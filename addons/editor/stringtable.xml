@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Editor">
+        <Key ID="STR_ZEN_Editor_MoveDisplayToEdge">
+            <English>Move Display to Edge</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_MoveDisplayToEdge_Description">
+            <English>Moves the Zeus Editor Display to the edge of the screen</English>
+        </Key>
+    </Package>
+</Project>
