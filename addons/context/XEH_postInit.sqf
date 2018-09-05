@@ -1,5 +1,14 @@
 #include "script_component.hpp"
 
+// Add keybind
+[ELSTRING(Common,Category), QGVAR(openKey), LSTRING(Keybind), {
+    if (!isNull curatorCamera) then {
+        [] call FUNC(open);
+    };
+}, {
+
+}, [46, [false, false, false]]] call CBA_fnc_addKeybind; // Default: C
+
 [QEGVAR(common,zeusDisplayLoad), {
     params ["_display"];
 

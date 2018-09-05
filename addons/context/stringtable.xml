@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Context">
+        <Key ID="STR_ZEN_Context_Keybind">
+            <English>Open Context Menu</English>
+        </Key>
+    </Package>
+</Project>
