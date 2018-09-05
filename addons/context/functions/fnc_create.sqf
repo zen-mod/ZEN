@@ -79,6 +79,7 @@ private _numberOfRows = 0;
         if (_button isEqualTo 0) then {
             private _ctrlContextRow = ctrlParentControlsGroup _ctrlMouse;
             private _statement = _ctrlContextRow getVariable [QGVAR(statement), _statement];
+            [] call FUNC(close);
             [GVAR(hovered), GVAR(selected)] call _statement;
         };
     }];

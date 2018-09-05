@@ -16,6 +16,10 @@
     _ctrlMouseArea ctrlAddEventHandler ["MouseButtonUp", {
         params ["_ctrlMouseArea", "_button"];
 
+        if (_button isEqualTo 0) exitwith {
+            [] call FUNC(close);
+        };
+
         if (_button isEqualTo 1) then {
             GVAR(rightClick) = false;
             if (GVAR(canContext) && {curatorSelected isEqualTo [[], [], [], []]}) then {

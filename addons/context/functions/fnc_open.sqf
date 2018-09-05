@@ -1,6 +1,6 @@
 /*
  * Author: mharis001
- * 
+ *
  *
  * Arguments:
  * None
@@ -16,7 +16,7 @@
 #include "script_component.hpp"
 
 // Close previously opened context menu
-// call FUNC(close);
+[] call FUNC(close);
 
 // Update global variables for this context
 GVAR(hovered) = curatorMouseOver;
