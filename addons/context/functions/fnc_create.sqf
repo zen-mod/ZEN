@@ -16,11 +16,14 @@ _contextActions = _contextActions select {
 private _display = findDisplay 312;
 private _ctrlContextGroup = _display ctrlCreate [QGVAR(group), IDC_CONTEXT_GROUP];
 
+// Store context group
+GVAR(contextGroups) set [parseNumber !isNull _parentRow, _ctrlContextGroup];
+
 // Create context action rows
 private _numberOfRows = 0;
 
 {
-    _x params ["_actionName", "_displayName", "_picture", "_statement", "_condition", "", "_children"];
+    _x params ["_actionName", "_displayName", "_picture", "_statement", "_condition", "", ["_children", []]];
 
     // Create context row control
     private _ctrlContextRow = _display ctrlCreate [QGVAR(row), IDC_CONTEXT_ROW, _ctrlContextGroup];
@@ -32,28 +35,56 @@ private _numberOfRows = 0;
     private _ctrlPicture = _ctrlContextRow controlsGroupCtrl IDC_CONTEXT_PICTURE;
     _ctrlPicture ctrlSetText _picture;
 
-    // Add mouse area EHs
+    // Hide expandable icon if no children actions
+    if (_children isEqualTo []) then {
+        private _ctrlExpandable = _ctrlContextRow controlsGroupCtrl IDC_CONTEXT_EXPANDABLE;
+        _ctrlExpandable ctrlShow false;
+    };
+
+    // Add mouse area EHs to highlight background
     private _ctrlMouse = _ctrlContextRow controlsGroupCtrl IDC_CONTEXT_MOUSE;
-    _ctrlMouse setVariable [QGVAR(children), _children];
     _ctrlMouse ctrlAddEventHandler ["MouseEnter", {
         params ["_ctrlMouse"];
 
         private _ctrlContextRow = ctrlParentControlsGroup _ctrlMouse;
 
+        // Update highlight color
         private _ctrlHighlight = _ctrlContextRow controlsGroupCtrl IDC_CONTEXT_HIGHLIGHT;
         _ctrlHighlight ctrlSetBackgroundColor [0, 0, 0, 1];
 
-        private _children = _ctrlMouse getVariable [QGVAR(children), []];
-        [_children, _ctrlContextRow] call FUNC(create);
+        // Close previously open child context group
+        private _childContextGroup = GVAR(contextGroups) select 1;
+        if !(ctrlParentControlsGroup _ctrlContextRow isEqualto _childContextGroup) then {
+            ctrlDelete _childContextGroup;
+        };
+
+        // Create child context group if action has children
+        private _children = _ctrlContextRow getVariable [QGVAR(children), _children];
+        if !(_children isEqualTo []) then {
+            [_children, _ctrlContextRow] call FUNC(create);
+        };
     }];
     _ctrlMouse ctrlAddEventHandler ["MouseExit", {
         params ["_ctrlMouse"];
 
         private _ctrlContextRow = ctrlParentControlsGroup _ctrlMouse;
 
+        // Update highlight color
         private _ctrlHighlight = _ctrlContextRow controlsGroupCtrl IDC_CONTEXT_HIGHLIGHT;
         _ctrlHighlight ctrlSetBackgroundColor [0, 0, 0, 0];
     }];
+    _ctrlMouse ctrlAddEventHandler ["MouseButtonDown", {
+        params ["_ctrlMouse", "_button"];
+
+        if (_button isEqualTo 0) then {
+            private _ctrlContextRow = ctrlParentControlsGroup _ctrlMouse;
+            private _statement = _ctrlContextRow getVariable [QGVAR(statement), _statement];
+            [GVAR(hovered), GVAR(selected)] call _statement;
+        };
+    }];
+
+    _ctrlContextRow setVariable [QGVAR(statement), _statement];
+    _ctrlContextRow setVariable [QGVAR(children), _children];
 
     // Update row position in group
     _ctrlContextRow ctrlSetPosition [0, _numberOfRows * GUI_GRID_H];
@@ -63,10 +94,11 @@ private _numberOfRows = 0;
 } forEach _contextActions;
 
 // Update context group position
+private _wPos = 8 * GUI_GRID_W;
+private _hPos = _numberOfRows * GUI_GRID_H;
+
 private _groupPosition = if (isNull _parentRow) then {
     getMousePosition params ["_xPos", "_yPos"];
-    private _wPos = 8 * GUI_GRID_W;
-    private _hPos = _numberOfRows * GUI_GRID_H;
 
     _xPos = (safeZoneX + 0.2 * GUI_GRID_W) max (_xPos min (safeZoneX + safeZoneW - _wPos - 0.2 * GUI_GRID_W));
     _yPos = (safeZoneY + 0.2 * GUI_GRID_H) max (_yPos min (safeZoneY + safezoneH - _hPos - 0.2 * GUI_GRID_H));
@@ -79,9 +111,6 @@ private _groupPosition = if (isNull _parentRow) then {
     _xPos = _xPos + _xPosGroup;
     _yPos = _yPos + _yPosGroup;
 
-    private _wPos = 8 * GUI_GRID_W;
-    private _hPos = _numberOfRows * GUI_GRID_H;
-
     _xPos = _xPos + _wPos + 0.2 * GUI_GRID_W;
     if (_xPos + _wPos > safeZoneX + safeZoneW - 0.2 * GUI_GRID_W) then {
         _xPos = _xPos - 2 * _wPos - 0.4 * GUI_GRID_W;
@@ -92,8 +121,9 @@ private _groupPosition = if (isNull _parentRow) then {
     [_xPos, _yPos, _wPos, _hPos]
 };
 
+// Update context background position
 private _ctrlBackground = _ctrlContextGroup controlsGroupCtrl IDC_CONTEXT_BACKGROUND;
-_ctrlBackground ctrlSetPosition [0, 0, _groupPosition select 2, _groupPosition select 3];
+_ctrlBackground ctrlSetPosition [0, 0, _wPos, _hPos];
 _ctrlBackground ctrlCommit 0;
 
 _ctrlContextGroup ctrlSetPosition _groupPosition;

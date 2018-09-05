@@ -33,7 +33,6 @@ class GVAR(row): RscControlsGroupNoScrollbars {
             y = 0;
             w = 8 * GUI_GRID_W;
             h = GUI_GRID_H;
-            // colorBackground[] = {0.1, 0.1, 0.1, 0.5};
         };
         class Name: RscText {
             idc = IDC_CONTEXT_NAME;
