@@ -2,7 +2,7 @@
 
 // Add keybind
 [ELSTRING(Common,Category), QGVAR(openKey), LSTRING(Keybind), {
-    if (!isNull curatorCamera) then {
+    if (GVAR(enable) && {!isNull curatorCamera}) then {
         [] call FUNC(open);
     };
 }, {
@@ -11,6 +11,8 @@
 
 [QEGVAR(common,zeusDisplayLoad), {
     params ["_display"];
+
+    if (!GVAR(enable)) exitWith {};
 
     private _ctrlMouseArea = _display displayCtrl 53;
 
