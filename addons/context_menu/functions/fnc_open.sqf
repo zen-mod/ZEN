@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [false] call zen_context_fnc_open
+ * [] call zen_context_menu_fnc_open
  *
  * Public: No
  */

@@ -1,16 +1,16 @@
-#define COMPONENT context
-#define COMPONENT_BEAUTIFIED Context
+#define COMPONENT context_menu
+#define COMPONENT_BEAUTIFIED Context Menu
 #include "\x\zen\addons\main\script_mod.hpp"
 
 #define DEBUG_MODE_FULL
 #define DISABLE_COMPILE_CACHE
 
-#ifdef DEBUG_ENABLED_CONTEXT
+#ifdef DEBUG_ENABLED_CONTEXT_MENU
     #define DEBUG_MODE_FULL
 #endif
 
-#ifdef DEBUG_SETTINGS_CONTEXT
-    #define DEBUG_SETTINGS DEBUG_SETTINGS_CONTEXT
+#ifdef DEBUG_SETTINGS_CONTEXT_MENU
+    #define DEBUG_SETTINGS DEBUG_SETTINGS_CONTEXT_MENU
 #endif
 
 #include "\x\zen\addons\main\script_macros.hpp"
