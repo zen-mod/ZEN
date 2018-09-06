@@ -19,6 +19,7 @@
 [] call FUNC(close);
 
 // Update global variables for this context
+GVAR(mousePosition) = getMousePosition;
 GVAR(hovered) = curatorMouseOver;
 GVAR(selected) = curatorSelected;
 

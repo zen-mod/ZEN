@@ -1,5 +1,7 @@
 #include "script_component.hpp"
 
+[] call FUNC(compileActions);
+
 // Add keybind
 [ELSTRING(Common,Category), QGVAR(openKey), LSTRING(Keybind), {
     if (GVAR(enable) && {!isNull curatorCamera}) then {

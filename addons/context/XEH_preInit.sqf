@@ -11,6 +11,7 @@ PREP_RECOMPILE_END;
 GVAR(canContext) = true;
 GVAR(rightClick) = false;
 GVAR(contextGroups) = [];
+GVAR(mousePosition) = [0, 0];
 GVAR(hovered) = [];
 GVAR(selected) = [[], [], [], []];
 

@@ -9,7 +9,7 @@ if (_contextActions isEqualTo [] && {isNull _parentRow}) then {
 
 // Check action conditions
 _contextActions = _contextActions select {
-    [GVAR(hovered), GVAR(selected)] call (_x select 4);
+    [AGLtoASL screenToWorld GVAR(mousePosition), GVAR(hovered), GVAR(selected)] call (_x select 4);
 };
 
 // Create context group control
@@ -79,8 +79,8 @@ private _numberOfRows = 0;
         if (_button isEqualTo 0) then {
             private _ctrlContextRow = ctrlParentControlsGroup _ctrlMouse;
             private _statement = _ctrlContextRow getVariable [QGVAR(statement), _statement];
-            [] call FUNC(close);
-            [GVAR(hovered), GVAR(selected)] call _statement;
+            [AGLtoASL screenToWorld GVAR(mousePosition), GVAR(hovered), GVAR(selected)] call _statement;
+            {call FUNC(close)} call CBA_fnc_execNextFrame;
         };
     }];
 
