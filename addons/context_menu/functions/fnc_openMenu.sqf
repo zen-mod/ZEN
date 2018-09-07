@@ -9,14 +9,14 @@
  * None
  *
  * Example:
- * [] call zen_context_menu_fnc_open
+ * [] call zen_context_menu_fnc_openMenu
  *
  * Public: No
  */
 #include "script_component.hpp"
 
 // Close previously opened context menu
-[] call FUNC(close);
+call FUNC(closeMenu);
 
 // Update global variables for this context
 GVAR(mousePosition) = getMousePosition;

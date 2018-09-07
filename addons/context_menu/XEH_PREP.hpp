@@ -1,4 +1,4 @@
-PREP(close);
+PREP(closeMenu);
 PREP(compileActions);
 PREP(create);
-PREP(open);
+PREP(openMenu);

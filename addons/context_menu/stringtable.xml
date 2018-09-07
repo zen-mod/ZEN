@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Context_Menu">
-        <Key ID="STR_ZEN_Context_Menu_Enable">
+        <Key ID="STR_ZEN_Context_Menu_Enabled">
             <English>Enable Context Menu</English>
         </Key>
-        <Key ID="STR_ZEN_Context_Menu_Enable_Description">
+        <Key ID="STR_ZEN_Context_Menu_Enabled_Description">
             <English>Enables opening of context menu using the keybind or right clicking</English>
         </Key>
         <Key ID="STR_ZEN_Context_Menu_Keybind">

@@ -1,7 +1,7 @@
 [
-    QGVAR(enable),
+    QGVAR(enabled),
     "CHECKBOX",
-    [LSTRING(Enable), LSTRING(Enable_Description)],
+    [LSTRING(Enabled), LSTRING(Enabled_Description)],
     ELSTRING(Common,Category),
     true,
     false

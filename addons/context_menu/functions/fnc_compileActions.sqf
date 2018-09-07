@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-private _actionFnc = {
+private _fnc_getActionData = {
     params ["_config"];
 
     private _actionName = configName _config;
@@ -42,11 +42,11 @@ private _actionFnc = {
 private _contextActions = [];
 
 {
-    private _action = _x call _actionFnc;
+    private _action = _x call _fnc_getActionData;
 
     private _children = [];
     {
-        _children pushBack (_x call _actionFnc);
+        _children pushBack (_x call _fnc_getActionData);
     } forEach configProperties [_x, QUOTE(isClass _x), true];
     [_children, 5, false] call CBA_fnc_sortNestedArray;
     _action pushBack _children;

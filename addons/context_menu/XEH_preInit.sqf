@@ -9,7 +9,7 @@ PREP_RECOMPILE_END;
 #include "initSettings.sqf"
 
 GVAR(canContext) = true;
-GVAR(rightClick) = false;
+GVAR(holdingRMB) = false;
 GVAR(contextGroups) = [];
 GVAR(mousePosition) = [0, 0];
 GVAR(hovered) = [];

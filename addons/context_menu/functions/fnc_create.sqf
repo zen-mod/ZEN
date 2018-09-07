@@ -80,7 +80,7 @@ private _numberOfRows = 0;
             private _ctrlContextRow = ctrlParentControlsGroup _ctrlMouse;
             private _statement = _ctrlContextRow getVariable [QGVAR(statement), _statement];
             [AGLtoASL screenToWorld GVAR(mousePosition), GVAR(hovered), GVAR(selected)] call _statement;
-            {call FUNC(close)} call CBA_fnc_execNextFrame;
+            {call FUNC(closeMenu)} call CBA_fnc_execNextFrame;
         };
     }];
 
