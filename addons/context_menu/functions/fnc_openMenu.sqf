@@ -19,8 +19,7 @@
 call FUNC(closeMenu);
 
 // Update global variables for this context
-GVAR(mousePosition) = getMousePosition;
-GVAR(hovered) = curatorMouseOver;
+GVAR(mousePos) = getMousePosition;
 GVAR(selected) = curatorSelected;
 
 // Create base level context menu

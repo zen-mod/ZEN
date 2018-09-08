@@ -16,6 +16,7 @@
 #include "\x\zen\addons\main\script_macros.hpp"
 
 #include "\a3\ui_f\hpp\defineCommonGrids.inc"
+#include "\a3\ui_f_curator\ui\defineResinclDesign.inc"
 
 #define IDC_CONTEXT_GROUP 185000
 #define IDC_CONTEXT_BACKGROUND 200

@@ -8,11 +8,10 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.sqf"
 
+GVAR(selected) = [];
+GVAR(mousePos) = [0.5, 0.5];
 GVAR(canContext) = true;
 GVAR(holdingRMB) = false;
 GVAR(contextGroups) = [];
-GVAR(mousePosition) = [0, 0];
-GVAR(hovered) = [];
-GVAR(selected) = [[], [], [], []];
 
 ADDON = true;
