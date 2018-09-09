@@ -1,1 +1,1 @@
-PREP(initZeusDisplay);
+PREP(initDisplayCurator);

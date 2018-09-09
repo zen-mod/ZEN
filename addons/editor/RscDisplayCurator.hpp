@@ -3,6 +3,7 @@ class RscEdit;
 class RscFrame;
 class RscPicture;
 class RscTree;
+class RscCheckBox;
 class RscButtonSearch;
 class RscControlsGroupNoScrollbars;
 
@@ -51,7 +52,7 @@ class RscDisplayCurator {
                     h = safeZoneH - POS_EDGE(6,5) * GUI_GRID_H;
                 };
                 class CreateFrame: RscFrame {
-                    h = safeZoneH - POS_EDGE(6,5) * GUI_GRID_H;
+                    h = safeZoneH - POS_EDGE(7,6) * GUI_GRID_H;
                 };
                 class CreateSearch: RscEdit {
                     x = 0.15 * GUI_GRID_W;
@@ -74,7 +75,46 @@ class RscDisplayCurator {
                     onButtonClick = QUOTE([ARR_2(ctrlParent (_this select 0),true)] call FUNC(handleTreeButtons));
                 };
                 class CreateUnitsWest: RscTree {
-                    h = safeZoneH - POS_EDGE(7.1,6.1) * GUI_GRID_H;
+                    h = safeZoneH - POS_EDGE(8.1,7.1) * GUI_GRID_H;
+                };
+                class VehicleCrew: RscControlsGroupNoScrollbars {
+                    x = 0;
+                    y = safeZoneH - POS_EDGE(3,2) * GUI_GRID_H - pixelH;
+                    w = 11 * GUI_GRID_W;
+                    h = GUI_GRID_H + 2 * pixelH;
+                    class controls {
+                        class Background: RscText {
+                            x = 0;
+                            y = 0;
+                            w = 11 * GUI_GRID_W;
+                            h = GUI_GRID_H + 2 * pixelH;
+                            colorBackground[] = {0, 0, 0, 0.2};
+                        };
+                        class Frame: CreateFrame {
+                            x = 0;
+                            y = 0;
+                            w = 11 * GUI_GRID_W;
+                            h = GUI_GRID_H + 2 * pixelH;
+                        };
+                        class Label: RscText {
+                            text = "$STR_3DEN_Display3DEN_VehiclePanel_TextEmpty_text";
+                            x = GUI_GRID_W;
+                            y = 0;
+                            w = 10 * GUI_GRID_W;
+                            h = GUI_GRID_H;
+                            sizeEx = 0.9 * GUI_GRID_H;
+                            shadow = 0;
+                        };
+                        class Toggle: RscCheckBox {
+                            idc = -1;
+                            onLoad = QUOTE((_this select 0) cbSetChecked GVAR(includeCrew));
+                            onCheckedChanged = QUOTE(GVAR(includeCrew) = !GVAR(includeCrew));
+                            x = 0.1 * GUI_GRID_W;
+                            y = 0;
+                            w = GUI_GRID_W;
+                            h = GUI_GRID_H;
+                        };
+                    };
                 };
             };
         };
