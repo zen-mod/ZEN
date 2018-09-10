@@ -9,7 +9,7 @@ call FUNC(compileActions);
     };
 }, {}, [46, [false, false, false]]] call CBA_fnc_addKeybind; // Default: C
 
-[QEGVAR(common,zeusDisplayLoad), {
+[QEGVAR(common,displayCuratorLoad), {
     if (!GVAR(enabled)) exitWith {};
 
     params ["_display"];
@@ -33,6 +33,8 @@ call FUNC(compileActions);
             if (_button isEqualTo 1) then {
                 GVAR(holdingRMB) = false;
 
+                // Right clicking with AI selected places waypoints
+                // Do not want to open context menu when this is the case
                 curatorSelected params ["_selectedObjects", "_selectedGroups", "_selectedWaypoints"];
                 if (GVAR(canContext) &&
                     {_selectedWaypoints isEqualTo []} &&

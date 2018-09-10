@@ -8,12 +8,14 @@ if (_contextActions isEqualTo [] && {isNull _parentRow}) then {
 };
 
 // Check action conditions
+private _params = [call FUNC(getContextPos)];
+_params append GVAR(selected);
 _contextActions = _contextActions select {
-    [call FUNC(getContextPos), GVAR(selected)] call (_x select 4);
+    _params call (_x select 4);
 };
 
 // Create context group control
-private _display = findDisplay 312;
+private _display = findDisplay IDD_RSCDISPLAYCURATOR;
 private _ctrlContextGroup = _display ctrlCreate [QGVAR(group), IDC_CONTEXT_GROUP];
 
 // Store context group
@@ -79,7 +81,9 @@ private _numberOfRows = 0;
         if (_button isEqualTo 0) then {
             private _ctrlContextRow = ctrlParentControlsGroup _ctrlMouse;
             private _statement = _ctrlContextRow getVariable [QGVAR(statement), _statement];
-            [call FUNC(getContextPos), GVAR(selected)] call _statement;
+            private _params = [call FUNC(getContextPos)];
+            _params append GVAR(selected);
+            _params call _statement;
             {call FUNC(closeMenu)} call CBA_fnc_execNextFrame;
         };
     }];

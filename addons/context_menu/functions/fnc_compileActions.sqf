@@ -71,3 +71,5 @@ missionNamespace setVariable [QGVAR(actions), _contextActions];
     ]
 ]
 */
+
+// Passed parameters: [_posASL, _selectedObjects, _selectedGroups, _selectedWaypoints, _selectedMarkers]
