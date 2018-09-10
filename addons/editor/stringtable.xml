@@ -7,5 +7,11 @@
         <Key ID="STR_ZEN_Editor_MoveDisplayToEdge_Description">
             <English>Moves the Zeus Editor Display to the edge of the screen</English>
         </Key>
+        <Key ID="STR_ZEN_Editor_RemoveWatermark">
+            <English>Remove Watermark</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_RemoveWatermark_Description">
+            <English>Removes the watermark shown when hiding the display</English>
+        </Key>
     </Package>
 </Project>

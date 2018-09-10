@@ -3,13 +3,13 @@
  * Initializes the Zeus Display and emits relevant events.
  *
  * Arguments:
- * 0: Zeus Display <DISPLAY>
+ * 0: Display <DISPLAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [DISPLAY] call zen_common_fnc_initZeusDisplay
+ * [DISPLAY] call zen_common_fnc_initDisplayCurator
  *
  * Public: No
  */
@@ -26,4 +26,4 @@ if !(_module getVariable [QGVAR(setupComplete), false]) then {
 };
 
 // Emit display load event
-[QGVAR(zeusDisplayLoad), _display] call CBA_fnc_localEvent;
+[QGVAR(displayCuratorLoad), _display] call CBA_fnc_localEvent;
