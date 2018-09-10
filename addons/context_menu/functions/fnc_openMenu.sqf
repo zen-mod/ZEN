@@ -23,7 +23,8 @@ GVAR(mousePos) = getMousePosition;
 GVAR(selected) = curatorSelected;
 
 curatorMouseOver params ["_type", "_entity"];
-if (["OBJECT", "GROUP", "ARRAY", "STRING"] find _type != -1) then {
+private _category = ["OBJECT", "GROUP", "ARRAY", "STRING"] find _type;
+if (_category != -1) then {
     GVAR(selected) select _category pushBackUnique _entity;
 };
 
