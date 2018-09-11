@@ -16,44 +16,43 @@
 #include "script_component.hpp"
 
 private _fnc_getActionData = {
-    params ["_config"];
+    params ["_actionsConfig"];
 
-    private _actionName = configName _config;
-    private _displayName = getText (_config >> "displayName");
-    private _picture = getText (_config >> "picture");
+    private _actions = [];
 
-    private _statement = compile getText (_config >> "statement");
+    {
+        private _entryConfig = _x;
 
-    private _condition = compile getText (_config >> "condition");
-    if (_condition isEqualTo {}) then {_condition = {true}};
+        private _actionName = configName _entryConfig;
+        private _displayName = getText (_entryConfig >> "displayName");
+        private _picture = getText (_entryConfig >> "picture");
 
-    private _priority = getNumber (_config >> "priority");
+        private _statement = compile getText (_entryConfig >> "statement");
+        private _condition = compile getText (_entryConfig >> "condition");
+        if (_condition isEqualTo {}) then {_condition = {true}};
 
-    [
-        _actionName,
-        _displayName,
-        _picture,
-        _statement,
-        _condition,
-        _priority
-    ]
+        private _priority = getNumber (_entryConfig >> "priority");
+
+        private _children = [_entryConfig] call _fnc_getActionData;
+        [_children, 5, false] call CBA_fnc_sortNestedArray;
+
+        private _actionEntry = [
+            _actionName,
+            _displayName,
+            _picture,
+            _statement,
+            _condition,
+            _priority,
+            _children
+        ];
+
+        _actions pushBack _actionEntry;
+    } forEach configProperties [_actionsConfig, "isClass _x", true];
+
+    _actions
 };
 
-private _contextActions = [];
-
-{
-    private _action = _x call _fnc_getActionData;
-
-    private _children = [];
-    {
-        _children pushBack (_x call _fnc_getActionData);
-    } forEach configProperties [_x, QUOTE(isClass _x), true];
-    [_children, 5, false] call CBA_fnc_sortNestedArray;
-    _action pushBack _children;
-
-    _contextActions pushBack _action;
-} forEach configProperties [configFile >> QGVAR(actions), QUOTE(isClass _x), true];
-
+private _contextActions = [configFile >> QGVAR(actions)] call _fnc_getActionData;
 [_contextActions, 5, false] call CBA_fnc_sortNestedArray;
 
 missionNamespace setVariable [QGVAR(actions), _contextActions];
@@ -72,4 +71,4 @@ missionNamespace setVariable [QGVAR(actions), _contextActions];
 ]
 */
 
-// Passed parameters: [_posASL, _selectedObjects, _selectedGroups, _selectedWaypoints, _selectedMarkers]
+// Passed parameters: [_positionASL, _selectedObjects, _selectedGroups, _selectedWaypoints, _selectedMarkers]
