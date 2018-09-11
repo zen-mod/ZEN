@@ -1,11 +1,25 @@
+/*
+ * Author: mharis001
+ * Creates a context group with rows of actions.
+ *
+ * Arguments:
+ * 0: Actions <ARRAY>
+ * 1: Parent row <CONTROL>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call zen_context_menu_fnc_createContextGroup
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 params [["_contextActions", []], ["_parentRow", controlNull]];
 
-// No context actions provided, open base level
-if (_contextActions isEqualTo [] && {isNull _parentRow}) then {
-    _contextActions = missionNamespace getVariable [QGVAR(actions), []];
-};
+// Exit if no context actions provided
+if (_contextActions isEqualTo []) exitWith {};
 
 // Check action conditions
 private _params = [call FUNC(getContextPos)];
@@ -43,7 +57,7 @@ private _numberOfRows = 0;
         _ctrlExpandable ctrlShow false;
     };
 
-    // Add mouse area EHs to highlight background
+    // Add mouse area EHs
     private _ctrlMouse = _ctrlContextRow controlsGroupCtrl IDC_CONTEXT_MOUSE;
     _ctrlMouse ctrlAddEventHandler ["MouseEnter", {
         params ["_ctrlMouse"];
@@ -61,9 +75,9 @@ private _numberOfRows = 0;
         };
 
         // Create child context group if action has children
-        private _children = _ctrlContextRow getVariable [QGVAR(children), _children];
+        private _children = _ctrlContextRow getVariable QGVAR(children);
         if !(_children isEqualTo []) then {
-            [_children, _ctrlContextRow] call FUNC(create);
+            [_children, _ctrlContextRow] call FUNC(createContextGroup);
         };
     }];
     _ctrlMouse ctrlAddEventHandler ["MouseExit", {
@@ -80,7 +94,7 @@ private _numberOfRows = 0;
 
         if (_button isEqualTo 0) then {
             private _ctrlContextRow = ctrlParentControlsGroup _ctrlMouse;
-            private _statement = _ctrlContextRow getVariable [QGVAR(statement), _statement];
+            private _statement = _ctrlContextRow getVariable QGVAR(statement);
             private _params = [call FUNC(getContextPos)];
             _params append GVAR(selected);
             _params call _statement;
@@ -98,38 +112,42 @@ private _numberOfRows = 0;
     _numberOfRows = _numberOfRows + 1;
 } forEach _contextActions;
 
-// Update context group position
+// Determine width and height of context group
 private _wPos = 8 * GUI_GRID_W;
 private _hPos = _numberOfRows * GUI_GRID_H;
-
-private _groupPosition = if (isNull _parentRow) then {
-    getMousePosition params ["_xPos", "_yPos"];
-
-    _xPos = (safeZoneX + 0.2 * GUI_GRID_W) max (_xPos min (safeZoneX + safeZoneW - _wPos - 0.2 * GUI_GRID_W));
-    _yPos = (safeZoneY + 0.2 * GUI_GRID_H) max (_yPos min (safeZoneY + safezoneH - _hPos - 0.2 * GUI_GRID_H));
-
-    [_xPos, _yPos, _wPos, _hPos]
-} else {
-    ctrlPosition _parentRow params ["_xPos", "_yPos"];
-
-    ctrlPosition ctrlParentControlsGroup _parentRow params ["_xPosGroup", "_yPosGroup"];
-    _xPos = _xPos + _xPosGroup;
-    _yPos = _yPos + _yPosGroup;
-
-    _xPos = _xPos + _wPos + 0.2 * GUI_GRID_W;
-    if (_xPos + _wPos > safeZoneX + safeZoneW - 0.2 * GUI_GRID_W) then {
-        _xPos = _xPos - 2 * _wPos - 0.4 * GUI_GRID_W;
-    };
-
-    _yPos = (safeZoneY + 0.2 * GUI_GRID_H) max (_yPos min (safeZoneY + safezoneH - _hPos - 0.2 * GUI_GRID_H));
-
-    [_xPos, _yPos, _wPos, _hPos]
-};
 
 // Update context background position
 private _ctrlBackground = _ctrlContextGroup controlsGroupCtrl IDC_CONTEXT_BACKGROUND;
 _ctrlBackground ctrlSetPosition [0, 0, _wPos, _hPos];
 _ctrlBackground ctrlCommit 0;
+
+// Update context group position
+private _groupPosition = if (isNull _parentRow) then {
+    // No parent row, position based on mouse position when opened
+    GVAR(mousePos) params ["_xPos", "_yPos"];
+
+    _xPos = safeZoneX + SPACING_W max (_xPos min (safeZoneX + safeZoneW - _wPos - SPACING_W));
+    _yPos = safeZoneY + SPACING_H max (_yPos min (safeZoneY + safezoneH - _hPos - SPACING_H));
+
+    [_xPos, _yPos, _wPos, _hPos]
+} else {
+    // Has parent row, position based on parent group position
+    ctrlPosition ctrlParentControlsGroup _parentRow params ["_xPos", "_yPos"];
+
+    // Add y position of row relative to group
+    _yPos = _yPos + (ctrlPosition _parentRow select 1);
+
+    // Determine position of children actions (left or right of main)
+    _xPos = if (_xPos + 2 * _wPos + 2 * SPACING_W > safeZoneX + safeZoneW) then {
+        _xPos - _wPos - SPACING_W;
+    } else {
+        _xPos + _wPos + SPACING_W;
+    };
+
+    _yPos = safeZoneY + SPACING_H max (_yPos min (safeZoneY + safezoneH - _hPos - SPACING_H));
+
+    [_xPos, _yPos, _wPos, _hPos]
+};
 
 _ctrlContextGroup ctrlSetPosition _groupPosition;
 _ctrlContextGroup ctrlCommit 0;

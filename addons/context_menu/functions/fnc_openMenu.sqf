@@ -29,4 +29,4 @@ if (_category != -1) then {
 };
 
 // Create base level context menu
-[] call FUNC(create);
+[GVAR(actions)] call FUNC(createContextGroup);

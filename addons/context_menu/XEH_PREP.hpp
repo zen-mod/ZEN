@@ -1,5 +1,5 @@
 PREP(closeMenu);
 PREP(compileActions);
-PREP(create);
+PREP(createContextGroup);
 PREP(getContextPos);
 PREP(openMenu);
