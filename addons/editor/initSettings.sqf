@@ -2,7 +2,7 @@
     QGVAR(moveDisplayToEdge),
     "CHECKBOX",
     [LSTRING(MoveDisplayToEdge), LSTRING(MoveDisplayToEdge_Description)],
-    ELSTRING(Common,Category),
+    ELSTRING(common,Category),
     false,
     false
 ] call CBA_settings_fnc_init;
@@ -11,7 +11,7 @@
     QGVAR(removeWatermark),
     "CHECKBOX",
     [LSTRING(RemoveWatermark), LSTRING(RemoveWatermark_Description)],
-    ELSTRING(Common,Category),
+    ELSTRING(common,Category),
     true,
     false
 ] call CBA_settings_fnc_init;
