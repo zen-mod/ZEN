@@ -7,7 +7,7 @@ call FUNC(compileActions);
     if (GVAR(enabled) && {!isNull curatorCamera}) then {
         call FUNC(openMenu);
     };
-}, {}, [46, [false, false, false]]] call CBA_fnc_addKeybind; // Default: C
+}, {}, [DIK_V, [false, false, false]]] call CBA_fnc_addKeybind; // Default: V
 
 [QEGVAR(common,displayCuratorLoad), {
     if (!GVAR(enabled)) exitWith {};
