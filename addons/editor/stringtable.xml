@@ -13,5 +13,8 @@
         <Key ID="STR_ZEN_Editor_RemoveWatermark_Description">
             <English>Removes the watermark shown when hiding the display</English>
         </Key>
+        <Key ID="STR_ZEN_Editor_ToggleIncludeCrew">
+            <English>Toggle Include Crew</English>
+        </Key>
     </Package>
 </Project>

@@ -106,7 +106,7 @@ class RscDisplayCurator {
                             shadow = 0;
                         };
                         class Toggle: RscCheckBox {
-                            idc = -1;
+                            idc = IDC_INCLUDE_CREW;
                             onLoad = QUOTE((_this select 0) cbSetChecked GVAR(includeCrew));
                             onCheckedChanged = QUOTE(GVAR(includeCrew) = !GVAR(includeCrew));
                             x = 0.1 * GUI_GRID_W;
