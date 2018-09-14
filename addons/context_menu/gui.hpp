@@ -43,8 +43,8 @@ class GVAR(row): RscControlsGroupNoScrollbars {
             sizeEx = 0.8 * GUI_GRID_H;
             shadow = 0;
         };
-        class Picture: RscPicture {
-            idc = IDC_CONTEXT_PICTURE;
+        class Icon: RscPicture {
+            idc = IDC_CONTEXT_ICON;
             x = 0.2 * GUI_GRID_W;
             y = 0.05 * GUI_GRID_H;
             w = 0.9 * GUI_GRID_W;

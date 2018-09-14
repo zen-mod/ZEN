@@ -41,17 +41,17 @@ GVAR(contextGroups) set [_contextLevel, _ctrlContextGroup];
 private _numberOfRows = 0;
 
 {
-    _x params ["_actionName", "_displayName", "_picture", "_statement", "_condition", "", "_children"];
+    _x params ["_actionName", "_displayName", "_icon", "_statement", "_condition", "", "_children"];
 
     // Create context row control
     private _ctrlContextRow = _display ctrlCreate [QGVAR(row), IDC_CONTEXT_ROW, _ctrlContextGroup];
 
-    // Set action name and picture
+    // Set action name and icon
     private _ctrlName = _ctrlContextRow controlsGroupCtrl IDC_CONTEXT_NAME;
     _ctrlName ctrlSetText _displayName;
 
-    private _ctrlPicture = _ctrlContextRow controlsGroupCtrl IDC_CONTEXT_PICTURE;
-    _ctrlPicture ctrlSetText _picture;
+    private _ctrlIcon = _ctrlContextRow controlsGroupCtrl IDC_CONTEXT_ICON;
+    _ctrlIcon ctrlSetText _icon;
 
     // Hide expandable icon if no children actions
     if (_children isEqualTo []) then {

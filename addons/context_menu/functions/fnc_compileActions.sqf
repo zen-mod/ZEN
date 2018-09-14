@@ -25,7 +25,7 @@ private _fnc_getActionData = {
 
         private _actionName = configName _entryConfig;
         private _displayName = getText (_entryConfig >> "displayName");
-        private _picture = getText (_entryConfig >> "picture");
+        private _icon = getText (_entryConfig >> "icon");
 
         private _statement = compile getText (_entryConfig >> "statement");
         private _condition = compile getText (_entryConfig >> "condition");
@@ -39,7 +39,7 @@ private _fnc_getActionData = {
         private _actionEntry = [
             _actionName,
             _displayName,
-            _picture,
+            _icon,
             _statement,
             _condition,
             _priority,
@@ -62,7 +62,7 @@ missionNamespace setVariable [QGVAR(actions), _contextActions];
     [
         _actionName,
         _displayName,
-        _picture,
+        _icon,
         _statement,
         _condition,
         _priority,
