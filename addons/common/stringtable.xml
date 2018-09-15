@@ -4,5 +4,11 @@
         <Key ID="STR_ZEN_Common_Category">
             <English>ZEN</English>
         </Key>
+        <Key ID="STR_ZEN_Common_Yes">
+            <English>Yes</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_No">
+            <English>No</English>
+        </Key>
     </Package>
 </Project>
