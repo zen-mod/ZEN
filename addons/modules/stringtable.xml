@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Modules">
+        <Key ID="STR_ZEN_Modules_CategoryPlayers">
+            <English>Players</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleTeleportPlayers">
             <English>Teleport Players</English>
         </Key>
@@ -15,9 +18,6 @@
         </Key>
         <Key ID="STR_ZEN_Modules_IncludeVehicles">
             <English>Include Vehicles</English>
-        </Key>
-        <Key ID="STR_ZEN_Modules_Players">
-            <English>Players</English>
         </Key>
     </Package>
 </Project>

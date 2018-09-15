@@ -1,6 +1,6 @@
 class CfgFactionClasses {
     class GVAR(Players) {
-        displayName = CSTRING(Players);
+        displayName = CSTRING(CategoryPlayers);
         priority = 2;
         side = 7;
     };
