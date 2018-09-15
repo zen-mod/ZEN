@@ -76,6 +76,7 @@ private _fnc_onTabClick = {
 {
     private _ctrlButton = _display displayCtrl _x;
     _ctrlButton setVariable [QGVAR(tab), _forEachIndex];
+    _ctrlButton ctrlSetText toUpper ctrlText _ctrlButton;
     _ctrlButton ctrlAddEventHandler ["ButtonClick", _fnc_onTabClick];
 } forEach TAB_BUTTON_IDCS;
 
@@ -170,7 +171,7 @@ _ctrlGroupList ctrlAddEventHandler ["LBSelChanged", {
     private _selected = _display getVariable QGVAR(selectedGroups);
     private _value = _ctrlGroupList lbValue _index;
 
-    // Update icon and add/remove from select list
+    // Update icon and add/remove from selected list
     if (_value in _selected) then {
         _ctrlGroupList lbSetPicture [_index, ICON_UNCHECKED];
         _selected deleteAt (_selected find _value);
@@ -245,7 +246,7 @@ _ctrlPlayerList ctrlAddEventHandler ["LBSelChanged", {
     private _selected = _display getVariable QGVAR(selectedPlayers);
     private _playerUID = _ctrlPlayerList lbData _index;
 
-    // Update icon and add/remove from select list
+    // Update icon and add/remove from selected list
     if (_playerUID in _selected) then {
         _ctrlPlayerList lbSetPicture [_index, ICON_UNCHECKED];
         _selected deleteAt (_selected find _playerUID);
@@ -293,6 +294,38 @@ private _fnc_onConfirm = {
 
     private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
     if (isNull _logic) exitWith {};
+
+    // Get selected units based on active tab
+    private _activeTab = TAB_BUTTON_IDCS findIf {!ctrlEnabled (_display displayCtrl _x)};
+    private _units = switch (_activeTab) do {
+        case 0: {
+            private _selected = _display getVariable QGVAR(selectedSides);
+            call CBA_fnc_players select {side _x in _selected};
+        };
+        case 1: {
+            private _selected = _display getVariable QGVAR(selectedGroups);
+            private _allGroups = _display getVariable QGVAR(allGroups);
+            private _temp = [];
+            {
+                _temp append units (_allGroups select _x);
+            } forEach _selected;
+            _temp
+        };
+        case 2: {
+            private _selected = _display getVariable QGVAR(selectedPlayers);
+            _selected apply {_x call BIS_fnc_getUnitByUID};
+        };
+    };
+
+    // Teleport units, check for attached vehicle
+    private _attached = attachedTo _logic;
+    private _position = if (isNull _attached) then {_logic modelToWorld [0, 0, 0]} else {_attached};
+
+    {
+        [QGVAR(moveToRespawnPosition), [_x, _position], _x] call CBA_fnc_targetEvent;
+    } forEach _units;
+
+    deleteVehicle _logic;
 };
 
 _display displayAddEventHandler ["Unload", _fnc_onUnload];

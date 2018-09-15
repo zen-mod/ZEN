@@ -52,7 +52,7 @@ class GVAR(RscTeleportPlayers): RscDisplayAttributes {
                     x = 0;
                     y = 0;
                     w = 26 * GUI_GRID_W;
-                    h = 9.3 * GUI_GRID_H;
+                    h = 8.2 * GUI_GRID_H;
                     class controls {
                         class Background: RscText {
                             x = 0;
@@ -63,7 +63,7 @@ class GVAR(RscTeleportPlayers): RscDisplayAttributes {
                         };
                         class ButtonSides: RscButton {
                             idc = IDC_TELEPORTPLAYERS_BUTTON_SIDES;
-                            text = CSTRING(SIDES);
+                            text = CSTRING(Sides);
                             font = "RobotoCondensedLight";
                             x = 0;
                             y = 0;
@@ -81,12 +81,12 @@ class GVAR(RscTeleportPlayers): RscDisplayAttributes {
                         };
                         class ButtonGroups: ButtonSides {
                             idc = IDC_TELEPORTPLAYERS_BUTTON_GROUPS;
-                            text = CSTRING(GROUPS);
+                            text = CSTRING(Groups);
                             x = 26/3 * GUI_GRID_W;
                         };
                         class ButtonPlayers: ButtonSides {
                             idc = IDC_TELEPORTPLAYERS_BUTTON_PLAYERS;
-                            text = CSTRING(PLAYERS);
+                            text = CSTRING(Players);
                             x = 52/3 * GUI_GRID_W;
                         };
                         class TabSides: RscControlsGroupNoScrollbars {
@@ -198,14 +198,6 @@ class GVAR(RscTeleportPlayers): RscDisplayAttributes {
                                     colorFocused[] = {0, 0, 0, 0.5};
                                 };
                             };
-                        };
-                        class VehiclesLabel: GVAR(RscLabel) {
-                            text = CSTRING(IncludeVehicles);
-                            y = 8.3 * GUI_GRID_H;
-                        };
-                        class Vehicles: GVAR(RscToolboxYesNo) {
-                            idc = IDC_TELEPORTPLAYERS_VEHICLES;
-                            y = 8.3 * GUI_GRID_H;
                         };
                     };
                 };
