@@ -7,7 +7,13 @@
         <Key ID="STR_ZEN_Context_Menu_Enabled_Description">
             <English>Enables opening of context menu using the keybind or right clicking</English>
         </Key>
-        <Key ID="STR_ZEN_Context_Menu_Keybind">
+        <Key ID="STR_ZEN_Context_Menu_KeybindOnly">
+            <English>Keybind Only</English>
+        </Key>
+        <Key ID="STR_ZEN_Context_Menu_KeybindAndMouse">
+            <English>Keybind and Mouse</English>
+        </Key>
+        <Key ID="STR_ZEN_Context_Menu_OpenContextMenu">
             <English>Open Context Menu</English>
         </Key>
     </Package>

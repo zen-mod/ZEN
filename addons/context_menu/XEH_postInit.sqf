@@ -3,7 +3,7 @@
 call FUNC(compileActions);
 
 [QEGVAR(common,displayCuratorLoad), {
-    if (!GVAR(enabled)) exitWith {};
+    if (GVAR(enabled) != 2) exitWith {};
 
     params ["_display"];
 

@@ -4,6 +4,9 @@
         <Key ID="STR_ZEN_Common_Category">
             <English>ZEN</English>
         </Key>
+        <Key ID="STR_ZEN_Common_Disabled">
+            <English>Disabled</English>
+        </Key>
         <Key ID="STR_ZEN_Common_Yes">
             <English>Yes</English>
         </Key>
