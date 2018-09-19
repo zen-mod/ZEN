@@ -1,6 +1,6 @@
 /*
  * Author: mharis001
- *
+ * Closes currently open context menu.
  *
  * Arguments:
  * None

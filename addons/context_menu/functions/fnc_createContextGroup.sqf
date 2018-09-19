@@ -23,8 +23,7 @@ params [["_contextActions", []], ["_contextLevel", 0], ["_parentRow", controlNul
 if (_contextActions isEqualTo []) exitWith {};
 
 // Check action conditions
-private _params = [call FUNC(getContextPos)];
-_params append GVAR(selected);
+private _params = [call FUNC(getContextPos), +GVAR(selected), GVAR(hovered)];
 _contextActions = _contextActions select {
     _params call (_x select 4);
 };
@@ -98,9 +97,7 @@ private _numberOfRows = 0;
         if (_button isEqualTo 0) then {
             private _ctrlContextRow = ctrlParentControlsGroup _ctrlMouse;
             private _statement = _ctrlContextRow getVariable QGVAR(statement);
-            private _params = [call FUNC(getContextPos)];
-            _params append GVAR(selected);
-            _params call _statement;
+            [call FUNC(getContextPos), +GVAR(selected), GVAR(hovered)] call _statement;
             {call FUNC(closeMenu)} call CBA_fnc_execNextFrame;
         };
     }];

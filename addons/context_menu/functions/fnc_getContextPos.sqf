@@ -9,7 +9,7 @@
  * Position ASL <ARRAY>
  *
  * Example:
- * call zen_context_menu_fnc_getContextPos
+ * [] call zen_context_menu_fnc_getContextPos
  *
  * Public: No
  */
