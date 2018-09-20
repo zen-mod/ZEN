@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [] call zen_context_actions_fnc_teleportZeus
+ * [[0, 0, 0]] call zen_context_actions_fnc_teleportZeus
  *
  * Public: No
  */
