@@ -25,7 +25,10 @@ private _fnc_getActionData = {
 
         private _actionName = configName _entryConfig;
         private _displayName = getText (_entryConfig >> "displayName");
+
         private _icon = getText (_entryConfig >> "icon");
+        private _iconColor = getArray (_entryConfig >> "iconColor");
+        if !(_iconColor isEqualTypeArray [1, 1, 1, 1]) then {_iconColor = [1, 1, 1, 1]};
 
         private _statement = compile getText (_entryConfig >> "statement");
         private _condition = compile getText (_entryConfig >> "condition");
@@ -34,12 +37,13 @@ private _fnc_getActionData = {
         private _priority = getNumber (_entryConfig >> "priority");
 
         private _children = [_entryConfig] call _fnc_getActionData;
-        [_children, 5, false] call CBA_fnc_sortNestedArray;
+        [_children, 6, false] call CBA_fnc_sortNestedArray;
 
         private _actionEntry = [
             _actionName,
             _displayName,
             _icon,
+            _iconColor,
             _statement,
             _condition,
             _priority,
@@ -53,7 +57,7 @@ private _fnc_getActionData = {
 };
 
 private _contextActions = [configFile >> QGVAR(actions)] call _fnc_getActionData;
-[_contextActions, 5, false] call CBA_fnc_sortNestedArray;
+[_contextActions, 6, false] call CBA_fnc_sortNestedArray;
 
 missionNamespace setVariable [QGVAR(actions), _contextActions];
 
@@ -63,6 +67,7 @@ missionNamespace setVariable [QGVAR(actions), _contextActions];
         _actionName,
         _displayName,
         _icon,
+        _iconColor,
         _statement,
         _condition,
         _priority,

@@ -25,7 +25,7 @@ if (_contextActions isEqualTo []) exitWith {};
 // Check action conditions
 SETUP_ACTION_VARS;
 _contextActions = _contextActions select {
-    ACTION_PARAMS call (_x select 4);
+    ACTION_PARAMS call (_x select 5);
 };
 
 // Create context group control
@@ -40,7 +40,7 @@ GVAR(contextGroups) set [_contextLevel, _ctrlContextGroup];
 private _numberOfRows = 0;
 
 {
-    _x params ["_actionName", "_displayName", "_icon", "_statement", "_condition", "", "_children"];
+    _x params ["_actionName", "_displayName", "_icon", "_iconColor", "_statement", "_condition", "", "_children"];
 
     // Create context row control
     private _ctrlContextRow = _display ctrlCreate [QGVAR(row), IDC_CONTEXT_ROW, _ctrlContextGroup];
@@ -50,6 +50,7 @@ private _numberOfRows = 0;
     _ctrlName ctrlSetText _displayName;
 
     private _ctrlIcon = _ctrlContextRow controlsGroupCtrl IDC_CONTEXT_ICON;
+    _ctrlIcon ctrlSetTextColor _iconColor;
     _ctrlIcon ctrlSetText _icon;
 
     // Hide expandable icon if no children actions
