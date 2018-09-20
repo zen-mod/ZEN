@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Context_Actions">
+        <Key ID="STR_ZEN_Context_Actions_TeleportZeus">
+            <English>Teleport Zeus</English>
+        </Key>
+    </Package>
+</Project>
