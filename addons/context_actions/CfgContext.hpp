@@ -1,4 +1,37 @@
 class EGVAR(context_menu,actions) {
+    class Behaviour {
+        displayName = "$STR_3DEN_Group_Attribute_Behaviour_displayName";
+        condition = QUOTE(!(_selectedGroups isEqualTo []));
+        class Careless {
+            displayName = "$STR_3DEN_Attributes_Behaviour_Careless_text";
+            icon = QPATHTOF(UI\careless_ca.paa);
+            statement = QUOTE([ARR_2(_selectedGroups,'CARELESS')] call FUNC(setBehaviour));
+        };
+        class Safe {
+            displayName = "$STR_safe";
+            icon = QPATHTOF(UI\safe_ca.paa);
+            iconColor[] = {0, 1, 0, 1};
+            statement = QUOTE([ARR_2(_selectedGroups,'SAFE')] call FUNC(setBehaviour));
+        };
+        class Aware {
+            displayName = "$STR_aware";
+            icon = QPATHTOF(UI\aware_ca.paa);
+            iconColor[] = {1, 1, 0, 1};
+            statement = QUOTE([ARR_2(_selectedGroups,'AWARE')] call FUNC(setBehaviour));
+        };
+        class Combat {
+            displayName = "$STR_combat";
+            icon = QPATHTOF(UI\combat_ca.paa);
+            iconColor[] = {1, 0, 0, 1};
+            statement = QUOTE([ARR_2(_selectedGroups,'COMBAT')] call FUNC(setBehaviour));
+        };
+        class Stealth {
+            displayName = "$STR_stealth";
+            icon = QPATHTOF(UI\stealth_ca.paa);
+            iconColor[] = {0, 1, 1, 1};
+            statement = QUOTE([ARR_2(_selectedGroups,'STEALTH')] call FUNC(setBehaviour));
+        };
+    };
     class Stance {
         displayName = "$STR_A3_RscAttributeUnitPos_Title";
         condition = QUOTE(_selectedObjects findIf {_x isKindOf 'CAManBase' && {!isPlayer _x}} > -1);
