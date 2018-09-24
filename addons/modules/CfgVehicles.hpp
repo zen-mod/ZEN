@@ -10,6 +10,11 @@ class CfgVehicles {
         scope = 1;
         scopeCurator = 2;
     };
+    class GVAR(moduleHideZeus): GVAR(moduleBase) {
+        category = "Curator";
+        displayName = CSTRING(ModuleHideZeus);
+        curatorInfoType = QGVAR(RscHideZeus);
+    };
     class GVAR(moduleTeleportPlayers): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Players);

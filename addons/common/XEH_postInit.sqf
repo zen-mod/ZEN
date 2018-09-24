@@ -14,3 +14,15 @@
     params ["_group", "_mode"];
     _group setSpeedMode _mode;
 }] call CBA_fnc_addEventHandler;
+
+if (isServer) then {
+    [QGVAR(hideObjectGlobal), {
+        params ["_object", "_hide"];
+        _object hideObjectGlobal _hide;
+    }] call CBA_fnc_addEventHandler;
+
+    [QGVAR(enableSimulationGlobal), {
+        params ["_object", "_enable"];
+        _object enableSimulationGlobal _enable;
+    }] call CBA_fnc_addEventHandler;
+};

@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Modules">
+        <Key ID="STR_ZEN_Modules_ModuleHideZeus">
+            <English>Hide Zeus</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ZeusIsNowHidden">
+            <English>Zeus is now hidden</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ZeusIsNowVisible">
+            <English>Zeus is now visible</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleTeleportPlayers">
             <English>Teleport Players</English>
         </Key>

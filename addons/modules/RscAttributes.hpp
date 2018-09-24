@@ -39,6 +39,36 @@ class GVAR(RscToolboxYesNo): ctrlToolbox {
     strings[] = {ECSTRING(common,No), ECSTRING(common,Yes)};
 };
 
+class GVAR(RscHideZeus): RscDisplayAttributes {
+    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscHideZeus))] call EFUNC(common,zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscHideZeus))] call EFUNC(common,zeusAttributes));
+    class Controls: Controls {
+        class Background: Background {};
+        class Title: Title {};
+        class Content: Content {
+            class Controls {
+                class hideZeus: RscControlsGroupNoScrollbars {
+                    onSetFocus = QUOTE(_this call FUNC(ui_hideZeus));
+                    x = 0;
+                    y = 0;
+                    w = 26 * GUI_GRID_W;
+                    h = GUI_GRID_H;
+                    class controls {
+                        class Label: GVAR(RscLabel) {
+                            text = CSTRING(ModuleHideZeus);
+                        };
+                        class Value: GVAR(RscToolboxYesNo) {
+                            idc = IDC_HIDEZEUS_VALUE;
+                        };
+                    };
+                };
+            };
+        };
+        class ButtonOK: ButtonOK {};
+        class ButtonCancel: ButtonCancel {};
+    };
+};
+
 class GVAR(RscTeleportPlayers): RscDisplayAttributes {
     onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscTeleportPlayers))] call EFUNC(common,zeusAttributes));
     onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscTeleportPlayers))] call EFUNC(common,zeusAttributes));

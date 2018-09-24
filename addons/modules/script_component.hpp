@@ -18,6 +18,8 @@
 #include "\a3\ui_f\hpp\defineCommonGrids.inc"
 #include "\a3\ui_f_curator\ui\defineResinclDesign.inc"
 
+#define IDC_HIDEZEUS_VALUE 51900
+
 #define IDC_TELEPORTPLAYERS_BUTTON_SIDES 52000
 #define IDC_TELEPORTPLAYERS_BUTTON_GROUPS 52010
 #define IDC_TELEPORTPLAYERS_BUTTON_PLAYERS 52020
