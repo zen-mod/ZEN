@@ -32,6 +32,28 @@ class EGVAR(context_menu,actions) {
             statement = QUOTE([ARR_2(_selectedGroups,'STEALTH')] call FUNC(setBehaviour));
         };
     };
+    class Speed {
+        displayName = "$STR_HC_Menu_Speed";
+        condition = QUOTE(!(_selectedGroups isEqualTo []));
+        class Limited {
+            displayName = "$STR_speed_limited";
+            icon = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeSpeedMode\limited_ca.paa";
+            statement = QUOTE([ARR_2(_selectedGroups,'LIMITED')] call FUNC(setSpeed));
+            priority = 3;
+        };
+        class Normal {
+            displayName = "$STR_speed_normal";
+            icon = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeSpeedMode\normal_ca.paa";
+            statement = QUOTE([ARR_2(_selectedGroups,'NORMAL')] call FUNC(setSpeed));
+            priority = 2;
+        };
+        class Full {
+            displayName = "$STR_speed_full";
+            icon = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeSpeedMode\full_ca.paa";
+            statement = QUOTE([ARR_2(_selectedGroups,'FULL')] call FUNC(setSpeed));
+            priority = 1;
+        };
+    };
     class Stance {
         displayName = "$STR_A3_RscAttributeUnitPos_Title";
         condition = QUOTE(_selectedObjects findIf {_x isKindOf 'CAManBase' && {!isPlayer _x}} > -1);

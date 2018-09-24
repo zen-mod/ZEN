@@ -9,3 +9,8 @@
     params ["_group", "_behaviour"];
     _group setBehaviour _behaviour;
 }] call CBA_fnc_addEventHandler;
+
+[QGVAR(setSpeedMode), {
+    params ["_group", "_mode"];
+    _group setSpeedMode _mode;
+}] call CBA_fnc_addEventHandler;
