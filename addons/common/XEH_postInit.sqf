@@ -25,4 +25,9 @@ if (isServer) then {
         params ["_object", "_enable"];
         _object enableSimulationGlobal _enable;
     }] call CBA_fnc_addEventHandler;
+
+    [QGVAR(setFriend), {
+        params ["_side1", "_side2", "_value"];
+        _side1 setFriend [_side2, _value];
+    }] call CBA_fnc_addEventHandler;
 };

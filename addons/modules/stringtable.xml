@@ -10,6 +10,21 @@
         <Key ID="STR_ZEN_Modules_ZeusIsNowVisible">
             <English>Zeus is now visible</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleSideRelations">
+            <English>Side Relations</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_RelationToChange">
+            <English>Relation to Change</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_HostileTo">
+            <English>Hostile to</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_FriendlyTo">
+            <English>Friendly to</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_PlayRadioMessage">
+            <English>Play Radio Message</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleTeleportPlayers">
             <English>Teleport Players</English>
         </Key>

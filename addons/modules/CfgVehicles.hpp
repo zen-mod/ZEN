@@ -15,6 +15,11 @@ class CfgVehicles {
         displayName = CSTRING(ModuleHideZeus);
         curatorInfoType = QGVAR(RscHideZeus);
     };
+    class GVAR(moduleSideRelations): GVAR(moduleBase) {
+        category = "MissionFlow";
+        displayName = CSTRING(ModuleSideRelations);
+        curatorInfoType = QGVAR(RscSideRelations);
+    };
     class GVAR(moduleTeleportPlayers): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Players);

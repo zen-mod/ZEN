@@ -1,8 +1,10 @@
 class RscText;
 class RscEdit;
+class RscCombo;
 class RscButton;
 class RscListBox;
 class ctrlToolbox;
+class ctrlButtonPictureKeepAspect;
 class RscActivePicture;
 class RscControlsGroup;
 class RscControlsGroupNoScrollbars;
@@ -59,6 +61,85 @@ class GVAR(RscHideZeus): RscDisplayAttributes {
                         };
                         class Value: GVAR(RscToolboxYesNo) {
                             idc = IDC_HIDEZEUS_VALUE;
+                        };
+                    };
+                };
+            };
+        };
+        class ButtonOK: ButtonOK {};
+        class ButtonCancel: ButtonCancel {};
+    };
+};
+
+class GVAR(RscSideRelations): RscDisplayAttributes {
+    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscSideRelations))] call EFUNC(common,zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscSideRelations))] call EFUNC(common,zeusAttributes));
+    class Controls: Controls {
+        class Background: Background {};
+        class Title: Title {};
+        class Content: Content {
+            class Controls {
+                class sideRelations: RscControlsGroupNoScrollbars {
+                    onSetFocus = QUOTE(_this call FUNC(ui_sideRelations));
+                    x = 0;
+                    y = 0;
+                    w = 26 * GUI_GRID_W;
+                    h = 2.1 * GUI_GRID_H;
+                    class controls {
+                        class RelationLabel: GVAR(RscLabel) {
+                            text = CSTRING(RelationToChange);
+                        };
+                        class RelationToggle: ctrlButtonPictureKeepAspect {
+                            idc = IDC_SIDERELATIONS_TOGGLE;
+                            text = ICON_FRIENDLY;
+                            tooltip = CSTRING(FriendlyTo);
+                            x = 17.55 * GUI_GRID_W;
+                            y = 0;
+                            w = GUI_GRID_W;
+                            h = GUI_GRID_H;
+                            colorBackground[] = {0, 0, 0, 0.7};
+                            tooltipColorBox[] = {1, 1, 1, 1};
+                            tooltipColorShade[] = {0, 0, 0, 0.65};
+                            offsetPressedX = 0;
+                            offsetPressedY = 0;
+                        };
+                        class RelationSide_1: RscCombo {
+                            idc = IDC_SIDERELATIONS_SIDE_1;
+                            x = 10.1 * GUI_GRID_W;
+                            y = 0;
+                            w = 7.35 * GUI_GRID_W;
+                            h = GUI_GRID_H;
+                            colorBackground[] = {0, 0, 0, 0.7};
+                            class Items {
+                                class BLUFOR {
+                                    text = "$STR_WEST";
+                                    picture = ICON_BLUFOR;
+                                    value = 1;
+                                };
+                                class OPFOR {
+                                    text = "$STR_EAST";
+                                    picture = ICON_OPFOR;
+                                    value = 0;
+                                };
+                                class Independent {
+                                    text = "$STR_guerrila";
+                                    picture = ICON_INDEPENDENT;
+                                    value = 2;
+                                };
+                            };
+                        };
+                        class RelationSide_2: RelationSide_1 {
+                            idc = IDC_SIDERELATIONS_SIDE_2;
+                            x = 18.65 * GUI_GRID_W;
+                            class Items {}; // Special handling through script
+                        };
+                        class RadioLabel: GVAR(RscLabel) {
+                            text = CSTRING(PlayRadioMessage);
+                            y = 1.1 * GUI_GRID_H;
+                        };
+                        class Radio: GVAR(RscToolboxYesNo) {
+                            idc = IDC_SIDERELATIONS_RADIO;
+                            y = 1.1 * GUI_GRID_H;
                         };
                     };
                 };

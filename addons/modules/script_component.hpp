@@ -20,6 +20,11 @@
 
 #define IDC_HIDEZEUS_VALUE 51900
 
+#define IDC_SIDERELATIONS_TOGGLE 53100
+#define IDC_SIDERELATIONS_SIDE_1 53101
+#define IDC_SIDERELATIONS_SIDE_2 53102
+#define IDC_SIDERELATIONS_RADIO 53103
+
 #define IDC_TELEPORTPLAYERS_BUTTON_SIDES 52000
 #define IDC_TELEPORTPLAYERS_BUTTON_GROUPS 52010
 #define IDC_TELEPORTPLAYERS_BUTTON_PLAYERS 52020
@@ -39,6 +44,9 @@
 
 #define ICON_CHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_checked_ca.paa"
 #define ICON_UNCHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_unchecked_ca.paa"
+
+#define ICON_HOSTILE "\a3\ui_f\data\igui\cfg\simpletasks\types\attack_ca.paa"
+#define ICON_FRIENDLY "\a3\ui_f\data\igui\cfg\simpletasks\types\help_ca.paa"
 
 #define ICON_BLUFOR QPATHTOEF(common,UI\icon_blufor_ca.paa)
 #define ICON_OPFOR QPATHTOEF(common,UI\icon_opfor_ca.paa)

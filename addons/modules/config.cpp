@@ -5,6 +5,7 @@ class CfgPatches {
         name = COMPONENT_NAME;
         units[] = {
             QGVAR(moduleHideZeus),
+            QGVAR(moduleSideRelations),
             QGVAR(moduleTeleportPlayers)
         };
         weapons[] = {};
