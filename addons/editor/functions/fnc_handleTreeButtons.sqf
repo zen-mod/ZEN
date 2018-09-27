@@ -16,15 +16,27 @@
  */
 #include "script_component.hpp"
 
-#define UNIT_TREE_IDCS [IDC_RSCDISPLAYCURATOR_CREATE_UNITS_EAST, IDC_RSCDISPLAYCURATOR_CREATE_UNITS_WEST, IDC_RSCDISPLAYCURATOR_CREATE_UNITS_GUER, IDC_RSCDISPLAYCURATOR_CREATE_UNITS_CIV, IDC_RSCDISPLAYCURATOR_CREATE_UNITS_EMPTY]
-#define GROUP_TREE_IDCS [IDC_RSCDISPLAYCURATOR_CREATE_GROUPS_EAST, IDC_RSCDISPLAYCURATOR_CREATE_GROUPS_WEST, IDC_RSCDISPLAYCURATOR_CREATE_GROUPS_GUER, IDC_RSCDISPLAYCURATOR_CREATE_GROUPS_CIV, IDC_RSCDISPLAYCURATOR_CREATE_GROUPS_EMPTY]
+#define UNIT_TREE_IDCS [\
+    IDC_RSCDISPLAYCURATOR_CREATE_UNITS_EAST,\
+    IDC_RSCDISPLAYCURATOR_CREATE_UNITS_WEST,\
+    IDC_RSCDISPLAYCURATOR_CREATE_UNITS_GUER,\
+    IDC_RSCDISPLAYCURATOR_CREATE_UNITS_CIV,\
+    IDC_RSCDISPLAYCURATOR_CREATE_UNITS_EMPTY\
+]
+#define GROUP_TREE_IDCS [\
+    IDC_RSCDISPLAYCURATOR_CREATE_GROUPS_EAST,\
+    IDC_RSCDISPLAYCURATOR_CREATE_GROUPS_WEST,\
+    IDC_RSCDISPLAYCURATOR_CREATE_GROUPS_GUER,\
+    IDC_RSCDISPLAYCURATOR_CREATE_GROUPS_CIV,\
+    IDC_RSCDISPLAYCURATOR_CREATE_GROUPS_EMPTY\
+]
 
 params ["_display", "_expand"];
 
-// determine currently active tree
+// Determine currently active tree
 RscDisplayCurator_sections params ["_mode", "_side"];
 
-// cant collapse marker or recent trees
+// Cant collapse marker or recent trees
 if (_mode > 2) exitWith {};
 
 private _treeIDC = switch (_mode) do {
@@ -35,11 +47,11 @@ private _treeIDC = switch (_mode) do {
         GROUP_TREE_IDCS select _side;
     };
     case 2: {
-        IDC_RSCDISPLAYCURATOR_CREATE_MODULES
+        IDC_RSCDISPLAYCURATOR_CREATE_MODULES;
     };
 };
 
-// collapse or expand current tree
+// Collapse or expand current tree
 private _ctrlTree = _display displayCtrl _treeIDC;
 
 if (_expand) then {
