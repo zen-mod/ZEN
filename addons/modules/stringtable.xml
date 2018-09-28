@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Modules">
+        <Key ID="STR_ZEN_Modules_AttributeRadius">
+            <English>Task Radius</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_AttributeRadius_Tooltip">
+            <English>Radius to perform the task within</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_AttributeRadius_Invalid">
+            <English>Invalid radius entered</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleHideZeus">
             <English>Hide Zeus</English>
         </Key>

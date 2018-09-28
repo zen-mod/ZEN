@@ -41,6 +41,30 @@ class GVAR(RscToolboxYesNo): ctrlToolbox {
     strings[] = {ECSTRING(common,No), ECSTRING(common,Yes)};
 };
 
+class GVAR(AttributeRadius): RscControlsGroupNoScrollbars {
+    onSetFocus = QUOTE(_this call FUNC(ui_attributeRadius));
+    idc = IDC_ATTRIBUTERADIUS;
+    x = 0;
+    y = 0;
+    w = 26 * GUI_GRID_W;
+    h = 1.1 * GUI_GRID_H;
+    class controls {
+        class Label: GVAR(RscLabel) {
+            text = CSTRING(AttributeRadius);
+            tooltip = CSTRING(AttributeRadius_Tooltip);
+            y = 0.1 * GUI_GRID_H;
+        };
+        class Value: RscEdit {
+            idc = IDC_ATTRIBUTERADIUS_VALUE;
+            text = "100";
+            x = 10.1 * GUI_GRID_W;
+            y = 0.1 * GUI_GRID_H;
+            w = 15.9 * GUI_GRID_W;
+            h = GUI_GRID_H;
+        };
+    };
+};
+
 class GVAR(RscHideZeus): RscDisplayAttributes {
     onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscHideZeus))] call EFUNC(common,zeusAttributes));
     onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscHideZeus))] call EFUNC(common,zeusAttributes));
