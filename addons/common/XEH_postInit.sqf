@@ -30,4 +30,28 @@ if (isServer) then {
         params ["_side1", "_side2", "_value"];
         _side1 setFriend [_side2, _value];
     }] call CBA_fnc_addEventHandler;
+
+    [QGVAR(addObjects), {
+        params ["_objects", ["_curator", objNull]];
+
+        if (!isNull _curator) exitWith {
+            _curator addCuratorEditableObjects [_objects, true];
+        };
+
+        {
+            _x addCuratorEditableObjects [_objects, true];
+        } forEach allCurators;
+    }] call CBA_fnc_addEventHandler;
+
+    [QGVAR(removeObjects), {
+        params ["_objects", ["_curator", objNull]];
+
+        if (!isNull _curator) exitWith {
+            _curator removeCuratorEditableObjects [_objects, true];
+        };
+
+        {
+            _x removeCuratorEditableObjects [_objects, true];
+        } forEach allCurators;
+    }] call CBA_fnc_addEventHandler;
 };
