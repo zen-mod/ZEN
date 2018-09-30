@@ -14,4 +14,5 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+#include "CfgCurator.hpp"
 #include "RscDisplayCurator.hpp"
