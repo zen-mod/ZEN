@@ -13,5 +13,20 @@
         <Key ID="STR_ZEN_Common_No">
             <English>No</English>
         </Key>
+        <Key ID="STR_ZEN_Common_VeryLow">
+            <English>Very Low</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_Low">
+            <English>Low</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_Medium">
+            <English>Medium</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_High">
+            <English>High</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_VeryHigh">
+            <English>Very High</English>
+        </Key>
     </Package>
 </Project>

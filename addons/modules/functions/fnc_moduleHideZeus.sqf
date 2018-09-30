@@ -16,7 +16,7 @@
 #include "script_component.hpp"
 
 params ["_invisible"];
-TRACE_1("Module Hide Zeus",_invisible);
+TRACE_1("Module Hide Zeus",_this);
 
 private _player = player;
 private _logic = getAssignedCuratorLogic _player;

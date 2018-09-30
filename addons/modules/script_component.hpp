@@ -48,6 +48,12 @@
 #define IDC_TELEPORTPLAYERS_PLAYERS_SEARCH 60341
 #define IDC_TELEPORTPLAYERS_PLAYERS_BUTTON 60342
 
+#define IDC_CREATEMINEFIELD 60400
+#define IDC_CREATEMINEFIELD_AREA_X 60401
+#define IDC_CREATEMINEFIELD_AREA_Y 60402
+#define IDC_CREATEMINEFIELD_TYPE 60403
+#define IDC_CREATEMINEFIELD_DENSITY 60404
+
 #define ICON_CHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_checked_ca.paa"
 #define ICON_UNCHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_unchecked_ca.paa"
 

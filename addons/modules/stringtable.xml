@@ -10,6 +10,18 @@
         <Key ID="STR_ZEN_Modules_AttributeRadius_Invalid">
             <English>Invalid radius entered</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateMinefield">
+            <English>Create Minefield</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateMinefield_MineArea">
+            <English>Minefield Area</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateMinefield_MineType">
+            <English>Mine Type</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateMinefield_MineDensity">
+            <English>Mine Density</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleHideZeus">
             <English>Hide Zeus</English>
         </Key>

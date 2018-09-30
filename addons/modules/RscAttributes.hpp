@@ -65,6 +65,93 @@ class GVAR(AttributeRadius): RscControlsGroupNoScrollbars {
     };
 };
 
+class GVAR(RscCreateMinefield): RscDisplayAttributes {
+    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscCreateMinefield))] call EFUNC(common,zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscCreateMinefield))] call EFUNC(common,zeusAttributes));
+    class Controls: Controls {
+        class Background: Background {};
+        class Title: Title {};
+        class Content: Content {
+            class Controls {
+                class createMinefield: RscControlsGroupNoScrollbars {
+                    onSetFocus = QUOTE(_this call FUNC(ui_createMinefield));
+                    idc = IDC_CREATEMINEFIELD;
+                    x = 0;
+                    y = 0;
+                    w = 26 * GUI_GRID_W;
+                    h = 3.2 * GUI_GRID_H;
+                    class controls {
+                        class AreaLabel: GVAR(RscLabel) {
+                            text = CSTRING(ModuleCreateMinefield_MineArea);
+                        };
+                        class AreaIconX: RscText {
+                            text = "$STR_3DEN_Axis_X";
+                            x = 10.1 * GUI_GRID_W;
+                            y = 0;
+                            w = GUI_GRID_W;
+                            h = GUI_GRID_H;
+                            font = "RobotoCondensedLight";
+                            colorBackground[] = {0.77, 0.18, 0.1, 1};
+                            shadow = 0;
+                        };
+                        class AreaEditX: RscEdit {
+                            idc = IDC_CREATEMINEFIELD_AREA_X;
+                            text = "100";
+                            x = 11.2 * GUI_GRID_W;
+                            y = pixelH;
+                            w = 6.8 * GUI_GRID_W;
+                            h = GUI_GRID_H - pixelH;
+                        };
+                        class AreaIconY: AreaIconX {
+                            text = "$STR_3DEN_Axis_Y";
+                            x = 18.1 * GUI_GRID_W;
+                            colorBackground[] = {0.58, 0.82, 0.22, 1};
+                        };
+                        class AreaEditY: AreaEditX {
+                            idc = IDC_CREATEMINEFIELD_AREA_Y;
+                            x = 19.2 * GUI_GRID_W;
+                        };
+                        class TypeLabel: GVAR(RscLabel) {
+                            text = CSTRING(ModuleCreateMinefield_MineType);
+                            y = 1.1 * GUI_GRID_H;
+                        };
+                        class Type: RscCombo {
+                            idc = IDC_CREATEMINEFIELD_TYPE;
+                            x = 10.1 * GUI_GRID_W;
+                            y = 1.1 * GUI_GRID_H;
+                            w = 15.9 * GUI_GRID_W;
+                            h = GUI_GRID_H;
+                            colorBackground[] = {0, 0, 0, 0.7};
+                        };
+                        class DensityLabel: GVAR(RscLabel) {
+                            text = CSTRING(ModuleCreateMinefield_MineDensity);
+                            y = 2.2 * GUI_GRID_H;
+                        };
+                        class Density: ctrlToolbox {
+                            idc = IDC_CREATEMINEFIELD_DENSITY;
+                            x = 10.1 * GUI_GRID_W;
+                            y = 2.2 * GUI_GRID_H;
+                            w = 15.9 * GUI_GRID_W;
+                            h = GUI_GRID_H;
+                            rows = 1;
+                            columns = 5;
+                            strings[] = {
+                                ECSTRING(common,VeryLow),
+                                ECSTRING(common,Low),
+                                ECSTRING(common,Medium),
+                                ECSTRING(common,High),
+                                ECSTRING(common,VeryHigh)
+                            };
+                        };
+                    };
+                };
+            };
+        };
+        class ButtonOK: ButtonOK {};
+        class ButtonCancel: ButtonCancel {};
+    };
+};
+
 class GVAR(RscHideZeus): RscDisplayAttributes {
     onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscHideZeus))] call EFUNC(common,zeusAttributes));
     onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscHideZeus))] call EFUNC(common,zeusAttributes));
@@ -75,6 +162,7 @@ class GVAR(RscHideZeus): RscDisplayAttributes {
             class Controls {
                 class hideZeus: RscControlsGroupNoScrollbars {
                     onSetFocus = QUOTE(_this call FUNC(ui_hideZeus));
+                    idc = IDC_HIDEZEUS;
                     x = 0;
                     y = 0;
                     w = 26 * GUI_GRID_W;
@@ -105,6 +193,7 @@ class GVAR(RscSideRelations): RscDisplayAttributes {
             class Controls {
                 class sideRelations: RscControlsGroupNoScrollbars {
                     onSetFocus = QUOTE(_this call FUNC(ui_sideRelations));
+                    idc = IDC_SIDERELATIONS;
                     x = 0;
                     y = 0;
                     w = 26 * GUI_GRID_W;
@@ -184,6 +273,7 @@ class GVAR(RscTeleportPlayers): RscDisplayAttributes {
             class Controls {
                 class teleportPlayers: RscControlsGroupNoScrollbars {
                     onSetFocus = QUOTE(_this call FUNC(ui_teleportPlayers));
+                    idc = IDC_TELEPORTPLAYERS;
                     x = 0;
                     y = 0;
                     w = 26 * GUI_GRID_W;

@@ -12,13 +12,14 @@
  * None
  *
  * Example:
- * [west, east, false] call zen_modules_fnc_moduleSideRelations
+ * [west, east, 0, false] call zen_modules_fnc_moduleSideRelations
  *
  * Public: No
  */
 #include "script_component.hpp"
 
 params ["_side1", "_side2", "_friendValue", "_radio"];
+TRACE_1("Module Side Relations",_this);
 
 // Change side relations
 [QEGVAR(common,setFriend), [_side1, _side2, _friendValue]] call CBA_fnc_serverEvent;

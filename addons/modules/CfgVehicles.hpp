@@ -10,6 +10,10 @@ class CfgVehicles {
         scope = 1;
         scopeCurator = 2;
     };
+    class GVAR(moduleCreateMinefield): GVAR(moduleBase) {
+        displayName = CSTRING(ModuleCreateMinefield);
+        curatorInfoType = QGVAR(RscCreateMinefield);
+    };
     class GVAR(moduleHideZeus): GVAR(moduleBase) {
         category = "Curator";
         displayName = CSTRING(ModuleHideZeus);
