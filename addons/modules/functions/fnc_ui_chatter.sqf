@@ -1,6 +1,6 @@
 /*
  * Author: mharis001
- * Initalizes the "Chatter" Zeus module display.
+ * Initializes the "Chatter" Zeus module display.
  *
  * Arguments:
  * 0: chatter controls group <CONTROL>

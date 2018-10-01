@@ -6,6 +6,7 @@ class CfgPatches {
         units[] = {
             QGVAR(moduleChatter),
             QGVAR(moduleCreateMinefield),
+            QGVAR(moduleGlobalHint),
             QGVAR(moduleHideZeus),
             QGVAR(moduleSideRelations),
             QGVAR(moduleTeleportPlayers)

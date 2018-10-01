@@ -66,6 +66,9 @@
         <Key ID="STR_ZEN_Modules_ModuleCreateMinefield_MineDensity">
             <English>Mine Density</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleGlobalHint">
+            <English>Global Hint</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleHideZeus">
             <English>Hide Zeus</English>
         </Key>

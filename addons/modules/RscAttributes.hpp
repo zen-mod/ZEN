@@ -4,6 +4,8 @@ class RscCombo;
 class RscButton;
 class RscListBox;
 class ctrlToolbox;
+class RscEditMulti;
+class RscStructuredText;
 class ctrlButtonPictureKeepAspect;
 class RscActivePicture;
 class RscControlsGroup;
@@ -242,6 +244,64 @@ class GVAR(RscCreateMinefield): RscDisplayAttributes {
                                 ECSTRING(common,Medium),
                                 ECSTRING(common,High),
                                 ECSTRING(common,VeryHigh)
+                            };
+                        };
+                    };
+                };
+            };
+        };
+        class ButtonOK: ButtonOK {};
+        class ButtonCancel: ButtonCancel {};
+    };
+};
+
+class GVAR(RscGlobalHint): RscDisplayAttributes {
+    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscGlobalHint))] call EFUNC(common,zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscGlobalHint))] call EFUNC(common,zeusAttributes));
+    class Controls: Controls {
+        class Background: Background {};
+        class Title: Title {};
+        class Content: Content {
+            class Controls {
+                class globalHint: RscControlsGroupNoScrollbars {
+                    onSetFocus = QUOTE(_this call FUNC(ui_globalHint));
+                    idc = IDC_GLOBALHINT;
+                    x = 0;
+                    y = 0;
+                    w = 26 * GUI_GRID_W;
+                    h = 6 * GUI_GRID_H;
+                    class controls {
+                        class Edit: RscEditMulti {
+                            idc = IDC_GLOBALHINT_EDIT;
+                            x = pixelW;
+                            y = pixelH;
+                            w = 13 * GUI_GRID_W - pixelW;
+                            h = 6 * GUI_GRID_H - pixelH;
+                            colorBackground[] = {0.25, 0.25, 0.25, 0.1};
+                        };
+                        class Container: RscControlsGroup {
+                            idc = -1;
+                            x = 13.1 * GUI_GRID_W;
+                            y = 0;
+                            w = 12.9 * GUI_GRID_W;
+                            h = 6 * GUI_GRID_H;
+                            class controls {
+                                class Preview: RscStructuredText {
+                                    idc = IDC_GLOBALHINT_PREVIEW;
+                                    x = 0;
+                                    y = 0;
+                                    w = 12.2 * GUI_GRID_W;
+                                    h = 2 * safeZoneH;
+                                    size = 0.9 * GUI_GRID_H; // Trial and error to get best representation of actual hint
+                                    colorBackground[] = {0, 0, 0, 0.6};
+                                    class Attributes {
+                                        font = "RobotoCondensed";
+                                        color = "#FFFFFF";
+                                        colorLink = "#D09B43";
+                                        align = "center";
+                                        shadow = 1;
+                                    };
+                                };
                             };
                         };
                     };

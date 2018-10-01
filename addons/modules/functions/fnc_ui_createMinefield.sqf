@@ -1,6 +1,6 @@
 /*
  * Author: mharis001
- * Initalizes the "Create Minefield" Zeus module display.
+ * Initializes the "Create Minefield" Zeus module display.
  *
  * Arguments:
  * 0: createMinefield controls group <CONTROL>

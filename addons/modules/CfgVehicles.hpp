@@ -19,6 +19,11 @@ class CfgVehicles {
         displayName = CSTRING(ModuleCreateMinefield);
         curatorInfoType = QGVAR(RscCreateMinefield);
     };
+    class GVAR(moduleGlobalHint): GVAR(moduleBase) {
+        category = "Curator";
+        displayName = CSTRING(ModuleGlobalHint);
+        curatorInfoType = QGVAR(RscGlobalHint);
+    };
     class GVAR(moduleHideZeus): GVAR(moduleBase) {
         category = "Curator";
         displayName = CSTRING(ModuleHideZeus);

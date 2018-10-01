@@ -1,6 +1,6 @@
 /*
  * Author: mharis001
- * Initalizes the "Teleport Players" Zeus module display.
+ * Initializes the "Teleport Players" Zeus module display.
  *
  * Arguments:
  * 0: teleportPlayers controls group <CONTROL>

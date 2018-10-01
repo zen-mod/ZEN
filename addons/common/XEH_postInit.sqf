@@ -1,5 +1,10 @@
 #include "script_component.hpp"
 
+[QGVAR(hint), {
+    params ["_message"];
+    hint _message;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(globalChat), {
     params ["_unit", "_message"];
     _unit globalChat _message;

@@ -1,6 +1,6 @@
 /*
  * Author: mharis001
- * Initalizes the "Side Relations" Zeus module display.
+ * Initializes the "Side Relations" Zeus module display.
  *
  * Arguments:
  * 0: sideRelations controls group <CONTROL>

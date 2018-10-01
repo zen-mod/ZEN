@@ -1,15 +1,15 @@
 /*
  * Author: mharis001
- * Initializes the "Hide Zeus" Zeus module display.
+ * Initializes the "Global Hint" Zeus module display.
  *
  * Arguments:
- * 0: hideZeus controls group <CONTROL>
+ * 0: globalHint controls group <CONTROL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL] call zen_modules_fnc_ui_hideZeus
+ * [CONTROL] call zen_modules_fnc_ui_globalHint
  *
  * Public: No
  */
@@ -25,9 +25,19 @@ TRACE_1("Logic Object",_logic);
 
 _control ctrlRemoveAllEventHandlers "SetFocus";
 
-// Set default opposite to current visibility
-private _ctrlValue = _display displayCtrl IDC_HIDEZEUS_VALUE;
-_ctrlValue lbSetCurSel parseNumber !isObjectHidden player;
+// Add EHs to update preview
+private _fnc_updatePreview = {
+    params ["_ctrlEdit"];
+
+    private _display = ctrlParent _ctrlEdit;
+    private _ctrlPreview = _display displayCtrl IDC_GLOBALHINT_PREVIEW;
+
+    _ctrlPreview ctrlSetStructuredText parseText ctrlText _ctrlEdit;
+};
+
+private _ctrlEdit = _display displayCtrl IDC_GLOBALHINT_EDIT;
+_ctrlEdit ctrlAddEventHandler ["KeyDown", _fnc_updatePreview];
+_ctrlEdit ctrlAddEventHandler ["KeyUp", _fnc_updatePreview];
 
 private _fnc_onUnload = {
     private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
@@ -45,10 +55,10 @@ private _fnc_onConfirm = {
     private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
     if (isNull _logic) exitWith {};
 
-    private _ctrlValue = _display displayCtrl IDC_HIDEZEUS_VALUE;
-    private _invisible = lbCurSel _ctrlValue > 0;
+    private _ctrlEdit = _display displayCtrl IDC_GLOBALHINT_EDIT;
+    private _message = parseText ctrlText _ctrlEdit;
 
-    [_invisible] call FUNC(moduleHideZeus);
+    [QEGVAR(common,hint), _message] call CBA_fnc_globalEvent;
 
     deleteVehicle _logic;
 };

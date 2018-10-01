@@ -60,6 +60,10 @@
 #define IDC_CHATTER_SIDES 60503
 #define IDC_CHATTER_CHANNELS 60504
 
+#define IDC_GLOBALHINT 60600
+#define IDC_GLOBALHINT_EDIT 60601
+#define IDC_GLOBALHINT_PREVIEW 60602
+
 #define ICON_CHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_checked_ca.paa"
 #define ICON_UNCHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_unchecked_ca.paa"
 
