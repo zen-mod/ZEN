@@ -7,8 +7,6 @@ class RscCheckBox;
 class RscButtonSearch;
 class RscControlsGroupNoScrollbars;
 
-#define POS_EDGE(DEFAULT,MOVED) ([ARR_2(DEFAULT,MOVED)] select GETMVAR(GVAR(moveDisplayToEdge),false))
-
 class RscDisplayCurator {
     class Controls {
         class Main: RscControlsGroupNoScrollbars {

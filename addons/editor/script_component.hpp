@@ -20,3 +20,5 @@
 #include "\a3\ui_f_curator\ui\defineResinclDesign.inc"
 
 #define IDC_INCLUDE_CREW 25460
+
+#define POS_EDGE(DEFAULT,MOVED) ([ARR_2(DEFAULT,MOVED)] select GETMVAR(GVAR(moveDisplayToEdge),false))
