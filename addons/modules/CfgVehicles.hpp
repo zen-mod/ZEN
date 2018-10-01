@@ -10,6 +10,11 @@ class CfgVehicles {
         scope = 1;
         scopeCurator = 2;
     };
+    class GVAR(moduleChatter): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleChatter);
+        curatorInfoType = QGVAR(RscChatter);
+    };
     class GVAR(moduleCreateMinefield): GVAR(moduleBase) {
         displayName = CSTRING(ModuleCreateMinefield);
         curatorInfoType = QGVAR(RscCreateMinefield);

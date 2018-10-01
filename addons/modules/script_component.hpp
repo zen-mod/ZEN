@@ -54,6 +54,12 @@
 #define IDC_CREATEMINEFIELD_TYPE 60403
 #define IDC_CREATEMINEFIELD_DENSITY 60404
 
+#define IDC_CHATTER 60500
+#define IDC_CHATTER_MESSAGE 60501
+#define IDC_CHATTER_LABEL 60502
+#define IDC_CHATTER_SIDES 60503
+#define IDC_CHATTER_CHANNELS 60504
+
 #define ICON_CHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_checked_ca.paa"
 #define ICON_UNCHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_unchecked_ca.paa"
 

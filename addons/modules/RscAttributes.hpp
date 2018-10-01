@@ -65,6 +65,107 @@ class GVAR(AttributeRadius): RscControlsGroupNoScrollbars {
     };
 };
 
+class GVAR(RscChatter): RscDisplayAttributes {
+    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscChatter))] call EFUNC(common,zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscChatter))] call EFUNC(common,zeusAttributes));
+    class Controls: Controls {
+        class Background: Background {};
+        class Title: Title {};
+        class Content: Content {
+            class Controls {
+                class chatter: RscControlsGroupNoScrollbars {
+                    onSetFocus = QUOTE(_this call FUNC(ui_chatter));
+                    idc = IDC_CHATTER;
+                    x = 0;
+                    y = 0;
+                    w = 26 * GUI_GRID_W;
+                    h = 2.1 * GUI_GRID_H;
+                    class controls {
+                        class MessageLabel: GVAR(RscLabel) {
+                            text = CSTRING(ModuleChatter_Message);
+                        };
+                        class Message: RscEdit {
+                            idc = IDC_CHATTER_MESSAGE;
+                            x = 10.1 * GUI_GRID_W;
+                            y = 0;
+                            w = 15.9 * GUI_GRID_W;
+                            h = GUI_GRID_H;
+                        };
+                        class Label: GVAR(RscLabel) {
+                            idc = IDC_CHATTER_LABEL;
+                            y = 1.1 * GUI_GRID_H;
+                        };
+                        class Sides: RscCombo {
+                            idc = IDC_CHATTER_SIDES;
+                            x = 10.1 * GUI_GRID_W;
+                            y = 1.1 * GUI_GRID_H;
+                            w = 15.9 * GUI_GRID_W;
+                            h = GUI_GRID_H;
+                            colorBackground[] = {0, 0, 0, 0.7};
+                            class Items {
+                                class BLUFOR {
+                                    text = "$STR_WEST";
+                                    picture = ICON_BLUFOR;
+                                    value = 1;
+                                    default = 1;
+                                };
+                                class OPFOR {
+                                    text = "$STR_EAST";
+                                    picture = ICON_OPFOR;
+                                    value = 0;
+                                };
+                                class Independent {
+                                    text = "$STR_guerrila";
+                                    picture = ICON_INDEPENDENT;
+                                    value = 2;
+                                };
+                                class Civilian {
+                                    text = "$STR_Civilian";
+                                    picture = ICON_CIVILIAN;
+                                    value = 3;
+                                };
+                            };
+                        };
+                        class Channels: RscCombo {
+                            idc = IDC_CHATTER_CHANNELS;
+                            x = 10.1 * GUI_GRID_W;
+                            y = 1.1 * GUI_GRID_H;
+                            w = 15.9 * GUI_GRID_W;
+                            h = GUI_GRID_H;
+                            colorBackground[] = {0, 0, 0, 0.7};
+                            class Items {
+                                class Global {
+                                    text = "$STR_channel_global";
+                                    color[] = {0.85, 0.85, 0.85, 1};
+                                };
+                                class Side {
+                                    text = "$STR_channel_side";
+                                    color[] = {0.27, 0.83, 0.99, 1};
+                                    default = 1;
+                                };
+                                class Command {
+                                    text = "$STR_channel_command";
+                                    color[] = {1, 1, 0.27, 1};
+                                };
+                                class Group {
+                                    text = "$STR_channel_group";
+                                    color[] = {0.71, 0.97, 0.38, 1};
+                                };
+                                class Vehicle {
+                                    text = "$STR_channel_vehicle";
+                                    color[] = {1, 0.82, 0, 1};
+                                };
+                            };
+                        };
+                    };
+                };
+            };
+        };
+        class ButtonOK: ButtonOK {};
+        class ButtonCancel: ButtonCancel {};
+    };
+};
+
 class GVAR(RscCreateMinefield): RscDisplayAttributes {
     onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscCreateMinefield))] call EFUNC(common,zeusAttributes));
     onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscCreateMinefield))] call EFUNC(common,zeusAttributes));

@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Modules">
+        <Key ID="STR_ZEN_Modules_OnlyAlive">
+            <English>Unit must be alive</English>
+            <French>Utiliser uniquement sur une unité vivante</French>
+            <German>Einheit muss lebendig sein.</German>
+            <Spanish>Utilizar solo en unidades vivas</Spanish>
+            <Czech>Použitelné jen na živé jednotky</Czech>
+            <Polish>Używaj tylko na żywych jednostkach</Polish>
+            <Russian>Применимо только к живым юнитам</Russian>
+            <Hungarian>Csak élő egységeken használni</Hungarian>
+            <Italian>Si può fare solo su persone vive</Italian>
+            <Portuguese>Usar somente em unidades vivas</Portuguese>
+            <Japanese>ユニットを生存させます</Japanese>
+            <Korean>대상이 반드시 살아있어야 합니다</Korean>
+            <Chinesesimp>单位必须是活着</Chinesesimp>
+            <Chinese>單位必須是活著</Chinese>
+        </Key>
+        <Key ID="STR_ZEN_Modules_OnlyInfantry">
+            <English>Unit must be infantry</English>
+            <French>Utiliser uniquement sur du personnel à pied</French>
+            <German>Nur bei abgesessener Infanterie verwendbar</German>
+            <Spanish>Utilizar solo en infanteria desmontada</Spanish>
+            <Czech>Použitelné jen na pěsích jednotkách</Czech>
+            <Polish>Używaj tylko na piechocie poza wszelkimi pojazdami</Polish>
+            <Russian>Применимо только к пехоте вне техники</Russian>
+            <Hungarian>Csak járműben kívül lévő egységeken használni</Hungarian>
+            <Italian>Si può usare solo su fanteria a piedi</Italian>
+            <Portuguese>Usar somente em infantaria desmontada</Portuguese>
+            <Japanese>ユニットを歩兵にさせます</Japanese>
+            <Korean>대상이 반드시 보병이어야 합니다</Korean>
+            <Chinesesimp>单位必须是步兵</Chinesesimp>
+            <Chinese>單位必須是步兵</Chinese>
+        </Key>
         <Key ID="STR_ZEN_Modules_AttributeRadius">
             <English>Task Radius</English>
         </Key>
@@ -9,6 +41,18 @@
         </Key>
         <Key ID="STR_ZEN_Modules_AttributeRadius_Invalid">
             <English>Invalid radius entered</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleChatter">
+            <English>Chatter</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleChatter_Message">
+            <English>Message</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleChatter_Side">
+            <English>Side</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleChatter_Channel">
+            <English>Channel</English>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateMinefield">
             <English>Create Minefield</English>

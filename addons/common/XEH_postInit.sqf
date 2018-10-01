@@ -1,5 +1,30 @@
 #include "script_component.hpp"
 
+[QGVAR(globalChat), {
+    params ["_unit", "_message"];
+    _unit globalChat _message;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(sideChat), {
+    params ["_unit", "_message"];
+    _unit sideChat _message;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(commandChat), {
+    params ["_unit", "_message"];
+    _unit commandChat _message;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(groupChat), {
+    params ["_unit", "_message"];
+    _unit groupChat _message;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(vehicleChat), {
+    params ["_unit", "_message"];
+    _unit vehicleChat _message;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(setUnitPos), {
     params ["_unit", "_mode"];
     _unit setUnitPos _mode;
