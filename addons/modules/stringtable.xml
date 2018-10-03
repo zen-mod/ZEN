@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Modules">
+        <Key ID="STR_ZEN_Modules_NothingSelected">
+            <English>Place on a unit</English>
+            <French>Placez sur une unité</French>
+            <German>Es wurde nichts ausgewählt</German>
+            <Spanish>Nada bajo el ratón</Spanish>
+            <Portuguese>Coloque em uma unidade</Portuguese>
+            <Czech>Umístni na jednotku</Czech>
+            <Polish>Nie ma nic pod kursorem</Polish>
+            <Russian>Ничего не выделено</Russian>
+            <Hungarian>Semmi sincs az egér alatt</Hungarian>
+            <Italian>Piazza su una unità</Italian>
+            <Japanese>ユニットの上に設置</Japanese>
+            <Korean>대상에 배치하기</Korean>
+            <Chinesesimp>放置在一个单位上</Chinesesimp>
+            <Chinese>放置在一個單位上</Chinese>
+        </Key>
         <Key ID="STR_ZEN_Modules_OnlyAlive">
             <English>Unit must be alive</English>
             <French>Utiliser uniquement sur une unité vivante</French>
@@ -78,6 +94,28 @@
         <Key ID="STR_ZEN_Modules_ZeusIsNowVisible">
             <English>Zeus is now visible</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModulePatrolArea">
+            <English>Patrol Area</English>
+            <French>Zone de patrouille</French>
+            <Russian>Патрулировать зону</Russian>
+            <Czech>Oblast hlídkování</Czech>
+            <Japanese>哨戒範囲</Japanese>
+            <Polish>Patrol obszaru</Polish>
+            <German>Patrouillengebiet</German>
+            <Korean>정찰 구역</Korean>
+            <Italian>Area di Pattugliamento</Italian>
+            <Chinesesimp>巡逻区域</Chinesesimp>
+            <Chinese>巡邏區域</Chinese>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModulePatrolArea_Behaviour_Tooltip">
+            <English>Will modify the behavior, speed mode, and formation of the group</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModulePatrolArea_Relaxed">
+            <English>Relaxed</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModulePatrolArea_Cautious">
+            <English>Cautious</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleSideRelations">
             <English>Side Relations</English>
         </Key>
@@ -104,6 +142,9 @@
         </Key>
         <Key ID="STR_ZEN_Modules_Players">
             <English>Players</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_AI">
+            <English>AI</English>
         </Key>
     </Package>
 </Project>

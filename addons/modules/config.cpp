@@ -8,6 +8,7 @@ class CfgPatches {
             QGVAR(moduleCreateMinefield),
             QGVAR(moduleGlobalHint),
             QGVAR(moduleHideZeus),
+            QGVAR(modulePatrolArea),
             QGVAR(moduleSideRelations),
             QGVAR(moduleTeleportPlayers)
         };

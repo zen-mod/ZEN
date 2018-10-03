@@ -45,6 +45,11 @@
     _group setSpeedMode _mode;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setFormation), {
+    params ["_group", "_formation"];
+    _group setFormation _formation;
+}] call CBA_fnc_addEventHandler;
+
 if (isServer) then {
     [QGVAR(hideObjectGlobal), {
         params ["_object", "_hide"];

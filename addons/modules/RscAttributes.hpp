@@ -344,6 +344,51 @@ class GVAR(RscHideZeus): RscDisplayAttributes {
     };
 };
 
+class GVAR(RscPatrolArea): RscDisplayAttributes {
+    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscPatrolArea))] call EFUNC(common,zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscPatrolArea))] call EFUNC(common,zeusAttributes));
+    class Controls: Controls {
+        class Background: Background {};
+        class Title: Title {};
+        class Content: Content {
+            class Controls {
+                class radius: GVAR(AttributeRadius) {};
+                class patrolArea: RscControlsGroupNoScrollbars {
+                    onSetFocus = QUOTE(_this call FUNC(ui_patrolArea));
+                    idc = IDC_PATROLAREA;
+                    x = 0;
+                    y = 0;
+                    w = 26 * GUI_GRID_W;
+                    h = GUI_GRID_H;
+                    class controls {
+                        class BehaviourLabel: GVAR(RscLabel) {
+                            text = "$STR_3DEN_Group_Attribute_Behaviour_displayName";
+                            tooltip = CSTRING(ModulePatrolArea_Behaviour_Tooltip);
+                        };
+                        class Behaviour: ctrlToolbox {
+                            idc = IDC_PATROLAREA_BEHAVIOUR;
+                            x = 10.1 * GUI_GRID_W;
+                            y = 0;
+                            w = 15.9 * GUI_GRID_W;
+                            h = GUI_GRID_H;
+                            rows = 1;
+                            columns = 4;
+                            strings[] = {
+                                "$STR_3den_attributes_default_unchanged_text",
+                                CSTRING(ModulePatrolArea_Relaxed),
+                                CSTRING(ModulePatrolArea_Cautious),
+                                "$STR_combat"
+                            };
+                        };
+                    };
+                };
+            };
+        };
+        class ButtonOK: ButtonOK {};
+        class ButtonCancel: ButtonCancel {};
+    };
+};
+
 class GVAR(RscSideRelations): RscDisplayAttributes {
     onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscSideRelations))] call EFUNC(common,zeusAttributes));
     onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscSideRelations))] call EFUNC(common,zeusAttributes));
