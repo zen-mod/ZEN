@@ -1,5 +1,5 @@
 /*
- * Author: 654wak654 (from ace_zeus)
+ * Author: 654wak654
  * Shows a Zeus message through the BIS function, handles localization.
  * If multiple args are given, they get formatted.
  *

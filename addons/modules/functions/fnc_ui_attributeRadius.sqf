@@ -1,5 +1,5 @@
 /*
- * Author: SilentSpike (ace_zeus), mharis001
+ * Author: SilentSpike, mharis001
  * Initializes the "Radius" Zeus module attribute.
  *
  * Arguments:

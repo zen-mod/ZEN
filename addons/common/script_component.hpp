@@ -2,8 +2,8 @@
 #define COMPONENT_BEAUTIFIED Common
 #include "\x\zen\addons\main\script_mod.hpp"
 
-// #define DEBUG_MODE_FULL
-// #define DISABLE_COMPILE_CACHE
+#define DEBUG_MODE_FULL
+#define DISABLE_COMPILE_CACHE
 
 #ifdef DEBUG_ENABLED_COMMON
     #define DEBUG_MODE_FULL
@@ -14,3 +14,8 @@
 #endif
 
 #include "\x\zen\addons\main\script_macros.hpp"
+
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
+#include "\a3\ui_f_curator\ui\defineResinclDesign.inc"
+
+#define ICON_TARGET "\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa"
