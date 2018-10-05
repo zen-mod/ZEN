@@ -3,10 +3,25 @@
 call FUNC(compileActions);
 
 [QEGVAR(common,displayCuratorLoad), {
-    if (GVAR(enabled) != 2) exitWith {};
-
     params ["_display"];
 
+    // No EHs needed if completely disabled
+    if (GVAR(enabled) == 0) exitWith {};
+
+    // Just mouse button EH to close when keybind only
+    if (GVAR(enabled) == 1) exitWith {
+        {
+            private _ctrl = _display displayCtrl _x;
+            _ctrl ctrlAddEventHandler ["MouseButtonDown", {
+                call FUNC(closeMenu);
+            }];
+        } forEach [
+            IDC_RSCDISPLAYCURATOR_MAINMAP,
+            IDC_RSCDISPLAYCURATOR_MOUSEAREA
+        ];
+    };
+
+    // Add full mouse EHs if keybind and mouse enabled
     {
         private _ctrl = _display displayCtrl _x;
 
