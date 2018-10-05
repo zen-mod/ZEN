@@ -1,7 +1,5 @@
 #include "script_component.hpp"
 
-call FUNC(compileActions);
-
 [QEGVAR(common,displayCuratorLoad), {
     params ["_display"];
 
