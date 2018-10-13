@@ -50,6 +50,11 @@
     _group setFormation _formation;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setName), {
+    params ["_unit", "_name"];
+    _unit setName _name;
+}] call CBA_fnc_addEventHandler;
+
 if (isServer) then {
     [QGVAR(hideObjectGlobal), {
         params ["_object", "_hide"];

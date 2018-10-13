@@ -38,7 +38,7 @@ class GVAR(RscEdit): RscEdit {
 
 class GVAR(RscAttributeName): RscControlsGroupNoScrollbars {
     idc = IDC_ATTRIBUTENAME;
-    onSetFocus = "";
+    onSetFocus = QUOTE(_this call FUNC(ui_attributeName));
     x = 0;
     y = 0;
     w = 26 * GUI_GRID_W;
