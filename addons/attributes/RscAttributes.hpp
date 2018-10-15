@@ -55,7 +55,7 @@ class GVAR(RscAttributeName): RscControlsGroupNoScrollbars {
 
 class GVAR(RscAttributeSkill): RscControlsGroupNoScrollbars {
     idc = IDC_ATTRIBUTESKILL;
-    onSetFocus = "";
+    onSetFocus = QUOTE(_this call FUNC(ui_attributeSkill));
     x = 0;
     y = 0;
     w = 26 * GUI_GRID_W;
