@@ -2,16 +2,69 @@
 <Project name="ZEN">
     <Package name="Common">
         <Key ID="STR_ZEN_Common_Category">
-            <English>ZEN</English>
+            <English>Zeus Enhanced</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_Enabled">
+            <English>Enabled</English>
+            <Czech>Povoleno</Czech>
+            <French>Activer</French>
+            <German>Aktiviert</German>
+            <Italian>Attivato</Italian>
+            <Polish>Włączone</Polish>
+            <Portuguese>Ativado</Portuguese>
+            <Russian>Вкл.</Russian>
+            <Spanish>Activado</Spanish>
+            <Japanese>有効化</Japanese>
+            <Korean>활성화</Korean>
+            <Chinese>啟用</Chinese>
+            <Chinesesimp>启用</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Common_Disabled">
             <English>Disabled</English>
+            <Czech>Zakázáno</Czech>
+            <French>Désactiver</French>
+            <German>Deaktiviert</German>
+            <Italian>Disattivato</Italian>
+            <Polish>Wyłączone</Polish>
+            <Portuguese>Desativado</Portuguese>
+            <Russian>Откл.</Russian>
+            <Spanish>Desactivado</Spanish>
+            <Japanese>無効化</Japanese>
+            <Korean>비활성화</Korean>
+            <Chinese>停用</Chinese>
+            <Chinesesimp>停用</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Common_Yes">
             <English>Yes</English>
+            <German>Ja</German>
+            <Spanish>Si</Spanish>
+            <Polish>Tak</Polish>
+            <Czech>Ano</Czech>
+            <French>Oui</French>
+            <Russian>Да</Russian>
+            <Hungarian>Igen</Hungarian>
+            <Portuguese>Sim</Portuguese>
+            <Italian>Si</Italian>
+            <Japanese>はい</Japanese>
+            <Korean>예</Korean>
+            <Chinese>是</Chinese>
+            <Chinesesimp>是</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Common_No">
             <English>No</English>
+            <German>Nein</German>
+            <Spanish>No</Spanish>
+            <Polish>Nie</Polish>
+            <Czech>Ne</Czech>
+            <French>Non</French>
+            <Russian>Нет</Russian>
+            <Hungarian>Nem</Hungarian>
+            <Portuguese>Não</Portuguese>
+            <Italian>No</Italian>
+            <Japanese>いいえ</Japanese>
+            <Korean>아니오</Korean>
+            <Chinese>否</Chinese>
+            <Chinesesimp>否</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Common_VeryLow">
             <English>Very Low</English>
