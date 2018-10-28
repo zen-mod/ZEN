@@ -158,7 +158,7 @@ class GVAR(RscAttributeRank): RscControlsGroupNoScrollbars {
             idc = IDC_ATTRIBUTERANK_PRIVATE;
             text = "\a3\Ui_f\data\GUI\Cfg\Ranks\private_gs.paa";
             tooltip = "$STR_Private";
-            x = 11 * GUI_GRID_W;
+            x = 11.25 * GUI_GRID_W;
             y = 0.5 * GUI_GRID_H;
             w = 1.5 * GUI_GRID_W;
             h = 1.5 * GUI_GRID_H;
@@ -167,37 +167,37 @@ class GVAR(RscAttributeRank): RscControlsGroupNoScrollbars {
             idc = IDC_ATTRIBUTERANK_CORPORAL;
             text = "\a3\Ui_f\data\GUI\Cfg\Ranks\corporal_gs.paa";
             tooltip = "$STR_Corporal";
-            x = 13 * GUI_GRID_W;
+            x = 13.25 * GUI_GRID_W;
         };
         class Sergeant: Private {
             idc = IDC_ATTRIBUTERANK_SERGEANT;
             text = "\a3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
             tooltip = "$STR_Sergeant";
-            x = 15 * GUI_GRID_W;
+            x = 15.25 * GUI_GRID_W;
         };
         class Lieutenant: Private {
             idc = IDC_ATTRIBUTERANK_LIEUTENANT;
             text = "\a3\Ui_f\data\GUI\Cfg\Ranks\lieutenant_gs.paa";
             tooltip = "$STR_Lieutenant";
-            x = 17 * GUI_GRID_W;
+            x = 17.25 * GUI_GRID_W;
         };
         class Captain: Private {
             idc = IDC_ATTRIBUTERANK_CAPTAIN;
             text = "\a3\Ui_f\data\GUI\Cfg\Ranks\captain_gs.paa";
             tooltip = "$STR_Captain";
-            x = 19 * GUI_GRID_W;
+            x = 19.25 * GUI_GRID_W;
         };
         class Major: Private {
             idc = IDC_ATTRIBUTERANK_MAJOR;
             text = "\a3\Ui_f\data\GUI\Cfg\Ranks\major_gs.paa";
             tooltip = "$STR_Major";
-            x = 21 * GUI_GRID_W;
+            x = 21.25 * GUI_GRID_W;
         };
         class Colonel: Private {
             idc = IDC_ATTRIBUTERANK_COLONEL;
             text = "\a3\Ui_f\data\GUI\Cfg\Ranks\colonel_gs.paa";
             tooltip = "$STR_Colonel";
-            x = 23 * GUI_GRID_W;
+            x = 23.25 * GUI_GRID_W;
         };
     };
 };
