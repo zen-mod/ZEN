@@ -136,7 +136,7 @@ class GVAR(RscAttributeAmmo): RscControlsGroupNoScrollbars {
 
 class GVAR(RscAttributeRank): RscControlsGroupNoScrollbars {
     idc = IDC_ATTRIBUTERANK;
-    onSetFocus = "";
+    onSetFocus = QUOTE(_this call FUNC(ui_attributeRank));
     x = 0;
     y = 0;
     w = 26 * GUI_GRID_W;
@@ -204,7 +204,7 @@ class GVAR(RscAttributeRank): RscControlsGroupNoScrollbars {
 
 class GVAR(RscAttributeUnitPos): RscControlsGroupNoScrollbars {
     idc = IDC_ATTRIBUTEUNITPOS;
-    onSetFocus = "";
+    onSetFocus = QUOTE(_this call FUNC(ui_attributeUnitPos));
     x = 0;
     y = 0;
     w = 26 * GUI_GRID_W;
