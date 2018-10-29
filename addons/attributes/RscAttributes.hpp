@@ -53,6 +53,23 @@ class GVAR(RscAttributeName): RscControlsGroupNoScrollbars {
     };
 };
 
+class GVAR(RscAttributeGroupID): RscControlsGroupNoScrollbars {
+    idc = IDC_ATTRIBUTEGROUPID;
+    onSetFocus = QUOTE(_this call FUNC(ui_attributeGroupID));
+    x = 0;
+    y = 0;
+    w = 26 * GUI_GRID_W;
+    h = GUI_GRID_H;
+    class controls {
+        class Label: GVAR(RscLabel) {
+            text = "$STR_A3_RscAttributeGroupID_Title";
+        };
+        class Edit: GVAR(RscEdit) {
+            idc = IDC_ATTRIBUTEGROUPID_EDIT;
+        };
+    };
+};
+
 class GVAR(RscAttributeSkill): RscControlsGroupNoScrollbars {
     idc = IDC_ATTRIBUTESKILL;
     onSetFocus = QUOTE(_this call FUNC(ui_attributeSkill));
@@ -330,6 +347,23 @@ class GVAR(RscAttributesMan): RscDisplayAttributes {
                 class Rank: GVAR(RscAttributeRank) {};
                 class UnitPos: GVAR(RscAttributeUnitPos) {};
                 class RespawnPosition: GVAR(RscAttributeRespawnPosition) {};
+            };
+        };
+        class ButtonOK: ButtonOK {};
+        class ButtonCancel: ButtonCancel {};
+    };
+};
+
+class GVAR(RscAttributesGroup): RscDisplayAttributes {
+    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscAttributesGroup))] call EFUNC(common,zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscAttributesGroup))] call EFUNC(common,zeusAttributes));
+    filterAttributes = 1;
+    class Controls: Controls {
+        class Background: Background {};
+        class Title: Title {};
+        class Content: Content {
+            class Controls {
+                class GroupID: GVAR(RscAttributeGroupID) {};
             };
         };
         class ButtonOK: ButtonOK {};
