@@ -331,6 +331,96 @@ class GVAR(RscAttributeRespawnPosition): RscControlsGroupNoScrollbars {
     };
 };
 
+class GVAR(RscAttributeFormation): RscControlsGroupNoScrollbars {
+    idc = IDC_ATTRIBUTEFORMATION;
+    onSetFocus = QUOTE(_this call FUNC(ui_attributeFormation));
+    x = 0;
+    y = 0;
+    w = 26 * GUI_GRID_W;
+    h = 5 * GUI_GRID_H;
+    class controls {
+        class Label: GVAR(RscLabel) {
+            text = "$STR_3DEN_Group_Attribute_Formation_displayName";
+            h = 5 * GUI_GRID_H;
+        };
+        class Background: RscText {
+            idc = -1;
+            x = 10 * GUI_GRID_W;
+            y = 0;
+            w = 16 * GUI_GRID_W;
+            h = 5 * GUI_GRID_H;
+            colorBackground[] = {1, 1, 1, 0.1};
+        };
+        class Wedge: RscActivePicture {
+            idc = IDC_ATTRIBUTEFORMATION_WEDGE;
+            text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\wedge_ca.paa";
+            tooltip = "$STR_wedge";
+            x = 11.75 * GUI_GRID_W;
+            y = 0;
+            w = 2.5 * GUI_GRID_W;
+            h = 2.5 * GUI_GRID_H;
+        };
+        class Vee: Wedge {
+            idc = IDC_ATTRIBUTEFORMATION_VEE;
+            text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\vee_ca.paa";
+            tooltip = "$STR_vee";
+            x = 14.25 * GUI_GRID_W;
+        };
+        class Line: Wedge {
+            idc = IDC_ATTRIBUTEFORMATION_LINE;
+            text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\line_ca.paa";
+            tooltip = "$STR_line";
+            x = 16.75 * GUI_GRID_W;
+        };
+        class Column: Wedge {
+            idc = IDC_ATTRIBUTEFORMATION_COLUMN;
+            text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\column_ca.paa";
+            tooltip = "$STR_column";
+            x = 19.25 * GUI_GRID_W;
+        };
+        class File: Wedge {
+            idc = IDC_ATTRIBUTEFORMATION_FILE;
+            text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\file_ca.paa";
+            tooltip = "$STR_file";
+            x = 21.75 * GUI_GRID_W;
+        };
+        class StagColumn: Wedge {
+            idc = IDC_ATTRIBUTEFORMATION_STAGCOLUMN;
+            text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\stag_column_ca.paa";
+            tooltip = "$STR_staggered";
+            x = 11.75 * GUI_GRID_W;
+            y = 2.5 * GUI_GRID_H;
+        };
+        class EchLeft: StagColumn {
+            idc = IDC_ATTRIBUTEFORMATION_ECHLEFT;
+            text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\ech_left_ca.paa";
+            tooltip = "$STR_echl";
+            x = 14.25 * GUI_GRID_W;
+        };
+        class EchRight: StagColumn {
+            idc = IDC_ATTRIBUTEFORMATION_ECHRIGHT;
+            text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\ech_right_ca.paa";
+            tooltip = "$STR_echr";
+            x = 16.75 * GUI_GRID_W;
+        };
+        class Diamond: StagColumn {
+            idc = IDC_ATTRIBUTEFORMATION_DIAMOND;
+            text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\diamond_ca.paa";
+            tooltip = "$STR_diamond";
+            x = 19.25 * GUI_GRID_W;
+        };
+        class Default: StagColumn {
+            idc = IDC_ATTRIBUTEFORMATION_DEFAULT;
+            text = "\a3\ui_f_curator\Data\default_ca.paa";
+            tooltip = "$STR_no_change";
+            x = 22.25 * GUI_GRID_W;
+            y = 3 * GUI_GRID_H;
+            w = 1.5 * GUI_GRID_W;
+            h = 1.5 * GUI_GRID_H;
+        };
+    };
+};
+
 class GVAR(RscAttributesMan): RscDisplayAttributes {
     onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscAttributesMan))] call EFUNC(common,zeusAttributes));
     onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscAttributesMan))] call EFUNC(common,zeusAttributes));
@@ -364,6 +454,7 @@ class GVAR(RscAttributesGroup): RscDisplayAttributes {
         class Content: Content {
             class Controls {
                 class GroupID: GVAR(RscAttributeGroupID) {};
+                class Formation: GVAR(RscAttributeFormation) {};
             };
         };
         class ButtonOK: ButtonOK {};

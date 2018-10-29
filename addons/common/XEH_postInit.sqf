@@ -71,6 +71,11 @@ if (isServer) then {
         _side1 setFriend [_side2, _value];
     }] call CBA_fnc_addEventHandler;
 
+    [QGVAR(setWaypointFormation), {
+        params ["_waypoint", "_formation"];
+        _waypoint setWaypointFormation _formation;
+    }] call CBA_fnc_addEventHandler;
+
     [QGVAR(addObjects), {
         params ["_objects", ["_curator", objNull]];
 
