@@ -4,7 +4,7 @@
  * Edited to allow player editing and improve code.
  *
  * Arguments:
- * 0: Entity <OBJECT|GROUP|WAYPOINT|STRING>
+ * 0: Entity <OBJECT|GROUP|ARRAY|STRING>
  *
  * Return Value:
  * Window opened <BOOL>
@@ -16,7 +16,8 @@
  */
 #include "script_component.hpp"
 
-params [["_entity", objNull, [objNull, grpNull, [], ""]]];
+// Need [_this] for passed waypoint arrays
+[_this] params [["_entity", objNull, [objNull, grpNull, [], ""]]];
 
 private _curator = getAssignedCuratorLogic player;
 private _curatorInfoType = switch (typeName _entity) do {
