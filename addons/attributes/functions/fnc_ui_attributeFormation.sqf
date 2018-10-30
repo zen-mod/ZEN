@@ -27,6 +27,12 @@ private _entity = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 
 _control ctrlRemoveAllEventHandlers "SetFocus";
 
+if (_entity isEqualType grpNull) then {
+    private _ctrlDefault = _display displayCtrl IDC_ATTRIBUTEFORMATION_DEFAULT;
+    _ctrlDefault ctrlEnable false;
+    _ctrlDefault ctrlShow false;
+};
+
 private _fnc_onButtonClick = {
     params ["_activeCtrl"];
 
@@ -63,12 +69,6 @@ private _activeIDC = IDCS select (FORMATIONS find toUpper _formation);
         [_ctrl, 1.2, 0] call BIS_fnc_ctrlSetScale;
     };
 } forEach IDCS;
-
-if (_entity isEqualType grpNull) then {
-    private _ctrlDefault = _display displayCtrl IDC_ATTRIBUTEFORMATION_DEFAULT;
-    _ctrlDefault ctrlEnable false;
-    _ctrlDefault ctrlShow false;
-};
 
 private _fnc_onConfirm = {
     params ["_ctrlButtonOK"];

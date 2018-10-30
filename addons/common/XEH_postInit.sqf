@@ -76,6 +76,11 @@ if (isServer) then {
         _waypoint setWaypointFormation _formation;
     }] call CBA_fnc_addEventHandler;
 
+    [QGVAR(setWaypointBehaviour), {
+        params ["_waypoint", "_formation"];
+        _waypoint setWaypointBehaviour _formation;
+    }] call CBA_fnc_addEventHandler;
+
     [QGVAR(addObjects), {
         params ["_objects", ["_curator", objNull]];
 

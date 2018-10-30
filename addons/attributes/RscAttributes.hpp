@@ -421,6 +421,68 @@ class GVAR(RscAttributeFormation): RscControlsGroupNoScrollbars {
     };
 };
 
+class GVAR(RscAttributeBehaviour): RscControlsGroupNoScrollbars {
+    idc = IDC_ATTRIBUTEBEHAVIOUR;
+    onSetFocus = QUOTE(_this call FUNC(ui_attributeBehaviour));
+    x = 0;
+    y = 0;
+    w = 26 * GUI_GRID_W;
+    h = 2.5 * GUI_GRID_H;
+    class controls {
+        class Label: GVAR(RscLabel) {
+            text = "$STR_3DEN_Group_Attribute_Behaviour_displayName";
+            h = 2.5 * GUI_GRID_H;
+        };
+        class Background: RscText {
+            idc = -1;
+            x = 10 * GUI_GRID_W;
+            y = 0;
+            w = 16 * GUI_GRID_W;
+            h = 2.5 * GUI_GRID_H;
+            colorBackground[] = {1, 1, 1, 0.1};
+        };
+        class Careless: RscActivePicture {
+            idc = IDC_ATTRIBUTEBEHAVIOUR_CARELESS;
+            text = QPATHTOF(UI\careless_ca.paa);
+            tooltip = "$STR_3DEN_Attributes_Behaviour_Careless_text";
+            x = 11.25 * GUI_GRID_W;
+            y = 0.5 * GUI_GRID_H;
+            w = 1.5 * GUI_GRID_W;
+            h = 1.5 * GUI_GRID_H;
+        };
+        class Safe: Careless {
+            idc = IDC_ATTRIBUTEBEHAVIOUR_SAFE;
+            text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeBehaviour\safe_ca.paa";
+            tooltip = "$STR_safe";
+            x = 13.75 * GUI_GRID_W;
+        };
+        class Aware: Careless {
+            idc = IDC_ATTRIBUTEBEHAVIOUR_AWARE;
+            text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeBehaviour\aware_ca.paa";
+            tooltip = "$STR_aware";
+            x = 16.25 * GUI_GRID_W;
+        };
+        class Combat: Careless {
+            idc = IDC_ATTRIBUTEBEHAVIOUR_COMBAT;
+            text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeBehaviour\combat_ca.paa";
+            tooltip = "$STR_combat";
+            x = 18.75 * GUI_GRID_W;
+        };
+        class Stealth: Careless {
+            idc = IDC_ATTRIBUTEBEHAVIOUR_STEALTH;
+            text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeBehaviour\stealth_ca.paa";
+            tooltip = "$STR_stealth";
+            x = 21.25 * GUI_GRID_W;
+        };
+        class Default: Careless {
+            idc = IDC_ATTRIBUTEBEHAVIOUR_DEFAULT;
+            text = "\a3\ui_f_curator\Data\default_ca.paa";
+            tooltip = "$STR_combat_unchanged";
+            x = 24 * GUI_GRID_W;
+        };
+    };
+};
+
 class GVAR(RscAttributesMan): RscDisplayAttributes {
     onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscAttributesMan))] call EFUNC(common,zeusAttributes));
     onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscAttributesMan))] call EFUNC(common,zeusAttributes));
@@ -455,6 +517,7 @@ class GVAR(RscAttributesGroup): RscDisplayAttributes {
             class Controls {
                 class GroupID: GVAR(RscAttributeGroupID) {};
                 class Formation: GVAR(RscAttributeFormation) {};
+                class Behaviour: GVAR(RscAttributeBehaviour) {};
             };
         };
         class ButtonOK: ButtonOK {};

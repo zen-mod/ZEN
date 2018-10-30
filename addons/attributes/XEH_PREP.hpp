@@ -1,4 +1,5 @@
 PREP(getAttributeEntities);
+PREP(ui_attributeBehaviour);
 PREP(ui_attributeFormation);
 PREP(ui_attributeGroupID);
 PREP(ui_attributeName);
