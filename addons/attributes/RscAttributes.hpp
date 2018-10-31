@@ -483,6 +483,59 @@ class GVAR(RscAttributeBehaviour): RscControlsGroupNoScrollbars {
     };
 };
 
+class GVAR(RscAttributeSpeedMode): RscControlsGroupNoScrollbars {
+    idc = IDC_ATTRIBUTESPEEDMODE;
+    onSetFocus = QUOTE(_this call FUNC(ui_attributeSpeedMode));
+    x = 0;
+    y = 0;
+    w = 26 * GUI_GRID_W;
+    h = 2.5 * GUI_GRID_H;
+    class controls {
+        class Label: GVAR(RscLabel) {
+            text = "$STR_HC_Menu_Speed";
+            h = 2.5 * GUI_GRID_H;
+        };
+        class Background: RscText {
+            idc = -1;
+            x = 10 * GUI_GRID_W;
+            y = 0;
+            w = 16 * GUI_GRID_W;
+            h = 2.5 * GUI_GRID_H;
+            colorBackground[] = {1, 1, 1, 0.1};
+        };
+        class Limited: RscActivePicture {
+            idc = IDC_ATTRIBUTESPEEDMODE_LIMITED;
+            text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeSpeedMode\limited_ca.paa";
+            tooltip = "$STR_speed_limited";
+            x = 13.25 * GUI_GRID_W;
+            y = 0;
+            w = 2.5 * GUI_GRID_W;
+            h = 2.5 * GUI_GRID_H;
+        };
+        class Normal: Limited {
+            idc = IDC_ATTRIBUTESPEEDMODE_NORMAL;
+            text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeSpeedMode\normal_ca.paa";
+            tooltip = "$STR_speed_normal";
+            x = 15.75 * GUI_GRID_W;
+        };
+        class Full: Limited {
+            idc = IDC_ATTRIBUTESPEEDMODE_FULL;
+            text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeSpeedMode\full_ca.paa";
+            tooltip = "$STR_speed_full";
+            x = 18.25 * GUI_GRID_W;
+        };
+        class Default: Limited {
+            idc = IDC_ATTRIBUTESPEEDMODE_DEFAULT;
+            text = "\a3\ui_f_curator\Data\default_ca.paa";
+            tooltip = "$STR_speed_unchanged";
+            x = 24 * GUI_GRID_W;
+            y = 0.5 * GUI_GRID_H;
+            w = 1.5 * GUI_GRID_W;
+            h = 1.5 * GUI_GRID_H;
+        };
+    };
+};
+
 class GVAR(RscAttributesMan): RscDisplayAttributes {
     onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscAttributesMan))] call EFUNC(common,zeusAttributes));
     onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscAttributesMan))] call EFUNC(common,zeusAttributes));
@@ -518,6 +571,7 @@ class GVAR(RscAttributesGroup): RscDisplayAttributes {
                 class GroupID: GVAR(RscAttributeGroupID) {};
                 class Formation: GVAR(RscAttributeFormation) {};
                 class Behaviour: GVAR(RscAttributeBehaviour) {};
+                class SpeedMode: GVAR(RscAttributeSpeedMode) {};
             };
         };
         class ButtonOK: ButtonOK {};

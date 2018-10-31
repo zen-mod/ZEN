@@ -81,6 +81,11 @@ if (isServer) then {
         _waypoint setWaypointBehaviour _formation;
     }] call CBA_fnc_addEventHandler;
 
+    [QGVAR(setWaypointSpeed), {
+        params ["_waypoint", "_speedMode"];
+        _waypoint setWaypointSpeed _speedMode;
+    }] call CBA_fnc_addEventHandler;
+
     [QGVAR(addObjects), {
         params ["_objects", ["_curator", objNull]];
 

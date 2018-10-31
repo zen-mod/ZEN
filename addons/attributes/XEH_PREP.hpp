@@ -5,4 +5,5 @@ PREP(ui_attributeGroupID);
 PREP(ui_attributeName);
 PREP(ui_attributeRank);
 PREP(ui_attributeSkill);
+PREP(ui_attributeSpeedMode);
 PREP(ui_attributeUnitPos);
