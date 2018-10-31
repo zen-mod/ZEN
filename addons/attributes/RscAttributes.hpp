@@ -578,3 +578,22 @@ class GVAR(RscAttributesGroup): RscDisplayAttributes {
         class ButtonCancel: ButtonCancel {};
     };
 };
+
+class GVAR(RscAttributesWaypoint): RscDisplayAttributes {
+    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscAttributesWaypoint))] call EFUNC(common,zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscAttributesWaypoint))] call EFUNC(common,zeusAttributes));
+    filterAttributes = 1;
+    class Controls: Controls {
+        class Background: Background {};
+        class Title: Title {};
+        class Content: Content {
+            class Controls {
+                class Formation: GVAR(RscAttributeFormation) {};
+                class Behaviour: GVAR(RscAttributeBehaviour) {};
+                class SpeedMode: GVAR(RscAttributeSpeedMode) {};
+            };
+        };
+        class ButtonOK: ButtonOK {};
+        class ButtonCancel: ButtonCancel {};
+    };
+};
