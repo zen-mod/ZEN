@@ -1,5 +1,6 @@
 class RscText;
 class RscEdit;
+class ctrlToolbox;
 class ctrlXSliderH;
 class RscActivePicture;
 class RscControlsGroup;
@@ -536,6 +537,55 @@ class GVAR(RscAttributeSpeedMode): RscControlsGroupNoScrollbars {
     };
 };
 
+class GVAR(RscAttributeWaypointType): RscControlsGroupNoScrollbars {
+    idc = IDC_ATTRIBUTEWAYPOINTTYPE;
+    onSetFocus = QUOTE(_this call FUNC(ui_attributeWaypointType));
+    x = 0;
+    y = 0;
+    w = 26 * GUI_GRID_W;
+    h = 5 * GUI_GRID_H;
+    class controls {
+        class Label: GVAR(RscLabel) {
+            text = "$STR_3DEN_Object_Attribute_Type_displayName";
+            w = 26 * GUI_GRID_H;
+        };
+        class Background: RscText {
+            idc = IDC_ATTRIBUTEWAYPOINTTYPE_BACKGROUND;
+            style = ST_CENTER;
+            x = 0;
+            y = GUI_GRID_H;
+            w = 26 * GUI_GRID_W;
+            h = 4 * GUI_GRID_H;
+            colorText[] = {1, 1, 1, 0.5};
+            colorBackground[] = {1, 1, 1, 0.1};
+        };
+        class Toolbox: ctrlToolbox {
+            idc = IDC_ATTRIBUTEWAYPOINTTYPE_TOOLBOX;
+            x = 0;
+            y = GUI_GRID_H;
+            w = 26 * GUI_GRID_W;
+            h = 4 * GUI_GRID_H;
+            colorBackground[] = {0, 0, 0, 0};
+            rows = 4;
+            columns = 3;
+            strings[] = {
+                "$STR_ac_move",
+                "$STR_ac_cycle",
+                "$STR_ac_seekanddestroy",
+                "$STR_ac_hold",
+                "$STR_ac_sentry",
+                "$STR_ac_getout",
+                "$STR_ac_unload",
+                "$STR_ac_transportunload",
+                "$STR_A3_CfgWaypoints_Land",
+                "$STR_ac_hook",
+                "$STR_ac_unhook",
+                "$STR_A3_Functions_F_Orange_Demine"
+            };
+        };
+    };
+};
+
 class GVAR(RscAttributesMan): RscDisplayAttributes {
     onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscAttributesMan))] call EFUNC(common,zeusAttributes));
     onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscAttributesMan))] call EFUNC(common,zeusAttributes));
@@ -588,6 +638,7 @@ class GVAR(RscAttributesWaypoint): RscDisplayAttributes {
         class Title: Title {};
         class Content: Content {
             class Controls {
+                class WaypointType: GVAR(RscAttributeWaypointType) {};
                 class Formation: GVAR(RscAttributeFormation) {};
                 class Behaviour: GVAR(RscAttributeBehaviour) {};
                 class SpeedMode: GVAR(RscAttributeSpeedMode) {};

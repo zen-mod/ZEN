@@ -7,3 +7,4 @@ PREP(ui_attributeRank);
 PREP(ui_attributeSkill);
 PREP(ui_attributeSpeedMode);
 PREP(ui_attributeUnitPos);
+PREP(ui_attributeWaypointType);
