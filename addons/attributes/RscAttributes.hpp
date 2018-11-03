@@ -619,6 +619,7 @@ class GVAR(RscAttributesGroup): RscDisplayAttributes {
         class Content: Content {
             class Controls {
                 class GroupID: GVAR(RscAttributeGroupID) {};
+                class Skill: GVAR(RscAttributeSkill) {};
                 class Formation: GVAR(RscAttributeFormation) {};
                 class Behaviour: GVAR(RscAttributeBehaviour) {};
                 class SpeedMode: GVAR(RscAttributeSpeedMode) {};

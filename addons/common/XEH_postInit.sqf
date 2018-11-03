@@ -50,6 +50,11 @@
     _group setFormation _formation;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setSkill), {
+    params ["_unit", "_skill"];
+    _unit setSkill _skill;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(setName), {
     params ["_unit", "_name"];
     _unit setName _name;
