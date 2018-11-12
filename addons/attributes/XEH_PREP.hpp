@@ -3,6 +3,8 @@ PREP(ui_attributeBehaviour);
 PREP(ui_attributeDamage);
 PREP(ui_attributeFormation);
 PREP(ui_attributeGroupID);
+PREP(ui_attributeMarkerColor);
+PREP(ui_attributeMarkerText);
 PREP(ui_attributeName);
 PREP(ui_attributeRank);
 PREP(ui_attributeSkill);
