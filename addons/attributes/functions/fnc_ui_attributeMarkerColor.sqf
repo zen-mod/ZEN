@@ -55,7 +55,7 @@ private _fnc_onConfirm = {
     _entity setMarkerColor _color;
 
     // Set new markers to have this color
-    getAssignedCuratorLogic player setVariable [QGVAR(lastMarkerColor), _color];
+    [GVAR(markerColorHash), markerType _entity, _color] call CBA_fnc_hashSet;
 };
 
 _ctrlButtonOK ctrlAddEventHandler ["ButtonClick", _fnc_onConfirm];

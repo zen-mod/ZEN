@@ -5,6 +5,7 @@
 
     _module addEventHandler ["CuratorMarkerPlaced", {
         params ["_curator", "_marker"];
-        _marker setMarkerColor (_curator getVariable [QGVAR(lastMarkerColor), "Default"]);
+        private _color = [GVAR(markerColorHash), markerType _marker] call CBA_fnc_hashGet;
+        _marker setMarkerColor _color;
     }];
 }] call CBA_fnc_addEventHandler;
