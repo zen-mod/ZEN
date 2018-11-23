@@ -13,6 +13,12 @@
         <Key ID="STR_ZEN_Editor_RemoveWatermark_Description">
             <English>Removes the watermark shown when hiding the display</English>
         </Key>
+        <Key ID="STR_ZEN_Editor_DisableLiveSearch">
+            <English>Disable Live Search</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_DisableLiveSearch_Description">
+            <English>Requires pressing Enter or clicking the search button to confirm a search\nHelps reduce lag when searching through a lot of items</English>
+        </Key>
         <Key ID="STR_ZEN_Editor_ToggleIncludeCrew">
             <English>Toggle Include Crew</English>
         </Key>

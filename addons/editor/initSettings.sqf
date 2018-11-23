@@ -15,3 +15,12 @@
     true,
     false
 ] call CBA_settings_fnc_init;
+
+[
+    QGVAR(disableLiveSearch),
+    "CHECKBOX",
+    [LSTRING(DisableLiveSearch), LSTRING(DisableLiveSearch_Description)],
+    ELSTRING(common,Category),
+    false,
+    false
+] call CBA_settings_fnc_init;

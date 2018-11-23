@@ -17,8 +17,10 @@
 
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 #include "\a3\ui_f\hpp\defineCommonGrids.inc"
+#include "\a3\ui_f\hpp\defineResinclDesign.inc"
 #include "\a3\ui_f_curator\ui\defineResinclDesign.inc"
 
 #define IDC_INCLUDE_CREW 25460
+#define IDC_SEARCH_CUSTOM 25470
 
 #define POS_EDGE(DEFAULT,MOVED) ([ARR_2(DEFAULT,MOVED)] select GETMVAR(GVAR(moveDisplayToEdge),false))
