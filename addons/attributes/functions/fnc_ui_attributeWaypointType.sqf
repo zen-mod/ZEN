@@ -65,7 +65,7 @@ private _fnc_onConfirm = {
     {
         _x setWaypointType _type;
         if (_type == "SCRIPTED") then {_x setWaypointScript _script};
-    } forEach (curatorSelected select 2);
+    } forEach SELECTED_WAYPOINTS;
 };
 
 _ctrlButtonOK ctrlAddEventHandler ["ButtonClick", _fnc_onConfirm];

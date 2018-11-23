@@ -81,7 +81,7 @@ private _fnc_onConfirm = {
     if (_entity isEqualType grpNull) then {
         {
             [QEGVAR(common,setFormation), [_x, _formation], _x] call CBA_fnc_targetEvent;
-        } forEach (curatorSelected select 1);
+        } forEach SELECTED_GROUPS;
     } else {
         {
             _x params ["_group", "_waypointID"];
@@ -91,7 +91,7 @@ private _fnc_onConfirm = {
             };
 
             [QEGVAR(common,setWaypointFormation), [_x, _formation]] call CBA_fnc_serverEvent;
-        } forEach (curatorSelected select 2);
+        } forEach SELECTED_WAYPOINTS;
     };
 };
 

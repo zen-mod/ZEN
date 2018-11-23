@@ -5,6 +5,7 @@
  *
  * Arguments:
  * 0: Entity <OBJECT|GROUP>
+ * 1: Can be empty <BOOL> (default: true)
  *
  * Return Value:
  * Entities <ARRAY>
@@ -16,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-params ["_entity"];
+params ["_entity", ["_canBeEmpty", true]];
 TRACE_1("Params",_entity);
 
 switch (true) do {
@@ -27,16 +28,15 @@ switch (true) do {
                 if (_x isKindOf "CAManBase") then {
                     _units pushBack _x;
                 } else {
-                    if (_x isKindOf "LandVehicle" || {_x isKindOf "Air"} || {_x isKindOf "Ship"}) then {
+                    if (_x isKindOf "LandVehicle" || {_x isKindOf "Air" || {_x isKindOf "Ship"}}) then {
                         _units append crew _x;
                     };
                 };
-            } forEach (curatorSelected select 0);
+            } forEach SELECTED_OBJECTS;
             _units arrayIntersect _units
         } else {
-            private _canBeEmpty = isNull group _entity;
-            (curatorSelected select 0) select {
-                (_x isKindOf "LandVehicle" || {_x isKindOf "Air"} || {_x isKindOf "Ship"})
+            SELECTED_OBJECTS select {
+                (_x isKindOf "LandVehicle" || {_x isKindOf "Air" || {_x isKindOf "Ship"}})
                 && {_canBeEmpty || {!isNull group _x}}
             };
         };
@@ -45,7 +45,7 @@ switch (true) do {
         private _units = [];
         {
             _units append units _x;
-        } forEach (curatorSelected select 1);
+        } forEach SELECTED_GROUPS;
         _units
     };
     default {[]};

@@ -73,7 +73,7 @@ private _fnc_onConfirm = {
     private _entity = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
     {
         _x setUnitRank _rank;
-    } forEach (_entity call FUNC(getAttributeEntities));
+    } forEach ([_entity, false] call FUNC(getAttributeEntities));
 };
 
 _ctrlButtonOK ctrlAddEventHandler ["ButtonClick", _fnc_onConfirm];

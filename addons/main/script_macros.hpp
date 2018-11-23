@@ -29,6 +29,11 @@
 
 #define ZEN_isHC (!hasInterface && !isDedicated)
 
+#define SELECTED_OBJECTS   (curatorSelected select 0)
+#define SELECTED_GROUPS    (curatorSelected select 1)
+#define SELECTED_WAYPOINTS (curatorSelected select 2)
+#define SELECTED_MARKERS   (curatorSelected select 3)
+
 #ifdef DISABLE_COMPILE_CACHE
     #undef PREP
     #define PREP(fncName) FUNC(fncName) = compile preprocessFileLineNumbers QPATHTOF(functions\DOUBLES(fnc,fncName).sqf)
@@ -52,8 +57,3 @@ Fast Recompiling via Function
     #define PREP_RECOMPILE_START /* */
     #define PREP_RECOMPILE_END /* */
 #endif
-
-#define SELECTED_OBJECTS   (curatorSelected select 0)
-#define SELECTED_GROUPS    (curatorSelected select 1)
-#define SELECTED_WAYPOINTS (curatorSelected select 2)
-#define SELECTED_MARKERS   (curatorSelected select 3)
