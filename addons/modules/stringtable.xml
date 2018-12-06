@@ -143,6 +143,42 @@
         <Key ID="STR_ZEN_Modules_Players">
             <English>Players</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleSmokePillar">
+            <English>Smoke Pillar</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_SmokePillarType">
+            <English>Smoke Pillar Type</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_VehicleFire">
+            <English>Vehicle Fire</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_SmallOilySmoke">
+            <English>Small Oily Smoke</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_MediumOilySmoke">
+            <English>Medium Oily Smoke</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_LargeOilySmoke">
+            <English>Large Oily Smoke</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_SmallWoodSmoke">
+            <English>Small Wood Smoke</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_MediumWoodSmoke">
+            <English>Medium Wood Smoke</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_LargeWoodSmoke">
+            <English>Large Wood Smoke</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_SmallMixedSmoke">
+            <English>Small Mixed Smoke</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_MediumMixedSmoke">
+            <English>Medium Mixed Smoke</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_LargeMixedSmoke">
+            <English>Large Mixed Smoke</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_AI">
             <English>AI</English>
         </Key>

@@ -10,6 +10,7 @@ class CfgPatches {
             QGVAR(moduleHideZeus),
             QGVAR(modulePatrolArea),
             QGVAR(moduleSideRelations),
+            QGVAR(ModuleSmokePillar),
             QGVAR(moduleTeleportPlayers)
         };
         weapons[] = {};

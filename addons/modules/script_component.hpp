@@ -67,6 +67,9 @@
 #define IDC_PATROLAREA 60700
 #define IDC_PATROLAREA_BEHAVIOUR 60701
 
+#define IDC_SMOKEPILLAR 60800
+#define IDC_SMOKEPILLAR_TYPE 60801
+
 #define ICON_CHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_checked_ca.paa"
 #define ICON_UNCHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_unchecked_ca.paa"
 

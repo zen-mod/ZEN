@@ -40,6 +40,11 @@ class CfgVehicles {
         displayName = CSTRING(ModuleSideRelations);
         curatorInfoType = QGVAR(RscSideRelations);
     };
+    class GVAR(moduleSmokePillar): GVAR(moduleBase) {
+        category = "Effects";
+        displayName = CSTRING(ModuleSmokePillar);
+        curatorInfoType = QGVAR(RscSmokePillar);
+    };
     class GVAR(moduleTeleportPlayers): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Players);

@@ -1,6 +1,7 @@
 class RscText;
 class RscEdit;
 class RscCombo;
+class ctrlCombo;
 class RscButton;
 class RscListBox;
 class ctrlToolbox;
@@ -30,6 +31,16 @@ class GVAR(RscLabel): RscText {
     w = 10 * GUI_GRID_W;
     h = GUI_GRID_H;
     colorBackground[] = {0, 0, 0, 0.5};
+};
+
+class GVAR(RscCombo): ctrlCombo {
+    idc = -1;
+    x = 10.1 * GUI_GRID_W;
+    y = 0;
+    w = 15.9 * GUI_GRID_W;
+    h = GUI_GRID_H;
+    sizeEx = GUI_GRID_H;
+    font = "RobotoCondensed";
 };
 
 class GVAR(RscToolboxYesNo): ctrlToolbox {
@@ -459,6 +470,69 @@ class GVAR(RscSideRelations): RscDisplayAttributes {
                         class Radio: GVAR(RscToolboxYesNo) {
                             idc = IDC_SIDERELATIONS_RADIO;
                             y = 1.1 * GUI_GRID_H;
+                        };
+                    };
+                };
+            };
+        };
+        class ButtonOK: ButtonOK {};
+        class ButtonCancel: ButtonCancel {};
+    };
+};
+
+class GVAR(RscSmokePillar): RscDisplayAttributes {
+    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscSmokePillar))] call EFUNC(common,zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscSmokePillar))] call EFUNC(common,zeusAttributes));
+    class Controls: Controls {
+        class Background: Background {};
+        class Title: Title {};
+        class Content: Content {
+            class Controls {
+                class smokePillar: RscControlsGroupNoScrollbars {
+                    onSetFocus = QUOTE(_this call FUNC(ui_smokePillar));
+                    idc = IDC_SMOKEPILLAR;
+                    x = 0;
+                    y = 0;
+                    w = 26 * GUI_GRID_W;
+                    h = GUI_GRID_H;
+                    class controls {
+                        class TypeLabel: GVAR(RscLabel) {
+                            text = CSTRING(SmokePillarType);
+                        };
+                        class Type: GVAR(RscCombo) {
+                            idc = IDC_SMOKEPILLAR_TYPE;
+                            class Items {
+                                class VehicleFire {
+                                    text = CSTRING(VehicleFire);
+                                };
+                                class SmallOily {
+                                    text = CSTRING(SmallOilySmoke);
+                                };
+                                class MediumOily {
+                                    text = CSTRING(MediumOilySmoke);
+                                };
+                                class LargeOily {
+                                    text = CSTRING(LargeOilySmoke);
+                                };
+                                class SmallWood {
+                                    text = CSTRING(SmallWoodSmoke);
+                                };
+                                class MediumWood {
+                                    text = CSTRING(MediumWoodSmoke);
+                                };
+                                class LargeWood {
+                                    text = CSTRING(LargeWoodSmoke);
+                                };
+                                class SmallMixed {
+                                    text = CSTRING(SmallMixedSmoke);
+                                };
+                                class MediumMixed {
+                                    text = CSTRING(MediumMixedSmoke);
+                                };
+                                class LargeMixed {
+                                    text = CSTRING(LargeMixedSmoke);
+                                };
+                            };
                         };
                     };
                 };
