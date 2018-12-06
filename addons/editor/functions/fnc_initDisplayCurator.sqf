@@ -45,24 +45,5 @@ if (GVAR(disableLiveSearch)) then {
 
 {
     private _ctrl = _display displayCtrl _x;
-    _ctrl ctrlAddEventHandler ["ButtonClick", {
-        [{
-            params ["_ctrl"];
-
-            private _display = ctrlParent _ctrl;
-            RscDisplayCurator_sections params ["_mode"];
-
-            private _idcs = switch (_mode) do {
-                case 0;
-                case 1: {IDCS_SIDE_BUTTONS};
-                case 2;
-                case 3: {[IDC_RSCDISPLAYCURATOR_SIDEEMPTY]};
-                default {[]}
-            };
-
-            {
-                (_display displayCtrl _x) ctrlShow true;
-            } forEach _idcs;
-        }, _this] call CBA_fnc_execNextFrame;
-    }];
+    _ctrl ctrlAddEventHandler ["ButtonClick", {call FUNC(fixSideButtons)}];
 } forEach IDCS_MODE_BUTTONS;

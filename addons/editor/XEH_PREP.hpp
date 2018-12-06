@@ -1,3 +1,4 @@
+PREP(fixSideButtons);
 PREP(handleObjectPlaced);
 PREP(handleSearchButton);
 PREP(handleSearchClick);
