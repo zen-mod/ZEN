@@ -1,4 +1,5 @@
 PREP(getAttributeEntities);
+PREP(initAttributesDisplay);
 PREP(ui_attributeBehaviour);
 PREP(ui_attributeDamage);
 PREP(ui_attributeFormation);

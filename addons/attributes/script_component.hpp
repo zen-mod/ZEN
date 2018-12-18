@@ -16,7 +16,21 @@
 #include "\x\zen\addons\main\script_macros.hpp"
 
 #include "\a3\ui_f\hpp\defineCommonGrids.inc"
+#include "\a3\ui_f\hpp\defineCommonColors.inc"
 #include "\a3\ui_f_curator\ui\defineResinclDesign.inc"
+
+#define POS_X(N) ((N) * GUI_GRID_W + GUI_GRID_CENTER_X)
+#define POS_Y(N) ((N) * GUI_GRID_H + GUI_GRID_CENTER_Y)
+#define POS_W(N) ((N) * GUI_GRID_W)
+#define POS_H(N) ((N) * GUI_GRID_H)
+
+#define IDC_ATTRIBUTES_MAP 100
+#define IDC_ATTRIBUTES_TITLE 110
+#define IDC_ATTRIBUTES_BACKGROUND 120
+#define IDC_ATTRIBUTES_CONTENT 130
+#define IDC_ATTRIBUTES_CUSTOM_1 140
+#define IDC_ATTRIBUTES_CUSTOM_2 150
+#define IDC_ATTRIBUTES_CUSTOM_3 160
 
 #define IDC_ATTRIBUTENAME 85000
 #define IDC_ATTRIBUTENAME_EDIT 85001

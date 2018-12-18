@@ -19,6 +19,88 @@ class RscDisplayAttributes {
     };
 };
 
+class RscMapControl;
+class RscButtonMenu;
+class RscButtonMenuCancel;
+class RscButtonMenuOK;
+
+class GVAR(RscAttributesBase) {
+    idd = -1;
+    movingEnable = 0;
+    class controlsBackground {
+        class Map: RscMapControl {
+            idc = IDC_ATTRIBUTES_MAP;
+            x = safeZoneXAbs;
+            y = safeZoneY;
+            w = safeZoneWAbs;
+            h = safeZoneH;
+            class CustomMark {
+                icon = "#(argb,8,8,3)color(0,0,0,0)";
+                color[] = {0, 0, 0, 0};
+                importance = 0;
+                coefMin = 0;
+                coefMax = 0;
+                size = 0;
+            };
+        };
+    };
+    class controls {
+        class Title: RscText {
+            idc = IDC_ATTRIBUTES_TITLE;
+            font = "PuristaMedium";
+            x = POS_X(6.5);
+            y = POS_Y(8.4);
+            w = POS_W(27);
+            h = POS_H(1);
+            colorBackground[] = GUI_BCG_COLOR;
+        };
+        class Background: RscText {
+            idc = IDC_ATTRIBUTES_BACKGROUND;
+            x = POS_X(6.5);
+            y = POS_Y(9.5);
+            w = POS_W(27);
+            h = POS_H(6.5);
+            colorBackground[] = {0, 0, 0, 0.7};
+        };
+        class Content: RscControlsGroup {
+            idc = IDC_ATTRIBUTES_CONTENT;
+            x = POS_X(7);
+            y = POS_Y(10);
+            w = POS_W(26);
+            h = POS_H(5.5);
+            class controls;
+        };
+        class ButtonOK: RscButtonMenuOK {
+            x = POS_X(28.5);
+            y = POS_Y(16.1);
+            w = POS_W(5);
+            h = POS_H(1);
+        };
+        class ButtonCancel: RscButtonMenuCancel {
+            x = POS_X(6.5);
+            y = POS_Y(16.1);
+            w = POS_W(5);
+            h = POS_H(1);
+        };
+        class ButtonCustom1: RscButtonMenu {
+            idc = IDC_ATTRIBUTES_CUSTOM_1;
+            x = POS_X(23.4);
+            y = POS_Y(16.1);
+            w = POS_W(5);
+            h = POS_H(1);
+            colorBackground[] = GUI_BCG_COLOR;
+        };
+        class ButtonCustom2: ButtonCustom1 {
+            idc = IDC_ATTRIBUTES_CUSTOM_2;
+            x = POS_X(18.3);
+        };
+        class ButtonCustom3: ButtonCustom1 {
+            idc = IDC_ATTRIBUTES_CUSTOM_3;
+            x = POS_X(13.2);
+        };
+    };
+};
+
 class GVAR(RscLabel): RscText {
     idc = -1;
     x = 0;
@@ -631,9 +713,8 @@ class GVAR(RscAttributeMarkerColor): RscControlsGroupNoScrollbars {
     };
 };
 
-class GVAR(RscAttributesMan): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscAttributesMan))] call EFUNC(common,zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscAttributesMan))] call EFUNC(common,zeusAttributes));
+class GVAR(RscAttributesMan): GVAR(RscAttributesBase) {
+    onLoad = QUOTE([ARR_2(_this select 0, QQGVAR(RscAttributesMan))] call FUNC(initAttributesDisplay));
     filterAttributes = 1;
     class Controls: Controls {
         class Background: Background {};
@@ -654,9 +735,8 @@ class GVAR(RscAttributesMan): RscDisplayAttributes {
     };
 };
 
-class GVAR(RscAttributesGroup): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscAttributesGroup))] call EFUNC(common,zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscAttributesGroup))] call EFUNC(common,zeusAttributes));
+class GVAR(RscAttributesGroup): GVAR(RscAttributesBase) {
+    onLoad = QUOTE([ARR_2(_this select 0, QQGVAR(RscAttributesGroup))] call FUNC(initAttributesDisplay));
     filterAttributes = 1;
     class Controls: Controls {
         class Background: Background {};
@@ -675,9 +755,8 @@ class GVAR(RscAttributesGroup): RscDisplayAttributes {
     };
 };
 
-class GVAR(RscAttributesWaypoint): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscAttributesWaypoint))] call EFUNC(common,zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscAttributesWaypoint))] call EFUNC(common,zeusAttributes));
+class GVAR(RscAttributesWaypoint): GVAR(RscAttributesBase) {
+    onLoad = QUOTE([ARR_2(_this select 0, QQGVAR(RscAttributesWaypoint))] call FUNC(initAttributesDisplay));
     filterAttributes = 1;
     class Controls: Controls {
         class Background: Background {};
@@ -695,9 +774,8 @@ class GVAR(RscAttributesWaypoint): RscDisplayAttributes {
     };
 };
 
-class GVAR(RscAttributesMarker): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscAttributesMarker))] call EFUNC(common,zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscAttributesMarker))] call EFUNC(common,zeusAttributes));
+class GVAR(RscAttributesMarker): GVAR(RscAttributesBase) {
+    onLoad = QUOTE([ARR_2(_this select 0, QQGVAR(RscAttributesMarker))] call FUNC(initAttributesDisplay));
     filterAttributes = 1;
     class Controls: Controls {
         class Background: Background {};
