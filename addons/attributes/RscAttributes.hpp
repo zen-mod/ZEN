@@ -1,28 +1,53 @@
 class RscText;
 class RscEdit;
-class ctrlCombo;
 class ctrlToolbox;
 class ctrlXSliderH;
 class RscActivePicture;
 class RscControlsGroup;
 class RscControlsGroupNoScrollbars;
-
-class RscDisplayAttributes {
-    class Controls {
-        class Background;
-        class Title;
-        class Content: RscControlsGroup {
-            class controls;
-        };
-        class ButtonOK;
-        class ButtonCancel;
-    };
-};
-
 class RscMapControl;
 class RscButtonMenu;
 class RscButtonMenuCancel;
 class RscButtonMenuOK;
+class RscCombo {
+    class ComboScrollBar;
+};
+
+class GVAR(RscLabel): RscText {
+    idc = -1;
+    x = 0;
+    y = 0;
+    w = POS_W(10);
+    h = POS_H(1);
+    colorBackground[] = {0, 0, 0, 0.5};
+};
+
+class GVAR(RscEdit): RscEdit {
+    idc = -1;
+    x = POS_W(10.1);
+    y = pixelH;
+    w = POS_W(15.9);
+    h = POS_H(1) - pixelH;
+    colorText[] = {1, 1, 1, 1};
+    colorBackground[] = {0, 0, 0, 0.2};
+};
+
+class GVAR(RscCombo): RscCombo {
+    idc = -1;
+    x = POS_W(10.1);
+    y = 0;
+    w = POS_W(15.9);
+    h = POS_H(1);
+    colorBackground[] = {0, 0, 0, 0.8};
+    arrowEmpty = "\a3\3DEN\Data\Controls\ctrlCombo\arrowEmpty_ca.paa";
+    arrowFull = "\a3\3DEN\Data\Controls\ctrlCombo\arrowFull_ca.paa";
+    class ComboScrollBar: ComboScrollBar {
+        arrowEmpty = "\a3\3DEN\Data\Controls\ctrlDefault\arrowEmpty_ca.paa";
+        arrowFull = "\a3\3DEN\Data\Controls\ctrlDefault\arrowFull_ca.paa";
+        border = "\a3\3DEN\Data\Controls\ctrlDefault\border_ca.paa";
+        thumb = "\a3\3DEN\Data\Controls\ctrlDefault\thumb_ca.paa";
+    };
+};
 
 class GVAR(RscAttributesBase) {
     idd = -1;
@@ -101,42 +126,13 @@ class GVAR(RscAttributesBase) {
     };
 };
 
-class GVAR(RscLabel): RscText {
-    idc = -1;
-    x = 0;
-    y = 0;
-    w = 10 * GUI_GRID_W;
-    h = GUI_GRID_H;
-    colorBackground[] = {0, 0, 0, 0.5};
-};
-
-class GVAR(RscEdit): RscEdit {
-    idc = -1;
-    x = 10.1 * GUI_GRID_W;
-    y = pixelH;
-    w = 15.9 * GUI_GRID_W;
-    h = GUI_GRID_H - pixelH;
-    colorText[] = {1, 1, 1, 1};
-    colorBackground[] = {0, 0, 0, 0.2};
-};
-
-class GVAR(RscCombo): ctrlCombo {
-    idc = -1;
-    x = 10.1 * GUI_GRID_W;
-    y = 0;
-    w = 15.9 * GUI_GRID_W;
-    h = GUI_GRID_H;
-    sizeEx = GUI_GRID_H;
-    font = "RobotoCondensed";
-};
-
 class GVAR(RscAttributeName): RscControlsGroupNoScrollbars {
     idc = IDC_ATTRIBUTENAME;
-    onSetFocus = QUOTE(_this call FUNC(ui_attributeName));
+    onSetFocus = QUOTE(_this call FUNC(attributeName));
     x = 0;
     y = 0;
-    w = 26 * GUI_GRID_W;
-    h = GUI_GRID_H;
+    w = POS_W(26);
+    h = POS_H(1);
     class controls {
         class Label: GVAR(RscLabel) {
             text = "$STR_3DEN_Object_Attribute_UnitName_displayName";
@@ -149,11 +145,11 @@ class GVAR(RscAttributeName): RscControlsGroupNoScrollbars {
 
 class GVAR(RscAttributeGroupID): RscControlsGroupNoScrollbars {
     idc = IDC_ATTRIBUTEGROUPID;
-    onSetFocus = QUOTE(_this call FUNC(ui_attributeGroupID));
+    onSetFocus = QUOTE(_this call FUNC(attributeGroupID));
     x = 0;
     y = 0;
-    w = 26 * GUI_GRID_W;
-    h = GUI_GRID_H;
+    w = POS_W(26);
+    h = POS_H(1);
     class controls {
         class Label: GVAR(RscLabel) {
             text = "$STR_A3_RscAttributeGroupID_Title";
@@ -166,26 +162,26 @@ class GVAR(RscAttributeGroupID): RscControlsGroupNoScrollbars {
 
 class GVAR(RscAttributeSkill): RscControlsGroupNoScrollbars {
     idc = IDC_ATTRIBUTESKILL;
-    onSetFocus = QUOTE(_this call FUNC(ui_attributeSkill));
+    onSetFocus = QUOTE(_this call FUNC(attributeSkill));
     x = 0;
     y = 0;
-    w = 26 * GUI_GRID_W;
-    h = GUI_GRID_H;
+    w = POS_W(26);
+    h = POS_H(1);
     class controls {
         class Label: GVAR(RscLabel) {
             text = "$STR_3DEN_Object_Attribute_Skill_displayName";
         };
         class Slider: ctrlXSliderH {
             idc = IDC_ATTRIBUTESKILL_SLIDER;
-            x = 10.1 * GUI_GRID_W;
+            x = POS_W(10.1);
             y = 0;
-            w = 13.5 * GUI_GRID_W;
-            h = GUI_GRID_H;
+            w = POS_W(13.5);
+            h = POS_H(1);
         };
         class Edit: GVAR(RscEdit) {
             idc = IDC_ATTRIBUTESKILL_EDIT;
-            x = 23.7 * GUI_GRID_W;
-            w = 2.3 * GUI_GRID_W;
+            x = POS_W(23.7);
+            w = POS_W(2.3);
             canModify = 0;
         };
     };
@@ -193,26 +189,26 @@ class GVAR(RscAttributeSkill): RscControlsGroupNoScrollbars {
 
 class GVAR(RscAttributeDamage): RscControlsGroupNoScrollbars {
     idc = IDC_ATTRIBUTEDAMAGE;
-    onSetFocus = QUOTE(_this call FUNC(ui_attributeDamage));
+    onSetFocus = QUOTE(_this call FUNC(attributeDamage));
     x = 0;
     y = 0;
-    w = 26 * GUI_GRID_W;
-    h = GUI_GRID_H;
+    w = POS_W(26);
+    h = POS_H(1);
     class controls {
         class Label: GVAR(RscLabel) {
             text = "$STR_3DEN_Object_Attribute_Health_displayName";
         };
         class Slider: ctrlXSliderH {
             idc = IDC_ATTRIBUTEDAMAGE_SLIDER;
-            x = 10.1 * GUI_GRID_W;
+            x = POS_W(10.1);
             y = 0;
-            w = 13.5 * GUI_GRID_W;
-            h = GUI_GRID_H;
+            w = POS_W(13.5);
+            h = POS_H(1);
         };
         class Edit: GVAR(RscEdit) {
             idc = IDC_ATTRIBUTEDAMAGE_EDIT;
-            x = 23.7 * GUI_GRID_W;
-            w = 2.3 * GUI_GRID_W;
+            x = POS_W(23.7);
+            w = POS_W(2.3);
             canModify = 0;
         };
     };
@@ -223,23 +219,23 @@ class GVAR(RscAttributeAmmo): RscControlsGroupNoScrollbars {
     onSetFocus = "";
     x = 0;
     y = 0;
-    w = 26 * GUI_GRID_W;
-    h = GUI_GRID_H;
+    w = POS_W(26);
+    h = POS_H(1);
     class controls {
         class Label: GVAR(RscLabel) {
             text = "$STR_3DEN_Object_Attribute_Ammo_displayName";
         };
         class Slider: ctrlXSliderH {
             idc = IDC_ATTRIBUTEAMMO_SLIDER;
-            x = 10.1 * GUI_GRID_W;
+            x = POS_W(10.1);
             y = 0;
-            w = 13.5 * GUI_GRID_W;
-            h = GUI_GRID_H;
+            w = POS_W(13.5);
+            h = POS_H(1);
         };
         class Edit: GVAR(RscEdit) {
             idc = IDC_ATTRIBUTEAMMO_EDIT;
-            x = 23.7 * GUI_GRID_W;
-            w = 2.3 * GUI_GRID_W;
+            x = POS_W(23.7);
+            w = POS_W(2.3);
             canModify = 0;
         };
     };
@@ -247,121 +243,121 @@ class GVAR(RscAttributeAmmo): RscControlsGroupNoScrollbars {
 
 class GVAR(RscAttributeRank): RscControlsGroupNoScrollbars {
     idc = IDC_ATTRIBUTERANK;
-    onSetFocus = QUOTE(_this call FUNC(ui_attributeRank));
+    onSetFocus = QUOTE(_this call FUNC(attributeRank));
     x = 0;
     y = 0;
-    w = 26 * GUI_GRID_W;
-    h = 2.5 * GUI_GRID_H;
+    w = POS_W(26);
+    h = POS_H(2.5);
     class controls {
         class Label: GVAR(RscLabel) {
             text = "$STR_3DEN_Object_Attribute_Rank_displayName";
-            h = 2.5 * GUI_GRID_H;
+            h = POS_H(2.5);
         };
         class Background: RscText {
             idc = -1;
-            x = 10 * GUI_GRID_W;
+            x = POS_W(10);
             y = 0;
-            w = 16 * GUI_GRID_W;
-            h = 2.5 * GUI_GRID_H;
+            w = POS_W(16);
+            h = POS_H(2.5);
             colorBackground[] = {1, 1, 1, 0.1};
         };
         class Private: RscActivePicture {
             idc = IDC_ATTRIBUTERANK_PRIVATE;
             text = "\a3\Ui_f\data\GUI\Cfg\Ranks\private_gs.paa";
             tooltip = "$STR_Private";
-            x = 11.25 * GUI_GRID_W;
-            y = 0.5 * GUI_GRID_H;
-            w = 1.5 * GUI_GRID_W;
-            h = 1.5 * GUI_GRID_H;
+            x = POS_W(11.25);
+            y = POS_H(0.5);
+            w = POS_W(1.5);
+            h = POS_H(1.5);
         };
         class Corporal: Private {
             idc = IDC_ATTRIBUTERANK_CORPORAL;
             text = "\a3\Ui_f\data\GUI\Cfg\Ranks\corporal_gs.paa";
             tooltip = "$STR_Corporal";
-            x = 13.25 * GUI_GRID_W;
+            x = POS_W(13.25);
         };
         class Sergeant: Private {
             idc = IDC_ATTRIBUTERANK_SERGEANT;
             text = "\a3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
             tooltip = "$STR_Sergeant";
-            x = 15.25 * GUI_GRID_W;
+            x = POS_W(15.25);
         };
         class Lieutenant: Private {
             idc = IDC_ATTRIBUTERANK_LIEUTENANT;
             text = "\a3\Ui_f\data\GUI\Cfg\Ranks\lieutenant_gs.paa";
             tooltip = "$STR_Lieutenant";
-            x = 17.25 * GUI_GRID_W;
+            x = POS_W(17.25);
         };
         class Captain: Private {
             idc = IDC_ATTRIBUTERANK_CAPTAIN;
             text = "\a3\Ui_f\data\GUI\Cfg\Ranks\captain_gs.paa";
             tooltip = "$STR_Captain";
-            x = 19.25 * GUI_GRID_W;
+            x = POS_W(19.25);
         };
         class Major: Private {
             idc = IDC_ATTRIBUTERANK_MAJOR;
             text = "\a3\Ui_f\data\GUI\Cfg\Ranks\major_gs.paa";
             tooltip = "$STR_Major";
-            x = 21.25 * GUI_GRID_W;
+            x = POS_W(21.25);
         };
         class Colonel: Private {
             idc = IDC_ATTRIBUTERANK_COLONEL;
             text = "\a3\Ui_f\data\GUI\Cfg\Ranks\colonel_gs.paa";
             tooltip = "$STR_Colonel";
-            x = 23.25 * GUI_GRID_W;
+            x = POS_W(23.25);
         };
     };
 };
 
 class GVAR(RscAttributeUnitPos): RscControlsGroupNoScrollbars {
     idc = IDC_ATTRIBUTEUNITPOS;
-    onSetFocus = QUOTE(_this call FUNC(ui_attributeUnitPos));
+    onSetFocus = QUOTE(_this call FUNC(attributeUnitPos));
     x = 0;
     y = 0;
-    w = 26 * GUI_GRID_W;
-    h = 2.5 * GUI_GRID_H;
+    w = POS_W(26);
+    h = POS_H(2.5);
     class controls {
         class Label: GVAR(RscLabel) {
             text = "$STR_A3_RscAttributeUnitPos_Title";
-            h = 2.5 * GUI_GRID_H;
+            h = POS_H(2.5);
         };
         class Background: RscText {
             idc = -1;
-            x = 10 * GUI_GRID_W;
+            x = POS_W(10);
             y = 0;
-            w = 16 * GUI_GRID_W;
-            h = 2.5 * GUI_GRID_H;
+            w = POS_W(16);
+            h = POS_H(2.5);
             colorBackground[] = {1, 1, 1, 0.1};
         };
         class Down: RscActivePicture {
             idc = IDC_ATTRIBUTEUNITPOS_DOWN;
             text = "\a3\Ui_f\data\IGUI\RscIngameUI\RscUnitInfo\SI_prone_ca.paa";
             tooltip = "$STR_A3_RscAttributeUnitPos_Down_tooltip";
-            x = 13.25 * GUI_GRID_W;
+            x = POS_W(13.25);
             y = 0;
-            w = 2.5 * GUI_GRID_W;
-            h = 2.5 * GUI_GRID_H;
+            w = POS_W(2.5);
+            h = POS_H(2.5);
         };
         class Crouch: Down {
             idc = IDC_ATTRIBUTEUNITPOS_CROUCH;
             text = "\a3\Ui_f\data\IGUI\RscIngameUI\RscUnitInfo\SI_crouch_ca.paa";
             tooltip = "$STR_A3_RscAttributeUnitPos_Crouch_tooltip";
-            x = 15.75 * GUI_GRID_W;
+            x = POS_W(15.75);
         };
         class Up: Down {
             idc = IDC_ATTRIBUTEUNITPOS_UP;
             text = "\a3\Ui_f\data\IGUI\RscIngameUI\RscUnitInfo\SI_stand_ca.paa";
             tooltip = "$STR_A3_RscAttributeUnitPos_Up_tooltip";
-            x = 18.25 * GUI_GRID_W;
+            x = POS_W(18.25);
         };
         class Auto: Down {
             idc = IDC_ATTRIBUTEUNITPOS_AUTO;
             text = "\a3\ui_f_curator\Data\default_ca.paa";
             tooltip = "$STR_A3_RscAttributeUnitPos_Auto_tooltip";
-            x = 24 * GUI_GRID_W;
-            y = 0.5 * GUI_GRID_H;
-            w = 1.5 * GUI_GRID_W;
-            h = 1.5 * GUI_GRID_H;
+            x = POS_W(24);
+            y = POS_H(0.5);
+            w = POS_W(1.5);
+            h = POS_H(1.5);
         };
     };
 };
@@ -371,293 +367,293 @@ class GVAR(RscAttributeRespawnPosition): RscControlsGroupNoScrollbars {
     onSetFocus = "";
     x = 0;
     y = 0;
-    w = 26 * GUI_GRID_W;
-    h = 2.5 * GUI_GRID_H;
+    w = POS_W(26);
+    h = POS_H(2.5);
     class controls {
         class Label: GVAR(RscLabel) {
             text = "$STR_A3_RscAttributeRespawnPosition_Title";
-            h = 2.5 * GUI_GRID_H;
+            h = POS_H(2.5);
         };
         class Background: RscText {
             idc = -1;
-            x = 10 * GUI_GRID_W;
+            x = POS_W(10);
             y = 0;
-            w = 16 * GUI_GRID_W;
-            h = 2.5 * GUI_GRID_H;
+            w = POS_W(16);
+            h = POS_H(2.5);
             colorBackground[] = {1, 1, 1, 0.1};
         };
         class West: RscActivePicture {
             idc = IDC_ATTRIBUTERESPAWNPOSITION_WEST;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnPosition\west_ca.paa";
             tooltip = "$STR_WEST";
-            x = 12.25 * GUI_GRID_W;
-            y = 0.25 * GUI_GRID_H;
-            w = 2 * GUI_GRID_W;
-            h = 2 * GUI_GRID_H;
+            x = POS_W(12.25);
+            y = POS_H(0.25);
+            w = POS_W(2);
+            h = POS_H(2);
         };
         class East: West {
             idc = IDC_ATTRIBUTERESPAWNPOSITION_EAST;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnPosition\east_ca.paa";
             tooltip = "$STR_EAST";
-            x = 14.75 * GUI_GRID_W;
+            x = POS_W(14.75);
         };
         class Guer: West {
             idc = IDC_ATTRIBUTERESPAWNPOSITION_GUER;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnPosition\guer_ca.paa";
             tooltip = "$STR_guerrila";
-            x = 17.25 * GUI_GRID_W;
+            x = POS_W(17.25);
         };
         class Civ: West {
             idc = IDC_ATTRIBUTERESPAWNPOSITION_CIV;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnPosition\civ_ca.paa";
             tooltip = "$STR_Civilian";
-            x = 19.75 * GUI_GRID_W;
+            x = POS_W(19.75);
         };
         class Disabled: West {
             idc = IDC_ATTRIBUTERESPAWNPOSITION_DISABLED;
             text = "\a3\Ui_F_Curator\Data\default_ca.paa";
             tooltip = "$STR_sensoractiv_none";
-            x = 24 * GUI_GRID_W;
-            y = 0.5 * GUI_GRID_H;
-            w = 1.5 * GUI_GRID_W;
-            h = 1.5 * GUI_GRID_H;
+            x = POS_W(24);
+            y = POS_H(0.5);
+            w = POS_W(1.5);
+            h = POS_H(1.5);
         };
     };
 };
 
 class GVAR(RscAttributeFormation): RscControlsGroupNoScrollbars {
     idc = IDC_ATTRIBUTEFORMATION;
-    onSetFocus = QUOTE(_this call FUNC(ui_attributeFormation));
+    onSetFocus = QUOTE(_this call FUNC(attributeFormation));
     x = 0;
     y = 0;
-    w = 26 * GUI_GRID_W;
-    h = 5 * GUI_GRID_H;
+    w = POS_W(26);
+    h = POS_H(5);
     class controls {
         class Label: GVAR(RscLabel) {
             text = "$STR_3DEN_Group_Attribute_Formation_displayName";
-            h = 5 * GUI_GRID_H;
+            h = POS_H(5);
         };
         class Background: RscText {
             idc = -1;
-            x = 10 * GUI_GRID_W;
+            x = POS_W(10);
             y = 0;
-            w = 16 * GUI_GRID_W;
-            h = 5 * GUI_GRID_H;
+            w = POS_W(16);
+            h = POS_H(5);
             colorBackground[] = {1, 1, 1, 0.1};
         };
         class Wedge: RscActivePicture {
             idc = IDC_ATTRIBUTEFORMATION_WEDGE;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\wedge_ca.paa";
             tooltip = "$STR_wedge";
-            x = 11.75 * GUI_GRID_W;
+            x = POS_W(11.75);
             y = 0;
-            w = 2.5 * GUI_GRID_W;
-            h = 2.5 * GUI_GRID_H;
+            w = POS_W(2.5);
+            h = POS_H(2.5);
         };
         class Vee: Wedge {
             idc = IDC_ATTRIBUTEFORMATION_VEE;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\vee_ca.paa";
             tooltip = "$STR_vee";
-            x = 14.25 * GUI_GRID_W;
+            x = POS_W(14.25);
         };
         class Line: Wedge {
             idc = IDC_ATTRIBUTEFORMATION_LINE;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\line_ca.paa";
             tooltip = "$STR_line";
-            x = 16.75 * GUI_GRID_W;
+            x = POS_W(16.75);
         };
         class Column: Wedge {
             idc = IDC_ATTRIBUTEFORMATION_COLUMN;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\column_ca.paa";
             tooltip = "$STR_column";
-            x = 19.25 * GUI_GRID_W;
+            x = POS_W(19.25);
         };
         class File: Wedge {
             idc = IDC_ATTRIBUTEFORMATION_FILE;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\file_ca.paa";
             tooltip = "$STR_file";
-            x = 21.75 * GUI_GRID_W;
+            x = POS_W(21.75);
         };
         class StagColumn: Wedge {
             idc = IDC_ATTRIBUTEFORMATION_STAGCOLUMN;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\stag_column_ca.paa";
             tooltip = "$STR_staggered";
-            x = 11.75 * GUI_GRID_W;
-            y = 2.5 * GUI_GRID_H;
+            x = POS_W(11.75);
+            y = POS_H(2.5);
         };
         class EchLeft: StagColumn {
             idc = IDC_ATTRIBUTEFORMATION_ECHLEFT;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\ech_left_ca.paa";
             tooltip = "$STR_echl";
-            x = 14.25 * GUI_GRID_W;
+            x = POS_W(14.25);
         };
         class EchRight: StagColumn {
             idc = IDC_ATTRIBUTEFORMATION_ECHRIGHT;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\ech_right_ca.paa";
             tooltip = "$STR_echr";
-            x = 16.75 * GUI_GRID_W;
+            x = POS_W(16.75);
         };
         class Diamond: StagColumn {
             idc = IDC_ATTRIBUTEFORMATION_DIAMOND;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\diamond_ca.paa";
             tooltip = "$STR_diamond";
-            x = 19.25 * GUI_GRID_W;
+            x = POS_W(19.25);
         };
         class Default: StagColumn {
             idc = IDC_ATTRIBUTEFORMATION_DEFAULT;
             text = "\a3\ui_f_curator\Data\default_ca.paa";
             tooltip = "$STR_no_change";
-            x = 22.25 * GUI_GRID_W;
-            y = 3 * GUI_GRID_H;
-            w = 1.5 * GUI_GRID_W;
-            h = 1.5 * GUI_GRID_H;
+            x = POS_W(22.25);
+            y = POS_H(3);
+            w = POS_W(1.5);
+            h = POS_H(1.5);
         };
     };
 };
 
 class GVAR(RscAttributeBehaviour): RscControlsGroupNoScrollbars {
     idc = IDC_ATTRIBUTEBEHAVIOUR;
-    onSetFocus = QUOTE(_this call FUNC(ui_attributeBehaviour));
+    onSetFocus = QUOTE(_this call FUNC(attributeBehaviour));
     x = 0;
     y = 0;
-    w = 26 * GUI_GRID_W;
-    h = 2.5 * GUI_GRID_H;
+    w = POS_W(26);
+    h = POS_H(2.5);
     class controls {
         class Label: GVAR(RscLabel) {
             text = "$STR_3DEN_Group_Attribute_Behaviour_displayName";
-            h = 2.5 * GUI_GRID_H;
+            h = POS_H(2.5);
         };
         class Background: RscText {
             idc = -1;
-            x = 10 * GUI_GRID_W;
+            x = POS_W(10);
             y = 0;
-            w = 16 * GUI_GRID_W;
-            h = 2.5 * GUI_GRID_H;
+            w = POS_W(16);
+            h = POS_H(2.5);
             colorBackground[] = {1, 1, 1, 0.1};
         };
         class Careless: RscActivePicture {
             idc = IDC_ATTRIBUTEBEHAVIOUR_CARELESS;
             text = QPATHTOF(UI\careless_ca.paa);
             tooltip = "$STR_3DEN_Attributes_Behaviour_Careless_text";
-            x = 11.25 * GUI_GRID_W;
-            y = 0.5 * GUI_GRID_H;
-            w = 1.5 * GUI_GRID_W;
-            h = 1.5 * GUI_GRID_H;
+            x = POS_W(11.25);
+            y = POS_H(0.5);
+            w = POS_W(1.5);
+            h = POS_H(1.5);
         };
         class Safe: Careless {
             idc = IDC_ATTRIBUTEBEHAVIOUR_SAFE;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeBehaviour\safe_ca.paa";
             tooltip = "$STR_safe";
-            x = 13.75 * GUI_GRID_W;
+            x = POS_W(13.75);
         };
         class Aware: Careless {
             idc = IDC_ATTRIBUTEBEHAVIOUR_AWARE;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeBehaviour\aware_ca.paa";
             tooltip = "$STR_aware";
-            x = 16.25 * GUI_GRID_W;
+            x = POS_W(16.25);
         };
         class Combat: Careless {
             idc = IDC_ATTRIBUTEBEHAVIOUR_COMBAT;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeBehaviour\combat_ca.paa";
             tooltip = "$STR_combat";
-            x = 18.75 * GUI_GRID_W;
+            x = POS_W(18.75);
         };
         class Stealth: Careless {
             idc = IDC_ATTRIBUTEBEHAVIOUR_STEALTH;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeBehaviour\stealth_ca.paa";
             tooltip = "$STR_stealth";
-            x = 21.25 * GUI_GRID_W;
+            x = POS_W(21.25);
         };
         class Default: Careless {
             idc = IDC_ATTRIBUTEBEHAVIOUR_DEFAULT;
             text = "\a3\ui_f_curator\Data\default_ca.paa";
             tooltip = "$STR_combat_unchanged";
-            x = 24 * GUI_GRID_W;
+            x = POS_W(24);
         };
     };
 };
 
 class GVAR(RscAttributeSpeedMode): RscControlsGroupNoScrollbars {
     idc = IDC_ATTRIBUTESPEEDMODE;
-    onSetFocus = QUOTE(_this call FUNC(ui_attributeSpeedMode));
+    onSetFocus = QUOTE(_this call FUNC(attributeSpeedMode));
     x = 0;
     y = 0;
-    w = 26 * GUI_GRID_W;
-    h = 2.5 * GUI_GRID_H;
+    w = POS_W(26);
+    h = POS_H(2.5);
     class controls {
         class Label: GVAR(RscLabel) {
             text = "$STR_HC_Menu_Speed";
-            h = 2.5 * GUI_GRID_H;
+            h = POS_H(2.5);
         };
         class Background: RscText {
             idc = -1;
-            x = 10 * GUI_GRID_W;
+            x = POS_W(10);
             y = 0;
-            w = 16 * GUI_GRID_W;
-            h = 2.5 * GUI_GRID_H;
+            w = POS_W(16);
+            h = POS_H(2.5);
             colorBackground[] = {1, 1, 1, 0.1};
         };
         class Limited: RscActivePicture {
             idc = IDC_ATTRIBUTESPEEDMODE_LIMITED;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeSpeedMode\limited_ca.paa";
             tooltip = "$STR_speed_limited";
-            x = 13.25 * GUI_GRID_W;
-            y = 0;
-            w = 2.5 * GUI_GRID_W;
-            h = 2.5 * GUI_GRID_H;
+            x = POS_W(13.25);
+            y = POS_H(0);
+            w = POS_W(2.5);
+            h = POS_H(2.5);
         };
         class Normal: Limited {
             idc = IDC_ATTRIBUTESPEEDMODE_NORMAL;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeSpeedMode\normal_ca.paa";
             tooltip = "$STR_speed_normal";
-            x = 15.75 * GUI_GRID_W;
+            x = POS_W(15.75);
         };
         class Full: Limited {
             idc = IDC_ATTRIBUTESPEEDMODE_FULL;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeSpeedMode\full_ca.paa";
             tooltip = "$STR_speed_full";
-            x = 18.25 * GUI_GRID_W;
+            x = POS_W(18.25);
         };
         class Default: Limited {
             idc = IDC_ATTRIBUTESPEEDMODE_DEFAULT;
             text = "\a3\ui_f_curator\Data\default_ca.paa";
             tooltip = "$STR_speed_unchanged";
-            x = 24 * GUI_GRID_W;
-            y = 0.5 * GUI_GRID_H;
-            w = 1.5 * GUI_GRID_W;
-            h = 1.5 * GUI_GRID_H;
+            x = POS_W(24);
+            y = POS_H(0.5);
+            w = POS_W(1.5);
+            h = POS_H(1.5);
         };
     };
 };
 
 class GVAR(RscAttributeWaypointType): RscControlsGroupNoScrollbars {
     idc = IDC_ATTRIBUTEWAYPOINTTYPE;
-    onSetFocus = QUOTE(_this call FUNC(ui_attributeWaypointType));
+    onSetFocus = QUOTE(_this call FUNC(attributeWaypointType));
     x = 0;
     y = 0;
-    w = 26 * GUI_GRID_W;
-    h = 5 * GUI_GRID_H;
+    w = POS_W(26);
+    h = POS_H(5);
     class controls {
         class Label: GVAR(RscLabel) {
             text = "$STR_3DEN_Object_Attribute_Type_displayName";
-            w = 26 * GUI_GRID_H;
+            w = POS_W(26);
         };
         class Background: RscText {
             idc = IDC_ATTRIBUTEWAYPOINTTYPE_BACKGROUND;
             style = ST_CENTER;
             x = 0;
-            y = GUI_GRID_H;
-            w = 26 * GUI_GRID_W;
-            h = 4 * GUI_GRID_H;
+            y = POS_H(1);
+            w = POS_W(26);
+            h = POS_H(4);
             colorText[] = {1, 1, 1, 0.5};
             colorBackground[] = {1, 1, 1, 0.1};
         };
         class Toolbox: ctrlToolbox {
             idc = IDC_ATTRIBUTEWAYPOINTTYPE_TOOLBOX;
             x = 0;
-            y = GUI_GRID_H;
-            w = 26 * GUI_GRID_W;
-            h = 4 * GUI_GRID_H;
+            y = POS_H(1);
+            w = POS_W(26);
+            h = POS_H(4);
             colorBackground[] = {0, 0, 0, 0};
             rows = 4;
             columns = 3;
@@ -681,11 +677,11 @@ class GVAR(RscAttributeWaypointType): RscControlsGroupNoScrollbars {
 
 class GVAR(RscAttributeMarkerText): RscControlsGroupNoScrollbars {
     idc = IDC_ATTRIBUTEMARKERTEXT;
-    onSetFocus = QUOTE(_this call FUNC(ui_attributeMarkerText));
+    onSetFocus = QUOTE(_this call FUNC(attributeMarkerText));
     x = 0;
     y = 0;
-    w = 26 * GUI_GRID_W;
-    h = GUI_GRID_H;
+    w = POS_W(26);
+    h = POS_H(1);
     class controls {
         class Label: GVAR(RscLabel) {
             text = "$STR_3DEN_Marker_Attribute_Text_displayName";
@@ -698,11 +694,11 @@ class GVAR(RscAttributeMarkerText): RscControlsGroupNoScrollbars {
 
 class GVAR(RscAttributeMarkerColor): RscControlsGroupNoScrollbars {
     idc = IDC_ATTRIBUTEMARKERCOLOR;
-    onSetFocus = QUOTE(_this call FUNC(ui_attributeMarkerColor));
+    onSetFocus = QUOTE(_this call FUNC(attributeMarkerColor));
     x = 0;
     y = 0;
-    w = 26 * GUI_GRID_W;
-    h = GUI_GRID_H;
+    w = POS_W(26);
+    h = POS_H(1);
     class controls {
         class Label: GVAR(RscLabel) {
             text = "$STR_3DEN_Marker_Attribute_Color_displayName";
@@ -724,7 +720,6 @@ class GVAR(RscAttributesMan): GVAR(RscAttributesBase) {
                 class Name: GVAR(RscAttributeName) {};
                 class Skill: GVAR(RscAttributeSkill) {};
                 class Damage: GVAR(RscAttributeDamage) {};
-                class Ammo: GVAR(RscAttributeAmmo) {};
                 class Rank: GVAR(RscAttributeRank) {};
                 class UnitPos: GVAR(RscAttributeUnitPos) {};
                 class RespawnPosition: GVAR(RscAttributeRespawnPosition) {};

@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [CONTROL] call zen_attributes_fnc_ui_attributeRank
+ * [CONTROL] call zen_attributes_fnc_attributeRank
  *
  * Public: No
  */

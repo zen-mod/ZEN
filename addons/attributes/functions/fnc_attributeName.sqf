@@ -1,6 +1,6 @@
 /*
  * Author: mharis001
- * Initializes the "Marker Text" Zeus attribute.
+ * Initializes the "Name" Zeus attribute.
  *
  * Arguments:
  * 0: Attribute controls group <CONTROL>
@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [CONTROL] call zen_attributes_fnc_ui_attributeMarkerText
+ * [CONTROL] call zen_attributes_fnc_attributeName
  *
  * Public: No
  */
@@ -24,8 +24,9 @@ private _entity = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 
 _control ctrlRemoveAllEventHandlers "SetFocus";
 
-private _ctrlEdit = _display displayCtrl IDC_ATTRIBUTEMARKERTEXT_EDIT;
-_ctrlEdit ctrlSetText markerText _entity;
+// Set current name
+private _ctrlEdit = _display displayCtrl IDC_ATTRIBUTENAME_EDIT;
+_ctrlEdit ctrlSetText name _entity;
 
 private _fnc_onConfirm = {
     params ["_ctrlButtonOK"];
@@ -33,8 +34,18 @@ private _fnc_onConfirm = {
     private _display = ctrlParent _ctrlButtonOK;
     private _entity = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 
-    private _ctrlEdit = _display displayCtrl IDC_ATTRIBUTEMARKERTEXT_EDIT;
-    _entity setMarkerText ctrlText _ctrlEdit;
+    private _ctrlEdit = _display displayCtrl IDC_ATTRIBUTENAME_EDIT;
+    private _newName = ctrlText _ctrlEdit;
+    private _oldName = name _entity;
+
+    // Change names of selected units
+    if !(_newName isEqualTo _oldName) then {
+        {
+            if (alive _x && {_x isKindOf "CAManBase"}) then {
+                [QEGVAR(common,setName), [_x, _newName]] call CBA_fnc_globalEvent;
+            };
+        } forEach (curatorSelected select 0);
+    };
 };
 
 _ctrlButtonOK ctrlAddEventHandler ["ButtonClick", _fnc_onConfirm];

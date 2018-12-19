@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [CONTROL] call zen_attributes_fnc_ui_attributeGroupID
+ * [CONTROL] call zen_attributes_fnc_attributeGroupID
  *
  * Public: No
  */

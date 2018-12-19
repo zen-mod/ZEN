@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [CONTROL] call zen_attributes_fnc_ui_attributeMarkerColor
+ * [CONTROL] call zen_attributes_fnc_attributeMarkerColor
  *
  * Public: No
  */

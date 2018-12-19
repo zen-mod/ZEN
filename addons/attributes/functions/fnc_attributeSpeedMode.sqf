@@ -1,6 +1,6 @@
 /*
  * Author: mharis001
- * Initializes the "Formation" Zeus attribute.
+ * Initializes the "Speed Mode" Zeus attribute.
  *
  * Arguments:
  * 0: Attribute controls group <CONTROL>
@@ -9,14 +9,14 @@
  * None
  *
  * Example:
- * [CONTROL] call zen_attributes_fnc_ui_attributeFormation
+ * [CONTROL] call zen_attributes_fnc_attributeSpeedMode
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-#define IDCS [IDC_ATTRIBUTEFORMATION_WEDGE, IDC_ATTRIBUTEFORMATION_VEE, IDC_ATTRIBUTEFORMATION_LINE, IDC_ATTRIBUTEFORMATION_COLUMN, IDC_ATTRIBUTEFORMATION_FILE, IDC_ATTRIBUTEFORMATION_STAGCOLUMN, IDC_ATTRIBUTEFORMATION_ECHLEFT, IDC_ATTRIBUTEFORMATION_ECHRIGHT, IDC_ATTRIBUTEFORMATION_DIAMOND, IDC_ATTRIBUTEFORMATION_DEFAULT]
-#define FORMATIONS ["WEDGE", "VEE", "LINE", "COLUMN", "FILE", "STAG COLUMN", "ECH LEFT", "ECH RIGHT", "DIAMOND", "NO CHANGE"]
+#define IDCS [IDC_ATTRIBUTESPEEDMODE_LIMITED, IDC_ATTRIBUTESPEEDMODE_NORMAL, IDC_ATTRIBUTESPEEDMODE_FULL, IDC_ATTRIBUTESPEEDMODE_DEFAULT]
+#define SPEED_MODES ["LIMITED", "NORMAL", "FULL", "UNCHANGED"]
 
 params ["_control"];
 
@@ -28,9 +28,15 @@ private _entity = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 _control ctrlRemoveAllEventHandlers "SetFocus";
 
 if (_entity isEqualType grpNull) then {
-    private _ctrlDefault = _display displayCtrl IDC_ATTRIBUTEFORMATION_DEFAULT;
+    private _ctrlDefault = _display displayCtrl IDC_ATTRIBUTESPEEDMODE_DEFAULT;
     _ctrlDefault ctrlEnable false;
     _ctrlDefault ctrlShow false;
+
+    {
+        private _ctrl = _display displayCtrl _x;
+        _ctrl ctrlSetPosition [(14.25 + _forEachIndex * 2.5) * GUI_GRID_W, 0];
+        _ctrl ctrlCommit 0;
+    } forEach IDCS;
 };
 
 private _fnc_onButtonClick = {
@@ -53,12 +59,12 @@ private _fnc_onButtonClick = {
         [_ctrl, _scale, 0.1] call BIS_fnc_ctrlSetScale;
     } forEach IDCS;
 
-    private _formation = FORMATIONS select (IDCS find _activeIDC);
-    _display setVariable [QGVAR(formation), _formation];
+    private _speedMode = SPEED_MODES select (IDCS find _activeIDC);
+    _display setVariable [QGVAR(speedMode), _speedMode];
 };
 
-private _formation = if (_entity isEqualType grpNull) then {formation _entity} else {waypointFormation _entity};
-private _activeIDC = IDCS select (FORMATIONS find toUpper _formation);
+private _speedMode = if (_entity isEqualType grpNull) then {speedMode _entity} else {waypointSpeed _entity};
+private _activeIDC = IDCS select (SPEED_MODES find toUpper _speedMode);
 
 {
     private _ctrl = _display displayCtrl _x;
@@ -74,23 +80,23 @@ private _fnc_onConfirm = {
     params ["_ctrlButtonOK"];
 
     private _display = ctrlParent _ctrlButtonOK;
-    private _formation = _display getVariable QGVAR(formation);
-    if (isNil "_formation") exitWith {};
+    private _speedMode = _display getVariable QGVAR(speedMode);
+    if (isNil "_speedMode") exitWith {};
 
     private _entity = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
     if (_entity isEqualType grpNull) then {
         {
-            [QEGVAR(common,setFormation), [_x, _formation], _x] call CBA_fnc_targetEvent;
+            [QEGVAR(common,setSpeedMode), [_x, _speedMode], _x] call CBA_fnc_targetEvent;
         } forEach SELECTED_GROUPS;
     } else {
         {
             _x params ["_group", "_waypointID"];
 
-            if (currentWaypoint _group == _waypointID && {_formation != "NO CHANGE"}) then {
-                [QEGVAR(common,setFormation), [_group, _formation], _group] call CBA_fnc_targetEvent;
+            if (currentWaypoint _group == _waypointID && {_speedMode != "UNCHANGED"}) then {
+                [QEGVAR(common,setSpeedMode), [_group, _speedMode], _group] call CBA_fnc_targetEvent;
             };
 
-            [QEGVAR(common,setWaypointFormation), [_x, _formation]] call CBA_fnc_serverEvent;
+            [QEGVAR(common,setWaypointSpeed), [_x, _speedMode]] call CBA_fnc_serverEvent;
         } forEach SELECTED_WAYPOINTS;
     };
 };

@@ -1,6 +1,6 @@
 /*
  * Author: mharis001
- * Initializes the "Damage" Zeus attribute.
+ * Initializes the "Skill" Zeus attribute.
  *
  * Arguments:
  * 0: Attribute controls group <CONTROL>
@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [CONTROL] call zen_attributes_fnc_ui_attributeDamage
+ * [CONTROL] call zen_attributes_fnc_attributeSkill
  *
  * Public: No
  */
@@ -22,40 +22,42 @@ private _display = ctrlParent _control;
 private _ctrlButtonOK = _display displayCtrl IDC_OK;
 private _entity = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 
+if (_entity isEqualType grpNull) then {
+    _entity = leader _entity;
+};
+
 _control ctrlRemoveAllEventHandlers "SetFocus";
 
-private _health = 1 - damage _entity;
-private _ctrlSlider = _display displayCtrl IDC_ATTRIBUTEDAMAGE_SLIDER;
+private _skill = skill _entity;
+private _ctrlSlider = _display displayCtrl IDC_ATTRIBUTESKILL_SLIDER;
 
 private _fnc_onSliderPosChanged = {
     params ["_ctrlSlider", "_value"];
 
     private _display = ctrlParent _ctrlSlider;
-    private _ctrlEdit = _display displayCtrl IDC_ATTRIBUTEDAMAGE_EDIT;
+    private _ctrlEdit = _display displayCtrl IDC_ATTRIBUTESKILL_EDIT;
     _ctrlEdit ctrlSetText format ["%1%2", round (_value * 100), "%"];
-    _display setVariable [QGVAR(damage), _value];
+    _display setVariable [QGVAR(skill), _value];
 };
 
-_ctrlSlider sliderSetRange [0, 1];
-_ctrlSlider sliderSetPosition _health;
+_ctrlSlider sliderSetRange [0.2, 1];
+_ctrlSlider sliderSetPosition _skill;
 
 _ctrlSlider ctrlAddEventHandler ["SliderPosChanged", _fnc_onSliderPosChanged];
 
-private _ctrlEdit = _display displayCtrl IDC_ATTRIBUTEDAMAGE_EDIT;
-_ctrlEdit ctrlSetText format ["%1%2", round (_health * 100), "%"];
+private _ctrlEdit = _display displayCtrl IDC_ATTRIBUTESKILL_EDIT;
+_ctrlEdit ctrlSetText format ["%1%2", round (_skill * 100), "%"];
 
 private _fnc_onConfirm = {
     params ["_ctrlButtonOK"];
 
     private _display = ctrlParent _ctrlButtonOK;
-    private _damage = _display getVariable QGVAR(damage);
-    if (isNil "_damage") exitWith {};
-    _damage = 1 - _damage;
+    private _skill = _display getVariable QGVAR(skill);
+    if (isNil "_skill") exitWith {};
 
     private _entity = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
     {
-        _x setDamage _damage;
-        systemChat str _x;
+        [QEGVAR(common,setSkill), [_x, _skill], _x] call CBA_fnc_targetEvent;
     } forEach (_entity call FUNC(getAttributeEntities));
 };
 

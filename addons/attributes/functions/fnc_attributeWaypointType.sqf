@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [CONTROL] call zen_attributes_fnc_ui_attributeWaypointType
+ * [CONTROL] call zen_attributes_fnc_attributeWaypointType
  *
  * Public: No
  */
