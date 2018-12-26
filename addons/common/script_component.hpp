@@ -19,3 +19,8 @@
 #include "\a3\ui_f_curator\ui\defineResinclDesign.inc"
 
 #define ICON_TARGET "\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa"
+
+#define ICON_BLUFOR      QPATHTOF(UI\icon_blufor_ca.paa)
+#define ICON_OPFOR       QPATHTOF(UI\icon_opfor_ca.paa)
+#define ICON_INDEPENDENT QPATHTOF(UI\icon_independent_ca.paa)
+#define ICON_CIVILIAN    QPATHTOF(UI\icon_civilian_ca.paa)
