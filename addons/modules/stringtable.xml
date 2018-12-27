@@ -1,54 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Modules">
-        <Key ID="STR_ZEN_Modules_NothingSelected">
-            <English>Place on a unit</English>
-            <French>Placez sur une unité</French>
-            <German>Es wurde nichts ausgewählt</German>
-            <Spanish>Nada bajo el ratón</Spanish>
-            <Portuguese>Coloque em uma unidade</Portuguese>
-            <Czech>Umístni na jednotku</Czech>
-            <Polish>Nie ma nic pod kursorem</Polish>
-            <Russian>Ничего не выделено</Russian>
-            <Hungarian>Semmi sincs az egér alatt</Hungarian>
-            <Italian>Piazza su una unità</Italian>
-            <Japanese>ユニットの上に設置</Japanese>
-            <Korean>대상에 배치하기</Korean>
-            <Chinesesimp>放置在一个单位上</Chinesesimp>
-            <Chinese>放置在一個單位上</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Modules_OnlyAlive">
-            <English>Unit must be alive</English>
-            <French>Utiliser uniquement sur une unité vivante</French>
-            <German>Einheit muss lebendig sein.</German>
-            <Spanish>Utilizar solo en unidades vivas</Spanish>
-            <Czech>Použitelné jen na živé jednotky</Czech>
-            <Polish>Używaj tylko na żywych jednostkach</Polish>
-            <Russian>Применимо только к живым юнитам</Russian>
-            <Hungarian>Csak élő egységeken használni</Hungarian>
-            <Italian>Si può fare solo su persone vive</Italian>
-            <Portuguese>Usar somente em unidades vivas</Portuguese>
-            <Japanese>ユニットを生存させます</Japanese>
-            <Korean>대상이 반드시 살아있어야 합니다</Korean>
-            <Chinesesimp>单位必须是活着</Chinesesimp>
-            <Chinese>單位必須是活著</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Modules_OnlyInfantry">
-            <English>Unit must be infantry</English>
-            <French>Utiliser uniquement sur du personnel à pied</French>
-            <German>Nur bei abgesessener Infanterie verwendbar</German>
-            <Spanish>Utilizar solo en infanteria desmontada</Spanish>
-            <Czech>Použitelné jen na pěsích jednotkách</Czech>
-            <Polish>Używaj tylko na piechocie poza wszelkimi pojazdami</Polish>
-            <Russian>Применимо только к пехоте вне техники</Russian>
-            <Hungarian>Csak járműben kívül lévő egységeken használni</Hungarian>
-            <Italian>Si può usare solo su fanteria a piedi</Italian>
-            <Portuguese>Usar somente em infantaria desmontada</Portuguese>
-            <Japanese>ユニットを歩兵にさせます</Japanese>
-            <Korean>대상이 반드시 보병이어야 합니다</Korean>
-            <Chinesesimp>单位必须是步兵</Chinesesimp>
-            <Chinese>單位必須是步兵</Chinese>
-        </Key>
         <Key ID="STR_ZEN_Modules_AttributeRadius">
             <English>Task Radius</English>
         </Key>
@@ -58,6 +10,20 @@
         <Key ID="STR_ZEN_Modules_AttributeRadius_Invalid">
             <English>Invalid radius entered</English>
         </Key>
+
+        <Key ID="STR_ZEN_Modules_ModuleAttachTo">
+            <English>Attach To</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ObjectAttached">
+            <English>Object Attached</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ObjectDetached">
+            <English>Object Detached</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_CannotAttachToSelf">
+            <English>Cannot attach object to itself</English>
+        </Key>
+
         <Key ID="STR_ZEN_Modules_ModuleChatter">
             <English>Chatter</English>
         </Key>
@@ -70,6 +36,7 @@
         <Key ID="STR_ZEN_Modules_ModuleChatter_Channel">
             <English>Channel</English>
         </Key>
+
         <Key ID="STR_ZEN_Modules_ModuleCreateMinefield">
             <English>Create Minefield</English>
         </Key>
@@ -140,9 +107,6 @@
         <Key ID="STR_ZEN_Modules_Groups">
             <English>Groups</English>
         </Key>
-        <Key ID="STR_ZEN_Modules_Players">
-            <English>Players</English>
-        </Key>
         <Key ID="STR_ZEN_Modules_ModuleSmokePillar">
             <English>Smoke Pillar</English>
         </Key>
@@ -179,8 +143,64 @@
         <Key ID="STR_ZEN_Modules_LargeMixedSmoke">
             <English>Large Mixed Smoke</English>
         </Key>
+        <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_AI">
             <English>AI</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_Objects">
+            <English>Objects</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_Players">
+            <English>Players</English>
+        </Key>
+        <!-- Feedback Messages -->
+        <Key ID="STR_ZEN_Modules_NothingSelected">
+            <English>Place on a unit</English>
+            <French>Placez sur une unité</French>
+            <German>Es wurde nichts ausgewählt</German>
+            <Spanish>Nada bajo el ratón</Spanish>
+            <Portuguese>Coloque em uma unidade</Portuguese>
+            <Czech>Umístni na jednotku</Czech>
+            <Polish>Nie ma nic pod kursorem</Polish>
+            <Russian>Ничего не выделено</Russian>
+            <Hungarian>Semmi sincs az egér alatt</Hungarian>
+            <Italian>Piazza su una unità</Italian>
+            <Japanese>ユニットの上に設置</Japanese>
+            <Korean>대상에 배치하기</Korean>
+            <Chinesesimp>放置在一个单位上</Chinesesimp>
+            <Chinese>放置在一個單位上</Chinese>
+        </Key>
+        <Key ID="STR_ZEN_Modules_OnlyAlive">
+            <English>Unit must be alive</English>
+            <French>Utiliser uniquement sur une unité vivante</French>
+            <German>Einheit muss lebendig sein.</German>
+            <Spanish>Utilizar solo en unidades vivas</Spanish>
+            <Czech>Použitelné jen na živé jednotky</Czech>
+            <Polish>Używaj tylko na żywych jednostkach</Polish>
+            <Russian>Применимо только к живым юнитам</Russian>
+            <Hungarian>Csak élő egységeken használni</Hungarian>
+            <Italian>Si può fare solo su persone vive</Italian>
+            <Portuguese>Usar somente em unidades vivas</Portuguese>
+            <Japanese>ユニットを生存させます</Japanese>
+            <Korean>대상이 반드시 살아있어야 합니다</Korean>
+            <Chinesesimp>单位必须是活着</Chinesesimp>
+            <Chinese>單位必須是活著</Chinese>
+        </Key>
+        <Key ID="STR_ZEN_Modules_OnlyInfantry">
+            <English>Unit must be infantry</English>
+            <French>Utiliser uniquement sur du personnel à pied</French>
+            <German>Nur bei abgesessener Infanterie verwendbar</German>
+            <Spanish>Utilizar solo en infanteria desmontada</Spanish>
+            <Czech>Použitelné jen na pěsích jednotkách</Czech>
+            <Polish>Używaj tylko na piechocie poza wszelkimi pojazdami</Polish>
+            <Russian>Применимо только к пехоте вне техники</Russian>
+            <Hungarian>Csak járműben kívül lévő egységeken használni</Hungarian>
+            <Italian>Si può usare solo su fanteria a piedi</Italian>
+            <Portuguese>Usar somente em infantaria desmontada</Portuguese>
+            <Japanese>ユニットを歩兵にさせます</Japanese>
+            <Korean>대상이 반드시 보병이어야 합니다</Korean>
+            <Chinesesimp>单位必须是步兵</Chinesesimp>
+            <Chinese>單位必須是步兵</Chinese>
         </Key>
     </Package>
 </Project>

@@ -1,3 +1,4 @@
+PREP(moduleAttachTo);
 PREP(moduleChatter);
 PREP(moduleCreateMinefield);
 PREP(moduleHideZeus);

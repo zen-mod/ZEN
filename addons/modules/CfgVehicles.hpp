@@ -10,6 +10,12 @@ class CfgVehicles {
         scope = 1;
         scopeCurator = 2;
     };
+    class GVAR(moduleAttachTo): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Objects);
+        displayName = CSTRING(ModuleAttachTo);
+        function = QFUNC(moduleAttachTo);
+    };
     class GVAR(moduleChatter): GVAR(moduleBase) {
         curatorCanAttach = 1;
         displayName = CSTRING(ModuleChatter);

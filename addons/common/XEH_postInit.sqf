@@ -65,6 +65,11 @@
     _unit setName _name;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setDir), {
+    params ["_object", "_direction"];
+    _object setDir _direction;
+}] call CBA_fnc_addEventHandler;
+
 if (isServer) then {
     [QGVAR(hideObjectGlobal), {
         params ["_object", "_hide"];

@@ -4,6 +4,7 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {
+            QGVAR(moduleAttachTo),
             QGVAR(moduleChatter),
             QGVAR(moduleCreateMinefield),
             QGVAR(moduleGlobalHint),

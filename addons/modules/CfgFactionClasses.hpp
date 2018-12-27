@@ -4,6 +4,11 @@ class CfgFactionClasses {
         priority = 2;
         side = 7;
     };
+    class GVAR(Objects) {
+        displayName = CSTRING(Objects);
+        priority = 2;
+        side = 7;
+    };
     class GVAR(Players) {
         displayName = CSTRING(Players);
         priority = 2;
