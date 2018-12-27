@@ -15,7 +15,7 @@ class CfgPatches {
         };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"zen_common"};
+        requiredAddons[] = {"zen_attributes"};
         author = "";
         url = "";
         VERSION_CONFIG;

@@ -18,6 +18,11 @@
 #include "\a3\ui_f\hpp\defineCommonGrids.inc"
 #include "\a3\ui_f_curator\ui\defineResinclDesign.inc"
 
+#define POS_X(N) ((N) * GUI_GRID_W + GUI_GRID_CENTER_X)
+#define POS_Y(N) ((N) * GUI_GRID_H + GUI_GRID_CENTER_Y)
+#define POS_W(N) ((N) * GUI_GRID_W)
+#define POS_H(N) ((N) * GUI_GRID_H)
+
 #define IDC_ATTRIBUTERADIUS 60000
 #define IDC_ATTRIBUTERADIUS_VALUE 60001
 
@@ -81,4 +86,4 @@
 #define ICON_INDEPENDENT QPATHTOEF(common,UI\icon_independent_ca.paa)
 #define ICON_CIVILIAN QPATHTOEF(common,UI\icon_civilian_ca.paa)
 
-#define GET_SIDE_ICON(UNIT) ([ARR_4(ICON_OPFOR, ICON_BLUFOR, ICON_INDEPENDENT, ICON_CIVILIAN)] select ([side UNIT] call BIS_fnc_sideID))
+#define GET_SIDE_ICON(unit) (unit call EFUNC(common,getSideIcon))

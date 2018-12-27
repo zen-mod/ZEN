@@ -12,17 +12,32 @@ class RscActivePicture;
 class RscControlsGroup;
 class RscControlsGroupNoScrollbars;
 
-class RscDisplayAttributes {
-    class Controls {
-        class Background;
+class EGVAR(attributes,RscAttributesBase) {
+    class controls {
         class Title;
-        class Content: RscControlsGroup {
-            class controls;
-        };
+        class Background;
+        class Content;
         class ButtonOK;
         class ButtonCancel;
     };
 };
+
+#define BEGIN_MODULE_DIALOG(name) \
+    class GVAR(name): EGVAR(attributes,RscAttributesBase) { \
+        onLoad = QUOTE([ARR_2(_this select 0, QQGVAR(name))] call EFUNC(attributes,initAttributesDisplay)); \
+        class controls: controls { \
+            class Title: Title {}; \
+            class Background: Background {}; \
+            class Content: Content { \
+                class controls { \
+
+#define END_MODULE_DIALOG \
+                }; \
+            }; \
+            class ButtonOK: ButtonOK {}; \
+            class ButtonCancel: ButtonCancel {}; \
+        }; \
+    }
 
 class GVAR(RscLabel): RscText {
     idc = -1;
@@ -78,9 +93,8 @@ class GVAR(AttributeRadius): RscControlsGroupNoScrollbars {
     };
 };
 
-class GVAR(RscChatter): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscChatter))] call EFUNC(common,zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscChatter))] call EFUNC(common,zeusAttributes));
+class GVAR(RscChatter): EGVAR(attributes,RscAttributesBase) {
+    onLoad = QUOTE([ARR_2(_this select 0, QQGVAR(RscChatter))] call EFUNC(attributes,initAttributesDisplay));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};
@@ -179,9 +193,8 @@ class GVAR(RscChatter): RscDisplayAttributes {
     };
 };
 
-class GVAR(RscCreateMinefield): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscCreateMinefield))] call EFUNC(common,zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscCreateMinefield))] call EFUNC(common,zeusAttributes));
+class GVAR(RscCreateMinefield): EGVAR(attributes,RscAttributesBase) {
+    onLoad = QUOTE([ARR_2(_this select 0, QQGVAR(RscCreateMinefield))] call EFUNC(attributes,initAttributesDisplay));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};
@@ -266,9 +279,8 @@ class GVAR(RscCreateMinefield): RscDisplayAttributes {
     };
 };
 
-class GVAR(RscGlobalHint): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscGlobalHint))] call EFUNC(common,zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscGlobalHint))] call EFUNC(common,zeusAttributes));
+class GVAR(RscGlobalHint): EGVAR(attributes,RscAttributesBase) {
+    onLoad = QUOTE([ARR_2(_this select 0, QQGVAR(RscGlobalHint))] call EFUNC(attributes,initAttributesDisplay));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};
@@ -324,9 +336,8 @@ class GVAR(RscGlobalHint): RscDisplayAttributes {
     };
 };
 
-class GVAR(RscHideZeus): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscHideZeus))] call EFUNC(common,zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscHideZeus))] call EFUNC(common,zeusAttributes));
+class GVAR(RscHideZeus): EGVAR(attributes,RscAttributesBase) {
+    onLoad = QUOTE([ARR_2(_this select 0, QQGVAR(RscHideZeus))] call EFUNC(attributes,initAttributesDisplay));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};
@@ -355,9 +366,8 @@ class GVAR(RscHideZeus): RscDisplayAttributes {
     };
 };
 
-class GVAR(RscPatrolArea): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscPatrolArea))] call EFUNC(common,zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscPatrolArea))] call EFUNC(common,zeusAttributes));
+class GVAR(RscPatrolArea): EGVAR(attributes,RscAttributesBase) {
+    onLoad = QUOTE([ARR_2(_this select 0, QQGVAR(RscPatrolArea))] call EFUNC(attributes,initAttributesDisplay));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};
@@ -400,9 +410,8 @@ class GVAR(RscPatrolArea): RscDisplayAttributes {
     };
 };
 
-class GVAR(RscSideRelations): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscSideRelations))] call EFUNC(common,zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscSideRelations))] call EFUNC(common,zeusAttributes));
+class GVAR(RscSideRelations): EGVAR(attributes,RscAttributesBase) {
+    onLoad = QUOTE([ARR_2(_this select 0, QQGVAR(RscSideRelations))] call EFUNC(attributes,initAttributesDisplay));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};
@@ -480,9 +489,8 @@ class GVAR(RscSideRelations): RscDisplayAttributes {
     };
 };
 
-class GVAR(RscSmokePillar): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscSmokePillar))] call EFUNC(common,zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscSmokePillar))] call EFUNC(common,zeusAttributes));
+class GVAR(RscSmokePillar): EGVAR(attributes,RscAttributesBase) {
+    onLoad = QUOTE([ARR_2(_this select 0, QQGVAR(RscSmokePillar))] call EFUNC(attributes,initAttributesDisplay));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};
@@ -543,9 +551,8 @@ class GVAR(RscSmokePillar): RscDisplayAttributes {
     };
 };
 
-class GVAR(RscTeleportPlayers): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscTeleportPlayers))] call EFUNC(common,zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscTeleportPlayers))] call EFUNC(common,zeusAttributes));
+class GVAR(RscTeleportPlayers): EGVAR(attributes,RscAttributesBase) {
+    onLoad = QUOTE([ARR_2(_this select 0, QQGVAR(RscTeleportPlayers))] call EFUNC(attributes,initAttributesDisplay));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};
