@@ -24,6 +24,10 @@
             <English>Cannot attach object to itself</English>
         </Key>
 
+        <Key ID="STR_ZEN_Modules_ModuleSimulation">
+            <English>Toggle Simulation</English>
+        </Key>
+
         <Key ID="STR_ZEN_Modules_ModuleChatter">
             <English>Chatter</English>
         </Key>

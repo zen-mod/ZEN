@@ -11,6 +11,7 @@ class CfgPatches {
             QGVAR(moduleHideZeus),
             QGVAR(modulePatrolArea),
             QGVAR(moduleSideRelations),
+            QGVAR(moduleSimulation),
             QGVAR(ModuleSmokePillar),
             QGVAR(moduleTeleportPlayers)
         };

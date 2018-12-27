@@ -4,6 +4,7 @@ PREP(moduleCreateMinefield);
 PREP(moduleHideZeus);
 PREP(modulePatrolArea);
 PREP(moduleSideRelations);
+PREP(moduleSimulation);
 PREP(moduleSmokePillar);
 PREP(ui_attributeRadius);
 PREP(ui_chatter);
