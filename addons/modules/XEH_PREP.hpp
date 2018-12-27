@@ -6,6 +6,7 @@ PREP(modulePatrolArea);
 PREP(moduleSideRelations);
 PREP(moduleSimulation);
 PREP(moduleSmokePillar);
+PREP(moduleVisibility);
 PREP(ui_attributeRadius);
 PREP(ui_chatter);
 PREP(ui_createMinefield);

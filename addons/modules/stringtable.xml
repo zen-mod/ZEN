@@ -28,6 +28,10 @@
             <English>Toggle Simulation</English>
         </Key>
 
+        <Key ID="STR_ZEN_Modules_ModuleVisibility">
+            <English>Toggle Visibility</English>
+        </Key>
+
         <Key ID="STR_ZEN_Modules_ModuleChatter">
             <English>Chatter</English>
         </Key>

@@ -22,6 +22,12 @@ class CfgVehicles {
         displayName = CSTRING(ModuleSimulation);
         function = QFUNC(moduleSimulation);
     };
+    class GVAR(moduleVisibility): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Objects);
+        displayName = CSTRING(ModuleVisibility);
+        function = QFUNC(moduleVisibility);
+    };
     class GVAR(moduleChatter): GVAR(moduleBase) {
         curatorCanAttach = 1;
         displayName = CSTRING(ModuleChatter);

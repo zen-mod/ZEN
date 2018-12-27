@@ -12,8 +12,9 @@ class CfgPatches {
             QGVAR(modulePatrolArea),
             QGVAR(moduleSideRelations),
             QGVAR(moduleSimulation),
-            QGVAR(ModuleSmokePillar),
-            QGVAR(moduleTeleportPlayers)
+            QGVAR(moduleSmokePillar),
+            QGVAR(moduleTeleportPlayers),
+            QGVAR(moduleVisibility)
         };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
