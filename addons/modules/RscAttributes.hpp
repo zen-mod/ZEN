@@ -97,6 +97,33 @@ BEGIN_MODULE_DIALOG(RscChangeHeight)
     };
 END_MODULE_DIALOG;
 
+BEGIN_MODULE_DIALOG(RscMakeInvincible)
+    class makeInvincible: RscControlsGroupNoScrollbars {
+        onSetFocus = QUOTE(_this call FUNC(ui_makeInvincible));
+        idc = IDC_MAKEINVINCIBLE;
+        x = 0;
+        y = 0;
+        w = POS_W(26);
+        h = POS_H(2.1);
+        class controls {
+            class InvincibleLabel: EGVAR(attributes,RscLabel) {
+                text = CSTRING(ModuleMakeInvincible_Invincible);
+            };
+            class Invincible: GVAR(RscToolboxYesNo) {
+                idc = IDC_MAKEINVINCIBLE_INVINCIBLE;
+            };
+            class IncludeCrewLabel: EGVAR(attributes,RscLabel) {
+                text = CSTRING(ModuleMakeInvincible_IncludeCrew);
+                y = POS_H(1.1);
+            };
+            class IncludeCrew: GVAR(RscToolboxYesNo) {
+                idc = IDC_MAKEINVINCIBLE_INCLUDECREW;
+                y = POS_H(1.1);
+            };
+        };
+    };
+END_MODULE_DIALOG;
+
 class GVAR(RscChatter): EGVAR(attributes,RscAttributesBase) {
     onLoad = QUOTE([ARR_2(_this select 0, QQGVAR(RscChatter))] call EFUNC(attributes,initAttributesDisplay));
     class Controls: Controls {

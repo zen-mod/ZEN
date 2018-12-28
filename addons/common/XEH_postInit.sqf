@@ -70,6 +70,11 @@
     _object setDir _direction;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(allowDamage), {
+    params ["_object", "_allow"];
+    _object allowDamage _allow;
+}] call CBA_fnc_addEventHandler;
+
 if (isServer) then {
     [QGVAR(hideObjectGlobal), {
         params ["_object", "_hide"];

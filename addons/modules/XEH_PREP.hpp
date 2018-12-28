@@ -13,6 +13,7 @@ PREP(ui_chatter);
 PREP(ui_createMinefield);
 PREP(ui_globalHint);
 PREP(ui_hideZeus);
+PREP(ui_makeInvincible);
 PREP(ui_patrolArea);
 PREP(ui_sideRelations);
 PREP(ui_smokePillar);

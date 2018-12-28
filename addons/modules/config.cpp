@@ -10,6 +10,7 @@ class CfgPatches {
             QGVAR(moduleCreateMinefield),
             QGVAR(moduleGlobalHint),
             QGVAR(moduleHideZeus),
+            QGVAR(moduleMakeInvincible),
             QGVAR(modulePatrolArea),
             QGVAR(moduleSideRelations),
             QGVAR(moduleSimulation),

@@ -24,6 +24,16 @@
             <English>Cannot attach object to itself</English>
         </Key>
 
+        <Key ID="STR_ZEN_Modules_ModuleMakeInvincible">
+            <English>Make Invincible</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleMakeInvincible_Invincible">
+            <English>Invincible</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleMakeInvincible_IncludeCrew">
+            <English>Include Crew</English>
+        </Key>
+
         <Key ID="STR_ZEN_Modules_ModuleSimulation">
             <English>Toggle Simulation</English>
         </Key>

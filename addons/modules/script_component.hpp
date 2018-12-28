@@ -78,6 +78,10 @@
 #define IDC_CHANGEHEIGHT 60900
 #define IDC_CHANGEHEIGHT_HEIGHT 60901
 
+#define IDC_MAKEINVINCIBLE 61000
+#define IDC_MAKEINVINCIBLE_INVINCIBLE 61001
+#define IDC_MAKEINVINCIBLE_INCLUDECREW 61002
+
 #define ICON_CHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_checked_ca.paa"
 #define ICON_UNCHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_unchecked_ca.paa"
 

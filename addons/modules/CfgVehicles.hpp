@@ -22,6 +22,12 @@ class CfgVehicles {
         displayName = CSTRING(ModuleChangeHeight);
         curatorInfoType = QGVAR(RscChangeHeight);
     };
+    class GVAR(moduleMakeInvincible): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Objects);
+        displayName = CSTRING(ModuleMakeInvincible);
+        curatorInfoType = QGVAR(RscMakeInvincible);
+    };
     class GVAR(moduleSimulation): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Objects);
