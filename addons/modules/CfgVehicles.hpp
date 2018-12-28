@@ -16,6 +16,12 @@ class CfgVehicles {
         displayName = CSTRING(ModuleAttachTo);
         function = QFUNC(moduleAttachTo);
     };
+    class GVAR(moduleChangeHeight): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Objects);
+        displayName = CSTRING(ModuleChangeHeight);
+        curatorInfoType = QGVAR(RscChangeHeight);
+    };
     class GVAR(moduleSimulation): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Objects);

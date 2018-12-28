@@ -75,6 +75,9 @@
 #define IDC_SMOKEPILLAR 60800
 #define IDC_SMOKEPILLAR_TYPE 60801
 
+#define IDC_CHANGEHEIGHT 60900
+#define IDC_CHANGEHEIGHT_HEIGHT 60901
+
 #define ICON_CHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_checked_ca.paa"
 #define ICON_UNCHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_unchecked_ca.paa"
 

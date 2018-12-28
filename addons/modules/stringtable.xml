@@ -32,6 +32,16 @@
             <English>Toggle Visibility</English>
         </Key>
 
+        <Key ID="STR_ZEN_Modules_ModuleChangeHeight">
+            <English>Change Height</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleChangeHeight_Label">
+            <English>Height (m)</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleChangeHeight_Tooltip">
+            <English>Change the height of the object by this value (can be negative)</English>
+        </Key>
+
         <Key ID="STR_ZEN_Modules_ModuleChatter">
             <English>Chatter</English>
         </Key>

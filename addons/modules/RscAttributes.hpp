@@ -1,7 +1,6 @@
 class RscText;
 class RscEdit;
 class RscCombo;
-class ctrlCombo;
 class RscButton;
 class RscListBox;
 class ctrlToolbox;
@@ -11,6 +10,21 @@ class ctrlButtonPictureKeepAspect;
 class RscActivePicture;
 class RscControlsGroup;
 class RscControlsGroupNoScrollbars;
+
+class EGVAR(attributes,RscLabel);
+class EGVAR(attributes,RscEdit);
+class EGVAR(attributes,RscCombo);
+
+class GVAR(RscToolboxYesNo): ctrlToolbox {
+    idc = -1;
+    x = POS_W(10.1);
+    y = 0;
+    w = POS_W(15.9);
+    h = POS_H(1);
+    rows = 1;
+    columns = 2;
+    strings[] = {ECSTRING(common,No), ECSTRING(common,Yes)};
+};
 
 class EGVAR(attributes,RscAttributesBase) {
     class controls {
@@ -39,36 +53,6 @@ class EGVAR(attributes,RscAttributesBase) {
         }; \
     }
 
-class GVAR(RscLabel): RscText {
-    idc = -1;
-    x = 0;
-    y = 0;
-    w = 10 * GUI_GRID_W;
-    h = GUI_GRID_H;
-    colorBackground[] = {0, 0, 0, 0.5};
-};
-
-class GVAR(RscCombo): ctrlCombo {
-    idc = -1;
-    x = 10.1 * GUI_GRID_W;
-    y = 0;
-    w = 15.9 * GUI_GRID_W;
-    h = GUI_GRID_H;
-    sizeEx = GUI_GRID_H;
-    font = "RobotoCondensed";
-};
-
-class GVAR(RscToolboxYesNo): ctrlToolbox {
-    idc = -1;
-    x = 10.1 * GUI_GRID_W;
-    y = 0;
-    w = 15.9 * GUI_GRID_W;
-    h = GUI_GRID_H;
-    rows = 1;
-    columns = 2;
-    strings[] = {ECSTRING(common,No), ECSTRING(common,Yes)};
-};
-
 class GVAR(AttributeRadius): RscControlsGroupNoScrollbars {
     onSetFocus = QUOTE(_this call FUNC(ui_attributeRadius));
     idc = IDC_ATTRIBUTERADIUS;
@@ -77,7 +61,7 @@ class GVAR(AttributeRadius): RscControlsGroupNoScrollbars {
     w = 26 * GUI_GRID_W;
     h = 1.1 * GUI_GRID_H;
     class controls {
-        class Label: GVAR(RscLabel) {
+        class Label: EGVAR(attributes,RscLabel) {
             text = CSTRING(AttributeRadius);
             tooltip = CSTRING(AttributeRadius_Tooltip);
             y = 0.1 * GUI_GRID_H;
@@ -92,6 +76,26 @@ class GVAR(AttributeRadius): RscControlsGroupNoScrollbars {
         };
     };
 };
+
+BEGIN_MODULE_DIALOG(RscChangeHeight)
+    class changeHeight: RscControlsGroupNoScrollbars {
+        onSetFocus = QUOTE(_this call FUNC(ui_changeHeight));
+        idc = IDC_CHANGEHEIGHT;
+        x = 0;
+        y = 0;
+        w = POS_W(26);
+        h = POS_H(1);
+        class controls {
+            class Label: EGVAR(attributes,RscLabel) {
+                text = CSTRING(ModuleChangeHeight_Label);
+                tooltip = CSTRING(ModuleChangeHeight_Tooltip);
+            };
+            class Height: EGVAR(attributes,RscEdit) {
+                idc = IDC_CHANGEHEIGHT_HEIGHT;
+            };
+        };
+    };
+END_MODULE_DIALOG;
 
 class GVAR(RscChatter): EGVAR(attributes,RscAttributesBase) {
     onLoad = QUOTE([ARR_2(_this select 0, QQGVAR(RscChatter))] call EFUNC(attributes,initAttributesDisplay));
@@ -108,7 +112,7 @@ class GVAR(RscChatter): EGVAR(attributes,RscAttributesBase) {
                     w = 26 * GUI_GRID_W;
                     h = 2.1 * GUI_GRID_H;
                     class controls {
-                        class MessageLabel: GVAR(RscLabel) {
+                        class MessageLabel: EGVAR(attributes,RscLabel) {
                             text = CSTRING(ModuleChatter_Message);
                         };
                         class Message: RscEdit {
@@ -118,7 +122,7 @@ class GVAR(RscChatter): EGVAR(attributes,RscAttributesBase) {
                             w = 15.9 * GUI_GRID_W;
                             h = GUI_GRID_H;
                         };
-                        class Label: GVAR(RscLabel) {
+                        class Label: EGVAR(attributes,RscLabel) {
                             idc = IDC_CHATTER_LABEL;
                             y = 1.1 * GUI_GRID_H;
                         };
@@ -208,7 +212,7 @@ class GVAR(RscCreateMinefield): EGVAR(attributes,RscAttributesBase) {
                     w = 26 * GUI_GRID_W;
                     h = 3.2 * GUI_GRID_H;
                     class controls {
-                        class AreaLabel: GVAR(RscLabel) {
+                        class AreaLabel: EGVAR(attributes,RscLabel) {
                             text = CSTRING(ModuleCreateMinefield_MineArea);
                         };
                         class AreaIconX: RscText {
@@ -238,7 +242,7 @@ class GVAR(RscCreateMinefield): EGVAR(attributes,RscAttributesBase) {
                             idc = IDC_CREATEMINEFIELD_AREA_Y;
                             x = 19.2 * GUI_GRID_W;
                         };
-                        class TypeLabel: GVAR(RscLabel) {
+                        class TypeLabel: EGVAR(attributes,RscLabel) {
                             text = CSTRING(ModuleCreateMinefield_MineType);
                             y = 1.1 * GUI_GRID_H;
                         };
@@ -250,7 +254,7 @@ class GVAR(RscCreateMinefield): EGVAR(attributes,RscAttributesBase) {
                             h = GUI_GRID_H;
                             colorBackground[] = {0, 0, 0, 0.7};
                         };
-                        class DensityLabel: GVAR(RscLabel) {
+                        class DensityLabel: EGVAR(attributes,RscLabel) {
                             text = CSTRING(ModuleCreateMinefield_MineDensity);
                             y = 2.2 * GUI_GRID_H;
                         };
@@ -351,7 +355,7 @@ class GVAR(RscHideZeus): EGVAR(attributes,RscAttributesBase) {
                     w = 26 * GUI_GRID_W;
                     h = GUI_GRID_H;
                     class controls {
-                        class Label: GVAR(RscLabel) {
+                        class Label: EGVAR(attributes,RscLabel) {
                             text = CSTRING(ModuleHideZeus);
                         };
                         class Value: GVAR(RscToolboxYesNo) {
@@ -382,7 +386,7 @@ class GVAR(RscPatrolArea): EGVAR(attributes,RscAttributesBase) {
                     w = 26 * GUI_GRID_W;
                     h = GUI_GRID_H;
                     class controls {
-                        class BehaviourLabel: GVAR(RscLabel) {
+                        class BehaviourLabel: EGVAR(attributes,RscLabel) {
                             text = "$STR_3DEN_Group_Attribute_Behaviour_displayName";
                             tooltip = CSTRING(ModulePatrolArea_Behaviour_Tooltip);
                         };
@@ -425,7 +429,7 @@ class GVAR(RscSideRelations): EGVAR(attributes,RscAttributesBase) {
                     w = 26 * GUI_GRID_W;
                     h = 2.1 * GUI_GRID_H;
                     class controls {
-                        class RelationLabel: GVAR(RscLabel) {
+                        class RelationLabel: EGVAR(attributes,RscLabel) {
                             text = CSTRING(RelationToChange);
                         };
                         class RelationToggle: ctrlButtonPictureKeepAspect {
@@ -472,7 +476,7 @@ class GVAR(RscSideRelations): EGVAR(attributes,RscAttributesBase) {
                             x = 18.65 * GUI_GRID_W;
                             class Items {}; // Special handling through script
                         };
-                        class RadioLabel: GVAR(RscLabel) {
+                        class RadioLabel: EGVAR(attributes,RscLabel) {
                             text = CSTRING(PlayRadioMessage);
                             y = 1.1 * GUI_GRID_H;
                         };
@@ -504,10 +508,10 @@ class GVAR(RscSmokePillar): EGVAR(attributes,RscAttributesBase) {
                     w = 26 * GUI_GRID_W;
                     h = GUI_GRID_H;
                     class controls {
-                        class TypeLabel: GVAR(RscLabel) {
+                        class TypeLabel: EGVAR(attributes,RscLabel) {
                             text = CSTRING(SmokePillarType);
                         };
-                        class Type: GVAR(RscCombo) {
+                        class Type: EGVAR(attributes,RscCombo) {
                             idc = IDC_SMOKEPILLAR_TYPE;
                             class Items {
                                 class VehicleFire {
