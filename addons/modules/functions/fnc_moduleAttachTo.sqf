@@ -40,6 +40,8 @@ if (!isNull _attached) exitWith {
 [_object, {
     params ["_successful", "_object"];
 
+    if (!_successful) exitWith {};
+
     curatorMouseOver params ["_type", "_entity"];
     if (_type != "OBJECT") exitWith {};
 
