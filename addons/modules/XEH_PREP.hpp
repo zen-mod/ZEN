@@ -1,5 +1,6 @@
 PREP(moduleAttachTo);
 PREP(moduleChatter);
+PREP(moduleCreateIED);
 PREP(moduleCreateMinefield);
 PREP(moduleHideZeus);
 PREP(modulePatrolArea);
@@ -10,6 +11,7 @@ PREP(moduleVisibility);
 PREP(ui_attributeRadius);
 PREP(ui_changeHeight);
 PREP(ui_chatter);
+PREP(ui_createIED);
 PREP(ui_createMinefield);
 PREP(ui_globalHint);
 PREP(ui_hideZeus);

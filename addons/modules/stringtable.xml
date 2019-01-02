@@ -24,6 +24,25 @@
             <English>Cannot attach object to itself</English>
         </Key>
 
+        <Key ID="STR_ZEN_Modules_CreateIED">
+            <English>Create IED</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_AlreadyAnIED">
+            <English>Object is already an IED</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ActivationSide">
+            <English>Activation Side</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ActivationRadius">
+            <English>Activation Radius</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ExplosionSize">
+            <English>Explosion Size</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_IsJammable">
+            <English>Is Jammable</English>
+        </Key>
+
         <Key ID="STR_ZEN_Modules_ModuleMakeInvincible">
             <English>Make Invincible</English>
         </Key>
@@ -229,6 +248,9 @@
             <Korean>대상이 반드시 보병이어야 합니다</Korean>
             <Chinesesimp>单位必须是步兵</Chinesesimp>
             <Chinese>單位必須是步兵</Chinese>
+        </Key>
+        <Key ID="STR_ZEN_Modules_OnlyNonInfantry">
+            <English>Unit must not be infantry</English>
         </Key>
     </Package>
 </Project>

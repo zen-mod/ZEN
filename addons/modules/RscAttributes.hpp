@@ -4,6 +4,7 @@ class RscCombo;
 class RscButton;
 class RscListBox;
 class ctrlToolbox;
+class ctrlXSliderH;
 class RscEditMulti;
 class RscStructuredText;
 class ctrlButtonPictureKeepAspect;
@@ -24,6 +25,54 @@ class GVAR(RscToolboxYesNo): ctrlToolbox {
     rows = 1;
     columns = 2;
     strings[] = {ECSTRING(common,No), ECSTRING(common,Yes)};
+};
+
+class GVAR(RscSides): RscControlsGroupNoScrollbars {
+    idc = -1;
+    x = 0;
+    y = 0;
+    w = POS_W(26);
+    h = POS_H(2.5);
+    class controls {
+        class Label: EGVAR(attributes,RscLabel) {
+            h = POS_H(2.5);
+        };
+        class Background: RscText {
+            idc = -1;
+            x = POS_W(10);
+            y = 0;
+            w = POS_W(16);
+            h = POS_H(2.5);
+            colorBackground[] = {1, 1, 1, 0.1};
+        };
+        class BLUFOR: RscActivePicture {
+            idc = IDC_BLUFOR;
+            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_west_ca.paa";
+            tooltip = "$STR_WEST";
+            x = POS_W(12.5);
+            y = POS_H(0.25);
+            w = POS_W(2);
+            h = POS_H(2);
+        };
+        class OPFOR: BLUFOR {
+            idc = IDC_OPFOR;
+            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_east_ca.paa";
+            tooltip = "$STR_EAST";
+            x = POS_W(15.5);
+        };
+        class Independent: BLUFOR {
+            idc = IDC_INDEPENDENT;
+            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_guer_ca.paa";
+            tooltip = "$STR_guerrila";
+            x = POS_W(18.5);
+        };
+        class Civilian: BLUFOR {
+            idc = IDC_CIVILIAN;
+            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_civ_ca.paa";
+            tooltip = "$STR_civilian";
+            x = POS_W(21.5);
+        };
+    };
 };
 
 class EGVAR(attributes,RscAttributesBase) {
@@ -168,6 +217,73 @@ BEGIN_MODULE_DIALOG(RscChatter)
                         color[] = {1, 0.82, 0, 1};
                     };
                 };
+            };
+        };
+    };
+END_MODULE_DIALOG;
+
+BEGIN_MODULE_DIALOG(RscCreateIED)
+    class createIED: RscControlsGroupNoScrollbars {
+        onSetFocus = QUOTE(_this call FUNC(ui_createIED));
+        idc = IDC_CREATEIED;
+        x = 0;
+        y = 0;
+        w = POS_W(26);
+        h = POS_H(5.8);
+        class controls {
+            class ActivationSide: GVAR(RscSides) {
+                class controls: controls {
+                    class Label: Label {
+                        text = CSTRING(ActivationSide);
+                    };
+                    class Background: Background {};
+                    class BLUFOR: BLUFOR {};
+                    class OPFOR: OPFOR {};
+                    class Independent: Independent {};
+                    class Civilian: Civilian {};
+                };
+            };
+            class RadiusLabel: EGVAR(attributes,RscLabel) {
+                text = CSTRING(ActivationRadius);
+                y = POS_H(2.6);
+            };
+            class RadiusSlider: ctrlXSliderH {
+                idc = IDC_CREATEIED_RADIUS_SLIDER;
+                x = POS_W(10.1);
+                y = POS_H(2.6);
+                w = POS_W(13.9);
+                h = POS_H(1);
+            };
+            class RadiusEdit: EGVAR(attributes,RscEdit) {
+                idc = IDC_CREATEIED_RADIUS_EDIT;
+                x = POS_W(24.1);
+                y = POS_H(2.6);
+                w = POS_W(1.9);
+                h = POS_H(1);
+                maxChars = 3;
+                canModify = 0;
+            };
+            class ExplosionLabel: EGVAR(attributes,RscLabel) {
+                text = CSTRING(ExplosionSize);
+                y = POS_H(3.7);
+            };
+            class Explosion: ctrlToolbox {
+                idc = IDC_CREATEIED_EXPLOSION;
+                x = POS_W(10.1);
+                y = POS_H(3.7);
+                w = POS_W(15.9);
+                h = POS_H(1);
+                rows = 1;
+                columns = 3;
+                strings[] = {"$STR_small", ECSTRING(common,Medium), "$STR_large"};
+            };
+            class JammableLabel: EGVAR(attributes,RscLabel) {
+                text = CSTRING(IsJammable);
+                y = POS_H(4.8);
+            };
+            class Jammable: GVAR(RscToolboxYesNo) {
+                idc = IDC_CREATEIED_JAMMABLE;
+                y = POS_H(4.8);
             };
         };
     };

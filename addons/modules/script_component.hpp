@@ -23,6 +23,11 @@
 #define POS_W(N) ((N) * GUI_GRID_W)
 #define POS_H(N) ((N) * GUI_GRID_H)
 
+#define IDC_BLUFOR 3451
+#define IDC_OPFOR 3450
+#define IDC_INDEPENDENT 3452
+#define IDC_CIVILIAN 3453
+
 #define IDC_ATTRIBUTERADIUS 60000
 #define IDC_ATTRIBUTERADIUS_VALUE 60001
 
@@ -81,6 +86,12 @@
 #define IDC_MAKEINVINCIBLE 61000
 #define IDC_MAKEINVINCIBLE_INVINCIBLE 61001
 #define IDC_MAKEINVINCIBLE_INCLUDECREW 61002
+
+#define IDC_CREATEIED 61100
+#define IDC_CREATEIED_RADIUS_SLIDER 61101
+#define IDC_CREATEIED_RADIUS_EDIT 61102
+#define IDC_CREATEIED_EXPLOSION 61103
+#define IDC_CREATEIED_JAMMABLE 61104
 
 #define ICON_CHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_checked_ca.paa"
 #define ICON_UNCHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_unchecked_ca.paa"

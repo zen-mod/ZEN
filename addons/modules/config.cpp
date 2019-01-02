@@ -7,6 +7,7 @@ class CfgPatches {
             QGVAR(moduleAttachTo),
             QGVAR(moduleChangeHeight),
             QGVAR(moduleChatter),
+            QGVAR(moduleCreateIED),
             QGVAR(moduleCreateMinefield),
             QGVAR(moduleGlobalHint),
             QGVAR(moduleHideZeus),
