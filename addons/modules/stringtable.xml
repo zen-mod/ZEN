@@ -43,6 +43,19 @@
             <English>Is Jammable</English>
         </Key>
 
+        <Key ID="STR_ZEN_Modules_BindVariable">
+            <English>Bind Variable To Object</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_VariableName">
+            <English>Variable Name</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_PublicVariable">
+            <English>Public (Broadcast)</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ShowInConfig">
+            <English>Show In Config Viewer</English>
+        </Key>
+
         <Key ID="STR_ZEN_Modules_ModuleMakeInvincible">
             <English>Make Invincible</English>
         </Key>
@@ -193,6 +206,9 @@
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_AI">
             <English>AI</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_DevTools">
+            <English>Development Tools</English>
         </Key>
         <Key ID="STR_ZEN_Modules_Objects">
             <English>Objects</English>

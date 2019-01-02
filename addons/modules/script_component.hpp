@@ -93,6 +93,10 @@
 #define IDC_CREATEIED_EXPLOSION 61103
 #define IDC_CREATEIED_JAMMABLE 61104
 
+#define IDC_BINDVARIABLE 61200
+#define IDC_BINDVARIABLE_NAME 61201
+#define IDC_BINDVARIABLE_PUBLIC 61202
+
 #define ICON_CHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_checked_ca.paa"
 #define ICON_UNCHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_unchecked_ca.paa"
 

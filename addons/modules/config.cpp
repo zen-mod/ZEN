@@ -5,14 +5,17 @@ class CfgPatches {
         name = COMPONENT_NAME;
         units[] = {
             QGVAR(moduleAttachTo),
+            QGVAR(moduleBindVariable),
             QGVAR(moduleChangeHeight),
             QGVAR(moduleChatter),
             QGVAR(moduleCreateIED),
             QGVAR(moduleCreateMinefield),
+            QGVAR(moduleFunctionsViewer),
             QGVAR(moduleGlobalHint),
             QGVAR(moduleHideZeus),
             QGVAR(moduleMakeInvincible),
             QGVAR(modulePatrolArea),
+            QGVAR(moduleShowInConfig),
             QGVAR(moduleSideRelations),
             QGVAR(moduleSimulation),
             QGVAR(moduleSmokePillar),

@@ -87,4 +87,23 @@ class CfgVehicles {
         displayName = CSTRING(ModuleTeleportPlayers);
         curatorInfoType = QGVAR(RscTeleportPlayers);
     };
+    class GVAR(moduleBindVariable): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(DevTools);
+        displayName = CSTRING(BindVariable);
+        curatorInfoType = QGVAR(RscBindVariable);
+    };
+    class GVAR(moduleFunctionsViewer): GVAR(moduleBase) {
+        category = QGVAR(DevTools);
+        displayName = "$STR_A3_RscFunctionsViewer_Caption";
+        function = QFUNC(moduleFunctionsViewer);
+        icon = "\a3\3DEN\Data\Displays\Display3DEN\EntityMenu\functions_ca.paa";
+    };
+    class GVAR(moduleShowInConfig): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(DevTools);
+        displayName = CSTRING(ShowInConfig);
+        function = QFUNC(moduleShowInConfig);
+        icon = "\a3\3DEN\Data\Displays\Display3DEN\EntityMenu\findConfig_ca.paa";
+    };
 };
