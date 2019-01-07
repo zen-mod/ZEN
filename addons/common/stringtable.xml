@@ -81,5 +81,11 @@
         <Key ID="STR_ZEN_Common_VeryHigh">
             <English>Very High</English>
         </Key>
+        <Key ID="STR_ZEN_Common_AutoAddObjects">
+            <English>Add Objects to Curators</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_AutoAddObjects_Description">
+            <English>Automatically adds spawned objects to all curators</English>
+        </Key>
     </Package>
 </Project>

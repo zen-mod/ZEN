@@ -1,3 +1,4 @@
+PREP(addObjectToCurators);
 PREP(getModuleTarget);
 PREP(getSideIcon);
 PREP(initDisplayCurator);

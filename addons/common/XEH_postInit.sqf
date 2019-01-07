@@ -130,3 +130,9 @@ if (isServer) then {
         } forEach allCurators;
     }] call CBA_fnc_addEventHandler;
 };
+
+["CBA_settingsInitialized", {
+    if (isServer && {GVAR(autoAddObjects)}) then {
+        ["AllVehicles", "InitPost", FUNC(addObjectToCurators), true, [], true] call CBA_fnc_addClassEventHandler;
+    };
+}] call CBA_fnc_addEventHandler;
