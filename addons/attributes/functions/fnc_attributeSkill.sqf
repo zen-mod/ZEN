@@ -17,36 +17,62 @@
 
 params ["_control"];
 
-// Generic init
 private _display = ctrlParent _control;
 private _ctrlButtonOK = _display displayCtrl IDC_OK;
 private _entity = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
+
+_control ctrlRemoveAllEventHandlers "SetFocus";
 
 if (_entity isEqualType grpNull) then {
     _entity = leader _entity;
 };
 
-_control ctrlRemoveAllEventHandlers "SetFocus";
-
 private _skill = skill _entity;
-private _ctrlSlider = _display displayCtrl IDC_ATTRIBUTESKILL_SLIDER;
+
+private _ctrlSlider = _display displayCtrl IDC_SKILL_SLIDER;
+_ctrlSlider sliderSetRange [0.2, 1];
+_ctrlSlider sliderSetPosition _skill;
 
 private _fnc_onSliderPosChanged = {
     params ["_ctrlSlider", "_value"];
 
     private _display = ctrlParent _ctrlSlider;
-    private _ctrlEdit = _display displayCtrl IDC_ATTRIBUTESKILL_EDIT;
-    _ctrlEdit ctrlSetText format ["%1%2", round (_value * 100), "%"];
     _display setVariable [QGVAR(skill), _value];
-};
 
-_ctrlSlider sliderSetRange [0.2, 1];
-_ctrlSlider sliderSetPosition _skill;
+    private _ctrlEdit = _display displayCtrl IDC_SKILL_EDIT;
+    _ctrlEdit ctrlSetText FORMAT_PERCENT(_value);
+};
 
 _ctrlSlider ctrlAddEventHandler ["SliderPosChanged", _fnc_onSliderPosChanged];
 
-private _ctrlEdit = _display displayCtrl IDC_ATTRIBUTESKILL_EDIT;
-_ctrlEdit ctrlSetText format ["%1%2", round (_skill * 100), "%"];
+private _ctrlEdit = _display displayCtrl IDC_SKILL_EDIT;
+_ctrlEdit ctrlSetText FORMAT_PERCENT(_skill);
+
+private _fnc_onKeyUp = {
+    params ["_ctrlEdit"];
+
+    private _display = ctrlParent _ctrlEdit;
+    private _value = parseNumber ctrlText _ctrlEdit / 100;
+
+    private _ctrlSlider = _display displayCtrl IDC_SKILL_SLIDER;
+    _ctrlSlider sliderSetPosition _value;
+    _value = sliderPosition _ctrlSlider;
+
+    _display setVariable [QGVAR(skill), _value];
+};
+
+private _fnc_onKillFocus = {
+    params ["_ctrlEdit"];
+
+    private _display = ctrlParent _ctrlEdit;
+    private _ctrlSlider = _display displayCtrl IDC_SKILL_SLIDER;
+
+    private _value = sliderPosition _ctrlSlider;
+    _ctrlEdit ctrlSetText FORMAT_PERCENT(_value);
+};
+
+_ctrlEdit ctrlAddEventHandler ["KeyUp", _fnc_onKeyUp];
+_ctrlEdit ctrlAddEventHandler ["KillFocus", _fnc_onKillFocus];
 
 private _fnc_onConfirm = {
     params ["_ctrlButtonOK"];

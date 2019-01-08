@@ -70,6 +70,11 @@
     _object setDir _direction;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setFuel), {
+    params ["_vehicle", "_fuel"];
+    _vehicle setFuel _fuel;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(allowDamage), {
     params ["_object", "_allow"];
     _object allowDamage _allow;

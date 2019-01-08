@@ -1,11 +1,13 @@
 PREP(attributeBehaviour);
 PREP(attributeDamage);
 PREP(attributeFormation);
+PREP(attributeFuel);
 PREP(attributeGroupID);
 PREP(attributeMarkerColor);
 PREP(attributeMarkerText);
 PREP(attributeName);
 PREP(attributeRank);
+PREP(attributeRespawnPosition);
 PREP(attributeSkill);
 PREP(attributeSpeedMode);
 PREP(attributeUnitPos);

@@ -1,6 +1,6 @@
 /*
  * Author: mharis001
- * Initializes the "Damage" Zeus attribute.
+ * Initializes the "Fuel" Zeus attribute.
  *
  * Arguments:
  * 0: Attribute controls group <CONTROL>
@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [CONTROL] call zen_attributes_fnc_attributeDamage
+ * [CONTROL] call zen_attributes_fnc_attributeFuel
  *
  * Public: No
  */
@@ -23,26 +23,26 @@ private _entity = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 
 _control ctrlRemoveAllEventHandlers "SetFocus";
 
-private _health = 1 - damage _entity;
+private _fuel = fuel _entity;
 
-private _ctrlSlider = _display displayCtrl IDC_DAMAGE_SLIDER;
+private _ctrlSlider = _display displayCtrl IDC_FUEL_SLIDER;
 _ctrlSlider sliderSetRange [0, 1];
-_ctrlSlider sliderSetPosition _health;
+_ctrlSlider sliderSetPosition _fuel;
 
 private _fnc_onSliderPosChanged = {
     params ["_ctrlSlider", "_value"];
 
     private _display = ctrlParent _ctrlSlider;
-    _display setVariable [QGVAR(damage), _value];
+    _display setVariable [QGVAR(fuel), _value];
 
-    private _ctrlEdit = _display displayCtrl IDC_DAMAGE_EDIT;
+    private _ctrlEdit = _display displayCtrl IDC_FUEL_EDIT;
     _ctrlEdit ctrlSetText FORMAT_PERCENT(_value);
 };
 
 _ctrlSlider ctrlAddEventHandler ["SliderPosChanged", _fnc_onSliderPosChanged];
 
-private _ctrlEdit = _display displayCtrl IDC_DAMAGE_EDIT;
-_ctrlEdit ctrlSetText FORMAT_PERCENT(_health);
+private _ctrlEdit = _display displayCtrl IDC_FUEL_EDIT;
+_ctrlEdit ctrlSetText FORMAT_PERCENT(_fuel);
 
 private _fnc_onKeyUp = {
     params ["_ctrlEdit"];
@@ -50,18 +50,18 @@ private _fnc_onKeyUp = {
     private _display = ctrlParent _ctrlEdit;
     private _value = parseNumber ctrlText _ctrlEdit / 100;
 
-    private _ctrlSlider = _display displayCtrl IDC_DAMAGE_SLIDER;
+    private _ctrlSlider = _display displayCtrl IDC_FUEL_SLIDER;
     _ctrlSlider sliderSetPosition _value;
     _value = sliderPosition _ctrlSlider;
 
-    _display setVariable [QGVAR(damage), _value];
+    _display setVariable [QGVAR(fuel), _value];
 };
 
 private _fnc_onKillFocus = {
     params ["_ctrlEdit"];
 
     private _display = ctrlParent _ctrlEdit;
-    private _ctrlSlider = _display displayCtrl IDC_DAMAGE_SLIDER;
+    private _ctrlSlider = _display displayCtrl IDC_FUEL_SLIDER;
 
     private _value = sliderPosition _ctrlSlider;
     _ctrlEdit ctrlSetText FORMAT_PERCENT(_value);
@@ -74,13 +74,12 @@ private _fnc_onConfirm = {
     params ["_ctrlButtonOK"];
 
     private _display = ctrlParent _ctrlButtonOK;
-    private _damage = _display getVariable QGVAR(damage);
-    if (isNil "_damage") exitWith {};
-    _damage = 1 - _damage;
+    private _fuel = _display getVariable QGVAR(fuel);
+    if (isNil "_fuel") exitWith {};
 
     private _entity = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
     {
-        _x setDamage _damage;
+        [QEGVAR(common,setFuel), [_x, _fuel], _x] call CBA_fnc_targetEvent;
     } forEach (_entity call FUNC(getAttributeEntities));
 };
 

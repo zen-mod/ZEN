@@ -38,7 +38,7 @@ class GVAR(RscCombo): RscCombo {
     y = 0;
     w = POS_W(15.9);
     h = POS_H(1);
-    colorBackground[] = {0, 0, 0, 0.8};
+    colorBackground[] = {0, 0, 0, 0.7};
     arrowEmpty = "\a3\3DEN\Data\Controls\ctrlCombo\arrowEmpty_ca.paa";
     arrowFull = "\a3\3DEN\Data\Controls\ctrlCombo\arrowFull_ca.paa";
     class ComboScrollBar: ComboScrollBar {
@@ -161,7 +161,7 @@ class GVAR(RscAttributeGroupID): RscControlsGroupNoScrollbars {
 };
 
 class GVAR(RscAttributeSkill): RscControlsGroupNoScrollbars {
-    idc = IDC_ATTRIBUTESKILL;
+    idc = IDC_SKILL_GROUP;
     onSetFocus = QUOTE(_this call FUNC(attributeSkill));
     x = 0;
     y = 0;
@@ -172,44 +172,48 @@ class GVAR(RscAttributeSkill): RscControlsGroupNoScrollbars {
             text = "$STR_3DEN_Object_Attribute_Skill_displayName";
         };
         class Slider: ctrlXSliderH {
-            idc = IDC_ATTRIBUTESKILL_SLIDER;
+            idc = IDC_SKILL_SLIDER;
             x = POS_W(10.1);
             y = 0;
             w = POS_W(13.5);
             h = POS_H(1);
         };
         class Edit: GVAR(RscEdit) {
-            idc = IDC_ATTRIBUTESKILL_EDIT;
+            idc = IDC_SKILL_EDIT;
             x = POS_W(23.7);
             w = POS_W(2.3);
-            canModify = 0;
         };
     };
 };
 
-class GVAR(RscAttributeDamage): RscControlsGroupNoScrollbars {
-    idc = IDC_ATTRIBUTEDAMAGE;
+class GVAR(RscAttributeDamage): GVAR(RscAttributeSkill) {
+    idc = IDC_DAMAGE_GROUP;
     onSetFocus = QUOTE(_this call FUNC(attributeDamage));
-    x = 0;
-    y = 0;
-    w = POS_W(26);
-    h = POS_H(1);
-    class controls {
-        class Label: GVAR(RscLabel) {
+    class controls: controls {
+        class Label: Label {
             text = "$STR_3DEN_Object_Attribute_Health_displayName";
         };
-        class Slider: ctrlXSliderH {
-            idc = IDC_ATTRIBUTEDAMAGE_SLIDER;
-            x = POS_W(10.1);
-            y = 0;
-            w = POS_W(13.5);
-            h = POS_H(1);
+        class Slider: Slider {
+            idc = IDC_DAMAGE_SLIDER;
         };
-        class Edit: GVAR(RscEdit) {
-            idc = IDC_ATTRIBUTEDAMAGE_EDIT;
-            x = POS_W(23.7);
-            w = POS_W(2.3);
-            canModify = 0;
+        class Edit: Edit {
+            idc = IDC_DAMAGE_EDIT;
+        };
+    };
+};
+
+class GVAR(RscAttributeFuel): GVAR(RscAttributeSkill) {
+    idc = IDC_FUEL_GROUP;
+    onSetFocus = QUOTE(_this call FUNC(attributeFuel));
+    class controls: controls {
+        class Label: Label {
+            text = "$STR_3DEN_Object_Attribute_Fuel_displayName";
+        };
+        class Slider: Slider {
+            idc = IDC_FUEL_SLIDER;
+        };
+        class Edit: Edit {
+            idc = IDC_FUEL_EDIT;
         };
     };
 };
@@ -364,7 +368,7 @@ class GVAR(RscAttributeUnitPos): RscControlsGroupNoScrollbars {
 
 class GVAR(RscAttributeRespawnPosition): RscControlsGroupNoScrollbars {
     idc = IDC_ATTRIBUTERESPAWNPOSITION;
-    onSetFocus = "";
+    onSetFocus = QUOTE(_this call FUNC(attributeRespawnPosition));
     x = 0;
     y = 0;
     w = POS_W(26);
@@ -375,18 +379,20 @@ class GVAR(RscAttributeRespawnPosition): RscControlsGroupNoScrollbars {
             h = POS_H(2.5);
         };
         class Background: RscText {
-            idc = -1;
+            idc = IDC_ATTRIBUTERESPAWNPOSITION_BACKGROUND;
+            style = ST_CENTER;
             x = POS_W(10);
             y = 0;
             w = POS_W(16);
             h = POS_H(2.5);
+            colorText[] = {1, 1, 1, 0.5};
             colorBackground[] = {1, 1, 1, 0.1};
         };
         class West: RscActivePicture {
             idc = IDC_ATTRIBUTERESPAWNPOSITION_WEST;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnPosition\west_ca.paa";
             tooltip = "$STR_WEST";
-            x = POS_W(12.25);
+            x = POS_W(11.5);
             y = POS_H(0.25);
             w = POS_W(2);
             h = POS_H(2);
@@ -395,19 +401,19 @@ class GVAR(RscAttributeRespawnPosition): RscControlsGroupNoScrollbars {
             idc = IDC_ATTRIBUTERESPAWNPOSITION_EAST;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnPosition\east_ca.paa";
             tooltip = "$STR_EAST";
-            x = POS_W(14.75);
+            x = POS_W(14.5);
         };
         class Guer: West {
             idc = IDC_ATTRIBUTERESPAWNPOSITION_GUER;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnPosition\guer_ca.paa";
             tooltip = "$STR_guerrila";
-            x = POS_W(17.25);
+            x = POS_W(17.5);
         };
         class Civ: West {
             idc = IDC_ATTRIBUTERESPAWNPOSITION_CIV;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnPosition\civ_ca.paa";
             tooltip = "$STR_Civilian";
-            x = POS_W(19.75);
+            x = POS_W(20.5);
         };
         class Disabled: West {
             idc = IDC_ATTRIBUTERESPAWNPOSITION_DISABLED;
@@ -730,6 +736,44 @@ class GVAR(RscAttributesMan): GVAR(RscAttributesBase) {
     };
 };
 
+class GVAR(RscAttributesVehicle): GVAR(RscAttributesBase) {
+    onLoad = QUOTE([ARR_2(_this select 0, QQGVAR(RscAttributesVehicle))] call FUNC(initAttributesDisplay));
+    filterAttributes = 1;
+    class Controls: Controls {
+        class Background: Background {};
+        class Title: Title {};
+        class Content: Content {
+            class Controls {
+                class Skill: GVAR(RscAttributeSkill) {};
+                class Damage: GVAR(RscAttributeDamage) {};
+                class Fuel: GVAR(RscAttributeFuel) {};
+                class Rank: GVAR(RscAttributeRank) {};
+                class RespawnPosition: GVAR(RscAttributeRespawnPosition) {};
+            };
+        };
+        class ButtonOK: ButtonOK {};
+        class ButtonCancel: ButtonCancel {};
+    };
+};
+
+class GVAR(RscAttributesVehicleEmpty): GVAR(RscAttributesBase) {
+    onLoad = QUOTE([ARR_2(_this select 0, QQGVAR(RscAttributesVehicleEmpty))] call FUNC(initAttributesDisplay));
+    filterAttributes = 1;
+    class Controls: Controls {
+        class Background: Background {};
+        class Title: Title {};
+        class Content: Content {
+            class Controls {
+                class Damage: GVAR(RscAttributeDamage) {};
+                class Fuel: GVAR(RscAttributeFuel) {};
+                class RespawnPosition: GVAR(RscAttributeRespawnPosition) {};
+            };
+        };
+        class ButtonOK: ButtonOK {};
+        class ButtonCancel: ButtonCancel {};
+    };
+};
+
 class GVAR(RscAttributesGroup): GVAR(RscAttributesBase) {
     onLoad = QUOTE([ARR_2(_this select 0, QQGVAR(RscAttributesGroup))] call FUNC(initAttributesDisplay));
     filterAttributes = 1;
@@ -743,6 +787,20 @@ class GVAR(RscAttributesGroup): GVAR(RscAttributesBase) {
                 class Formation: GVAR(RscAttributeFormation) {};
                 class Behaviour: GVAR(RscAttributeBehaviour) {};
                 class SpeedMode: GVAR(RscAttributeSpeedMode) {};
+                class UnitPos: GVAR(RscAttributeUnitPos) {};
+                class RespawnPosition: GVAR(RscAttributeRespawnPosition) {
+                    class controls: controls {
+                        class Label: Label {
+                            text = "$STR_A3_RscAttributeRespawnPosition_TitleGroup";
+                        };
+                        class Background: Background {};
+                        class West: West {};
+                        class East: East {};
+                        class Guer: Guer {};
+                        class Civ: Civ {};
+                        class Disabled: Disabled {};
+                    };
+                };
             };
         };
         class ButtonOK: ButtonOK {};
