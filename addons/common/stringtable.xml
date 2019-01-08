@@ -87,5 +87,17 @@
         <Key ID="STR_ZEN_Common_AutoAddObjects_Description">
             <English>Automatically adds spawned objects to all curators</English>
         </Key>
+        <Key ID="STR_ZEN_Common_PreferredArsenal">
+            <English>Preferred Arsenal</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_PreferredArsenal_Description">
+            <English>Selects the preferred arsenal used by Zeus Enhanced\nIf ACE Arsenal is not installed, will fall back to BI Virtual Arsenal</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_BIVirtualArsenal">
+            <English>BI Virtual Arsenal</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_AceArsenal">
+            <English>ACE Arsenal</English>
+        </Key>
     </Package>
 </Project>

@@ -733,6 +733,10 @@ class GVAR(RscAttributesMan): GVAR(RscAttributesBase) {
         };
         class ButtonOK: ButtonOK {};
         class ButtonCancel: ButtonCancel {};
+        class ButtonArsenal: ButtonCustom1 {
+            text = "$STR_A3_Arsenal";
+            onButtonClick = QUOTE(_this call FUNC(buttonArsenal));
+        };
     };
 };
 
