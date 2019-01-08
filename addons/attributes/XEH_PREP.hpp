@@ -1,4 +1,5 @@
 PREP(attributeBehaviour);
+PREP(attributeCombatMode);
 PREP(attributeDamage);
 PREP(attributeFormation);
 PREP(attributeFuel);

@@ -45,6 +45,11 @@
     _group setBehaviour _behaviour;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setCombatMode), {
+    params ["_group", "_combatMode"];
+    _group setCombatMode _combatMode;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(setSpeedMode), {
     params ["_group", "_mode"];
     _group setSpeedMode _mode;
@@ -102,8 +107,13 @@ if (isServer) then {
     }] call CBA_fnc_addEventHandler;
 
     [QGVAR(setWaypointBehaviour), {
-        params ["_waypoint", "_formation"];
-        _waypoint setWaypointBehaviour _formation;
+        params ["_waypoint", "_behaviour"];
+        _waypoint setWaypointBehaviour _behaviour;
+    }] call CBA_fnc_addEventHandler;
+
+    [QGVAR(setWaypointCombatMode), {
+        params ["_waypoint", "_combatMode"];
+        _waypoint setWaypointCombatMode _combatMode;
     }] call CBA_fnc_addEventHandler;
 
     [QGVAR(setWaypointSpeed), {

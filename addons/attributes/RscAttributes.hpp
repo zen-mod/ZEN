@@ -579,6 +579,68 @@ class GVAR(RscAttributeBehaviour): RscControlsGroupNoScrollbars {
     };
 };
 
+class GVAR(RscAttributeCombatMode): RscControlsGroupNoScrollbars {
+    idc = IDC_COMBATMODE_GROUP;
+    onSetFocus = QUOTE(_this call FUNC(attributeCombatMode));
+    x = 0;
+    y = 0;
+    w = POS_W(26);
+    h = POS_H(2.5);
+    class controls {
+        class Label: GVAR(RscLabel) {
+            text = "$STR_3DEN_Group_Attribute_CombatMode_displayName";
+            h = POS_H(2.5);
+        };
+        class Background: RscText {
+            idc = -1;
+            x = POS_W(10);
+            y = 0;
+            w = POS_W(16);
+            h = POS_H(2.5);
+            colorBackground[] = {1, 1, 1, 0.1};
+        };
+        class Blue: RscActivePicture {
+            idc = IDC_COMBATMODE_BLUE;
+            text = QPATHTOF(UI\hold_ca.paa);
+            tooltip = "$STR_3DEN_Attributes_CombatMode_Blue_text";
+            x = POS_W(11.25);
+            y = POS_H(0.5);
+            w = POS_W(1.5);
+            h = POS_H(1.5);
+        };
+        class Green: Blue {
+            idc = IDC_COMBATMODE_GREEN;
+            text = QPATHTOF(UI\defend_ca.paa);
+            tooltip = "$STR_3DEN_Attributes_CombatMode_Green_text";
+            x = POS_W(13.75);
+        };
+        class White: Blue {
+            idc = IDC_COMBATMODE_WHITE;
+            text = QPATHTOF(UI\engage_ca.paa);
+            tooltip = "$STR_3DEN_Attributes_CombatMode_White_text";
+            x = POS_W(16.25);
+        };
+        class Yellow: Blue {
+            idc = IDC_COMBATMODE_YELLOW;
+            text = QPATHTOF(UI\hold_ca.paa);
+            tooltip = "$STR_3DEN_Attributes_CombatMode_Yellow_text";
+            x = POS_W(18.75);
+        };
+        class Red: Blue {
+            idc = IDC_COMBATMODE_RED;
+            text = QPATHTOF(UI\engage_ca.paa);
+            tooltip = "$STR_3DEN_Attributes_CombatMode_Red_text";
+            x = POS_W(21.25);
+        };
+        class Default: Blue {
+            idc = IDC_COMBATMODE_DEFAULT;
+            text = "\a3\ui_f_curator\Data\default_ca.paa";
+            tooltip = "$STR_combat_unchanged";
+            x = POS_W(24);
+        };
+    };
+};
+
 class GVAR(RscAttributeSpeedMode): RscControlsGroupNoScrollbars {
     idc = IDC_ATTRIBUTESPEEDMODE;
     onSetFocus = QUOTE(_this call FUNC(attributeSpeedMode));
@@ -790,6 +852,28 @@ class GVAR(RscAttributesGroup): GVAR(RscAttributesBase) {
                 class Skill: GVAR(RscAttributeSkill) {};
                 class Formation: GVAR(RscAttributeFormation) {};
                 class Behaviour: GVAR(RscAttributeBehaviour) {};
+                class CombatMode: GVAR(RscAttributeCombatMode) {
+                    class controls: controls {
+                        class Label: Label {};
+                        class Background: Background {};
+                        class Blue: Blue {
+                            x = POS_W(12.25);
+                        };
+                        class Green: Green {
+                            x = POS_W(14.75);
+                        };
+                        class White: White {
+                            x = POS_W(17.25);
+                        };
+                        class Yellow: Yellow {
+                            x = POS_W(19.75);
+                        };
+                        class Red: Red {
+                            x = POS_W(22.25);
+                        };
+                        class Default: Default {};
+                    };
+                };
                 class SpeedMode: GVAR(RscAttributeSpeedMode) {};
                 class UnitPos: GVAR(RscAttributeUnitPos) {};
                 class RespawnPosition: GVAR(RscAttributeRespawnPosition) {
@@ -823,6 +907,7 @@ class GVAR(RscAttributesWaypoint): GVAR(RscAttributesBase) {
                 class WaypointType: GVAR(RscAttributeWaypointType) {};
                 class Formation: GVAR(RscAttributeFormation) {};
                 class Behaviour: GVAR(RscAttributeBehaviour) {};
+                class CombatMode: GVAR(RscAttributeCombatMode) {};
                 class SpeedMode: GVAR(RscAttributeSpeedMode) {};
             };
         };
