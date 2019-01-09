@@ -743,6 +743,23 @@ class GVAR(RscAttributeWaypointType): RscControlsGroupNoScrollbars {
     };
 };
 
+class GVAR(RscAttributeWaypointTimeout): GVAR(RscAttributeSkill) {
+    idc = IDC_TIMEOUT_GROUP;
+    onSetFocus = QUOTE(_this call FUNC(attributeWaypointTimeout));
+    class controls: controls {
+        class Label: Label {
+            text = CSTRING(Timeout);
+            tooltip = CSTRING(Timeout_Tooltip);
+        };
+        class Slider: Slider {
+            idc = IDC_TIMEOUT_SLIDER;
+        };
+        class Edit: Edit {
+            idc = IDC_TIMEOUT_EDIT;
+        };
+    };
+};
+
 class GVAR(RscAttributeMarkerText): RscControlsGroupNoScrollbars {
     idc = IDC_ATTRIBUTEMARKERTEXT;
     onSetFocus = QUOTE(_this call FUNC(attributeMarkerText));
@@ -905,6 +922,7 @@ class GVAR(RscAttributesWaypoint): GVAR(RscAttributesBase) {
         class Content: Content {
             class Controls {
                 class WaypointType: GVAR(RscAttributeWaypointType) {};
+                class WaypointTimeout: GVAR(RscAttributeWaypointTimeout) {};
                 class Formation: GVAR(RscAttributeFormation) {};
                 class Behaviour: GVAR(RscAttributeBehaviour) {};
                 class CombatMode: GVAR(RscAttributeCombatMode) {};

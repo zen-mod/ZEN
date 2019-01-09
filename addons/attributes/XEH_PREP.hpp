@@ -12,6 +12,7 @@ PREP(attributeRespawnPosition);
 PREP(attributeSkill);
 PREP(attributeSpeedMode);
 PREP(attributeUnitPos);
+PREP(attributeWaypointTimeout);
 PREP(attributeWaypointType);
 PREP(buttonArsenal);
 PREP(getAttributeEntities);

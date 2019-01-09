@@ -121,4 +121,9 @@
 #define IDC_COMBATMODE_RED 86405
 #define IDC_COMBATMODE_DEFAULT 86406
 
+#define IDC_TIMEOUT_GROUP 86500
+#define IDC_TIMEOUT_SLIDER 86501
+#define IDC_TIMEOUT_EDIT 86502
+
+#define FORMAT_ROUND(value) (str round value)
 #define FORMAT_PERCENT(value) (format ["%1%2", round (value * 100), "%"])
