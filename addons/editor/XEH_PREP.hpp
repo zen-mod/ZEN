@@ -1,3 +1,4 @@
+PREP(declutterEmptyTree);
 PREP(fixSideButtons);
 PREP(handleObjectPlaced);
 PREP(handleSearchButton);

@@ -43,6 +43,10 @@ if (GVAR(disableLiveSearch)) then {
     _ctrlSearchButton ctrlAddEventHandler ["ButtonClick", {call FUNC(handleSearchButton)}];
 };
 
+if (GVAR(declutterEmptyTree)) then {
+    [FUNC(declutterEmptyTree), _display] call CBA_fnc_execNextFrame;
+};
+
 {
     private _ctrl = _display displayCtrl _x;
     _ctrl ctrlAddEventHandler ["ButtonClick", {call FUNC(fixSideButtons)}];

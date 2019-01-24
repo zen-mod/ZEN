@@ -24,3 +24,12 @@
     false,
     false
 ] call CBA_settings_fnc_init;
+
+[
+    QGVAR(declutterEmptyTree),
+    "CHECKBOX",
+    [LSTRING(DeclutterEmptyTree), LSTRING(DeclutterEmptyTree_Description)],
+    ELSTRING(common,Category),
+    true,
+    false
+] call CBA_settings_fnc_init;

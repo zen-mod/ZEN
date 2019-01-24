@@ -19,6 +19,12 @@
         <Key ID="STR_ZEN_Editor_DisableLiveSearch_Description">
             <English>Requires pressing Enter or clicking the search button to confirm a search\nHelps reduce lag when searching through a lot of items</English>
         </Key>
+        <Key ID="STR_ZEN_Editor_DeclutterEmptyTree">
+            <English>Declutter Empty Tree</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_DeclutterEmptyTree_Description">
+            <English>Declutters the empty tree by removing empty vehicles as those are available in the side specific trees</English>
+        </Key>
         <Key ID="STR_ZEN_Editor_ToggleIncludeCrew">
             <English>Toggle Include Crew</English>
         </Key>
