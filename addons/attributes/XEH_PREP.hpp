@@ -15,5 +15,6 @@ PREP(attributeUnitPos);
 PREP(attributeWaypointTimeout);
 PREP(attributeWaypointType);
 PREP(buttonArsenal);
+PREP(buttonGarage);
 PREP(getAttributeEntities);
 PREP(initAttributesDisplay);

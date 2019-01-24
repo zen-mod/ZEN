@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Garage">
+        <Key ID="STR_ZEN_Garage_ButtonClose_Tooltip">
+            <English>Exit Garage (Escape)</English>
+        </Key>
+        <Key ID="STR_ZEN_Garage_ButtonHide_Tooltip">
+            <English>Hide Interface (Backspace)</English>
+        </Key>
+    </Package>
+</Project>

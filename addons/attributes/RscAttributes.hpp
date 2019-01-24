@@ -836,6 +836,10 @@ class GVAR(RscAttributesVehicle): GVAR(RscAttributesBase) {
         };
         class ButtonOK: ButtonOK {};
         class ButtonCancel: ButtonCancel {};
+        class ButtonGarage: ButtonCustom1 {
+            text = "$STR_A3_Garage";
+            onButtonClick = QUOTE(_this call FUNC(buttonGarage));
+        };
     };
 };
 
@@ -854,6 +858,10 @@ class GVAR(RscAttributesVehicleEmpty): GVAR(RscAttributesBase) {
         };
         class ButtonOK: ButtonOK {};
         class ButtonCancel: ButtonCancel {};
+        class ButtonGarage: ButtonCustom1 {
+            text = "$STR_A3_Garage";
+            onButtonClick = QUOTE(_this call FUNC(buttonGarage));
+        };
     };
 };
 

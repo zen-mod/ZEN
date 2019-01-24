@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"zen_garage"};
+        requiredAddons[] = {"zen_common"};
         author = "";
         url = "";
         VERSION_CONFIG;
@@ -14,7 +14,4 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
-#include "CfgFunctions.hpp"
-#include "CfgVehicles.hpp"
-#include "RscAttributes.hpp"
-#include "CfgCurator.hpp"
+#include "gui.hpp"
