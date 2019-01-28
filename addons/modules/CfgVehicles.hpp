@@ -106,4 +106,10 @@ class CfgVehicles {
         function = QFUNC(moduleShowInConfig);
         icon = "\a3\3DEN\Data\Displays\Display3DEN\EntityMenu\findConfig_ca.paa";
     };
+    class GVAR(moduleDamageBuildings): GVAR(moduleBase) {
+        category = QGVAR(Buildings);
+        displayName = CSTRING(ModuleDamageBuildings);
+        curatorInfoType = QGVAR(RscDamageBuildings);
+        icon = "\a3\modules_f\data\editterrainobject\icon_ca.paa";
+    };
 };

@@ -10,6 +10,7 @@ class CfgPatches {
             QGVAR(moduleChatter),
             QGVAR(moduleCreateIED),
             QGVAR(moduleCreateMinefield),
+            QGVAR(moduleDamageBuildings),
             QGVAR(moduleFunctionsViewer),
             QGVAR(moduleGlobalHint),
             QGVAR(moduleHideZeus),

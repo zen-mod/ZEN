@@ -3,6 +3,7 @@ class RscEdit;
 class RscCombo;
 class RscButton;
 class RscListBox;
+class RscCheckBox;
 class ctrlToolbox;
 class ctrlXSliderH;
 class RscEditMulti;
@@ -788,6 +789,104 @@ BEGIN_MODULE_DIALOG(RscTeleportPlayers)
                         colorFocused[] = {0, 0, 0, 0.5};
                     };
                 };
+            };
+        };
+    };
+END_MODULE_DIALOG;
+
+BEGIN_MODULE_DIALOG(RscDamageBuildings)
+    class damageBuildings: RscControlsGroupNoScrollbars {
+        onSetFocus = QUOTE(_this call FUNC(ui_damageBuildings));
+        idc = IDC_DAMAGEBUILDINGS;
+        x = 0;
+        y = 0;
+        w = POS_W(26);
+        h = POS_H(4.2);
+        class controls {
+            class SelectionLabel: EGVAR(attributes,RscLabel) {
+                text = CSTRING(BuildingSelection);
+            };
+            class SelectionMode: ctrlToolbox {
+                idc = IDC_DAMAGEBUILDINGS_MODE;
+                x = POS_W(10.1);
+                y = 0;
+                w = POS_W(13.8) - pixelW;
+                h = POS_H(1);
+                rows = 1;
+                columns = 2;
+                strings[] = {CSTRING(Nearest), CSTRING(Radius)};
+            };
+            class SelectionRadius: EGVAR(attributes,RscEdit) {
+                idc = IDC_DAMAGEBUILDINGS_RADIUS;
+                x = POS_W(24);
+                w = POS_W(2);
+                maxChars = 4;
+            };
+            class DamageLabel: EGVAR(attributes,RscLabel) {
+                text = CSTRING(DamageState);
+                tooltip = CSTRING(DamageState_Tooltip);
+                y = POS_H(1.1);
+                h = POS_H(2);
+            };
+            class DamageBlockLeft: RscText {
+                idc = -1;
+                x = POS_W(10.1);
+                y = POS_H(1.1);
+                w = POS_W(10);
+                h = POS_H(2);
+                colorBackground[] = {0, 0, 0, 0.5};
+            };
+            class DamageblockRight: DamageBlockLeft {
+                x = POS_W(20.2);
+                w = POS_W(5.8);
+            };
+            class Undamaged: RscCheckBox {
+                idc = IDC_DAMAGEBUILDINGS_UNDAMAGED;
+                tooltip = "$STR_a3_to_editTerrainObject15";
+                x = POS_W(10.1);
+                y = POS_H(1.1);
+                w = POS_W(2);
+                h = POS_H(2);
+                color[] = {1, 1, 1, 1};
+                colorBackground[] = {0, 0, 0, 0};
+                colorBackgroundHover[] = {0, 0, 0, 0};
+                colorBackgroundFocused[] = {0, 0, 0, 0};
+                colorBackgroundPressed[] = {0, 0, 0, 0};
+                colorBackgroundDisabled[] = {0, 0, 0, 0};
+                CHECKBOX_TEXTURES(ICON_UNDAMAGED_UNCHECKED,ICON_UNDAMAGED_CHECKED);
+            };
+            class Damaged_1: Undamaged {
+                idc = IDC_DAMAGEBUILDINGS_DAMAGED_1;
+                tooltip = "$STR_a3_to_editTerrainObject16";
+                x = POS_W(12.1);
+                CHECKBOX_TEXTURES(ICON_DAMAGED_1_UNCHECKED,ICON_DAMAGED_1_CHECKED);
+            };
+            class Damaged_2: Undamaged {
+                idc = IDC_DAMAGEBUILDINGS_DAMAGED_2;
+                tooltip = "$STR_a3_to_editTerrainObject17";
+                x = POS_W(14.1);
+                CHECKBOX_TEXTURES(ICON_DAMAGED_2_UNCHECKED,ICON_DAMAGED_2_CHECKED);
+            };
+            class Damaged_3: Undamaged {
+                idc = IDC_DAMAGEBUILDINGS_DAMAGED_3;
+                tooltip = "$STR_a3_to_editTerrainObject18";
+                x = POS_W(16.1);
+                CHECKBOX_TEXTURES(ICON_DAMAGED_3_UNCHECKED,ICON_DAMAGED_3_CHECKED);
+            };
+            class Destroyed: Undamaged {
+                idc = IDC_DAMAGEBUILDINGS_DESTROYED;
+                tooltip = "$STR_a3_to_editTerrainObject19";
+                x = POS_W(18.1);
+                CHECKBOX_TEXTURES(ICON_DESTROYED_UNCHECKED,ICON_DESTROYED_CHECKED);
+            };
+            class EffectsLabel: EGVAR(attributes,RscLabel) {
+                text = CSTRING(DestructionEffects);
+                tooltip = CSTRING(DestructionEffects_Tooltip);
+                y = POS_H(3.2);
+            };
+            class Effects: GVAR(RscToolboxYesNo) {
+                idc = IDC_DAMAGEBUILDINGS_EFFECTS;
+                y = POS_H(3.2);
             };
         };
     };

@@ -97,6 +97,16 @@
 #define IDC_BINDVARIABLE_NAME 61201
 #define IDC_BINDVARIABLE_PUBLIC 61202
 
+#define IDC_DAMAGEBUILDINGS 61300
+#define IDC_DAMAGEBUILDINGS_MODE 61301
+#define IDC_DAMAGEBUILDINGS_RADIUS 61302
+#define IDC_DAMAGEBUILDINGS_UNDAMAGED 61303
+#define IDC_DAMAGEBUILDINGS_DAMAGED_1 61304
+#define IDC_DAMAGEBUILDINGS_DAMAGED_2 61305
+#define IDC_DAMAGEBUILDINGS_DAMAGED_3 61306
+#define IDC_DAMAGEBUILDINGS_DESTROYED 61307
+#define IDC_DAMAGEBUILDINGS_EFFECTS 61308
+
 #define ICON_CHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_checked_ca.paa"
 #define ICON_UNCHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_unchecked_ca.paa"
 
@@ -109,3 +119,26 @@
 #define ICON_CIVILIAN QPATHTOEF(common,UI\icon_civilian_ca.paa)
 
 #define GET_SIDE_ICON(unit) (unit call EFUNC(common,getSideIcon))
+
+#define CHECKBOX_TEXTURES(uncheckedTexture,checkedTexture) \
+    textureChecked           = checkedTexture; \
+    textureHoverChecked      = checkedTexture; \
+    textureFocusedChecked    = checkedTexture; \
+    texturePressedChecked    = checkedTexture; \
+    textureDisabledChecked   = checkedTexture; \
+    textureUnchecked         = uncheckedTexture; \
+    textureHoverUnchecked    = uncheckedTexture; \
+    textureFocusedUnchecked  = uncheckedTexture; \
+    texturePressedUnchecked  = uncheckedTexture; \
+    textureDisabledUnchecked = uncheckedTexture
+
+#define ICON_UNDAMAGED_UNCHECKED "\a3\modules_f\data\editterrainobject\textureunchecked_undamaged_ca.paa"
+#define ICON_UNDAMAGED_CHECKED   "\a3\modules_f\data\editterrainobject\texturechecked_undamaged_ca.paa"
+#define ICON_DAMAGED_1_UNCHECKED "\a3\modules_f\data\editterrainobject\textureunchecked_damaged1_ca.paa"
+#define ICON_DAMAGED_1_CHECKED   "\a3\modules_f\data\editterrainobject\texturechecked_damaged1_ca.paa"
+#define ICON_DAMAGED_2_UNCHECKED "\a3\modules_f\data\editterrainobject\textureunchecked_damaged2_ca.paa"
+#define ICON_DAMAGED_2_CHECKED   "\a3\modules_f\data\editterrainobject\texturechecked_damaged2_ca.paa"
+#define ICON_DAMAGED_3_UNCHECKED "\a3\modules_f\data\editterrainobject\textureunchecked_damaged12_ca.paa"
+#define ICON_DAMAGED_3_CHECKED   "\a3\modules_f\data\editterrainobject\texturechecked_damaged12_ca.paa"
+#define ICON_DESTROYED_UNCHECKED "\a3\modules_f\data\editterrainobject\textureunchecked_destroyed_ca.paa"
+#define ICON_DESTROYED_CHECKED   "\a3\modules_f\data\editterrainobject\texturechecked_destroyed_ca.paa"

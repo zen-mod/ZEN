@@ -56,6 +56,31 @@
             <English>Show In Config Viewer</English>
         </Key>
 
+        <Key ID="STR_ZEN_Modules_ModuleDamageBuildings">
+            <English>Damage Buildings</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_BuildingSelection">
+            <English>Building Selection</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_Nearest">
+            <English>Nearest</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_Radius">
+            <English>Radius</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_DamageState">
+            <English>Damage State</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_DamageState_Tooltip">
+            <English>Selects the damage state to apply.\nIn nearest mode, only damage states that the nearest building supports are selectable.\nIn radius mode, the module will default to undamaged if a building does not support the selected state.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_DestructionEffects">
+            <English>Destruction Effects</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_DestructionEffects_Tooltip">
+            <English>WARNING: Enabling destruction effects when using the module on a\nlarge amount of buildings can create a lot of lag.</English>
+        </Key>
+
         <Key ID="STR_ZEN_Modules_ModuleMakeInvincible">
             <English>Make Invincible</English>
         </Key>
@@ -207,6 +232,9 @@
         <Key ID="STR_ZEN_Modules_AI">
             <English>AI</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_Buildings">
+            <English>Buildings</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_DevTools">
             <English>Development Tools</English>
         </Key>
@@ -267,6 +295,19 @@
         </Key>
         <Key ID="STR_ZEN_Modules_OnlyNonInfantry">
             <English>Unit must not be infantry</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_BuildingTooFar">
+            <English>Nearest building is too far away</English>
+            <French>Le bâtiment le plus proche est trop loin</French>
+            <Russian>Ближайшие здания слишком далеко</Russian>
+            <Czech>Nejbližší budova je příliš daleko</Czech>
+            <Japanese>近くに建物がありません。</Japanese>
+            <Polish>Najbliższy budynek jest zbyt daleko</Polish>
+            <German>Nächstgelegenes Gebäude ist zu weit entfernt</German>
+            <Korean>가장가까운 건물이 너무 멈</Korean>
+            <Italian>L'edificio più vicino è troppo lontano</Italian>
+            <Chinesesimp>最近的房子离太远了</Chinesesimp>
+            <Chinese>最近的房子離太遠了</Chinese>
         </Key>
     </Package>
 </Project>
