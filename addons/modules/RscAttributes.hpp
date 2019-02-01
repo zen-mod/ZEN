@@ -127,6 +127,29 @@ class GVAR(AttributeRadius): RscControlsGroupNoScrollbars {
     };
 };
 
+class GVAR(RscAttributeSlider): RscControlsGroupNoScrollbars {
+    idc = -1;
+    x = 0;
+    y = 0;
+    w = POS_W(26);
+    h = POS_H(1);
+    class controls {
+        class Label: EGVAR(attributes,RscLabel) {};
+        class Slider: ctrlXSliderH {
+            idc = IDC_SLIDER;
+            x = POS_W(10.1);
+            y = 0;
+            w = POS_W(13.8);
+            h = POS_H(1);
+        };
+        class Edit: EGVAR(attributes,RscEdit) {
+            idc = IDC_EDIT;
+            x = POS_W(24);
+            w = POS_W(2);
+        };
+    };
+};
+
 BEGIN_MODULE_DIALOG(RscBindVariable)
     class bindVariable: RscControlsGroupNoScrollbars {
         onSetFocus = QUOTE(_this call FUNC(ui_bindVariable));

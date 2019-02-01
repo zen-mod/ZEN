@@ -12,6 +12,7 @@ PREP(moduleSimulation);
 PREP(moduleSmokePillar);
 PREP(moduleVisibility);
 PREP(ui_attributeRadius);
+PREP(ui_attributeSlider);
 PREP(ui_bindVariable);
 PREP(ui_changeHeight);
 PREP(ui_chatter);
