@@ -5,6 +5,7 @@ PREP(moduleCreateMinefield);
 PREP(moduleDamageBuildings);
 PREP(moduleEarthquake);
 PREP(moduleFunctionsViewer);
+PREP(moduleHeal);
 PREP(moduleHideZeus);
 PREP(modulePatrolArea);
 PREP(moduleShowInConfig);

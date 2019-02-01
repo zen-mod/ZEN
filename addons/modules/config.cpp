@@ -14,6 +14,7 @@ class CfgPatches {
             QGVAR(moduleEarthquake),
             QGVAR(moduleFunctionsViewer),
             QGVAR(moduleGlobalHint),
+            QGVAR(moduleHeal),
             QGVAR(moduleHideZeus),
             QGVAR(moduleMakeInvincible),
             QGVAR(modulePatrolArea),

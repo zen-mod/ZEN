@@ -117,4 +117,9 @@ class CfgVehicles {
         displayName = CSTRING(ModuleEarthquake);
         curatorInfoType = QGVAR(RscEarthquake);
     };
+    class GVAR(moduleHeal): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleHeal);
+        function = QFUNC(moduleHeal);
+    };
 };
