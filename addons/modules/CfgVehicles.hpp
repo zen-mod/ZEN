@@ -112,4 +112,9 @@ class CfgVehicles {
         curatorInfoType = QGVAR(RscDamageBuildings);
         icon = "\a3\modules_f\data\editterrainobject\icon_ca.paa";
     };
+    class GVAR(moduleEarthquake): GVAR(moduleBase) {
+        category = "Environment";
+        displayName = CSTRING(ModuleEarthquake);
+        curatorInfoType = QGVAR(RscEarthquake);
+    };
 };

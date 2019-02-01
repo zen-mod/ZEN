@@ -81,6 +81,19 @@
             <English>WARNING: Enabling destruction effects when using the module on a\nlarge amount of buildings can create a lot of lag.</English>
         </Key>
 
+        <Key ID="STR_ZEN_Modules_ModuleEarthquake">
+            <English>Earthquake</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleEarthquake_Radius">
+            <English>Radius (m)</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleEarthquake_Intensity">
+            <English>Intensity</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleEarthquake_Buildings">
+            <English>Destroy Buildings</English>
+        </Key>
+
         <Key ID="STR_ZEN_Modules_ModuleMakeInvincible">
             <English>Make Invincible</English>
         </Key>

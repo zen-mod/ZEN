@@ -110,6 +110,11 @@
 #define IDC_DAMAGEBUILDINGS_DESTROYED 61307
 #define IDC_DAMAGEBUILDINGS_EFFECTS 61308
 
+#define IDC_EARTHQUAKE 61400
+#define IDC_EARTHQUAKE_RADIUS 61401
+#define IDC_EARTHQUAKE_INTENSITY 61402
+#define IDC_EARTHQUAKE_BUILDINGS 61403
+
 #define ICON_CHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_checked_ca.paa"
 #define ICON_UNCHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_unchecked_ca.paa"
 

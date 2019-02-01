@@ -81,6 +81,15 @@
         <Key ID="STR_ZEN_Common_VeryHigh">
             <English>Very High</English>
         </Key>
+        <Key ID="STR_ZEN_Common_VeryWeak">
+            <English>Very Weak</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_Weak">
+            <English>Weak</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_Strong">
+            <English>Strong</English>
+        </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects">
             <English>Add Objects to Curators</English>
         </Key>
