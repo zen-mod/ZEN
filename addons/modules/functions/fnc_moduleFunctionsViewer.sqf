@@ -17,8 +17,6 @@
 
 params ["_logic"];
 
-if (!local _logic) exitWith {};
-
 [] call BIS_fnc_help;
 
 deleteVehicle _logic;

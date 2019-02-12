@@ -1,3 +1,4 @@
+PREP(initModule);
 PREP(moduleAttachTo);
 PREP(moduleChatter);
 PREP(moduleCreateIED);
