@@ -22,6 +22,8 @@ class CfgPatches {
             QGVAR(moduleSideRelations),
             QGVAR(moduleSimulation),
             QGVAR(moduleSmokePillar),
+            QGVAR(moduleSpawnCarrier),
+            QGVAR(moduleSpawnDestroyer),
             QGVAR(moduleTeleportPlayers),
             QGVAR(moduleVisibility)
         };

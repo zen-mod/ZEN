@@ -125,4 +125,14 @@ class CfgVehicles {
         displayName = CSTRING(ModuleHeal);
         function = QFUNC(moduleHeal);
     };
+    class GVAR(moduleSpawnCarrier): GVAR(moduleBase) {
+        category = QGVAR(Spawn);
+        displayName = CSTRING(ModuleSpawnCarrier);
+        function = QFUNC(moduleSpawnCarrier);
+    };
+    class GVAR(moduleSpawnDestroyer): GVAR(moduleBase) {
+        category = QGVAR(Spawn);
+        displayName = CSTRING(ModuleSpawnDestroyer);
+        function = QFUNC(moduleSpawnDestroyer);
+    };
 };

@@ -98,6 +98,13 @@
             <English>Heal</English>
         </Key>
 
+        <Key ID="STR_ZEN_Modules_ModuleSpawnCarrier">
+            <English>USS Freedom</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleSpawnDestroyer">
+            <English>USS Liberty</English>
+        </Key>
+
         <Key ID="STR_ZEN_Modules_ModuleMakeInvincible">
             <English>Make Invincible</English>
         </Key>
@@ -260,6 +267,9 @@
         </Key>
         <Key ID="STR_ZEN_Modules_Players">
             <English>Players</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_Spawn">
+            <English>Spawn</English>
         </Key>
         <!-- Feedback Messages -->
         <Key ID="STR_ZEN_Modules_NothingSelected">

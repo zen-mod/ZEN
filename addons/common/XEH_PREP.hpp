@@ -3,4 +3,5 @@ PREP(getModuleTarget);
 PREP(getSideIcon);
 PREP(initDisplayCurator);
 PREP(showMessage);
+PREP(spawnLargeObject);
 PREP(zeusAttributes);

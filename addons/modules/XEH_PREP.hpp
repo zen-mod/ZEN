@@ -13,6 +13,8 @@ PREP(moduleShowInConfig);
 PREP(moduleSideRelations);
 PREP(moduleSimulation);
 PREP(moduleSmokePillar);
+PREP(moduleSpawnCarrier);
+PREP(moduleSpawnDestroyer);
 PREP(moduleVisibility);
 PREP(ui_attributeRadius);
 PREP(ui_attributeSlider);
