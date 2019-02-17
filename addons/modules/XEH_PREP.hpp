@@ -1,4 +1,5 @@
 PREP(initModule);
+PREP(moduleAttachEffect);
 PREP(moduleAttachTo);
 PREP(moduleChatter);
 PREP(moduleCreateIED);
@@ -16,6 +17,7 @@ PREP(moduleSmokePillar);
 PREP(moduleSpawnCarrier);
 PREP(moduleSpawnDestroyer);
 PREP(moduleVisibility);
+PREP(ui_attachEffect);
 PREP(ui_attributeRadius);
 PREP(ui_attributeSlider);
 PREP(ui_bindVariable);

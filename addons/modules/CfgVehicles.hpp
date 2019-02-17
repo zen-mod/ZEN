@@ -135,4 +135,10 @@ class CfgVehicles {
         displayName = CSTRING(ModuleSpawnDestroyer);
         function = QFUNC(moduleSpawnDestroyer);
     };
+    class GVAR(moduleAttachEffect): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Equipment);
+        displayName = CSTRING(moduleAttachEffect);
+        curatorInfoType = QGVAR(RscAttachEffect);
+    };
 };

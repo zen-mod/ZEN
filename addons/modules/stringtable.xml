@@ -105,6 +105,19 @@
             <English>USS Liberty</English>
         </Key>
 
+        <Key ID="STR_ZEN_Modules_ModuleAttachEffect">
+            <English>Attach/Detach Effect</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAttachEffect_Target">
+            <English>Target</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAttachEffect_SelectedGroup">
+            <English>Selected Group</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAttachEffect_Effect">
+            <English>Effect</English>
+        </Key>
+
         <Key ID="STR_ZEN_Modules_ModuleMakeInvincible">
             <English>Make Invincible</English>
         </Key>
@@ -261,6 +274,9 @@
         </Key>
         <Key ID="STR_ZEN_Modules_DevTools">
             <English>Development Tools</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_Equipment">
+            <English>Equipment</English>
         </Key>
         <Key ID="STR_ZEN_Modules_Objects">
             <English>Objects</English>

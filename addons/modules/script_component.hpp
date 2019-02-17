@@ -115,11 +115,17 @@
 #define IDC_EARTHQUAKE_INTENSITY 61402
 #define IDC_EARTHQUAKE_BUILDINGS 61403
 
+#define IDC_ATTACHEFFECT 61500
+#define IDC_ATTACHEFFECT_TARGET 61501
+#define IDC_ATTACHEFFECT_EFFECT 61502
+
 #define ICON_CHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_checked_ca.paa"
 #define ICON_UNCHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_unchecked_ca.paa"
 
 #define ICON_HOSTILE "\a3\ui_f\data\igui\cfg\simpletasks\types\attack_ca.paa"
 #define ICON_FRIENDLY "\a3\ui_f\data\igui\cfg\simpletasks\types\help_ca.paa"
+
+#define ICON_GROUP "\a3\ui_f_curator\data\displays\rscdisplaycurator\modegroups_ca.paa"
 
 #define ICON_BLUFOR QPATHTOEF(common,UI\icon_blufor_ca.paa)
 #define ICON_OPFOR QPATHTOEF(common,UI\icon_opfor_ca.paa)

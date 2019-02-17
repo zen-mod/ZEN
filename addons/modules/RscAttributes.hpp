@@ -959,3 +959,92 @@ BEGIN_MODULE_DIALOG(RscEarthquake)
         };
     };
 END_MODULE_DIALOG;
+
+BEGIN_MODULE_DIALOG(RscAttachEffect)
+    class attachEffect: RscControlsGroupNoScrollbars {
+        onSetFocus = QUOTE(_this call FUNC(ui_attachEffect));
+        idc = IDC_ATTACHEFFECT;
+        x = 0;
+        y = 0;
+        w = POS_W(26);
+        h = POS_H(7.5);
+        class controls {
+            class TargetLabel: EGVAR(attributes,RscLabel) {
+                text = CSTRING(ModuleAttachEffect_Target);
+            };
+            class Target: EGVAR(attributes,RscCombo) {
+                idc = IDC_ATTACHEFFECT_TARGET;
+                class Items {
+                    class Group {
+                        text = CSTRING(ModuleAttachEffect_SelectedGroup);
+                        picture = ICON_GROUP;
+                        default = 1;
+                    };
+                    class BLUFOR {
+                        text = "$STR_WEST";
+                        picture = ICON_BLUFOR;
+                    };
+                    class OPFOR {
+                        text = "$STR_EAST";
+                        picture = ICON_OPFOR;
+                    };
+                    class Independent {
+                        text = "$STR_guerrila";
+                        picture = ICON_INDEPENDENT;
+                    };
+                    class Civilian {
+                        text = "$STR_Civilian";
+                        picture = ICON_CIVILIAN;
+                    };
+                };
+            };
+            class EffectLabel: EGVAR(attributes,RscLabel) {
+                text = CSTRING(ModuleAttachEffect_Effect);
+                y = POS_H(1.1);
+                w = POS_W(26);
+            };
+            class Effect: RscListBox {
+                idc = IDC_ATTACHEFFECT_EFFECT;
+                x = 0;
+                y = POS_H(2.1);
+                w = POS_W(26);
+                h = POS_H(5.4);
+                sizeEx = POS_H(0.9);
+                class Items {
+                    class None {
+                        text = "$STR_A3_None";
+                        picture = QPATHTOF(ui\none_ca.paa);
+                        data = "";
+                        colorPictureSelected[] = {0, 0, 0, 1};
+                        default = 1;
+                    };
+                    class Strobe {
+                        text = "$STR_A3_CFGMAGAZINES_IR_GRENADE_DNS";
+                        picture = "\a3\Modules_F_Curator\Data\portraitIRGrenade_ca.paa";
+                        data = "O_IRStrobe";
+                    };
+                    class Blue {
+                        text = "$STR_A3_CFGMAGAZINES_CHEMLIGHTT_BLUE_DNS";
+                        picture = "\a3\Modules_F_Curator\Data\portraitChemlightBlue_ca.paa";
+                        data = "Chemlight_Blue";
+                    };
+                    class Green {
+                        text = "$STR_A3_CfgMagazines_Chemlight_dns";
+                        picture = "\a3\Modules_F_Curator\Data\portraitChemlightGreen_ca.paa";
+                        data = "Chemlight_Green";
+                    };
+                    class Red {
+                        text = "$STR_A3_CFGMAGAZINES_CHEMLIGHTT_RED_DNS";
+                        picture = "\a3\Modules_F_Curator\Data\portraitChemlightRed_ca.paa";
+                        data = "Chemlight_Red";
+                    };
+                    class Yellow {
+                        text = "$STR_A3_CFGMAGAZINES_CHEMLIGHTT_YELLOW_DNS";
+                        picture = "\a3\Modules_F_Curator\Data\portraitChemlightYellow_ca.paa";
+                        data = "Chemlight_Yellow";
+                    };
+                };
+            };
+        };
+    };
+END_MODULE_DIALOG;
