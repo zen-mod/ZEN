@@ -19,6 +19,7 @@ class CfgPatches {
             QGVAR(moduleHideZeus),
             QGVAR(moduleMakeInvincible),
             QGVAR(modulePatrolArea),
+            QGVAR(moduleSetDate),
             QGVAR(moduleShowInConfig),
             QGVAR(moduleSideRelations),
             QGVAR(moduleSimulation),

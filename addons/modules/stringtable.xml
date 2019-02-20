@@ -118,6 +118,10 @@
             <English>Effect</English>
         </Key>
 
+        <Key ID="STR_ZEN_Modules_ModuleSetDate">
+            <English>Set Date</English>
+        </Key>
+
         <Key ID="STR_ZEN_Modules_ModuleMakeInvincible">
             <English>Make Invincible</English>
         </Key>

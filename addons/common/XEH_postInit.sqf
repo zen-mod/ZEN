@@ -121,6 +121,11 @@ if (isServer) then {
         _waypoint setWaypointSpeed _speedMode;
     }] call CBA_fnc_addEventHandler;
 
+    [QGVAR(setDate), {
+        params ["_date"];
+        setDate _date;
+    }] call CBA_fnc_addEventHandler;
+
     [QGVAR(addObjects), {
         params ["_objects", ["_curator", objNull]];
 

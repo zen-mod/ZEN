@@ -119,6 +119,22 @@
 #define IDC_ATTACHEFFECT_TARGET 61501
 #define IDC_ATTACHEFFECT_EFFECT 61502
 
+#define IDC_SETDATE 61600
+#define IDC_SETDATE_YEAR 61601
+#define IDC_SETDATE_MONTH 61602
+#define IDC_SETDATE_DAY 61603
+#define IDC_SETDATE_PREVIEW 61604
+#define IDC_SETDATE_NIGHT1 61605
+#define IDC_SETDATE_NIGHT2 61606
+#define IDC_SETDATE_DAYTIME 61607
+#define IDC_SETDATE_SUNRISE 61608
+#define IDC_SETDATE_SUNSET 61609
+#define IDC_SETDATE_SUN 61610
+#define IDC_SETDATE_SLIDER 61611
+#define IDC_SETDATE_HOUR 61612
+#define IDC_SETDATE_MINUTE 61613
+#define IDC_SETDATE_SECOND 61614
+
 #define ICON_CHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_checked_ca.paa"
 #define ICON_UNCHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_unchecked_ca.paa"
 

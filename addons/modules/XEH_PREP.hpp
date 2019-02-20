@@ -31,6 +31,7 @@ PREP(ui_globalHint);
 PREP(ui_hideZeus);
 PREP(ui_makeInvincible);
 PREP(ui_patrolArea);
+PREP(ui_setDate);
 PREP(ui_sideRelations);
 PREP(ui_smokePillar);
 PREP(ui_teleportPlayers);

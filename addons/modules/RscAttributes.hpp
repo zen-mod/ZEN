@@ -1,7 +1,9 @@
 class RscText;
 class RscEdit;
 class RscCombo;
+class RscFrame;
 class RscButton;
+class RscPicture;
 class RscListBox;
 class RscCheckBox;
 class ctrlToolbox;
@@ -1044,6 +1046,200 @@ BEGIN_MODULE_DIALOG(RscAttachEffect)
                         data = "Chemlight_Yellow";
                     };
                 };
+            };
+        };
+    };
+END_MODULE_DIALOG;
+
+BEGIN_MODULE_DIALOG(RscSetDate)
+    class setDate: RscControlsGroupNoScrollbars {
+        onSetFocus = QUOTE(_this call FUNC(ui_setDate));
+        idc = IDC_SETDATE;
+        x = 0;
+        y = 0;
+        w = POS_W(26);
+        h = POS_H(6.1);
+        class controls {
+            class DateLabel: EGVAR(attributes,RscLabel) {
+                text = "$STR_3DEN_Environment_Attribute_Date_displayName";
+                w = POS_W(26);
+            };
+            class DateBackground: RscText {
+                idc = -1;
+                x = 0;
+                y = POS_H(1);
+                w = POS_W(26);
+                h = POS_H(2);
+                colorBackground[] = {1, 1, 1, 0.1};
+            };
+            class Year: EGVAR(attributes,RscCombo) {
+                idc = IDC_SETDATE_YEAR;
+                font = "RobotoCondensedLight";
+                x = POS_W(3.9);
+                y = POS_H(1.5);
+                w = POS_W(6);
+                sizeEx = POS_H(0.85);
+            };
+            class Month: Year {
+                idc = IDC_SETDATE_MONTH;
+                x = POS_W(10);
+                class Items {
+                    class Month1 {
+                        text = "$STR_3DEN_Attributes_Date_Month1_text";
+                        value = 1;
+                    };
+                    class Month2 {
+                        text = "$STR_3DEN_Attributes_Date_Month2_text";
+                        value = 2;
+                    };
+                    class Month3 {
+                        text = "$STR_3DEN_Attributes_Date_Month3_text";
+                        value = 3;
+                    };
+                    class Month4 {
+                        text = "$STR_3DEN_Attributes_Date_Month4_text";
+                        value = 4;
+                    };
+                    class Month5 {
+                        text = "$STR_3DEN_Attributes_Date_Month5_text";
+                        value = 5;
+                    };
+                    class Month6 {
+                        text = "$STR_3DEN_Attributes_Date_Month6_text";
+                        value = 6;
+                    };
+                    class Month7 {
+                        text = "$STR_3DEN_Attributes_Date_Month7_text";
+                        value = 7;
+                    };
+                    class Month8 {
+                        text = "$STR_3DEN_Attributes_Date_Month8_text";
+                        value = 8;
+                    };
+                    class Month9 {
+                        text = "$STR_3DEN_Attributes_Date_Month9_text";
+                        value = 9;
+                    };
+                    class Month10 {
+                        text = "$STR_3DEN_Attributes_Date_Month10_text";
+                        value = 10;
+                    };
+                    class Month11 {
+                        text = "$STR_3DEN_Attributes_Date_Month11_text";
+                        value = 11;
+                    };
+                    class Month12 {
+                        text = "$STR_3DEN_Attributes_Date_Month12_text";
+                        value = 12;
+                    };
+                };
+            };
+            class Day: Year {
+                idc = IDC_SETDATE_DAY;
+                x = POS_W(16.1);
+            };
+            class TimeLabel: DateLabel {
+                text = "$STR_3DEN_Environment_Attribute_Daytime_displayName";
+                y = POS_H(3.1);
+            };
+            class TimeBackground: DateBackground {
+                y = POS_H(4.1);
+            };
+            class TimePreview: RscControlsGroupNoScrollbars {
+                idc = IDC_SETDATE_PREVIEW;
+                x = POS_W(5.05);
+                y = POS_H(4.6);
+                w = POS_W(9.8);
+                h = POS_H(1);
+                class controls {
+                    class Night1: RscPicture {
+                        idc = IDC_SETDATE_NIGHT1;
+                        text = "\a3\3DEN\Data\Attributes\SliderTimeDay\night_ca.paa";
+                        x = 0;
+                        y = 0;
+                        w = POS_W(0.5);
+                        h = POS_H(1);
+                        colorText[] = {1, 1, 1, 0.6};
+                    };
+                    class Night2: Night1 {
+                        idc = IDC_SETDATE_NIGHT2;
+                    };
+                    class Daytime: Night1 {
+                        idc = IDC_SETDATE_DAYTIME;
+                        text = "\a3\3DEN\Data\Attributes\SliderTimeDay\day_ca.paa";
+                    };
+                    class Sunrise: Night1 {
+                        idc = IDC_SETDATE_SUNRISE;
+                        text = "\a3\3DEN\Data\Attributes\SliderTimeDay\sunrise_ca.paa";
+                    };
+                    class Sunset: Night1 {
+                        idc = IDC_SETDATE_SUNSET;
+                        text = "\a3\3DEN\Data\Attributes\SliderTimeDay\sunset_ca.paa";
+                    };
+                    class Sun: Night1 {
+                        idc = IDC_SETDATE_SUN;
+                        text = "\a3\3DEN\Data\Attributes\SliderTimeDay\sun_ca.paa";
+                        x = POS_W(4.4);
+                        w = POS_W(1);
+                    };
+                };
+            };
+            class Slider: ctrlXSliderH {
+                idc = IDC_SETDATE_SLIDER;
+                x = POS_W(3.9);
+                y = POS_H(4.6);
+                w = POS_W(12.1);
+                h = POS_H(1);
+                sliderRange[] = {0, 86399};
+                sliderPosition = 0;
+                lineSize = 3600;
+                pageSize = 3600;
+                border = "\a3\3DEN\Data\Attributes\SliderTimeDay\border_ca.paa";
+                thumb  = "\a3\3DEN\Data\Attributes\SliderTimeDay\thumb_ca.paa";
+            };
+            /*
+            class Frame: RscFrame {
+                idc = -1;
+                x = POS_W(16.1);
+                y = POS_H(4.6);
+                w = POS_W(6);
+                h = POS_H(1);
+                colorText[] = {0.75, 0.75, 0.75, 1};
+            };
+            */
+            class Separator: RscText {
+                idc = -1;
+                style = ST_CENTER;
+                text = ":   :";
+                font = "EtelkaMonospacePro";
+                x = POS_W(16.1);
+                y = POS_H(4.6);
+                w = POS_W(6);
+                h = POS_H(1);
+                colorBackground[] = {0, 0, 0, 0.5};
+            };
+            class Hour: EGVAR(attributes,RscEdit) {
+                idc = IDC_SETDATE_HOUR;
+                style = ST_CENTER + ST_NO_RECT;
+                text = "00";
+                tooltip = "$STR_3DEN_Attributes_SliderTime_Hour_tooltip";
+                font = "EtelkaMonospacePro";
+                x = POS_W(16.1);
+                y = POS_H(4.6);
+                w = POS_W(2);
+                sizeEx = POS_H(0.9);
+                colorBackground[] = {0, 0, 0, 0};
+                maxChars = 2;
+            };
+            class Minute: Hour {
+                idc = IDC_SETDATE_MINUTE;
+                tooltip = "$STR_3DEN_Attributes_SliderTime_Minute_tooltip";
+                x = POS_W(18.1);
+            };
+            class Second: Hour {
+                idc = IDC_SETDATE_SECOND;
+                tooltip = "$STR_3DEN_Attributes_SliderTime_Second_tooltip";
+                x = POS_W(20.1);
             };
         };
     };

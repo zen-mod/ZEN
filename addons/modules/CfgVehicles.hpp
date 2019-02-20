@@ -138,7 +138,12 @@ class CfgVehicles {
     class GVAR(moduleAttachEffect): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Equipment);
-        displayName = CSTRING(moduleAttachEffect);
+        displayName = CSTRING(ModuleAttachEffect);
         curatorInfoType = QGVAR(RscAttachEffect);
+    };
+    class GVAR(moduleSetDate): GVAR(moduleBase) {
+        category = "Environment";
+        displayName = CSTRING(ModuleSetDate);
+        curatorInfoType = QGVAR(RscSetDate);
     };
 };
