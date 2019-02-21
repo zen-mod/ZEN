@@ -58,7 +58,7 @@ private _fnc_changedYearOrMonth = {
     private _month = _ctrlMonth lbValue lbCurSel _ctrlMonth;
 
     private _days = if (_month == 2) then {
-        [28, 29] select (_year % 4 == 0 && {_year % 100 != 100} || {_year % 400 == 0});
+        [28, 29] select (_year % 4 == 0 && {_year % 100 != 0} || {_year % 400 == 0});
     } else {
         31 - (_month - 1) % 7 % 2;
     };
