@@ -11,7 +11,7 @@
  * Example:
  * [DISPLAY] call zen_custom_modules_fnc_addModules
  *
- * Public: None
+ * Public: No
  */
 #include "script_component.hpp"
 

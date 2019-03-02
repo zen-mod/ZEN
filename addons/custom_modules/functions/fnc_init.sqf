@@ -11,7 +11,7 @@
  * Example:
  * [LOGIC] call zen_custom_modules_fnc_init
  *
- * Public: None
+ * Public: No
  */
 #include "script_component.hpp"
 
