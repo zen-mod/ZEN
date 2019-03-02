@@ -38,7 +38,6 @@ class GVAR(RscCombo): RscCombo {
     y = 0;
     w = POS_W(15.9);
     h = POS_H(1);
-    colorBackground[] = {0, 0, 0, 0.7};
     arrowEmpty = "\a3\3DEN\Data\Controls\ctrlCombo\arrowEmpty_ca.paa";
     arrowFull = "\a3\3DEN\Data\Controls\ctrlCombo\arrowFull_ca.paa";
     class ComboScrollBar: ComboScrollBar {
