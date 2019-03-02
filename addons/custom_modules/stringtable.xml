@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Custom_Modules">
+        <Key ID="STR_ZEN_Custom_Modules_DisplayName">
+            <English>Custom Module</English>
+        </Key>
+    </Package>
+</Project>
