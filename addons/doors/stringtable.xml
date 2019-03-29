@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Doors">
+        <Key ID="STR_ZEN_Doors_Configure">
+            <English>Configure Doors</English>
+        </Key>
+        <Key ID="STR_ZEN_Doors_NoBuilding">
+            <English>Place on a building</English>
+        </Key>
+        <Key ID="STR_ZEN_Doors_NoDoors">
+            <English>Building has no doors</English>
+        </Key>
+    </Package>
+</Project>
