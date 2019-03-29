@@ -120,6 +120,10 @@ scopeName "Main";
             _controlType = [QGVAR(Row_ToolboxYesNo), QGVAR(Row_ToolboxEnabled)] select (_subType == "ENABLED");
             _defaultValue = _valueInfo param [0, false, [false]];
         };
+        case "SIDES": {
+            _controlType = QGVAR(Row_Sides);
+            _defaultValue = _valueInfo param [0, nil, [west]];
+        };
     };
 
     // Exit if default value could not be found

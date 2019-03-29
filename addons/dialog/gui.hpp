@@ -2,6 +2,7 @@ class RscText;
 class RscEdit;
 class RscCheckBox;
 class ctrlToolbox;
+class RscActivePicture;
 class RscControlsGroup;
 class RscControlsGroupNoScrollbars;
 class RscButtonMenuOK;
@@ -162,6 +163,51 @@ class GVAR(Row_ToolboxEnabled): GVAR(Row_ToolboxYesNo) {
         class Name: Name {};
         class Toolbox: Toolbox {
             strings[] = {ECSTRING(common,Disabled), ECSTRING(common,Enabled)};
+        };
+    };
+};
+
+class GVAR(Row_Sides): GVAR(Row_Base) {
+    GVAR(script) = QFUNC(gui_sides);
+    h = POS_H(2.5);
+    class controls: controls {
+        class Name: Name {
+            h = POS_H(2.5);
+        };
+        class Background: RscText {
+            idc = -1;
+            x = POS_W(10);
+            y = 0;
+            w = POS_W(16);
+            h = POS_H(2.5);
+            colorBackground[] = {1, 1, 1, 0.1};
+        };
+        class BLUFOR: RscActivePicture {
+            idc = IDC_ROW_SIDES_BLUFOR;
+            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_west_ca.paa";
+            tooltip = "$STR_WEST";
+            x = POS_W(12.5);
+            y = POS_H(0.25);
+            w = POS_W(2);
+            h = POS_H(2);
+        };
+        class OPFOR: BLUFOR {
+            idc = IDC_ROW_SIDES_OPFOR;
+            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_east_ca.paa";
+            tooltip = "$STR_EAST";
+            x = POS_W(15.5);
+        };
+        class Independent: BLUFOR {
+            idc = IDC_ROW_SIDES_INDEPENDENT;
+            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_guer_ca.paa";
+            tooltip = "$STR_guerrila";
+            x = POS_W(18.5);
+        };
+        class Civilian: BLUFOR {
+            idc = IDC_ROW_SIDES_CIVILIAN;
+            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_civ_ca.paa";
+            tooltip = "$STR_civilian";
+            x = POS_W(21.5);
         };
     };
 };
