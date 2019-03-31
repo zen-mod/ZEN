@@ -168,6 +168,27 @@ class GVAR(Row_ToolboxEnabled): GVAR(Row_ToolboxYesNo) {
     };
 };
 
+class GVAR(Row_Slider): GVAR(Row_Base) {
+    GVAR(script) = QFUNC(gui_slider);
+    class controls: controls {
+        class Name: Name {};
+        class Slider: ctrlXSliderH {
+            idc = IDC_ROW_SLIDER;
+            x = POS_W(10.1);
+            y = 0;
+            w = POS_W(13.8);
+            h = POS_H(1);
+        };
+        class Edit: GVAR(RscEdit) {
+            idc = IDC_ROW_SLIDER_EDIT;
+            x = POS_W(24);
+            y = pixelH;
+            w = POS_W(2);
+            h = POS_H(1) - pixelH;
+        };
+    };
+};
+
 class GVAR(Row_Sides): GVAR(Row_Base) {
     GVAR(script) = QFUNC(gui_sides);
     h = POS_H(2.5);

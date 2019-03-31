@@ -71,11 +71,9 @@ scopeName "Main";
             _defaultValue = _valueInfo param [0, false, [false]];
             _controlType = QGVAR(Row_Checkbox);
         };
-        case "EDIT": {
-            _valueInfo params [["_default", "", [""]], ["_fnc_sanitizeValue", {_this}, [{}]]];
-            _rowSettings append [_fnc_sanitizeValue];
-            _defaultValue = _default;
-            _controlType = QGVAR(Row_Edit);
+        case "COLOR": {
+            _defaultValue = [_valueInfo] param [0, [1, 1, 1], [[]], [3, 4]];
+            _controlType = [QGVAR(Row_ColorRGB), QGVAR(Row_ColorRGBA)] select (count _defaultValue > 3);
         };
         case "COMBO": {
             _valueInfo params [["_values", [], [[]]], ["_labels", [], [[]]], ["_defaultIndex", 0, [0]]];
@@ -116,17 +114,25 @@ scopeName "Main";
             _defaultValue = _values param [_defaultIndex];
             _controlType = QGVAR(Row_Combo);
         };
-        case "TOOLBOX": {
-            _defaultValue = _valueInfo param [0, false, [false]];
-            _controlType = [QGVAR(Row_ToolboxYesNo), QGVAR(Row_ToolboxEnabled)] select (_subType == "ENABLED");
+        case "EDIT": {
+            _valueInfo params [["_default", "", [""]], ["_fnc_sanitizeValue", {_this}, [{}]]];
+            _rowSettings append [_fnc_sanitizeValue];
+            _defaultValue = _default;
+            _controlType = QGVAR(Row_Edit);
         };
         case "SIDES": {
             _defaultValue = _valueInfo param [0, nil, [west]];
             _controlType = QGVAR(Row_Sides);
         };
-        case "COLOR": {
-            _defaultValue = [_valueInfo] param [0, [1, 1, 1], [[]], [3, 4]];
-            _controlType = [QGVAR(Row_ColorRGB), QGVAR(Row_ColorRGBA)] select (count _defaultValue > 3);
+        case "SLIDER": {
+            _valueInfo params [["_min", 0, [0]], ["_max", 1, [0]], ["_default", 0, [0]], ["_decimals", 2, [0]]];
+            _rowSettings append [_min, _max, _decimals];
+            _defaultValue = _default;
+            _controlType = QGVAR(Row_Slider);
+        };
+        case "TOOLBOX": {
+            _defaultValue = _valueInfo param [0, false, [false]];
+            _controlType = [QGVAR(Row_ToolboxYesNo), QGVAR(Row_ToolboxEnabled)] select (_subType == "ENABLED");
         };
     };
 

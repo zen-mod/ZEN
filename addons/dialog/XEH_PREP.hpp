@@ -6,4 +6,5 @@ PREP(gui_combo);
 PREP(gui_confirm);
 PREP(gui_edit);
 PREP(gui_sides);
+PREP(gui_slider);
 PREP(gui_toolbox);

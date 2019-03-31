@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Controls Group <CONTROL>
  * 1: Row Index <NUMBER>
- * 2: Current Value <SIDE>
+ * 2: Current Value <ARRAY>
  *
  * Return Value:
  * None
