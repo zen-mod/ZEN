@@ -2,6 +2,7 @@ class RscText;
 class RscEdit;
 class RscCheckBox;
 class ctrlToolbox;
+class ctrlXSliderH;
 class RscActivePicture;
 class RscControlsGroup;
 class RscControlsGroupNoScrollbars;
@@ -208,6 +209,87 @@ class GVAR(Row_Sides): GVAR(Row_Base) {
             text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_civ_ca.paa";
             tooltip = "$STR_civilian";
             x = POS_W(21.5);
+        };
+    };
+};
+
+class GVAR(Row_ColorRGB): GVAR(Row_Base) {
+    GVAR(script) = QFUNC(gui_color);
+    h = POS_H(3);
+    class controls: controls {
+        class Name: Name {
+            h = POS_H(3);
+        };
+        class Preview: RscText {
+            idc = IDC_ROW_COLOR_PREVIEW;
+            x = POS_W(6.5);
+            y = POS_H(0.5);
+            w = POS_W(3);
+            h = POS_H(2);
+        };
+        class Red: ctrlXSliderH {
+            idc = IDC_ROW_COLOR_RED;
+            x = POS_W(10.1);
+            y = 0;
+            w = POS_W(13.8);
+            h = POS_H(1);
+            color[] = {1, 0, 0, 0.6};
+            colorActive[] = {1, 0, 0, 1};
+        };
+        class Red_Edit: GVAR(RscEdit) {
+            idc = IDC_ROW_COLOR_RED_EDIT;
+            x = POS_W(24);
+            y = 0;
+            w = POS_W(2);
+            h = POS_H(1);
+        };
+        class Green: Red {
+            idc = IDC_ROW_COLOR_GREEN;
+            y = POS_H(1);
+            color[] = {0, 1, 0, 0.6};
+            colorActive[] = {0, 1, 0, 1};
+        };
+        class Green_Edit: Red_Edit {
+            idc = IDC_ROW_COLOR_GREEN_EDIT;
+            y = POS_H(1);
+        };
+        class Blue: Red {
+            idc = IDC_ROW_COLOR_BLUE;
+            y = POS_H(2);
+            color[] = {0, 0, 1, 0.6};
+            colorActive[] = {0, 0, 1, 1};
+        };
+        class Blue_Edit: Red_Edit {
+            idc = IDC_ROW_COLOR_BLUE_EDIT;
+            y = POS_H(2);
+        };
+    };
+};
+
+class GVAR(Row_ColorRGBA): GVAR(Row_ColorRGB) {
+    h = POS_H(4);
+    class controls: controls {
+        class Name: Name {
+            h = POS_H(4);
+        };
+        class Preview: Preview {
+            h = POS_H(3);
+        };
+        class Red: Red {};
+        class Red_Edit: Red_Edit {};
+        class Green: Green {};
+        class Green_Edit: Green_Edit {};
+        class Blue: Blue {};
+        class Blue_Edit: Blue_Edit {};
+        class Alpha: Red {
+            idc = IDC_ROW_COLOR_ALPHA;
+            y = POS_H(3);
+            color[] = {1, 1, 1, 0.6};
+            colorActive[] = {1, 1, 1, 1};
+        };
+        class Alpha_Edit: Red_Edit {
+            idc = IDC_ROW_COLOR_ALPHA_EDIT;
+            y = POS_H(3);
         };
     };
 };

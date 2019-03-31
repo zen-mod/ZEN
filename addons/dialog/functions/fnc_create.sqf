@@ -68,14 +68,14 @@ scopeName "Main";
 
     switch (toUpper _type) do {
         case "CHECKBOX": {
-            _controlType = QGVAR(Row_Checkbox);
             _defaultValue = _valueInfo param [0, false, [false]];
+            _controlType = QGVAR(Row_Checkbox);
         };
         case "EDIT": {
             _valueInfo params [["_default", "", [""]], ["_fnc_sanitizeValue", {_this}, [{}]]];
-            _controlType = QGVAR(Row_Edit);
             _rowSettings append [_fnc_sanitizeValue];
             _defaultValue = _default;
+            _controlType = QGVAR(Row_Edit);
         };
         case "COMBO": {
             _valueInfo params [["_values", [], [[]]], ["_labels", [], [[]]], ["_defaultIndex", 0, [0]]];
@@ -112,17 +112,21 @@ scopeName "Main";
                 _labels set [_forEachIndex, [_label, _tooltip, _picture]];
             } forEach _labels;
 
-            _controlType = QGVAR(Row_Combo);
             _rowSettings append [_values, _labels];
             _defaultValue = _values param [_defaultIndex];
+            _controlType = QGVAR(Row_Combo);
         };
         case "TOOLBOX": {
-            _controlType = [QGVAR(Row_ToolboxYesNo), QGVAR(Row_ToolboxEnabled)] select (_subType == "ENABLED");
             _defaultValue = _valueInfo param [0, false, [false]];
+            _controlType = [QGVAR(Row_ToolboxYesNo), QGVAR(Row_ToolboxEnabled)] select (_subType == "ENABLED");
         };
         case "SIDES": {
-            _controlType = QGVAR(Row_Sides);
             _defaultValue = _valueInfo param [0, nil, [west]];
+            _controlType = QGVAR(Row_Sides);
+        };
+        case "COLOR": {
+            _defaultValue = [_valueInfo] param [0, [1, 1, 1], [[]], [3, 4]];
+            _controlType = [QGVAR(Row_ColorRGB), QGVAR(Row_ColorRGBA)] select (count _defaultValue > 3);
         };
     };
 
