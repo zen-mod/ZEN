@@ -17,14 +17,13 @@
 
 params ["_building"];
 
-private _config = configFile >> "CfgVehicles" >> typeOf _building;
-private _numberOfDoors = getNumber (_config >> "numberOfDoors");
-
 private _doors = [];
 
-for "_door" from 1 to _numberOfDoors do {
-    private _position = getText (_config >> "UserActions" >> format ["OpenDoor_%1", _door] >> "position");
-    _doors pushBack (_building selectionPosition _position);
-};
+{
+    if (toLower configName _x find "opendoor" != -1) then {
+        private _position = getText (_x >> "position");
+        _doors pushBack (_building selectionPosition _position);
+    };
+} forEach configProperties [configFile >> "CfgVehicles" >> typeOf _building >> "UserActions", "isClass _x"];
 
 _doors
