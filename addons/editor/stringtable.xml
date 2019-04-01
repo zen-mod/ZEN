@@ -25,6 +25,15 @@
         <Key ID="STR_ZEN_Editor_DeclutterEmptyTree_Description">
             <English>Declutters the empty tree by removing empty vehicles as those are available in the side specific trees</English>
         </Key>
+        <Key ID="STR_ZEN_Editor_UnitRadioMessages">
+            <English>Unit Radio Messages</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_UnitRadioMessages_Description">
+            <English>Controls whether unit radio messages are played on placement and waypoint orders, waypoints only, or disabled</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_UnitRadioMessages_WaypointsOnly">
+            <English>Waypoints Only</English>
+        </Key>
         <Key ID="STR_ZEN_Editor_ToggleIncludeCrew">
             <English>Toggle Include Crew</English>
         </Key>

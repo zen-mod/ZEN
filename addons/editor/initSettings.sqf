@@ -33,3 +33,12 @@
     true,
     false
 ] call CBA_settings_fnc_init;
+
+[
+    QGVAR(unitRadioMessages),
+    "LIST",
+    [LSTRING(UnitRadioMessages), LSTRING(UnitRadioMessages_Description)],
+    ELSTRING(common,Category),
+    [[0, 1, 2], [ELSTRING(common,Enabled), LSTRING(UnitRadioMessages_WaypointsOnly), ELSTRING(common,Disabled)], 0],
+    false
+] call CBA_settings_fnc_init;
