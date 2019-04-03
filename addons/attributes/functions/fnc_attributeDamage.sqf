@@ -3,25 +3,22 @@
  * Initializes the "Damage" Zeus attribute.
  *
  * Arguments:
- * 0: Attribute controls group <CONTROL>
+ * 0: Display <DISPLAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL] call zen_attributes_fnc_attributeDamage
+ * [DISPLAY] call zen_attributes_fnc_attributeDamage
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params ["_control"];
+params ["_display"];
 
-private _display = ctrlParent _control;
-private _ctrlButtonOK = _display displayCtrl IDC_OK;
 private _entity = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-
-_control ctrlRemoveAllEventHandlers "SetFocus";
+private _ctrlButtonOK = _display displayCtrl IDC_OK;
 
 private _health = 1 - damage _entity;
 

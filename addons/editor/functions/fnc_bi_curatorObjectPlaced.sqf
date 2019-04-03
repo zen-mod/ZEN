@@ -19,7 +19,7 @@
 
 params ["", "_object"];
 
-[_object] call BIS_fnc_curatorAttachObject;
+_object call BIS_fnc_curatorAttachObject;
 
 private _group = group _object;
 
@@ -32,7 +32,7 @@ BIS_fnc_curatorObjectPlaced_mouseOver = curatorMouseOver;
 private _curatorInfoType = getText (configFile >> "CfgVehicles" >> typeOf _object >> "curatorInfoType");
 
 if (getNumber (configFile >> _curatorInfoType >> "filterAttributes") == 0) then {
-    [_object] call BIS_fnc_showCuratorAttributes;
+    _object call BIS_fnc_showCuratorAttributes;
 };
 
 true

@@ -3,28 +3,24 @@
  * Initializes the "Marker Color" Zeus attribute.
  *
  * Arguments:
- * 0: Attribute controls group <CONTROL>
+ * 0: Display <DISPLAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL] call zen_attributes_fnc_attributeMarkerColor
+ * [DISPLAY] call zen_attributes_fnc_attributeMarkerColor
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params ["_control"];
+params ["_display"];
 
-// Generic init
-private _display = ctrlParent _control;
-private _ctrlButtonOK = _display displayCtrl IDC_OK;
 private _entity = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
+private _ctrlButtonOK = _display displayCtrl IDC_OK;
 
-_control ctrlRemoveAllEventHandlers "SetFocus";
-
-private _ctrlCombo = _display displayCtrl IDC_ATTRIBUTEMARKERCOLOR_COMBO;
+private _ctrlCombo = _display displayCtrl IDC_MARKERCOLOR_COMBO;
 private _markerColor = markerColor _entity;
 
 {
@@ -50,7 +46,7 @@ private _fnc_onConfirm = {
     private _display = ctrlParent _ctrlButtonOK;
     private _entity = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 
-    private _ctrlCombo = _display displayCtrl IDC_ATTRIBUTEMARKERCOLOR_COMBO;
+    private _ctrlCombo = _display displayCtrl IDC_MARKERCOLOR_COMBO;
     private _color = _ctrlCombo lbData lbCurSel _ctrlCombo;
     _entity setMarkerColor _color;
 

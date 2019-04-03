@@ -3,13 +3,13 @@
  * Initializes the "Combat Mode" Zeus attribute.
  *
  * Arguments:
- * 0: Attribute controls group <CONTROL>
+ * 0: Display <DISPLAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL] call zen_attributes_fnc_attributeCombatMode
+ * [DISPLAY] call zen_attributes_fnc_attributeCombatMode
  *
  * Public: No
  */
@@ -19,13 +19,10 @@
 #define COMBATMODES ["BLUE", "GREEN", "WHITE", "YELLOW", "RED", "NO CHANGE"]
 #define COLORS [[1, 0, 0, 1], [1, 0, 0, 1], [1, 0, 0, 1], [1, 1, 1, 1], [1, 1, 1, 1], [1, 1, 1, 1]]
 
-params ["_control"];
+params ["_display"];
 
-private _display = ctrlParent _control;
-private _ctrlButtonOK = _display displayCtrl IDC_OK;
 private _entity = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-
-_control ctrlRemoveAllEventHandlers "SetFocus";
+private _ctrlButtonOK = _display displayCtrl IDC_OK;
 
 if (_entity isEqualType grpNull) then {
     private _ctrlDefault = _display displayCtrl IDC_COMBATMODE_DEFAULT;
@@ -65,11 +62,11 @@ private _activeIDC = IDCS select (COMBATMODES find toUpper _combatMode);
     private _ctrl = _display displayCtrl _x;
     private _color = COLORS select _forEachIndex;
     _ctrl ctrlSetActiveColor _color;
-    _color set [3, 0.5];
 
     if (_activeIDC == _x) then {
         [_ctrl, 1.2, 0] call BIS_fnc_ctrlSetScale;
-        _color set [3, 1];
+    } else {
+        _color set [3, 0.5];
     };
 
     _ctrl ctrlSetTextColor _color;
@@ -84,6 +81,7 @@ private _fnc_onConfirm = {
     if (isNil "_combatMode") exitWith {};
 
     private _entity = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
+
     if (_entity isEqualType grpNull) then {
         {
             [QEGVAR(common,setCombatMode), [_x, _combatMode], _x] call CBA_fnc_targetEvent;

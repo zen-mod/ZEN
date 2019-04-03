@@ -3,13 +3,13 @@
  * Initializes the "Waypoint Type" Zeus attribute.
  *
  * Arguments:
- * 0: Attribute controls group <CONTROL>
+ * 0: Display <DISPLAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL] call zen_attributes_fnc_attributeWaypointType
+ * [DISPLAY] call zen_attributes_fnc_attributeWaypointType
  *
  * Public: No
  */
@@ -17,16 +17,12 @@
 
 #define WAYPOINT_TYPES ["MOVE", "CYCLE", "SAD", "HOLD", "SENTRY", "GETOUT", "UNLOAD", "TR UNLOAD", ["SCRIPTED", "a3\functions_f\waypoints\fn_wpLand.sqf"], "HOOK", "UNHOOK", ["SCRIPTED", "a3\functions_f_orange\waypoints\fn_wpDemine.sqf"]]
 
-params ["_control"];
+params ["_display"];
 
-// Generic init
-private _display = ctrlParent _control;
-private _ctrlButtonOK = _display displayCtrl IDC_OK;
 private _entity = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
+private _ctrlButtonOK = _display displayCtrl IDC_OK;
 
-_control ctrlRemoveAllEventHandlers "SetFocus";
-
-private _ctrlToolbox = _display displayCtrl IDC_ATTRIBUTEWAYPOINTTYPE_TOOLBOX;
+private _ctrlToolbox = _display displayCtrl IDC_WAYPOINTTYPE_TOOLBOX;
 
 if (isNull waypointAttachedVehicle _entity) then {
     private _fnc_onToolBoxSelChanged = {
@@ -46,7 +42,7 @@ if (isNull waypointAttachedVehicle _entity) then {
     _ctrlToolbox lbSetCurSel _index;
     _ctrlToolbox ctrlAddEventHandler ["ToolBoxSelChanged", _fnc_onToolBoxSelChanged];
 } else {
-    private _ctrlBackground = _display displayCtrl IDC_ATTRIBUTEWAYPOINTTYPE_BACKGROUND;
+    private _ctrlBackground = _display displayCtrl IDC_WAYPOINTTYPE_BACKGROUND;
     _ctrlBackground ctrlSetText localize "str_a3_rscattributewaypointtype_type";
 
     _ctrlToolbox ctrlEnable false;

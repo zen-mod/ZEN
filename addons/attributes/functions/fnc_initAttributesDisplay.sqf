@@ -1,7 +1,6 @@
 /*
- * Author: Bohemia Interactive, mharis001
+ * Author: mharis001
  * Initializes the Zeus attributes displays.
- * Called from onLoad EH.
  *
  * Arguments:
  * 0: Display <DISPLAY>
@@ -19,106 +18,111 @@
 
 params ["_display", "_displayClass"];
 
-private _ctrlTitle = _display displayCtrl IDC_ATTRIBUTES_TITLE;
-private _ctrlBackground = _display displayCtrl IDC_ATTRIBUTES_BACKGROUND;
-private _ctrlContent = _display displayCtrl IDC_ATTRIBUTES_CONTENT;
-
-private _ctrlTitlePos = ctrlPosition _ctrlTitle;
-private _ctrlBackgroundPos = ctrlPosition _ctrlBackground;
-private _ctrlContentPos = ctrlPosition _ctrlContent;
-
-// Calculate vertical spacing offsets
-private _ctrlTitleOffset = (_ctrlBackgroundPos select 1) - (_ctrlTitlePos select 1) - (_ctrlTitlePos select 3);
-private _ctrlContentOffset = (_ctrlContentPos select 1) - (_ctrlBackgroundPos select 1);
-
-// Show fake map in the background if Zeus Display map is open
-private _ctrlMap = _display displayCtrl IDC_ATTRIBUTES_MAP;
-_ctrlMap ctrlEnable false;
-
-if (visibleMap) then {
-    private _ctrlMapCurator = findDisplay IDD_RSCDISPLAYCURATOR displayCtrl IDC_RSCDISPLAYCURATOR_MAINMAP;
-    _ctrlMap ctrlMapAnimAdd [0, ctrlMapScale _ctrlMapCurator, _ctrlMapCurator ctrlMapScreenToWorld [0.5, 0.5]];
-    ctrlMapAnimCommit _ctrlMap;
-} else {
-    _ctrlMap ctrlShow false;
-};
-
-// Set the title text based on target
-private _target = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-
-private _titleText = switch (true) do {
-    case (_target isEqualType objNull): {
-        getText (configFile >> "CfgVehicles" >> typeOf _target >> "displayName");
-    };
-    case (_target isEqualType grpNull): {
-        groupId _target;
-    };
-    case (_target isEqualType []): {
-        _target params ["_group", "_waypointID"];
-        format ["%1: %2 #%3", _group, localize "str_a3_cfgmarkers_waypoint_0", _waypointID];
-    };
-    case (_target isEqualType ""): {
-        markerText _target;
-    };
-};
-
-_ctrlTitle ctrlSetText toUpper format [localize "str_a3_rscdisplayattributes_title", _titleText];
-
-// Determine which attributes should be shown
 private _displayConfig = configFile >> _displayClass;
-
-private _attributes = if (getNumber (_displayConfig >> "filterAttributes") > 0) then {GETMVAR(BIS_fnc_initCuratorAttributes_attributes,[])} else {["%ALL"]};
-private _allAttributes = "%ALL" in _attributes;
-
-// Check if adminOnly attributes (code execution) should be enabled
-private _enableAdmin = isServer || {serverCommandAvailable "#shutdown" || BIS_fnc_isDebugConsoleAllowed};
+private _entity = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 
 // Initialize and reposition attributes
-private _posY = _ctrlContentOffset;
+private _ctrlContent = _display displayCtrl IDC_CONTENT;
+private _contentPosY = 0;
 
 {
-    private _configName = configName _x;
-    private _idc = getNumber (_x >> "idc");
-    private _ctrl = _display displayCtrl _idc;
+    private _idc     = getNumber (_x >> "idc");
+    private _control = _display displayCtrl _idc;
 
-    if ((_allAttributes || {_attributes findIf {_x == _configName} > -1}) && {_enableAdmin || {getNumber (_x >> "adminOnly") == 0}}) then {
-        private _ctrlPos = ctrlPosition _ctrl;
-        _ctrlPos set [1, _posY];
-        _ctrl ctrlSetPosition _ctrlPos;
-        _posY = _posY + (_ctrlPos select 3) + POS_H(0.1);
-        ctrlSetFocus _ctrl;
-    } else {
-        _ctrl ctrlSetPosition [0, 0, 0, 0];
-        _ctrl ctrlShow false;
-    };
+    private _function = getText (_x >> "function");
+    _display call (missionNamespace getVariable _function);
 
-    _ctrl ctrlCommit 0;
-} forEach ("true" configClasses (_displayConfig >> "controls" >> "Content" >> "controls"));
+    private _controlPos = ctrlPosition _control;
+    _controlPos set [1, _contentPosY];
+    _control ctrlSetPosition _controlPos;
+    _control ctrlCommit 0;
 
-// Reposition other controls based on content height
-private _posH = ((_posY + _ctrlContentOffset - POS_H(0.1)) min 0.8 * safeZoneH) / 2;
+    _contentPosY = _contentPosY + (_controlPos select 3) + POS_H(0.1);
+} forEach configProperties [_displayConfig >> "controls" >> "Content" >> "controls", "isClass _x"];
 
-_ctrlTitlePos set [1, 0.5 - _posH - (_ctrlTitlePos select 3) - _ctrlTitleOffset];
-_ctrlTitle ctrlSetPosition _ctrlTitlePos;
-_ctrlTitle ctrlCommit 0;
+private _contentHeight = (_contentPosY - POS_H(0.1)) min MAX_HEIGHT;
 
-_ctrlBackgroundPos set [1, 0.5 - _posH];
-_ctrlBackgroundPos set [3, _posH * 2];
-_ctrlBackground ctrlSetPosition _ctrlBackgroundPos;
-_ctrlBackground ctrlCommit 0;
+_ctrlContent ctrlSetPosition [
+    POS_X(7),
+    0.5 - _contentHeight / 2,
+    POS_W(26),
+    _contentHeight
+];
 
-_ctrlContentPos set [1, 0.5 - _posH];
-_ctrlContentPos set [3, _posH * 2];
-_ctrlContent ctrlSetPosition _ctrlContentPos;
 _ctrlContent ctrlCommit 0;
 
+// Reposition and set the title text
+private _ctrlTitle = _display displayCtrl IDC_TITLE;
+
+private _titleText = switch (true) do {
+    case (_entity isEqualType objNull): {
+        getText (configFile >> "CfgVehicles" >> typeOf _entity >> "displayName");
+    };
+    case (_entity isEqualType grpNull): {
+        groupId _entity;
+    };
+    case (_entity isEqualType []): {
+        _entity params ["_group", "_waypointID"];
+        format ["%1: %2 #%3", _group, localize "str_a3_cfgmarkers_waypoint_0", _waypointID];
+    };
+    case (_entity isEqualType ""): {
+        markerText _entity;
+    };
+};
+
+_ctrlTitle ctrlSetPosition [
+    POS_X(6.5),
+    0.5 - _contentHeight / 2 - POS_H(1.6),
+    POS_W(27),
+    POS_H(1)
+];
+
+_ctrlTitle ctrlCommit 0;
+_ctrlTitle ctrlSetText toUpper format [localize "str_a3_rscdisplayattributes_title", _titleText];
+
+private _ctrlBackground = _display displayCtrl IDC_BACKGROUND;
+
+_ctrlBackground ctrlSetPosition [
+    POS_X(6.5),
+    0.5 - _contentHeight / 2 - POS_H(0.5),
+    POS_W(27),
+    _contentHeight + POS_H(1)
+];
+
+_ctrlBackground ctrlCommit 0;
+
+private _ctrlButtonOK = _display displayCtrl IDC_OK;
+_ctrlButtonOK ctrlSetPosition [POS_X(28.5), 0.5 + _contentHeight / 2 + POS_H(0.6)];
+_ctrlButtonOK ctrlCommit 0;
+
+private _ctrlButtonCancel = _display displayCtrl IDC_CANCEL;
+_ctrlButtonCancel ctrlSetPosition [POS_X(6.5), 0.5 + _contentHeight / 2 + POS_H(0.6)];
+_ctrlButtonCancel ctrlCommit 0;
+
+// Create custom buttons
 {
-    private _ctrl = _display displayCtrl _x;
-    private _ctrlPos = ctrlPosition _ctrl;
-    _ctrlPos set [1, 0.5 + _posH + _ctrlTitleOffset];
-    _ctrl ctrlSetPosition _ctrlPos;
-    _ctrl ctrlCommit 0;
-} forEach [IDC_OK, IDC_CANCEL, IDC_ATTRIBUTES_CUSTOM_1, IDC_ATTRIBUTES_CUSTOM_2, IDC_ATTRIBUTES_CUSTOM_3];
+    private _buttonText = getText (_x >> "text");
+    private _function   = getText (_x >> "function");
+
+    if (isNil _function) then {
+        _function = compile _function;
+    } else {
+        _function = missionNamespace getVariable _function;
+    };
+
+    private _ctrlButton = _display ctrlCreate ["RscButtonMenu", -1];
+
+    _ctrlButton ctrlSetPosition [
+        POS_X(23.4) - POS_W(5.1) * (_forEachIndex mod 3),
+        0.5 + _contentHeight / 2 + POS_H(0.6) + POS_H(1.1) * floor (_forEachIndex / 3),
+        POS_W(5),
+        POS_H(1)
+    ];
+
+    _ctrlButton ctrlCommit 0;
+    _ctrlButton ctrlSetText _buttonText;
+    _ctrlButton ctrlAddEventHandler ["ButtonClick", _function];
+} forEach configProperties [_displayConfig >> "buttons", "isClass _x"];
 
 // Add check to close the display when the entity is altered
 private _fnc_closeDisplay = {
@@ -127,29 +131,29 @@ private _fnc_closeDisplay = {
 };
 
 switch (true) do {
-    case (_target isEqualType objNull): {
+    case (_entity isEqualType objNull): {
         [{
-            params ["_display", "_target", "_wasAlive"];
-            isNull _display || {_wasAlive && {!alive _target}}
-        }, _fnc_closeDisplay, [_display, _target, alive _target]] call CBA_fnc_waitUntilAndExecute;
+            params ["_display", "_entity", "_wasAlive"];
+            isNull _display || {_wasAlive && {!alive _entity}}
+        }, _fnc_closeDisplay, [_display, _entity, alive _entity]] call CBA_fnc_waitUntilAndExecute;
     };
-    case (_target isEqualType grpNull): {
+    case (_entity isEqualType grpNull): {
         [{
-            params ["_display", "_target"];
-            isNull _display || {isNull _target}
-        }, _fnc_closeDisplay, [_display, _target]] call CBA_fnc_waitUntilAndExecute;
+            params ["_display", "_entity"];
+            isNull _display || {isNull _entity}
+        }, _fnc_closeDisplay, [_display, _entity]] call CBA_fnc_waitUntilAndExecute;
     };
-    case (_target isEqualType []): {
-        _target params ["_group"];
+    case (_entity isEqualType []): {
+        _entity params ["_group"];
         [{
-            params ["_display", "_target", "_wpCount"];
-            isNull _display || {count waypoints _target != _wpCount}
+            params ["_display", "_entity", "_wpCount"];
+            isNull _display || {count waypoints _entity != _wpCount}
         }, _fnc_closeDisplay, [_display, _group, count waypoints _group]] call CBA_fnc_waitUntilAndExecute;
     };
-    case (_target isEqualType ""): {
+    case (_entity isEqualType ""): {
         [{
-            params ["_display", "_target"];
-            isNull _display || {markerType _target == ""}
-        }, _fnc_closeDisplay, [_display, _target]] call CBA_fnc_waitUntilAndExecute;
+            params ["_display", "_entity"];
+            isNull _display || {markerType _entity == ""}
+        }, _fnc_closeDisplay, [_display, _entity]] call CBA_fnc_waitUntilAndExecute;
     };
 };

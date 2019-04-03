@@ -3,33 +3,29 @@
  * Initializes the "Unit Pos" Zeus attribute.
  *
  * Arguments:
- * 0: Attribute controls group <CONTROL>
+ * 0: Display <DISPLAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL] call zen_attributes_fnc_attributeUnitPos
+ * [DISPLAY] call zen_attributes_fnc_attributeUnitPos
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-#define IDCS [IDC_ATTRIBUTEUNITPOS_DOWN, IDC_ATTRIBUTEUNITPOS_CROUCH, IDC_ATTRIBUTEUNITPOS_UP, IDC_ATTRIBUTEUNITPOS_AUTO]
+#define IDCS [IDC_UNITPOS_DOWN, IDC_UNITPOS_CROUCH, IDC_UNITPOS_UP, IDC_UNITPOS_AUTO]
 #define STANCES ["DOWN", "MIDDLE", "UP", "AUTO"]
 
-params ["_control"];
+params ["_display"];
 
-// Generic init
-private _display = ctrlParent _control;
-private _ctrlButtonOK = _display displayCtrl IDC_OK;
 private _entity = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
+private _ctrlButtonOK = _display displayCtrl IDC_OK;
 
 if (_entity isEqualType grpNull) then {
     _entity = leader _entity;
 };
-
-_control ctrlRemoveAllEventHandlers "SetFocus";
 
 private _fnc_onButtonClick = {
     params ["_activeCtrl"];

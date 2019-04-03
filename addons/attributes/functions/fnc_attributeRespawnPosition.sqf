@@ -3,30 +3,24 @@
  * Initializes the "Respawn Position" Zeus attribute.
  *
  * Arguments:
- * 0: Attribute controls group <CONTROL>
+ * 0: Display <DISPLAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL] call zen_attributes_fnc_attributeRespawnPosition
+ * [DISPLAY] call zen_attributes_fnc_attributeRespawnPosition
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-#define IDCS [IDC_ATTRIBUTERESPAWNPOSITION_EAST, IDC_ATTRIBUTERESPAWNPOSITION_WEST, IDC_ATTRIBUTERESPAWNPOSITION_GUER, IDC_ATTRIBUTERESPAWNPOSITION_CIV, IDC_ATTRIBUTERESPAWNPOSITION_DISABLED]
+#define IDCS [IDC_RESPAWNPOSITION_EAST, IDC_RESPAWNPOSITION_WEST, IDC_RESPAWNPOSITION_GUER, IDC_RESPAWNPOSITION_CIV, IDC_RESPAWNPOSITION_DISABLED]
 
-params ["_control"];
+params ["_display"];
 
-// Generic init
-private _display = ctrlParent _control;
-private _ctrlButtonOK = _display displayCtrl IDC_OK;
 private _entity = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-
-_control ctrlRemoveAllEventHandlers "SetFocus";
-
-private _respawnIDs = _entity getVariable [QGVAR(respawnIDs), [[], [], [], [], []]];
+private _ctrlButtonOK = _display displayCtrl IDC_OK;
 
 if (_entity isEqualType grpNull) then {
     _entity = leader _entity;
@@ -39,9 +33,11 @@ if !(alive _entity && {canMove _entity}) exitWith {
         _ctrl ctrlShow false;
     } forEach IDCS;
 
-    private _ctrlBackground = _display displayCtrl IDC_ATTRIBUTERESPAWNPOSITION_BACKGROUND;
+    private _ctrlBackground = _display displayCtrl IDC_RESPAWNPOSITION_BACKGROUND;
     _ctrlBackground ctrlSetText localize "str_lib_info_na";
 };
+
+private _respawnIDs = _entity getVariable [QGVAR(respawnIDs), [[], [], [], [], []]];
 
 private _iconColors = [
     [east] call BIS_fnc_sideColor,

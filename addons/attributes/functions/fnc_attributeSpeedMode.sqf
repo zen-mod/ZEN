@@ -3,40 +3,30 @@
  * Initializes the "Speed Mode" Zeus attribute.
  *
  * Arguments:
- * 0: Attribute controls group <CONTROL>
+ * 0: Display <DISPLAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL] call zen_attributes_fnc_attributeSpeedMode
+ * [DISPLAY] call zen_attributes_fnc_attributeSpeedMode
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-#define IDCS [IDC_ATTRIBUTESPEEDMODE_LIMITED, IDC_ATTRIBUTESPEEDMODE_NORMAL, IDC_ATTRIBUTESPEEDMODE_FULL, IDC_ATTRIBUTESPEEDMODE_DEFAULT]
+#define IDCS [IDC_SPEEDMODE_LIMITED, IDC_SPEEDMODE_NORMAL, IDC_SPEEDMODE_FULL, IDC_SPEEDMODE_DEFAULT]
 #define SPEED_MODES ["LIMITED", "NORMAL", "FULL", "UNCHANGED"]
 
-params ["_control"];
+params ["_display"];
 
-// Generic init
-private _display = ctrlParent _control;
-private _ctrlButtonOK = _display displayCtrl IDC_OK;
 private _entity = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-
-_control ctrlRemoveAllEventHandlers "SetFocus";
+private _ctrlButtonOK = _display displayCtrl IDC_OK;
 
 if (_entity isEqualType grpNull) then {
-    private _ctrlDefault = _display displayCtrl IDC_ATTRIBUTESPEEDMODE_DEFAULT;
+    private _ctrlDefault = _display displayCtrl IDC_SPEEDMODE_DEFAULT;
     _ctrlDefault ctrlEnable false;
     _ctrlDefault ctrlShow false;
-
-    {
-        private _ctrl = _display displayCtrl _x;
-        _ctrl ctrlSetPosition [(14.25 + _forEachIndex * 2.5) * GUI_GRID_W, 0];
-        _ctrl ctrlCommit 0;
-    } forEach IDCS;
 };
 
 private _fnc_onButtonClick = {
@@ -84,6 +74,7 @@ private _fnc_onConfirm = {
     if (isNil "_speedMode") exitWith {};
 
     private _entity = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
+
     if (_entity isEqualType grpNull) then {
         {
             [QEGVAR(common,setSpeedMode), [_x, _speedMode], _x] call CBA_fnc_targetEvent;

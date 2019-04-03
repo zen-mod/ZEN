@@ -3,32 +3,28 @@
  * Initializes the "Formation" Zeus attribute.
  *
  * Arguments:
- * 0: Attribute controls group <CONTROL>
+ * 0: Display <DISPLAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL] call zen_attributes_fnc_attributeFormation
+ * [DISPLAY] call zen_attributes_fnc_attributeFormation
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-#define IDCS [IDC_ATTRIBUTEFORMATION_WEDGE, IDC_ATTRIBUTEFORMATION_VEE, IDC_ATTRIBUTEFORMATION_LINE, IDC_ATTRIBUTEFORMATION_COLUMN, IDC_ATTRIBUTEFORMATION_FILE, IDC_ATTRIBUTEFORMATION_STAGCOLUMN, IDC_ATTRIBUTEFORMATION_ECHLEFT, IDC_ATTRIBUTEFORMATION_ECHRIGHT, IDC_ATTRIBUTEFORMATION_DIAMOND, IDC_ATTRIBUTEFORMATION_DEFAULT]
+#define IDCS [IDC_FORMATION_WEDGE, IDC_FORMATION_VEE, IDC_FORMATION_LINE, IDC_FORMATION_COLUMN, IDC_FORMATION_FILE, IDC_FORMATION_STAGCOLUMN, IDC_FORMATION_ECHLEFT, IDC_FORMATION_ECHRIGHT, IDC_FORMATION_DIAMOND, IDC_FORMATION_DEFAULT]
 #define FORMATIONS ["WEDGE", "VEE", "LINE", "COLUMN", "FILE", "STAG COLUMN", "ECH LEFT", "ECH RIGHT", "DIAMOND", "NO CHANGE"]
 
-params ["_control"];
+params ["_display"];
 
-// Generic init
-private _display = ctrlParent _control;
-private _ctrlButtonOK = _display displayCtrl IDC_OK;
 private _entity = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-
-_control ctrlRemoveAllEventHandlers "SetFocus";
+private _ctrlButtonOK = _display displayCtrl IDC_OK;
 
 if (_entity isEqualType grpNull) then {
-    private _ctrlDefault = _display displayCtrl IDC_ATTRIBUTEFORMATION_DEFAULT;
+    private _ctrlDefault = _display displayCtrl IDC_FORMATION_DEFAULT;
     _ctrlDefault ctrlEnable false;
     _ctrlDefault ctrlShow false;
 };

@@ -22,6 +22,17 @@ class GVAR(RscLabel): RscText {
     colorBackground[] = {0, 0, 0, 0.5};
 };
 
+class GVAR(RscBackground): RscText {
+    idc = -1;
+    style = ST_CENTER;
+    x = POS_W(10);
+    y = 0;
+    w = POS_W(16);
+    h = POS_H(2.5);
+    colorText[] = {1, 1, 1, 0.5};
+    colorBackground[] = {1, 1, 1, 0.1};
+};
+
 class GVAR(RscEdit): RscEdit {
     idc = -1;
     x = POS_W(10.1);
@@ -38,96 +49,19 @@ class GVAR(RscCombo): RscCombo {
     y = 0;
     w = POS_W(15.9);
     h = POS_H(1);
-    arrowEmpty = "\a3\3DEN\Data\Controls\ctrlCombo\arrowEmpty_ca.paa";
     arrowFull = "\a3\3DEN\Data\Controls\ctrlCombo\arrowFull_ca.paa";
+    arrowEmpty = "\a3\3DEN\Data\Controls\ctrlCombo\arrowEmpty_ca.paa";
     class ComboScrollBar: ComboScrollBar {
-        arrowEmpty = "\a3\3DEN\Data\Controls\ctrlDefault\arrowEmpty_ca.paa";
-        arrowFull = "\a3\3DEN\Data\Controls\ctrlDefault\arrowFull_ca.paa";
-        border = "\a3\3DEN\Data\Controls\ctrlDefault\border_ca.paa";
         thumb = "\a3\3DEN\Data\Controls\ctrlDefault\thumb_ca.paa";
-    };
-};
-
-class GVAR(RscAttributesBase) {
-    idd = -1;
-    movingEnable = 0;
-    class controlsBackground {
-        class Map: RscMapControl {
-            idc = IDC_ATTRIBUTES_MAP;
-            x = safeZoneXAbs;
-            y = safeZoneY;
-            w = safeZoneWAbs;
-            h = safeZoneH;
-            class CustomMark {
-                icon = "#(argb,8,8,3)color(0,0,0,0)";
-                color[] = {0, 0, 0, 0};
-                importance = 0;
-                coefMin = 0;
-                coefMax = 0;
-                size = 0;
-            };
-        };
-    };
-    class controls {
-        class Title: RscText {
-            idc = IDC_ATTRIBUTES_TITLE;
-            font = "PuristaMedium";
-            x = POS_X(6.5);
-            y = POS_Y(8.4);
-            w = POS_W(27);
-            h = POS_H(1);
-            colorBackground[] = GUI_BCG_COLOR;
-        };
-        class Background: RscText {
-            idc = IDC_ATTRIBUTES_BACKGROUND;
-            x = POS_X(6.5);
-            y = POS_Y(9.5);
-            w = POS_W(27);
-            h = POS_H(6.5);
-            colorBackground[] = {0, 0, 0, 0.7};
-        };
-        class Content: RscControlsGroup {
-            idc = IDC_ATTRIBUTES_CONTENT;
-            x = POS_X(7);
-            y = POS_Y(10);
-            w = POS_W(26);
-            h = POS_H(5.5);
-            class controls;
-        };
-        class ButtonOK: RscButtonMenuOK {
-            x = POS_X(28.5);
-            y = POS_Y(16.1);
-            w = POS_W(5);
-            h = POS_H(1);
-        };
-        class ButtonCancel: RscButtonMenuCancel {
-            x = POS_X(6.5);
-            y = POS_Y(16.1);
-            w = POS_W(5);
-            h = POS_H(1);
-        };
-        class ButtonCustom1: RscButtonMenu {
-            idc = IDC_ATTRIBUTES_CUSTOM_1;
-            x = POS_X(23.4);
-            y = POS_Y(16.1);
-            w = POS_W(5);
-            h = POS_H(1);
-            colorBackground[] = GUI_BCG_COLOR;
-        };
-        class ButtonCustom2: ButtonCustom1 {
-            idc = IDC_ATTRIBUTES_CUSTOM_2;
-            x = POS_X(18.3);
-        };
-        class ButtonCustom3: ButtonCustom1 {
-            idc = IDC_ATTRIBUTES_CUSTOM_3;
-            x = POS_X(13.2);
-        };
+        border = "\a3\3DEN\Data\Controls\ctrlDefault\border_ca.paa";
+        arrowFull = "\a3\3DEN\Data\Controls\ctrlDefault\arrowFull_ca.paa";
+        arrowEmpty = "\a3\3DEN\Data\Controls\ctrlDefault\arrowEmpty_ca.paa";
     };
 };
 
 class GVAR(RscAttributeName): RscControlsGroupNoScrollbars {
-    idc = IDC_ATTRIBUTENAME;
-    onSetFocus = QUOTE(_this call FUNC(attributeName));
+    idc = IDC_NAME;
+    function = QFUNC(attributeName);
     x = 0;
     y = 0;
     w = POS_W(26);
@@ -137,14 +71,14 @@ class GVAR(RscAttributeName): RscControlsGroupNoScrollbars {
             text = "$STR_3DEN_Object_Attribute_UnitName_displayName";
         };
         class Edit: GVAR(RscEdit) {
-            idc = IDC_ATTRIBUTENAME_EDIT;
+            idc = IDC_NAME_EDIT;
         };
     };
 };
 
 class GVAR(RscAttributeGroupID): RscControlsGroupNoScrollbars {
-    idc = IDC_ATTRIBUTEGROUPID;
-    onSetFocus = QUOTE(_this call FUNC(attributeGroupID));
+    idc = IDC_GROUPID;
+    function = QFUNC(attributeGroupID);
     x = 0;
     y = 0;
     w = POS_W(26);
@@ -154,14 +88,14 @@ class GVAR(RscAttributeGroupID): RscControlsGroupNoScrollbars {
             text = "$STR_A3_RscAttributeGroupID_Title";
         };
         class Edit: GVAR(RscEdit) {
-            idc = IDC_ATTRIBUTEGROUPID_EDIT;
+            idc = IDC_GROUPID_EDIT;
         };
     };
 };
 
 class GVAR(RscAttributeSkill): RscControlsGroupNoScrollbars {
-    idc = IDC_SKILL_GROUP;
-    onSetFocus = QUOTE(_this call FUNC(attributeSkill));
+    idc = IDC_SKILL;
+    function = QFUNC(attributeSkill);
     x = 0;
     y = 0;
     w = POS_W(26);
@@ -186,8 +120,8 @@ class GVAR(RscAttributeSkill): RscControlsGroupNoScrollbars {
 };
 
 class GVAR(RscAttributeDamage): GVAR(RscAttributeSkill) {
-    idc = IDC_DAMAGE_GROUP;
-    onSetFocus = QUOTE(_this call FUNC(attributeDamage));
+    idc = IDC_DAMAGE;
+    function = QFUNC(attributeDamage);
     class controls: controls {
         class Label: Label {
             text = "$STR_3DEN_Object_Attribute_Health_displayName";
@@ -202,8 +136,8 @@ class GVAR(RscAttributeDamage): GVAR(RscAttributeSkill) {
 };
 
 class GVAR(RscAttributeFuel): GVAR(RscAttributeSkill) {
-    idc = IDC_FUEL_GROUP;
-    onSetFocus = QUOTE(_this call FUNC(attributeFuel));
+    idc = IDC_FUEL;
+    function = QFUNC(attributeFuel);
     class controls: controls {
         class Label: Label {
             text = "$STR_3DEN_Object_Attribute_Fuel_displayName";
@@ -218,8 +152,8 @@ class GVAR(RscAttributeFuel): GVAR(RscAttributeSkill) {
 };
 
 class GVAR(RscAttributeAmmo): RscControlsGroupNoScrollbars {
-    idc = IDC_ATTRIBUTEAMMO;
-    onSetFocus = "";
+    idc = IDC_AMMO;
+    function = "";
     x = 0;
     y = 0;
     w = POS_W(26);
@@ -229,14 +163,14 @@ class GVAR(RscAttributeAmmo): RscControlsGroupNoScrollbars {
             text = "$STR_3DEN_Object_Attribute_Ammo_displayName";
         };
         class Slider: ctrlXSliderH {
-            idc = IDC_ATTRIBUTEAMMO_SLIDER;
+            idc = IDC_AMMO_SLIDER;
             x = POS_W(10.1);
             y = 0;
             w = POS_W(13.5);
             h = POS_H(1);
         };
         class Edit: GVAR(RscEdit) {
-            idc = IDC_ATTRIBUTEAMMO_EDIT;
+            idc = IDC_AMMO_EDIT;
             x = POS_W(23.7);
             w = POS_W(2.3);
             canModify = 0;
@@ -245,8 +179,8 @@ class GVAR(RscAttributeAmmo): RscControlsGroupNoScrollbars {
 };
 
 class GVAR(RscAttributeRank): RscControlsGroupNoScrollbars {
-    idc = IDC_ATTRIBUTERANK;
-    onSetFocus = QUOTE(_this call FUNC(attributeRank));
+    idc = IDC_RANK;
+    function = QFUNC(attributeRank);
     x = 0;
     y = 0;
     w = POS_W(26);
@@ -256,16 +190,9 @@ class GVAR(RscAttributeRank): RscControlsGroupNoScrollbars {
             text = "$STR_3DEN_Object_Attribute_Rank_displayName";
             h = POS_H(2.5);
         };
-        class Background: RscText {
-            idc = -1;
-            x = POS_W(10);
-            y = 0;
-            w = POS_W(16);
-            h = POS_H(2.5);
-            colorBackground[] = {1, 1, 1, 0.1};
-        };
+        class Background: GVAR(RscBackground) {};
         class Private: RscActivePicture {
-            idc = IDC_ATTRIBUTERANK_PRIVATE;
+            idc = IDC_RANK_PRIVATE;
             text = "\a3\Ui_f\data\GUI\Cfg\Ranks\private_gs.paa";
             tooltip = "$STR_Private";
             x = POS_W(11.25);
@@ -274,37 +201,37 @@ class GVAR(RscAttributeRank): RscControlsGroupNoScrollbars {
             h = POS_H(1.5);
         };
         class Corporal: Private {
-            idc = IDC_ATTRIBUTERANK_CORPORAL;
+            idc = IDC_RANK_CORPORAL;
             text = "\a3\Ui_f\data\GUI\Cfg\Ranks\corporal_gs.paa";
             tooltip = "$STR_Corporal";
             x = POS_W(13.25);
         };
         class Sergeant: Private {
-            idc = IDC_ATTRIBUTERANK_SERGEANT;
+            idc = IDC_RANK_SERGEANT;
             text = "\a3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
             tooltip = "$STR_Sergeant";
             x = POS_W(15.25);
         };
         class Lieutenant: Private {
-            idc = IDC_ATTRIBUTERANK_LIEUTENANT;
+            idc = IDC_RANK_LIEUTENANT;
             text = "\a3\Ui_f\data\GUI\Cfg\Ranks\lieutenant_gs.paa";
             tooltip = "$STR_Lieutenant";
             x = POS_W(17.25);
         };
         class Captain: Private {
-            idc = IDC_ATTRIBUTERANK_CAPTAIN;
+            idc = IDC_RANK_CAPTAIN;
             text = "\a3\Ui_f\data\GUI\Cfg\Ranks\captain_gs.paa";
             tooltip = "$STR_Captain";
             x = POS_W(19.25);
         };
         class Major: Private {
-            idc = IDC_ATTRIBUTERANK_MAJOR;
+            idc = IDC_RANK_MAJOR;
             text = "\a3\Ui_f\data\GUI\Cfg\Ranks\major_gs.paa";
             tooltip = "$STR_Major";
             x = POS_W(21.25);
         };
         class Colonel: Private {
-            idc = IDC_ATTRIBUTERANK_COLONEL;
+            idc = IDC_RANK_COLONEL;
             text = "\a3\Ui_f\data\GUI\Cfg\Ranks\colonel_gs.paa";
             tooltip = "$STR_Colonel";
             x = POS_W(23.25);
@@ -313,8 +240,8 @@ class GVAR(RscAttributeRank): RscControlsGroupNoScrollbars {
 };
 
 class GVAR(RscAttributeUnitPos): RscControlsGroupNoScrollbars {
-    idc = IDC_ATTRIBUTEUNITPOS;
-    onSetFocus = QUOTE(_this call FUNC(attributeUnitPos));
+    idc = IDC_UNITPOS;
+    function = QFUNC(attributeUnitPos);
     x = 0;
     y = 0;
     w = POS_W(26);
@@ -324,16 +251,9 @@ class GVAR(RscAttributeUnitPos): RscControlsGroupNoScrollbars {
             text = "$STR_A3_RscAttributeUnitPos_Title";
             h = POS_H(2.5);
         };
-        class Background: RscText {
-            idc = -1;
-            x = POS_W(10);
-            y = 0;
-            w = POS_W(16);
-            h = POS_H(2.5);
-            colorBackground[] = {1, 1, 1, 0.1};
-        };
+        class Background: GVAR(RscBackground) {};
         class Down: RscActivePicture {
-            idc = IDC_ATTRIBUTEUNITPOS_DOWN;
+            idc = IDC_UNITPOS_DOWN;
             text = "\a3\Ui_f\data\IGUI\RscIngameUI\RscUnitInfo\SI_prone_ca.paa";
             tooltip = "$STR_A3_RscAttributeUnitPos_Down_tooltip";
             x = POS_W(13.25);
@@ -342,19 +262,19 @@ class GVAR(RscAttributeUnitPos): RscControlsGroupNoScrollbars {
             h = POS_H(2.5);
         };
         class Crouch: Down {
-            idc = IDC_ATTRIBUTEUNITPOS_CROUCH;
+            idc = IDC_UNITPOS_CROUCH;
             text = "\a3\Ui_f\data\IGUI\RscIngameUI\RscUnitInfo\SI_crouch_ca.paa";
             tooltip = "$STR_A3_RscAttributeUnitPos_Crouch_tooltip";
             x = POS_W(15.75);
         };
         class Up: Down {
-            idc = IDC_ATTRIBUTEUNITPOS_UP;
+            idc = IDC_UNITPOS_UP;
             text = "\a3\Ui_f\data\IGUI\RscIngameUI\RscUnitInfo\SI_stand_ca.paa";
             tooltip = "$STR_A3_RscAttributeUnitPos_Up_tooltip";
             x = POS_W(18.25);
         };
         class Auto: Down {
-            idc = IDC_ATTRIBUTEUNITPOS_AUTO;
+            idc = IDC_UNITPOS_AUTO;
             text = "\a3\ui_f_curator\Data\default_ca.paa";
             tooltip = "$STR_A3_RscAttributeUnitPos_Auto_tooltip";
             x = POS_W(24);
@@ -366,8 +286,8 @@ class GVAR(RscAttributeUnitPos): RscControlsGroupNoScrollbars {
 };
 
 class GVAR(RscAttributeRespawnPosition): RscControlsGroupNoScrollbars {
-    idc = IDC_ATTRIBUTERESPAWNPOSITION;
-    onSetFocus = QUOTE(_this call FUNC(attributeRespawnPosition));
+    idc = IDC_RESPAWNPOSITION;
+    function = QFUNC(attributeRespawnPosition);
     x = 0;
     y = 0;
     w = POS_W(26);
@@ -377,18 +297,11 @@ class GVAR(RscAttributeRespawnPosition): RscControlsGroupNoScrollbars {
             text = "$STR_A3_RscAttributeRespawnPosition_Title";
             h = POS_H(2.5);
         };
-        class Background: RscText {
-            idc = IDC_ATTRIBUTERESPAWNPOSITION_BACKGROUND;
-            style = ST_CENTER;
-            x = POS_W(10);
-            y = 0;
-            w = POS_W(16);
-            h = POS_H(2.5);
-            colorText[] = {1, 1, 1, 0.5};
-            colorBackground[] = {1, 1, 1, 0.1};
+        class Background: GVAR(RscBackground) {
+            idc = IDC_RESPAWNPOSITION_BACKGROUND;
         };
         class West: RscActivePicture {
-            idc = IDC_ATTRIBUTERESPAWNPOSITION_WEST;
+            idc = IDC_RESPAWNPOSITION_WEST;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnPosition\west_ca.paa";
             tooltip = "$STR_WEST";
             x = POS_W(11.5);
@@ -397,25 +310,25 @@ class GVAR(RscAttributeRespawnPosition): RscControlsGroupNoScrollbars {
             h = POS_H(2);
         };
         class East: West {
-            idc = IDC_ATTRIBUTERESPAWNPOSITION_EAST;
+            idc = IDC_RESPAWNPOSITION_EAST;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnPosition\east_ca.paa";
             tooltip = "$STR_EAST";
             x = POS_W(14.5);
         };
         class Guer: West {
-            idc = IDC_ATTRIBUTERESPAWNPOSITION_GUER;
+            idc = IDC_RESPAWNPOSITION_GUER;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnPosition\guer_ca.paa";
             tooltip = "$STR_guerrila";
             x = POS_W(17.5);
         };
         class Civ: West {
-            idc = IDC_ATTRIBUTERESPAWNPOSITION_CIV;
+            idc = IDC_RESPAWNPOSITION_CIV;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnPosition\civ_ca.paa";
             tooltip = "$STR_Civilian";
             x = POS_W(20.5);
         };
         class Disabled: West {
-            idc = IDC_ATTRIBUTERESPAWNPOSITION_DISABLED;
+            idc = IDC_RESPAWNPOSITION_DISABLED;
             text = "\a3\Ui_F_Curator\Data\default_ca.paa";
             tooltip = "$STR_sensoractiv_none";
             x = POS_W(24);
@@ -427,8 +340,8 @@ class GVAR(RscAttributeRespawnPosition): RscControlsGroupNoScrollbars {
 };
 
 class GVAR(RscAttributeFormation): RscControlsGroupNoScrollbars {
-    idc = IDC_ATTRIBUTEFORMATION;
-    onSetFocus = QUOTE(_this call FUNC(attributeFormation));
+    idc = IDC_FORMATION;
+    function = QFUNC(attributeFormation);
     x = 0;
     y = 0;
     w = POS_W(26);
@@ -438,16 +351,11 @@ class GVAR(RscAttributeFormation): RscControlsGroupNoScrollbars {
             text = "$STR_3DEN_Group_Attribute_Formation_displayName";
             h = POS_H(5);
         };
-        class Background: RscText {
-            idc = -1;
-            x = POS_W(10);
-            y = 0;
-            w = POS_W(16);
+        class Background: GVAR(RscBackground) {
             h = POS_H(5);
-            colorBackground[] = {1, 1, 1, 0.1};
         };
         class Wedge: RscActivePicture {
-            idc = IDC_ATTRIBUTEFORMATION_WEDGE;
+            idc = IDC_FORMATION_WEDGE;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\wedge_ca.paa";
             tooltip = "$STR_wedge";
             x = POS_W(11.75);
@@ -456,56 +364,56 @@ class GVAR(RscAttributeFormation): RscControlsGroupNoScrollbars {
             h = POS_H(2.5);
         };
         class Vee: Wedge {
-            idc = IDC_ATTRIBUTEFORMATION_VEE;
+            idc = IDC_FORMATION_VEE;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\vee_ca.paa";
             tooltip = "$STR_vee";
             x = POS_W(14.25);
         };
         class Line: Wedge {
-            idc = IDC_ATTRIBUTEFORMATION_LINE;
+            idc = IDC_FORMATION_LINE;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\line_ca.paa";
             tooltip = "$STR_line";
             x = POS_W(16.75);
         };
         class Column: Wedge {
-            idc = IDC_ATTRIBUTEFORMATION_COLUMN;
+            idc = IDC_FORMATION_COLUMN;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\column_ca.paa";
             tooltip = "$STR_column";
             x = POS_W(19.25);
         };
         class File: Wedge {
-            idc = IDC_ATTRIBUTEFORMATION_FILE;
+            idc = IDC_FORMATION_FILE;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\file_ca.paa";
             tooltip = "$STR_file";
             x = POS_W(21.75);
         };
         class StagColumn: Wedge {
-            idc = IDC_ATTRIBUTEFORMATION_STAGCOLUMN;
+            idc = IDC_FORMATION_STAGCOLUMN;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\stag_column_ca.paa";
             tooltip = "$STR_staggered";
             x = POS_W(11.75);
             y = POS_H(2.5);
         };
         class EchLeft: StagColumn {
-            idc = IDC_ATTRIBUTEFORMATION_ECHLEFT;
+            idc = IDC_FORMATION_ECHLEFT;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\ech_left_ca.paa";
             tooltip = "$STR_echl";
             x = POS_W(14.25);
         };
         class EchRight: StagColumn {
-            idc = IDC_ATTRIBUTEFORMATION_ECHRIGHT;
+            idc = IDC_FORMATION_ECHRIGHT;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\ech_right_ca.paa";
             tooltip = "$STR_echr";
             x = POS_W(16.75);
         };
         class Diamond: StagColumn {
-            idc = IDC_ATTRIBUTEFORMATION_DIAMOND;
+            idc = IDC_FORMATION_DIAMOND;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\diamond_ca.paa";
             tooltip = "$STR_diamond";
             x = POS_W(19.25);
         };
         class Default: StagColumn {
-            idc = IDC_ATTRIBUTEFORMATION_DEFAULT;
+            idc = IDC_FORMATION_DEFAULT;
             text = "\a3\ui_f_curator\Data\default_ca.paa";
             tooltip = "$STR_no_change";
             x = POS_W(22.25);
@@ -517,8 +425,8 @@ class GVAR(RscAttributeFormation): RscControlsGroupNoScrollbars {
 };
 
 class GVAR(RscAttributeBehaviour): RscControlsGroupNoScrollbars {
-    idc = IDC_ATTRIBUTEBEHAVIOUR;
-    onSetFocus = QUOTE(_this call FUNC(attributeBehaviour));
+    idc = IDC_BEHAVIOUR;
+    function = QFUNC(attributeBehaviour);
     x = 0;
     y = 0;
     w = POS_W(26);
@@ -528,16 +436,9 @@ class GVAR(RscAttributeBehaviour): RscControlsGroupNoScrollbars {
             text = "$STR_3DEN_Group_Attribute_Behaviour_displayName";
             h = POS_H(2.5);
         };
-        class Background: RscText {
-            idc = -1;
-            x = POS_W(10);
-            y = 0;
-            w = POS_W(16);
-            h = POS_H(2.5);
-            colorBackground[] = {1, 1, 1, 0.1};
-        };
+        class Background: GVAR(RscBackground) {};
         class Careless: RscActivePicture {
-            idc = IDC_ATTRIBUTEBEHAVIOUR_CARELESS;
+            idc = IDC_BEHAVIOUR_CARELESS;
             text = QPATHTOF(UI\careless_ca.paa);
             tooltip = "$STR_3DEN_Attributes_Behaviour_Careless_text";
             x = POS_W(11.25);
@@ -546,31 +447,31 @@ class GVAR(RscAttributeBehaviour): RscControlsGroupNoScrollbars {
             h = POS_H(1.5);
         };
         class Safe: Careless {
-            idc = IDC_ATTRIBUTEBEHAVIOUR_SAFE;
+            idc = IDC_BEHAVIOUR_SAFE;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeBehaviour\safe_ca.paa";
             tooltip = "$STR_safe";
             x = POS_W(13.75);
         };
         class Aware: Careless {
-            idc = IDC_ATTRIBUTEBEHAVIOUR_AWARE;
+            idc = IDC_BEHAVIOUR_AWARE;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeBehaviour\aware_ca.paa";
             tooltip = "$STR_aware";
             x = POS_W(16.25);
         };
         class Combat: Careless {
-            idc = IDC_ATTRIBUTEBEHAVIOUR_COMBAT;
+            idc = IDC_BEHAVIOUR_COMBAT;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeBehaviour\combat_ca.paa";
             tooltip = "$STR_combat";
             x = POS_W(18.75);
         };
         class Stealth: Careless {
-            idc = IDC_ATTRIBUTEBEHAVIOUR_STEALTH;
+            idc = IDC_BEHAVIOUR_STEALTH;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeBehaviour\stealth_ca.paa";
             tooltip = "$STR_stealth";
             x = POS_W(21.25);
         };
         class Default: Careless {
-            idc = IDC_ATTRIBUTEBEHAVIOUR_DEFAULT;
+            idc = IDC_BEHAVIOUR_DEFAULT;
             text = "\a3\ui_f_curator\Data\default_ca.paa";
             tooltip = "$STR_combat_unchanged";
             x = POS_W(24);
@@ -579,8 +480,8 @@ class GVAR(RscAttributeBehaviour): RscControlsGroupNoScrollbars {
 };
 
 class GVAR(RscAttributeCombatMode): RscControlsGroupNoScrollbars {
-    idc = IDC_COMBATMODE_GROUP;
-    onSetFocus = QUOTE(_this call FUNC(attributeCombatMode));
+    idc = IDC_COMBATMODE;
+    function = QFUNC(attributeCombatMode);
     x = 0;
     y = 0;
     w = POS_W(26);
@@ -590,14 +491,7 @@ class GVAR(RscAttributeCombatMode): RscControlsGroupNoScrollbars {
             text = "$STR_3DEN_Group_Attribute_CombatMode_displayName";
             h = POS_H(2.5);
         };
-        class Background: RscText {
-            idc = -1;
-            x = POS_W(10);
-            y = 0;
-            w = POS_W(16);
-            h = POS_H(2.5);
-            colorBackground[] = {1, 1, 1, 0.1};
-        };
+        class Background: GVAR(RscBackground) {};
         class Blue: RscActivePicture {
             idc = IDC_COMBATMODE_BLUE;
             text = QPATHTOF(UI\hold_ca.paa);
@@ -641,8 +535,8 @@ class GVAR(RscAttributeCombatMode): RscControlsGroupNoScrollbars {
 };
 
 class GVAR(RscAttributeSpeedMode): RscControlsGroupNoScrollbars {
-    idc = IDC_ATTRIBUTESPEEDMODE;
-    onSetFocus = QUOTE(_this call FUNC(attributeSpeedMode));
+    idc = IDC_SPEEDMODE;
+    function = QFUNC(attributeSpeedMode);
     x = 0;
     y = 0;
     w = POS_W(26);
@@ -652,16 +546,9 @@ class GVAR(RscAttributeSpeedMode): RscControlsGroupNoScrollbars {
             text = "$STR_HC_Menu_Speed";
             h = POS_H(2.5);
         };
-        class Background: RscText {
-            idc = -1;
-            x = POS_W(10);
-            y = 0;
-            w = POS_W(16);
-            h = POS_H(2.5);
-            colorBackground[] = {1, 1, 1, 0.1};
-        };
+        class Background: GVAR(RscBackground) {};
         class Limited: RscActivePicture {
-            idc = IDC_ATTRIBUTESPEEDMODE_LIMITED;
+            idc = IDC_SPEEDMODE_LIMITED;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeSpeedMode\limited_ca.paa";
             tooltip = "$STR_speed_limited";
             x = POS_W(13.25);
@@ -670,19 +557,19 @@ class GVAR(RscAttributeSpeedMode): RscControlsGroupNoScrollbars {
             h = POS_H(2.5);
         };
         class Normal: Limited {
-            idc = IDC_ATTRIBUTESPEEDMODE_NORMAL;
+            idc = IDC_SPEEDMODE_NORMAL;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeSpeedMode\normal_ca.paa";
             tooltip = "$STR_speed_normal";
             x = POS_W(15.75);
         };
         class Full: Limited {
-            idc = IDC_ATTRIBUTESPEEDMODE_FULL;
+            idc = IDC_SPEEDMODE_FULL;
             text = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeSpeedMode\full_ca.paa";
             tooltip = "$STR_speed_full";
             x = POS_W(18.25);
         };
         class Default: Limited {
-            idc = IDC_ATTRIBUTESPEEDMODE_DEFAULT;
+            idc = IDC_SPEEDMODE_DEFAULT;
             text = "\a3\ui_f_curator\Data\default_ca.paa";
             tooltip = "$STR_speed_unchanged";
             x = POS_W(24);
@@ -694,8 +581,8 @@ class GVAR(RscAttributeSpeedMode): RscControlsGroupNoScrollbars {
 };
 
 class GVAR(RscAttributeWaypointType): RscControlsGroupNoScrollbars {
-    idc = IDC_ATTRIBUTEWAYPOINTTYPE;
-    onSetFocus = QUOTE(_this call FUNC(attributeWaypointType));
+    idc = IDC_WAYPOINTTYPE;
+    function = QFUNC(attributeWaypointType);
     x = 0;
     y = 0;
     w = POS_W(26);
@@ -705,18 +592,15 @@ class GVAR(RscAttributeWaypointType): RscControlsGroupNoScrollbars {
             text = "$STR_3DEN_Object_Attribute_Type_displayName";
             w = POS_W(26);
         };
-        class Background: RscText {
-            idc = IDC_ATTRIBUTEWAYPOINTTYPE_BACKGROUND;
-            style = ST_CENTER;
+        class Background: GVAR(RscBackground) {
+            idc = IDC_WAYPOINTTYPE_BACKGROUND;
             x = 0;
             y = POS_H(1);
             w = POS_W(26);
             h = POS_H(4);
-            colorText[] = {1, 1, 1, 0.5};
-            colorBackground[] = {1, 1, 1, 0.1};
         };
         class Toolbox: ctrlToolbox {
-            idc = IDC_ATTRIBUTEWAYPOINTTYPE_TOOLBOX;
+            idc = IDC_WAYPOINTTYPE_TOOLBOX;
             x = 0;
             y = POS_H(1);
             w = POS_W(26);
@@ -743,8 +627,8 @@ class GVAR(RscAttributeWaypointType): RscControlsGroupNoScrollbars {
 };
 
 class GVAR(RscAttributeWaypointTimeout): GVAR(RscAttributeSkill) {
-    idc = IDC_TIMEOUT_GROUP;
-    onSetFocus = QUOTE(_this call FUNC(attributeWaypointTimeout));
+    idc = IDC_TIMEOUT;
+    function = QFUNC(attributeWaypointTimeout);
     class controls: controls {
         class Label: Label {
             text = CSTRING(Timeout);
@@ -760,8 +644,8 @@ class GVAR(RscAttributeWaypointTimeout): GVAR(RscAttributeSkill) {
 };
 
 class GVAR(RscAttributeMarkerText): RscControlsGroupNoScrollbars {
-    idc = IDC_ATTRIBUTEMARKERTEXT;
-    onSetFocus = QUOTE(_this call FUNC(attributeMarkerText));
+    idc = IDC_MARKERTEXT;
+    function = QFUNC(attributeMarkerText);
     x = 0;
     y = 0;
     w = POS_W(26);
@@ -771,14 +655,14 @@ class GVAR(RscAttributeMarkerText): RscControlsGroupNoScrollbars {
             text = "$STR_3DEN_Marker_Attribute_Text_displayName";
         };
         class Edit: GVAR(RscEdit) {
-            idc = IDC_ATTRIBUTEMARKERTEXT_EDIT;
+            idc = IDC_MARKERTEXT_EDIT;
         };
     };
 };
 
 class GVAR(RscAttributeMarkerColor): RscControlsGroupNoScrollbars {
-    idc = IDC_ATTRIBUTEMARKERCOLOR;
-    onSetFocus = QUOTE(_this call FUNC(attributeMarkerColor));
+    idc = IDC_MARKERCOLOR;
+    function = QFUNC(attributeMarkerColor);
     x = 0;
     y = 0;
     w = POS_W(26);
@@ -788,7 +672,48 @@ class GVAR(RscAttributeMarkerColor): RscControlsGroupNoScrollbars {
             text = "$STR_3DEN_Marker_Attribute_Color_displayName";
         };
         class Combo: GVAR(RscCombo) {
-            idc = IDC_ATTRIBUTEMARKERCOLOR_COMBO;
+            idc = IDC_MARKERCOLOR_COMBO;
+        };
+    };
+};
+
+class GVAR(RscAttributesBase) {
+    idd = -1;
+    class controls {
+        class Title: RscText {
+            idc = IDC_TITLE;
+            x = POS_X(6.5);
+            y = POS_Y(8.4);
+            w = POS_W(27);
+            h = POS_H(1);
+            colorBackground[] = GUI_BCG_COLOR;
+        };
+        class Background: RscText {
+            idc = IDC_BACKGROUND;
+            x = POS_X(6.5);
+            y = POS_Y(9.5);
+            w = POS_W(27);
+            h = POS_H(6.5);
+            colorBackground[] = {0, 0, 0, 0.7};
+        };
+        class Content: RscControlsGroup {
+            idc = IDC_CONTENT;
+            x = POS_X(7);
+            y = POS_Y(10);
+            w = POS_W(26);
+            h = POS_H(5.5);
+        };
+        class ButtonOK: RscButtonMenuOK {
+            x = POS_X(28.5);
+            y = POS_Y(16.1);
+            w = POS_W(5);
+            h = POS_H(1);
+        };
+        class ButtonCancel: RscButtonMenuCancel {
+            x = POS_X(6.5);
+            y = POS_Y(16.1);
+            w = POS_W(5);
+            h = POS_H(1);
         };
     };
 };
@@ -796,7 +721,7 @@ class GVAR(RscAttributeMarkerColor): RscControlsGroupNoScrollbars {
 class GVAR(RscAttributesMan): GVAR(RscAttributesBase) {
     onLoad = QUOTE([ARR_2(_this select 0, QQGVAR(RscAttributesMan))] call FUNC(initAttributesDisplay));
     filterAttributes = 1;
-    class Controls: Controls {
+    class controls: controls {
         class Background: Background {};
         class Title: Title {};
         class Content: Content {
@@ -811,9 +736,11 @@ class GVAR(RscAttributesMan): GVAR(RscAttributesBase) {
         };
         class ButtonOK: ButtonOK {};
         class ButtonCancel: ButtonCancel {};
-        class ButtonArsenal: ButtonCustom1 {
+    };
+    class buttons {
+        class Arsenal {
             text = "$STR_A3_Arsenal";
-            onButtonClick = QUOTE(_this call FUNC(buttonArsenal));
+            function = QFUNC(buttonArsenal);
         };
     };
 };
@@ -821,7 +748,7 @@ class GVAR(RscAttributesMan): GVAR(RscAttributesBase) {
 class GVAR(RscAttributesVehicle): GVAR(RscAttributesBase) {
     onLoad = QUOTE([ARR_2(_this select 0, QQGVAR(RscAttributesVehicle))] call FUNC(initAttributesDisplay));
     filterAttributes = 1;
-    class Controls: Controls {
+    class controls: controls {
         class Background: Background {};
         class Title: Title {};
         class Content: Content {
@@ -835,9 +762,11 @@ class GVAR(RscAttributesVehicle): GVAR(RscAttributesBase) {
         };
         class ButtonOK: ButtonOK {};
         class ButtonCancel: ButtonCancel {};
-        class ButtonGarage: ButtonCustom1 {
+    };
+    class buttons {
+        class Garage {
             text = "$STR_A3_Garage";
-            onButtonClick = QUOTE(_this call FUNC(buttonGarage));
+            function = QFUNC(buttonGarage);
         };
     };
 };
@@ -845,7 +774,7 @@ class GVAR(RscAttributesVehicle): GVAR(RscAttributesBase) {
 class GVAR(RscAttributesVehicleEmpty): GVAR(RscAttributesBase) {
     onLoad = QUOTE([ARR_2(_this select 0, QQGVAR(RscAttributesVehicleEmpty))] call FUNC(initAttributesDisplay));
     filterAttributes = 1;
-    class Controls: Controls {
+    class controls: controls {
         class Background: Background {};
         class Title: Title {};
         class Content: Content {
@@ -857,9 +786,11 @@ class GVAR(RscAttributesVehicleEmpty): GVAR(RscAttributesBase) {
         };
         class ButtonOK: ButtonOK {};
         class ButtonCancel: ButtonCancel {};
-        class ButtonGarage: ButtonCustom1 {
+    };
+    class buttons {
+        class Garage {
             text = "$STR_A3_Garage";
-            onButtonClick = QUOTE(_this call FUNC(buttonGarage));
+            function = QFUNC(buttonGarage);
         };
     };
 };
@@ -867,7 +798,7 @@ class GVAR(RscAttributesVehicleEmpty): GVAR(RscAttributesBase) {
 class GVAR(RscAttributesGroup): GVAR(RscAttributesBase) {
     onLoad = QUOTE([ARR_2(_this select 0, QQGVAR(RscAttributesGroup))] call FUNC(initAttributesDisplay));
     filterAttributes = 1;
-    class Controls: Controls {
+    class controls: controls {
         class Background: Background {};
         class Title: Title {};
         class Content: Content {
@@ -875,7 +806,28 @@ class GVAR(RscAttributesGroup): GVAR(RscAttributesBase) {
                 class GroupID: GVAR(RscAttributeGroupID) {};
                 class Skill: GVAR(RscAttributeSkill) {};
                 class Formation: GVAR(RscAttributeFormation) {};
-                class Behaviour: GVAR(RscAttributeBehaviour) {};
+                class Behaviour: GVAR(RscAttributeBehaviour) {
+                    class controls: controls {
+                        class Label: Label {};
+                        class Background: Background {};
+                        class Careless : Careless {
+                            x = POS_W(12.25);
+                        };
+                        class Safe : Safe {
+                            x = POS_W(14.75);
+                        };
+                        class Aware : Aware {
+                            x = POS_W(17.25);
+                        };
+                        class Combat : Combat {
+                            x = POS_W(19.75);
+                        };
+                        class Stealth : Stealth {
+                            x = POS_W(22.25);
+                        };
+                        class Default : Default {};
+                    };
+                };
                 class CombatMode: GVAR(RscAttributeCombatMode) {
                     class controls: controls {
                         class Label: Label {};
@@ -898,8 +850,38 @@ class GVAR(RscAttributesGroup): GVAR(RscAttributesBase) {
                         class Default: Default {};
                     };
                 };
-                class SpeedMode: GVAR(RscAttributeSpeedMode) {};
-                class UnitPos: GVAR(RscAttributeUnitPos) {};
+                class SpeedMode: GVAR(RscAttributeSpeedMode) {
+                    class controls: controls {
+                        class Label: Label {};
+                        class Background: Background {};
+                        class Limited: Limited {
+                            x = POS_W(14.25);
+                        };
+                        class Normal: Normal {
+                            x = POS_W(16.75);
+                        };
+                        class Full: Full {
+                            x = POS_W(19.25);
+                        };
+                        class Default: Default {};
+                    };
+                };
+                class UnitPos: GVAR(RscAttributeUnitPos) {
+                    class controls: controls {
+                        class Label: Label {};
+                        class Background: Background {};
+                        class Down: Down {
+                            x = POS_W(14.25);
+                        };
+                        class Crouch: Crouch {
+                            x = POS_W(16.75);
+                        };
+                        class Up: Up {
+                            x = POS_W(19.25);
+                        };
+                        class Auto: Auto {};
+                    };
+                };
                 class RespawnPosition: GVAR(RscAttributeRespawnPosition) {
                     class controls: controls {
                         class Label: Label {
@@ -923,7 +905,7 @@ class GVAR(RscAttributesGroup): GVAR(RscAttributesBase) {
 class GVAR(RscAttributesWaypoint): GVAR(RscAttributesBase) {
     onLoad = QUOTE([ARR_2(_this select 0, QQGVAR(RscAttributesWaypoint))] call FUNC(initAttributesDisplay));
     filterAttributes = 1;
-    class Controls: Controls {
+    class controls: controls {
         class Background: Background {};
         class Title: Title {};
         class Content: Content {
@@ -944,7 +926,7 @@ class GVAR(RscAttributesWaypoint): GVAR(RscAttributesBase) {
 class GVAR(RscAttributesMarker): GVAR(RscAttributesBase) {
     onLoad = QUOTE([ARR_2(_this select 0, QQGVAR(RscAttributesMarker))] call FUNC(initAttributesDisplay));
     filterAttributes = 1;
-    class Controls: Controls {
+    class controls: controls {
         class Background: Background {};
         class Title: Title {};
         class Content: Content {

@@ -3,29 +3,25 @@
  * Initializes the "Rank" Zeus attribute.
  *
  * Arguments:
- * 0: Attribute controls group <CONTROL>
+ * 0: Display <DISPLAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL] call zen_attributes_fnc_attributeRank
+ * [DISPLAY] call zen_attributes_fnc_attributeRank
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-#define IDCS [IDC_ATTRIBUTERANK_PRIVATE, IDC_ATTRIBUTERANK_CORPORAL, IDC_ATTRIBUTERANK_SERGEANT, IDC_ATTRIBUTERANK_LIEUTENANT, IDC_ATTRIBUTERANK_CAPTAIN, IDC_ATTRIBUTERANK_MAJOR, IDC_ATTRIBUTERANK_COLONEL]
+#define IDCS [IDC_RANK_PRIVATE, IDC_RANK_CORPORAL, IDC_RANK_SERGEANT, IDC_RANK_LIEUTENANT, IDC_RANK_CAPTAIN, IDC_RANK_MAJOR, IDC_RANK_COLONEL]
 #define RANKS ["PRIVATE", "CORPORAL", "SERGEANT", "LIEUTENANT", "CAPTAIN", "MAJOR", "COLONEL"]
 
-params ["_control"];
+params ["_display"];
 
-// Generic init
-private _display = ctrlParent _control;
-private _ctrlButtonOK = _display displayCtrl IDC_OK;
 private _entity = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-
-_control ctrlRemoveAllEventHandlers "SetFocus";
+private _ctrlButtonOK = _display displayCtrl IDC_OK;
 
 private _fnc_onButtonClick = {
     params ["_activeCtrl"];

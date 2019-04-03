@@ -3,28 +3,24 @@
  * Initializes the "Group ID" Zeus attribute.
  *
  * Arguments:
- * 0: Attribute controls group <CONTROL>
+ * 0: Display <DISPLAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL] call zen_attributes_fnc_attributeGroupID
+ * [DISPLAY] call zen_attributes_fnc_attributeGroupID
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params ["_control"];
+params ["_display"];
 
-// Generic init
-private _display = ctrlParent _control;
-private _ctrlButtonOK = _display displayCtrl IDC_OK;
 private _entity = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
+private _ctrlButtonOK = _display displayCtrl IDC_OK;
 
-_control ctrlRemoveAllEventHandlers "SetFocus";
-
-private _ctrlEdit = _display displayCtrl IDC_ATTRIBUTEGROUPID_EDIT;
+private _ctrlEdit = _display displayCtrl IDC_GROUPID_EDIT;
 _ctrlEdit ctrlSetText groupID _entity;
 
 private _fnc_onConfirm = {
@@ -33,7 +29,7 @@ private _fnc_onConfirm = {
     private _display = ctrlParent _ctrlButtonOK;
     private _entity = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 
-    private _ctrlEdit = _display displayCtrl IDC_ATTRIBUTEGROUPID_EDIT;
+    private _ctrlEdit = _display displayCtrl IDC_GROUPID_EDIT;
     private _groupID = ctrlText _ctrlEdit;
 
     if !(_groupID isEqualTo groupID _entity) then {

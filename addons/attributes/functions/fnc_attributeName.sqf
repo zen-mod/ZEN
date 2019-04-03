@@ -3,29 +3,24 @@
  * Initializes the "Name" Zeus attribute.
  *
  * Arguments:
- * 0: Attribute controls group <CONTROL>
+ * 0: Display <DISPLAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL] call zen_attributes_fnc_attributeName
+ * [DISPLAY] call zen_attributes_fnc_attributeName
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params ["_control"];
+params ["_display"];
 
-// Generic init
-private _display = ctrlParent _control;
-private _ctrlButtonOK = _display displayCtrl IDC_OK;
 private _entity = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
+private _ctrlButtonOK = _display displayCtrl IDC_OK;
 
-_control ctrlRemoveAllEventHandlers "SetFocus";
-
-// Set current name
-private _ctrlEdit = _display displayCtrl IDC_ATTRIBUTENAME_EDIT;
+private _ctrlEdit = _display displayCtrl IDC_NAME_EDIT;
 _ctrlEdit ctrlSetText name _entity;
 
 private _fnc_onConfirm = {
@@ -34,7 +29,7 @@ private _fnc_onConfirm = {
     private _display = ctrlParent _ctrlButtonOK;
     private _entity = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 
-    private _ctrlEdit = _display displayCtrl IDC_ATTRIBUTENAME_EDIT;
+    private _ctrlEdit = _display displayCtrl IDC_NAME_EDIT;
     private _newName = ctrlText _ctrlEdit;
     private _oldName = name _entity;
 
