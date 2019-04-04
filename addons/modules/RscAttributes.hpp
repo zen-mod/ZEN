@@ -490,25 +490,6 @@ BEGIN_MODULE_DIALOG(RscGlobalHint)
     };
 END_MODULE_DIALOG;
 
-BEGIN_MODULE_DIALOG(RscHideZeus)
-    class hideZeus: RscControlsGroupNoScrollbars {
-        onSetFocus = QUOTE(_this call FUNC(ui_hideZeus));
-        idc = IDC_HIDEZEUS;
-        x = 0;
-        y = 0;
-        w = POS_W(26);
-        h = POS_H(1);
-        class controls {
-            class Label: EGVAR(attributes,RscLabel) {
-                text = CSTRING(ModuleHideZeus);
-            };
-            class Value: GVAR(RscToolboxYesNo) {
-                idc = IDC_HIDEZEUS_VALUE;
-            };
-        };
-    };
-END_MODULE_DIALOG;
-
 BEGIN_MODULE_DIALOG(RscPatrolArea)
     class radius: GVAR(AttributeRadius) {};
     class patrolArea: RscControlsGroupNoScrollbars {

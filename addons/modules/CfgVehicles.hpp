@@ -66,7 +66,7 @@ class CfgVehicles {
     class GVAR(moduleHideZeus): GVAR(moduleBase) {
         category = "Curator";
         displayName = CSTRING(ModuleHideZeus);
-        curatorInfoType = QGVAR(RscHideZeus);
+        function = QFUNC(moduleHideZeus);
     };
     class GVAR(modulePatrolArea): GVAR(moduleBase) {
         curatorCanAttach = 1;
