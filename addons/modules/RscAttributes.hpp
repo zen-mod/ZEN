@@ -591,57 +591,6 @@ BEGIN_MODULE_DIALOG(RscSideRelations)
     };
 END_MODULE_DIALOG;
 
-BEGIN_MODULE_DIALOG(RscSmokePillar)
-    class smokePillar: RscControlsGroupNoScrollbars {
-        onSetFocus = QUOTE(_this call FUNC(ui_smokePillar));
-        idc = IDC_SMOKEPILLAR;
-        x = 0;
-        y = 0;
-        w = POS_W(26);
-        h = POS_H(1);
-        class controls {
-            class TypeLabel: EGVAR(attributes,RscLabel) {
-                text = CSTRING(SmokePillarType);
-            };
-            class Type: EGVAR(attributes,RscCombo) {
-                idc = IDC_SMOKEPILLAR_TYPE;
-                class Items {
-                    class VehicleFire {
-                        text = CSTRING(VehicleFire);
-                    };
-                    class SmallOily {
-                        text = CSTRING(SmallOilySmoke);
-                    };
-                    class MediumOily {
-                        text = CSTRING(MediumOilySmoke);
-                    };
-                    class LargeOily {
-                        text = CSTRING(LargeOilySmoke);
-                    };
-                    class SmallWood {
-                        text = CSTRING(SmallWoodSmoke);
-                    };
-                    class MediumWood {
-                        text = CSTRING(MediumWoodSmoke);
-                    };
-                    class LargeWood {
-                        text = CSTRING(LargeWoodSmoke);
-                    };
-                    class SmallMixed {
-                        text = CSTRING(SmallMixedSmoke);
-                    };
-                    class MediumMixed {
-                        text = CSTRING(MediumMixedSmoke);
-                    };
-                    class LargeMixed {
-                        text = CSTRING(LargeMixedSmoke);
-                    };
-                };
-            };
-        };
-    };
-END_MODULE_DIALOG;
-
 BEGIN_MODULE_DIALOG(RscTeleportPlayers)
     class teleportPlayers: RscControlsGroupNoScrollbars {
         onSetFocus = QUOTE(_this call FUNC(ui_teleportPlayers));

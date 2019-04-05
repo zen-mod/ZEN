@@ -82,7 +82,7 @@ class CfgVehicles {
     class GVAR(moduleSmokePillar): GVAR(moduleBase) {
         category = "Effects";
         displayName = CSTRING(ModuleSmokePillar);
-        curatorInfoType = QGVAR(RscSmokePillar);
+        function = QFUNC(moduleSmokePillar);
     };
     class GVAR(moduleTeleportPlayers): GVAR(moduleBase) {
         curatorCanAttach = 1;
