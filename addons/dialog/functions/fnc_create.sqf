@@ -39,7 +39,8 @@ if (isNil QGVAR(saved)) then {
 };
 
 // Each unique set of params gets an id
-private _saveId = [QGVAR(value), _this] joinString "$";
+// Arguments are excluded since their string representations could change between calls
+private _saveId = [QGVAR(value), _title, _content, _onConfirm, _onCancel] joinString "$";
 private _values = [];
 
 // Verify content array and exit if invalid parameters given

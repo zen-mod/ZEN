@@ -21,6 +21,6 @@ private _display = ctrlParent _ctrlButtonCancel;
 private _values = _display getVariable QGVAR(values);
 (_display getVariable QGVAR(params)) params ["", "_onCancel", "_arguments"];
 
-[_values, _arguments] call _fnc_onCancel;
+[_values, _arguments] call _onCancel;
 
 closeDialog 0;
