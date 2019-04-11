@@ -152,33 +152,6 @@ class GVAR(RscAttributeSlider): RscControlsGroupNoScrollbars {
     };
 };
 
-BEGIN_MODULE_DIALOG(RscBindVariable)
-    class bindVariable: RscControlsGroupNoScrollbars {
-        onSetFocus = QUOTE(_this call FUNC(ui_bindVariable));
-        idc = IDC_BINDVARIABLE;
-        x = 0;
-        y = 0;
-        w = POS_W(26);
-        h = POS_H(2.1);
-        class controls {
-            class NameLabel: EGVAR(attributes,RscLabel) {
-                text = CSTRING(VariableName);
-            };
-            class Name: EGVAR(attributes,RscEdit) {
-                idc = IDC_BINDVARIABLE_NAME;
-            };
-            class PublicLabel: EGVAR(attributes,RscLabel) {
-                text = CSTRING(PublicVariable);
-                y = POS_H(1.1);
-            };
-            class Public: GVAR(RscToolboxYesNo) {
-                idc = IDC_BINDVARIABLE_PUBLIC;
-                y = POS_H(1.1);
-            };
-        };
-    };
-END_MODULE_DIALOG;
-
 BEGIN_MODULE_DIALOG(RscChangeHeight)
     class changeHeight: RscControlsGroupNoScrollbars {
         onSetFocus = QUOTE(_this call FUNC(ui_changeHeight));

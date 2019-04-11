@@ -1,6 +1,7 @@
 PREP(initModule);
 PREP(moduleAttachEffect);
 PREP(moduleAttachTo);
+PREP(moduleBindVariable);
 PREP(moduleChatter);
 PREP(moduleCreateIED);
 PREP(moduleCreateMinefield);
@@ -20,7 +21,6 @@ PREP(moduleVisibility);
 PREP(ui_attachEffect);
 PREP(ui_attributeRadius);
 PREP(ui_attributeSlider);
-PREP(ui_bindVariable);
 PREP(ui_changeHeight);
 PREP(ui_chatter);
 PREP(ui_createIED);

@@ -94,7 +94,7 @@ class CfgVehicles {
         curatorCanAttach = 1;
         category = QGVAR(DevTools);
         displayName = CSTRING(BindVariable);
-        curatorInfoType = QGVAR(RscBindVariable);
+        function = QFUNC(moduleBindVariable);
     };
     class GVAR(moduleFunctionsViewer): GVAR(moduleBase) {
         category = QGVAR(DevTools);
