@@ -35,7 +35,7 @@ class CfgVehicles {
         curatorCanAttach = 1;
         category = QGVAR(Objects);
         displayName = CSTRING(ModuleMakeInvincible);
-        curatorInfoType = QGVAR(RscMakeInvincible);
+        function = QFUNC(moduleMakeInvincible);
     };
     class GVAR(moduleSimulation): GVAR(moduleBase) {
         curatorCanAttach = 1;
