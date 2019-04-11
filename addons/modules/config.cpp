@@ -17,6 +17,7 @@ class CfgPatches {
             QGVAR(moduleGlobalHint),
             QGVAR(moduleHeal),
             QGVAR(moduleHideZeus),
+            QGVAR(moduleLightSource),
             QGVAR(moduleMakeInvincible),
             QGVAR(modulePatrolArea),
             QGVAR(moduleSetDate),

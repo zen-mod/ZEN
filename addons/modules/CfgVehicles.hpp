@@ -68,6 +68,11 @@ class CfgVehicles {
         displayName = CSTRING(ModuleHideZeus);
         function = QFUNC(moduleHideZeus);
     };
+    class GVAR(moduleLightSource): GVAR(moduleBase) {
+        category = "Effects";
+        displayName = CSTRING(ModuleLightSource);
+        curatorInfoType = QGVAR(RscLightSourceHelper);
+    };
     class GVAR(modulePatrolArea): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(AI);

@@ -11,6 +11,7 @@ PREP(moduleEarthquake);
 PREP(moduleFunctionsViewer);
 PREP(moduleHeal);
 PREP(moduleHideZeus);
+PREP(moduleLightSource);
 PREP(moduleMakeInvincible);
 PREP(modulePatrolArea);
 PREP(moduleShowInConfig);

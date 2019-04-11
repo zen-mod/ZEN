@@ -269,6 +269,25 @@
         <Key ID="STR_ZEN_Modules_LargeMixedSmoke">
             <English>Large Mixed Smoke</English>
         </Key>
+
+        <Key ID="STR_ZEN_Modules_ModuleLightSource">
+            <English>Light Source</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleLightSource_Color">
+            <English>Light Color</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleLightSource_Range">
+            <English>Range (m)</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleLightSource_Constant">
+            <English>Constant Attenuation</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleLightSource_Linear">
+            <English>Linear Attenuation</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleLightSource_Quadratic">
+            <English>Quadratic Attenuation</English>
+        </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_AI">
             <English>AI</English>

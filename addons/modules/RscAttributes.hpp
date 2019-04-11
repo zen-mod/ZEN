@@ -78,6 +78,11 @@ class GVAR(RscSides): RscControlsGroupNoScrollbars {
     };
 };
 
+class GVAR(RscLightSourceHelper) {
+    idd = -1;
+    onLoad = QUOTE(call FUNC(moduleLightSource));
+};
+
 class EGVAR(attributes,RscAttributesBase) {
     class controls {
         class Title;
