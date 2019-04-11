@@ -29,7 +29,7 @@ class CfgVehicles {
         curatorCanAttach = 1;
         category = QGVAR(Objects);
         displayName = CSTRING(CreateIED);
-        curatorInfoType = QGVAR(RscCreateIED);
+        function = QFUNC(moduleCreateIED);
     };
     class GVAR(moduleMakeInvincible): GVAR(moduleBase) {
         curatorCanAttach = 1;

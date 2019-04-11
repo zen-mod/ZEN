@@ -23,7 +23,6 @@ PREP(ui_attributeRadius);
 PREP(ui_attributeSlider);
 PREP(ui_changeHeight);
 PREP(ui_chatter);
-PREP(ui_createIED);
 PREP(ui_createMinefield);
 PREP(ui_damageBuildings);
 PREP(ui_earthquake);
