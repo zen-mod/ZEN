@@ -152,26 +152,6 @@ class GVAR(RscAttributeSlider): RscControlsGroupNoScrollbars {
     };
 };
 
-BEGIN_MODULE_DIALOG(RscChangeHeight)
-    class changeHeight: RscControlsGroupNoScrollbars {
-        onSetFocus = QUOTE(_this call FUNC(ui_changeHeight));
-        idc = IDC_CHANGEHEIGHT;
-        x = 0;
-        y = 0;
-        w = POS_W(26);
-        h = POS_H(1);
-        class controls {
-            class Label: EGVAR(attributes,RscLabel) {
-                text = CSTRING(ModuleChangeHeight_Label);
-                tooltip = CSTRING(ModuleChangeHeight_Tooltip);
-            };
-            class Height: EGVAR(attributes,RscEdit) {
-                idc = IDC_CHANGEHEIGHT_HEIGHT;
-            };
-        };
-    };
-END_MODULE_DIALOG;
-
 BEGIN_MODULE_DIALOG(RscChatter)
     class chatter: RscControlsGroupNoScrollbars {
         onSetFocus = QUOTE(_this call FUNC(ui_chatter));

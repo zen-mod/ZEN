@@ -23,7 +23,7 @@ class CfgVehicles {
         curatorCanAttach = 1;
         category = QGVAR(Objects);
         displayName = CSTRING(ModuleChangeHeight);
-        curatorInfoType = QGVAR(RscChangeHeight);
+        function = QFUNC(moduleChangeHeight);
     };
     class GVAR(moduleCreateIED): GVAR(moduleBase) {
         curatorCanAttach = 1;
