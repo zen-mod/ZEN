@@ -225,4 +225,18 @@ _ctrlButtonCancel ctrlAddEventHandler ["ButtonClick", FUNC(gui_cancel)];
 _ctrlButtonCancel ctrlSetPosition [POS_X(6.5), POS_BUTTON_Y(_contentHeight)];
 _ctrlButtonCancel ctrlCommit 0;
 
+// Add EH to trigger cancel when escape key pressed
+_display displayAddEventHandler ["KeyDown", {
+    params ["_display", "_key"];
+
+    if (_key == DIK_ESCAPE) then {
+        private _values = _display getVariable QGVAR(values);
+        (_display getVariable QGVAR(params)) params ["", "_onCancel", "_arguments"];
+
+        [_values, _arguments] call _onCancel;
+    };
+
+    false
+}];
+
 true
