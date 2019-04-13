@@ -142,7 +142,7 @@ class GVAR(Row_Combo): GVAR(Row_Base) {
     };
 };
 
-class GVAR(Row_ToolboxYesNo): GVAR(Row_Base) {
+class GVAR(Row_Toolbox2): GVAR(Row_Base) {
     GVAR(script) = QFUNC(gui_toolbox);
     class controls: controls {
         class Name: Name {};
@@ -154,16 +154,33 @@ class GVAR(Row_ToolboxYesNo): GVAR(Row_Base) {
             h = POS_H(1);
             rows = 1;
             columns = 2;
-            strings[] = {ECSTRING(common,No), ECSTRING(common,Yes)};
         };
     };
 };
 
-class GVAR(Row_ToolboxEnabled): GVAR(Row_ToolboxYesNo) {
+class GVAR(Row_Toolbox3): GVAR(Row_Toolbox2) {
     class controls: controls {
         class Name: Name {};
         class Toolbox: Toolbox {
-            strings[] = {ECSTRING(common,Disabled), ECSTRING(common,Enabled)};
+            columns = 3;
+        };
+    };
+};
+
+class GVAR(Row_Toolbox4): GVAR(Row_Toolbox2) {
+    class controls: controls {
+        class Name: Name {};
+        class Toolbox: Toolbox {
+            columns = 4;
+        };
+    };
+};
+
+class GVAR(Row_Toolbox5): GVAR(Row_Toolbox2) {
+    class controls: controls {
+        class Name: Name {};
+        class Toolbox: Toolbox {
+            columns = 5;
         };
     };
 };

@@ -67,7 +67,7 @@ scopeName "Main";
     private _controlType = "";
     private _rowSettings = [];
 
-    switch (toUpper _type) do {
+    switch (_type) do {
         case "CHECKBOX": {
             _defaultValue = _valueInfo param [0, false, [false]];
             _controlType = QGVAR(Row_Checkbox);
@@ -132,8 +132,32 @@ scopeName "Main";
             _controlType = QGVAR(Row_Slider);
         };
         case "TOOLBOX": {
-            _defaultValue = _valueInfo param [0, false, [false]];
-            _controlType = [QGVAR(Row_ToolboxYesNo), QGVAR(Row_ToolboxEnabled)] select (_subType == "ENABLED");
+            _valueInfo params [["_default", 0, [0, false]], ["_strings", [], [[]]]];
+
+            // Common toolbox use cases, for QOL mostly
+            switch (_subType) do {
+                case "YESNO": {
+                    _strings = [ELSTRING(common,No), ELSTRING(common,Yes)];
+                };
+                case "ENABLED": {
+                    _strings = [ELSTRING(common,Disabled), ELSTRING(common,Enabled)];
+                };
+            };
+
+            _strings = _strings apply {if (isLocalized _x) then {localize _x} else {_x}};
+
+            // Return bool if there are only two options and default is a bool
+            private _countStrings = count _strings;
+            private _returnBool = _countStrings == 2 && {_default isEqualType false};
+
+            // Ensure default is number if not returning bool
+            if (!_returnBool && {_default isEqualType false}) then {
+                _default = parseNumber _default;
+            };
+
+            _rowSettings append [_strings, _returnBool];
+            _defaultValue = _default;
+            _controlType = format [QGVAR(Row_Toolbox%1), _countStrings];
         };
     };
 
