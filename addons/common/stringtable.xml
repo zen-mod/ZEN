@@ -90,6 +90,9 @@
         <Key ID="STR_ZEN_Common_Strong">
             <English>Strong</English>
         </Key>
+        <Key ID="STR_ZEN_Common_Extreme">
+            <English>Extreme</English>
+        </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects">
             <English>Add Objects to Curators</English>
         </Key>
