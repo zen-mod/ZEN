@@ -288,6 +288,13 @@
         <Key ID="STR_ZEN_Modules_ModuleLightSource_Quadratic">
             <English>Quadratic Attenuation</English>
         </Key>
+
+        <Key ID="STR_ZEN_Modules_ModuleEquipWithECM">
+            <English>Equip With ECM</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleEquipWithECM_HasECM">
+            <English>Has ECM</English>
+        </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_AI">
             <English>AI</English>
@@ -361,6 +368,21 @@
         </Key>
         <Key ID="STR_ZEN_Modules_OnlyNonInfantry">
             <English>Unit must not be infantry</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_OnlyVehicles">
+            <English>Unit must be a vehicle</English>
+            <German>Das Ziel muss ein Fahrzeug sein.</German>
+            <Polish>Jednostka musi być pojazdem</Polish>
+            <Portuguese>Unidade deve ser um veículo</Portuguese>
+            <Russian>Юнит должен быть транспортом</Russian>
+            <Spanish>La unidad debe ser un vehículo</Spanish>
+            <Czech>Jednotka musí být vozidlo</Czech>
+            <Italian>Si può usare solo su veicoli</Italian>
+            <French>L'unité doit être un véhicule</French>
+            <Japanese>ユニットを車両とします</Japanese>
+            <Korean>대상이 반드시 차량이어야만 합니다</Korean>
+            <Chinesesimp>单位必须是载具</Chinesesimp>
+            <Chinese>單位必須是載具</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_BuildingTooFar">
             <English>Nearest building is too far away</English>

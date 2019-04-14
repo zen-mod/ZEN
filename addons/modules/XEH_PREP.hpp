@@ -8,6 +8,7 @@ PREP(moduleCreateIED);
 PREP(moduleCreateMinefield);
 PREP(moduleDamageBuildings);
 PREP(moduleEarthquake);
+PREP(moduleEquipWithECM);
 PREP(moduleFunctionsViewer);
 PREP(moduleHeal);
 PREP(moduleHideZeus);

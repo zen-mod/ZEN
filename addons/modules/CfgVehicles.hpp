@@ -31,6 +31,12 @@ class CfgVehicles {
         displayName = CSTRING(CreateIED);
         function = QFUNC(moduleCreateIED);
     };
+    class GVAR(moduleEquipWithECM): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Objects);
+        displayName = CSTRING(ModuleEquipWithECM);
+        function = QFUNC(moduleEquipWithECM);
+    };
     class GVAR(moduleMakeInvincible): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Objects);
