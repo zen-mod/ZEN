@@ -88,7 +88,7 @@ class CfgVehicles {
         curatorCanAttach = 1;
         category = QGVAR(AI);
         displayName = CSTRING(ModulePatrolArea);
-        curatorInfoType = QGVAR(RscPatrolArea);
+        function = QFUNC(modulePatrolArea);
     };
     class GVAR(moduleSideRelations): GVAR(moduleBase) {
         category = "MissionFlow";

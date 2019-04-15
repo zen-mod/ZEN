@@ -354,39 +354,6 @@ BEGIN_MODULE_DIALOG(RscGlobalHint)
     };
 END_MODULE_DIALOG;
 
-BEGIN_MODULE_DIALOG(RscPatrolArea)
-    class radius: GVAR(AttributeRadius) {};
-    class patrolArea: RscControlsGroupNoScrollbars {
-        onSetFocus = QUOTE(_this call FUNC(ui_patrolArea));
-        idc = IDC_PATROLAREA;
-        x = 0;
-        y = 0;
-        w = POS_W(26);
-        h = POS_H(1);
-        class controls {
-            class BehaviourLabel: EGVAR(attributes,RscLabel) {
-                text = "$STR_3DEN_Group_Attribute_Behaviour_displayName";
-                tooltip = CSTRING(ModulePatrolArea_Behaviour_Tooltip);
-            };
-            class Behaviour: ctrlToolbox {
-                idc = IDC_PATROLAREA_BEHAVIOUR;
-                x = POS_W(10.1);
-                y = 0;
-                w = POS_W(15.9);
-                h = POS_H(1);
-                rows = 1;
-                columns = 4;
-                strings[] = {
-                    "$STR_3den_attributes_default_unchanged_text",
-                    CSTRING(ModulePatrolArea_Relaxed),
-                    CSTRING(ModulePatrolArea_Cautious),
-                    "$STR_combat"
-                };
-            };
-        };
-    };
-END_MODULE_DIALOG;
-
 BEGIN_MODULE_DIALOG(RscSideRelations)
     class sideRelations: RscControlsGroupNoScrollbars {
         onSetFocus = QUOTE(_this call FUNC(ui_sideRelations));

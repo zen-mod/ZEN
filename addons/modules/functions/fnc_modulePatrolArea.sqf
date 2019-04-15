@@ -1,35 +1,60 @@
 /*
  * Author: mharis001
- * Makes group of unit randomly patrol the area.
+ * Zeus module function to make a group patrol an area.
  *
  * Arguments:
- * 0: Unit <OBJECT>
- * 1: Radius <NUMBER>
- * 2: Behaviour (0 - Unchanged, 1 - Relaxed, 2 - Cautious, 3 - Combat) <NUMBER>
+ * 0: Logic <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [unit, 100, 0] call zen_modules_fnc_modulePatrolArea
+ * [LOGIC] call zen_modules_fnc_modulePatrolArea
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params ["_unit", "_radius", "_behaviour"];
-TRACE_1("Module Patrol Area",_this);
+params ["_logic"];
 
-// Modify behaviour based on setting
-if (_behaviour > 0) then {
-    [QEGVAR(common,setFormation), [_unit, "COLUMN"], _unit] call CBA_fnc_targetEvent;
+private _unit = effectiveCommander attachedTo _logic;
+deleteVehicle _logic;
 
-    private _speedMode = ["LIMITED", "NORMAL"] select (_behaviour > 1);
-    [QEGVAR(common,setSpeedMode), [_unit, _speedMode], _unit] call CBA_fnc_targetEvent;
-
-    private _behaviourMode = ["SAFE", "AWARE", "COMBAT"] select (_behaviour - 1);
-    [QEGVAR(common,setBehaviour), [_unit, _behaviourMode], _unit] call CBA_fnc_targetEvent;
+if (isNull _unit) exitWith {
+    [LSTRING(NothingSelected)] call EFUNC(common,showMessage);
 };
 
-// Create patrol waypoints
-[QGVAR(taskPatrol), [_unit, _unit, _radius, 5], _unit] call CBA_fnc_targetEvent;
+if !(_unit isKindOf "CAManBase") exitWith {
+    [LSTRING(OnlyInfantry)] call EFUNC(common,showMessage);
+};
+
+if !(alive _unit) exitWith {
+    [LSTRING(OnlyAlive)] call EFUNC(common,showMessage);
+};
+
+[LSTRING(ModulePatrolArea), [
+    ["SLIDER", [LSTRING(AttributeRadius), LSTRING(AttributeRadius_Tooltip)], [0, 5000, 100, 0]],
+    ["TOOLBOX", ["STR_3DEN_Group_Attribute_Behaviour_displayName", LSTRING(ModulePatrolArea_Behaviour_Tooltip)], [0, [
+        "STR_3den_attributes_default_unchanged_text",
+        LSTRING(ModulePatrolArea_Relaxed),
+        LSTRING(ModulePatrolArea_Cautious),
+        "STR_combat"
+    ]]]
+], {
+    params ["_dialogValues", "_unit"];
+    _dialogValues params ["_radius", "_behaviour"];
+
+    // Modify behaviour based on setting
+    if (_behaviour > 0) then {
+        [QEGVAR(common,setFormation), [_unit, "COLUMN"], _unit] call CBA_fnc_targetEvent;
+
+        private _speedMode = ["LIMITED", "NORMAL"] select (_behaviour > 1);
+        [QEGVAR(common,setSpeedMode), [_unit, _speedMode], _unit] call CBA_fnc_targetEvent;
+
+        private _behaviourMode = ["SAFE", "AWARE", "COMBAT"] select (_behaviour - 1);
+        [QEGVAR(common,setBehaviour), [_unit, _behaviourMode], _unit] call CBA_fnc_targetEvent;
+    };
+
+    // Create patrol waypoints
+    [QGVAR(taskPatrol), [_unit, _unit, _radius, 5], _unit] call CBA_fnc_targetEvent;
+}, {}, _unit] call EFUNC(dialog,create);

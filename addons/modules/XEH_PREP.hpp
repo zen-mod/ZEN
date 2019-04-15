@@ -29,7 +29,6 @@ PREP(ui_chatter);
 PREP(ui_createMinefield);
 PREP(ui_damageBuildings);
 PREP(ui_globalHint);
-PREP(ui_patrolArea);
 PREP(ui_setDate);
 PREP(ui_sideRelations);
 PREP(ui_teleportPlayers);
