@@ -711,51 +711,6 @@ BEGIN_MODULE_DIALOG(RscDamageBuildings)
     };
 END_MODULE_DIALOG;
 
-BEGIN_MODULE_DIALOG(RscEarthquake)
-    class earthquake: RscControlsGroupNoScrollbars {
-        onSetFocus = QUOTE(_this call FUNC(ui_earthquake));
-        idc = IDC_EARTHQUAKE;
-        x = 0;
-        y = 0;
-        w = POS_W(26);
-        h = POS_H(3.2);
-        class controls {
-            class Radius: GVAR(RscAttributeSlider) {
-                idc = IDC_EARTHQUAKE_RADIUS;
-                class controls: controls {
-                    class Label: Label {
-                        text = CSTRING(ModuleEarthquake_Radius);
-                    };
-                    class Slider: Slider {};
-                    class Edit: Edit {};
-                };
-            };
-            class IntensityLabel: EGVAR(attributes,RscLabel) {
-                text = CSTRING(ModuleEarthquake_Intensity);
-                y = POS_H(1.1);
-            };
-            class Intensity: ctrlToolbox {
-                idc = IDC_EARTHQUAKE_INTENSITY;
-                x = POS_W(10.1);
-                y = POS_H(1.1);
-                w = POS_W(15.9);
-                h = POS_H(1);
-                rows = 1;
-                columns = 4;
-                strings[] = {ECSTRING(common,VeryWeak), ECSTRING(common,Weak), ECSTRING(common,Medium), ECSTRING(common,Strong)};
-            };
-            class BuildingsLabel: EGVAR(attributes,RscLabel) {
-                text = CSTRING(ModuleEarthquake_Buildings);
-                y = POS_H(2.2);
-            };
-            class Buildings: GVAR(RscToolboxYesNo) {
-                idc = IDC_EARTHQUAKE_BUILDINGS;
-                y = POS_H(2.2);
-            };
-        };
-    };
-END_MODULE_DIALOG;
-
 BEGIN_MODULE_DIALOG(RscAttachEffect)
     class attachEffect: RscControlsGroupNoScrollbars {
         onSetFocus = QUOTE(_this call FUNC(ui_attachEffect));

@@ -31,6 +31,11 @@ class CfgVehicles {
         displayName = CSTRING(CreateIED);
         function = QFUNC(moduleCreateIED);
     };
+    class GVAR(moduleEarthquake): GVAR(moduleBase) {
+        category = "Environment";
+        displayName = CSTRING(ModuleEarthquake);
+        function = QFUNC(moduleEarthquake);
+    };
     class GVAR(moduleEquipWithECM): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Objects);
@@ -125,11 +130,6 @@ class CfgVehicles {
         displayName = CSTRING(ModuleDamageBuildings);
         curatorInfoType = QGVAR(RscDamageBuildings);
         icon = "\a3\modules_f\data\editterrainobject\icon_ca.paa";
-    };
-    class GVAR(moduleEarthquake): GVAR(moduleBase) {
-        category = "Environment";
-        displayName = CSTRING(ModuleEarthquake);
-        curatorInfoType = QGVAR(RscEarthquake);
     };
     class GVAR(moduleHeal): GVAR(moduleBase) {
         curatorCanAttach = 1;

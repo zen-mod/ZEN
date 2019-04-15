@@ -28,7 +28,6 @@ PREP(ui_attributeSlider);
 PREP(ui_chatter);
 PREP(ui_createMinefield);
 PREP(ui_damageBuildings);
-PREP(ui_earthquake);
 PREP(ui_globalHint);
 PREP(ui_patrolArea);
 PREP(ui_setDate);
