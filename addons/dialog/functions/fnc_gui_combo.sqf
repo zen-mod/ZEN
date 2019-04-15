@@ -24,11 +24,12 @@ _rowSettings params ["_values", "_labels"];
 private _ctrlCombo = _controlsGroup controlsGroupCtrl IDC_ROW_COMBO;
 
 {
-    _x params ["_label", "_tooltip", "_picture"];
+    _x params ["_label", "_tooltip", "_picture", "_textColor"];
 
     private _index = _ctrlCombo lbAdd _label;
     _ctrlCombo lbSetTooltip [_index, _tooltip];
     _ctrlCombo lbSetPicture [_index, _picture];
+    _ctrlCombo lbSetColor [_index, _textColor];
 } forEach _labels;
 
 _ctrlCombo lbSetCurSel (_values find _currentValue);

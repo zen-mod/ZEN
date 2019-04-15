@@ -90,7 +90,7 @@ scopeName "Main";
                     _x = _values select _forEachIndex;
                 };
 
-                _x params ["_label", ["_tooltip", ""], ["_picture", "", [""]]];
+                _x params ["_label", ["_tooltip", ""], ["_picture", "", [""]], ["_textColor", [1, 1, 1, 1], [[]], 4]];
 
                 if !(_label isEqualType "") then {
                     _label = str _label;
@@ -108,7 +108,7 @@ scopeName "Main";
                     _tooltip = localize _tooltip;
                 };
 
-                _labels set [_forEachIndex, [_label, _tooltip, _picture]];
+                _labels set [_forEachIndex, [_label, _tooltip, _picture, _textColor]];
             } forEach _labels;
 
             _rowSettings append [_values, _labels];

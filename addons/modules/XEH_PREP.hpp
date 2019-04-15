@@ -25,7 +25,6 @@ PREP(moduleVisibility);
 PREP(ui_attachEffect);
 PREP(ui_attributeRadius);
 PREP(ui_attributeSlider);
-PREP(ui_chatter);
 PREP(ui_createMinefield);
 PREP(ui_damageBuildings);
 PREP(ui_globalHint);

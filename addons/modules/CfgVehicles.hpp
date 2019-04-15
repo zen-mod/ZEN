@@ -25,6 +25,11 @@ class CfgVehicles {
         displayName = CSTRING(ModuleChangeHeight);
         function = QFUNC(moduleChangeHeight);
     };
+    class GVAR(moduleChatter): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleChatter);
+        function = QFUNC(moduleChatter);
+    };
     class GVAR(moduleCreateIED): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Objects);
@@ -59,11 +64,6 @@ class CfgVehicles {
         category = QGVAR(Objects);
         displayName = CSTRING(ModuleVisibility);
         function = QFUNC(moduleVisibility);
-    };
-    class GVAR(moduleChatter): GVAR(moduleBase) {
-        curatorCanAttach = 1;
-        displayName = CSTRING(ModuleChatter);
-        curatorInfoType = QGVAR(RscChatter);
     };
     class GVAR(moduleCreateMinefield): GVAR(moduleBase) {
         displayName = CSTRING(ModuleCreateMinefield);
