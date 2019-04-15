@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Modules">
-        <Key ID="STR_ZEN_Modules_AttributeRadius">
-            <English>Task Radius</English>
-        </Key>
-        <Key ID="STR_ZEN_Modules_AttributeRadius_Tooltip">
-            <English>Radius to perform the task within</English>
-        </Key>
-        <Key ID="STR_ZEN_Modules_AttributeRadius_Invalid">
-            <English>Invalid radius entered</English>
-        </Key>
-
         <Key ID="STR_ZEN_Modules_ModuleAttachTo">
             <English>Attach To</English>
         </Key>
@@ -200,8 +190,14 @@
             <Chinesesimp>巡逻区域</Chinesesimp>
             <Chinese>巡邏區域</Chinese>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModulePatrolArea_Radius">
+            <English>Patrol Radius (m)</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModulePatrolArea_Radius_Tooltip">
+            <English>The radius that will be patrolled by the group.</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModulePatrolArea_Behaviour_Tooltip">
-            <English>Will modify the behavior, speed mode, and formation of the group</English>
+            <English>Will modify the behavior, speed mode, and formation of the group.</English>
         </Key>
         <Key ID="STR_ZEN_Modules_ModulePatrolArea_Relaxed">
             <English>Relaxed</English>

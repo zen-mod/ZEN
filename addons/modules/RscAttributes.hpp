@@ -30,54 +30,6 @@ class GVAR(RscToolboxYesNo): ctrlToolbox {
     strings[] = {ECSTRING(common,No), ECSTRING(common,Yes)};
 };
 
-class GVAR(RscSides): RscControlsGroupNoScrollbars {
-    idc = -1;
-    x = 0;
-    y = 0;
-    w = POS_W(26);
-    h = POS_H(2.5);
-    class controls {
-        class Label: EGVAR(attributes,RscLabel) {
-            h = POS_H(2.5);
-        };
-        class Background: RscText {
-            idc = -1;
-            x = POS_W(10);
-            y = 0;
-            w = POS_W(16);
-            h = POS_H(2.5);
-            colorBackground[] = {1, 1, 1, 0.1};
-        };
-        class BLUFOR: RscActivePicture {
-            idc = IDC_BLUFOR;
-            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_west_ca.paa";
-            tooltip = "$STR_WEST";
-            x = POS_W(12.5);
-            y = POS_H(0.25);
-            w = POS_W(2);
-            h = POS_H(2);
-        };
-        class OPFOR: BLUFOR {
-            idc = IDC_OPFOR;
-            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_east_ca.paa";
-            tooltip = "$STR_EAST";
-            x = POS_W(15.5);
-        };
-        class Independent: BLUFOR {
-            idc = IDC_INDEPENDENT;
-            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_guer_ca.paa";
-            tooltip = "$STR_guerrila";
-            x = POS_W(18.5);
-        };
-        class Civilian: BLUFOR {
-            idc = IDC_CIVILIAN;
-            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_civ_ca.paa";
-            tooltip = "$STR_civilian";
-            x = POS_W(21.5);
-        };
-    };
-};
-
 class GVAR(RscLightSourceHelper) {
     idd = -1;
     onLoad = QUOTE(call FUNC(moduleLightSource));
@@ -109,53 +61,6 @@ class EGVAR(attributes,RscAttributesBase) {
             class ButtonCancel: ButtonCancel {}; \
         }; \
     }
-
-class GVAR(AttributeRadius): RscControlsGroupNoScrollbars {
-    onSetFocus = QUOTE(_this call FUNC(ui_attributeRadius));
-    idc = IDC_ATTRIBUTERADIUS;
-    x = 0;
-    y = 0;
-    w = POS_W(26);
-    h = POS_H(1.1);
-    class controls {
-        class Label: EGVAR(attributes,RscLabel) {
-            text = CSTRING(AttributeRadius);
-            tooltip = CSTRING(AttributeRadius_Tooltip);
-            y = POS_H(0.1);
-        };
-        class Value: RscEdit {
-            idc = IDC_ATTRIBUTERADIUS_VALUE;
-            text = "100";
-            x = POS_W(10.1);
-            y = POS_H(0.1);
-            w = POS_W(15.9);
-            h = POS_H(1);
-        };
-    };
-};
-
-class GVAR(RscAttributeSlider): RscControlsGroupNoScrollbars {
-    idc = -1;
-    x = 0;
-    y = 0;
-    w = POS_W(26);
-    h = POS_H(1);
-    class controls {
-        class Label: EGVAR(attributes,RscLabel) {};
-        class Slider: ctrlXSliderH {
-            idc = IDC_SLIDER;
-            x = POS_W(10.1);
-            y = 0;
-            w = POS_W(13.8);
-            h = POS_H(1);
-        };
-        class Edit: EGVAR(attributes,RscEdit) {
-            idc = IDC_EDIT;
-            x = POS_W(24);
-            w = POS_W(2);
-        };
-    };
-};
 
 BEGIN_MODULE_DIALOG(RscCreateMinefield)
     class createMinefield: RscControlsGroupNoScrollbars {
