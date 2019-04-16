@@ -12,6 +12,6 @@
     "LIST",
     [LSTRING(PreferredArsenal), LSTRING(PreferredArsenal_Description)],
     LSTRING(Category),
-    [[false, true], [LSTRING(BIVirtualArsenal), LSTRING(AceArsenal)], 1],
+    [[0, 1], [LSTRING(BIVirtualArsenal), LSTRING(AceArsenal)], 1],
     false
 ] call CBA_settings_fnc_init;

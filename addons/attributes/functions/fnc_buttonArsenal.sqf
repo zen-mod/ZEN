@@ -21,9 +21,4 @@ private _display = ctrlParent _ctrlButton;
 _display closeDisplay IDC_CANCEL;
 
 private _unit = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-
-if (EGVAR(common,useAceArsenal)) then {
-    [_unit, _unit, true] call ace_arsenal_fnc_openBox;
-} else {
-    ["Open", [true, nil, _unit]] call BIS_fnc_arsenal;
-};
+[_unit] call EFUNC(common,openArsenal);

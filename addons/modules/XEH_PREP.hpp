@@ -2,6 +2,7 @@ PREP(initModule);
 PREP(moduleAmbientAnim);
 PREP(moduleAmbientAnimEnd);
 PREP(moduleAmbientAnimStart);
+PREP(moduleArsenal);
 PREP(moduleAttachEffect);
 PREP(moduleAttachTo);
 PREP(moduleBindVariable);

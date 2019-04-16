@@ -176,11 +176,3 @@ if (isServer) then {
         ["AllVehicles", "InitPost", FUNC(addObjectToCurators), true, [], true] call CBA_fnc_addClassEventHandler;
     };
 }] call CBA_fnc_addEventHandler;
-
-["CBA_SettingChanged", {
-    params ["_name", "_value"];
-
-    if (_name == QGVAR(preferredArsenal)) then {
-        GVAR(useAceArsenal) = _value && {isClass (configFile >> "CfgPatches" >> "ace_arsenal")};
-    };
-}] call CBA_fnc_addEventHandler;

@@ -5,6 +5,7 @@ class CfgPatches {
         name = COMPONENT_NAME;
         units[] = {
             QGVAR(moduleAmbientAnim),
+            QGVAR(moduleArsenal),
             QGVAR(moduleAttachTo),
             QGVAR(moduleAttachEffect),
             QGVAR(moduleBindVariable),

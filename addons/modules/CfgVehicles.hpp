@@ -13,11 +13,23 @@ class CfgVehicles {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
         };
     };
+
+    class ModuleArsenal_F: Module_F {
+        scopeCurator = 1;
+    };
+
     class GVAR(moduleAmbientAnim): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(AI);
         displayName = CSTRING(ModuleAmbientAnim);
         function = QFUNC(moduleAmbientAnim);
+    };
+    class GVAR(moduleArsenal): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = "Curator";
+        displayName = "$STR_A3_Arsenal";
+        function = QFUNC(moduleArsenal);
+        icon = "\a3\ui_f\data\logos\a_64_ca.paa";
     };
     class GVAR(moduleAttachTo): GVAR(moduleBase) {
         curatorCanAttach = 1;
