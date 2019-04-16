@@ -1,6 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Modules">
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim">
+            <English>Ambient Animation</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Type">
+            <English>Animation Type</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_StopAnimation">
+            <English>Stop Animation</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_SitOnFloor">
+            <English>Sit On Floor</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_LeanOnWall">
+            <English>Lean On Wall</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Watch">
+            <English>Watch</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_StandIdle">
+            <English>Stand Idle</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_StandIdleNoWeapon">
+            <English>Stand Idle (No Weapon)</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_AtEase">
+            <English>At Ease</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ListenToBriefing">
+            <English>Listen To Briefing</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Briefing">
+            <English>Briefing</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_BriefingInteractive">
+            <English>Briefing (Interactive)</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ListeningCivilian">
+            <English>Listening Civilian</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_TalkingCivilian">
+            <English>Talking Civilian</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ListenToRadio">
+            <English>Listen To Radio</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ShieldFromSun">
+            <English>Shield From Sun</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_NavigateAircraft">
+            <English>Navigate Aircraft</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ShowVehicleTheWay">
+            <English>Showing A Vehicle The Way</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_TreatWounded">
+            <English>Treat Wounded</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_CombatWounded">
+            <English>Combat Wounded</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedGeneral">
+            <English>Wounded (General)</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedHead">
+            <English>Wounded (Head)</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedChest">
+            <English>Wounded (Chest)</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedArm">
+            <English>Wounded (Arm)</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedLeg">
+            <English>Wounded (Leg)</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ShockedCivilian">
+            <English>Shocked Civilian</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_HidingCivilian">
+            <English>Hiding Civilian</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_SitCaptured">
+            <English>Sit Captured</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_RepairStand">
+            <English>Repair Vehicle (Stand)</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_RepairKneel">
+            <English>Repair Vehicle (Kneel)</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_RepairProne">
+            <English>Repair Vehicle (Prone)</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Combat">
+            <English>Combat Ready</English>
+        </Key>
+
         <Key ID="STR_ZEN_Modules_ModuleAttachTo">
             <English>Attach To</English>
         </Key>

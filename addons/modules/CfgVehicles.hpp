@@ -13,6 +13,12 @@ class CfgVehicles {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
         };
     };
+    class GVAR(moduleAmbientAnim): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = CSTRING(ModuleAmbientAnim);
+        function = QFUNC(moduleAmbientAnim);
+    };
     class GVAR(moduleAttachTo): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Objects);

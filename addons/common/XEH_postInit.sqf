@@ -65,6 +65,16 @@
     _unit setSkill _skill;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(enableAI), {
+    params ["_unit", "_section"];
+    _unit enableAI _section;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(disableAI), {
+    params ["_unit", "_section"];
+    _unit disableAI _section;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(setName), {
     params ["_unit", "_name"];
     _unit setName _name;
@@ -83,6 +93,16 @@
 [QGVAR(allowDamage), {
     params ["_object", "_allow"];
     _object allowDamage _allow;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(playMoveNow), {
+    params ["_unit", "_animation"];
+    _unit playMoveNow _animation;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(switchMove), {
+    params ["_unit", "_animation"];
+    _unit switchMove _animation;
 }] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
