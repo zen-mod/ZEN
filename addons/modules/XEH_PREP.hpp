@@ -1,4 +1,5 @@
 PREP(compileAircraft);
+PREP(compileMines);
 PREP(gui_ambientFlyby);
 PREP(initModule);
 PREP(moduleAmbientAnim);
@@ -31,7 +32,6 @@ PREP(moduleSpawnCarrier);
 PREP(moduleSpawnDestroyer);
 PREP(moduleVisibility);
 PREP(ui_attachEffect);
-PREP(ui_createMinefield);
 PREP(ui_damageBuildings);
 PREP(ui_globalHint);
 PREP(ui_setDate);

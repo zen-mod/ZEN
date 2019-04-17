@@ -72,7 +72,7 @@ class CfgVehicles {
     };
     class GVAR(moduleCreateMinefield): GVAR(moduleBase) {
         displayName = CSTRING(ModuleCreateMinefield);
-        curatorInfoType = QGVAR(RscCreateMinefield);
+        function = QFUNC(moduleCreateMinefield);
     };
     class GVAR(moduleDamageBuildings): GVAR(moduleBase) {
         category = QGVAR(Buildings);

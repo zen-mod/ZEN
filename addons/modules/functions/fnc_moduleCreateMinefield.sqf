@@ -1,43 +1,51 @@
 /*
  * Author: mharis001
- * Creates minefield of given area around the center position.
+ * Zeus module function to create a minefield.
  *
  * Arguments:
- * 0: Center position AGL <ARRAY>
- * 1: Area width <NUMBER>
- * 2: Area height <NUMBER>
- * 3: Mine type <STRING>
- * 4: Mine density (0 - low to 4 - high) <NUMBER>
+ * 0: Logic <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [[0, 0, 0], 100, 100, "ModuleMine_APERSMine_F", 2] call zen_modules_fnc_moduleCreateMinefield
+ * [LOGIC] call zen_modules_fnc_moduleCreateMinefield
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params ["_centerPos", "_areaWidth", "_areaHeight", "_mineType", "_mineDensity"];
-TRACE_1("Module Create Minefield",_this);
+params ["_logic"];
 
-private _createdMines = [];
+private _minesCache = +(uiNamespace getVariable QGVAR(minesCache));
+_minesCache params ["_configNames", "_displayNames"];
 
-// Determine spacing based on density
-private _mineSpacing = -5 * _mineDensity + 30;
-private _topLeftPos = _centerPos vectorAdd [-_areaWidth / 2, -_areaHeight / 2, 0];
+[LSTRING(ModuleCreateMinefield), [
+    ["VECTOR", LSTRING(ModuleCreateMinefield_MineArea), [100, 100]],
+    ["COMBO", LSTRING(ModuleCreateMinefield_MineType), [_configNames, _displayNames, 0]],
+    ["TOOLBOX", LSTRING(ModuleCreateMinefield_MineDensity), [2, [ELSTRING(common,VeryLow), ELSTRING(common,Low), ELSTRING(common,Medium), ELSTRING(common,High), ELSTRING(common,VeryHigh)]]]
+], {
+    params ["_dialogValues", "_position"];
+    _dialogValues params ["_area", "_mineType", "_mineDensity"];
+    _area params ["_areaWidth", "_areaHeight"];
 
-// Create minefield
-for "_i" from _mineSpacing / 2 to _areaWidth step _mineSpacing do {
-    for "_j" from _mineSpacing / 2 to _areaHeight step _mineSpacing do {
-        private _mine = createVehicle [_mineType, [0, 0, 0], [], 0, "CAN_COLLIDE"];
-        _mine setPos (_topLeftPos vectorAdd [_i, _j, 0]);
-        _createdMines pushBack _mine;
+    private _createdMines = [];
+
+    // Determine spacing based on density
+    private _mineSpacing = -5 * _mineDensity + 30;
+    private _topLeftPos = _position vectorAdd [-_areaWidth / 2, -_areaHeight / 2, 0];
+
+    // Create minefield of given area
+    for "_i" from _mineSpacing / 2 to _areaWidth step _mineSpacing do {
+        for "_j" from _mineSpacing / 2 to _areaHeight step _mineSpacing do {
+            private _mine = createVehicle [_mineType, [0, 0, 0], [], 0, "CAN_COLLIDE"];
+            _mine setPos (_topLeftPos vectorAdd [_i, _j, 0]);
+            _createdMines pushBack _mine;
+        };
     };
-};
 
-TRACE_1("Minefield created",count _createdMines);
+    // Add created mines to editable objects
+    [QEGVAR(common,addObjects), [_createdMines]] call CBA_fnc_serverEvent;
+}, {}, ASLtoAGL getPosASL _logic] call EFUNC(dialog,create);
 
-// Add created mines to Zeus
-[QEGVAR(common,addObjects), [_createdMines]] call CBA_fnc_serverEvent;
+deleteVehicle _logic;
