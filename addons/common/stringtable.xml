@@ -105,6 +105,12 @@
         <Key ID="STR_ZEN_Common_Speed">
             <English>Speed</English>
         </Key>
+        <Key ID="STR_ZEN_Common_Height">
+            <English>Height</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_Height_Units">
+            <English>Height (m)</English>
+        </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects">
             <English>Add Objects to Curators</English>
         </Key>

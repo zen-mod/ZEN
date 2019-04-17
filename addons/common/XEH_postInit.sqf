@@ -75,6 +75,11 @@
     _unit disableAI _section;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(flyInHeight), {
+    params ["_aircraft", "_height"];
+    _aircraft flyInHeight _height;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(setName), {
     params ["_unit", "_name"];
     _unit setName _name;

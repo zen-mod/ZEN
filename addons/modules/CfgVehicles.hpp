@@ -91,6 +91,12 @@ class CfgVehicles {
         displayName = CSTRING(ModuleEquipWithECM);
         function = QFUNC(moduleEquipWithECM);
     };
+    class GVAR(moduleFlyHeight): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = CSTRING(ModuleFlyHeight);
+        function = QFUNC(moduleFlyHeight);
+    };
     class GVAR(moduleFunctionsViewer): GVAR(moduleBase) {
         category = QGVAR(DevTools);
         displayName = "$STR_A3_RscFunctionsViewer_Caption";

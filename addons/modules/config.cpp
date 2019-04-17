@@ -17,6 +17,7 @@ class CfgPatches {
             QGVAR(moduleDamageBuildings),
             QGVAR(moduleEarthquake),
             QGVAR(moduleEquipWithECM),
+            QGVAR(moduleFlyHeight),
             QGVAR(moduleFunctionsViewer),
             QGVAR(moduleGlobalHint),
             QGVAR(moduleHeal),

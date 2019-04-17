@@ -883,7 +883,7 @@ BEGIN_MODULE_DIALOG(RscAmbientFlyby)
                 strings[] = {"N", "NE", "E", "SE", "S", "SW", "W", "NW"};
             };
             class HeightLabel: EGVAR(attributes,RscLabel) {
-                text = CSTRING(ModuleAmbientFlyby_Height);
+                text = ECSTRING(common,Height);
                 tooltip = CSTRING(ModuleAmbientFlyby_Height_Tooltip);
                 y = POS_H(5.6);
             };

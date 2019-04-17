@@ -25,7 +25,7 @@ if (isNull _object) exitWith {
 };
 
 [LSTRING(ModuleChangeHeight), [
-    ["EDIT", [LSTRING(ModuleChangeHeight_Label), LSTRING(ModuleChangeHeight_Tooltip)], ["", {
+    ["EDIT", [ELSTRING(common,Height_Units), LSTRING(ModuleChangeHeight_Tooltip)], ["", {
         params ["_value"];
 
         private _filter = toArray "-0123456789";

@@ -110,9 +110,6 @@
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_FlyTowards_Tooltip">
             <English>Aircraft will fly towards this direction from the opposite direction.</English>
         </Key>
-        <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height">
-            <English>Height</English>
-        </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Tooltip">
             <English>Sets the height that the aircraft will fly at, in meters.</English>
         </Key>
@@ -257,9 +254,6 @@
 
         <Key ID="STR_ZEN_Modules_ModuleChangeHeight">
             <English>Change Height</English>
-        </Key>
-        <Key ID="STR_ZEN_Modules_ModuleChangeHeight_Label">
-            <English>Height (m)</English>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleChangeHeight_Tooltip">
             <English>Change the height of the object by this value (can be negative)</English>
@@ -413,6 +407,13 @@
         <Key ID="STR_ZEN_Modules_ModuleEquipWithECM_HasECM">
             <English>Has ECM</English>
         </Key>
+
+        <Key ID="STR_ZEN_Modules_ModuleFlyHeight">
+            <English>Fly Height</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleFlyHeight_Tooltip">
+            <English>Sets the flying altitude for the aircraft relative to the ground.</English>
+        </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_AI">
             <English>AI</English>
@@ -501,6 +502,9 @@
             <Korean>대상이 반드시 차량이어야만 합니다</Korean>
             <Chinesesimp>单位必须是载具</Chinesesimp>
             <Chinese>單位必須是載具</Chinese>
+        </Key>
+        <Key ID="STR_ZEN_Modules_OnlyAircraft">
+            <English>Unit must be an aircraft</English>
         </Key>
         <Key ID="STR_ZEN_Modules_BuildingTooFar">
             <English>Nearest building is too far away</English>

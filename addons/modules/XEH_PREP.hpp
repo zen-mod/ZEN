@@ -16,6 +16,7 @@ PREP(moduleCreateMinefield);
 PREP(moduleDamageBuildings);
 PREP(moduleEarthquake);
 PREP(moduleEquipWithECM);
+PREP(moduleFlyHeight);
 PREP(moduleFunctionsViewer);
 PREP(moduleHeal);
 PREP(moduleHideZeus);
