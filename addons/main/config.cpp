@@ -7,8 +7,9 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"cba_main"};
-        author = "";
-        url = "";
+        author = CSTRING(Author);
+        authors[] = {"mharis001"};
+        url = CSTRING(URL);
         VERSION_CONFIG;
     };
 };
