@@ -23,7 +23,7 @@ deleteVehicle _logic;
 if (isNull _unit) then {
     [LSTRING(ModuleChatter), [
         ["EDIT", LSTRING(ModuleChatter_Message)],
-        ["SIDES", LSTRING(ModuleChatter_Side), west]
+        ["SIDES", ELSTRING(common,Side), west]
     ], {
         params ["_dialogValues"];
         _dialogValues params ["_message", "_side"];

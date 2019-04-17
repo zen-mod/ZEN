@@ -98,6 +98,34 @@
             <English>Combat Ready</English>
         </Key>
 
+        <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby">
+            <English>Ambient Flyby</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_AircraftSelect">
+            <English>Aircraft Selection</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_FlyTowards">
+            <English>Fly Towards</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_FlyTowards_Tooltip">
+            <English>Aircraft will fly towards this direction from the opposite direction.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height">
+            <English>Height</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Tooltip">
+            <English>Sets the height that the aircraft will fly at, in meters.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Distance">
+            <English>Distance</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Distance_Tooltip">
+            <English>Sets the distance that the aircraft will start out from, in meters.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Speed_Tooltip">
+            <English>Sets how fast the aircraft will fly.</English>
+        </Key>
+
         <Key ID="STR_ZEN_Modules_ModuleAttachTo">
             <English>Attach To</English>
         </Key>
@@ -242,9 +270,6 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleChatter_Message">
             <English>Message</English>
-        </Key>
-        <Key ID="STR_ZEN_Modules_ModuleChatter_Side">
-            <English>Side</English>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleChatter_Channel">
             <English>Channel</English>

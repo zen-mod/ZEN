@@ -1,7 +1,10 @@
+PREP(compileAircraft);
+PREP(gui_ambientFlyby);
 PREP(initModule);
 PREP(moduleAmbientAnim);
 PREP(moduleAmbientAnimEnd);
 PREP(moduleAmbientAnimStart);
+PREP(moduleAmbientFlyby);
 PREP(moduleArsenal);
 PREP(moduleAttachEffect);
 PREP(moduleAttachTo);

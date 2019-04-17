@@ -93,6 +93,18 @@
         <Key ID="STR_ZEN_Common_Extreme">
             <English>Extreme</English>
         </Key>
+        <Key ID="STR_ZEN_Common_Side">
+            <English>Side</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_Faction">
+            <English>Faction</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_Aircraft">
+            <English>Aircraft</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_Speed">
+            <English>Speed</English>
+        </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects">
             <English>Add Objects to Curators</English>
         </Key>

@@ -24,6 +24,10 @@ class CfgVehicles {
         displayName = CSTRING(ModuleAmbientAnim);
         function = QFUNC(moduleAmbientAnim);
     };
+    class GVAR(moduleAmbientFlyby): GVAR(moduleBase) {
+        displayName = CSTRING(ModuleAmbientFlyby);
+        curatorInfoType = QGVAR(RscAmbientFlyby);
+    };
     class GVAR(moduleArsenal): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = "Curator";

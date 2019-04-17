@@ -16,6 +16,7 @@ class RscControlsGroup;
 class RscControlsGroupNoScrollbars;
 
 class EGVAR(attributes,RscLabel);
+class EGVAR(attributes,RscBackground);
 class EGVAR(attributes,RscEdit);
 class EGVAR(attributes,RscCombo);
 
@@ -785,6 +786,144 @@ BEGIN_MODULE_DIALOG(RscSetDate)
                 idc = IDC_SETDATE_SECOND;
                 tooltip = "$STR_3DEN_Attributes_SliderTime_Second_tooltip";
                 x = POS_W(20.1);
+            };
+        };
+    };
+END_MODULE_DIALOG;
+
+BEGIN_MODULE_DIALOG(RscAmbientFlyby)
+    class ambientFlyby: RscControlsGroupNoScrollbars {
+        idc = IDC_AMBIENTFLYBY;
+        function = QFUNC(gui_ambientFlyby);
+        x = 0;
+        y = 0;
+        w = POS_W(26);
+        h = POS_H(8.8);
+        class controls {
+            class AircraftSelect: RscControlsGroupNoScrollbars {
+                idc = -1;
+                x = 0;
+                y = 0;
+                w = POS_W(26);
+                h = POS_H(4.4);
+                class controls {
+                    class Title: EGVAR(attributes,RscLabel) {
+                        text = CSTRING(ModuleAmbientFlyby_AircraftSelect);
+                        w = POS_W(26);
+                    };
+                    class Background: EGVAR(attributes,RscBackground) {
+                        x = 0;
+                        y = POS_H(1);
+                        w = POS_W(26);
+                        h = POS_H(3.4);
+                    };
+                    class SideLabel: EGVAR(attributes,RscLabel) {
+                        text = ECSTRING(common,Side);
+                        x = POS_W(3);
+                        y = POS_H(1.1);
+                        w = POS_W(8.9);
+                        colorBackground[] = {0, 0, 0, 0.7};
+                    };
+                    class SideCombo: EGVAR(attributes,RscCombo) {
+                        idc = IDC_AMBIENTFLYBY_SIDE;
+                        x = POS_W(12);
+                        y = POS_H(1.1);
+                        w = POS_W(11);
+                        class Items {
+                            class BLUFOR {
+                                text = "$STR_West";
+                                picture = ICON_BLUFOR;
+                            };
+                            class OPFOR {
+                                text = "$STR_East";
+                                picture = ICON_OPFOR;
+                            };
+                            class Independent {
+                                text = "$STR_Guerrila";
+                                picture = ICON_INDEPENDENT;
+                            };
+                            class Civilian {
+                                text = "$STR_Civilian";
+                                picture = ICON_CIVILIAN;
+                            };
+                        };
+                    };
+                    class FactionLabel: SideLabel {
+                        text = ECSTRING(common,Faction);
+                        y = POS_H(2.2);
+                    };
+                    class FactionCombo: SideCombo {
+                        idc = IDC_AMBIENTFLYBY_FACTION;
+                        y = POS_H(2.2);
+                        class Items {};
+                    };
+                    class AircraftLabel: FactionLabel {
+                        text = ECSTRING(common,Aircraft);
+                        y = POS_H(3.3);
+                    };
+                    class AircraftCombo: FactionCombo {
+                        idc = IDC_AMBIENTFLYBY_AIRCRAFT;
+                        y = POS_H(3.3);
+                    };
+                };
+            };
+            class DirectionLabel: EGVAR(attributes,RscLabel) {
+                text = CSTRING(ModuleAmbientFlyby_FlyTowards);
+                tooltip = CSTRING(ModuleAmbientFlyby_FlyTowards_Tooltip);
+                y = POS_H(4.5);
+            };
+            class Direction: ctrlToolbox {
+                idc = IDC_AMBIENTFLYBY_DIRECTION;
+                x = POS_W(10.1);
+                y = POS_H(4.5);
+                w = POS_W(15.9);
+                h = POS_H(1);
+                rows = 1;
+                columns = 8;
+                strings[] = {"N", "NE", "E", "SE", "S", "SW", "W", "NW"};
+            };
+            class HeightLabel: EGVAR(attributes,RscLabel) {
+                text = CSTRING(ModuleAmbientFlyby_Height);
+                tooltip = CSTRING(ModuleAmbientFlyby_Height_Tooltip);
+                y = POS_H(5.6);
+            };
+            class HeightSlider: ctrlXSliderH {
+                idc = IDC_AMBIENTFLYBY_HEIGHT_SLIDER;
+                x = POS_W(10.1);
+                y = POS_H(5.6);
+                w = POS_W(13.4);
+                h = POS_H(1);
+            };
+            class HeightEdit: EGVAR(attributes,RscEdit) {
+                idc = IDC_AMBIENTFLYBY_HEIGHT_EDIT;
+                x = POS_W(23.6);
+                y = POS_H(5.6);
+                w = POS_W(2.4);
+                h = POS_H(1);
+            };
+            class DistanceLabel: EGVAR(attributes,RscLabel) {
+                text = CSTRING(ModuleAmbientFlyby_Distance);
+                tooltip = CSTRING(ModuleAmbientFlyby_Distance_Tooltip);
+                y = POS_H(6.7);
+            };
+            class DistanceSlider: HeightSlider {
+                idc = IDC_AMBIENTFLYBY_DISTANCE_SLIDER;
+                y = POS_H(6.7);
+            };
+            class DistanceEdit: HeightEdit {
+                idc = IDC_AMBIENTFLYBY_DISTANCE_EDIT;
+                y = POS_H(6.7);
+            };
+            class SpeedLabel: EGVAR(attributes,RscLabel) {
+                text = ECSTRING(common,Speed);
+                tooltip = CSTRING(ModuleAmbientFlyby_Speed_Tooltip);
+                y = POS_H(7.8);
+            };
+            class Speed: Direction {
+                idc = IDC_AMBIENTFLYBY_SPEED;
+                y = POS_H(7.8);
+                columns = 3;
+                strings[] = {"$STR_A3_Slow", "$STR_A3_Normal", "$STR_A3_Fast"};
             };
         };
     };

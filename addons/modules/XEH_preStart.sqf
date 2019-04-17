@@ -13,3 +13,5 @@ private _mineTypes = [];
 } forEach ("true" configClasses (configFile >> "CfgVehicles"));
 
 uiNamespace setVariable [QGVAR(mineTypes), _mineTypes];
+
+call FUNC(compileAircraft);
