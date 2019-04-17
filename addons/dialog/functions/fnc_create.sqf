@@ -159,6 +159,10 @@ scopeName "Main";
             _defaultValue = _default;
             _controlType = format [QGVAR(Row_Toolbox%1), _countStrings];
         };
+        case "VECTOR": {
+            _defaultValue = [_valueInfo] param [0, [0, 0], [], [2, 3]];
+            _controlType = [QGVAR(Row_VectorXY), QGVAR(Row_VectorXYZ)] select (count _defaultValue > 2);
+        };
     };
 
     // Exit if default value could not be found

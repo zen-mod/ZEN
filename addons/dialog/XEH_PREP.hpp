@@ -8,3 +8,4 @@ PREP(gui_edit);
 PREP(gui_sides);
 PREP(gui_slider);
 PREP(gui_toolbox);
+PREP(gui_vector);

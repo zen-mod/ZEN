@@ -331,3 +331,65 @@ class GVAR(Row_ColorRGBA): GVAR(Row_ColorRGB) {
         };
     };
 };
+
+class GVAR(Row_VectorXY): GVAR(Row_Base) {
+    GVAR(script) = QFUNC(gui_vector);
+    class controls: controls {
+        class Name: Name {};
+        class IconX: RscText {
+            idc = -1;
+            style = ST_CENTER;
+            text = "$STR_3DEN_Axis_X";
+            x = POS_W(10.1);
+            y = 0;
+            w = POS_W(1);
+            h = POS_H(1);
+            font = "RobotoCondensedLight";
+            colorBackground[] = {0.77, 0.18, 0.1, 1};
+            shadow = 0;
+        };
+        class EditX: GVAR(RscEdit) {
+            idc = IDC_ROW_VECTOR_X;
+            x = POS_W(11.2);
+            y = pixelH;
+            w = POS_W(6.8);
+            h = POS_H(1) - pixelH;
+        };
+        class IconY: IconX {
+            text = "$STR_3DEN_Axis_Y";
+            x = POS_W(18.1);
+            colorBackground[] = {0.58, 0.82, 0.22, 1};
+        };
+        class EditY: EditX {
+            idc = IDC_ROW_VECTOR_Y;
+            x = POS_W(19.2);
+        };
+    };
+};
+
+class GVAR(Row_VectorXYZ): GVAR(Row_VectorXY) {
+    class controls: controls {
+        class Name: Name {};
+        class IconX: IconX {};
+        class EditX: EditX {
+            w = POS_W(12.4/3);
+        };
+        class IconY: IconY {
+            x = POS_W(11.3 + 12.4/3);
+        };
+        class EditY: EditY {
+            x = POS_W(12.4 + 12.4/3);
+            w = POS_W(12.4/3);
+        };
+        class IconZ: IconX {
+            text = "$STR_3DEN_Axis_Z";
+            x = POS_W(12.5 + 2 * 12.4/3);
+            colorBackground[] = {0.26, 0.52, 0.92, 1};
+        };
+        class EditZ: EditX {
+            idc = IDC_ROW_VECTOR_Z;
+            x = POS_W(13.6 + 2 * 12.4/3);
+            w = POS_W(12.4/3);
+        };
+    };
+};
