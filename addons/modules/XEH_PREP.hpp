@@ -1,4 +1,5 @@
 PREP(compileAircraft);
+PREP(compileFlags);
 PREP(compileMines);
 PREP(gui_ambientFlyby);
 PREP(initModule);
@@ -8,6 +9,7 @@ PREP(moduleAmbientAnimStart);
 PREP(moduleAmbientFlyby);
 PREP(moduleArsenal);
 PREP(moduleAttachEffect);
+PREP(moduleAttachFlag);
 PREP(moduleAttachTo);
 PREP(moduleBindVariable);
 PREP(moduleChangeHeight);

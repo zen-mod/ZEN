@@ -47,6 +47,12 @@ class CfgVehicles {
         displayName = CSTRING(ModuleAttachEffect);
         curatorInfoType = QGVAR(RscAttachEffect);
     };
+    class GVAR(moduleAttachFlag): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Objects);
+        displayName = CSTRING(ModuleAttachFlag);
+        function = QFUNC(moduleAttachFlag);
+    };
     class GVAR(moduleBindVariable): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(DevTools);

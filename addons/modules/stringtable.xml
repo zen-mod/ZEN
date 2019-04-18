@@ -136,6 +136,13 @@
             <English>Cannot attach object to itself</English>
         </Key>
 
+        <Key ID="STR_ZEN_Modules_ModuleAttachFlag">
+            <English>Attach Flag</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAttachFlag_Type">
+            <English>Flag Type</English>
+        </Key>
+
         <Key ID="STR_ZEN_Modules_CreateIED">
             <English>Create IED</English>
         </Key>

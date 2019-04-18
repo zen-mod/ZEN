@@ -9,6 +9,7 @@ class CfgPatches {
             QGVAR(moduleArsenal),
             QGVAR(moduleAttachTo),
             QGVAR(moduleAttachEffect),
+            QGVAR(moduleAttachFlag),
             QGVAR(moduleBindVariable),
             QGVAR(moduleChangeHeight),
             QGVAR(moduleChatter),
