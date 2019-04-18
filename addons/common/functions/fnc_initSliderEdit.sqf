@@ -9,7 +9,8 @@
  * 3: Max <NUMBER>
  * 4: Value <NUMBER>
  * 5: Speed <NUMBER>
- * 6: Formatting <STRING>
+ * 6: Decimals <NUMBER> (default: 0)
+ * 7: Formatting <STRING> (default: "%1")
  *
  * Return Value:
  * None
@@ -21,7 +22,7 @@
  */
 #include "script_component.hpp"
 
-params ["_ctrlSlider", "_ctrlEdit", "_value", "_min", "_max", "_speed", ["_decimals", 0, [0]], ["_formatting", "%1", [""]]];
+params ["_ctrlSlider", "_ctrlEdit", "_min", "_max", "_value", "_speed", ["_decimals", 0, [0]], ["_formatting", "%1", [""]]];
 
 _ctrlSlider sliderSetRange [_min, _max];
 _ctrlSlider sliderSetSpeed [_speed, _speed];
