@@ -456,7 +456,7 @@ class GVAR(RscAttributeBehaviour): RscControlsGroupNoScrollbars {
         class Background: GVAR(RscBackground) {};
         class Careless: RscActivePicture {
             idc = IDC_BEHAVIOUR_CARELESS;
-            text = QPATHTOF(UI\careless_ca.paa);
+            text = QPATHTOF(ui\careless_ca.paa);
             tooltip = "$STR_3DEN_Attributes_Behaviour_Careless_text";
             x = POS_W(11.25);
             y = POS_H(0.5);
@@ -511,7 +511,7 @@ class GVAR(RscAttributeCombatMode): RscControlsGroupNoScrollbars {
         class Background: GVAR(RscBackground) {};
         class Blue: RscActivePicture {
             idc = IDC_COMBATMODE_BLUE;
-            text = QPATHTOF(UI\hold_ca.paa);
+            text = QPATHTOF(ui\hold_ca.paa);
             tooltip = "$STR_3DEN_Attributes_CombatMode_Blue_text";
             x = POS_W(11.25);
             y = POS_H(0.5);
@@ -520,25 +520,25 @@ class GVAR(RscAttributeCombatMode): RscControlsGroupNoScrollbars {
         };
         class Green: Blue {
             idc = IDC_COMBATMODE_GREEN;
-            text = QPATHTOF(UI\defend_ca.paa);
+            text = QPATHTOF(ui\defend_ca.paa);
             tooltip = "$STR_3DEN_Attributes_CombatMode_Green_text";
             x = POS_W(13.75);
         };
         class White: Blue {
             idc = IDC_COMBATMODE_WHITE;
-            text = QPATHTOF(UI\engage_ca.paa);
+            text = QPATHTOF(ui\engage_ca.paa);
             tooltip = "$STR_3DEN_Attributes_CombatMode_White_text";
             x = POS_W(16.25);
         };
         class Yellow: Blue {
             idc = IDC_COMBATMODE_YELLOW;
-            text = QPATHTOF(UI\hold_ca.paa);
+            text = QPATHTOF(ui\hold_ca.paa);
             tooltip = "$STR_3DEN_Attributes_CombatMode_Yellow_text";
             x = POS_W(18.75);
         };
         class Red: Blue {
             idc = IDC_COMBATMODE_RED;
-            text = QPATHTOF(UI\engage_ca.paa);
+            text = QPATHTOF(ui\engage_ca.paa);
             tooltip = "$STR_3DEN_Attributes_CombatMode_Red_text";
             x = POS_W(21.25);
         };

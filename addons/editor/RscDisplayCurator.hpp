@@ -67,7 +67,7 @@ class RscDisplayCurator {
                     onButtonClick = QUOTE([ARR_2(ctrlParent (_this select 0),false)] call FUNC(handleTreeButtons));
                 };
                 class ExpandAll: CollapseAll {
-                    text = QPATHTOF(UI\tree_expand_ca.paa);
+                    text = QPATHTOF(ui\tree_expand_ca.paa);
                     tooltip = "$STR_3DEN_ctrlButtonExpandAll_text";
                     x = 9.9 * GUI_GRID_W;
                     onButtonClick = QUOTE([ARR_2(ctrlParent (_this select 0),true)] call FUNC(handleTreeButtons));

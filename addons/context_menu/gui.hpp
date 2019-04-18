@@ -52,7 +52,7 @@ class GVAR(row): RscControlsGroupNoScrollbars {
         };
         class Expandable: RscPicture {
             idc = IDC_CONTEXT_EXPANDABLE;
-            text = QPATHTOF(UI\arrow_ca.paa);
+            text = QPATHTOF(ui\arrow_ca.paa);
             x = 7 * GUI_GRID_W;
             y = 0;
             w = GUI_GRID_W;

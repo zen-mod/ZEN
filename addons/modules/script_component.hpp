@@ -100,10 +100,10 @@
 
 #define ICON_GROUP "\a3\ui_f_curator\data\displays\rscdisplaycurator\modegroups_ca.paa"
 
-#define ICON_BLUFOR QPATHTOEF(common,UI\icon_blufor_ca.paa)
-#define ICON_OPFOR QPATHTOEF(common,UI\icon_opfor_ca.paa)
-#define ICON_INDEPENDENT QPATHTOEF(common,UI\icon_independent_ca.paa)
-#define ICON_CIVILIAN QPATHTOEF(common,UI\icon_civilian_ca.paa)
+#define ICON_BLUFOR QPATHTOEF(common,ui\icon_blufor_ca.paa)
+#define ICON_OPFOR QPATHTOEF(common,ui\icon_opfor_ca.paa)
+#define ICON_INDEPENDENT QPATHTOEF(common,ui\icon_independent_ca.paa)
+#define ICON_CIVILIAN QPATHTOEF(common,ui\icon_civilian_ca.paa)
 
 #define GET_SIDE_ICON(unit) (unit call EFUNC(common,getSideIcon))
 
