@@ -13,6 +13,7 @@ class CfgPatches {
             QGVAR(moduleBindVariable),
             QGVAR(moduleChangeHeight),
             QGVAR(moduleChatter),
+            QGVAR(moduleConvoyParameters),
             QGVAR(moduleCreateIED),
             QGVAR(moduleCreateMinefield),
             QGVAR(moduleDamageBuildings),

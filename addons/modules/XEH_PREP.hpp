@@ -14,6 +14,7 @@ PREP(moduleAttachTo);
 PREP(moduleBindVariable);
 PREP(moduleChangeHeight);
 PREP(moduleChatter);
+PREP(moduleConvoyParameters);
 PREP(moduleCreateIED);
 PREP(moduleCreateMinefield);
 PREP(moduleDamageBuildings);

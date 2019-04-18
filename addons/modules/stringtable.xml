@@ -162,6 +162,28 @@
             <English>Is Jammable</English>
         </Key>
 
+        <Key ID="STR_ZEN_Modules_ModuleConvoyParameters">
+            <English>Convoy Parameters</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_Separation">
+            <English>Convoy Separation</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_Separation_Tooltip">
+            <English>Sets the distance that the vehicle will keep to the vehicle in front of it, in meters.\nSmall values should only be used for slow moving convoys.\nFor best results, vehicles should be in the same group with a column formation.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_Speed">
+            <English>Speed Limit</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_Speed_Tooltip">
+            <English>Limits the speed of the vehicle to the given value, in kilometers per hour.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_ForceRoad">
+            <English>Stay On Road</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_ForceRoad_Tooltip">
+            <English>Forces the vehicle to stay on the road.</English>
+        </Key>
+
         <Key ID="STR_ZEN_Modules_BindVariable">
             <English>Bind Variable To Object</English>
         </Key>

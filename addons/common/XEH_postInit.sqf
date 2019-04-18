@@ -80,6 +80,21 @@
     _aircraft flyInHeight _height;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setConvoySeparation), {
+    params ["_vehicle", "_distance"];
+    _vehicle setConvoySeparation _distance;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(limitSpeed), {
+    params ["_vehicle", "_speed"];
+    _vehicle limitSpeed _speed;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(forceFollowRoad), {
+    params ["_vehicle", "_mode"];
+    _vehicle forceFollowRoad _mode;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(setName), {
     params ["_unit", "_name"];
     _unit setName _name;

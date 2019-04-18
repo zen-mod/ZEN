@@ -70,6 +70,12 @@ class CfgVehicles {
         displayName = CSTRING(ModuleChatter);
         function = QFUNC(moduleChatter);
     };
+    class GVAR(moduleConvoyParameters): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = CSTRING(ModuleConvoyParameters);
+        function = QFUNC(moduleConvoyParameters);
+    };
     class GVAR(moduleCreateIED): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Objects);
