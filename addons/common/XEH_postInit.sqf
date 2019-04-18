@@ -110,6 +110,11 @@
     _unit switchMove _animation;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setPlateNumber), {
+    params ["_vehicle", "_string"];
+    _vehicle setPlateNumber _string;
+}] call CBA_fnc_addEventHandler;
+
 if (isServer) then {
     [QGVAR(hideObjectGlobal), {
         params ["_object", "_hide"];

@@ -93,6 +93,23 @@ class GVAR(RscAttributeGroupID): RscControlsGroupNoScrollbars {
     };
 };
 
+class GVAR(RscAttributePlateNumber): RscControlsGroupNoScrollbars {
+    idc = IDC_PLATENUMBER;
+    function = QFUNC(attributePlateNumber);
+    x = 0;
+    y = 0;
+    w = POS_W(26);
+    h = POS_H(1);
+    class controls {
+        class Label: GVAR(RscLabel) {
+            text = CSTRING(PlateNumber);
+        };
+        class Edit: GVAR(RscEdit) {
+            idc = IDC_PLATENUMBER_EDIT;
+        };
+    };
+};
+
 class GVAR(RscAttributeSkill): RscControlsGroupNoScrollbars {
     idc = IDC_SKILL;
     function = QFUNC(attributeSkill);
@@ -757,6 +774,7 @@ class GVAR(RscAttributesVehicle): GVAR(RscAttributesBase) {
                 class Damage: GVAR(RscAttributeDamage) {};
                 class Fuel: GVAR(RscAttributeFuel) {};
                 class Rank: GVAR(RscAttributeRank) {};
+                class PlateNumber: GVAR(RscAttributePlateNumber) {};
                 class RespawnPosition: GVAR(RscAttributeRespawnPosition) {};
             };
         };
@@ -781,6 +799,7 @@ class GVAR(RscAttributesVehicleEmpty): GVAR(RscAttributesBase) {
             class Controls {
                 class Damage: GVAR(RscAttributeDamage) {};
                 class Fuel: GVAR(RscAttributeFuel) {};
+                class PlateNumber: GVAR(RscAttributePlateNumber) {};
                 class RespawnPosition: GVAR(RscAttributeRespawnPosition) {};
             };
         };

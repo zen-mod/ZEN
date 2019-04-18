@@ -32,12 +32,17 @@ private _contentPosY = 0;
     private _function = getText (_x >> "function");
     _display call (missionNamespace getVariable _function);
 
-    private _controlPos = ctrlPosition _control;
-    _controlPos set [1, _contentPosY];
-    _control ctrlSetPosition _controlPos;
-    _control ctrlCommit 0;
+    if (ctrlEnabled _control) then {
+        private _controlPos = ctrlPosition _control;
+        _controlPos set [1, _contentPosY];
+        _control ctrlSetPosition _controlPos;
 
-    _contentPosY = _contentPosY + (_controlPos select 3) + POS_H(0.1);
+        _contentPosY = _contentPosY + (_controlPos select 3) + POS_H(0.1);
+    } else {
+        _control ctrlSetPosition [0, 0, 0, 0];
+    };
+
+    _control ctrlCommit 0;
 } forEach configProperties [_displayConfig >> "controls" >> "Content" >> "controls", "isClass _x"];
 
 private _contentHeight = (_contentPosY - POS_H(0.1)) min MAX_HEIGHT;

@@ -7,6 +7,7 @@ PREP(attributeGroupID);
 PREP(attributeMarkerColor);
 PREP(attributeMarkerText);
 PREP(attributeName);
+PREP(attributePlateNumber);
 PREP(attributeRank);
 PREP(attributeRespawnPosition);
 PREP(attributeSkill);
