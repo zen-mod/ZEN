@@ -1,4 +1,4 @@
 PREP(changeBrightness);
-PREP(setVisionModes);
-PREP(showVisionModes);
+PREP(setModes);
+PREP(showHint);
 PREP(updateEffect);

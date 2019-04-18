@@ -16,8 +16,8 @@ GVAR(ppBrightness) ppEffectEnable false;
     params ["_name"];
 
     if (_name in [QGVAR(enableNVG), QGVAR(enableWhiteHot), QGVAR(enableBlackHot), QGVAR(enableGreenHotCold), QGVAR(enableBlackHotGreenCold), QGVAR(enableRedHotCold), QGVAR(enableBlackHotRedCold), QGVAR(enableWhiteHotRedCold), QGVAR(enableRedGreenThermal)]) then {
-        [] call FUNC(setVisionModes);
+        [] call FUNC(setModes);
     };
 }] call CBA_fnc_addEventHandler;
 
-[QEGVAR(common,moduleSetup), FUNC(setVisionModes)] call CBA_fnc_addEventHandler;
+[QEGVAR(common,moduleSetup), FUNC(setModes)] call CBA_fnc_addEventHandler;

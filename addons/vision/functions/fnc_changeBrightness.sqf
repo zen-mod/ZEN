@@ -1,7 +1,6 @@
 /*
  * Author: mharis001
- * Changes the current NVG brightness.
- * Called from keybindings.
+ * Changes the current NVG brightness. Called from keybindings.
  *
  * Arguments:
  * 0: Change <NUMBER>
@@ -19,7 +18,7 @@
 params ["_change"];
 
 // Update current brightness and trigger effects update
-GVAR(brightness) = ((GVAR(brightness) + _change) min MAX_BRIGHTNESS) max MIN_BRIGHTNESS;
+GVAR(brightness) = MIN_BRIGHTNESS max (GVAR(brightness) + _change) min MAX_BRIGHTNESS;
 [] call FUNC(updateEffect);
 
 // Display hint for current brightness level

@@ -5,7 +5,7 @@ class RscTitles {
         idd = -1;
         fadeIn = 0;
         duration = 2;
-        onLoad = QUOTE(_this call FUNC(showVisionModes));
+        onLoad = QUOTE(_this call FUNC(showHint));
         class controls {
             class Mode_0: RscText {
                 idc = IDC_MODE_0;

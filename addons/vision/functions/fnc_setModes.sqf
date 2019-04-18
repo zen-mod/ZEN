@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [] call zen_vision_fnc_setVisionModes
+ * [] call zen_vision_fnc_setModes
  *
  * Public: No
  */
