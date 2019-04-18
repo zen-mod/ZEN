@@ -65,8 +65,8 @@ class EGVAR(attributes,RscAttributesBase) {
 
 BEGIN_MODULE_DIALOG(RscGlobalHint)
     class globalHint: RscControlsGroupNoScrollbars {
-        onSetFocus = QUOTE(_this call FUNC(ui_globalHint));
         idc = IDC_GLOBALHINT;
+        function = QFUNC(gui_globalHint);
         x = 0;
         y = 0;
         w = POS_W(26);
@@ -111,8 +111,8 @@ END_MODULE_DIALOG;
 
 BEGIN_MODULE_DIALOG(RscSideRelations)
     class sideRelations: RscControlsGroupNoScrollbars {
-        onSetFocus = QUOTE(_this call FUNC(ui_sideRelations));
         idc = IDC_SIDERELATIONS;
+        function = QFUNC(gui_sideRelations);
         x = 0;
         y = 0;
         w = POS_W(26);
@@ -179,8 +179,8 @@ END_MODULE_DIALOG;
 
 BEGIN_MODULE_DIALOG(RscTeleportPlayers)
     class teleportPlayers: RscControlsGroupNoScrollbars {
-        onSetFocus = QUOTE(_this call FUNC(ui_teleportPlayers));
         idc = IDC_TELEPORTPLAYERS;
+        function = QFUNC(gui_teleportPlayers);
         x = 0;
         y = 0;
         w = POS_W(26);
@@ -337,8 +337,8 @@ END_MODULE_DIALOG;
 
 BEGIN_MODULE_DIALOG(RscDamageBuildings)
     class damageBuildings: RscControlsGroupNoScrollbars {
-        onSetFocus = QUOTE(_this call FUNC(ui_damageBuildings));
         idc = IDC_DAMAGEBUILDINGS;
+        function = QFUNC(gui_damageBuildings);
         x = 0;
         y = 0;
         w = POS_W(26);
@@ -435,8 +435,8 @@ END_MODULE_DIALOG;
 
 BEGIN_MODULE_DIALOG(RscAttachEffect)
     class attachEffect: RscControlsGroupNoScrollbars {
-        onSetFocus = QUOTE(_this call FUNC(ui_attachEffect));
         idc = IDC_ATTACHEFFECT;
+        function = QFUNC(gui_attachEffect);
         x = 0;
         y = 0;
         w = POS_W(26);
@@ -524,8 +524,8 @@ END_MODULE_DIALOG;
 
 BEGIN_MODULE_DIALOG(RscSetDate)
     class setDate: RscControlsGroupNoScrollbars {
-        onSetFocus = QUOTE(_this call FUNC(ui_setDate));
         idc = IDC_SETDATE;
+        function = QFUNC(gui_setDate);
         x = 0;
         y = 0;
         w = POS_W(26);

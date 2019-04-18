@@ -3,27 +3,22 @@
  * Initializes the "Global Hint" Zeus module display.
  *
  * Arguments:
- * 0: globalHint controls group <CONTROL>
+ * 0: Display <DISPLAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL] call zen_modules_fnc_ui_globalHint
+ * [DISPLAY] call zen_modules_fnc_gui_globalHint
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params ["_control"];
+params ["_display"];
 
-// Generic init
-private _display = ctrlParent _control;
 private _ctrlButtonOK = _display displayCtrl IDC_OK;
 private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-TRACE_1("Logic Object",_logic);
-
-_control ctrlRemoveAllEventHandlers "SetFocus";
 
 // Add EHs to update preview
 private _fnc_updatePreview = {
@@ -59,8 +54,6 @@ private _fnc_onConfirm = {
     private _message = parseText ctrlText _ctrlEdit;
 
     [QEGVAR(common,hint), _message] call CBA_fnc_globalEvent;
-
-    deleteVehicle _logic;
 };
 
 _display displayAddEventHandler ["Unload", _fnc_onUnload];

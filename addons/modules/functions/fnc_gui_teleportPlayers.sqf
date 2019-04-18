@@ -3,13 +3,13 @@
  * Initializes the "Teleport Players" Zeus module display.
  *
  * Arguments:
- * 0: teleportPlayers controls group <CONTROL>
+ * 0: Display <DISPLAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL] call zen_modules_fnc_ui_teleportPlayers
+ * [DISPLAY] call zen_modules_fnc_gui_teleportPlayers
  *
  * Public: No
  */
@@ -34,15 +34,10 @@
     IDC_TELEPORTPLAYERS_CIVILIAN\
 ]
 
-params ["_control"];
+params ["_display"];
 
-// Generic init
-private _display = ctrlParent _control;
 private _ctrlButtonOK = _display displayCtrl IDC_OK;
 private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-TRACE_1("Logic Object",_logic);
-
-_control ctrlRemoveAllEventHandlers "SetFocus";
 
 // Set selection variables
 _display setVariable [QGVAR(selectedSides), []];

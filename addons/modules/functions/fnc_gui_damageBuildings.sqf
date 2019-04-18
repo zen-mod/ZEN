@@ -3,13 +3,13 @@
  * Initializes the "Damage Buildings" Zeus module display.
  *
  * Arguments:
- * 0: damageBuildings controls group <CONTROL>
+ * 0: Display <DISPLAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL] call zen_modules_fnc_ui_damageBuildings
+ * [DISPLAY] call zen_modules_fnc_gui_damageBuildings
  *
  * Public: No
  */
@@ -17,14 +17,10 @@
 
 #define IDCS_CHECKBOXES [IDC_DAMAGEBUILDINGS_UNDAMAGED, IDC_DAMAGEBUILDINGS_DAMAGED_1, IDC_DAMAGEBUILDINGS_DAMAGED_2, IDC_DAMAGEBUILDINGS_DAMAGED_3, IDC_DAMAGEBUILDINGS_DESTROYED]
 
-params ["_control"];
+params ["_display"];
 
-private _display = ctrlParent _control;
 private _ctrlButtonOK = _display displayCtrl IDC_OK;
 private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-TRACE_1("Logic Object",_logic);
-
-_control ctrlRemoveAllEventHandlers "SetFocus";
 
 // Verify a building is near the module
 private _building = nearestObject [_logic, "Building"];

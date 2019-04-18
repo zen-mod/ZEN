@@ -3,13 +3,13 @@
  * Initializes the "Set Date" Zeus module display.
  *
  * Arguments:
- * 0: setDate controls group <CONTROL>
+ * 0: Display <DISPLAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL] call zen_modules_fnc_ui_setDate
+ * [DISPLAY] call zen_modules_fnc_gui_setDate
  *
  * Public: No
  */
@@ -25,13 +25,10 @@
     _ctrlMinute ctrlSetText FORMAT_TIME(_value / 60 % 60); \
     _ctrlSecond ctrlSetText FORMAT_TIME(_value % 60)
 
-params ["_control"];
+params ["_display"];
 
-private _display = ctrlParent _control;
 private _ctrlButtonOK = _display displayCtrl IDC_OK;
 private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-
-_control ctrlRemoveAllEventHandlers "SetFocus";
 
 date params ["_currentYear", "_currentMonth", "_currentDay", "_currentHour", "_currentMinute"];
 

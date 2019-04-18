@@ -3,25 +3,22 @@
  * Initializes the "Attach Effect" Zeus module display.
  *
  * Arguments:
- * 0: attachEffect controls group <CONTROL>
+ * 0: Display <DISPLAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL] call zen_modules_fnc_ui_attachEffect
+ * [DISPLAY] call zen_modules_fnc_gui_attachEffect
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params ["_control"];
+params ["_display"];
 
-private _display = ctrlParent _control;
 private _ctrlButtonOK = _display displayCtrl IDC_OK;
 private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-
-_control ctrlRemoveAllEventHandlers "SetFocus";
 
 scopeName "Main";
 private _fnc_errorAndClose = {
