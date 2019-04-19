@@ -6,15 +6,15 @@ class GVAR(group): RscControlsGroupNoScrollbars {
     idc = IDC_CONTEXT_GROUP;
     x = 0;
     y = 0;
-    w = 8 * GUI_GRID_W;
-    h = GUI_GRID_H;
+    w = POS_W(8);
+    h = POS_H(1);
     class controls {
         class Background: RscText {
             idc = IDC_CONTEXT_BACKGROUND;
             x = 0;
             y = 0;
-            w = 8 * GUI_GRID_W;
-            h = GUI_GRID_H;
+            w = POS_W(8);
+            h = POS_H(1);
             colorBackground[] = {0.1, 0.1, 0.1, 0.5};
         };
     };
@@ -24,47 +24,47 @@ class GVAR(row): RscControlsGroupNoScrollbars {
     idc = IDC_CONTEXT_ROW;
     x = 0;
     y = 0;
-    w = 8 * GUI_GRID_W;
-    h = GUI_GRID_H;
+    w = POS_W(8);
+    h = POS_H(1);
     class controls {
         class Highlight: RscText {
             idc = IDC_CONTEXT_HIGHLIGHT;
             x = 0;
             y = 0;
-            w = 8 * GUI_GRID_W;
-            h = GUI_GRID_H;
+            w = POS_W(8);
+            h = POS_H(1);
         };
         class Name: RscText {
             idc = IDC_CONTEXT_NAME;
-            x = 1.1 * GUI_GRID_W;
+            x = POS_W(1.1);
             y = 0;
-            w = 6.8 * GUI_GRID_W;
-            h = GUI_GRID_H;
-            sizeEx = 0.8 * GUI_GRID_H;
+            w = POS_W(6.8);
+            h = POS_H(1);
+            sizeEx = POS_H(0.8);
             shadow = 0;
         };
         class Icon: RscPicture {
             idc = IDC_CONTEXT_ICON;
-            x = 0.2 * GUI_GRID_W;
-            y = 0.05 * GUI_GRID_H;
-            w = 0.9 * GUI_GRID_W;
-            h = 0.9 * GUI_GRID_H;
+            x = POS_W(0.2);
+            y = POS_H(0.05);
+            w = POS_W(0.9);
+            h = POS_H(0.9);
         };
         class Expandable: RscPicture {
             idc = IDC_CONTEXT_EXPANDABLE;
             text = QPATHTOF(ui\arrow_ca.paa);
-            x = 7 * GUI_GRID_W;
+            x = POS_W(7);
             y = 0;
-            w = GUI_GRID_W;
-            h = GUI_GRID_H;
+            w = POS_W(1);
+            h = POS_H(1);
         };
         class MouseArea: RscText {
             idc = IDC_CONTEXT_MOUSE;
-            style = 16;
+            style = ST_MULTI;
             x = 0;
             y = 0;
-            w = 8 * GUI_GRID_W;
-            h = GUI_GRID_H;
+            w = POS_W(8);
+            h = POS_H(1);
         };
     };
 };

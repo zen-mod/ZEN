@@ -100,7 +100,7 @@ private _numberOfRows = 0;
             private _statement = _ctrlContextRow getVariable QGVAR(statement);
             SETUP_ACTION_VARS;
             ACTION_PARAMS call _statement;
-            {call FUNC(closeMenu)} call CBA_fnc_execNextFrame;
+            FUNC(closeMenu) call CBA_fnc_execNextFrame;
         };
     }];
 
@@ -108,15 +108,15 @@ private _numberOfRows = 0;
     _ctrlContextRow setVariable [QGVAR(children), _children];
 
     // Update row position in group
-    _ctrlContextRow ctrlSetPosition [0, _numberOfRows * GUI_GRID_H];
+    _ctrlContextRow ctrlSetPosition [0, POS_H(_numberOfRows)];
     _ctrlContextRow ctrlCommit 0;
 
     _numberOfRows = _numberOfRows + 1;
 } forEach _contextActions;
 
 // Determine width and height of context group
-private _wPos = 8 * GUI_GRID_W;
-private _hPos = _numberOfRows * GUI_GRID_H;
+private _wPos = POS_W(8);
+private _hPos = POS_H(_numberOfRows);
 
 // Update context background position
 private _ctrlBackground = _ctrlContextGroup controlsGroupCtrl IDC_CONTEXT_BACKGROUND;

@@ -42,10 +42,11 @@
                 // Right clicking with AI selected places waypoints
                 // Do not want to open context menu when this is the case
                 curatorSelected params ["_selectedObjects", "_selectedGroups", "_selectedWaypoints"];
-                if (GVAR(canContext) &&
-                    {_selectedWaypoints isEqualTo []} &&
-                    {_selectedGroups findIf {!isPlayer leader _x} == -1} &&
-                    {_selectedObjects findIf {_x isKindOf "CAManBase" && {!isPlayer leader _x}} == -1}
+                if (
+                    GVAR(canContext)
+                    && {_selectedWaypoints isEqualTo []}
+                    && {_selectedGroups findIf {!isPlayer leader _x} == -1}
+                    && {_selectedObjects findIf {!isPlayer leader _x && {!isNull group _x}} == -1}
                 ) then {
                     call FUNC(openMenu);
                 };

@@ -19,6 +19,11 @@
 #include "\a3\ui_f\hpp\defineCommonGrids.inc"
 #include "\a3\ui_f_curator\ui\defineResinclDesign.inc"
 
+#define POS_X(N) ((N) * GUI_GRID_W + GUI_GRID_CENTER_X)
+#define POS_Y(N) ((N) * GUI_GRID_H + GUI_GRID_CENTER_Y)
+#define POS_W(N) ((N) * GUI_GRID_W)
+#define POS_H(N) ((N) * GUI_GRID_H)
+
 #define IDC_CONTEXT_GROUP 185000
 #define IDC_CONTEXT_BACKGROUND 200
 #define IDC_CONTEXT_ROW 300
@@ -28,8 +33,8 @@
 #define IDC_CONTEXT_EXPANDABLE 340
 #define IDC_CONTEXT_MOUSE 350
 
-#define SPACING_W (0.2 * GUI_GRID_W)
-#define SPACING_H (0.2 * GUI_GRID_H)
+#define SPACING_W POS_W(0.2)
+#define SPACING_H POS_H(0.2)
 
 #define SETUP_ACTION_VARS \
     private _contextPosASL = call FUNC(getContextPos);\
