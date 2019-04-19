@@ -30,16 +30,14 @@ private _fnc_onConfirm = {
     private _entity = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 
     private _ctrlEdit = _display displayCtrl IDC_NAME_EDIT;
-    private _newName = ctrlText _ctrlEdit;
-    private _oldName = name _entity;
+    private _name = ctrlText _ctrlEdit;
 
-    // Change names of selected units
-    if !(_newName isEqualTo _oldName) then {
-        {
-            if (alive _x && {_x isKindOf "CAManBase"}) then {
-                [QEGVAR(common,setName), [_x, _newName]] call CBA_fnc_globalEvent;
-            };
-        } forEach (curatorSelected select 0);
+    if !(_name isEqualTo name _entity) then {
+        [QEGVAR(common,setName), [_entity, _newName]] call CBA_fnc_globalEvent;
+
+        if (isClass (configFile >> "CfgPatches" >> "ace_common")) then {
+            [_entity] call ace_common_fnc_setName;
+        };
     };
 };
 
