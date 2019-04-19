@@ -40,7 +40,7 @@ GVAR(contextGroups) set [_contextLevel, _ctrlContextGroup];
 private _numberOfRows = 0;
 
 {
-    _x params ["_actionName", "_displayName", "_icon", "_iconColor", "_statement", "_condition", "", "_children"];
+    _x params ["", "_displayName", "_icon", "_iconColor", "_statement", "_condition", "", "_children"];
 
     // Create context row control
     private _ctrlContextRow = _display ctrlCreate [QGVAR(row), IDC_CONTEXT_ROW, _ctrlContextGroup];
@@ -97,13 +97,20 @@ private _numberOfRows = 0;
 
         if (_button isEqualTo 0) then {
             private _ctrlContextRow = ctrlParentControlsGroup _ctrlMouse;
+
+            private _condition = _ctrlContextRow getVariable QGVAR(condition);
             private _statement = _ctrlContextRow getVariable QGVAR(statement);
             SETUP_ACTION_VARS;
-            ACTION_PARAMS call _statement;
+
+            if (ACTION_PARAMS call _condition) then {
+                ACTION_PARAMS call _statement;
+            };
+
             FUNC(closeMenu) call CBA_fnc_execNextFrame;
         };
     }];
 
+    _ctrlContextRow setVariable [QGVAR(condition), _condition];
     _ctrlContextRow setVariable [QGVAR(statement), _statement];
     _ctrlContextRow setVariable [QGVAR(children), _children];
 
