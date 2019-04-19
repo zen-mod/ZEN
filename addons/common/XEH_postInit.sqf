@@ -115,6 +115,11 @@
     _object allowDamage _allow;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(lock), {
+    params ["_vehicle", "_state"];
+    _vehicle lock _state;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(playMoveNow), {
     params ["_unit", "_animation"];
     _unit playMoveNow _animation;

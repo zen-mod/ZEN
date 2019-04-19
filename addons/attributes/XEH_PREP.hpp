@@ -4,6 +4,7 @@ PREP(attributeDamage);
 PREP(attributeFormation);
 PREP(attributeFuel);
 PREP(attributeGroupID);
+PREP(attributeLock);
 PREP(attributeMarkerColor);
 PREP(attributeMarkerText);
 PREP(attributeName);

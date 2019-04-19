@@ -126,5 +126,8 @@
 #define IDC_PLATENUMBER 86600
 #define IDC_PLATENUMBER_EDIT 86601
 
+#define IDC_LOCK 86700
+#define IDC_LOCK_TOOLBOX 86701
+
 #define FORMAT_ROUND(value) (str round value)
 #define FORMAT_PERCENT(value) (format ["%1%2", round (value * 100), "%"])

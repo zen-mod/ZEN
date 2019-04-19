@@ -195,6 +195,48 @@ class GVAR(RscAttributeAmmo): RscControlsGroupNoScrollbars {
     };
 };
 
+class GVAR(RscAttributeLock): RscControlsGroupNoScrollbars {
+    idc = IDC_LOCK;
+    function = QFUNC(attributeLock);
+    x = 0;
+    y = 0;
+    w = POS_W(26);
+    h = POS_H(2);
+    class controls {
+        class Label: GVAR(RscLabel) {
+            text = "$STR_3DEN_Object_Attribute_Lock_displayName";
+            h = POS_H(2);
+        };
+        class Toolbox: ctrlToolbox {
+            idc = IDC_LOCK_TOOLBOX;
+            x = POS_W(10.1);
+            y = 0;
+            w = POS_W(15.9);
+            h = POS_H(2);
+            rows = 2;
+            columns = 2;
+            strings[] = {
+                "$STR_3DEN_Attributes_Lock_Locked_text",
+                "$STR_3DEN_Attributes_Lock_Unlocked_text",
+                "$STR_3DEN_Attributes_Lock_Default_text",
+                "$STR_3DEN_Attributes_Lock_LockedForPlayer_text"
+            };
+            tooltips[] = {
+                "$STR_3DEN_Attributes_Lock_Locked_tooltip",
+                "$STR_3DEN_Attributes_Lock_Unlocked_tooltip",
+                "$STR_3DEN_Attributes_Lock_Default_tooltip",
+                "$STR_3DEN_Attributes_Lock_LockedForPlayer_tooltip"
+            };
+            values[] = {
+                2,
+                0,
+                1,
+                3
+            };
+        };
+    };
+};
+
 class GVAR(RscAttributeRank): RscControlsGroupNoScrollbars {
     idc = IDC_RANK;
     function = QFUNC(attributeRank);
@@ -774,6 +816,7 @@ class GVAR(RscAttributesVehicle): GVAR(RscAttributesBase) {
                 class Damage: GVAR(RscAttributeDamage) {};
                 class Fuel: GVAR(RscAttributeFuel) {};
                 class Rank: GVAR(RscAttributeRank) {};
+                class Lock: GVAR(RscAttributeLock) {};
                 class PlateNumber: GVAR(RscAttributePlateNumber) {};
                 class RespawnPosition: GVAR(RscAttributeRespawnPosition) {};
             };
@@ -799,6 +842,7 @@ class GVAR(RscAttributesVehicleEmpty): GVAR(RscAttributesBase) {
             class Controls {
                 class Damage: GVAR(RscAttributeDamage) {};
                 class Fuel: GVAR(RscAttributeFuel) {};
+                class Lock: GVAR(RscAttributeLock) {};
                 class PlateNumber: GVAR(RscAttributePlateNumber) {};
                 class RespawnPosition: GVAR(RscAttributeRespawnPosition) {};
             };
