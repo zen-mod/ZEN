@@ -78,6 +78,13 @@ class EGVAR(context_menu,actions) {
             statement = QUOTE([ARR_2(_selectedObjects,'DOWN')] call FUNC(setStance));
         };
     };
+    class Arsenal {
+        displayName = "$STR_3den_display3den_entitymenu_arsenal_text";
+        icon = "\a3\3den\data\displays\display3den\entitymenu\arsenal_ca.paa";
+        condition = QUOTE(_hoveredEntity isEqualType objNull && {_hoveredEntity isKindOf 'CAManBase'} && {alive _hoveredEntity});
+        statement = QUOTE(_hoveredEntity call EFUNC(common,openArsenal));
+        priority = -80;
+    };
     class TeleportZeus {
         displayName = CSTRING(TeleportZeus);
         icon = "\a3\Ui_F_Curator\Data\Logos\arma3_curator_eye_256_ca.paa";
