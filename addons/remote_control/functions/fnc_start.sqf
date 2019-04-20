@@ -17,6 +17,8 @@
 
 params ["_unit"];
 
+_unit = effectiveCommander _unit;
+
 _unit setVariable [VAR_OWNER, player, true];
 missionNamespace setVariable [VAR_UNIT, _unit];
 
