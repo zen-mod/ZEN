@@ -1,4 +1,5 @@
 PREP(addObjectToCurators);
+PREP(collapseTree);
 PREP(getModuleTarget);
 PREP(getSideIcon);
 PREP(initDisplayCurator);

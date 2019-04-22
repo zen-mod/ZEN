@@ -42,18 +42,5 @@ private _ctrlTree = _display displayCtrl _treeIDC;
 if (_expand) then {
     tvExpandAll _ctrlTree;
 } else {
-    // tvCollapseAll is bugged and results in the scroll bar not
-    // automatically showing without selecting a tree item first
-    // this gets around this by using tvCollapse on all tree paths
-    private _fnc_collapse = {
-        if !(_this isEqualTo []) then {
-            _ctrlTree tvCollapse _this;
-        };
-
-        for "_i" from 0 to ((_ctrlTree tvCount _this) - 1) do {
-            _this + [_i] call _fnc_collapse;
-        };
-    };
-
-    [] call _fnc_collapse;
+    _ctrlTree call EFUNC(common,collapseTree);
 };

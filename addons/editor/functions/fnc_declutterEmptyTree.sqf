@@ -15,6 +15,8 @@
  */
 #include "script_component.hpp"
 
+IF (!GVAR(declutterEmptyTree)) exitWith {};
+
 params ["_display"];
 
 // Get faction names for west, east, independent, and civilian

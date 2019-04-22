@@ -44,11 +44,24 @@ if (GVAR(disableLiveSearch)) then {
     _ctrlSearchButton ctrlAddEventHandler ["ButtonClick", {call FUNC(handleSearchButton)}];
 };
 
-if (GVAR(declutterEmptyTree)) then {
-    [FUNC(declutterEmptyTree), _display] call CBA_fnc_execNextFrame;
-};
-
 {
     private _ctrl = _display displayCtrl _x;
     _ctrl ctrlAddEventHandler ["ButtonClick", {call FUNC(fixSideButtons)}];
 } forEach IDCS_MODE_BUTTONS;
+
+[{
+    params ["_display"];
+
+    [_display] call FUNC(declutterEmptyTree);
+
+    {
+        private _ctrl = _display displayCtrl _x;
+        _ctrl call EFUNC(common,collapseTree);
+    } forEach IDCS_UNIT_TREES;
+
+    {
+        private _ctrl = _display displayCtrl _x;
+        _ctrl call EFUNC(common,collapseTree);
+        _ctrl tvExpand [0]; // Expand side level path so all factions are visible
+    } forEach IDCS_GROUP_TREES;
+}, _display] call CBA_fnc_execNextFrame;
