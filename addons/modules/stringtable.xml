@@ -184,6 +184,10 @@
             <English>Forces the vehicle to stay on the road.</English>
         </Key>
 
+        <Key ID="STR_ZEN_Modules_ModuleCAS_Bomb">
+            <English>CAS - Bomb Strike</English>
+        </Key>
+
         <Key ID="STR_ZEN_Modules_BindVariable">
             <English>Bind Variable To Object</English>
         </Key>

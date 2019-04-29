@@ -1,8 +1,10 @@
 PREP(compileAircraft);
+PREP(compileCAS);
 PREP(compileFlags);
 PREP(compileMines);
 PREP(gui_ambientFlyby);
 PREP(gui_attachEffect);
+PREP(gui_cas);
 PREP(gui_damageBuildings);
 PREP(gui_globalHint);
 PREP(gui_setDate);
@@ -18,6 +20,7 @@ PREP(moduleAttachEffect);
 PREP(moduleAttachFlag);
 PREP(moduleAttachTo);
 PREP(moduleBindVariable);
+PREP(moduleCAS);
 PREP(moduleChangeHeight);
 PREP(moduleChatter);
 PREP(moduleConvoyParameters);

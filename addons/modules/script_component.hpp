@@ -92,6 +92,9 @@
 #define IDC_AMBIENTFLYBY_DISTANCE_EDIT 61708
 #define IDC_AMBIENTFLYBY_SPEED 61709
 
+#define IDC_CAS 61800
+#define IDC_CAS_LIST 61801
+
 #define ICON_CHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_checked_ca.paa"
 #define ICON_UNCHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_unchecked_ca.paa"
 
@@ -129,3 +132,5 @@
 #define ICON_DAMAGED_3_CHECKED   "\a3\modules_f\data\editterrainobject\texturechecked_damaged12_ca.paa"
 #define ICON_DESTROYED_UNCHECKED "\a3\modules_f\data\editterrainobject\textureunchecked_destroyed_ca.paa"
 #define ICON_DESTROYED_CHECKED   "\a3\modules_f\data\editterrainobject\texturechecked_destroyed_ca.paa"
+
+#define CAS_WEAPON_TYPES [["machinegun"], ["missilelauncher"], ["machinegun", "missilelauncher"], ["bomblauncher"]]

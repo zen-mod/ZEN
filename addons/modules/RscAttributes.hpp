@@ -8,6 +8,7 @@ class RscListBox;
 class RscCheckBox;
 class ctrlToolbox;
 class ctrlXSliderH;
+class ctrlListNBox;
 class RscEditMulti;
 class RscStructuredText;
 class ctrlButtonPictureKeepAspect;
@@ -62,6 +63,37 @@ class EGVAR(attributes,RscAttributesBase) {
             class ButtonCancel: ButtonCancel {}; \
         }; \
     }
+
+BEGIN_MODULE_DIALOG(RscCAS)
+    class cas: RscControlsGroupNoScrollbars {
+        idc = IDC_CAS;
+        function = QFUNC(gui_cas);
+        x = 0;
+        y = 0;
+        w = POS_W(26);
+        h = POS_H(8);
+        class controls {
+            class Label: EGVAR(attributes,RscLabel) {
+                text = "$STR_DN_Plane";
+                w = POS_W(26);
+            };
+            class Background: EGVAR(attributes,RscBackground) {
+                x = 0;
+                y = POS_H(1);
+                w = POS_W(26);
+                h = POS_H(7);
+            };
+            class List: ctrlListNBox {
+                idc = IDC_CAS_LIST;
+                x = 0;
+                y = POS_H(1);
+                w = POS_W(26);
+                h = POS_H(7);
+                columns[] = {0, 0.1, 0.25};
+            };
+        };
+    };
+END_MODULE_DIALOG;
 
 BEGIN_MODULE_DIALOG(RscGlobalHint)
     class globalHint: RscControlsGroupNoScrollbars {

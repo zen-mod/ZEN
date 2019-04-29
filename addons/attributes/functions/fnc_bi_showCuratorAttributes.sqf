@@ -10,7 +10,7 @@
  * Window opened <BOOL>
  *
  * Example:
- * [unit] call BIS_fnc_showCuratorAttribures
+ * [unit] call BIS_fnc_showCuratorAttributes
  *
  * Public: No
  */
@@ -18,6 +18,9 @@
 
 // Need [_this] for passed waypoint arrays
 [_this] params [["_entity", objNull, [objNull, grpNull, [], ""]]];
+
+// Opening attributes disabled for object
+if (_entity isEqualType objNull && {_entity getVariable [QGVAR(disable), false]}) exitWith {};
 
 private _curator = getAssignedCuratorLogic player;
 private _curatorInfoType = switch (typeName _entity) do {
