@@ -1,4 +1,54 @@
 class EGVAR(context_menu,actions) {
+    class Formation {
+        displayName = "$STR_3DEN_Group_Attribute_Formation_displayName";
+        icon = "\a3\3den\data\displays\display3den\entitymenu\movetoformation_ca.paa";
+        condition = QUOTE(!(_selectedGroups isEqualTo []));
+        class Wedge {
+            displayName = "$STR_wedge";
+            icon = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\wedge_ca.paa";
+            statement = QUOTE([ARR_2(_selectedGroups,'WEDGE')] call FUNC(setFormation));
+        };
+        class Vee {
+            displayName = "$STR_vee";
+            icon = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\vee_ca.paa";
+            statement = QUOTE([ARR_2(_selectedGroups,'VEE')] call FUNC(setFormation));
+        };
+        class Line {
+            displayName = "$STR_line";
+            icon = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\line_ca.paa";
+            statement = QUOTE([ARR_2(_selectedGroups,'LINE')] call FUNC(setFormation));
+        };
+        class Column {
+            displayName = "$STR_column";
+            icon = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\column_ca.paa";
+            statement = QUOTE([ARR_2(_selectedGroups,'COLUMN')] call FUNC(setFormation));
+        };
+        class File {
+            displayName = "$STR_file";
+            icon = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\file_ca.paa";
+            statement = QUOTE([ARR_2(_selectedGroups,'FILE')] call FUNC(setFormation));
+        };
+        class StagColumn {
+            displayName = "$STR_staggered";
+            icon = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\stag_column_ca.paa";
+            statement = QUOTE([ARR_2(_selectedGroups,'STAG COLUMN')] call FUNC(setFormation));
+        };
+        class EchLeft {
+            displayName = "$STR_echl";
+            icon = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\ech_left_ca.paa";
+            statement = QUOTE([ARR_2(_selectedGroups,'ECH LEFT')] call FUNC(setFormation));
+        };
+        class EchRight {
+            displayName = "$STR_echr";
+            icon = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\ech_right_ca.paa";
+            statement = QUOTE([ARR_2(_selectedGroups,'ECH RIGHT')] call FUNC(setFormation));
+        };
+        class Diamond {
+            displayName = "$STR_diamond";
+            icon = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\diamond_ca.paa";
+            statement = QUOTE([ARR_2(_selectedGroups,'DIAMOND')] call FUNC(setFormation));
+        };
+    };
     class Behaviour {
         displayName = "$STR_3DEN_Group_Attribute_Behaviour_displayName";
         condition = QUOTE(!(_selectedGroups isEqualTo []));
