@@ -11,8 +11,8 @@ Modules are added locally and as a result the function must be executed on each 
 
 **Arguments:**
 
- \#   | Description | Type  | Default Value (if optional)
-:---: | :---------: | :---: | ---------------------------
+ \#   | Description | Type | Default Value (if optional)
+:---: | ----------- | ---- | ---------------------------
 0 | Category | STRING |
 1 | Module Name | STRING |
 2 | Function | CODE |
@@ -34,7 +34,7 @@ The module function is executed in the **unscheduled** environment on the client
 
 **Passed Parameters:**
 
- \#   | Description | Type  | Notes
-:---: | :---------: | :---: | -----
+ \#   | Description | Type | Notes
+:---: | ----------- | ---- | -----
 0 | Module Position | ARRAY | In ASL format
 1 | Attached Object | OBJECT | `objNull` if not attached
