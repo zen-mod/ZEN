@@ -1,3 +1,4 @@
+PREP(addAction);
 PREP(closeMenu);
 PREP(compileActions);
 PREP(createContextGroup);

@@ -26,7 +26,7 @@ private _fnc_getActionData = {
         private _actionName = configName _entryConfig;
         private _displayName = getText (_entryConfig >> "displayName");
 
-        private _icon = getText (_entryConfig >> "icon");
+        private _iconFile = getText (_entryConfig >> "icon");
         private _iconColor = getArray (_entryConfig >> "iconColor");
         if !(_iconColor isEqualTypeArray [1, 1, 1, 1]) then {_iconColor = [1, 1, 1, 1]};
 
@@ -42,7 +42,7 @@ private _fnc_getActionData = {
         private _actionEntry = [
             _actionName,
             _displayName,
-            _icon,
+            _iconFile,
             _iconColor,
             _statement,
             _condition,
@@ -66,7 +66,7 @@ missionNamespace setVariable [QGVAR(actions), _contextActions];
     [
         _actionName,
         _displayName,
-        _icon,
+        _iconFile,
         _iconColor,
         _statement,
         _condition,
