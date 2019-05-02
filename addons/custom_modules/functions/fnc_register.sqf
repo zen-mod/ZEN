@@ -37,7 +37,7 @@ if (isNil QGVAR(modulesList)) then {
     GVAR(modulesList) = [];
 };
 
-if (count GVAR(modulesList) >= 99) exitWith {
+if (count GVAR(modulesList) >= 100) exitWith {
     WARNING("Maximum amount of custom modules reached!");
     false
 };

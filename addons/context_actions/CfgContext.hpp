@@ -7,46 +7,55 @@ class EGVAR(context_menu,actions) {
             displayName = "$STR_wedge";
             icon = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\wedge_ca.paa";
             statement = QUOTE([ARR_2(_selectedGroups,'WEDGE')] call FUNC(setFormation));
+            priority = 9;
         };
         class Vee {
             displayName = "$STR_vee";
             icon = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\vee_ca.paa";
             statement = QUOTE([ARR_2(_selectedGroups,'VEE')] call FUNC(setFormation));
+            priority = 8;
         };
         class Line {
             displayName = "$STR_line";
             icon = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\line_ca.paa";
             statement = QUOTE([ARR_2(_selectedGroups,'LINE')] call FUNC(setFormation));
+            priority = 7;
         };
         class Column {
             displayName = "$STR_column";
             icon = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\column_ca.paa";
             statement = QUOTE([ARR_2(_selectedGroups,'COLUMN')] call FUNC(setFormation));
+            priority = 6;
         };
         class File {
             displayName = "$STR_file";
             icon = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\file_ca.paa";
             statement = QUOTE([ARR_2(_selectedGroups,'FILE')] call FUNC(setFormation));
+            priority = 5;
         };
         class StagColumn {
             displayName = "$STR_staggered";
             icon = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\stag_column_ca.paa";
             statement = QUOTE([ARR_2(_selectedGroups,'STAG COLUMN')] call FUNC(setFormation));
+            priority = 4;
         };
         class EchLeft {
             displayName = "$STR_echl";
             icon = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\ech_left_ca.paa";
             statement = QUOTE([ARR_2(_selectedGroups,'ECH LEFT')] call FUNC(setFormation));
+            priority = 3;
         };
         class EchRight {
             displayName = "$STR_echr";
             icon = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\ech_right_ca.paa";
             statement = QUOTE([ARR_2(_selectedGroups,'ECH RIGHT')] call FUNC(setFormation));
+            priority = 2;
         };
         class Diamond {
             displayName = "$STR_diamond";
             icon = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\diamond_ca.paa";
             statement = QUOTE([ARR_2(_selectedGroups,'DIAMOND')] call FUNC(setFormation));
+            priority = 1;
         };
     };
     class Behaviour {
