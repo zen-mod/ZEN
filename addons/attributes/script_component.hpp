@@ -129,5 +129,9 @@
 #define IDC_LOCK 86700
 #define IDC_LOCK_TOOLBOX 86701
 
+#define IDC_LIGHTS 86800
+#define IDC_LIGHTS_ON 86801
+#define IDC_LIGHTS_OFF 86802
+
 #define FORMAT_ROUND(value) (str round value)
 #define FORMAT_PERCENT(value) (format ["%1%2", round (value * 100), "%"])

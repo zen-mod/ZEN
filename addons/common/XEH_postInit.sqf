@@ -75,6 +75,16 @@
     _unit disableAI _section;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setPilotLight), {
+    params ["_vehicle", "_lights"];
+    _vehicle setPilotLight _lights;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setCollisionLight), {
+    params ["_vehicle", "_lights"];
+    _vehicle setCollisionLight _lights;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(flyInHeight), {
     params ["_aircraft", "_height"];
     _aircraft flyInHeight _height;

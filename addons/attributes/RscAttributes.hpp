@@ -237,6 +237,35 @@ class GVAR(RscAttributeLock): RscControlsGroupNoScrollbars {
     };
 };
 
+class GVAR(RscAttributeLights): RscControlsGroupNoScrollbars {
+    idc = IDC_LIGHTS;
+    function = QFUNC(attributeLights);
+    x = 0;
+    y = 0;
+    w = POS_W(26);
+    h = POS_H(2.5);
+    class controls {
+        class Label: GVAR(RscLabel) {
+            text = CSTRING(Lights);
+            h = POS_H(2.5);
+        };
+        class Background: GVAR(RscBackground) {};
+        class LightsOn: RscActivePicture {
+            idc = IDC_LIGHTS_ON;
+            text = QPATHTOF(ui\lights_on_ca.paa);
+            x = POS_W(14.5);
+            y = POS_H(0);
+            w = POS_W(2.5);
+            h = POS_H(2.5);
+        };
+        class LightsOff: LightsOn {
+            idc = IDC_LIGHTS_OFF;
+            text = QPATHTOF(ui\lights_off_ca.paa);
+            x = POS_W(19.5);
+        };
+    };
+};
+
 class GVAR(RscAttributeRank): RscControlsGroupNoScrollbars {
     idc = IDC_RANK;
     function = QFUNC(attributeRank);
@@ -817,6 +846,7 @@ class GVAR(RscAttributesVehicle): GVAR(RscAttributesBase) {
                 class Fuel: GVAR(RscAttributeFuel) {};
                 class Rank: GVAR(RscAttributeRank) {};
                 class Lock: GVAR(RscAttributeLock) {};
+                class Lights: GVAR(RscAttributeLights) {};
                 class PlateNumber: GVAR(RscAttributePlateNumber) {};
                 class RespawnPosition: GVAR(RscAttributeRespawnPosition) {};
             };
@@ -843,6 +873,7 @@ class GVAR(RscAttributesVehicleEmpty): GVAR(RscAttributesBase) {
                 class Damage: GVAR(RscAttributeDamage) {};
                 class Fuel: GVAR(RscAttributeFuel) {};
                 class Lock: GVAR(RscAttributeLock) {};
+                class Lights: GVAR(RscAttributeLights) {};
                 class PlateNumber: GVAR(RscAttributePlateNumber) {};
                 class RespawnPosition: GVAR(RscAttributeRespawnPosition) {};
             };
