@@ -75,6 +75,11 @@
     _unit disableAI _section;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(engineOn), {
+    params ["_vehicle", "_state"];
+    _vehicle engineOn _state;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(setPilotLight), {
     params ["_vehicle", "_lights"];
     _vehicle setPilotLight _lights;

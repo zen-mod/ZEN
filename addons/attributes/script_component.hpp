@@ -133,5 +133,9 @@
 #define IDC_LIGHTS_ON 86801
 #define IDC_LIGHTS_OFF 86802
 
+#define IDC_ENGINE 86900
+#define IDC_ENGINE_ON 86901
+#define IDC_ENGINE_OFF 86902
+
 #define FORMAT_ROUND(value) (str round value)
 #define FORMAT_PERCENT(value) (format ["%1%2", round (value * 100), "%"])

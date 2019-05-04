@@ -1,6 +1,7 @@
 PREP(attributeBehaviour);
 PREP(attributeCombatMode);
 PREP(attributeDamage);
+PREP(attributeEngine);
 PREP(attributeFormation);
 PREP(attributeFuel);
 PREP(attributeGroupID);
