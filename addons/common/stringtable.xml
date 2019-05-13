@@ -117,6 +117,12 @@
         <Key ID="STR_ZEN_Common_AutoAddObjects_Description">
             <English>Automatically adds spawned objects to all curators</English>
         </Key>
+        <Key ID="STR_ZEN_Common_DarkMode">
+            <English>Dark Mode</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_DarkMode_Description">
+            <English>Changes the appearance of various user interface elements to a darker color theme</English>
+        </Key>
         <Key ID="STR_ZEN_Common_PreferredArsenal">
             <English>Preferred Arsenal</English>
         </Key>

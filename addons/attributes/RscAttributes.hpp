@@ -30,7 +30,7 @@ class GVAR(RscBackground): RscText {
     w = POS_W(16);
     h = POS_H(2.5);
     colorText[] = {1, 1, 1, 0.5};
-    colorBackground[] = {1, 1, 1, 0.1};
+    SET_BACKGROUND_COLOR;
 };
 
 class GVAR(RscEdit): RscEdit {

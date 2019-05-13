@@ -8,6 +8,15 @@
 ] call CBA_settings_fnc_init;
 
 [
+    QGVAR(darkMode),
+    "CHECKBOX",
+    [LSTRING(DarkMode), LSTRING(DarkMode_Description)],
+    LSTRING(Category),
+    false,
+    false
+] call CBA_settings_fnc_init;
+
+[
     QGVAR(preferredArsenal),
     "LIST",
     [LSTRING(PreferredArsenal), LSTRING(PreferredArsenal_Description)],

@@ -34,6 +34,16 @@
 #define SELECTED_WAYPOINTS (curatorSelected select 2)
 #define SELECTED_MARKERS   (curatorSelected select 3)
 
+#define COLOR_BACKGROUND_LIGHT 1, 1, 1, 0.1
+#define COLOR_BACKGROUND_DARK  0, 0, 0, 0.2
+
+ #define SET_BACKGROUND_COLOR \
+    onLoad = QUOTE( \
+        params ['_ctrl']; \
+        private _color = if (EGVAR(common,darkMode)) then {[COLOR_BACKGROUND_DARK]} else {[COLOR_BACKGROUND_LIGHT]}; \
+        _ctrl ctrlSetBackgroundColor _color; \
+    )
+
 #ifdef DISABLE_COMPILE_CACHE
     #undef PREP
     #define PREP(fncName) FUNC(fncName) = compile preprocessFileLineNumbers QPATHTOF(functions\DOUBLES(fnc,fncName).sqf)

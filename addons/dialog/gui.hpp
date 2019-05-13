@@ -219,7 +219,7 @@ class GVAR(Row_Sides): GVAR(Row_Base) {
             y = 0;
             w = POS_W(16);
             h = POS_H(2.5);
-            colorBackground[] = {1, 1, 1, 0.1};
+            SET_BACKGROUND_COLOR;
         };
         class BLUFOR: RscActivePicture {
             idc = IDC_ROW_SIDES_BLUFOR;

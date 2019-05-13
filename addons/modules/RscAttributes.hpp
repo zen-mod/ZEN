@@ -567,13 +567,11 @@ BEGIN_MODULE_DIALOG(RscSetDate)
                 text = "$STR_3DEN_Environment_Attribute_Date_displayName";
                 w = POS_W(26);
             };
-            class DateBackground: RscText {
-                idc = -1;
+            class DateBackground: EGVAR(attributes,RscBackground) {
                 x = 0;
                 y = POS_H(1);
                 w = POS_W(26);
                 h = POS_H(2);
-                colorBackground[] = {1, 1, 1, 0.1};
             };
             class Year: EGVAR(attributes,RscCombo) {
                 idc = IDC_SETDATE_YEAR;
