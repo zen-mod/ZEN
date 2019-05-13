@@ -19,6 +19,11 @@ params ["_display"];
 
 private _module = getAssignedCuratorLogic player;
 
+// Remove "Gear" animation when entering Zeus
+if (GVAR(disableGearAnim) && {vehicle player == player}) then {
+    [{player switchMove _this}, animationState player] call CBA_fnc_execNextFrame;
+};
+
 // Emit one time module setup event
 if !(_module getVariable [QGVAR(setupComplete), false]) then {
     [QGVAR(moduleSetup), _module] call CBA_fnc_localEvent;

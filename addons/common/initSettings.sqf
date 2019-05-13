@@ -8,6 +8,15 @@
 ] call CBA_settings_fnc_init;
 
 [
+    QGVAR(disableGearAnim),
+    "CHECKBOX",
+    [LSTRING(DisableGearAnim), LSTRING(DisableGearAnim_Description)],
+    LSTRING(Category),
+    false,
+    false
+] call CBA_settings_fnc_init;
+
+[
     QGVAR(darkMode),
     "CHECKBOX",
     [LSTRING(DarkMode), LSTRING(DarkMode_Description)],

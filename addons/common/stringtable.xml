@@ -117,6 +117,12 @@
         <Key ID="STR_ZEN_Common_AutoAddObjects_Description">
             <English>Automatically adds spawned objects to all curators</English>
         </Key>
+        <Key ID="STR_ZEN_Common_DisableGearAnim">
+            <English>Disable Gear Animation</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_DisableGearAnim_Description">
+            <English>Disables the "Gear" animation from playing when entering Zeus</English>
+        </Key>
         <Key ID="STR_ZEN_Common_DarkMode">
             <English>Dark Mode</English>
         </Key>
