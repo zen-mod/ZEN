@@ -97,7 +97,7 @@ class RscDisplayCurator {
                         class Label: RscText {
                             text = "$STR_3DEN_Display3DEN_VehiclePanel_TextEmpty_text";
                             x = GUI_GRID_W;
-                            y = 0;
+                            y = POS_EDGE(0,1) * pixelH;
                             w = 10 * GUI_GRID_W;
                             h = GUI_GRID_H;
                             sizeEx = 0.9 * GUI_GRID_H;
@@ -108,7 +108,7 @@ class RscDisplayCurator {
                             onLoad = QUOTE((_this select 0) cbSetChecked GVAR(includeCrew));
                             onCheckedChanged = QUOTE(GVAR(includeCrew) = !GVAR(includeCrew));
                             x = 0.1 * GUI_GRID_W;
-                            y = 0;
+                            y = POS_EDGE(0,1) * pixelH;
                             w = GUI_GRID_W;
                             h = GUI_GRID_H;
                         };
