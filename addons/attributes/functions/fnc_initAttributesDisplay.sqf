@@ -32,7 +32,7 @@ private _contentPosY = 0;
     private _function = getText (_x >> "function");
     _display call (missionNamespace getVariable _function);
 
-    if (ctrlEnabled _control) then {
+    if (ctrlShown _control) then {
         private _controlPos = ctrlPosition _control;
         _controlPos set [1, _contentPosY];
         _control ctrlSetPosition _controlPos;

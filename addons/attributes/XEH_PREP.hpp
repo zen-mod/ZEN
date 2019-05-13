@@ -1,3 +1,4 @@
+PREP(attributeAmmo);
 PREP(attributeBehaviour);
 PREP(attributeCombatMode);
 PREP(attributeDamage);

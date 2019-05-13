@@ -168,29 +168,22 @@ class GVAR(RscAttributeFuel): GVAR(RscAttributeSkill) {
     };
 };
 
-class GVAR(RscAttributeAmmo): RscControlsGroupNoScrollbars {
+class GVAR(RscAttributeAmmo): GVAR(RscAttributeSkill) {
     idc = IDC_AMMO;
-    function = "";
+    function = QFUNC(attributeAmmo);
     x = 0;
     y = 0;
     w = POS_W(26);
     h = POS_H(1);
-    class controls {
-        class Label: GVAR(RscLabel) {
+    class controls: controls {
+        class Label: Label {
             text = "$STR_3DEN_Object_Attribute_Ammo_displayName";
         };
-        class Slider: ctrlXSliderH {
+        class Slider: Slider {
             idc = IDC_AMMO_SLIDER;
-            x = POS_W(10.1);
-            y = 0;
-            w = POS_W(13.5);
-            h = POS_H(1);
         };
-        class Edit: GVAR(RscEdit) {
+        class Edit: Edit {
             idc = IDC_AMMO_EDIT;
-            x = POS_W(23.7);
-            w = POS_W(2.3);
-            canModify = 0;
         };
     };
 };
@@ -873,6 +866,7 @@ class GVAR(RscAttributesVehicle): GVAR(RscAttributesBase) {
                 class Skill: GVAR(RscAttributeSkill) {};
                 class Damage: GVAR(RscAttributeDamage) {};
                 class Fuel: GVAR(RscAttributeFuel) {};
+                class Ammo: GVAR(RscAttributeAmmo) {};
                 class Rank: GVAR(RscAttributeRank) {};
                 class Lock: GVAR(RscAttributeLock) {};
                 class Engine: GVAR(RscAttributeEngine) {};
@@ -902,6 +896,7 @@ class GVAR(RscAttributesVehicleEmpty): GVAR(RscAttributesBase) {
             class Controls {
                 class Damage: GVAR(RscAttributeDamage) {};
                 class Fuel: GVAR(RscAttributeFuel) {};
+                class Ammo: GVAR(RscAttributeAmmo) {};
                 class Lock: GVAR(RscAttributeLock) {};
                 class Engine: GVAR(RscAttributeEngine) {};
                 class Lights: GVAR(RscAttributeLights) {};

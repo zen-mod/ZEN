@@ -24,3 +24,6 @@
 #define ICON_OPFOR       QPATHTOF(ui\icon_opfor_ca.paa)
 #define ICON_INDEPENDENT QPATHTOF(ui\icon_independent_ca.paa)
 #define ICON_CIVILIAN    QPATHTOF(ui\icon_civilian_ca.paa)
+
+// Prevent certain magazines from being handled by ammo functions
+#define BLACKLIST_MAGAZINES ["Laserbatteries"]

@@ -1,9 +1,14 @@
 PREP(addObjectToCurators);
 PREP(collapseTree);
+PREP(getTurretMagazines);
+PREP(getAllTurrets);
 PREP(getModuleTarget);
 PREP(getSideIcon);
+PREP(getVehicleAmmo);
 PREP(initDisplayCurator);
 PREP(initSliderEdit);
 PREP(openArsenal);
+PREP(setTurretAmmo);
+PREP(setVehicleAmmo);
 PREP(showMessage);
 PREP(spawnLargeObject);

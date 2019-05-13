@@ -150,6 +150,14 @@
     _vehicle setPlateNumber _string;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setAmmoOnPylon), {
+    params ["_vehicle", "_pylon", "_ammoCount"];
+    _vehicle setAmmoOnPylon [_pylon, _ammoCount];
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setTurretAmmo), FUNC(setTurretAmmo)] call CBA_fnc_addEventHandler;
+[QGVAR(setVehicleAmmo), FUNC(setVehicleAmmo)] call CBA_fnc_addEventHandler;
+
 if (isServer) then {
     [QGVAR(hideObjectGlobal), {
         params ["_object", "_hide"];
