@@ -17,6 +17,8 @@
  */
 #include "script_component.hpp"
 
+#define COMBAT_REACTION_DELAY 0.75
+
 params ["_unit", "_animationType", "_combatReady"];
 
 // Stop animation selected, exit with animation cancel
@@ -157,6 +159,14 @@ _unit setVariable [QGVAR(ambientAnimKilledEH), _killedEH];
 
 // Add event handler to cancel animation if fired near and combat ready enabled
 if (_combatReady) then {
-    private _firedNearEH = _unit addEventHandler ["FiredNear", {call FUNC(moduleAmbientAnimEnd)}];
+    private _firedNearEH = _unit addEventHandler ["FiredNear", {
+        [{
+            params ["_unit"];
+
+            if (alive _unit) then {
+                [_unit] call FUNC(moduleAmbientAnimEnd);
+            };
+        }, _this, COMBAT_REACTION_DELAY] call CBA_fnc_waitAndExecute;
+    }];
     _unit setVariable [QGVAR(ambientAnimFiredNearEH), _firedNearEH];
 };
