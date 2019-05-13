@@ -154,7 +154,13 @@ private _animDoneEH = _unit addEventHandler ["AnimDone", {
 _unit setVariable [QGVAR(ambientAnimDoneEH), _animDoneEH];
 
 // Add event handler to cancel animation when unit is killed
-private _killedEH = _unit addEventHandler ["Killed", {call FUNC(moduleAmbientAnimEnd)}];
+// MP event handler since killed EH is only executed where the unit is local
+// Ensures execution without having to add event handler everywhere to handle locality change
+private _killedEH = _unit addMPEventHandler ["MPKilled", {
+    if (isServer) then {
+        _this call FUNC(moduleAmbientAnimEnd);
+    };
+}];
 _unit setVariable [QGVAR(ambientAnimKilledEH), _killedEH];
 
 // Add event handler to cancel animation if fired near and combat ready enabled

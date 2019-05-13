@@ -22,7 +22,7 @@ private _animDoneEH = _unit getVariable [QGVAR(ambientAnimDoneEH), -1];
 _unit removeEventHandler ["AnimDone", _animDoneEH];
 
 private _killedEH = _unit getVariable [QGVAR(ambientAnimKilledEH), -1];
-_unit removeEventHandler ["Killed", _killedEH];
+_unit removeMPEventHandler ["MPKilled", _killedEH];
 
 private _firedNearEH = _unit getVariable [QGVAR(ambientAnimFiredNearEH), -1];
 _unit removeEventHandler ["FiredNear", _firedNearEH];
