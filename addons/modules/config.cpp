@@ -22,6 +22,7 @@ class CfgPatches {
             QGVAR(moduleCreateMinefield),
             QGVAR(moduleDamageBuildings),
             QGVAR(moduleEarthquake),
+            QGVAR(moduleEditableObjects),
             QGVAR(moduleEquipWithECM),
             QGVAR(moduleFlyHeight),
             QGVAR(moduleFunctionsViewer),

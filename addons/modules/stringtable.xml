@@ -207,12 +207,6 @@
         <Key ID="STR_ZEN_Modules_BuildingSelection">
             <English>Building Selection</English>
         </Key>
-        <Key ID="STR_ZEN_Modules_Nearest">
-            <English>Nearest</English>
-        </Key>
-        <Key ID="STR_ZEN_Modules_Radius">
-            <English>Radius</English>
-        </Key>
         <Key ID="STR_ZEN_Modules_DamageState">
             <English>Damage State</English>
         </Key>
@@ -237,6 +231,31 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEarthquake_Buildings">
             <English>Destroy Buildings</English>
+        </Key>
+
+        <Key ID="STR_ZEN_Modules_ModuleEditableObjects">
+            <English>Update Editable Objects</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleEditableObjects_EditingMode">
+            <English>Editing Mode</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleEditableObjects_EditingMode_Tooltip">
+            <English>Add or remove editable objects from Zeus.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleEditableObjects_AddObjects">
+            <English>Add Objects</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleEditableObjects_RemoveObjects">
+            <English>Remove Objects</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleEditableObjects_AllCurators">
+            <English>All Curators</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleEditableObjects_AllCurators_Tooltip">
+            <English>Controls whether changes are applied to all curators or just locally.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleEditableObjects_AllMissionObjects">
+            <English>All Mission Objects</English>
         </Key>
 
         <Key ID="STR_ZEN_Modules_ModuleHeal">

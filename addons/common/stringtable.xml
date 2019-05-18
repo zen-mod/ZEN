@@ -93,6 +93,9 @@
         <Key ID="STR_ZEN_Common_Extreme">
             <English>Extreme</English>
         </Key>
+        <Key ID="STR_ZEN_Common_All">
+            <English>All</English>
+        </Key>
         <Key ID="STR_ZEN_Common_Side">
             <English>Side</English>
         </Key>
@@ -102,8 +105,29 @@
         <Key ID="STR_ZEN_Common_Aircraft">
             <English>Aircraft</English>
         </Key>
+        <Key ID="STR_ZEN_Common_Filter">
+            <English>Filter</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_Units">
+            <English>Units</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_Vehicles">
+            <English>Vehicles</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_Static">
+            <English>Static</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_Nearest">
+            <English>Nearest</English>
+        </Key>
         <Key ID="STR_ZEN_Common_Speed">
             <English>Speed</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_Range">
+            <English>Range</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_Radius">
+            <English>Radius</English>
         </Key>
         <Key ID="STR_ZEN_Common_Height">
             <English>Height</English>

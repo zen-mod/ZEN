@@ -132,6 +132,11 @@ class CfgVehicles {
         displayName = CSTRING(ModuleEarthquake);
         function = QFUNC(moduleEarthquake);
     };
+    class GVAR(moduleEditableObjects): GVAR(moduleBase) {
+        category = "Curator";
+        displayName = CSTRING(ModuleEditableObjects);
+        curatorInfoType = QGVAR(RscEditableObjects);
+    };
     class GVAR(moduleEquipWithECM): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Objects);

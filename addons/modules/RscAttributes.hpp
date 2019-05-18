@@ -64,6 +64,117 @@ class EGVAR(attributes,RscAttributesBase) {
         }; \
     }
 
+BEGIN_MODULE_DIALOG(RscEditableObjects)
+    class editableObjects: RscControlsGroupNoScrollbars {
+        idc = IDC_EDITABLEOBJECTS;
+        function = QFUNC(gui_editableObjects);
+        x = 0;
+        y = 0;
+        w = POS_W(26);
+        h = POS_H(8.2);
+        class controls {
+            class EditingModeLabel: EGVAR(attributes,RscLabel) {
+                text = CSTRING(ModuleEditableObjects_EditingMode);
+                tooltip = CSTRING(ModuleEditableObjects_EditingMode_Tooltip);
+            };
+            class EditingMode: ctrlToolbox {
+                idc = IDC_EDITABLEOBJECTS_MODE;
+                x = POS_W(10.1);
+                y = 0;
+                w = POS_W(15.9);
+                h = POS_H(1);
+                rows = 1;
+                columns = 2;
+                strings[] = {CSTRING(ModuleEditableObjects_RemoveObjects), CSTRING(ModuleEditableObjects_AddObjects)};
+            };
+            class AllCuratorsLabel: EGVAR(attributes,RscLabel) {
+                text = CSTRING(ModuleEditableObjects_AllCurators);
+                tooltip = CSTRING(ModuleEditableObjects_AllCurators_Tooltip);
+                y = POS_H(1.1);
+            };
+            class AllCurators: GVAR(RscToolboxYesNo) {
+                idc = IDC_EDITABLEOBJECTS_CURATORS;
+                y = POS_H(1.1);
+            };
+            class RangeLabel: EGVAR(attributes,RscLabel) {
+                text = ECSTRING(common,Range);
+                y = POS_H(2.2);
+                h = POS_H(2.1);
+            };
+            class RangeMode: EditingMode {
+                idc = IDC_EDITABLEOBJECTS_RANGE_MODE;
+                y = POS_H(2.2);
+                strings[] = {ECSTRING(common,Radius), CSTRING(ModuleEditableObjects_AllMissionObjects)};
+            };
+            class RangeSlider: ctrlXSliderH {
+                idc = IDC_EDITABLEOBJECTS_RANGE_SLIDER;
+                x = POS_W(10.1);
+                y = POS_H(3.3);
+                w = POS_W(13.4);
+                h = POS_H(1);
+            };
+            class RangeEdit: EGVAR(attributes,RscEdit) {
+                idc = IDC_EDITABLEOBJECTS_RANGE_EDIT;
+                x = POS_W(23.6);
+                y = POS_H(3.3);
+                w = POS_W(2.4);
+                h = POS_H(1);
+            };
+            class FilterLabel: EGVAR(attributes,RscLabel) {
+                text = ECSTRING(common,Filter);
+                y = POS_H(4.4);
+                h = POS_H(3.8);
+            };
+            class FilterBackground: EGVAR(attributes,RscBackground) {
+                y = POS_H(4.4);
+                h = POS_H(3.8);
+            };
+            class FilterAll: RscCheckBox {
+                idc = IDC_EDITABLEOBJECTS_FILTER_ALL;
+                x = POS_W(10.1);
+                y = POS_H(4.5);
+                w = POS_W(0.9);
+                h = POS_H(0.9);
+                checked = 1;
+            };
+            class FilterAllText: RscText {
+                idc = -1;
+                text = ECSTRING(common,All);
+                x = POS_W(11);
+                y = POS_H(4.5);
+                w = POS_W(10);
+                h = POS_H(0.9);
+                sizeEx = POS_H(0.9);
+                shadow = 0;
+            };
+            class FilterUnits: FilterAll {
+                idc = IDC_EDITABLEOBJECTS_FILTER_UNITS;
+                y = POS_H(5.4);
+            };
+            class FilterUnitsText: FilterAllText {
+                text = ECSTRING(common,Units);
+                y = POS_H(5.4);
+            };
+            class FilterVehicles: FilterAll {
+                idc = IDC_EDITABLEOBJECTS_FILTER_VEHICLES;
+                y = POS_H(6.3);
+            };
+            class FilterVehiclesText: FilterAllText {
+                text = ECSTRING(common,Vehicles);
+                y = POS_H(6.3);
+            };
+            class FilterStatic: FilterAll {
+                idc = IDC_EDITABLEOBJECTS_FILTER_STATIC;
+                y = POS_H(7.2);
+            };
+            class FilterStaticText: FilterAllText {
+                text = ECSTRING(common,Static);
+                y = POS_H(7.2);
+            };
+        };
+    };
+END_MODULE_DIALOG;
+
 BEGIN_MODULE_DIALOG(RscCAS)
     class cas: RscControlsGroupNoScrollbars {
         idc = IDC_CAS;
@@ -387,7 +498,7 @@ BEGIN_MODULE_DIALOG(RscDamageBuildings)
                 h = POS_H(1);
                 rows = 1;
                 columns = 2;
-                strings[] = {CSTRING(Nearest), CSTRING(Radius)};
+                strings[] = {ECSTRING(common,Nearest), ECSTRING(common,Radius)};
             };
             class SelectionRadius: EGVAR(attributes,RscEdit) {
                 idc = IDC_DAMAGEBUILDINGS_RADIUS;
