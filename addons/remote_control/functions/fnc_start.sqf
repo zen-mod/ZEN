@@ -39,6 +39,8 @@ missionNamespace setVariable [VAR_UNIT, _unit];
     private _handle = player addEventHandler ["HandleRating", {0}];
     player setVariable [QGVAR(handle), _handle];
 
+    [QGVAR(started), _unit] call CBA_fnc_localEvent;
+
     [{
         [{
             params ["_unit", "_vehicle", "_vehicleRole"];
