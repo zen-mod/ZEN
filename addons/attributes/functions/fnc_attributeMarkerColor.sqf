@@ -50,8 +50,8 @@ private _fnc_onConfirm = {
     private _color = _ctrlCombo lbData lbCurSel _ctrlCombo;
     _entity setMarkerColor _color;
 
-    // Set new markers to have this color
-    [GVAR(markerColorHash), markerType _entity, _color] call CBA_fnc_hashSet;
+    // Set new markers of this type to have this color
+    GVAR(markerColors) setVariable [markerType _entity, _color];
 };
 
 _ctrlButtonOK ctrlAddEventHandler ["ButtonClick", _fnc_onConfirm];
