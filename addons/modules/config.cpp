@@ -36,6 +36,7 @@ class CfgPatches {
             QGVAR(moduleShowInConfig),
             QGVAR(moduleSideRelations),
             QGVAR(moduleSimulation),
+            QGVAR(moduleSitOnChair),
             QGVAR(moduleSmokePillar),
             QGVAR(moduleSpawnCarrier),
             QGVAR(moduleSpawnDestroyer),

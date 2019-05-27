@@ -41,6 +41,7 @@ PREP(modulePatrolArea);
 PREP(moduleShowInConfig);
 PREP(moduleSideRelations);
 PREP(moduleSimulation);
+PREP(moduleSitOnChair);
 PREP(moduleSmokePillar);
 PREP(moduleSpawnCarrier);
 PREP(moduleSpawnDestroyer);

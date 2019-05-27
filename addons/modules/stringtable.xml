@@ -321,6 +321,12 @@
             <English>Channel</English>
         </Key>
 
+        <Key ID="STR_ZEN_Modules_ModuleSitOnChair">
+            <English>Sit On Chair</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleSitOnChair_ChairObject">
+            <English>Chair Object</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateMinefield">
             <English>Create Minefield</English>
         </Key>

@@ -210,6 +210,12 @@ class CfgVehicles {
         displayName = CSTRING(ModuleSimulation);
         function = QFUNC(moduleSimulation);
     };
+    class GVAR(moduleSitOnChair): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = CSTRING(ModuleSitOnChair);
+        function = QFUNC(moduleSitOnChair);
+    };
     class GVAR(moduleSmokePillar): GVAR(moduleBase) {
         category = "Effects";
         displayName = CSTRING(ModuleSmokePillar);
