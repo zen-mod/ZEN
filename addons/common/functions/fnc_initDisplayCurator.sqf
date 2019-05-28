@@ -26,9 +26,9 @@ if (GVAR(disableGearAnim) && {vehicle player == player}) then {
 
 // Emit one time module setup event
 if !(_module getVariable [QGVAR(setupComplete), false]) then {
-    [QGVAR(moduleSetup), _module] call CBA_fnc_localEvent;
+    ["ZEN_moduleSetup", _module] call CBA_fnc_localEvent;
     _module setVariable [QGVAR(setupComplete), true];
 };
 
 // Emit display load event
-[QGVAR(displayCuratorLoad), _display] call CBA_fnc_localEvent;
+["ZEN_displayCuratorLoad", _display] call CBA_fnc_localEvent;

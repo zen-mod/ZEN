@@ -20,4 +20,4 @@ GVAR(ppBrightness) ppEffectEnable false;
     };
 }] call CBA_fnc_addEventHandler;
 
-[QEGVAR(common,moduleSetup), FUNC(setModes)] call CBA_fnc_addEventHandler;
+["ZEN_displayCuratorLoad", FUNC(setModes)] call CBA_fnc_addEventHandler;
