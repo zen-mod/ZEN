@@ -11,4 +11,10 @@ PREP_RECOMPILE_END;
 
 GVAR(includeCrew) = true;
 
+["ModuleCurator_F", "Init", {
+    params ["_logic"];
+
+    _logic addEventHandler ["CuratorObjectPlaced", {call FUNC(handleObjectPlaced)}];
+}, true, [], true] call CBA_fnc_addClassEventHandler;
+
 ADDON = true;
