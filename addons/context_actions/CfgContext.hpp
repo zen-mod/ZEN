@@ -143,6 +143,17 @@ class EGVAR(context_menu,actions) {
         condition = QUOTE(_hoveredEntity isEqualType objNull && {_hoveredEntity isKindOf 'CAManBase'} && {alive _hoveredEntity});
         statement = QUOTE(_hoveredEntity call EFUNC(common,openArsenal));
         priority = -80;
+        class CopyLoadout {
+            displayName = "$STR_3DEN_Display3DEN_MenuBar_EntityCopy_text";
+            statement = QUOTE(GVAR(loadout) = getUnitLoadout _hoveredEntity);
+            priority = 2;
+        };
+        class PasteLoadout {
+            displayName = "$STR_3DEN_Display3DEN_MenuBar_EntityPaste_text";
+            condition = QUOTE(!isNil QQGVAR(loadout));
+            statement = QUOTE(_hoveredEntity setUnitLoadout GVAR(loadout));
+            priority = 1;
+        };
     };
     class TeleportZeus {
         displayName = CSTRING(TeleportZeus);
