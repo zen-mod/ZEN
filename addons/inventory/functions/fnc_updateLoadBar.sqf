@@ -19,7 +19,7 @@ params ["_display"];
 
 private _maxLoad = _display getVariable QGVAR(maxLoad);
 private _currentLoad = _display getVariable QGVAR(currentLoad);
-private _loadPercent = _currentLoad / _maxLoad;
+private _loadPercent = 0 max _currentLoad / _maxLoad min 1;
 
 private _ctrlLoad = _display displayCtrl IDC_LOAD;
 _ctrlLoad progressSetPosition _loadPercent;

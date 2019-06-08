@@ -155,6 +155,31 @@ class EGVAR(context_menu,actions) {
             priority = 1;
         };
     };
+    class Inventory {
+        displayName = CSTRING(EditInventory);
+        icon = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeInventory\filter_0_ca.paa";
+        condition = QUOTE( \
+            _hoveredEntity isEqualType objNull \
+            && {alive _hoveredEntity} \
+            && {getNumber (configFile >> 'CfgVehicles' >> typeOf _hoveredEntity >> 'maximumLoad') > 0} \
+        );
+        statement = QUOTE( \
+            BIS_fnc_initCuratorAttributes_target = _hoveredEntity; \
+            createDialog QQEGVAR(attributes,RscAttributesInventory); \
+        );
+        priority = -81;
+        class CopyInventory {
+            displayName = "$STR_3DEN_Display3DEN_MenuBar_EntityCopy_text";
+            statement = QUOTE(GVAR(inventory) = _hoveredEntity call EFUNC(common,getInventory));
+            priority = 2;
+        };
+        class PasteInventory {
+            displayName = "$STR_3DEN_Display3DEN_MenuBar_EntityPaste_text";
+            condition = QUOTE(!isNil QQGVAR(inventory));
+            statement = QUOTE([ARR_2(_hoveredEntity, GVAR(inventory))] call EFUNC(common,setInventory));
+            priority = 1;
+        };
+    };
     class TeleportZeus {
         displayName = CSTRING(TeleportZeus);
         icon = "\a3\Ui_F_Curator\Data\Logos\arma3_curator_eye_256_ca.paa";

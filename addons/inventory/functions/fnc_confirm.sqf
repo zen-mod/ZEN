@@ -19,16 +19,6 @@ params ["_ctrlButtonOK"];
 
 private _display = ctrlParent _ctrlButtonOK;
 private _object  = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
+private _cargo   = _display getVariable QGVAR(cargo);
 
-clearItemCargoGlobal _object;
-clearWeaponCargoGlobal _object;
-clearMagazineCargoGlobal _object;
-clearBackpackCargoGlobal _object;
-
-private _cargo = _display getVariable QGVAR(cargo);
-_cargo params ["_itemCargo", "_weaponCargo", "_magazineCargo", "_backpackCargo"];
-
-ADD_CARGO(_object,addItemCargoGlobal,_itemCargo);
-ADD_CARGO(_object,addWeaponCargoGlobal,_weaponCargo);
-ADD_CARGO(_object,addMagazineCargoGlobal,_magazineCargo);
-ADD_CARGO(_object,addBackpackCargoGlobal,_backpackCargo);
+[_object, _cargo] call EFUNC(common,setInventory);

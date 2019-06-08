@@ -18,7 +18,7 @@
 params ["_display"];
 
 private _object  = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-private _cargo   = [getItemCargo _object, getWeaponCargo _object, getMagazineCargo _object, getBackpackCargo _object];
+private _cargo   = _object call EFUNC(common,getInventory);
 private _maxLoad = getNumber (configFile >> "CfgVehicles" >> typeOf _object >> "maximumLoad");
 
 _display setVariable [QGVAR(cargo), _cargo];

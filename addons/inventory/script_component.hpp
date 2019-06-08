@@ -36,9 +36,3 @@
 #define IDC_BTN_CLEAR  1580
 
 #define EMPTY_CARGO [[[], []], [[], []], [[], []], [[], []]]
-
-#define ADD_CARGO(object,command,cargo) \
-    cargo params ["_items", "_counts"]; \
-    { \
-        object command [_x, _counts select _forEachIndex]; \
-    } forEach _items
