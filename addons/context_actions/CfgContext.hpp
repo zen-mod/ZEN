@@ -145,11 +145,13 @@ class EGVAR(context_menu,actions) {
         priority = -80;
         class CopyLoadout {
             displayName = "$STR_3DEN_Display3DEN_MenuBar_EntityCopy_text";
+            icon = QPATHTOF(ui\copy_ca.paa);
             statement = QUOTE(GVAR(loadout) = getUnitLoadout _hoveredEntity);
             priority = 2;
         };
         class PasteLoadout {
             displayName = "$STR_3DEN_Display3DEN_MenuBar_EntityPaste_text";
+            icon = QPATHTOF(ui\paste_ca.paa);
             condition = QUOTE(!isNil QQGVAR(loadout));
             statement = QUOTE(_hoveredEntity setUnitLoadout GVAR(loadout));
             priority = 1;
@@ -170,11 +172,13 @@ class EGVAR(context_menu,actions) {
         priority = -81;
         class CopyInventory {
             displayName = "$STR_3DEN_Display3DEN_MenuBar_EntityCopy_text";
+            icon = QPATHTOF(ui\copy_ca.paa);
             statement = QUOTE(GVAR(inventory) = _hoveredEntity call EFUNC(common,getInventory));
             priority = 2;
         };
         class PasteInventory {
             displayName = "$STR_3DEN_Display3DEN_MenuBar_EntityPaste_text";
+            icon = QPATHTOF(ui\paste_ca.paa);
             condition = QUOTE(!isNil QQGVAR(inventory));
             statement = QUOTE([ARR_2(_hoveredEntity, GVAR(inventory))] call EFUNC(common,setInventory));
             priority = 1;
