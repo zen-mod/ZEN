@@ -8,6 +8,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "zen_context_menu",
+            "zen_garage",
             "zen_inventory"
         };
         author = ECSTRING(main,Author);

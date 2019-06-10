@@ -137,7 +137,7 @@ class EGVAR(context_menu,actions) {
             statement = QUOTE([ARR_2(_selectedObjects,'DOWN')] call FUNC(setStance));
         };
     };
-    class Arsenal {
+    class Loadout {
         displayName = "$STR_3den_display3den_entitymenu_arsenal_text";
         icon = "\a3\3den\data\displays\display3den\entitymenu\arsenal_ca.paa";
         condition = QUOTE(_hoveredEntity isEqualType objNull && {_hoveredEntity isKindOf 'CAManBase'} && {alive _hoveredEntity});
@@ -183,6 +183,21 @@ class EGVAR(context_menu,actions) {
             statement = QUOTE([ARR_2(_hoveredEntity, GVAR(inventory))] call EFUNC(common,setInventory));
             priority = 1;
         };
+    };
+    class Garage {
+        displayName = "$STR_3den_display3den_entitymenu_garage_text";
+        icon = "\a3\3DEN\Data\Displays\Display3DEN\EntityMenu\garage_ca.paa";
+        condition = QUOTE( \
+            _hoveredEntity isEqualType objNull \
+            && {alive _hoveredEntity} \
+            && { \
+                _hoveredEntity isKindOf 'LandVehicle' \
+                || {_hoveredEntity isKindOf 'Air'} \
+                || {_hoveredEntity isKindOf 'Ship'} \
+            } \
+        );
+        statement = QUOTE(_hoveredEntity call EFUNC(garage,openGarage));
+        priority = -82;
     };
     class TeleportZeus {
         displayName = CSTRING(TeleportZeus);
