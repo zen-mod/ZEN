@@ -4,6 +4,9 @@
         <Key ID="STR_ZEN_Context_Actions_EditInventory">
             <English>Edit Inventory</English>
         </Key>
+        <Key ID="STR_ZEN_Context_Actions_TeleportPlayers">
+            <English>Teleport Players</English>
+        </Key>
         <Key ID="STR_ZEN_Context_Actions_TeleportZeus">
             <English>Teleport Zeus</English>
         </Key>

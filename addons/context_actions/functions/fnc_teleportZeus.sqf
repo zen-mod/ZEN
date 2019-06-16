@@ -1,6 +1,6 @@
 /*
  * Author: mharis001
- * Teleports Zeus given position.
+ * Teleports Zeus to the given position.
  *
  * Arguments:
  * 0: Position <ARRAY>

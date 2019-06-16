@@ -199,6 +199,13 @@ class EGVAR(context_menu,actions) {
         statement = QUOTE(_hoveredEntity call EFUNC(garage,openGarage));
         priority = -82;
     };
+    class TeleportPlayers {
+        displayName = CSTRING(TeleportPlayers);
+        icon = QPATHTOF(ui\marker_ca.paa);
+        condition = QUOTE(_selectedObjects findIf {isPlayer _x} != -1);
+        statement = QUOTE(_selectedObjects call FUNC(teleportPlayers));
+        priority = -99;
+    };
     class TeleportZeus {
         displayName = CSTRING(TeleportZeus);
         icon = "\a3\Ui_F_Curator\Data\Logos\arma3_curator_eye_256_ca.paa";
