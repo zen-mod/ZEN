@@ -54,4 +54,4 @@ if (!isNull _attached) exitWith {
     [QEGVAR(common,setDir), [_object, _direction], _object] call CBA_fnc_targetEvent;
 
     [LSTRING(ObjectAttached)] call EFUNC(common,showMessage);
-}, localize LSTRING(ModuleAttachTo)] call EFUNC(common,getModuleTarget);
+}, [], LSTRING(ModuleAttachTo)] call EFUNC(common,getTargetPos);

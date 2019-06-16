@@ -1,10 +1,10 @@
 PREP(addObjectToCurators);
 PREP(collapseTree);
-PREP(getTurretMagazines);
 PREP(getAllTurrets);
 PREP(getInventory);
-PREP(getModuleTarget);
 PREP(getSideIcon);
+PREP(getTargetPos);
+PREP(getTurretMagazines);
 PREP(getVehicleAmmo);
 PREP(initDisplayCurator);
 PREP(initSliderEdit);
