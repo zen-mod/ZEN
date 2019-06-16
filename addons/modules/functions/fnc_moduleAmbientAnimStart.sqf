@@ -141,14 +141,14 @@ _unit setVariable [QGVAR(ambientAnimStart), animationState _unit];
 } forEach ["ANIM", "AUTOTARGET", "FSM", "MOVE", "TARGET"];
 
 // Play a random animation to start the ambient animation loop
-[QEGVAR(common,switchMove), [_unit, selectRandom _animations], _unit] call CBA_fnc_globalEvent;
+[QEGVAR(common,switchMove), [_unit, selectRandom _animations]] call CBA_fnc_globalEvent;
 
 // Add event handler to play animation again when animation finishes
 private _animDoneEH = _unit addEventHandler ["AnimDone", {
     params ["_unit"];
 
     private _animations = _unit getVariable [QGVAR(ambientAnimList), []];
-    [QEGVAR(common,switchMove), [_unit, selectRandom _animations], _unit] call CBA_fnc_globalEvent;
+    [QEGVAR(common,switchMove), [_unit, selectRandom _animations]] call CBA_fnc_globalEvent;
 }];
 
 _unit setVariable [QGVAR(ambientAnimDoneEH), _animDoneEH];

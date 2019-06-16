@@ -36,13 +36,13 @@ if (alive _unit) then {
 
     // Try playMoveNow first, use switchMove if animation does not respond
     private _previousAnim = _unit getVariable [QGVAR(ambientAnimStart), ""];
-    [QEGVAR(common,playMoveNow), [_unit, _previousAnim], _unit] call CBA_fnc_globalEvent;
+    [QEGVAR(common,playMoveNow), [_unit, _previousAnim]] call CBA_fnc_globalEvent;
 
     if (animationState _unit != _previousAnim) then {
-        [QEGVAR(common,switchMove), [_unit, _previousAnim], _unit] call CBA_fnc_globalEvent;
+        [QEGVAR(common,switchMove), [_unit, _previousAnim]] call CBA_fnc_globalEvent;
     };
 } else {
-    [QEGVAR(common,switchMove), [_unit, ""], _unit] call CBA_fnc_globalEvent;
+    [QEGVAR(common,switchMove), [_unit, ""]] call CBA_fnc_globalEvent;
 };
 
 // Remove stored animations list and previous animation
