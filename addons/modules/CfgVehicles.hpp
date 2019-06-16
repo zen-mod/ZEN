@@ -33,6 +33,7 @@ class CfgVehicles {
         function = QFUNC(moduleAmbientAnim);
     };
     class GVAR(moduleAmbientFlyby): GVAR(moduleBase) {
+        category = QGVAR(AI);
         displayName = CSTRING(ModuleAmbientFlyby);
         curatorInfoType = QGVAR(RscAmbientFlyby);
     };
@@ -102,6 +103,7 @@ class CfgVehicles {
     };
     class GVAR(moduleChatter): GVAR(moduleBase) {
         curatorCanAttach = 1;
+        category = QGVAR(AI);
         displayName = CSTRING(ModuleChatter);
         function = QFUNC(moduleChatter);
     };
@@ -118,6 +120,7 @@ class CfgVehicles {
         function = QFUNC(moduleCreateIED);
     };
     class GVAR(moduleCreateMinefield): GVAR(moduleBase) {
+        category = QGVAR(Objects);
         displayName = CSTRING(ModuleCreateMinefield);
         function = QFUNC(moduleCreateMinefield);
     };
