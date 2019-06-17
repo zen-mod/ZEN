@@ -44,12 +44,6 @@ class CfgVehicles {
         function = QFUNC(moduleArsenal);
         icon = "\a3\ui_f\data\logos\a_64_ca.paa";
     };
-    class GVAR(moduleAttachTo): GVAR(moduleBase) {
-        curatorCanAttach = 1;
-        category = QGVAR(Objects);
-        displayName = CSTRING(ModuleAttachTo);
-        function = QFUNC(moduleAttachTo);
-    };
     class GVAR(moduleAttachEffect): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Equipment);
@@ -61,6 +55,12 @@ class CfgVehicles {
         category = QGVAR(Objects);
         displayName = CSTRING(ModuleAttachFlag);
         function = QFUNC(moduleAttachFlag);
+    };
+    class GVAR(moduleAttachTo): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Objects);
+        displayName = CSTRING(ModuleAttachTo);
+        function = QFUNC(moduleAttachTo);
     };
     class GVAR(moduleBindVariable): GVAR(moduleBase) {
         curatorCanAttach = 1;
