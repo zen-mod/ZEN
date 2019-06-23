@@ -26,6 +26,11 @@ class CfgVehicles {
         scopeCurator = 1;
     };
 
+    class ModuleEmpty_F;
+    class ModuleMine_F: ModuleEmpty_F {
+        function = QFUNC(bi_moduleMine);
+    };
+
     class GVAR(moduleAmbientAnim): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(AI);

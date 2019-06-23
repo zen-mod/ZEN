@@ -1,3 +1,4 @@
+PREP(bi_moduleMine);
 PREP(compileAircraft);
 PREP(compileCAS);
 PREP(compileFlags);
