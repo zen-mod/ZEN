@@ -20,4 +20,11 @@ GVAR(ppBrightness) ppEffectEnable false;
     };
 }] call CBA_fnc_addEventHandler;
 
-["ZEN_displayCuratorLoad", FUNC(setModes)] call CBA_fnc_addEventHandler;
+["ZEN_displayCuratorLoad", {
+    [] call FUNC(setModes);
+    FUNC(updateEffect) call CBA_fnc_execNextFrame;
+}] call CBA_fnc_addEventHandler;
+
+["ZEN_displayCuratorUnload", {
+    GVAR(ppBrightness) ppEffectEnable false;
+}] call CBA_fnc_addEventHandler;

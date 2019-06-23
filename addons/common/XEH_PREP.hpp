@@ -1,13 +1,14 @@
 PREP(addObjectToCurators);
 PREP(collapseTree);
 PREP(createZeus);
+PREP(curatorDisplayLoad);
+PREP(curatorDisplayUnload);
 PREP(getAllTurrets);
 PREP(getInventory);
 PREP(getSideIcon);
 PREP(getTargetPos);
 PREP(getTurretMagazines);
 PREP(getVehicleAmmo);
-PREP(initDisplayCurator);
 PREP(initSliderEdit);
 PREP(openArsenal);
 PREP(setInventory);

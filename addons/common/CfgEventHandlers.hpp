@@ -18,6 +18,12 @@ class Extended_PostInit_EventHandlers {
 
 class Extended_DisplayLoad_EventHandlers {
     class RscDisplayCurator {
-        ADDON = QUOTE(call FUNC(initDisplayCurator));
+        ADDON = QUOTE(call FUNC(curatorDisplayLoad));
+    };
+};
+
+class Extended_DisplayUnload_EventHandlers {
+    class RscDisplayCurator {
+        ADDON = QUOTE(call FUNC(curatorDisplayUnload));
     };
 };

@@ -15,15 +15,3 @@ class Extended_PostInit_EventHandlers {
         init = QUOTE(call COMPILE_FILE(XEH_postInit));
     };
 };
-
-class Extended_DisplayLoad_EventHandlers {
-    class RscDisplayCurator {
-        ADDON = QUOTE(FUNC(updateEffect) call CBA_fnc_execNextFrame);
-    };
-};
-
-class Extended_DisplayUnload_EventHandlers {
-    class RscDisplayCurator {
-        ADDON = QUOTE(GVAR(ppBrightness) ppEffectEnable false);
-    };
-};

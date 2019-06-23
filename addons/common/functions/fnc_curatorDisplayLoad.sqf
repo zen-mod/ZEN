@@ -1,6 +1,6 @@
 /*
  * Author: mharis001
- * Initializes the Zeus Display and emits relevant events.
+ * Handles the display load event for the Zeus display.
  *
  * Arguments:
  * 0: Display <DISPLAY>
@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [DISPLAY] call zen_common_fnc_initDisplayCurator
+ * [DISPLAY] call zen_common_fnc_curatorDisplayLoad
  *
  * Public: No
  */
