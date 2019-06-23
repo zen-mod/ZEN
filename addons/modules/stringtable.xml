@@ -492,6 +492,28 @@
         <Key ID="STR_ZEN_Modules_ModuleTurretOptics_TI">
             <English>TI Equipment</English>
         </Key>
+
+        <Key ID="STR_ZEN_Modules_ModuleGarrison">
+            <English>Garrison Group</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleGarrison_FillMode">
+            <English>Filling Mode</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleGarrison_Even">
+            <English>Even Filling</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleGarrison_ByBuilding">
+            <English>Building By Building</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleGarrison_Random">
+            <English>Random</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleGarrison_TopDown">
+            <English>Fill From Top Down</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleUnGarrison">
+            <English>Un-Garrison Group</English>
+        </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_AI">
             <English>AI</English>

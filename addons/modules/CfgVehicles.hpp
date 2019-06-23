@@ -165,6 +165,12 @@ class CfgVehicles {
         function = QFUNC(moduleFunctionsViewer);
         icon = "\a3\3DEN\Data\Displays\Display3DEN\EntityMenu\functions_ca.paa";
     };
+    class GVAR(moduleGarrison): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = CSTRING(ModuleGarrison);
+        function = QFUNC(moduleGarrison);
+    };
     class GVAR(moduleGlobalHint): GVAR(moduleBase) {
         category = "Curator";
         displayName = CSTRING(ModuleGlobalHint);
@@ -252,6 +258,12 @@ class CfgVehicles {
         category = QGVAR(Equipment);
         displayName = CSTRING(ModuleTurretOptics);
         function = QFUNC(moduleTurretOptics);
+    };
+    class GVAR(moduleUnGarrison): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = CSTRING(ModuleUnGarrison);
+        function = QFUNC(moduleUnGarrison);
     };
     class GVAR(moduleVisibility): GVAR(moduleBase) {
         curatorCanAttach = 1;

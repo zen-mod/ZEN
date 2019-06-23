@@ -27,6 +27,7 @@ class CfgPatches {
             QGVAR(moduleEquipWithECM),
             QGVAR(moduleFlyHeight),
             QGVAR(moduleFunctionsViewer),
+            QGVAR(moduleGarrison),
             QGVAR(moduleGlobalHint),
             QGVAR(moduleHeal),
             QGVAR(moduleHideZeus),
@@ -43,6 +44,7 @@ class CfgPatches {
             QGVAR(moduleSpawnDestroyer),
             QGVAR(moduleTeleportPlayers),
             QGVAR(moduleTurretOptics),
+            QGVAR(moduleUnGarrison),
             QGVAR(moduleVisibility)
         };
         weapons[] = {};
