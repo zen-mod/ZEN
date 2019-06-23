@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"zen_common"};
+        requiredAddons[] = {"zen_attributes"};
         author = ECSTRING(main,Author);
         authors[] = {"mharis001"};
         url = ECSTRING(main,URL);
@@ -15,4 +15,5 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+#include "RscAttributes.hpp"
 #include "gui.hpp"
