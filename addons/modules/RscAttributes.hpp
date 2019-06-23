@@ -921,6 +921,7 @@ BEGIN_MODULE_DIALOG(RscAmbientFlyby)
                     class FactionCombo: SideCombo {
                         idc = IDC_AMBIENTFLYBY_FACTION;
                         y = POS_H(2.2);
+                        wholeHeight = POS_H(6);
                         class Items {};
                     };
                     class AircraftLabel: FactionLabel {
@@ -930,6 +931,7 @@ BEGIN_MODULE_DIALOG(RscAmbientFlyby)
                     class AircraftCombo: FactionCombo {
                         idc = IDC_AMBIENTFLYBY_AIRCRAFT;
                         y = POS_H(3.3);
+                        wholeHeight = POS_H(5);
                     };
                 };
             };
