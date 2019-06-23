@@ -3,7 +3,7 @@
     "CHECKBOX",
     [LSTRING(MoveDisplayToEdge), LSTRING(MoveDisplayToEdge_Description)],
     ELSTRING(common,Category),
-    false,
+    true,
     false
 ] call CBA_settings_fnc_init;
 

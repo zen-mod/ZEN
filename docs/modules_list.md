@@ -43,6 +43,10 @@ Sends the entered message AI communication over chat.
 When placed on a unit, sends the message from the unit over the selected channel.
 When not placed on a unit, sends the message from the HQ element of the selected side.
 
+## Configure Doors
+
+Opens the 3D door configuration UI on the attached or nearest building.
+
 ## Convoy Parameters
 
 Sets the convoy parameters (separation, speed, stay on road) of the attached land vehicle.
@@ -85,6 +89,10 @@ Sets the flying altitude of the attached aircraft relative to the ground.
 ## Functions Viewer
 
 Opens the functions viewer.
+
+## Garrison Group
+
+Garrisons units from the attached group in nearby buildings.
 
 ## Global Hint
 
@@ -151,6 +159,10 @@ Toggles the simulation of the attached object.
 ## Toggle Visibility
 
 Toggles the visibility of the attached object.
+
+## Un-Garrison Group
+
+Un-garrisons units from the attached group.
 
 ## Update Editable Objects
 

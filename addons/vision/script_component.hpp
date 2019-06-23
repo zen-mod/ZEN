@@ -2,8 +2,8 @@
 #define COMPONENT_BEAUTIFIED Vision
 #include "\x\zen\addons\main\script_mod.hpp"
 
-#define DEBUG_MODE_FULL
-#define DISABLE_COMPILE_CACHE
+// #define DEBUG_MODE_FULL
+// #define DISABLE_COMPILE_CACHE
 
 #ifdef DEBUG_ENABLED_VISION
     #define DEBUG_MODE_FULL

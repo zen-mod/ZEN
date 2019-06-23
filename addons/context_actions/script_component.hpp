@@ -2,8 +2,8 @@
 #define COMPONENT_BEAUTIFIED Context Actions
 #include "\x\zen\addons\main\script_mod.hpp"
 
-#define DEBUG_MODE_FULL
-#define DISABLE_COMPILE_CACHE
+// #define DEBUG_MODE_FULL
+// #define DISABLE_COMPILE_CACHE
 
 #ifdef DEBUG_ENABLED_CONTEXT_ACTIONS
     #define DEBUG_MODE_FULL
