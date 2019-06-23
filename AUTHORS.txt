@@ -1,0 +1,22 @@
+# ZEUS ENHANCED CONTRIBUTOR LIST
+# If you contributed, but are not listed here,
+# contact one of the Core Team members.
+#
+# Feel free to add yourself to this when creating a pull
+# request, preferably including an email address.
+
+# CORE TEAM
+mharis001 <mhariszakar@gmail.com>
+
+# CONTRIBUTORS
+654wak654
+Alganthe
+Brett
+Dedmen
+Dystopian
+GitHawk
+Glowbal
+Jonpas
+PabstMirror
+SilentSpike
+Tuupertunut

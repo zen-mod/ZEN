@@ -8,4 +8,6 @@
 - Extended attributes displays
 - Settings to customize the editor display
 - Context menu providing easy access to common actions
+- Various bug fixes to the Zeus interface
+- Rewritten vehicle garage specifically for Zeus
 - Rewritten, faster remote controlling of units
