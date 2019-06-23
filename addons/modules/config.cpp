@@ -28,6 +28,7 @@ class CfgPatches {
             QGVAR(moduleFlyHeight),
             QGVAR(moduleFunctionsViewer),
             QGVAR(moduleGarrison),
+            QGVAR(ModuleGroupSide),
             QGVAR(moduleGlobalHint),
             QGVAR(moduleHeal),
             QGVAR(moduleHideZeus),

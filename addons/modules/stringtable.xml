@@ -514,6 +514,10 @@
         <Key ID="STR_ZEN_Modules_ModuleUnGarrison">
             <English>Un-Garrison Group</English>
         </Key>
+
+        <Key ID="STR_ZEN_Modules_ModuleGroupSide">
+            <English>Group Side</English>
+        </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_AI">
             <English>AI</English>

@@ -36,6 +36,7 @@ PREP(moduleEquipWithECM);
 PREP(moduleFlyHeight);
 PREP(moduleFunctionsViewer);
 PREP(moduleGarrison);
+PREP(moduleGroupSide);
 PREP(moduleHeal);
 PREP(moduleHideZeus);
 PREP(moduleLightSource);
