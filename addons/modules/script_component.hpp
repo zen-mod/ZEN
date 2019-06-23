@@ -16,7 +16,7 @@
 #include "\x\zen\addons\main\script_macros.hpp"
 
 #include "\a3\ui_f\hpp\defineCommonGrids.inc"
-#include "\a3\ui_f_curator\ui\defineResinclDesign.inc"
+#include "\x\zen\addons\common\defineResinclDesign.inc"
 
 #define POS_X(N) ((N) * GUI_GRID_W + GUI_GRID_CENTER_X)
 #define POS_Y(N) ((N) * GUI_GRID_H + GUI_GRID_CENTER_Y)

@@ -17,8 +17,7 @@
 
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 #include "\a3\ui_f\hpp\defineCommonGrids.inc"
-#include "\a3\ui_f\hpp\defineResinclDesign.inc"
-#include "\a3\ui_f_curator\ui\defineResinclDesign.inc"
+#include "\x\zen\addons\common\defineResinclDesign.inc"
 
 #define IDC_INCLUDE_CREW 25460
 #define IDC_SEARCH_CUSTOM 25470

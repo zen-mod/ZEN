@@ -15,7 +15,7 @@
 
 #include "\x\zen\addons\main\script_macros.hpp"
 
-#include "\a3\ui_f_curator\ui\defineResinclDesign.inc"
+#include "\x\zen\addons\common\defineResinclDesign.inc"
 
 #define VAR_UNIT  "bis_fnc_moduleRemoteControl_unit"
 #define VAR_OWNER "bis_fnc_moduleRemoteControl_owner"

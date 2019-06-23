@@ -16,7 +16,7 @@
 #include "\x\zen\addons\main\script_macros.hpp"
 
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
-#include "\a3\ui_f_curator\ui\defineResinclDesign.inc"
+#include "\x\zen\addons\common\defineResinclDesign.inc"
 
 #define ICON_TARGET "\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa"
 

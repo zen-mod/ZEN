@@ -15,6 +15,6 @@
 
 #include "\x\zen\addons\main\script_macros.hpp"
 
-#include "\a3\ui_f_curator\ui\defineResinclDesign.inc"
+#include "\x\zen\addons\common\defineResinclDesign.inc"
 
 #define DEFAULT_ICON "\a3\modules_f\data\portraitmodule_ca.paa"
