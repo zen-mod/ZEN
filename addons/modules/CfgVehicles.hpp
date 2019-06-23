@@ -44,6 +44,13 @@ class CfgVehicles {
         function = QFUNC(moduleArsenal);
         icon = "\a3\ui_f\data\logos\a_64_ca.paa";
     };
+    class GVAR(moduleAssignZeus): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = "Curator";
+        displayName = CSTRING(ModuleAssignZeus);
+        function = QFUNC(moduleAssignZeus);
+        icon = "\a3\Ui_F_Curator\Data\Logos\arma3_curator_eye_256_ca.paa";
+    };
     class GVAR(moduleAttachEffect): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Equipment);

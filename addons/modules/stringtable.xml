@@ -123,6 +123,16 @@
             <English>Sets how fast the aircraft will fly.</English>
         </Key>
 
+        <Key ID="STR_ZEN_Modules_ModuleAssignZeus">
+            <English>Promote To Zeus</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAssignZeus_AlreadyZeus">
+            <English>Unit is already a curator</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAssignZeus_Promoted">
+            <English>You have been promoted to Zeus.</English>
+        </Key>
+
         <Key ID="STR_ZEN_Modules_ModuleAttachTo">
             <English>Attach To</English>
         </Key>
@@ -545,6 +555,9 @@
         </Key>
         <Key ID="STR_ZEN_Modules_OnlyNonInfantry">
             <English>Unit must not be infantry</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_OnlyPlayers">
+            <English>Unit must be a player</English>
         </Key>
         <Key ID="STR_ZEN_Modules_OnlyVehicles">
             <English>Unit must be a vehicle</English>

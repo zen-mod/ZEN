@@ -222,6 +222,8 @@ if (isServer) then {
             _x removeCuratorEditableObjects [_objects, true];
         } forEach allCurators;
     }] call CBA_fnc_addEventHandler;
+
+    [QGVAR(createZeus), FUNC(createZeus)] call CBA_fnc_addEventHandler;
 };
 
 ["CBA_settingsInitialized", {

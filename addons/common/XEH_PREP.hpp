@@ -1,5 +1,6 @@
 PREP(addObjectToCurators);
 PREP(collapseTree);
+PREP(createZeus);
 PREP(getAllTurrets);
 PREP(getInventory);
 PREP(getSideIcon);

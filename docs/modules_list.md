@@ -113,6 +113,10 @@ Invincibility can be removed using this module as well.
 
 Makes the attached group patrol an area of the given radius with the selected behavior.
 
+## Promote To Zeus
+
+Assigns the attached player as a Zeus.
+
 ## Set Date
 
 Sets the current date (and time of day) in the mission.
