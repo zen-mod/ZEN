@@ -17,7 +17,7 @@
 
 params ["_logic"];
 
-private _vehicle = attachedto _logic;
+private _vehicle = attachedTo _logic;
 deleteVehicle _logic;
 
 if (isNull _vehicle) exitWith {

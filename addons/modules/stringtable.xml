@@ -482,6 +482,16 @@
         <Key ID="STR_ZEN_Modules_ModuleFlyHeight_Tooltip">
             <English>Sets the flying altitude for the aircraft relative to the ground.</English>
         </Key>
+
+        <Key ID="STR_ZEN_Modules_ModuleTurretOptics">
+            <English>Vehicle Turret Optics</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleTurretOptics_NVG">
+            <English>NVG Equipment</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleTurretOptics_TI">
+            <English>TI Equipment</English>
+        </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_AI">
             <English>AI</English>

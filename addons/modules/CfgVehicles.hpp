@@ -247,6 +247,12 @@ class CfgVehicles {
         displayName = CSTRING(ModuleTeleportPlayers);
         curatorInfoType = QGVAR(RscTeleportPlayers);
     };
+    class GVAR(moduleTurretOptics): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Equipment);
+        displayName = CSTRING(ModuleTurretOptics);
+        function = QFUNC(moduleTurretOptics);
+    };
     class GVAR(moduleVisibility): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Objects);

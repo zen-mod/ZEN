@@ -42,6 +42,7 @@ class CfgPatches {
             QGVAR(moduleSpawnCarrier),
             QGVAR(moduleSpawnDestroyer),
             QGVAR(moduleTeleportPlayers),
+            QGVAR(moduleTurretOptics),
             QGVAR(moduleVisibility)
         };
         weapons[] = {};

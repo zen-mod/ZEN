@@ -46,4 +46,5 @@ PREP(moduleSitOnChair);
 PREP(moduleSmokePillar);
 PREP(moduleSpawnCarrier);
 PREP(moduleSpawnDestroyer);
+PREP(moduleTurretOptics);
 PREP(moduleVisibility);

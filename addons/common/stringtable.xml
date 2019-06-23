@@ -66,6 +66,9 @@
             <Chinese>否</Chinese>
             <Chinesesimp>否</Chinesesimp>
         </Key>
+        <Key ID="STR_ZEN_Common_Unchanged">
+            <English>Unchanged</English>
+        </Key>
         <Key ID="STR_ZEN_Common_VeryLow">
             <English>Very Low</English>
         </Key>

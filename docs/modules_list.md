@@ -164,3 +164,7 @@ Spawns the USS Freedom aircraft carrier.
 ## USS Liberty
 
 Spawns the USS Liberty destroyer.
+
+## Vehicle Turret Optics
+
+Modifies the attached vehicle's NVG and TI equipment availability.  
