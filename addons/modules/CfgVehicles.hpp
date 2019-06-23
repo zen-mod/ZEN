@@ -41,6 +41,7 @@ class CfgVehicles {
         category = QGVAR(AI);
         displayName = CSTRING(ModuleAmbientFlyby);
         curatorInfoType = QGVAR(RscAmbientFlyby);
+        icon = QPATHTOF(ui\heli_ca.paa);
     };
     class GVAR(moduleArsenal): GVAR(moduleBase) {
         curatorCanAttach = 1;
@@ -67,6 +68,7 @@ class CfgVehicles {
         category = QGVAR(Objects);
         displayName = CSTRING(ModuleAttachFlag);
         function = QFUNC(moduleAttachFlag);
+        icon = QPATHTOF(ui\flag_ca.paa);
     };
     class GVAR(moduleAttachTo): GVAR(moduleBase) {
         curatorCanAttach = 1;
@@ -118,18 +120,21 @@ class CfgVehicles {
         category = QGVAR(AI);
         displayName = CSTRING(ModuleChatter);
         function = QFUNC(moduleChatter);
+        icon = QPATHTOF(ui\chat_ca.paa);
     };
     class GVAR(moduleConvoyParameters): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(AI);
         displayName = CSTRING(ModuleConvoyParameters);
         function = QFUNC(moduleConvoyParameters);
+        icon = QPATHTOF(ui\truck_ca.paa);
     };
     class GVAR(moduleCreateIED): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Objects);
         displayName = CSTRING(CreateIED);
         function = QFUNC(moduleCreateIED);
+        icon = QPATHTOF(ui\explosion_ca.paa);
     };
     class GVAR(moduleCreateMinefield): GVAR(moduleBase) {
         category = QGVAR(Objects);
@@ -151,6 +156,7 @@ class CfgVehicles {
         category = "Curator";
         displayName = CSTRING(ModuleEditableObjects);
         curatorInfoType = QGVAR(RscEditableObjects);
+        icon = QPATHTOF(ui\edit_obj_ca.paa);
     };
     class GVAR(moduleEquipWithECM): GVAR(moduleBase) {
         curatorCanAttach = 1;
@@ -190,6 +196,7 @@ class CfgVehicles {
         curatorCanAttach = 1;
         displayName = CSTRING(ModuleHeal);
         function = QFUNC(moduleHeal);
+        icon = QPATHTOF(ui\heal_ca.paa);
     };
     class GVAR(moduleHideZeus): GVAR(moduleBase) {
         category = "Curator";
@@ -229,6 +236,7 @@ class CfgVehicles {
         category = "MissionFlow";
         displayName = CSTRING(ModuleSideRelations);
         curatorInfoType = QGVAR(RscSideRelations);
+        icon = "\a3\ui_f\data\igui\cfg\simpletasks\types\help_ca.paa";
     };
     class GVAR(moduleSimulation): GVAR(moduleBase) {
         curatorCanAttach = 1;
@@ -241,11 +249,13 @@ class CfgVehicles {
         category = QGVAR(AI);
         displayName = CSTRING(ModuleSitOnChair);
         function = QFUNC(moduleSitOnChair);
+        icon = QPATHTOF(ui\chair_ca.paa);
     };
     class GVAR(moduleSmokePillar): GVAR(moduleBase) {
         category = "Effects";
         displayName = CSTRING(ModuleSmokePillar);
         function = QFUNC(moduleSmokePillar);
+        icon = QPATHTOF(ui\smoke_pillar_ca.paa);
     };
     class GVAR(moduleSpawnCarrier): GVAR(moduleBase) {
         category = QGVAR(Spawn);
