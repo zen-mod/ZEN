@@ -1,4 +1,6 @@
-<center><h1>Zeus Enhanced</h1></center>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/mharis001/ZEN/master/extras/assets/logo/logo_zen_black.png" height="384">
+</p>
 
 <p align="center">
     <a href="https://github.com/mharis001/ZEN/releases">
@@ -17,6 +19,8 @@
 </p>
 
 **Zeus Enhanced**, also known as **ZEN**, is an Arma 3 mod aimed at improving and expanding the functionality of the Zeus real-time editor.
+
+Zeus Enhanced is built with communities who use Zeus as their primary mission making tool in mind by enabling curators with powerful tools to create dynamic scenarios in an efficient manner.
 For an in-depth breakdown of the features and frameworks please visit the [website](https://mharis001.github.io/ZEN/#/).
 
 This mod is built using the same foundation and design standards as the ACE3 Project.
@@ -31,6 +35,16 @@ Special thanks to the [ACE3 Team](http://ace3mod.com/team.html) for their open s
 - Various bug fixes to the Zeus interface
 - Rewritten vehicle garage specifically for Zeus
 - Rewritten, faster remote controlling of units
+
+## Contributing
+
+You can help out with the ongoing development by looking for potential bugs in our code base, or by contributing new features. We are always welcoming new pull requests containing bug fixes, refactors and new features. We have a list of tasks and bugs on our issue tracker on GitHub. Please comment on issues you want to contribute with, to avoid duplicating effort.
+
+To contribute something to ZEN, simply fork this repository and submit your pull requests for review by other collaborators. Remember to add yourself to the author array of any PBO you will be editing and the [`AUTHORS.txt`](https://github.com/mharis001/ZEN/blob/master/AUTHORS.txt) file; including a valid email address.
+
+### Submitting Issues and Feature Requests
+
+Please use our [Issue Tracker](https://github.com/mharis001/ZEN/issues) to report a bug, propose a feature, or suggest changes to the existing ones.
 
 ## License
 
