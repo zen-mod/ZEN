@@ -13,6 +13,6 @@ Special thanks to the [ACE3 Team](http://ace3mod.com/team.html) for their open s
 - Extended attributes displays
 - Settings to customize the editor display
 - Context menu providing easy access to common actions
-- Various bug fixes to the Zeus interface
+- Various bug fixes for the Zeus interface
 - Rewritten vehicle garage specifically for Zeus
 - Rewritten, faster remote controlling of units

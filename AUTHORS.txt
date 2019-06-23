@@ -11,6 +11,7 @@ mharis001 <mhariszakar@gmail.com>
 # CONTRIBUTORS
 654wak654
 Alganthe
+Beaumont
 Brett
 Dedmen
 Dystopian
