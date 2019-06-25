@@ -164,6 +164,14 @@ class CfgVehicles {
         displayName = CSTRING(ModuleEquipWithECM);
         function = QFUNC(moduleEquipWithECM);
     };
+    class GVAR(moduleExecuteCode): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(DevTools);
+        displayName = CSTRING(ModuleExecuteCode);
+        curatorInfoType = QGVAR(RscExecuteCode);
+        icon = QPATHTOF(ui\code_ca.paa);
+        portrait = QPATHTOF(ui\code_ca.paa);
+    };
     class GVAR(moduleFlyHeight): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(AI);

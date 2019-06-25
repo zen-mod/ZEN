@@ -518,6 +518,28 @@
         <Key ID="STR_ZEN_Modules_ModuleGroupSide">
             <English>Group Side</English>
         </Key>
+
+        <Key ID="STR_ZEN_Modules_ModuleExecuteCode">
+            <English>Execute Code</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleExecuteCode_Args_Tooltip">
+            <English>This code will be passed the following arguments:\n0: Attached Object (objNull if none)\n1: Module Position ASL</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleExecuteCode_Disabled">
+            <English>Code execution by Zeus is disabled in this mission</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleExecuteCode_Local">
+            <English>Local</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleExecuteCode_Server">
+            <English>Server</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleExecuteCode_Global">
+            <English>Global</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleExecuteCode_GlobalAndJIP">
+            <English>Global and JIP</English>
+        </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_AI">
             <English>AI</English>

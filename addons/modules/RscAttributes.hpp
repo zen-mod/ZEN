@@ -996,3 +996,51 @@ BEGIN_MODULE_DIALOG(RscAmbientFlyby)
         };
     };
 END_MODULE_DIALOG;
+
+BEGIN_MODULE_DIALOG(RscExecuteCode)
+    class executeCode: RscControlsGroupNoScrollbars {
+        idc = IDC_EXECUTECODE;
+        function = QFUNC(gui_executeCode);
+        x = 0;
+        y = 0;
+        w = POS_W(26);
+        h = POS_H(15.2);
+        class controls {
+            class History: EGVAR(attributes,RscCombo) {
+                idc = IDC_EXECUTECODE_HISTORY;
+                font = "EtelkaMonospacePro";
+                x = 0;
+                w = POS_W(26);
+                sizeEx = POS_H(0.7);
+            };
+            class Edit: EGVAR(attributes,RscEdit) {
+                idc = IDC_EXECUTECODE_EDIT;
+                style = ST_MULTI;
+                font = "EtelkaMonospacePro";
+                tooltip = CSTRING(ModuleExecuteCode_Args_Tooltip);
+                x = pixelW;
+                y = POS_H(1.1);
+                w = POS_W(26) - pixelW;
+                h = POS_H(13);
+                sizeEx = POS_H(0.7);
+                autocomplete = "scripting";
+                default = 1;
+            };
+            class Mode: ctrlToolbox {
+                idc = IDC_EXECUTECODE_MODE;
+                x = 0;
+                y = POS_H(14.2);
+                w = POS_W(26);
+                h = POS_H(1);
+                rows = 1;
+                columns = 4;
+                strings[] = {
+                    CSTRING(ModuleExecuteCode_Local),
+                    CSTRING(ModuleExecuteCode_Server),
+                    CSTRING(ModuleExecuteCode_Global),
+                    CSTRING(ModuleExecuteCode_GlobalAndJIP)
+                };
+            };
+        };
+    };
+END_MODULE_DIALOG;
