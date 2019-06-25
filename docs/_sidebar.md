@@ -2,6 +2,7 @@
   - [<i class="fas fa-arrow-right"></i> Home](/)
   - [<i class="fas fa-list"></i> Modules List](/modules_list.md)
   - [<i class="fas fa-table"></i> Attributes](/attributes.md)
+  - [<i class="fas fa-caret-square-right"></i> Context Actions](/context_actions.md)
 - **Frameworks**
   - [<i class="fas fa-bars"></i> Context Menu](/context_menu.md)
   - [<i class="fas fa-cog"></i> Custom Modules](/custom_modules.md)
