@@ -57,8 +57,32 @@ private _fnc_getActionData = {
 };
 
 private _contextActions = [configFile >> QGVAR(actions)] call _fnc_getActionData;
-[_contextActions, 6, false] call CBA_fnc_sortNestedArray;
 
+// Support for missionConfigFile actions, need special handling to support adding to paths that exist from configFile
+private _missionActions = [missionConfigFile >> QGVAR(actions)] call _fnc_getActionData;
+
+private _fnc_addMissionActions = {
+    params ["_actionsArray", "_actionsToAdd"];
+
+    {
+        _x params ["_actionName", "", "", "", "", "", "", "_actionChildren"];
+
+        private _index = _actionsArray findIf {
+            (_x select 0) isEqualTo _actionName;
+        };
+
+        if (_index == -1) then {
+            _actionsArray pushBack _x;
+        } else {
+            private _children = _actionsArray select _index select 7;
+            [_children, _actionChildren] call _fnc_addMissionActions;
+        };
+    } forEach _actionsToAdd;
+
+    [_actionsArray, 6, false] call CBA_fnc_sortNestedArray;
+};
+
+[_contextActions, _missionActions] call _fnc_addMissionActions;
 missionNamespace setVariable [QGVAR(actions), _contextActions];
 
 /*
