@@ -1,17 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Attributes">
         <Key ID="STR_ZEN_Attributes_Engine">
             <English>Engine</English>
+            <Russian>Двигатель</Russian>
         </Key>
         <Key ID="STR_ZEN_Attributes_Lights">
             <English>Lights</English>
+            <Russian>Фары</Russian>
         </Key>
         <Key ID="STR_ZEN_Attributes_PlateNumber">
             <English>Plate Number</English>
+            <Russian>Госномер</Russian>
         </Key>
         <Key ID="STR_ZEN_Attributes_Timeout">
             <English>Timeout (s)</English>
+            <Russian>Таймаут (с)</Russian>
         </Key>
         <Key ID="STR_ZEN_Attributes_Timeout_Tooltip">
             <English>The time (in seconds) between waypoint condition satisfaction and waypoint completion.</English>

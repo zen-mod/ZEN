@@ -1,14 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Doors">
         <Key ID="STR_ZEN_Doors_Configure">
             <English>Configure Doors</English>
+            <Russian>Конфигурация дверей</Russian>
         </Key>
         <Key ID="STR_ZEN_Doors_NoBuilding">
             <English>Place on a building</English>
+            <Russian>Поместите на здание</Russian>
         </Key>
         <Key ID="STR_ZEN_Doors_NoDoors">
             <English>Building has no doors</English>
+            <Russian>У этого здания нет дверей!</Russian>
         </Key>
     </Package>
 </Project>

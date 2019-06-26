@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Common">
         <Key ID="STR_ZEN_Common_Category">
@@ -68,105 +68,139 @@
         </Key>
         <Key ID="STR_ZEN_Common_Unchanged">
             <English>Unchanged</English>
+            <Russian>Не изменилось</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_VeryLow">
             <English>Very Low</English>
+            <Russian>Оч. низкий</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_Low">
             <English>Low</English>
+            <Russian>Низкий</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_Medium">
             <English>Medium</English>
+            <Russian>Средний</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_High">
             <English>High</English>
+            <Russian>Высокий</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_VeryHigh">
             <English>Very High</English>
+            <Russian>Оч. высокий</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_VeryWeak">
             <English>Very Weak</English>
+            <Russian>Оч. слабый</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_Weak">
             <English>Weak</English>
+            <Russian>Слабый</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_Strong">
             <English>Strong</English>
+            <Russian>Сильный</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_Extreme">
             <English>Extreme</English>
+            <Russian>Экстремальный</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_All">
             <English>All</English>
+            <Russian>Все</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_Side">
             <English>Side</English>
+            <Russian>Сторона</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_Faction">
             <English>Faction</English>
+            <Russian>Фракция</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_Aircraft">
             <English>Aircraft</English>
+            <Russian>Самолёт</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_Filter">
             <English>Filter</English>
+            <Russian>Фильтр</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_Units">
             <English>Units</English>
+            <Russian>Солдаты</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_Vehicles">
             <English>Vehicles</English>
+            <Russian>Машины</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_Static">
             <English>Static</English>
+            <Russian>Турели</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_Nearest">
             <English>Nearest</English>
+            <Russian>Ближайший</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_Speed">
             <English>Speed</English>
+            <Russian>Скорость</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_Range">
             <English>Range</English>
+            <Russian>Дистанция</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_Radius">
             <English>Radius</English>
+            <Russian>Радиус</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_Height">
             <English>Height</English>
+            <Russian>Высота</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_Height_Units">
             <English>Height (m)</English>
+            <Russian>Высота (м)</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects">
             <English>Add Objects to Curators</English>
+            <Russian>Сдалвть объекты редактируемыми</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects_Description">
             <English>Automatically adds spawned objects to all curators</English>
+            <Russian>Автоматически делает все добавленные объекты редактируемыми</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_DisableGearAnim">
             <English>Disable Gear Animation</English>
+            <Russian>Отключить анимацию шестерёнки</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_DisableGearAnim_Description">
             <English>Disables the "Gear" animation from playing when entering Zeus</English>
+            <Russian>Отключает анимированную шестерёнку при входе в режим ГМ</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_DarkMode">
             <English>Dark Mode</English>
+            <Russian>Тёмная тема</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_DarkMode_Description">
             <English>Changes the appearance of various user interface elements to a darker color theme</English>
+            <Russian>Меняет вид интерфейса пользователя на более тёмные</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_PreferredArsenal">
             <English>Preferred Arsenal</English>
+            <Russian>Предпочитаемый арсенал</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_PreferredArsenal_Description">
             <English>Selects the preferred arsenal used by Zeus Enhanced\nIf ACE Arsenal is not installed, will fall back to BI Virtual Arsenal</English>
+            <Russian>Выбор предпочитаемого Арсенала\nlfЕсли не установлен ACE, будет запущен стандартный Виртуальный Арсенал.</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_BIVirtualArsenal">
             <English>BI Virtual Arsenal</English>
+            <Russian>Виртуальный Арсенал</Russian>
         </Key>
         <Key ID="STR_ZEN_Common_AceArsenal">
             <English>ACE Arsenal</English>
+            <Russian>ACE Арсенал</Russian>
         </Key>
     </Package>
 </Project>

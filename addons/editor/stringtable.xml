@@ -1,38 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Editor">
         <Key ID="STR_ZEN_Editor_MoveDisplayToEdge">
             <English>Move Display to Edge</English>
+            <Russian>Убрать панель за край</Russian>
         </Key>
         <Key ID="STR_ZEN_Editor_MoveDisplayToEdge_Description">
             <English>Moves the Zeus Editor Display to the edge of the screen</English>
+            <Russian>Убирает панель за край</Russian>
         </Key>
         <Key ID="STR_ZEN_Editor_RemoveWatermark">
             <English>Remove Watermark</English>
+            <Russian>Убрать водяной знак</Russian>
         </Key>
         <Key ID="STR_ZEN_Editor_RemoveWatermark_Description">
             <English>Removes the watermark shown when hiding the display</English>
+            <Russian>Убирает водяной знак ГМ когда интерфейс спрятан</Russian>
         </Key>
         <Key ID="STR_ZEN_Editor_DisableLiveSearch">
             <English>Disable Live Search</English>
+            <Russian>Отключить мгновенный поиск</Russian>
         </Key>
         <Key ID="STR_ZEN_Editor_DisableLiveSearch_Description">
             <English>Requires pressing Enter or clicking the search button to confirm a search\nHelps reduce lag when searching through a lot of items</English>
+            <Russian>Для подтверждения поиска тебуется нажатие клавиши Ввод\nПомогает уменьшить лаг при поиске </Russian>
         </Key>
         <Key ID="STR_ZEN_Editor_DeclutterEmptyTree">
             <English>Declutter Empty Tree</English>
+            <Russian>Очистить пустое дерево</Russian>
         </Key>
         <Key ID="STR_ZEN_Editor_DeclutterEmptyTree_Description">
             <English>Declutters the empty tree by removing empty vehicles as those are available in the side specific trees</English>
+            <Russian>???</Russian>
         </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages">
             <English>Unit Radio Messages</English>
+            <Russian>Радиосообшения ИИ</Russian>
         </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages_Description">
             <English>Controls whether unit radio messages are played on placement and waypoint orders, waypoints only, or disabled</English>
+            <Russian>Определяет будут ли ИИ подразделения сообщать по радио о своих действиях или нет.</Russian>
         </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages_WaypointsOnly">
             <English>Waypoints Only</English>
+            <Russian>Только путевые точки</Russian>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleIncludeCrew">
             <English>Toggle Include Crew</English>
