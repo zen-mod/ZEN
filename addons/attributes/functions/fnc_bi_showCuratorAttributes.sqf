@@ -16,6 +16,9 @@
  */
 #include "script_component.hpp"
 
+// Prevent attributes from opening if remote controlling (cannot override double click EH)
+if (!isNull (missionNamespace getVariable ["bis_fnc_moduleRemoteControl_unit", objNull])) exitWith {};
+
 // Need [_this] for passed waypoint arrays
 [_this] params [["_entity", objNull, [objNull, grpNull, [], ""]]];
 
