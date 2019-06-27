@@ -43,6 +43,7 @@ class CfgPatches {
             QGVAR(moduleSmokePillar),
             QGVAR(moduleSpawnCarrier),
             QGVAR(moduleSpawnDestroyer),
+            QGVAR(moduleSuicideBomber),
             QGVAR(moduleTeleportPlayers),
             QGVAR(moduleTurretOptics),
             QGVAR(moduleUnGarrison),

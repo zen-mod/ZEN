@@ -518,6 +518,71 @@
         <Key ID="STR_ZEN_Modules_ModuleGroupSide">
             <English>Group Side</English>
         </Key>
+
+        <Key ID="STR_ZEN_Modules_ModuleSuicideBomber">
+            <English>Suicide Bomber</English>
+            <Chinese>自殺式炸彈襲擊者</Chinese>
+            <Chinesesimp>自杀式炸弹袭击者</Chinesesimp>
+            <Czech>Samovražedný bombardér</Czech>
+            <French>Kamikaze</French>
+            <German>Selbstmordattentäter</German>
+            <Hungarian>Öngyilkos merénylő</Hungarian>
+            <Italian>Kamikaze</Italian>
+            <Japanese>自爆テロ犯</Japanese>
+            <Korean>자살 폭탄</Korean>
+            <Polish>Samobójca</Polish>
+            <Portuguese>Bombardeiro suicida</Portuguese>
+            <Russian>Террорист-смертник</Russian>
+            <Spanish>Bombardeo suicida</Spanish>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleSuicideBomber_DeadManSwitch">
+            <English>Dead Man's Switch</English>
+            <German>Totmannschalter</German>
+            <French>Détonateur par relâchement de pression</French>
+            <Czech>Spínač mrtvého muže</Czech>
+            <Polish>Czuwak</Polish>
+            <Spanish>Detonador de hombre muerto</Spanish>
+            <Hungarian>Halott ember kapcsolója</Hungarian>
+            <Portuguese>Detonador do homem morto</Portuguese>
+            <Russian>Кнопка мертвеца</Russian>
+            <Italian>Detonatore a rilascio</Italian>
+            <Japanese>自爆装置</Japanese>
+            <Korean>자폭 장치</Korean>
+            <Chinesesimp>自杀炸弹客引爆器</Chinesesimp>
+            <Chinese>自殺炸彈客引爆器</Chinese>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleSuicideBomber_AutoSeek">
+            <English>Auto Seek</English>
+            <Chinese>自動尋求</Chinese>
+            <Chinesesimp>自动寻求</Chinesesimp>
+            <Czech>Auto Seek</Czech>
+            <French>Recherche automatique</French>
+            <German>Automatische Suche</German>
+            <Hungarian>Automatikus keresés</Hungarian>
+            <Italian>Ricerca automatica</Italian>
+            <Japanese>自動誘導</Japanese>
+            <Korean>자동 탐색</Korean>
+            <Polish>Auto Seek</Polish>
+            <Portuguese>Busca automática</Portuguese>
+            <Russian>Автоматический поиск</Russian>
+            <Spanish>Búsqueda automática</Spanish>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleSuicideBomber_AlreadyBomber">
+            <English>Unit is already a suicide bomber</English>
+            <Chinese>這個單位已經是自殺炸彈手了</Chinese>
+            <Chinesesimp>这个单位已经是自杀炸弹手了</Chinesesimp>
+            <Czech>Jednotka je již samovražedným bombardérem</Czech>
+            <French>L'unité est déjà un kamikaze</French>
+            <German>Die Einheit ist bereits ein Selbstmordattentäter</German>
+            <Hungarian>Az egység már öngyilkos bombázó</Hungarian>
+            <Italian>L'unità è già un kamikaze</Italian>
+            <Japanese>既に自爆ユニットです</Japanese>
+            <Korean>유닛은 이미 자살 폭탄 테러범이다.</Korean>
+            <Polish>Jednostka jest już zamachowcem-samobójcą</Polish>
+            <Portuguese>A unidade já é um suicida</Portuguese>
+            <Russian>Единица уже является террористом-смертником</Russian>
+            <Spanish>La unidad ya es un terrorista suicida</Spanish>
+        </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_AI">
             <English>AI</English>

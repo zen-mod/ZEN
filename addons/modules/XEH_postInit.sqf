@@ -13,5 +13,16 @@ if (isServer) then {
 [QGVAR(moveToRespawnPosition), BIS_fnc_moveToRespawnPosition] call CBA_fnc_addEventHandler;
 [QGVAR(taskPatrol), CBA_fnc_taskPatrol] call CBA_fnc_addEventHandler;
 
+[QGVAR(autoSeekBehavior), {
+    params ["_unit"];
+    _unit setUnitPos "UP";
+    _unit setSpeedMode "FULL";
+    _unit setBehaviour "CARELESS";
+    _unit setCombatMode "BLUE";
+    _unit disableAI "TARGET";
+    _unit disableAI "AUTOTARGET";
+    _unit allowFleeing 0;
+}] call CBA_fnc_addEventHandler;
+
 // Function needs to be spawned
 [QGVAR(earthquake), {_this spawn BIS_fnc_earthquake}] call CBA_fnc_addEventHandler;

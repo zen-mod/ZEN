@@ -49,6 +49,7 @@ PREP(moduleSitOnChair);
 PREP(moduleSmokePillar);
 PREP(moduleSpawnCarrier);
 PREP(moduleSpawnDestroyer);
+PREP(moduleSuicideBomber);
 PREP(moduleTurretOptics);
 PREP(moduleUnGarrison);
 PREP(moduleVisibility);
