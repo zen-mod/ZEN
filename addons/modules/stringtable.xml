@@ -519,6 +519,87 @@
             <English>Group Side</English>
         </Key>
 
+        <Key ID="STR_ZEN_Modules_ModuleSuicideBomber">
+            <English>Suicide Bomber</English>
+            <Chinese>自殺式炸彈襲擊者</Chinese>
+            <Chinesesimp>自杀式炸弹袭击者</Chinesesimp>
+            <Czech>Samovražedný bombardér</Czech>
+            <French>Kamikaze</French>
+            <German>Selbstmordattentäter</German>
+            <Hungarian>Öngyilkos merénylő</Hungarian>
+            <Italian>Kamikaze</Italian>
+            <Japanese>自爆テロ犯</Japanese>
+            <Korean>자살 폭탄</Korean>
+            <Polish>Samobójca</Polish>
+            <Portuguese>Bombardeiro suicida</Portuguese>
+            <Russian>Террорист-смертник</Russian>
+            <Spanish>Bombardeo suicida</Spanish>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleSuicideBomber_DeadManSwitch">
+            <English>Dead Man's Switch</English>
+            <German>Totmannschalter</German>
+            <French>Détonateur par relâchement de pression</French>
+            <Czech>Spínač mrtvého muže</Czech>
+            <Polish>Czuwak</Polish>
+            <Spanish>Detonador de hombre muerto</Spanish>
+            <Hungarian>Halott ember kapcsolója</Hungarian>
+            <Portuguese>Detonador do homem morto</Portuguese>
+            <Russian>Кнопка мертвеца</Russian>
+            <Italian>Detonatore a rilascio</Italian>
+            <Japanese>自爆装置</Japanese>
+            <Korean>자폭 장치</Korean>
+            <Chinesesimp>自杀炸弹客引爆器</Chinesesimp>
+            <Chinese>自殺炸彈客引爆器</Chinese>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleSuicideBomber_AutoSeek">
+            <English>Auto Seek</English>
+            <Chinese>自動尋求</Chinese>
+            <Chinesesimp>自动寻求</Chinesesimp>
+            <Czech>Auto Seek</Czech>
+            <French>Recherche automatique</French>
+            <German>Automatische Suche</German>
+            <Hungarian>Automatikus keresés</Hungarian>
+            <Italian>Ricerca automatica</Italian>
+            <Japanese>自動誘導</Japanese>
+            <Korean>자동 탐색</Korean>
+            <Polish>Auto Seek</Polish>
+            <Portuguese>Busca automática</Portuguese>
+            <Russian>Автоматический поиск</Russian>
+            <Spanish>Búsqueda automática</Spanish>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleSuicideBomber_AutoSeek_Tooltip">
+            <English>Unit will actively try to find and move towards nearby units of the activation side.\nThe range of Auto Seek is based on the unit's spot distance skill with a minimum of 100 meters.</English>
+            <Chinese>單位將主動嘗試尋找並移動到附近的激活方單位。自動搜索的範圍是基於單位的距離技能，最少100米</Chinese>
+            <Chinesesimp>单位将主动尝试寻找并移动到附近的激活方单位。自动搜索的范围是基于单位的距离技能，最少100米。</Chinesesimp>
+            <Czech>Jednotka se bude aktivně snažit najít a přejít na blízké jednotky na straně aktivace. Rozsah Auto Seek je založen na dovednosti spotové vzdálenosti jednotky s minimem 100 metrů.</Czech>
+            <French>L'unité essayera activement de trouver et de se déplacer vers les unités à proximité du côté d'activation. La portée d'Auto Seek est basée sur la compétence de distance de l'unité avec un minimum de 100 mètres.</French>
+            <German>Die Einheit versucht aktiv, in der Nähe befindliche Einheiten der Aktivierungsseite zu finden und sich dorthin zu bewegen. Der Bereich der automatischen Suche basiert auf der Fähigkeit der Zielentfernung der Einheit mit einer Mindestentfernung von 100 Metern.</German>
+            <Hungarian>Az egység aktívan megpróbálja megtalálni és elmozdulni az aktivációs oldal közeli egységei felé.Az automatikus keresési tartomány az egység helyszíni szakértelmén alapul, legalább 100 méterrel.</Hungarian>
+            <Italian>L'unità cercherà attivamente di trovare e spostarsi verso le unità vicine del lato di attivazione. La gamma di Auto Seek si basa sull'abilità a distanza spot dell'unità con un minimo di 100 metri.</Italian>
+            <Japanese>対象陣営ユニットを見つけて移動しようと積極的に試みます。自動誘導の範囲は、ユニットの索敵能力に基づいており、最低100メートルです。</Japanese>
+            <Korean>유닛은 액티브 측의 근접 유닛을 향해 적극적으로 찾아서 이동하려고 시도합니다. 자동 시크의 범위는 유닛의 스팟 거리 스킬을 기준으로 최소 100 미터입니다.</Korean>
+            <Polish>Jednostka będzie aktywnie próbowała znaleźć i ruszyć w kierunku pobliskich jednostek strony aktywacji. Zasięg Auto Seek opiera się na umiejętności punktowej odległości jednostki z minimum 100 metrów.</Polish>
+            <Portuguese>A unidade tentará ativamente encontrar e se mover para as unidades próximas do lado da ativação. O alcance da Auto Seek é baseado na habilidade de distância do ponto da unidade com um mínimo de 100 metros.</Portuguese>
+            <Russian>Устройство будет активно пытаться найти и перейти к соседним единицам активации. Диапазон автоматического поиска основан на умении снимать расстояние на расстоянии не менее 100 метров.</Russian>
+            <Spanish>La unidad intentará buscar activamente y moverse hacia las unidades cercanas del lado de activación. El rango de Auto Seek se basa en la habilidad de distancia al punto de la unidad con un mínimo de 100 metros.</Spanish>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleSuicideBomber_AlreadyBomber">
+            <English>Unit is already a suicide bomber</English>
+            <Chinese>這個單位已經是自殺炸彈手了</Chinese>
+            <Chinesesimp>这个单位已经是自杀炸弹手了</Chinesesimp>
+            <Czech>Jednotka je již samovražedným bombardérem</Czech>
+            <French>L'unité est déjà un kamikaze</French>
+            <German>Die Einheit ist bereits ein Selbstmordattentäter</German>
+            <Hungarian>Az egység már öngyilkos bombázó</Hungarian>
+            <Italian>L'unità è già un kamikaze</Italian>
+            <Japanese>既に自爆ユニットです</Japanese>
+            <Korean>유닛은 이미 자살 폭탄 테러범이다.</Korean>
+            <Polish>Jednostka jest już zamachowcem-samobójcą</Polish>
+            <Portuguese>A unidade já é um suicida</Portuguese>
+            <Russian>Единица уже является террористом-смертником</Russian>
+            <Spanish>La unidad ya es un terrorista suicida</Spanish>
+        </Key>
+
         <Key ID="STR_ZEN_Modules_ModuleExecuteCode">
             <English>Execute Code</English>
         </Key>
