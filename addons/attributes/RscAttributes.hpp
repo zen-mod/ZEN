@@ -449,6 +449,40 @@ class GVAR(RscAttributeRespawnPosition): RscControlsGroupNoScrollbars {
     };
 };
 
+class GVAR(RscAttributeExec): RscControlsGroupNoScrollbars {
+    idc = IDC_EXEC;
+    function = QFUNC(attributeExec);
+    x = 0;
+    y = 0;
+    w = POS_W(26);
+    h = POS_H(5);
+    class controls {
+        class Label: GVAR(RscLabel) {
+            text = "$STR_a3_rscdebugconsole_expressiontext";
+            tooltip = CSTRING(Exec_Tooltip);
+        };
+        class History: GVAR(RscCombo) {
+            idc = IDC_EXEC_HISTORY;
+            font = "EtelkaMonospacePro";
+            x = POS_W(10);
+            w = POS_W(16);
+            sizeEx = POS_H(0.65);
+        };
+        class Edit: GVAR(RscEdit) {
+            idc = IDC_EXEC_EDIT;
+            style = ST_MULTI;
+            tooltip = CSTRING(Exec_Tooltip);
+            font = "EtelkaMonospacePro";
+            x = pixelW;
+            y = POS_H(1);
+            w = POS_W(26) - pixelW;
+            h = POS_H(4);
+            sizeEx = POS_H(0.65);
+            autocomplete = "scripting";
+        };
+    };
+};
+
 class GVAR(RscAttributeFormation): RscControlsGroupNoScrollbars {
     idc = IDC_FORMATION;
     function = QFUNC(attributeFormation);
@@ -842,6 +876,7 @@ class GVAR(RscAttributesMan): GVAR(RscAttributesBase) {
                 class Rank: GVAR(RscAttributeRank) {};
                 class UnitPos: GVAR(RscAttributeUnitPos) {};
                 class RespawnPosition: GVAR(RscAttributeRespawnPosition) {};
+                class Exec: GVAR(RscAttributeExec) {};
             };
         };
         class ButtonOK: ButtonOK {};
@@ -873,6 +908,7 @@ class GVAR(RscAttributesVehicle): GVAR(RscAttributesBase) {
                 class Lights: GVAR(RscAttributeLights) {};
                 class PlateNumber: GVAR(RscAttributePlateNumber) {};
                 class RespawnPosition: GVAR(RscAttributeRespawnPosition) {};
+                class Exec: GVAR(RscAttributeExec) {};
             };
         };
         class ButtonOK: ButtonOK {};
@@ -902,6 +938,7 @@ class GVAR(RscAttributesVehicleEmpty): GVAR(RscAttributesBase) {
                 class Lights: GVAR(RscAttributeLights) {};
                 class PlateNumber: GVAR(RscAttributePlateNumber) {};
                 class RespawnPosition: GVAR(RscAttributeRespawnPosition) {};
+                class Exec: GVAR(RscAttributeExec) {};
             };
         };
         class ButtonOK: ButtonOK {};

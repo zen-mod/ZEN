@@ -10,6 +10,9 @@
         <Key ID="STR_ZEN_Attributes_PlateNumber">
             <English>Plate Number</English>
         </Key>
+        <Key ID="STR_ZEN_Attributes_Exec_Tooltip">
+            <English>This code will be executed in the unscheduled environment on the machine where this object is local.\nThe object will be passed in the "_this" variable.</English>
+        </Key>
         <Key ID="STR_ZEN_Attributes_Timeout">
             <English>Timeout (s)</English>
         </Key>
