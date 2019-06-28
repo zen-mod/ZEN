@@ -16,6 +16,8 @@
 #include "script_component.hpp"
 
 #define VAR_HISTORY QGVAR(executeCodeHistory)
+#define MAX_STATEMENTS 20
+#define PREVIEW_LENGTH 50
 
 params ["_display"];
 
@@ -43,8 +45,8 @@ _ctrlHistory ctrlAddEventHandler ["LBSelChanged", {
 }];
 
 {
-    if (count _x > 50) then {
-        _x = (_x select [0, 50]) + toString [46, 46, 46];
+    if (count _x > PREVIEW_LENGTH) then {
+        _x = (_x select [0, PREVIEW_LENGTH]) + toString [46, 46, 46];
     };
 
     _ctrlHistory lbAdd _x;
@@ -82,8 +84,8 @@ private _fnc_onConfirm = {
     _history pushBack _code;
     reverse _history;
 
-    if (count _history > 20) then {
-        _history resize 20;
+    if (count _history > MAX_STATEMENTS) then {
+        _history resize MAX_STATEMENTS;
     };
 
     profileNamespace setVariable [VAR_HISTORY, _history];
