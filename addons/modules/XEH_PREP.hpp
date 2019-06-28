@@ -8,6 +8,7 @@ PREP(gui_attachEffect);
 PREP(gui_cas);
 PREP(gui_damageBuildings);
 PREP(gui_editableObjects);
+PREP(gui_executeCode);
 PREP(gui_fireMission);
 PREP(gui_globalHint);
 PREP(gui_setDate);

@@ -172,6 +172,14 @@ class CfgVehicles {
         displayName = CSTRING(ModuleEquipWithECM);
         function = QFUNC(moduleEquipWithECM);
     };
+    class GVAR(moduleExecuteCode): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(DevTools);
+        displayName = CSTRING(ModuleExecuteCode);
+        curatorInfoType = QGVAR(RscExecuteCode);
+        icon = QPATHTOF(ui\code_ca.paa);
+        portrait = QPATHTOF(ui\code_ca.paa);
+    };
     class GVAR(moduleFireMission): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = "Ordnance";

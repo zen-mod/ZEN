@@ -26,6 +26,7 @@ class CfgPatches {
             QGVAR(moduleEarthquake),
             QGVAR(moduleEditableObjects),
             QGVAR(moduleEquipWithECM),
+            QGVAR(moduleExecuteCode),
             QGVAR(moduleFireMission),
             QGVAR(moduleFlyHeight),
             QGVAR(moduleFunctionsViewer),
