@@ -5,6 +5,7 @@ PREP(curatorDisplayLoad);
 PREP(curatorDisplayUnload);
 PREP(getAllTurrets);
 PREP(getInventory);
+PREP(getPhoneticName);
 PREP(getSideIcon);
 PREP(getTargetPos);
 PREP(getTurretMagazines);
