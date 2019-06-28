@@ -3,363 +3,455 @@
     <Package name="Modules">
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim">
             <English>Ambient Animation</English>
+            <German>Ambiente Animation</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Type">
             <English>Animation Type</English>
+            <German>Animationstyp</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_StopAnimation">
             <English>Stop Animation</English>
+            <German>Animation stoppen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_SitOnFloor">
             <English>Sit On Floor</English>
+            <German>Auf dem Boden sitzen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_LeanOnWall">
             <English>Lean On Wall</English>
+            <German>An Wand lehnen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Watch">
             <English>Watch</English>
+            <German>Ausschau halten</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_StandIdle">
             <English>Stand Idle</English>
+            <German>Herumstehen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_StandIdleNoWeapon">
             <English>Stand Idle (No Weapon)</English>
+            <German>Herumstehen (keine Waffe)</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_AtEase">
             <English>At Ease</English>
+            <German>Locker stehen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ListenToBriefing">
             <English>Listen To Briefing</English>
+            <German>Briefing anhören</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Briefing">
             <English>Briefing</English>
+            <German>Briefing</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_BriefingInteractive">
             <English>Briefing (Interactive)</English>
+            <German>Briefing (Interaktiv)</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ListeningCivilian">
             <English>Listening Civilian</English>
+            <German>Zuhörender Zivilist</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_TalkingCivilian">
             <English>Talking Civilian</English>
+            <German>Redenter Zivilist</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ListenToRadio">
             <English>Listen To Radio</English>
+            <German>Radiohören</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ShieldFromSun">
             <English>Shield From Sun</English>
+            <German>Vor dem Sonnenlicht schützen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_NavigateAircraft">
             <English>Navigate Aircraft</English>
+            <German>Flugzeug navigieren</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ShowVehicleTheWay">
             <English>Showing A Vehicle The Way</English>
+            <German>Einem Fahrzeug den Weg zeigen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_TreatWounded">
             <English>Treat Wounded</English>
+            <German>Verletzten versorgen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_CombatWounded">
             <English>Combat Wounded</English>
+            <German>Kampfverletzung</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedGeneral">
             <English>Wounded (General)</English>
+            <German>Verletzt (Generel)</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedHead">
             <English>Wounded (Head)</English>
+            <German>Verletzt (Kopf)</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedChest">
             <English>Wounded (Chest)</English>
+            <German>Verletzt (Brustkorb)</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedArm">
             <English>Wounded (Arm)</English>
+            <German>Verletzt (Arm)</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedLeg">
             <English>Wounded (Leg)</English>
+            <German>Verletzt (Bein)</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ShockedCivilian">
             <English>Shocked Civilian</English>
+            <German>Entsetzter Zivilist</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_HidingCivilian">
             <English>Hiding Civilian</English>
+            <German>Vesteckender Zivilist</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_SitCaptured">
             <English>Sit Captured</English>
+            <German>Sitzt gefangen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_RepairStand">
             <English>Repair Vehicle (Stand)</English>
+            <German>Fahrzeug reparieren (Stehend)</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_RepairKneel">
             <English>Repair Vehicle (Kneel)</English>
+            <German>Fahrzeug reparieren (Kniehend)</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_RepairProne">
             <English>Repair Vehicle (Prone)</English>
+            <German>Fahrzeug reparieren (Liegend)</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Combat">
             <English>Combat Ready</English>
+            <German>Kampfbereit</German>
         </Key>
-
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby">
             <English>Ambient Flyby</English>
+            <German>Atmosphärischer Vorbeiflug</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_AircraftSelect">
             <English>Aircraft Selection</English>
+            <German>Flugzeugauswahl</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_FlyTowards">
             <English>Fly Towards</English>
+            <German>Flugrichtung</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_FlyTowards_Tooltip">
             <English>Aircraft will fly towards this direction from the opposite direction.</English>
+            <German>Flugzeuge werden aus der entgegengesetzten Richtung in diese Richtung fliegen.</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Tooltip">
             <English>Sets the height that the aircraft will fly at, in meters.</English>
+            <German>Legt die Höhe fest, in der das Flugzeug fliegen soll, in Metern.</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Distance">
             <English>Distance</English>
+            <German>Entfernung</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Distance_Tooltip">
             <English>Sets the distance that the aircraft will start out from, in meters.</English>
+            <German>Legt die Entfernung fest, aus der das Flugzeug starten soll, in Metern.</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Speed_Tooltip">
             <English>Sets how fast the aircraft will fly.</English>
+            <German>Legt fest, wie schnell das Flugzeug fliegen soll.</German>
         </Key>
-
         <Key ID="STR_ZEN_Modules_ModuleAssignZeus">
             <English>Promote To Zeus</English>
+            <German>Zu Zeus befördern</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAssignZeus_AlreadyZeus">
             <English>Unit is already a curator</English>
+            <German>Die Einheit ist bereits ein Kurator</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAssignZeus_Promoted">
             <English>You have been promoted to Zeus.</English>
+            <German>Sie wurden zum Zeus befördert.</German>
         </Key>
-
         <Key ID="STR_ZEN_Modules_ModuleAttachTo">
             <English>Attach To</English>
+            <German>Anhängen an</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ObjectAttached">
             <English>Object Attached</English>
+            <German>Objekt angehängt</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ObjectDetached">
             <English>Object Detached</English>
+            <German>Objekt abgetrennt</German>
         </Key>
         <Key ID="STR_ZEN_Modules_CannotAttachToSelf">
             <English>Cannot attach object to itself</English>
+            <German>Das Objekt kann nicht an sich selbst angehängt werden</German>
         </Key>
-
         <Key ID="STR_ZEN_Modules_ModuleAttachFlag">
             <English>Attach Flag</English>
+            <German>Flagge anhängen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAttachFlag_Type">
             <English>Flag Type</English>
+            <German>Flaggenart</German>
         </Key>
-
         <Key ID="STR_ZEN_Modules_CreateIED">
             <English>Create IED</English>
+            <German>IED erstellen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_AlreadyAnIED">
             <English>Object is already an IED</English>
+            <German>Objekt ist bereits eine IED</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ActivationSide">
             <English>Activation Side</English>
+            <German>Aktivierungsseite</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ActivationRadius">
             <English>Activation Radius</English>
+            <German>Aktivierungsradius</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ExplosionSize">
             <English>Explosion Size</English>
+            <German>Explosionsgröße</German>
         </Key>
         <Key ID="STR_ZEN_Modules_IsJammable">
             <English>Is Jammable</English>
+            <German>Kann geblockt werden</German>
         </Key>
-
         <Key ID="STR_ZEN_Modules_ModuleConvoyParameters">
             <English>Convoy Parameters</English>
+            <German>Konvoi-Parameter</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_Separation">
             <English>Convoy Separation</English>
+            <German>Konvoiabstand</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_Separation_Tooltip">
             <English>Sets the distance that the vehicle will keep to the vehicle in front of it, in meters.\nSmall values should only be used for slow moving convoys.\nFor best results, vehicles should be in the same group with a column formation.</English>
+            <German>Legt den Abstand fest, den das Fahrzeug zum vorausfahrenden Fahrzeug in Metern einhalten soll.\nKleine Werte sollten nur für langsam fahrende Konvois verwendet werden.\nFür beste Ergebnisse sollten Fahrzeuge in der gleichen Gruppe mit einer Säulen Formation sein.</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_Speed">
             <English>Speed Limit</English>
+            <German>Geschwindigkeitsbegrenzung</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_Speed_Tooltip">
             <English>Limits the speed of the vehicle to the given value, in kilometers per hour.</English>
+            <German>Begrenzt die Geschwindigkeit des Fahrzeugs auf den angegebenen Wert, in km/h.</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_ForceRoad">
             <English>Stay On Road</English>
+            <German>Bleiben Sie auf der Straße</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_ForceRoad_Tooltip">
             <English>Forces the vehicle to stay on the road.</English>
+            <German>Zwingt das Fahrzeug, auf der Straße zu bleiben.</German>
         </Key>
-
         <Key ID="STR_ZEN_Modules_ModuleCAS_Bomb">
             <English>CAS - Bomb Strike</English>
+            <German>Nahluftunterstützung - Bombenangriff</German>
         </Key>
-
         <Key ID="STR_ZEN_Modules_BindVariable">
             <English>Bind Variable To Object</English>
+            <German>Variable an Objekt binden</German>
         </Key>
         <Key ID="STR_ZEN_Modules_VariableName">
             <English>Variable Name</English>
+            <German>Variablenname</German>
         </Key>
         <Key ID="STR_ZEN_Modules_PublicVariable">
             <English>Public (Broadcast)</English>
+            <German>Öffentlich (Übertragung)</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ShowInConfig">
             <English>Show In Config Viewer</English>
+            <German>Im Config Viewer anzeigen</German>
         </Key>
-
         <Key ID="STR_ZEN_Modules_ModuleDamageBuildings">
             <English>Damage Buildings</English>
+            <German>Gebäude beschädigen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_BuildingSelection">
             <English>Building Selection</English>
+            <German>Gebäudeauswahl</German>
         </Key>
         <Key ID="STR_ZEN_Modules_DamageState">
             <English>Damage State</English>
+            <German>Schadenszustand</German>
         </Key>
         <Key ID="STR_ZEN_Modules_DamageState_Tooltip">
             <English>Selects the damage state to apply.\nIn nearest mode, only damage states that the nearest building supports are selectable.\nIn radius mode, the module will default to undamaged if a building does not support the selected state.</English>
+            <German>Wählt den anzuwendenden Schadenszustand aus. Im "Nächsten" Modus wird nur das nächstgelegene Gebäude ausgewählt. Im "Radius" Modus wird das Modul standardmäßig auf unbeschädigt gesetzt, wenn ein Gebäude den ausgewählten Zustand nicht unterstützt.</German>
         </Key>
         <Key ID="STR_ZEN_Modules_DestructionEffects">
             <English>Destruction Effects</English>
+            <German>Zerstörungseffekte</German>
         </Key>
         <Key ID="STR_ZEN_Modules_DestructionEffects_Tooltip">
             <English>WARNING: Enabling destruction effects when using the module on a\nlarge amount of buildings can create a lot of lag.</English>
+            <German>WARNUNG: Das Aktivieren von Zerstörungseffekten für eine größere Anzahl von Gebäuden kann zu erheblichem Ruckeln führen.</German>
         </Key>
-
         <Key ID="STR_ZEN_Modules_ModuleEarthquake">
             <English>Earthquake</English>
+            <German>Erdbeben</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEarthquake_Radius">
             <English>Radius (m)</English>
+            <German>Radius (m)</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEarthquake_Intensity">
             <English>Intensity</English>
+            <German>Intensität</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEarthquake_Buildings">
             <English>Destroy Buildings</English>
+            <German>Gebäude zerstören</German>
         </Key>
-
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects">
             <English>Update Editable Objects</English>
+            <German>Editierbare Objekte aktualisieren</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects_EditingMode">
             <English>Editing Mode</English>
+            <German>Bearbeitungsmodus</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects_EditingMode_Tooltip">
             <English>Add or remove editable objects from Zeus.</English>
+            <German>Objekten zum Bearbeiten zu Zeus hinzufügen oder entfernen.</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects_AddObjects">
             <English>Add Objects</English>
+            <German>Objekte hinzufügen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects_RemoveObjects">
             <English>Remove Objects</English>
+            <German>Objekte entfernen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects_AllCurators">
             <English>All Curators</English>
+            <German>Alle Kuratoren</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects_AllCurators_Tooltip">
             <English>Controls whether changes are applied to all curators or just locally.</English>
+            <German>Steuert, ob Änderungen auf alle Kuratoren oder nur lokal angewendet werden.</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects_AllMissionObjects">
             <English>All Mission Objects</English>
+            <German>Alle Missionsobjekte</German>
         </Key>
-
         <Key ID="STR_ZEN_Modules_ModuleHeal">
             <English>Heal</English>
+            <German>Heilen</German>
         </Key>
-
         <Key ID="STR_ZEN_Modules_ModuleSpawnCarrier">
             <English>USS Freedom</English>
+            <German>USS Freedom</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSpawnDestroyer">
             <English>USS Liberty</English>
+            <German>USS Liberty</German>
         </Key>
-
         <Key ID="STR_ZEN_Modules_ModuleAttachEffect">
             <English>Attach/Detach Effect</English>
+            <German>Effekt anhängen/abtrennen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAttachEffect_Target">
             <English>Target</English>
+            <German>Ziel</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAttachEffect_SelectedGroup">
             <English>Selected Group</English>
+            <German>Ausgewählte Gruppe</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAttachEffect_Effect">
             <English>Effect</English>
+            <German>Effekt</German>
         </Key>
-
         <Key ID="STR_ZEN_Modules_ModuleSetDate">
             <English>Set Date</English>
+            <German>Datum setzen</German>
         </Key>
-
         <Key ID="STR_ZEN_Modules_ModuleMakeInvincible">
             <English>Make Invincible</English>
+            <German>Unbesiegbar machen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleMakeInvincible_Invincible">
             <English>Invincible</English>
+            <German>Unbesiegbar</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleMakeInvincible_IncludeCrew">
             <English>Include Crew</English>
+            <German>Crew einbeziehen</German>
         </Key>
-
         <Key ID="STR_ZEN_Modules_ModuleSimulation">
             <English>Toggle Simulation</English>
+            <German>Simulation umschalten</German>
         </Key>
-
         <Key ID="STR_ZEN_Modules_ModuleVisibility">
             <English>Toggle Visibility</English>
+            <German>Sichtbarkeit umschalten</German>
         </Key>
-
         <Key ID="STR_ZEN_Modules_ModuleChangeHeight">
             <English>Change Height</English>
+            <German>Höhe ändern</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleChangeHeight_Tooltip">
             <English>Change the height of the object by this value (can be negative)</English>
+            <German>Ändert die Höhe des Objekts um gegebenen Wert (kann negativ sein)</German>
         </Key>
-
         <Key ID="STR_ZEN_Modules_ModuleChatter">
             <English>Chatter</English>
+            <German>Chatter</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleChatter_Message">
             <English>Message</English>
+            <German>Nachricht</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleChatter_Channel">
             <English>Channel</English>
+            <German>Kanal</German>
         </Key>
-
         <Key ID="STR_ZEN_Modules_ModuleSitOnChair">
             <English>Sit On Chair</English>
+            <German>Auf dem Stuhl sitzen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSitOnChair_ChairObject">
             <English>Chair Object</English>
+            <German>Stuhl-Objekt</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateMinefield">
             <English>Create Minefield</English>
+            <German>Minenfeld erstellen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateMinefield_MineArea">
             <English>Minefield Area</English>
+            <German>Minenfeld-Bereich</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateMinefield_MineType">
             <English>Mine Type</English>
+            <German>Minentyp</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateMinefield_MineDensity">
             <English>Mine Density</English>
+            <German>Minendichte</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGlobalHint">
             <English>Global Hint</English>
+            <German>Globaler Hinweis</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleHideZeus">
             <English>Hide Zeus</English>
+            <German>Zeus verstecken</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ZeusIsNowHidden">
             <English>Zeus is now hidden</English>
+            <German>Zeus ist jetzt versteckt</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ZeusIsNowVisible">
             <English>Zeus is now visible</English>
+            <German>Zeus ist jetzt sichtbar</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModulePatrolArea">
             <English>Patrol Area</English>
@@ -376,149 +468,188 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModulePatrolArea_Radius">
             <English>Patrol Radius (m)</English>
+            <German>Patrouillenradius (m)</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModulePatrolArea_Radius_Tooltip">
             <English>The radius that will be patrolled by the group.</English>
+            <German>Der Radius, der von der Gruppe patrouilliert wird.</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModulePatrolArea_Behaviour_Tooltip">
             <English>Will modify the behavior, speed mode, and formation of the group.</English>
+            <German>Ändert das Verhalten, den Geschwindigkeitsmodus und die Formation der Gruppe.</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModulePatrolArea_Relaxed">
             <English>Relaxed</English>
+            <German>Entspannt</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModulePatrolArea_Cautious">
             <English>Cautious</English>
+            <German>Vorsichtig</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSideRelations">
             <English>Side Relations</English>
+            <German>Seitenbeziehungen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_RelationToChange">
             <English>Relation to Change</English>
+            <German>Beziehung zur Veränderung</German>
         </Key>
         <Key ID="STR_ZEN_Modules_HostileTo">
             <English>Hostile to</English>
+            <German>Feindselig gegenüber</German>
         </Key>
         <Key ID="STR_ZEN_Modules_FriendlyTo">
             <English>Friendly to</English>
+            <German>Freundlich zu</German>
         </Key>
         <Key ID="STR_ZEN_Modules_PlayRadioMessage">
             <English>Play Radio Message</English>
+            <German>Radionachricht abspielen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTeleportPlayers">
             <English>Teleport Players</English>
+            <German>Spieler teleportieren</German>
         </Key>
         <Key ID="STR_ZEN_Modules_Sides">
             <English>Sides</English>
+            <German>Seiten</German>
         </Key>
         <Key ID="STR_ZEN_Modules_Groups">
             <English>Groups</English>
+            <German>Gruppen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSmokePillar">
             <English>Smoke Pillar</English>
+            <German>Rauchsäulen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_SmokePillarType">
             <English>Smoke Pillar Type</English>
+            <German>Rauchsäulentyp</German>
         </Key>
         <Key ID="STR_ZEN_Modules_VehicleFire">
             <English>Vehicle Fire</English>
+            <German>Fahrzeugbrand</German>
         </Key>
         <Key ID="STR_ZEN_Modules_SmallOilySmoke">
             <English>Small Oily Smoke</English>
+            <German>Kleiner Ölrauch</German>
         </Key>
         <Key ID="STR_ZEN_Modules_MediumOilySmoke">
             <English>Medium Oily Smoke</English>
+            <German>Mittlerer Ölrauch</German>
         </Key>
         <Key ID="STR_ZEN_Modules_LargeOilySmoke">
             <English>Large Oily Smoke</English>
+            <German>Großer Ölauch</German>
         </Key>
         <Key ID="STR_ZEN_Modules_SmallWoodSmoke">
             <English>Small Wood Smoke</English>
+            <German>Kleiner Holzrauch</German>
         </Key>
         <Key ID="STR_ZEN_Modules_MediumWoodSmoke">
             <English>Medium Wood Smoke</English>
+            <German>Mittlerer Holzrauch</German>
         </Key>
         <Key ID="STR_ZEN_Modules_LargeWoodSmoke">
             <English>Large Wood Smoke</English>
+            <German>Großer Holzrauch</German>
         </Key>
         <Key ID="STR_ZEN_Modules_SmallMixedSmoke">
             <English>Small Mixed Smoke</English>
+            <German>Kleiner gemischter Rauch</German>
         </Key>
         <Key ID="STR_ZEN_Modules_MediumMixedSmoke">
             <English>Medium Mixed Smoke</English>
+            <German>Mittlerer gemischter Rauch</German>
         </Key>
         <Key ID="STR_ZEN_Modules_LargeMixedSmoke">
             <English>Large Mixed Smoke</English>
+            <German>Großer gemischter Rauch</German>
         </Key>
-
         <Key ID="STR_ZEN_Modules_ModuleLightSource">
             <English>Light Source</English>
+            <German>Lichtquelle</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleLightSource_Color">
             <English>Light Color</English>
+            <German>Lichtfarbe</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleLightSource_Range">
             <English>Range (m)</English>
+            <German>Reichweite (m)</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleLightSource_Constant">
             <English>Constant Attenuation</English>
+            <German>Konstante Dämpfung</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleLightSource_Linear">
             <English>Linear Attenuation</English>
+            <German>Lineare Dämpfung</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleLightSource_Quadratic">
             <English>Quadratic Attenuation</English>
+            <German>Quadratische Dämpfung</German>
         </Key>
-
         <Key ID="STR_ZEN_Modules_ModuleEquipWithECM">
             <English>Equip With ECM</English>
+            <German>Mit ECM ausstatten</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEquipWithECM_HasECM">
             <English>Has ECM</English>
+            <German>Hat ECM</German>
         </Key>
-
         <Key ID="STR_ZEN_Modules_ModuleFlyHeight">
             <English>Fly Height</English>
+            <German>Flughöhe</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFlyHeight_Tooltip">
             <English>Sets the flying altitude for the aircraft relative to the ground.</English>
+            <German>Legt die Flughöhe für das Flugzeug in Bezug auf den Boden fest.</German>
         </Key>
-
         <Key ID="STR_ZEN_Modules_ModuleTurretOptics">
             <English>Vehicle Turret Optics</English>
+            <German>Fahrzeug-Turmoptik</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTurretOptics_NVG">
             <English>NVG Equipment</English>
+            <German>Nachtsichtgeräte</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTurretOptics_TI">
             <English>TI Equipment</English>
+            <German>Thermische Infrarotgeräte</German>
         </Key>
-
         <Key ID="STR_ZEN_Modules_ModuleGarrison">
             <English>Garrison Group</English>
+            <German>Gebäude besetzen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGarrison_FillMode">
             <English>Filling Mode</English>
+            <German>Füllmodus</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGarrison_Even">
             <English>Even Filling</English>
+            <German>Gleichmäßig befüllen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGarrison_ByBuilding">
             <English>Building By Building</English>
+            <German>Gebäude für Gebäude</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGarrison_Random">
             <English>Random</English>
+            <German>Zufällig</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGarrison_TopDown">
             <English>Fill From Top Down</English>
+            <German>Von oben nach unten füllen </German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleUnGarrison">
             <English>Un-Garrison Group</English>
+            <German>Besetzung ausfheben</German>
         </Key>
-
         <Key ID="STR_ZEN_Modules_ModuleGroupSide">
             <English>Group Side</English>
+            <German>Gruppenseite</German>
         </Key>
-
         <Key ID="STR_ZEN_Modules_ModuleSuicideBomber">
             <English>Suicide Bomber</English>
             <Chinese>自殺式炸彈襲擊者</Chinese>
@@ -599,117 +730,150 @@
             <Russian>Единица уже является террористом-смертником</Russian>
             <Spanish>La unidad ya es un terrorista suicida</Spanish>
         </Key>
-
         <Key ID="STR_ZEN_Modules_ModuleExecuteCode">
             <English>Execute Code</English>
+            <German>Code ausführen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleExecuteCode_Args_Tooltip">
             <English>This code will be passed the following arguments:\n0: Attached Object (objNull if none)\n1: Module Position ASL</English>
+            <German>Dieser Code wird mit folgenden Argumenten übergeben:\n0: Angehängtes Objekt (objNull wenn keins) \n1: Modulposition ASL</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleExecuteCode_Disabled">
             <English>Code execution by Zeus is disabled in this mission</English>
+            <German>Die Codeausführung durch Zeus ist in dieser Mission deaktiviert</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleExecuteCode_Local">
             <English>Local</English>
+            <German>Lokal</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleExecuteCode_Server">
             <English>Server</English>
+            <German>Server</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleExecuteCode_Global">
             <English>Global</English>
+            <German>Global</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleExecuteCode_GlobalAndJIP">
             <English>Global and JIP</English>
+            <German>Global und JIP</German>
         </Key>
-
         <Key ID="STR_ZEN_Modules_ModuleCreateTarget">
             <English>Create Target</English>
+            <German>Ziel erstellen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateTarget_Name">
             <English>Target Name</English>
+            <German>Zielname</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateTarget_AttachLaser">
             <English>Attach Laser Target For</English>
+            <German>Laser-Target anbringen für</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateTarget_TargetX">
             <English>Target %1</English>
+            <German>Ziel %1</German>
         </Key>
-
         <Key ID="STR_ZEN_Modules_ModuleFireMission">
             <English>Artillery Fire Mission</English>
+            <German>Artilleriefeuermission</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_NotArtillery">
             <English>Unit is not an artillery vehicle</English>
+            <German>Die Einheit ist kein Artilleriefahrzeug</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_NoGunners">
             <English>Artillery vehicles have no gunners</English>
+            <German>Artilleriefahrzeuge haben keine Schützen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_NotInRange">
             <English>Target is not in range</English>
+            <German>Ziel ist nicht in Reichweite</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_ArtilleryETA">
             <English>Artillery ETA: %1 seconds</English>
+            <German>Zeit bis zum Einschlag: %1 Sekunden</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Targetting">
             <English>Targeting</English>
+            <German>Zielvorgaben</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Mode">
             <English>Mode</English>
+            <German>Modus</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_MapGrid">
             <English>Map Grid</English>
+            <German>Kartenraster</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_TargetModule">
             <English>Target Module</English>
+            <German>Zielmodul</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Target">
             <English>Target</English>
+            <German>Ziel</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Spread">
             <English>Spread</English>
+            <German>Streuung</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Spread_Tooltip">
             <English>Controls the spread of fired artillery, in meters.</English>
+            <German>Kontrolliert die Streuung der abgefeuerten Artillerie in Metern.</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_FireParameters">
             <English>Fire Parameters</English>
+            <German>Feuerparameter</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Units">
             <English>Units</English>
+            <German>Einheiten</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_">
             <English>Number of units involved in the fire mission.</English>
+            <German>Anzahl der Einheiten die an der Feuermission beteiligt sind.</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Ammo">
             <English>Ammo</English>
+            <German>Munition</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Rounds">
             <English>Rounds</English>
+            <German>Schüsse</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Rounds_Tooltip">
             <English>Number of rounds that should be fired by each unit.</English>
+            <German>Anzahl der Schüsse, die von jeder Einheit abgegeben werden sollen.</German>
         </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_AI">
             <English>AI</English>
+            <German>KI</German>
         </Key>
         <Key ID="STR_ZEN_Modules_Buildings">
             <English>Buildings</English>
+            <German>Gebäude</German>
         </Key>
         <Key ID="STR_ZEN_Modules_DevTools">
             <English>Development Tools</English>
+            <German>Entwicklungswerkzeuge</German>
         </Key>
         <Key ID="STR_ZEN_Modules_Equipment">
             <English>Equipment</English>
+            <German>Ausrüstung</German>
         </Key>
         <Key ID="STR_ZEN_Modules_Objects">
             <English>Objects</English>
+            <German>Objekte</German>
         </Key>
         <Key ID="STR_ZEN_Modules_Players">
             <English>Players</English>
+            <German>Spieler</German>
         </Key>
         <Key ID="STR_ZEN_Modules_Spawn">
             <English>Spawn</English>
+            <German>Spawn</German>
         </Key>
         <!-- Feedback Messages -->
         <Key ID="STR_ZEN_Modules_NothingSelected">
@@ -762,9 +926,11 @@
         </Key>
         <Key ID="STR_ZEN_Modules_OnlyNonInfantry">
             <English>Unit must not be infantry</English>
+            <German>Die Einheit darf keine Infanterie sein</German>
         </Key>
         <Key ID="STR_ZEN_Modules_OnlyPlayers">
             <English>Unit must be a player</English>
+            <German>Die Einheit muss ein Spieler sein</German>
         </Key>
         <Key ID="STR_ZEN_Modules_OnlyVehicles">
             <English>Unit must be a vehicle</English>
@@ -783,6 +949,7 @@
         </Key>
         <Key ID="STR_ZEN_Modules_OnlyAircraft">
             <English>Unit must be an aircraft</English>
+            <German>Die Einheit muss ein Luftfahrzeug sein</German>
         </Key>
         <Key ID="STR_ZEN_Modules_BuildingTooFar">
             <English>Nearest building is too far away</English>
@@ -799,6 +966,7 @@
         </Key>
         <Key ID="STR_ZEN_Modules_NoTargetModules">
             <English>No target modules exist, place one first</English>
+            <German>Es gibt keine Zielmodule, platzieren Sie zuerst ein Zielmodul</German>
         </Key>
     </Package>
 </Project>

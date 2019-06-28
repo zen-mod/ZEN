@@ -3,21 +3,27 @@
     <Package name="Attributes">
         <Key ID="STR_ZEN_Attributes_Engine">
             <English>Engine</English>
+            <German>Motor</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_Lights">
             <English>Lights</English>
+            <German>Lichter</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_PlateNumber">
             <English>Plate Number</English>
+            <German>Kennzeichen</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_Exec_Tooltip">
             <English>This code will be executed in the unscheduled environment on the machine where this object is local.\nThe object will be passed in the "_this" variable.</English>
+            <German>Der eingegebene Code wird in einer unscheduled Umgebung lokal zum Objkekt ausgeführt.\nDas Objekt wird in der Variable names "_this" übergeben.</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_Timeout">
             <English>Timeout (s)</English>
+            <German>Zeitüberschreitung (s)</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_Timeout_Tooltip">
             <English>The time (in seconds) between waypoint condition satisfaction and waypoint completion.</English>
+            <German>Zeit (in Sekunden) zwischen der Erfüllung der Wegpunktbedingung und der Vervollständigung des Wegpunktes.</German>
         </Key>
     </Package>
 </Project>
