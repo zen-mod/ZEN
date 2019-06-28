@@ -137,5 +137,9 @@
 #define IDC_ENGINE_ON 86901
 #define IDC_ENGINE_OFF 86902
 
+#define IDC_EXEC 88000
+#define IDC_EXEC_HISTORY 88001
+#define IDC_EXEC_EDIT 88002
+
 #define FORMAT_ROUND(value) (str round value)
 #define FORMAT_PERCENT(value) (format ["%1%2", round (value * 100), "%"])
