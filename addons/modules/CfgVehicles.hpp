@@ -270,7 +270,7 @@ class CfgVehicles {
     class GVAR(moduleSuicideBomber): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(AI);
-        displayName = CSTING(ModuleSuicideBomber);
+        displayName = CSTRING(ModuleSuicideBomber);
         function = QFUNC(moduleSuicideBomber);
     };
     class GVAR(moduleTeleportPlayers): GVAR(moduleBase) {

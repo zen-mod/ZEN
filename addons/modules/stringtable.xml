@@ -567,6 +567,22 @@
             <Russian>Автоматический поиск</Russian>
             <Spanish>Búsqueda automática</Spanish>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleSuicideBomber_AutoSeek_Tooltip">
+            <English>Unit will actively try to find and move towards nearby units of the activation side.\nThe range of Auto Seek is based on the unit's spot distance skill with a minimum of 100 meters.</English>
+            <Chinese>單位將主動嘗試尋找並移動到附近的激活方單位。自動搜索的範圍是基於單位的距離技能，最少100米</Chinese>
+            <Chinesesimp>单位将主动尝试寻找并移动到附近的激活方单位。自动搜索的范围是基于单位的距离技能，最少100米。</Chinesesimp>
+            <Czech>Jednotka se bude aktivně snažit najít a přejít na blízké jednotky na straně aktivace. Rozsah Auto Seek je založen na dovednosti spotové vzdálenosti jednotky s minimem 100 metrů.</Czech>
+            <French>L'unité essayera activement de trouver et de se déplacer vers les unités à proximité du côté d'activation. La portée d'Auto Seek est basée sur la compétence de distance de l'unité avec un minimum de 100 mètres.</French>
+            <German>Die Einheit versucht aktiv, in der Nähe befindliche Einheiten der Aktivierungsseite zu finden und sich dorthin zu bewegen. Der Bereich der automatischen Suche basiert auf der Fähigkeit der Zielentfernung der Einheit mit einer Mindestentfernung von 100 Metern.</German>
+            <Hungarian>Az egység aktívan megpróbálja megtalálni és elmozdulni az aktivációs oldal közeli egységei felé.Az automatikus keresési tartomány az egység helyszíni szakértelmén alapul, legalább 100 méterrel.</Hungarian>
+            <Italian>L'unità cercherà attivamente di trovare e spostarsi verso le unità vicine del lato di attivazione. La gamma di Auto Seek si basa sull'abilità a distanza spot dell'unità con un minimo di 100 metri.</Italian>
+            <Japanese>対象陣営ユニットを見つけて移動しようと積極的に試みます。自動誘導の範囲は、ユニットの索敵能力に基づいており、最低100メートルです。</Japanese>
+            <Korean>유닛은 액티브 측의 근접 유닛을 향해 적극적으로 찾아서 이동하려고 시도합니다. 자동 시크의 범위는 유닛의 스팟 거리 스킬을 기준으로 최소 100 미터입니다.</Korean>
+            <Polish>Jednostka będzie aktywnie próbowała znaleźć i ruszyć w kierunku pobliskich jednostek strony aktywacji. Zasięg Auto Seek opiera się na umiejętności punktowej odległości jednostki z minimum 100 metrów.</Polish>
+            <Portuguese>A unidade tentará ativamente encontrar e se mover para as unidades próximas do lado da ativação. O alcance da Auto Seek é baseado na habilidade de distância do ponto da unidade com um mínimo de 100 metros.</Portuguese>
+            <Russian>Устройство будет активно пытаться найти и перейти к соседним единицам активации. Диапазон автоматического поиска основан на умении снимать расстояние на расстоянии не менее 100 метров.</Russian>
+            <Spanish>La unidad intentará buscar activamente y moverse hacia las unidades cercanas del lado de activación. El rango de Auto Seek se basa en la habilidad de distancia al punto de la unidad con un mínimo de 100 metros.</Spanish>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleSuicideBomber_AlreadyBomber">
             <English>Unit is already a suicide bomber</English>
             <Chinese>這個單位已經是自殺炸彈手了</Chinese>

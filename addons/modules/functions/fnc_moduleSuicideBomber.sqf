@@ -50,8 +50,8 @@ if (_unit getVariable [QGVAR(isBomber), false]) exitWith {
     ["SIDES", LSTRING(ActivationSide), west],
     ["SLIDER", LSTRING(ActivationRadius), [5, 50, 10, 0]],
     ["TOOLBOX", LSTRING(ExplosionSize), [0, ["str_small", ELSTRING(common,Medium), "str_large"]]],
-    ["TOOLBOX:YESNO", LSTRING(ModuleSuicideBomber_DeadManSwitch), false]
-    ["TOOLBOX:YESNO", LSTRING(ModuleSuicideBomber_AutoSeek), false]
+    ["TOOLBOX:YESNO", LSTRING(ModuleSuicideBomber_DeadManSwitch), false],
+    ["TOOLBOX:YESNO", [LSTRING(ModuleSuicideBomber_AutoSeek), LSTRING(ModuleSuicideBomber_AutoSeek_Tooltip)], false]
 ], {
     params ["_dialogValues", "_unit"];
     _dialogValues params ["_activationSide", "_activationRadius", "_explosionSize", "_deadManSwitch", "_autoSeek"];
@@ -115,5 +115,5 @@ if (_unit getVariable [QGVAR(isBomber), false]) exitWith {
             [QEGVAR(common,doMove), [_unit, _moveToPos], _unit] call CBA_fnc_targetEvent;
             _unit setVariable [QGVAR(bomberMemory), [_moveToPos, CBA_missionTime + MOVE_TIME]];
         };
-    }. SCANNING_PERIOD, [_unit, _activationSide, _activationRadius, _explosionSize, _deadManSwitch, _autoSeek]] call CBA_fnc_addPerFrameHandler;
+    }, SCANNING_PERIOD, [_unit, _activationSide, _activationRadius, _explosionSize, _deadManSwitch, _autoSeek]] call CBA_fnc_addPerFrameHandler;
 }, {}, _unit] call EFUNC(dialog,create);
