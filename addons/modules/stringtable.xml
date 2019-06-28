@@ -540,6 +540,74 @@
         <Key ID="STR_ZEN_Modules_ModuleExecuteCode_GlobalAndJIP">
             <English>Global and JIP</English>
         </Key>
+
+        <Key ID="STR_ZEN_Modules_ModuleCreateTarget">
+            <English>Create Target</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateTarget_Name">
+            <English>Target Name</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateTarget_AttachLaser">
+            <English>Attach Laser Target For</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateTarget_TargetX">
+            <English>Target %1</English>
+        </Key>
+
+        <Key ID="STR_ZEN_Modules_ModuleFireMission">
+            <English>Artillery Fire Mission</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleFireMission_NotArtillery">
+            <English>Unit is not an artillery vehicle</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleFireMission_NoGunners">
+            <English>Artillery vehicles have no gunners</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleFireMission_NotInRange">
+            <English>Target is not in range</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleFireMission_ArtilleryETA">
+            <English>Artillery ETA: %1 seconds</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleFireMission_Targetting">
+            <English>Targeting</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleFireMission_Mode">
+            <English>Mode</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleFireMission_MapGrid">
+            <English>Map Grid</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleFireMission_TargetModule">
+            <English>Target Module</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleFireMission_Target">
+            <English>Target</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleFireMission_Spread">
+            <English>Spread</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleFireMission_Spread_Tooltip">
+            <English>Controls the spread of fired artillery, in meters.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleFireMission_FireParameters">
+            <English>Fire Parameters</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleFireMission_Units">
+            <English>Units</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleFireMission_">
+            <English>Number of units involved in the fire mission.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleFireMission_Ammo">
+            <English>Ammo</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleFireMission_Rounds">
+            <English>Rounds</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleFireMission_Rounds_Tooltip">
+            <English>Number of rounds that should be fired by each unit.</English>
+        </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_AI">
             <English>AI</English>
@@ -647,6 +715,9 @@
             <Italian>L'edificio più vicino è troppo lontano</Italian>
             <Chinesesimp>最近的房子离太远了</Chinesesimp>
             <Chinese>最近的房子離太遠了</Chinese>
+        </Key>
+        <Key ID="STR_ZEN_Modules_NoTargetModules">
+            <English>No target modules exist, place one first</English>
         </Key>
     </Package>
 </Project>
