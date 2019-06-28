@@ -160,8 +160,8 @@ private _fnc_onConfirm = {
     private _ctrlTarget = _display displayCtrl IDC_FIREMISSION_TARGET_LOGIC;
     private _target = GVAR(targetLogics) select (_ctrlTarget lbValue lbCurSel _ctrlTarget);
 
-    private _ctrlSpreadSlider = _display displayCtrl IDC_FIREMISSION_PRECISION_SLIDER;
-    private _precision = sliderPosition _ctrlSpreadSlider;
+    private _ctrlSpreadSlider = _display displayCtrl IDC_FIREMISSION_SPREAD_SLIDER;
+    private _spread = sliderPosition _ctrlSpreadSlider;
 
     private _ctrlUnits = _display displayCtrl IDC_FIREMISSION_UNITS;
     private _numberOfUnits = lbCurSel _ctrlUnits + 1;
@@ -176,9 +176,9 @@ private _fnc_onConfirm = {
     _vehicles = _vehicles select {alive _x && {_ammo in getArtilleryAmmo [_x]}};
     _vehicles resize (_numberOfUnits min count _vehicles);
 
-    GVAR(lastFireMission) = [_mode, _grid, _target, _precision, _numberOfUnits, _ammo, _rounds];
+    GVAR(lastFireMission) = [_mode, _grid, _target, _spread, _numberOfUnits, _ammo, _rounds];
 
-    [_vehicles, [_grid, _target] select _mode, _precision, _ammo, _rounds] call FUNC(moduleFireMission);
+    [_vehicles, [_grid, _target] select _mode, _spread, _ammo, _rounds] call FUNC(moduleFireMission);
 
     deleteVehicle _logic;
 };
