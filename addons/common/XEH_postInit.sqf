@@ -81,6 +81,11 @@
     _unit doMove _position;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setCaptive), {
+    params ["_unit", "_status"];
+    _unit setCaptive _status;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(engineOn), {
     params ["_vehicle", "_state"];
     _vehicle engineOn _state;
