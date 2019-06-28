@@ -24,7 +24,7 @@ private _object = attachedTo _logic;
 deleteVehicle _logic;
 
 if (isNull _object) exitWith {
-    [LSTRING(NothingSelected)] call EFUNC(common,showMessage);
+    [LSTRING(NoObjectSelected)] call EFUNC(common,showMessage);
 };
 
 if (!alive _object) exitWith {
