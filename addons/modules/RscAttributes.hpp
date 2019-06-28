@@ -996,3 +996,161 @@ BEGIN_MODULE_DIALOG(RscAmbientFlyby)
         };
     };
 END_MODULE_DIALOG;
+
+BEGIN_MODULE_DIALOG(RscExecuteCode)
+    class executeCode: RscControlsGroupNoScrollbars {
+        idc = IDC_EXECUTECODE;
+        function = QFUNC(gui_executeCode);
+        x = 0;
+        y = 0;
+        w = POS_W(26);
+        h = POS_H(15.2);
+        class controls {
+            class History: EGVAR(attributes,RscCombo) {
+                idc = IDC_EXECUTECODE_HISTORY;
+                font = "EtelkaMonospacePro";
+                x = 0;
+                w = POS_W(26);
+                sizeEx = POS_H(0.7);
+            };
+            class Edit: EGVAR(attributes,RscEdit) {
+                idc = IDC_EXECUTECODE_EDIT;
+                style = ST_MULTI;
+                font = "EtelkaMonospacePro";
+                tooltip = CSTRING(ModuleExecuteCode_Args_Tooltip);
+                x = pixelW;
+                y = POS_H(1.1);
+                w = POS_W(26) - pixelW;
+                h = POS_H(13);
+                sizeEx = POS_H(0.7);
+                autocomplete = "scripting";
+                default = 1;
+            };
+            class Mode: ctrlToolbox {
+                idc = IDC_EXECUTECODE_MODE;
+                x = 0;
+                y = POS_H(14.2);
+                w = POS_W(26);
+                h = POS_H(1);
+                rows = 1;
+                columns = 4;
+                strings[] = {
+                    CSTRING(ModuleExecuteCode_Local),
+                    CSTRING(ModuleExecuteCode_Server),
+                    CSTRING(ModuleExecuteCode_Global),
+                    CSTRING(ModuleExecuteCode_GlobalAndJIP)
+                };
+            };
+        };
+    };
+END_MODULE_DIALOG;
+
+BEGIN_MODULE_DIALOG(RscFireMission)
+    class fireMission: RscControlsGroupNoScrollbars {
+        idc = IDC_FIREMISSION;
+        function = QFUNC(gui_fireMission);
+        x = 0;
+        y = 0;
+        w = POS_W(26);
+        h = POS_H(8.9);
+        class controls {
+            class TargetingLabel: EGVAR(attributes,RscLabel) {
+                text = CSTRING(ModuleFireMission_Targetting);
+                w = POS_W(26);
+            };
+            class TargetingBackground: RscText {
+                idc = -1;
+                x = 0;
+                y = POS_H(1);
+                w = POS_W(26);
+                h = POS_H(3.4);
+                colorBackground[] = {1, 1, 1, 0.1};
+            };
+            class ModeLabel: EGVAR(attributes,RscLabel) {
+                text = CSTRING(ModuleFireMission_Mode);
+                x = POS_W(1);
+                y = POS_H(1.1);
+                w = POS_W(8);
+                colorBackground[] = {0, 0, 0, 0.6};
+            };
+            class Mode: ctrlToolbox {
+                idc = IDC_FIREMISSION_MODE;
+                x = POS_W(9.1);
+                y = POS_H(1.1);
+                w = POS_W(15.9);
+                h = POS_H(1);
+                rows = 1;
+                columns = 2;
+                strings[] = {CSTRING(ModuleFireMission_MapGrid), CSTRING(ModuleFireMission_TargetModule)};
+            };
+            class TargetLabel: ModeLabel {
+                idc = IDC_FIREMISSION_TARGET_LABEL;
+                text = "$STR_3den_display3den_menubar_grid_text";
+                y = POS_H(2.2);
+            };
+            class TargetGrid: EGVAR(attributes,RscEdit) {
+                idc = IDC_FIREMISSION_TARGET_GRID;
+                x = POS_W(9.1);
+                y = POS_H(2.2) + pixelH;
+                colorBackground[] = {0, 0, 0, 0.3};
+            };
+            class TargetLogic: EGVAR(attributes,RscCombo) {
+                idc = IDC_FIREMISSION_TARGET_LOGIC;
+                x = POS_W(9.1);
+                y = POS_H(2.2);
+            };
+            class SpreadLabel: ModeLabel {
+                text = CSTRING(ModuleFireMission_Spread);
+                tooltip = CSTRING(ModuleFireMission_Spread_Tooltip);
+                y = POS_H(3.3);
+            };
+            class SpreadSlider: ctrlXSliderH {
+                idc = IDC_FIREMISSION_SPREAD_SLIDER;
+                x = POS_W(9.1);
+                y = POS_H(3.3);
+                w = POS_W(13.4);
+                h = POS_H(1);
+            };
+            class SpreadEdit: EGVAR(attributes,RscEdit) {
+                idc = IDC_FIREMISSION_SPREAD_EDIT;
+                x = POS_W(22.6);
+                y = POS_H(3.3);
+                w = POS_W(2.4);
+                colorBackground[] = {0, 0, 0, 0.3};
+            };
+            class FireParamsLabel: TargetingLabel {
+                text = CSTRING(ModuleFireMission_FireParameters);
+                y = POS_H(4.5);
+            };
+            class FireParamsBackground: TargetingBackground {
+                y = POS_H(5.5);
+            };
+            class UnitsLabel: ModeLabel {
+                text = CSTRING(ModuleFireMission_Units);
+                tooltip = CSTRING(ModuleFireMission_Units_Tooltip);
+                y = POS_H(5.6);
+            };
+            class Units: TargetLogic {
+                idc = IDC_FIREMISSION_UNITS;
+                y = POS_H(5.6);
+            };
+            class AmmoLabel: ModeLabel {
+                text = CSTRING(ModuleFireMission_Ammo);
+                y = POS_H(6.7);
+            };
+            class Ammo: Units {
+                idc = IDC_FIREMISSION_AMMO;
+                y = POS_H(6.7);
+            };
+            class RoundsLabel: ModeLabel {
+                text = CSTRING(ModuleFireMission_Rounds);
+                tooltip = CSTRING(ModuleFireMission_Rounds_Tooltip);
+                y = POS_H(7.8);
+            };
+            class Rounds: TargetGrid {
+                idc = IDC_FIREMISSION_ROUNDS;
+                y = POS_H(7.8) + pixelH;
+            };
+        };
+    };
+END_MODULE_DIALOG;

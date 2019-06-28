@@ -141,6 +141,14 @@ class CfgVehicles {
         displayName = CSTRING(ModuleCreateMinefield);
         function = QFUNC(moduleCreateMinefield);
     };
+    class GVAR(moduleCreateTarget): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = "Ordnance";
+        displayName = CSTRING(ModuleCreateTarget);
+        function = QFUNC(moduleCreateTarget);
+        icon = QPATHTOF(ui\target_ca.paa);
+        portrait = QPATHTOF(ui\target_ca.paa);
+    };
     class GVAR(moduleDamageBuildings): GVAR(moduleBase) {
         category = QGVAR(Buildings);
         displayName = CSTRING(ModuleDamageBuildings);
@@ -163,6 +171,20 @@ class CfgVehicles {
         category = QGVAR(Objects);
         displayName = CSTRING(ModuleEquipWithECM);
         function = QFUNC(moduleEquipWithECM);
+    };
+    class GVAR(moduleExecuteCode): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(DevTools);
+        displayName = CSTRING(ModuleExecuteCode);
+        curatorInfoType = QGVAR(RscExecuteCode);
+        icon = QPATHTOF(ui\code_ca.paa);
+        portrait = QPATHTOF(ui\code_ca.paa);
+    };
+    class GVAR(moduleFireMission): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = "Ordnance";
+        displayName = CSTRING(ModuleFireMission);
+        curatorInfoType = QGVAR(RscFireMission);
     };
     class GVAR(moduleFlyHeight): GVAR(moduleBase) {
         curatorCanAttach = 1;
