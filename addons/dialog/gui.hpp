@@ -47,7 +47,7 @@ class GVAR(display) {
             y = POS_TITLE_Y(MIN_HEIGHT);
             w = POS_W(27);
             h = POS_H(1);
-            colorBackground[] = GUI_BCG_COLOR;
+            colorBackground[] = GUI_THEME_COLOR;
             moving = 1;
         };
         class Background: RscText {

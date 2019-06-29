@@ -75,6 +75,13 @@
 #define COLOR_BACKGROUND_LIGHT 1, 1, 1, 0.1
 #define COLOR_BACKGROUND_DARK  0, 0, 0, 0.2
 
+#define GUI_THEME_RGB_R "(profilenamespace getvariable ['GUI_BCG_RGB_R',0.13])"
+#define GUI_THEME_RGB_G "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.54])"
+#define GUI_THEME_RGB_B "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.21])"
+#define GUI_THEME_ALPHA "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.8])"
+
+#define GUI_THEME_COLOR {GUI_THEME_RGB_R,GUI_THEME_RGB_G,GUI_THEME_RGB_B,GUI_THEME_ALPHA}
+
  #define SET_BACKGROUND_COLOR \
     onLoad = QUOTE( \
         params ['_ctrl']; \

@@ -54,7 +54,7 @@ class EGVAR(attributes,RscAttributesBase) {
             class Title: Title {}; \
             class Background: Background {}; \
             class Content: Content { \
-                class controls { \
+                class controls {
 
 #define END_MODULE_DIALOG \
                 }; \
