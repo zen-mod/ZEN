@@ -77,6 +77,13 @@ if (_object getVariable [QGVAR(isIED), false]) exitWith {
             };
 
             createVehicle [EXPLOSIVES select _explosionSize, _object, [], 0, "CAN_COLLIDE"];
+
+            // Manually destroy the IED object since some objects do not get destroyed by the explosion
+            // And it would be expected that the object does not survive the explosion
+            if (alive _object) then {
+                _object setDamage 1;
+            };
+
             [_pfhID] call CBA_fnc_removePerFrameHandler;
         };
     }, SCANNING_PERIOD, [_object, _activationSide, _activationRadius, _explosionSize, _isJammable]] call CBA_fnc_addPerFrameHandler;
