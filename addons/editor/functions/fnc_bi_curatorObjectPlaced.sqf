@@ -29,9 +29,9 @@ if (GVAR(unitRadioMessages) == 0 && {!isNull _group && {side _group in [west, ea
     [effectiveCommander _object, "CuratorObjectPlaced"] call BIS_fnc_curatorSayMessage;
 };
 
-if (_placedObject isKindOf "Module_f") then
+if (_object isKindOf "Module_f") then
 {
-	_placedObject setVariable ["BIS_fnc_initModules_activate", true, true];
+	_object setVariable ["BIS_fnc_initModules_activate", true, true];
 };
 
 BIS_fnc_curatorObjectPlaced_mouseOver = curatorMouseOver;
