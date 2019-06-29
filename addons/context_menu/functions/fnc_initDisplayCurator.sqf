@@ -74,6 +74,7 @@ if (GVAR(enabled) == 1) exitWith {
             curatorSelected params ["_selectedObjects", "_selectedGroups", "_selectedWaypoints"];
             if (
                 GVAR(canContext)
+                && {!call EFUNC(common,isPlacementActive)}
                 && {_selectedWaypoints isEqualTo []}
                 && {_selectedGroups findIf {!isPlayer leader _x} == -1}
                 && {_selectedObjects findIf {!isPlayer leader _x && {!isNull group _x}} == -1}
