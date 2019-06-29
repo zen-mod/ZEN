@@ -1,8 +1,9 @@
 /*
- * Author: Bohemia Interactive, mharis001
+ * Author: Bohemia Interactive, mharis001, Kex
  * Handles placement of an object by Zeus.
- * Edited to allow control over radio messages and not automatically
- * show inventory attributes for ammo box objects.
+ * Edited to allow control over radio messages, not automatically
+ * showing inventory attributes for ammo box objects and activating
+ * copy/pasted modules.
  *
  * Arguments:
  * 0: Curator (not used) <OBJECT>
@@ -26,6 +27,11 @@ private _group = group _object;
 
 if (GVAR(unitRadioMessages) == 0 && {!isNull _group && {side _group in [west, east, independent, civilian]}}) then {
     [effectiveCommander _object, "CuratorObjectPlaced"] call BIS_fnc_curatorSayMessage;
+};
+
+if (_placedObject isKindOf "Module_f") then
+{
+	_placedObject setVariable ["BIS_fnc_initModules_activate", true, true];
 };
 
 BIS_fnc_curatorObjectPlaced_mouseOver = curatorMouseOver;
