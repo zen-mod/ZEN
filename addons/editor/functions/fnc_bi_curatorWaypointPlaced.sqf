@@ -1,7 +1,7 @@
 /*
- * Author: Bohemia Interactive, mharis001
+ * Author: Bohemia Interactive, mharis001, Kex
  * Handles placement of a waypoint by Zeus.
- * Edited to allow control over radio messages.
+ * Edited to allow control over radio messages and fixing waypoint positioning.
  *
  * Arguments:
  * 0: Curator (not used) <OBJECT>
@@ -18,11 +18,23 @@
  */
 #include "script_component.hpp"
 
-if (GVAR(unitRadioMessages) == 2) exitWith {};
-
 params ["", "_group", "_waypointID"];
 
-[
-    leader _group,
-    ["CuratorWaypointPlaced", "CuratorWaypointPlacedAttack"] select (waypointType [_group, _waypointID] == "DESTROY")
-] call BIS_fnc_curatorSayMessage;
+private _leader = leader _group;
+private _waypoint = [_group, _waypointID];
+private _waypointType = waypointType _waypoint;
+
+if (GVAR(unitRadioMessages) != 2) then {
+    [
+        _leader,
+        ["CuratorWaypointPlaced", "CuratorWaypointPlacedAttack"] select (_waypointType == "DESTROY")
+    ] call BIS_fnc_curatorSayMessage;
+};
+
+if (_waypointID == 1) then {
+    [_group, 0] setWaypointPosition [getPos _leader, 0];
+};
+
+if (_waypointType == "CYCLE") then {
+    _waypoint setWaypointPosition [waypointPosition [_group, 0], 0];
+};
