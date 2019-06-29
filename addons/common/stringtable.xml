@@ -3,6 +3,7 @@
     <Package name="Common">
         <Key ID="STR_ZEN_Common_Category">
             <English>Zeus Enhanced</English>
+            <German>Zeus Verbessert</German>
         </Key>
         <Key ID="STR_ZEN_Common_Enabled">
             <English>Enabled</English>
