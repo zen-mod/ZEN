@@ -7,7 +7,7 @@
         </Key>
         <Key ID="STR_ZEN_Garage_ButtonHide_Tooltip">
             <English>Hide Interface (Backspace)</English>
-            <German>Interface verstecken (Rücktaste)</German>
+            <German>Benutzeroberfläche verstecken (Rücktaste)</German>
         </Key>
     </Package>
 </Project>

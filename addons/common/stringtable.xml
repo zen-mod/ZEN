@@ -173,11 +173,11 @@
         </Key>
         <Key ID="STR_ZEN_Common_DisableGearAnim">
             <English>Disable Gear Animation</English>
-            <German>Zahnrad Animation deaktivieren</German>
+            <German>Inventar Animation deaktivieren</German>
         </Key>
         <Key ID="STR_ZEN_Common_DisableGearAnim_Description">
             <English>Disables the "Gear" animation from playing when entering Zeus</English>
-            <German>Deaktiviert die "Zahnrat" Animation wenn man in dem Zeusmodus geht</German>
+            <German>Deaktiviert die "Inventar" Animation der Spielerfigur wenn man in dem Zeusmodus geht</German>
         </Key>
         <Key ID="STR_ZEN_Common_DarkMode">
             <English>Dark Mode</English>
@@ -193,7 +193,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_PreferredArsenal_Description">
             <English>Selects the preferred arsenal used by Zeus Enhanced\nIf ACE Arsenal is not installed, will fall back to BI Virtual Arsenal</English>
-            <German>Regelt welches Arsenal von Enhanced Zeus geöffnet wird. Wenn ACE Arsenal nicht installiert ist, wird auf das Vanilla BI Virtual Arsenal zurückgegriffen</German>
+            <German>Regelt welches Arsenal von Zeus Enhanced geöffnet wird. Wenn ACE Arsenal nicht installiert ist, wird auf das Vanilla BI Virtual Arsenal zurückgegriffen</German>
         </Key>
         <Key ID="STR_ZEN_Common_BIVirtualArsenal">
             <English>BI Virtual Arsenal</English>
