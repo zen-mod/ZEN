@@ -830,7 +830,7 @@ class GVAR(RscAttributesBase) {
             y = POS_Y(8.4);
             w = POS_W(27);
             h = POS_H(1);
-            colorBackground[] = GUI_BCG_COLOR;
+            colorBackground[] = GUI_THEME_COLOR;
         };
         class Background: RscText {
             idc = IDC_BACKGROUND;
