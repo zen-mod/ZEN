@@ -29,7 +29,7 @@ if (_unit isKindOf CLASS_VLS_BASE) then
     if (_unit currentMagazineTurret [0] != _magazineClass) then {
         // Unfortunately, the reloaded EH is useless here
         private _magazineReloadTime = (1.3 * getNumber (configfile >> "CfgWeapons" >> _weaponClass >> "magazineReloadTime"));
-        [_unit, [[0], _weaponClass, _ammo]] remoteExecCall ["loadMagazine", _unit];
+        _unit loadMagazine [[0], _weaponClass, _magazineClass];
         [
             FUNC(vlsFireNoLoading),
             _this,
