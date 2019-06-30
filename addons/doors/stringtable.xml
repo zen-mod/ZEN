@@ -3,12 +3,15 @@
     <Package name="Doors">
         <Key ID="STR_ZEN_Doors_Configure">
             <English>Configure Doors</English>
+            <German>Türen konfigurieren</German>
         </Key>
         <Key ID="STR_ZEN_Doors_NoBuilding">
             <English>Place on a building</English>
+            <German>Auf Gebäude platzieren</German>
         </Key>
         <Key ID="STR_ZEN_Doors_NoDoors">
             <English>Building has no doors</English>
+            <German>Das Gebäude hat keine Türen</German>
         </Key>
     </Package>
 </Project>

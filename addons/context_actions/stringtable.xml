@@ -3,12 +3,15 @@
     <Package name="Context_Actions">
         <Key ID="STR_ZEN_Context_Actions_EditInventory">
             <English>Edit Inventory</English>
+            <German>Inventar bearbeiten</German>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_TeleportPlayers">
             <English>Teleport Players</English>
+            <German>Spieler teleportieren</German>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_TeleportZeus">
             <English>Teleport Zeus</English>
+            <German>Zeus teleportieren</German>
         </Key>
     </Package>
 </Project>

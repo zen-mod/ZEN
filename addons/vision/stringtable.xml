@@ -3,42 +3,55 @@
     <Package name="Vision">
         <Key ID="STR_ZEN_Vision_VisionModes">
             <English>Vision Modes</English>
+            <German>Sichtmodi</German>
         </Key>
         <Key ID="STR_ZEN_Vision_IncreaseNVGBrightness">
             <English>Increase NVG Brightness</English>
+            <German>Nachtsicht Helligkeit erhöhen</German>
         </Key>
         <Key ID="STR_ZEN_Vision_DecreaseNVGBrightness">
             <English>Decrease NVG Brightness</English>
+            <German>Nachtsicht Helligkeit reduzieren</German>
         </Key>
         <Key ID="STR_ZEN_Vision_Brightness">
             <English>Brightness: %1</English>
+            <German>Helligkeit: %1</German>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableNVG">
             <English>Nightvision</English>
+            <German>Nachtsicht</German>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableWhiteHot">
             <English>Thermal - White Hot</English>
+            <German>Thermal - Weiß Heiß</German>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableBlackHot">
             <English>Thermal - Black Hot</English>
+            <German>Thermal - Schwarz Heiß</German>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableGreenHotCold">
             <English>Thermal - Light Green Hot / Dark Green Cold</English>
+            <German>Thermal - Hellgrün Heiß / Dunkelgrün Kalt</German>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableBlackHotGreenCold">
             <English>Thermal - Black Hot / Green Cold</English>
+            <German>Thermal - Schwarz Heiß / Grün Kalt</German>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableRedHotCold">
             <English>Thermal - Light Red Hot / Dark Red Cold</English>
+            <German>Thermal - Hellrot Heiß / Dunkelrot Kalt</German>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableBlackHotRedCold">
             <English>Thermal - Black Hot / Red Cold</English>
+            <German>Thermal - Schwarz Heiß / Rot Kalt</German>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableWhiteHotRedCold">
             <English>Thermal - White Hot / Red Cold</English>
+            <German>Thermal - Weiß Heiß / Rot Kalt</German>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableRedGreenThermal">
             <English>Thermal - Red / Green (White Bodies)</English>
+            <German>Thermal - Rot / Grün (weiße Körper)</German>
         </Key>
     </Package>
 </Project>

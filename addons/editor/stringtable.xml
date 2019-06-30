@@ -3,39 +3,51 @@
     <Package name="Editor">
         <Key ID="STR_ZEN_Editor_MoveDisplayToEdge">
             <English>Move Display to Edge</English>
+            <German>Display an den Rand verschieben</German>
         </Key>
         <Key ID="STR_ZEN_Editor_MoveDisplayToEdge_Description">
             <English>Moves the Zeus Editor Display to the edge of the screen</English>
+            <German>Bewegt die Zeus Editor Anzeige an den Rand des Bildschirms</German>
         </Key>
         <Key ID="STR_ZEN_Editor_RemoveWatermark">
             <English>Remove Watermark</English>
+            <German>Wasserzeichen verstecken</German>
         </Key>
         <Key ID="STR_ZEN_Editor_RemoveWatermark_Description">
             <English>Removes the watermark shown when hiding the display</English>
+            <German>Versteckt das Wasserzeichen, das gezeigt wird wenn die Oberfläche versteckt wird</German>
         </Key>
         <Key ID="STR_ZEN_Editor_DisableLiveSearch">
             <English>Disable Live Search</English>
+            <German>Live Suche deaktivieren</German>
         </Key>
         <Key ID="STR_ZEN_Editor_DisableLiveSearch_Description">
             <English>Requires pressing Enter or clicking the search button to confirm a search\nHelps reduce lag when searching through a lot of items</English>
+            <German>Suche wird erst ausgeführt, wenn die Eingabetaste oder die Lupe neben dem Eingabefeld betätigt wird\nHilft, Verzögerungen bei der Suche durch viele Elemente zu reduzieren.</German>
         </Key>
         <Key ID="STR_ZEN_Editor_DeclutterEmptyTree">
             <English>Declutter Empty Tree</English>
+            <German>Leer Kategorie aufräumen</German>
         </Key>
         <Key ID="STR_ZEN_Editor_DeclutterEmptyTree_Description">
             <English>Declutters the empty tree by removing empty vehicles as those are available in the side specific trees</English>
+            <German>Räumt die Kategorie "Leer" auf. Leere Fahrzeuge werden versteckt, da diese in den Seiten spezifischen Kategorien vorhanden sind</German>
         </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages">
             <English>Unit Radio Messages</English>
+            <German>Funkmeldungen von Einheiten</German>
         </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages_Description">
             <English>Controls whether unit radio messages are played on placement and waypoint orders, waypoints only, or disabled</English>
+            <German>Steuert, ob die  Einheit eine Funkmeldung absetzt wenn diese platziert wird und eine Anweisung von Wegpunkten erhält oder nur bei Wegpunkten oder niemals</German>
         </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages_WaypointsOnly">
             <English>Waypoints Only</English>
+            <German>Nur Wegpunkte</German>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleIncludeCrew">
             <English>Toggle Include Crew</English>
+            <German>Besatzung hinzufügen umschalten</German>
         </Key>
     </Package>
 </Project>

@@ -3,6 +3,7 @@
     <Package name="Common">
         <Key ID="STR_ZEN_Common_Category">
             <English>Zeus Enhanced</English>
+            <German>Zeus Verbessert</German>
         </Key>
         <Key ID="STR_ZEN_Common_Enabled">
             <English>Enabled</English>
@@ -68,105 +69,139 @@
         </Key>
         <Key ID="STR_ZEN_Common_Unchanged">
             <English>Unchanged</English>
+            <German>Unverändert</German>
         </Key>
         <Key ID="STR_ZEN_Common_VeryLow">
             <English>Very Low</English>
+            <German>Sehr niedrieg</German>
         </Key>
         <Key ID="STR_ZEN_Common_Low">
             <English>Low</English>
+            <German>Niedrig</German>
         </Key>
         <Key ID="STR_ZEN_Common_Medium">
             <English>Medium</English>
+            <German>Medium</German>
         </Key>
         <Key ID="STR_ZEN_Common_High">
             <English>High</English>
+            <German>Hoch</German>
         </Key>
         <Key ID="STR_ZEN_Common_VeryHigh">
             <English>Very High</English>
+            <German>Sehr hoch</German>
         </Key>
         <Key ID="STR_ZEN_Common_VeryWeak">
             <English>Very Weak</English>
+            <German>Sehr schwach</German>
         </Key>
         <Key ID="STR_ZEN_Common_Weak">
             <English>Weak</English>
+            <German>Schwach</German>
         </Key>
         <Key ID="STR_ZEN_Common_Strong">
             <English>Strong</English>
+            <German>Stark</German>
         </Key>
         <Key ID="STR_ZEN_Common_Extreme">
             <English>Extreme</English>
+            <German>Extrem</German>
         </Key>
         <Key ID="STR_ZEN_Common_All">
             <English>All</English>
+            <German>Alle</German>
         </Key>
         <Key ID="STR_ZEN_Common_Side">
             <English>Side</English>
+            <German>Seite</German>
         </Key>
         <Key ID="STR_ZEN_Common_Faction">
             <English>Faction</English>
+            <German>Fraktion</German>
         </Key>
         <Key ID="STR_ZEN_Common_Aircraft">
             <English>Aircraft</English>
+            <German>Fluggerät</German>
         </Key>
         <Key ID="STR_ZEN_Common_Filter">
             <English>Filter</English>
+            <German>Filter</German>
         </Key>
         <Key ID="STR_ZEN_Common_Units">
             <English>Units</English>
+            <German>Einheiten</German>
         </Key>
         <Key ID="STR_ZEN_Common_Vehicles">
             <English>Vehicles</English>
+            <German>Fahrzeuge</German>
         </Key>
         <Key ID="STR_ZEN_Common_Static">
             <English>Static</English>
+            <German>Statische Waffen</German>
         </Key>
         <Key ID="STR_ZEN_Common_Nearest">
             <English>Nearest</English>
+            <German>Am nächsten</German>
         </Key>
         <Key ID="STR_ZEN_Common_Speed">
             <English>Speed</English>
+            <German>Geschwindigkeit</German>
         </Key>
         <Key ID="STR_ZEN_Common_Range">
             <English>Range</English>
+            <German>Reichweite</German>
         </Key>
         <Key ID="STR_ZEN_Common_Radius">
             <English>Radius</English>
+            <German>Radius</German>
         </Key>
         <Key ID="STR_ZEN_Common_Height">
             <English>Height</English>
+            <German>Höhe</German>
         </Key>
         <Key ID="STR_ZEN_Common_Height_Units">
             <English>Height (m)</English>
+            <German>Höhe (m)</German>
         </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects">
             <English>Add Objects to Curators</English>
+            <German>Objekte zum Kurator hinzufügen</German>
         </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects_Description">
             <English>Automatically adds spawned objects to all curators</English>
+            <German>Fügt automatisch gespawnte Objekte zu allen Kuratoren hinzu.</German>
         </Key>
         <Key ID="STR_ZEN_Common_DisableGearAnim">
             <English>Disable Gear Animation</English>
+            <German>Inventar Animation deaktivieren</German>
         </Key>
         <Key ID="STR_ZEN_Common_DisableGearAnim_Description">
             <English>Disables the "Gear" animation from playing when entering Zeus</English>
+            <German>Deaktiviert die "Inventar" Animation der Spielerfigur wenn man in dem Zeusmodus geht</German>
         </Key>
         <Key ID="STR_ZEN_Common_DarkMode">
             <English>Dark Mode</English>
+            <German>Dunkler Modus</German>
         </Key>
         <Key ID="STR_ZEN_Common_DarkMode_Description">
             <English>Changes the appearance of various user interface elements to a darker color theme</English>
+            <German>Ändert das Aussehen veschiedener Elemente der Benutzeroberfläche zu einem dunkleren Farbschema</German>
         </Key>
         <Key ID="STR_ZEN_Common_PreferredArsenal">
             <English>Preferred Arsenal</English>
+            <German>Bevorzugtes Arsenal</German>
         </Key>
         <Key ID="STR_ZEN_Common_PreferredArsenal_Description">
             <English>Selects the preferred arsenal used by Zeus Enhanced\nIf ACE Arsenal is not installed, will fall back to BI Virtual Arsenal</English>
+            <German>Regelt welches Arsenal von Zeus Enhanced geöffnet wird. Wenn ACE Arsenal nicht installiert ist, wird auf das Vanilla BI Virtual Arsenal zurückgegriffen</German>
         </Key>
         <Key ID="STR_ZEN_Common_BIVirtualArsenal">
             <English>BI Virtual Arsenal</English>
+            <German>BI Virtuelle Arsenal</German>
         </Key>
         <Key ID="STR_ZEN_Common_AceArsenal">
             <English>ACE Arsenal</English>
+            <German>ACE Arsenal</German>
         </Key>
     </Package>
 </Project>

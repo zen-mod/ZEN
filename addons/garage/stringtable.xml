@@ -3,9 +3,11 @@
     <Package name="Garage">
         <Key ID="STR_ZEN_Garage_ButtonClose_Tooltip">
             <English>Exit Garage (Escape)</English>
+            <German>Garage verlasen (Escape)</German>
         </Key>
         <Key ID="STR_ZEN_Garage_ButtonHide_Tooltip">
             <English>Hide Interface (Backspace)</English>
+            <German>Benutzeroberfläche verstecken (Rücktaste)</German>
         </Key>
     </Package>
 </Project>

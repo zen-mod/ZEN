@@ -3,18 +3,23 @@
     <Package name="Context_Menu">
         <Key ID="STR_ZEN_Context_Menu_Enabled">
             <English>Enable Context Menu</English>
+            <German>Kontextmenu aktivieren</German>
         </Key>
         <Key ID="STR_ZEN_Context_Menu_Enabled_Description">
             <English>Enables opening of context menu using the keybind or right clicking</English>
+            <German>Ermöglicht das Öffnen des Kontextmenus mit einer Tastenkombination oder Rechtslick</German>
         </Key>
         <Key ID="STR_ZEN_Context_Menu_KeybindOnly">
             <English>Keybind Only</English>
+            <German>Nur Tastenkombination</German>
         </Key>
         <Key ID="STR_ZEN_Context_Menu_KeybindAndMouse">
             <English>Keybind and Mouse</English>
+            <German>Tastenkombination und Rechtsklick</German>
         </Key>
         <Key ID="STR_ZEN_Context_Menu_OpenContextMenu">
             <English>Open Context Menu</English>
+            <German>Kontextmenu öffnen</German>
         </Key>
     </Package>
 </Project>
