@@ -50,6 +50,8 @@ if (GVAR(disableLiveSearch)) then {
     _ctrl ctrlAddEventHandler ["ButtonClick", {call FUNC(fixSideButtons)}];
 } forEach IDCS_MODE_BUTTONS;
 
+curatorCamera camCommand "maxPitch 89";
+
 [{
     params ["_display"];
 
