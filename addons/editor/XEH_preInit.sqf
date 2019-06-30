@@ -15,6 +15,10 @@ GVAR(includeCrew) = true;
     params ["_logic"];
 
     _logic addEventHandler ["CuratorObjectPlaced", {call FUNC(handleObjectPlaced)}];
+    
+    if (isServer) then {
+        _logic setCuratorCameraAreaCeiling 1e5;
+    };
 }, true, [], true] call CBA_fnc_addClassEventHandler;
 
 ADDON = true;
