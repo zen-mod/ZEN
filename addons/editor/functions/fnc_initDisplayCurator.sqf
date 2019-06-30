@@ -50,8 +50,6 @@ if (GVAR(disableLiveSearch)) then {
     _ctrl ctrlAddEventHandler ["ButtonClick", {call FUNC(fixSideButtons)}];
 } forEach IDCS_MODE_BUTTONS;
 
-curatorCamera camCommand "maxPitch 89";
-
 [{
     params ["_display"];
 
@@ -67,4 +65,6 @@ curatorCamera camCommand "maxPitch 89";
         _ctrl call EFUNC(common,collapseTree);
         _ctrl tvExpand [0]; // Expand side level path so all factions are visible
     } forEach IDCS_GROUP_TREES;
+    
+    curatorCamera camCommand "maxPitch 89";
 }, _display] call CBA_fnc_execNextFrame;
