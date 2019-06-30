@@ -29,7 +29,7 @@ if (GVAR(unitRadioMessages) == 0 && {!isNull _group && {side _group in [west, ea
     [effectiveCommander _object, "CuratorObjectPlaced"] call BIS_fnc_curatorSayMessage;
 };
 
-if (_object isKindOf "Module_f") then {
+if (_object isKindOf "Module_F") then {
     _object setVariable ["BIS_fnc_initModules_activate", true, true];
 };
 
