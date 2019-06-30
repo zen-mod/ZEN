@@ -4,6 +4,7 @@
         <Key ID="STR_ZEN_Common_Category">
             <English>Zeus Enhanced</English>
             <German>Zeus Verbessert</German>
+            <Polish>Zeus Enhanced</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_Enabled">
             <English>Enabled</English>
@@ -70,138 +71,172 @@
         <Key ID="STR_ZEN_Common_Unchanged">
             <English>Unchanged</English>
             <German>Unverändert</German>
+            <Polish>Niezmieniony</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_VeryLow">
             <English>Very Low</English>
             <German>Sehr niedrieg</German>
+            <Polish>Bardzo niski</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_Low">
             <English>Low</English>
             <German>Niedrig</German>
+            <Polish>Niski</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_Medium">
             <English>Medium</English>
             <German>Medium</German>
+            <Polish>Średni</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_High">
             <English>High</English>
             <German>Hoch</German>
+            <Polish>Wysoki</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_VeryHigh">
             <English>Very High</English>
             <German>Sehr hoch</German>
+            <Polish>Bardzo wysoki</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_VeryWeak">
             <English>Very Weak</English>
             <German>Sehr schwach</German>
+            <Polish>Bardzo słaby</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_Weak">
             <English>Weak</English>
             <German>Schwach</German>
+            <Polish>Słaby</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_Strong">
             <English>Strong</English>
             <German>Stark</German>
+            <Polish>Silny</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_Extreme">
             <English>Extreme</English>
             <German>Extrem</German>
+            <Polish>Ekstremalny</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_All">
             <English>All</English>
             <German>Alle</German>
+            <Polish>Wszystko</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_Side">
             <English>Side</English>
             <German>Seite</German>
+            <Polish>Strona</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_Faction">
             <English>Faction</English>
             <German>Fraktion</German>
+            <Polish>Frakcja</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_Aircraft">
             <English>Aircraft</English>
             <German>Fluggerät</German>
+            <Polish>Pojazd latający</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_Filter">
             <English>Filter</English>
             <German>Filter</German>
+            <Polish>Filtr</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_Units">
             <English>Units</English>
             <German>Einheiten</German>
+            <Polish>Jednostki</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_Vehicles">
             <English>Vehicles</English>
             <German>Fahrzeuge</German>
+            <Polish>Pojazdy</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_Static">
             <English>Static</English>
             <German>Statische Waffen</German>
+            <Polish>Obiekty statyczne</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_Nearest">
             <English>Nearest</English>
             <German>Am nächsten</German>
+            <Polish>Najbliższe</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_Speed">
             <English>Speed</English>
             <German>Geschwindigkeit</German>
+            <Polish>Prędkość</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_Range">
             <English>Range</English>
             <German>Reichweite</German>
+            <Polish>Zasięg</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_Radius">
             <English>Radius</English>
             <German>Radius</German>
+            <Polish>Promień</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_Height">
             <English>Height</English>
             <German>Höhe</German>
+            <Polish>Wysokość</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_Height_Units">
             <English>Height (m)</English>
             <German>Höhe (m)</German>
+            <Polish>Wysokość (m)</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects">
             <English>Add Objects to Curators</English>
             <German>Objekte zum Kurator hinzufügen</German>
+            <Polish>Dodaj obiekty do Zeusa</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects_Description">
             <English>Automatically adds spawned objects to all curators</English>
             <German>Fügt automatisch gespawnte Objekte zu allen Kuratoren hinzu.</German>
+            <Polish>Automatycznie dodaj zespawnowane obiekty do Zeusa</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_DisableGearAnim">
             <English>Disable Gear Animation</English>
             <German>Inventar Animation deaktivieren</German>
+            <Polish>Wyłącz animację grzebania w ekwipunku</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_DisableGearAnim_Description">
             <English>Disables the "Gear" animation from playing when entering Zeus</English>
             <German>Deaktiviert die "Inventar" Animation der Spielerfigur wenn man in dem Zeusmodus geht</German>
+            <Polish>Wyłącza animację grzebania w ekwipunku po wejściu do Zeusa</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_DarkMode">
             <English>Dark Mode</English>
             <German>Dunkler Modus</German>
+            <Polish>Tryb ciemny</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_DarkMode_Description">
             <English>Changes the appearance of various user interface elements to a darker color theme</English>
             <German>Ändert das Aussehen veschiedener Elemente der Benutzeroberfläche zu einem dunkleren Farbschema</German>
+            <Polish>Zmienia kolorystykę elementów interfejsu na ciemniejszą</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_PreferredArsenal">
             <English>Preferred Arsenal</English>
             <German>Bevorzugtes Arsenal</German>
+            <Polish>Preferowany arsenał</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_PreferredArsenal_Description">
             <English>Selects the preferred arsenal used by Zeus Enhanced\nIf ACE Arsenal is not installed, will fall back to BI Virtual Arsenal</English>
             <German>Regelt welches Arsenal von Zeus Enhanced geöffnet wird. Wenn ACE Arsenal nicht installiert ist, wird auf das Vanilla BI Virtual Arsenal zurückgegriffen</German>
+            <Polish>Wybierz preferowany arsenał używany przez Zeus Enhanced\nJeśli arsenał ACE nie będzie dostępny to uruchomi się podstawowy wirtualny arsenał BI</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_BIVirtualArsenal">
             <English>BI Virtual Arsenal</English>
             <German>BI Virtuelle Arsenal</German>
+            <Polish>Wirtualny arsenał BI</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_AceArsenal">
             <English>ACE Arsenal</English>
             <German>ACE Arsenal</German>
+            <Polish>Arsenał ACE</Polish>
         </Key>
     </Package>
 </Project>

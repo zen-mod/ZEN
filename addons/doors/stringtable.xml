@@ -4,14 +4,17 @@
         <Key ID="STR_ZEN_Doors_Configure">
             <English>Configure Doors</English>
             <German>Türen konfigurieren</German>
+            <Polish>Konfiguruj drzwi</Polish>
         </Key>
         <Key ID="STR_ZEN_Doors_NoBuilding">
             <English>Place on a building</English>
             <German>Auf Gebäude platzieren</German>
+            <Polish>Ustaw na budynku</Polish>
         </Key>
         <Key ID="STR_ZEN_Doors_NoDoors">
             <English>Building has no doors</English>
             <German>Das Gebäude hat keine Türen</German>
+            <Polish>Budynek nie ma drzwi</Polish>
         </Key>
     </Package>
 </Project>
