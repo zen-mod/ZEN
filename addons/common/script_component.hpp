@@ -25,5 +25,7 @@
 #define ICON_INDEPENDENT QPATHTOF(ui\icon_independent_ca.paa)
 #define ICON_CIVILIAN    QPATHTOF(ui\icon_civilian_ca.paa)
 
+#define CLASS_VLS_BASE   "B_Ship_MRLS_01_base_F"
+
 // Prevent certain magazines from being handled by ammo functions
 #define BLACKLIST_MAGAZINES ["Laserbatteries"]

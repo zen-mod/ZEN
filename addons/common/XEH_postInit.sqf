@@ -166,10 +166,7 @@
     _vehicle setAmmoOnPylon [_pylon, _ammoCount];
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(doArtilleryFire), {
-    params ["_unit", "_position", "_magazine", "_rounds"];
-    _unit doArtilleryFire [_position, _magazine, _rounds];
-}] call CBA_fnc_addEventHandler;
+[QGVAR(doArtilleryFire), FUNC(doArtilleryFire)] call CBA_fnc_addEventHandler;
 
 [QGVAR(setTurretAmmo), FUNC(setTurretAmmo)] call CBA_fnc_addEventHandler;
 [QGVAR(setVehicleAmmo), FUNC(setVehicleAmmo)] call CBA_fnc_addEventHandler;
