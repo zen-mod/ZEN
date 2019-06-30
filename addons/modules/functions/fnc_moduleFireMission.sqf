@@ -1,5 +1,5 @@
 /*
- * Author: mharis001
+ * Author: mharis001, Kex
  * Zeus module function to perform an artillery fire mission.
  *
  * Arguments:
@@ -30,7 +30,7 @@ private _position = if (_target isEqualType "") then {
 private _artilleryETA = 9999;
 
 {
-    _artilleryETA = (_x getArtilleryETA [_position, _ammo]) min _artilleryETA;
+    _artilleryETA = ([_x, _position _ammo] call EFUNC(common,getArtilleryETA)) min _artilleryETA;
 } forEach _vehicles;
 
 if (_artilleryETA == -1) then {
