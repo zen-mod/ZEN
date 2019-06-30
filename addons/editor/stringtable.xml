@@ -35,7 +35,7 @@
         </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages">
             <English>Unit Radio Messages</English>
-            <German>Einheiten Funkmeldungen</German>
+            <German>Funkmeldungen von Einheiten</German>
         </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages_Description">
             <English>Controls whether unit radio messages are played on placement and waypoint orders, waypoints only, or disabled</English>
