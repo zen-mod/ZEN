@@ -64,13 +64,13 @@ class RscDisplayCurator {
                     text = "\a3\3DEN\Data\Displays\Display3DEN\tree_collapse_ca.paa";
                     tooltip = "$STR_3DEN_ctrlButtonCollapseAll_text";
                     x = 8.9 * GUI_GRID_W;
-                    onButtonClick = QUOTE([ARR_2(ctrlParent (_this select 0),false)] call FUNC(handleTreeButtons));
+                    onButtonClick = QUOTE(false call FUNC(handleTreeButtons));
                 };
                 class ExpandAll: CollapseAll {
                     text = QPATHTOF(ui\tree_expand_ca.paa);
                     tooltip = "$STR_3DEN_ctrlButtonExpandAll_text";
                     x = 9.9 * GUI_GRID_W;
-                    onButtonClick = QUOTE([ARR_2(ctrlParent (_this select 0),true)] call FUNC(handleTreeButtons));
+                    onButtonClick = QUOTE(true call FUNC(handleTreeButtons));
                 };
                 class CreateUnitsWest: RscTree {
                     h = safeZoneH - POS_EDGE(8.1,7.1) * GUI_GRID_H;
