@@ -887,6 +887,10 @@ class GVAR(RscAttributesMan): GVAR(RscAttributesBase) {
             text = "$STR_A3_Arsenal";
             function = QFUNC(buttonArsenal);
         };
+        class Skills {
+            text = CSTRING(Skills);
+            function = QFUNC(buttonSkills);
+        };
     };
 };
 
@@ -1056,6 +1060,12 @@ class GVAR(RscAttributesGroup): GVAR(RscAttributesBase) {
         };
         class ButtonOK: ButtonOK {};
         class ButtonCancel: ButtonCancel {};
+    };
+    class buttons {
+        class Skills {
+            text = CSTRING(Skills);
+            function = QFUNC(buttonSkills);
+        };
     };
 };
 

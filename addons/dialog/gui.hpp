@@ -193,14 +193,14 @@ class GVAR(Row_Slider): GVAR(Row_Base) {
             idc = IDC_ROW_SLIDER;
             x = POS_W(10.1);
             y = 0;
-            w = POS_W(13.8);
+            w = POS_W(13.5);
             h = POS_H(1);
         };
         class Edit: GVAR(RscEdit) {
             idc = IDC_ROW_SLIDER_EDIT;
-            x = POS_W(24);
+            x = POS_W(23.7);
             y = pixelH;
-            w = POS_W(2);
+            w = POS_W(2.3);
             h = POS_H(1) - pixelH;
         };
     };
