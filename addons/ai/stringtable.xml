@@ -4,6 +4,7 @@
         <Key ID="STR_ZEN_AI_CouldNotGarrisonAll">
             <English>Unable to garrison all units - not enough positions</English>
             <German>Das Gebäude hat zu wenig Positionen - Nicht alle Einheiten konnten das Gebäude besetzen</German>
+            <Polish>Nie udało się zgarnizonować wszystkich jednostek - za mało pozycji</Polish>
         </Key>
     </Package>
 </Project>
