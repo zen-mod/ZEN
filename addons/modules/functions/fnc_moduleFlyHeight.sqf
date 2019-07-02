@@ -21,7 +21,7 @@ private _vehicle = attachedTo _logic;
 deleteVehicle _logic;
 
 if (isNull _vehicle) exitWith {
-    [LSTRING(NothingSelected)] call EFUNC(common,showMessage);
+    [LSTRING(NoObjectSelected)] call EFUNC(common,showMessage);
 };
 
 if !(_vehicle isKindOf "Air") exitWith {

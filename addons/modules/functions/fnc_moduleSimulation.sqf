@@ -21,7 +21,7 @@ private _object = attachedTo _logic;
 deleteVehicle _logic;
 
 if (isNull _object) exitWith {
-    [LSTRING(NothingSelected)] call EFUNC(common,showMessage);
+    [LSTRING(NoObjectSelected)] call EFUNC(common,showMessage);
 };
 
 [QEGVAR(common,enableSimulationGlobal), [_object, !simulationEnabled _object]] call CBA_fnc_serverEvent;

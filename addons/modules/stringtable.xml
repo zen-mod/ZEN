@@ -1071,7 +1071,7 @@
             <Polish>Spawn</Polish>
         </Key>
         <!-- Feedback Messages -->
-        <Key ID="STR_ZEN_Modules_NothingSelected">
+        <Key ID="STR_ZEN_Modules_NoUnitSelected">
             <English>Place on a unit</English>
             <French>Placez sur une unité</French>
             <German>Es wurde nichts ausgewählt</German>
@@ -1086,6 +1086,9 @@
             <Korean>대상에 배치하기</Korean>
             <Chinesesimp>放置在一个单位上</Chinesesimp>
             <Chinese>放置在一個單位上</Chinese>
+        </Key>
+        <Key ID="STR_ZEN_Modules_NoObjectSelected">
+            <English>Place on an object</English>
         </Key>
         <Key ID="STR_ZEN_Modules_OnlyAlive">
             <English>Unit must be alive</English>

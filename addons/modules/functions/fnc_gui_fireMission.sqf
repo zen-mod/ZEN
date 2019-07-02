@@ -33,7 +33,7 @@ private _fnc_errorAndClose = {
 private _vehicle = attachedTo _logic;
 
 if (isNull _vehicle) then {
-    [LSTRING(NothingSelected)] call _fnc_errorAndClose;
+    [LSTRING(NoUnitSelected)] call _fnc_errorAndClose;
 };
 
 // Attached unit is an artillery vehicle
