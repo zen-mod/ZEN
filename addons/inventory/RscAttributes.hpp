@@ -20,7 +20,7 @@ class EGVAR(attributes,RscAttributesBase) {
 };
 
 class EGVAR(attributes,RscAttributesVehicle): EGVAR(attributes,RscAttributesBase) {
-    class buttons {
+    class Buttons {
         class Inventory {
             text = "$STR_a3_gear1";
             function = QUOTE(createDialog QQEGVAR(attributes,RscAttributesInventory));
@@ -29,7 +29,7 @@ class EGVAR(attributes,RscAttributesVehicle): EGVAR(attributes,RscAttributesBase
 };
 
 class EGVAR(attributes,RscAttributesVehicleEmpty): EGVAR(attributes,RscAttributesBase) {
-    class buttons {
+    class Buttons {
         class Inventory {
             text = "$STR_a3_gear1";
             function = QUOTE(createDialog QQEGVAR(attributes,RscAttributesInventory));
