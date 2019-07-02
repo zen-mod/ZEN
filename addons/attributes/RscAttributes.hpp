@@ -197,7 +197,7 @@ class GVAR(RscAttributeMedic): RscControlsGroupNoScrollbars {
     h = POS_H(1);
     class controls {
         class Label: GVAR(RscLabel) {
-            text = CSTRING(Medic);
+            text = "$STR_support_medic";
         };
         class Toolbox: ctrlToolbox {
             idc = IDC_MEDIC_TOOLBOX;
