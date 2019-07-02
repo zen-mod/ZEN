@@ -65,6 +65,4 @@ if (GVAR(disableLiveSearch)) then {
         _ctrl call EFUNC(common,collapseTree);
         _ctrl tvExpand [0]; // Expand side level path so all factions are visible
     } forEach IDCS_GROUP_TREES;
-    
-    curatorCamera camCommand "maxPitch 89";
 }, _display] call CBA_fnc_execNextFrame;
