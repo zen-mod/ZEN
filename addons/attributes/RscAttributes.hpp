@@ -188,6 +188,30 @@ class GVAR(RscAttributeAmmo): GVAR(RscAttributeSkill) {
     };
 };
 
+class GVAR(RscAttributeMedic): RscControlsGroupNoScrollbars {
+    idc = IDC_MEDIC;
+    function = QFUNC(attributeMedic);
+    x = 0;
+    y = 0;
+    w = POS_W(26);
+    h = POS_H(1);
+    class controls {
+        class Label: GVAR(RscLabel) {
+            text = CSTRING(Medic);
+        };
+        class Toolbox: ctrlToolbox {
+            idc = IDC_MEDIC_TOOLBOX;
+            x = POS_W(10.1);
+            y = 0;
+            w = POS_W(15.9);
+            h = POS_H(1);
+            rows = 1;
+            columns = 2;
+            strings[] = {ECSTRING(common,No), ECSTRING(common,Yes)};
+        };
+    };
+};
+
 class GVAR(RscAttributeLock): RscControlsGroupNoScrollbars {
     idc = IDC_LOCK;
     function = QFUNC(attributeLock);
@@ -873,6 +897,7 @@ class GVAR(RscAttributesMan): GVAR(RscAttributesBase) {
                 class Name: GVAR(RscAttributeName) {};
                 class Skill: GVAR(RscAttributeSkill) {};
                 class Damage: GVAR(RscAttributeDamage) {};
+                class Medic: GVAR(RscAttributeMedic) {};
                 class Rank: GVAR(RscAttributeRank) {};
                 class UnitPos: GVAR(RscAttributeUnitPos) {};
                 class RespawnPosition: GVAR(RscAttributeRespawnPosition) {};

@@ -11,6 +11,7 @@ PREP(attributeLights);
 PREP(attributeLock);
 PREP(attributeMarkerColor);
 PREP(attributeMarkerText);
+PREP(attributeMedic);
 PREP(attributeName);
 PREP(attributePlateNumber);
 PREP(attributeRank);

@@ -140,5 +140,8 @@
 #define IDC_EXEC_HISTORY 88001
 #define IDC_EXEC_EDIT 88002
 
+#define IDC_MEDIC 88100
+#define IDC_MEDIC_TOOLBOX 88101
+
 #define FORMAT_ROUND(value) (str round value)
 #define FORMAT_PERCENT(value) (format ["%1%2", round (value * 100), "%"])

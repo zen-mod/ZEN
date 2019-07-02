@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Attributes">
+        <Key ID="STR_ZEN_Attributes_Medic">
+            <English>Medic</English>
+        </Key>
         <Key ID="STR_ZEN_Attributes_Engine">
             <English>Engine</English>
             <German>Motor</German>
