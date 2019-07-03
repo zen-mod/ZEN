@@ -10,3 +10,5 @@ Thumbs.db
 CHANGELOG.md
 .hephaestus.json
 *.bisign
+hemtt*
+!hemtt.json
