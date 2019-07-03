@@ -10,3 +10,7 @@ Thumbs.db
 CHANGELOG.md
 .hephaestus.json
 *.bisign
+*.tar.gz
+*.zip
+@zen
+tools/armake.exe
