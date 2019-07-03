@@ -23,7 +23,7 @@
 params ["_unit", "_targetPosition", "_magazineClass", "_rounds"];
 
 // VLS needs an actual dummy target to fire at
-private _target = (createGroup sideLogic) createUnit ["Module_f", _targetPosition, [], 0, "CAN_COLLIDE"];
+private _target = (createGroup sideLogic) createUnit ["Module_F", _targetPosition, [], 0, "CAN_COLLIDE"];
 
 _unit setVariable [QGVAR(roundCounter), 0];
 [
