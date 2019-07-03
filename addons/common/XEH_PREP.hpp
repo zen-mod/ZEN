@@ -11,6 +11,7 @@ PREP(getSideIcon);
 PREP(getTargetPos);
 PREP(getTurretMagazines);
 PREP(getVehicleAmmo);
+PREP(healUnit);
 PREP(initSliderEdit);
 PREP(isPlacementActive);
 PREP(openArsenal);
