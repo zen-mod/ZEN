@@ -56,7 +56,4 @@ if (count _intersections != 0) then {
 GVAR(previewObject) setVectorUp [0,0,0];
 GVAR(previewVehicle) setVectorUp surfaceNormal position GVAR(previewVehicle);
 
-// Draw Bounding Box
-GVAR(previewVehicle) call FUNC(boundingBoxAdjustment);
-
 GVAR(originMouse) = getMousePosition;
