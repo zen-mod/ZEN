@@ -199,6 +199,13 @@ class EGVAR(context_menu,actions) {
         statement = QUOTE(_hoveredEntity call EFUNC(garage,openGarage));
         priority = -82;
     };
+    class HealPlayers {
+        displayName = CSTRING(HealPlayers);
+        icon = QPATHTOF(ui\medical_cross_ca.paa);
+        condition = QUOTE(_selectedObjects findIf {isPlayer _x} != -1);
+        statement = QUOTE(_selectedObjects call FUNC(healPlayers));
+        priority = -98;
+    };
     class TeleportPlayers {
         displayName = CSTRING(TeleportPlayers);
         icon = QPATHTOF(ui\marker_ca.paa);
