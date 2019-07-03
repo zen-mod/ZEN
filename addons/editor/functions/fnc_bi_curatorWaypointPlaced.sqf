@@ -1,7 +1,7 @@
 /*
  * Author: Bohemia Interactive, mharis001, Kex
  * Handles placement of a waypoint by Zeus.
- * Edited to allow control over radio messages and fixing waypoint positioning.
+ * Edited to allow control over radio messages and fixed cycle waypoint position.
  *
  * Arguments:
  * 0: Curator (not used) <OBJECT>
