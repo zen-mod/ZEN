@@ -100,6 +100,22 @@ The function is called on every key press with the full text as an argument and 
 
 - Text &lt;STRING&gt;
 
+### List Box `LIST`
+
+A list box control with support for detailing specific entries.
+This control type works identically to the combo box control type except for the format in which the entries are presented (list view rather than a drop down).
+In addition, this control type accepts an additional height argument to change how tall the list box is.
+
+**Control Specific Argument(s):**
+
+- 0: Values that can be returned &lt;ARRAY&gt;
+- 1: Corresponding pretty names (see above) &lt;ARRAY&gt;
+- 2: Default index &lt;NUMBER&gt;
+- 3: Height &lt;NUMBER&gt;
+
+**Return Value:**
+
+- Value &lt;ANY&gt;
 
 ### Side Select `SIDES`
 
