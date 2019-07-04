@@ -24,4 +24,4 @@ private _units = [];
     if (isPlayer _x) then {
         [_x] call EFUNC(common,healUnit);
     };
-} forEach _units;
+} forEach (_units arrayIntersect _units);
