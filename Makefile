@@ -59,7 +59,7 @@ version:
 	@echo "  VER  $(VERSION)"
 	$(shell sed -i -r -s 's/[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+/$(VERSION)/g' $(VERSION_FILES))
 	$(shell sed -i -r -s 's/[0-9]+\.[0-9]+\.[0-9]+/$(VERSION_S)/g' $(VERSION_FILES))
-	@printf "#define MAJOR $(MAJOR)%s\n#define MINOR $(MINOR)%s\n#define PATCHLVL $(PATCH)%s\n#define BUILD $(BUILD)" > "addons/main/script_version.hpp"
+	@printf "#define MAJOR $(MAJOR)%s\n#define MINOR $(MINOR)%s\n#define PATCHLVL $(PATCH)%s\n#define BUILD $(BUILD)%s\n" > "addons/main/script_version.hpp"
 
 commit:
 	@echo "  GIT  commit release preparation"
