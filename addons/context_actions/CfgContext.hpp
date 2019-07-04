@@ -199,6 +199,33 @@ class EGVAR(context_menu,actions) {
         statement = QUOTE(_hoveredEntity call EFUNC(garage,openGarage));
         priority = -82;
     };
+    class VehicleLogistics {
+        displayName = CSTRING(VehicleLogistics);
+        icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\truck_ca.paa";
+        condition = QUOTE(_selectedObjects findIf {_x isKindOf 'AllVehicles' && {!(_x isKindOf 'Man')} && {alive _x} && {damage _x > 0 || {([_x] call EFUNC(common,getVehicleAmmo) != -1 && {[_x] call EFUNC(common,getVehicleAmmo) < 1}) || {fuel _x < 1}}}} != -1);
+        class Repair {
+            displayName = CSTRING(Repair);
+            icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\repair_ca.paa";
+            condition = QUOTE(_selectedObjects findIf {damage _x > 0} != -1);
+            statement = QUOTE(_selectedObjects call FUNC(repairVehicles));
+            priority = 3;
+        };
+        class Rearm {
+            displayName = CSTRING(Rearm);
+            icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\rearm_ca.paa";
+            condition = QUOTE(_selectedObjects findIf {!(_x isKindOf 'Man') && {[_x] call EFUNC(common,getVehicleAmmo) != -1} && {[_x] call EFUNC(common,getVehicleAmmo) < 1}} != -1);
+            statement = QUOTE(_selectedObjects call FUNC(rearmVehicles));
+            priority = 2;
+        };
+        class Refuel {
+            displayName = CSTRING(Refuel);
+            icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\refuel_ca.paa";
+            condition = QUOTE(_selectedObjects findIf {fuel _x < 1} != -1);
+            statement = QUOTE(_selectedObjects call FUNC(refuelVehicles));
+            priority = 1;
+        };
+        priority = -97;
+    };
     class TeleportPlayers {
         displayName = CSTRING(TeleportPlayers);
         icon = QPATHTOF(ui\marker_ca.paa);
