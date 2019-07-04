@@ -117,6 +117,10 @@ A side selection control with clickable icons for the BLUFOR, OPFOR, Independent
 
 A slider control with an attached edit box which can both be used to change the value.
 
+A percentage slider sub-type exists for this control type - `SLIDER:PERCENT`.
+When this sub-type is used, the value displayed in the edit box will be multiplied by 100 and be suffixed by a percent sign.
+The returned value will still be within the min and max values (ideally 0 to 1) and the decimals argument is not necessary.
+
 **Control Specific Argument(s):**
 
 - 0: Minimum value &lt;NUMBER&gt;

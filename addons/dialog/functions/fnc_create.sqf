@@ -127,7 +127,7 @@ scopeName "Main";
         };
         case "SLIDER": {
             _valueInfo params [["_min", 0, [0]], ["_max", 1, [0]], ["_default", 0, [0]], ["_decimals", 2, [0]]];
-            _rowSettings append [_min, _max, _decimals];
+            _rowSettings append [_min, _max, _decimals, _subType == "PERCENT"];
             _defaultValue = _default;
             _controlType = QGVAR(Row_Slider);
         };
