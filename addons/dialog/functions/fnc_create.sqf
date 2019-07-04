@@ -78,18 +78,10 @@ scopeName "Main";
 
         _labels = _labels apply {
             if (isNil "_x") then {
-                _x = _values select _forEachIndex;
+                _x = str (_values select _forEachIndex);
             };
 
-            _x params ["_label", ["_tooltip", ""], ["_picture", "", [""]], ["_textColor", [1, 1, 1, 1], [[]], 4]];
-
-            if !(_label isEqualType "") then {
-                _label = str _label;
-            };
-
-            if !(_tooltip isEqualType "") then {
-                _tooltip = str _tooltip;
-            };
+            _x params [["_label", "", [""]], ["_tooltip", "", [""]], ["_picture", "", [""]], ["_textColor", [1, 1, 1, 1], [[]], 4]];
 
             if (isLocalized _label) then {
                 _label = localize _label;
