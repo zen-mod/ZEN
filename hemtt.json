@@ -20,6 +20,6 @@
     "keyname": "{{prefix}}_{{version}}",
     "signame": "{{prefix}}_{{version}}-{{git \"id 8\"}}",
     "releasebuild": [
-        "@zip ace3_{{semver.major}}.{{semver.minor}}.{{semver.patch}}"
+        "@zip zen_{{semver.major}}.{{semver.minor}}.{{semver.patch}}"
     ]
 }
