@@ -202,7 +202,7 @@ class EGVAR(context_menu,actions) {
     class HealPlayers {
         displayName = CSTRING(HealPlayers);
         icon = QPATHTOF(ui\medical_cross_ca.paa);
-        condition = QUOTE(_selectedObjects findIf {isPlayer _x} != -1);
+        condition = QUOTE(_selectedObjects findIf {crew _x findIf {isPlayer _x && {alive _x}} != -1} != -1);
         statement = QUOTE(_selectedObjects call FUNC(healPlayers));
         priority = -98;
     };

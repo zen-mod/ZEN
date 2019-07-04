@@ -1,6 +1,6 @@
 /*
  * Author: 3Mydlo3
- * Heals players in given selection.
+ * Heals players in given selection. Works for players in vehicles.
  *
  * Arguments:
  * N: Selected Objects <OBJECT>
@@ -15,17 +15,11 @@
  */
 #include "script_component.hpp"
 
-private _players = _this select {isPlayer _x};
-
-private _moduleGroup = createGroup sideLogic;
+private _mans = [];
 {
-	private _module = _moduleGroup createUnit [
-		QEGVAR(modules,moduleHeal),
-		[0, 0, 0],
-		[],
-		0,
-		"CAN_COLLIDE"
-	];
-	_module attachTo [_x];
-	_module setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true];
-} forEach _players;
+	_mans append crew _x;
+} forEach _this;
+
+{
+	[_x] call EFUNC(common,healUnit);
+} forEach _mans select {isPlayer _x};
