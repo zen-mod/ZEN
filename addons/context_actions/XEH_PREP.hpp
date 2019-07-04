@@ -1,4 +1,4 @@
-PREP(healPlayers);
+PREP(healUnits);
 PREP(setBehaviour);
 PREP(setFormation);
 PREP(setSpeed);

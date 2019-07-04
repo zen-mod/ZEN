@@ -6,11 +6,6 @@
             <German>Inventar bearbeiten</German>
             <Polish>Edytuj wyposażenie</Polish>
         </Key>
-        <Key ID="STR_ZEN_Context_Actions_HealPlayers">
-            <English>Heal Players</English>
-            <German>Spieler heilen</German>
-            <Polish>Ulecz graczy</Polish>
-        </Key>
         <Key ID="STR_ZEN_Context_Actions_TeleportPlayers">
             <English>Teleport Players</English>
             <German>Spieler teleportieren</German>
