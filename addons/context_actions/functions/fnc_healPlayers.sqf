@@ -15,11 +15,13 @@
  */
 #include "script_component.hpp"
 
-private _mans = [];
+private _units = [];
 {
-	_mans append crew _x;
+    _units append crew _x;
 } forEach _this;
 
 {
-	[_x] call EFUNC(common,healUnit);
-} forEach _mans select {isPlayer _x};
+    if (isPlayer _x) then {
+        [_x] call EFUNC(common,healUnit);
+    };
+} forEach _units;

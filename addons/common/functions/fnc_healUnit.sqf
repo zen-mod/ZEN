@@ -1,6 +1,6 @@
 /*
  * Author: mharis001, 3Mydlo3
- * Heals unit
+ * Heals the given unit.
  *
  * Arguments:
  * 0: Unit <OBJECT>
