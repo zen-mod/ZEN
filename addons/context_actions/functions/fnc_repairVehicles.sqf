@@ -3,7 +3,7 @@
  * Repairs units in given selection.
  *
  * Arguments:
- * N: Selected Objects <OBJECT>
+ * N: Selected Objects <ARRAY>
  *
  * Return Value:
  * None
