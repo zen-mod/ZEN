@@ -11,6 +11,9 @@ class RscButtonMenuCancel;
 class RscCombo {
     class ComboScrollBar;
 };
+class RscListBox {
+    class ListScrollBar;
+};
 
 class GVAR(RscEdit): RscEdit {
     colorText[] = {1, 1, 1, 1};
@@ -28,6 +31,15 @@ class GVAR(RscCombo): RscCombo {
     arrowEmpty = "\a3\3DEN\Data\Controls\ctrlCombo\arrowEmpty_ca.paa";
     arrowFull = "\a3\3DEN\Data\Controls\ctrlCombo\arrowFull_ca.paa";
     class ComboScrollBar: ComboScrollBar {
+        arrowEmpty = "\a3\3DEN\Data\Controls\ctrlDefault\arrowEmpty_ca.paa";
+        arrowFull = "\a3\3DEN\Data\Controls\ctrlDefault\arrowFull_ca.paa";
+        border = "\a3\3DEN\Data\Controls\ctrlDefault\border_ca.paa";
+        thumb = "\a3\3DEN\Data\Controls\ctrlDefault\thumb_ca.paa";
+    };
+};
+
+class GVAR(RscListBox): RscListBox {
+    class ListScrollBar: ListScrollBar {
         arrowEmpty = "\a3\3DEN\Data\Controls\ctrlDefault\arrowEmpty_ca.paa";
         arrowFull = "\a3\3DEN\Data\Controls\ctrlDefault\arrowFull_ca.paa";
         border = "\a3\3DEN\Data\Controls\ctrlDefault\border_ca.paa";
@@ -165,6 +177,24 @@ class GVAR(Row_Combo): GVAR(Row_Base) {
             y = 0;
             w = POS_W(15.9);
             h = POS_H(1);
+        };
+    };
+};
+
+class GVAR(Row_List): GVAR(Row_Base) {
+    GVAR(script) = QFUNC(gui_list);
+    h = POS_H(7);
+    class controls: controls {
+        class Name: Name {
+            x = 0;
+            w = POS_W(26);
+        };
+        class List: GVAR(RscListBox) {
+            idc = IDC_ROW_LIST;
+            x = 0;
+            y = POS_H(1);
+            w = POS_W(26);
+            h = POS_H(6);
         };
     };
 };

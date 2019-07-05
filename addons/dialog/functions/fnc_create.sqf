@@ -67,6 +67,34 @@ scopeName "Main";
     private _controlType = "";
     private _rowSettings = [];
 
+    private _fnc_verifyListData = {
+        if (_values isEqualTo []) then {
+            {
+                _values pushBack _forEachIndex;
+            } forEach _labels;
+        };
+
+        _labels resize count _values;
+
+        _labels = _labels apply {
+            if (isNil "_x") then {
+                _x = str (_values select _forEachIndex);
+            };
+
+            _x params [["_label", "", [""]], ["_tooltip", "", [""]], ["_picture", "", [""]], ["_textColor", [1, 1, 1, 1], [[]], 4]];
+
+            if (isLocalized _label) then {
+                _label = localize _label;
+            };
+
+            if (isLocalized _tooltip) then {
+                _tooltip = localize _tooltip;
+            };
+
+            [_label, _tooltip, _picture, _textColor]
+        };
+    };
+
     switch (_type) do {
         case "CHECKBOX": {
             _defaultValue = _valueInfo param [0, false, [false]];
@@ -79,38 +107,7 @@ scopeName "Main";
         case "COMBO": {
             _valueInfo params [["_values", [], [[]]], ["_labels", [], [[]]], ["_defaultIndex", 0, [0]]];
 
-            if (_values isEqualTo []) then {
-                {
-                    _values pushBack _forEachIndex;
-                } forEach _labels;
-            };
-
-            {
-                if (isNil "_x") then {
-                    _x = _values select _forEachIndex;
-                };
-
-                _x params ["_label", ["_tooltip", ""], ["_picture", "", [""]], ["_textColor", [1, 1, 1, 1], [[]], 4]];
-
-                if !(_label isEqualType "") then {
-                    _label = str _label;
-                };
-
-                if !(_tooltip isEqualType "") then {
-                    _tooltip = str _tooltip;
-                };
-
-                if (isLocalized _label) then {
-                    _label = localize _label;
-                };
-
-                if (isLocalized _tooltip) then {
-                    _tooltip = localize _tooltip;
-                };
-
-                _labels set [_forEachIndex, [_label, _tooltip, _picture, _textColor]];
-            } forEach _labels;
-
+            [] call _fnc_verifyListData;
             _rowSettings append [_values, _labels];
             _defaultValue = _values param [_defaultIndex];
             _controlType = QGVAR(Row_Combo);
@@ -132,6 +129,14 @@ scopeName "Main";
                     QGVAR(Row_Edit);
                 };
             };
+        };
+        case "LIST": {
+            _valueInfo params [["_values", [], [[]]], ["_labels", [], [[]]], ["_defaultIndex", 0, [0]], ["_height", 6, [0]]];
+
+            [] call _fnc_verifyListData;
+            _rowSettings append [_values, _labels, _height];
+            _defaultValue = _values param [_defaultIndex];
+            _controlType = QGVAR(Row_List);
         };
         case "SIDES": {
             _defaultValue = _valueInfo param [0, nil, [west]];
