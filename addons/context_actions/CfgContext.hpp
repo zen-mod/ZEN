@@ -202,7 +202,7 @@ class EGVAR(context_menu,actions) {
     class HealUnits {
         displayName = ECSTRING(modules,ModuleHeal);
         icon = QPATHTOF(ui\medical_cross_ca.paa);
-        condition = QUOTE(_selectedObjects findIf {crew _x findIf {alive _x} != -1} != -1);
+        condition = QUOTE(_selectedObjects findIf {crew _x findIf {_x isKindOf 'CAManBase' && {alive _x}} != -1} != -1);
         class All {
             displayName = ECSTRING(common,All);
             statement = QUOTE([ARR_2(_selectedObjects,HEAL_MODE_ALL)] call FUNC(healUnits));
@@ -210,7 +210,7 @@ class EGVAR(context_menu,actions) {
         };
         class AI {
             displayName = ECSTRING(modules,AI);
-            condition = QUOTE(_selectedObjects findIf {crew _x findIf {!isPlayer _x && {alive _x}} != -1} != -1);
+            condition = QUOTE(_selectedObjects findIf {crew _x findIf {!isPlayer _x && {_x isKindOf 'CAManBase'} && {alive _x}} != -1} != -1);
             statement = QUOTE([ARR_2(_selectedObjects,HEAL_MODE_AI)] call FUNC(healUnits));
             priority = 2;
         };
