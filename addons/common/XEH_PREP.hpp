@@ -3,6 +3,7 @@ PREP(collapseTree);
 PREP(createZeus);
 PREP(curatorDisplayLoad);
 PREP(curatorDisplayUnload);
+PREP(dumpPerformanceCounters);
 PREP(getActiveTree);
 PREP(getAllTurrets);
 PREP(getInventory);
