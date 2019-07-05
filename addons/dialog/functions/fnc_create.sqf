@@ -116,10 +116,22 @@ scopeName "Main";
             _controlType = QGVAR(Row_Combo);
         };
         case "EDIT": {
-            _valueInfo params [["_default", "", [""]], ["_fnc_sanitizeValue", {_this}, [{}]]];
-            _rowSettings append [_fnc_sanitizeValue];
+            _valueInfo params [["_default", "", [""]], ["_fnc_sanitizeValue", {_this}, [{}]], ["_height", 5, [0]]];
+
+            private _isMulti = _subType in ["MULTI", "CODE"];
+            _rowSettings append [_fnc_sanitizeValue, _isMulti, _height];
             _defaultValue = _default;
-            _controlType = QGVAR(Row_Edit);
+            _controlType = switch (_subType) do {
+                case "MULTI": {
+                    QGVAR(Row_EditMulti);
+                };
+                case "CODE": {
+                    QGVAR(Row_EditCode);
+                };
+                default {
+                    QGVAR(Row_Edit);
+                };
+            };
         };
         case "SIDES": {
             _defaultValue = _valueInfo param [0, nil, [west]];

@@ -128,6 +128,33 @@ class GVAR(Row_Edit): GVAR(Row_Base) {
     };
 };
 
+class GVAR(Row_EditMulti): GVAR(Row_Edit) {
+    class controls: controls {
+        class Name: Name {
+            x = 0;
+            w = POS_W(26);
+        };
+        class Edit: Edit {
+            style = ST_MULTI;
+            x = pixelW;
+            y = POS_H(1);
+            w = POS_W(26) - pixelW;
+            h = POS_H(5);
+        };
+    };
+};
+
+class GVAR(Row_EditCode): GVAR(Row_EditMulti) {
+    class controls: controls {
+        class Name: Name {};
+        class Edit: Edit {
+            font = "EtelkaMonospacePro";
+            sizeEx = POS_H(0.7);
+            autocomplete = "scripting";
+        };
+    };
+};
+
 class GVAR(Row_Combo): GVAR(Row_Base) {
     GVAR(script) = QFUNC(gui_combo);
     class controls: controls {

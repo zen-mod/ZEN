@@ -91,10 +91,15 @@ The corresponding pretty names array can have elements in the following format, 
 A single line edit box with support for an optional sanitizing function.
 The function is called on every key press with the full text as an argument and its return value is the resulting text.
 
+Two multi-line edit box sub-types exist for this control type, `EDIT:MULTI` and `EDIT:CODE`.
+When either sub-type is used, an additional height argument can be supplied to change how tall the edit box is.
+The code sub-type provides scripting autocompletion to the user.
+
 **Control Specific Argument(s):**
 
 - 0: Default text &lt;STRING&gt;
 - 1: Sanitizing function &lt;CODE&gt;
+- 2: Height (only for multi-line types) &lt;NUMBER&gt;
 
 **Return Value:**
 
