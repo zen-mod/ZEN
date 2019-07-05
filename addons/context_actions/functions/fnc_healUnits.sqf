@@ -8,7 +8,7 @@
  *
  * Arguments:
  * 0: Selected Objects <ARRAY>
- * 1: Mode <SCALAR>
+ * 1: Mode <NUMBER>
  *
  * Return Value:
  * None

@@ -205,19 +205,19 @@ class EGVAR(context_menu,actions) {
         condition = QUOTE(_selectedObjects findIf {crew _x findIf {alive _x} != -1} != -1);
         class All {
             displayName = ECSTRING(common,All);
-            statement = QUOTE([ARR_2(_selectedObjects, HEAL_MODE_ALL)] call FUNC(healUnits));
+            statement = QUOTE([ARR_2(_selectedObjects,HEAL_MODE_ALL)] call FUNC(healUnits));
             priority = 3;
         };
         class AI {
             displayName = ECSTRING(modules,AI);
             condition = QUOTE(_selectedObjects findIf {crew _x findIf {!isPlayer _x && {alive _x}} != -1} != -1);
-            statement = QUOTE([ARR_2(_selectedObjects, HEAL_MODE_AI)] call FUNC(healUnits));
+            statement = QUOTE([ARR_2(_selectedObjects,HEAL_MODE_AI)] call FUNC(healUnits));
             priority = 2;
         };
         class Players {
             displayName = ECSTRING(modules,Players);
             condition = QUOTE(_selectedObjects findIf {crew _x findIf {isPlayer _x && {alive _x}} != -1} != -1);
-            statement = QUOTE([ARR_2(_selectedObjects, HEAL_MODE_PLAYERS)] call FUNC(healUnits));
+            statement = QUOTE([ARR_2(_selectedObjects,HEAL_MODE_PLAYERS)] call FUNC(healUnits));
             priority = 1;
         };
         priority = -98;
