@@ -137,6 +137,29 @@ class EGVAR(context_menu,actions) {
             statement = QUOTE([ARR_2(_selectedObjects,'DOWN')] call FUNC(setStance));
         };
     };
+    class HealUnits {
+        displayName = ECSTRING(modules,ModuleHeal);
+        icon = QPATHTOF(ui\medical_cross_ca.paa);
+        condition = QUOTE(_selectedObjects findIf {crew _x findIf {_x isKindOf 'CAManBase' && {alive _x}} != -1} != -1);
+        class All {
+            displayName = ECSTRING(common,All);
+            statement = QUOTE([ARR_2(_selectedObjects,HEAL_MODE_ALL)] call FUNC(healUnits));
+            priority = 3;
+        };
+        class AI {
+            displayName = ECSTRING(modules,AI);
+            condition = QUOTE(_selectedObjects findIf {crew _x findIf {!isPlayer _x && {_x isKindOf 'CAManBase'} && {alive _x}} != -1} != -1);
+            statement = QUOTE([ARR_2(_selectedObjects,HEAL_MODE_AI)] call FUNC(healUnits));
+            priority = 2;
+        };
+        class Players {
+            displayName = ECSTRING(modules,Players);
+            condition = QUOTE(_selectedObjects findIf {crew _x findIf {isPlayer _x && {alive _x}} != -1} != -1);
+            statement = QUOTE([ARR_2(_selectedObjects,HEAL_MODE_PLAYERS)] call FUNC(healUnits));
+            priority = 1;
+        };
+        priority = -70;
+    };
     class Loadout {
         displayName = "$STR_3den_display3den_entitymenu_arsenal_text";
         icon = "\a3\3den\data\displays\display3den\entitymenu\arsenal_ca.paa";
@@ -198,29 +221,6 @@ class EGVAR(context_menu,actions) {
         );
         statement = QUOTE(_hoveredEntity call EFUNC(garage,openGarage));
         priority = -82;
-    };
-    class HealUnits {
-        displayName = ECSTRING(modules,ModuleHeal);
-        icon = QPATHTOF(ui\medical_cross_ca.paa);
-        condition = QUOTE(_selectedObjects findIf {crew _x findIf {_x isKindOf 'CAManBase' && {alive _x}} != -1} != -1);
-        class All {
-            displayName = ECSTRING(common,All);
-            statement = QUOTE([ARR_2(_selectedObjects,HEAL_MODE_ALL)] call FUNC(healUnits));
-            priority = 3;
-        };
-        class AI {
-            displayName = ECSTRING(modules,AI);
-            condition = QUOTE(_selectedObjects findIf {crew _x findIf {!isPlayer _x && {_x isKindOf 'CAManBase'} && {alive _x}} != -1} != -1);
-            statement = QUOTE([ARR_2(_selectedObjects,HEAL_MODE_AI)] call FUNC(healUnits));
-            priority = 2;
-        };
-        class Players {
-            displayName = ECSTRING(modules,Players);
-            condition = QUOTE(_selectedObjects findIf {crew _x findIf {isPlayer _x && {alive _x}} != -1} != -1);
-            statement = QUOTE([ARR_2(_selectedObjects,HEAL_MODE_PLAYERS)] call FUNC(healUnits));
-            priority = 1;
-        };
-        priority = -98;
     };
     class TeleportPlayers {
         displayName = CSTRING(TeleportPlayers);
