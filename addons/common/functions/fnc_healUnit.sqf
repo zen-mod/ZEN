@@ -18,7 +18,11 @@
 params ["_unit"];
 
 if (GVAR(aceMedicalLoaded) && {ace_medical_level > 0}) then {
-    ["ace_medical_treatmentAdvanced_fullHealLocal", [_unit, _unit], _unit] call CBA_fnc_targetEvent;
+    if (GVAR(aceMedicalTreatmentLoaded)) then {
+        ["ace_medical_treatment_fnc_fullHealLocal", [_unit], _unit] call CBA_fnc_targetEvent;
+    } else {
+        ["ace_medical_treatmentAdvanced_fullHealLocal", [_unit, _unit], _unit] call CBA_fnc_targetEvent;
+    };
 } else {
     // BI's scripted revive system
     if ((missionNamespace getVariable ["bis_revive_mode", 0]) != 0) then {

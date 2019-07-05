@@ -7,6 +7,8 @@ PREP_RECOMPILE_START;
 PREP_RECOMPILE_END;
 
 GVAR(aceMedicalLoaded) = isClass (configFile >> "CfgPatches" >> "ace_medical");
+// Detect next ACE update containing medical rewrite which will change medical functions
+GVAR(aceMedicalTreatmentLoaded) = isClass (configFile >> "CfgPatches" >> "ace_medical_treatment");
 
 #include "initSettings.sqf"
 
