@@ -32,9 +32,9 @@ if (GVAR(unitRadioMessages) != 2) then {
 };
 
 if (_waypointID == 1) then {
-    [_group, 0] setWaypointPosition [getPos _leader, 0];
+    [_group, 0] setWaypointPosition [getPosASL _leader, -1];
 };
 
 if (_waypointType == "CYCLE") then {
-    _waypoint setWaypointPosition [waypointPosition [_group, 0], 0];
+    _waypoint setWaypointPosition [AGLToASL waypointPosition [_group, 0], -1];
 };
