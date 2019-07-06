@@ -4,6 +4,7 @@
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
+// #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_ATTRIBUTES
     #define DEBUG_MODE_FULL
@@ -16,7 +17,6 @@
 #include "\x\zen\addons\main\script_macros.hpp"
 
 #include "\a3\ui_f\hpp\defineCommonGrids.inc"
-#include "\a3\ui_f\hpp\defineCommonColors.inc"
 #include "\x\zen\addons\common\defineResinclDesign.inc"
 
 #define POS_X(N) ((N) * GUI_GRID_W + GUI_GRID_CENTER_X)
@@ -136,6 +136,10 @@
 #define IDC_ENGINE 86900
 #define IDC_ENGINE_ON 86901
 #define IDC_ENGINE_OFF 86902
+
+#define IDC_EXEC 88000
+#define IDC_EXEC_HISTORY 88001
+#define IDC_EXEC_EDIT 88002
 
 #define FORMAT_ROUND(value) (str round value)
 #define FORMAT_PERCENT(value) (format ["%1%2", round (value * 100), "%"])

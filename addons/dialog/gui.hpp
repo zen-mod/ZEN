@@ -11,6 +11,9 @@ class RscButtonMenuCancel;
 class RscCombo {
     class ComboScrollBar;
 };
+class RscListBox {
+    class ListScrollBar;
+};
 
 class GVAR(RscEdit): RscEdit {
     colorText[] = {1, 1, 1, 1};
@@ -35,6 +38,15 @@ class GVAR(RscCombo): RscCombo {
     };
 };
 
+class GVAR(RscListBox): RscListBox {
+    class ListScrollBar: ListScrollBar {
+        arrowEmpty = "\a3\3DEN\Data\Controls\ctrlDefault\arrowEmpty_ca.paa";
+        arrowFull = "\a3\3DEN\Data\Controls\ctrlDefault\arrowFull_ca.paa";
+        border = "\a3\3DEN\Data\Controls\ctrlDefault\border_ca.paa";
+        thumb = "\a3\3DEN\Data\Controls\ctrlDefault\thumb_ca.paa";
+    };
+};
+
 class GVAR(display) {
     idd = -1;
     movingEnable = 1;
@@ -47,7 +59,7 @@ class GVAR(display) {
             y = POS_TITLE_Y(MIN_HEIGHT);
             w = POS_W(27);
             h = POS_H(1);
-            colorBackground[] = GUI_BCG_COLOR;
+            colorBackground[] = GUI_THEME_COLOR;
             moving = 1;
         };
         class Background: RscText {
@@ -128,6 +140,33 @@ class GVAR(Row_Edit): GVAR(Row_Base) {
     };
 };
 
+class GVAR(Row_EditMulti): GVAR(Row_Edit) {
+    class controls: controls {
+        class Name: Name {
+            x = 0;
+            w = POS_W(26);
+        };
+        class Edit: Edit {
+            style = ST_MULTI;
+            x = pixelW;
+            y = POS_H(1);
+            w = POS_W(26) - pixelW;
+            h = POS_H(5);
+        };
+    };
+};
+
+class GVAR(Row_EditCode): GVAR(Row_EditMulti) {
+    class controls: controls {
+        class Name: Name {};
+        class Edit: Edit {
+            font = "EtelkaMonospacePro";
+            sizeEx = POS_H(0.7);
+            autocomplete = "scripting";
+        };
+    };
+};
+
 class GVAR(Row_Combo): GVAR(Row_Base) {
     GVAR(script) = QFUNC(gui_combo);
     class controls: controls {
@@ -138,6 +177,24 @@ class GVAR(Row_Combo): GVAR(Row_Base) {
             y = 0;
             w = POS_W(15.9);
             h = POS_H(1);
+        };
+    };
+};
+
+class GVAR(Row_List): GVAR(Row_Base) {
+    GVAR(script) = QFUNC(gui_list);
+    h = POS_H(7);
+    class controls: controls {
+        class Name: Name {
+            x = 0;
+            w = POS_W(26);
+        };
+        class List: GVAR(RscListBox) {
+            idc = IDC_ROW_LIST;
+            x = 0;
+            y = POS_H(1);
+            w = POS_W(26);
+            h = POS_H(6);
         };
     };
 };
@@ -193,14 +250,14 @@ class GVAR(Row_Slider): GVAR(Row_Base) {
             idc = IDC_ROW_SLIDER;
             x = POS_W(10.1);
             y = 0;
-            w = POS_W(13.8);
+            w = POS_W(13.5);
             h = POS_H(1);
         };
         class Edit: GVAR(RscEdit) {
             idc = IDC_ROW_SLIDER_EDIT;
-            x = POS_W(24);
+            x = POS_W(23.7);
             y = pixelH;
-            w = POS_W(2);
+            w = POS_W(2.3);
             h = POS_H(1) - pixelH;
         };
     };

@@ -21,7 +21,14 @@ private _object = attachedTo _logic;
 deleteVehicle _logic;
 
 if (isNull _object) exitWith {
-    [LSTRING(NothingSelected)] call EFUNC(common,showMessage);
+    [LSTRING(NoObjectSelected)] call EFUNC(common,showMessage);
 };
 
-[QEGVAR(common,hideObjectGlobal), [_object, !isObjectHidden _object]] call CBA_fnc_serverEvent;
+private _hide = !isObjectHidden _object;
+
+[QEGVAR(common,hideObjectGlobal), [_object, _hide]] call CBA_fnc_serverEvent;
+
+// Prevent AI from shooting an invisible unit
+if (_object isKindOf "CAManBase") exitWith {
+    [QEGVAR(common,setCaptive), [_object, _hide], _object] call CBA_fnc_targetEvent;
+};

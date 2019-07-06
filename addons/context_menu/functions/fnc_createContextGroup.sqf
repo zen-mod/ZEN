@@ -100,8 +100,11 @@ private _numberOfRows = 0;
 
             private _condition = _ctrlContextRow getVariable QGVAR(condition);
             private _statement = _ctrlContextRow getVariable QGVAR(statement);
-            SETUP_ACTION_VARS;
 
+            // Exit on empty statement, the menu should not close when the action does nothing
+            if (_statement isEqualTo {}) exitWith {};
+
+            SETUP_ACTION_VARS;
             if (ACTION_PARAMS call _condition) then {
                 ACTION_PARAMS call _statement;
             };

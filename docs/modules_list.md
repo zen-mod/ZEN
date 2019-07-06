@@ -147,6 +147,14 @@ The unit will stand up if it is already sitting.
 
 Creates a persistent smoke pillar of the selected type.
 
+## Suicide Bomber
+
+Makes the attached unit act as a suicide bomber that is activated by the selected side within the selected radius.
+When the "Dead Man's Switch" option is enabled, the unit will detonate if they die or go unconscious.
+
+When "Auto Seek" is enabled, the unit will actively try to find and move towards nearby units of the activation side.
+The range of Auto Seek is based on the unit's spot distance skill with a minimum of 100 meters.
+
 ## Teleport Players
 
 Teleports players from the selected side, group(s), or individual player(s) to the module's position.

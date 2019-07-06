@@ -4,9 +4,13 @@
         <Key ID="STR_ZEN_Garage_ButtonClose_Tooltip">
             <English>Exit Garage (Escape)</English>
             <Russian>Покинуть гараж (Escape)</Russian>
+            <German>Garage verlasen (Escape)</German>
+            <Polish>Wyjdź z garażu (Escape)</Polish>
         </Key>
         <Key ID="STR_ZEN_Garage_ButtonHide_Tooltip">
             <English>Hide Interface (Backspace)</English>
+            <German>Benutzeroberfläche verstecken (Rücktaste)</German>
+            <Polish>Ukryj interfejs (Backspace)</Polish>
         </Key>
     </Package>
 </Project>

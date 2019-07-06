@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-#define WAYPOINT_TYPES ["MOVE", "CYCLE", "SAD", "HOLD", "SENTRY", "GETOUT", "UNLOAD", "TR UNLOAD", ["SCRIPTED", "a3\functions_f\waypoints\fn_wpLand.sqf"], "HOOK", "UNHOOK", ["SCRIPTED", "a3\functions_f_orange\waypoints\fn_wpDemine.sqf"]]
+#define WAYPOINT_TYPES ["MOVE", "CYCLE", "SAD", "HOLD", "SENTRY", "GETOUT", "UNLOAD", "TR UNLOAD", ["SCRIPTED", QPATHTOEF(ai,functions\fnc_waypointLand.sqf)], "HOOK", "UNHOOK", ["SCRIPTED", "a3\functions_f_orange\waypoints\fn_wpDemine.sqf"]]
 
 params ["_display"];
 

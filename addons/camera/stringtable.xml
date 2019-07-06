@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Camera">
+        <Key ID="STR_ZEN_Camera_Camera">
+            <English>Camera</English>
+        </Key>
+        <Key ID="STR_ZEN_Camera_FollowTerrain">
+            <English>Follow Terrain</English>
+        </Key>
+        <Key ID="STR_ZEN_Camera_FollowTerrain_Description">
+            <English>Controls whether the camera's height should adjust with changes in terrain elevation.</English>
+        </Key>
+        <Key ID="STR_ZEN_Camera_AdaptiveSpeed">
+            <English>Adaptive Speed</English>
+        </Key>
+        <Key ID="STR_ZEN_Camera_AdaptiveSpeed_Description">
+            <English>Adapts the camera's speed based on its current height. Lower height - slower camera movement.</English>
+        </Key>
+        <Key ID="STR_ZEN_Camera_DefaultSpeedCoef">
+            <English>Default Speed Coefficient</English>
+        </Key>
+        <Key ID="STR_ZEN_Camera_DefaultSpeedCoef_Description">
+            <English>Coefficient for the default camera movement speed, higher is faster.</English>
+        </Key>
+        <Key ID="STR_ZEN_Camera_FastSpeedCoef">
+            <English>Fast Speed Coefficient</English>
+        </Key>
+        <Key ID="STR_ZEN_Camera_FastSpeedCoef_Description">
+            <English>Coefficient for the fast camera movement speed (when holding down the shift key), higher is faster.</English>
+        </Key>
+    </Package>
+</Project>

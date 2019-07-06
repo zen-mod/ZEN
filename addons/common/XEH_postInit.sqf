@@ -75,6 +75,17 @@
     _unit disableAI _section;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(doMove), {
+    params ["_unit", "_position"];
+    _unit setDestination [_position, "LEADER PLANNED", true];
+    _unit doMove _position;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setCaptive), {
+    params ["_unit", "_status"];
+    _unit setCaptive _status;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(engineOn), {
     params ["_vehicle", "_state"];
     _vehicle engineOn _state;
@@ -153,6 +164,11 @@
 [QGVAR(setAmmoOnPylon), {
     params ["_vehicle", "_pylon", "_ammoCount"];
     _vehicle setAmmoOnPylon [_pylon, _ammoCount];
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(doArtilleryFire), {
+    params ["_unit", "_position", "_magazine", "_rounds"];
+    _unit doArtilleryFire [_position, _magazine, _rounds];
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(setTurretAmmo), FUNC(setTurretAmmo)] call CBA_fnc_addEventHandler;
