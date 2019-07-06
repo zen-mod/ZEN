@@ -1,9 +1,8 @@
 /*
- * Author: Bohemia Interactive, mharis001, Kex
+ * Author: Bohemia Interactive, mharis001
  * Handles placement of an object by Zeus.
  * Edited to allow control over radio messages, not automatically
- * showing inventory attributes for ammo box objects and activating
- * copy/pasted modules.
+ * showing inventory attributes for ammo box objects.
  *
  * Arguments:
  * 0: Curator (not used) <OBJECT>
