@@ -27,9 +27,9 @@ if (isNull _object) exitWith {
 if (EGVAR(common,preferredArsenal) == 1 && {isClass (configFile >> "CfgPatches" >> "ace_arsenal")}) then {
     [_object, true] call ace_arsenal_fnc_removeBox;
 } else {
-    _object call BIS_fnc_removeVirtualWeaponCargo;
-    _object call BIS_fnc_removeVirtualMagazineCargo;
-    _object call BIS_fnc_removeVirtualItemCargo;
-    _object call BIS_fnc_removeVirtualBackpackCargo;
-    ["AmmoboxExit", [_object]] call BIS_fnc_arsenal;
+    // Set variables manually, since "AmmoboxExit" is not reliable
+    _object setVariable ["BIS_addVirtualWeaponCargo_cargo", nil, true];
+    private _boxes = missionNamespace getVariable ["BIS_fnc_arsenal_boxes", []];
+    _boxes = _boxes - [_object];
+    missionNamespace setVariable ["BIS_fnc_arsenal_boxes", _boxes, true];
 };
