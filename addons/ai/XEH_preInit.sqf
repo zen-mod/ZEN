@@ -12,7 +12,7 @@ PREP_RECOMPILE_END;
 
     _logic addEventHandler ["CuratorObjectEdited", {
         params ["", "_object"];
-        if (_object isKindOf "Man" && {(group _object) getVariable [QGVAR(garrisoned), false]}) then {
+        if (_object isKindOf "Man" && {_object getVariable [QGVAR(garrisoned), false]}) then {
             _object doWatch ((ASLtoAGL eyePos _object) vectorAdd (vectorDir _object));
         };
     }];
