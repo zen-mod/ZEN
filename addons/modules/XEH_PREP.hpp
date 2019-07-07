@@ -14,7 +14,6 @@ PREP(gui_globalHint);
 PREP(gui_setDate);
 PREP(gui_sideRelations);
 PREP(gui_teleportPlayers);
-PREP(handleModulePlaced);
 PREP(initModule);
 PREP(moduleAmbientAnim);
 PREP(moduleAmbientAnimEnd);
