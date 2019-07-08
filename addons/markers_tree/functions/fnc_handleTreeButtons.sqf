@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Handles clicking the tree collapse and expand all buttons.
@@ -9,19 +10,17 @@
  * None
  *
  * Example:
- * [false] call zen_editor_fnc_handleTreeButtons
+ * [false] call zen_markers_tree_fnc_handleTreeButtons
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_expand"];
 
-// Cant collapse or expand marker or recent trees
-if (RscDisplayCurator_sections select 0 > 2) exitWith {};
+// Only handle the custom markers tree, rest are handled by editor component
+if (RscDisplayCurator_sections select 0 != 3) exitWith {};
 
-// Collapse or expand current tree
-private _ctrlTree = call EFUNC(common,getActiveTree);
+private _ctrlTree = findDisplay IDD_RSCDISPLAYCURATOR displayCtrl IDC_MARKERS_TREE;
 
 if (_expand) then {
     tvExpandAll _ctrlTree;
