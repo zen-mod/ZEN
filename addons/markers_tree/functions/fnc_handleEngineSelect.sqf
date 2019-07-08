@@ -5,6 +5,7 @@
  *
  * Arguments:
  * 0: Markers Tree <CONTROL>
+ * 1: Selected Path <ARRAY>
  *
  * Return Value:
  * None

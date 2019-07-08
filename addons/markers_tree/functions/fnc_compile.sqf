@@ -12,7 +12,7 @@
  * Example:
  * [] call zen_markers_tree_fnc_compile
  *
- * Public: None
+ * Public: No
  */
 
 // Exit if markers tree has already been compiled

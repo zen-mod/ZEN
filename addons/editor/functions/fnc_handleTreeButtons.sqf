@@ -17,7 +17,7 @@
 
 params ["_expand"];
 
-// Cant collapse or expand marker or recent trees
+// Can't collapse or expand marker or recent trees
 if (RscDisplayCurator_sections select 0 > 2) exitWith {};
 
 // Collapse or expand current tree
