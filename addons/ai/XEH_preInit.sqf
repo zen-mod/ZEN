@@ -13,7 +13,7 @@ PREP_RECOMPILE_END;
     _logic addEventHandler ["CuratorObjectEdited", {
         params ["", "_object"];
         if (_object getVariable [QGVAR(garrisoned), false]) then {
-            _object doWatch ((ASLtoAGL eyePos _object) vectorAdd (vectorDir _object));
+            [QEGVAR(common,doWatch), [_object, (ASLtoAGL eyePos _object) vectorAdd (vectorDir _object)], _object] call CBA_fnc_targetEvent;
         };
     }];
 }, true, [], true] call CBA_fnc_addClassEventHandler;
