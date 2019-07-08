@@ -34,5 +34,8 @@
         };
 
         _unit setVariable [QGVAR(garrisonned), false, true];
+        
+        // End fix for rotating garrisoned units
+        _unit doWatch objNull;
     };
 } forEach _this;
