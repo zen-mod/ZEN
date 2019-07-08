@@ -919,9 +919,9 @@ class GVAR(RscAttributesVehicle): GVAR(RscAttributesBase) {
         class ButtonCancel: ButtonCancel {};
     };
     class Buttons {
-        class Garage {
-            text = "$STR_A3_Garage";
-            function = QFUNC(buttonGarage);
+        class Sensors {
+            text = CSTRING(Sensors);
+            function = QFUNC(buttonSensors);
         };
     };
 };
@@ -949,9 +949,9 @@ class GVAR(RscAttributesVehicleEmpty): GVAR(RscAttributesBase) {
         class ButtonCancel: ButtonCancel {};
     };
     class Buttons {
-        class Garage {
-            text = "$STR_A3_Garage";
-            function = QFUNC(buttonGarage);
+        class Sensors {
+            text = CSTRING(Sensors);
+            function = QFUNC(buttonSensors);
         };
     };
 };

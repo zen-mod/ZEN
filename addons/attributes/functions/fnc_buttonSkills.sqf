@@ -3,13 +3,13 @@
  * Handles clicking the skills button.
  *
  * Arguments:
- * 0: Button <CONTROL>
+ * None
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL] call zen_attributes_fnc_buttonSkills
+ * [] call zen_attributes_fnc_buttonSkills
  *
  * Public: No
  */
