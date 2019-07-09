@@ -220,7 +220,7 @@ class EGVAR(context_menu,actions) {
         class Repair {
             displayName = CSTRING(Repair);
             icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\repair_ca.paa";
-            condition = QUOTE(_selectedObjects findIf {damage _x > 0} != -1);
+            condition = QUOTE(_selectedObjects findIf {damage _x > 0 && {!(_x isKindOf 'Man')}} != -1);
             statement = QUOTE(_selectedObjects call FUNC(repairVehicles));
             priority = 3;
         };
