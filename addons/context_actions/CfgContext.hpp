@@ -137,6 +137,47 @@ class EGVAR(context_menu,actions) {
             statement = QUOTE([ARR_2(_selectedObjects,'DOWN')] call FUNC(setStance));
         };
     };
+    class VehicleLogistics {
+        displayName = CSTRING(VehicleLogistics);
+        icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\truck_ca.paa";
+        condition = QUOTE( \
+            _selectedObjects findIf { \
+                alive _x \
+                && {_x isKindOf 'AllVehicles'} \
+                && {!(_x isKindOf 'Man')} \
+                && { \
+                    damage _x > 0 \
+                    || { \
+                        ([_x] call EFUNC(common,getVehicleAmmo) != -1 \
+                        && {[_x] call EFUNC(common,getVehicleAmmo) < 1}) \
+                    } \
+                    || {fuel _x < 1} \
+                } \
+            } != -1 \
+        );
+        class Repair {
+            displayName = CSTRING(Repair);
+            icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\repair_ca.paa";
+            condition = QUOTE(_selectedObjects findIf {damage _x > 0 && {!(_x isKindOf 'Man')}} != -1);
+            statement = QUOTE(_selectedObjects call FUNC(repairVehicles));
+            priority = 3;
+        };
+        class Rearm {
+            displayName = CSTRING(Rearm);
+            icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\rearm_ca.paa";
+            condition = QUOTE(_selectedObjects findIf {[_x] call EFUNC(common,getVehicleAmmo) != -1 && {[_x] call EFUNC(common,getVehicleAmmo) < 1} && {!(_x isKindOf 'Man')}} != -1);
+            statement = QUOTE(_selectedObjects call FUNC(rearmVehicles));
+            priority = 2;
+        };
+        class Refuel {
+            displayName = CSTRING(Refuel);
+            icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\refuel_ca.paa";
+            condition = QUOTE(_selectedObjects findIf {fuel _x < 1} != -1);
+            statement = QUOTE(_selectedObjects call FUNC(refuelVehicles));
+            priority = 1;
+        };
+        priority = -71;
+    };
     class Loadout {
         displayName = "$STR_3den_display3den_entitymenu_arsenal_text";
         icon = "\a3\3den\data\displays\display3den\entitymenu\arsenal_ca.paa";
@@ -198,47 +239,6 @@ class EGVAR(context_menu,actions) {
         );
         statement = QUOTE(_hoveredEntity call EFUNC(garage,openGarage));
         priority = -82;
-    };
-    class VehicleLogistics {
-        displayName = CSTRING(VehicleLogistics);
-        icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\truck_ca.paa";
-        condition = QUOTE( \
-            _selectedObjects findIf { \
-                alive _x \
-                && {_x isKindOf 'AllVehicles'} \
-                && {!(_x isKindOf 'Man')} \
-                && { \
-                    damage _x > 0 \
-                    || { \
-                        ([_x] call EFUNC(common,getVehicleAmmo) != -1 \
-                        && {[_x] call EFUNC(common,getVehicleAmmo) < 1}) \
-                    } \
-                    || {fuel _x < 1} \
-                } \
-            } != -1 \
-        );
-        class Repair {
-            displayName = CSTRING(Repair);
-            icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\repair_ca.paa";
-            condition = QUOTE(_selectedObjects findIf {damage _x > 0 && {!(_x isKindOf 'Man')}} != -1);
-            statement = QUOTE(_selectedObjects call FUNC(repairVehicles));
-            priority = 3;
-        };
-        class Rearm {
-            displayName = CSTRING(Rearm);
-            icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\rearm_ca.paa";
-            condition = QUOTE(_selectedObjects findIf {[_x] call EFUNC(common,getVehicleAmmo) != -1 && {[_x] call EFUNC(common,getVehicleAmmo) < 1} && {!(_x isKindOf 'Man')}} != -1);
-            statement = QUOTE(_selectedObjects call FUNC(rearmVehicles));
-            priority = 2;
-        };
-        class Refuel {
-            displayName = CSTRING(Refuel);
-            icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\refuel_ca.paa";
-            condition = QUOTE(_selectedObjects findIf {fuel _x < 1} != -1);
-            statement = QUOTE(_selectedObjects call FUNC(refuelVehicles));
-            priority = 1;
-        };
-        priority = -97;
     };
     class TeleportPlayers {
         displayName = CSTRING(TeleportPlayers);
