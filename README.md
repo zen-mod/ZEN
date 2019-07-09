@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/zen-mod/ZEN/master/extras/assets/logo/logo_zen_black.png" height="384">
+    <img src="https://raw.githubusercontent.com/zen-mod/ZEN/master/extras/assets/logo/logo_zen_black.png" width="500">
 </p>
 
 <p align="center">
