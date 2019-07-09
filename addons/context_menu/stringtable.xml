@@ -8,10 +8,10 @@
             <Polish>Włącz menu kontekstowe</Polish>
         </Key>
         <Key ID="STR_ZEN_Context_Menu_Enabled_Description">
-            <English>Enables opening of context menu using the keybind or right clicking</English>
+            <English>Enables opening of context menu using the keybind or right clicking.</English>
+            <German>Ermöglicht das Öffnen des Kontextmenus mit einer Tastenkombination oder Rechtslick.</German>
+            <Polish>Pozwala otwierać menu kontekstowe używając skrótu klawiaturowego lub prawego przycisku myszy.</Polish>
             <Russian>Включает открытие контекстного меню по правой клавише мыши или сочетанию клавиш</Russian>
-            <German>Ermöglicht das Öffnen des Kontextmenus mit einer Tastenkombination oder Rechtslick</German>
-            <Polish>Pozwala otwierać menu kontekstowe używając skrótu klawiaturowego lub prawego przycisku myszy</Polish>
         </Key>
         <Key ID="STR_ZEN_Context_Menu_KeybindOnly">
             <English>Keybind Only</English>
