@@ -4,7 +4,7 @@
         <Key ID="STR_ZEN_Custom_Modules_DisplayName">
             <English>Custom Module</English>
             <German>Benutzerdefinierte Module</German>
-            <German>Moduł niestandardowy</German>
+            <Polish>Moduł niestandardowy</Polish>
         </Key>
     </Package>
 </Project>
