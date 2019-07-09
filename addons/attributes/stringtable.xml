@@ -3,16 +3,19 @@
     <Package name="Attributes">
         <Key ID="STR_ZEN_Attributes_Engine">
             <English>Engine</English>
+            <Russian>Двигатель</Russian>
             <German>Motor</German>
             <Polish>Silnik</Polish>
         </Key>
         <Key ID="STR_ZEN_Attributes_Lights">
             <English>Lights</English>
+            <Russian>Фары</Russian>
             <German>Lichter</German>
             <Polish>Światła</Polish>
         </Key>
         <Key ID="STR_ZEN_Attributes_PlateNumber">
             <English>Plate Number</English>
+            <Russian>Госномер</Russian>
             <German>Kennzeichen</German>
             <Polish>Tablica rejestracyjna</Polish>
         </Key>
@@ -23,6 +26,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_Timeout">
             <English>Timeout (s)</English>
+            <Russian>Таймаут (с)</Russian>
             <German>Zeitüberschreitung (s)</German>
             <Polish>Limit czasu (s)</Polish>
         </Key>
