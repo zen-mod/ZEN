@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-private _vehicles = _this select {alive _x && {_x isKindOf "AllVehicles" && {!(_x isKindOf 'Man')} && {[_x] call EFUNC(common,getVehicleAmmo) != -1 && {[_x] call EFUNC(common,getVehicleAmmo) < 1}}}};
+private _vehicles = _this select {alive _x && {[_x] call EFUNC(common,getVehicleAmmo) != -1} && {[_x] call EFUNC(common,getVehicleAmmo) < 1} && {_x isKindOf "AllVehicles"} && {!(_x isKindOf 'Man')}};
 
 {
     [_x, 1] call EFUNC(common,setVehicleAmmo);

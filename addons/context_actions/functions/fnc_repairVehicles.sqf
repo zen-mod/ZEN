@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-private _vehicles = _this select {alive _x && {_x isKindOf "AllVehicles" && {!(_x isKindOf 'Man')} && {damage _x > 0}}};
+private _vehicles = _this select {alive _x && {damage _x > 0} && {_x isKindOf "AllVehicles"} && {!(_x isKindOf 'Man')}};
 
 {
     _x setDamage 0;

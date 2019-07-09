@@ -202,7 +202,21 @@ class EGVAR(context_menu,actions) {
     class VehicleLogistics {
         displayName = CSTRING(VehicleLogistics);
         icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\truck_ca.paa";
-        condition = QUOTE(_selectedObjects findIf {_x isKindOf 'AllVehicles' && {!(_x isKindOf 'Man')} && {alive _x} && {damage _x > 0 || {([_x] call EFUNC(common,getVehicleAmmo) != -1 && {[_x] call EFUNC(common,getVehicleAmmo) < 1}) || {fuel _x < 1}}}} != -1);
+        condition = QUOTE( \
+            _selectedObjects findIf { \
+                alive _x \
+                && {_x isKindOf 'AllVehicles'} \
+                && {!(_x isKindOf 'Man')} \
+                && { \
+                    damage _x > 0 \
+                    || { \
+                        ([_x] call EFUNC(common,getVehicleAmmo) != -1 \
+                        && {[_x] call EFUNC(common,getVehicleAmmo) < 1}) \
+                    } \
+                    || {fuel _x < 1} \
+                } \
+            } != -1 \
+        );
         class Repair {
             displayName = CSTRING(Repair);
             icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\repair_ca.paa";
@@ -213,7 +227,7 @@ class EGVAR(context_menu,actions) {
         class Rearm {
             displayName = CSTRING(Rearm);
             icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\rearm_ca.paa";
-            condition = QUOTE(_selectedObjects findIf {!(_x isKindOf 'Man') && {[_x] call EFUNC(common,getVehicleAmmo) != -1} && {[_x] call EFUNC(common,getVehicleAmmo) < 1}} != -1);
+            condition = QUOTE(_selectedObjects findIf {[_x] call EFUNC(common,getVehicleAmmo) != -1 && {[_x] call EFUNC(common,getVehicleAmmo) < 1} && {!(_x isKindOf 'Man')}} != -1);
             statement = QUOTE(_selectedObjects call FUNC(rearmVehicles));
             priority = 2;
         };
