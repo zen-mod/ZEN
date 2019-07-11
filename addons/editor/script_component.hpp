@@ -20,8 +20,7 @@
 #include "\a3\ui_f\hpp\defineCommonGrids.inc"
 #include "\x\zen\addons\common\defineResinclDesign.inc"
 
-#define IDC_INCLUDE_CREW 25460
-#define IDC_SEARCH_CUSTOM 25470
+#include "script_idc.hpp"
 
 #define IDCS_MODE_BUTTONS [ \
     IDC_RSCDISPLAYCURATOR_MODEUNITS, \
