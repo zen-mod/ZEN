@@ -15,14 +15,19 @@
  */
 #include "script_component.hpp"
 
-params ["_display"];
-
-if (isNil QGVAR(modulesList)) exitWith {};
-
 [{
     params ["_display"];
 
     private _ctrlTree = _display displayCtrl IDC_RSCDISPLAYCURATOR_CREATE_MODULES;
+
+    // Delete the custom modules category, needed to make recent tree work with custom modules
+    for "_i" from 0 to ((_ctrlTree tvCount []) - 1) do {
+        if (_ctrlTree tvText [_i] isEqualTo QGVAR(category)) exitWith {
+            _ctrlTree tvDelete [_i];
+        };
+    };
+
+    if (isNil QGVAR(modulesList)) exitWith {};
 
     if (isNil QGVAR(categories)) then {
         GVAR(categories) = [];
@@ -57,4 +62,4 @@ if (isNil QGVAR(modulesList)) exitWith {};
     for "_i" from 0 to ((_ctrlTree tvCount []) - 1) do {
         _ctrlTree tvSort [[_i], false];
     };
-}, _display] call CBA_fnc_execNextFrame;
+}, _this] call CBA_fnc_execNextFrame;
