@@ -138,8 +138,9 @@ private _groupPosition = if (isNull _parentRow) then {
     // No parent row, position based on mouse position when opened
     GVAR(mousePos) params ["_xPos", "_yPos"];
 
-    _xPos = safeZoneX + SPACING_W max (_xPos min (safeZoneX + safeZoneW - _wPos - SPACING_W));
-    _yPos = safeZoneY + SPACING_H max (_yPos min (safeZoneY + safezoneH - _hPos - SPACING_H));
+    // Apply a one pixel right, one pixel down offset so an option is not selected by default
+    _xPos = safeZoneX + SPACING_W max (_xPos + pixelW min (safeZoneX + safeZoneW - _wPos - SPACING_W));
+    _yPos = safeZoneY + SPACING_H max (_yPos + pixelH min (safeZoneY + safezoneH - _hPos - SPACING_H));
 
     [_xPos, _yPos, _wPos, _hPos]
 } else {
