@@ -140,14 +140,16 @@ A slider control with an attached edit box which can both be used to change the 
 
 A percentage slider sub-type exists for this control type - `SLIDER:PERCENT`.
 When this sub-type is used, the value displayed in the edit box will be multiplied by 100 and be suffixed by a percent sign.
-The returned value will still be within the min and max values (ideally 0 to 1) and the decimals argument is not necessary.
+The returned value will still be within the min and max values (ideally 0 to 1) and the formatting argument is ignored.
 
 **Control Specific Argument(s):**
 
 - 0: Minimum value &lt;NUMBER&gt;
 - 1: Maximum value &lt;NUMBER&gt;
 - 2: Default value &lt;NUMBER&gt;
-- 3: Number of displayed decimal (0, 1, or 2) &lt;NUMBER&gt;
+- 3: Formatting &lt;NUMBER|CODE&gt;
+    - Number specifies the number of displayed decimal places (0, 1, or 2).
+    - Code specifies custom formatting which is passed the value in `_this` and **must** return a string.
 
 **Return Value:**
 

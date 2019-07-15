@@ -18,15 +18,19 @@
  */
 #include "script_component.hpp"
 
-#define FORMAT_VALUE(value,decimals,isPercentage) (\
+#define FORMAT_VALUE(value,formatting,isPercentage) (\
     if (isPercentage) then { \
         format ["%1%2", round (value * 100), "%"]; \
     } else { \
-        [value, 1, decimals max 0] call CBA_fnc_formatNumber; \
+        if (formatting isEqualType {}) then { \
+            value call formatting; \
+        } else { \
+            [value, 1, formatting] call CBA_fnc_formatNumber; \
+        }; \
     })
 
 params ["_controlsGroup", "_rowIndex", "_currentValue", "_rowSettings"];
-_rowSettings params ["_min", "_max", "_decimals", "_isPercentage"];
+_rowSettings params ["_min", "_max", "_formatting", "_isPercentage"];
 
 private _range = _max - _min;
 
@@ -34,19 +38,15 @@ private _ctrlSlider = _controlsGroup controlsGroupCtrl IDC_ROW_SLIDER;
 _ctrlSlider sliderSetRange [_min, _max];
 _ctrlSlider sliderSetPosition _currentValue;
 _ctrlSlider sliderSetSpeed [0.05 * _range, 0.1 * _range];
-_ctrlSlider setVariable [QGVAR(params), [_rowIndex, _decimals, _isPercentage]];
+_ctrlSlider setVariable [QGVAR(params), [_rowIndex, _formatting, _isPercentage]];
 
 _ctrlSlider ctrlAddEventHandler ["SliderPosChanged", {
     params ["_ctrlSlider", "_value"];
-    (_ctrlSlider getVariable QGVAR(params)) params ["_rowIndex", "_decimals", "_isPercentage"];
+    (_ctrlSlider getVariable QGVAR(params)) params ["_rowIndex", "_formatting", "_isPercentage"];
 
     private _controlsGroup = ctrlParentControlsGroup _ctrlSlider;
     private _ctrlEdit = _controlsGroup controlsGroupCtrl IDC_ROW_SLIDER_EDIT;
-    _ctrlEdit ctrlSetText FORMAT_VALUE(_value,_decimals,_isPercentage);
-
-    if (_decimals < 0) then {
-        _value = round _value;
-    };
+    _ctrlEdit ctrlSetText FORMAT_VALUE(_value,_formatting,_isPercentage);
 
     private _display = ctrlParent _ctrlSlider;
     private _values = _display getVariable QGVAR(values);
@@ -54,21 +54,17 @@ _ctrlSlider ctrlAddEventHandler ["SliderPosChanged", {
 }];
 
 private _ctrlEdit = _controlsGroup controlsGroupCtrl IDC_ROW_SLIDER_EDIT;
-_ctrlEdit ctrlSetText FORMAT_VALUE(_currentValue,_decimals,_isPercentage);
-_ctrlEdit setVariable [QGVAR(params), [_rowIndex, _decimals, _isPercentage]];
+_ctrlEdit ctrlSetText FORMAT_VALUE(_currentValue,_formatting,_isPercentage);
+_ctrlEdit setVariable [QGVAR(params), [_rowIndex, _formatting, _isPercentage]];
 
 _ctrlEdit ctrlAddEventHandler ["KeyUp", {
     params ["_ctrlEdit"];
-    (_ctrlEdit getVariable QGVAR(params)) params ["_rowIndex", "_decimals", "_isPercentage"];
+    (_ctrlEdit getVariable QGVAR(params)) params ["_rowIndex", "_formatting", "_isPercentage"];
 
     private _value = parseNumber ctrlText _ctrlEdit;
 
     if (_isPercentage) then {
         _value = _value / 100; // User will enter a percent from 0-100 not 0-1
-    } else {
-        if (_decimals < 0) then {
-            _value = round _value;
-        };
     };
 
     private _controlsGroup = ctrlParentControlsGroup _ctrlEdit;
@@ -84,11 +80,11 @@ _ctrlEdit ctrlAddEventHandler ["KeyUp", {
 
 _ctrlEdit ctrlAddEventHandler ["KillFocus", {
     params ["_ctrlEdit"];
-    (_ctrlEdit getVariable QGVAR(params)) params ["", "_decimals", "_isPercentage"];
+    (_ctrlEdit getVariable QGVAR(params)) params ["", "_formatting", "_isPercentage"];
 
     private _controlsGroup = ctrlParentControlsGroup _ctrlEdit;
     private _ctrlSlider = _controlsGroup controlsGroupCtrl IDC_ROW_SLIDER;
 
     private _value = sliderPosition _ctrlSlider;
-    _ctrlEdit ctrlSetText FORMAT_VALUE(_value,_decimals,_isPercentage);
+    _ctrlEdit ctrlSetText FORMAT_VALUE(_value,_formatting,_isPercentage);
 }];
