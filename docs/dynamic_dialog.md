@@ -155,10 +155,11 @@ The returned value will still be within the min and max values (ideally 0 to 1) 
 
 ### Toolbox `TOOLBOX`
 
-A toolbox selection control with support for 2 to 5 options.
+A toolbox selection control with support for any number of rows and columns.
+The subtype - `TOOLBOX:WIDE` is a wider variant that works better with a large number of columns.
 
-Two sub-types exist for this control type, mostly for QOL - `TOOLBOX:YESNO` and `TOOLBOX:ENABLED`.
-When either sub-type is used, it is not necessary to specify the option names.
+Two additional sub-types exist for this control type, mostly for QOL - `TOOLBOX:YESNO` and `TOOLBOX:ENABLED`.
+When either sub-type is used, only the default value needs to be specified.
 
 The return value type depends on the given default value:
 - `BOOL` type is only available for toolbox controls with 2 options
@@ -167,7 +168,11 @@ The return value type depends on the given default value:
 **Control Specific Argument(s):**
 
 - 0: Default value &lt;BOOL|NUMBER&gt;
-- 1: Option names &lt;ARRAY&gt;
+- 1: Number of rows &lt;NUMBER&gt;
+- 2: Number of columns &lt;NUMBER&gt;
+- 3: Option names &lt;ARRAY&gt;
+- 4: Height &lt;NUMBER&gt;
+    - Optional, will be calculated from the number of rows when unspecified.
 
 **Return Value:**
 

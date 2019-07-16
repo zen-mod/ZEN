@@ -23,7 +23,7 @@ _minesCache params ["_configNames", "_displayNames"];
 [LSTRING(ModuleCreateMinefield), [
     ["VECTOR", LSTRING(ModuleCreateMinefield_MineArea), [100, 100]],
     ["COMBO", LSTRING(ModuleCreateMinefield_MineType), [_configNames, _displayNames, 0]],
-    ["TOOLBOX", LSTRING(ModuleCreateMinefield_MineDensity), [2, [ELSTRING(common,VeryLow), ELSTRING(common,Low), ELSTRING(common,Medium), ELSTRING(common,High), ELSTRING(common,VeryHigh)]]]
+    ["TOOLBOX", LSTRING(ModuleCreateMinefield_MineDensity), [2, 1, 5, [ELSTRING(common,VeryLow), ELSTRING(common,Low), ELSTRING(common,Medium), ELSTRING(common,High), ELSTRING(common,VeryHigh)]]]
 ], {
     params ["_dialogValues", "_position"];
     _dialogValues params ["_area", "_mineType", "_mineDensity"];

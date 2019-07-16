@@ -149,7 +149,7 @@ scopeName "Main";
             _controlType = QGVAR(Row_Slider);
         };
         case "TOOLBOX": {
-            _valueInfo params [["_default", 0, [0, false]], ["_strings", [], [[]]]];
+            _valueInfo params [["_default", 0, [0, false]], ["_rows", 1, [0]], ["_columns", 2, [0]], ["_strings", [], [[]]], ["_height", -1, [0]]];
 
             // Common toolbox use cases, for QOL mostly
             switch (_subType) do {
@@ -161,20 +161,24 @@ scopeName "Main";
                 };
             };
 
-            _strings = _strings apply {if (isLocalized _x) then {localize _x} else {_x}};
+            _strings = _strings select [0, _rows * _columns] apply {if (isLocalized _x) then {localize _x} else {_x}};
 
             // Return bool if there are only two options and default is a bool
-            private _countStrings = count _strings;
-            private _returnBool = _countStrings == 2 && {_default isEqualType false};
+            private _returnBool = count _strings == 2 && {_default isEqualType false};
 
             // Ensure default is number if not returning bool
             if (!_returnBool && {_default isEqualType false}) then {
                 _default = parseNumber _default;
             };
 
-            _rowSettings append [_strings, _returnBool];
+            // Adjust height based on number of rows when undefined
+            if (_height == -1) then {
+                _height = _rows;
+            };
+
+            _rowSettings append [_returnBool, _rows, _columns, _strings, _height, _subType == "WIDE"];
             _defaultValue = _default;
-            _controlType = format [QGVAR(Row_Toolbox%1), _countStrings];
+            _controlType = QGVAR(Row_Toolbox);
         };
         case "VECTOR": {
             _defaultValue = [_valueInfo] param [0, [0, 0], [], [2, 3]];
