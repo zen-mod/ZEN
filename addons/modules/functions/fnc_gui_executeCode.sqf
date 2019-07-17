@@ -24,10 +24,6 @@ params ["_display"];
 private _ctrlButtonOK = _display displayCtrl IDC_OK;
 private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 
-if (_logic getVariable [QGVAR(executed), false]) exitWith {
-    _display closeDisplay 0;
-};
-
 if (!IS_ADMIN && {missionNamespace getVariable ["ZEN_disableCodeExecution", false]}) exitWith {
     [LSTRING(ModuleExecuteCode_Disabled)] call EFUNC(common,showMessage);
     deleteVehicle _logic;
@@ -114,7 +110,7 @@ private _fnc_onConfirm = {
     if (_delete) then {
         deleteVehicle _logic;
     } else {
-        _logic setVariable [QGVAR(executed), true, true];
+        _logic setVariable [QEGVAR(attributes,disabled), true, true];
     };
 };
 
