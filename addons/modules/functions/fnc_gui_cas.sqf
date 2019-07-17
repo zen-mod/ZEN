@@ -87,7 +87,7 @@ private _fnc_onConfirm = {
     _planeInfo params ["_planeClass", "_planeWeapons"];
 
     _logic setDir (missionNamespace getVariable [QGVAR(casDir), 0]);
-    _logic setVariable [QEGVAR(attributes,disable), true, true];
+    _logic setVariable [QEGVAR(attributes,disabled), true, true];
 
     [QGVAR(moduleCAS), [_logic, _casType, _planeClass, _planeWeapons]] call CBA_fnc_serverEvent;
 };
