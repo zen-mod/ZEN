@@ -38,6 +38,9 @@
         <Key ID="STR_ZEN_Attributes_Sensors">
             <English>Sensors</English>
         </Key>
+        <Key ID="STR_ZEN_Attributes_ChangeSide">
+            <English>Change Side</English>
+        </Key>
         <Key ID="STR_ZEN_Attributes_ChangeSkills">
             <English>Change Skills</English>
         </Key>

@@ -1066,6 +1066,10 @@ class GVAR(RscAttributesGroup): GVAR(RscAttributesBase) {
             text = CSTRING(Skills);
             function = QFUNC(buttonSkills);
         };
+        class Side {
+            text = ECSTRING(common,Side);
+            function = QFUNC(buttonSide);
+        };
     };
 };
 
