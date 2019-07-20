@@ -100,8 +100,11 @@ private _numberOfRows = 0;
 
             private _condition = _ctrlContextRow getVariable QGVAR(condition);
             private _statement = _ctrlContextRow getVariable QGVAR(statement);
-            SETUP_ACTION_VARS;
 
+            // Exit on empty statement, the menu should not close when the action does nothing
+            if (_statement isEqualTo {}) exitWith {};
+
+            SETUP_ACTION_VARS;
             if (ACTION_PARAMS call _condition) then {
                 ACTION_PARAMS call _statement;
             };
@@ -135,8 +138,9 @@ private _groupPosition = if (isNull _parentRow) then {
     // No parent row, position based on mouse position when opened
     GVAR(mousePos) params ["_xPos", "_yPos"];
 
-    _xPos = safeZoneX + SPACING_W max (_xPos min (safeZoneX + safeZoneW - _wPos - SPACING_W));
-    _yPos = safeZoneY + SPACING_H max (_yPos min (safeZoneY + safezoneH - _hPos - SPACING_H));
+    // Apply a one pixel right, one pixel down offset so an option is not selected by default
+    _xPos = safeZoneX + SPACING_W max (_xPos + pixelW min (safeZoneX + safeZoneW - _wPos - SPACING_W));
+    _yPos = safeZoneY + SPACING_H max (_yPos + pixelH min (safeZoneY + safezoneH - _hPos - SPACING_H));
 
     [_xPos, _yPos, _wPos, _hPos]
 } else {

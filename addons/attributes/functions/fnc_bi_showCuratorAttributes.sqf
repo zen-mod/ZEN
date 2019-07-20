@@ -23,7 +23,7 @@ if (!isNull (missionNamespace getVariable ["bis_fnc_moduleRemoteControl_unit", o
 [_this] params [["_entity", objNull, [objNull, grpNull, [], ""]]];
 
 // Opening attributes disabled for object
-if (_entity isEqualType objNull && {_entity getVariable [QGVAR(disable), false]}) exitWith {};
+if (_entity isEqualType objNull && {_entity getVariable [QGVAR(disabled), false]}) exitWith {};
 
 private _curator = getAssignedCuratorLogic player;
 private _curatorInfoType = switch (typeName _entity) do {

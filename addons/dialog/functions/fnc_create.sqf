@@ -67,6 +67,34 @@ scopeName "Main";
     private _controlType = "";
     private _rowSettings = [];
 
+    private _fnc_verifyListData = {
+        if (_values isEqualTo []) then {
+            {
+                _values pushBack _forEachIndex;
+            } forEach _labels;
+        };
+
+        _labels resize count _values;
+
+        _labels = _labels apply {
+            if (isNil "_x") then {
+                _x = str (_values select _forEachIndex);
+            };
+
+            _x params [["_label", "", [""]], ["_tooltip", "", [""]], ["_picture", "", [""]], ["_textColor", [1, 1, 1, 1], [[]], 4]];
+
+            if (isLocalized _label) then {
+                _label = localize _label;
+            };
+
+            if (isLocalized _tooltip) then {
+                _tooltip = localize _tooltip;
+            };
+
+            [_label, _tooltip, _picture, _textColor]
+        };
+    };
+
     switch (_type) do {
         case "CHECKBOX": {
             _defaultValue = _valueInfo param [0, false, [false]];
@@ -79,47 +107,36 @@ scopeName "Main";
         case "COMBO": {
             _valueInfo params [["_values", [], [[]]], ["_labels", [], [[]]], ["_defaultIndex", 0, [0]]];
 
-            if (_values isEqualTo []) then {
-                {
-                    _values pushBack _forEachIndex;
-                } forEach _labels;
-            };
-
-            {
-                if (isNil "_x") then {
-                    _x = _values select _forEachIndex;
-                };
-
-                _x params ["_label", ["_tooltip", ""], ["_picture", "", [""]], ["_textColor", [1, 1, 1, 1], [[]], 4]];
-
-                if !(_label isEqualType "") then {
-                    _label = str _label;
-                };
-
-                if !(_tooltip isEqualType "") then {
-                    _tooltip = str _tooltip;
-                };
-
-                if (isLocalized _label) then {
-                    _label = localize _label;
-                };
-
-                if (isLocalized _tooltip) then {
-                    _tooltip = localize _tooltip;
-                };
-
-                _labels set [_forEachIndex, [_label, _tooltip, _picture, _textColor]];
-            } forEach _labels;
-
+            [] call _fnc_verifyListData;
             _rowSettings append [_values, _labels];
             _defaultValue = _values param [_defaultIndex];
             _controlType = QGVAR(Row_Combo);
         };
         case "EDIT": {
-            _valueInfo params [["_default", "", [""]], ["_fnc_sanitizeValue", {_this}, [{}]]];
-            _rowSettings append [_fnc_sanitizeValue];
+            _valueInfo params [["_default", "", [""]], ["_fnc_sanitizeValue", {_this}, [{}]], ["_height", 5, [0]]];
+
+            private _isMulti = _subType in ["MULTI", "CODE"];
+            _rowSettings append [_fnc_sanitizeValue, _isMulti, _height];
             _defaultValue = _default;
-            _controlType = QGVAR(Row_Edit);
+            _controlType = switch (_subType) do {
+                case "MULTI": {
+                    QGVAR(Row_EditMulti);
+                };
+                case "CODE": {
+                    QGVAR(Row_EditCode);
+                };
+                default {
+                    QGVAR(Row_Edit);
+                };
+            };
+        };
+        case "LIST": {
+            _valueInfo params [["_values", [], [[]]], ["_labels", [], [[]]], ["_defaultIndex", 0, [0]], ["_height", 6, [0]]];
+
+            [] call _fnc_verifyListData;
+            _rowSettings append [_values, _labels, _height];
+            _defaultValue = _values param [_defaultIndex];
+            _controlType = QGVAR(Row_List);
         };
         case "SIDES": {
             _defaultValue = _valueInfo param [0, nil, [west]];
@@ -127,7 +144,7 @@ scopeName "Main";
         };
         case "SLIDER": {
             _valueInfo params [["_min", 0, [0]], ["_max", 1, [0]], ["_default", 0, [0]], ["_decimals", 2, [0]]];
-            _rowSettings append [_min, _max, _decimals];
+            _rowSettings append [_min, _max, _decimals, _subType == "PERCENT"];
             _defaultValue = _default;
             _controlType = QGVAR(Row_Slider);
         };

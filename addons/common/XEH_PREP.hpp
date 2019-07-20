@@ -1,8 +1,10 @@
 PREP(addObjectToCurators);
+PREP(changeGroupSide);
 PREP(collapseTree);
 PREP(createZeus);
 PREP(curatorDisplayLoad);
 PREP(curatorDisplayUnload);
+PREP(dumpPerformanceCounters);
 PREP(getActiveTree);
 PREP(getAllTurrets);
 PREP(getInventory);
@@ -11,6 +13,7 @@ PREP(getSideIcon);
 PREP(getTargetPos);
 PREP(getTurretMagazines);
 PREP(getVehicleAmmo);
+PREP(healUnit);
 PREP(initSliderEdit);
 PREP(isPlacementActive);
 PREP(openArsenal);

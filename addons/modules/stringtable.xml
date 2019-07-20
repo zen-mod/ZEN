@@ -3,326 +3,391 @@
     <Package name="Modules">
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim">
             <English>Ambient Animation</English>
+            <Russian>Фоновая анимация</Russian>
             <German>Ambiente Animation</German>
             <Polish>Animacje</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Type">
             <English>Animation Type</English>
+            <Russian>Тип анимации</Russian>
             <German>Animationstyp</German>
             <Polish>Typ animacji</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_StopAnimation">
             <English>Stop Animation</English>
+            <Russian>Остановить анимацию</Russian>
             <German>Animation stoppen</German>
             <Polish>Przerwij animację</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_SitOnFloor">
             <English>Sit On Floor</English>
+            <Russian>Сесть на пол</Russian>
             <German>Auf dem Boden sitzen</German>
             <Polish>Siedzenie na ziemi</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_LeanOnWall">
             <English>Lean On Wall</English>
+            <Russian>Прислониться к стене</Russian>
             <German>An Wand lehnen</German>
             <Polish>Opieranie się o ścianę</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Watch">
             <English>Watch</English>
+            <Russian>Смотреть</Russian>
             <German>Ausschau halten</German>
             <Polish>Stanie na straży</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_StandIdle">
             <English>Stand Idle</English>
+            <Russian>Праздно стоять</Russian>
             <German>Herumstehen</German>
             <Polish>Bezczynne stanie</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_StandIdleNoWeapon">
             <English>Stand Idle (No Weapon)</English>
+            <Russian>Праздно стоять (без оружия)</Russian>
             <German>Herumstehen (keine Waffe)</German>
             <Polish>Bezczynne stanie (bez broni)</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_AtEase">
             <English>At Ease</English>
+            <Russian>Стоять по команде "Вольно"</Russian>
             <German>Locker stehen</German>
             <Polish>Swobodnie</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ListenToBriefing">
             <English>Listen To Briefing</English>
+            <Russian>Слушать брифинг</Russian>
             <German>Briefing anhören</German>
             <Polish>Słuchanie briefingu</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Briefing">
             <English>Briefing</English>
+            <Russian>Вести брифинг</Russian>
             <German>Briefing</German>
             <Polish>Briefing</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_BriefingInteractive">
             <English>Briefing (Interactive)</English>
+            <Russian>Вести брифинг (жестикулируя)</Russian>
             <German>Briefing (Interaktiv)</German>
             <Polish>Briefing (Interaktywny)</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ListeningCivilian">
             <English>Listening Civilian</English>
+            <Russian>Слушать гражданское лицо</Russian>
             <German>Zuhörender Zivilist</German>
             <Polish>Słuchający cywil</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_TalkingCivilian">
             <English>Talking Civilian</English>
+            <Russian>Говорить с гражданским лицом</Russian>
             <German>Redenter Zivilist</German>
             <Polish>Mówiący cywil</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ListenToRadio">
             <English>Listen To Radio</English>
+            <Russian>Слушать радио</Russian>
             <German>Radiohören</German>
             <Polish>Słuchanie radia</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ShieldFromSun">
             <English>Shield From Sun</English>
+            <Russian>Заслонять глаза от солнца</Russian>
             <German>Vor dem Sonnenlicht schützen</German>
             <Polish>Osłanianie przed słońcem</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_NavigateAircraft">
             <English>Navigate Aircraft</English>
+            <Russian>Вести воздушную технику</Russian>
             <German>Flugzeug navigieren</German>
             <Polish>Naprowadzanie helikoptera</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ShowVehicleTheWay">
             <English>Showing A Vehicle The Way</English>
+            <Russian>Указывать дорогу ТС</Russian>
             <German>Einem Fahrzeug den Weg zeigen</German>
             <Polish>Wskazywanie drogi pojazdom</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_TreatWounded">
             <English>Treat Wounded</English>
+            <Russian>Перевязка раненого</Russian>
             <German>Verletzten versorgen</German>
             <Polish>Leczenie rannego</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_CombatWounded">
             <English>Combat Wounded</English>
+            <Russian>Боевое ранение</Russian>
             <German>Kampfverletzung</German>
             <Polish>Ranny w boju</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedGeneral">
             <English>Wounded (General)</English>
+            <Russian>Ранение (общее)</Russian>
             <German>Verletzt (Generel)</German>
             <Polish>Ranny (Ogólnie)</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedHead">
             <English>Wounded (Head)</English>
+            <Russian>Ранение (голова)</Russian>
             <German>Verletzt (Kopf)</German>
             <Polish>Ranny (W głowę)</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedChest">
             <English>Wounded (Chest)</English>
+            <Russian>Ранение (грудь)</Russian>
             <German>Verletzt (Brustkorb)</German>
             <Polish>Ranny (W brzuch)</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedArm">
             <English>Wounded (Arm)</English>
+            <Russian>Ранение (рука)</Russian>
             <German>Verletzt (Arm)</German>
             <Polish>Ranny (W rękę)</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedLeg">
             <English>Wounded (Leg)</English>
+            <Russian>Ранение (нога)</Russian>
             <German>Verletzt (Bein)</German>
             <Polish>Ranny (W nogę)</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ShockedCivilian">
             <English>Shocked Civilian</English>
+            <Russian>Шокированное гражданское лицо</Russian>
             <German>Entsetzter Zivilist</German>
             <Polish>Przerażony cywil</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_HidingCivilian">
             <English>Hiding Civilian</English>
+            <Russian>Прячущееся гражданское лицо</Russian>
             <German>Vesteckender Zivilist</German>
             <Polish>Ukrywający się cywil</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_SitCaptured">
             <English>Sit Captured</English>
+            <Russian>Сидящий пленный</Russian>
             <German>Sitzt gefangen</German>
             <Polish>Siedź pojmany</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_RepairStand">
             <English>Repair Vehicle (Stand)</English>
+            <Russian>Ремонт техники (стоя)</Russian>
             <German>Fahrzeug reparieren (Stehend)</German>
             <Polish>Naprawianie pojazdu (Na stojąco)</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_RepairKneel">
             <English>Repair Vehicle (Kneel)</English>
+            <Russian>Ремонт техники (на коленях)</Russian>
             <German>Fahrzeug reparieren (Kniehend)</German>
             <Polish>Naprawianie pojazdu (Kucając)</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_RepairProne">
             <English>Repair Vehicle (Prone)</English>
+            <Russian>Ремонт техники (лёжа)</Russian>
             <German>Fahrzeug reparieren (Liegend)</German>
             <Polish>Naprawianie pojazdu (Na leżąco)</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Combat">
             <English>Combat Ready</English>
+            <Russian>Готовность к бою</Russian>
             <German>Kampfbereit</German>
             <Polish>Gotowość bojowa</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby">
             <English>Ambient Flyby</English>
+            <Russian>Фоновый пролёт</Russian>
             <German>Atmosphärischer Vorbeiflug</German>
             <Polish>Przelot samolotu</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_AircraftSelect">
             <English>Aircraft Selection</English>
+            <Russian>Выбор воздушной техники</Russian>
             <German>Flugzeugauswahl</German>
             <Polish>Wybór samolotu</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_FlyTowards">
             <English>Fly Towards</English>
+            <Russian>Лететь в направлении</Russian>
             <German>Flugrichtung</German>
             <Polish>Lot w kierunku</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_FlyTowards_Tooltip">
             <English>Aircraft will fly towards this direction from the opposite direction.</English>
+            <Russian>Воздушная техника пролетит в указанном направлении</Russian>
             <German>Flugzeuge werden aus der entgegengesetzten Richtung in diese Richtung fliegen.</German>
             <Polish>Samolot będzie leciał w tym kierunku, nadlatując z przeciwnego kierunku.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Tooltip">
             <English>Sets the height that the aircraft will fly at, in meters.</English>
+            <Russian>Устанавливает высоту пролёта в метрах</Russian>
             <German>Legt die Höhe fest, in der das Flugzeug fliegen soll, in Metern.</German>
             <Polish>Ustala na jakiej wysokości będzie leciał samolot, w metrach.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Distance">
             <English>Distance</English>
+            <Russian>Дистанция</Russian>
             <German>Entfernung</German>
             <Polish>Odległość</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Distance_Tooltip">
             <English>Sets the distance that the aircraft will start out from, in meters.</English>
+            <Russian>Указывает дистанцию в метрах до точки появления</Russian>
             <German>Legt die Entfernung fest, aus der das Flugzeug starten soll, in Metern.</German>
             <Polish>Ustala odległość w jakiej samolot rozpocznie lot, w metrach.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Speed_Tooltip">
             <English>Sets how fast the aircraft will fly.</English>
+            <Russian>Указывает скорость полёта</Russian>
             <German>Legt fest, wie schnell das Flugzeug fliegen soll.</German>
             <Polish>Ustala z jaką prędkością będzie leciał samolot.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAssignZeus">
             <English>Promote To Zeus</English>
+            <Russian>Повысить до ГМ</Russian>
             <German>Zu Zeus befördern</German>
             <Polish>Przydziel Zeusa</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAssignZeus_AlreadyZeus">
             <English>Unit is already a curator</English>
+            <Russian>Игрок уже является гейммастером!</Russian>
             <German>Die Einheit ist bereits ein Kurator</German>
             <Polish>Jednostka jest już Zeusem</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAssignZeus_Promoted">
             <English>You have been promoted to Zeus.</English>
+            <Russian>Вас повысили до ГМ!</Russian>
             <German>Sie wurden zum Zeus befördert.</German>
             <Polish>Przydzielono Ci Zeusa.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAttachTo">
             <English>Attach To</English>
+            <Russian>Прикрепить к</Russian>
             <German>Anhängen an</German>
             <Polish>Przyczep do</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ObjectAttached">
             <English>Object Attached</English>
+            <Russian>Объект прикреплён</Russian>
             <German>Objekt angehängt</German>
             <Polish>Obiekt przyczepiony</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ObjectDetached">
             <English>Object Detached</English>
+            <Russian>Объект откреплён</Russian>
             <German>Objekt abgetrennt</German>
             <Polish>Obiekt odczepiony</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_CannotAttachToSelf">
             <English>Cannot attach object to itself</English>
+            <Russian>Нельзя приклеить объект к самому себе</Russian>
             <German>Das Objekt kann nicht an sich selbst angehängt werden</German>
             <Polish>Nie można przyczepić obiektu do niego samego</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAttachFlag">
             <English>Attach Flag</English>
+            <Russian>Прикрепить флаг</Russian>
             <German>Flagge anhängen</German>
             <Polish>Przyczep flagę</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAttachFlag_Type">
             <English>Flag Type</English>
+            <Russian>Вид флага</Russian>
             <German>Flaggenart</German>
             <Polish>Rodzaj flagi</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_CreateIED">
             <English>Create IED</English>
+            <Russian>Создать СВУ</Russian>
             <German>IED erstellen</German>
             <Polish>Stwórz IED</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_AlreadyAnIED">
             <English>Object is already an IED</English>
+            <Russian>Объект уже является СВУ!</Russian>
             <German>Objekt ist bereits eine IED</German>
             <Polish>Obiekt jest już IEDem</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ActivationSide">
             <English>Activation Side</English>
+            <Russian>Активирующая сторона</Russian>
             <German>Aktivierungsseite</German>
             <Polish>Strona aktywująca</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ActivationRadius">
             <English>Activation Radius</English>
+            <Russian>Радиус активации</Russian>
             <German>Aktivierungsradius</German>
             <Polish>Promień aktywacji</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ExplosionSize">
             <English>Explosion Size</English>
+            <Russian>Размер взрыва</Russian>
             <German>Explosionsgröße</German>
             <Polish>Siła eksplozji</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_IsJammable">
             <English>Is Jammable</English>
+            <Russian>Можно подавить</Russian>
             <German>Kann geblockt werden</German>
             <Polish>Da się zagłuszyć?</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleConvoyParameters">
             <English>Convoy Parameters</English>
+            <Russian>Параметры конвоя</Russian>
             <German>Konvoi-Parameter</German>
             <Polish>Parametry konwoju</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_Separation">
             <English>Convoy Separation</English>
+            <Russian>Дистанция между ТС в конвое</Russian>
             <German>Konvoiabstand</German>
             <Polish>Odstępy w konwoju</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_Separation_Tooltip">
             <English>Sets the distance that the vehicle will keep to the vehicle in front of it, in meters.\nSmall values should only be used for slow moving convoys.\nFor best results, vehicles should be in the same group with a column formation.</English>
+            <Russian>Устанавливает дистанцию между машинами в конвое в метрах.\nНебольшие значения следует устанавливать только для медленно двигающихся конвоев.\nДля достижения лучшего результата, ТС должны быть в одной группе со всей колонной</Russian>
             <German>Legt den Abstand fest, den das Fahrzeug zum vorausfahrenden Fahrzeug in Metern einhalten soll.\nKleine Werte sollten nur für langsam fahrende Konvois verwendet werden.\nFür beste Ergebnisse sollten Fahrzeuge in der gleichen Gruppe mit einer Säulen Formation sein.</German>
             <Polish>Ustala odległość jaką pojazd będzie utrzymywał od poprzedzającego go pojazdu, w metrach.\nNiewielkie wartości powinny być używane tylko przy wolno jadących konwojach.\nDla najlepszych rezultatów pojazdy powinny być w tej samej grupie z ustaloną formacją kolumny.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_Speed">
             <English>Speed Limit</English>
+            <Russian>Предел скорости</Russian>
             <German>Geschwindigkeitsbegrenzung</German>
             <Polish>Limit prędkości</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_Speed_Tooltip">
             <English>Limits the speed of the vehicle to the given value, in kilometers per hour.</English>
+            <Russian>Ограничивает скорость (в км/ч) для выбранного ТС</Russian>
             <German>Begrenzt die Geschwindigkeit des Fahrzeugs auf den angegebenen Wert, in km/h.</German>
             <Polish>Ustala limit prędkości pojazdu, w km/h.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_ForceRoad">
             <English>Stay On Road</English>
+            <Russian>Оставаться на дороге</Russian>
             <German>Bleiben Sie auf der Straße</German>
             <Polish>Trzymaj się drogi</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_ForceRoad_Tooltip">
             <English>Forces the vehicle to stay on the road.</English>
+            <Russian>Заставляет ТС оставаться на дороге</Russian>
             <German>Zwingt das Fahrzeug, auf der Straße zu bleiben.</German>
             <Polish>Wymusza na pojazdach ruch po drodze.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCAS_Bomb">
             <English>CAS - Bomb Strike</English>
+            <Russian>Авианалёт - Бомбы</Russian>
             <German>Nahluftunterstützung - Bombenangriff</German>
             <Polish>CAS - Nalot bombowy</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_BindVariable">
             <English>Bind Variable To Object</English>
+            <Russian>Привязать переменную к объекту</Russian>
             <German>Variable an Objekt binden</German>
             <Polish>Przypisz zmienną do obiektu</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_VariableName">
             <English>Variable Name</English>
+            <Russian>Имя переменной</Russian>
             <German>Variablenname</German>
             <Polish>Nazwa zmiennej</Polish>
         </Key>
@@ -333,21 +398,25 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ShowInConfig">
             <English>Show In Config Viewer</English>
+            <Russian>Показать в Окне просмотра конфигураций</Russian>
             <German>Im Config Viewer anzeigen</German>
             <Polish>Pokaż w przeglądarce configu</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleDamageBuildings">
             <English>Damage Buildings</English>
+            <Russian>Разрушить здания</Russian>
             <German>Gebäude beschädigen</German>
             <Polish>Uszkodź budynki</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_BuildingSelection">
             <English>Building Selection</English>
+            <Russian>Выбрать здания</Russian>
             <German>Gebäudeauswahl</German>
             <Polish>Wybierz budynek</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_DamageState">
             <English>Damage State</English>
+            <Russian>Уровень повреждений</Russian>
             <German>Schadenszustand</German>
             <Polish>Stopień zniszczenia</Polish>
         </Key>
@@ -358,76 +427,91 @@
         </Key>
         <Key ID="STR_ZEN_Modules_DestructionEffects">
             <English>Destruction Effects</English>
+            <Russian>Эффекты разрушения</Russian>
             <German>Zerstörungseffekte</German>
             <Polish>Efekty zniszczenia</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_DestructionEffects_Tooltip">
             <English>WARNING: Enabling destruction effects when using the module on a\nlarge amount of buildings can create a lot of lag.</English>
+            <Russian>ПРЕДУПРЕЖДЕНИЕ: включение эффектов разрушения\nдля большого количества зданий\nможет привести к серьёзным\nзадержкам в управлении</Russian>
             <German>WARNUNG: Das Aktivieren von Zerstörungseffekten für eine größere Anzahl von Gebäuden kann zu erheblichem Ruckeln führen.</German>
             <Polish>OSTRZEŻENIE: Włączenie efektów zniszczenia na wielu budynkach jednocześnie może spowodować bardzo duży lag.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEarthquake">
             <English>Earthquake</English>
+            <Russian>Землетрясение</Russian>
             <German>Erdbeben</German>
             <Polish>Trzęsienie ziemi</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEarthquake_Radius">
             <English>Radius (m)</English>
+            <Russian>Радиус (м)</Russian>
             <German>Radius (m)</German>
             <Polish>Promień (m)</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEarthquake_Intensity">
             <English>Intensity</English>
+            <Russian>Интенсивность</Russian>
             <German>Intensität</German>
             <Polish>Intensywność</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEarthquake_Buildings">
             <English>Destroy Buildings</English>
+            <Russian>Разрушать здания</Russian>
             <German>Gebäude zerstören</German>
             <Polish>Zniszcz budynki</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects">
             <English>Update Editable Objects</English>
+            <Russian>Обновить редактируемые объекты</Russian>
             <German>Editierbare Objekte aktualisieren</German>
             <Polish>Zaktualizuje edytowalne obiekty</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects_EditingMode">
             <English>Editing Mode</English>
+            <Russian>Режим редактирования</Russian>
             <German>Bearbeitungsmodus</German>
             <Polish>Tryb edycji</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects_EditingMode_Tooltip">
             <English>Add or remove editable objects from Zeus.</English>
+            <Russian>Добавить/удалить редактируемые объекты</Russian>
             <German>Objekten zum Bearbeiten zu Zeus hinzufügen oder entfernen.</German>
             <Polish>Dodaj lub usuń edytowalne obiekty z Zeusa.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects_AddObjects">
             <English>Add Objects</English>
+            <Russian>Добавить объекты</Russian>
             <German>Objekte hinzufügen</German>
             <Polish>Dodaj obiekty</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects_RemoveObjects">
             <English>Remove Objects</English>
+            <Russian>Удалить объекты</Russian>
             <German>Objekte entfernen</German>
             <Polish>Usuń obiekty</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects_AllCurators">
             <English>All Curators</English>
+            <Russian>Все ГМ</Russian>
             <German>Alle Kuratoren</German>
             <Polish>Wszyscy Zeusi</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects_AllCurators_Tooltip">
             <English>Controls whether changes are applied to all curators or just locally.</English>
+            <Russian>Определяет, будут ли изменения применены ко всем ГМам или только локально</Russian>
             <German>Steuert, ob Änderungen auf alle Kuratoren oder nur lokal angewendet werden.</German>
             <Polish>Ustala czy zmiany będą dotyczyć wszystkich Zeusów czy tylko lokalnego.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects_AllMissionObjects">
             <English>All Mission Objects</English>
+            <Russian>Все объекты миссии</Russian>
             <German>Alle Missionsobjekte</German>
             <Polish>Wszystkie obiekty w misji</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleHeal">
             <English>Heal</English>
+            <Russian>Лечить</Russian>
             <German>Heilen</German>
             <Polish>Ulecz</Polish>
         </Key>
@@ -443,126 +527,151 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAttachEffect">
             <English>Attach/Detach Effect</English>
+            <Russian>Прикрепить/открепить эффект</Russian>
             <German>Effekt anhängen/abtrennen</German>
             <Polish>Przyczep/Odczep efekt</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAttachEffect_Target">
             <English>Target</English>
+            <Russian>Цель</Russian>
             <German>Ziel</German>
             <Polish>Cel</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAttachEffect_SelectedGroup">
             <English>Selected Group</English>
+            <Russian>Выбранная группа</Russian>
             <German>Ausgewählte Gruppe</German>
             <Polish>Wybrana grupa</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAttachEffect_Effect">
             <English>Effect</English>
+            <Russian>Эффект</Russian>
             <German>Effekt</German>
             <Polish>Efekt</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSetDate">
             <English>Set Date</English>
+            <Russian>Установить дату</Russian>
             <German>Datum setzen</German>
             <Polish>Ustaw datę</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleMakeInvincible">
             <English>Make Invincible</English>
+            <Russian>Сделать неуязвимым</Russian>
             <German>Unbesiegbar machen</German>
             <Polish>Zrób nieśmiertelnym</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleMakeInvincible_Invincible">
             <English>Invincible</English>
+            <Russian>Неуязвимость</Russian>
             <German>Unbesiegbar</German>
             <Polish>Nieśmiertelny</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleMakeInvincible_IncludeCrew">
             <English>Include Crew</English>
+            <Russian>Включая команду</Russian>
             <German>Crew einbeziehen</German>
             <Polish>Dołącz załogę</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSimulation">
             <English>Toggle Simulation</English>
+            <Russian>Вкл./выкл. физическую симуляцию</Russian>
             <German>Simulation umschalten</German>
             <Polish>Przełącz symulację</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleVisibility">
             <English>Toggle Visibility</English>
+            <Russian>Вкл./выкл. невидимость</Russian>
             <German>Sichtbarkeit umschalten</German>
             <Polish>Przełącz widoczność</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleChangeHeight">
             <English>Change Height</English>
+            <Russian>Изменить высоту</Russian>
             <German>Höhe ändern</German>
             <Polish>Zmień wysokość</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleChangeHeight_Tooltip">
             <English>Change the height of the object by this value (can be negative)</English>
+            <Russian>Изменяет значение высоты, на которой находится объект (может быть отрицательной)</Russian>
             <German>Ändert die Höhe des Objekts um gegebenen Wert (kann negativ sein)</German>
             <Polish>Zmień wysokość na której jest obiekt (może być ujemne)</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleChatter">
             <English>Chatter</English>
+            <Russian>Разговор</Russian>
             <German>Chatter</German>
             <Polish>Rozmowa</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleChatter_Message">
             <English>Message</English>
+            <Russian>Сообщение</Russian>
             <German>Nachricht</German>
             <Polish>Wiadomość</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleChatter_Channel">
             <English>Channel</English>
+            <Russian>Канал</Russian>
             <German>Kanal</German>
             <Polish>Kanał</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSitOnChair">
             <English>Sit On Chair</English>
+            <Russian>Сесть на стул</Russian>
             <German>Auf dem Stuhl sitzen</German>
             <Polish>Siedź na krześle</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSitOnChair_ChairObject">
             <English>Chair Object</English>
+            <Russian>Стул</Russian>
             <German>Stuhl-Objekt</German>
             <Polish>Krzesło</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateMinefield">
             <English>Create Minefield</English>
+            <Russian>Создать минное поле</Russian>
             <German>Minenfeld erstellen</German>
             <Polish>Utwórz pole minowe</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateMinefield_MineArea">
             <English>Minefield Area</English>
+            <Russian>Минное поле</Russian>
             <German>Minenfeld-Bereich</German>
             <Polish>Obszar pola minowego</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateMinefield_MineType">
             <English>Mine Type</English>
+            <Russian>Тип мины</Russian>
             <German>Minentyp</German>
             <Polish>Rodzaj min</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateMinefield_MineDensity">
             <English>Mine Density</English>
+            <Russian>Плотность размещения</Russian>
             <German>Minendichte</German>
             <Polish>Gęstość min</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGlobalHint">
             <English>Global Hint</English>
+            <Russian>Подсказка всем</Russian>
             <German>Globaler Hinweis</German>
             <Polish>Globalny Hint</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleHideZeus">
             <English>Hide Zeus</English>
+            <Russian>Спрятать ГМа</Russian>
             <German>Zeus verstecken</German>
             <Polish>Ukryj Zeusa</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ZeusIsNowHidden">
             <English>Zeus is now hidden</English>
+            <Russian>ГМ теперь спрятан</Russian>
             <German>Zeus ist jetzt versteckt</German>
             <Polish>Zeus jest teraz ukryty</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ZeusIsNowVisible">
             <English>Zeus is now visible</English>
+            <Russian>ГМ теперь виден</Russian>
             <German>Zeus ist jetzt sichtbar</German>
             <Polish>Zeus jest teraz widoczny</Polish>
         </Key>
@@ -581,191 +690,229 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModulePatrolArea_Radius">
             <English>Patrol Radius (m)</English>
+            <Russian>Радиус патрулирования (м)</Russian>
             <German>Patrouillenradius (m)</German>
             <Polish>Promień patrolu (m)</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModulePatrolArea_Radius_Tooltip">
             <English>The radius that will be patrolled by the group.</English>
+            <Russian>Радиус зоны, которую группа будет патрулировать.</Russian>
             <German>Der Radius, der von der Gruppe patrouilliert wird.</German>
             <Polish>Promień w jakim grupa będzie patrolować.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModulePatrolArea_Behaviour_Tooltip">
             <English>Will modify the behavior, speed mode, and formation of the group.</English>
+            <Russian>Изменение поведения, скорости, режима и строя группы</Russian>
             <German>Ändert das Verhalten, den Geschwindigkeitsmodus und die Formation der Gruppe.</German>
             <Polish>Zmieni zachowanie, prędkość i formację grupy.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModulePatrolArea_Relaxed">
             <English>Relaxed</English>
+            <Russian>Расслабленный</Russian>
             <German>Entspannt</German>
             <Polish>Spokojni</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModulePatrolArea_Cautious">
             <English>Cautious</English>
+            <Russian>Осторожный</Russian>
             <German>Vorsichtig</German>
             <Polish>Ostrożni</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSideRelations">
             <English>Side Relations</English>
+            <Russian>Отношения сторон</Russian>
             <German>Seitenbeziehungen</German>
             <Polish>Stosunki stron</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_RelationToChange">
             <English>Relation to Change</English>
+            <Russian>Изменение отношений</Russian>
             <German>Beziehung zur Veränderung</German>
             <Polish>Stosunek do zmiany</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_HostileTo">
             <English>Hostile to</English>
+            <Russian>Враджебны к</Russian>
             <German>Feindselig gegenüber</German>
             <Polish>Wrogi do</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_FriendlyTo">
             <English>Friendly to</English>
+            <Russian>Дружественны к</Russian>
             <German>Freundlich zu</German>
             <Polish>Przyjazny do</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_PlayRadioMessage">
             <English>Play Radio Message</English>
+            <Russian>Проиграть радиосообщение</Russian>
             <German>Radionachricht abspielen</German>
             <Polish>Odtwórz wiadomość radiową</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTeleportPlayers">
             <English>Teleport Players</English>
+            <Russian>Телепортировать игроков</Russian>
             <German>Spieler teleportieren</German>
             <Polish>Teleportuj graczy</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_Sides">
             <English>Sides</English>
+            <Russian>Стороны</Russian>
             <German>Seiten</German>
             <Polish>Strony</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_Groups">
             <English>Groups</English>
+            <Russian>Группы</Russian>
             <German>Gruppen</German>
             <Polish>Grupy</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSmokePillar">
             <English>Smoke Pillar</English>
+            <Russian>Столб дыма</Russian>
             <German>Rauchsäulen</German>
             <Polish>Kłąb dymu</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_SmokePillarType">
             <English>Smoke Pillar Type</English>
+            <Russian>Тип дыма</Russian>
             <German>Rauchsäulentyp</German>
             <Polish>Rodzaj kłębu dymu</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_VehicleFire">
             <English>Vehicle Fire</English>
+            <Russian>Горящее ТС</Russian>
             <German>Fahrzeugbrand</German>
             <Polish>Pożar pojazdu</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_SmallOilySmoke">
             <English>Small Oily Smoke</English>
+            <Russian>Слабый дым (нефтепродукты)</Russian>
             <German>Kleiner Ölrauch</German>
             <Polish>Mały oleisty dym</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_MediumOilySmoke">
             <English>Medium Oily Smoke</English>
+            <Russian>Средний дым (нефтепродукты)</Russian>
             <German>Mittlerer Ölrauch</German>
             <Polish>Średni oleisty dym</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_LargeOilySmoke">
             <English>Large Oily Smoke</English>
+            <Russian>Сильный дым (нефтепродукты)</Russian>
             <German>Großer Ölauch</German>
             <Polish>Duży oleisty dym</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_SmallWoodSmoke">
             <English>Small Wood Smoke</English>
+            <Russian>Слабый дым (дерево)</Russian>
             <German>Kleiner Holzrauch</German>
             <Polish>Mały drewniany dym</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_MediumWoodSmoke">
             <English>Medium Wood Smoke</English>
+            <Russian>Средний дым (дерево)</Russian>
             <German>Mittlerer Holzrauch</German>
             <Polish>Średni drewniany dym</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_LargeWoodSmoke">
             <English>Large Wood Smoke</English>
+            <Russian>Сильный дым (дерево)</Russian>
             <German>Großer Holzrauch</German>
             <Polish>Duży drewniany dym</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_SmallMixedSmoke">
             <English>Small Mixed Smoke</English>
+            <Russian>Слабый дым (смешанный)</Russian>
             <German>Kleiner gemischter Rauch</German>
             <Polish>Mały mieszany dym</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_MediumMixedSmoke">
             <English>Medium Mixed Smoke</English>
+            <Russian>Средний дым (смешанный)</Russian>
             <German>Mittlerer gemischter Rauch</German>
             <Polish>Średni mieszany dym</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_LargeMixedSmoke">
             <English>Large Mixed Smoke</English>
+            <Russian>Сильный дым (смешанный)</Russian>
             <German>Großer gemischter Rauch</German>
             <Polish>Duży mieszany dym</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleLightSource">
             <English>Light Source</English>
+            <Russian>Источник света</Russian>
             <German>Lichtquelle</German>
             <Polish>Źródło światła</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleLightSource_Color">
             <English>Light Color</English>
+            <Russian>Цвет</Russian>
             <German>Lichtfarbe</German>
             <Polish>Kolor światła</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleLightSource_Range">
             <English>Range (m)</English>
+            <Russian>Дистанция (м)</Russian>
             <German>Reichweite (m)</German>
             <Polish>Zasięg (m)</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleLightSource_Constant">
             <English>Constant Attenuation</English>
+            <Russian>Постоянное затухание</Russian>
             <German>Konstante Dämpfung</German>
             <Polish>Stałe tłumienie</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleLightSource_Linear">
             <English>Linear Attenuation</English>
+            <Russian>Линейное затухание</Russian>
             <German>Lineare Dämpfung</German>
             <Polish>Liniowe tłumienie</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleLightSource_Quadratic">
             <English>Quadratic Attenuation</English>
+            <Russian>Квадратичное затухание</Russian>
             <German>Quadratische Dämpfung</German>
             <Polish>Kwadratowe tłumienie</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEquipWithECM">
             <English>Equip With ECM</English>
+            <Russian>Установить аппаратуру РЭП</Russian>
             <German>Mit ECM ausstatten</German>
             <Polish>Wyposaż w ECM</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEquipWithECM_HasECM">
             <English>Has ECM</English>
+            <Russian>РЭП</Russian>
             <German>Hat ECM</German>
             <Polish>Posiada ECM</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFlyHeight">
             <English>Fly Height</English>
+            <Russian>Высота полёта</Russian>
             <German>Flughöhe</German>
             <Polish>Wysokość lotu</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFlyHeight_Tooltip">
             <English>Sets the flying altitude for the aircraft relative to the ground.</English>
+            <Russian>Устанавливает высоту полёта воздушного ТС относительно земли</Russian>
             <German>Legt die Flughöhe für das Flugzeug in Bezug auf den Boden fest.</German>
             <Polish>Ustala wysokość lotu w stosunku do ziemi.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTurretOptics">
             <English>Vehicle Turret Optics</English>
+            <Russian>Оптика на турели</Russian>
             <German>Fahrzeug-Turmoptik</German>
             <Polish>Optyka pojazdu</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTurretOptics_NVG">
             <English>NVG Equipment</English>
+            <Russian>ПНВ</Russian>
             <German>Nachtsichtgeräte</German>
             <Polish>Noktowizja</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTurretOptics_TI">
             <English>TI Equipment</English>
+            <Russian>ИК</Russian>
             <German>Thermische Infrarotgeräte</German>
             <Polish>Termowizja</Polish>
         </Key>
@@ -776,26 +923,31 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGarrison_FillMode">
             <English>Filling Mode</English>
+            <Russian>Тип заполнения</Russian>
             <German>Füllmodus</German>
             <Polish>Tryb wypełniania</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGarrison_Even">
             <English>Even Filling</English>
+            <Russian>Равномерное заполнение</Russian>
             <German>Gleichmäßig befüllen</German>
             <Polish>Wypełnianie równomierne</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGarrison_ByBuilding">
             <English>Building By Building</English>
+            <Russian>Здание за зданием</Russian>
             <German>Gebäude für Gebäude</German>
             <Polish>Wypełnianie budynek po budynku</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGarrison_Random">
             <English>Random</English>
+            <Russian>Случайное</Russian>
             <German>Zufällig</German>
             <Polish>Losowo</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGarrison_TopDown">
             <English>Fill From Top Down</English>
+            <Russian>Сверху вниз</Russian>
             <German>Von oben nach unten füllen </German>
             <Polish>Wypełniaj od góry do dołu</Polish>
         </Key>
@@ -806,6 +958,7 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGroupSide">
             <English>Group Side</English>
+            <Russian>Сторона группы</Russian>
             <German>Gruppenseite</German>
             <Polish>Strona grupy</Polish>
         </Key>
@@ -1037,41 +1190,48 @@
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_AI">
             <English>AI</English>
+            <Russian>ИИ</Russian>
             <German>KI</German>
             <Polish>AI</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_Buildings">
             <English>Buildings</English>
+            <Russian>Здания</Russian>
             <German>Gebäude</German>
             <Polish>Budynki</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_DevTools">
             <English>Development Tools</English>
+            <Russian>Инструменты разработчика</Russian>
             <German>Entwicklungswerkzeuge</German>
             <Polish>Narzędzia deweloperskie</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_Equipment">
             <English>Equipment</English>
+            <Russian>Снаряжение</Russian>
             <German>Ausrüstung</German>
             <Polish>Ekwipunek</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_Objects">
             <English>Objects</English>
+            <Russian>Объекты</Russian>
             <German>Objekte</German>
             <Polish>Obiekty</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_Players">
             <English>Players</English>
+            <Russian>Игроки</Russian>
             <German>Spieler</German>
             <Polish>Gracze</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_Spawn">
             <English>Spawn</English>
+            <Russian>Спавн</Russian>
             <German>Spawn</German>
             <Polish>Spawn</Polish>
         </Key>
         <!-- Feedback Messages -->
-        <Key ID="STR_ZEN_Modules_NothingSelected">
+        <Key ID="STR_ZEN_Modules_NoUnitSelected">
             <English>Place on a unit</English>
             <French>Placez sur une unité</French>
             <German>Es wurde nichts ausgewählt</German>
@@ -1079,13 +1239,16 @@
             <Portuguese>Coloque em uma unidade</Portuguese>
             <Czech>Umístni na jednotku</Czech>
             <Polish>Nie ma nic pod kursorem</Polish>
-            <Russian>Ничего не выделено</Russian>
+            <Russian>Поместите на солдата или технику</Russian>
             <Hungarian>Semmi sincs az egér alatt</Hungarian>
             <Italian>Piazza su una unità</Italian>
             <Japanese>ユニットの上に設置</Japanese>
             <Korean>대상에 배치하기</Korean>
             <Chinesesimp>放置在一个单位上</Chinesesimp>
             <Chinese>放置在一個單位上</Chinese>
+        </Key>
+        <Key ID="STR_ZEN_Modules_NoObjectSelected">
+            <English>Place on an object</English>
         </Key>
         <Key ID="STR_ZEN_Modules_OnlyAlive">
             <English>Unit must be alive</English>
@@ -1121,11 +1284,13 @@
         </Key>
         <Key ID="STR_ZEN_Modules_OnlyNonInfantry">
             <English>Unit must not be infantry</English>
+            <Russian>Не применимо к пехоте</Russian>
             <German>Die Einheit darf keine Infanterie sein</German>
             <Polish>Jednostka nie może być piechurem</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_OnlyPlayers">
             <English>Unit must be a player</English>
+            <Russian>Применимо только к игрокам</Russian>
             <German>Die Einheit muss ein Spieler sein</German>
             <Polish>Jednostka musi być graczem</Polish>
         </Key>
@@ -1134,7 +1299,7 @@
             <German>Das Ziel muss ein Fahrzeug sein.</German>
             <Polish>Jednostka musi być pojazdem</Polish>
             <Portuguese>Unidade deve ser um veículo</Portuguese>
-            <Russian>Юнит должен быть транспортом</Russian>
+            <Russian>Применимо только к технике</Russian>
             <Spanish>La unidad debe ser un vehículo</Spanish>
             <Czech>Jednotka musí být vozidlo</Czech>
             <Italian>Si può usare solo su veicoli</Italian>
@@ -1146,6 +1311,7 @@
         </Key>
         <Key ID="STR_ZEN_Modules_OnlyAircraft">
             <English>Unit must be an aircraft</English>
+            <Russian>Применимо только к воздушной технике</Russian>
             <German>Die Einheit muss ein Luftfahrzeug sein</German>
             <Polish>Jednostka musi być pojazdem latającym</Polish>
         </Key>

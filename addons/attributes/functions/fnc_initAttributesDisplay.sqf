@@ -127,7 +127,7 @@ _ctrlButtonCancel ctrlCommit 0;
     _ctrlButton ctrlCommit 0;
     _ctrlButton ctrlSetText _buttonText;
     _ctrlButton ctrlAddEventHandler ["ButtonClick", _function];
-} forEach configProperties [_displayConfig >> "buttons", "isClass _x"];
+} forEach configProperties [_displayConfig >> "Buttons", "isClass _x"];
 
 // Add check to close the display when the entity is altered
 private _fnc_closeDisplay = {

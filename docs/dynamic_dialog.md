@@ -91,15 +91,36 @@ The corresponding pretty names array can have elements in the following format, 
 A single line edit box with support for an optional sanitizing function.
 The function is called on every key press with the full text as an argument and its return value is the resulting text.
 
+Two multi-line edit box sub-types exist for this control type, `EDIT:MULTI` and `EDIT:CODE`.
+When either sub-type is used, an additional height argument can be supplied to change how tall the edit box is.
+The code sub-type provides scripting autocompletion to the user.
+
 **Control Specific Argument(s):**
 
 - 0: Default text &lt;STRING&gt;
 - 1: Sanitizing function &lt;CODE&gt;
+- 2: Height (only for multi-line types) &lt;NUMBER&gt;
 
 **Return Value:**
 
 - Text &lt;STRING&gt;
 
+### List Box `LIST`
+
+A list box control with support for detailing specific entries.
+This control type works identically to the combo box control type except for the format in which the entries are presented (list view rather than a drop down).
+In addition, this control type accepts an additional height argument to change how tall the list box is.
+
+**Control Specific Argument(s):**
+
+- 0: Values that can be returned &lt;ARRAY&gt;
+- 1: Corresponding pretty names (see above) &lt;ARRAY&gt;
+- 2: Default index &lt;NUMBER&gt;
+- 3: Height &lt;NUMBER&gt;
+
+**Return Value:**
+
+- Value &lt;ANY&gt;
 
 ### Side Select `SIDES`
 
@@ -116,6 +137,10 @@ A side selection control with clickable icons for the BLUFOR, OPFOR, Independent
 ### Slider `SLIDER`
 
 A slider control with an attached edit box which can both be used to change the value.
+
+A percentage slider sub-type exists for this control type - `SLIDER:PERCENT`.
+When this sub-type is used, the value displayed in the edit box will be multiplied by 100 and be suffixed by a percent sign.
+The returned value will still be within the min and max values (ideally 0 to 1) and the decimals argument is not necessary.
 
 **Control Specific Argument(s):**
 

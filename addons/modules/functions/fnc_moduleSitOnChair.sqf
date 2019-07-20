@@ -81,7 +81,7 @@ private _unit = attachedTo _logic;
 deleteVehicle _logic;
 
 if (isNull _unit) exitWith {
-    [LSTRING(NothingSelected)] call EFUNC(common,showMessage);
+    [LSTRING(NoUnitSelected)] call EFUNC(common,showMessage);
 };
 
 if !(_unit isKindOf "CAManBase") exitWith {
