@@ -724,13 +724,15 @@ class GVAR(RscAttributeSpeedMode): RscControlsGroupNoScrollbars {
     };
 };
 
+#define WAYPOINT_ROWS (ceil (count (uiNamespace getVariable 'GVAR(waypointTypes)') / 3))
+
 class GVAR(RscAttributeWaypointType): RscControlsGroupNoScrollbars {
     idc = IDC_WAYPOINTTYPE;
     function = QFUNC(attributeWaypointType);
     x = 0;
     y = 0;
     w = POS_W(26);
-    h = POS_H(5);
+    h = POS_H(WAYPOINT_ROWS + 1);
     class controls {
         class Label: GVAR(RscLabel) {
             text = "$STR_3DEN_Object_Attribute_Type_displayName";
@@ -741,31 +743,20 @@ class GVAR(RscAttributeWaypointType): RscControlsGroupNoScrollbars {
             x = 0;
             y = POS_H(1);
             w = POS_W(26);
-            h = POS_H(4);
+            h = POS_H(WAYPOINT_ROWS);
         };
         class Toolbox: ctrlToolbox {
             idc = IDC_WAYPOINTTYPE_TOOLBOX;
             x = 0;
             y = POS_H(1);
             w = POS_W(26);
-            h = POS_H(4);
+            h = POS_H(WAYPOINT_ROWS);
             colorBackground[] = {0, 0, 0, 0};
-            rows = 4;
+            tooltipColorBox[] = {0, 0, 0, 0};
+            tooltipColorText[] = {0, 0, 0, 0};
+            tooltipColorShade[] = {0, 0, 0, 0};
+            rows = QUOTE(WAYPOINT_ROWS);
             columns = 3;
-            strings[] = {
-                "$STR_ac_move",
-                "$STR_ac_cycle",
-                "$STR_ac_seekanddestroy",
-                "$STR_ac_hold",
-                "$STR_ac_sentry",
-                "$STR_ac_getout",
-                "$STR_ac_unload",
-                "$STR_ac_transportunload",
-                "$STR_A3_CfgWaypoints_Land",
-                "$STR_ac_hook",
-                "$STR_ac_unhook",
-                "$STR_A3_Functions_F_Orange_Demine"
-            };
         };
     };
 };

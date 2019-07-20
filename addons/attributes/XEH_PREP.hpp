@@ -23,5 +23,6 @@ PREP(attributeWaypointType);
 PREP(buttonArsenal);
 PREP(buttonSensors);
 PREP(buttonSkills);
+PREP(compileWaypoints);
 PREP(getAttributeEntities);
 PREP(initAttributesDisplay);
