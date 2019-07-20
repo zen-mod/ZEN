@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Initializes the "Engine" Zeus attribute.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define IDCS [IDC_ENGINE_OFF, IDC_ENGINE_ON]
 

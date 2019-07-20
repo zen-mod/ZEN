@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Checks if Zeus display is currently in placement mode.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _display = findDisplay IDD_RSCDISPLAYCURATOR;
 if (isNull _display) exitWith {false};

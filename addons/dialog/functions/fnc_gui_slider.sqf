@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Initializes the SLIDER content control.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define FORMAT_VALUE(value,decimals,isPercentage) (\
     if (isPercentage) then { \

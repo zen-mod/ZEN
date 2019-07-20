@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Sets the ammo level of all turrets and pylons of a vehicle.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 // Only run on server (turretOwner command requires server execution)
 if (!isServer) exitWith {

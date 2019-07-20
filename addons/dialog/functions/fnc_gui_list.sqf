@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Initializes the LIST content control.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_controlsGroup", "_rowIndex", "_currentValue", "_rowSettings"];
 _rowSettings params ["_values", "_labels", "_height"];

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: ACE-Team, ZEN Team
  * Dumps performance counter statistics into RPT.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 diag_log text "~~~ ZEN PERFORMANCE COUNTERS DUMP ~~~";
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Initializes the "Damage Buildings" Zeus module display.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define IDCS_CHECKBOXES [IDC_DAMAGEBUILDINGS_UNDAMAGED, IDC_DAMAGEBUILDINGS_DAMAGED_1, IDC_DAMAGEBUILDINGS_DAMAGED_2, IDC_DAMAGEBUILDINGS_DAMAGED_3, IDC_DAMAGEBUILDINGS_DESTROYED]
 

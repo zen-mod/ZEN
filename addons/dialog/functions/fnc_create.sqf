@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Creates a dialog with given rows of content.
@@ -17,7 +18,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 if (canSuspend) exitWith {
     [FUNC(create), _this] call CBA_fnc_directCall;

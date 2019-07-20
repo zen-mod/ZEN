@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Allows Zeus to specify the position and direction before spawning a large object.
@@ -18,7 +19,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_helper", "_code", "_length", "_width", ["_color", [1, 0, 1, 1]]];
 

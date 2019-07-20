@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Fixes disappearing side buttons when changing modes.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 // One frame later so RscDisplayCurator_sections is updated
 [{
