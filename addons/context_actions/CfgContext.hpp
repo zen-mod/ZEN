@@ -148,8 +148,9 @@ class EGVAR(context_menu,actions) {
                 && { \
                     damage _x > 0 \
                     || { \
-                        ([_x] call EFUNC(common,getVehicleAmmo) != -1 \
-                        && {[_x] call EFUNC(common,getVehicleAmmo) < 1}) \
+                        private _ammo = [_x] call EFUNC(common,getVehicleAmmo); \
+                        _ammo != -1 \
+                        && {_ammo < 1} \
                     } \
                     || {fuel _x < 1} \
                 } \
@@ -165,7 +166,13 @@ class EGVAR(context_menu,actions) {
         class Rearm {
             displayName = CSTRING(Rearm);
             icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\rearm_ca.paa";
-            condition = QUOTE(_selectedObjects findIf {[_x] call EFUNC(common,getVehicleAmmo) != -1 && {[_x] call EFUNC(common,getVehicleAmmo) < 1} && {!(_x isKindOf 'CAManBase')}} != -1);
+            condition = QUOTE(_selectedObjects findIf { \
+                private _ammo = [_x] call EFUNC(common,getVehicleAmmo); \
+                _ammo != -1 \
+                && {_ammo < 1} \
+                && {!(_x isKindOf 'CAManBase')} \
+                } != -1 \
+            );
             statement = QUOTE(_selectedObjects call FUNC(rearmVehicles));
             priority = 2;
         };
