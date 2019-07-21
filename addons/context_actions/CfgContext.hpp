@@ -190,10 +190,10 @@ class EGVAR(context_menu,actions) {
             displayName = CSTRING(Rearm);
             icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\rearm_ca.paa";
             condition = QUOTE(_selectedObjects findIf { \
-                private _ammo = [_x] call EFUNC(common,getVehicleAmmo); \
-                _ammo != -1 \
-                && {_ammo < 1} \
-                && {!(_x isKindOf 'CAManBase')} \
+                    private _ammo = [_x] call EFUNC(common,getVehicleAmmo); \
+                    _ammo != -1 \
+                    && {_ammo < 1} \
+                    && {!(_x isKindOf 'CAManBase')} \
                 } != -1 \
             );
             statement = QUOTE(_selectedObjects call FUNC(rearmVehicles));
