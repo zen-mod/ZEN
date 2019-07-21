@@ -144,7 +144,7 @@ class EGVAR(context_menu,actions) {
             _selectedObjects findIf { \
                 alive _x \
                 && {_x isKindOf 'AllVehicles'} \
-                && {!(_x isKindOf 'Man')} \
+                && {!(_x isKindOf 'CAManBase')} \
                 && { \
                     damage _x > 0 \
                     || { \
@@ -158,14 +158,14 @@ class EGVAR(context_menu,actions) {
         class Repair {
             displayName = CSTRING(Repair);
             icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\repair_ca.paa";
-            condition = QUOTE(_selectedObjects findIf {damage _x > 0 && {!(_x isKindOf 'Man')}} != -1);
+            condition = QUOTE(_selectedObjects findIf {damage _x > 0 && {!(_x isKindOf 'CAManBase')}} != -1);
             statement = QUOTE(_selectedObjects call FUNC(repairVehicles));
             priority = 3;
         };
         class Rearm {
             displayName = CSTRING(Rearm);
             icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\rearm_ca.paa";
-            condition = QUOTE(_selectedObjects findIf {[_x] call EFUNC(common,getVehicleAmmo) != -1 && {[_x] call EFUNC(common,getVehicleAmmo) < 1} && {!(_x isKindOf 'Man')}} != -1);
+            condition = QUOTE(_selectedObjects findIf {[_x] call EFUNC(common,getVehicleAmmo) != -1 && {[_x] call EFUNC(common,getVehicleAmmo) < 1} && {!(_x isKindOf 'CAManBase')}} != -1);
             statement = QUOTE(_selectedObjects call FUNC(rearmVehicles));
             priority = 2;
         };
