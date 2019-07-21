@@ -15,7 +15,12 @@
  */
 #include "script_component.hpp"
 
-private _vehicles = _this select {alive _x && {fuel _x < 1} && {_x isKindOf "AllVehicles"} && {!(_x isKindOf 'CAManBase')}};
+private _vehicles = _this select {
+    alive _x
+    && {fuel _x < 1}
+    && {_x isKindOf "AllVehicles"}
+    && {!(_x isKindOf 'CAManBase')}
+};
 
 {
     [_x, 1] remoteExecCall ["setFuel", _x];
