@@ -160,6 +160,54 @@ class EGVAR(context_menu,actions) {
         };
         priority = -70;
     };
+    class VehicleLogistics {
+        displayName = CSTRING(VehicleLogistics);
+        icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\truck_ca.paa";
+        condition = QUOTE( \
+            _selectedObjects findIf { \
+                alive _x \
+                && {_x isKindOf 'AllVehicles'} \
+                && {!(_x isKindOf 'CAManBase')} \
+                && { \
+                    damage _x > 0 \
+                    || { \
+                        private _ammo = [_x] call EFUNC(common,getVehicleAmmo); \
+                        _ammo != -1 \
+                        && {_ammo < 1} \
+                    } \
+                    || {fuel _x < 1} \
+                } \
+            } != -1 \
+        );
+        class Repair {
+            displayName = CSTRING(Repair);
+            icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\repair_ca.paa";
+            condition = QUOTE(_selectedObjects findIf {damage _x > 0 && {!(_x isKindOf 'CAManBase')}} != -1);
+            statement = QUOTE(_selectedObjects call FUNC(repairVehicles));
+            priority = 3;
+        };
+        class Rearm {
+            displayName = CSTRING(Rearm);
+            icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\rearm_ca.paa";
+            condition = QUOTE(_selectedObjects findIf { \
+                    private _ammo = [_x] call EFUNC(common,getVehicleAmmo); \
+                    _ammo != -1 \
+                    && {_ammo < 1} \
+                    && {!(_x isKindOf 'CAManBase')} \
+                } != -1 \
+            );
+            statement = QUOTE(_selectedObjects call FUNC(rearmVehicles));
+            priority = 2;
+        };
+        class Refuel {
+            displayName = CSTRING(Refuel);
+            icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\refuel_ca.paa";
+            condition = QUOTE(_selectedObjects findIf {fuel _x < 1} != -1);
+            statement = QUOTE(_selectedObjects call FUNC(refuelVehicles));
+            priority = 1;
+        };
+        priority = -71;
+    };
     class Loadout {
         displayName = "$STR_3den_display3den_entitymenu_arsenal_text";
         icon = "\a3\3den\data\displays\display3den\entitymenu\arsenal_ca.paa";
