@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Changes side relations and plays radio messages.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_side1", "_side2", "_friendValue", "_radio"];
 TRACE_1("Module Side Relations",_this);

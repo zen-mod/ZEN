@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Registers a custom module to be available in the Zeus modules tree.
@@ -20,7 +21,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 if (canSuspend) exitWith {
     [FUNC(register), _this] call CBA_fnc_directCall;

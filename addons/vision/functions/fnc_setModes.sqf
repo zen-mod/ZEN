@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Updates avaiable curator vision modes based on settings.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _curator = getAssignedCuratorLogic player;
 private _modes = [-1]; // Default is always available

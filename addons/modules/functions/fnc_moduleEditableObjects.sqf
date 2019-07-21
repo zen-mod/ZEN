@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Zeus module function to update editable objects.
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_position", "_editingMode", "_curator", "_range", "_filter"];
 _filter params ["_allowAll", "_allowUnits", "_allowVehicles", "_allowStatic"];

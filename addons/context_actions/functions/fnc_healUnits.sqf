@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: 3Mydlo3, veteran29
  * Heals units in given selection. Works for units in vehicles.
@@ -18,7 +19,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_objects", "_mode"];
 

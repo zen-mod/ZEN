@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Updates current vehicle information display.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _display = findDisplay IDD_DISPLAY;
 private _vehicleConfig = configFile >> "CfgVehicles" >> typeOf GVAR(center);

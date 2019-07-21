@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Initializes a slider with an edit box showing its value.
@@ -20,7 +21,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_ctrlSlider", "_ctrlEdit", "_min", "_max", "_value", "_speed", ["_decimals", 0, [0]], ["_formatting", "%1", [""]]];
 

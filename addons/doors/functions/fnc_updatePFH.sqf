@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Handles updating the visuals and positions of the door buttons.
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_args", "_pfhID"];
 _args params ["_building", "_doors", "_controls"];
