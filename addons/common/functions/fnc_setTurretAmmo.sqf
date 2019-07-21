@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Sets the ammo level for the given turret of a vehicle.
@@ -15,7 +16,6 @@
  *
  * Public: None
  */
-#include "script_component.hpp"
 
 params ["_vehicle", "_turretPath", "_percentage"];
 

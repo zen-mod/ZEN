@@ -1,3 +1,4 @@
+PREP(healUnits);
 PREP(rearmVehicles);
 PREP(refuelVehicles);
 PREP(repairVehicles);

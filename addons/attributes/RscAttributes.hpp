@@ -882,10 +882,14 @@ class GVAR(RscAttributesMan): GVAR(RscAttributesBase) {
         class ButtonOK: ButtonOK {};
         class ButtonCancel: ButtonCancel {};
     };
-    class buttons {
+    class Buttons {
         class Arsenal {
             text = "$STR_A3_Arsenal";
             function = QFUNC(buttonArsenal);
+        };
+        class Skills {
+            text = CSTRING(Skills);
+            function = QFUNC(buttonSkills);
         };
     };
 };
@@ -914,10 +918,10 @@ class GVAR(RscAttributesVehicle): GVAR(RscAttributesBase) {
         class ButtonOK: ButtonOK {};
         class ButtonCancel: ButtonCancel {};
     };
-    class buttons {
-        class Garage {
-            text = "$STR_A3_Garage";
-            function = QFUNC(buttonGarage);
+    class Buttons {
+        class Sensors {
+            text = CSTRING(Sensors);
+            function = QFUNC(buttonSensors);
         };
     };
 };
@@ -944,10 +948,10 @@ class GVAR(RscAttributesVehicleEmpty): GVAR(RscAttributesBase) {
         class ButtonOK: ButtonOK {};
         class ButtonCancel: ButtonCancel {};
     };
-    class buttons {
-        class Garage {
-            text = "$STR_A3_Garage";
-            function = QFUNC(buttonGarage);
+    class Buttons {
+        class Sensors {
+            text = CSTRING(Sensors);
+            function = QFUNC(buttonSensors);
         };
     };
 };
@@ -1056,6 +1060,16 @@ class GVAR(RscAttributesGroup): GVAR(RscAttributesBase) {
         };
         class ButtonOK: ButtonOK {};
         class ButtonCancel: ButtonCancel {};
+    };
+    class Buttons {
+        class Skills {
+            text = CSTRING(Skills);
+            function = QFUNC(buttonSkills);
+        };
+        class Side {
+            text = ECSTRING(common,Side);
+            function = QFUNC(buttonSide);
+        };
     };
 };
 

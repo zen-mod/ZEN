@@ -3,11 +3,13 @@
     <Package name="Context_Actions">
         <Key ID="STR_ZEN_Context_Actions_EditInventory">
             <English>Edit Inventory</English>
+            <Russian>Редактировать снаряжение</Russian>
             <German>Inventar bearbeiten</German>
             <Polish>Edytuj wyposażenie</Polish>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_TeleportPlayers">
             <English>Teleport Players</English>
+            <Russian>Телепортировать игроков</Russian>
             <German>Spieler teleportieren</German>
             <Polish>Teleportuj graczy</Polish>
         </Key>

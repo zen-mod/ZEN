@@ -9,8 +9,10 @@
 mharis001 <mhariszakar@gmail.com>
 
 # CONTRIBUTORS
+3Mydlo3
 654wak654
 Alganthe
+BaerMitUmlaut
 Beaumont
 Brett
 Dedmen
@@ -19,6 +21,7 @@ Dystopian
 GitHawk
 Glowbal
 Jonpas
+KoffeinFlummi
 PabstMirror
 SilentSpike
 Tuupertunut

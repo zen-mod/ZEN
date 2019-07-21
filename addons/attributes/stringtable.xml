@@ -3,16 +3,19 @@
     <Package name="Attributes">
         <Key ID="STR_ZEN_Attributes_Engine">
             <English>Engine</English>
+            <Russian>Двигатель</Russian>
             <German>Motor</German>
             <Polish>Silnik</Polish>
         </Key>
         <Key ID="STR_ZEN_Attributes_Lights">
             <English>Lights</English>
+            <Russian>Фары</Russian>
             <German>Lichter</German>
             <Polish>Światła</Polish>
         </Key>
         <Key ID="STR_ZEN_Attributes_PlateNumber">
             <English>Plate Number</English>
+            <Russian>Госномер</Russian>
             <German>Kennzeichen</German>
             <Polish>Tablica rejestracyjna</Polish>
         </Key>
@@ -23,6 +26,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_Timeout">
             <English>Timeout (s)</English>
+            <Russian>Таймаут (с)</Russian>
             <German>Zeitüberschreitung (s)</German>
             <Polish>Limit czasu (s)</Polish>
         </Key>
@@ -30,6 +34,42 @@
             <English>The time (in seconds) between waypoint condition satisfaction and waypoint completion.</English>
             <German>Zeit (in Sekunden) zwischen der Erfüllung der Wegpunktbedingung und der Vervollständigung des Wegpunktes.</German>
             <Polish>Czas (w sekundach) pomiędzy wypełnieniem warunku zaliczenia punktu trasy a jego faktycznym zaliczeniem.</Polish>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_Sensors">
+            <English>Sensors</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_ChangeSide">
+            <English>Change Side</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_ChangeSkills">
+            <English>Change Skills</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_Skills">
+            <English>Skills</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_AimingAccuracy">
+            <English>Aiming Accuracy</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_AimingSpeed">
+            <English>Aiming Speed</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_AimingShake">
+            <English>Aiming Shake</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_Commanding">
+            <English>Commanding</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_Courage">
+            <English>Courage</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_SpotDistance">
+            <English>Spot Distance</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_SpotTime">
+            <English>Spot Time</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_ReloadSpeed">
+            <English>Reload Speed</English>
         </Key>
     </Package>
 </Project>

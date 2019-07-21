@@ -81,6 +81,11 @@
     _unit doMove _position;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(doWatch), {
+    params ["_unit", "_target"];
+    _unit doWatch _target;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(setCaptive), {
     params ["_unit", "_status"];
     _unit setCaptive _status;

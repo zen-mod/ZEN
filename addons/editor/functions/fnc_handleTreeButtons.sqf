@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Handles clicking the tree collapse and expand all buttons.
@@ -13,11 +14,10 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_expand"];
 
-// Cant collapse marker or recent trees
+// Can't collapse or expand marker or recent trees
 if (RscDisplayCurator_sections select 0 > 2) exitWith {};
 
 // Collapse or expand current tree

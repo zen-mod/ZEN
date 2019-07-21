@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Closes the garage display.
@@ -13,7 +14,6 @@
  *
  * Public: None
  */
-#include "script_component.hpp"
 
 // Close the garage display
 private _display = findDisplay IDD_DISPLAY;

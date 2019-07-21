@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Sets the given inventory data as the inventory of an object.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define ADD_CARGO(object,command,cargo) \
     cargo params ["_items", "_counts"]; \

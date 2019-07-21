@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Initializes the "Set Date" Zeus module display.
@@ -13,9 +14,8 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-#define YEARS_START 1982
+#define YEARS_START 1900
 #define YEARS_END   2050
 
 #define FORMAT_TIME(x) ([floor (x), 2] call CBA_fnc_formatNumber)

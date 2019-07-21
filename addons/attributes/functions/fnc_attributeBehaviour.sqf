@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Initializes the "Behaviour" Zeus attribute.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define IDCS [IDC_BEHAVIOUR_CARELESS, IDC_BEHAVIOUR_SAFE, IDC_BEHAVIOUR_AWARE, IDC_BEHAVIOUR_COMBAT, IDC_BEHAVIOUR_STEALTH, IDC_BEHAVIOUR_DEFAULT]
 #define BEHAVIOURS ["CARELESS", "SAFE", "AWARE", "COMBAT", "STEALTH", "UNCHANGED"]

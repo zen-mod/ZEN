@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Initializes the "Name" Zeus attribute.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_display"];
 
@@ -33,7 +33,7 @@ private _fnc_onConfirm = {
     private _name = ctrlText _ctrlEdit;
 
     if !(_name isEqualTo name _entity) then {
-        [QEGVAR(common,setName), [_entity, _newName]] call CBA_fnc_globalEvent;
+        [QEGVAR(common,setName), [_entity, _name]] call CBA_fnc_globalEvent;
 
         if (isClass (configFile >> "CfgPatches" >> "ace_common")) then {
             [_entity] call ace_common_fnc_setName;

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk, Jonpas
  * Returns all magazines a vehicle turret can hold according to config.
@@ -14,6 +15,5 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 getArray ((_this call CBA_fnc_getTurret) >> "magazines")

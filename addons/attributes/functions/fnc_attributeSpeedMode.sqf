@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Initializes the "Speed Mode" Zeus attribute.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define IDCS [IDC_SPEEDMODE_LIMITED, IDC_SPEEDMODE_NORMAL, IDC_SPEEDMODE_FULL, IDC_SPEEDMODE_DEFAULT]
 #define SPEED_MODES ["LIMITED", "NORMAL", "FULL", "UNCHANGED"]

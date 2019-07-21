@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Declutters empty unit tree by removing empty vehicles.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 IF (!GVAR(declutterEmptyTree)) exitWith {};
 
