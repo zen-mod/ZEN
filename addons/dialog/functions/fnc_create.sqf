@@ -150,7 +150,7 @@ scopeName "Main";
         };
         case "TOOLBOX": {
             // Backwards compatibility for old value info format
-            if (_valueInfo select 1 isEqualType []) then {
+            if (_valueInfo param [1] isEqualType []) then {
                 _valueInfo params ["_default", "_strings"];
                 _valueInfo = [_default, 1, 2 max count _strings min 5, _strings];
             };
