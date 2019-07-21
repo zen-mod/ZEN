@@ -149,6 +149,12 @@ scopeName "Main";
             _controlType = QGVAR(Row_Slider);
         };
         case "TOOLBOX": {
+            // Backwards compatibility for old value info format
+            if (_valueInfo select 1 isEqualType []) then {
+                _valueInfo params ["_default", "_strings"];
+                _valueInfo = [_default, 1, 2 max count _strings min 5, _strings];
+            };
+
             _valueInfo params [["_default", 0, [0, false]], ["_rows", 1, [0]], ["_columns", 2, [0]], ["_strings", [], [[]]], ["_height", -1, [0]]];
 
             // Common toolbox use cases, for QOL mostly
