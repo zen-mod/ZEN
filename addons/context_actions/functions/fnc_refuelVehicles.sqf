@@ -23,5 +23,5 @@ private _vehicles = _this select {
 };
 
 {
-    [_x, 1] remoteExecCall ["setFuel", _x];
+    [QEGVAR(common,setFuel), [_x, 1], _x] call CBA_fnc_targetEvent;
 } forEach _vehicles;
