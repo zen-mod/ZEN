@@ -33,8 +33,8 @@ if !(alive _vehicle) exitWith {
 };
 
 [LSTRING(ModuleTurretOptics), [
-    ["TOOLBOX", LSTRING(ModuleTurretOptics_NVG), [0, [ELSTRING(common,Unchanged), ELSTRING(common,Disabled), ELSTRING(common,Enabled)]], true],
-    ["TOOLBOX", LSTRING(ModuleTurretOptics_TI),  [0, [ELSTRING(common,Unchanged), ELSTRING(common,Disabled), ELSTRING(common,Enabled)]], true]
+    ["TOOLBOX", LSTRING(ModuleTurretOptics_NVG), [0, 1, 3, [ELSTRING(common,Unchanged), ELSTRING(common,Disabled), ELSTRING(common,Enabled)]], true],
+    ["TOOLBOX", LSTRING(ModuleTurretOptics_TI),  [0, 1, 3, [ELSTRING(common,Unchanged), ELSTRING(common,Disabled), ELSTRING(common,Enabled)]], true]
 ], {
     params ["_dialogValues", "_vehicle"];
     _dialogValues params ["_nvgEquipment", "_tiEquipment"];

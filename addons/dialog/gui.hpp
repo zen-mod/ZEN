@@ -199,47 +199,30 @@ class GVAR(Row_List): GVAR(Row_Base) {
     };
 };
 
-class GVAR(Row_Toolbox2): GVAR(Row_Base) {
+class GVAR(Row_Toolbox): GVAR(Row_Base) {
     GVAR(script) = QFUNC(gui_toolbox);
     class controls: controls {
         class Name: Name {};
-        class Toolbox: ctrlToolbox {
-            idc = IDC_ROW_TOOLBOX;
-            x = POS_W(10.1);
-            y = 0;
-            w = POS_W(15.9);
-            h = POS_H(1);
-            rows = 1;
-            columns = 2;
-        };
+        /* Toolbox created through script */
     };
 };
 
-class GVAR(Row_Toolbox3): GVAR(Row_Toolbox2) {
-    class controls: controls {
-        class Name: Name {};
-        class Toolbox: Toolbox {
-            columns = 3;
-        };
-    };
-};
+class GVAR(RscToolbox): ctrlToolbox {
+    idc = IDC_ROW_TOOLBOX;
+    x = POS_W(10.1);
+    y = 0;
+    w = POS_W(15.9);
+    h = POS_H(1);
 
-class GVAR(Row_Toolbox4): GVAR(Row_Toolbox2) {
-    class controls: controls {
-        class Name: Name {};
-        class Toolbox: Toolbox {
-            columns = 4;
-        };
-    };
-};
+    tooltipColorBox[] = {0, 0, 0, 0};
+    tooltipColorText[] = {0, 0, 0, 0};
+    tooltipColorShade[] = {0, 0, 0, 0};
 
-class GVAR(Row_Toolbox5): GVAR(Row_Toolbox2) {
-    class controls: controls {
-        class Name: Name {};
-        class Toolbox: Toolbox {
-            columns = 5;
-        };
-    };
+    rows = QUOTE(call compile getText (configFile >> QQGVAR(RscToolbox) >> QQGVAR(rows)));
+    GVAR(rows) = QUOTE(missionNamespace getVariable [ARR_2(QQGVAR(toolboxRows),1)]);
+
+    columns = QUOTE(call compile getText (configFile >> QQGVAR(RscToolbox) >> QQGVAR(columns)));
+    GVAR(columns) = QUOTE(missionNamespace getVariable [ARR_2(QQGVAR(toolboxColumns),2)]);
 };
 
 class GVAR(Row_Slider): GVAR(Row_Base) {

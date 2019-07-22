@@ -42,7 +42,7 @@ if (_object getVariable [QGVAR(isIED), false]) exitWith {
 [LSTRING(CreateIED), [
     ["SIDES", LSTRING(ActivationSide), west],
     ["SLIDER", LSTRING(ActivationRadius), [5, 50, 10, 0]],
-    ["TOOLBOX", LSTRING(ExplosionSize), [0, ["str_small", ELSTRING(common,Medium), "str_large", ELSTRING(common,Extreme)]]],
+    ["TOOLBOX", LSTRING(ExplosionSize), [0, 1, 4, ["str_small", ELSTRING(common,Medium), "str_large", ELSTRING(common,Extreme)]]],
     ["TOOLBOX:YESNO", LSTRING(IsJammable), false]
 ], {
     params ["_dialogValues", "_object"];
