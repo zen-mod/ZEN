@@ -1187,6 +1187,75 @@
             <German>Anzahl der Schüsse, die von jeder Einheit abgegeben werden sollen.</German>
             <Polish>Liczba pocisków do wystrzelenia przez każdą jednostkę.</Polish>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleWeather">
+            <English>Change Weather</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleWeather_Overcast">
+            <English>Overcast</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleWeather_Overcast_Tooltip">
+            <English>Sets the amount of cloud cover, higher values result in a greater likelihood of rain/storms and faster wind speeds.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleWeather_Rain">
+            <English>Rain</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleWeather_Rain_Tooltip">
+            <English>Sets the rain strength, requires overcast to be greater than 70%.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleWeather_Lightning">
+            <English>Lightning</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleWeather_Lightning_Tooltip">
+            <English>Sets the frequency of lightning strikes, requires overcast to be near 100%.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleWeather_Rainbow">
+            <English>Rainbow</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleWeather_Rainbow_Tooltip">
+            <English>Sets the intensity of rainbows.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleWeather_Waves">
+            <English>Waves</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleWeather_Waves_Tooltip">
+            <English>Sets the size of waves (higher values equal taller waves), applied independently of cloud cover settings.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleWeather_WindSpeed">
+            <English>Wind Speed</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleWeather_WindSpeed_Tooltip">
+            <English>Sets the wind speed in kilometers per hour.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleWeather_WindDirection">
+            <English>Wind Direction</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleWeather_WindDirection_Tooltip">
+            <English>Sets the wind direction.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleWeather_Gusts">
+            <English>Gusts</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleWeather_Gusts_Tooltip">
+            <English>Sets the strength of gusts, random changes in wind direction.\nThese changes become stronger and more frequent with worse cloud cover.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleWeather_FogDensity">
+            <English>Fog Density</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleWeather_FogDensity_Tooltip">
+            <English>Sets the fog density at the base fog altitude.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleWeather_FogDecay">
+            <English>Fog Decay</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleWeather_FogDecay_Tooltip">
+            <English>Sets how much the fog density decays with altitude. Larger values result in a sharper fog ceiling (more defined fog start).\nSmaller values lead to a more smooth transition from no fog to full fog, and as a result, the fog will cross the base altitude line more.\nWhen this is a positive value, the fog will be generated below the base altitude (valley fog); if negative, above the base altitude (mountain fog).</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleWeather_FogAltitude">
+            <English>Fog Altitude</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleWeather_FogAltitude_Tooltip">
+            <English>Sets the base altitude of the fog layer, in meters above/below sea level.</English>
+        </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_AI">
             <English>AI</English>

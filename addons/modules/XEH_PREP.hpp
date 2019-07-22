@@ -57,3 +57,4 @@ PREP(moduleSuicideBomber);
 PREP(moduleTurretOptics);
 PREP(moduleUnGarrison);
 PREP(moduleVisibility);
+PREP(moduleWeather);

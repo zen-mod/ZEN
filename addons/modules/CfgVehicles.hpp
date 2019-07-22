@@ -319,4 +319,10 @@ class CfgVehicles {
         displayName = CSTRING(ModuleVisibility);
         function = QFUNC(moduleVisibility);
     };
+    class GVAR(moduleWeather): GVAR(moduleBase) {
+        category = "Environment";
+        displayName = CSTRING(ModuleWeather);
+        function = QFUNC(moduleWeather);
+        icon = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\intel_ca.paa";
+    };
 };
