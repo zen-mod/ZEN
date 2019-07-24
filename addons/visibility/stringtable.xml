@@ -4,9 +4,6 @@
         <Key ID="STR_ZEN_Visibility_Enabled_Description">
             <English>Indicates when a player can see the Zeus' cursor</English>
         </Key>
-        <Key ID="STR_ZEN_Visibility_Category">
-            <English>Visibility</English>
-        </Key>
         <Key ID="STR_ZEN_Visibility_Visible">
             <English>VISIBLE</English>
         </Key>
