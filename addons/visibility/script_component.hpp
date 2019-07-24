@@ -14,3 +14,5 @@
 #endif
 
 #include "\x\zen\addons\main\script_macros.hpp"
+
+#include "\x\zen\addons\common\defineResinclDesign.inc"
