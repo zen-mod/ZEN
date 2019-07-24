@@ -11,20 +11,18 @@
         };
 
         // check 1.5 above the cursor to prevent a small object on the terrain blocking the view
-        private _posHigh = [_pos select 0, _pos select 1, (_pos select 2) + 1.5];
+        private _posHigh = _pos vectorAdd [0, 0, 1.5];
         private _draw = false;
         {
             if (side _x != sideLogic) then {
-                private _dir = (_x getRelDir _posHigh) + 90;
-                if (_dir >= 360) then {
-                    _dir = _dir - 360;
-                };
+                private _dir = ((_x getRelDir _posHigh) + 90) mod 360;
                 if (_dir < 180) then {
-                    if (count lineIntersectsSurfaces [eyePos _x, _pos, _x, objNull] == 0 || {count lineIntersectsSurfaces [eyePos _x, _posHigh, _x, objNull] == 0}) then {
+                    private _eyePos = eyePos _x;
+                    if (lineIntersectsSurfaces [_eyePos, _pos, _x, objNull] isEqualTo [] || {count lineIntersectsSurfaces [_eyePos, _posHigh, _x, objNull] == 0}) then {
                         // Check visibility through smoke
-                        private _visibility = [objNull, "VIEW"] checkVisibility [eyePos _x, _posHigh];
+                        private _visibility = [objNull, "VIEW"] checkVisibility [_eyePos, _posHigh];
                         // Draw a line from each player that can see the cursor
-                        drawLine3D [ASLToAGL eyePos _x, ASLToAGL _pos, [1, 0, 0, _visibility]];
+                        drawLine3D [ASLToAGL _eyePos, ASLToAGL _pos, [1, 0, 0, _visibility]];
                         _draw = true;
                     };
                 };
