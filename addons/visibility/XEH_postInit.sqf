@@ -13,7 +13,7 @@
 ["CBA_SettingChanged", {
     params ["_setting", "_value"];
     if (_setting isEqualTo QGVAR(enabled)) then {
-        if (isNull (findDisplay IDD_RSCDISPLAYCURATOR)) exitWith {false};
+        if (isNull (findDisplay IDD_RSCDISPLAYCURATOR)) exitWith {};
         if (_value) then {
             call FUNC(start);
         } else {
