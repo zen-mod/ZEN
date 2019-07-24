@@ -3,6 +3,12 @@
  * Author: Brett
  * Removes the Draw3D event handler
  *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
  * Example:
  * [] call zen_visibility_fnc_stop
  *
