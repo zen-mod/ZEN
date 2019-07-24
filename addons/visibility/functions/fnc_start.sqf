@@ -1,4 +1,13 @@
 #include "script_component.hpp"
+/*
+ * Author: Brett
+ * Starts the Draw3D eh that indicates when a player can see the curator cursor
+ *
+ * Example:
+ * [] call zen_visibility_fnc_start
+ *
+ * Public: No
+ */
 
 if (GVAR(draw) != -1) exitWith {};
 
