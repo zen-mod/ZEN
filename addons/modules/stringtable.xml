@@ -1070,6 +1070,24 @@
             <German>Spawn</German>
             <Polish>Spawn</Polish>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAddFullArsenal">
+            <Chinese>添加完整的軍火庫</Chinese>
+            <Chinesesimp>添加完整军火库</Chinesesimp>
+            <English>Add Full Arsenal</English>
+            <French>Ajouter Arsenal complète</French>
+            <German>Komplettes Arsenal hinzufügen</German>
+            <Japanese>完全な武器庫を追加</Japanese>
+            <Russian>Полный Арсенал</Russian>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleRemoveArsenal">
+            <Chinese>移除軍火庫</Chinese>
+            <Chinesesimp>移除军火库</Chinesesimp>
+            <English>Remove Arsenal</English>
+            <French>Retirer l'arsenal</French>
+            <German>Entferne Arsenal</German>
+            <Japanese>武器庫を削除</Japanese>
+            <Russian>Удалить Арсенал</Russian>
+        </Key>
         <!-- Feedback Messages -->
         <Key ID="STR_ZEN_Modules_NoUnitSelected">
             <English>Place on a unit</English>
@@ -1169,24 +1187,6 @@
             <English>No target modules exist, place one first</English>
             <German>Es gibt keine Zielmodule, platzieren Sie zuerst ein Zielmodul</German>
             <Polish>Brak modułów celu, najpierw ustaw moduł celu</Polish>
-        </Key>
-        <Key ID="STR_ZEN_Modules_ModuleAddFullArsenal">
-            <Chinese>添加完整的軍火庫</Chinese>
-            <Chinesesimp>添加完整军火库</Chinesesimp>
-            <English>Add Full Arsenal</English>
-            <French>Ajouter Arsenal complète</French>
-            <German>Komplettes Arsenal hinzufügen</German>
-            <Japanese>完全な武器庫を追加</Japanese>
-            <Russian>Полный Арсенал</Russian>
-        </Key>
-        <Key ID="STR_ZEN_Modules_ModuleRemoveArsenal">
-            <Chinese>移除軍火庫</Chinese>
-            <Chinesesimp>移除军火库</Chinesesimp>
-            <English>Remove Arsenal</English>
-            <French>Retirer l'arsenal</French>
-            <German>Entferne Arsenal</German>
-            <Japanese>武器庫を削除</Japanese>
-            <Russian>Удалить Арсенал</Russian>
         </Key>
     </Package>
 </Project>
