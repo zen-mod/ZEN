@@ -1,6 +1,6 @@
 /*
- * Author: mharis001
- * Teleports Zeus to the given position.
+ * Author: mharis001, 3Mydlo3
+ * Teleports Zeus to the given position or vehicle.
  *
  * Arguments:
  * 0: Position <ARRAY>
@@ -17,4 +17,13 @@
 
 params ["_posASL"];
 
-player setPosASL _posASL;
+private _curatorHovered = curatorMouseOver;
+_curatorHovered params ["_type", "_entity"];
+
+if (_type isEqualTo "OBJECT") then {
+    private _result = [[player], _entity] call EFUNC(common,teleportToVehicle);
+    if (_result) exitWith {};
+    [localize "str_3den_notifications_vehiclefull_text"] call EFUNC(common,showMessage);
+} else {
+    player setPosASL _posASL;
+};
