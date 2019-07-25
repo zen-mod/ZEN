@@ -22,12 +22,12 @@ private _success = false;
 
 if (_vehicle isKindOf "AllVehicles" && {!(_vehicle isKindOf "CAManBase")}) then {
     private _freeCargoSpace = {_x#0 isEqualTo objNull} count fullCrew [_vehicle, "", true];
-    private _unitsCount = {!(_x in _vehicle)} count _units;
+    private _unitsNotInTargetVehicle = _units select {!(_x in _vehicle)};
 
-    if (_unitsCount <= _freeCargoSpace) then {
+    if ((count _unitsNotInTargetVehicle) <= _freeCargoSpace) then {
         {
             _x moveInAny _vehicle;
-        } forEach _units;
+        } forEach _unitsNotInTargetVehicle;
         _success = true;
     };
 };
