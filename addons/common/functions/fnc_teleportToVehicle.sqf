@@ -21,7 +21,7 @@ params ["_units", "_vehicle"];
 private _success = false;
 
 if (_vehicle isKindOf "AllVehicles" && {!(_vehicle isKindOf "CAManBase")}) then {
-    private _freeCargoSpace = {_x#0 isEqualTo objNull} count fullCrew [_vehicle, "", true];
+    private _freeCargoSpace = {(_x select 0) isEqualTo objNull} count fullCrew [_vehicle, "", true];
     private _unitsNotInTargetVehicle = _units select {!(_x in _vehicle)};
 
     if ((count _unitsNotInTargetVehicle) <= _freeCargoSpace) then {
