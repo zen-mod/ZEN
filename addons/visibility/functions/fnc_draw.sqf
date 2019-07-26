@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Brett
- * Checks and draws the visibility indication
+ * Checks and draws the visibility indicator.
  *
  * Arguments:
  * None
@@ -15,7 +15,7 @@
  * Public: No
  */
 
-// The the cursor position in the world
+// The cursor position in the world
 private _pos = AGLtoASL screenToWorld getMousePosition;
 private _intersections = lineIntersectsSurfaces [getPosASL curatorCamera, _pos];
 if !(_intersections isEqualTo []) then {

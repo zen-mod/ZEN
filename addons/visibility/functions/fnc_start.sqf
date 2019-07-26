@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Brett
- * Starts the Draw3D eh that indicates when a player can see the curator cursor
+ * Starts the Draw3D EH that indicates when a player can see the curator cursor.
  *
  * Arguments:
  * None

@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Brett
- * Removes the Draw3D event handler
+ * Removes the Draw3D event handler.
  *
  * Arguments:
  * None
