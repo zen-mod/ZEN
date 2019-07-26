@@ -31,7 +31,7 @@ if (_vehicle isKindOf "AllVehicles" && {!(_vehicle isKindOf "CAManBase")}) then 
         } forEach _unitsNotInTargetVehicle;
         _success = true;
     } else {
-        [ELSTRING(common,VehicleNotEnoughSpace_Xneeded_Yavailable), _unitsCount, _freeCargoSpace] call EFUNC(common,showMessage);
+        [LSTRING(NotEnoughSpaceInVehicle), _unitsCount, _freeCargoSpace] call EFUNC(common,showMessage);
     };
 };
 
