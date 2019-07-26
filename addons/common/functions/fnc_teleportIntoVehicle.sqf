@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: 3Mydlo3
  * Teleports units to the given vehicle.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_units", "_vehicle"];
 
