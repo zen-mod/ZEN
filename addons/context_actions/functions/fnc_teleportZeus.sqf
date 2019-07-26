@@ -17,8 +17,7 @@
 
 params ["_posASL"];
 
-private _curatorHovered = curatorMouseOver;
-_curatorHovered params ["_type", "_entity"];
+curatorMouseOver params ["_type", "_entity"];
 
 if (_type isEqualTo "OBJECT") then {
     private _result = [[player], _entity] call EFUNC(common,teleportToVehicle);

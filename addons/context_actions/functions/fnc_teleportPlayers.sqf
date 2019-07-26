@@ -21,8 +21,7 @@ private _players = _this select {isPlayer _x};
     params ["_successful", "_players", "_posASL"];
 
     if (_successful) then {
-        private _curatorHovered = curatorMouseOver;
-        _curatorHovered params ["_type", "_entity"];
+        curatorMouseOver params ["_type", "_entity"];
 
         if (_type isEqualTo "OBJECT") then {
             private _result = [_players, _entity] call EFUNC(common,teleportToVehicle);
