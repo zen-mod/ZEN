@@ -25,8 +25,6 @@ private _players = _this select {isPlayer _x};
 
         if (_type isEqualTo "OBJECT") then {
             [_players, _entity] call EFUNC(common,teleportIntoVehicle);
-            if (_result) exitWith {};
-            [localize "str_3den_notifications_vehiclefull_text"] call EFUNC(common,showMessage);
         } else {
             {
                 _x setPosASL _posASL;

@@ -21,8 +21,6 @@ curatorMouseOver params ["_type", "_entity"];
 
 if (_type isEqualTo "OBJECT") then {
     private _result = [[player], _entity] call EFUNC(common,teleportIntoVehicle);
-    if (_result) exitWith {};
-    [localize "str_3den_notifications_vehiclefull_text"] call EFUNC(common,showMessage);
 } else {
     player setPosASL _posASL;
 };

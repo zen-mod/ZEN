@@ -23,12 +23,15 @@ private _success = false;
 if (_vehicle isKindOf "AllVehicles" && {!(_vehicle isKindOf "CAManBase")}) then {
     private _freeCargoSpace = {(_x select 0) isEqualTo objNull} count fullCrew [_vehicle, "", true];
     private _unitsNotInTargetVehicle = _units select {!(_x in _vehicle)};
+    private _unitsCount = count _unitsNotInTargetVehicle;
 
-    if ((count _unitsNotInTargetVehicle) <= _freeCargoSpace) then {
+    if (_unitsCount <= _freeCargoSpace) then {
         {
             _x moveInAny _vehicle;
         } forEach _unitsNotInTargetVehicle;
         _success = true;
+    } else {
+        [ELSTRING(common,VehicleNotEnoughSpace_Xneeded_Yavailable), _unitsCount, _freeCargoSpace] call EFUNC(common,showMessage);
     };
 };
 
