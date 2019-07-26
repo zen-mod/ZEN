@@ -23,7 +23,7 @@ private _players = _this select {isPlayer _x};
     if (_successful) then {
         curatorMouseOver params ["_type", "_entity"];
 
-        if (_type isEqualTo "OBJECT") then {
+        if (_type isEqualTo "OBJECT" && {_entity isKindOf "AllVehicles"} && {!(_entity isKindOf "CAManBase")}) then {
             [_players, _entity] call EFUNC(common,teleportIntoVehicle);
         } else {
             {
