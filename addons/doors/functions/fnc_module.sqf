@@ -20,7 +20,7 @@ params ["_logic"];
 // Use attached building first then search nearby
 private _building = attachedTo _logic;
 
-if (isNull _building) then {
+if (isNull _building || {!(_building isKindOf "Building")}) then {
     _building = nearestObject [_logic, "Building"];
 };
 
