@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
- * Author: mharis001
- * Teleports Zeus to the given position.
+ * Author: mharis001, 3Mydlo3
+ * Teleports Zeus to the given position or vehicle.
  *
  * Arguments:
  * 0: Position <ARRAY>
@@ -17,4 +17,10 @@
 
 params ["_posASL"];
 
-player setPosASL _posASL;
+curatorMouseOver params ["_type", "_entity"];
+
+if (_type isEqualTo "OBJECT" && {_entity isKindOf "AllVehicles"} && {!(_entity isKindOf "CAManBase")}) then {
+    [[player], _entity] call EFUNC(common,teleportIntoVehicle);
+} else {
+    player setPosASL _posASL;
+};

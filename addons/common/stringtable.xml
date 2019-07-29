@@ -272,5 +272,9 @@
             <German>ACE Arsenal</German>
             <Polish>Arsenał ACE</Polish>
         </Key>
+        <Key ID="STR_ZEN_Common_NotEnoughSpaceInVehicle">
+            <English>Not enough space in target vehicle: %1 needed - %2 available</English>
+            <Polish>Za mało miejsca w pojeździe docelowym: %1 potrzebne - %2 dostępne</Polish>
+        </Key>
     </Package>
 </Project>

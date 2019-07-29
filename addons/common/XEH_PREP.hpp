@@ -22,3 +22,4 @@ PREP(setTurretAmmo);
 PREP(setVehicleAmmo);
 PREP(showMessage);
 PREP(spawnLargeObject);
+PREP(teleportIntoVehicle);

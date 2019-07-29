@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
- * Author: mharis001
- * Allows Zeus to select a position to teleport players to.
+ * Author: mharis001, 3Mydlo3
+ * Allows Zeus to select a position or vehicle to teleport players to.
  *
  * Arguments:
  * N: Selected Objects <OBJECT>
@@ -21,8 +21,14 @@ private _players = _this select {isPlayer _x};
     params ["_successful", "_players", "_posASL"];
 
     if (_successful) then {
-        {
-            _x setPosASL _posASL;
-        } forEach _players;
+        curatorMouseOver params ["_type", "_entity"];
+
+        if (_type isEqualTo "OBJECT" && {_entity isKindOf "AllVehicles"} && {!(_entity isKindOf "CAManBase")}) then {
+            [_players, _entity] call EFUNC(common,teleportIntoVehicle);
+        } else {
+            {
+                _x setPosASL _posASL;
+            } forEach _players;
+        };
     };
 }, [], LSTRING(TeleportPlayers)] call EFUNC(common,getTargetPos);
