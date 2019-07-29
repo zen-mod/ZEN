@@ -20,7 +20,7 @@ params ["_posASL"];
 curatorMouseOver params ["_type", "_entity"];
 
 if (_type isEqualTo "OBJECT" && {_entity isKindOf "AllVehicles"} && {!(_entity isKindOf "CAManBase")}) then {
-    private _result = [[player], _entity] call EFUNC(common,teleportIntoVehicle);
+    [[player], _entity] call EFUNC(common,teleportIntoVehicle);
 } else {
     player setPosASL _posASL;
 };
