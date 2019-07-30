@@ -45,6 +45,7 @@ _ctrlSide1 ctrlAddEventHandler ["LBSelChanged", {
 
     private _display = ctrlParent _ctrlSide1;
     private _ctrlSide2 = _display displayCtrl IDC_SIDERELATIONS_SIDE_2;
+    private _currentValue = _ctrlSide2 lbValue lbCurSel _ctrlSide2;
 
     // Update second side combo, do not include selected side
     lbClear _ctrlSide2;
@@ -55,10 +56,12 @@ _ctrlSide1 ctrlAddEventHandler ["LBSelChanged", {
             private _index = _ctrlSide2 lbAdd localize _name;
             _ctrlSide2 lbSetPicture [_index, _icon];
             _ctrlSide2 lbSetValue [_index, _value];
+
+            if (_value == _currentValue) then {
+                _ctrlSide2 lbSetCurSel _index;
+            };
         };
     } forEach SIDES;
-
-    _ctrlSide2 lbSetCurSel 0;
 }];
 
 // Trigger EH to populate side combo 2

@@ -284,7 +284,6 @@ BEGIN_MODULE_DIALOG(RscSideRelations)
                 y = 0;
                 w = POS_W(7.35);
                 h = POS_H(1);
-                colorBackground[] = {0, 0, 0, 0.7};
                 class Items {
                     class BLUFOR {
                         text = "$STR_WEST";
