@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: CreepPork_LV, Kex
+ * Author: CreepPork, Kex
  * Zeus module function to remove the virtual arsenal.
  *
  * Arguments:
