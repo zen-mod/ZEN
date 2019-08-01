@@ -1,7 +1,8 @@
 #include "script_component.hpp"
 /*
  * Author: 3Mydlo3
- * Teleports units to the given vehicle.
+ * Teleports units into the given vehicle.
+ * Will only teleport if there is enough space in the vehicle for all units.
  *
  * Arguments:
  * 0: Units <ARRAY>

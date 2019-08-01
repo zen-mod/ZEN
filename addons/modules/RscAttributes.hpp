@@ -2,7 +2,6 @@ class RscText;
 class RscEdit;
 class RscCombo;
 class RscFrame;
-class RscButton;
 class RscPicture;
 class RscListBox;
 class RscCheckBox;
@@ -12,7 +11,6 @@ class ctrlListNBox;
 class RscEditMulti;
 class RscStructuredText;
 class ctrlButtonPictureKeepAspect;
-class RscActivePicture;
 class RscControlsGroup;
 class RscControlsGroupNoScrollbars;
 
@@ -315,164 +313,6 @@ BEGIN_MODULE_DIALOG(RscSideRelations)
             class Radio: GVAR(RscToolboxYesNo) {
                 idc = IDC_SIDERELATIONS_RADIO;
                 y = POS_H(1.1);
-            };
-        };
-    };
-END_MODULE_DIALOG;
-
-BEGIN_MODULE_DIALOG(RscTeleportPlayers)
-    class teleportPlayers: RscControlsGroupNoScrollbars {
-        idc = IDC_TELEPORTPLAYERS;
-        function = QFUNC(gui_teleportPlayers);
-        x = 0;
-        y = 0;
-        w = POS_W(26);
-        h = POS_H(8.2);
-        class controls {
-            class Background: RscText {
-                x = 0;
-                y = POS_H(1);
-                w = POS_W(26);
-                h = POS_H(7.2);
-                colorBackground[] = {1, 1, 1, 0.1};
-            };
-            class ButtonSides: RscButton {
-                idc = IDC_TELEPORTPLAYERS_BUTTON_SIDES;
-                text = CSTRING(Sides);
-                font = "RobotoCondensedLight";
-                x = 0;
-                y = 0;
-                w = POS_W(26/3);
-                h = POS_H(1);
-                colorBackground[] = {0, 0, 0, 0.5};
-                colorBackgroundActive[] = {1, 1, 1, 0.15};
-                colorBackgroundDisabled[] = {1, 1, 1, 0.1};
-                colorDisabled[] = {1, 1, 1, 1};
-                colorFocused[] = {1, 1, 1, 0.1};
-                period = 0;
-                periodOver = 0;
-                periodFocus = 0;
-                shadow = 0;
-            };
-            class ButtonGroups: ButtonSides {
-                idc = IDC_TELEPORTPLAYERS_BUTTON_GROUPS;
-                text = CSTRING(Groups);
-                x = POS_W(26/3);
-            };
-            class ButtonPlayers: ButtonSides {
-                idc = IDC_TELEPORTPLAYERS_BUTTON_PLAYERS;
-                text = CSTRING(Players);
-                x = POS_W(52/3);
-            };
-            class TabSides: RscControlsGroupNoScrollbars {
-                idc = IDC_TELEPORTPLAYERS_TAB_SIDES;
-                x = 0;
-                y = POS_H(1);
-                w = POS_W(26);
-                h = POS_H(7.2);
-                class controls {
-                    class BLUFOR: RscActivePicture {
-                        idc = IDC_TELEPORTPLAYERS_BLUFOR;
-                        text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_west_ca.paa";
-                        x = POS_W(4.25);
-                        y = POS_H(2.35);
-                        w = POS_W(2.5);
-                        h = POS_H(2.5);
-                    };
-                    class OPFOR: BLUFOR {
-                        idc = IDC_TELEPORTPLAYERS_OPFOR;
-                        text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_east_ca.paa";
-                        x = POS_W(9.25);
-                    };
-                    class Independent: BLUFOR {
-                        idc = IDC_TELEPORTPLAYERS_INDEPENDENT;
-                        text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_guer_ca.paa";
-                        x = POS_W(14.25);
-                    };
-                    class Civilian: BLUFOR {
-                        idc = IDC_TELEPORTPLAYERS_CIVILIAN;
-                        text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_civ_ca.paa";
-                        x = POS_W(19.25);
-                    };
-                };
-            };
-            class TabGroups: RscControlsGroupNoScrollbars {
-                idc = IDC_TELEPORTPLAYERS_TAB_GROUPS;
-                x = 0;
-                y = POS_H(1);
-                w = POS_W(26);
-                h = POS_H(7.2);
-                class controls {
-                    class Groups: RscListBox {
-                        idc = IDC_TELEPORTPLAYERS_GROUPS;
-                        x = POS_W(0.5);
-                        y = POS_H(0.5);
-                        w = POS_W(25);
-                        h = POS_H(5);
-                        colorSelect[] = {1, 1, 1, 1};
-                        colorSelect2[] = {1, 1, 1, 1};
-                        colorBackground[] = {0, 0, 0, 0.5};
-                        colorSelectBackground[] = {0, 0, 0, 0};
-                        colorSelectBackground2[] = {0, 0, 0, 0};
-                    };
-                    class Search: RscEdit {
-                        idc = IDC_TELEPORTPLAYERS_GROUPS_SEARCH;
-                        x = POS_W(1.6);
-                        y = POS_H(5.7);
-                        w = POS_W(23.9);
-                        h = POS_H(1);
-                    };
-                    class SearchButton: RscButton {
-                        idc = IDC_TELEPORTPLAYERS_GROUPS_BUTTON;
-                        style = ST_CENTER + ST_PICTURE + ST_KEEP_ASPECT_RATIO;
-                        text = "\a3\Ui_f\data\GUI\RscCommon\RscButtonSearch\search_start_ca.paa";
-                        x = POS_W(0.5);
-                        y = POS_H(5.65);
-                        w = POS_W(1);
-                        h = POS_H(1);
-                        colorBackground[] = {0, 0, 0, 0.5};
-                        colorFocused[] = {0, 0, 0, 0.5};
-                    };
-                };
-            };
-            class TabPlayers: RscControlsGroupNoScrollbars {
-                idc = IDC_TELEPORTPLAYERS_TAB_PLAYERS;
-                x = 0;
-                y = POS_H(1);
-                w = POS_W(26);
-                h = POS_H(7.2);
-                class controls {
-                    class Players: RscListBox {
-                        idc = IDC_TELEPORTPLAYERS_PLAYERS;
-                        x = POS_W(0.5);
-                        y = POS_H(0.5);
-                        w = POS_W(25);
-                        h = POS_H(5);
-                        colorSelect[] = {1, 1, 1, 1};
-                        colorSelect2[] = {1, 1, 1, 1};
-                        colorBackground[] = {0, 0, 0, 0.5};
-                        colorSelectBackground[] = {0, 0, 0, 0};
-                        colorSelectBackground2[] = {0, 0, 0, 0};
-                    };
-                    class Search: RscEdit {
-                        idc = IDC_TELEPORTPLAYERS_PLAYERS_SEARCH;
-                        x = POS_W(1.6);
-                        y = POS_H(5.7);
-                        w = POS_W(23.9);
-                        h = POS_H(1);
-                    };
-                    class SearchButton: RscButton {
-                        idc = IDC_TELEPORTPLAYERS_PLAYERS_BUTTON;
-                        style = ST_CENTER + ST_PICTURE + ST_KEEP_ASPECT_RATIO;
-                        text = "\a3\Ui_f\data\GUI\RscCommon\RscButtonSearch\search_start_ca.paa";
-                        x = POS_W(0.5);
-                        y = POS_H(5.65);
-                        w = POS_W(1);
-                        h = POS_H(1);
-                        colorBackground[] = {0, 0, 0, 0.5};
-                        colorFocused[] = {0, 0, 0, 0.5};
-                    };
-                };
             };
         };
     };

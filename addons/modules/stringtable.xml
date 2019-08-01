@@ -754,17 +754,11 @@
             <German>Spieler teleportieren</German>
             <Polish>Teleportuj graczy</Polish>
         </Key>
-        <Key ID="STR_ZEN_Modules_Sides">
-            <English>Sides</English>
-            <Russian>Стороны</Russian>
-            <German>Seiten</German>
-            <Polish>Strony</Polish>
+        <Key ID="STR_ZEN_Modules_ModuleTeleportPlayers_IncludeVehicles">
+            <English>Include Vehicles</English>
         </Key>
-        <Key ID="STR_ZEN_Modules_Groups">
-            <English>Groups</English>
-            <Russian>Группы</Russian>
-            <German>Gruppen</German>
-            <Polish>Grupy</Polish>
+        <Key ID="STR_ZEN_Modules_ModuleTeleportPlayers_IncludeVehicles_Tooltip">
+            <English>Teleports vehicles of players instead of the players themselves.\nIf the module was attached to a vehicle, this is ignored and players will be moved into the attached vehicle.</English>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSmokePillar">
             <English>Smoke Pillar</English>

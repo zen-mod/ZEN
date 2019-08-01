@@ -138,6 +138,16 @@ scopeName "Main";
             _defaultValue = _values param [_defaultIndex];
             _controlType = QGVAR(Row_List);
         };
+        case "OWNERS": {
+            _valueInfo params [["_tab", 3, [0]], ["_sides", [], [[]], [0, 1, 2, 3, 4]], ["_groups", [], [[]]], ["_players", [], [[]]]];
+
+            _sides = _sides select {_x in [west, east, independent, civilian]};
+            _groups = _groups select {units _x findIf {isPlayer _x} != -1};
+            _players = _players call EFUNC(common,getPlayers);
+
+            _defaultValue = [_tab, _sides, _groups, _players];
+            _controlType = [QGVAR(Row_Owners), QGVAR(Row_OwnersNoTitle)] select (_subType == "NOTITLE");
+        };
         case "SIDES": {
             _defaultValue = _valueInfo param [0, nil, [west]];
             _controlType = QGVAR(Row_Sides);

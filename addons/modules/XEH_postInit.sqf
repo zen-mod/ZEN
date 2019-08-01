@@ -13,7 +13,6 @@ if (isServer) then {
 [QGVAR(sayMessage), BIS_fnc_sayMessage] call CBA_fnc_addEventHandler;
 [QGVAR(carrierInit), BIS_fnc_Carrier01Init] call CBA_fnc_addEventHandler;
 [QGVAR(destroyerInit), BIS_fnc_Destroyer01Init] call CBA_fnc_addEventHandler;
-[QGVAR(moveToRespawnPosition), BIS_fnc_moveToRespawnPosition] call CBA_fnc_addEventHandler;
 [QGVAR(taskPatrol), CBA_fnc_taskPatrol] call CBA_fnc_addEventHandler;
 
 [QGVAR(autoSeekBehavior), {

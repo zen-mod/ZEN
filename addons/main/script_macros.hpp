@@ -72,9 +72,6 @@
 #define SELECTED_WAYPOINTS (curatorSelected select 2)
 #define SELECTED_MARKERS   (curatorSelected select 3)
 
-#define COLOR_BACKGROUND_LIGHT 1, 1, 1, 0.1
-#define COLOR_BACKGROUND_DARK  0, 0, 0, 0.2
-
 #define GUI_THEME_RGB_R "(profileNamespace getVariable ['GUI_BCG_RGB_R',0.13])"
 #define GUI_THEME_RGB_G "(profileNamespace getVariable ['GUI_BCG_RGB_G',0.54])"
 #define GUI_THEME_RGB_B "(profileNamespace getVariable ['GUI_BCG_RGB_B',0.21])"
@@ -82,12 +79,11 @@
 
 #define GUI_THEME_COLOR {GUI_THEME_RGB_R,GUI_THEME_RGB_G,GUI_THEME_RGB_B,GUI_THEME_ALPHA}
 
- #define SET_BACKGROUND_COLOR \
-    onLoad = QUOTE( \
-        params ['_ctrl']; \
-        private _color = if (EGVAR(common,darkMode)) then {[COLOR_BACKGROUND_DARK]} else {[COLOR_BACKGROUND_LIGHT]}; \
-        _ctrl ctrlSetBackgroundColor _color; \
-    )
+#define COLOR_SETTING_SYS(setting,color1,color2,index) QUOTE(with missionNamespace do {[ARR_2(color1,color2)] select setting select index})
+#define COLOR_SETTING(setting,color1,color2) {COLOR_SETTING_SYS(setting,color1,color2,0),COLOR_SETTING_SYS(setting,color1,color2,1),COLOR_SETTING_SYS(setting,color1,color2,2),COLOR_SETTING_SYS(setting,color1,color2,3)}
+
+#define COLOR_BACKGROUND_LIGHT 1, 1, 1, 0.1
+#define COLOR_BACKGROUND_DARK  0, 0, 0, 0.2
 
 #ifdef DISABLE_COMPILE_CACHE
     #undef PREP
