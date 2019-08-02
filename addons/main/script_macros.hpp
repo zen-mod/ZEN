@@ -79,11 +79,10 @@
 
 #define GUI_THEME_COLOR {GUI_THEME_RGB_R,GUI_THEME_RGB_G,GUI_THEME_RGB_B,GUI_THEME_ALPHA}
 
-#define COLOR_SETTING_SYS(setting,color1,color2,index) QUOTE(with missionNamespace do {[ARR_2(color1,color2)] select setting select index})
-#define COLOR_SETTING(setting,color1,color2) {COLOR_SETTING_SYS(setting,color1,color2,0),COLOR_SETTING_SYS(setting,color1,color2,1),COLOR_SETTING_SYS(setting,color1,color2,2),COLOR_SETTING_SYS(setting,color1,color2,3)}
+#define COLOR_SETTING_SYS(SETTING,VALUE1,VALUE2) QUOTE(with missionNamespace do {if (SETTING) then {VALUE2} else {VALUE1}})
+#define COLOR_SETTING(SETTING,R1,G1,B1,A1,R2,G2,B2,A2) {COLOR_SETTING_SYS(SETTING,R1,R2),COLOR_SETTING_SYS(SETTING,G1,G2),COLOR_SETTING_SYS(SETTING,B1,B2),COLOR_SETTING_SYS(SETTING,A1,A2)}
 
-#define COLOR_BACKGROUND_LIGHT 1, 1, 1, 0.1
-#define COLOR_BACKGROUND_DARK  0, 0, 0, 0.2
+#define COLOR_BACKGROUND_SETTING COLOR_SETTING(EGVAR(common,darkMode),1,1,1,0.1,0,0,0,0.2)
 
 #ifdef DISABLE_COMPILE_CACHE
     #undef PREP

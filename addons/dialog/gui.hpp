@@ -260,7 +260,7 @@ class GVAR(Row_Sides): GVAR(Row_Base) {
             y = 0;
             w = POS_W(16);
             h = POS_H(2.5);
-            colorBackground[] = COLOR_SETTING(EGVAR(common,darkMode),[COLOR_BACKGROUND_LIGHT],[COLOR_BACKGROUND_DARK]);
+            colorBackground[] = COLOR_BACKGROUND_SETTING;
         };
         class BLUFOR: RscActivePicture {
             idc = IDC_ROW_SIDES_BLUFOR;
@@ -448,7 +448,7 @@ class GVAR(Row_Owners): GVAR(Row_Base) {
             y = POS_H(2);
             w = POS_W(26);
             h = POS_H(8);
-            colorBackground[] = COLOR_SETTING(EGVAR(common,darkMode),[COLOR_BACKGROUND_LIGHT],[COLOR_BACKGROUND_DARK]);
+            colorBackground[] = COLOR_BACKGROUND_SETTING;
         };
         class ButtonSides: RscButton {
             idc = IDC_ROW_OWNERS_BTN_SIDES;
@@ -461,8 +461,8 @@ class GVAR(Row_Owners): GVAR(Row_Base) {
             h = POS_H(1);
             sizeEx = 4.32 * (1 / (getResolution select 3)) * pixelGrid * 0.5;
             colorBackground[] = {0, 0, 0, 0.5};
-            colorBackgroundActive[] = COLOR_SETTING(EGVAR(common,darkMode),[ARR_4(1,1,1,0.15)],[ARR_4(0.1,0.1,0.1,0.2)]);
-            colorBackgroundDisabled[] = COLOR_SETTING(EGVAR(common,darkMode),[COLOR_BACKGROUND_LIGHT],[COLOR_BACKGROUND_DARK]);
+            colorBackgroundActive[] = COLOR_SETTING(EGVAR(common,darkMode),1,1,1,0.15,0.1,0.1,0.1,0.2); // lighter
+            colorBackgroundDisabled[] = COLOR_BACKGROUND_SETTING;
             colorDisabled[] = {1, 1, 1, 1};
             colorFocused[] = {1, 1, 1, 0.1};
             period = 0;
