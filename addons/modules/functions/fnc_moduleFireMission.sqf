@@ -41,5 +41,5 @@ if (_artilleryETA == -1) then {
         [QEGVAR(common,doArtilleryFire), [_x, _targetPos, _ammo, _rounds], _x] call CBA_fnc_targetEvent;
     } forEach _vehicles;
 
-    [LSTRING(ModuleFireMission_ArtilleryETA), _artilleryETA] call EFUNC(common,showMessage);
+    [LSTRING(ModuleFireMission_ArtilleryETA), _artilleryETA toFixed 1] call EFUNC(common,showMessage);
 };
