@@ -1256,6 +1256,36 @@
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogAltitude_Tooltip">
             <English>Sets the base altitude of the fog layer, in meters above/below sea level.</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateIntel">
+            <English>Create/Edit Intel</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ObjectType">
+            <English>Object Type</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ShareWith">
+            <English>Share With</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateIntel_DeleteOnCompletion">
+            <English>Delete On Completion</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ActionText">
+            <English>Action Text</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ActionDuration">
+            <English>Action Duration</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateIntel_IntelTitle">
+            <English>Intel Title</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateIntel_IntelText">
+            <English>Intel Text</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateIntel_PickUpIntel">
+            <English>Pick Up Intel</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateIntel_IntelFound">
+            <English>Intel Found</English>
+        </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_AI">
             <English>AI</English>

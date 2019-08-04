@@ -1,14 +1,16 @@
 #include "script_component.hpp"
 
 if (isServer) then {
-    [QGVAR(moduleAmbientAnimStart), FUNC(moduleAmbientAnimStart)] call CBA_fnc_addEventHandler;
-    [QGVAR(moduleAmbientFlyby), FUNC(moduleAmbientFlyby)] call CBA_fnc_addEventHandler;
-    [QGVAR(moduleCAS), FUNC(moduleCAS)] call CBA_fnc_addEventHandler;
-    [QGVAR(moduleEditableObjects), FUNC(moduleEditableObjects)] call CBA_fnc_addEventHandler;
+    [QGVAR(moduleAmbientAnimStart), LINKFUNC(moduleAmbientAnimStart)] call CBA_fnc_addEventHandler;
+    [QGVAR(moduleAmbientFlyby), LINKFUNC(moduleAmbientFlyby)] call CBA_fnc_addEventHandler;
+    [QGVAR(moduleCAS), LINKFUNC(moduleCAS)] call CBA_fnc_addEventHandler;
+    [QGVAR(moduleEditableObjects), LINKFUNC(moduleEditableObjects)] call CBA_fnc_addEventHandler;
 
     // Public variable to track created target logics
     missionNamespace setVariable [QGVAR(targetLogics), [], true];
 };
+
+[QGVAR(moduleCreateIntel), LINKFUNC(moduleCreateIntelLocal)] call CBA_fnc_addEventHandler;
 
 [QGVAR(sayMessage), BIS_fnc_sayMessage] call CBA_fnc_addEventHandler;
 [QGVAR(carrierInit), BIS_fnc_Carrier01Init] call CBA_fnc_addEventHandler;
@@ -44,7 +46,16 @@ if (isServer) then {
 
         forceWeatherChange;
     };
+}] call CBA_fnc_addEventHandler;
 
+[QGVAR(addIntel), {
+    params ["_title", "_text"];
+
+    if !(player diarySubjectExists QGVAR(intel)) then {
+        player createDiarySubject [QGVAR(intel), localize "str_disp_intel_title"];
+    };
+
+    player createDiaryRecord [QGVAR(intel), [_title, _text]];
 }] call CBA_fnc_addEventHandler;
 
 // Function needs to be spawned
