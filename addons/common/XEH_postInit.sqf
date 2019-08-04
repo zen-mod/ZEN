@@ -86,6 +86,16 @@
     _unit doWatch _target;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(moveInDriver), {
+    params ["_unit", "_vehicle"];
+    _unit moveInDriver _vehicle;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(unassignVehicle), {
+    params ["_unit"];
+    unassignVehicle _unit;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(setCaptive), {
     params ["_unit", "_status"];
     _unit setCaptive _status;
