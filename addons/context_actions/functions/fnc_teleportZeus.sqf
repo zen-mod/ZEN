@@ -4,13 +4,13 @@
  * Teleports Zeus to the given position or vehicle.
  *
  * Arguments:
- * 0: Position <ARRAY>
+ * None
  *
  * Return Value:
  * None
  *
  * Example:
- * [[0, 0, 0]] call zen_context_actions_fnc_teleportZeus
+ * [] call zen_context_actions_fnc_teleportZeus
  *
  * Public: No
  */
