@@ -122,6 +122,27 @@ In addition, this control type accepts an additional height argument to change h
 
 - Value &lt;ANY&gt;
 
+
+### Owners `OWNERS`
+
+An owners control that allows for the selection of multiple sides, groups with players, or players.
+Each selection type is separated into individual tabs, with the groups and players tabs implementing search bar.
+
+The subtype - `OWNERS:NOTITLE` is a slightly taller variant with no title, the display name and tooltip arguments are ignored.
+
+**Control Specific Argument(s):**
+
+- 0: Selected sides &lt;ARRAY&gt;
+- 1: Selected groups &lt;ARRAY&gt;
+- 2: Selected players &lt;ARRAY&gt;
+- 3: Default Tab &lt;NUMBER&gt;
+    - 0 - Sides, 1 - Groups, 2 - Players
+
+**Return Value:**
+
+- Selections &lt;ARRAY&gt;
+    - In same format as control specific arguments.
+
 ### Side Select `SIDES`
 
 A side selection control with clickable icons for the BLUFOR, OPFOR, Independent, and Civilian sides.

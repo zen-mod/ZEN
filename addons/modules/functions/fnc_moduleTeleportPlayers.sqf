@@ -26,7 +26,7 @@ params ["_logic"];
     _args params ["_position", "_vehicle"];
 
     // Only use players from the active tab in the owners control
-    private _players = [_owners select (_owners select 0)] call EFUNC(common,getPlayers);
+    private _players = [_owners select (_owners select 3)] call EFUNC(common,getPlayers);
 
     if (isNull _vehicle || {fullCrew [_vehicle, "", true] isEqualTo []}) then {
         if (_includeVehicles) then {

@@ -18,7 +18,7 @@
  */
 
 params ["_controlsGroup", "_rowIndex", "_currentValue"];
-_currentValue params ["_tab", "_sides", "_groups", "_players"];
+_currentValue params ["_sides", "_groups", "_players", "_tab"];
 
 _controlsGroup setVariable [QGVAR(params), [_groups, _players]];
 
@@ -41,7 +41,7 @@ private _fnc_onTabClick = {
 
     ctrlSetFocus (_controlsGroup controlsGroupCtrl (IDC_ROW_OWNERS_TABS select _selectedTab));
 
-    _currentValue set [0, _selectedTab + 1]; // +1 since one-based index
+    _currentValue set [3, _selectedTab];
 };
 
 {
@@ -49,7 +49,7 @@ private _fnc_onTabClick = {
     _ctrlButton setVariable [QGVAR(params), [_currentValue]];
     _ctrlButton ctrlAddEventHandler ["ButtonClick", _fnc_onTabClick];
 
-    if (_forEachIndex + 1 == _tab) then {
+    if (_forEachIndex == _tab) then {
         _ctrlButton call _fnc_onTabClick;
     };
 } forEach IDCS_ROW_OWNERS_BTNS;
