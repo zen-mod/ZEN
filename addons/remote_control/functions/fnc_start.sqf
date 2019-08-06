@@ -59,6 +59,13 @@ missionNamespace setVariable [VAR_UNIT, _unit];
         }, {
             params ["_unit"];
 
+            if (!isNull _unit) then {
+                private _position = _unit getPos [10, getDir _unit + 180];
+                _position set [2, (getPosATL _unit select 2) + 10];
+
+                getAssignedCuratorLogic player setVariable ["bis_fnc_moduleCuratorSetCamera_params", [_position, _unit]];
+            };
+
             objNull remoteControl _unit;
             player switchCamera cameraView;
 
