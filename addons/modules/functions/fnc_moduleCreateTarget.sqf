@@ -46,7 +46,6 @@ _defaultName = format [localize LSTRING(ModuleCreateTarget_TargetX), _defaultNam
             _attachedLaser = _attachedLaser - 1;
         };
 
-
         private _laserTargetType = ["LaserTargetW", "LaserTargetE"] select _attachedLaser;
         private _laserTarget = createVehicle [_laserTargetType, [0, 0, 0], [], 0, "NONE"];
         _laserTarget attachTo [_logic, [0, 0, 0]];
