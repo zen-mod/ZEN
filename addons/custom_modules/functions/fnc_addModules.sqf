@@ -15,19 +15,12 @@
  * Public: No
  */
 
+if (isNil QGVAR(modulesList)) exitWith {};
+
 [{
     params ["_display"];
 
     private _ctrlTree = _display displayCtrl IDC_RSCDISPLAYCURATOR_CREATE_MODULES;
-
-    // Delete the custom modules category, needed to make recent tree work with custom modules
-    for "_i" from 0 to ((_ctrlTree tvCount []) - 1) do {
-        if (_ctrlTree tvText [_i] isEqualTo QGVAR(category)) exitWith {
-            _ctrlTree tvDelete [_i];
-        };
-    };
-
-    if (isNil QGVAR(modulesList)) exitWith {};
 
     if (isNil QGVAR(categories)) then {
         GVAR(categories) = [];
