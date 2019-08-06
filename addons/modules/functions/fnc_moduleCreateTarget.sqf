@@ -39,12 +39,13 @@ _defaultName = format [localize LSTRING(ModuleCreateTarget_TargetX), _defaultNam
     publicVariable QGVAR(targetLogics);
 
     // Handle creating an attached laser target
-    _attachedLaser = _attachedLaser - 1;
-
-    if (_attachedLaser > -1) then {
-        if (_attachedLaser > 2) then {
+    if (_attachedLaser != 0) then {
+        if (_attachedLaser == 3) then {
             _attachedLaser = parseNumber ([west, independent] call BIS_fnc_sideIsEnemy);
+        } else {
+            _attachedLaser = _attachedLaser - 1;
         };
+
 
         private _laserTargetType = ["LaserTargetW", "LaserTargetE"] select _attachedLaser;
         private _laserTarget = createVehicle [_laserTargetType, [0, 0, 0], [], 0, "NONE"];
