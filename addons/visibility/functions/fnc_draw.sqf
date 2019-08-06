@@ -28,7 +28,7 @@ private _draw = false;
 {
     if (side _x != sideLogic && {(((_x getRelDir _posHigh) + 90) mod 360) < 180}) then {
         private _eyePos = eyePos _x;
-        if (lineIntersectsSurfaces [_eyePos, _pos, _x, objNull] isEqualTo [] || {count lineIntersectsSurfaces [_eyePos, _posHigh, _x, objNull] == 0}) then {
+        if (lineIntersectsSurfaces [_eyePos, _pos, _x, objNull] isEqualTo [] || {lineIntersectsSurfaces [_eyePos, _posHigh, _x, objNull] isEqualTo []}) then {
             // Check visibility through smoke
             private _visibility = [objNull, "VIEW"] checkVisibility [_eyePos, _posHigh];
             // Draw a line from each player that can see the cursor
