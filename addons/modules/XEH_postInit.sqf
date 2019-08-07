@@ -18,6 +18,7 @@ if (isServer) then {
 
 [QGVAR(autoSeekBehavior), {
     params ["_unit"];
+
     _unit setUnitPos "UP";
     _unit setSpeedMode "FULL";
     _unit setBehaviour "CARELESS";
@@ -25,6 +26,25 @@ if (isServer) then {
     _unit disableAI "TARGET";
     _unit disableAI "AUTOTARGET";
     _unit allowFleeing 0;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(applyWeather), {
+    params ["_overcast", "_rain", "_lightning", "_rainbow", "_waves", "_wind", "_gusts", "_fog"];
+
+    0 setOvercast _overcast;
+    0 setLightnings _lightning;
+    0 setRainbow _rainbow;
+    0 setWaves _waves;
+    0 setGusts _gusts;
+
+    if (isServer) then {
+        0 setRain _rain;
+        0 setFog _fog;
+        setWind _wind;
+
+        forceWeatherChange;
+    };
+
 }] call CBA_fnc_addEventHandler;
 
 // Function needs to be spawned

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Initializes the "Rank" Zeus attribute.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define IDCS [IDC_RANK_PRIVATE, IDC_RANK_CORPORAL, IDC_RANK_SERGEANT, IDC_RANK_LIEUTENANT, IDC_RANK_CAPTAIN, IDC_RANK_MAJOR, IDC_RANK_COLONEL]
 #define RANKS ["PRIVATE", "CORPORAL", "SERGEANT", "LIEUTENANT", "CAPTAIN", "MAJOR", "COLONEL"]

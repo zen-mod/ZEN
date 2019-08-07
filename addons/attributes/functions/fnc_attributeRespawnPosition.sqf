@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Initializes the "Respawn Position" Zeus attribute.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define IDCS [IDC_RESPAWNPOSITION_EAST, IDC_RESPAWNPOSITION_WEST, IDC_RESPAWNPOSITION_GUER, IDC_RESPAWNPOSITION_CIV, IDC_RESPAWNPOSITION_DISABLED]
 

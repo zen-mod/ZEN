@@ -18,5 +18,21 @@
             <German>Zeus teleportieren</German>
             <Polish>Teleportuj Zeusa</Polish>
         </Key>
+        <Key ID="STR_ZEN_Context_Actions_VehicleLogistics">
+            <English>Vehicle Logistics</English>
+            <Polish>Logistyka pojazdów</Polish>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_Rearm">
+            <English>Rearm</English>
+            <Polish>Przezbrój</Polish>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_Refuel">
+            <English>Refuel</English>
+            <Polish>Zatankuj</Polish>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_Repair">
+            <English>Repair</English>
+            <Polish>Napraw</Polish>
+        </Key>
     </Package>
 </Project>

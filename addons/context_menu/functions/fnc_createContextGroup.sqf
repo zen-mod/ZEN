@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Creates a context group with rows of actions.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params [["_contextActions", []], ["_contextLevel", 0], ["_parentRow", controlNull]];
 

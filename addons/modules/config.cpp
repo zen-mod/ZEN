@@ -50,7 +50,8 @@ class CfgPatches {
             QGVAR(moduleTeleportPlayers),
             QGVAR(moduleTurretOptics),
             QGVAR(moduleUnGarrison),
-            QGVAR(moduleVisibility)
+            QGVAR(moduleVisibility),
+            QGVAR(moduleWeather)
         };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;

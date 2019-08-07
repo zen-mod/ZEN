@@ -140,14 +140,16 @@ A slider control with an attached edit box which can both be used to change the 
 
 A percentage slider sub-type exists for this control type - `SLIDER:PERCENT`.
 When this sub-type is used, the value displayed in the edit box will be multiplied by 100 and be suffixed by a percent sign.
-The returned value will still be within the min and max values (ideally 0 to 1) and the decimals argument is not necessary.
+The returned value will still be within the min and max values (ideally 0 to 1) and the formatting argument is ignored.
 
 **Control Specific Argument(s):**
 
 - 0: Minimum value &lt;NUMBER&gt;
 - 1: Maximum value &lt;NUMBER&gt;
 - 2: Default value &lt;NUMBER&gt;
-- 3: Number of displayed decimal (0, 1, or 2) &lt;NUMBER&gt;
+- 3: Formatting &lt;NUMBER|CODE&gt;
+    - Number specifies the number of displayed decimal places (0, 1, or 2).
+    - Code specifies custom formatting which is passed the value in `_this` and **must** return a string.
 
 **Return Value:**
 
@@ -155,10 +157,11 @@ The returned value will still be within the min and max values (ideally 0 to 1) 
 
 ### Toolbox `TOOLBOX`
 
-A toolbox selection control with support for 2 to 5 options.
+A toolbox selection control with support for any number of rows and columns.
+The subtype - `TOOLBOX:WIDE` is a wider variant that works better with a large number of columns.
 
-Two sub-types exist for this control type, mostly for QOL - `TOOLBOX:YESNO` and `TOOLBOX:ENABLED`.
-When either sub-type is used, it is not necessary to specify the option names.
+Two additional sub-types exist for this control type, mostly for QOL - `TOOLBOX:YESNO` and `TOOLBOX:ENABLED`.
+When either sub-type is used, only the default value needs to be specified.
 
 The return value type depends on the given default value:
 - `BOOL` type is only available for toolbox controls with 2 options
@@ -167,7 +170,11 @@ The return value type depends on the given default value:
 **Control Specific Argument(s):**
 
 - 0: Default value &lt;BOOL|NUMBER&gt;
-- 1: Option names &lt;ARRAY&gt;
+- 1: Number of rows &lt;NUMBER&gt;
+- 2: Number of columns &lt;NUMBER&gt;
+- 3: Option names &lt;ARRAY&gt;
+- 4: Height &lt;NUMBER&gt;
+    - Optional, will be calculated from the number of rows when unspecified.
 
 **Return Value:**
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001, 3Mydlo3
  * Heals the given unit.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 

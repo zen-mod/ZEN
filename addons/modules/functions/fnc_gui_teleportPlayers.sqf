@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Initializes the "Teleport Players" Zeus module display.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define TAB_BUTTON_IDCS [\
     IDC_TELEPORTPLAYERS_BUTTON_SIDES,\

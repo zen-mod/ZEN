@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror, mharis001
  * Allows Zeus to click to indicate position in 3D or on map.
@@ -27,7 +28,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 // Handle only one object passed, convert to array for loops
 #define GET_ARRAY(x) (if !(x isEqualType []) then {[x]} else {x})

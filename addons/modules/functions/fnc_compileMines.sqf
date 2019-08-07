@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Compiles a list of all Zeus placeable mines.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _minesCache = [[], []];
 _minesCache params ["_configNames", "_displayNames"];

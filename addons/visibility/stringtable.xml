@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Visibility">
+        <Key ID="STR_ZEN_Visibility_Enabled_Description">
+            <English>Indicates when a player can see the Zeus' cursor.</English>
+        </Key>
+        <Key ID="STR_ZEN_Visibility_Visible">
+            <English>VISIBLE</English>
+        </Key>
+    </Package>
+</Project>

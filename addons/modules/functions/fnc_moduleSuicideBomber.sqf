@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Zeus module function to make a unit a suicide bomber.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define EXPLOSIVES ["R_TBG32V_F", "M_Mo_120mm_AT", "Bo_GBU12_LGB"]
 #define DISTANCE_FAR 15
@@ -49,7 +49,7 @@ if (_unit getVariable [QGVAR(isBomber), false]) exitWith {
 [LSTRING(ModuleSuicideBomber), [
     ["SIDES", LSTRING(ActivationSide), west],
     ["SLIDER", LSTRING(ActivationRadius), [5, 50, 10, 0]],
-    ["TOOLBOX", LSTRING(ExplosionSize), [0, ["str_small", ELSTRING(common,Medium), "str_large"]]],
+    ["TOOLBOX", LSTRING(ExplosionSize), [0, 1, 3, ["str_small", ELSTRING(common,Medium), "str_large"]]],
     ["TOOLBOX:YESNO", LSTRING(ModuleSuicideBomber_DeadManSwitch), false],
     ["TOOLBOX:YESNO", [LSTRING(ModuleSuicideBomber_AutoSeek), LSTRING(ModuleSuicideBomber_AutoSeek_Tooltip)], false]
 ], {

@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "\a3\ui_f\hpp\defineResinclDesign.inc" // can't put this in config due to undef error
 /*
  * Author: mharis001
  * Initializes the Zeus Display.
@@ -13,8 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
-#include "\a3\ui_f\hpp\defineResinclDesign.inc" // can't put this in config due to undef error
 
 params ["_display"];
 

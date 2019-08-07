@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Handles clicking the skills button.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _entity = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 private _unit   = if (_entity isEqualType grpNull) then {leader _entity} else {_entity};

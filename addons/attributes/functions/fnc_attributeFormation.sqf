@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Initializes the "Formation" Zeus attribute.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define IDCS [IDC_FORMATION_WEDGE, IDC_FORMATION_VEE, IDC_FORMATION_LINE, IDC_FORMATION_COLUMN, IDC_FORMATION_FILE, IDC_FORMATION_STAGCOLUMN, IDC_FORMATION_ECHLEFT, IDC_FORMATION_ECHRIGHT, IDC_FORMATION_DIAMOND, IDC_FORMATION_DEFAULT]
 #define FORMATIONS ["WEDGE", "VEE", "LINE", "COLUMN", "FILE", "STAG COLUMN", "ECH LEFT", "ECH RIGHT", "DIAMOND", "NO CHANGE"]

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Returns entities that are selected by Zeus based on passed entity.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_entity", ["_canBeEmpty", true]];
 TRACE_1("Params",_entity);

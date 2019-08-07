@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * Un-garrisons given units from their buildings.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 {
     if (local _x && {!isPlayer _x} && {_x getVariable [QGVAR(garrisoned), false]}) then {

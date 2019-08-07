@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Zeus module function to create a target logic.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic"];
 
@@ -39,11 +39,11 @@ _defaultName = format [localize LSTRING(ModuleCreateTarget_TargetX), _defaultNam
     publicVariable QGVAR(targetLogics);
 
     // Handle creating an attached laser target
-    _attachedLaser = _attachedLaser - 1;
-
-    if (_attachedLaser > -1) then {
-        if (_attachedLaser > 2) then {
+    if (_attachedLaser != 0) then {
+        if (_attachedLaser == 3) then {
             _attachedLaser = parseNumber ([west, independent] call BIS_fnc_sideIsEnemy);
+        } else {
+            _attachedLaser = _attachedLaser - 1;
         };
 
         private _laserTargetType = ["LaserTargetW", "LaserTargetE"] select _attachedLaser;

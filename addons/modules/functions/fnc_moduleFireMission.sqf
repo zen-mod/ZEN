@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Zeus module function to perform an artillery fire mission.
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicles", "_target", "_spread", "_ammo", "_rounds"];
 
@@ -41,5 +41,5 @@ if (_artilleryETA == -1) then {
         [QEGVAR(common,doArtilleryFire), [_x, _targetPos, _ammo, _rounds], _x] call CBA_fnc_targetEvent;
     } forEach _vehicles;
 
-    [LSTRING(ModuleFireMission_ArtilleryETA), _artilleryETA] call EFUNC(common,showMessage);
+    [LSTRING(ModuleFireMission_ArtilleryETA), _artilleryETA toFixed 1] call EFUNC(common,showMessage);
 };

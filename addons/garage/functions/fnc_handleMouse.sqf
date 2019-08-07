@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Handles mouse movement for repositioning and rotating the camera.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["", "_mouseX", "_mouseY"];
 GVAR(mouseButtons) params ["_mouseLMB", "_mouseRMB"];

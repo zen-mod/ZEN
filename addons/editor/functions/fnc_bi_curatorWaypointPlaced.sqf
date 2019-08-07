@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Bohemia Interactive, mharis001, Kex
  * Handles placement of a waypoint by Zeus.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["", "_group", "_waypointID"];
 
