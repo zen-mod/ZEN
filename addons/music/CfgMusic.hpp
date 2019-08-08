@@ -2,13 +2,13 @@ class CfgMusic {
     // This Is War a
     class LeadTrack01a_F {
         musicClass = "Lead";
-        name = "$STR_ZEN_Music_ThisIsWarPartOne";
+        name = CSTRING(ThisIsWarPartOne);
     };
 
     // This Is War b
     class LeadTrack01b_F {
         musicClass = "Lead";
-        name = "$STR_ZEN_Music_ThisIsWarPartTwo";
+        name = CSTRING(ThisIsWarPartTwo);
     };
 
     // This Is War (VR Remix)
@@ -99,26 +99,26 @@ class CfgMusic {
     // Arma 2 Eagle Wing
     class Defcon {
         musicClass = "Stealth";
-        name = "STR_ZEN_Music_EagleWing_Defcon";
+        name = CSTRING(EagleWing_Defcon);
     };
 
     class Fallout {
         musicClass = "Stealth";
-        name = "STR_ZEN_Music_EagleWing_Fallout";
+        name = CSTRING(EagleWing_Fallout);
     };
 
     class MAD {
         musicClass = "Stealth";
-        name = "STR_ZEN_Music_EagleWing_MAD";
+        name = CSTRING(EagleWing_MAD);
     };
 
     class SkyNet {
         musicClass = "Stealth";
-        name = "STR_ZEN_Music_EagleWing_SkyNet";
+        name = CSTRING(EagleWing_SkyNet);
     };
 
     class Wasteland {
         musicClass = "Stealth";
-        name = "STR_ZEN_Music_EagleWing_Wasteland";
+        name = CSTRING(EagleWing_Wasteland);
     };
 };
