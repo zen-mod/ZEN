@@ -15,18 +15,20 @@
  * Public: No
  */
 
-IF (!GVAR(declutterEmptyTree)) exitWith {};
+if (!GVAR(declutterEmptyTree)) exitWith {};
 
 params ["_display"];
 
-// Get faction names for west, east, independent, and civilian
-private _factionNames = [];
-
-{
-    if (getNumber (_x >> "side") in [0, 1, 2, 3]) then {
-        _factionNames pushBack getText (_x >> "displayName");
+// Get faction names for west, east, independent, and civilian sides
+if (isNil QGVAR(factionNames)) then {
+    GVAR(factionNames) = configProperties [configFile >> "CfgFactionClasses", "isClass _x"] select {
+        getNumber (_x >> "side") in [0, 1, 2, 3]
+    } apply {
+        getText (_x >> "displayName")
     };
-} forEach ("true" configClasses (configFile >> "CfgFactionClasses"));
+};
+
+private _factionNames = GVAR(factionNames);
 
 // Remove factions from empty tree
 // Backwards since tree item paths will change as items are deleted
