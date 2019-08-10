@@ -49,4 +49,9 @@ class ZEN_WaypointTypes {
         type = "SCRIPTED";
         script = "\a3\functions_f_orange\waypoints\fn_wpDemine.sqf";
     };
+    class Paradrop {
+        displayName = ECSTRING(ai,Paradrop);
+        type = "SCRIPTED";
+        script = QPATHTOEF(ai,functions\fnc_waypointParadrop.sqf);
+    };
 };
