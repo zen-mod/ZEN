@@ -65,6 +65,11 @@ _ctrlEdit ctrlAddEventHandler ["KeyUp", {
     (_ctrlEdit getVariable QGVAR(params)) params ["_ctrlSlider"];
 
     private _value = parseNumber ctrlText _ctrlEdit;
+
+    if (_isPercentage) then {
+        _value = _value / 100;
+    };
+
     _ctrlSlider sliderSetPosition _value;
 }];
 
