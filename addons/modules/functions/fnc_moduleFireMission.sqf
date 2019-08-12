@@ -36,18 +36,9 @@ private _artilleryETA = 1e9;
 if (_artilleryETA == -1) then {
     [LSTRING(ModuleFireMission_NotInRange)] call EFUNC(common,showMessage);
 } else {
-    // For small spread values, use doArtilleryFire directly to avoid delay
-    // between firing caused by using doArtilleryFire one round at a time
-    if (_spread <= 10) then {
-        {
-            [QEGVAR(common,doArtilleryFire), [_x, _position, _ammo, _rounds], _x] call CBA_fnc_targetEvent;
-        } forEach _vehicles;
-    } else {
-        {
-            [QGVAR(fireArtillery), [_x, _position, _spread, _ammo, _rounds], _x] call CBA_fnc_targetEvent;
-        } forEach _vehicles;
-    };
-
+    {
+        [QGVAR(fireArtillery), [_x, _position, _spread, _ammo, _rounds], _x] call CBA_fnc_targetEvent;
+    } forEach _vehicles;
 
     [LSTRING(ModuleFireMission_ArtilleryETA), _artilleryETA toFixed 1] call EFUNC(common,showMessage);
 };

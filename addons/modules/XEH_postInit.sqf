@@ -50,6 +50,12 @@ if (isServer) then {
 [QGVAR(fireArtillery), {
     params ["_unit", "_position", "_spread", "_ammo", "_rounds"];
 
+    // For small spread values, use doArtilleryFire directly to avoid delay
+    // between firing caused by using doArtilleryFire one round at a time
+    if (_spread <= 10) exitWith {
+        _unit doArtilleryFire [_position, _ammo, _rounds];
+    };
+
     [{
         params ["_unit", "_position", "_spread", "_ammo", "_rounds", "_fired"];
 
