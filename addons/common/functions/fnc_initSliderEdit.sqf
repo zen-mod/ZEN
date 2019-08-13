@@ -33,7 +33,7 @@
 
 params ["_ctrlSlider", "_ctrlEdit", "_min", "_max", "_value", "_speed", ["_formatting", 0, [0, {}]], ["_isPercentage", false, [false]]];
 
-private _fnc_getFormattedValue = {
+private _fnc_formatValue = {
     if (_isPercentage) then {
         format [localize "STR_3DEN_percentageUnit", round (_value * 100), "%"];
     } else {
@@ -48,17 +48,17 @@ private _fnc_getFormattedValue = {
 _ctrlSlider sliderSetRange [_min, _max];
 _ctrlSlider sliderSetSpeed [_speed, _speed];
 _ctrlSlider sliderSetPosition _value;
-_ctrlSlider setVariable [QGVAR(params), [_ctrlEdit, _formatting, _isPercentage, _fnc_getFormattedValue]];
+_ctrlSlider setVariable [QGVAR(params), [_ctrlEdit, _formatting, _isPercentage, _fnc_formatValue]];
 
 _ctrlSlider ctrlAddEventHandler ["SliderPosChanged", {
     params ["_ctrlSlider", "_value"];
-    (_ctrlSlider getVariable QGVAR(params)) params ["_ctrlEdit", "_formatting", "_isPercentage", "_fnc_getFormattedValue"];
+    (_ctrlSlider getVariable QGVAR(params)) params ["_ctrlEdit", "_formatting", "_isPercentage", "_fnc_formatValue"];
 
-    _ctrlEdit ctrlSetText call _fnc_getFormattedValue;
+    _ctrlEdit ctrlSetText call _fnc_formatValue;
 }];
 
-_ctrlEdit ctrlSetText call _fnc_getFormattedValue;
-_ctrlEdit setVariable [QGVAR(params), [_ctrlSlider, _formatting, _isPercentage, _fnc_getFormattedValue]];
+_ctrlEdit ctrlSetText call _fnc_formatValue;
+_ctrlEdit setVariable [QGVAR(params), [_ctrlSlider, _formatting, _isPercentage, _fnc_formatValue]];
 
 _ctrlEdit ctrlAddEventHandler ["KeyUp", {
     params ["_ctrlEdit"];
@@ -75,8 +75,8 @@ _ctrlEdit ctrlAddEventHandler ["KeyUp", {
 
 _ctrlEdit ctrlAddEventHandler ["KillFocus", {
     params ["_ctrlEdit"];
-    (_ctrlEdit getVariable QGVAR(params)) params ["_ctrlSlider", "_formatting", "_isPercentage", "_fnc_getFormattedValue"];
+    (_ctrlEdit getVariable QGVAR(params)) params ["_ctrlSlider", "_formatting", "_isPercentage", "_fnc_formatValue"];
 
     private _value = sliderPosition _ctrlSlider;
-    _ctrlEdit ctrlSetText call _fnc_getFormattedValue;
+    _ctrlEdit ctrlSetText call _fnc_formatValue;
 }];

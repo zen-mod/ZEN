@@ -163,7 +163,5 @@
 
 #define CAS_WEAPON_TYPES [["machinegun"], ["missilelauncher"], ["machinegun", "missilelauncher"], ["bomblauncher"]]
 
-#define DEGREE_SYMBOL (toString [176])
-
 #define MS_TO_KMH(value) ((value) * 3.6)
 #define KMH_TO_MS(value) ((value) / 3.6)

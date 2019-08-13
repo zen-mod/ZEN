@@ -15,8 +15,6 @@
  * Public: No
  */
 
-#define DEGREE_SYMBOL (toString [176])
-
 params ["_marker"];
 
 private _display = findDisplay IDD_RSCDISPLAYCURATOR;
