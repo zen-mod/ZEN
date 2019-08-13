@@ -65,6 +65,12 @@ The mine density option affects the spacing of the mines from: Very Low = 30 m t
 
 !> Caution should be used when using a large area with a high mine density.
 
+## Create Teleporter
+
+Creates a teleport location at the attached object or newly created flagpole object if not attached.
+Players can use the "Teleport" action on any teleporter objects to teleport between them.
+When used on a vehicle, players will first be teleported into an empty seat if possible.
+
 ## Damage Buildings
 
 Sets the damaged state of the nearest building to the module or all buildings within the given radius, depending on the selected mode.
