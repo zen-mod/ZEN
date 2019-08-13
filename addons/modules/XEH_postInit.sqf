@@ -8,7 +8,44 @@ if (isServer) then {
 
     // Public variable to track created target logics
     missionNamespace setVariable [QGVAR(targetLogics), [], true];
+
+    // Public variable to track created teleporter objects
+    missionNamespace setVariable [QGVAR(teleporters), [], true];
+
+    [QGVAR(createTeleporter), {
+        params ["_object", "_position", "_name"];
+
+        // Create a flag pole object if an object wasn't given
+        if (isNull _object) then {
+            _object = createVehicle ["FlagPole_F", _position, [], 0, "NONE"];
+            [QEGVAR(common,addObjects), [[_object]]] call CBA_fnc_localEvent;
+        };
+
+        // Add teleport action to new teleporter object
+        private _jipID = [QGVAR(addTeleporterAction), _object] call CBA_fnc_globalEventJIP;
+        [_jipID, _object] call CBA_fnc_removeGlobalEventJIP;
+
+        // Add EH to remove object from the teleporters list if it is deleted
+        _object addEventHandler ["Deleted", {
+            params ["_object"];
+
+            private _index = GVAR(teleporters) findIf {
+                _object isEqualTo (_x select 0);
+            };
+
+            if (_index != -1) then {
+                GVAR(teleporters) deleteAt _index;
+                publicVariable QGVAR(teleporters);
+            };
+        }];
+
+        // Add new teleport location and broadcast the updated list
+        GVAR(teleporters) pushBack [_object, _name];
+        publicVariable QGVAR(teleporters);
+    }] call CBA_fnc_addEventHandler;
 };
+
+[QGVAR(addTeleporterAction), LINKFUNC(addTeleporterAction)] call CBA_fnc_addEventHandler;
 
 [QGVAR(sayMessage), BIS_fnc_sayMessage] call CBA_fnc_addEventHandler;
 [QGVAR(carrierInit), BIS_fnc_Carrier01Init] call CBA_fnc_addEventHandler;

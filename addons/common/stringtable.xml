@@ -212,6 +212,9 @@
             <German>Höhe (m)</German>
             <Polish>Wysokość (m)</Polish>
         </Key>
+        <Key ID="STR_ZEN_Common_Teleport">
+            <English>Teleport</English>
+        </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects">
             <English>Add Objects to Curators</English>
             <Russian>Сдалвть объекты редактируемыми</Russian>

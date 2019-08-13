@@ -1,3 +1,4 @@
+PREP(addTeleporterAction);
 PREP(bi_moduleMine);
 PREP(compileAircraft);
 PREP(compileCAS);
@@ -32,6 +33,7 @@ PREP(moduleConvoyParameters);
 PREP(moduleCreateIED);
 PREP(moduleCreateMinefield);
 PREP(moduleCreateTarget);
+PREP(moduleCreateTeleporter);
 PREP(moduleDamageBuildings);
 PREP(moduleEarthquake);
 PREP(moduleEditableObjects);

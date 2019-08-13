@@ -22,6 +22,7 @@ class CfgPatches {
             QGVAR(moduleCreateIED),
             QGVAR(moduleCreateMinefield),
             QGVAR(moduleCreateTarget),
+            QGVAR(moduleCreateTeleporter),
             QGVAR(moduleDamageBuildings),
             QGVAR(moduleEarthquake),
             QGVAR(moduleEditableObjects),

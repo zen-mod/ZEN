@@ -1256,6 +1256,9 @@
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogAltitude_Tooltip">
             <English>Sets the base altitude of the fog layer, in meters above/below sea level.</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateTeleporter">
+            <English>Create Teleporter</English>
+        </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_AI">
             <English>AI</English>
