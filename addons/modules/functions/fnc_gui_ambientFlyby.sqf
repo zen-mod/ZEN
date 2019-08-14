@@ -97,6 +97,10 @@ private _ctrlDistanceEdit   = _display displayCtrl IDC_AMBIENTFLYBY_DISTANCE_EDI
 private _ctrlSpeed = _display displayCtrl IDC_AMBIENTFLYBY_SPEED;
 _ctrlSpeed lbSetCurSel 1;
 
+private _ctrlAmountSlider = _display displayCtrl IDC_AMBIENTFLYBY_AMOUNT_SLIDER;
+private _ctrlAmountEdit   = _display displayCtrl IDC_AMBIENTFLYBY_AMOUNT_EDIT;
+[_ctrlAmountSlider, _ctrlAmountEdit, 1, 6, 1, 1] call EFUNC(common,initSliderEdit);
+
 private _fnc_onUnload = {
     private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
     if (isNull _logic) exitWith {};
@@ -128,7 +132,10 @@ private _fnc_onConfirm = {
     private _ctrlSpeed = _display displayCtrl IDC_AMBIENTFLYBY_SPEED;
     private _speed = lbCurSel _ctrlSpeed;
 
-    [QGVAR(moduleAmbientFlyby), [_aircraftType, ASLtoAGL getPosASL _logic, _height, _distance, _direction, _speed]] call CBA_fnc_serverEvent;
+    private _ctrlAmountSlider = _display displayCtrl IDC_AMBIENTFLYBY_AMOUNT_SLIDER;
+    private _amount = sliderPosition _ctrlAmountSlider;
+
+    [QGVAR(moduleAmbientFlyby), [_aircraftType, ASLtoAGL getPosASL _logic, _height, _distance, _direction, _speed, _amount]] call CBA_fnc_serverEvent;
 };
 
 _display displayAddEventHandler ["Unload", _fnc_onUnload];
