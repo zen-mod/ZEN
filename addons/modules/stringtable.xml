@@ -202,7 +202,7 @@
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_AircraftSelect">
             <English>Aircraft Selection</English>
             <Russian>Выбор воздушной техники</Russian>
-            <German>Flugzeugauswahl</German>
+            <German>Luftfahrzeugauswahl</German>
             <Polish>Wybór samolotu</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_FlyTowards">
@@ -214,13 +214,13 @@
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_FlyTowards_Tooltip">
             <English>Aircraft will fly towards this direction from the opposite direction.</English>
             <Russian>Воздушная техника пролетит в указанном направлении</Russian>
-            <German>Flugzeuge werden aus der entgegengesetzten Richtung in diese Richtung fliegen.</German>
+            <German>Luftfahrzeuge werden aus der entgegengesetzten Richtung in diese Richtung fliegen.</German>
             <Polish>Samolot będzie leciał w tym kierunku, nadlatując z przeciwnego kierunku.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Tooltip">
             <English>Sets the height that the aircraft will fly at, in meters.</English>
             <Russian>Устанавливает высоту пролёта в метрах</Russian>
-            <German>Legt die Höhe fest, in der das Flugzeug fliegen soll, in Metern.</German>
+            <German>Legt die Höhe fest, in der das Luftfahrzeug fliegen soll, in Metern.</German>
             <Polish>Ustala na jakiej wysokości będzie leciał samolot, w metrach.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Distance">
@@ -232,14 +232,22 @@
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Distance_Tooltip">
             <English>Sets the distance that the aircraft will start out from, in meters.</English>
             <Russian>Указывает дистанцию в метрах до точки появления</Russian>
-            <German>Legt die Entfernung fest, aus der das Flugzeug starten soll, in Metern.</German>
+            <German>Legt die Entfernung fest, aus der das Luftfahrzeug starten soll, in Metern.</German>
             <Polish>Ustala odległość w jakiej samolot rozpocznie lot, w metrach.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Speed_Tooltip">
             <English>Sets how fast the aircraft will fly.</English>
             <Russian>Указывает скорость полёта</Russian>
-            <German>Legt fest, wie schnell das Flugzeug fliegen soll.</German>
+            <German>Legt fest, wie schnell das Luftfahrzeug fliegen soll.</German>
             <Polish>Ustala z jaką prędkością będzie leciał samolot.</Polish>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Amount">
+            <English>Amount</English>
+            <German>Menge</German>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Amount_Tooltip">
+            <English>Sets the Amount of aircraft that will be spawned.</English>
+            <German>Legt die Menge Luftfahrzeugen fest, die erzeugt werden sollen.</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAssignZeus">
             <English>Promote To Zeus</English>

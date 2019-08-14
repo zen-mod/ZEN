@@ -863,7 +863,7 @@ BEGIN_MODULE_DIALOG(RscAmbientFlyby)
         x = 0;
         y = 0;
         w = POS_W(26);
-        h = POS_H(8.8);
+        h = POS_H(9.9);
         class controls {
             class AircraftSelect: RscControlsGroupNoScrollbars {
                 idc = -1;
@@ -991,6 +991,25 @@ BEGIN_MODULE_DIALOG(RscAmbientFlyby)
                 y = POS_H(7.8);
                 columns = 3;
                 strings[] = {"$STR_A3_Slow", "$STR_A3_Normal", "$STR_A3_Fast"};
+            };
+            class AmountLabel: EGVAR(attributes,RscLabel) {
+                text = CSTRING(ModuleAmbientFlyby_Amount);
+                tooltip = CSTRING(ModuleAmbientFlyby_Amount_Tooltip);
+                y = POS_H(8.9);
+            };
+            class AmountSlider: HeightSlider {
+                idc = IDC_AMBIENTFLYBY_AMOUNT_SLIDER;
+                x = POS_W(10.1);
+                y = POS_H(8.9);
+                w = POS_W(13.4);
+                h = POS_H(1);
+            };
+            class AmountEdit: HeightEdit {
+                idc = IDC_AMBIENTFLYBY_AMOUNT_EDIT;
+                x = POS_W(23.6);
+                y = POS_H(8.9);
+                w = POS_W(2.4);
+                h = POS_H(1);
             };
         };
     };
