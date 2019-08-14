@@ -246,7 +246,7 @@
             <German>Menge</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Amount_Tooltip">
-            <English>Sets the Amount of aircraft that will be spawned.</English>
+            <English>Sets the amount of aircraft that will be spawned.</English>
             <German>Legt die Menge Luftfahrzeugen fest, die erzeugt werden sollen.</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAssignZeus">
