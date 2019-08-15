@@ -21,7 +21,7 @@
  * Public: No
  */
 
-#define SPAWN_OFFSET 30
+#define SPAWN_OFFSET -30
 
 params ["_aircraftType", "_position", "_height", "_distance", "_direction", "_speed", "_amount"];
 
@@ -51,15 +51,13 @@ private _aircrafts = [];
 
 // _amount will be a value from 0 to 5
 for "_i" from 0 to (_amount) do {
-    // we don't want to spawn each aircraft inside each other
-    private _spawnOffset = _i * SPAWN_OFFSET;
-    _startPos set [0, (_startPos select 0) + _spawnOffset];
-    _startPos set [1, (_startPos select 1) + _spawnOffset];
-
     // Spawn aircraft at start position and set its fly direction
     private _aircraft = createVehicle [_aircraftType, _startPos, [], 0, "FLY"];
     _aircraft setPos _startPos;
     _aircraft setDir _direction;
+
+    // set new start position -> we don't want to spawn each aircraft inside each other
+    _startPos = _aircraft modelToWorld [SPAWN_OFFSET, SPAWN_OFFSET, 0];
 
     if (_simulation == "airplanex") then {
         _aircraft setVelocity [sin _direction * 100, cos _direction * 100, 0];
