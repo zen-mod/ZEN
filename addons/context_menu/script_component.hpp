@@ -38,8 +38,8 @@
 #define SPACING_H POS_H(0.2)
 
 #define SETUP_ACTION_VARS \
-    private _contextPosASL = call FUNC(getContextPos);\
-    private _hoveredEntity = GVAR(hovered);\
+    private _contextPosASL = call FUNC(getContextPos); \
+    private _hoveredEntity = GVAR(hovered); \
     +GVAR(selected) params ["_selectedObjects", "_selectedGroups", "_selectedWaypoints", "_selectedMarkers"]
 
-#define ACTION_PARAMS [_contextPosASL, _selectedObjects, _selectedGroups, _selectedWaypoints, _selectedMarkers, _hoveredEntity]
+#define ACTION_PARAMS [_contextPosASL, _selectedObjects, _selectedGroups, _selectedWaypoints, _selectedMarkers, _hoveredEntity, _arguments]
