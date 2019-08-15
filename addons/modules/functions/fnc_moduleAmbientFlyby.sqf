@@ -21,6 +21,8 @@
  * Public: No
  */
 
+#define SPAWN_OFFSET 30
+
 params ["_aircraftType", "_position", "_height", "_distance", "_direction", "_speed", "_amount"];
 
 // Convert direction from 0 to 7 index to degrees
@@ -47,9 +49,10 @@ _group allowFleeing 0;
 
 private _aircrafts = [];
 
-for "_i" from 0 to (_amount - 1) do {
+// _amount will be a value from 0 to 5
+for "_i" from 0 to (_amount) do {
     // we don't want to spawn each aircraft inside each other
-    private _spawnOffset = _i * 30; // TODO replace MAGIC NUMBER with define
+    private _spawnOffset = _i * SPAWN_OFFSET;
     _startPos set [0, (_startPos select 0) + _spawnOffset];
     _startPos set [1, (_startPos select 1) + _spawnOffset];
 
@@ -72,12 +75,14 @@ for "_i" from 0 to (_amount - 1) do {
     _aircraft disableAI "TARGET";
     _aircraft disableAI "AUTOTARGET";
     _aircraft setCaptive true;
+    {
+        _x setCaptive true;
+    } forEach crew _aircraft;
 
     _aircrafts pushBack _aircraft;
 };
 
-// selecting the last spawned aircraft as leader makes the movement smarter
-_group selectLeader commander (_aircrafts select (count _aircrafts - 1));
+_group selectLeader commander (_aircrafts select 0);
 
 // Create a move waypoint on the end position with proper behaviour and speed
 private _waypoint = _group addWaypoint [_endPos, -1];
@@ -88,3 +93,8 @@ _waypoint setWaypointSpeed _speed;
 
 // Delete aircraft, crew, and group once end waypoint is reached
 _waypoint setWaypointStatements ["true", "private _group = group this; private _aircrafts = []; {if !(vehicle _x in _aircrafts) then {_aircrafts pushback vehicle _x}; deleteVehicle _x} forEach thisList; {deleteVehicle _x;} forEach _aircrafts; deleteGroup _group"];
+
+// add aircrafts to curators
+{
+    _x addCuratorEditableObjects [_aircrafts, true];
+} forEach allCurators;

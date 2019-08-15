@@ -997,19 +997,11 @@ BEGIN_MODULE_DIALOG(RscAmbientFlyby)
                 tooltip = CSTRING(ModuleAmbientFlyby_Amount_Tooltip);
                 y = POS_H(8.9);
             };
-            class AmountSlider: HeightSlider {
-                idc = IDC_AMBIENTFLYBY_AMOUNT_SLIDER;
-                x = POS_W(10.1);
+            class Amount: Direction {
+                idc = IDC_AMBIENTFLYBY_AMOUNT;
                 y = POS_H(8.9);
-                w = POS_W(13.4);
-                h = POS_H(1);
-            };
-            class AmountEdit: HeightEdit {
-                idc = IDC_AMBIENTFLYBY_AMOUNT_EDIT;
-                x = POS_W(23.6);
-                y = POS_H(8.9);
-                w = POS_W(2.4);
-                h = POS_H(1);
+                columns = 6;
+                strings[] = {"1", "2", "3", "4", "5", "6"};
             };
         };
     };
