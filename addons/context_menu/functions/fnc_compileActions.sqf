@@ -104,7 +104,7 @@ missionNamespace setVariable [QGVAR(actions), _contextActions];
             _iconColor,
             _statement,
             _condition,
-            _arguments,
+            _args,
             _insertChildren,
             _modifierFunction
         ],

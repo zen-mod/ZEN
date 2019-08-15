@@ -23,7 +23,7 @@ private _activeActions = [];
 
 {
     _x params ["_action", "_children", "_priority"];
-    _action params ["", "", "", "", "_statement", "_condition", "_arguments", "_insertChildren", "_modifierFunction"];
+    _action params ["", "", "", "", "_statement", "_condition", "_args", "_insertChildren", "_modifierFunction"];
 
     // Check if the action should modified first
     if !(_modifierFunction isEqualTo {}) then {

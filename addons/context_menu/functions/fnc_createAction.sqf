@@ -29,7 +29,7 @@ params [
     ["_iconArg", "", ["", []]],
     ["_statement", {}, [{}]],
     ["_condition", {true}, [{}]],
-    ["_arguments", []],
+    ["_args", []],
     ["_insertChildren", {}, [{}]],
     ["_modifierFunction", {}, [{}]]
 ];
@@ -46,7 +46,7 @@ _iconArg params [
     _iconColor,
     _statement,
     _condition,
-    _arguments,
+    _args,
     _insertChildren,
     _modifierFunction
 ]

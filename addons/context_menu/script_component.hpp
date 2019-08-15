@@ -42,4 +42,4 @@
     private _hoveredEntity = GVAR(hovered); \
     +GVAR(selected) params ["_selectedObjects", "_selectedGroups", "_selectedWaypoints", "_selectedMarkers"]
 
-#define ACTION_PARAMS [_contextPosASL, _selectedObjects, _selectedGroups, _selectedWaypoints, _selectedMarkers, _hoveredEntity, _arguments]
+#define ACTION_PARAMS [_contextPosASL, _selectedObjects, _selectedGroups, _selectedWaypoints, _selectedMarkers, _hoveredEntity, _args]

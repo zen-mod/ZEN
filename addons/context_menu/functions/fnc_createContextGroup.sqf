@@ -35,7 +35,7 @@ private _numberOfRows = 0;
 
 {
     _x params ["_action", "_children"];
-    _action params ["", "_displayName", "_icon", "_iconColor", "_statement", "_condition", "_arguments"];
+    _action params ["", "_displayName", "_icon", "_iconColor", "_statement", "_condition", "_args"];
 
     // Create context row control
     private _ctrlContextRow = _display ctrlCreate [QGVAR(row), IDC_CONTEXT_ROW, _ctrlContextGroup];
@@ -92,10 +92,7 @@ private _numberOfRows = 0;
 
         if (_button isEqualTo 0) then {
             private _ctrlContextRow = ctrlParentControlsGroup _ctrlMouse;
-
-            private _condition = _ctrlContextRow getVariable QGVAR(condition);
-            private _statement = _ctrlContextRow getVariable QGVAR(statement);
-            private _arguments = _ctrlContextRow getVariable QGVAR(arguments);
+            (_ctrlContextRow getVariable QGVAR(params)) params ["_condition", "_statement", "_args"];
 
             // Exit on empty statement, the menu should not close when the action does nothing
             if (_statement isEqualTo {}) exitWith {};
@@ -109,9 +106,7 @@ private _numberOfRows = 0;
         };
     }];
 
-    _ctrlContextRow setVariable [QGVAR(condition), _condition];
-    _ctrlContextRow setVariable [QGVAR(statement), _statement];
-    _ctrlContextRow setVariable [QGVAR(arguments), _arguments];
+    _ctrlContextRow setVariable [QGVAR(params), [_condition, _statement, _args]];
     _ctrlContextRow setVariable [QGVAR(children), _children];
 
     // Update row position in group
