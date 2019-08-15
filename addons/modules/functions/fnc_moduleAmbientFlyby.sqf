@@ -49,8 +49,7 @@ _group allowFleeing 0;
 
 private _aircrafts = [];
 
-// _amount will be a value from 0 to 5
-for "_i" from 0 to (_amount) do {
+for "_i" from 0 to (_amount - 1) do {
     // Spawn aircraft at start position and set its fly direction
     private _aircraft = createVehicle [_aircraftType, _startPos, [], 0, "FLY"];
     _aircraft setPos _startPos;
@@ -93,6 +92,4 @@ _waypoint setWaypointSpeed _speed;
 _waypoint setWaypointStatements ["true", "private _group = group this; private _aircrafts = []; {if !(vehicle _x in _aircrafts) then {_aircrafts pushback vehicle _x}; deleteVehicle _x} forEach thisList; {deleteVehicle _x;} forEach _aircrafts; deleteGroup _group"];
 
 // add aircrafts to curators
-{
-    _x addCuratorEditableObjects [_aircrafts, true];
-} forEach allCurators;
+[QEGVAR(common,addObjects), [_aircrafts]] call CBA_fnc_localEvent;

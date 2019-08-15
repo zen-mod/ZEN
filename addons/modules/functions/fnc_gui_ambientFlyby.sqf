@@ -97,8 +97,8 @@ private _ctrlDistanceEdit   = _display displayCtrl IDC_AMBIENTFLYBY_DISTANCE_EDI
 private _ctrlSpeed = _display displayCtrl IDC_AMBIENTFLYBY_SPEED;
 _ctrlSpeed lbSetCurSel 1;
 
-private _ctrlAmountSlider = _display displayCtrl IDC_AMBIENTFLYBY_AMOUNT;
-_ctrlAmountSlider lbSetCurSel 0;
+private _ctrlAmount = _display displayCtrl IDC_AMBIENTFLYBY_AMOUNT;
+_ctrlAmount lbSetCurSel 0;
 
 private _fnc_onUnload = {
     private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
@@ -131,8 +131,8 @@ private _fnc_onConfirm = {
     private _ctrlSpeed = _display displayCtrl IDC_AMBIENTFLYBY_SPEED;
     private _speed = lbCurSel _ctrlSpeed;
 
-    private _ctrlAmountSlider = _display displayCtrl IDC_AMBIENTFLYBY_AMOUNT;
-    private _amount = lbCurSel _ctrlAmountSlider;
+    private _ctrlAmount = _display displayCtrl IDC_AMBIENTFLYBY_AMOUNT;
+    private _amount = (lbCurSel _ctrlAmount) + 1;
 
     [QGVAR(moduleAmbientFlyby), [_aircraftType, ASLtoAGL getPosASL _logic, _height, _distance, _direction, _speed, _amount]] call CBA_fnc_serverEvent;
 };
