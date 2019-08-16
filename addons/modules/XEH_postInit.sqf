@@ -47,5 +47,26 @@ if (isServer) then {
 
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(fireArtillery), {
+    params ["_unit", "_position", "_spread", "_ammo", "_rounds"];
+
+    // For small spread values, use doArtilleryFire directly to avoid delay
+    // between firing caused by using doArtilleryFire one round at a time
+    if (_spread <= 10) exitWith {
+        _unit doArtilleryFire [_position, _ammo, _rounds];
+    };
+
+    [{
+        params ["_unit", "_position", "_spread", "_ammo", "_rounds", "_fired"];
+
+        if (unitReady _unit) then {
+            _unit doArtilleryFire [[_position, _spread] call CBA_fnc_randPos, _ammo, 1];
+            _this set [5, _fired + 1];
+        };
+
+        _fired >= _rounds || {!alive _unit} || {!alive gunner _unit}
+    }, {}, [_unit, _position, _spread, _ammo, _rounds, 0]] call CBA_fnc_waitUntilAndExecute;
+}] call CBA_fnc_addEventHandler;
+
 // Function needs to be spawned
 [QGVAR(earthquake), {_this spawn BIS_fnc_earthquake}] call CBA_fnc_addEventHandler;
