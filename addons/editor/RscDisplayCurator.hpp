@@ -112,6 +112,10 @@ class RscDisplayCurator {
                             y = POS_EDGE(0,1) * pixelH;
                             w = GUI_GRID_W;
                             h = GUI_GRID_H;
+                            soundClick[] = {"\a3\ui_f\data\sound\rscbutton\soundclick", 0.09, 1};
+                            soundEnter[] = {"\a3\ui_f\data\sound\rscbutton\soundenter", 0.09, 1};
+                            soundEscape[] = {"\a3\ui_f\data\sound\rscbutton\soundescape", 0.09, 1};
+                            soundPush[] = {"\a3\ui_f\data\sound\rscbutton\soundpush", 0.09, 1};
                         };
                     };
                 };
