@@ -27,7 +27,7 @@ private _position = getPosATL _logic;
     _values params ["_name"];
     _args params ["_object", "_position"];
 
-    [QGVAR(createTeleporter), [_object, _position, _name]] call CBA_fnc_serverEvent;
+    [QGVAR(moduleCreateTeleporter), [_object, _position, _name]] call CBA_fnc_serverEvent;
 }, {}, [_object, _position]] call EFUNC(dialog,create);
 
 deleteVehicle _logic;

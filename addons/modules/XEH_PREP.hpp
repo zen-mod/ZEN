@@ -34,6 +34,7 @@ PREP(moduleCreateIED);
 PREP(moduleCreateMinefield);
 PREP(moduleCreateTarget);
 PREP(moduleCreateTeleporter);
+PREP(moduleCreateTeleporterServer);
 PREP(moduleDamageBuildings);
 PREP(moduleEarthquake);
 PREP(moduleEditableObjects);
