@@ -30,6 +30,5 @@ if (EGVAR(common,preferredArsenal) == 1 && {isClass (configFile >> "CfgPatches" 
     // Set variables manually, since "AmmoboxExit" is not reliable
     _object setVariable ["BIS_addVirtualWeaponCargo_cargo", nil, true];
     private _boxes = missionNamespace getVariable ["BIS_fnc_arsenal_boxes", []];
-    _boxes = _boxes - [_object];
-    missionNamespace setVariable ["BIS_fnc_arsenal_boxes", _boxes, true];
+    missionNamespace setVariable ["BIS_fnc_arsenal_boxes", _boxes - [_object], true];
 };
