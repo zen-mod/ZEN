@@ -63,5 +63,5 @@ private _actionID = _object addAction [
 ];
 
 private _text = format ["<t color='#FFFFFF'>%1</t>", localize ELSTRING(common,Teleport)];
-private _picture = format ["<img image='\a3\3den\data\displays\display3den\panelleft\locationlist_ca.paa' size='1.75' /><br />%1", _text];
+private _picture = format ["<img image='%1' size='1.75' /><br />%2", ICON_LOCATION, _text];
 _object setUserActionText [_actionID, _text, "", _picture];
