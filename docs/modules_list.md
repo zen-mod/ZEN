@@ -67,7 +67,7 @@ The mine density option affects the spacing of the mines from: Very Low = 30 m t
 
 ## Create Teleporter
 
-Creates a teleport location at the attached object or newly created flagpole object if not attached.
+Creates a teleport location at the attached object or, if not attached, at a newly created flag pole.
 Players can use the "Teleport" action on any teleporter objects to teleport between them.
 When used on a vehicle, players will first be teleported into an empty seat if possible.
 

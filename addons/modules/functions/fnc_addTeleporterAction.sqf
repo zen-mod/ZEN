@@ -41,7 +41,7 @@ private _actionID = _object addAction [
             _values params ["_object"];
 
             // Exit if the object was deleted after opening the menu
-            // Otherwise the unit will be teleporter to [0, 0, 0]
+            // Otherwise the unit will be teleported to [0, 0, 0]
             if (isNull _object) exitWith {};
 
             private _unit = call CBA_fnc_currentUnit;
