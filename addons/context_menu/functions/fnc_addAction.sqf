@@ -25,7 +25,13 @@ if (!hasInterface) exitWith {
     []
 };
 
-params [["_action", [], [[]], 9], ["_parentPath", [], []], ["_priority", 0, [0]]];
+params [
+    ["_action", [], [[]], 9],
+    ["_parentPath", [], []],
+    ["_priority", 0, [0]]
+];
+
+_action params ["_actionName"];
 
 scopeName "Main";
 
@@ -40,7 +46,7 @@ private _parentNode = if (_parentPath isEqualTo []) then {
         };
 
         if (_index == -1) then {
-            ERROR_2("Failed to add action (%1) to parent path %2",_action select 0,_parentPath);
+            ERROR_2("Failed to add action (%1) to parent path %2.",_actionName,_parentPath);
             [] breakOut "Main";
         } else {
             private _children = _actions select _index select 1;
@@ -59,4 +65,4 @@ private _parentNode = if (_parentPath isEqualTo []) then {
 _parentNode pushBack [_action, [], _priority];
 [_parentNode, 2, false] call CBA_fnc_sortNestedArray;
 
-_parentPath + [_action select 0]
+_parentPath + [_actionName]
