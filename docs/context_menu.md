@@ -58,7 +58,7 @@ This function is used to ensure that the created action array is in the correct 
 
 **Return Value:**
 
-&nbsp;&nbsp;&nbsp;&nbsp;Action &lt;ARRAY&gt;
+- Action &lt;ARRAY&gt;
 
 **Example:**
 
@@ -82,15 +82,13 @@ Actions are added locally and as a result the function must be executed on each 
 
 **Return Value:**
 
-&nbsp;&nbsp;&nbsp;&nbsp;Full Action Path &lt;ARRAY&gt;
+- Full Action Path &lt;ARRAY&gt;
 
 **Example:**
 
 ```clike
 [_action, [], 0] call zen_context_menu_fnc_addAction
 ```
-
-Once the action is c
 
 ## Statement and Condition
 

@@ -20,7 +20,7 @@ Modules are added locally and as a result the function must be executed on each 
 
 **Return Value:**
 
-&nbsp;&nbsp;&nbsp;&nbsp;Successfully Registered &lt;BOOL&gt;
+- Successfully Registered &lt;BOOL&gt;
 
 **Example:**
 
