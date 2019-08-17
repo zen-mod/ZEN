@@ -149,6 +149,13 @@ class CfgVehicles {
         icon = QPATHTOF(ui\target_ca.paa);
         portrait = QPATHTOF(ui\target_ca.paa);
     };
+    class GVAR(moduleCreateTeleporter): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Players);
+        displayName = CSTRING(ModuleCreateTeleporter);
+        function = QFUNC(moduleCreateTeleporter);
+        icon = "\a3\3den\data\displays\display3den\panelleft\entitylist_location_ca.paa";
+    };
     class GVAR(moduleDamageBuildings): GVAR(moduleBase) {
         category = QGVAR(Buildings);
         displayName = CSTRING(ModuleDamageBuildings);

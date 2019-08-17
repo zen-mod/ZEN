@@ -8,7 +8,14 @@ if (isServer) then {
 
     // Public variable to track created target logics
     missionNamespace setVariable [QGVAR(targetLogics), [], true];
+
+    // Public variable to track created teleporter objects
+    missionNamespace setVariable [QGVAR(teleporters), [], true];
+
+    [QGVAR(moduleCreateTeleporter), LINKFUNC(moduleCreateTeleporterServer)] call CBA_fnc_addEventHandler;
 };
+
+[QGVAR(addTeleporterAction), LINKFUNC(addTeleporterAction)] call CBA_fnc_addEventHandler;
 
 [QGVAR(sayMessage), BIS_fnc_sayMessage] call CBA_fnc_addEventHandler;
 [QGVAR(carrierInit), BIS_fnc_Carrier01Init] call CBA_fnc_addEventHandler;

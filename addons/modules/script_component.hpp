@@ -132,6 +132,8 @@
 
 #define ICON_GROUP "\a3\ui_f_curator\data\displays\rscdisplaycurator\modegroups_ca.paa"
 
+#define ICON_LOCATION "\a3\3den\data\displays\display3den\panelleft\locationlist_ca.paa"
+
 #define ICON_BLUFOR QPATHTOEF(common,ui\icon_blufor_ca.paa)
 #define ICON_OPFOR QPATHTOEF(common,ui\icon_opfor_ca.paa)
 #define ICON_INDEPENDENT QPATHTOEF(common,ui\icon_independent_ca.paa)
