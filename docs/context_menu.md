@@ -38,6 +38,8 @@ class zen_context_menu_actions {
 
 ## Adding Actions Through Script
 
+_Requires Zeus Enhanced v1.4.0_
+
 #### Creating an Action
 
 Context menu actions can be added by first creating an action with the `zen_context_menu_fnc_createAction` function.
@@ -100,7 +102,7 @@ This removes the need to duplicate condition checks for actions that are only th
 
 **Passed Parameters:**
 
-- The variable column references the name of local scope variable corresponding to the given parameter (for easy access, especially in configs).
+- The variable column references the name of the local scope variable corresponding to the given parameter (for easy access, especially in configs).
 - Context position is taken from the top-left corner of the menu, in format ASL.
 - Hovered entity is the Zeus entity being hovered when the menu was opened. It is also included in its corresponding selected array. `objNull` if nothing was hovered.
 - Arguments is the custom argument(s) given to the action when it was created.
@@ -121,7 +123,7 @@ This removes the need to duplicate condition checks for actions that are only th
 Dynamic children actions can be added to an action by returning an array of actions from the insert children code.
 The same parameters that are available to the statement and condition are also available here.
 
-Each action in the array must be in the following format:
+Each action in the returned actions must be an array with the following format:
 
 - 0: Action (created using `zen_context_menu_fnc_createAction`) &lt;ARRAY&gt;
 - 1: Array of Children Actions &lt;ARRAY&gt;
