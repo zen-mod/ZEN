@@ -46,5 +46,17 @@ if (isServer) then {
 
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(teleportOutOfVehicle), {
+    params ["_unit", "_position"];
+
+    moveOut _unit;
+
+    [{
+        params ["_unit", "_position"];
+        _unit setVelocity [0, 0, 0];
+        _unit setVehiclePosition [_position, [], 0, "NONE"];
+    }, _this] call CBA_fnc_execNextFrame;
+}] call CBA_fnc_addEventHandler;
+
 // Function needs to be spawned
 [QGVAR(earthquake), {_this spawn BIS_fnc_earthquake}] call CBA_fnc_addEventHandler;

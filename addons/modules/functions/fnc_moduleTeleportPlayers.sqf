@@ -42,7 +42,13 @@ params ["_logic"];
                 _x setVehiclePosition [_position, [], 0, "FLY"];
                 [QEGVAR(common,setVelocity), [_x, velocity _x], _x] call CBA_fnc_targetEvent;
             } else {
-                _x setVehiclePosition [_position, [], 0, "NONE"];
+                // Need special handling for players in vehicles
+                // Without this they are teleported back inside the vehicle
+                if (_x isKindOf "CAManBase" && {vehicle _x != _x}) then {
+                    [QGVAR(teleportOutOfVehicle), [_x, _position], _x] call CBA_fnc_targetEvent;
+                } else {
+                    _x setVehiclePosition [_position, [], 0, "NONE"];
+                };
             };
         } forEach _players;
     } else {
