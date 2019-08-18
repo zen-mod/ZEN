@@ -1,0 +1,13 @@
+PREP(applyProperties);
+PREP(configure);
+PREP(createIcon);
+PREP(deleteIcon);
+PREP(module);
+PREP(onKeyDown);
+PREP(onMouseButtonDown);
+PREP(onMouseButtonUp);
+PREP(onMouseDblClick);
+PREP(onMouseMoving);
+PREP(setIconAngle);
+PREP(setIconColor);
+PREP(update);
