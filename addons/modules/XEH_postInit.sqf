@@ -8,7 +8,14 @@ if (isServer) then {
 
     // Public variable to track created target logics
     missionNamespace setVariable [QGVAR(targetLogics), [], true];
+
+    // Public variable to track created teleporter objects
+    missionNamespace setVariable [QGVAR(teleporters), [], true];
+
+    [QGVAR(moduleCreateTeleporter), LINKFUNC(moduleCreateTeleporterServer)] call CBA_fnc_addEventHandler;
 };
+
+[QGVAR(addTeleporterAction), LINKFUNC(addTeleporterAction)] call CBA_fnc_addEventHandler;
 
 [QGVAR(sayMessage), BIS_fnc_sayMessage] call CBA_fnc_addEventHandler;
 [QGVAR(carrierInit), BIS_fnc_Carrier01Init] call CBA_fnc_addEventHandler;
@@ -56,6 +63,27 @@ if (isServer) then {
         _unit setVelocity [0, 0, 0];
         _unit setVehiclePosition [_position, [], 0, "NONE"];
     }, _this] call CBA_fnc_execNextFrame;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(fireArtillery), {
+    params ["_unit", "_position", "_spread", "_ammo", "_rounds"];
+
+    // For small spread values, use doArtilleryFire directly to avoid delay
+    // between firing caused by using doArtilleryFire one round at a time
+    if (_spread <= 10) exitWith {
+        _unit doArtilleryFire [_position, _ammo, _rounds];
+    };
+
+    [{
+        params ["_unit", "_position", "_spread", "_ammo", "_rounds", "_fired"];
+
+        if (unitReady _unit) then {
+            _unit doArtilleryFire [[_position, _spread] call CBA_fnc_randPos, _ammo, 1];
+            _this set [5, _fired + 1];
+        };
+
+        _fired >= _rounds || {!alive _unit} || {!alive gunner _unit}
+    }, {}, [_unit, _position, _spread, _ammo, _rounds, 0]] call CBA_fnc_waitUntilAndExecute;
 }] call CBA_fnc_addEventHandler;
 
 // Function needs to be spawned

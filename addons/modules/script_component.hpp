@@ -74,6 +74,7 @@
 #define IDC_AMBIENTFLYBY_DISTANCE_SLIDER 61707
 #define IDC_AMBIENTFLYBY_DISTANCE_EDIT 61708
 #define IDC_AMBIENTFLYBY_SPEED 61709
+#define IDC_AMBIENTFLYBY_AMOUNT 61710
 
 #define IDC_CAS 61800
 #define IDC_CAS_LIST 61801
@@ -110,6 +111,8 @@
 
 #define ICON_GROUP "\a3\ui_f_curator\data\displays\rscdisplaycurator\modegroups_ca.paa"
 
+#define ICON_LOCATION "\a3\3den\data\displays\display3den\panelleft\locationlist_ca.paa"
+
 #define ICON_BLUFOR QPATHTOEF(common,ui\icon_blufor_ca.paa)
 #define ICON_OPFOR QPATHTOEF(common,ui\icon_opfor_ca.paa)
 #define ICON_INDEPENDENT QPATHTOEF(common,ui\icon_independent_ca.paa)
@@ -139,8 +142,6 @@
 #define ICON_DESTROYED_CHECKED   "\a3\modules_f\data\editterrainobject\texturechecked_destroyed_ca.paa"
 
 #define CAS_WEAPON_TYPES [["machinegun"], ["missilelauncher"], ["machinegun", "missilelauncher"], ["bomblauncher"]]
-
-#define DEGREE_SYMBOL (toString [176])
 
 #define MS_TO_KMH(value) ((value) * 3.6)
 #define KMH_TO_MS(value) ((value) / 3.6)

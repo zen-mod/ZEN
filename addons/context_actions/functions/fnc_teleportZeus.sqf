@@ -4,23 +4,19 @@
  * Teleports Zeus to the given position or vehicle.
  *
  * Arguments:
- * 0: Position <ARRAY>
+ * None
  *
  * Return Value:
  * None
  *
  * Example:
- * [[0, 0, 0]] call zen_context_actions_fnc_teleportZeus
+ * [] call zen_context_actions_fnc_teleportZeus
  *
  * Public: No
  */
 
-params ["_posASL"];
-
-curatorMouseOver params ["_type", "_entity"];
-
-if (_type isEqualTo "OBJECT" && {_entity isKindOf "AllVehicles"} && {!(_entity isKindOf "CAManBase")}) then {
-    [[player], _entity] call EFUNC(common,teleportIntoVehicle);
+if (_hoveredEntity isEqualType objNull && {_hoveredEntity isKindOf "AllVehicles"} && {!(_hoveredEntity isKindOf "CAManBase")}) then {
+    [[player], _hoveredEntity] call EFUNC(common,teleportIntoVehicle);
 } else {
-    player setPosASL _posASL;
+    player setPosASL _contextPosASL;
 };

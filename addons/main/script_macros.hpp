@@ -84,6 +84,9 @@
 
 #define COLOR_BACKGROUND_SETTING COLOR_SETTING(EGVAR(common,darkMode),1,1,1,0.1,0,0,0,0.2)
 
+
+#define DEGREE_SYMBOL toString [176]
+
 #ifdef DISABLE_COMPILE_CACHE
     #undef PREP
     #define PREP(fncName) FUNC(fncName) = compile preprocessFileLineNumbers QPATHTOF(functions\DOUBLES(fnc,fncName).sqf)

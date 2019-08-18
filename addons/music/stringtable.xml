@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Music">
+        <Key ID="STR_ZEN_Music_ThisIsWarPartOne">
+            <English>This Is War - Part 1</English>
+        </Key>
+        <Key ID="STR_ZEN_Music_ThisIsWarPartTwo">
+            <English>This Is War - Part 2</English>
+        </Key>
+        <Key ID="STR_ZEN_Music_EagleWing_Defcon">
+            <English>A2 EW - Defcon</English>
+        </Key>
+        <Key ID="STR_ZEN_Music_EagleWing_Fallout">
+            <English>A2 EW - Fallout</English>
+        </Key>
+        <Key ID="STR_ZEN_Music_EagleWing_MAD">
+            <English>A2 EW - Mad</English>
+        </Key>
+        <Key ID="STR_ZEN_Music_EagleWing_SkyNet">
+            <English>A2 EW - Skynet</English>
+        </Key>
+        <Key ID="STR_ZEN_Music_EagleWing_Wasteland">
+            <English>A2 EW - Wasteland</English>
+        </Key>
+    </Package>
+</Project>

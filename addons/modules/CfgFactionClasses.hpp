@@ -19,6 +19,11 @@ class CfgFactionClasses {
         priority = 2;
         side = 7;
     };
+    class GVAR(Inventory) {
+        displayName = "$STR_A3_Gear1";
+        priority = 2;
+        side = 7;
+    };
     class GVAR(Objects) {
         displayName = CSTRING(Objects);
         priority = 2;

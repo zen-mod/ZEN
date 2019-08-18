@@ -4,9 +4,8 @@ class CfgVehicles {
     #define ADD_CUSTOM_MODULE(id) \
         class DOUBLES(GVAR(module),id): EGVAR(modules,moduleBase) { \
             displayName = CSTRING(DisplayName); \
-            category = QGVAR(category); \
             function = QFUNC(init); \
-            scopeCurator = 2; \
+            scopeCurator = 1; \
             GVAR(index) = __EVAL(id - 1); \
         }
 

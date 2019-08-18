@@ -65,6 +65,11 @@
     _unit setSkill _skill;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setUnitTrait), {
+    params ["_unit", "_trait", "_value"];
+    _unit setUnitTrait [_trait, _value];
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(enableAI), {
     params ["_unit", "_section"];
     _unit enableAI _section;
@@ -84,6 +89,16 @@
 [QGVAR(doWatch), {
     params ["_unit", "_target"];
     _unit doWatch _target;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(moveInDriver), {
+    params ["_unit", "_vehicle"];
+    _unit moveInDriver _vehicle;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(unassignVehicle), {
+    params ["_unit"];
+    unassignVehicle _unit;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(setCaptive), {

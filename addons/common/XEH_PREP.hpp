@@ -5,6 +5,7 @@ PREP(createZeus);
 PREP(curatorDisplayLoad);
 PREP(curatorDisplayUnload);
 PREP(dumpPerformanceCounters);
+PREP(ejectPassengers);
 PREP(getActiveTree);
 PREP(getAllTurrets);
 PREP(getInventory);

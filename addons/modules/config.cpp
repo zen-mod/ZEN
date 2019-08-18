@@ -4,6 +4,7 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {
+            QGVAR(moduleAddFullArsenal),
             QGVAR(moduleAmbientAnim),
             QGVAR(moduleAmbientFlyby),
             QGVAR(moduleArsenal),
@@ -22,6 +23,7 @@ class CfgPatches {
             QGVAR(moduleCreateIED),
             QGVAR(moduleCreateMinefield),
             QGVAR(moduleCreateTarget),
+            QGVAR(moduleCreateTeleporter),
             QGVAR(moduleDamageBuildings),
             QGVAR(moduleEarthquake),
             QGVAR(moduleEditableObjects),
@@ -38,6 +40,7 @@ class CfgPatches {
             QGVAR(moduleLightSource),
             QGVAR(moduleMakeInvincible),
             QGVAR(modulePatrolArea),
+            QGVAR(moduleRemoveArsenal),
             QGVAR(moduleSetDate),
             QGVAR(moduleShowInConfig),
             QGVAR(moduleSideRelations),
