@@ -1310,6 +1310,24 @@
             <German>Spawn</German>
             <Polish>Spawn</Polish>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAddFullArsenal">
+            <English>Add Full Arsenal</English>
+            <French>Ajouter Arsenal complète</French>
+            <German>Komplettes Arsenal hinzufügen</German>
+            <Russian>Полный Арсенал</Russian>
+            <Japanese>完全な武器庫を追加</Japanese>
+            <Chinesesimp>添加完整军火库</Chinesesimp>
+            <Chinese>添加完整的軍火庫</Chinese>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleRemoveArsenal">
+            <English>Remove Arsenal</English>
+            <French>Retirer l'arsenal</French>
+            <German>Entferne Arsenal</German>
+            <Russian>Удалить Арсенал</Russian>
+            <Japanese>武器庫を削除</Japanese>
+            <Chinesesimp>移除军火库</Chinesesimp>
+            <Chinese>移除軍火庫</Chinese>
+        </Key>
         <!-- Feedback Messages -->
         <Key ID="STR_ZEN_Modules_NoUnitSelected">
             <English>Place on a unit</English>

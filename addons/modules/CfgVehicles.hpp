@@ -31,6 +31,13 @@ class CfgVehicles {
         function = QFUNC(bi_moduleMine);
     };
 
+    class GVAR(moduleAddFullArsenal): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = GVAR(Inventory);
+        displayName = CSTRING(ModuleAddFullArsenal);
+        function = QFUNC(moduleAddFullArsenal);
+        icon = "\a3\ui_f\data\logos\a_64_ca.paa";
+    };
     class GVAR(moduleAmbientAnim): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(AI);
@@ -248,6 +255,13 @@ class CfgVehicles {
         category = QGVAR(AI);
         displayName = CSTRING(ModulePatrolArea);
         function = QFUNC(modulePatrolArea);
+    };
+    class GVAR(moduleRemoveArsenal): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = GVAR(Inventory);
+        displayName = CSTRING(ModuleRemoveArsenal);
+        function = QFUNC(moduleRemoveArsenal);
+        icon = "\a3\ui_f\data\logos\a_64_ca.paa";
     };
     class GVAR(moduleSetDate): GVAR(moduleBase) {
         category = "Environment";
