@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="AI">
+        <Key ID="STR_ZEN_AI_Paradrop">
+            <English>Paradrop</English>
+        </Key>
         <Key ID="STR_ZEN_AI_CouldNotGarrisonAll">
             <English>Unable to garrison all units - not enough positions</English>
             <German>Das Gebäude hat zu wenig Positionen - Nicht alle Einheiten konnten das Gebäude besetzen</German>
