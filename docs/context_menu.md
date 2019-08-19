@@ -38,7 +38,7 @@ class zen_context_menu_actions {
 
 ## Adding Actions Through Script
 
-_Requires Zeus Enhanced v1.4.0_
+_Requires Zeus Enhanced v1.4.0 or later._
 
 #### Creating an Action
 
