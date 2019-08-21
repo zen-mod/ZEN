@@ -80,5 +80,8 @@
         <Key ID="STR_ZEN_Editor_DeployCountermeasures">
             <English>Deploy Countermeasures</English>
         </Key>
+        <Key ID="STR_ZEN_Editor_DeployCountermeasures_Description">
+            <English>Makes all selected vehicles deploy countermeasures such as smokes and flares.</English>
+        </Key>
     </Package>
 </Project>
