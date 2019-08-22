@@ -43,28 +43,28 @@ class CfgMusic {
 
     // Action Dark
     class LeadTrack04a_F {
-		musicClass = "Action";
-	};
+        musicClass = "Action";
+    };
 
     // Stage A: Lead Track 03 (Survive the Hard Part)
-	class LeadTrack03_F_EPA {
-		musicClass = "Action";
-	};
+    class LeadTrack03_F_EPA {
+        musicClass = "Action";
+    };
 
     // Stage B: Lead Track 02 (Exit Strategy - Alternative 1)
-	class LeadTrack02a_F_EPB {
-		musicClass = "Action";
-	};
+    class LeadTrack02a_F_EPB {
+        musicClass = "Action";
+    };
 
     // Stage B: Lead Track 01 (Adapt - Alternative)
-	class LeadTrack01a_F_EPB {
-		musicClass = "Action";
-	};
+    class LeadTrack01a_F_EPB {
+        musicClass = "Action";
+    };
 
     // Stage A: Lead Track 02 (Aegis Blues - Alternative 2)
-	class LeadTrack02b_F_EPA {
-		musicClass = "Action";
-	};
+    class LeadTrack02b_F_EPA {
+        musicClass = "Action";
+    };
 
     // Night percussions
     class AmbientTrack04a_F {
@@ -72,29 +72,29 @@ class CfgMusic {
     };
 
     // Tac-Ops Action Event Tracks
-	class EventTrack01a_F_Tacops {
-		musicClass = "Action";
-	};
+    class EventTrack01a_F_Tacops {
+        musicClass = "Action";
+    };
 
-	class EventTrack01b_F_Tacops {
-		musicClass = "Action";
-	};
+    class EventTrack01b_F_Tacops {
+        musicClass = "Action";
+    };
 
-	class EventTrack02a_F_Tacops {
-		musicClass = "Action";
-	};
+    class EventTrack02a_F_Tacops {
+        musicClass = "Action";
+    };
 
-	class EventTrack02b_F_Tacops {
-		musicClass = "Action";
-	};
+    class EventTrack02b_F_Tacops {
+        musicClass = "Action";
+    };
 
-	class EventTrack03a_F_Tacops {
-		musicClass = "Action";
-	};
+    class EventTrack03a_F_Tacops {
+        musicClass = "Action";
+    };
 
-	class EventTrack03b_F_Tacops {
-		musicClass = "Action";
-	};
+    class EventTrack03b_F_Tacops {
+        musicClass = "Action";
+    };
 
     // Arma 2 Eagle Wing
     class Defcon {
