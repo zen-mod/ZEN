@@ -22,12 +22,6 @@ params [["_contextActions", []], ["_contextLevel", 0], ["_parentRow", controlNul
 // Exit if no context actions provided
 if (_contextActions isEqualTo []) exitWith {};
 
-// Check action conditions
-SETUP_ACTION_VARS;
-_contextActions = _contextActions select {
-    ACTION_PARAMS call (_x select 5);
-};
-
 // Create context group control
 private _display = findDisplay IDD_RSCDISPLAYCURATOR;
 private _ctrlContextGroup = _display ctrlCreate [QGVAR(group), IDC_CONTEXT_GROUP];
@@ -40,7 +34,8 @@ GVAR(contextGroups) set [_contextLevel, _ctrlContextGroup];
 private _numberOfRows = 0;
 
 {
-    _x params ["", "_displayName", "_icon", "_iconColor", "_statement", "_condition", "", "_children"];
+    _x params ["_action", "_children"];
+    _action params ["", "_displayName", "_icon", "_iconColor", "_statement", "_condition", "_args"];
 
     // Create context row control
     private _ctrlContextRow = _display ctrlCreate [QGVAR(row), IDC_CONTEXT_ROW, _ctrlContextGroup];
@@ -73,7 +68,7 @@ private _numberOfRows = 0;
 
         // Close previously opened child context groups
         private _contextLevel = _ctrlContextGroup getVariable QGVAR(level);
-        for "_i" from (_contextLevel + 1) to (count GVAR(contextGroups) -1) do {
+        for "_i" from (_contextLevel + 1) to (count GVAR(contextGroups) - 1) do {
             ctrlDelete (GVAR(contextGroups) select _i);
         };
 
@@ -97,9 +92,7 @@ private _numberOfRows = 0;
 
         if (_button isEqualTo 0) then {
             private _ctrlContextRow = ctrlParentControlsGroup _ctrlMouse;
-
-            private _condition = _ctrlContextRow getVariable QGVAR(condition);
-            private _statement = _ctrlContextRow getVariable QGVAR(statement);
+            (_ctrlContextRow getVariable QGVAR(params)) params ["_condition", "_statement", "_args"];
 
             // Exit on empty statement, the menu should not close when the action does nothing
             if (_statement isEqualTo {}) exitWith {};
@@ -113,8 +106,7 @@ private _numberOfRows = 0;
         };
     }];
 
-    _ctrlContextRow setVariable [QGVAR(condition), _condition];
-    _ctrlContextRow setVariable [QGVAR(statement), _statement];
+    _ctrlContextRow setVariable [QGVAR(params), [_condition, _statement, _args]];
     _ctrlContextRow setVariable [QGVAR(children), _children];
 
     // Update row position in group

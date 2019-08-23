@@ -10,7 +10,7 @@ Executed **locally** when the Zeus display is loaded.
 
 **Parameters:**
 
-&nbsp;&nbsp;&nbsp;&nbsp;0: Zeus Display &lt;DISPLAY&gt;
+- 0: Zeus Display &lt;DISPLAY&gt;
 
 ---
 
@@ -20,7 +20,7 @@ Executed **locally** when the Zeus display is unloaded.
 
 **Parameters:**
 
-&nbsp;&nbsp;&nbsp;&nbsp;0: Zeus Display &lt;DISPLAY&gt;
+- 0: Zeus Display &lt;DISPLAY&gt;
 
 ---
 
@@ -30,4 +30,4 @@ Executed **locally** when Zeus starts remote controlling a unit.
 
 **Parameters:**
 
-&nbsp;&nbsp;&nbsp;&nbsp;0: Unit &lt;OBJECT&gt;
+- 0: Unit &lt;OBJECT&gt;
