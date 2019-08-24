@@ -38,4 +38,7 @@
 #define POS_TITLE_Y(HEIGHT)      (POS_BACKGROUND_Y(HEIGHT) - VERTICAL_SPACING - POS_H(1))
 #define POS_BUTTON_Y(HEIGHT)     (0.5 + HEIGHT / 2 + CONTENT_SPACING + VERTICAL_SPACING)
 
+#define ICON_CHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_checked_ca.paa"
+#define ICON_UNCHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_unchecked_ca.paa"
+
 #include "script_idc.hpp"

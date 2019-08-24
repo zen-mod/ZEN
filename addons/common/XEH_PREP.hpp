@@ -10,6 +10,7 @@ PREP(getActiveTree);
 PREP(getAllTurrets);
 PREP(getInventory);
 PREP(getPhoneticName);
+PREP(getPlayers);
 PREP(getSideIcon);
 PREP(getTargetPos);
 PREP(getTurretMagazines);

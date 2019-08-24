@@ -151,6 +151,11 @@
     _object setDir _direction;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setVelocity), {
+    params ["_object", "_velocity"];
+    _object setVelocity _velocity;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(setFuel), {
     params ["_vehicle", "_fuel"];
     _vehicle setFuel _fuel;

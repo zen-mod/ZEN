@@ -140,6 +140,12 @@
             <German>Seite</German>
             <Polish>Strona</Polish>
         </Key>
+        <Key ID="STR_ZEN_Common_Sides">
+            <English>Sides</English>
+            <Russian>Стороны</Russian>
+            <German>Seiten</German>
+            <Polish>Strony</Polish>
+        </Key>
         <Key ID="STR_ZEN_Common_Faction">
             <English>Faction</English>
             <Russian>Фракция</Russian>

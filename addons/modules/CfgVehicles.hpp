@@ -320,7 +320,7 @@ class CfgVehicles {
         curatorCanAttach = 1;
         category = QGVAR(Players);
         displayName = CSTRING(ModuleTeleportPlayers);
-        curatorInfoType = QGVAR(RscTeleportPlayers);
+        function = QFUNC(moduleTeleportPlayers);
     };
     class GVAR(moduleTurretOptics): GVAR(moduleBase) {
         curatorCanAttach = 1;
