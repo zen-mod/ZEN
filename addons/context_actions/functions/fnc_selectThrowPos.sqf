@@ -37,9 +37,17 @@ private _text = format [localize LSTRING(ThrowX), getText (configFile >> "CfgMag
 
     if (!_successful) exitWith {};
 
+    private _notInRange = 0;
+
     {
         if (_x distance2D _position < MAX_DISTANCE) then {
             [QEGVAR(ai,throwGrenade), [_x, _muzzle, _position], _x] call CBA_fnc_targetEvent;
+        } else {
+            _notInRange = _notInRange + 1;
         };
     } forEach _units;
+
+    if (_notInRange > 0) then {
+        [LSTRING(PositionTooFar), _notInRange] call EFUNC(common,showMessage);
+    };
 }, _muzzle, _text] call EFUNC(common,getTargetPos);
