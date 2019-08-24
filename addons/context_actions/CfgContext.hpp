@@ -1,8 +1,15 @@
 class EGVAR(context_menu,actions) {
+    class ThrowGrenade {
+        displayName = CSTRING(ThrowGrenade);
+        icon = QPATHTOF(ui\grenade_ca.paa);
+        priority = -50;
+        insertChildren = QUOTE([_selectedObjects] call FUNC(getGrenadeActions));
+    };
     class Formation {
         displayName = "$STR_3DEN_Group_Attribute_Formation_displayName";
         icon = "\a3\3den\data\displays\display3den\entitymenu\movetoformation_ca.paa";
         condition = QUOTE(!(_selectedGroups isEqualTo []));
+        priority = -60;
         class Wedge {
             displayName = "$STR_wedge";
             icon = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\wedge_ca.paa";
@@ -61,6 +68,7 @@ class EGVAR(context_menu,actions) {
     class Behaviour {
         displayName = "$STR_3DEN_Group_Attribute_Behaviour_displayName";
         condition = QUOTE(!(_selectedGroups isEqualTo []));
+        priority = -61;
         class Careless {
             displayName = "$STR_3DEN_Attributes_Behaviour_Careless_text";
             icon = QPATHTOF(ui\careless_ca.paa);
@@ -94,6 +102,7 @@ class EGVAR(context_menu,actions) {
     class Speed {
         displayName = "$STR_HC_Menu_Speed";
         condition = QUOTE(!(_selectedGroups isEqualTo []));
+        priority = -62;
         class Limited {
             displayName = "$STR_speed_limited";
             icon = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeSpeedMode\limited_ca.paa";
@@ -116,6 +125,7 @@ class EGVAR(context_menu,actions) {
     class Stance {
         displayName = "$STR_A3_RscAttributeUnitPos_Title";
         condition = QUOTE(_selectedObjects findIf {_x isKindOf 'CAManBase' && {!isPlayer _x}} > -1);
+        priority = -63;
         class Auto {
             displayName = "$STR_A3_RscAttributeUnitPos_Auto_tooltip";
             icon = QPATHTOF(ui\default_ca.paa);
@@ -141,6 +151,7 @@ class EGVAR(context_menu,actions) {
         displayName = ECSTRING(modules,ModuleHeal);
         icon = QPATHTOF(ui\medical_cross_ca.paa);
         condition = QUOTE(_selectedObjects findIf {crew _x findIf {_x isKindOf 'CAManBase' && {alive _x}} != -1} != -1);
+        priority = -70;
         class All {
             displayName = ECSTRING(common,All);
             statement = QUOTE([ARR_2(_selectedObjects,HEAL_MODE_ALL)] call FUNC(healUnits));
@@ -158,7 +169,6 @@ class EGVAR(context_menu,actions) {
             statement = QUOTE([ARR_2(_selectedObjects,HEAL_MODE_PLAYERS)] call FUNC(healUnits));
             priority = 1;
         };
-        priority = -70;
     };
     class VehicleLogistics {
         displayName = CSTRING(VehicleLogistics);
@@ -179,6 +189,7 @@ class EGVAR(context_menu,actions) {
                 } \
             } != -1 \
         );
+        priority = -71;
         class Repair {
             displayName = CSTRING(Repair);
             icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\repair_ca.paa";
@@ -206,7 +217,6 @@ class EGVAR(context_menu,actions) {
             statement = QUOTE(_selectedObjects call FUNC(refuelVehicles));
             priority = 1;
         };
-        priority = -71;
     };
     class Loadout {
         displayName = "$STR_3den_display3den_entitymenu_arsenal_text";

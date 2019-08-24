@@ -1,7 +1,10 @@
+PREP(compileGrenades);
+PREP(getGrenadeActions);
 PREP(healUnits);
 PREP(rearmVehicles);
 PREP(refuelVehicles);
 PREP(repairVehicles);
+PREP(selectThrowPos);
 PREP(setBehaviour);
 PREP(setFormation);
 PREP(setSpeed);
