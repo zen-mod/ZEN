@@ -18,6 +18,7 @@
 
 #define MAX_DISTANCE 50
 
+params ["_selectedObjects", "_args"];
 _args params ["_magazine", "_muzzle"];
 
 // Get AI units that are alive, on foot, and have the selected grenade type
