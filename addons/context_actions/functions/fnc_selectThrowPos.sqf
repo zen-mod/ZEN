@@ -16,7 +16,7 @@
  * Public: No
  */
 
-#define MAX_DISTANCE 50
+#define MAX_DISTANCE 75
 
 params ["_selectedObjects", "_args"];
 _args params ["_magazine", "_muzzle"];
