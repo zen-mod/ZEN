@@ -48,7 +48,7 @@ if (_draw) then {
         "",
         [1, 0, 0, 1],
         ASLToAGL _pos,
-        1, 3, 0,
+        1, 1.3, 0,
         LLSTRING(Visible),
         2,
         0.04,
