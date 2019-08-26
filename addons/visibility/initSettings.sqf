@@ -1,13 +1,15 @@
 [
     QGVAR(enabled),
     "CHECKBOX",
-    ["STR_A3_OPTIONS_ENABLED", LSTRING(enabled_Description)],
-    [ELSTRING(common,Category), "str_a3_rscdisplayoptionsvideo_textvisibility"],
-    true,
+    [LSTRING(Enabled), LSTRING(Enabled_Description)],
+    ELSTRING(common,Category),
+    false,
     false,
     {
         params ["_value"];
-        if (isNull (findDisplay IDD_RSCDISPLAYCURATOR)) exitWith {};
+
+        if (isNull findDisplay IDD_RSCDISPLAYCURATOR) exitWith {};
+
         if (_value) then {
             call FUNC(start);
         } else {

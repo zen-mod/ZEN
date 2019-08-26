@@ -19,10 +19,10 @@
 private _pos = AGLtoASL screenToWorld getMousePosition;
 private _intersections = lineIntersectsSurfaces [getPosASL curatorCamera, _pos];
 if !(_intersections isEqualTo []) then {
-    _pos = ((_intersections select 0) select 0);
+    _pos = _intersections select 0 select 0;
 };
 
-// check 1.5 above the cursor to prevent a small object on the terrain blocking the view
+// Check 1.5 above the cursor to prevent a small object on the terrain blocking the view
 private _posHigh = _pos vectorAdd [0, 0, 1.5];
 private _draw = false;
 {
@@ -31,8 +31,10 @@ private _draw = false;
         if (lineIntersectsSurfaces [_eyePos, _pos, _x, objNull] isEqualTo [] || {lineIntersectsSurfaces [_eyePos, _posHigh, _x, objNull] isEqualTo []}) then {
             // Check visibility through smoke
             private _visibility = [objNull, "VIEW"] checkVisibility [_eyePos, _posHigh];
+
             // Draw a line from each player that can see the cursor
             drawLine3D [ASLToAGL _eyePos, ASLToAGL _pos, [1, 0, 0, _visibility]];
+
             _draw = true;
         };
     };
