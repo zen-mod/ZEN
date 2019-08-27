@@ -25,6 +25,7 @@
  _magazine params ["_name", "_turretPath", "_magMaxAmmo", "_magCount"];
 
  _vehicle removeMagazinesTurret [_name, _turretPath];
+
  for "_i" from 1 to _magCount do {
  	private _magAmmo = _magMaxAmmo min _totalAmmo;
  	_vehicle addMagazineTurret [_name, _turretPath, _magAmmo];

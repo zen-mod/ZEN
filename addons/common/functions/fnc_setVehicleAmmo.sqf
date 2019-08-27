@@ -30,6 +30,7 @@ private _turretMags = magazinesAllTurrets _vehicle select {
     private _className =_x select 0;
     !(_className in _pylonMags || _className in BLACKLIST_MAGAZINES)
 };
+
 private _countPylons = count _pylonMags;
 private _cfgMagazines  = configFile >> "CfgMagazines";
 
@@ -53,14 +54,17 @@ private _cfgMagazines  = configFile >> "CfgMagazines";
     };
 } forEach (_pylonMags arrayIntersect _pylonMags);
 
-// Iterate through all turrets and broadcast events to handle turret locality
+// Iterate through each magazine type in each turret and add required information for zen_common_fnc_setMAgazineAmmo
 private _turretMagCount = (_turretMags apply {[_x select 0, _x select 1]}) call CBA_fnc_getArrayElements;
+
 {
 	_x pushBack (getNumber (_cfgMagazines >> (_x select 0) >> "count"));
 	_x pushBack (_turretMagCount select ((_forEachIndex + 1) * 2) - 1);
 } forEach (_turretMagCount select {_x isEqualType []});
+
 _turretMagCount = _turretMagCount select {_x isEqualType []};
 
+// Iterate through all magazines in the turrets and broadcast events to handle turret locality
 {
 	_x params ["_name", "_turretPath", "_magMaxAmmo", "_magCount"];
     private _turretOwner = _vehicle turretOwner _turretPath;
