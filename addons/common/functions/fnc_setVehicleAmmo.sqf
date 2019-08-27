@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
- * Author: mharis001
- * Sets the ammo level of all turrets and pylons of a vehicle.
+ * Author: mharis001, NeilZar
+ * Sets the ammo level of all magazines and pylons of a vehicle.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
@@ -25,8 +25,9 @@ params ["_vehicle", "_percentage"];
 
 // Set ammo for pylons with magazines, group pylons with the same
 // magazine to better handle magazines with a low maximum ammo counts
-private _currentPylons = getPylonMagazines _vehicle;
-private _countPylons   = count _currentPylons;
+private _pylonMags = getPylonMagazines _vehicle;
+private _turretMags = magazinesAllTurrets _vehicle select {!((_x select 0) in _pylonMags || (_x select 0) in BLACKLIST_MAGAZINES)};
+private _countPylons = count _pylonMags;
 private _cfgMagazines  = configFile >> "CfgMagazines";
 
 {
@@ -34,7 +35,7 @@ private _cfgMagazines  = configFile >> "CfgMagazines";
 
     if (_pylonMagazine != "") then {
         private _maxRoundsPerMag = getNumber (_cfgMagazines >> _pylonMagazine >> "count");
-        private _magazineCount = _countPylons - count (_currentPylons - [_pylonMagazine]);
+        private _magazineCount = _countPylons - count (_pylonMags - [_pylonMagazine]);
 
         private _totalRounds = round (_magazineCount * _maxRoundsPerMag * _percentage);
 
@@ -45,18 +46,26 @@ private _cfgMagazines  = configFile >> "CfgMagazines";
 
                 [QGVAR(setAmmoOnPylon), [_vehicle, _forEachIndex + 1, _roundsOnPylon], _vehicle] call CBA_fnc_targetEvent;
             };
-        } forEach _currentPylons;
+        } forEach _pylonMags;
     };
-} forEach (_currentPylons arrayIntersect _currentPylons);
+} forEach (_pylonMags arrayIntersect _pylonMags);
 
 // Iterate through all turrets and broadcast events to handle turret locality
+private _turretMagCount = (_turretMags apply {[_x select 0, _x select 1]}) call CBA_fnc_getArrayElements;
 {
-    private _turretPath  = _x;
+	_x pushBack (getNumber (_cfgMagazines >> (_x select 0) >> "count"));
+	_x pushBack (_turretMagCount select ((_forEachIndex + 1) * 2) - 1);
+} forEach (_turretMagCount select {_x isEqualType []});
+_turretMagCount = _turretMagCount select {_x isEqualType []};
+
+{
+	_x params ["_name", "_turretPath", "_magMaxAmmo", "_magCount"];
     private _turretOwner = _vehicle turretOwner _turretPath;
+	private _turretMag = round (_magMaxAmmo * _magCount * _percentage);
 
     if (_turretOwner == 0) then {
-        [QGVAR(setTurretAmmo), [_vehicle, _turretPath, _percentage], _vehicle] call CBA_fnc_targetEvent;
+        [QGVAR(setMagazineAmmo), [_vehicle, _x, _turretMag], _vehicle] call CBA_fnc_targetEvent;
     } else {
-        [QGVAR(setTurretAmmo), [_vehicle, _turretPath, _percentage], _turretOwner] call CBA_fnc_ownerEvent;
+        [QGVAR(setMagazineAmmo), [_vehicle, _x, _turretMag], _turretOwner] call CBA_fnc_ownerEvent;
     };
-} forEach (_vehicle call FUNC(getAllTurrets));
+} forEach _turretMagCount;
