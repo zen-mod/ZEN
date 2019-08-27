@@ -27,8 +27,8 @@ params ["_vehicle", "_percentage"];
 // magazine to better handle magazines with a low maximum ammo counts
 private _pylonMags = getPylonMagazines _vehicle;
 private _turretMags = magazinesAllTurrets _vehicle select {
-    private _className =_x select 0;
-    !(_className in _pylonMags || _className in BLACKLIST_MAGAZINES)
+    _x params ["_magazineClass"];
+    !(_className in _pylonMags || {_className in BLACKLIST_MAGAZINES})
 };
 
 private _countPylons = count _pylonMags;
@@ -55,24 +55,20 @@ private _cfgMagazines  = configFile >> "CfgMagazines";
 } forEach (_pylonMags arrayIntersect _pylonMags);
 
 // Iterate through each magazine type in each turret and add required information for zen_common_fnc_setMagazineAmmo
-private _turretMagCount = (_turretMags apply {[_x select 0, _x select 1]}) call CBA_fnc_getArrayElements;
+private _turretMagsCount = (_turretMags apply {[_x select 0, _x select 1]}) call CBA_fnc_getArrayElements;
 
-{
-	_x pushBack (getNumber (_cfgMagazines >> (_x select 0) >> "count"));
-	_x pushBack (_turretMagCount select ((_forEachIndex + 1) * 2) - 1);
-} forEach (_turretMagCount select {_x isEqualType []});
-
-_turretMagCount = _turretMagCount select {_x isEqualType []};
+_turretMags = _turretMagsCount select {_x isEqualType []};
+_turretMagsCount = _turretMagsCount select {_x isEqualType 0};
 
 // Iterate through all magazines in the turrets and broadcast events to handle turret locality
 {
-	_x params ["_name", "_turretPath", "_magMaxAmmo", "_magCount"];
+	_x params ["_name", "_turretPath"];
     private _turretOwner = _vehicle turretOwner _turretPath;
-	private _turretMag = round (_magMaxAmmo * _magCount * _percentage);
+    _x append [getNumber (_cfgMagazines >> _name >> "count"), _turretMagsCount select _forEachIndex];
 
     if (_turretOwner == 0) then {
-        [QGVAR(setMagazineAmmo), [_vehicle, _x, _turretMag], _vehicle] call CBA_fnc_targetEvent;
+        [QGVAR(setMagazineAmmo), [_vehicle, _x, _percentage], _vehicle] call CBA_fnc_targetEvent;
     } else {
-        [QGVAR(setMagazineAmmo), [_vehicle, _x, _turretMag], _turretOwner] call CBA_fnc_ownerEvent;
+        [QGVAR(setMagazineAmmo), [_vehicle, _x, _percentage], _turretOwner] call CBA_fnc_ownerEvent;
     };
-} forEach _turretMagCount;
+} forEach _turretMags;

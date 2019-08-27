@@ -21,13 +21,14 @@
  * Public: No
  */
 
- params ["_vehicle", "_magazine", "_totalAmmo"];
- _magazine params ["_name", "_turretPath", "_magMaxAmmo", "_magCount"];
+params ["_vehicle", "_magazine", "_percentage"];
+_magazine params ["_name", "_turretPath", "_magMaxAmmo", "_magCount"];
 
- _vehicle removeMagazinesTurret [_name, _turretPath];
+private _totalAmmo = round (_magMaxAmmo * _magCount * _percentage);
+_vehicle removeMagazinesTurret [_name, _turretPath];
 
- for "_i" from 1 to _magCount do {
- 	private _magAmmo = _magMaxAmmo min _totalAmmo;
- 	_vehicle addMagazineTurret [_name, _turretPath, _magAmmo];
- 	_totalAmmo = _totalAmmo - _magMaxAmmo;
- };
+for "_i" from 1 to _magCount do {
+    private _magAmmo = _magMaxAmmo min _totalAmmo;
+    _vehicle addMagazineTurret [_name, _turretPath, _magAmmo];
+    _totalAmmo = _totalAmmo - _magMaxAmmo;
+};
