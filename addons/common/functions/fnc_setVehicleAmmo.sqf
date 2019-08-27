@@ -54,7 +54,7 @@ private _cfgMagazines  = configFile >> "CfgMagazines";
     };
 } forEach (_pylonMags arrayIntersect _pylonMags);
 
-// Iterate through each magazine type in each turret and add required information for zen_common_fnc_setMAgazineAmmo
+// Iterate through each magazine type in each turret and add required information for zen_common_fnc_setMagazineAmmo
 private _turretMagCount = (_turretMags apply {[_x select 0, _x select 1]}) call CBA_fnc_getArrayElements;
 
 {
