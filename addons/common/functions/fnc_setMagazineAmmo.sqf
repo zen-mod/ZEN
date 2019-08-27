@@ -9,7 +9,7 @@
  *   0: Class Name <STRING>
  *   1: Turret Path <ARRAY>
  *   2: Max Magazine Ammo <NUMBER>
- *   3: Magazine Count <INTEGER>
+ *   3: Magazine Count <NUMBER>
  * 2: Ammo Level <NUMBER>
  *
  * Return Value:
