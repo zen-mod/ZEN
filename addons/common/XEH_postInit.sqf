@@ -196,7 +196,7 @@
     _unit doArtilleryFire [_position, _magazine, _rounds];
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(setTurretAmmo), FUNC(setTurretAmmo)] call CBA_fnc_addEventHandler;
+[QGVAR(setMagazineAmmo), FUNC(setMagazineAmmo)] call CBA_fnc_addEventHandler;
 [QGVAR(setVehicleAmmo), FUNC(setVehicleAmmo)] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
