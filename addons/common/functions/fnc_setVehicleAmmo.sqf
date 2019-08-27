@@ -26,7 +26,10 @@ params ["_vehicle", "_percentage"];
 // Set ammo for pylons with magazines, group pylons with the same
 // magazine to better handle magazines with a low maximum ammo counts
 private _pylonMags = getPylonMagazines _vehicle;
-private _turretMags = magazinesAllTurrets _vehicle select {!((_x select 0) in _pylonMags || (_x select 0) in BLACKLIST_MAGAZINES)};
+private _turretMags = magazinesAllTurrets _vehicle select {
+    private _className =_x select 0;
+    !(_className in _pylonMags || _className in BLACKLIST_MAGAZINES)
+};
 private _countPylons = count _pylonMags;
 private _cfgMagazines  = configFile >> "CfgMagazines";
 
