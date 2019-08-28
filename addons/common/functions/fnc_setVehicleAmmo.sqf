@@ -28,7 +28,7 @@ params ["_vehicle", "_percentage"];
 private _pylonMags = getPylonMagazines _vehicle;
 private _turretMags = magazinesAllTurrets _vehicle select {
     _x params ["_magazineClass"];
-    !(_className in _pylonMags || {_className in BLACKLIST_MAGAZINES})
+    !(_magazineClass in _pylonMags || {_magazineClass in BLACKLIST_MAGAZINES})
 };
 
 private _countPylons = count _pylonMags;
