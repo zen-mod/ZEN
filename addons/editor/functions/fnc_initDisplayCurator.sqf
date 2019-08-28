@@ -45,10 +45,19 @@ if (GVAR(disableLiveSearch)) then {
     _ctrlSearchButton ctrlAddEventHandler ["ButtonClick", {call FUNC(handleSearchButton)}];
 };
 
+_display displayAddEventHandler ["KeyDown", {call FUNC(handleKeyDown)}];
+
 {
     private _ctrl = _display displayCtrl _x;
-    _ctrl ctrlAddEventHandler ["ButtonClick", {call FUNC(fixSideButtons)}];
+    _ctrl ctrlAddEventHandler ["ButtonClick", {call FUNC(handleModeButtons)}];
 } forEach IDCS_MODE_BUTTONS;
+
+{
+    private _ctrl = _display displayCtrl _x;
+    _ctrl ctrlAddEventHandler ["ButtonClick", {call FUNC(handleSideButtons)}];
+    _ctrl ctrlAddEventHandler ["MouseEnter", {UNLOCK}];
+    _ctrl ctrlAddEventHandler ["MouseExit", {LOCK}];
+} forEach IDCS_SIDE_BUTTONS;
 
 [{
     params ["_display"];

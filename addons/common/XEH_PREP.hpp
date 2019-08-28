@@ -18,6 +18,7 @@ PREP(getVehicleAmmo);
 PREP(healUnit);
 PREP(initSliderEdit);
 PREP(isPlacementActive);
+PREP(messageBox);
 PREP(openArsenal);
 PREP(setInventory);
 PREP(setTurretAmmo);

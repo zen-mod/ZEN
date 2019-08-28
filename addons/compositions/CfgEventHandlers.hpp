@@ -17,7 +17,10 @@ class Extended_PostInit_EventHandlers {
 };
 
 class Extended_DisplayLoad_EventHandlers {
-    class RscDisplayCurator {
-        ADDON = QUOTE(call FUNC(initDisplayCurator));
+    class Display3DEN {
+        ADDON = QUOTE(call (uiNamespace getVariable QQFUNC(initDisplay3DEN)));
+    };
+    class Display3DENPlace {
+        ADDON = QUOTE(call (uiNamespace getVariable QQFUNC(initDisplay3DEN)));
     };
 };

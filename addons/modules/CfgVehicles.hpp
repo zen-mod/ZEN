@@ -3,7 +3,7 @@ class CBA_Extended_EventHandlers_base;
 class CfgVehicles {
     class Module_F;
     class GVAR(moduleBase): Module_F {
-        author = "";
+        author = ECSTRING(main,Author);
         category = "NO_CATEGORY";
         function = "";
         scope = 1;

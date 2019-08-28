@@ -17,7 +17,18 @@
 #include "\x\zen\addons\main\script_macros.hpp"
 
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
+#include "\a3\ui_f\hpp\defineCommonGrids.inc"
 #include "\x\zen\addons\common\defineResinclDesign.inc"
+
+#define POS_X(N) ((N) * GUI_GRID_W + GUI_GRID_CENTER_X)
+#define POS_Y(N) ((N) * GUI_GRID_H + GUI_GRID_CENTER_Y)
+#define POS_W(N) ((N) * GUI_GRID_W)
+#define POS_H(N) ((N) * GUI_GRID_H)
+
+#define IDC_MESSAGE_TITLE      100
+#define IDC_MESSAGE_BACKGROUND 110
+#define IDC_MESSAGE_PICTURE    120
+#define IDC_MESSAGE_TEXT       130
 
 #define IDCS_UNIT_TREES [ \
     IDC_RSCDISPLAYCURATOR_CREATE_UNITS_EAST, \
