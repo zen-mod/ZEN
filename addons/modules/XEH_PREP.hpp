@@ -1,3 +1,4 @@
+PREP(addIntelAction);
 PREP(addTeleporterAction);
 PREP(bi_moduleMine);
 PREP(compileAircraft);
@@ -32,7 +33,6 @@ PREP(moduleChatter);
 PREP(moduleConvoyParameters);
 PREP(moduleCreateIED);
 PREP(moduleCreateIntel);
-PREP(moduleCreateIntelLocal);
 PREP(moduleCreateMinefield);
 PREP(moduleCreateTarget);
 PREP(moduleCreateTeleporter);

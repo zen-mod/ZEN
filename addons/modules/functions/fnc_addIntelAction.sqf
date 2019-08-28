@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Zeus module function to add an intel action to an object.
+ * Add an intel action to the given object.
  *
  * Arguments:
  * 0: Object <OBJECT>
@@ -16,7 +16,7 @@
  * None
  *
  * Example:
- * [notebook, 0, true, "Pick Up Intel", 1, "Intel!", "Notes..."] call zen_modules_fnc_moduleCreateIntelLocal
+ * [notebook, 0, true, "Pick Up Intel", 1, "Intel!", "Notes..."] call zen_modules_fnc_addIntelAction
  *
  * Public: No
  */

@@ -15,9 +15,8 @@ if (isServer) then {
     [QGVAR(moduleCreateTeleporter), LINKFUNC(moduleCreateTeleporterServer)] call CBA_fnc_addEventHandler;
 };
 
+[QGVAR(addIntelAction), LINKFUNC(addIntelAction)] call CBA_fnc_addEventHandler;
 [QGVAR(addTeleporterAction), LINKFUNC(addTeleporterAction)] call CBA_fnc_addEventHandler;
-
-[QGVAR(moduleCreateIntel), LINKFUNC(moduleCreateIntelLocal)] call CBA_fnc_addEventHandler;
 
 [QGVAR(sayMessage), BIS_fnc_sayMessage] call CBA_fnc_addEventHandler;
 [QGVAR(carrierInit), BIS_fnc_Carrier01Init] call CBA_fnc_addEventHandler;

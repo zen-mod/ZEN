@@ -61,7 +61,7 @@ if (isNull _object) then {
     _values params ["_share", "_delete", "_actionText", "_duration", "_title", "_text"];
     _text = _text splitString endl joinString "<br />";
 
-    private _jipID = [QGVAR(moduleCreateIntel), [_object, _share, _delete, _actionText, _duration, _title, _text]] call CBA_fnc_globalEventJIP;
+    private _jipID = [QGVAR(addIntelAction), [_object, _share, _delete, _actionText, _duration, _title, _text]] call CBA_fnc_globalEventJIP;
     [_jipID, _object] call CBA_fnc_removeGlobalEventJIP;
 }, {}, _object] call EFUNC(dialog,create);
 
