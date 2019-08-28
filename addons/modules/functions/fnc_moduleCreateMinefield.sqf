@@ -63,7 +63,9 @@ _minesCache params ["_configNames", "_displayNames"];
 
         for "_i" from 1 to (_width / _spacing * _height / _spacing) do {
             private _position = [_area] call CBA_fnc_randPosArea;
-            _mines pushBack createVehicle [_type, _position, [], 0, "CAN_COLLIDE"];
+            private _mine = createVehicle [_type, _position, [], 0, "CAN_COLLIDE"];
+            _mine setDir random 360;
+            _mines pushBack _mine;
         };
     } else {
         private _topLeft = _position vectorAdd [-_width / 2, -_height / 2, 0];
