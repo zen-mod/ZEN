@@ -71,5 +71,26 @@
         <Key ID="STR_ZEN_Attributes_ReloadSpeed">
             <English>Reload Speed</English>
         </Key>
+        <Key ID="STR_ZEN_Attributes_ChangeTraits">
+            <English>Change Traits</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_Traits">
+            <English>Traits</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_MedicalTraining">
+            <English>Medical Training</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_EngineeringSkill">
+            <English>Engineering Skill</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_Doctor">
+            <English>Doctor</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_AdvEngineer">
+            <English>Adv. Engineer</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_EOD">
+            <English>EOD</English>
+        </Key>
     </Package>
 </Project>

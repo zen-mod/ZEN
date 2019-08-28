@@ -22,10 +22,13 @@ _unit = effectiveCommander _unit;
 _unit setVariable [VAR_OWNER, player, true];
 missionNamespace setVariable [VAR_UNIT, _unit];
 
+private _cameraDir = vectorNormalized (_unit worldToModel ASLtoAGL getPosASL curatorCamera);
+private _cameraPos = _cameraDir vectorMultiply ((_unit distance curatorCamera) min MAX_CAMERA_DISTANCE);
+
 (findDisplay IDD_RSCDISPLAYCURATOR) closeDisplay 2;
 
 [{
-    params ["_unit"];
+    params ["_unit", "_cameraPos"];
 
     private _vehicle = vehicle _unit;
     private _vehicleRole = assignedVehicleRole _unit;
@@ -57,7 +60,12 @@ missionNamespace setVariable [VAR_UNIT, _unit];
             || {cameraOn == vehicle player}
             || {isNull getAssignedCuratorLogic player}
         }, {
-            params ["_unit"];
+            params ["_unit", "", "", "_cameraPos"];
+
+            if (!isNull _unit) then {
+                _cameraPos = _unit modelToWorld _cameraPos;
+                getAssignedCuratorLogic player setVariable ["bis_fnc_moduleCuratorSetCamera_params", [_cameraPos, _unit]];
+            };
 
             objNull remoteControl _unit;
             player switchCamera cameraView;
@@ -70,5 +78,5 @@ missionNamespace setVariable [VAR_UNIT, _unit];
 
             {openCuratorInterface} call CBA_fnc_execNextFrame;
         }, _this] call CBA_fnc_waitUntilAndExecute;
-    }, [_unit, _vehicle, _vehicleRole]] call CBA_fnc_execNextFrame;
-}, _unit] call CBA_fnc_execNextFrame;
+    }, [_unit, _vehicle, _vehicleRole, _cameraPos]] call CBA_fnc_execNextFrame;
+}, [_unit, _cameraPos]] call CBA_fnc_execNextFrame;

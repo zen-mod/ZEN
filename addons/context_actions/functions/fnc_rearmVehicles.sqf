@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: 3Mydlo3
  * Rearms units in given selection.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _vehicles = _this select {
     alive _x

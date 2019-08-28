@@ -47,4 +47,5 @@ if (_category != -1) then {
 };
 
 // Create base level context menu
-[GVAR(actions)] call FUNC(createContextGroup);
+private _actions = [GVAR(actions)] call FUNC(getActiveActions);
+[_actions] call FUNC(createContextGroup);

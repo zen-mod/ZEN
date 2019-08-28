@@ -140,6 +140,12 @@
             <German>Seite</German>
             <Polish>Strona</Polish>
         </Key>
+        <Key ID="STR_ZEN_Common_Sides">
+            <English>Sides</English>
+            <Russian>Стороны</Russian>
+            <German>Seiten</German>
+            <Polish>Strony</Polish>
+        </Key>
         <Key ID="STR_ZEN_Common_Faction">
             <English>Faction</English>
             <Russian>Фракция</Russian>
@@ -212,6 +218,9 @@
             <German>Höhe (m)</German>
             <Polish>Wysokość (m)</Polish>
         </Key>
+        <Key ID="STR_ZEN_Common_Teleport">
+            <English>Teleport</English>
+        </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects">
             <English>Add Objects to Curators</English>
             <Russian>Сдалвть объекты редактируемыми</Russian>
@@ -271,6 +280,10 @@
             <Russian>ACE Арсенал</Russian>
             <German>ACE Arsenal</German>
             <Polish>Arsenał ACE</Polish>
+        </Key>
+        <Key ID="STR_ZEN_Common_NotEnoughSpaceInVehicle">
+            <English>Not enough space in target vehicle: %1 needed - %2 available</English>
+            <Polish>Za mało miejsca w pojeździe docelowym: %1 potrzebne - %2 dostępne</Polish>
         </Key>
     </Package>
 </Project>

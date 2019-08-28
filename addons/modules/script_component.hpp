@@ -30,24 +30,6 @@
 #define IDC_SIDERELATIONS_SIDE_2 60203
 #define IDC_SIDERELATIONS_RADIO 60204
 
-#define IDC_TELEPORTPLAYERS 60300
-#define IDC_TELEPORTPLAYERS_BUTTON_SIDES 60301
-#define IDC_TELEPORTPLAYERS_BUTTON_GROUPS 60302
-#define IDC_TELEPORTPLAYERS_BUTTON_PLAYERS 60303
-#define IDC_TELEPORTPLAYERS_TAB_SIDES 60311
-#define IDC_TELEPORTPLAYERS_TAB_GROUPS 60312
-#define IDC_TELEPORTPLAYERS_TAB_PLAYERS 60313
-#define IDC_TELEPORTPLAYERS_BLUFOR 60321
-#define IDC_TELEPORTPLAYERS_OPFOR 60320
-#define IDC_TELEPORTPLAYERS_INDEPENDENT 60322
-#define IDC_TELEPORTPLAYERS_CIVILIAN 60323
-#define IDC_TELEPORTPLAYERS_GROUPS 60330
-#define IDC_TELEPORTPLAYERS_GROUPS_SEARCH 60331
-#define IDC_TELEPORTPLAYERS_GROUPS_BUTTON 60332
-#define IDC_TELEPORTPLAYERS_PLAYERS 60340
-#define IDC_TELEPORTPLAYERS_PLAYERS_SEARCH 60341
-#define IDC_TELEPORTPLAYERS_PLAYERS_BUTTON 60342
-
 #define IDC_GLOBALHINT 60600
 #define IDC_GLOBALHINT_EDIT 60601
 #define IDC_GLOBALHINT_PREVIEW 60602
@@ -92,6 +74,7 @@
 #define IDC_AMBIENTFLYBY_DISTANCE_SLIDER 61707
 #define IDC_AMBIENTFLYBY_DISTANCE_EDIT 61708
 #define IDC_AMBIENTFLYBY_SPEED 61709
+#define IDC_AMBIENTFLYBY_AMOUNT 61710
 
 #define IDC_CAS 61800
 #define IDC_CAS_LIST 61801
@@ -123,20 +106,17 @@
 #define IDC_FIREMISSION_AMMO 62008
 #define IDC_FIREMISSION_ROUNDS 62009
 
-#define ICON_CHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_checked_ca.paa"
-#define ICON_UNCHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_unchecked_ca.paa"
-
 #define ICON_HOSTILE "\a3\ui_f\data\igui\cfg\simpletasks\types\attack_ca.paa"
 #define ICON_FRIENDLY "\a3\ui_f\data\igui\cfg\simpletasks\types\help_ca.paa"
 
 #define ICON_GROUP "\a3\ui_f_curator\data\displays\rscdisplaycurator\modegroups_ca.paa"
 
+#define ICON_LOCATION "\a3\3den\data\displays\display3den\panelleft\locationlist_ca.paa"
+
 #define ICON_BLUFOR QPATHTOEF(common,ui\icon_blufor_ca.paa)
 #define ICON_OPFOR QPATHTOEF(common,ui\icon_opfor_ca.paa)
 #define ICON_INDEPENDENT QPATHTOEF(common,ui\icon_independent_ca.paa)
 #define ICON_CIVILIAN QPATHTOEF(common,ui\icon_civilian_ca.paa)
-
-#define GET_SIDE_ICON(unit) (unit call EFUNC(common,getSideIcon))
 
 #define CHECKBOX_TEXTURES(uncheckedTexture,checkedTexture) \
     textureChecked           = checkedTexture; \
@@ -162,8 +142,6 @@
 #define ICON_DESTROYED_CHECKED   "\a3\modules_f\data\editterrainobject\texturechecked_destroyed_ca.paa"
 
 #define CAS_WEAPON_TYPES [["machinegun"], ["missilelauncher"], ["machinegun", "missilelauncher"], ["bomblauncher"]]
-
-#define DEGREE_SYMBOL (toString [176])
 
 #define MS_TO_KMH(value) ((value) * 3.6)
 #define KMH_TO_MS(value) ((value) / 3.6)

@@ -27,7 +27,7 @@ private _position = if (_target isEqualType "") then {
     getPosASL _target;
 };
 
-private _artilleryETA = 9999;
+private _artilleryETA = 1e9;
 
 {
     _artilleryETA = (_x getArtilleryETA [_position, _ammo]) min _artilleryETA;
@@ -37,9 +37,8 @@ if (_artilleryETA == -1) then {
     [LSTRING(ModuleFireMission_NotInRange)] call EFUNC(common,showMessage);
 } else {
     {
-        private _targetPos = [_position, _spread] call CBA_fnc_randPos;
-        [QEGVAR(common,doArtilleryFire), [_x, _targetPos, _ammo, _rounds], _x] call CBA_fnc_targetEvent;
+        [QGVAR(fireArtillery), [_x, _position, _spread, _ammo, _rounds], _x] call CBA_fnc_targetEvent;
     } forEach _vehicles;
 
-    [LSTRING(ModuleFireMission_ArtilleryETA), _artilleryETA] call EFUNC(common,showMessage);
+    [LSTRING(ModuleFireMission_ArtilleryETA), _artilleryETA toFixed 1] call EFUNC(common,showMessage);
 };

@@ -31,6 +31,13 @@ class CfgVehicles {
         function = QFUNC(bi_moduleMine);
     };
 
+    class GVAR(moduleAddFullArsenal): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = GVAR(Inventory);
+        displayName = CSTRING(ModuleAddFullArsenal);
+        function = QFUNC(moduleAddFullArsenal);
+        icon = "\a3\ui_f\data\logos\a_64_ca.paa";
+    };
     class GVAR(moduleAmbientAnim): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(AI);
@@ -155,6 +162,13 @@ class CfgVehicles {
         icon = QPATHTOF(ui\target_ca.paa);
         portrait = QPATHTOF(ui\target_ca.paa);
     };
+    class GVAR(moduleCreateTeleporter): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Players);
+        displayName = CSTRING(ModuleCreateTeleporter);
+        function = QFUNC(moduleCreateTeleporter);
+        icon = "\a3\3den\data\displays\display3den\panelleft\entitylist_location_ca.paa";
+    };
     class GVAR(moduleDamageBuildings): GVAR(moduleBase) {
         category = QGVAR(Buildings);
         displayName = CSTRING(ModuleDamageBuildings);
@@ -248,6 +262,13 @@ class CfgVehicles {
         displayName = CSTRING(ModulePatrolArea);
         function = QFUNC(modulePatrolArea);
     };
+    class GVAR(moduleRemoveArsenal): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = GVAR(Inventory);
+        displayName = CSTRING(ModuleRemoveArsenal);
+        function = QFUNC(moduleRemoveArsenal);
+        icon = "\a3\ui_f\data\logos\a_64_ca.paa";
+    };
     class GVAR(moduleSetDate): GVAR(moduleBase) {
         category = "Environment";
         displayName = CSTRING(ModuleSetDate);
@@ -305,7 +326,7 @@ class CfgVehicles {
         curatorCanAttach = 1;
         category = QGVAR(Players);
         displayName = CSTRING(ModuleTeleportPlayers);
-        curatorInfoType = QGVAR(RscTeleportPlayers);
+        function = QFUNC(moduleTeleportPlayers);
     };
     class GVAR(moduleTurretOptics): GVAR(moduleBase) {
         curatorCanAttach = 1;
