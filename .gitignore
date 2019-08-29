@@ -13,6 +13,6 @@ CHANGELOG.md
 *.tar.gz
 *.zip
 @zen
-tools/armake.exe
+tools/armake*
 .ipynb_checkpoints/
 __pycache__/
