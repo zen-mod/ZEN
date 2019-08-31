@@ -55,7 +55,7 @@ _minesCache params ["_configNames", "_displayNames"];
     private _mines = [];
 
     // Determine spacing based on density
-    private _spacing = 30 + _density * -5;
+    private _spacing = 50 - 10 * _density;
 
     if (_randomize) then {
         // Create rectangular area array to get random positions from
