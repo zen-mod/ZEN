@@ -24,7 +24,7 @@ private _result = [];
     private _turret = _x;
     {
         _result pushback [_x, _turret];
-    } foreach ((object weaponsTurret _turret) select {!(toLower(_x) in _pylons)});
+    } foreach ((_vehicle weaponsTurret _turret) select {!(toLower(_x) in _pylons)});
 } foreach allTurrets _vehicle;
 
 _result

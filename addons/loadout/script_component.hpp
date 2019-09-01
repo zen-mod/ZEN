@@ -32,6 +32,7 @@
 #define IDC_BTN_ADD    1541
 #define IDC_BTN_SEARCH 1551
 #define IDC_SEARCH_BAR 1561
+#define IDC_BTN_CLEAR  1571
 
 
 #define EMPTY_CARGO [[[], []], [[], []], [[], []], [[], []]]

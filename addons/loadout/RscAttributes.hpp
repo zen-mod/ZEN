@@ -34,7 +34,7 @@ class EGVAR(attributes,RscAttributesVehicle): EGVAR(attributes,RscAttributesBase
 
 class EGVAR(attributes,RscAttributesVehicleEmpty): EGVAR(attributes,RscAttributesBase) {
     class Buttons {
-        class Inventory {
+        class Loadout {
             text = "Loadout";
             function = QUOTE(createDialog QQEGVAR(attributes,RscAttributesLoadout));
         };
@@ -57,7 +57,7 @@ class EGVAR(attributes,RscAttributesLoadout): EGVAR(attributes,RscAttributesBase
                     w = POS_W(26);
                     h = POS_H(19);
                     class controls {
-                        class Weapon: RscCombo {
+                        class Weapon: EGVAR(attributes,RscCombo) {
                             idc = IDC_WEAPON;
                             x = 0;
                             y = 0;
@@ -80,7 +80,7 @@ class EGVAR(attributes,RscAttributesLoadout): EGVAR(attributes,RscAttributesBase
                             h = POS_H(16);
                             drawSideArrows = 1;
                             disableOverflow = 1;
-                            columns[] = {0.05, 0.15, 0.85};
+                            columns[] = {0.05, 0.85};
                         };
                         class ButtonRemove: ctrlButton {
                             idc = IDC_BTN_REMOVE;
@@ -114,6 +114,12 @@ class EGVAR(attributes,RscAttributesLoadout): EGVAR(attributes,RscAttributesBase
                             w = POS_W(8);
                             h = POS_H(1);
                             sizeEx = POS_H(0.9);
+                        };
+                        class ButtonClear: ButtonSearch {
+                            idc = IDC_BTN_CLEAR;
+                            text = QPATHTOF(ui\clear_ca.paa);
+                            tooltip = "$STR_disp_arcmap_clear";
+                            x = POS_W(25);
                         };
                     };
                 };
