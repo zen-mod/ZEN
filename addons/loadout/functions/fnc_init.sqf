@@ -17,10 +17,11 @@
 
 params ["_display"];
 
-private _object = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-private _weapons = (_object call FUNC(getWeapons)) select { getText (configFile >> "CfgWeapons" >> (_x select 0) >> "displayName") != "" };
+private _vehicle = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
+private _weaponList = _vehicle call FUNC(getWeaponList);
 
-_display setVariable [QGVAR(weapons), _weapons];
+_display setVariable [QGVAR(weaponList), _weaponList];
+_display setVariable [QGVAR(changes), []];
 
 // Refresh list when weapon is changed
 private _ctrlWeapon = _display displayCtrl IDC_WEAPON;
@@ -116,9 +117,9 @@ _ctrlButtonOK ctrlAddEventHandler ["ButtonClick", {call FUNC(confirm)}];
 
 // Fill the weapons combo box
 {
-    private _weaponName = ([_object] + _x) call FUNC(getWeaponName);
+    private _weaponName = ([_vehicle] + _x) call FUNC(getWeaponName);
     _ctrlWeapon lbAdd _weaponName;
-} forEach _weapons;
+} forEach _weaponList;
 _ctrlWeapon lbSetCurSel 0;
 
 // Populate the list with items

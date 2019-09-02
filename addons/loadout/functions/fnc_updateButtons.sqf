@@ -21,10 +21,6 @@ params ["_display"];
 private _ctrlList = _display displayCtrl IDC_LIST;
 private _currentRow = lnbCurSelRow _ctrlList;
 
-// Enable add button if object has enough space
-private _ctrlButtonAdd = _display displayCtrl IDC_BTN_ADD;
-_ctrlButtonAdd ctrlEnable true;
-
 // Enable remove button if item count is not zero
 private _ctrlButtonRemove = _display displayCtrl IDC_BTN_REMOVE;
-_ctrlButtonRemove ctrlEnable (_ctrlList lnbText [_currentRow, 2] != "0");
+_ctrlButtonRemove ctrlEnable (_ctrlList lnbText [_currentRow, 1] != "0");

@@ -1,6 +1,6 @@
 PREP(fillList);
 PREP(getWeaponName);
-PREP(getWeapons);
+PREP(getWeaponList);
 PREP(init);
 PREP(modify);
 PREP(updateButtons);
