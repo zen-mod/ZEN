@@ -16,14 +16,15 @@
  * None
  *
  * Example:
- * [vehicle player, ["680Rnd_35mm_AA_shells_Tracer_Red", [0], 680, 2], 900] call zen_common_fnc_setTurretAmmo
+ * [vehicle player, ["680Rnd_35mm_AA_shells_Tracer_Red", [0], 2], 0.8] call zen_common_fnc_setTurretAmmo
  *
  * Public: No
  */
 
 params ["_vehicle", "_magazine", "_percentage"];
-_magazine params ["_name", "_turretPath", "_magMaxAmmo", "_magCount"];
+_magazine params ["_name", "_turretPath", "_magCount"];
 
+private _magMaxAmmo = getNumber (configFile >> "CfgMagazines" >> _name >> "count");
 private _totalAmmo = round (_magMaxAmmo * _magCount * _percentage);
 _vehicle removeMagazinesTurret [_name, _turretPath];
 

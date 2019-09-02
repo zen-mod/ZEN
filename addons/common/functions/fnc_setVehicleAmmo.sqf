@@ -64,7 +64,7 @@ _turretMagsCount = _turretMagsCount select {_x isEqualType 0};
 {
 	_x params ["_name", "_turretPath"];
     private _turretOwner = _vehicle turretOwner _turretPath;
-    _x append [getNumber (_cfgMagazines >> _name >> "count"), _turretMagsCount select _forEachIndex];
+    _x pushBack (_turretMagsCount select _forEachIndex);
 
     if (_turretOwner == 0) then {
         [QGVAR(setMagazineAmmo), [_vehicle, _x, _percentage], _vehicle] call CBA_fnc_targetEvent;
