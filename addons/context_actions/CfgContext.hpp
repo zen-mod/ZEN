@@ -115,7 +115,7 @@ class EGVAR(context_menu,actions) {
     };
     class Stance {
         displayName = "$STR_A3_RscAttributeUnitPos_Title";
-        condition = QUOTE(_selectedObjects findIf {_x isKindOf 'CAManBase' && {!isPlayer _x}} > -1);
+        condition = QUOTE(_selectedObjects findIf {alive _x && {_x isKindOf 'CAManBase'} && {!isPlayer _x}} != -1);
         class Auto {
             displayName = "$STR_A3_RscAttributeUnitPos_Auto_tooltip";
             icon = QPATHTOF(ui\default_ca.paa);
