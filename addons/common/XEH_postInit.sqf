@@ -196,6 +196,26 @@
     _unit doArtilleryFire [_position, _magazine, _rounds];
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setVehicleRadar), {
+    params ["_vehicle", "_mode"];
+    _vehicle setVehicleRadar _mode;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setVehicleReportRemoteTargets), {
+    params ["_vehicle", "_mode"];
+    _vehicle setVehicleReportRemoteTargets _mode;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setVehicleReceiveRemoteTargets), {
+    params ["_vehicle", "_mode"];
+    _vehicle setVehicleReceiveRemoteTargets _mode;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setVehicleReportOwnPosition), {
+    params ["_vehicle", "_mode"];
+    _vehicle setVehicleReportOwnPosition _mode;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(setTurretAmmo), FUNC(setTurretAmmo)] call CBA_fnc_addEventHandler;
 [QGVAR(setVehicleAmmo), FUNC(setVehicleAmmo)] call CBA_fnc_addEventHandler;
 

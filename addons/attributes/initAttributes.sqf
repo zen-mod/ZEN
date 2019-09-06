@@ -687,3 +687,69 @@ if (isClass (configFile >> "CfgPatches" >> "ace_explosives")) then {
         {_entity getUnitTrait "explosiveSpecialist"}
     ] call FUNC(addAttribute);
 };
+
+// - Sensors ------------------------------------------------------------------
+
+[
+    "Sensors",
+    ["STR_3DEN_Object_Attribute_Radar_displayName", "STR_3DEN_Object_Attribute_Radar_tooltip"],
+    QGVAR(combo),
+    [
+        [0, "STR_3DEN_Attributes_Radar_Default_text",  "STR_3DEN_Attributes_Radar_Default_tooltip"],
+        [1, "STR_3DEN_Attributes_Radar_RadarOn_text",  "STR_3DEN_Attributes_Radar_RadarOn_tooltip"],
+        [2, "STR_3DEN_Attributes_Radar_RadarOff_text", "STR_3DEN_Attributes_Radar_RadarOff_tooltip"]
+    ],
+    {
+        {
+            [QEGVAR(common,setVehicleRadar), [_x, _value], _x] call CBA_fnc_targetEvent;
+        } forEach (_entity call FUNC(getEntities));
+    },
+    {[2, 1] select isVehicleRadarOn _entity},
+    {true},
+    4
+] call FUNC(addAttribute);
+
+[
+    "Sensors",
+    ["STR_3DEN_Object_Attribute_ReportRemoteTargets_displayName", "STR_3DEN_Object_Attribute_ReportRemoteTargets_tooltip"],
+    QGVAR(checkbox),
+    nil,
+    {
+        {
+            [QEGVAR(common,setVehicleReportRemoteTargets), [_x, _value], _x] call CBA_fnc_targetEvent;
+        } forEach (_entity call FUNC(getEntities));
+    },
+    {vehicleReportRemoteTargets _entity},
+    {true},
+    3
+] call FUNC(addAttribute);
+
+[
+    "Sensors",
+    ["STR_3DEN_Object_Attribute_ReceiveRemoteTargets_displayName", "STR_3DEN_Object_Attribute_ReceiveRemoteTargets_tooltip"],
+    QGVAR(checkbox),
+    nil,
+    {
+        {
+            [QEGVAR(common,setVehicleReceiveRemoteTargets), [_x, _value], _x] call CBA_fnc_targetEvent;
+        } forEach (_entity call FUNC(getEntities));
+    },
+    {vehicleReceiveRemoteTargets _entity},
+    {true},
+    2
+] call FUNC(addAttribute);
+
+[
+    "Sensors",
+    ["STR_3DEN_Object_Attribute_ReportOwnPosition_displayName", "STR_3DEN_Object_Attribute_ReportOwnPosition_tooltip"],
+    QGVAR(checkbox),
+    nil,
+    {
+        {
+            [QEGVAR(common,setVehicleReportOwnPosition), [_x, _value], _x] call CBA_fnc_targetEvent;
+        } forEach (_entity call FUNC(getEntities));
+    },
+    {vehicleReportOwnPosition _entity},
+    {true},
+    1
+] call FUNC(addAttribute);

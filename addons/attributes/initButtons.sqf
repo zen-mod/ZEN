@@ -14,3 +14,10 @@
     {[_entity, "Traits"] call FUNC(open)},
     {alive _entity && {_entity isKindOf "CAManBase"}}
 ] call FUNC(addButton);
+
+[
+    "Object",
+    LSTRING(Sensors),
+    {[_entity, "Sensors"] call FUNC(open)},
+    {alive _entity && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}}
+] call FUNC(addButton);

@@ -1,11 +1,9 @@
-PREP(buttonSensors);
 PREP(buttonSide);
 PREP(buttonSkills);
-PREP(compileWaypoints);
-PREP(initDisplay);
 
 PREP(addAttribute);
 PREP(addButton);
+PREP(compileWaypoints);
 PREP(confirm);
 PREP(getEntities);
 PREP(getTitle);
@@ -19,4 +17,5 @@ PREP(gui_toolbox);
 PREP(gui_waypoint);
 PREP(handleMarkerPlaced);
 PREP(handleObjectPlaced);
+PREP(initDisplay);
 PREP(open);
