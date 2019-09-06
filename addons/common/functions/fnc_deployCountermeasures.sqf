@@ -17,7 +17,7 @@
 
 params ["_vehicle"];
 
-if !(_vehicle isKindOf "AllVehicles") exitWith {};
+if !(_vehicle isKindOf "LandVehicle" || {_vehicle isKindOf "Air"} || {_vehicle isKindOf "Ship"}) exitWith {};
 
 private _weapons = [];
 private _cfgAmmo = configFile >> "CfgAmmo";
@@ -44,3 +44,5 @@ private _cfgMagazines = configFile >> "CfgMagazines";
 if (_weapons isEqualTo []) exitWith {};
 
 [_vehicle, selectRandom _weapons] call BIS_fnc_fire;
+
+nil

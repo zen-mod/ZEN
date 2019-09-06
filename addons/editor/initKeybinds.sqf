@@ -13,7 +13,7 @@
 
         true // handled
     };
-}, {}, [DIK_C, [false, false, false]]] call CBA_fnc_addKeybind; // Default: C
+}, {}, [DIK_C, [true, false, false]]] call CBA_fnc_addKeybind; // Default: SHIFT + C
 
 [ELSTRING(common,Category), QGVAR(ejectPassengers), [LSTRING(EjectPassengers), LSTRING(EjectPassengers_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
