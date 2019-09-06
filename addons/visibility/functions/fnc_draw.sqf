@@ -27,7 +27,9 @@ if !(_intersections isEqualTo []) then {
 // Check 1.5 above the cursor to prevent a small object on the terrain blocking the view
 private _posHigh = _pos vectorAdd [0, 0, 1.5];
 private _draw = false;
+
 {
+    // Check if the cursor's position is in the player's view (filter the local player and virtual units)
     if (_x != player && {side _x != sideLogic} && {((_x getRelDir _posHigh) + 90) mod 360 < 180}) then {
         private _eyePos = eyePos _x;
         if (lineIntersectsSurfaces [_eyePos, _pos, _x, objNull] isEqualTo [] || {lineIntersectsSurfaces [_eyePos, _posHigh, _x, objNull] isEqualTo []}) then {
