@@ -204,6 +204,40 @@
 
 [
     "Object",
+    "STR_Diff_Simulation",
+    QGVAR(toolbox),
+    [1, 2, [ELSTRING(common,Disabled), ELSTRING(common,Enabled)]],
+    {
+        {
+            if (alive _x) then {
+                [QEGVAR(common,enableSimulationGlobal), [_x, _value]] call CBA_fnc_serverEvent;
+            };
+        } forEach SELECTED_OBJECTS;
+    },
+    {simulationEnabled _entity},
+    {alive _entity},
+    -99.5
+] call FUNC(addAttribute);
+
+[
+    "Object",
+    "STR_A3_NormalDamage1",
+    QGVAR(toolbox),
+    [1, 2, [ELSTRING(common,Disabled), ELSTRING(common,Enabled)]],
+    {
+        {
+            if (alive _x) then {
+                [QEGVAR(common,allowDamage), [_x, _value], _x] call CBA_fnc_targetEvent;
+            };
+        } forEach SELECTED_OBJECTS;
+    },
+    {isDamageAllowed _entity},
+    {alive _entity},
+    -99.6
+] call FUNC(addAttribute);
+
+[
+    "Object",
     "STR_a3_rscdebugconsole_expressiontext",
     QGVAR(code),
     [QGVAR(objectExecHistory), 20, LSTRING(Exec_TooltipObject)],

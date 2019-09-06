@@ -8,6 +8,7 @@ class RscControlsGroupNoScrollbars;
 class EGVAR(common,RscLabel);
 class EGVAR(common,RscBackground);
 class EGVAR(common,RscEdit);
+class EGVAR(common,RscCheckBox);
 class EGVAR(common,RscCombo);
 class EGVAR(common,RscControlsGroup);
 
@@ -76,6 +77,16 @@ class GVAR(base): RscControlsGroupNoScrollbars {
     class controls {
         class Label: EGVAR(common,RscLabel) {
             idc = IDC_ATTRIBUTE_LABEL;
+        };
+    };
+};
+
+class GVAR(checkbox): GVAR(base) {
+    GVAR(function) = QFUNC(gui_checkbox);
+    class controls: controls {
+        class Label: Label {};
+        class CheckBox: EGVAR(common,RscCheckBox) {
+            idc = IDC_ATTRIBUTE_CHECKBOX;
         };
     };
 };
@@ -157,6 +168,26 @@ class GVAR(slider): GVAR(base) {
             w = POS_W(2.3);
         };
     };
+};
+
+class GVAR(toolbox): GVAR(base) {
+    GVAR(function) = QFUNC(gui_toolbox);
+    class controls: controls {
+        class Label: Label {};
+        /* toolbox created through script based on value info */
+    };
+};
+
+class GVAR(RscToolbox): ctrlToolbox {
+    x = POS_W(10.1);
+    y = 0;
+    w = POS_W(15.9);
+    h = POS_H(1);
+    tooltipColorBox[] = {0, 0, 0, 0};
+    tooltipColorText[] = {0, 0, 0, 0};
+    tooltipColorShade[] = {0, 0, 0, 0};
+    rows = QGVAR(rows);
+    columns = QGVAR(columns);
 };
 
 #define WAYPOINT_ROWS (ceil (count (uiNamespace getVariable QGVAR(waypointTypes)) / 3))

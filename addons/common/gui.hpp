@@ -1,5 +1,6 @@
 class RscText;
 class RscEdit;
+class RscCheckBox;
 class RscCombo {
     class ComboScrollBar;
 };
@@ -36,6 +37,18 @@ class GVAR(RscEdit): RscEdit {
     h = POS_H(1) - pixelH;
     colorText[] = {1, 1, 1, 1};
     colorBackground[] = {0, 0, 0, 0.2};
+};
+
+class GVAR(RscCheckBox): RscCheckBox {
+    idc = -1;
+    x = POS_W(10.1);
+    y = 0;
+    w = POS_W(1);
+    h = POS_H(1);
+    soundClick[] = {"\a3\ui_f\data\sound\rscbutton\soundclick", 0.09, 1};
+    soundEnter[] = {"\a3\ui_f\data\sound\rscbutton\soundenter", 0.09, 1};
+    soundEscape[] = {"\a3\ui_f\data\sound\rscbutton\soundescape", 0.09, 1};
+    soundPush[] = {"\a3\ui_f\data\sound\rscbutton\soundpush", 0.09, 1};
 };
 
 class GVAR(RscCombo): RscCombo {
