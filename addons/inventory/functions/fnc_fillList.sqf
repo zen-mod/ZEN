@@ -15,14 +15,14 @@
  * Public: No
  */
 
-params ["_display"];
+params ["_controlsGroup"];
 
 private _itemsList = uiNamespace getVariable QGVAR(itemsList);
-private _category = lbCurSel (_display displayCtrl IDC_CATEGORY) - 1;
-private _filter = toLower ctrlText (_display displayCtrl IDC_SEARCH_BAR);
+private _category = lbCurSel (_controlsGroup controlsGroupCtrl IDC_CATEGORY) - 1;
+private _filter = toLower ctrlText (_controlsGroup controlsGroupCtrl IDC_SEARCH_BAR);
 
 // Clear the listbox
-private _ctrlList = _display displayCtrl IDC_LIST;
+private _ctrlList = _controlsGroup controlsGroupCtrl IDC_LIST;
 lnbClear _ctrlList;
 
 // Handle current cargo, no specific category
@@ -32,7 +32,7 @@ if (_category == -1) then {
     private _cfgGlassess  = configFile >> "CfgGlasses";
     private _cfgWeapons   = configFile >> "CfgWeapons";
 
-    private _cargo = _display getVariable QGVAR(cargo);
+    private _cargo = _controlsGroup getVariable QEGVAR(attributes,value);
 
     {
         _x params ["_cargoItems", "_cargoCounts"];
@@ -59,12 +59,12 @@ if (_category == -1) then {
             };
 
             // Add item to listbox if not filtered
-            private _displayName = getText (_config >> "displayName");
-            if (toLower _displayName find _filter != -1) then {
+            private _controlsGroupName = getText (_config >> "displayName");
+            if (toLower _controlsGroupName find _filter != -1) then {
                 private _picture = getText (_config >> "picture");
-                private _tooltip = format ["%1\n%2", _displayName, _x];
+                private _tooltip = format ["%1\n%2", _controlsGroupName, _x];
 
-                private _index = _ctrlList lnbAddRow ["", _displayName, str _count];
+                private _index = _ctrlList lnbAddRow ["", _controlsGroupName, str _count];
                 _ctrlList lnbSetData    [[_index, 0], _x];
                 _ctrlList lnbSetPicture [[_index, 0], _picture];
                 _ctrlList lbSetTooltip  [_index * count lnbGetColumnsPosition _ctrlList, _tooltip];
@@ -89,15 +89,15 @@ if (_category == -1) then {
     };
 
     // Get cargo for current category
-    private _categoryCargo = [_display] call FUNC(getCargo);
+    private _categoryCargo = [_controlsGroup] call FUNC(getCargo);
     _categoryCargo params ["_cargoItems", "_cargoCounts"];
 
     {
         // Add item to listbox if not filtered
-        private _displayName = getText (_config >> _x >> "displayName");
-        if (toLower _displayName find _filter != -1) then {
+        private _controlsGroupName = getText (_config >> _x >> "displayName");
+        if (toLower _controlsGroupName find _filter != -1) then {
             private _picture = getText (_config >> _x >> "picture");
-            private _tooltip = format ["%1\n%2", _displayName, _x];
+            private _tooltip = format ["%1\n%2", _controlsGroupName, _x];
             private _count = "0";
             private _alpha = 0.5;
 
@@ -109,7 +109,7 @@ if (_category == -1) then {
                 _alpha = 1;
             };
 
-            private _index = _ctrlList lnbAddRow ["", _displayName, _count];
+            private _index = _ctrlList lnbAddRow ["", _controlsGroupName, _count];
             _ctrlList lnbSetData    [[_index, 0], _x];
             _ctrlList lnbSetPicture [[_index, 0], _picture];
             _ctrlList lnbSetColor   [[_index, 1], [1, 1, 1, _alpha]];
@@ -121,4 +121,4 @@ if (_category == -1) then {
 
 _ctrlList lnbSort [1];
 
-[_display] call FUNC(updateButtons);
+[_controlsGroup] call FUNC(updateButtons);

@@ -28,9 +28,9 @@ private _unit   = if (_entity isEqualType grpNull) then {leader _entity} else {_
     ["SLIDER:PERCENT", LSTRING(SpotTime),       [0, 1, _unit skill "spotTime"      ], true],
     ["SLIDER:PERCENT", LSTRING(ReloadSpeed),    [0, 1, _unit skill "reloadSpeed"   ], true]
 ], {
-    params ["_dialogValues", "_entity"];
+    params ["_values", "_entity"];
 
     {
-        [QGVAR(setSkills), [_x, _dialogValues], _x] call CBA_fnc_targetEvent;
-    } forEach (_entity call FUNC(getAttributeEntities));
+        [QGVAR(setSkills), [_x, _values], _x] call CBA_fnc_targetEvent;
+    } forEach (_entity call FUNC(getEntities));
 }, {}, _entity] call EFUNC(dialog,create);

@@ -16,9 +16,9 @@
  * Public: No
  */
 
-params ["_display"];
+params ["_controlsGroup"];
 
-private _cargo = +(_display getVariable QGVAR(cargo));
+private _cargo = +(_controlsGroup getVariable QEGVAR(attributes,value));
 _cargo params ["_itemCargo", "_weaponCargo", "_magazineCargo", "_backpackCargo"];
 
 private _load = 0;
@@ -58,6 +58,6 @@ _itemCargo params ["_itemCargoItems", "_itemCargoCounts"];
 [_backpackCargo, configFile >> "CfgVehicles"] call _fnc_addMasses;
 [_glassesCargo, _cfgGlasses] call _fnc_addMasses;
 
-_display setVariable [QGVAR(currentLoad), _load];
+_controlsGroup setVariable [QGVAR(currentLoad), _load];
 
 _load

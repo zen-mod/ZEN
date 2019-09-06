@@ -13,16 +13,25 @@
             <German>Lichter</German>
             <Polish>Światła</Polish>
         </Key>
+        <Key ID="STR_ZEN_Attributes_TurnOn">
+            <English>Turn On</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_TurnOff">
+            <English>Turn Off</English>
+        </Key>
         <Key ID="STR_ZEN_Attributes_PlateNumber">
             <English>Plate Number</English>
             <Russian>Госномер</Russian>
             <German>Kennzeichen</German>
             <Polish>Tablica rejestracyjna</Polish>
         </Key>
-        <Key ID="STR_ZEN_Attributes_Exec_Tooltip">
+        <Key ID="STR_ZEN_Attributes_Exec_TooltipObject">
             <English>This code will be executed in the unscheduled environment on the machine where this object is local.\nThe object will be passed in the "_this" variable.</English>
             <German>Der eingegebene Code wird in einer unscheduled Umgebung lokal zum Objkekt ausgeführt.\nDas Objekt wird in der Variable names "_this" übergeben.</German>
             <Polish>Ten kod zostanie wykonany w środowisku unscheduled na maszynie gdzie obiekt jest lokalny.\nObiekt zostanie przekazany w zmiennej "_this".</Polish>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_Exec_TooltipGroup">
+            <English>This code will be executed in the unscheduled environment on the machine where this group is local.\nThe group will be passed in the "_this" variable.</English>
         </Key>
         <Key ID="STR_ZEN_Attributes_Timeout">
             <English>Timeout (s)</English>

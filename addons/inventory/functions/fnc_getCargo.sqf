@@ -18,12 +18,12 @@
  * Public: No
  */
 
-params ["_display", ["_item", ""]];
+params ["_controlsGroup", ["_item", ""]];
 
-private _cargo = _display getVariable QGVAR(cargo);
+private _cargo = _controlsGroup getVariable QEGVAR(attributes,value);
 
 private _index = if (_item == "") then {
-    private _category = lbCurSel (_display displayCtrl IDC_CATEGORY) - 1;
+    private _category = lbCurSel (_controlsGroup controlsGroupCtrl IDC_CATEGORY) - 1;
 
     switch (true) do {
         case (_category in [0, 1, 2, 14]): {1};

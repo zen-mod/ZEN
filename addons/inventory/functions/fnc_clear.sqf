@@ -17,17 +17,17 @@
 
 params ["_ctrlButtonClear"];
 
-private _display = ctrlParent _ctrlButtonClear;
-private _category = lbCurSel (_display displayCtrl IDC_CATEGORY) - 1;
+private _controlsGroup = ctrlParentControlsGroup _ctrlButtonClear;
+private _category = lbCurSel (_controlsGroup controlsGroupCtrl IDC_CATEGORY) - 1;
 
 if (_category == -1) then {
     // No specific category, empty cargo completely
-    _display setVariable [QGVAR(cargo), EMPTY_CARGO];
-    _display setVariable [QGVAR(currentLoad), 0];
+    _controlsGroup setVariable [QEGVAR(attributes,value), EMPTY_CARGO];
+    _controlsGroup setVariable [QGVAR(currentLoad), 0];
 } else {
     // Remove category items from cargo
     private _itemsList = uiNamespace getVariable QGVAR(itemsList);
-    private _categoryCargo = [_display] call FUNC(getCargo);
+    private _categoryCargo = [_controlsGroup] call FUNC(getCargo);
     _categoryCargo params ["_cargoItems", "_cargoCounts"];
 
     {
@@ -36,11 +36,11 @@ if (_category == -1) then {
         _cargoCounts deleteAt _itemIndex;
     } forEach (_itemsList select _category);
 
-    [_display] call FUNC(calculateLoad);
+    [_controlsGroup] call FUNC(calculateLoad);
 };
 
 // Update the load bar for new load
-[_display] call FUNC(updateLoadBar);
+[_controlsGroup] call FUNC(updateLoadBar);
 
 // Refresh the list after clearing
-[_display] call FUNC(fillList);
+[_controlsGroup] call FUNC(fillList);

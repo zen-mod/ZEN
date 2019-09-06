@@ -4,7 +4,7 @@
  * Handles placement of an object by Zeus.
  *
  * Arguments:
- * 0: Curator module (not used) <OBJECT>
+ * 0: Curator (not used) <OBJECT>
  * 1: Placed object <OBJECT>
  *
  * Return Value:

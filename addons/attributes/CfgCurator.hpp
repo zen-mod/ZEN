@@ -1,5 +1,5 @@
 class CfgCurator {
-    groupInfoType = QGVAR(RscAttributesGroup);
-    waypointInfoType = QGVAR(RscAttributesWaypoint);
-    markerInfoType = QGVAR(RscAttributesMarker);
+    delete groupInfoType;
+    delete waypointInfoType;
+    delete markerInfoType;
 };

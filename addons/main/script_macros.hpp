@@ -84,8 +84,10 @@
 
 #define COLOR_BACKGROUND_SETTING COLOR_SETTING(EGVAR(common,darkMode),1,1,1,0.1,0,0,0,0.2)
 
+#define ASCII_PERIOD 46
+#define ASCII_DEGREE 176
 
-#define DEGREE_SYMBOL toString [176]
+#define DEGREE_SYMBOL toString [ASCII_DEGREE]
 
 #ifdef DISABLE_COMPILE_CACHE
     #undef PREP

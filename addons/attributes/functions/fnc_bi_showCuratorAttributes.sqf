@@ -8,52 +8,52 @@
  * 0: Entity <OBJECT|GROUP|ARRAY|STRING>
  *
  * Return Value:
- * Window opened <BOOL>
+ * Opened <BOOL>
  *
  * Example:
- * [unit] call BIS_fnc_showCuratorAttributes
+ * [player] call BIS_fnc_showCuratorAttributes
  *
  * Public: No
  */
 
 // Prevent attributes from opening if remote controlling (cannot override double click EH)
-if (!isNull (missionNamespace getVariable ["bis_fnc_moduleRemoteControl_unit", objNull])) exitWith {};
+if (!isNull (missionNamespace getVariable ["bis_fnc_moduleRemoteControl_unit", objNull])) exitWith {false};
 
 // Need [_this] for passed waypoint arrays
 [_this] params [["_entity", objNull, [objNull, grpNull, [], ""]]];
 
-// Opening attributes disabled for object
-if (_entity isEqualType objNull && {_entity getVariable [QGVAR(disabled), false]}) exitWith {};
+scopeName "Main";
 
-private _curator = getAssignedCuratorLogic player;
-private _curatorInfoType = switch (typeName _entity) do {
-    case (typeName objNull): {
-        private _infoTypeClass = if (isNull group _entity && {side _entity != sideLogic}) then {"curatorInfoTypeEmpty"} else {"curatorInfoType"};
-        getText (configfile >> "CfgVehicles" >> typeOf _entity >> _infoTypeClass);
+if (_entity isEqualType objNull) then {
+    // Exit if opening attributes is disabled for this object
+    if (_entity getVariable [QGVAR(disabled), false]) then {
+        false breakOut "Main";
     };
-    case (typeName grpNull): {
-        getText (configFile >> "CfgCurator" >> "groupInfoType");
+
+    private _infoTypeClass = if (isNull group _entity && {side _entity != sideLogic}) then {"curatorInfoTypeEmpty"} else {"curatorInfoType"};
+    private _infoType = getText (configfile >> "CfgVehicles" >> typeOf _entity >> _infoTypeClass);
+
+    if (_infoType != "") then {
+        private _curator = getAssignedCuratorLogic player;
+        private _attributes = [_curator, _entity] call BIS_fnc_curatorAttributes;
+
+        if (_attributes isEqualTo []) then {
+            false breakOut "Main";
+        } else {
+            BIS_fnc_initCuratorAttributes_target = _entity;
+            BIS_fnc_initCuratorAttributes_attributes = _attributes;
+            createDialog _infoType breakOut "Main";
+        };
     };
-    case (typeName []): {
-        getText (configFile >> "CfgCurator" >> "waypointInfoType");
-    };
-    case (typeName ""): {
-        getText (configFile >> "CfgCurator" >> "markerInfoType");
-    };
-    default {""};
 };
 
-if (isClass (configFile >> _curatorInfoType)) then {
-    private _attributes = [_curator, _entity] call BIS_fnc_curatorAttributes;
-    if !(_attributes isEqualTo []) then {
-        BIS_fnc_initCuratorAttributes_target = _entity;
-        BIS_fnc_initCuratorAttributes_attributes = _attributes;
-        createDialog _curatorInfoType;
-        true
-    };
-} else {
-    if (_curatorInfoType != "") then {
-        ["Display '%1' not found", _curatorInfoType] call BIS_fnc_error;
-    };
-    false
+private _type = switch (true) do {
+    case (_entity isEqualType objNull): {"Object"};
+    case (_entity isEqualType grpNull): {"Group"};
+    case (_entity isEqualType []): {"Waypoint"};
+    case (_entity isEqualType ""): {"Marker"};
 };
+
+[_entity, _type] call FUNC(open);
+
+true

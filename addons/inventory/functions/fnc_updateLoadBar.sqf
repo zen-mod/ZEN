@@ -15,12 +15,12 @@
  * Public: No
  */
 
-params ["_display"];
+params ["_controlsGroup"];
 
-private _maxLoad = _display getVariable QGVAR(maxLoad);
-private _currentLoad = _display getVariable QGVAR(currentLoad);
+private _maxLoad = _controlsGroup getVariable QGVAR(maxLoad);
+private _currentLoad = _controlsGroup getVariable QGVAR(currentLoad);
 private _loadPercent = 0 max _currentLoad / _maxLoad min 1;
 
-private _ctrlLoad = _display displayCtrl IDC_LOAD;
+private _ctrlLoad = _controlsGroup controlsGroupCtrl IDC_LOAD;
 _ctrlLoad progressSetPosition _loadPercent;
 _ctrlLoad ctrlSetTooltip format ["%1%2", _loadPercent * 100 toFixed 1, "%"];

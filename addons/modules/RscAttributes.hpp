@@ -14,10 +14,10 @@ class ctrlButtonPictureKeepAspect;
 class RscControlsGroup;
 class RscControlsGroupNoScrollbars;
 
-class EGVAR(attributes,RscLabel);
-class EGVAR(attributes,RscBackground);
-class EGVAR(attributes,RscEdit);
-class EGVAR(attributes,RscCombo);
+class EGVAR(common,RscLabel);
+class EGVAR(common,RscBackground);
+class EGVAR(common,RscEdit);
+class EGVAR(common,RscCombo);
 
 class GVAR(RscToolboxYesNo): ctrlToolbox {
     idc = -1;
@@ -47,7 +47,7 @@ class EGVAR(attributes,RscAttributesBase) {
 
 #define BEGIN_MODULE_DIALOG(name) \
     class GVAR(name): EGVAR(attributes,RscAttributesBase) { \
-        onLoad = QUOTE([ARR_2(_this select 0, QQGVAR(name))] call EFUNC(attributes,initAttributesDisplay)); \
+        onLoad = QUOTE([ARR_2(_this select 0, QQGVAR(name))] call EFUNC(attributes,initDisplay)); \
         class controls: controls { \
             class Title: Title {}; \
             class Background: Background {}; \
@@ -71,7 +71,7 @@ BEGIN_MODULE_DIALOG(RscEditableObjects)
         w = POS_W(26);
         h = POS_H(8.2);
         class controls {
-            class EditingModeLabel: EGVAR(attributes,RscLabel) {
+            class EditingModeLabel: EGVAR(common,RscLabel) {
                 text = CSTRING(ModuleEditableObjects_EditingMode);
                 tooltip = CSTRING(ModuleEditableObjects_EditingMode_Tooltip);
             };
@@ -85,7 +85,7 @@ BEGIN_MODULE_DIALOG(RscEditableObjects)
                 columns = 2;
                 strings[] = {CSTRING(ModuleEditableObjects_RemoveObjects), CSTRING(ModuleEditableObjects_AddObjects)};
             };
-            class AllCuratorsLabel: EGVAR(attributes,RscLabel) {
+            class AllCuratorsLabel: EGVAR(common,RscLabel) {
                 text = CSTRING(ModuleEditableObjects_AllCurators);
                 tooltip = CSTRING(ModuleEditableObjects_AllCurators_Tooltip);
                 y = POS_H(1.1);
@@ -94,7 +94,7 @@ BEGIN_MODULE_DIALOG(RscEditableObjects)
                 idc = IDC_EDITABLEOBJECTS_CURATORS;
                 y = POS_H(1.1);
             };
-            class RangeLabel: EGVAR(attributes,RscLabel) {
+            class RangeLabel: EGVAR(common,RscLabel) {
                 text = ECSTRING(common,Range);
                 y = POS_H(2.2);
                 h = POS_H(2.1);
@@ -111,19 +111,19 @@ BEGIN_MODULE_DIALOG(RscEditableObjects)
                 w = POS_W(13.4);
                 h = POS_H(1);
             };
-            class RangeEdit: EGVAR(attributes,RscEdit) {
+            class RangeEdit: EGVAR(common,RscEdit) {
                 idc = IDC_EDITABLEOBJECTS_RANGE_EDIT;
                 x = POS_W(23.6);
                 y = POS_H(3.3);
                 w = POS_W(2.4);
                 h = POS_H(1);
             };
-            class FilterLabel: EGVAR(attributes,RscLabel) {
+            class FilterLabel: EGVAR(common,RscLabel) {
                 text = ECSTRING(common,Filter);
                 y = POS_H(4.4);
                 h = POS_H(3.8);
             };
-            class FilterBackground: EGVAR(attributes,RscBackground) {
+            class FilterBackground: EGVAR(common,RscBackground) {
                 y = POS_H(4.4);
                 h = POS_H(3.8);
             };
@@ -182,11 +182,11 @@ BEGIN_MODULE_DIALOG(RscCAS)
         w = POS_W(26);
         h = POS_H(8);
         class controls {
-            class Label: EGVAR(attributes,RscLabel) {
+            class Label: EGVAR(common,RscLabel) {
                 text = "$STR_DN_Plane";
                 w = POS_W(26);
             };
-            class Background: EGVAR(attributes,RscBackground) {
+            class Background: EGVAR(common,RscBackground) {
                 x = 0;
                 y = POS_H(1);
                 w = POS_W(26);
@@ -259,7 +259,7 @@ BEGIN_MODULE_DIALOG(RscSideRelations)
         w = POS_W(26);
         h = POS_H(2.1);
         class controls {
-            class RelationLabel: EGVAR(attributes,RscLabel) {
+            class RelationLabel: EGVAR(common,RscLabel) {
                 text = CSTRING(RelationToChange);
             };
             class RelationToggle: ctrlButtonPictureKeepAspect {
@@ -276,7 +276,7 @@ BEGIN_MODULE_DIALOG(RscSideRelations)
                 offsetPressedX = 0;
                 offsetPressedY = 0;
             };
-            class RelationSide_1: EGVAR(attributes,RscCombo) {
+            class RelationSide_1: EGVAR(common,RscCombo) {
                 idc = IDC_SIDERELATIONS_SIDE_1;
                 x = POS_W(10.1);
                 y = 0;
@@ -305,7 +305,7 @@ BEGIN_MODULE_DIALOG(RscSideRelations)
                 x = POS_W(18.65);
                 class Items {}; // Special handling through script
             };
-            class RadioLabel: EGVAR(attributes,RscLabel) {
+            class RadioLabel: EGVAR(common,RscLabel) {
                 text = CSTRING(PlayRadioMessage);
                 y = POS_H(1.1);
             };
@@ -326,7 +326,7 @@ BEGIN_MODULE_DIALOG(RscDamageBuildings)
         w = POS_W(26);
         h = POS_H(4.2);
         class controls {
-            class SelectionLabel: EGVAR(attributes,RscLabel) {
+            class SelectionLabel: EGVAR(common,RscLabel) {
                 text = CSTRING(BuildingSelection);
             };
             class SelectionMode: ctrlToolbox {
@@ -339,13 +339,13 @@ BEGIN_MODULE_DIALOG(RscDamageBuildings)
                 columns = 2;
                 strings[] = {ECSTRING(common,Nearest), ECSTRING(common,Radius)};
             };
-            class SelectionRadius: EGVAR(attributes,RscEdit) {
+            class SelectionRadius: EGVAR(common,RscEdit) {
                 idc = IDC_DAMAGEBUILDINGS_RADIUS;
                 x = POS_W(24);
                 w = POS_W(2);
                 maxChars = 4;
             };
-            class DamageLabel: EGVAR(attributes,RscLabel) {
+            class DamageLabel: EGVAR(common,RscLabel) {
                 text = CSTRING(DamageState);
                 tooltip = CSTRING(DamageState_Tooltip);
                 y = POS_H(1.1);
@@ -402,7 +402,7 @@ BEGIN_MODULE_DIALOG(RscDamageBuildings)
                 x = POS_W(18.1);
                 CHECKBOX_TEXTURES(ICON_DESTROYED_UNCHECKED,ICON_DESTROYED_CHECKED);
             };
-            class EffectsLabel: EGVAR(attributes,RscLabel) {
+            class EffectsLabel: EGVAR(common,RscLabel) {
                 text = CSTRING(DestructionEffects);
                 tooltip = CSTRING(DestructionEffects_Tooltip);
                 y = POS_H(3.2);
@@ -424,10 +424,10 @@ BEGIN_MODULE_DIALOG(RscAttachEffect)
         w = POS_W(26);
         h = POS_H(7.5);
         class controls {
-            class TargetLabel: EGVAR(attributes,RscLabel) {
+            class TargetLabel: EGVAR(common,RscLabel) {
                 text = CSTRING(ModuleAttachEffect_Target);
             };
-            class Target: EGVAR(attributes,RscCombo) {
+            class Target: EGVAR(common,RscCombo) {
                 idc = IDC_ATTACHEFFECT_TARGET;
                 class Items {
                     class Group {
@@ -453,7 +453,7 @@ BEGIN_MODULE_DIALOG(RscAttachEffect)
                     };
                 };
             };
-            class EffectLabel: EGVAR(attributes,RscLabel) {
+            class EffectLabel: EGVAR(common,RscLabel) {
                 text = CSTRING(ModuleAttachEffect_Effect);
                 y = POS_H(1.1);
                 w = POS_W(26);
@@ -513,17 +513,17 @@ BEGIN_MODULE_DIALOG(RscSetDate)
         w = POS_W(26);
         h = POS_H(6.1);
         class controls {
-            class DateLabel: EGVAR(attributes,RscLabel) {
+            class DateLabel: EGVAR(common,RscLabel) {
                 text = "$STR_3DEN_Environment_Attribute_Date_displayName";
                 w = POS_W(26);
             };
-            class DateBackground: EGVAR(attributes,RscBackground) {
+            class DateBackground: EGVAR(common,RscBackground) {
                 x = 0;
                 y = POS_H(1);
                 w = POS_W(26);
                 h = POS_H(2);
             };
-            class Year: EGVAR(attributes,RscCombo) {
+            class Year: EGVAR(common,RscCombo) {
                 idc = IDC_SETDATE_YEAR;
                 font = "RobotoCondensedLight";
                 x = POS_W(3.9);
@@ -669,7 +669,7 @@ BEGIN_MODULE_DIALOG(RscSetDate)
                 h = POS_H(1);
                 colorBackground[] = {0, 0, 0, 0.5};
             };
-            class Hour: EGVAR(attributes,RscEdit) {
+            class Hour: EGVAR(common,RscEdit) {
                 idc = IDC_SETDATE_HOUR;
                 style = ST_CENTER + ST_NO_RECT;
                 text = "00";
@@ -712,24 +712,24 @@ BEGIN_MODULE_DIALOG(RscAmbientFlyby)
                 w = POS_W(26);
                 h = POS_H(4.4);
                 class controls {
-                    class Title: EGVAR(attributes,RscLabel) {
+                    class Title: EGVAR(common,RscLabel) {
                         text = CSTRING(ModuleAmbientFlyby_AircraftSelect);
                         w = POS_W(26);
                     };
-                    class Background: EGVAR(attributes,RscBackground) {
+                    class Background: EGVAR(common,RscBackground) {
                         x = 0;
                         y = POS_H(1);
                         w = POS_W(26);
                         h = POS_H(3.4);
                     };
-                    class SideLabel: EGVAR(attributes,RscLabel) {
+                    class SideLabel: EGVAR(common,RscLabel) {
                         text = ECSTRING(common,Side);
                         x = POS_W(3);
                         y = POS_H(1.1);
                         w = POS_W(8.9);
                         colorBackground[] = {0, 0, 0, 0.7};
                     };
-                    class SideCombo: EGVAR(attributes,RscCombo) {
+                    class SideCombo: EGVAR(common,RscCombo) {
                         idc = IDC_AMBIENTFLYBY_SIDE;
                         x = POS_W(12);
                         y = POS_H(1.1);
@@ -774,7 +774,7 @@ BEGIN_MODULE_DIALOG(RscAmbientFlyby)
                     };
                 };
             };
-            class DirectionLabel: EGVAR(attributes,RscLabel) {
+            class DirectionLabel: EGVAR(common,RscLabel) {
                 text = CSTRING(ModuleAmbientFlyby_FlyTowards);
                 tooltip = CSTRING(ModuleAmbientFlyby_FlyTowards_Tooltip);
                 y = POS_H(4.5);
@@ -789,7 +789,7 @@ BEGIN_MODULE_DIALOG(RscAmbientFlyby)
                 columns = 8;
                 strings[] = {"N", "NE", "E", "SE", "S", "SW", "W", "NW"};
             };
-            class HeightLabel: EGVAR(attributes,RscLabel) {
+            class HeightLabel: EGVAR(common,RscLabel) {
                 text = ECSTRING(common,Height);
                 tooltip = CSTRING(ModuleAmbientFlyby_Height_Tooltip);
                 y = POS_H(5.6);
@@ -801,14 +801,14 @@ BEGIN_MODULE_DIALOG(RscAmbientFlyby)
                 w = POS_W(13.4);
                 h = POS_H(1);
             };
-            class HeightEdit: EGVAR(attributes,RscEdit) {
+            class HeightEdit: EGVAR(common,RscEdit) {
                 idc = IDC_AMBIENTFLYBY_HEIGHT_EDIT;
                 x = POS_W(23.6);
                 y = POS_H(5.6);
                 w = POS_W(2.4);
                 h = POS_H(1);
             };
-            class DistanceLabel: EGVAR(attributes,RscLabel) {
+            class DistanceLabel: EGVAR(common,RscLabel) {
                 text = CSTRING(ModuleAmbientFlyby_Distance);
                 tooltip = CSTRING(ModuleAmbientFlyby_Distance_Tooltip);
                 y = POS_H(6.7);
@@ -821,7 +821,7 @@ BEGIN_MODULE_DIALOG(RscAmbientFlyby)
                 idc = IDC_AMBIENTFLYBY_DISTANCE_EDIT;
                 y = POS_H(6.7);
             };
-            class SpeedLabel: EGVAR(attributes,RscLabel) {
+            class SpeedLabel: EGVAR(common,RscLabel) {
                 text = ECSTRING(common,Speed);
                 tooltip = CSTRING(ModuleAmbientFlyby_Speed_Tooltip);
                 y = POS_H(7.8);
@@ -832,7 +832,7 @@ BEGIN_MODULE_DIALOG(RscAmbientFlyby)
                 columns = 3;
                 strings[] = {"$STR_A3_Slow", "$STR_A3_Normal", "$STR_A3_Fast"};
             };
-            class AmountLabel: EGVAR(attributes,RscLabel) {
+            class AmountLabel: EGVAR(common,RscLabel) {
                 text = CSTRING(ModuleAmbientFlyby_Amount);
                 tooltip = CSTRING(ModuleAmbientFlyby_Amount_Tooltip);
                 y = POS_H(8.9);
@@ -856,14 +856,14 @@ BEGIN_MODULE_DIALOG(RscExecuteCode)
         w = POS_W(26);
         h = POS_H(15.2);
         class controls {
-            class History: EGVAR(attributes,RscCombo) {
+            class History: EGVAR(common,RscCombo) {
                 idc = IDC_EXECUTECODE_HISTORY;
                 font = "EtelkaMonospacePro";
                 x = 0;
                 w = POS_W(26);
                 sizeEx = POS_H(0.7);
             };
-            class Edit: EGVAR(attributes,RscEdit) {
+            class Edit: EGVAR(common,RscEdit) {
                 idc = IDC_EXECUTECODE_EDIT;
                 style = ST_MULTI;
                 font = "EtelkaMonospacePro";
@@ -904,7 +904,7 @@ BEGIN_MODULE_DIALOG(RscFireMission)
         w = POS_W(26);
         h = POS_H(8.9);
         class controls {
-            class TargetingLabel: EGVAR(attributes,RscLabel) {
+            class TargetingLabel: EGVAR(common,RscLabel) {
                 text = CSTRING(ModuleFireMission_Targetting);
                 w = POS_W(26);
             };
@@ -916,7 +916,7 @@ BEGIN_MODULE_DIALOG(RscFireMission)
                 h = POS_H(3.4);
                 colorBackground[] = {1, 1, 1, 0.1};
             };
-            class ModeLabel: EGVAR(attributes,RscLabel) {
+            class ModeLabel: EGVAR(common,RscLabel) {
                 text = CSTRING(ModuleFireMission_Mode);
                 x = POS_W(1);
                 y = POS_H(1.1);
@@ -938,13 +938,13 @@ BEGIN_MODULE_DIALOG(RscFireMission)
                 text = "$STR_3den_display3den_menubar_grid_text";
                 y = POS_H(2.2);
             };
-            class TargetGrid: EGVAR(attributes,RscEdit) {
+            class TargetGrid: EGVAR(common,RscEdit) {
                 idc = IDC_FIREMISSION_TARGET_GRID;
                 x = POS_W(9.1);
                 y = POS_H(2.2) + pixelH;
                 colorBackground[] = {0, 0, 0, 0.3};
             };
-            class TargetLogic: EGVAR(attributes,RscCombo) {
+            class TargetLogic: EGVAR(common,RscCombo) {
                 idc = IDC_FIREMISSION_TARGET_LOGIC;
                 x = POS_W(9.1);
                 y = POS_H(2.2);
@@ -961,7 +961,7 @@ BEGIN_MODULE_DIALOG(RscFireMission)
                 w = POS_W(13.4);
                 h = POS_H(1);
             };
-            class SpreadEdit: EGVAR(attributes,RscEdit) {
+            class SpreadEdit: EGVAR(common,RscEdit) {
                 idc = IDC_FIREMISSION_SPREAD_EDIT;
                 x = POS_W(22.6);
                 y = POS_H(3.3);

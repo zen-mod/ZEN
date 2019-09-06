@@ -17,8 +17,8 @@
 
 params ["_ctrlButtonOK"];
 
-private _display = ctrlParent _ctrlButtonOK;
+private _controlsGroup = ctrlParentControlsGroup _ctrlButtonOK;
 private _object  = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-private _cargo   = _display getVariable QGVAR(cargo);
+private _cargo   = _controlsGroup getVariable QEGVAR(attributes,value);
 
 [_object, _cargo] call EFUNC(common,setInventory);

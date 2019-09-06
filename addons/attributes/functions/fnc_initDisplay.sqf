@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [DISPLAY, "RscAttributesMan"] call zen_attributes_fnc_initAttributesDisplay
+ * [DISPLAY, "RscAttributesMan"] call zen_attributes_fnc_initDisplay
  *
  * Public: No
  */
