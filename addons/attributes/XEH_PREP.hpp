@@ -1,7 +1,6 @@
 PREP(buttonSensors);
 PREP(buttonSide);
 PREP(buttonSkills);
-PREP(buttonTraits);
 PREP(compileWaypoints);
 PREP(initDisplay);
 

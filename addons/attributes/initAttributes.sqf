@@ -602,43 +602,88 @@ private _markerColors = [];
     -100
 ] call FUNC(addAttribute);
 
-// - Skills -------------------------------------------------------------------
+// - Traits -------------------------------------------------------------------
 
-/* {
-    _x params ["_skill", "_displayName"];
-
+if (isClass (configFile >> "CfgPatches" >> "ace_medical")) then {
     [
-        "Skills",
-        LSTRING(AimingAccuracy),
-        QGVAR(slider),
-        [0, 1, 0.1, true],
-        {},
+        "Traits",
+        LSTRING(MedicalTraining),
+        QGVAR(toolbox),
+        [1, 3, ["STR_A3_None", "STR_support_medic", LSTRING(Doctor)]],
         {
-            if (_entity isEqualType grpNull) then {
-                _entity = leader _entity;
-            };
-        }
+            {
+                _x setVariable ["ace_medical_medicClass", _value, true];
+            } forEach (_entity call FUNC(getEntities));
+        },
+        {_entity getVariable ["ace_medical_medicClass", parseNumber (_entity getUnitTrait "medic")]}
     ] call FUNC(addAttribute);
-} forEach [
-    ["aimingAccuracy", LSTRING(AimingAccuracy)]
-    ["aimingSpeed",    LSTRING(AimingSpeed)]
-    ["aimingShake",    LSTRING(AimingShake)]
-    ["commanding",     LSTRING(Commanding)]
-    ["courage",        LSTRING(Courage)]
-    ["spotDistance",   LSTRING(SpotDistance)]
-    ["spotTime",       LSTRING(SpotTime)]
-    ["reloadSpeed",    LSTRING(ReloadSpeed)]
-];
+} else {
+    [
+        "Traits",
+        "STR_Support_Medic",
+        QGVAR(toolbox),
+        [1, 2, [ELSTRING(common,No), ELSTRING(common,Yes)]],
+        {
+            {
+                [QEGVAR(common,setUnitTrait), [_x, "medic", _value], _x] call CBA_fnc_targetEvent;
+            } forEach (_entity call FUNC(getEntities));
+        },
+        {_entity getUnitTrait "medic"}
+    ] call FUNC(addAttribute);
+};
 
-[
-    "Skills",
-    LSTRING(AimingAccuracy),
-    QGVAR(slider),
-    [0, 1, 0.1, true],
-    {},
-    {
-        if (_entity isEqualType grpNull) then {
-            _entity = leader _entity;
-        };
-    }
-] call FUNC(addAttribute); */
+if (isClass (configFile >> "CfgPatches" >> "ace_repair")) then {
+    [
+        "Traits",
+        LSTRING(EngineeringSkill),
+        QGVAR(toolbox),
+        [1, 3, ["STR_A3_None", "str_b_engineer_f0", LSTRING(AdvEngineer)]],
+        {
+            {
+                _x setVariable ["ACE_isEngineer", _value, true];
+            } forEach (_entity call FUNC(getEntities));
+        },
+        {[0, 1, 2] select (_entity getVariable ["ACE_isEngineer", _entity getUnitTrait "engineer"])}
+    ] call FUNC(addAttribute);
+} else {
+    [
+        "Traits",
+        "str_b_engineer_f0",
+        QGVAR(toolbox),
+        [1, 2, [ELSTRING(common,No), ELSTRING(common,Yes)]],
+        {
+            {
+                [QEGVAR(common,setUnitTrait), [_x, "engineer", _value], _x] call CBA_fnc_targetEvent;
+            } forEach (_entity call FUNC(getEntities));
+        },
+        {_entity getUnitTrait "engineer"}
+    ] call FUNC(addAttribute);
+};
+
+if (isClass (configFile >> "CfgPatches" >> "ace_explosives")) then {
+    [
+        "Traits",
+        "str_b_soldier_exp_f0",
+        QGVAR(toolbox),
+        [1, 2, [ELSTRING(common,No), ELSTRING(common,Yes)]],
+        {
+            {
+                _x setVariable ["ACE_isEOD", _value, true];
+            } forEach (_entity call FUNC(getEntities));
+        },
+        {_entity call ace_common_fnc_isEOD}
+    ] call FUNC(addAttribute);
+} else {
+    [
+        "Traits",
+        LSTRING(EOD),
+        QGVAR(toolbox),
+        [1, 2, [ELSTRING(common,No), ELSTRING(common,Yes)]],
+        {
+            {
+                [QEGVAR(common,setUnitTrait), [_x, "explosiveSpecialist", _value], _x] call CBA_fnc_targetEvent;
+            } forEach (_entity call FUNC(getEntities));
+        },
+        {_entity getUnitTrait "explosiveSpecialist"}
+    ] call FUNC(addAttribute);
+};
