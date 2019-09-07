@@ -17,6 +17,7 @@ PREP(getTurretMagazines);
 PREP(getVehicleAmmo);
 PREP(healUnit);
 PREP(initSliderEdit);
+PREP(isInScreenshotMode);
 PREP(isPlacementActive);
 PREP(openArsenal);
 PREP(setInventory);
