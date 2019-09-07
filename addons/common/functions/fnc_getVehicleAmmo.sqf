@@ -22,16 +22,14 @@ private _percentages  = [];
 private _cfgMagazines = configFile >> "CfgMagazines";
 
 // Iterate through all vehicle magazines and calculate ammo percentages for each
-private _currentMagazines = magazinesAllTurrets _vehicle;
-
 {
-    _x params ["_name", "", "_ammo"];
+    _x params ["_magazineClass", "", "_ammo"];
 
-    if !(_name in BLACKLIST_MAGAZINES) then {
-    	private _magMaxAmmo = getNumber (_cfgMagazines >> _name >> "count");
+    if !(_magazineClass in BLACKLIST_MAGAZINES) then {
+    	private _magMaxAmmo = getNumber (_cfgMagazines >> _magazineClass >> "count");
     	_percentages pushBack (_ammo / _magMaxAmmo);
     };
-} forEach _currentMagazines;
+} forEach magazinesAllTurrets _vehicle;
 
 // Vehicle has no magazines, return -1 for invalid
 if (_percentages isEqualTo []) exitWith {-1};
