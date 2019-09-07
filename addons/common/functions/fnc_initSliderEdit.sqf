@@ -48,21 +48,21 @@ private _fnc_formatValue = {
 _ctrlSlider sliderSetRange [_min, _max];
 _ctrlSlider sliderSetSpeed [_speed, _speed];
 _ctrlSlider sliderSetPosition _value;
-_ctrlSlider setVariable [QGVAR(params), [_ctrlEdit, _formatting, _isPercentage, _fnc_formatValue]];
+_ctrlSlider setVariable [QGVAR(params), [_ctrlEdit, _isPercentage, _formatting, _fnc_formatValue]];
 
 _ctrlSlider ctrlAddEventHandler ["SliderPosChanged", {
     params ["_ctrlSlider", "_value"];
-    (_ctrlSlider getVariable QGVAR(params)) params ["_ctrlEdit", "_formatting", "_isPercentage", "_fnc_formatValue"];
+    (_ctrlSlider getVariable QGVAR(params)) params ["_ctrlEdit", "_isPercentage", "_formatting", "_fnc_formatValue"];
 
     _ctrlEdit ctrlSetText call _fnc_formatValue;
 }];
 
 _ctrlEdit ctrlSetText call _fnc_formatValue;
-_ctrlEdit setVariable [QGVAR(params), [_ctrlSlider, _formatting, _isPercentage, _fnc_formatValue]];
+_ctrlEdit setVariable [QGVAR(params), [_ctrlSlider, _isPercentage, _formatting, _fnc_formatValue]];
 
 _ctrlEdit ctrlAddEventHandler ["KeyUp", {
     params ["_ctrlEdit"];
-    (_ctrlEdit getVariable QGVAR(params)) params ["_ctrlSlider"];
+    (_ctrlEdit getVariable QGVAR(params)) params ["_ctrlSlider", "_isPercentage"];
 
     private _value = parseNumber ctrlText _ctrlEdit;
 
@@ -75,7 +75,7 @@ _ctrlEdit ctrlAddEventHandler ["KeyUp", {
 
 _ctrlEdit ctrlAddEventHandler ["KillFocus", {
     params ["_ctrlEdit"];
-    (_ctrlEdit getVariable QGVAR(params)) params ["_ctrlSlider", "_formatting", "_isPercentage", "_fnc_formatValue"];
+    (_ctrlEdit getVariable QGVAR(params)) params ["_ctrlSlider", "_isPercentage", "_formatting", "_fnc_formatValue"];
 
     private _value = sliderPosition _ctrlSlider;
     _ctrlEdit ctrlSetText call _fnc_formatValue;
