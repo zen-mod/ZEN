@@ -92,5 +92,11 @@
         <Key ID="STR_ZEN_Attributes_EOD">
             <English>EOD</English>
         </Key>
+        <Key ID="STR_ZEN_Attributes_ComponentsDamage">
+            <English>Components Damage</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_Components">
+            <English>Damage</English>
+        </Key>
     </Package>
 </Project>
