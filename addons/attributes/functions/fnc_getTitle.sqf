@@ -15,9 +15,9 @@
  * Public: No
  */
 
-[_this] params ["_entity"];
+params ["_entity", "_type"];
 
-private _text = switch (true) do {
+private _entityText = switch (true) do {
     case (_entity isEqualType objNull): {
         getText (configFile >> "CfgVehicles" >> typeOf _entity >> "displayName");
     };
@@ -39,4 +39,10 @@ private _text = switch (true) do {
     };
 };
 
-toUpper format [localize "str_a3_rscdisplayattributes_title", _text]
+private _title = GVAR(titles) getVariable _type;
+
+if (isNil "_title") then {
+    _title = localize "str_a3_rscdisplayattributes_title";
+};
+
+toUpper format [_title, _entityText]

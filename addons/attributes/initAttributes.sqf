@@ -602,6 +602,128 @@ private _markerColors = [];
     -100
 ] call FUNC(addAttribute);
 
+// - Skills -------------------------------------------------------------------
+
+[
+    "Skills",
+    LSTRING(AimingAccuracy),
+    QGVAR(slider),
+    [0, 1, 0.1, true],
+    {
+        {
+            [QEGVAR(common,setSkill), [_x, ["aimingAccuracy", _value]], _x] call CBA_fnc_targetEvent;
+        } forEach (_entity call FUNC(getEntities));
+    },
+    {_entity skill "aimingAccuracy"},
+    {true},
+    8
+] call FUNC(addAttribute);
+
+[
+    "Skills",
+    LSTRING(AimingSpeed),
+    QGVAR(slider),
+    [0, 1, 0.1, true],
+    {
+        {
+            [QEGVAR(common,setSkill), [_x, ["aimingSpeed", _value]], _x] call CBA_fnc_targetEvent;
+        } forEach (_entity call FUNC(getEntities));
+    },
+    {_entity skill "aimingSpeed"},
+    {true},
+    7
+] call FUNC(addAttribute);
+
+[
+    "Skills",
+    LSTRING(AimingShake),
+    QGVAR(slider),
+    [0, 1, 0.1, true],
+    {
+        {
+            [QEGVAR(common,setSkill), [_x, ["aimingShake", _value]], _x] call CBA_fnc_targetEvent;
+        } forEach (_entity call FUNC(getEntities));
+    },
+    {_entity skill "aimingShake"},
+    {true},
+    6
+] call FUNC(addAttribute);
+
+[
+    "Skills",
+    LSTRING(Commanding),
+    QGVAR(slider),
+    [0, 1, 0.1, true],
+    {
+        {
+            [QEGVAR(common,setSkill), [_x, ["commanding", _value]], _x] call CBA_fnc_targetEvent;
+        } forEach (_entity call FUNC(getEntities));
+    },
+    {_entity skill "commanding"},
+    {true},
+    5
+] call FUNC(addAttribute);
+
+[
+    "Skills",
+    LSTRING(Courage),
+    QGVAR(slider),
+    [0, 1, 0.1, true],
+    {
+        {
+            [QEGVAR(common,setSkill), [_x, ["courage", _value]], _x] call CBA_fnc_targetEvent;
+        } forEach (_entity call FUNC(getEntities));
+    },
+    {_entity skill "courage"},
+    {true},
+    4
+] call FUNC(addAttribute);
+
+[
+    "Skills",
+    LSTRING(SpotDistance),
+    QGVAR(slider),
+    [0, 1, 0.1, true],
+    {
+        {
+            [QEGVAR(common,setSkill), [_x, ["spotDistance", _value]], _x] call CBA_fnc_targetEvent;
+        } forEach (_entity call FUNC(getEntities));
+    },
+    {_entity skill "spotDistance"},
+    {true},
+    3
+] call FUNC(addAttribute);
+
+[
+    "Skills",
+    LSTRING(SpotTime),
+    QGVAR(slider),
+    [0, 1, 0.1, true],
+    {
+        {
+            [QEGVAR(common,setSkill), [_x, ["spotTime", _value]], _x] call CBA_fnc_targetEvent;
+        } forEach (_entity call FUNC(getEntities));
+    },
+    {_entity skill "spotTime"},
+    {true},
+    2
+] call FUNC(addAttribute);
+
+[
+    "Skills",
+    LSTRING(ReloadSpeed),
+    QGVAR(slider),
+    [0, 1, 0.1, true],
+    {
+        {
+            [QEGVAR(common,setSkill), [_x, ["reloadSpeed", _value]], _x] call CBA_fnc_targetEvent;
+        } forEach (_entity call FUNC(getEntities));
+    },
+    {_entity skill "reloadSpeed"},
+    {true},
+    1
+] call FUNC(addAttribute);
+
 // - Traits -------------------------------------------------------------------
 
 if (isClass (configFile >> "CfgPatches" >> "ace_medical")) then {
@@ -615,7 +737,9 @@ if (isClass (configFile >> "CfgPatches" >> "ace_medical")) then {
                 _x setVariable ["ace_medical_medicClass", _value, true];
             } forEach (_entity call FUNC(getEntities));
         },
-        {_entity getVariable ["ace_medical_medicClass", parseNumber (_entity getUnitTrait "medic")]}
+        {_entity getVariable ["ace_medical_medicClass", parseNumber (_entity getUnitTrait "medic")]},
+        {true},
+        3
     ] call FUNC(addAttribute);
 } else {
     [
@@ -628,7 +752,9 @@ if (isClass (configFile >> "CfgPatches" >> "ace_medical")) then {
                 [QEGVAR(common,setUnitTrait), [_x, "medic", _value], _x] call CBA_fnc_targetEvent;
             } forEach (_entity call FUNC(getEntities));
         },
-        {_entity getUnitTrait "medic"}
+        {_entity getUnitTrait "medic"},
+        {true},
+        3
     ] call FUNC(addAttribute);
 };
 
@@ -643,7 +769,9 @@ if (isClass (configFile >> "CfgPatches" >> "ace_repair")) then {
                 _x setVariable ["ACE_isEngineer", _value, true];
             } forEach (_entity call FUNC(getEntities));
         },
-        {[0, 1, 2] select (_entity getVariable ["ACE_isEngineer", _entity getUnitTrait "engineer"])}
+        {[0, 1, 2] select (_entity getVariable ["ACE_isEngineer", _entity getUnitTrait "engineer"])},
+        {true},
+        2
     ] call FUNC(addAttribute);
 } else {
     [
@@ -656,7 +784,9 @@ if (isClass (configFile >> "CfgPatches" >> "ace_repair")) then {
                 [QEGVAR(common,setUnitTrait), [_x, "engineer", _value], _x] call CBA_fnc_targetEvent;
             } forEach (_entity call FUNC(getEntities));
         },
-        {_entity getUnitTrait "engineer"}
+        {_entity getUnitTrait "engineer"},
+        {true},
+        2
     ] call FUNC(addAttribute);
 };
 
@@ -671,7 +801,9 @@ if (isClass (configFile >> "CfgPatches" >> "ace_explosives")) then {
                 _x setVariable ["ACE_isEOD", _value, true];
             } forEach (_entity call FUNC(getEntities));
         },
-        {_entity call ace_common_fnc_isEOD}
+        {_entity call ace_common_fnc_isEOD},
+        {true},
+        1
     ] call FUNC(addAttribute);
 } else {
     [
@@ -684,7 +816,9 @@ if (isClass (configFile >> "CfgPatches" >> "ace_explosives")) then {
                 [QEGVAR(common,setUnitTrait), [_x, "explosiveSpecialist", _value], _x] call CBA_fnc_targetEvent;
             } forEach (_entity call FUNC(getEntities));
         },
-        {_entity getUnitTrait "explosiveSpecialist"}
+        {_entity getUnitTrait "explosiveSpecialist"},
+        {true},
+        1
     ] call FUNC(addAttribute);
 };
 

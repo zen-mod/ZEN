@@ -1,8 +1,6 @@
-PREP(buttonSide);
-PREP(buttonSkills);
-
 PREP(addAttribute);
 PREP(addButton);
+PREP(addTitle);
 PREP(compileWaypoints);
 PREP(confirm);
 PREP(getEntities);

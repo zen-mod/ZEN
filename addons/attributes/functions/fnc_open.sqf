@@ -116,7 +116,7 @@ private _buttonIndex = 0;
 
 private _ctrlTitle = _display displayCtrl IDC_DISPLAY_TITLE;
 _ctrlTitle ctrlSetPositionY (0.5 - _contentHeight / 2 - POS_H(1.6));
-_ctrlTitle ctrlSetText (_entity call FUNC(getTitle));
+_ctrlTitle ctrlSetText call FUNC(getTitle);
 _ctrlTitle ctrlCommit 0;
 
 private _ctrlBackground = _display displayCtrl IDC_DISPLAY_BACKGROUND;
