@@ -4,6 +4,7 @@ PREP(collapseTree);
 PREP(createZeus);
 PREP(curatorDisplayLoad);
 PREP(curatorDisplayUnload);
+PREP(deployCountermeasures);
 PREP(dumpPerformanceCounters);
 PREP(ejectPassengers);
 PREP(getActiveTree);
