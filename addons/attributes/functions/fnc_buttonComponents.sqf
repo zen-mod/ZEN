@@ -28,6 +28,11 @@ private _allHitPointsDamage = getAllHitPointsDamage _vehicle;
 
 [LSTRING(ComponentsDamage), _components, {
     params ["_dialogValues", "_vehicle"];
+    _vehicleType = typeOf _vehicle;
 
-    [QGVAR(setAllHitPointsDamage), [_vehicle, _dialogValues], _vehicle] call CBA_fnc_targetEvent;
+    {
+        if (typeOf _x isEqualTo _vehicleType) then {
+            [QGVAR(setAllHitPointsDamage), [_x, _dialogValues], _x] call CBA_fnc_targetEvent;
+        };
+    } forEach (_vehicle call FUNC(getAttributeEntities));
 }, {}, _vehicle] call EFUNC(dialog,create);
