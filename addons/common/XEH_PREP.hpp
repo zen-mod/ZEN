@@ -6,6 +6,7 @@ PREP(curatorDisplayLoad);
 PREP(curatorDisplayUnload);
 PREP(deployCountermeasures);
 PREP(dumpPerformanceCounters);
+PREP(earthquake);
 PREP(ejectPassengers);
 PREP(getActiveTree);
 PREP(getAllTurrets);
