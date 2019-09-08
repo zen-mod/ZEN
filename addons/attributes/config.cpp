@@ -17,7 +17,6 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgFunctions.hpp"
 #include "CfgVehicles.hpp"
-#include "CfgAttributes.hpp"
 #include "CfgWaypointTypes.hpp"
 #include "CfgCurator.hpp"
 #include "gui.hpp"
