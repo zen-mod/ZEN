@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Handles clicking the sensors button.
+ * Handles clicking the damage button.
  *
  * Arguments:
  * None
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [] call zen_attributes_fnc_buttonSensors
+ * [] call zen_attributes_fnc_buttonComponents
  *
  * Public: No
  */
