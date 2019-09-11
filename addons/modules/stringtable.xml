@@ -659,6 +659,12 @@
             <German>Minendichte</German>
             <Polish>Gęstość min</Polish>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateMinefield_RandomPlacement">
+            <English>Random Placement</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateMinefield_RandomPlacement_Tooltip">
+            <English>Controls whether mines will be placed uniformly or randomly within the area.</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleGlobalHint">
             <English>Global Hint</English>
             <Russian>Подсказка всем</Russian>

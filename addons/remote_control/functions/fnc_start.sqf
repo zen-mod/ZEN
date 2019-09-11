@@ -22,7 +22,9 @@ _unit = effectiveCommander _unit;
 _unit setVariable [VAR_OWNER, player, true];
 missionNamespace setVariable [VAR_UNIT, _unit];
 
-private _cameraPos = _unit worldToModel ASLtoAGL getPosASL curatorCamera;
+private _cameraDir = vectorNormalized (_unit worldToModel ASLtoAGL getPosASL curatorCamera);
+private _cameraPos = _cameraDir vectorMultiply ((_unit distance curatorCamera) min MAX_CAMERA_DISTANCE);
+
 (findDisplay IDD_RSCDISPLAYCURATOR) closeDisplay 2;
 
 [{
