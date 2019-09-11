@@ -38,7 +38,7 @@
 #define SPACING_H POS_H(0.2)
 
 #define SETUP_ACTION_VARS \
-    private _contextPosASL = call FUNC(getContextPos); \
+    private _contextPosASL = [GVAR(mousePos)] call EFUNC(common,getPosFromScreen); \
     private _hoveredEntity = GVAR(hovered); \
     +GVAR(selected) params ["_selectedObjects", "_selectedGroups", "_selectedWaypoints", "_selectedMarkers"]
 

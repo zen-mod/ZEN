@@ -13,6 +13,7 @@ PREP(getAllTurrets);
 PREP(getInventory);
 PREP(getPhoneticName);
 PREP(getPlayers);
+PREP(getPosFromScreen);
 PREP(getSideIcon);
 PREP(getTargetPos);
 PREP(getTurretMagazines);
