@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Blank">
+        <Key ID="STR_ZEN_Blank_DisplayName">
+            <English>Blank</English>
+        </Key>
+    </Package>
+</Project>
