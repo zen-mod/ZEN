@@ -58,4 +58,4 @@ private _cfgMagazines  = configFile >> "CfgMagazines";
     } else {
         [QGVAR(setMagazineAmmo), [_vehicle, _x, _percentage], _turretOwner] call CBA_fnc_ownerEvent;
     };
-} forEach allTurrets _vehicle;
+} forEach ([[-1]] + allTurrets _vehicle);
