@@ -26,11 +26,6 @@ params ["_vehicle", "_percentage"];
 // Set ammo for pylons with magazines, group pylons with the same
 // magazine to better handle magazines with a low maximum ammo counts
 private _pylonMags = getPylonMagazines _vehicle;
-private _turretMags = magazinesAllTurrets _vehicle select {
-    _x params ["_magazineClass"];
-    !(_magazineClass in _pylonMags || {_magazineClass in BLACKLIST_MAGAZINES})
-};
-
 private _countPylons = count _pylonMags;
 private _cfgMagazines  = configFile >> "CfgMagazines";
 
@@ -54,21 +49,13 @@ private _cfgMagazines  = configFile >> "CfgMagazines";
     };
 } forEach (_pylonMags arrayIntersect _pylonMags);
 
-// Iterate through each magazine type in each turret and add required information for zen_common_fnc_setMagazineAmmo
-private _turretMagsCount = (_turretMags apply {[_x select 0, _x select 1]}) call CBA_fnc_getArrayElements;
-
-_turretMags = _turretMagsCount select {_x isEqualType []};
-_turretMagsCount = _turretMagsCount select {_x isEqualType 0};
-
-// Iterate through all magazines in the turrets and broadcast events to handle turret locality
+// Iterate through all the turrets and broadcast events to handle turret locality
 {
-	_x params ["_name", "_turretPath"];
-    private _turretOwner = _vehicle turretOwner _turretPath;
-    _x pushBack (_turretMagsCount select _forEachIndex);
+    private _turretOwner = _vehicle turretOwner _x;
 
     if (_turretOwner == 0) then {
         [QGVAR(setMagazineAmmo), [_vehicle, _x, _percentage], _vehicle] call CBA_fnc_targetEvent;
     } else {
         [QGVAR(setMagazineAmmo), [_vehicle, _x, _percentage], _turretOwner] call CBA_fnc_ownerEvent;
     };
-} forEach _turretMags;
+} forEach allTurrets _vehicle;

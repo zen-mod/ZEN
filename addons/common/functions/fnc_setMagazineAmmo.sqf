@@ -16,20 +16,20 @@
  * None
  *
  * Example:
- * [vehicle player, ["680Rnd_35mm_AA_shells_Tracer_Red", [0], 2], 0.8] call zen_common_fnc_setTurretAmmo
+ * [vehicle player, ["680Rnd_35mm_AA_shells_Tracer_Red", [0], 2], 0.8] call zen_common_fnc_setMagazineAmmo
  *
  * Public: No
  */
 
-params ["_vehicle", "_magazine", "_percentage"];
-_magazine params ["_name", "_turretPath", "_magCount"];
+params ["_vehicle", "_magazine", ["_percentage", 1, [0]]];
+_magazine params ["_magazineClass", "_turretPath", "_magazineCount"];
 
-private _magMaxAmmo = getNumber (configFile >> "CfgMagazines" >> _name >> "count");
-private _totalAmmo = round (_magMaxAmmo * _magCount * _percentage);
-_vehicle removeMagazinesTurret [_name, _turretPath];
+private _maxRoundsPerMag = getNumber (configFile >> "CfgMagazines" >> _magazineClass >> "count");
 
-for "_i" from 1 to _magCount do {
-    private _magAmmo = _magMaxAmmo min _totalAmmo;
-    _vehicle addMagazineTurret [_name, _turretPath, _magAmmo];
-    _totalAmmo = _totalAmmo - _magMaxAmmo;
+private _totalRounds = round (_magazineCount * _maxRoundsPerMag * _percentage);
+_vehicle removeMagazinesTurret [_magazineClass, _turretPath];
+
+for "_i" from 1 to _magazineCount do {
+    _vehicle addMagazineTurret [_magazineClass, _turretPath, 0 max _totalRounds min _maxRoundsPerMag];
+    _totalRounds = _totalRounds - _maxRoundsPerMag;
 };
