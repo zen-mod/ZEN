@@ -1267,6 +1267,48 @@
         <Key ID="STR_ZEN_Modules_ModuleCreateTeleporter">
             <English>Create Teleporter</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_ToggleTarget">
+            <English>Toggle Target</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ToggleTarget_Tooltip">
+            <English>Units affected by the toggle.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleToggleFlashlights">
+            <English>Toggle Flashlights</English>
+            <German>Ändere Taschenlampen</German>
+            <French>Basculer lampes torches</French>
+            <Italian>Attiva torce</Italian>
+            <Japanese>フラッシュライトの切り替え</Japanese>
+            <Chinese>切換手電筒</Chinese>
+            <Chinesesimp>切换手电筒</Chinesesimp>
+            <Korean>손전등 토글</Korean>
+            <Polish>Przełącz latarki</Polish>
+            <Russian>Вкл/Выкл Фонари</Russian>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleToggleFlashlights_Flashlights">
+            <English>Flashlights</English>
+            <German>Taschenlampe</German>
+            <French>Lampe torche</French>
+            <Italian>Torcia</Italian>
+            <Japanese>フラッシュライト</Japanese>
+            <Chinese>手電筒</Chinese>
+            <Chinesesimp>手电筒</Chinesesimp>
+            <Korean>손전등</Korean>
+            <Polish>Latarki</Polish>
+            <Russian>Фонари</Russian>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleToggleFlashlights_AddGear">
+            <English>Add Gear</English>
+            <German>Ausrüstung hinzufügen</German>
+            <French>Ajouter équipement</French>
+            <Italian>Aggiungi equipaggiamento</Italian>
+            <Japanese>装備を追加</Japanese>
+            <Chinese>增加裝備</Chinese>
+            <Chinesesimp>增加装备</Chinesesimp>
+            <Korean>장비 추가</Korean>
+            <Polish>Dodaj wyposażenie</Polish>
+            <Russian>Добавить снаряжение</Russian>
+        </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_AI">
             <English>AI</English>
