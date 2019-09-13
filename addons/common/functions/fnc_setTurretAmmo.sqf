@@ -1,15 +1,11 @@
 #include "script_component.hpp"
 /*
- * Author: NeilZar
+ * Author: mharis001, NeilZar
  * Sets the ammo level for the given magazine in the given turret of a vehicle.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
- * 1: Magazine <ARRAY>
- *   0: Class Name <STRING>
- *   1: Turret Path <ARRAY>
- *   2: Max Magazine Ammo <NUMBER>
- *   3: Magazine Count <NUMBER>
+ * 1: Turret Path <ARRAY>
  * 2: Ammo Level <NUMBER>
  *
  * Return Value:
