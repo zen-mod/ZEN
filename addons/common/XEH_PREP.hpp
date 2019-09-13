@@ -23,6 +23,7 @@ PREP(isPlacementActive);
 PREP(openArsenal);
 PREP(setInventory);
 PREP(setMagazineAmmo);
+PREP(setTurretAmmo);
 PREP(setVehicleAmmo);
 PREP(showMessage);
 PREP(spawnLargeObject);

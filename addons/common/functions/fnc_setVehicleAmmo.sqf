@@ -54,8 +54,8 @@ private _cfgMagazines  = configFile >> "CfgMagazines";
     private _turretOwner = _vehicle turretOwner _x;
 
     if (_turretOwner == 0) then {
-        [QGVAR(setMagazineAmmo), [_vehicle, _x, _percentage], _vehicle] call CBA_fnc_targetEvent;
+        [QGVAR(setTurretAmmo), [_vehicle, _x, _percentage], _vehicle] call CBA_fnc_targetEvent;
     } else {
-        [QGVAR(setMagazineAmmo), [_vehicle, _x, _percentage], _turretOwner] call CBA_fnc_ownerEvent;
+        [QGVAR(setTurretAmmo), [_vehicle, _x, _percentage], _turretOwner] call CBA_fnc_ownerEvent;
     };
 } forEach ([[-1]] + allTurrets _vehicle);
