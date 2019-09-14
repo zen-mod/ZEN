@@ -22,6 +22,7 @@ GVAR(titles)     = [] call CBA_fnc_createNamespace;
 ["Skills", LSTRING(ChangeSkills)] call FUNC(addTitle);
 ["Traits", LSTRING(ChangeTraits)] call FUNC(addTitle);
 ["Sensors", "STR_3DEN_Object_AttributeCategory_VehicleSystems"] call FUNC(addTitle);
+["Side", LSTRING(ChangeSide)] call FUNC(addTitle);
 
 #include "initAttributes.sqf"
 #include "initButtons.sqf"

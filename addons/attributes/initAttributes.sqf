@@ -887,3 +887,24 @@ if (isClass (configFile >> "CfgPatches" >> "ace_explosives")) then {
     {true},
     1
 ] call FUNC(addAttribute);
+
+// - Side ---------------------------------------------------------------------
+
+[
+    "Side",
+    ELSTRING(common,Side),
+    QGVAR(icons),
+    [[
+        ["\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_west_ca.paa", "STR_West",     12.5, 0.25, 2, west call BIS_fnc_sideColor],
+        ["\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_east_ca.paa", "STR_East",     15.5, 0.25, 2, east call BIS_fnc_sideColor],
+        ["\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_guer_ca.paa", "STR_Guerrila", 18.5, 0.25, 2, independent call BIS_fnc_sideColor],
+        ["\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_civ_ca.paa",  "STR_Civilian", 21.5, 0.25, 2, civilian call BIS_fnc_sideColor]
+    ]],
+    {
+        private _side = [west, east, independent, civilian] select _value;
+        {
+            [_x, _side] call EFUNC(common,changeGroupSide);
+        } forEach SELECTED_GROUPS;
+    },
+    {[west, east, independent, civilian] find side _entity}
+] call FUNC(addAttribute);

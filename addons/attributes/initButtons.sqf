@@ -26,3 +26,9 @@
     {[_entity, "Sensors"] call FUNC(open)},
     {alive _entity && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}}
 ] call FUNC(addButton);
+
+[
+    "Group",
+    ELSTRING(common,Side),
+    {[_entity, "Side"] call FUNC(open)}
+] call FUNC(addButton);

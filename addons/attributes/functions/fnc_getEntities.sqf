@@ -18,7 +18,6 @@
  */
 
 params ["_entity", ["_canBeEmpty", true]];
-TRACE_1("Params",_entity);
 
 switch (true) do {
     case (_entity isEqualType objNull): {
