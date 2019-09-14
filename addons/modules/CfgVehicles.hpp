@@ -330,6 +330,13 @@ class CfgVehicles {
         function = QFUNC(moduleToggleFlashlights);
         icon = QPATHTOF(ui\flashlight_ca.paa);
     };
+    class GVAR(moduleToggleIRLasers): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Equipment);
+        displayName = CSTRING(ModuleToggleIRLasers);
+        function = QFUNC(moduleToggleIRLasers);
+        icon = "\a3\ui_f_curator\data\cfgcurator\laser_ca.paa";
+    };
     class GVAR(moduleTurretOptics): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Equipment);

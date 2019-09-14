@@ -96,6 +96,11 @@
     _unit enableGunLights _mode;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(enableIRLasers), {
+    params ["_unit", "_mode"];
+    _unit enableIRLasers _mode;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(moveInDriver), {
     params ["_unit", "_vehicle"];
     _unit moveInDriver _vehicle;

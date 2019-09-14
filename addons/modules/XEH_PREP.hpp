@@ -60,6 +60,7 @@ PREP(moduleSpawnDestroyer);
 PREP(moduleSuicideBomber);
 PREP(moduleTeleportPlayers);
 PREP(moduleToggleFlashlights);
+PREP(moduleToggleIRLasers);
 PREP(moduleTurretOptics);
 PREP(moduleUnGarrison);
 PREP(moduleVisibility);
