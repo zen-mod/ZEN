@@ -216,6 +216,8 @@
     _vehicle setVehicleReportOwnPosition _mode;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(earthquake), LINKFUNC(earthquake)] call CBA_fnc_addEventHandler;
+
 [QGVAR(setTurretAmmo), FUNC(setTurretAmmo)] call CBA_fnc_addEventHandler;
 [QGVAR(setVehicleAmmo), FUNC(setVehicleAmmo)] call CBA_fnc_addEventHandler;
 

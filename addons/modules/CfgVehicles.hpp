@@ -299,6 +299,7 @@ class CfgVehicles {
         displayName = CSTRING(ModuleSmokePillar);
         function = QFUNC(moduleSmokePillar);
         icon = QPATHTOF(ui\smoke_pillar_ca.paa);
+        portrait = QPATHTOF(ui\smoke_pillar_ca.paa);
     };
     class GVAR(moduleSpawnCarrier): GVAR(moduleBase) {
         category = QGVAR(Spawn);
