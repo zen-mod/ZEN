@@ -10,6 +10,7 @@ PREP(earthquake);
 PREP(ejectPassengers);
 PREP(getActiveTree);
 PREP(getAllTurrets);
+PREP(getHitPointString);
 PREP(getInventory);
 PREP(getPhoneticName);
 PREP(getPlayers);
