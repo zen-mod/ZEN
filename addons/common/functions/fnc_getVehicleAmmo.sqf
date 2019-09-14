@@ -1,13 +1,14 @@
 #include "script_component.hpp"
 /*
- * Author: NeilZar
- * Returns the current ammo level of a vehicle.
+ * Author: mharis001, NeilZar
+ * Returns the current ammo level (0..1) of a vehicle.
+ * -1 is returned if the vehicle has no magazines.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
  *
  * Return Value:
- * Current Ammo Percentage <NUMBER>
+ * Ammo Level <NUMBER>
  *
  * Example:
  * [vehicle player] call zen_common_fnc_getVehicleAmmo
@@ -21,13 +22,13 @@ params ["_vehicle"];
 private _percentages  = [];
 private _cfgMagazines = configFile >> "CfgMagazines";
 
-// Iterate through all vehicle magazines and calculate ammo percentages for each
+// Calculate ammo percentages for all vehicle magazines
 {
-    _x params ["_magazineClass", "", "_ammo"];
+    _x params ["_magazineClass", "", "_currentAmmo"];
 
     if !(_magazineClass in BLACKLIST_MAGAZINES) then {
-    	private _magMaxAmmo = getNumber (_cfgMagazines >> _magazineClass >> "count");
-    	_percentages pushBack (_ammo / _magMaxAmmo);
+    	private _maxAmmo = getNumber (_cfgMagazines >> _magazineClass >> "count");
+    	_percentages pushBack _currentAmmo / _maxAmmo;
     };
 } forEach magazinesAllTurrets _vehicle;
 

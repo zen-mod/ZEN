@@ -9,6 +9,7 @@ PREP(dumpPerformanceCounters);
 PREP(earthquake);
 PREP(ejectPassengers);
 PREP(getActiveTree);
+PREP(getAllTurrets);
 PREP(getInventory);
 PREP(getPhoneticName);
 PREP(getPlayers);

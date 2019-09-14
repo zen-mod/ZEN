@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001, NeilZar
- * Sets the ammo level for the given magazine in the given turret of a vehicle.
+ * Sets the ammo level for all magazines in the given turret of a vehicle.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
@@ -20,13 +20,13 @@
 params ["_vehicle", "_turretPath", "_percentage"];
 
 private _magazines = _vehicle magazinesTurret _turretPath;
-private _pylonMags = getPylonMagazines _vehicle;
+private _pylonMagazines = getPylonMagazines _vehicle;
 
 {
     private _magazineClass = _x;
 
-    if !(_magazineClass in _pylonMags || {_magazineClass in BLACKLIST_MAGAZINES}) then {
+    if !(_magazineClass in _pylonMagazines || {_magazineClass in BLACKLIST_MAGAZINES}) then {
         private _magazineCount = {_x == _magazineClass} count _magazines;
-        [_vehicle, [_x, _turretPath, _magazineCount], _percentage] call FUNC(setMagazineAmmo);
+        [_vehicle, _turretPath, _magazineClass, _magazineCount, _percentage] call FUNC(setMagazineAmmo);
     };
 } forEach (_magazines arrayIntersect _magazines);

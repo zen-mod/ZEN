@@ -25,16 +25,15 @@ params ["_vehicle", "_percentage"];
 
 // Set ammo for pylons with magazines, group pylons with the same
 // magazine to better handle magazines with a low maximum ammo counts
-private _pylonMags = getPylonMagazines _vehicle;
-private _countPylons = count _pylonMags;
-private _cfgMagazines  = configFile >> "CfgMagazines";
+private _pylonMagazines = getPylonMagazines _vehicle;
+private _cfgMagazines = configFile >> "CfgMagazines";
 
 {
     private _pylonMagazine = _x;
 
     if (_pylonMagazine != "") then {
+        private _magazineCount = {_x == _pylonMagazine} count _pylonMagazines;
         private _maxRoundsPerMag = getNumber (_cfgMagazines >> _pylonMagazine >> "count");
-        private _magazineCount = _countPylons - count (_pylonMags - [_pylonMagazine]);
 
         private _totalRounds = round (_magazineCount * _maxRoundsPerMag * _percentage);
 
@@ -45,11 +44,11 @@ private _cfgMagazines  = configFile >> "CfgMagazines";
 
                 [QGVAR(setAmmoOnPylon), [_vehicle, _forEachIndex + 1, _roundsOnPylon], _vehicle] call CBA_fnc_targetEvent;
             };
-        } forEach _pylonMags;
+        } forEach _pylonMagazines;
     };
-} forEach (_pylonMags arrayIntersect _pylonMags);
+} forEach (_pylonMagazines arrayIntersect _pylonMagazines);
 
-// Iterate through all the turrets and broadcast events to handle turret locality
+// Broadcast set turret ammo events to handle turret locality
 {
     private _turretOwner = _vehicle turretOwner _x;
 
@@ -58,4 +57,4 @@ private _cfgMagazines  = configFile >> "CfgMagazines";
     } else {
         [QGVAR(setTurretAmmo), [_vehicle, _x, _percentage], _turretOwner] call CBA_fnc_ownerEvent;
     };
-} forEach ([[-1]] + allTurrets _vehicle);
+} forEach (_vehicle call FUNC(getAllTurrets));
