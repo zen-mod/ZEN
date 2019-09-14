@@ -323,6 +323,13 @@ class CfgVehicles {
         displayName = CSTRING(ModuleTeleportPlayers);
         function = QFUNC(moduleTeleportPlayers);
     };
+    class GVAR(moduleToggleFlashlights): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Equipment);
+        displayName = CSTRING(ModuleToggleFlashlights);
+        function = QFUNC(moduleToggleFlashlights);
+        icon = QPATHTOF(ui\flashlight_ca.paa);
+    };
     class GVAR(moduleTurretOptics): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Equipment);
