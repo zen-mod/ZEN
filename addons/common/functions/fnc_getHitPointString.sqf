@@ -1,18 +1,16 @@
 #include "script_component.hpp"
 /*
  * Author: Jonpas
- * Finds the localized string of the given hitpoint name or uses default text if none found.
+ * Finds the localized string of the given hitpoint name or uses the hitpoint name if none found.
  *
  * Arguments:
- * 0: Hitpoint <STRING>
- * 1: Localized Text <STRING>
- * 2: Default Text <STRING>
+ * Hitpoint <STRING>
  *
  * Return Value:
  * Localized Hit Point Name <STRING>
  *
  * Example:
- * ["HitFuel", "Repairing %1 ...", "Repairing HitFuel"] call zen_common_fnc_getHitPointString
+ * "HitFuel" call zen_common_fnc_getHitPointString
  *
  * Public: No
  */
