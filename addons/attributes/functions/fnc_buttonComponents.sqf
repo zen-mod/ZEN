@@ -22,10 +22,9 @@ private _components = [];
 {
     private _component = _x;
     if (_component isEqualTo "") then { _component = _allHitSelectionNames select _forEachIndex };
+    if ((toLower _component) find "hit" == 0) then { _component = [_component, 3] call CBA_fnc_substr };
 
-    private _componentName = [_component, LSTRING(_component)] select (isLocalized LSTRING(_component));
-
-    _components pushBack ["SLIDER:PERCENT", [_componentName, _component], [0, 1, _allHitPointsDamage select _forEachIndex], true];
+    _components pushBack ["SLIDER:PERCENT", _component, [0, 1, _allHitPointsDamage select _forEachIndex], true];
 } forEach _allHitPointNames;
 
 [LSTRING(ComponentsDamage), _components, {
