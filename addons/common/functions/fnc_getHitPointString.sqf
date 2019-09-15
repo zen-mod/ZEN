@@ -10,7 +10,7 @@
  * Localized Hit Point Name <STRING>
  *
  * Example:
- * "HitFuel" call zen_common_fnc_getHitPointString
+ * ["HitFuel"] call zen_common_fnc_getHitPointString
  *
  * Public: No
  */
