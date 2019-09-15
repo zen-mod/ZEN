@@ -40,9 +40,6 @@ for "_i" from 0 to (count _hitPoint) do {
 };
 
 // Don't display part name if no string is found in stringtable
-if (_text == LSTRING(Hit)) then {
-    if (_hitPoint != "") then { LOG_1("Hitpoint [%1] - could not be localized", _hitPoint); };
-    _text = _hitPoint;
-};
+if (_text == LSTRING(Hit)) then { _text = _hitPoint };
 
 _text
