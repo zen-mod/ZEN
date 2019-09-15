@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Zeus module function to toggle the flashlights of infantry units.
+ * Zeus module function to toggle the IR lasers of infantry units.
  *
  * Arguments:
  * 0: Logic <OBJECT>
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [LOGIC] call zen_modules_fnc_moduleToggleFlashlights
+ * [LOGIC] call zen_modules_fnc_moduleToggleIRLasers
  *
  * Public: No
  */
@@ -47,9 +47,9 @@ if (!_isAttached) then {
     _targets select 1 deleteAt 0;
 };
 
-[LSTRING(ModuleToggleFlashlights), [
+[LSTRING(ModuleToggleIRLasers), [
     ["COMBO", [LSTRING(ToggleTarget), LSTRING(ToggleTarget_Tooltip)], _targets],
-    ["TOOLBOX:ENABLED", LSTRING(ModuleToggleFlashlights_Flashlights), false],
+    ["TOOLBOX:ENABLED", LSTRING(ModuleToggleIRLasers_IRLasers), false],
     ["TOOLBOX:YESNO", LSTRING(AddGear), false]
 ], {
     params ["_values", "_group"];
@@ -69,25 +69,25 @@ if (!_isAttached) then {
             private _weapon  = currentWeapon _x;
             private _pointer = _x weaponAccessories _weapon select 1;
 
-            // Add gear to the unit if enabled and the unit does not already have a flashlight
-            if (_addGear && {_weapon != ""} && {_pointer == "" || {getNumber (_cfgWeapons >> _pointer >> "ItemInfo" >> "FlashLight" >> "size") <= 0}}) then {
-                // Get all compatible flashlight items for the unit's weapon
-                private _flashlights = [_weapon, "pointer"] call CBA_fnc_compatibleItems select {
-                    getNumber (_cfgWeapons >> _x >> "ItemInfo" >> "FlashLight" >> "size") > 0
+            // Add gear to the unit if enabled and the unit does not already have an IR laser
+            if (_addGear && {_weapon != ""} && {_pointer == "" || {getNumber (_cfgWeapons >> _pointer >> "ItemInfo" >> "Pointer" >> "irDistance") <= 0}}) then {
+                // Get all compatible IR laser items for the unit's weapon
+                private _irLasers = [_weapon, "pointer"] call CBA_fnc_compatibleItems select {
+                    getNumber (_cfgWeapons >> _x >> "ItemInfo" >> "Pointer" >> "irDistance") > 0
                 };
 
-                // Exit if the unit's weapon has no compatible flashlight items
-                if (_flashlights isEqualTo []) exitwith {};
+                // Exit if the unit's weapon has no compatible IR laser items
+                if (_irLasers isEqualTo []) exitwith {};
 
-                // Add a random flashlight to the unit's weapon
-                [QEGVAR(common,addWeaponItem), [_x, _weapon, selectRandom _flashlights], _x] call CBA_fnc_targetEvent;
+                // Add a random IR laser to the unit's weapon
+                [QEGVAR(common,addWeaponItem), [_x, _weapon, selectRandom _irLasers], _x] call CBA_fnc_targetEvent;
             };
 
-            [QEGVAR(common,enableGunLights), [_x, "ForceOn"], _x] call CBA_fnc_targetEvent;
+            [QEGVAR(common,enableIRLasers), [_x, _enabled], _x] call CBA_fnc_targetEvent;
         } forEach _units;
     } else {
         {
-            [QEGVAR(common,enableGunLights), [_x, "ForceOff"], _x] call CBA_fnc_targetEvent;
+            [QEGVAR(common,enableIRLasers), [_x, _enabled], _x] call CBA_fnc_targetEvent;
         } forEach _units;
     };
 }, {}, group _unit] call EFUNC(dialog,create);

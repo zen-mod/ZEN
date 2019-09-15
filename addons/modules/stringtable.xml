@@ -1273,6 +1273,18 @@
         <Key ID="STR_ZEN_Modules_ToggleTarget_Tooltip">
             <English>Units affected by the toggle.</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_AddGear">
+            <English>Add Gear</English>
+            <German>Ausrüstung hinzufügen</German>
+            <French>Ajouter équipement</French>
+            <Italian>Aggiungi equipaggiamento</Italian>
+            <Japanese>装備を追加</Japanese>
+            <Chinese>增加裝備</Chinese>
+            <Chinesesimp>增加装备</Chinesesimp>
+            <Korean>장비 추가</Korean>
+            <Polish>Dodaj wyposażenie</Polish>
+            <Russian>Добавить снаряжение</Russian>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleToggleFlashlights">
             <English>Toggle Flashlights</English>
             <German>Ändere Taschenlampen</German>
@@ -1297,17 +1309,11 @@
             <Polish>Latarki</Polish>
             <Russian>Фонари</Russian>
         </Key>
-        <Key ID="STR_ZEN_Modules_ModuleToggleFlashlights_AddGear">
-            <English>Add Gear</English>
-            <German>Ausrüstung hinzufügen</German>
-            <French>Ajouter équipement</French>
-            <Italian>Aggiungi equipaggiamento</Italian>
-            <Japanese>装備を追加</Japanese>
-            <Chinese>增加裝備</Chinese>
-            <Chinesesimp>增加装备</Chinesesimp>
-            <Korean>장비 추가</Korean>
-            <Polish>Dodaj wyposażenie</Polish>
-            <Russian>Добавить снаряжение</Russian>
+        <Key ID="STR_ZEN_Modules_ModuleToggleIRLasers">
+            <English>Toggle IR Lasers</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleToggleIRLasers_IRLasers">
+            <English>IR Lasers</English>
         </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_AI">
