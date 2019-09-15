@@ -91,6 +91,16 @@
     _unit doWatch _target;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(enableGunLights), {
+    params ["_unit", "_mode"];
+    _unit enableGunLights _mode;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(enableIRLasers), {
+    params ["_unit", "_mode"];
+    _unit enableIRLasers _mode;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(moveInDriver), {
     params ["_unit", "_vehicle"];
     _unit moveInDriver _vehicle;
@@ -216,8 +226,14 @@
     _vehicle setVehicleReportOwnPosition _mode;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(addWeaponItem), {
+    params ["_unit", "_weapon", "_item"];
+    _unit addweaponItem [_weapon, _item];
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(earthquake), LINKFUNC(earthquake)] call CBA_fnc_addEventHandler;
 
+[QGVAR(setMagazineAmmo), FUNC(setMagazineAmmo)] call CBA_fnc_addEventHandler;
 [QGVAR(setTurretAmmo), FUNC(setTurretAmmo)] call CBA_fnc_addEventHandler;
 [QGVAR(setVehicleAmmo), FUNC(setVehicleAmmo)] call CBA_fnc_addEventHandler;
 
