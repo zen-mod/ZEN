@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
- * Author: mharis001
- * Sets the ammo level for the given turret of a vehicle.
+ * Author: mharis001, NeilZar
+ * Sets the ammo level for all magazines in the given turret of a vehicle.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
@@ -12,29 +12,21 @@
  * None
  *
  * Example:
- * [vehicle player, [-1], 0.5] call zen_common_fnc_setTurretAmmo
+ * [vehicle player, [0], 0.8] call zen_common_fnc_setTurretAmmo
  *
- * Public: None
+ * Public: No
  */
 
 params ["_vehicle", "_turretPath", "_percentage"];
 
-private _magazines = [_vehicle, _turretPath] call FUNC(getTurretMagazines);
-private _cfgMagazines = configFile >> "CfgMagazines";
+private _magazines = _vehicle magazinesTurret _turretPath;
+private _pylonMagazines = getPylonMagazines _vehicle;
 
 {
     private _magazineClass = _x;
 
-    if !(_magazineClass in BLACKLIST_MAGAZINES) then {
-        private _maxMagazines = {_x == _magazineClass} count _magazines;
-        private _maxRoundsPerMag = getNumber (_cfgMagazines >> _magazineClass >> "count");
-
-        private _totalRounds = round (_maxMagazines * _maxRoundsPerMag * _percentage);
-        _vehicle removeMagazinesTurret [_magazineClass, _turretPath];
-
-        while {_totalRounds > 0} do {
-            _vehicle addMagazineTurret [_magazineClass, _turretPath, _totalRounds min _maxRoundsPerMag];
-            _totalRounds = _totalRounds - _maxRoundsPerMag;
-        };
+    if !(_magazineClass in _pylonMagazines || {_magazineClass in BLACKLIST_MAGAZINES}) then {
+        private _magazineCount = {_x == _magazineClass} count _magazines;
+        [_vehicle, _turretPath, _magazineClass, _magazineCount, _percentage] call FUNC(setMagazineAmmo);
     };
 } forEach (_magazines arrayIntersect _magazines);
