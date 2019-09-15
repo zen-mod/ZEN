@@ -27,10 +27,13 @@ lnbClear _ctrlList;
 private _cfgMagazines = configFile >> "CfgMagazines";
 {
     _x params ["_magazine", "_count"];
+
     private _displayName = getText (_cfgMagazines >> _magazine >> "displayName");
+    if (_displayName isEqualTo "") then { _displayName = _magazine };
+
     if (toLower _displayName find _filter != -1) then {
         private _rounds = getNumber (_cfgMagazines >> _magazine >> "count");
-        private _toolTip = format ["%1\n%2 Rounds\n%3", _displayName, _rounds, (_x select 0)];
+        private _toolTip = format ["%1\n%2 Rounds\n%3", _displayName, _rounds, _magazine];
         private _alpha = [0.5, 1] select (_count > 0);
 
         private _index = _ctrlList lnbAddRow [(format ["%1 (%2 Rounds)", _displayName, _rounds]), str _count];

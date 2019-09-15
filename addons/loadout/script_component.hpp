@@ -2,16 +2,16 @@
 #define COMPONENT_BEAUTIFIED Loadout
 #include "\x\zen\addons\main\script_mod.hpp"
 
-// #define DEBUG_MODE_FULL
-// #define DISABLE_COMPILE_CACHE
-// #define ENABLE_PERFORMANCE_COUNTERS
+#define DEBUG_MODE_FULL
+#define DISABLE_COMPILE_CACHE
+#define ENABLE_PERFORMANCE_COUNTERS
 
-#ifdef DEBUG_ENABLED_INVENTORY
+#ifdef DEBUG_ENABLED_LOADOUT
     #define DEBUG_MODE_FULL
 #endif
 
-#ifdef DEBUG_SETTINGS_INVENTORY
-    #define DEBUG_SETTINGS DEBUG_SETTINGS_INVENTORY
+#ifdef DEBUG_SETTINGS_LOADOUT
+    #define DEBUG_SETTINGS DEBUG_SETTINGS_LOADOUT
 #endif
 
 #include "\x\zen\addons\main\script_macros.hpp"
@@ -34,5 +34,5 @@
 #define IDC_SEARCH_BAR 1561
 #define IDC_BTN_CLEAR  1571
 
-
-#define EMPTY_CARGO [[[], []], [[], []], [[], []], [[], []]]
+// Prevent certain magazines from being handled by ammo functions
+#define BLACKLIST_WEAPONS ["TruckHorn", "SmokeLauncher", "Laserdesignator_mounted", "Laserdesignator_pilotCamera", "CMFlareLauncher", "CMFlareLauncher_Singles", "ProbingWeapon_01_F", "ProbingWeapon_02_F", "ProbingLaser_01_F"]

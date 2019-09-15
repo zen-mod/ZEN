@@ -20,6 +20,11 @@ params ["_display"];
 private _vehicle = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 private _weaponList = _vehicle call FUNC(getWeaponList);
 
+if (_weaponList isEqualTo []) exitWith {
+    [LSTRING(NoWeapons)] call EFUNC(common,showMessage);
+    _display closeDisplay 2;
+};
+
 _display setVariable [QGVAR(weaponList), _weaponList];
 _display setVariable [QGVAR(changes), []];
 
@@ -110,10 +115,13 @@ _ctrlList ctrlAddEventHandler ["LBSelChanged", {
     [_display] call FUNC(updateButtons);
 }];
 
+// Clear magazines from current weapon
+private _ctrlButtonClear = _display displayCtrl IDC_BTN_CLEAR;
+_ctrlButtonClear ctrlAddEventHandler ["ButtonClick", {call FUNC(clear)}];
+
 // Confirm changes to inventory
 private _ctrlButtonOK = _display displayCtrl IDC_OK;
 _ctrlButtonOK ctrlAddEventHandler ["ButtonClick", {call FUNC(confirm)}];
-
 
 // Fill the weapons combo box
 {

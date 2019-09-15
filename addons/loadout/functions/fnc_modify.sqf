@@ -27,7 +27,7 @@ private _magazineIndex = lnbCurSelRow _ctrlList;
 
 private _weaponList = _display getVariable QGVAR(weaponList);
 private _weapon = _weaponList select _weaponIndex;
-_weapon params ["_weaponClass", "_turret", "_magazines"];
+_weapon params ["", "_turret", "_magazines"];
 private _magazine = _magazines select _magazineIndex;
 _magazine params ["_magazineClass", "_count"];
 
