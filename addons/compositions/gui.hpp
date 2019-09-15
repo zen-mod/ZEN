@@ -16,36 +16,36 @@ class GVAR(display) {
     class controls {
         class Title: RscText {
             idc = IDC_DISPLAY_TITLE;
-            x = POS_X(10);
+            x = POS_X(6.5);
             y = POS_Y(9.85);
-            w = POS_W(20);
+            w = POS_W(27);
             h = POS_H(1);
             colorBackground[] = GUI_THEME_COLOR;
             moving = 1;
         };
         class Background: RscText {
             idc = -1;
-            x = POS_X(10);
+            x = POS_X(6.5);
             y = POS_Y(10.95);
-            w = POS_W(20);
+            w = POS_W(27);
             h = POS_H(3.1);
             colorBackground[] = {0, 0, 0, 0.7};
         };
         class CategoryLabel: EGVAR(attributes,RscLabel) {
             text = "$STR_3DEN_Display3DENEditComposition_CategoryLabel_text";
-            x = POS_X(10.5);
+            x = POS_X(7);
             y = POS_Y(11.45);
-            w = POS_W(5.7);
+            w = POS_W(10);
         };
         class CategoryEdit: EGVAR(attributes,RscEdit) {
             idc = IDC_DISPLAY_CATEGORY;
-            x = POS_X(16.3);
+            x = POS_X(17.1);
             y = POS_Y(11.45);
-            w = POS_W(12.1);
+            w = POS_W(14.8);
         };
         class CategoryList: EGVAR(attributes,RscCombo) {
             idc = IDC_DISPLAY_LIST;
-            x = POS_X(28.5);
+            x = POS_X(31.9);
             y = POS_Y(11.45);
             w = POS_W(1);
         };
@@ -56,16 +56,16 @@ class GVAR(display) {
         class NameEdit: CategoryEdit {
             idc = IDC_DISPLAY_NAME;
             y = POS_Y(12.55);
-            w = POS_W(13.2);
+            w = POS_W(15.9);
         };
         class ButtonOK: RscButtonMenuOK {
-            x = POS_X(25) + pixelW;
+            x = POS_X(28.5);
             y = POS_Y(14.15);
             w = POS_W(5);
             h = POS_H(1);
         };
         class ButtonCancel: RscButtonMenuCancel {
-            x = POS_X(10);
+            x = POS_X(6.5);
             y = POS_Y(14.15);
             w = POS_W(5);
             h = POS_H(1);
