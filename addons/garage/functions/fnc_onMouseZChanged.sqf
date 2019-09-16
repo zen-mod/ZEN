@@ -23,4 +23,4 @@ boundingBoxReal GVAR(center) params ["_vehicleP1", "_vehicleP2"];
 private _distanceMax = (_vehicleP1 vectorDistance _vehicleP2) * 1.5;
 private _distanceMin = _distanceMax * 0.15;
 
-GVAR(camDistance) = _distanceMin max (GVAR(camDistance) - _scroll / 10)  min _distanceMax;
+GVAR(camDistance) = _distanceMin max (GVAR(camDistance) - _scroll / 10) min _distanceMax;
