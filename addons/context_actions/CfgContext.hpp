@@ -269,6 +269,22 @@ class EGVAR(context_menu,actions) {
         );
         statement = QUOTE(_hoveredEntity call EFUNC(garage,openGarage));
         priority = -82;
+        class CopyAppearance {
+            displayName = "$STR_3DEN_Display3DEN_MenuBar_EntityCopy_text";
+            icon = QPATHTOF(ui\copy_ca.paa);
+            statement = QUOTE(GVAR(appearances) setVariable [ARR_2(typeOf _hoveredEntity, _hoveredEntity call BIS_fnc_getVehicleCustomization)]);
+            priority = 2;
+        };
+        class PasteAppearance {
+            displayName = "$STR_3DEN_Display3DEN_MenuBar_EntityPaste_text";
+            icon = QPATHTOF(ui\paste_ca.paa);
+            condition = QUOTE(!isNil {GVAR(appearances) getVariable typeOf _hoveredEntity});
+            statement = QUOTE( \
+                GVAR(appearances) getVariable typeOf _hoveredEntity params [ARR_2('_textures','_animations')]; \
+                [ARR_4(_hoveredEntity,_textures,_animations,true)] call BIS_fnc_initVehicle; \
+            );
+            priority = 1;
+        };
     };
     class TeleportPlayers {
         displayName = CSTRING(TeleportPlayers);
