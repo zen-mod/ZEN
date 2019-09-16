@@ -124,7 +124,7 @@ class EGVAR(context_menu,actions) {
     };
     class Stance {
         displayName = "$STR_A3_RscAttributeUnitPos_Title";
-        condition = QUOTE(_selectedObjects findIf {_x isKindOf 'CAManBase' && {!isPlayer _x}} > -1);
+        condition = QUOTE(_selectedObjects findIf {alive _x && {_x isKindOf 'CAManBase'} && {!isPlayer _x}} != -1);
         priority = -63;
         class Auto {
             displayName = "$STR_A3_RscAttributeUnitPos_Auto_tooltip";
@@ -150,23 +150,26 @@ class EGVAR(context_menu,actions) {
     class HealUnits {
         displayName = ECSTRING(modules,ModuleHeal);
         icon = QPATHTOF(ui\medical_cross_ca.paa);
-        condition = QUOTE(_selectedObjects findIf {crew _x findIf {_x isKindOf 'CAManBase' && {alive _x}} != -1} != -1);
         priority = -70;
         class All {
             displayName = ECSTRING(common,All);
             statement = QUOTE([ARR_2(_selectedObjects,HEAL_MODE_ALL)] call FUNC(healUnits));
+            condition = QUOTE(_selectedObjects findIf {crew _x findIf {_x isKindOf 'CAManBase' && {alive _x}} != -1} != -1);
+            icon = QPATHTOF(ui\medical_cross_ca.paa);
             priority = 3;
-        };
-        class AI {
-            displayName = ECSTRING(modules,AI);
-            condition = QUOTE(_selectedObjects findIf {crew _x findIf {!isPlayer _x && {_x isKindOf 'CAManBase'} && {alive _x}} != -1} != -1);
-            statement = QUOTE([ARR_2(_selectedObjects,HEAL_MODE_AI)] call FUNC(healUnits));
-            priority = 2;
         };
         class Players {
             displayName = ECSTRING(modules,Players);
             condition = QUOTE(_selectedObjects findIf {crew _x findIf {isPlayer _x && {alive _x}} != -1} != -1);
             statement = QUOTE([ARR_2(_selectedObjects,HEAL_MODE_PLAYERS)] call FUNC(healUnits));
+            icon = QPATHTOF(ui\medical_cross_ca.paa);
+            priority = 2;
+        };
+        class AI {
+            displayName = "$STR_Team_Switch_AI";
+            condition = QUOTE(_selectedObjects findIf {crew _x findIf {!isPlayer _x && {_x isKindOf 'CAManBase'} && {alive _x}} != -1} != -1);
+            statement = QUOTE([ARR_2(_selectedObjects,HEAL_MODE_AI)] call FUNC(healUnits));
+            icon = QPATHTOF(ui\medical_cross_ca.paa);
             priority = 1;
         };
     };

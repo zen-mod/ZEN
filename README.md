@@ -4,7 +4,7 @@
 
 <p align="center">
     <a href="https://github.com/zen-mod/ZEN/releases">
-        <img src="https://img.shields.io/badge/Version-1.3.0-blue.svg" alt="Zeus Enhanced Version">
+        <img src="https://img.shields.io/badge/Version-1.4.1-blue.svg" alt="Zeus Enhanced Version">
     </a>
     <a href="https://github.com/zen-mod/ZEN/issues">
         <img src="https://img.shields.io/github/issues-raw/zen-mod/ZEN.svg?label=Issues" alt="Zeus Enhanced Issues">

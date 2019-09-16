@@ -299,6 +299,7 @@ class CfgVehicles {
         displayName = CSTRING(ModuleSmokePillar);
         function = QFUNC(moduleSmokePillar);
         icon = QPATHTOF(ui\smoke_pillar_ca.paa);
+        portrait = QPATHTOF(ui\smoke_pillar_ca.paa);
     };
     class GVAR(moduleSpawnCarrier): GVAR(moduleBase) {
         category = QGVAR(Spawn);
@@ -320,7 +321,21 @@ class CfgVehicles {
         curatorCanAttach = 1;
         category = QGVAR(Players);
         displayName = CSTRING(ModuleTeleportPlayers);
-        curatorInfoType = QGVAR(RscTeleportPlayers);
+        function = QFUNC(moduleTeleportPlayers);
+    };
+    class GVAR(moduleToggleFlashlights): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Equipment);
+        displayName = CSTRING(ModuleToggleFlashlights);
+        function = QFUNC(moduleToggleFlashlights);
+        icon = QPATHTOF(ui\flashlight_ca.paa);
+    };
+    class GVAR(moduleToggleIRLasers): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Equipment);
+        displayName = CSTRING(ModuleToggleIRLasers);
+        function = QFUNC(moduleToggleIRLasers);
+        icon = "\a3\ui_f_curator\data\cfgcurator\laser_ca.paa";
     };
     class GVAR(moduleTurretOptics): GVAR(moduleBase) {
         curatorCanAttach = 1;

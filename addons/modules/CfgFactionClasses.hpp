@@ -1,6 +1,6 @@
 class CfgFactionClasses {
     class GVAR(AI) {
-        displayName = CSTRING(AI);
+        displayName = "$STR_Team_Switch_AI";
         priority = 2;
         side = 7;
     };

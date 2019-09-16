@@ -72,9 +72,6 @@
 #define SELECTED_WAYPOINTS (curatorSelected select 2)
 #define SELECTED_MARKERS   (curatorSelected select 3)
 
-#define COLOR_BACKGROUND_LIGHT 1, 1, 1, 0.1
-#define COLOR_BACKGROUND_DARK  0, 0, 0, 0.2
-
 #define GUI_THEME_RGB_R "(profileNamespace getVariable ['GUI_BCG_RGB_R',0.13])"
 #define GUI_THEME_RGB_G "(profileNamespace getVariable ['GUI_BCG_RGB_G',0.54])"
 #define GUI_THEME_RGB_B "(profileNamespace getVariable ['GUI_BCG_RGB_B',0.21])"
@@ -82,12 +79,10 @@
 
 #define GUI_THEME_COLOR {GUI_THEME_RGB_R,GUI_THEME_RGB_G,GUI_THEME_RGB_B,GUI_THEME_ALPHA}
 
- #define SET_BACKGROUND_COLOR \
-    onLoad = QUOTE( \
-        params ['_ctrl']; \
-        private _color = if (EGVAR(common,darkMode)) then {[COLOR_BACKGROUND_DARK]} else {[COLOR_BACKGROUND_LIGHT]}; \
-        _ctrl ctrlSetBackgroundColor _color; \
-    )
+#define COLOR_SETTING_SYS(SETTING,VALUE1,VALUE2) QUOTE(with missionNamespace do {if (SETTING) then {VALUE2} else {VALUE1}})
+#define COLOR_SETTING(SETTING,R1,G1,B1,A1,R2,G2,B2,A2) {COLOR_SETTING_SYS(SETTING,R1,R2),COLOR_SETTING_SYS(SETTING,G1,G2),COLOR_SETTING_SYS(SETTING,B1,B2),COLOR_SETTING_SYS(SETTING,A1,A2)}
+
+#define COLOR_BACKGROUND_SETTING COLOR_SETTING(EGVAR(common,darkMode),1,1,1,0.1,0,0,0,0.2)
 
 
 #define DEGREE_SYMBOL toString [176]

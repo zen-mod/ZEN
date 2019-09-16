@@ -77,5 +77,11 @@
         <Key ID="STR_ZEN_Editor_EjectPassengers_Description">
             <English>Ejects the passengers of all selected vehicles. If the vehicle is currently flying, the units will be given parachutes.\nUnlike vanilla eject, units will disembark one after another (not immediately, with a short delay in-between).</English>
         </Key>
+        <Key ID="STR_ZEN_Editor_DeployCountermeasures">
+            <English>Deploy Countermeasures</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_DeployCountermeasures_Description">
+            <English>Makes all selected vehicles deploy countermeasures such as smokes and flares.</English>
+        </Key>
     </Package>
 </Project>

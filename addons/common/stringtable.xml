@@ -140,6 +140,24 @@
             <German>Seite</German>
             <Polish>Strona</Polish>
         </Key>
+        <Key ID="STR_ZEN_Common_Sides">
+            <English>Sides</English>
+            <Russian>Стороны</Russian>
+            <German>Seiten</German>
+            <Polish>Strony</Polish>
+        </Key>
+        <Key ID="STR_ZEN_Common_SelectedGroup">
+            <English>Selected Group</English>
+            <German>Ausgewählte Gruppe</German>
+            <French>Groupe sélectionné</French>
+            <Italian>Gruppo selezionato</Italian>
+            <Japanese>選択されたグループ</Japanese>
+            <Chinese>選擇小隊</Chinese>
+            <Chinesesimp>选择小队</Chinesesimp>
+            <Korean>그룹 선택</Korean>
+            <Polish>Wybrana grupa</Polish>
+            <Russian>Выбранная группа</Russian>
+        </Key>
         <Key ID="STR_ZEN_Common_Faction">
             <English>Faction</English>
             <Russian>Фракция</Russian>

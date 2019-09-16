@@ -20,7 +20,6 @@ if (isServer) then {
 [QGVAR(sayMessage), BIS_fnc_sayMessage] call CBA_fnc_addEventHandler;
 [QGVAR(carrierInit), BIS_fnc_Carrier01Init] call CBA_fnc_addEventHandler;
 [QGVAR(destroyerInit), BIS_fnc_Destroyer01Init] call CBA_fnc_addEventHandler;
-[QGVAR(moveToRespawnPosition), BIS_fnc_moveToRespawnPosition] call CBA_fnc_addEventHandler;
 [QGVAR(taskPatrol), CBA_fnc_taskPatrol] call CBA_fnc_addEventHandler;
 
 [QGVAR(autoSeekBehavior), {
@@ -54,6 +53,18 @@ if (isServer) then {
 
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(teleportOutOfVehicle), {
+    params ["_unit", "_position"];
+
+    moveOut _unit;
+
+    [{
+        params ["_unit", "_position"];
+        _unit setVelocity [0, 0, 0];
+        _unit setVehiclePosition [_position, [], 0, "NONE"];
+    }, _this] call CBA_fnc_execNextFrame;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(fireArtillery), {
     params ["_unit", "_position", "_spread", "_ammo", "_rounds"];
 
@@ -74,6 +85,3 @@ if (isServer) then {
         _fired >= _rounds || {!alive _unit} || {!alive gunner _unit}
     }, {}, [_unit, _position, _spread, _ammo, _rounds, 0]] call CBA_fnc_waitUntilAndExecute;
 }] call CBA_fnc_addEventHandler;
-
-// Function needs to be spawned
-[QGVAR(earthquake), {_this spawn BIS_fnc_earthquake}] call CBA_fnc_addEventHandler;

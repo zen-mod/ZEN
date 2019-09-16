@@ -659,6 +659,12 @@
             <German>Minendichte</German>
             <Polish>Gęstość min</Polish>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateMinefield_RandomPlacement">
+            <English>Random Placement</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateMinefield_RandomPlacement_Tooltip">
+            <English>Controls whether mines will be placed uniformly or randomly within the area.</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleGlobalHint">
             <English>Global Hint</English>
             <Russian>Подсказка всем</Russian>
@@ -762,17 +768,11 @@
             <German>Spieler teleportieren</German>
             <Polish>Teleportuj graczy</Polish>
         </Key>
-        <Key ID="STR_ZEN_Modules_Sides">
-            <English>Sides</English>
-            <Russian>Стороны</Russian>
-            <German>Seiten</German>
-            <Polish>Strony</Polish>
+        <Key ID="STR_ZEN_Modules_ModuleTeleportPlayers_IncludeVehicles">
+            <English>Include Vehicles</English>
         </Key>
-        <Key ID="STR_ZEN_Modules_Groups">
-            <English>Groups</English>
-            <Russian>Группы</Russian>
-            <German>Gruppen</German>
-            <Polish>Grupy</Polish>
+        <Key ID="STR_ZEN_Modules_ModuleTeleportPlayers_IncludeVehicles_Tooltip">
+            <English>Teleports vehicles of players instead of the players themselves.\nIf the module was attached to a vehicle, this is ignored and players will be moved into the attached vehicle.</English>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSmokePillar">
             <English>Smoke Pillar</English>
@@ -1267,13 +1267,55 @@
         <Key ID="STR_ZEN_Modules_ModuleCreateTeleporter">
             <English>Create Teleporter</English>
         </Key>
-        <!-- Module Categories -->
-        <Key ID="STR_ZEN_Modules_AI">
-            <English>AI</English>
-            <Russian>ИИ</Russian>
-            <German>KI</German>
-            <Polish>AI</Polish>
+        <Key ID="STR_ZEN_Modules_ToggleTarget">
+            <English>Toggle Target</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_ToggleTarget_Tooltip">
+            <English>Units affected by the toggle.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_AddGear">
+            <English>Add Gear</English>
+            <German>Ausrüstung hinzufügen</German>
+            <French>Ajouter équipement</French>
+            <Italian>Aggiungi equipaggiamento</Italian>
+            <Japanese>装備を追加</Japanese>
+            <Chinese>增加裝備</Chinese>
+            <Chinesesimp>增加装备</Chinesesimp>
+            <Korean>장비 추가</Korean>
+            <Polish>Dodaj wyposażenie</Polish>
+            <Russian>Добавить снаряжение</Russian>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleToggleFlashlights">
+            <English>Toggle Flashlights</English>
+            <German>Ändere Taschenlampen</German>
+            <French>Basculer lampes torches</French>
+            <Italian>Attiva torce</Italian>
+            <Japanese>フラッシュライトの切り替え</Japanese>
+            <Chinese>切換手電筒</Chinese>
+            <Chinesesimp>切换手电筒</Chinesesimp>
+            <Korean>손전등 토글</Korean>
+            <Polish>Przełącz latarki</Polish>
+            <Russian>Вкл/Выкл Фонари</Russian>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleToggleFlashlights_Flashlights">
+            <English>Flashlights</English>
+            <German>Taschenlampe</German>
+            <French>Lampe torche</French>
+            <Italian>Torcia</Italian>
+            <Japanese>フラッシュライト</Japanese>
+            <Chinese>手電筒</Chinese>
+            <Chinesesimp>手电筒</Chinesesimp>
+            <Korean>손전등</Korean>
+            <Polish>Latarki</Polish>
+            <Russian>Фонари</Russian>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleToggleIRLasers">
+            <English>Toggle IR Lasers</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleToggleIRLasers_IRLasers">
+            <English>IR Lasers</English>
+        </Key>
+        <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_Buildings">
             <English>Buildings</English>
             <Russian>Здания</Russian>
