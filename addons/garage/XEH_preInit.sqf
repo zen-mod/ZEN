@@ -7,7 +7,7 @@ PREP_RECOMPILE_START;
 PREP_RECOMPILE_END;
 
 GVAR(helperPos) = [0, 0, -1];
-GVAR(camDistance) = 10;
+GVAR(camDistance) = 100;
 GVAR(camPitch) = 15;
 GVAR(camYaw) = -45;
 
