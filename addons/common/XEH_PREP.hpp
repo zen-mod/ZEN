@@ -14,6 +14,8 @@ PREP(getInventory);
 PREP(getPhoneticName);
 PREP(getPlayers);
 PREP(getPosFromScreen);
+PREP(getSelectedUnits);
+PREP(getSelectedVehicles);
 PREP(getSideIcon);
 PREP(getTargetPos);
 PREP(getVehicleAmmo);
