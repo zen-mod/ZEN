@@ -23,22 +23,29 @@
 
 #define MAX_DISTANCE 3
 
-#define ADD_INTEL_TO_TARGETS \
-    private _targets = switch (_share) do { \
-        case 0: { \
-            call CBA_fnc_players select {side group _x == side _unit} \
-        }; \
-        case 1: { \
-            units _unit select {isPlayer _x} \
-        }; \
-        case 2: { \
-            [_unit] \
-        }; \
-    }; \
-    [["\a3\ui_f\data\igui\cfg\simpletasks\types\documents_ca.paa", 1.25], [localize LSTRING(ModuleCreateIntel_IntelFound)], true] call CBA_fnc_notify; \
-    [QGVAR(addIntel), [_title, _text], _targets] call CBA_fnc_targetEvent
-
 params ["_object", "_share", "_delete", "_actionText", "_duration", "_title", "_text"];
+
+private _fnc_addIntel = {
+    private _targets = switch (_share) do {
+        case 0: {
+            call CBA_fnc_players select {side group _x == side _unit}
+        };
+        case 1: {
+            units _unit select {isPlayer _x}
+        };
+        case 2: {
+            [_unit]
+        };
+    };
+
+    [
+        ["\a3\ui_f\data\igui\cfg\simpletasks\types\documents_ca.paa", 1.25],
+        [localize LSTRING(ModuleCreateIntel_IntelFound)],
+        true
+    ] call CBA_fnc_notify;
+
+    [QGVAR(addIntel), [_title, _text], _targets] call CBA_fnc_targetEvent;
+};
 
 if (isClass (configFile >> "CfgPatches" >> "ace_interact_menu")) then {
     [_object, 0, ["ACE_MainActions", QGVAR(intelAction)]] call ace_interact_menu_fnc_removeActionFromObject;
@@ -55,9 +62,9 @@ if (isClass (configFile >> "CfgPatches" >> "ace_interact_menu")) then {
                 _duration,
                 [_object, _unit, _title, _text, _share, _delete],
                 {
-                    (_this select 0) params ["_object", "_unit", "_title", "_text", "_share", "_delete"];
+                    (_this select 0) params ["_object", "_unit", "_title", "_text", "_share", "_delete", "_fnc_addIntel"];
 
-                    ADD_INTEL_TO_TARGETS;
+                    call _fnc_addIntel;
 
                     if (_delete) then {
                         deleteVehicle _object;
@@ -71,7 +78,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_interact_menu")) then {
         },
         {true},
         {},
-        [_title, _text, _share, _delete, _actionText, _duration]
+        [_title, _text, _share, _delete, _actionText, _duration, _fnc_addIntel]
     ] call ace_interact_menu_fnc_createAction;
 
     [_object, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
@@ -93,16 +100,16 @@ if (isClass (configFile >> "CfgPatches" >> "ace_interact_menu")) then {
         {},
         {
             params ["_object", "_unit", "", "_args"];
-            _args params ["_title", "_text", "_share", "_delete"];
+            _args params ["_title", "_text", "_share", "_delete", "_fnc_addIntel"];
 
-            ADD_INTEL_TO_TARGETS;
+            call _fnc_addIntel;
 
             if (_delete) then {
                 deleteVehicle _object;
             };
         },
         {},
-        [_title, _text, _share, _delete],
+        [_title, _text, _share, _delete, _fnc_addIntel],
         _duration,
         100,
         true,
