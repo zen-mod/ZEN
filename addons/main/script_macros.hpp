@@ -87,8 +87,6 @@
 #define ASCII_PERIOD 46
 #define ASCII_DEGREE 176
 
-#define DEGREE_SYMBOL toString [ASCII_DEGREE]
-
 #ifdef DISABLE_COMPILE_CACHE
     #undef PREP
     #define PREP(fncName) FUNC(fncName) = compile preprocessFileLineNumbers QPATHTOF(functions\DOUBLES(fnc,fncName).sqf)
