@@ -3,7 +3,6 @@ PREP(addButton);
 PREP(addTitle);
 PREP(compileWaypoints);
 PREP(confirm);
-PREP(getEntities);
 PREP(getTitle);
 PREP(gui_checkbox);
 PREP(gui_code);
