@@ -428,7 +428,7 @@
     "Waypoint",
     [LSTRING(Timeout), LSTRING(Timeout_Tooltip)],
     QGVAR(slider),
-    [0, 1800, 15],
+    [0, 1800, 15, false, 0],
     {_entity setWaypointTimeout [_value, _value, _value]},
     {random waypointTimeout _entity},
     {true},
