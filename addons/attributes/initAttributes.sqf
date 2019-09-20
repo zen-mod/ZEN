@@ -128,10 +128,10 @@
     "STR_3DEN_Object_Attribute_Lock_displayName",
     QGVAR(combo),
     [
-        [0, ["STR_3DEN_Attributes_Lock_Unlocked_text",        "STR_3DEN_Attributes_Lock_Unlocked_tooltip"]],
-        [1, ["STR_3DEN_Attributes_Lock_Default_text",         "STR_3DEN_Attributes_Lock_Default_tooltip"]],
-        [2, ["STR_3DEN_Attributes_Lock_Locked_text",          "STR_3DEN_Attributes_Lock_Locked_tooltip"]],
-        [3, ["STR_3DEN_Attributes_Lock_LockedForPlayer_text", "STR_3DEN_Attributes_Lock_LockedForPlayer_tooltip"]]
+        [0, ["STR_3DEN_Attributes_Lock_Unlocked_text", "STR_3DEN_Attributes_Lock_Unlocked_tooltip"], "\a3\modules_f\data\iconunlock_ca.paa"],
+        [1, ["STR_3DEN_Attributes_Lock_Default_text", "STR_3DEN_Attributes_Lock_Default_tooltip"], "\a3\ui_f_curator\Data\default_ca.paa"],
+        [2, ["STR_3DEN_Attributes_Lock_Locked_text", "STR_3DEN_Attributes_Lock_Locked_tooltip"], "\a3\modules_f\data\iconlock_ca.paa"],
+        [3, [LSTRING(LockedForPlayers), "STR_3DEN_Attributes_Lock_LockedForPlayer_tooltip"], ["\a3\modules_f\data\iconlock_ca.paa", [0.7, 0.1, 0, 1]]]
     ],
     {
         {

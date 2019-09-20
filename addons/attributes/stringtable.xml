@@ -19,6 +19,9 @@
         <Key ID="STR_ZEN_Attributes_TurnOff">
             <English>Turn Off</English>
         </Key>
+        <Key ID="STR_ZEN_Attributes_LockedForPlayers">
+            <English>Locked For Players</English>
+        </Key>
         <Key ID="STR_ZEN_Attributes_PlateNumber">
             <English>Plate Number</English>
             <Russian>Госномер</Russian>
