@@ -16,15 +16,6 @@ class GVAR(display) {
     idd = IDD_DISPLAY;
     movingEnable = 1;
     onLoad = QUOTE(with uiNamespace do {GVAR(display) = _this select 0});
-    class controlsBackground {
-        class Background: RscText {
-            x = safeZoneXAbs;
-            y = safeZoneY;
-            w = safeZoneWAbs;
-            h = safeZoneH;
-            colorBackground[] = {0, 0, 0, 0};
-        };
-    };
     class controls {
         class Title: RscText {
             idc = IDC_DISPLAY_TITLE;
