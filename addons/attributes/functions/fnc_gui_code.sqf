@@ -1,19 +1,22 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Initializes the code attribute control type.
+ * Initializes the `code` attribute control type.
  *
  * Arguments:
  * 0: Controls Group <CONTROL>
  * 1: Entity <OBJECT|GROUP|ARRAY|STRING>
  * 2: Default Value <STRING>
  * 3: Value Info <ARRAY>
+ *   0: History Variable Name <STRING>
+ *   1: Statements History Length <NUMBER>
+ *   2: Editbox Tooltip <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL, _entity, "", ["", 20, ""]] call zen_attributes_fnc_gui_code
+ * [_controlsGroup, _entity, "", ["", 20, ""]] call zen_attributes_fnc_gui_code
  *
  * Public: No
  */
@@ -25,6 +28,10 @@ _valueInfo params [["_historyVarName", "", [""]], ["_maxStatements", 20, [0]], [
 
 if (isLocalized _tooltip) then {
     _tooltip = localize _tooltip;
+};
+
+if (isNil "_defaultValue") then {
+    _defaultValue = "";
 };
 
 private _ctrlCombo = _controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_COMBO;
@@ -60,6 +67,7 @@ _ctrlCombo ctrlAddEventHandler ["LBSelChanged", {
 
 _ctrlEdit setVariable [QGVAR(params), [_controlsGroup]];
 _ctrlEdit ctrlSetTooltip _tooltip;
+_ctrlEdit ctrlSetText _defaultValue;
 
 _ctrlEdit ctrlAddEventHandler ["KeyUp", {
     params ["_ctrlEdit"];

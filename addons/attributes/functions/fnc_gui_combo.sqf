@@ -6,14 +6,15 @@
  * Arguments:
  * 0: Controls Group <CONTROL>
  * 1: Entity <OBJECT|GROUP|ARRAY|STRING>
- * 2: Default Value <STRING>
+ * 2: Default Value <ANY>
  * 3: Value Info <ARRAY>
+ *   N: [Value <ANY>, Display Name and Tooltip <STRING|ARRAY>, Icon and Icon Color <STRING|ARRAY>] <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL, _entity, "", []] call zen_attributes_fnc_gui_combo
+ * [_controlsGroup, _entity, 1, [[1, "Option 1"], [2, "Option 2"]]] call zen_attributes_fnc_gui_combo
  *
  * Public: No
  */
@@ -24,8 +25,9 @@ private _ctrlCombo = _controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_COMBO;
 _ctrlCombo setVariable [QGVAR(params), [_controlsGroup]];
 
 {
-    _x params ["_value", "_displayName", ["_tooltip", "", [""]], ["_pictureArg", "", ["", []]]];
-    _pictureArg params [["_picture", "", [""]], ["_pictureColor", [1, 1, 1, 1], [[]], [4]]];
+    _x params [["_value", _forEachIndex], ["_name", "", ["", []]], ["_icon", "", ["", []]]];
+    _name params [["_displayName", "", [""]], ["_tooltip", "", [""]]];
+    _icon params [["_picture", "", [""]], ["_pictureColor", [1, 1, 1, 1], [[]], 4]];
 
     if (isLocalized _displayName) then {
         _displayName = localize _displayName;

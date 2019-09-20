@@ -128,10 +128,10 @@
     "STR_3DEN_Object_Attribute_Lock_displayName",
     QGVAR(combo),
     [
-        [0, "STR_3DEN_Attributes_Lock_Unlocked_text",        "STR_3DEN_Attributes_Lock_Unlocked_tooltip"],
-        [1, "STR_3DEN_Attributes_Lock_Default_text",         "STR_3DEN_Attributes_Lock_Default_tooltip"],
-        [2, "STR_3DEN_Attributes_Lock_Locked_text",          "STR_3DEN_Attributes_Lock_Locked_tooltip"],
-        [3, "STR_3DEN_Attributes_Lock_LockedForPlayer_text", "STR_3DEN_Attributes_Lock_LockedForPlayer_tooltip"]
+        [0, ["STR_3DEN_Attributes_Lock_Unlocked_text",        "STR_3DEN_Attributes_Lock_Unlocked_tooltip"]],
+        [1, ["STR_3DEN_Attributes_Lock_Default_text",         "STR_3DEN_Attributes_Lock_Default_tooltip"]],
+        [2, ["STR_3DEN_Attributes_Lock_Locked_text",          "STR_3DEN_Attributes_Lock_Locked_tooltip"]],
+        [3, ["STR_3DEN_Attributes_Lock_LockedForPlayer_text", "STR_3DEN_Attributes_Lock_LockedForPlayer_tooltip"]]
     ],
     {
         {
@@ -580,7 +580,6 @@ private _markerColors = [];
         _markerColors pushBack [
             configName _x,
             getText (_x >> "name"),
-            "",
             ["#(argb,8,8,3)color(1,1,1,1)", (_x >> "color") call BIS_fnc_colorConfigToRGBA]
         ];
     };
@@ -829,9 +828,9 @@ if (isClass (configFile >> "CfgPatches" >> "ace_explosives")) then {
     ["STR_3DEN_Object_Attribute_Radar_displayName", "STR_3DEN_Object_Attribute_Radar_tooltip"],
     QGVAR(combo),
     [
-        [0, "STR_3DEN_Attributes_Radar_Default_text",  "STR_3DEN_Attributes_Radar_Default_tooltip"],
-        [1, "STR_3DEN_Attributes_Radar_RadarOn_text",  "STR_3DEN_Attributes_Radar_RadarOn_tooltip"],
-        [2, "STR_3DEN_Attributes_Radar_RadarOff_text", "STR_3DEN_Attributes_Radar_RadarOff_tooltip"]
+        [0, ["STR_3DEN_Attributes_Radar_Default_text",  "STR_3DEN_Attributes_Radar_Default_tooltip"]],
+        [1, ["STR_3DEN_Attributes_Radar_RadarOn_text",  "STR_3DEN_Attributes_Radar_RadarOn_tooltip"]],
+        [2, ["STR_3DEN_Attributes_Radar_RadarOff_text", "STR_3DEN_Attributes_Radar_RadarOff_tooltip"]]
     ],
     {
         {

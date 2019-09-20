@@ -8,12 +8,13 @@
  * 1: Entity <OBJECT|GROUP|ARRAY|STRING>
  * 2: Default Value <STRING>
  * 3: Value Info <ARRAY>
+ *   0: Sanitizing Function <CODE>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL, _entity, "", [{_this}]] call zen_attributes_fnc_gui_edit
+ * [_controlsGroup, _entity, "", [{_this}]] call zen_attributes_fnc_gui_edit
  *
  * Public: No
  */

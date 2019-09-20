@@ -8,12 +8,15 @@
  * 1: Entity <OBJECT|GROUP|ARRAY|STRING>
  * 2: Default Value <NUMBER>
  * 3: Value Info <ARRAY>
+ *   0: Icons <ARRAY>
+ *     N: [Icon <STRING>, Tooltip <STRING>, X Position <NUMBER>, Y Position <NUMBER>, Size <NUMBER>, Color <ARRAY>, Condition <CODE>] <ARRAY>
+ *   1: Height <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL, _entity, 0, [[], 1]] call zen_attributes_fnc_gui_icons
+ * [_controlsGroup, _entity, 0, [[], 1]] call zen_attributes_fnc_gui_icons
  *
  * Public: No
  */
@@ -25,18 +28,18 @@
 #define SCALE_SELECTED 1.2
 
 params ["_controlsGroup", "_entity", "_defaultValue", "_valueInfo"];
-_valueInfo params ["_icons", ["_height", 1]];
+_valueInfo params [["_icons", [], [[]]], ["_height", 1, [0]]];
 
 private _fnc_onButtonClick = {
     params ["_ctrlIcon"];
     (_ctrlIcon getVariable QGVAR(params)) params ["_controlsGroup", "_iconControls", "_selectedIndex"];
 
     {
-        _x params ["_ctrlIcon", "_color", "_index"];
+        _x params ["_ctrlIcon", "_color"];
 
         private _scale = SCALE_NORMAL;
 
-        if (_index == _selectedIndex) then {
+        if (_forEachIndex == _selectedIndex) then {
             _color set [3, ALPHA_SELECTED];
             _scale = SCALE_SELECTED;
         } else {
@@ -54,7 +57,7 @@ private _display = ctrlParent _controlsGroup;
 private _iconControls = [];
 
 {
-    _x params ["_iconFile", "_tooltip", "_posX", "_posY", "_size", ["_color", [1, 1, 1]], ["_condition", {true}]];
+    _x params ["_icon", "_tooltip", "_posX", "_posY", "_size", ["_color", [1, 1, 1], [[]], [3, 4]], ["_condition", {true}, [{}]]];
 
     if (_forEachIndex call _condition) then {
         if (isLocalized _tooltip) then {
@@ -66,7 +69,7 @@ private _iconControls = [];
         private _ctrlIcon = _display ctrlCreate ["RscActivePicture", -1, _controlsGroup];
         _ctrlIcon setVariable [QGVAR(params), [_controlsGroup, _iconControls, _forEachIndex]];
 
-        _ctrlIcon ctrlSetText _iconFile;
+        _ctrlIcon ctrlSetText _icon;
         _ctrlIcon ctrlSetTooltip _tooltip;
         _ctrlIcon ctrlSetActiveColor _color;
 
@@ -82,7 +85,7 @@ private _iconControls = [];
         _ctrlIcon ctrlSetTextColor _color;
         _ctrlIcon ctrlAddEventHandler ["ButtonClick", _fnc_onButtonClick];
 
-        _iconControls pushBack [_ctrlIcon, _color, _forEachIndex];
+        _iconControls pushBack [_ctrlIcon, _color];
     };
 } forEach _icons;
 

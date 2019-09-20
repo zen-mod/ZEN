@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Initializes the waypoint attribute control type.
+ * Initializes the `waypoint` attribute control type.
  *
  * Arguments:
  * 0: Controls Group <CONTROL>

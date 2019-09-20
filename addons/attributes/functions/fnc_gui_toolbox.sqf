@@ -1,18 +1,22 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Initializes the toolbox attribute control type.
+ * Initializes the `toolbox` attribute control type.
  *
  * Arguments:
  * 0: Controls Group <CONTROL>
  * 1: Entity <OBJECT|GROUP|ARRAY|STRING>
- * 2: Default Value <BOOL>
+ * 2: Default Value <BOOL|NUMBER>
+ * 3: Value Info <ARRAY>
+ *   0: Rows <NUMBER>
+ *   1: Columns <NUMBER>
+ *   2: Strings <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL, _entity, 0] call zen_attributes_fnc_gui_toolbox
+ * [_controlsGroup, _entity, true, [1, 2, ["No", "Yes"]]] call zen_attributes_fnc_gui_toolbox
  *
  * Public: No
  */

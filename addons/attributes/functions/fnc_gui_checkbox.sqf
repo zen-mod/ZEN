@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Initializes the checkbox attribute control type.
+ * Initializes the `checkbox` attribute control type.
  *
  * Arguments:
  * 0: Controls Group <CONTROL>
@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [CONTROL, _entity, true] call zen_attributes_fnc_gui_checkbox
+ * [_controlsGroup, _entity, true] call zen_attributes_fnc_gui_checkbox
  *
  * Public: No
  */
