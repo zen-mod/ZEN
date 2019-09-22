@@ -1,14 +1,14 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Opens are message box dialog with the given title and message text.
+ * Opens a message box dialog with the given title and message text.
  * When an empty picture path is provided, the message width is increased.
  *
  * Arguments:
  * 0: Title <STRING>
  * 1: Message <STRING>
  * 2: Confirm <CODE>
- * 3: Cancel <CODE>
+ * 3: Cancel <CODE> (default: {})
  * 4: Arguments <ANY> (default: [])
  * 5: Picture <STRING> (default: "\a3\3den\data\displays\display3denmsgbox\picture_ca.paa")
  *
@@ -76,7 +76,6 @@ _ctrlText ctrlSetPositionH _height;
 _ctrlText ctrlCommit 0;
 
 // Reposition other controls based on text height
-// Add events to buttons to trigger their associated functions
 _height = _height / 2 max POS_H(1.25);
 
 _ctrlTitle ctrlSetPositionY (0.5 - _height - POS_H(1.6));
@@ -89,22 +88,21 @@ _ctrlBackground ctrlCommit 0;
 
 private _buttonY = 0.5 + _height + POS_H(0.6);
 
+// Add events to buttons to trigger their associated functions
 private _ctrlButtonCancel = _display displayCtrl IDC_CANCEL;
+_ctrlButtonCancel ctrlSetPositionY _buttonY;
+_ctrlButtonCancel ctrlCommit 0;
 
 [_ctrlButtonCancel, "ButtonClick", {
     _thisArgs params ["_args", "_fnc_cancel"];
     _args call _fnc_cancel;
 }, [_args, _fnc_cancel]] call CBA_fnc_addBISEventHandler;
 
-_ctrlButtonCancel ctrlSetPositionY _buttonY;
-_ctrlButtonCancel ctrlCommit 0;
-
 private _ctrlButtonOK = _display displayCtrl IDC_OK;
+_ctrlButtonOK ctrlSetPositionY _buttonY;
+_ctrlButtonOK ctrlCommit 0;
 
 [_ctrlButtonOK, "ButtonClick", {
     _thisArgs params ["_args", "_fnc_confirm"];
     _args call _fnc_confirm;
 }, [_args, _fnc_confirm]] call CBA_fnc_addBISEventHandler;
-
-_ctrlButtonOK ctrlSetPositionY _buttonY;
-_ctrlButtonOK ctrlCommit 0;
