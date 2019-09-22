@@ -36,10 +36,10 @@ private _fnc_rangeModeChanged = {
     params ["_ctrlRangeMode", "_index"];
 
     private _display = ctrlParent _ctrlRangeMode;
-    private _enable = _index == 0;
+    private _enabled = _index == 0;
 
     {
-        (_display displayCtrl _x) ctrlEnable _enable;
+        (_display displayCtrl _x) ctrlEnable _enabled;
     } forEach [
         IDC_EDITABLEOBJECTS_RANGE_SLIDER,
         IDC_EDITABLEOBJECTS_RANGE_EDIT
