@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Display Type <STRING>
  * 1: Label and Tooltip <STRING|ARRAY>
- * 2: Control <STRING>
+ * 2: Control Type <STRING>
  * 3: Value Info <ANY> (default: [])
  * 4: Statement <CODE> (default: {})
  * 5: Default Value <CODE> (default: {})
