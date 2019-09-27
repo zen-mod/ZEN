@@ -793,29 +793,11 @@ BEGIN_MODULE_DIALOG(RscAmbientFlyby)
                 text = ECSTRING(common,Height);
                 tooltip = CSTRING(ModuleAmbientFlyby_Height_Tooltip);
                 y = POS_H(5.6);
-            };
-            class HeightSlider: ctrlXSliderH {
-                idc = IDC_AMBIENTFLYBY_HEIGHT_SLIDER;
-                x = POS_W(10.1);
-                y = POS_H(5.6);
-                w = POS_W(13.4);
-                h = POS_H(1);
-            };
-            class HeightEdit: EGVAR(attributes,RscEdit) {
-                idc = IDC_AMBIENTFLYBY_HEIGHT_EDIT;
-                x = POS_W(23.6);
-                y = POS_H(5.6);
-                w = POS_W(2.4);
-                h = POS_H(1);
-            };
-            class FixedLabel: EGVAR(attributes,RscLabel) {
-                text = CSTRING(ModuleAmbientFlyby_Fixed);
-                tooltip = CSTRING(ModuleAmbientFlyby_Fixed_Tooltip);
-                y = POS_H(6.7);
+                h = POS_H(2.1);
             };
             class Fixed: Direction {
                 idc = IDC_AMBIENTFLYBY_FIXED;
-                y = POS_H(6.7);
+                y = POS_H(5.6);
                 columns = 2;
                 strings[] = {
                     CSTRING(ModuleAmbientFlyby_Fixed_AGL),
@@ -825,6 +807,20 @@ BEGIN_MODULE_DIALOG(RscAmbientFlyby)
                     CSTRING(ModuleAmbientFlyby_Fixed_AGL_Tooltip),
                     CSTRING(ModuleAmbientFlyby_Fixed_ASL_Tooltip)
                 };
+            };
+            class HeightSlider: ctrlXSliderH {
+                idc = IDC_AMBIENTFLYBY_HEIGHT_SLIDER;
+                x = POS_W(10.1);
+                y = POS_H(6.7);
+                w = POS_W(13.4);
+                h = POS_H(1);
+            };
+            class HeightEdit: EGVAR(attributes,RscEdit) {
+                idc = IDC_AMBIENTFLYBY_HEIGHT_EDIT;
+                x = POS_W(23.6);
+                y = POS_H(6.7);
+                w = POS_W(2.4);
+                h = POS_H(1);
             };
             class DistanceLabel: EGVAR(attributes,RscLabel) {
                 text = CSTRING(ModuleAmbientFlyby_Distance);
