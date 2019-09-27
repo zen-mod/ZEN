@@ -231,6 +231,8 @@
     _unit addweaponItem [_weapon, _item];
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setDate), {setDate _this}] call CBA_fnc_addEventHandler;
+
 [QGVAR(earthquake), LINKFUNC(earthquake)] call CBA_fnc_addEventHandler;
 
 [QGVAR(setMagazineAmmo), FUNC(setMagazineAmmo)] call CBA_fnc_addEventHandler;
@@ -271,11 +273,6 @@ if (isServer) then {
     [QGVAR(setWaypointSpeed), {
         params ["_waypoint", "_speedMode"];
         _waypoint setWaypointSpeed _speedMode;
-    }] call CBA_fnc_addEventHandler;
-
-    [QGVAR(setDate), {
-        params ["_date"];
-        setDate _date;
     }] call CBA_fnc_addEventHandler;
 
     [QGVAR(addObjects), {

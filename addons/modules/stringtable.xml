@@ -1316,12 +1316,6 @@
             <English>IR Lasers</English>
         </Key>
         <!-- Module Categories -->
-        <Key ID="STR_ZEN_Modules_AI">
-            <English>AI</English>
-            <Russian>ИИ</Russian>
-            <German>KI</German>
-            <Polish>AI</Polish>
-        </Key>
         <Key ID="STR_ZEN_Modules_Buildings">
             <English>Buildings</English>
             <Russian>Здания</Russian>

@@ -24,7 +24,7 @@ params ["_vehicles", "_target", "_spread", "_ammo", "_rounds"];
 private _position = if (_target isEqualType "") then {
     [_target, true] call CBA_fnc_mapGridToPos;
 } else {
-    getPosASL _target;
+    ASLtoAGL getPosASL _target;
 };
 
 private _artilleryETA = 1e9;
