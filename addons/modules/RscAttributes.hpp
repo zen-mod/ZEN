@@ -703,7 +703,7 @@ BEGIN_MODULE_DIALOG(RscAmbientFlyby)
         x = 0;
         y = 0;
         w = POS_W(26);
-        h = POS_H(9.9);
+        h = POS_H(11);
         class controls {
             class AircraftSelect: RscControlsGroupNoScrollbars {
                 idc = -1;
@@ -808,38 +808,56 @@ BEGIN_MODULE_DIALOG(RscAmbientFlyby)
                 w = POS_W(2.4);
                 h = POS_H(1);
             };
+            class FixedLabel: EGVAR(attributes,RscLabel) {
+                text = CSTRING(ModuleAmbientFlyby_Fixed);
+                tooltip = CSTRING(ModuleAmbientFlyby_Fixed_Tooltip);
+                y = POS_H(6.7);
+            };
+            class Fixed: Direction {
+                idc = IDC_AMBIENTFLYBY_FIXED;
+                y = POS_H(6.7);
+                columns = 2;
+                strings[] = {
+                    CSTRING(ModuleAmbientFlyby_Fixed_AGL),
+                    CSTRING(ModuleAmbientFlyby_Fixed_ASL)
+                };
+                tooltips[] = {
+                    CSTRING(ModuleAmbientFlyby_Fixed_AGL_Tooltip),
+                    CSTRING(ModuleAmbientFlyby_Fixed_ASL_Tooltip)
+                };
+            };
             class DistanceLabel: EGVAR(attributes,RscLabel) {
                 text = CSTRING(ModuleAmbientFlyby_Distance);
                 tooltip = CSTRING(ModuleAmbientFlyby_Distance_Tooltip);
-                y = POS_H(6.7);
+                y = POS_H(7.8);
             };
             class DistanceSlider: HeightSlider {
                 idc = IDC_AMBIENTFLYBY_DISTANCE_SLIDER;
-                y = POS_H(6.7);
+                y = POS_H(7.8);
             };
             class DistanceEdit: HeightEdit {
                 idc = IDC_AMBIENTFLYBY_DISTANCE_EDIT;
-                y = POS_H(6.7);
+                y = POS_H(7.8);
             };
             class SpeedLabel: EGVAR(attributes,RscLabel) {
                 text = ECSTRING(common,Speed);
                 tooltip = CSTRING(ModuleAmbientFlyby_Speed_Tooltip);
-                y = POS_H(7.8);
+                y = POS_H(8.9);
             };
             class Speed: Direction {
                 idc = IDC_AMBIENTFLYBY_SPEED;
-                y = POS_H(7.8);
+                y = POS_H(8.9);
                 columns = 3;
                 strings[] = {"$STR_A3_Slow", "$STR_A3_Normal", "$STR_A3_Fast"};
             };
             class AmountLabel: EGVAR(attributes,RscLabel) {
                 text = CSTRING(ModuleAmbientFlyby_Amount);
                 tooltip = CSTRING(ModuleAmbientFlyby_Amount_Tooltip);
-                y = POS_H(8.9);
+                y = POS_H(10);
             };
             class Amount: Direction {
                 idc = IDC_AMBIENTFLYBY_AMOUNT;
-                y = POS_H(8.9);
+                y = POS_H(10);
                 columns = 6;
                 strings[] = {"1", "2", "3", "4", "5", "6"};
             };

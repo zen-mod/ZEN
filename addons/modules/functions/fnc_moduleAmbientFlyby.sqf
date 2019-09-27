@@ -23,10 +23,14 @@
 
 #define SPAWN_OFFSET -30
 
-params ["_aircraftType", "_position", "_height", "_distance", "_direction", "_speed", "_amount"];
+params ["_aircraftType", "_position", "_height", "_useASL", "_distance", "_direction", "_speed", "_amount"];
 
 // Convert direction from 0 to 7 index to degrees
 _direction = _direction * 45;
+
+// Convert the given height to true altitude
+private _altitude = (_position select 2) + _height;
+_position = ASLToAGL _position;
 
 // Convert speed from 0 to 2 index to speed mode
 _speed = ["LIMITED", "NORMAL", "FULL"] select _speed;
@@ -36,8 +40,15 @@ private _startPos = _position getPos [_distance, _direction - 180];
 private _endPos   = _position getPos [_distance, _direction];
 
 // Set position heights to be the fly height
-_startPos set [2, _height];
-_endPos   set [2, _height];
+if (_useASL) then {
+    _startPos set [2, _altitude];
+    _endPos   set [2, _altitude];
+    _startPos = ASLToAGL _startPos;
+    _endPos   = ASLToAGL _endPos;
+} else {
+    _startPos set [2, _height];
+    _endPos   set [2, _height];
+};
 
 // Set a sufficient initial velocity for planes
 private _aircraftConfig = configFile >> "CfgVehicles" >> _aircraftType;
@@ -68,7 +79,12 @@ for "_i" from 0 to (_amount - 1) do {
     _group addVehicle _aircraft;
 
     // Set the behaviour of the aircraft to the fly height and to ignore surroundings
-    _aircraft flyInHeight _height;
+    if (_useASL) then {
+        _aircraft flyInHeight 10;
+        _aircraft flyInHeightASL [_altitude, _altitude, _altitude];
+    } else {
+        _aircraft flyInHeight _height;
+    };
     _aircraft disableAI "TARGET";
     _aircraft disableAI "AUTOTARGET";
     _aircraft setCaptive true;
