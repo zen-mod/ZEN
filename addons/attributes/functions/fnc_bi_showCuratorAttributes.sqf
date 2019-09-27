@@ -30,7 +30,7 @@ if (_entity isEqualType objNull) then {
         false breakOut "Main";
     };
 
-    private _infoTypeClass = if (isNull group _entity && {side _entity != sideLogic}) then {"curatorInfoTypeEmpty"} else {"curatorInfoType"};
+    private _infoTypeClass = ["curatorInfoType", "curatorInfoTypeEmpty"] select (isNull group _entity && {side _entity != sideLogic});
     private _infoType = getText (configfile >> "CfgVehicles" >> typeOf _entity >> _infoTypeClass);
 
     if (isClass (configFile >> _infoType)) then {

@@ -22,7 +22,7 @@ _object call BIS_fnc_curatorAttachObject;
 
 BIS_fnc_curatorObjectPlaced_mouseOver = curatorMouseOver;
 
-private _infoTypeClass = if (isNull group _object && {side _object != sideLogic}) then {"curatorInfoTypeEmpty"} else {"curatorInfoType"};
+private _infoTypeClass = ["curatorInfoType", "curatorInfoTypeEmpty"] select (isNull group _entity && {side _entity != sideLogic});
 private _infoType = getText (configfile >> "CfgVehicles" >> typeOf _object >> _infoTypeClass);
 
 if (isClass (configFile >> _infoType) && {getNumber (configFile >> _infoType >> "filterAttributes") == 0}) then {

@@ -58,7 +58,7 @@ _ctrlCombo ctrlAddEventHandler ["LBSelChanged", {
         private _history = profileNamespace getVariable [_historyVarName, []];
         _history select (_index - 1)
     } else {
-        "" // new
+        "" // New
     };
 
     _controlsGroup setVariable [QGVAR(value), _text];
