@@ -1,5 +1,15 @@
 // - Object -------------------------------------------------------------------
 
+["Object", "", true] call FUNC(addDisplay);
+
+[
+    "Object",
+    "STR_A3_Arsenal",
+    {_entity call EFUNC(common,openArsenal)},
+    {alive _entity && {_entity isKindOf "CAManBase"}},
+    true
+] call FUNC(addButton);
+
 [
     "Object",
     "STR_3DEN_Object_Attribute_UnitName_displayName",
@@ -14,7 +24,7 @@
     },
     {name _entity},
     {alive _entity && {_entity isKindOf "CAManBase"}},
-    -89
+    100
 ] call FUNC(addAttribute);
 
 [
@@ -29,7 +39,7 @@
     },
     {skill _entity},
     {alive _entity && {!isNull group _entity && {side _entity != sideLogic}}},
-    -90
+    95
 ] call FUNC(addAttribute);
 
 [
@@ -45,7 +55,7 @@
     },
     {1 - damage _entity},
     {alive _entity},
-    -91
+    90
 ] call FUNC(addAttribute);
 
 [
@@ -60,7 +70,7 @@
     },
     {fuel _entity},
     {alive _entity && {getNumber (configFile >> "CfgVehicles" >> typeOf _entity >> "fuelCapacity") > 0}},
-    -92
+    85
 ] call FUNC(addAttribute);
 
 [
@@ -75,7 +85,7 @@
     },
     {_entity call EFUNC(common,getVehicleAmmo)},
     {alive _entity && {!(_entity isKindOf "CAManBase")} && {_entity call EFUNC(common,getVehicleAmmo) != -1}},
-    -93
+    80
 ] call FUNC(addAttribute);
 
 [
@@ -99,7 +109,7 @@
     },
     {RANKS find toUpper rank _entity},
     {alive _entity && {_entity isKindOf "CAManBase"}},
-    -94
+    75
 ] call FUNC(addAttribute);
 
 [
@@ -120,7 +130,7 @@
     },
     {STANCES find toUpper unitPos _entity},
     {alive _entity && {_entity isKindOf "CAManBase"}},
-    -95
+    70
 ] call FUNC(addAttribute);
 
 [
@@ -140,7 +150,7 @@
     },
     {locked _entity},
     {alive _entity && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}},
-    -96
+    65
 ] call FUNC(addAttribute);
 
 [
@@ -159,7 +169,7 @@
     },
     {parseNumber !isEngineOn _entity},
     {alive _entity && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}},
-    -97
+    60
 ] call FUNC(addAttribute);
 
 [
@@ -186,7 +196,7 @@
     },
     {parseNumber !isLightOn _entity},
     {alive _entity && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}},
-    -98
+    55
 ] call FUNC(addAttribute);
 
 [
@@ -199,24 +209,7 @@
     },
     {getPlateNumber _entity},
     {alive _entity && {isClass (configFile >> "CfgVehicles" >> typeOf _entity >> "PlateInfos")}},
-    -99
-] call FUNC(addAttribute);
-
-[
-    "Object",
-    "STR_Diff_Simulation",
-    QGVAR(toolbox),
-    [1, 2, [ELSTRING(common,Disabled), ELSTRING(common,Enabled)]],
-    {
-        {
-            if (alive _x) then {
-                [QEGVAR(common,enableSimulationGlobal), [_x, _value]] call CBA_fnc_serverEvent;
-            };
-        } forEach SELECTED_OBJECTS;
-    },
-    {simulationEnabled _entity},
-    {alive _entity},
-    -99.5
+    50
 ] call FUNC(addAttribute);
 
 [
@@ -233,8 +226,26 @@
     },
     {isDamageAllowed _entity},
     {alive _entity},
-    -99.6
+    45
 ] call FUNC(addAttribute);
+
+[
+    "Object",
+    "STR_Diff_Simulation",
+    QGVAR(toolbox),
+    [1, 2, [ELSTRING(common,Disabled), ELSTRING(common,Enabled)]],
+    {
+        {
+            if (alive _x) then {
+                [QEGVAR(common,enableSimulationGlobal), [_x, _value]] call CBA_fnc_serverEvent;
+            };
+        } forEach SELECTED_OBJECTS;
+    },
+    {simulationEnabled _entity},
+    {alive _entity},
+    40
+] call FUNC(addAttribute);
+
 
 [
     "Object",
@@ -251,6 +262,8 @@
 
 // - Group --------------------------------------------------------------------
 
+["Group", "", true] call FUNC(addDisplay);
+
 [
     "Group",
     "STR_A3_RscAttributeGroupID_Title",
@@ -259,7 +272,7 @@
     {_entity setGroupIdGlobal [_value]},
     {groupID _entity},
     {true},
-    -92
+    100
 ] call FUNC(addAttribute);
 
 [
@@ -276,7 +289,7 @@
     },
     {skill leader _entity},
     {true},
-    -94
+    95
 ] call FUNC(addAttribute);
 
 [
@@ -302,7 +315,7 @@
     },
     {FORMATIONS find toUpper formation _entity},
     {true},
-    -95
+    90
 ] call FUNC(addAttribute);
 
 [
@@ -324,7 +337,7 @@
     },
     {BEHAVIOURS find toUpper behaviour leader _entity},
     {true},
-    -96
+    85
 ] call FUNC(addAttribute);
 
 [
@@ -346,7 +359,7 @@
     },
     {COMBATMODES find toUpper combatMode _entity},
     {true},
-    -97
+    80
 ] call FUNC(addAttribute);
 
 [
@@ -366,7 +379,7 @@
     },
     {SPEEDMODES find toUpper speedMode _entity},
     {true},
-    -98
+    75
 ] call FUNC(addAttribute);
 
 [
@@ -389,7 +402,7 @@
     },
     {STANCES find toUpper unitPos leader _entity},
     {true},
-    -99
+    70
 ] call FUNC(addAttribute);
 
 [
@@ -407,6 +420,8 @@
 
 // - Waypoint -----------------------------------------------------------------
 
+["Waypoint", "", true] call FUNC(addDisplay);
+
 [
     "Waypoint",
     "STR_3DEN_Object_Attribute_Type_displayName",
@@ -421,7 +436,7 @@
     },
     {},
     {true},
-    -95
+    100
 ] call FUNC(addAttribute);
 
 [
@@ -432,7 +447,7 @@
     {_entity setWaypointTimeout [_value, _value, _value]},
     {random waypointTimeout _entity},
     {true},
-    -96
+    95
 ] call FUNC(addAttribute);
 
 [
@@ -465,7 +480,7 @@
     },
     {FORMATIONS find toUpper waypointFormation _entity},
     {true},
-    -97
+    90
 ] call FUNC(addAttribute);
 
 [
@@ -494,7 +509,7 @@
     },
     {BEHAVIOURS find toUpper waypointBehaviour _entity},
     {true},
-    -98
+    85
 ] call FUNC(addAttribute);
 
 [
@@ -523,7 +538,7 @@
     },
     {COMBATMODES find toUpper waypointCombatMode _entity},
     {true},
-    -99
+    80
 ] call FUNC(addAttribute);
 
 [
@@ -550,10 +565,12 @@
     },
     {SPEEDMODES find toUpper waypointSpeed _entity},
     {true},
-    -100
+    75
 ] call FUNC(addAttribute);
 
 // - Marker -------------------------------------------------------------------
+
+["Marker", "", true] call FUNC(addDisplay);
 
 [
     "Marker",
@@ -563,7 +580,7 @@
     {_entity setMarkerText _value},
     {markerText _entity},
     {true},
-    -98
+    100
 ] call FUNC(addAttribute);
 
 [
@@ -574,38 +591,37 @@
     {_entity setMarkerAlpha _value},
     {markerAlpha _entity},
     {true},
-    -99
+    95
 ] call FUNC(addAttribute);
-
-private _markerColors = [];
-
-{
-    if (getNumber (_x >> "scope") > 0) then {
-        _markerColors pushBack [
-            configName _x,
-            getText (_x >> "name"),
-            ["#(argb,8,8,3)color(1,1,1,1)", (_x >> "color") call BIS_fnc_colorConfigToRGBA]
-        ];
-    };
-} forEach configProperties [configFile >> "CfgMarkerColors", "isClass _x"];
 
 [
     "Marker",
     "STR_3DEN_Marker_Attribute_Color_displayName",
     QGVAR(combo),
-    _markerColors,
+    configProperties [configFile >> "CfgMarkerColors", "isClass _x && {getNumber (_x >> 'scope') > 0}"] apply {
+        [configName _x, getText (_x >> "name"), ["#(argb,8,8,3)color(1,1,1,1)", (_x >> "color") call BIS_fnc_colorConfigToRGBA]]
+    },
     {
         _entity setMarkerColor _value;
 
-        // Apply this color to new markers of this type
-        GVAR(markerColors) setVariable [markerType _entity, _color];
+        // Set this color to be applied to new markers of this type
+        GVAR(previousMarkerColors) setVariable [markerType _entity, _value];
     },
     {markerColor _entity},
     {true},
-    -100
+    90
 ] call FUNC(addAttribute);
 
 // - Skills -------------------------------------------------------------------
+
+["Skills", LSTRING(ChangeSkills), false] call FUNC(addDisplay);
+
+[
+    "Object",
+    LSTRING(Skills),
+    {[_entity, "Skills"] call FUNC(open)},
+    {alive _entity && {_entity isKindOf "CAManBase"}}
+] call FUNC(addButton);
 
 [
     "Skills",
@@ -729,6 +745,15 @@ private _markerColors = [];
 
 // - Traits -------------------------------------------------------------------
 
+["Traits", LSTRING(ChangeTraits), false] call FUNC(addDisplay);
+
+[
+    "Object",
+    LSTRING(Traits),
+    {[_entity, "Traits"] call FUNC(open)},
+    {alive _entity && {_entity isKindOf "CAManBase"}}
+] call FUNC(addButton);
+
 if (isClass (configFile >> "CfgPatches" >> "ace_medical")) then {
     [
         "Traits",
@@ -827,6 +852,15 @@ if (isClass (configFile >> "CfgPatches" >> "ace_explosives")) then {
 
 // - Sensors ------------------------------------------------------------------
 
+["Sensors", "STR_3DEN_Object_AttributeCategory_VehicleSystems", false] call FUNC(addDisplay);
+
+[
+    "Object",
+    LSTRING(Sensors),
+    {[_entity, "Sensors"] call FUNC(open)},
+    {alive _entity && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}}
+] call FUNC(addButton);
+
 [
     "Sensors",
     ["STR_3DEN_Object_Attribute_Radar_displayName", "STR_3DEN_Object_Attribute_Radar_tooltip"],
@@ -893,9 +927,17 @@ if (isClass (configFile >> "CfgPatches" >> "ace_explosives")) then {
 
 // - Side ---------------------------------------------------------------------
 
+["Side", LSTRING(ChangeSide), false] call FUNC(addDisplay);
+
+[
+    "Group",
+    "STR_Eval_TypeSide",
+    {[_entity, "Side"] call FUNC(open)}
+] call FUNC(addButton);
+
 [
     "Side",
-    ELSTRING(common,Side),
+    "STR_Eval_TypeSide",
     QGVAR(icons),
     [[
         ["\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_west_ca.paa", "STR_West",     12.5, 0.25, 2, west call BIS_fnc_sideColor],

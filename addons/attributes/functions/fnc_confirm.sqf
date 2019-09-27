@@ -17,7 +17,7 @@
 
 params ["_ctrlButtonOK"];
 
-private _display = ctrlParent _ctrlButtonOK;
+private _display  = ctrlParent _ctrlButtonOK;
 private _controls = _display getVariable QGVAR(controls);
 private _entity   = _display getVariable QGVAR(entity);
 

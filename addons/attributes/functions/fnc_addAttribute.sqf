@@ -14,7 +14,7 @@
  * 7: Priority <NUMBER> (default: 0)
  *
  * Return Value:
- * None
+ * Successfully Added <BOOL>
  *
  * Example:
  * [] call zen_attributes_fnc_addAttribute
@@ -23,7 +23,7 @@
  */
 
 params [
-    ["_type", "", [""]],
+    ["_displayType", "", [""]],
     ["_name", "", ["", []]],
     ["_control", "", [""]],
     ["_valueInfo", []],
@@ -38,6 +38,15 @@ _name params [
     ["_tooltip", "", [""]]
 ];
 
+private _displayData = GVAR(displays) getVariable _displayType;
+
+if (isNil "_displayData") exitWith {
+    WARNING_1("Display type (%1) has not been registered.",_displayType);
+    false
+};
+
+private _attributes = _displayData select 2;
+
 if (isLocalized _displayName) then {
     _displayName = localize _displayName;
 };
@@ -46,14 +55,9 @@ if (isLocalized _tooltip) then {
     _tooltip = localize _tooltip;
 };
 
-private _attributes = GVAR(attributes) getVariable _type;
-
-if (isNil "_attributes") then {
-    _attributes = [];
-    GVAR(attributes) setVariable [_type, _attributes];
-};
-
 _attributes pushBack [_displayName, _tooltip, _control, _valueInfo, _statement, _defaultValue, _condition, _priority];
 
 // Sort the attributes based on priority
 [_attributes, 7, false] call CBA_fnc_sortNestedArray;
+
+true

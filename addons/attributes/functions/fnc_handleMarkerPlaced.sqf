@@ -19,7 +19,7 @@
 params ["", "_marker"];
 
 // Apply the last selected color for this marker type
-private _color = GVAR(markerColors) getVariable markerType _marker;
+private _color = GVAR(previousMarkerColors) getVariable markerType _marker;
 
 if (!isNil "_color") then {
     _marker setMarkerColor _color;

@@ -12,7 +12,7 @@
  * Example:
  * [] call zen_garage_fnc_closeGarage
  *
- * Public: None
+ * Public: No
  */
 
 // Close the garage display

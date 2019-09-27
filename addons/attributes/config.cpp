@@ -20,5 +20,4 @@ class CfgPatches {
 #include "CfgWaypointTypes.hpp"
 #include "CfgCurator.hpp"
 #include "gui.hpp"
-
 #include "RscAttributes.hpp"

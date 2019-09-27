@@ -1,9 +1,8 @@
 PREP(addAttribute);
 PREP(addButton);
-PREP(addTitle);
+PREP(addDisplay);
 PREP(compileWaypoints);
 PREP(confirm);
-PREP(getTitle);
 PREP(gui_checkbox);
 PREP(gui_code);
 PREP(gui_combo);

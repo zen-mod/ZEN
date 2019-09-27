@@ -6,25 +6,20 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-GVAR(markerColors) = [] call CBA_fnc_createNamespace;
+// Namespace to store data of all attributes displays
+GVAR(displays) = [] call CBA_fnc_createNamespace;
+
+// Namespace to track previously selected marker colors by marker type
+// Color is applied to newly placed markers of the same type
+GVAR(previousMarkerColors) = [] call CBA_fnc_createNamespace;
 
 ["ModuleCurator_F", "Init", {
     params ["_logic"];
 
-    _logic addEventHandler ["CuratorMarkerPlaced", {call FUNC(handleMarkerPlaced)}];
     _logic addEventHandler ["CuratorObjectPlaced", {call FUNC(handleObjectPlaced)}];
+    _logic addEventHandler ["CuratorMarkerPlaced", {call FUNC(handleMarkerPlaced)}];
 }, true, [], true] call CBA_fnc_addClassEventHandler;
 
-GVAR(attributes) = [] call CBA_fnc_createNamespace;
-GVAR(buttons)    = [] call CBA_fnc_createNamespace;
-GVAR(titles)     = [] call CBA_fnc_createNamespace;
-
-["Skills", LSTRING(ChangeSkills)] call FUNC(addTitle);
-["Traits", LSTRING(ChangeTraits)] call FUNC(addTitle);
-["Sensors", "STR_3DEN_Object_AttributeCategory_VehicleSystems"] call FUNC(addTitle);
-["Side", LSTRING(ChangeSide)] call FUNC(addTitle);
-
 #include "initAttributes.sqf"
-#include "initButtons.sqf"
 
 ADDON = true;
