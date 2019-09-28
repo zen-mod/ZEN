@@ -795,17 +795,17 @@ BEGIN_MODULE_DIALOG(RscAmbientFlyby)
                 y = POS_H(5.6);
                 h = POS_H(2.1);
             };
-            class Fixed: Direction {
-                idc = IDC_AMBIENTFLYBY_FIXED;
+            class HeightMode: Direction {
+                idc = IDC_AMBIENTFLYBY_HEIGHT_MODE;
                 y = POS_H(5.6);
                 columns = 2;
                 strings[] = {
-                    CSTRING(ModuleAmbientFlyby_Fixed_AGL),
-                    CSTRING(ModuleAmbientFlyby_Fixed_ASL)
+                    CSTRING(ModuleAmbientFlyby_Height_Mode_AGL),
+                    CSTRING(ModuleAmbientFlyby_Height_Mode_ASL)
                 };
                 tooltips[] = {
-                    CSTRING(ModuleAmbientFlyby_Fixed_AGL_Tooltip),
-                    CSTRING(ModuleAmbientFlyby_Fixed_ASL_Tooltip)
+                    CSTRING(ModuleAmbientFlyby_Height_Mode_AGL_Tooltip),
+                    CSTRING(ModuleAmbientFlyby_Height_Mode_ASL_Tooltip)
                 };
             };
             class HeightSlider: ctrlXSliderH {
