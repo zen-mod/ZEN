@@ -7,7 +7,7 @@
  * 0: Config <CONFIG>
  *
  * Return Value:
- * DLC <STRING>
+ * DLC Classname <STRING>
  *
  * Example:
  * [configFile >> "CfgVehicles" >> "CAManBase"] call zen_common_fnc_getDLC
