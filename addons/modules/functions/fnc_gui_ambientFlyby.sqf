@@ -101,7 +101,7 @@ private _ctrlHeightSlider = _display displayCtrl IDC_AMBIENTFLYBY_HEIGHT_SLIDER;
 private _ctrlHeightEdit   = _display displayCtrl IDC_AMBIENTFLYBY_HEIGHT_EDIT;
 [_ctrlHeightSlider, _ctrlHeightEdit, 10, 5000, _height, 50] call EFUNC(common,initSliderEdit);
 
-private _ctrlFixed = _display displayCtrl IDC_AMBIENTFLYBY_FIXED;
+private _ctrlFixed = _display displayCtrl IDC_AMBIENTFLYBY_HEIGHT_MODE;
 _ctrlFixed lbSetCurSel _useASL;
 
 private _ctrlDistanceSlider = _display displayCtrl IDC_AMBIENTFLYBY_DISTANCE_SLIDER;
@@ -146,7 +146,7 @@ private _fnc_onConfirm = {
     private _ctrlHeightSlider = _display displayCtrl IDC_AMBIENTFLYBY_HEIGHT_SLIDER;
     private _height = sliderPosition _ctrlHeightSlider;
 
-    private _ctrlFixed = _display displayCtrl IDC_AMBIENTFLYBY_FIXED;
+    private _ctrlFixed = _display displayCtrl IDC_AMBIENTFLYBY_HEIGHT_MODE;
     private _useASL = lbCurSel _ctrlFixed;
 
     private _ctrlDistanceSlider = _display displayCtrl IDC_AMBIENTFLYBY_DISTANCE_SLIDER;
