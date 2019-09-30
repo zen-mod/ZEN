@@ -40,15 +40,8 @@ private _startPos = _position getPos [_distance, _direction - 180];
 private _endPos   = _position getPos [_distance, _direction];
 
 // Set position heights to be the fly height
-if (_useASL) then {
-    _startPos set [2, _altitude];
-    _endPos   set [2, _altitude];
-    _startPos = ASLToAGL _startPos;
-    _endPos   = ASLToAGL _endPos;
-} else {
-    _startPos set [2, _height];
-    _endPos   set [2, _height];
-};
+_startPos set [2, _height];
+_endPos   set [2, _height];
 
 // Set a sufficient initial velocity for planes
 private _aircraftConfig = configFile >> "CfgVehicles" >> _aircraftType;
