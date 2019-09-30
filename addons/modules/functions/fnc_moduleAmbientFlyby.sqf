@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: mharis001
+ * Author: mharis001, NeilZar
  * Zeus module function to create an ambient aircraft flyby.
  *
  * Arguments:

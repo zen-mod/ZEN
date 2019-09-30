@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: mharis001
+ * Author: mharis001, NeilZar
  * Initializes the "Ambient Flyby" Zeus module display.
  *
  * Arguments:
