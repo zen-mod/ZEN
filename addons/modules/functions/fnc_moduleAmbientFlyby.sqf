@@ -23,7 +23,7 @@
 
 #define SPAWN_OFFSET -30
 
-params ["_aircraftType", "_position", "_height", "_useASL", "_distance", "_direction", "_speed", "_amount"];
+params ["_aircraftType", "_position", "_useASL", "_height", "_distance", "_direction", "_speed", "_amount"];
 
 // Convert direction from 0 to 7 index to degrees
 _direction = _direction * 45;

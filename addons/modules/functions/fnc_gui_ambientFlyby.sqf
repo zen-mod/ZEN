@@ -21,7 +21,7 @@ if (isNil QGVAR(lastAmbientFlyby)) then {
     GVAR(lastAmbientFlyby) = [0, 0, 0, 0, 250, 0, 3000, 1, 0];
 };
 
-GVAR(lastAmbientFlyby) params ["_side", "_faction", "_aircraft", "_direction", "_height", "_useASL", "_distance", "_speed", "_amount"];
+GVAR(lastAmbientFlyby) params ["_side", "_faction", "_aircraft", "_direction", "_useASL", "_height", "_distance", "_speed", "_amount"];
 
 private _ctrlButtonOK = _display displayCtrl IDC_OK;
 
@@ -97,12 +97,12 @@ _ctrlAircraft lbSetCurSel _aircraft;
 private _ctrlDirection = _display displayCtrl IDC_AMBIENTFLYBY_DIRECTION;
 _ctrlDirection lbSetCurSel _direction;
 
+private _ctrlHeightMode = _display displayCtrl IDC_AMBIENTFLYBY_HEIGHT_MODE;
+_ctrlHeightMode lbSetCurSel _useASL;
+
 private _ctrlHeightSlider = _display displayCtrl IDC_AMBIENTFLYBY_HEIGHT_SLIDER;
 private _ctrlHeightEdit   = _display displayCtrl IDC_AMBIENTFLYBY_HEIGHT_EDIT;
 [_ctrlHeightSlider, _ctrlHeightEdit, 10, 5000, _height, 50] call EFUNC(common,initSliderEdit);
-
-private _ctrlFixed = _display displayCtrl IDC_AMBIENTFLYBY_HEIGHT_MODE;
-_ctrlFixed lbSetCurSel _useASL;
 
 private _ctrlDistanceSlider = _display displayCtrl IDC_AMBIENTFLYBY_DISTANCE_SLIDER;
 private _ctrlDistanceEdit   = _display displayCtrl IDC_AMBIENTFLYBY_DISTANCE_EDIT;
@@ -143,11 +143,11 @@ private _fnc_onConfirm = {
     private _ctrlDirection = _display displayCtrl IDC_AMBIENTFLYBY_DIRECTION;
     private _direction = lbCurSel _ctrlDirection;
 
+    private _ctrlHeightMode = _display displayCtrl IDC_AMBIENTFLYBY_HEIGHT_MODE;
+    private _useASL = lbCurSel _ctrlHeightMode;
+
     private _ctrlHeightSlider = _display displayCtrl IDC_AMBIENTFLYBY_HEIGHT_SLIDER;
     private _height = sliderPosition _ctrlHeightSlider;
-
-    private _ctrlFixed = _display displayCtrl IDC_AMBIENTFLYBY_HEIGHT_MODE;
-    private _useASL = lbCurSel _ctrlFixed;
 
     private _ctrlDistanceSlider = _display displayCtrl IDC_AMBIENTFLYBY_DISTANCE_SLIDER;
     private _distance = sliderPosition _ctrlDistanceSlider;
@@ -158,11 +158,11 @@ private _fnc_onConfirm = {
     private _ctrlAmount = _display displayCtrl IDC_AMBIENTFLYBY_AMOUNT;
     private _amount = lbCurSel _ctrlAmount;
 
-    GVAR(lastAmbientFlyby) = [_side, _faction, _aircraft, _direction, _height, _useASL, _distance, _speed, _amount];
+    GVAR(lastAmbientFlyby) = [_side, _faction, _aircraft, _direction, _useASL, _height, _distance, _speed, _amount];
 
     [
         QGVAR(moduleAmbientFlyby),
-        [_aircraftType, getPosASL _logic, _height, _useASL == 1, _distance, _direction, _speed, _amount + 1]
+        [_aircraftType, getPosASL _logic, _useASL == 1, _height, _distance, _direction, _speed, _amount + 1]
     ] call CBA_fnc_serverEvent;
 };
 
