@@ -106,6 +106,8 @@
 #define IDC_FIREMISSION_AMMO 62008
 #define IDC_FIREMISSION_ROUNDS 62009
 
+#define IDC_PLAYMUSIC 62200
+
 #define ICON_HOSTILE "\a3\ui_f\data\igui\cfg\simpletasks\types\attack_ca.paa"
 #define ICON_FRIENDLY "\a3\ui_f\data\igui\cfg\simpletasks\types\help_ca.paa"
 
