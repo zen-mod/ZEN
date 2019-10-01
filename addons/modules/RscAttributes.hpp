@@ -1004,3 +1004,20 @@ BEGIN_MODULE_DIALOG(RscFireMission)
         };
     };
 END_MODULE_DIALOG;
+
+BEGIN_MODULE_DIALOG(RscPlayMusic)
+    class playMusic: RscControlsGroupNoScrollbars {
+        idc = IDC_PLAYMUSIC;
+        function = QFUNC(gui_playMusic);
+        x = 0;
+        y = 0;
+        w = POS_W(26);
+        h = POS_H(8.9);
+        class controls {
+            // Owners
+            // Searchbar for the tree
+            // Music tree with alphabetical trees
+            // Music volume slider
+        };
+    };
+END_MODULE_DIALOG
