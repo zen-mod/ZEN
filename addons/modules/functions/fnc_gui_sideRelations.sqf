@@ -41,7 +41,7 @@ _ctrlSide1 ctrlAddEventHandler ["LBSelChanged", {
         if (_i != _selectedIndex) then {
             private _value = _ctrlSide1 lbValue _i;
 
-            private _index = _ctrlSide2 lbAdd (_ctrlSide1 lbText _i;);
+            private _index = _ctrlSide2 lbAdd (_ctrlSide1 lbText _i);
             _ctrlSide2 lbSetPicture [_index, _ctrlSide1 lbPicture _i];
             _ctrlSide2 lbSetValue [_index, _value];
 
