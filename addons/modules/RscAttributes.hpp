@@ -1020,4 +1020,4 @@ BEGIN_MODULE_DIALOG(RscPlayMusic)
             // Music volume slider
         };
     };
-END_MODULE_DIALOG
+END_MODULE_DIALOG;
