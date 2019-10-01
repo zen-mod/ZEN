@@ -6,11 +6,12 @@
  * Arguments:
  * 0: Aircraft <STRING>
  * 1: Position <ARRAY>
- * 2: Height <NUMBER>
- * 3: Distance <NUMBER>
- * 4: Direction <NUMBER>
- * 5: Speed <NUMBER>
- * 6: Amount <NUMBER>
+ * 2: Height Mode <BOOLEAN>
+ * 3: Height <NUMBER>
+ * 4: Distance <NUMBER>
+ * 5: Direction <NUMBER>
+ * 6: Speed <NUMBER>
+ * 7: Amount <NUMBER>
  *
  * Return Value:
  * None
