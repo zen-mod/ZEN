@@ -4,6 +4,7 @@ on:
   push:
     branches:
     - master
+    - translations-ci
 
 jobs:
   update:
