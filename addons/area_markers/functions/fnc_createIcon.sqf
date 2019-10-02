@@ -26,5 +26,4 @@ _ctrlIcon ctrlShow visibleMap;
 
 GVAR(icons) setVariable [_marker, _ctrlIcon];
 
-[_marker, markerDir _marker] call FUNC(setIconAngle);
-[_marker, markerColor _marker] call FUNC(setIconColor);
+[_marker, markerDir _marker, markerColor _marker] call FUNC(updateIcon);

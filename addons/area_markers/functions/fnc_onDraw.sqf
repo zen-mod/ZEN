@@ -10,12 +10,12 @@
  * None
  *
  * Example:
- * [CONTROL] call zen_area_markers_fnc_update
+ * [CONTROL] call zen_area_markers_fnc_onDraw
  *
  * Public: No
  */
 
-BEGIN_COUNTER(update);
+BEGIN_COUNTER(onDraw);
 
 params ["_ctrlMap"];
 
@@ -30,4 +30,4 @@ params ["_ctrlMap"];
     };
 } forEach GVAR(markers);
 
-END_COUNTER(update);
+END_COUNTER(onDraw);
