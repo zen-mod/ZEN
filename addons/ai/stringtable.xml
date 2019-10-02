@@ -3,7 +3,7 @@
     <Package name="AI">
         <Key ID="STR_ZEN_AI_Paradrop">
             <English>Paradrop</English>
-            <German>Paradrop</German>
+            <German>Fallschirmsprung</German>
         </Key>
         <Key ID="STR_ZEN_AI_CouldNotGarrisonAll">
             <English>Unable to garrison all units - not enough positions</English>
