@@ -75,8 +75,8 @@ All text that shall be displayed to a user shall be defined in a `stringtable.xm
 
 The family of `GVAR` macros define global variable strings or constants for use within a component. Please use these to make sure we follow naming conventions across all components and also prevent duplicate/overwriting between variables in different components. The macro family expands as follows, for the example of the component 'balls':
 
-Macros | Expands To
------- | ----------
+Macro | Expands To
+----- | ----------
 `GVAR(face)` | `ace_balls_face`
 `QGVAR(face)` | `"ace_balls_face"`
 `QQGVAR(face)` | `""ace_balls_face""` used inside `QUOTE` macros where double quotation is required.
@@ -86,8 +86,8 @@ Macros | Expands To
 
 There also exists the `FUNC` family of Macros:
 
-Macros | Expands To
------- | ----------
+Macro | Expands To
+----- | ----------
 `FUNC(face)` | `ace_balls_fnc_face`
 `EFUNC(leg,face)` | `ace_leg_fnc_face`
 `LINKFUNC(face)` | `FUNC(face)` or "pass by reference" `{_this call FUNC(face)}`
@@ -108,8 +108,8 @@ The `LINKFUNC` macro allows for the recompiling of a function used in event hand
 
 These macros are allowed but are not enforced.
 
-Macros | Expands To
------- | ----------
+Macro | Expands To
+----- | ----------
 `GETVAR(player,MyVarName,false)` | `player getVariable ["MyVarName", false]`
 `GETMVAR(MyVarName,objNull)` | `missionNamespace getVariable ["MyVarName", objNull]`
 `GETUVAR(MyVarName,displayNull)` | `uiNamespace getVariable ["MyVarName", displayNull]`
@@ -126,16 +126,16 @@ Example: `STR_ZEN_Balls_Banana`
 
 Script strings (still require `localize` to localize the string):
 
-Macros | Expands To
------- | ----------
+Macro | Expands To
+----- | ----------
 `LSTRING(banana)` | `"STR_ZEN_balls_banana"` |
 `ELSTRING(leg,banana)` | `"STR_ZEN_leg_banana"` |
 
 
 Config Strings (require `$` as first character):
 
-Macros | Expands To
------- | ----------
+Macro | Expands To
+----- | ----------
 `CSTRING(banana)` | `"$STR_ZEN_balls_banana"` |
 `ECSTRING(leg,banana)` | `"$STR_ZEN_leg_banana"` |
 
@@ -143,8 +143,8 @@ Macros | Expands To
 
 The family of path macros define global paths to files for use within a component. Please use these to reference files in the ZEN project. The macro family expands as follows, for the example of the component 'balls':
 
-Macros | Expands To
------- | ----------
+Macro | Expands To
+----- | ----------
 `PATHTOF(data\banana.p3d)` | `\x\zen\addons\balls\data\banana.p3d`
 `QPATHTOF(data\banana.p3d)` | `"\x\zen\addons\balls\data\banana.p3d"`
 `PATHTOEF(leg,data\banana.p3d)` | `\x\zen\addons\leg\data\banana.p3d`
