@@ -23,10 +23,11 @@ if (isNil QGVAR(lastSideRelations)) then {
 
 GVAR(lastSideRelations) params ["_side1", "_side2", "_friendValue", "_radio"];
 
-private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 private _ctrlButtonOK = _display displayCtrl IDC_OK;
 
 private _ctrlSide1 = _display displayCtrl IDC_SIDERELATIONS_SIDE_1;
+private _ctrlSide2 = _display displayCtrl IDC_SIDERELATIONS_SIDE_2;
+
 _ctrlSide1 ctrlAddEventHandler ["LBSelChanged", {
     params ["_ctrlSide1", "_selectedIndex"];
 
@@ -65,11 +66,11 @@ private _fnc_relationToggled = {
 
     // Update icon and tooltip
     if (_value > 0) then {
-        _ctrlToggle ctrlSetText ICON_FRIENDLY;
-        _ctrlToggle ctrlSetTooltip localize LSTRING(FriendlyTo);
-    } else {
         _ctrlToggle ctrlSetText ICON_HOSTILE;
         _ctrlToggle ctrlSetTooltip localize LSTRING(HostileTo);
+    } else {
+        _ctrlToggle ctrlSetText ICON_FRIENDLY;
+        _ctrlToggle ctrlSetTooltip localize LSTRING(FriendlyTo);
     };
 };
 
