@@ -3,6 +3,7 @@
     <Package name="Area_Markers">
         <Key ID="STR_ZEN_Area_Markers_CreateAreaMarker">
             <English>Create Area Marker</English>
+            <Russian>Создать Маркер Площади</Russian>
             <French>Créer un marqueur de zone</French>
             <German>Bereichsmarkierungen erstellen</German>
             <Italian>Crea un marker</Italian>
@@ -13,6 +14,7 @@
         </Key>
         <Key ID="STR_ZEN_Area_Markers_EditAreaMarker">
             <English>EDIT AREA MARKER</English>
+            <Russian>РЕДАКТИРОВАТЬ МАРКЕР ПЛОЩАДИ</Russian>
             <French>EDITER LE MARQUEUR DE ZONE</French>
             <German>BEREICHSMARKIERUNG BEARBEITEN</German>
             <Italian>Modifica un marker</Italian>
@@ -23,6 +25,7 @@
         </Key>
         <Key ID="STR_ZEN_Area_Markers_PlaceOnMap">
             <English>Place On Map</English>
+            <Russian>Место На Карте</Russian>
             <French>Placer sur la carte</French>
             <German>Auf Karte platzieren</German>
             <Italian>Aggiungi sulla mappa</Italian>
