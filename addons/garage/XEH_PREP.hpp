@@ -1,3 +1,4 @@
+PREP(applyToAll);
 PREP(buttonGarage);
 PREP(closeGarage);
 PREP(getVehicleData);
