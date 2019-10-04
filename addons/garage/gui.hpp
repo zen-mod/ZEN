@@ -28,6 +28,7 @@ class GVAR(display) {
             onMouseMoving = QUOTE(_this call FUNC(handleMouse));
             onMouseHolding = QUOTE(_this call FUNC(handleMouse));
             onMouseZChanged = QUOTE(_this call FUNC(onMouseZChanged));
+            onMouseButtonClick = QUOTE(_this call FUNC(onMouseButtonClick));
             style = ST_MULTI;
             x = safeZoneX;
             y = safeZoneY;
