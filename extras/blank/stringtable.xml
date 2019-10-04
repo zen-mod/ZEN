@@ -3,6 +3,7 @@
     <Package name="Blank">
         <Key ID="STR_ZEN_Blank_DisplayName">
             <English>Blank</English>
+            <Russian>Пусто</Russian>
         </Key>
     </Package>
 </Project>

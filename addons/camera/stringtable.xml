@@ -3,30 +3,39 @@
     <Package name="Camera">
         <Key ID="STR_ZEN_Camera_Camera">
             <English>Camera</English>
+            <Russian>Камера</Russian>
         </Key>
         <Key ID="STR_ZEN_Camera_FollowTerrain">
             <English>Follow Terrain</English>
+            <Russian>Следовать за местностью</Russian>
         </Key>
         <Key ID="STR_ZEN_Camera_FollowTerrain_Description">
             <English>Controls whether the camera's height should adjust with changes in terrain elevation.</English>
+            <Russian>Контролирует должна ли высота камеры регулироваться при изменении высоты местности</Russian>
         </Key>
         <Key ID="STR_ZEN_Camera_AdaptiveSpeed">
             <English>Adaptive Speed</English>
+            <Russian>Адаптивная Скорость</Russian>
         </Key>
         <Key ID="STR_ZEN_Camera_AdaptiveSpeed_Description">
             <English>Adapts the camera's speed based on its current height. Lower height - slower camera movement.</English>
+            <Russian>Адаптирует скорость камеры в зависимости от ее текущей высоты. Чем ниже высота - тем медленее движение камеры.</Russian>
         </Key>
         <Key ID="STR_ZEN_Camera_DefaultSpeedCoef">
             <English>Default Speed Coefficient</English>
+            <Russian>Коэффициент Скорости По Умолчанию</Russian>
         </Key>
         <Key ID="STR_ZEN_Camera_DefaultSpeedCoef_Description">
             <English>Coefficient for the default camera movement speed, higher is faster.</English>
+            <Russian>Коэффициент для скорости движения камеры по умолчанию. Чем выше тем быстрее.</Russian>
         </Key>
         <Key ID="STR_ZEN_Camera_FastSpeedCoef">
             <English>Fast Speed Coefficient</English>
+            <Russian>Коэффициент Быстрой Скорости</Russian>
         </Key>
         <Key ID="STR_ZEN_Camera_FastSpeedCoef_Description">
             <English>Coefficient for the fast camera movement speed (when holding down the shift key), higher is faster.</English>
+            <Russian>Коэффициент для быстрой скорости движения камеры (когда зажата клавиша shift). Чем выше тем быстрее.</Russian>
         </Key>
     </Package>
 </Project>
