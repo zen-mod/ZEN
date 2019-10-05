@@ -24,12 +24,6 @@ private _changes = _display getVariable QGVAR(changes);
 if !(_changes isEqualTo []) then {
     {
     	_x params ["_turretPath", "_magazineClass", "_magazineCount"];
-        private _turretOwner = _vehicle turretOwner _turretPath;
-
-        if (_turretOwner == 0) then {
-            [QEGVAR(common,setMagazineAmmo), [_vehicle, _turretPath, _magazineClass, _magazineCount], _vehicle] call CBA_fnc_targetEvent;
-        } else {
-            [QEGVAR(common,setMagazineAmmo), [_vehicle, _turretPath, _magazineClass, _magazineCount], _turretOwner] call CBA_fnc_ownerEvent;
-        };
+        [QEGVAR(common,setMagazineAmmo), [_vehicle, _turretPath, _magazineClass, _magazineCount], _vehicle, _turretPath] call CBA_fnc_turretEvent;
     } forEach _changes;
 };

@@ -31,7 +31,7 @@ private _cfgMagazines = configFile >> "CfgMagazines";
     private _displayName = getText (_cfgMagazines >> _magazine >> "displayName");
     if (_displayName isEqualTo "") then { _displayName = _magazine };
 
-    if (toLower _displayName find _filter != -1) then {
+    if (_filter in toLower _displayName) then {
         private _rounds = getNumber (_cfgMagazines >> _magazine >> "count");
         private _toolTip = format ["%1\n%2 Rounds\n%3", _displayName, _rounds, _magazine];
         private _alpha = [0.5, 1] select (_count > 0);
