@@ -4,10 +4,10 @@
  * Returns the side icon for given group or unit.
  *
  * Arguments:
- * 0: Unit <OBJECT|GROUP>
+ * 0: Unit or Group <OBJECT|GROUP>
  *
  * Return Value:
- * Icon file path <STRING>
+ * Icon File Path <STRING>
  *
  * Example:
  * [player] call zen_common_fnc_getSideIcon
