@@ -37,7 +37,7 @@ if (crew _vehicle findIf {assignedVehicleRole _x select 0 == "cargo"} == -1) exi
 
 private _enabled = getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "ace_fastroping_enabled");
 
-// Exit if fastroping is not enabled for the vehicle
+// Exit if fastroping is not enabled for the helicopter
 if (_enabled == 0) exitWith {true};
 
 // Equip the helicopter with FRIES if necessary
