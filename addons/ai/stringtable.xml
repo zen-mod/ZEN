@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="AI">
+        <Key ID="STR_ZEN_AI_Fastrope">
+            <English>Fastrope</English>
+        </Key>
         <Key ID="STR_ZEN_AI_Paradrop">
             <English>Paradrop</English>
         </Key>
