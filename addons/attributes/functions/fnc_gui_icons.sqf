@@ -57,7 +57,15 @@ private _display = ctrlParent _controlsGroup;
 private _iconControls = [];
 
 {
-    _x params ["_icon", "_tooltip", "_posX", "_posY", "_size", ["_color", [1, 1, 1], [[]], [3, 4]], ["_condition", {true}, [{}]]];
+    _x params [
+        ["_icon", "", [""]],
+        ["_tooltip", "", [""]],
+        ["_posX", 0, [0]],
+        ["_posY", 0, [0]],
+        ["_size", 0, [0]],
+        ["_color", [1, 1, 1], [[]], [3, 4]],
+        ["_condition", {true}, [{}]]
+    ];
 
     if (_forEachIndex call _condition) then {
         if (isLocalized _tooltip) then {
