@@ -17,5 +17,5 @@
 #include "\x\zen\addons\main\script_macros.hpp"
 
 #define HEAL_MODE_ALL 0
-#define HEAL_MODE_AI 1
-#define HEAL_MODE_PLAYERS 2
+#define HEAL_MODE_PLAYERS 1
+#define HEAL_MODE_AI 2

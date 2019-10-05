@@ -223,6 +223,18 @@
             <German>Legt die Höhe fest, in der das Luftfahrzeug fliegen soll, in Metern.</German>
             <Polish>Ustala na jakiej wysokości będzie leciał samolot, w metrach.</Polish>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Mode_AGL">
+            <English>Follow Terrain</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Mode_ASL">
+            <English>Fixed Altitude</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Mode_AGL_Tooltip">
+            <English>The aircraft will follow the terrain, staying at the same height relative to the ground. Based on AGL.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Mode_ASL_Tooltip">
+            <English>The aircraft will fly at a constant altitude, only following the terrain if less than 10 meters from the ground. Based on ASL, final altitude is the elevation of the module plus the height given.</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Distance">
             <English>Distance</English>
             <Russian>Дистанция</Russian>
@@ -658,6 +670,12 @@
             <Russian>Плотность размещения</Russian>
             <German>Minendichte</German>
             <Polish>Gęstość min</Polish>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateMinefield_RandomPlacement">
+            <English>Random Placement</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateMinefield_RandomPlacement_Tooltip">
+            <English>Controls whether mines will be placed uniformly or randomly within the area.</English>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGlobalHint">
             <English>Global Hint</English>
@@ -1261,6 +1279,54 @@
         <Key ID="STR_ZEN_Modules_ModuleCreateTeleporter">
             <English>Create Teleporter</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_ToggleTarget">
+            <English>Toggle Target</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ToggleTarget_Tooltip">
+            <English>Units affected by the toggle.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_AddGear">
+            <English>Add Gear</English>
+            <German>Ausrüstung hinzufügen</German>
+            <French>Ajouter équipement</French>
+            <Italian>Aggiungi equipaggiamento</Italian>
+            <Japanese>装備を追加</Japanese>
+            <Chinese>增加裝備</Chinese>
+            <Chinesesimp>增加装备</Chinesesimp>
+            <Korean>장비 추가</Korean>
+            <Polish>Dodaj wyposażenie</Polish>
+            <Russian>Добавить снаряжение</Russian>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleToggleFlashlights">
+            <English>Toggle Flashlights</English>
+            <German>Ändere Taschenlampen</German>
+            <French>Basculer lampes torches</French>
+            <Italian>Attiva torce</Italian>
+            <Japanese>フラッシュライトの切り替え</Japanese>
+            <Chinese>切換手電筒</Chinese>
+            <Chinesesimp>切换手电筒</Chinesesimp>
+            <Korean>손전등 토글</Korean>
+            <Polish>Przełącz latarki</Polish>
+            <Russian>Вкл/Выкл Фонари</Russian>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleToggleFlashlights_Flashlights">
+            <English>Flashlights</English>
+            <German>Taschenlampe</German>
+            <French>Lampe torche</French>
+            <Italian>Torcia</Italian>
+            <Japanese>フラッシュライト</Japanese>
+            <Chinese>手電筒</Chinese>
+            <Chinesesimp>手电筒</Chinesesimp>
+            <Korean>손전등</Korean>
+            <Polish>Latarki</Polish>
+            <Russian>Фонари</Russian>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleToggleIRLasers">
+            <English>Toggle IR Lasers</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleToggleIRLasers_IRLasers">
+            <English>IR Lasers</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel">
             <English>Create/Edit Intel</English>
         </Key>
@@ -1292,12 +1358,6 @@
             <English>Intel Found</English>
         </Key>
         <!-- Module Categories -->
-        <Key ID="STR_ZEN_Modules_AI">
-            <English>AI</English>
-            <Russian>ИИ</Russian>
-            <German>KI</German>
-            <Polish>AI</Polish>
-        </Key>
         <Key ID="STR_ZEN_Modules_Buildings">
             <English>Buildings</English>
             <Russian>Здания</Russian>

@@ -57,12 +57,7 @@ private _mouseEH = [_display, "MouseButtonDown", {
 
     private _ctrlMap = _display displayCtrl IDC_RSCDISPLAYCURATOR_MAINMAP;
 
-    private _posASL = if (ctrlShown _ctrlMap) then {
-        private _pos2D = _ctrlMap ctrlMapScreenToWorld getMousePosition;
-        _pos2D + [getTerrainHeightASL _pos2D];
-    } else {
-        AGLtoASL screenToWorld getMousePosition;
-    };
+    private _posASL = [] call FUNC(getPosFromScreen);
 
     _thisArgs params ["_objects", "_code", "_args"];
     [true, _objects, _posASL, _args, _shift, _ctrl, _alt] call _code;
@@ -79,12 +74,7 @@ private _keyboardEH = [_display, "KeyDown", {
 
     private _ctrlMap = _display displayCtrl IDC_RSCDISPLAYCURATOR_MAINMAP;
 
-    private _posASL = if (ctrlShown _ctrlMap) then {
-        private _pos2D = _ctrlMap ctrlMapScreenToWorld getMousePosition;
-        _pos2D + [getTerrainHeightASL _pos2D];
-    } else {
-        AGLtoASL screenToWorld getMousePosition;
-    };
+    private _posASL = [] call FUNC(getPosFromScreen);
 
     _thisArgs params ["_objects", "_code", "_args"];
     [false, _objects, _posASL, _args, _shift, _ctrl, _alt] call _code;

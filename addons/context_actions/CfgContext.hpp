@@ -115,7 +115,7 @@ class EGVAR(context_menu,actions) {
     };
     class Stance {
         displayName = "$STR_A3_RscAttributeUnitPos_Title";
-        condition = QUOTE(_selectedObjects findIf {_x isKindOf 'CAManBase' && {!isPlayer _x}} > -1);
+        condition = QUOTE(_selectedObjects findIf {alive _x && {_x isKindOf 'CAManBase'} && {!isPlayer _x}} != -1);
         class Auto {
             displayName = "$STR_A3_RscAttributeUnitPos_Auto_tooltip";
             icon = QPATHTOF(ui\default_ca.paa);
@@ -140,22 +140,25 @@ class EGVAR(context_menu,actions) {
     class HealUnits {
         displayName = ECSTRING(modules,ModuleHeal);
         icon = QPATHTOF(ui\medical_cross_ca.paa);
-        condition = QUOTE(_selectedObjects findIf {crew _x findIf {_x isKindOf 'CAManBase' && {alive _x}} != -1} != -1);
         class All {
             displayName = ECSTRING(common,All);
             statement = QUOTE([ARR_2(_selectedObjects,HEAL_MODE_ALL)] call FUNC(healUnits));
+            condition = QUOTE(_selectedObjects findIf {crew _x findIf {_x isKindOf 'CAManBase' && {alive _x}} != -1} != -1);
+            icon = QPATHTOF(ui\medical_cross_ca.paa);
             priority = 3;
-        };
-        class AI {
-            displayName = ECSTRING(modules,AI);
-            condition = QUOTE(_selectedObjects findIf {crew _x findIf {!isPlayer _x && {_x isKindOf 'CAManBase'} && {alive _x}} != -1} != -1);
-            statement = QUOTE([ARR_2(_selectedObjects,HEAL_MODE_AI)] call FUNC(healUnits));
-            priority = 2;
         };
         class Players {
             displayName = ECSTRING(modules,Players);
             condition = QUOTE(_selectedObjects findIf {crew _x findIf {isPlayer _x && {alive _x}} != -1} != -1);
             statement = QUOTE([ARR_2(_selectedObjects,HEAL_MODE_PLAYERS)] call FUNC(healUnits));
+            icon = QPATHTOF(ui\medical_cross_ca.paa);
+            priority = 2;
+        };
+        class AI {
+            displayName = "$STR_Team_Switch_AI";
+            condition = QUOTE(_selectedObjects findIf {crew _x findIf {!isPlayer _x && {_x isKindOf 'CAManBase'} && {alive _x}} != -1} != -1);
+            statement = QUOTE([ARR_2(_selectedObjects,HEAL_MODE_AI)] call FUNC(healUnits));
+            icon = QPATHTOF(ui\medical_cross_ca.paa);
             priority = 1;
         };
         priority = -70;
@@ -269,6 +272,22 @@ class EGVAR(context_menu,actions) {
         );
         statement = QUOTE(_hoveredEntity call EFUNC(garage,openGarage));
         priority = -82;
+        class CopyAppearance {
+            displayName = "$STR_3DEN_Display3DEN_MenuBar_EntityCopy_text";
+            icon = QPATHTOF(ui\copy_ca.paa);
+            statement = QUOTE(GVAR(appearances) setVariable [ARR_2(typeOf _hoveredEntity, _hoveredEntity call BIS_fnc_getVehicleCustomization)]);
+            priority = 2;
+        };
+        class PasteAppearance {
+            displayName = "$STR_3DEN_Display3DEN_MenuBar_EntityPaste_text";
+            icon = QPATHTOF(ui\paste_ca.paa);
+            condition = QUOTE(!isNil {GVAR(appearances) getVariable typeOf _hoveredEntity});
+            statement = QUOTE( \
+                GVAR(appearances) getVariable typeOf _hoveredEntity params [ARR_2('_textures','_animations')]; \
+                [ARR_4(_hoveredEntity,_textures,_animations,true)] call BIS_fnc_initVehicle; \
+            );
+            priority = 1;
+        };
     };
     class TeleportPlayers {
         displayName = CSTRING(TeleportPlayers);

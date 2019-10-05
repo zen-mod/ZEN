@@ -282,7 +282,7 @@ private _fnc_onConfirm = {
         round (floor (_sliderPos / 60 % 60) + _sliderPos % 60 / 60)
     ];
 
-    [QEGVAR(common,setDate), [_date]] call CBA_fnc_serverEvent;
+    [QEGVAR(common,setDate), _date] call CBA_fnc_globalEvent;
 };
 
 _display displayAddEventHandler ["Unload", _fnc_onUnload];

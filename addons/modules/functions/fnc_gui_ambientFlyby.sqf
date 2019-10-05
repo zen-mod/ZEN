@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: mharis001
+ * Author: mharis001, NeilZar
  * Initializes the "Ambient Flyby" Zeus module display.
  *
  * Arguments:
@@ -17,11 +17,17 @@
 
 params ["_display"];
 
-private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
+if (isNil QGVAR(lastAmbientFlyby)) then {
+    GVAR(lastAmbientFlyby) = [0, 0, 0, 0, 250, 0, 3000, 1, 0];
+};
+
+GVAR(lastAmbientFlyby) params ["_side", "_faction", "_aircraft", "_direction", "_useASL", "_height", "_distance", "_speed", "_amount"];
+
 private _ctrlButtonOK = _display displayCtrl IDC_OK;
 
-private _ctrlSide    = _display displayCtrl IDC_AMBIENTFLYBY_SIDE;
-private _ctrlFaction = _display displayCtrl IDC_AMBIENTFLYBY_FACTION;
+private _ctrlSide     = _display displayCtrl IDC_AMBIENTFLYBY_SIDE;
+private _ctrlFaction  = _display displayCtrl IDC_AMBIENTFLYBY_FACTION;
+private _ctrlAircraft = _display displayCtrl IDC_AMBIENTFLYBY_AIRCRAFT;
 
 private _fnc_sideChanged = {
     params ["_ctrlSide", "_sideIndex"];
@@ -84,21 +90,29 @@ private _fnc_factionChanged = {
 _ctrlSide    ctrlAddEventHandler ["LBSelChanged", _fnc_sideChanged];
 _ctrlFaction ctrlAddEventHandler ["LBSelChanged", _fnc_factionChanged];
 
-_ctrlSide lbSetCurSel 0;
+_ctrlSide     lbSetCurSel _side;
+_ctrlFaction  lbSetCurSel _faction;
+_ctrlAircraft lbSetCurSel _aircraft;
+
+private _ctrlDirection = _display displayCtrl IDC_AMBIENTFLYBY_DIRECTION;
+_ctrlDirection lbSetCurSel _direction;
+
+private _ctrlHeightMode = _display displayCtrl IDC_AMBIENTFLYBY_HEIGHT_MODE;
+_ctrlHeightMode lbSetCurSel _useASL;
 
 private _ctrlHeightSlider = _display displayCtrl IDC_AMBIENTFLYBY_HEIGHT_SLIDER;
 private _ctrlHeightEdit   = _display displayCtrl IDC_AMBIENTFLYBY_HEIGHT_EDIT;
-[_ctrlHeightSlider, _ctrlHeightEdit, 10, 5000, 250, 50] call EFUNC(common,initSliderEdit);
+[_ctrlHeightSlider, _ctrlHeightEdit, 10, 5000, _height, 50] call EFUNC(common,initSliderEdit);
 
 private _ctrlDistanceSlider = _display displayCtrl IDC_AMBIENTFLYBY_DISTANCE_SLIDER;
 private _ctrlDistanceEdit   = _display displayCtrl IDC_AMBIENTFLYBY_DISTANCE_EDIT;
-[_ctrlDistanceSlider, _ctrlDistanceEdit, 1000, 10000, 3000, 100] call EFUNC(common,initSliderEdit);
+[_ctrlDistanceSlider, _ctrlDistanceEdit, 1000, 10000, _distance, 100] call EFUNC(common,initSliderEdit);
 
 private _ctrlSpeed = _display displayCtrl IDC_AMBIENTFLYBY_SPEED;
-_ctrlSpeed lbSetCurSel 1;
+_ctrlSpeed lbSetCurSel _speed;
 
 private _ctrlAmount = _display displayCtrl IDC_AMBIENTFLYBY_AMOUNT;
-_ctrlAmount lbSetCurSel 0;
+_ctrlAmount lbSetCurSel _amount;
 
 private _fnc_onUnload = {
     private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
@@ -116,11 +130,21 @@ private _fnc_onConfirm = {
     private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
     if (isNull _logic) exitWith {};
 
+    private _ctrlSide = _display displayCtrl IDC_AMBIENTFLYBY_SIDE;
+    private _side = lbCurSel _ctrlSide;
+
+    private _ctrlFaction = _display displayCtrl IDC_AMBIENTFLYBY_FACTION;
+    private _faction = lbCurSel _ctrlFaction;
+
     private _ctrlAircraft = _display displayCtrl IDC_AMBIENTFLYBY_AIRCRAFT;
-    private _aircraftType = _ctrlAircraft lbData lbCurSel _ctrlAircraft;
+    private _aircraft = lbCurSel _ctrlAircraft;
+    private _aircraftType = _ctrlAircraft lbData _aircraft;
 
     private _ctrlDirection = _display displayCtrl IDC_AMBIENTFLYBY_DIRECTION;
     private _direction = lbCurSel _ctrlDirection;
+
+    private _ctrlHeightMode = _display displayCtrl IDC_AMBIENTFLYBY_HEIGHT_MODE;
+    private _useASL = lbCurSel _ctrlHeightMode;
 
     private _ctrlHeightSlider = _display displayCtrl IDC_AMBIENTFLYBY_HEIGHT_SLIDER;
     private _height = sliderPosition _ctrlHeightSlider;
@@ -132,9 +156,14 @@ private _fnc_onConfirm = {
     private _speed = lbCurSel _ctrlSpeed;
 
     private _ctrlAmount = _display displayCtrl IDC_AMBIENTFLYBY_AMOUNT;
-    private _amount = (lbCurSel _ctrlAmount) + 1;
+    private _amount = lbCurSel _ctrlAmount;
 
-    [QGVAR(moduleAmbientFlyby), [_aircraftType, ASLtoAGL getPosASL _logic, _height, _distance, _direction, _speed, _amount]] call CBA_fnc_serverEvent;
+    GVAR(lastAmbientFlyby) = [_side, _faction, _aircraft, _direction, _useASL, _height, _distance, _speed, _amount];
+
+    [
+        QGVAR(moduleAmbientFlyby),
+        [_aircraftType, getPosASL _logic, _useASL == 1, _height, _distance, _direction, _speed, _amount + 1]
+    ] call CBA_fnc_serverEvent;
 };
 
 _display displayAddEventHandler ["Unload", _fnc_onUnload];

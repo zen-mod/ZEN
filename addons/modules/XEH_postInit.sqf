@@ -95,6 +95,3 @@ if (isServer) then {
         _fired >= _rounds || {!alive _unit} || {!alive gunner _unit}
     }, {}, [_unit, _position, _spread, _ammo, _rounds, 0]] call CBA_fnc_waitUntilAndExecute;
 }] call CBA_fnc_addEventHandler;
-
-// Function needs to be spawned
-[QGVAR(earthquake), {_this spawn BIS_fnc_earthquake}] call CBA_fnc_addEventHandler;

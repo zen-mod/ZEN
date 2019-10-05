@@ -19,7 +19,7 @@
 params ["_objects", "_mode"];
 
 {
-    if (_x isKindOf "CAManBase" && {!isPlayer _x}) then {
+    if (alive _x && {_x isKindOf "CAManBase"} && {!isPlayer _x}) then {
         [QEGVAR(common,setUnitPos), [_x, _mode], _x] call CBA_fnc_targetEvent;
     };
 } forEach _objects;

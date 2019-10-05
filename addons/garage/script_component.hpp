@@ -29,19 +29,6 @@
 #define ICON_UNCHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_unchecked_ca.paa"
 #define CHECK_ICONS    [ICON_UNCHECKED, ICON_CHECKED]
 
-#define GETDLC \
-    { \
-        private _dlc = ""; \
-        private _addons = configSourceAddonList _this; \
-        if !(_addons isEqualTo []) then { \
-            private _mods = configSourceModList (configFile >> "CfgPatches" >> _addons select 0); \
-            if !(_mods isEqualTo []) then { \
-                _dlc = _mods select 0; \
-            }; \
-        }; \
-        _dlc \
-    }
-
 #define FADE_DELAY 0.15
 
 #define ZEUS_DISPLAY (findDisplay IDD_RSCDISPLAYCURATOR)
