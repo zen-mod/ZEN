@@ -52,6 +52,10 @@ private _skill = skill _driver;
 _driver allowFleeing 0;
 _driver setSkill 1;
 
+// Set the group's behaviour to careless to prevent it from flying away in combat
+private _behaviour = behaviour _vehicle;
+_group setBehaviour "CARELESS";
+
 // Set the helicopter to fly at the fastrope height
 _vehicle flyInHeight FASTROPE_HEIGHT;
 
@@ -114,5 +118,6 @@ waitUntil {  _vehicle getVariable ["ace_fastroping_deployedRopes", []] isEqualTo
 _vehicle call ace_fastroping_fnc_stowFRIES;
 
 _driver setSkill _skill;
+_group setBehaviour _behaviour;
 
 true
