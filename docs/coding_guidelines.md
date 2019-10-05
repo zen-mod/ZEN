@@ -77,24 +77,24 @@ The family of `GVAR` macros define global variable strings or constants for use 
 
 Macro | Expands To
 ----- | ----------
-`GVAR(face)` | `ace_balls_face`
-`QGVAR(face)` | `"ace_balls_face"`
-`QQGVAR(face)` | `""ace_balls_face""` used inside `QUOTE` macros where double quotation is required.
-`EGVAR(leg,face)` | `ace_leg_face`
-`QEGVAR(leg,face)` | `"ace_leg_face"`
-`QQEGVAR(leg,face)` | `""ace_leg_face""` used inside `QUOTE` macros where double quotation is required.
+`GVAR(face)` | `zen_balls_face`
+`QGVAR(face)` | `"zen_balls_face"`
+`QQGVAR(face)` | `""zen_balls_face""` used inside `QUOTE` macros where double quotation is required.
+`EGVAR(leg,face)` | `zen_leg_face`
+`QEGVAR(leg,face)` | `"zen_leg_face"`
+`QQEGVAR(leg,face)` | `""zen_leg_face""` used inside `QUOTE` macros where double quotation is required.
 
 There also exists the `FUNC` family of Macros:
 
 Macro | Expands To
 ----- | ----------
-`FUNC(face)` | `ace_balls_fnc_face`
-`EFUNC(leg,face)` | `ace_leg_fnc_face`
+`FUNC(face)` | `zen_balls_fnc_face`
+`EFUNC(leg,face)` | `zen_leg_fnc_face`
 `LINKFUNC(face)` | `FUNC(face)` or "pass by reference" `{_this call FUNC(face)}`
-`QFUNC(face)` | `"ace_balls_fnc_face"`
-`QEFUNC(leg,face)` | `"ace_leg_fnc_face"`
-`QQFUNC(face)` | `""ace_balls_fnc_face""` used inside `QUOTE` macros where double quotation is required.
-`QQEFUNC(leg,face)` | `""ace_leg_fnc_face""` used inside `QUOTE` macros where double quotation is required.
+`QFUNC(face)` | `"zen_balls_fnc_face"`
+`QEFUNC(leg,face)` | `"zen_leg_fnc_face"`
+`QQFUNC(face)` | `""zen_balls_fnc_face""` used inside `QUOTE` macros where double quotation is required.
+`QQEFUNC(leg,face)` | `""zen_leg_fnc_face""` used inside `QUOTE` macros where double quotation is required.
 
 The `LINKFUNC` macro allows for the recompiling of a function used in event handler code when function caching is disabled. Example: `player addEventHandler ["Fired", LINKFUNC(firedEH)];` will run updated code after each recompile.
 
