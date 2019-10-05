@@ -10,6 +10,7 @@ class RscControlsGroup;
 class RscControlsGroupNoScrollbars;
 class RscButtonMenuOK;
 class RscButtonMenuCancel;
+class RscTree;
 class RscCombo {
     class ComboScrollBar;
 };
@@ -633,6 +634,48 @@ class GVAR(Row_OwnersNoTitle): GVAR(Row_Owners) {
                     y = POS_H(7.5);
                 };
             };
+        };
+    };
+};
+
+class GVAR(Row_Tree): GVAR(Row_Base) {
+    GVAR(script) = QFUNC(gui_tree);
+    h = POS_H(2.5);
+    class controls: controls {
+        class Name: Name {
+            h = POS_H(2.5);
+        };
+        class Background: RscText {
+            idc = -1;
+            x = POS_W(10);
+            y = 0;
+            w = POS_W(16);
+            h = POS_H(2.5);
+            colorBackground[] = COLOR_BACKGROUND_SETTING;
+        };
+        class Tree: RscTree {
+            idc = IDC_ROW_TREE;
+            x = POS_W(12.5);
+            y = POS_H(0.25);
+            w = POS_W(2);
+            h = POS_H(2);
+        };
+    };
+};
+
+class GVAR(Row_TreeNoLabel): GVAR(Row_Tree) {
+    class controls: controls {
+        class Name: Name {
+            w = 0;
+            h = 0;
+        };
+        class Background: Background {
+            y = POS_H(1);
+            h = POS_H(9);
+        };
+        class Tree: RscTree {
+            y = POS_H(0);
+            h = POS_H(9);
         };
     };
 };
