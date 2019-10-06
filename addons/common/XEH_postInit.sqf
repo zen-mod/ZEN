@@ -1,5 +1,25 @@
 #include "script_component.hpp"
 
+// Fix BI Virtual Arsenal incorrectly changing Zeus camera position
+[missionNamespace, "arsenalOpened", {
+    {
+        if (!isNull curatorCamera) then {
+            GVAR(cameraData) = [getPosASL curatorCamera, [vectorDir curatorCamera, vectorUp curatorCamera]];
+        };
+    } call CBA_fnc_directCall;
+}] call BIS_fnc_addScriptedEventHandler;
+
+[missionNamespace, "arsenalClosed", {
+    {
+        if (!isNull curatorCamera) then {
+            GVAR(cameraData) params ["_position", "_dirAndUp"];
+
+            curatorCamera setPosASL _position;
+            curatorCamera setVectorDirAndUp _dirAndUp;
+        };
+    } call CBA_fnc_directCall;
+}] call BIS_fnc_addScriptedEventHandler;
+
 [QGVAR(execute), {
     params ["_code", "_args"];
     _args call _code;

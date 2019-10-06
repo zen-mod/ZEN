@@ -223,6 +223,18 @@
             <German>Legt die Höhe fest, in der das Luftfahrzeug fliegen soll, in Metern.</German>
             <Polish>Ustala na jakiej wysokości będzie leciał samolot, w metrach.</Polish>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Mode_AGL">
+            <English>Follow Terrain</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Mode_ASL">
+            <English>Fixed Altitude</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Mode_AGL_Tooltip">
+            <English>The aircraft will follow the terrain, staying at the same height relative to the ground. Based on AGL.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Mode_ASL_Tooltip">
+            <English>The aircraft will fly at a constant altitude, only following the terrain if less than 10 meters from the ground. Based on ASL, final altitude is the elevation of the module plus the height given.</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Distance">
             <English>Distance</English>
             <Russian>Дистанция</Russian>
