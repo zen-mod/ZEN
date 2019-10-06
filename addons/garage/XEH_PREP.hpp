@@ -4,6 +4,7 @@ PREP(getVehicleData);
 PREP(handleMouse);
 PREP(onAnimationSelect);
 PREP(onKeyDown);
+PREP(onMouseButtonClick);
 PREP(onMouseButtonDown);
 PREP(onMouseButtonUp);
 PREP(onMouseZChanged);
