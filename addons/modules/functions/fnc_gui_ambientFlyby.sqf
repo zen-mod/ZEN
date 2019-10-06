@@ -18,7 +18,7 @@
 params ["_display"];
 
 if (isNil QGVAR(lastAmbientFlyby)) then {
-    GVAR(lastAmbientFlyby) = [0, 0, 0, 0, 250, 0, 3000, 1, 0];
+    GVAR(lastAmbientFlyby) = [0, 0, 0, 0, 0, 250, 3000, 1, 0];
 };
 
 GVAR(lastAmbientFlyby) params ["_side", "_faction", "_aircraft", "_direction", "_useASL", "_height", "_distance", "_speed", "_amount"];
