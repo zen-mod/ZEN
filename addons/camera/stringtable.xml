@@ -7,7 +7,7 @@
         </Key>
         <Key ID="STR_ZEN_Camera_FollowTerrain">
             <English>Follow Terrain</English>
-            <Russian>Следовать за местностью</Russian>
+            <Russian>Следование Рельефу</Russian>
         </Key>
         <Key ID="STR_ZEN_Camera_FollowTerrain_Description">
             <English>Controls whether the camera's height should adjust with changes in terrain elevation.</English>

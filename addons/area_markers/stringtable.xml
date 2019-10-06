@@ -3,15 +3,15 @@
     <Package name="Area_Markers">
         <Key ID="STR_ZEN_Area_Markers_CreateAreaMarker">
             <English>Create Area Marker</English>
-            <Russian>Создать Маркер Площади</Russian>
+            <Russian>Создать Маркер Области</Russian>
         </Key>
         <Key ID="STR_ZEN_Area_Markers_EditAreaMarker">
             <English>EDIT AREA MARKER</English>
-            <Russian>РЕДАКТИРОВАТЬ МАРКЕР ПЛОЩАДИ</Russian>
+            <Russian>ИЗМЕНИТЬ МАРКЕР ОБЛАСТИ</Russian>
         </Key>
         <Key ID="STR_ZEN_Area_Markers_PlaceOnMap">
             <English>Place On Map</English>
-            <Russian>Место На Карте</Russian>
+            <Russian>Разместить На Карте</Russian>
         </Key>
     </Package>
 </Project>
