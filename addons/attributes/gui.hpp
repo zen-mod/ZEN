@@ -138,7 +138,7 @@ class GVAR(icons): GVAR(base) {
         class Background: EGVAR(common,RscBackground) {
             idc = IDC_ATTRIBUTE_BACKGROUND;
         };
-        /* icons created through script based on value info */
+        // Icons created through script based on value info
     };
 };
 
@@ -165,7 +165,7 @@ class GVAR(toolbox): GVAR(base) {
     GVAR(function) = QFUNC(gui_toolbox);
     class controls: controls {
         class Label: Label {};
-        /* toolbox created through script based on value info */
+        // Toolbox created through script based on value info
     };
 };
 

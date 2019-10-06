@@ -1,14 +1,14 @@
 #include "script_component.hpp"
 /*
  * Author: Bohemia Interactive, mharis001
- * Shows the Zeus attributes display for an entity.
+ * Shows the Zeus attribute display for an entity.
  * Edited to work with the ZEN attributes framework.
  *
  * Arguments:
  * 0: Entity <OBJECT|GROUP|ARRAY|STRING>
  *
  * Return Value:
- * Opened <BOOL>
+ * Display Opened <BOOL>
  *
  * Example:
  * [player] call BIS_fnc_showCuratorAttributes
@@ -33,6 +33,7 @@ if (_entity isEqualType objNull) then {
     private _infoTypeClass = ["curatorInfoType", "curatorInfoTypeEmpty"] select (isNull group _entity && {side _entity != sideLogic});
     private _infoType = getText (configfile >> "CfgVehicles" >> typeOf _entity >> _infoTypeClass);
 
+    // Use info type instead of ZEN attributes if it is defined
     if (isClass (configFile >> _infoType)) then {
         private _curator = getAssignedCuratorLogic player;
         private _attributes = [_curator, _entity] call BIS_fnc_curatorAttributes;

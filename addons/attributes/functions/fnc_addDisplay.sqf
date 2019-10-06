@@ -1,8 +1,8 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Registers the given attributes display type allowing attributes and buttons to be added to it.
- * The title is formatted with an entity specific description as "%1".
+ * Registers the given attribute display type allowing attributes and buttons to be added to it.
+ * The title is formatted with an entity description as the "%1" format specifier.
  * If the title is empty, a generic "Edit %1" title will be used.
  *
  * Arguments:

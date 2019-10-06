@@ -585,17 +585,6 @@
 
 [
     "Marker",
-    "STR_3DEN_Marker_Attribute_Alpha_displayName",
-    QGVAR(slider),
-    [0, 1, 0.1, true],
-    {_entity setMarkerAlpha _value},
-    {markerAlpha _entity},
-    {true},
-    95
-] call FUNC(addAttribute);
-
-[
-    "Marker",
     "STR_3DEN_Marker_Attribute_Color_displayName",
     QGVAR(combo),
     configProperties [configFile >> "CfgMarkerColors", "isClass _x && {getNumber (_x >> 'scope') > 0}"] apply {
@@ -608,6 +597,17 @@
         GVAR(previousMarkerColors) setVariable [markerType _entity, _value];
     },
     {markerColor _entity},
+    {true},
+    95
+] call FUNC(addAttribute);
+
+[
+    "Marker",
+    "STR_3DEN_Marker_Attribute_Alpha_displayName",
+    QGVAR(slider),
+    [0, 1, 0.1, true],
+    {_entity setMarkerAlpha _value},
+    {markerAlpha _entity},
     {true},
     90
 ] call FUNC(addAttribute);

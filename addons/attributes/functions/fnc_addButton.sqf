@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Adds a button to the given attributes display type.
+ * Adds a button to the given attribute display type.
  *
  * Arguments:
  * 0: Display Type <STRING>
@@ -39,6 +39,8 @@ if (isNil "_displayData") exitWith {
     false
 };
 
+private _buttons = _displayData select 3;
+
 if (isLocalized _displayName) then {
     _displayName = localize _displayName;
 };
@@ -47,6 +49,6 @@ if (isLocalized _tooltip) then {
     _tooltip = localize _tooltip;
 };
 
-_displayData select 3 pushBack [_displayName, _tooltip, _statement, _condition, _closeDisplay];
+_buttons pushBack [_displayName, _tooltip, _statement, _condition, _closeDisplay];
 
 true

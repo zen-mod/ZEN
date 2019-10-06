@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Adds an attribute to the given attributes display type.
+ * Adds an attribute to the given attribute display type.
  *
  * Arguments:
  * 0: Display Type <STRING>
