@@ -161,7 +161,7 @@ The `PREP` macro allows for CBA function caching, which drastically speeds up lo
 
 ### 3.1 Headers
 
-Every function should have a header with the following format at the start of their function file.
+Every function should have a header with the following format at the start of their function file. This is not necessary for inline functions or functions not contained in their own file.
 
 ```cpp
 /*
@@ -185,7 +185,7 @@ Every function should have a header with the following format at the start of th
  */
 ```
 
-This is not the case for inline functions or functions not contained in their own file.
+A return value of "None" should be used when the functions returns `nil` or its return value has no meaning.
 
 ### 3.2 Includes
 
