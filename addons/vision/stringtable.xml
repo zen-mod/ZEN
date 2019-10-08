@@ -3,78 +3,91 @@
     <Package name="Vision">
         <Key ID="STR_ZEN_Vision_VisionModes">
             <English>Vision Modes</English>
+            <French>Mode de vision</French>
             <Russian>Режимы зрения</Russian>
             <German>Sichtmodi</German>
             <Polish>Tryby kamery</Polish>
         </Key>
         <Key ID="STR_ZEN_Vision_IncreaseNVGBrightness">
             <English>Increase NVG Brightness</English>
+            <French>Augmenter la luminosité</French>
             <Russian>Увеличить яркость ПНВ</Russian>
             <German>Nachtsicht Helligkeit erhöhen</German>
             <Polish>Zwiększ jasność noktowizji</Polish>
         </Key>
         <Key ID="STR_ZEN_Vision_DecreaseNVGBrightness">
             <English>Decrease NVG Brightness</English>
+            <French>Baisser la luminosité</French>
             <Russian>Уменьшить яркость ПНВ</Russian>
             <German>Nachtsicht Helligkeit reduzieren</German>
             <Polish>Zmniejsz jasność noktowizji</Polish>
         </Key>
         <Key ID="STR_ZEN_Vision_Brightness">
             <English>Brightness: %1</English>
+            <French>Luminosité : %1</French>
             <Russian>Яркость: %1</Russian>
             <German>Helligkeit: %1</German>
             <Polish>Jasność: %1</Polish>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableNVG">
             <English>Nightvision</English>
+            <French>Vision nocturne</French>
             <Russian>ПНВ</Russian>
             <German>Nachtsicht</German>
             <Polish>Noktowizja</Polish>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableWhiteHot">
             <English>Thermal - White Hot</English>
+            <French>Thermique - Blanc chaud</French>
             <Russian>Тепловизор - белые объекты на тёмном фоне</Russian>
             <German>Thermal - Weiß Heiß</German>
             <Polish>Termowizja - Biały ciepły</Polish>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableBlackHot">
             <English>Thermal - Black Hot</English>
+            <French>Thermique - Noir chaud</French>
             <Russian>Тепловизор - чёрные объекты на светлом фоне</Russian>
             <German>Thermal - Schwarz Heiß</German>
             <Polish>Termowizja - Czarny ciepły</Polish>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableGreenHotCold">
             <English>Thermal - Light Green Hot / Dark Green Cold</English>
+            <French>Thermique - Vert clair Chaud / Vert foncé Froid</French>
             <Russian>Тепловизор - светло-зелёные объекты на тёмно-зелёном фоне</Russian>
             <German>Thermal - Hellgrün Heiß / Dunkelgrün Kalt</German>
             <Polish>Termowizja - Jasnozielony ciepły / Ciemnozielony zimny</Polish>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableBlackHotGreenCold">
             <English>Thermal - Black Hot / Green Cold</English>
+            <French>Thermique - Noir Chaud / Vert Froid</French>
             <Russian>Тепловизор - чёрные объекты на зелёном фоне</Russian>
             <German>Thermal - Schwarz Heiß / Grün Kalt</German>
             <Polish>Termowizja - Czarny ciepły / Zielony zimny</Polish>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableRedHotCold">
             <English>Thermal - Light Red Hot / Dark Red Cold</English>
+            <French>Thermique - Rouge clair Chaud / Rouge foncé Froid / Rouge foncé Froid</French>
             <Russian>Тепловизор - светло-красные объекты на тёмно-красном фоне</Russian>
             <German>Thermal - Hellrot Heiß / Dunkelrot Kalt</German>
             <Polish>Termowizja - Jasnoczerwony ciepły / Ciemnoczerwony zimny</Polish>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableBlackHotRedCold">
             <English>Thermal - Black Hot / Red Cold</English>
+            <French>Thermique - Noir Chaud / Rouge Froid</French>
             <Russian>Тепловизор - чёрные объекты на красном фоне</Russian>
             <German>Thermal - Schwarz Heiß / Rot Kalt</German>
             <Polish>Termowizja - Czarny ciepły / Czerwony zimny</Polish>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableWhiteHotRedCold">
             <English>Thermal - White Hot / Red Cold</English>
+            <French>Thermique - Blanc chaud / Rouge froid</French>
             <Russian>Тепловизор - белые объекты на красном фоне</Russian>
             <German>Thermal - Weiß Heiß / Rot Kalt</German>
             <Polish>Termowizja - Biały ciepły / Czerwony zimny</Polish>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableRedGreenThermal">
             <English>Thermal - Red / Green (White Bodies)</English>
+            <French>Thermique - Rouge / Vert (Corps blancs)</French>
             <Russian>Тепловизор - бело-красные объекты на зелёном фоне</Russian>
             <German>Thermal - Rot / Grün (weiße Körper)</German>
             <Polish>Termowizja - Czerwono / Zielona (białe ciała)</Polish>

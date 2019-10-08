@@ -3,12 +3,15 @@
     <Package name="Area_Markers">
         <Key ID="STR_ZEN_Area_Markers_CreateAreaMarker">
             <English>Create Area Marker</English>
+            <French>Créer un marqueur de zone</French>
         </Key>
         <Key ID="STR_ZEN_Area_Markers_EditAreaMarker">
             <English>EDIT AREA MARKER</English>
+            <French>EDITER LE MARQUEUR DE ZONE</French>
         </Key>
         <Key ID="STR_ZEN_Area_Markers_PlaceOnMap">
             <English>Place On Map</English>
+            <French>Placer sur la carte</French>
         </Key>
     </Package>
 </Project>
