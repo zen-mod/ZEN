@@ -147,13 +147,14 @@
         </Key>
         <Key ID="STR_ZEN_Common_Side">
             <English>Side</English>
+            <French>Camp</French>
             <Russian>Сторона</Russian>
             <German>Seite</German>
             <Polish>Strona</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_Sides">
             <English>Sides</English>
-            <French>Faces</French>
+            <French>Camps</French>
             <Russian>Стороны</Russian>
             <German>Seiten</German>
             <Polish>Strony</Polish>
@@ -260,14 +261,14 @@
         </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects">
             <English>Add Objects to Curators</English>
-            <French>Ajouter les objets aux collections</French>
+            <French>Ajouter des objets aux curateurs</French>
             <Russian>Сдалвть объекты редактируемыми</Russian>
             <German>Objekte zum Kurator hinzufügen</German>
             <Polish>Dodaj obiekty do Zeusa</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects_Description">
             <English>Automatically adds spawned objects to all curators.</English>
-            <French>Ajouter automatiquement les objets générés à toutes les collections.</French>
+            <French>Ajouter automatiquement ses objets générés à tous les curateurs.</French>
             <Russian>Автоматически делает все добавленные объекты редактируемыми</Russian>
             <German>Fügt automatisch gespawnte Objekte zu allen Kuratoren hinzu.</German>
             <Polish>Automatycznie dodaj zespawnowane obiekty do Zeusa.</Polish>
@@ -309,7 +310,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_PreferredArsenal_Description">
             <English>Selects the preferred arsenal used by Zeus Enhanced.\nIf ACE Arsenal is not installed, will fall back to BI Virtual Arsenal.</English>
-            <French>Sélectionner l'arsenal préféré utilisé par Zeus Enhanced. Si ACE Arsenal n'est pas installé, il retournera à BI Virtual Arsenal.</French>
+            <French>Sélectionner l'arsenal préféré utilisé par Zeus Enhanced.\nSi ACE Arsenal n'est pas installé, il retournera à BI Virtual Arsenal.</French>
             <German>Regelt welches Arsenal von Zeus Enhanced geöffnet wird.\nWenn ACE Arsenal nicht installiert ist, wird auf das Vanilla BI Virtual Arsenal zurückgegriffen.</German>
             <Polish>Wybierz preferowany arsenał używany przez Zeus Enhanced.\nJeśli arsenał ACE nie będzie dostępny to uruchomi się podstawowy wirtualny arsenał BI.</Polish>
             <Russian>Выбор предпочитаемого Арсенала\nlfЕсли не установлен ACE, будет запущен стандартный Виртуальный Арсенал.</Russian>

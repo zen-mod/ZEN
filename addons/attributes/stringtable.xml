@@ -24,7 +24,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_Exec_Tooltip">
             <English>This code will be executed in the unscheduled environment on the machine where this object is local.\nThe object will be passed in the "_this" variable.</English>
-            <French>Ce code sera exécuté dans l'environnement non planifié de la machine où cet objet est local. L'objet sera passé dans la variable "_this".</French>
+            <French>Ce code sera exécuté dans l'environnement non planifié de la machine où cet objet est local.\nL'objet sera passé dans la variable "_this".</French>
             <German>Der eingegebene Code wird in einer unscheduled Umgebung lokal zum Objkekt ausgeführt.\nDas Objekt wird in der Variable names "_this" übergeben.</German>
             <Polish>Ten kod zostanie wykonany w środowisku unscheduled na maszynie gdzie obiekt jest lokalny.\nObiekt zostanie przekazany w zmiennej "_this".</Polish>
         </Key>
