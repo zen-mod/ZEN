@@ -98,7 +98,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_High">
             <English>High</English>
-            <French>Élevée</French>
+            <French>Élevé</French>
             <Russian>Высокий</Russian>
             <German>Hoch</German>
             <Polish>Wysoki</Polish>
@@ -268,7 +268,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects_Description">
             <English>Automatically adds spawned objects to all curators.</English>
-            <French>Ajouter automatiquement ses objets générés à tous les curateurs.</French>
+            <French>Ajouter automatiquement les objets générés à tous les curateurs.</French>
             <Russian>Автоматически делает все добавленные объекты редактируемыми</Russian>
             <German>Fügt automatisch gespawnte Objekte zu allen Kuratoren hinzu.</German>
             <Polish>Automatycznie dodaj zespawnowane obiekty do Zeusa.</Polish>
@@ -289,7 +289,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_DarkMode">
             <English>Dark Mode</English>
-            <French>Mode nuit</French>
+            <French>Mode sombre</French>
             <Russian>Тёмная тема</Russian>
             <German>Dunkler Modus</German>
             <Polish>Tryb ciemny</Polish>

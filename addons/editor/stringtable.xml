@@ -45,14 +45,14 @@
         </Key>
         <Key ID="STR_ZEN_Editor_DeclutterEmptyTree">
             <English>Declutter Empty Tree</English>
-            <French>Déclencheur arborescence vide</French>
+            <French>Vider l'arborescence</French>
             <Russian>Очистить пустое дерево</Russian>
             <German>Leer Kategorie aufräumen</German>
             <Polish>Oczyść drzewo pustych obiektów</Polish>
         </Key>
         <Key ID="STR_ZEN_Editor_DeclutterEmptyTree_Description">
             <English>Declutters the empty tree by removing empty vehicles as those are available in the side specific trees.</English>
-            <French>Déclenche le désencombrement de l'arborescence vide en en enlevant les véhicules vides comme ceux qui sont disponibles dans les arborescences latéraux spécifiques.</French>
+            <French>Déclenche le désencombrement de l'arborescence en enlevant les véhicules vides comme ceux qui sont disponibles dans les arborescences latéraux spécifiques.</French>
             <German>Räumt die Kategorie "Leer" auf. Leere Fahrzeuge werden versteckt, da diese in den Seiten spezifischen Kategorien vorhanden sind.</German>
             <Polish>Oczyszcza drzewo pustych obiektów przez usunięcie pustych pojazdów, gdyż są one dostępne w drzewach poszczególnych stron.</Polish>
         </Key>
@@ -89,7 +89,7 @@
         </Key>
         <Key ID="STR_ZEN_Editor_EjectPassengers_Description">
             <English>Ejects the passengers of all selected vehicles. If the vehicle is currently flying, the units will be given parachutes.\nUnlike vanilla eject, units will disembark one after another (not immediately, with a short delay in-between).</English>
-            <French>Éjecte les passagers de tous les véhicules sélectionnés. Si le véhicule est actuellement en vol, les unités recevront des parachutes. Contrairement à l'éjection de vanille, les unités débarqueront les unes après les autres (pas immédiatement, avec un court délai entre les deux).</French>
+            <French>Éjecte les passagers de tous les véhicules sélectionnés. Si le véhicule est actuellement en vol, les unités recevront des parachutes. Contrairement à l'éjection standard, les unités débarqueront les unes après les autres (pas immédiatement, avec un court délai entre les deux).</French>
         </Key>
         <Key ID="STR_ZEN_Editor_DeployCountermeasures">
             <English>Deploy Countermeasures</English>
