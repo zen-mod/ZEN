@@ -67,7 +67,7 @@ This should be used on all vehicles in a convoy which are ideally in the same gr
 
 ## Create Area Marker
 
-Creates an area marker at the module's position.
+Creates an [area marker](/area_markers.md) at the module's position.
 This module must be placed on the map.
 
 ## Create IED
