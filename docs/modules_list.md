@@ -3,6 +3,10 @@
 Zeus Enhanced adds a lot of new modules to Zeus, as well as improving some existing ones.
 Here is a list of these modules and brief descriptions of what they do (and any usage details).
 
+## Add Full Arsenal
+
+Adds a full arsenal to the attached object. The type of arsenal added is based on the "Preferred Arsenal" setting.
+
 ## Ambient Animation
 
 Plays a ambient animation on the attached AI unit. Animation can be stopped using the same module.
@@ -12,6 +16,11 @@ In combat ready mode, the unit will snap out of the animation when a gun is fire
 
 Creates an aircraft of the selected type that will fly over the module's position from the selected direction.
 The height, distance, and speed options allow for further control of the flyby.
+
+## Artillery Fire Mission
+
+Makes the attached artillery unit fire the given number of rounds of the selected ammo at a grid position or target module with the given spread.
+The "Units" option will make the selected number of additional nearby unit's of the same type also fire.
 
 ## Attach Effect
 
@@ -37,6 +46,10 @@ Selecting the public option will broadcast this value.
 
 Changes the height of the attached object by the given value.
 
+## Change Weather
+
+Immediately changes the weather to the selected values for overcast, rain, lightning, rainbows, wind, gusts, and fog.
+
 ## Chatter
 
 Sends the entered message AI communication over chat.
@@ -52,6 +65,11 @@ Opens the 3D door configuration UI on the attached or nearest building.
 Sets the convoy parameters (separation, speed, stay on road) of the attached land vehicle.
 This should be used on all vehicles in a convoy which are ideally in the same group.
 
+## Create Area Marker
+
+Creates an [area marker](/area_markers.md) at the module's position.
+This module must be placed on the map.
+
 ## Create IED
 
 Makes the attached object act as an IED that is activated by the selected side within the selected radius.
@@ -64,6 +82,11 @@ Creates a minefield of the given area centered at the module's position filled w
 The mine density option affects the spacing of the mines from: Very Low = 30 m to Very High = 10 m.
 
 !> Caution should be used when using a large area with a high mine density.
+
+## Create Target
+
+Creates a target module with the given name which can be used in conjunction with other modules (such as the "Artillery Fire Mission" module) to specify a position.
+Optionally, a laser target for the selected side can be attached to the module.
 
 ## Create Teleporter
 
@@ -87,6 +110,11 @@ Optionally, the earthquake can damage a random amount of buildings (increasing w
 ## Equip With ECM
 
 Equips the attached vehicle with an ECM which prevents the detonation of jammable IEDs.
+
+## Execute Code
+
+Executes the entered code on the selected machine(s).
+When used in JIP mode, the module can be deleted to stop execution on new JIP clients.
 
 ## Fly Height
 
@@ -131,6 +159,10 @@ Makes the attached group patrol an area of the given radius with the selected be
 
 Assigns the attached player as a Zeus.
 
+## Remove Arsenal
+
+Removes any existing arsenal from the attached object. The type of arsenal removed is based on the "Preferred Arsenal" setting.
+
 ## Set Date
 
 Sets the current date (and time of day) in the mission.
@@ -165,6 +197,16 @@ The range of Auto Seek is based on the unit's spot distance skill with a minimum
 
 Teleports players from the selected side, group(s), or individual player(s) to the module's position.
 If the module is placed on a vehicle, players will be teleported into the vehicle.
+
+## Toggle Flashlights
+
+Toggles the flashlights of all AI units of the given side (or group, when placed on a unit) to the selected state.
+The "Add Gear" option, will add a random, compatible flashlight to unit's weapon if possible and the weapon does not already have one.
+
+## Toggle IR Lasers
+
+Toggles the IR lasers of all AI units of the given side (or group, when placed on a unit) to the selected state.
+The "Add Gear" option, will add a random, compatible IR laser to unit's weapon if possible and the weapon does not already have one.
 
 ## Toggle Simulation
 
