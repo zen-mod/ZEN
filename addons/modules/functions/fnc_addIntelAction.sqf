@@ -38,6 +38,13 @@ private _fnc_addIntel = {
         };
     };
 
+    // Send to message to curators that a player has found intel
+    [
+        QEGVAR(common,showMessage),
+        [format [localize LSTRING(ModuleCreateIntel_PlayerFoundIntel), name _unit]],
+        allCurators
+    ] call CBA_fnc_targetEvent;
+
     [
         ["\a3\ui_f\data\igui\cfg\simpletasks\types\documents_ca.paa", 1.25],
         [localize LSTRING(ModuleCreateIntel_IntelFound)],
