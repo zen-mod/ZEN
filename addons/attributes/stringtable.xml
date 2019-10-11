@@ -75,9 +75,11 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_SpotDistance">
             <English>Spot Distance</English>
+            <Russian>Дистанция обнаружения цели</Russian>
         </Key>
         <Key ID="STR_ZEN_Attributes_SpotTime">
             <English>Spot Time</English>
+            <Russian>Скорость распознавания цели</Russian>
         </Key>
         <Key ID="STR_ZEN_Attributes_ReloadSpeed">
             <English>Reload Speed</English>
@@ -105,7 +107,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_AdvEngineer">
             <English>Adv. Engineer</English>
-            <Russian>Старший Инженер</Russian>
+            <Russian>Ст. Инженер</Russian>
         </Key>
         <Key ID="STR_ZEN_Attributes_EOD">
             <English>EOD</English>
