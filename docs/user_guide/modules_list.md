@@ -67,7 +67,7 @@ This should be used on all vehicles in a convoy which are ideally in the same gr
 
 ## Create Area Marker
 
-Creates an [area marker](/area_markers.md) at the module's position.
+Creates an [area marker](/user_guide/area_markers.md) at the module's position.
 This module must be placed on the map.
 
 ## Create IED
@@ -131,7 +131,7 @@ Garrisons units from the attached group in nearby buildings.
 ## Global Hint
 
 Sends the entered message as a global hint.
-The message preview shows the message with all of the formatting applies.
+The message preview shows the message with all of the formatting applied.
 
 ## Heal
 
