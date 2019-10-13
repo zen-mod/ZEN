@@ -8,4 +8,7 @@
   - [<i class="fas fa-bars"></i> Context Menu](/context_menu.md)
   - [<i class="fas fa-cog"></i> Custom Modules](/custom_modules.md)
   - [<i class="far fa-window-restore"></i> Dynamic Dialog](/dynamic_dialog.md)
+  - [<i class="fas fa-chevron-circle-down"></i> Custom Waypoints](/custom_waypoints.md)
   - [<i class="fas fa-broadcast-tower"></i> Public Events](/public_events.md)
+- **Development**
+  - [<i class="fas fa-code"></i> Coding Guidelines](/coding_guidelines.md)

@@ -43,5 +43,4 @@ private _ctrlAlphaSlider = _ctrlConfigure controlsGroupCtrl IDC_CONFIGURE_ALPHA_
 private _alpha = sliderPosition _ctrlAlphaSlider;
 _marker setMarkerAlpha _alpha;
 
-[QGVAR(setIconAngle), [_marker, _rotation]] call CBA_fnc_globalEvent;
-[QGVAR(setIconColor), [_marker, _color]] call CBA_fnc_globalEvent;
+[QGVAR(updateIcon), [_marker, _rotation, _color]] call CBA_fnc_globalEvent;

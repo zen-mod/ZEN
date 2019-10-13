@@ -29,7 +29,7 @@ _ctrlInfoAuthor ctrlSetText _authorName;
 
 private _ctrlDLC = _display displayCtrl IDC_DLC_ICON;
 private _ctrlDLCBackground = _display displayCtrl IDC_DLC_BACKGROUND;
-private _vehicleDLC = _vehicleConfig call GETDLC;
+private _vehicleDLC = _vehicleConfig call EFUNC(common,getDLC);
 
 if (_vehicleDLC != "") then {
     private _dlcParams = modParams [_vehicleDLC, ["name", "logo", "logoOver"]];

@@ -72,11 +72,11 @@
             <German>Mut</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_SpotDistance">
-            <English>Spot Distance</English>
+            <English>Spotting Distance</English>
             <German>Aufklärungsdistanz</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_SpotTime">
-            <English>Spot Time</English>
+            <English>Spotting Speed</English>
             <German>Aufklärungszeit</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_ReloadSpeed">

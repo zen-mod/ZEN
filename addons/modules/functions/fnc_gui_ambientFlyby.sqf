@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: mharis001
+ * Author: mharis001, NeilZar
  * Initializes the "Ambient Flyby" Zeus module display.
  *
  * Arguments:
@@ -18,12 +18,11 @@
 params ["_display"];
 
 if (isNil QGVAR(lastAmbientFlyby)) then {
-    GVAR(lastAmbientFlyby) = [0, 0, 0, 0, 250, 3000, 1, 0];
+    GVAR(lastAmbientFlyby) = [0, 0, 0, 0, 0, 250, 3000, 1, 0];
 };
 
-GVAR(lastAmbientFlyby) params ["_side", "_faction", "_aircraft", "_direction", "_height", "_distance", "_speed", "_amount"];
+GVAR(lastAmbientFlyby) params ["_side", "_faction", "_aircraft", "_direction", "_useASL", "_height", "_distance", "_speed", "_amount"];
 
-private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 private _ctrlButtonOK = _display displayCtrl IDC_OK;
 
 private _ctrlSide     = _display displayCtrl IDC_AMBIENTFLYBY_SIDE;
@@ -98,6 +97,9 @@ _ctrlAircraft lbSetCurSel _aircraft;
 private _ctrlDirection = _display displayCtrl IDC_AMBIENTFLYBY_DIRECTION;
 _ctrlDirection lbSetCurSel _direction;
 
+private _ctrlHeightMode = _display displayCtrl IDC_AMBIENTFLYBY_HEIGHT_MODE;
+_ctrlHeightMode lbSetCurSel _useASL;
+
 private _ctrlHeightSlider = _display displayCtrl IDC_AMBIENTFLYBY_HEIGHT_SLIDER;
 private _ctrlHeightEdit   = _display displayCtrl IDC_AMBIENTFLYBY_HEIGHT_EDIT;
 [_ctrlHeightSlider, _ctrlHeightEdit, 10, 5000, _height, 50] call EFUNC(common,initSliderEdit);
@@ -141,6 +143,9 @@ private _fnc_onConfirm = {
     private _ctrlDirection = _display displayCtrl IDC_AMBIENTFLYBY_DIRECTION;
     private _direction = lbCurSel _ctrlDirection;
 
+    private _ctrlHeightMode = _display displayCtrl IDC_AMBIENTFLYBY_HEIGHT_MODE;
+    private _useASL = lbCurSel _ctrlHeightMode;
+
     private _ctrlHeightSlider = _display displayCtrl IDC_AMBIENTFLYBY_HEIGHT_SLIDER;
     private _height = sliderPosition _ctrlHeightSlider;
 
@@ -153,11 +158,11 @@ private _fnc_onConfirm = {
     private _ctrlAmount = _display displayCtrl IDC_AMBIENTFLYBY_AMOUNT;
     private _amount = lbCurSel _ctrlAmount;
 
-    GVAR(lastAmbientFlyby) = [_side, _faction, _aircraft, _direction, _height, _distance, _speed, _amount];
+    GVAR(lastAmbientFlyby) = [_side, _faction, _aircraft, _direction, _useASL, _height, _distance, _speed, _amount];
 
     [
         QGVAR(moduleAmbientFlyby),
-        [_aircraftType, ASLtoAGL getPosASL _logic, _height, _distance, _direction, _speed, _amount + 1]
+        [_aircraftType, getPosASL _logic, _useASL == 1, _height, _distance, _direction, _speed, _amount + 1]
     ] call CBA_fnc_serverEvent;
 };
 
