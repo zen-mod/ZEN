@@ -50,6 +50,18 @@ if (GVAR(disableLiveSearch)) then {
     _ctrl ctrlAddEventHandler ["ButtonClick", {call FUNC(fixSideButtons)}];
 } forEach IDCS_MODE_BUTTONS;
 
+private _ctrlTreeRecent = _display displayCtrl IDC_RSCDISPLAYCURATOR_CREATE_RECENT;
+_ctrlTreeRecent ctrlAddEventHandler ["TreeSelChanged", {
+    params ["_ctrlTreeRecent", "_selectedPath"];
+
+    // Store data of selected item to allow for deleting the of crew of objects placed through the recent tree
+    // tvCurSel is unavailable once the selected item has been placed, the empty path check ensures that the
+    // data is not cleared since this event occurs before the object placed event
+    if !(_selectedPath isEqualTo []) then {
+        GVAR(recentTreeData) = _ctrlTreeRecent tvData _selectedPath;
+    };
+}];
+
 [{
     params ["_display"];
 

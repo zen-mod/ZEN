@@ -28,6 +28,7 @@ TRACE_1("Module Side Relations",_this);
 // Play radio message
 if (_radio) then {
     private _message = ["SentGenBaseSideEnemy%1", "SentGenBaseSideFriendly%1"] select _friendValue;
+
     [QGVAR(sayMessage), [_side1, format [_message, _side2], "side"]] call CBA_fnc_globalEvent;
     [QGVAR(sayMessage), [_side2, format [_message, _side1], "side"]] call CBA_fnc_globalEvent;
 };
