@@ -1376,7 +1376,7 @@
             <English>Intel Found</English>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_PlayerFoundIntel">
-            <English>%1 found intel</English>
+            <English>%1 found intel: "%2"</English>
         </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_Buildings">

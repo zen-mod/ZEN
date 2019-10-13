@@ -41,7 +41,7 @@ private _fnc_addIntel = {
     // Send to message to curators that a player has found intel
     [
         QEGVAR(common,showMessage),
-        [format [localize LSTRING(ModuleCreateIntel_PlayerFoundIntel), name _unit]],
+        [format [localize LSTRING(ModuleCreateIntel_PlayerFoundIntel), name _unit, _title]],
         allCurators
     ] call CBA_fnc_targetEvent;
 
