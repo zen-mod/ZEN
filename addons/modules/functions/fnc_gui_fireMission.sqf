@@ -17,6 +17,12 @@
 
 params ["_display"];
 
+if (isNil QGVAR(lastFireMission)) then {
+    GVAR(lastFireMission) = [1, "", -3, 0, 99, "", 1];
+};
+
+GVAR(lastFireMission) params ["_mode", "_grid", "_target", "_spread", "_units", "_ammo", "_rounds"];
+
 private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 private _ctrlButtonOK = _display displayCtrl IDC_OK;
 
@@ -52,43 +58,13 @@ if (_vehicles isEqualTo []) then {
 
 _logic setVariable [QGVAR(vehicles), _vehicles];
 
-// Get previously selected parameters
-if (isNil QGVAR(lastFireMission)) then {
-    GVAR(lastFireMission) = [1, "", objNull, 0, 99, "", 1];
-};
-
-GVAR(lastFireMission) params ["_mode", "_grid", "_target", "_spread", "_units", "_ammo", "_rounds"];
-
 private _ctrlGrid = _display displayCtrl IDC_FIREMISSION_TARGET_GRID;
 _ctrlGrid ctrlSetText _grid;
 
+private _ctrlMode = _display displayCtrl IDC_FIREMISSION_MODE;
 private _ctrlTarget = _display displayCtrl IDC_FIREMISSION_TARGET_LOGIC;
 
-{
-    if (!isNull _x) then {
-        private _index = _ctrlTarget lbAdd name _x;
-        _ctrlTarget lbSetValue [_index, _forEachIndex];
-
-        if (_target == _x) then {
-            _ctrlTarget lbSetCurSel _index;
-        };
-    };
-} forEach GVAR(targetLogics);
-
-if (lbCurSel _ctrlTarget == -1) then {
-    _ctrlTarget lbSetCurSel 0;
-};
-
-private _ctrlMode = _display displayCtrl IDC_FIREMISSION_MODE;
-
-if (lbSize _ctrlTarget == 0) then {
-    _ctrlTarget ctrlShow false;
-    _ctrlMode ctrlSetTooltip localize LSTRING(NoTargetModules);
-    _ctrlMode ctrlSetBackgroundColor [0, 0, 0, 0.25];
-    _ctrlMode ctrlSetFade 0.3;
-    _ctrlMode ctrlCommit 0;
-    _ctrlMode ctrlEnable false;
-} else {
+if (QGVAR(moduleCreateTarget) call EFUNC(position_logics,exists)) then {
     private _fnc_onModeChanged = {
         params ["_ctrlMode", "_index"];
 
@@ -105,8 +81,18 @@ if (lbSize _ctrlTarget == 0) then {
     };
 
     _ctrlMode ctrlAddEventHandler ["ToolBoxSelChanged", _fnc_onModeChanged];
-    [_ctrlMode, _mode] call _fnc_onModeChanged;
     _ctrlMode lbSetCurSel _mode;
+
+    [_ctrlMode, _mode] call _fnc_onModeChanged;
+
+    [_ctrlTarget, QGVAR(moduleCreateTarget), _target] call EFUNC(position_logics,initList);
+} else {
+    _ctrlTarget ctrlShow false;
+    _ctrlMode ctrlSetTooltip localize LSTRING(NoTargetModules);
+    _ctrlMode ctrlSetBackgroundColor [0, 0, 0, 0.25];
+    _ctrlMode ctrlSetFade 0.3;
+    _ctrlMode ctrlCommit 0;
+    _ctrlMode ctrlEnable false;
 };
 
 private _ctrlSpreadSlider = _display displayCtrl IDC_FIREMISSION_SPREAD_SLIDER;
@@ -158,7 +144,7 @@ private _fnc_onConfirm = {
     private _grid = ctrlText _ctrlGrid;
 
     private _ctrlTarget = _display displayCtrl IDC_FIREMISSION_TARGET_LOGIC;
-    private _target = GVAR(targetLogics) select (_ctrlTarget lbValue lbCurSel _ctrlTarget);
+    private _target = _ctrlTarget lbValue lbCurSel _ctrlTarget;
 
     private _ctrlSpreadSlider = _display displayCtrl IDC_FIREMISSION_SPREAD_SLIDER;
     private _spread = sliderPosition _ctrlSpreadSlider;
@@ -172,11 +158,13 @@ private _fnc_onConfirm = {
     private _ctrlRounds = _display displayCtrl IDC_FIREMISSION_ROUNDS;
     private _rounds = parseNumber ctrlText _ctrlRounds;
 
+    GVAR(lastFireMission) = [_mode, _grid, _target, _spread, _numberOfUnits, _ammo, _rounds];
+
     private _vehicles = _logic getVariable QGVAR(vehicles);
     _vehicles = _vehicles select {alive _x && {_ammo in getArtilleryAmmo [_x]}};
     _vehicles resize (_numberOfUnits min count _vehicles);
 
-    GVAR(lastFireMission) = [_mode, _grid, _target, _spread, _numberOfUnits, _ammo, _rounds];
+    _target = [QGVAR(moduleCreateTarget), _target, _logic] call EFUNC(position_logics,select);
 
     [_vehicles, [_grid, _target] select _mode, _spread, _ammo, _rounds] call FUNC(moduleFireMission);
 

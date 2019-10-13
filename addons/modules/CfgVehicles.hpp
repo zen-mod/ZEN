@@ -143,10 +143,24 @@ class CfgVehicles {
         function = QFUNC(moduleCreateIED);
         icon = QPATHTOF(ui\explosion_ca.paa);
     };
+    class GVAR(moduleCreateLZ): GVAR(moduleBase) {
+        category = QGVAR(Reinforcements);
+        displayName = CSTRING(ModuleCreateLZ);
+        function = QFUNC(moduleCreateLZ);
+        icon = QPATHTOF(ui\lz_ca.paa);
+        portrait = QPATHTOF(ui\lz_ca.paa);
+    };
     class GVAR(moduleCreateMinefield): GVAR(moduleBase) {
         category = QGVAR(Objects);
         displayName = CSTRING(ModuleCreateMinefield);
         function = QFUNC(moduleCreateMinefield);
+    };
+    class GVAR(moduleCreateRP): GVAR(moduleBase) {
+        category = QGVAR(Reinforcements);
+        displayName = CSTRING(ModuleCreateRP);
+        function = QFUNC(moduleCreateRP);
+        icon = QPATHTOF(ui\rp_ca.paa);
+        portrait = QPATHTOF(ui\rp_ca.paa);
     };
     class GVAR(moduleCreateTarget): GVAR(moduleBase) {
         curatorCanAttach = 1;
@@ -310,6 +324,11 @@ class CfgVehicles {
         category = QGVAR(Spawn);
         displayName = CSTRING(ModuleSpawnDestroyer);
         function = QFUNC(moduleSpawnDestroyer);
+    };
+    class GVAR(moduleSpawnReinforcements): GVAR(moduleBase) {
+        category = QGVAR(Reinforcements);
+        displayName = "Spawn Reinforcements";
+        curatorInfoType = QGVAR(RscSpawnReinforcements);
     };
     class GVAR(moduleSuicideBomber): GVAR(moduleBase) {
         curatorCanAttach = 1;

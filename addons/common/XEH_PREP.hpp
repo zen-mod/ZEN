@@ -10,6 +10,7 @@ PREP(earthquake);
 PREP(ejectPassengers);
 PREP(getActiveTree);
 PREP(getAllTurrets);
+PREP(getCargoPositionsCount);
 PREP(getDLC);
 PREP(getInventory);
 PREP(getPhoneticName);

@@ -1097,26 +1097,6 @@
             <German>Global und JIP</German>
             <Polish>Globalnie i JIP</Polish>
         </Key>
-        <Key ID="STR_ZEN_Modules_ModuleCreateTarget">
-            <English>Create Target</English>
-            <German>Ziel erstellen</German>
-            <Polish>Utwórz cel</Polish>
-        </Key>
-        <Key ID="STR_ZEN_Modules_ModuleCreateTarget_Name">
-            <English>Target Name</English>
-            <German>Zielname</German>
-            <Polish>Nazwa celu</Polish>
-        </Key>
-        <Key ID="STR_ZEN_Modules_ModuleCreateTarget_AttachLaser">
-            <English>Attach Laser Target For</English>
-            <German>Laser-Target anbringen für</German>
-            <Polish>Przyczep cel laserowy dla</Polish>
-        </Key>
-        <Key ID="STR_ZEN_Modules_ModuleCreateTarget_TargetX">
-            <English>Target %1</English>
-            <German>Ziel %1</German>
-            <Polish>Cel %1</Polish>
-        </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission">
             <English>Artillery Fire Mission</English>
             <German>Artilleriefeuermission</German>
@@ -1344,6 +1324,44 @@
             <Japanese>武器庫を削除</Japanese>
             <Chinesesimp>移除军火库</Chinesesimp>
             <Chinese>移除軍火庫</Chinese>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateTarget">
+            <English>Create Target</English>
+            <German>Ziel erstellen</German>
+            <Polish>Utwórz cel</Polish>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateTarget_Name">
+            <English>Target Name</English>
+            <German>Zielname</German>
+            <Polish>Nazwa celu</Polish>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateTarget_Format">
+            <English>Target %1</English>
+            <German>Ziel %1</German>
+            <Polish>Cel %1</Polish>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateTarget_AttachLaser">
+            <English>Attach Laser Target For</English>
+            <German>Laser-Target anbringen für</German>
+            <Polish>Przyczep cel laserowy dla</Polish>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateLZ">
+            <English>Create LZ</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateLZ_Name">
+            <English>LZ Name</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateLZ_Format">
+            <English>LZ %1</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateRP">
+            <English>Create RP</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateRP_Name">
+            <English>RP Name</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateRP_Format">
+            <English>RP %1</English>
         </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_Buildings">

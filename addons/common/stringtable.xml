@@ -128,6 +128,12 @@
             <German>Extrem</German>
             <Polish>Ekstremalny</Polish>
         </Key>
+        <Key ID="STR_ZEN_Common_Nearest">
+            <English>Nearest</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_Farthest">
+            <English>Farthest</English>
+        </Key>
         <Key ID="STR_ZEN_Common_All">
             <English>All</English>
             <Russian>Все</Russian>

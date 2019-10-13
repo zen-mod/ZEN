@@ -5,9 +5,7 @@ if (isServer) then {
     [QGVAR(moduleAmbientFlyby), FUNC(moduleAmbientFlyby)] call CBA_fnc_addEventHandler;
     [QGVAR(moduleCAS), FUNC(moduleCAS)] call CBA_fnc_addEventHandler;
     [QGVAR(moduleEditableObjects), FUNC(moduleEditableObjects)] call CBA_fnc_addEventHandler;
-
-    // Public variable to track created target logics
-    missionNamespace setVariable [QGVAR(targetLogics), [], true];
+    [QGVAR(moduleSpawnreinforcements), LINKFUNC(moduleSpawnreinforcements)] call CBA_fnc_addEventHandler;
 
     // Public variable to track created teleporter objects
     missionNamespace setVariable [QGVAR(teleporters), [], true];

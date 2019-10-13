@@ -2,9 +2,9 @@
 #define COMPONENT_BEAUTIFIED Modules
 #include "\x\zen\addons\main\script_mod.hpp"
 
-// #define DEBUG_MODE_FULL
-// #define DISABLE_COMPILE_CACHE
-// #define ENABLE_PERFORMANCE_COUNTERS
+#define DEBUG_MODE_FULL
+#define DISABLE_COMPILE_CACHE
+#define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_MODULES
     #define DEBUG_MODE_FULL
@@ -16,6 +16,7 @@
 
 #include "\x\zen\addons\main\script_macros.hpp"
 
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 #include "\a3\ui_f\hpp\defineCommonGrids.inc"
 #include "\x\zen\addons\common\defineResinclDesign.inc"
 
@@ -106,6 +107,20 @@
 #define IDC_FIREMISSION_UNITS 62007
 #define IDC_FIREMISSION_AMMO 62008
 #define IDC_FIREMISSION_ROUNDS 62009
+
+#define IDC_SPAWNREINFORCEMENTS 62300
+#define IDC_SPAWNREINFORCEMENTS_SIDE 62301
+#define IDC_SPAWNREINFORCEMENTS_FACTION 62302
+#define IDC_SPAWNREINFORCEMENTS_CATEGORY 62303
+#define IDC_SPAWNREINFORCEMENTS_VEHICLE 62304
+#define IDC_SPAWNREINFORCEMENTS_GROUP_TREE 62305
+#define IDC_SPAWNREINFORCEMENTS_GROUP_LIST 62306
+#define IDC_SPAWNREINFORCEMENTS_GROUP_COUNT 62307
+#define IDC_SPAWNREINFORCEMENTS_LZ 62308
+#define IDC_SPAWNREINFORCEMENTS_RP 62309
+#define IDC_SPAWNREINFORCEMENTS_VEHICLE_BEHAVIOUR 62310
+#define IDC_SPAWNREINFORCEMENTS_UNIT_BEHAVIOUR 62311
+#define IDC_SPAWNREINFORCEMENTS_INSERTION 62312
 
 #define ICON_HOSTILE "\a3\ui_f\data\igui\cfg\simpletasks\types\attack_ca.paa"
 #define ICON_FRIENDLY "\a3\ui_f\data\igui\cfg\simpletasks\types\help_ca.paa"

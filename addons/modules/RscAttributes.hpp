@@ -4,6 +4,7 @@ class RscCombo;
 class RscFrame;
 class RscPicture;
 class RscListBox;
+class ctrlTree;
 class RscCheckBox;
 class ctrlToolbox;
 class ctrlXSliderH;
@@ -28,6 +29,27 @@ class GVAR(RscToolboxYesNo): ctrlToolbox {
     rows = 1;
     columns = 2;
     strings[] = {ECSTRING(common,No), ECSTRING(common,Yes)};
+};
+
+class GVAR(RscSidesCombo): EGVAR(attributes,RscCombo) {
+    class Items {
+        class BLUFOR {
+            text = "$STR_West";
+            picture = ICON_BLUFOR;
+        };
+        class OPFOR {
+            text = "$STR_East";
+            picture = ICON_OPFOR;
+        };
+        class Independent {
+            text = "$STR_Guerrila";
+            picture = ICON_INDEPENDENT;
+        };
+        class Civilian {
+            text = "$STR_Civilian";
+            picture = ICON_CIVILIAN;
+        };
+    };
 };
 
 class GVAR(RscLightSourceHelper) {
@@ -1014,6 +1036,216 @@ BEGIN_MODULE_DIALOG(RscFireMission)
             class Rounds: TargetGrid {
                 idc = IDC_FIREMISSION_ROUNDS;
                 y = POS_H(7.8) + pixelH;
+            };
+        };
+    };
+END_MODULE_DIALOG;
+
+class ctrlListBox;
+
+BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
+    class spawnReinforcements: RscControlsGroupNoScrollbars {
+        idc = IDC_SPAWNREINFORCEMENTS;
+        function = QFUNC(gui_spawnReinforcements);
+        x = 0;
+        y = 0;
+        w = POS_W(26);
+        h = POS_H(26.3);
+        class controls {
+            class SideLabel: EGVAR(attributes,RscLabel) {
+                text = ECSTRING(common,Side);
+            };
+            class Side: GVAR(RscSidesCombo) {
+                idc = IDC_SPAWNREINFORCEMENTS_SIDE;
+            };
+            class VehicleSelect: RscControlsGroupNoScrollbars {
+                idc = -1;
+                x = 0;
+                y = POS_H(1.1);
+                w = POS_W(26);
+                h = POS_H(4.4);
+                class controls {
+                    class Title: EGVAR(attributes,RscLabel) {
+                        text = "Vehicle Select";
+                        w = POS_W(26);
+                    };
+                    class Background: EGVAR(attributes,RscBackground) {
+                        x = 0;
+                        y = POS_H(1);
+                        w = POS_W(26);
+                        h = POS_H(3.4);
+                    };
+                    class FactionLabel: EGVAR(attributes,RscLabel) {
+                        text = ECSTRING(common,Faction);
+                        x = POS_W(3);
+                        y = POS_H(1.1);
+                        w = POS_W(8.9);
+                        colorBackground[] = {0, 0, 0, 0.7};
+                    };
+                    class FactionCombo: EGVAR(attributes,RscCombo) {
+                        idc = IDC_SPAWNREINFORCEMENTS_FACTION;
+                        x = POS_W(12);
+                        y = POS_H(1.1);
+                        w = POS_W(11);
+                    };
+                    class CategoryLabel: FactionLabel {
+                        text = "Category";
+                        y = POS_H(2.2);
+                    };
+                    class CategoryCombo: FactionCombo {
+                        idc = IDC_SPAWNREINFORCEMENTS_CATEGORY;
+                        y = POS_H(2.2);
+                    };
+                    class VehicleLabel: FactionLabel {
+                        text = "Vehicle";
+                        y = POS_H(3.3);
+                    };
+                    class VehicleCombo: FactionCombo {
+                        idc = IDC_SPAWNREINFORCEMENTS_VEHICLE;
+                        y = POS_H(3.3);
+                    };
+                };
+            };
+            class GroupSelect: RscControlsGroupNoScrollbars {
+                idc = -1;
+                x = 0;
+                y = POS_H(5.5);
+                w = POS_W(26);
+                h = POS_H(14.2);
+                class controls {
+                    class Title: EGVAR(attributes,RscLabel) {
+                        text = "Group Select";
+                        w = POS_W(26);
+                    };
+                    class Background: EGVAR(attributes,RscBackground) {
+                        x = 0;
+                        y = POS_H(1);
+                        w = POS_W(26);
+                        h = POS_H(13.2);
+                    };
+                    class Tree: ctrlTree {
+                        idc = IDC_SPAWNREINFORCEMENTS_GROUP_TREE;
+                        x = POS_W(0.1);
+                        y = POS_H(1.1);
+                        w = POS_W(13);
+                        h = POS_H(13);
+                        sizeEx = 3.96 * (1 / (getResolution select 3)) * pixelGrid * 0.5;
+                        colorBackground[] = {0, 0, 0, 0.3};
+                        colorBorder[] = {0, 0, 0, 0};
+                        disableKeyboardSearch = 1;
+                    };
+                    class Label: EGVAR(attributes,RscLabel) {
+                        text = "Current Group";
+                        x = POS_W(13.2);
+                        y = POS_H(1.1);
+                        w = POS_W(12.7);
+                    };
+                    class Count: Label {
+                        idc = IDC_SPAWNREINFORCEMENTS_GROUP_COUNT;
+                        style = ST_RIGHT;
+                        text = "0";
+                        w = POS_W(12);
+                        colorBackground[] = {0, 0, 0, 0};
+                    };
+                    class MaxIcon: RscPicture {
+                        idc = -1;
+                        text = QPATHTOF(ui\person_ca.paa);
+                        x = POS_W(24.9);
+                        y = POS_H(1.1);
+                        w = POS_W(1);
+                        h = POS_H(1);
+                    };
+                    class List: ctrlListBox {
+                        idc = IDC_SPAWNREINFORCEMENTS_GROUP_LIST;
+                        x = POS_W(13.2);
+                        y = POS_H(2.1) - pixelH;
+                        w = POS_W(12.7);
+                        h = POS_H(12);
+                        colorBackground[] = {0, 0, 0, 0.3};
+                    };
+                };
+            };
+            class Properties: RscControlsGroupNoScrollbars {
+                idc = -1;
+                x = 0;
+                y = POS_H(19.7);
+                w = POS_W(26);
+                h = POS_H(6.6);
+                class controls {
+                    class Title: EGVAR(attributes,RscLabel) {
+                        text = "Properties";
+                        w = POS_W(26);
+                    };
+                    class Background: EGVAR(attributes,RscBackground) {
+                        x = 0;
+                        y = POS_H(1);
+                        w = POS_W(26);
+                        h = POS_H(5.6);
+                    };
+                    class LZLabel: EGVAR(attributes,RscLabel) {
+                        text = "LZ/DZ";
+                        x = POS_W(3);
+                        y = POS_H(1.1);
+                        w = POS_W(8.9);
+                        colorBackground[] = {0, 0, 0, 0.7};
+                    };
+                    class LZ: EGVAR(attributes,RscCombo) {
+                        idc = IDC_SPAWNREINFORCEMENTS_LZ;
+                        x = POS_W(12);
+                        y = POS_H(1.1);
+                        w = POS_W(11);
+                    };
+                    class RPLabel: LZLabel {
+                        text = "Unit RP";
+                        y = POS_H(2.2);
+                    };
+                    class RP: LZ {
+                        idc = IDC_SPAWNREINFORCEMENTS_RP;
+                        y = POS_H(2.2);
+                    };
+                    class VehicleBehaviourLabel: LZLabel {
+                        text = "Vehicle Behaviour";
+                        y = POS_H(3.3);
+                    };
+                    class VehicleBehaviour: ctrlToolbox {
+                        idc = IDC_SPAWNREINFORCEMENTS_VEHICLE_BEHAVIOUR;
+                        x = POS_W(12);
+                        y = POS_H(3.3);
+                        w = POS_W(11);
+                        h = POS_H(1);
+                        rows = 1;
+                        columns = 2;
+                        strings[] = {"Stay at LZ", "RTB and Despawn"};
+                        colorBackground[] = {0, 0, 0, 0.7};
+                    };
+                    class UnitBehaviourLabel: LZLabel {
+                        text = "Unit Behaviour";
+                        y = POS_H(4.4);
+                    };
+                    class UnitBehaviour: VehicleBehaviour {
+                        idc = IDC_SPAWNREINFORCEMENTS_UNIT_BEHAVIOUR;
+                        y = POS_H(4.4);
+                        columns = 4;
+                        strings[] = {"Default", "Relaxed", "Cautious", "Combat"};
+                    };
+                    class InsertionLabel: LZLabel {
+                        text = "Insertion Method";
+                        y = POS_H(5.5);
+                    };
+                    class Insertion: LZ {
+                        idc = IDC_SPAWNREINFORCEMENTS_INSERTION;
+                        y = POS_H(5.5);
+                        class Items {
+                            class Land {
+                                text = ECSTRING(ai,Land);
+                                default = 1;
+                            };
+                            class Paradrop {
+                                text = ECSTRING(ai,Paradrop);
+                            };
+                        };
+                    };
+                };
             };
         };
     };
