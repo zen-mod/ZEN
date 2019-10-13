@@ -70,6 +70,12 @@ This should be used on all vehicles in a convoy which are ideally in the same gr
 Creates an [area marker](/area_markers.md) at the module's position.
 This module must be placed on the map.
 
+## Create/Edit Intel
+
+Creates an object of the selected type and adds action to collect its intel.
+The intel is added as a diary record with the given title and text (under the "Intel" subject).
+Additionally, the module can be attached to an existing object to add (or edit) an intel action.
+
 ## Create IED
 
 Makes the attached object act as an IED that is activated by the selected side within the selected radius.
