@@ -5,6 +5,7 @@
             <English>Zeus Enhanced</English>
             <German>Zeus Verbessert</German>
             <Polish>Zeus Enhanced</Polish>
+            <Swedish>Zeus Förbättrad</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_Enabled">
             <English>Enabled</English>
@@ -20,6 +21,7 @@
             <Korean>활성화</Korean>
             <Chinese>啟用</Chinese>
             <Chinesesimp>启用</Chinesesimp>
+            <Swedish>Aktiverad</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_Disabled">
             <English>Disabled</English>
@@ -35,6 +37,7 @@
             <Korean>비활성화</Korean>
             <Chinese>停用</Chinese>
             <Chinesesimp>停用</Chinesesimp>
+            <Swedish>Inaktiverad</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_Yes">
             <English>Yes</English>
@@ -51,6 +54,7 @@
             <Korean>예</Korean>
             <Chinese>是</Chinese>
             <Chinesesimp>是</Chinesesimp>
+            <Swedish>Ja</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_No">
             <English>No</English>
@@ -67,84 +71,98 @@
             <Korean>아니오</Korean>
             <Chinese>否</Chinese>
             <Chinesesimp>否</Chinesesimp>
+            <Swedish>Nä</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_Unchanged">
             <English>Unchanged</English>
             <Russian>Не изменилось</Russian>
             <German>Unverändert</German>
             <Polish>Niezmieniony</Polish>
+            <Swedish>Oändrad</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_VeryLow">
             <English>Very Low</English>
             <Russian>Оч. низкий</Russian>
             <German>Sehr niedrieg</German>
             <Polish>Bardzo niski</Polish>
+            <Swedish>Väldigt låg</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_Low">
             <English>Low</English>
             <Russian>Низкий</Russian>
             <German>Niedrig</German>
             <Polish>Niski</Polish>
+            <Swedish>Låg</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_Medium">
             <English>Medium</English>
             <Russian>Средний</Russian>
             <German>Medium</German>
             <Polish>Średni</Polish>
+            <Swedish>Medium</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_High">
             <English>High</English>
             <Russian>Высокий</Russian>
             <German>Hoch</German>
             <Polish>Wysoki</Polish>
+            <Swedish>Hög</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_VeryHigh">
             <English>Very High</English>
             <Russian>Оч. высокий</Russian>
             <German>Sehr hoch</German>
             <Polish>Bardzo wysoki</Polish>
+            <Swedish>Väldigt hög</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_VeryWeak">
             <English>Very Weak</English>
             <Russian>Оч. слабый</Russian>
             <German>Sehr schwach</German>
             <Polish>Bardzo słaby</Polish>
+            <Swedish>Väldigt svag</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_Weak">
             <English>Weak</English>
             <Russian>Слабый</Russian>
             <German>Schwach</German>
             <Polish>Słaby</Polish>
+            <Swedish>Svag</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_Strong">
             <English>Strong</English>
             <Russian>Сильный</Russian>
             <German>Stark</German>
             <Polish>Silny</Polish>
+            <Swedish>Stark</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_Extreme">
             <English>Extreme</English>
             <Russian>Экстремальный</Russian>
             <German>Extrem</German>
             <Polish>Ekstremalny</Polish>
+            <Swedish>Extrem</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_All">
             <English>All</English>
             <Russian>Все</Russian>
             <German>Alle</German>
             <Polish>Wszystko</Polish>
+            <Swedish>Alla</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_Side">
             <English>Side</English>
             <Russian>Сторона</Russian>
             <German>Seite</German>
             <Polish>Strona</Polish>
+            <Swedish>Sida</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_Sides">
             <English>Sides</English>
             <Russian>Стороны</Russian>
             <German>Seiten</German>
             <Polish>Strony</Polish>
+            <Swedish>Sidor</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_SelectedGroup">
             <English>Selected Group</English>
@@ -157,147 +175,172 @@
             <Korean>그룹 선택</Korean>
             <Polish>Wybrana grupa</Polish>
             <Russian>Выбранная группа</Russian>
+            <Swedish>Vald grupp</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_Faction">
             <English>Faction</English>
             <Russian>Фракция</Russian>
             <German>Fraktion</German>
             <Polish>Frakcja</Polish>
+            <Swedish>Fraktion</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_Aircraft">
             <English>Aircraft</English>
             <Russian>Самолёт</Russian>
             <German>Fluggerät</German>
             <Polish>Pojazd latający</Polish>
+            <Swedish>Flygplan</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_Filter">
             <English>Filter</English>
             <Russian>Фильтр</Russian>
             <German>Filter</German>
             <Polish>Filtr</Polish>
+            <Swedish>Filtrera</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_Units">
             <English>Units</English>
             <Russian>Солдаты</Russian>
             <German>Einheiten</German>
             <Polish>Jednostki</Polish>
+            <Swedish>Enheter</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_Vehicles">
             <English>Vehicles</English>
             <Russian>Машины</Russian>
             <German>Fahrzeuge</German>
             <Polish>Pojazdy</Polish>
+            <Swedish>Fordon</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_Static">
             <English>Static</English>
             <Russian>Турели</Russian>
             <German>Statische Waffen</German>
             <Polish>Obiekty statyczne</Polish>
+            <Swedish>Statisk</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_Nearest">
             <English>Nearest</English>
             <Russian>Ближайший</Russian>
             <German>Am nächsten</German>
             <Polish>Najbliższe</Polish>
+            <Swedish>Närmaste</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_Speed">
             <English>Speed</English>
             <Russian>Скорость</Russian>
             <German>Geschwindigkeit</German>
             <Polish>Prędkość</Polish>
+            <Swedish>Hastighet</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_Range">
             <English>Range</English>
             <Russian>Дистанция</Russian>
             <German>Reichweite</German>
             <Polish>Zasięg</Polish>
+            <Swedish>Räckvidd</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_Radius">
             <English>Radius</English>
             <Russian>Радиус</Russian>
             <German>Radius</German>
             <Polish>Promień</Polish>
+            <Swedish>Radie</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_Height">
             <English>Height</English>
             <Russian>Высота</Russian>
             <German>Höhe</German>
             <Polish>Wysokość</Polish>
+            <Swedish>Höjd</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_Height_Units">
             <English>Height (m)</English>
             <Russian>Высота (м)</Russian>
             <German>Höhe (m)</German>
             <Polish>Wysokość (m)</Polish>
+            <Swedish>Höjd (m)</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_Teleport">
             <English>Teleport</English>
             <German>Teleportieren</German>
+            <Swedish>Teleportera</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects">
             <English>Add Objects to Curators</English>
             <Russian>Сдалвть объекты редактируемыми</Russian>
             <German>Objekte zum Kurator hinzufügen</German>
             <Polish>Dodaj obiekty do Zeusa</Polish>
+            <Swedish>Lägg till objekt i kuratorer</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects_Description">
             <English>Automatically adds spawned objects to all curators.</English>
             <Russian>Автоматически делает все добавленные объекты редактируемыми</Russian>
             <German>Fügt automatisch gespawnte Objekte zu allen Kuratoren hinzu.</German>
             <Polish>Automatycznie dodaj zespawnowane obiekty do Zeusa.</Polish>
+            <Swedish>Lägger automatiskt till alla spawnade objekt till alla kuratorer.</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_DisableGearAnim">
             <English>Disable Gear Animation</English>
             <Russian>Отключить анимацию шестерёнки</Russian>
             <German>Inventar Animation deaktivieren</German>
             <Polish>Wyłącz animację grzebania w ekwipunku</Polish>
+            <Swedish>Inaktivera Gear Animation</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_DisableGearAnim_Description">
             <English>Disables the "Gear" animation from playing when entering Zeus.</English>
             <German>Deaktiviert die "Inventar" Animation der Spielerfigur wenn man in dem Zeusmodus geht.</German>
             <Polish>Wyłącza animację grzebania w ekwipunku po wejściu do Zeusa.</Polish>
             <Russian>Отключает анимированную шестерёнку при входе в режим ГМ</Russian>
+            <Swedish>Inaktiverar animationen "Gear" från att spela när du går in i Zeus.</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_DarkMode">
             <English>Dark Mode</English>
             <Russian>Тёмная тема</Russian>
             <German>Dunkler Modus</German>
             <Polish>Tryb ciemny</Polish>
+            <Swedish>Mörkt läge</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_DarkMode_Description">
             <English>Changes the appearance of various user interface elements to a darker color theme.</English>
             <German>Ändert das Aussehen veschiedener Elemente der Benutzeroberfläche zu einem dunkleren Farbschema.</German>
             <Polish>Zmienia kolorystykę elementów interfejsu na ciemniejszą.</Polish>
             <Russian>Меняет вид интерфейса пользователя на более тёмные</Russian>
+            <Swedish>Ändrar utseendet på olika användargränssnittselement till ett mörkare färgtema</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_PreferredArsenal">
             <English>Preferred Arsenal</English>
             <Russian>Предпочитаемый арсенал</Russian>
             <German>Bevorzugtes Arsenal</German>
             <Polish>Preferowany arsenał</Polish>
+            <Swedish>Föredragen Arsenal</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_PreferredArsenal_Description">
             <English>Selects the preferred arsenal used by Zeus Enhanced.\nIf ACE Arsenal is not installed, will fall back to BI Virtual Arsenal.</English>
             <German>Regelt welches Arsenal von Zeus Enhanced geöffnet wird.\nWenn ACE Arsenal nicht installiert ist, wird auf das Vanilla BI Virtual Arsenal zurückgegriffen.</German>
             <Polish>Wybierz preferowany arsenał używany przez Zeus Enhanced.\nJeśli arsenał ACE nie będzie dostępny to uruchomi się podstawowy wirtualny arsenał BI.</Polish>
             <Russian>Выбор предпочитаемого Арсенала\nlfЕсли не установлен ACE, будет запущен стандартный Виртуальный Арсенал.</Russian>
+            <Swedish>Väljer den föredragna arsenal som används av Zeus Enhanced. \nOm ACE Arsenal inte är installerat, använder BI Virtual Arsenal.</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_BIVirtualArsenal">
             <English>BI Virtual Arsenal</English>
             <Russian>Виртуальный Арсенал</Russian>
             <German>BI Virtuelle Arsenal</German>
             <Polish>Wirtualny arsenał BI</Polish>
+            <Swedish>BI Virtual Arsenal</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_AceArsenal">
             <English>ACE Arsenal</English>
             <Russian>ACE Арсенал</Russian>
             <German>ACE Arsenal</German>
             <Polish>Arsenał ACE</Polish>
+            <Swedish>ACE Arsenal</Swedish>
         </Key>
         <Key ID="STR_ZEN_Common_NotEnoughSpaceInVehicle">
             <English>Not enough space in target vehicle: %1 needed - %2 available</English>
             <Polish>Za mało miejsca w pojeździe docelowym: %1 potrzebne - %2 dostępne</Polish>
             <German>Nicht genügend Platz im Zielfahrzeug: %1 benötigt - %2 verfügbar</German>
+            <Swedish>Inte tillräckligt med utrymme i målfordonet: 1% behövs - 2% tillgängligt</Swedish>
         </Key>
     </Package>
 </Project>

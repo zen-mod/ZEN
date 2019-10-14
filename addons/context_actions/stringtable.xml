@@ -6,37 +6,44 @@
             <Russian>Редактировать снаряжение</Russian>
             <German>Inventar bearbeiten</German>
             <Polish>Edytuj wyposażenie</Polish>
+            <Swedish>Redigera Inventering</Swedish>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_TeleportPlayers">
             <English>Teleport Players</English>
             <Russian>Телепортировать игроков</Russian>
             <German>Spieler teleportieren</German>
             <Polish>Teleportuj graczy</Polish>
+            <Swedish>Teleportera Spelare</Swedish>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_TeleportZeus">
             <English>Teleport Zeus</English>
             <German>Zeus teleportieren</German>
             <Polish>Teleportuj Zeusa</Polish>
+            <Swedish>Teleportera Zeus</Swedish>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_VehicleLogistics">
             <English>Vehicle Logistics</English>
             <Polish>Logistyka pojazdów</Polish>
             <German>Fahrzeuglogistik</German>
+            <Swedish>Fordonslogistik</Swedish>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_Rearm">
             <English>Rearm</English>
             <Polish>Przezbrój</Polish>
             <German>Waffen zurücksetzen</German>
+            <Swedish>Upprusta</Swedish>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_Refuel">
             <English>Refuel</English>
             <Polish>Zatankuj</Polish>
             <German>Auftanken</German>
+            <Swedish>Tanka</Swedish>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_Repair">
             <English>Repair</English>
             <Polish>Napraw</Polish>
             <German>Repariern</German>
+            <Swedish>Reparera</Swedish>
         </Key>
     </Package>
 </Project>

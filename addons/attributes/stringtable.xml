@@ -6,110 +6,135 @@
             <Russian>Двигатель</Russian>
             <German>Motor</German>
             <Polish>Silnik</Polish>
+            <Swedish>Motor</Swedish>
         </Key>
         <Key ID="STR_ZEN_Attributes_Lights">
             <English>Lights</English>
             <Russian>Фары</Russian>
             <German>Lichter</German>
             <Polish>Światła</Polish>
+            <Swedish>Lampor</Swedish>
         </Key>
         <Key ID="STR_ZEN_Attributes_PlateNumber">
             <English>Plate Number</English>
             <Russian>Госномер</Russian>
             <German>Kennzeichen</German>
             <Polish>Tablica rejestracyjna</Polish>
+            <Swedish>Registreringsnummer</Swedish>
         </Key>
         <Key ID="STR_ZEN_Attributes_Exec_Tooltip">
             <English>This code will be executed in the unscheduled environment on the machine where this object is local.\nThe object will be passed in the "_this" variable.</English>
             <German>Der eingegebene Code wird in einer unscheduled Umgebung lokal zum Objkekt ausgeführt.\nDas Objekt wird in der Variable names "_this" übergeben.</German>
             <Polish>Ten kod zostanie wykonany w środowisku unscheduled na maszynie gdzie obiekt jest lokalny.\nObiekt zostanie przekazany w zmiennej "_this".</Polish>
+            <Swedish>Koden kommer köras i en oplanerad miljö där objektet är lokalt.\nObjektet kommer att skickas i "_this" variablen.</Swedish>
         </Key>
         <Key ID="STR_ZEN_Attributes_Timeout">
             <English>Timeout (s)</English>
             <Russian>Таймаут (с)</Russian>
             <German>Zeitüberschreitung (s)</German>
             <Polish>Limit czasu (s)</Polish>
+            <Swedish>Paus (s)</Swedish>
         </Key>
         <Key ID="STR_ZEN_Attributes_Timeout_Tooltip">
             <English>The time (in seconds) between waypoint condition satisfaction and waypoint completion.</English>
             <German>Zeit (in Sekunden) zwischen der Erfüllung der Wegpunktbedingung und der Vervollständigung des Wegpunktes.</German>
             <Polish>Czas (w sekundach) pomiędzy wypełnieniem warunku zaliczenia punktu trasy a jego faktycznym zaliczeniem.</Polish>
+            <Swedish>Tiden (i sekunder) mellan tillfredsställelse av waypointtillstånd och slutföring av waypoint.</Swedish>
         </Key>
         <Key ID="STR_ZEN_Attributes_Sensors">
             <English>Sensors</English>
             <German>Sensoren</German>
+            <Swedish>Sensorer</Swedish>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeSide">
             <English>Change Side</English>
             <German>Seite ändern</German>
+            <Swedish>Ändra sida</Swedish>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeSkills">
             <English>Change Skills</English>
             <German>Fähigkeiten ändern</German>
+            <Swedish>Ändra färdigheter</Swedish>
         </Key>
         <Key ID="STR_ZEN_Attributes_Skills">
             <English>Skills</English>
             <German>Fähigkeiten</German>
+            <Swedish>Färdigheter</Swedish>
         </Key>
         <Key ID="STR_ZEN_Attributes_AimingAccuracy">
             <English>Aiming Accuracy</English>
             <German>Zielgenauigkeit</German>
+            <Swedish>Siktnings Noggrannhet</Swedish>
         </Key>
         <Key ID="STR_ZEN_Attributes_AimingSpeed">
             <English>Aiming Speed</English>
             <German>Zilelgeschwindigkeit</German>
+            <Swedish>Siktnings hastighet</Swedish>
         </Key>
         <Key ID="STR_ZEN_Attributes_AimingShake">
             <English>Aiming Shake</English>
             <German>Waffenschwankung</German>
+            <Swedish>Siktnings skakning</Swedish>
         </Key>
         <Key ID="STR_ZEN_Attributes_Commanding">
             <English>Commanding</English>
             <German>Kommandierend</German>
+            <Swedish>Befallande</Swedish>
         </Key>
         <Key ID="STR_ZEN_Attributes_Courage">
             <English>Courage</English>
             <German>Mut</German>
+            <Swedish>Mod</Swedish>
         </Key>
         <Key ID="STR_ZEN_Attributes_SpotDistance">
             <English>Spotting Distance</English>
             <German>Aufklärungsdistanz</German>
+            <Swedish>Igenkännelighets Avstånd</Swedish>
         </Key>
         <Key ID="STR_ZEN_Attributes_SpotTime">
             <English>Spotting Speed</English>
             <German>Aufklärungszeit</German>
+            <Swedish>Igenkännelighets Hastighet</Swedish>
         </Key>
         <Key ID="STR_ZEN_Attributes_ReloadSpeed">
             <English>Reload Speed</English>
             <German>Nachladezeit</German>
+            <Swedish>Omladdningshastighet</Swedish>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeTraits">
             <English>Change Traits</English>
             <German>Eigenschaften ändern</German>
+            <Swedish>Ändra egenskaper</Swedish>
         </Key>
         <Key ID="STR_ZEN_Attributes_Traits">
             <English>Traits</English>
             <German>Eigenschaften</German>
+            <Swedish>Egenskaper</Swedish>
         </Key>
         <Key ID="STR_ZEN_Attributes_MedicalTraining">
             <English>Medical Training</English>
             <German>Medizinische Ausbildung</German>
+            <Swedish>Medicinsk utbildning</Swedish>
         </Key>
         <Key ID="STR_ZEN_Attributes_EngineeringSkill">
             <English>Engineering Skill</English>
             <German>Technische Fähigkeiten</German>
+            <Swedish>Teknisk skicklighet</Swedish>
         </Key>
         <Key ID="STR_ZEN_Attributes_Doctor">
             <English>Doctor</English>
             <German>Doktor</German>
+            <Swedish>Läkare</Swedish>
         </Key>
         <Key ID="STR_ZEN_Attributes_AdvEngineer">
             <English>Adv. Engineer</English>
             <German>Erfahrene Techniker</German>
+            <Swedish>Adv. Ingenjör</Swedish>
         </Key>
         <Key ID="STR_ZEN_Attributes_EOD">
             <English>EOD</English>
             <German>Kampfmittelbeseitigung</German>
+            <Swedish>Explosiv ordinationskontroll</Swedish>
         </Key>
     </Package>
 </Project>

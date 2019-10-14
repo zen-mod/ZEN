@@ -5,6 +5,7 @@
             <English>ZEN Team</English>
             <German>ZEN Team</German>
             <Polish>ZEN Team</Polish>
+            <Swedish>ZEN Team</Swedish>
         </Key>
         <Key ID="STR_ZEN_Main_URL">
             <English>https://github.com/zen-mod/ZEN</English>
@@ -20,6 +21,7 @@
             <Japanese>https://github.com/zen-mod/ZEN</Japanese>
             <Chinese>https://github.com/zen-mod/ZEN</Chinese>
             <Chinesesimp>https://github.com/zen-mod/ZEN</Chinesesimp>
+            <Swedish>https://github.com/zen-mod/ZEN</Swedish>
         </Key>
     </Package>
 </Project>

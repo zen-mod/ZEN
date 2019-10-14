@@ -6,86 +6,102 @@
             <Russian>Убрать панель за край</Russian>
             <German>Display an den Rand verschieben</German>
             <Polish>Przesuń wyświetlacz do krawędzi</Polish>
+            <Swedish>Flytta skärmen till kanten</Swedish>
         </Key>
         <Key ID="STR_ZEN_Editor_MoveDisplayToEdge_Description">
             <English>Moves the Zeus Editor Display to the edge of the screen.</English>
             <German>Bewegt die Zeus Editor Anzeige an den Rand des Bildschirms.</German>
             <Polish>Przesuwa wyświetlacz edytora Zeusa do krawędzi ekranu.</Polish>
             <Russian>Убирает панель за край</Russian>
+            <Swedish>Flyttar Zeus Editor Skärmen till kanten av skärmen.</Swedish>
         </Key>
         <Key ID="STR_ZEN_Editor_RemoveWatermark">
             <English>Remove Watermark</English>
             <Russian>Убрать водяной знак</Russian>
             <German>Wasserzeichen verstecken</German>
             <Polish>Usuń znak wodny</Polish>
+            <Swedish>Ta bort vattenstämpel</Swedish>
         </Key>
         <Key ID="STR_ZEN_Editor_RemoveWatermark_Description">
             <English>Removes the watermark shown when hiding the display.</English>
             <German>Versteckt das Wasserzeichen, das gezeigt wird wenn die Oberfläche versteckt wird.</German>
             <Polish>Usuwa znak wodny pokazywany po ukryciu wyświetlacza.</Polish>
             <Russian>Убирает водяной знак ГМ когда интерфейс спрятан</Russian>
+            <Swedish>Tar bort vattenstämpeln som visas när du döljer skärmen.</Swedish>
         </Key>
         <Key ID="STR_ZEN_Editor_DisableLiveSearch">
             <English>Disable Live Search</English>
             <Russian>Отключить мгновенный поиск</Russian>
             <German>Live Suche deaktivieren</German>
             <Polish>Wyłącz wyszukiwanie na żywo</Polish>
+            <Swedish>Inaktivera Live Search</Swedish>
         </Key>
         <Key ID="STR_ZEN_Editor_DisableLiveSearch_Description">
             <English>Requires pressing Enter or clicking the search button to confirm a search.\nHelps reduce lag when searching through a lot of items.</English>
             <German>Suche wird erst ausgeführt, wenn die Eingabetaste oder die Lupe neben dem Eingabefeld betätigt wird.\nHilft, Verzögerungen bei der Suche durch viele Elemente zu reduzieren.</German>
             <Polish>Wymaga wciśnięcia Enter lub kliknięcia przycisku wyszukiwania by potwierdzić wyszukiwanie.\nPomaga zredukować lag przy przeszukiwaniu wielu przedmiotów.</Polish>
             <Russian>Для подтверждения поиска тебуется нажатие клавиши Ввод\nПомогает уменьшить лаг при поиске </Russian>
+            <Swedish>Kräver att trycka på Enter eller klicka på sökknappen för att bekräfta en sökning.\nHjälper minska fördröjningen när du söker igenom många saker.</Swedish>
         </Key>
         <Key ID="STR_ZEN_Editor_DeclutterEmptyTree">
             <English>Declutter Empty Tree</English>
             <Russian>Очистить пустое дерево</Russian>
             <German>Leer Kategorie aufräumen</German>
             <Polish>Oczyść drzewo pustych obiektów</Polish>
+            <Swedish>Rensa tomt träd</Swedish>
         </Key>
         <Key ID="STR_ZEN_Editor_DeclutterEmptyTree_Description">
             <English>Declutters the empty tree by removing empty vehicles as those are available in the side specific trees.</English>
             <German>Räumt die Kategorie "Leer" auf. Leere Fahrzeuge werden versteckt, da diese in den Seiten spezifischen Kategorien vorhanden sind.</German>
             <Polish>Oczyszcza drzewo pustych obiektów przez usunięcie pustych pojazdów, gdyż są one dostępne w drzewach poszczególnych stron.</Polish>
-        </Key>
-        <Key ID="STR_ZEN_Editor_UnitRadioMessages">
-            <English>Unit Radio Messages</English>
-            <Russian>Радиосообшения ИИ</Russian>
-            <German>Funkmeldungen von Einheiten</German>
-            <Polish>Wiadomość radiowa jednostki</Polish>
+            <Swedish>Rensar det tomma trädet genom att ta bort tomma fordon eftersom de finns tillgängliga i de sidospecifika träden</Swedish>
         </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages_Description">
             <English>Controls whether unit radio messages are played on placement and waypoint orders, waypoints only, or disabled.</English>
             <German>Steuert, ob die  Einheit eine Funkmeldung absetzt wenn diese platziert wird und eine Anweisung von Wegpunkten erhält oder nur bei Wegpunkten oder niemals.</German>
             <Polish>Kontroluje czy wiadomości radiowe jednostki są odtwarzane przy postawieniu i wyznaczeniu punktu trasy, jedynie przy wyznaczeniu punktu trasy lub czy są wyłączone.</Polish>
             <Russian>Определяет будут ли ИИ подразделения сообщать по радио о своих действиях или нет.</Russian>
+            <Swedish>Kontrollerar om enhetsradiomeddelanden spelas på placerings och waypointorder, endast waypoints eller inaktiverat.</Swedish>
         </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages_WaypointsOnly">
             <English>Waypoints Only</English>
             <Russian>Только путевые точки</Russian>
             <German>Nur Wegpunkte</German>
             <Polish>Tylko punkty trasy</Polish>
+            <Swedish>Endast waypoints</Swedish>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleIncludeCrew">
             <English>Toggle Include Crew</English>
             <German>Besatzung hinzufügen umschalten</German>
             <Polish>Przełącz 'dołącz załogę'</Polish>
+            <Swedish>Växla inkludera bestättning</Swedish>
         </Key>
         <Key ID="STR_ZEN_Editor_EjectPassengers">
             <English>Eject Passengers</English>
             <German>Passagiere rauswerfen</German>
+            <Swedish>Släng ut passagerare</Swedish>
         </Key>
         <Key ID="STR_ZEN_Editor_EjectPassengers_Description">
             <English>Ejects the passengers of all selected vehicles. If the vehicle is currently flying, the units will be given parachutes.\nUnlike vanilla eject, units will disembark one after another (not immediately, with a short delay in-between).</English>
             <German>Wirft die Fahrgäste aller ausgewählten Fahrzeuge raus. Wenn das Fahrzeug gerade fliegt, erhalten die Einheiten Fallschirme.\nIm Gegensatz zu "Vanilla" sitzen die Einheiten nacheinander ab (nicht alle sofort, sondern mit einer kurzen Verzögerung dazwischen).</German>
+            <Swedish>Släng ut passagerarna av alla utvalda fordon. Om fordonet för närvarande flyger kommer passagerarna ges fallskärmar.\nTill skillnad från vanliga utkast kommer passagerarna att gå ombord efter varandra (inte omedelbart, med en kort fördröjning däremellan).</Swedish>
         </Key>
         <Key ID="STR_ZEN_Editor_DeployCountermeasures">
             <English>Deploy Countermeasures</English>
             <German>Gegenmaßnahmen einleiten</German>
+            <Swedish>Aktivera motåtgärder</Swedish>
         </Key>
         <Key ID="STR_ZEN_Editor_DeployCountermeasures_Description">
             <English>Makes all selected vehicles deploy countermeasures such as smokes and flares.</English>
             <German>Alle ausgewählten Fahrzeuge setzen Gegenmaßnahmen wie Rauch und Leuchtfackeln ein.</German>
+            <Swedish>Gör att alla valda fordon använder motåtgärder som till exempel rök och blossar.</Swedish>
+        </Key>
+        <Key ID="s">
+            <English>Unit Radio Messages</English>
+            <German>Funkmeldungen von Einheiten</German>
+            <Polish>Wiadomość radiowa jednostki</Polish>
+            <Russian>Радиосообшения ИИ</Russian>
+            <Swedish>Enhetsradiomeddelanden</Swedish>
         </Key>
     </Package>
 </Project>

@@ -3,15 +3,18 @@
     <Package name="AI">
         <Key ID="STR_ZEN_AI_Fastrope">
             <English>Fastrope</English>
+            <Swedish>Snabbrep</Swedish>
         </Key>
         <Key ID="STR_ZEN_AI_Paradrop">
             <English>Paradrop</English>
             <German>Fallschirmsprung</German>
+            <Swedish>Fallskärmssläpp</Swedish>
         </Key>
         <Key ID="STR_ZEN_AI_CouldNotGarrisonAll">
             <English>Unable to garrison all units - not enough positions</English>
             <German>Das Gebäude hat zu wenig Positionen - Nicht alle Einheiten konnten das Gebäude besetzen</German>
             <Polish>Nie udało się zgarnizonować wszystkich jednostek - za mało pozycji</Polish>
+            <Swedish>Går ute samla alla enheter - inte någ ned positioner</Swedish>
         </Key>
     </Package>
 </Project>

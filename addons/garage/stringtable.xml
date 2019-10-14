@@ -6,17 +6,21 @@
             <Russian>Покинуть гараж (Escape)</Russian>
             <German>Garage verlasen (Escape)</German>
             <Polish>Wyjdź z garażu (Escape)</Polish>
+            <Swedish>Gå ur garaget (Escape)</Swedish>
         </Key>
         <Key ID="STR_ZEN_Garage_Hide_Tooltip">
             <English>Hide Interface (Backspace)</English>
             <German>Benutzeroberfläche verstecken (Rücktaste)</German>
             <Polish>Ukryj interfejs (Backspace)</Polish>
+            <Swedish>Dölj gränssnitt (Backspace)</Swedish>
         </Key>
         <Key ID="STR_ZEN_Garage_ApplyToAll">
             <English>Apply To All</English>
+            <Swedish>Tillämpa Alla</Swedish>
         </Key>
         <Key ID="STR_ZEN_Garage_ApplyToAll_Tooltip">
             <English>Apply the current vehicle's customization to all selected vehicles of this type.</English>
+            <Swedish>Tillämpa det aktuella fordonets anpassning på alla utvalda fordon av denna typ.</Swedish>
         </Key>
     </Package>
 </Project>

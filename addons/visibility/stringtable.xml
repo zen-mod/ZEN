@@ -4,14 +4,17 @@
         <Key ID="STR_ZEN_Visibility_Enabled">
             <English>Visibility Indicator</English>
             <German>Sichtbarkeitsindikator</German>
+            <Swedish>Synlighets Indikator</Swedish>
         </Key>
         <Key ID="STR_ZEN_Visibility_Enabled_Description">
             <English>Indicates when a player can see the Zeus' cursor.</English>
             <German>Zeigt an, wann ein Spieler den Zeuszeiger sehen könnte.</German>
+            <Swedish>Anger när en spelar kan se Zeus' markör-</Swedish>
         </Key>
         <Key ID="STR_ZEN_Visibility_Visible">
             <English>VISIBLE</English>
             <German>SICHTBAR</German>
+            <Swedish>SYNLIG</Swedish>
         </Key>
     </Package>
 </Project>
