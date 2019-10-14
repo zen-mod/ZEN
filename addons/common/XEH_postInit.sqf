@@ -234,6 +234,7 @@
 [QGVAR(setDate), {setDate _this}] call CBA_fnc_addEventHandler;
 
 [QGVAR(earthquake), LINKFUNC(earthquake)] call CBA_fnc_addEventHandler;
+[QGVAR(showMessage), LINKFUNC(showMessage)] call CBA_fnc_addEventHandler;
 
 [QGVAR(setMagazineAmmo), FUNC(setMagazineAmmo)] call CBA_fnc_addEventHandler;
 [QGVAR(setTurretAmmo), FUNC(setTurretAmmo)] call CBA_fnc_addEventHandler;

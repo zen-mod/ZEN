@@ -47,18 +47,24 @@ class GVAR(display) {
                 class ButtonClose: RscButtonMenu {
                     onButtonClick = QUOTE(_this call FUNC(closeGarage));
                     text = "$STR_DISP_CLOSE";
-                    tooltip = CSTRING(ButtonClose_Tooltip);
+                    tooltip = CSTRING(Close_Tooltip);
                     x = 0;
                     y = 0;
-                    w = (safeZoneW - POS_W(1)) / 5 - POS_W(0.1);
+                    w = (safeZoneW - POS_W(1)) / 5;
                     h = POS_H(1);
                 };
                 class ButtonHide: ButtonClose {
                     onButtonClick = QUOTE(_this call FUNC(toggleInterface));
                     text = "$STR_CA_HIDE";
-                    tooltip = CSTRING(ButtonHide_Tooltip);
-                    x = (safeZoneW - POS_W(1)) / 5;
-                    w = (safeZoneW - POS_W(1)) / 10 - POS_W(0.1);
+                    tooltip = CSTRING(Hide_Tooltip);
+                    x = (safeZoneW - POS_W(1)) / 5 + POS_W(0.1);
+                    w = (safeZoneW - POS_W(1)) / 8;
+                };
+                class ButtonApply: ButtonHide {
+                    onButtonClick = QUOTE(_this call FUNC(applyToAll));
+                    text = CSTRING(ApplyToAll);
+                    tooltip = CSTRING(ApplyToAll_Tooltip);
+                    x = (safeZoneW - POS_W(1)) / 5 + (safeZoneW - POS_W(1)) / 8 + POS_W(0.2);
                 };
             };
         };
