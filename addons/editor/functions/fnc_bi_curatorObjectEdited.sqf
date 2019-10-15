@@ -30,7 +30,7 @@ _object call BIS_fnc_curatorAttachObject;
 // Delete current parachute if it exists
 deleteVehicle (_object getVariable [PARACHUTE_VAR, objNull]);
 
-// Handle slingloading in vehicle in vehicle transport
+// Handle slingloading and vehicle in vehicle transport
 curatorMouseOver params ["_type", "_entity"];
 
 if (_type == "OBJECT") exitWith {
