@@ -60,6 +60,12 @@
             <Polish>Kontroluje czy wiadomości radiowe jednostki są odtwarzane przy postawieniu i wyznaczeniu punktu trasy, jedynie przy wyznaczeniu punktu trasy lub czy są wyłączone.</Polish>
             <Russian>Определяет будут ли ИИ подразделения сообщать по радио о своих действиях или нет.</Russian>
         </Key>
+        <Key ID="STR_ZEN_Editor_ParachuteSounds">
+            <English>Parachute Sounds</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_ParachuteSounds_Description">
+            <English>Controls whether jet flyby sounds are played when object positions are changed to a height where they are attached to parachutes.</English>
+        </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages_WaypointsOnly">
             <English>Waypoints Only</English>
             <Russian>Только путевые точки</Russian>

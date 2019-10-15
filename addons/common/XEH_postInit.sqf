@@ -55,6 +55,11 @@
     _unit vehicleChat _message;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(say3D), {
+    params ["_object", "_sound"];
+    _object say3D _sound;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(setUnitPos), {
     params ["_unit", "_mode"];
     _unit setUnitPos _mode;
