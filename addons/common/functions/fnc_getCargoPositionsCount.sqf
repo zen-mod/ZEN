@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: mharis001
+ * Author: mharis001, NeilZar
  * Returns the number of cargo positions in the given vehicle.
  *
  * Arguments:

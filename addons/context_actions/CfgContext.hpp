@@ -283,8 +283,8 @@ class EGVAR(context_menu,actions) {
             icon = QPATHTOF(ui\paste_ca.paa);
             condition = QUOTE(!isNil {GVAR(appearances) getVariable typeOf _hoveredEntity});
             statement = QUOTE( \
-                GVAR(appearances) getVariable typeOf _hoveredEntity params [ARR_2('_textures','_animations')]; \
-                [ARR_4(_hoveredEntity,_textures,_animations,true)] call BIS_fnc_initVehicle; \
+                GVAR(appearances) getVariable typeOf _hoveredEntity params [ARR_2('_texture','_animations')]; \
+                [ARR_4(_hoveredEntity,_texture,_animations,true)] call BIS_fnc_initVehicle; \
             );
             priority = 1;
         };

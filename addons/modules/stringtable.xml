@@ -673,9 +673,11 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateMinefield_RandomPlacement">
             <English>Random Placement</English>
+            <German>Zufällige Platzierung</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateMinefield_RandomPlacement_Tooltip">
             <English>Controls whether mines will be placed uniformly or randomly within the area.</English>
+            <German>Kontrolliert, ob die Minen einheitlich oder zufällig innerhalb des Bereichs platziert werden.</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGlobalHint">
             <English>Global Hint</English>
@@ -782,9 +784,11 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTeleportPlayers_IncludeVehicles">
             <English>Include Vehicles</English>
+            <German>Fahrzeuge einbeziehen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTeleportPlayers_IncludeVehicles_Tooltip">
             <English>Teleports vehicles of players instead of the players themselves.\nIf the module was attached to a vehicle, this is ignored and players will be moved into the attached vehicle.</English>
+            <German>Teleportiert Fahrzeuge von Spielern anstelle der Spieler selbst.\nWenn das Modul auf einem Fahrzeug platziert war, wird dies ignoriert und die Spieler werden in das angehängte Fahrzeug bewegt.</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSmokePillar">
             <English>Smoke Pillar</English>
@@ -1189,81 +1193,107 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather">
             <English>Change Weather</English>
+            <German>Wetter ändern</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Overcast">
             <English>Overcast</English>
+            <German>Bewölkung</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Overcast_Tooltip">
             <English>Sets the amount of cloud cover, higher values result in a greater likelihood of rain/storms and faster wind speeds.</English>
+            <German>Legt die Bedeckung der Wolken fest, höhere Werte führen zu einer höheren Wahrscheinlichkeit von Regen/Stürmen und schnelleren Windgeschwindigkeiten.</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Rain">
             <English>Rain</English>
+            <German>Regen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Rain_Tooltip">
             <English>Sets the rain strength, requires overcast to be greater than 70%.</English>
+            <German>Legt die Regenstärke fest, erfordert, dass die Bewölkung größer als 70% ist.</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Lightning">
             <English>Lightning</English>
+            <German>Blitzschlag</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Lightning_Tooltip">
             <English>Sets the frequency of lightning strikes, requires overcast to be near 100%.</English>
+            <German>Legt die Häufigkeit der Blitzeinschläge fest, erfordert eine Bewölkung von nahezu 100%.</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Rainbow">
             <English>Rainbow</English>
+            <German>Regenbogen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Rainbow_Tooltip">
             <English>Sets the intensity of rainbows.</English>
+            <German>Legt die Intensität der Regenbögen fest.</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Waves">
             <English>Waves</English>
+            <German>Wellen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Waves_Tooltip">
             <English>Sets the size of waves (higher values equal taller waves), applied independently of cloud cover settings.</English>
+            <German>Legt die Größe der Wellen fest (höhere Werte entsprechen höheren Wellen), unabhängig von den Einstellungen der Bewölkung.</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_WindSpeed">
             <English>Wind Speed</English>
+            <German>Windgeschwindigkeit</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_WindSpeed_Tooltip">
             <English>Sets the wind speed in kilometers per hour.</English>
+            <German>Legt die Windgeschwindigkeit in km/h fest.</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_WindDirection">
             <English>Wind Direction</English>
+            <German>Windrichtung</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_WindDirection_Tooltip">
             <English>Sets the wind direction.</English>
+            <German>Legt die Windrichtung fest.</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Gusts">
             <English>Gusts</English>
+            <German>Windböen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Gusts_Tooltip">
             <English>Sets the strength of gusts, random changes in wind direction.\nThese changes become stronger and more frequent with worse cloud cover.</English>
+            <German>Legt die Stärke von Windböen, zufällige Änderungen in der Windrichtung fest. Diese Änderungen werden mit zunehmender Bewölkung stärker und häufiger.</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogDensity">
             <English>Fog Density</English>
+            <German>Nebeldichte</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogDensity_Tooltip">
             <English>Sets the fog density at the base fog altitude.</English>
+            <German>Stellt die Nebeldichte auf die Basisnebelhöhe ein.</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogDecay">
             <English>Fog Decay</English>
+            <German>Nebelzerfall</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogDecay_Tooltip">
             <English>Sets how much the fog density decays with altitude. Larger values result in a sharper fog ceiling (more defined fog start).\nSmaller values lead to a more smooth transition from no fog to full fog, and as a result, the fog will cross the base altitude line more.\nWhen this is a positive value, the fog will be generated below the base altitude (valley fog); if negative, above the base altitude (mountain fog).</English>
+            <German>Legt fest, wie stark die Nebeldichte mit der Höhe abnimmt. Größere Werte führen zu einer schärferen Nebeldecke (definierterer Nebelbeginn). \nKleinere Werte führen zu einem sanfteren Übergang von keinem Nebel zu vollem Nebel, so dass der Nebel die Basishöhenlinie mehr überschreitet. \nWenn dies ein positiver Wert ist, wird der Nebel unterhalb der Basishöhe (Talnebel) erzeugt, wenn negativ, oberhalb der Basishöhe (Bergnebel).</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogAltitude">
             <English>Fog Altitude</English>
+            <German>Nebelhöhe</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogAltitude_Tooltip">
             <English>Sets the base altitude of the fog layer, in meters above/below sea level.</English>
+            <German>Legt die Basishöhe der Nebelschicht in Metern über/unter dem Meeresspiegel fest.</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateTeleporter">
             <English>Create Teleporter</English>
+            <German>Teleporter erstellen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ToggleTarget">
             <English>Toggle Target</English>
+            <German>Ziel umschalten</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ToggleTarget_Tooltip">
             <English>Units affected by the toggle.</English>
+            <German>Einheiten, die vom Umschalten betroffen sind.</German>
         </Key>
         <Key ID="STR_ZEN_Modules_AddGear">
             <English>Add Gear</English>
@@ -1303,9 +1333,11 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleToggleIRLasers">
             <English>Toggle IR Lasers</English>
+            <German>IR-Laser umschalten</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleToggleIRLasers_IRLasers">
             <English>IR Lasers</English>
+            <German>IR-Laser</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAddFullArsenal">
             <English>Add Full Arsenal</English>
@@ -1363,6 +1395,39 @@
         <Key ID="STR_ZEN_Modules_ModuleCreateRP_Format">
             <English>RP %1</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateIntel">
+            <English>Create/Edit Intel</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ObjectType">
+            <English>Object Type</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ShareWith">
+            <English>Share With</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateIntel_DeleteOnCompletion">
+            <English>Delete On Completion</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ActionText">
+            <English>Action Text</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ActionDuration">
+            <English>Action Duration</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateIntel_IntelTitle">
+            <English>Intel Title</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateIntel_IntelText">
+            <English>Intel Text</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateIntel_PickUpIntel">
+            <English>Pick Up Intel</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateIntel_IntelFound">
+            <English>Intel Found</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateIntel_PlayerFoundIntel">
+            <English>%1 found intel: "%2"</English>
+        </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_Buildings">
             <English>Buildings</English>
@@ -1419,6 +1484,7 @@
         </Key>
         <Key ID="STR_ZEN_Modules_NoObjectSelected">
             <English>Place on an object</English>
+            <German>Auf einem Objekt platzieren</German>
         </Key>
         <Key ID="STR_ZEN_Modules_OnlyAlive">
             <English>Unit must be alive</English>

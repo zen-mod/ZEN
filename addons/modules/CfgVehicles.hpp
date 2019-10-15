@@ -143,6 +143,12 @@ class CfgVehicles {
         function = QFUNC(moduleCreateIED);
         icon = QPATHTOF(ui\explosion_ca.paa);
     };
+    class GVAR(moduleCreateIntel): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleCreateIntel);
+        function = QFUNC(moduleCreateIntel);
+        icon = "\a3\ui_f\data\igui\cfg\simpletasks\types\documents_ca.paa";
+    };
     class GVAR(moduleCreateLZ): GVAR(moduleBase) {
         category = QGVAR(Reinforcements);
         displayName = CSTRING(ModuleCreateLZ);
@@ -232,15 +238,15 @@ class CfgVehicles {
         displayName = CSTRING(ModuleGarrison);
         function = QFUNC(moduleGarrison);
     };
-    class GVAR(ModuleGroupSide): GVAR(moduleBase) {
-        curatorCanAttach = 1;
-        displayName = CSTRING(ModuleGroupSide);
-        function = QFUNC(moduleGroupSide);
-    };
     class GVAR(moduleGlobalHint): GVAR(moduleBase) {
         category = "Curator";
         displayName = CSTRING(ModuleGlobalHint);
         curatorInfoType = QGVAR(RscGlobalHint);
+    };
+    class GVAR(moduleGroupSide): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleGroupSide);
+        function = QFUNC(moduleGroupSide);
     };
     class GVAR(moduleHeal): GVAR(moduleBase) {
         curatorCanAttach = 1;
