@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [] call zen_position_logics_fnc_initList
+ * [_ctrlList, _logicType, 0, false] call zen_position_logics_fnc_initList
  *
  * Public: No
  */
@@ -29,6 +29,8 @@ if (_type isEqualType objNull) then {
     _type = typeOf _type;
 };
 
+private _list = missionNamespace getVariable [VAR_LIST(_type), []];
+
 // Ensure the combo or list box is clear before adding entries
 lbClear _ctrlList;
 
@@ -37,6 +39,12 @@ if (_includeNone) then {
     _ctrlList lbSetValue [_ctrlList lbAdd localize "STR_A3_None", -4];
 
     _default = _default + 1; // Extra option
+};
+
+// Disable the list if no position logics of this type exist
+if (_list isEqualTo []) exitWith {
+    _ctrlList lbSetCurSel 0;
+    _ctrlList ctrlEnable false;
 };
 
 // Add "Random", "Nearest", "Farthest" options
@@ -51,8 +59,6 @@ if (_includeNone) then {
 ];
 
 // Add names of position logics of the given type
-private _list = missionNamespace getVariable [VAR_LIST(_type), []];
-
 {
     _ctrlList lbSetValue [_ctrlList lbAdd name _x, _forEachIndex];
 } forEach _list;

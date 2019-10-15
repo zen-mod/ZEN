@@ -13,7 +13,7 @@
  * 2: Position <ARRAY|OBJECT> (default: [0, 0, 0])
  *
  * Return Value:
- * Return Name <TYPE>
+ * Logic <OBJECT>
  *
  * Example:
  * [_logicType, "nearest", [0, 0, 0]] call zen_position_logics_fnc_select

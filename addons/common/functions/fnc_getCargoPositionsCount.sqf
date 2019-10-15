@@ -18,7 +18,7 @@
 params [["_config", "", ["", objNull, configNull]]];
 
 if (_config isEqualType objNull) exitWith {
-    count (fullCrew [_config, "cargo", true]) + count (allTurrets [_config, true] - allTurrets [_config, false])
+    count fullCrew [_config, "cargo", true] + count (allTurrets [_config, true] - allTurrets [_config, false])
 };
 
 if (_config isEqualType "") then {
