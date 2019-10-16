@@ -1436,7 +1436,7 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_IntelFound">
             <English>Intel Found</English>
-            <Polish>Znaleziono tajne informacje</Polish>
+            <Polish>Znaleziono dane wywiadowcze</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_PlayerFoundIntel">
             <English>%1 found intel: "%2"</English>
