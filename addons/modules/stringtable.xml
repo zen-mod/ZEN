@@ -1432,7 +1432,7 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_PickUpIntel">
             <English>Pick Up Intel</English>
-            <Polish>Podnieś tajne informację</Polish>
+            <Polish>Podnieś dane wywiadowcze</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_IntelFound">
             <English>Intel Found</English>
