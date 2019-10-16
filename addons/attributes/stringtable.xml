@@ -53,7 +53,7 @@
         <Key ID="STR_ZEN_Attributes_Skills">
             <English>Skills</English>
             <German>Fähigkeiten</German>
-            <Polish>Umiejętnośc</Polish>
+            <Polish>Umiejętności</Polish>
         </Key>
         <Key ID="STR_ZEN_Attributes_AimingAccuracy">
             <English>Aiming Accuracy</English>
