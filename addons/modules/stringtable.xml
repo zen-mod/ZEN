@@ -1428,7 +1428,7 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_IntelText">
             <English>Intel Text</English>
-            <Polish>Treść tajnej informacji</Polish>
+            <Polish>Treść danych wywiadowczych</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_PickUpIntel">
             <English>Pick Up Intel</English>
