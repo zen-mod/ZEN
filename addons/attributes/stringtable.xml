@@ -58,7 +58,7 @@
         <Key ID="STR_ZEN_Attributes_AimingAccuracy">
             <English>Aiming Accuracy</English>
             <German>Zielgenauigkeit</German>
-            <Polish>Precyzja Wycelowania</Polish>
+            <Polish>Celność</Polish>
         </Key>
         <Key ID="STR_ZEN_Attributes_AimingSpeed">
             <English>Aiming Speed</English>
