@@ -111,6 +111,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_EOD">
             <English>EOD</English>
+            <Russian>Сапёр</Russian>
         </Key>
     </Package>
 </Project>
