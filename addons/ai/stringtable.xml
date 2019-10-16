@@ -3,7 +3,7 @@
     <Package name="AI">
         <Key ID="STR_ZEN_AI_Fastrope">
             <English>Fastrope</English>
-            <Polish>Szybki desant z liny</Polish>
+            <Polish>Zjazd na linach</Polish>
         </Key>
         <Key ID="STR_ZEN_AI_Paradrop">
             <English>Paradrop</English>
