@@ -63,7 +63,7 @@
         <Key ID="STR_ZEN_Attributes_AimingSpeed">
             <English>Aiming Speed</English>
             <German>Zilelgeschwindigkeit</German>
-            <Polish>Prędkość Wycelowania</Polish>
+            <Polish>Prędkość celowania</Polish>
         </Key>
         <Key ID="STR_ZEN_Attributes_AimingShake">
             <English>Aiming Shake</English>
