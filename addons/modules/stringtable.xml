@@ -1414,7 +1414,7 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_DeleteOnCompletion">
             <English>Delete On Completion</English>
-            <Polish>Usuń przy zakończeniu</Polish>
+            <Polish>Usuń po zakończeniu</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ActionText">
             <English>Action Text</English>
