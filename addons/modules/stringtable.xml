@@ -225,9 +225,11 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Mode_AGL">
             <English>Follow Terrain</English>
+            <Polish>Śledz Teren</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Mode_ASL">
             <English>Fixed Altitude</English>
+            <Polish>Stała wysokość</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Mode_AGL_Tooltip">
             <English>The aircraft will follow the terrain, staying at the same height relative to the ground. Based on AGL.</English>
@@ -256,10 +258,12 @@
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Amount">
             <English>Amount</English>
             <German>Menge</German>
+            <Polish>Liczba</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Amount_Tooltip">
             <English>Sets the amount of aircraft that will be spawned.</English>
             <German>Legt die Menge an Luftfahrzeugen fest, die erzeugt werden sollen.</German>
+            <Polish>Ustala liczbę samolotów  </Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAssignZeus">
             <English>Promote To Zeus</English>
@@ -785,6 +789,7 @@
         <Key ID="STR_ZEN_Modules_ModuleTeleportPlayers_IncludeVehicles">
             <English>Include Vehicles</English>
             <German>Fahrzeuge einbeziehen</German>
+            <Polish>Wliczając pojazdy</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTeleportPlayers_IncludeVehicles_Tooltip">
             <English>Teleports vehicles of players instead of the players themselves.\nIf the module was attached to a vehicle, this is ignored and players will be moved into the attached vehicle.</English>
@@ -1029,7 +1034,7 @@
             <Italian>Ricerca automatica</Italian>
             <Japanese>自動誘導</Japanese>
             <Korean>자동 탐색</Korean>
-            <Polish>Auto Seek</Polish>
+            <Polish>Auto wyszukiwanie</Polish>
             <Portuguese>Busca automática</Portuguese>
             <Russian>Автоматический поиск</Russian>
             <Spanish>Búsqueda automática</Spanish>
@@ -1214,18 +1219,22 @@
         <Key ID="STR_ZEN_Modules_ModuleWeather">
             <English>Change Weather</English>
             <German>Wetter ändern</German>
+            <Polish>Zmień pogodę</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Overcast">
             <English>Overcast</English>
             <German>Bewölkung</German>
+            <Polish>Pochmurność</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Overcast_Tooltip">
             <English>Sets the amount of cloud cover, higher values result in a greater likelihood of rain/storms and faster wind speeds.</English>
             <German>Legt die Bedeckung der Wolken fest, höhere Werte führen zu einer höheren Wahrscheinlichkeit von Regen/Stürmen und schnelleren Windgeschwindigkeiten.</German>
+            <Polish>Ustala pochmurność, wyska wartość powoduje większe prawdopodobieństwo deszczu/burzy i szybszego wiatru.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Rain">
             <English>Rain</English>
             <German>Regen</German>
+            <Polish>Deszcz</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Rain_Tooltip">
             <English>Sets the rain strength, requires overcast to be greater than 70%.</English>
@@ -1234,22 +1243,27 @@
         <Key ID="STR_ZEN_Modules_ModuleWeather_Lightning">
             <English>Lightning</English>
             <German>Blitzschlag</German>
+            <Polish>Piorun</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Lightning_Tooltip">
             <English>Sets the frequency of lightning strikes, requires overcast to be near 100%.</English>
             <German>Legt die Häufigkeit der Blitzeinschläge fest, erfordert eine Bewölkung von nahezu 100%.</German>
+            <Polish>Ustala częstotliwość piorunów, pochmurność musi być bliska 100%</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Rainbow">
             <English>Rainbow</English>
             <German>Regenbogen</German>
+            <Polish>Tęcza</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Rainbow_Tooltip">
             <English>Sets the intensity of rainbows.</English>
             <German>Legt die Intensität der Regenbögen fest.</German>
+            <Polish>Intensywność tęczy</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Waves">
             <English>Waves</English>
             <German>Wellen</German>
+            <Polish>Fale</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Waves_Tooltip">
             <English>Sets the size of waves (higher values equal taller waves), applied independently of cloud cover settings.</English>
@@ -1258,6 +1272,7 @@
         <Key ID="STR_ZEN_Modules_ModuleWeather_WindSpeed">
             <English>Wind Speed</English>
             <German>Windgeschwindigkeit</German>
+            <Polish>Prędkość wiatru</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_WindSpeed_Tooltip">
             <English>Sets the wind speed in kilometers per hour.</English>
@@ -1266,6 +1281,7 @@
         <Key ID="STR_ZEN_Modules_ModuleWeather_WindDirection">
             <English>Wind Direction</English>
             <German>Windrichtung</German>
+            <Polish>Kierunek wiatru</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_WindDirection_Tooltip">
             <English>Sets the wind direction.</English>
@@ -1274,6 +1290,7 @@
         <Key ID="STR_ZEN_Modules_ModuleWeather_Gusts">
             <English>Gusts</English>
             <German>Windböen</German>
+            <Polish>Powiewy wiatru</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Gusts_Tooltip">
             <English>Sets the strength of gusts, random changes in wind direction.\nThese changes become stronger and more frequent with worse cloud cover.</English>
@@ -1282,10 +1299,12 @@
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogDensity">
             <English>Fog Density</English>
             <German>Nebeldichte</German>
+            <Polish>Gęstość mgły</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogDensity_Tooltip">
             <English>Sets the fog density at the base fog altitude.</English>
             <German>Stellt die Nebeldichte auf die Basisnebelhöhe ein.</German>
+            <Polish>Ustala gęstość mgły na podstawowej wysokości mgły.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogDecay">
             <English>Fog Decay</English>
@@ -1298,6 +1317,7 @@
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogAltitude">
             <English>Fog Altitude</English>
             <German>Nebelhöhe</German>
+            <Polish>Wysokość mgły</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogAltitude_Tooltip">
             <English>Sets the base altitude of the fog layer, in meters above/below sea level.</English>
@@ -1306,10 +1326,12 @@
         <Key ID="STR_ZEN_Modules_ModuleCreateTeleporter">
             <English>Create Teleporter</English>
             <German>Teleporter erstellen</German>
+            <Polish>Stwórz teleporter</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ToggleTarget">
             <English>Toggle Target</English>
             <German>Ziel umschalten</German>
+            <Polish>Przełacz cel</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ToggleTarget_Tooltip">
             <English>Units affected by the toggle.</English>
@@ -1367,6 +1389,7 @@
             <Japanese>完全な武器庫を追加</Japanese>
             <Chinesesimp>添加完整军火库</Chinesesimp>
             <Chinese>添加完整的軍火庫</Chinese>
+            <Polish>Dodaj cały arsenał</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleRemoveArsenal">
             <English>Remove Arsenal</English>
@@ -1376,18 +1399,22 @@
             <Japanese>武器庫を削除</Japanese>
             <Chinesesimp>移除军火库</Chinesesimp>
             <Chinese>移除軍火庫</Chinese>
+            <Polish>Usuń arsenał</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel">
             <English>Create/Edit Intel</English>
+            <Polish>Stwórz/Edytuj tajną informację</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ObjectType">
             <English>Object Type</English>
+            <Polish>Typ Obiektu</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ShareWith">
             <English>Share With</English>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_DeleteOnCompletion">
             <English>Delete On Completion</English>
+            <Polish>Usuń przy zakończeniu</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ActionText">
             <English>Action Text</English>
@@ -1397,15 +1424,19 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_IntelTitle">
             <English>Intel Title</English>
+            <Polish>Tytuł tajnej informacji</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_IntelText">
             <English>Intel Text</English>
+            <Polish>Treść tajnej informacji</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_PickUpIntel">
             <English>Pick Up Intel</English>
+            <Polish>Podnieś tajne informację</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_IntelFound">
             <English>Intel Found</English>
+            <Polish>Znaleziono tajne informacje</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_PlayerFoundIntel">
             <English>%1 found intel: "%2"</English>

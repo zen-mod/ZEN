@@ -14,9 +14,11 @@
         </Key>
         <Key ID="STR_ZEN_Garage_ApplyToAll">
             <English>Apply To All</English>
+            <Polish>Zastosuj do Wszystkich</Polish>
         </Key>
         <Key ID="STR_ZEN_Garage_ApplyToAll_Tooltip">
             <English>Apply the current vehicle's customization to all selected vehicles of this type.</English>
+            <Polish>Zastosuj Właściwości wybranego pojazdu do wszystkich pojazdów tego typu.</Polish>
         </Key>
     </Package>
 </Project>

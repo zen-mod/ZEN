@@ -3,10 +3,12 @@
     <Package name="AI">
         <Key ID="STR_ZEN_AI_Fastrope">
             <English>Fastrope</English>
+            <Polish>Szybki desant z liny</Polish>
         </Key>
         <Key ID="STR_ZEN_AI_Paradrop">
             <English>Paradrop</English>
             <German>Fallschirmsprung</German>
+            <Polish>Desasnt ze spadochronem</Polish>
         </Key>
         <Key ID="STR_ZEN_AI_CouldNotGarrisonAll">
             <English>Unable to garrison all units - not enough positions</English>

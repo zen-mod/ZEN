@@ -4,14 +4,17 @@
         <Key ID="STR_ZEN_Area_Markers_CreateAreaMarker">
             <English>Create Area Marker</English>
             <German>Bereichsmarkierungen erstellen</German>
+            <Polish>Stwórz Marker</Polish>
         </Key>
         <Key ID="STR_ZEN_Area_Markers_EditAreaMarker">
             <English>EDIT AREA MARKER</English>
             <German>BEREICHSMARKIERUNG BEARBEITEN</German>
+            <Polish>Edytuj Marker</Polish>
         </Key>
         <Key ID="STR_ZEN_Area_Markers_PlaceOnMap">
             <English>Place On Map</English>
             <German>Auf Karte platzieren</German>
+            <Polish>Zaznacz Na Mapie</Polish>
         </Key>
     </Package>
 </Project>

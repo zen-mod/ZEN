@@ -38,38 +38,47 @@
         <Key ID="STR_ZEN_Attributes_Sensors">
             <English>Sensors</English>
             <German>Sensoren</German>
+            <Polish>Sensory</Polish>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeSide">
             <English>Change Side</English>
             <German>Seite ändern</German>
+            <Polish>Zmień Stronę</Polish>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeSkills">
             <English>Change Skills</English>
             <German>Fähigkeiten ändern</German>
+            <Polish>Zmień </Polish>
         </Key>
         <Key ID="STR_ZEN_Attributes_Skills">
             <English>Skills</English>
             <German>Fähigkeiten</German>
+            <Polish>Umiejętnośc</Polish>
         </Key>
         <Key ID="STR_ZEN_Attributes_AimingAccuracy">
             <English>Aiming Accuracy</English>
             <German>Zielgenauigkeit</German>
+            <Polish>Precyzja Wycelowania</Polish>
         </Key>
         <Key ID="STR_ZEN_Attributes_AimingSpeed">
             <English>Aiming Speed</English>
             <German>Zilelgeschwindigkeit</German>
+            <Polish>Prędkość Wycelowania</Polish>
         </Key>
         <Key ID="STR_ZEN_Attributes_AimingShake">
             <English>Aiming Shake</English>
             <German>Waffenschwankung</German>
+            <Polish>Dokładność Wycelowania</Polish>
         </Key>
         <Key ID="STR_ZEN_Attributes_Commanding">
             <English>Commanding</English>
             <German>Kommandierend</German>
+            <Polish>Wyżej położony</Polish>
         </Key>
         <Key ID="STR_ZEN_Attributes_Courage">
             <English>Courage</English>
             <German>Mut</German>
+            <Polish>Odwaga</Polish>
         </Key>
         <Key ID="STR_ZEN_Attributes_SpotDistance">
             <English>Spotting Distance</English>
@@ -82,34 +91,42 @@
         <Key ID="STR_ZEN_Attributes_ReloadSpeed">
             <English>Reload Speed</English>
             <German>Nachladezeit</German>
+            <Polish>Prędkość przeładowania</Polish>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeTraits">
             <English>Change Traits</English>
             <German>Eigenschaften ändern</German>
+            <Polish>Zmien Cechy</Polish>
         </Key>
         <Key ID="STR_ZEN_Attributes_Traits">
             <English>Traits</English>
             <German>Eigenschaften</German>
+            <Polish>Cechy</Polish>
         </Key>
         <Key ID="STR_ZEN_Attributes_MedicalTraining">
             <English>Medical Training</English>
             <German>Medizinische Ausbildung</German>
+            <Polish>Szkolenie Medyczne</Polish>
         </Key>
         <Key ID="STR_ZEN_Attributes_EngineeringSkill">
             <English>Engineering Skill</English>
             <German>Technische Fähigkeiten</German>
+            <Polish>Umiejętność w inżynierii </Polish>
         </Key>
         <Key ID="STR_ZEN_Attributes_Doctor">
             <English>Doctor</English>
             <German>Doktor</German>
+            <Polish>Doktor</Polish>
         </Key>
         <Key ID="STR_ZEN_Attributes_AdvEngineer">
             <English>Adv. Engineer</English>
             <German>Erfahrene Techniker</German>
+            <Polish>Zaawansowany Inżynier</Polish>
         </Key>
         <Key ID="STR_ZEN_Attributes_EOD">
             <English>EOD</English>
             <German>Kampfmittelbeseitigung</German>
+            <Polish>Saperska Jednostka Specjalna</Polish>
         </Key>
     </Package>
 </Project>

@@ -4,10 +4,12 @@
         <Key ID="STR_ZEN_Camera_Camera">
             <English>Camera</English>
             <German>Kamera</German>
+            <Polish>Kamera</Polish>
         </Key>
         <Key ID="STR_ZEN_Camera_FollowTerrain">
             <English>Follow Terrain</English>
             <German>Geländeform folgen</German>
+            <Polish>Śledz Teren</Polish>
         </Key>
         <Key ID="STR_ZEN_Camera_FollowTerrain_Description">
             <English>Controls whether the camera's height should adjust with changes in terrain elevation.</English>
@@ -16,6 +18,7 @@
         <Key ID="STR_ZEN_Camera_AdaptiveSpeed">
             <English>Adaptive Speed</English>
             <German>Adaptive Geschwindigkeit</German>
+            <Polish>Prędkość adaptacyjna</Polish>
         </Key>
         <Key ID="STR_ZEN_Camera_AdaptiveSpeed_Description">
             <English>Adapts the camera's speed based on its current height. Lower height - slower camera movement.</English>
@@ -24,6 +27,7 @@
         <Key ID="STR_ZEN_Camera_DefaultSpeedCoef">
             <English>Default Speed Coefficient</English>
             <German>Standardmäßiger Geschwindigkeitskoeffizient</German>
+            <Polish>Współczynnik prędkości domyślnej </Polish>
         </Key>
         <Key ID="STR_ZEN_Camera_DefaultSpeedCoef_Description">
             <English>Coefficient for the default camera movement speed, higher is faster.</English>
@@ -32,6 +36,7 @@
         <Key ID="STR_ZEN_Camera_FastSpeedCoef">
             <English>Fast Speed Coefficient</English>
             <German>Koeffizient für schnelle Geschwindigkeit</German>
+            <Polish>Współczynnik szybkiej prędkości</Polish>
         </Key>
         <Key ID="STR_ZEN_Camera_FastSpeedCoef_Description">
             <English>Coefficient for the fast camera movement speed (when holding down the shift key), higher is faster.</English>
