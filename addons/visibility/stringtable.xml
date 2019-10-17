@@ -9,7 +9,7 @@
         <Key ID="STR_ZEN_Visibility_Enabled_Description">
             <English>Indicates when a player can see the Zeus' cursor.</English>
             <German>Zeigt an, wann ein Spieler den Zeuszeiger sehen könnte.</German>
-            <Polish>Wskazuje kiedy kursor Zeusa jest widoczny.</Polish>
+            <Polish>Wskazuje czy kursor Zeusa jest widoczny dla gracza.</Polish>
         </Key>
         <Key ID="STR_ZEN_Visibility_Visible">
             <English>VISIBLE</English>

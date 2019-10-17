@@ -68,7 +68,7 @@
         <Key ID="STR_ZEN_Attributes_AimingShake">
             <English>Aiming Shake</English>
             <German>Waffenschwankung</German>
-            <Polish>Dokładność Wycelowania</Polish>
+            <Polish>Niestabilność celowania</Polish>
         </Key>
         <Key ID="STR_ZEN_Attributes_Commanding">
             <English>Commanding</English>
@@ -111,7 +111,7 @@
         <Key ID="STR_ZEN_Attributes_EngineeringSkill">
             <English>Engineering Skill</English>
             <German>Technische Fähigkeiten</German>
-            <Polish>Umiejętność w inżynierii </Polish>
+            <Polish>Szkolenie Inżynieryjne</Polish>
         </Key>
         <Key ID="STR_ZEN_Attributes_Doctor">
             <English>Doctor</English>
@@ -126,7 +126,7 @@
         <Key ID="STR_ZEN_Attributes_EOD">
             <English>EOD</English>
             <German>Kampfmittelbeseitigung</German>
-            <Polish>Saperska Jednostka Specjalna</Polish>
+            <Polish>Saper</Polish>
         </Key>
     </Package>
 </Project>

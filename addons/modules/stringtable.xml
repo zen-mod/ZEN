@@ -258,12 +258,12 @@
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Amount">
             <English>Amount</English>
             <German>Menge</German>
-            <Polish>Liczba</Polish>
+            <Polish>Ilość</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Amount_Tooltip">
             <English>Sets the amount of aircraft that will be spawned.</English>
             <German>Legt die Menge an Luftfahrzeugen fest, die erzeugt werden sollen.</German>
-            <Polish>Ustala liczbę samolotów  </Polish>
+            <Polish>Ilość samolotów które zostaną stworzone.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAssignZeus">
             <English>Promote To Zeus</English>
@@ -789,7 +789,7 @@
         <Key ID="STR_ZEN_Modules_ModuleTeleportPlayers_IncludeVehicles">
             <English>Include Vehicles</English>
             <German>Fahrzeuge einbeziehen</German>
-            <Polish>Wliczając pojazdy</Polish>
+            <Polish>Razem z pojazdami</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTeleportPlayers_IncludeVehicles_Tooltip">
             <English>Teleports vehicles of players instead of the players themselves.\nIf the module was attached to a vehicle, this is ignored and players will be moved into the attached vehicle.</English>
@@ -1229,7 +1229,7 @@
         <Key ID="STR_ZEN_Modules_ModuleWeather_Overcast_Tooltip">
             <English>Sets the amount of cloud cover, higher values result in a greater likelihood of rain/storms and faster wind speeds.</English>
             <German>Legt die Bedeckung der Wolken fest, höhere Werte führen zu einer höheren Wahrscheinlichkeit von Regen/Stürmen und schnelleren Windgeschwindigkeiten.</German>
-            <Polish>Ustala pochmurność, wyska wartość powoduje większe prawdopodobieństwo deszczu/burzy i szybszego wiatru.</Polish>
+            <Polish>Ustala pochmurność, wysoka wartość powoduje większe prawdopodobieństwo deszczu/burzy i szybszego wiatru.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Rain">
             <English>Rain</English>
@@ -1389,7 +1389,7 @@
             <Japanese>完全な武器庫を追加</Japanese>
             <Chinesesimp>添加完整军火库</Chinesesimp>
             <Chinese>添加完整的軍火庫</Chinese>
-            <Polish>Dodaj cały arsenał</Polish>
+            <Polish>Dodaj pełny arsenał</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleRemoveArsenal">
             <English>Remove Arsenal</English>
@@ -1403,7 +1403,7 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel">
             <English>Create/Edit Intel</English>
-            <Polish>Stwórz/Edytuj tajną informację</Polish>
+            <Polish>Stwórz/Edytuj dane wywiadowcze</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ObjectType">
             <English>Object Type</English>
