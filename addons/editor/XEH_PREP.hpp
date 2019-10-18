@@ -1,4 +1,6 @@
 PREP(declutterEmptyTree);
+PREP(deepCopy);
+PREP(deepPaste);
 PREP(fixSideButtons);
 PREP(handleObjectPlaced);
 PREP(handleSearchButton);

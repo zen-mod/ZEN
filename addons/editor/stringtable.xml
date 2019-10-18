@@ -87,5 +87,17 @@
             <English>Makes all selected vehicles deploy countermeasures such as smokes and flares.</English>
             <German>Alle ausgewählten Fahrzeuge setzen Gegenmaßnahmen wie Rauch und Leuchtfackeln ein.</German>
         </Key>
+        <Key ID="STR_ZEN_Editor_DeepCopy">
+            <English>Deep Copy</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_DeepCopy_Description">
+            <English>Performs a "deep copy" of selected objects - copying an extended set of object properties such as unit loadouts, vehicle inventories and customization.</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_DeepPaste">
+            <English>Deep Paste</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_DeepPaste_Description">
+            <English>Pastes the current deep copied object data.</English>
+        </Key>
     </Package>
 </Project>
