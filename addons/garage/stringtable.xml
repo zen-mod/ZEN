@@ -18,5 +18,8 @@
         <Key ID="STR_ZEN_Garage_ApplyToAll_Tooltip">
             <English>Apply the current vehicle's customization to all selected vehicles of this type.</English>
         </Key>
+        <Key ID="STR_ZEN_Garage_CannotApplyToAll">
+            <English>No other vehicles of the same type selected.</English>
+        </Key>
     </Package>
 </Project>

@@ -61,6 +61,7 @@ class GVAR(display) {
                     w = (safeZoneW - POS_W(1)) / 8;
                 };
                 class ButtonApply: ButtonHide {
+                    idc = IDC_BUTTON_APPLY;
                     onButtonClick = QUOTE(_this call FUNC(applyToAll));
                     text = CSTRING(ApplyToAll);
                     tooltip = CSTRING(ApplyToAll_Tooltip);
