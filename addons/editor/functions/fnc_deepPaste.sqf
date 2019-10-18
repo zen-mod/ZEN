@@ -22,13 +22,7 @@ params ["_units", "_vehicles", "_statics", "_groups"];
 
 // Get the world position where the cursor is pointing
 // Objects are created relative to the cursor
-private _centerPos = if (visibleMap) then {
-    private _ctrlMap = findDisplay IDD_RSCDISPLAYCURATOR displayCtrl IDC_RSCDISPLAYCURATOR_MAINMAP;
-    private _pos2D = _ctrlMap ctrlMapScreenToWorld getMousePosition;
-    _pos2D + [0]
-} else {
-    screenToWorld getMousePosition
-};
+private _centerPos = ASLtoAGL ([nil, false] call EFUNC(common,getPosFromScreen));
 
 // Keep track of all created objects to add them as editable objects at the end
 private _createdObjects = [];
