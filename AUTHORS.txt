@@ -6,7 +6,10 @@
 # request, preferably including an email address.
 
 # CORE TEAM
+CreepPork <github@garkaklis.com
+NeilZar
 mharis001 <mhariszakar@gmail.com>
+oOKexOo <rc_mapper@yahoo.com>
 
 # CONTRIBUTORS
 3Mydlo3
