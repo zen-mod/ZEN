@@ -67,6 +67,7 @@ private _fnc_serializeUnit = {
     private _position = getPosATL _unit vectorDiff _centerPos;
     private _direction = getDir _unit;
 
+    private _name = name _unit;
     private _rank = rank _unit;
     private _skill = skill _unit;
     private _stance = unitPos _unit;
@@ -75,7 +76,7 @@ private _fnc_serializeUnit = {
     private _group = _unit call _fnc_serializeGroup;
     private _isLeader = leader _unit == _unit;
 
-    [_type, _position, _direction, _rank, _skill, _stance, _loadout, _group, _isLeader]
+    [_type, _position, _direction, _name, _rank, _skill, _stance, _loadout, _group, _isLeader]
 };
 
 private _fnc_serializeVehicle = {
@@ -102,7 +103,7 @@ private _fnc_serializeVehicle = {
     };
 
     private _vehicleCargo = getVehicleCargo _vehicle apply {
-        _x call _fnc_serializeVehicle;
+        _x call _fnc_serializeVehicle
     };
 
     // todo: pylons
