@@ -15,6 +15,7 @@ PREP(getInventory);
 PREP(getPhoneticName);
 PREP(getPlayers);
 PREP(getPosFromScreen);
+PREP(getPylonTurret);
 PREP(getSideIcon);
 PREP(getTargetPos);
 PREP(getVehicleAmmo);
