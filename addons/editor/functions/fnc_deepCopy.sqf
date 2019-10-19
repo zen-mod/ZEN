@@ -98,16 +98,26 @@ private _fnc_serializeVehicle = {
     private _inventory = _vehicle call _fnc_serializeInventory;
     private _customization = _vehicle call BIS_fnc_getVehicleCustomization;
 
-    private _turretMagazines = magazinesAllTurrets _vehicle apply {
+    private _allPylonMagazines = getPylonMagazines _vehicle;
+
+    private _turretMagazines = magazinesAllTurrets _vehicle select {
+        !(_x select 0 in _allPylonMagazines)
+    } apply {
         _x select [0, 3] // Discard ID and creator
     };
+
+    private _pylonMagazines = [];
+
+    {
+        private _turretPath = [_vehicle, _forEachIndex] call EFUNC(common,getPylonTurret);
+        private _ammoCount = _vehicle ammoOnPylon (_forEachIndex + 1);
+
+        _pylonMagazines pushBack [_x, _turretPath, _ammoCount];
+    } forEach _allPylonMagazines;
 
     private _vehicleCargo = getVehicleCargo _vehicle apply {
         _x call _fnc_serializeVehicle
     };
-
-    // todo: pylons
-    private _pylonMagazines = [];
 
     private _crew = fullCrew _vehicle apply {
         _x params ["_unit", "_role", "_cargoIndex", "_turretPath"];
