@@ -49,60 +49,79 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_Sensors">
             <English>Sensors</English>
+            <German>Sensoren</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeSide">
             <English>Change Side</English>
+            <German>Seite ändern</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeSkills">
             <English>Change Skills</English>
+            <German>Fähigkeiten ändern</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_Skills">
             <English>Skills</English>
+            <German>Fähigkeiten</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_AimingAccuracy">
             <English>Aiming Accuracy</English>
+            <German>Zielgenauigkeit</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_AimingSpeed">
             <English>Aiming Speed</English>
+            <German>Zilelgeschwindigkeit</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_AimingShake">
             <English>Aiming Shake</English>
+            <German>Waffenschwankung</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_Commanding">
             <English>Commanding</English>
+            <German>Kommandierend</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_Courage">
             <English>Courage</English>
+            <German>Mut</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_SpotDistance">
-            <English>Spot Distance</English>
+            <English>Spotting Distance</English>
+            <German>Aufklärungsdistanz</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_SpotTime">
-            <English>Spot Time</English>
+            <English>Spotting Speed</English>
+            <German>Aufklärungszeit</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_ReloadSpeed">
             <English>Reload Speed</English>
+            <German>Nachladezeit</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeTraits">
             <English>Change Traits</English>
+            <German>Eigenschaften ändern</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_Traits">
             <English>Traits</English>
+            <German>Eigenschaften</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_MedicalTraining">
             <English>Medical Training</English>
+            <German>Medizinische Ausbildung</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_EngineeringSkill">
             <English>Engineering Skill</English>
+            <German>Technische Fähigkeiten</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_Doctor">
             <English>Doctor</English>
+            <German>Doktor</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_AdvEngineer">
             <English>Adv. Engineer</English>
+            <German>Erfahrene Techniker</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_EOD">
             <English>EOD</English>
+            <German>Kampfmittelbeseitigung</German>
         </Key>
     </Package>
 </Project>

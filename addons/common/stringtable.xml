@@ -232,6 +232,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_Teleport">
             <English>Teleport</English>
+            <German>Teleportieren</German>
         </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects">
             <English>Add Objects to Curators</English>
@@ -296,6 +297,7 @@
         <Key ID="STR_ZEN_Common_NotEnoughSpaceInVehicle">
             <English>Not enough space in target vehicle: %1 needed - %2 available</English>
             <Polish>Za mało miejsca w pojeździe docelowym: %1 potrzebne - %2 dostępne</Polish>
+            <German>Nicht genügend Platz im Zielfahrzeug: %1 benötigt - %2 verfügbar</German>
         </Key>
     </Package>
 </Project>

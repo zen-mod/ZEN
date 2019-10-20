@@ -1,0 +1,123 @@
+:root {
+    --theme-color: #2684c1;
+    --theme-color-dark: #2275ac;
+}
+
+body {
+    font-size: 100%;
+    line-height: 1.5;
+}
+
+* {
+    text-decoration: none !important;
+}
+
+a {
+    transition: all 0.3s linear;
+}
+
+/*** GitHub Corner ***/
+.github-corner {
+    z-index: 5;
+}
+
+.github-corner svg {
+    fill: #ddd;
+    transition: all 0.3s linear;
+}
+
+.github-corner svg:hover {
+    fill: var(--theme-color);
+}
+
+/*** Sidebar ***/
+
+.sidebar ul li a {
+    font-size: 15px;
+}
+
+.sidebar ul li a:hover {
+    color: var(--theme-color);
+}
+
+.app-sub-sidebar li:before {
+    display: none;
+}
+
+.app-sub-sidebar .section-link {
+    padding-left: 10px;
+}
+
+/*** Markdown General ***/
+
+.markdown-section hr {
+    margin: 1.5em 0;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+.markdown-section pre:after {
+    display: none;
+}
+
+.markdown-section a {
+    text-decoration: none;
+    border-bottom: 0.1rem solid var(--theme-color);
+    transition: all 0.3s ease;
+}
+
+.markdown-section a:hover {
+    color: var(--theme-color-dark);
+    border-color: var(--theme-color-dark);
+}
+
+.markdown-section a.anchor {
+    border: none;
+}
+
+/*** Markdown Table ***/
+
+.markdown-section table {
+    display: table;
+}
+
+.markdown-section table tr {
+    border-width: 0.15rem 0;
+    border-style: solid;
+    border-color: #f1f1f2;
+}
+
+.markdown-section table thead tr {
+    text-transform: uppercase;
+    font-size: 95%;
+    border-top: none;
+    border-color: #c0c0c0;
+}
+
+.markdown-section table tbody tr:last-of-type {
+    border-bottom: none;
+}
+
+.markdown-section table tr:nth-child(2n) {
+    background-color: transparent;
+}
+
+.markdown-section table td,
+.markdown-section table th {
+    border: none;
+    padding: 1.1rem 0.5rem;
+    text-align: left;
+}
+
+.markdown-section table td p {
+    margin: 0;
+}
+
+/*** Code Highlighting ***/
+
+.token.string {
+    color: #42b983;
+}
+
+.lang-cpp .token.class-name {
+    color: var(--theme-color-dark);
+}

@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [car] call zen_garage_fnc_openGarage
+ * [_vehicle] call zen_garage_fnc_openGarage
  *
  * Public: No
  */
@@ -34,6 +34,15 @@ GVAR(visionMode) = 0;
 // Init display elements
 [] call FUNC(showVehicleInfo);
 [] call FUNC(populateLists);
+
+// Disable "Apply To All" button if there are no other vehicles
+private _vehicleType = typeOf _vehicle;
+
+if (SELECTED_OBJECTS findIf {_x != _vehicle && {typeOf _x == _vehicleType}} == -1) then {
+    private _ctrlButtonApply = findDisplay IDD_DISPLAY displayCtrl IDC_BUTTON_APPLY;
+    _ctrlButtonApply ctrlSetTooltip localize LSTRING(CannotApplyToAll);
+    _ctrlButtonApply ctrlEnable false;
+};
 
 // Create the camera
 GVAR(camHelper) = "Logic" createVehicleLocal [0, 0, 0];

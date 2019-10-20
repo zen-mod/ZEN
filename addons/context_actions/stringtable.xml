@@ -21,18 +21,22 @@
         <Key ID="STR_ZEN_Context_Actions_VehicleLogistics">
             <English>Vehicle Logistics</English>
             <Polish>Logistyka pojazdów</Polish>
+            <German>Fahrzeuglogistik</German>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_Rearm">
             <English>Rearm</English>
             <Polish>Przezbrój</Polish>
+            <German>Waffen zurücksetzen</German>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_Refuel">
             <English>Refuel</English>
             <Polish>Zatankuj</Polish>
+            <German>Auftanken</German>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_Repair">
             <English>Repair</English>
             <Polish>Napraw</Polish>
+            <German>Repariern</German>
         </Key>
     </Package>
 </Project>

@@ -23,7 +23,6 @@ if (isNil QGVAR(lastEditableObjects)) then {
 
 GVAR(lastEditableObjects) params ["_editingMode", "_curators", "_rangeMode", "_range", "_filter"];
 
-private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 private _ctrlButtonOK = _display displayCtrl IDC_OK;
 
 private _ctrlEditingMode = _display displayCtrl IDC_EDITABLEOBJECTS_MODE;

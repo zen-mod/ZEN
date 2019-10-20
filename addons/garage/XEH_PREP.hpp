@@ -1,3 +1,4 @@
+PREP(applyToAll);
 PREP(closeGarage);
 PREP(getVehicleData);
 PREP(handleMouse);

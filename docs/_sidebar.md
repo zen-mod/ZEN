@@ -1,12 +1,14 @@
 - **User Guide**
   - [<i class="fas fa-arrow-right"></i> Home](/)
-  - [<i class="fas fa-list"></i> Modules List](/modules_list.md)
-  - [<i class="fas fa-table"></i> Attributes](/attributes.md)
-  - [<i class="fas fa-caret-square-right"></i> Context Actions](/context_actions.md)
-  - [<i class="fas fa-map-marked"></i> Area Markers](/area_markers.md)
+  - [<i class="fas fa-list"></i> Modules List](/user_guide/modules_list.md)
+  - [<i class="fas fa-table"></i> Attributes](/user_guide/attributes.md)
+  - [<i class="fas fa-caret-square-right"></i> Context Actions](/user_guide/context_actions.md)
+  - [<i class="fas fa-map-marked"></i> Area Markers](/user_guide/area_markers.md)
 - **Frameworks**
-  - [<i class="fas fa-bars"></i> Context Menu](/context_menu.md)
-  - [<i class="fas fa-cog"></i> Custom Modules](/custom_modules.md)
-  - [<i class="far fa-window-restore"></i> Dynamic Dialog](/dynamic_dialog.md)
-  - [<i class="fas fa-chevron-circle-down"></i> Custom Waypoints](/custom_waypoints.md)
-  - [<i class="fas fa-broadcast-tower"></i> Public Events](/public_events.md)
+  - [<i class="fas fa-bars"></i> Context Menu](/frameworks/context_menu.md)
+  - [<i class="fas fa-cog"></i> Custom Modules](/frameworks/custom_modules.md)
+  - [<i class="far fa-window-restore"></i> Dynamic Dialog](/frameworks/dynamic_dialog.md)
+  - [<i class="fas fa-chevron-circle-down"></i> Custom Waypoints](/frameworks/custom_waypoints.md)
+  - [<i class="fas fa-broadcast-tower"></i> Public Events](/frameworks/public_events.md)
+- **Development**
+  - [<i class="fas fa-code"></i> Coding Guidelines](/development/coding_guidelines.md)
