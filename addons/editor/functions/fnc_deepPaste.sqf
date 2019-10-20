@@ -70,7 +70,7 @@ private _fnc_createWaypoint = {
 
     _position = _position vectorAdd _centerPos;
 
-    private _waypoint = _group addWaypoint [_position, 0];
+    private _waypoint = _group addWaypoint [_position, -1];
     _waypoint setWaypointType _type;
     _waypoint setWaypointName _name;
     _waypoint setWaypointDescription _description;
@@ -89,7 +89,7 @@ private _fnc_createWaypoint = {
         [{
             params ["_waypoint", "_position"];
 
-            _waypoint setWaypointPosition [_position, 0];
+            _waypoint setWaypointPosition [AGLtoASL _position, -1];
         }, [_waypoint, _position]] call CBA_fnc_execNextFrame;
     };
 };
