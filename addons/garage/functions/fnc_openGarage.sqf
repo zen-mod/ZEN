@@ -35,6 +35,9 @@ GVAR(visionMode) = 0;
 [] call FUNC(showVehicleInfo);
 [] call FUNC(populateLists);
 
+// Open garage with previously selected tab
+[GVAR(currentTab), true] call FUNC(onTabSelect);
+
 // Disable "Apply To All" button if there are no other vehicles
 private _vehicleType = typeOf _vehicle;
 

@@ -127,11 +127,10 @@ class GVAR(display) {
             w = POS_W(3.5);
             h = POS_H(2);
             colorBackground[] = {0, 0, 0, 1};
-            fade = 1;
         };
         class ButtonAnimations: RscButtonArsenal {
             idc = IDC_BUTTON_ANIMATIONS;
-            onButtonClick = QUOTE(_this call FUNC(onTabSelect));
+            onButtonClick = QUOTE(0 call FUNC(onTabSelect));
             text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGarage\AnimationSources_ca.paa";
             tooltip = "$STR_A3_RscDisplayGarage_tab_AnimationSources";
             x = safeZoneX + POS_W(0.5);
@@ -146,6 +145,7 @@ class GVAR(display) {
         };
         class ButtonTextures: ButtonAnimations {
             idc = IDC_BUTTON_TEXTURES;
+            onButtonClick = QUOTE(1 call FUNC(onTabSelect));
             text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGarage\TextureSources_ca.paa";
             tooltip = "$STR_A3_RscDisplayGarage_tab_TextureSources";
             y = safeZoneY + POS_H(2.8);
