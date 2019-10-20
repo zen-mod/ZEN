@@ -34,7 +34,7 @@ private _fnc_createGroup = {
     private _group = [_createdGroups, _index] call CBA_fnc_hashGet;
 
     if (isNil "_group") then {
-        (_groups select _index) params ["_side", "_formation", "_behaviour", "_combatMode", "_speedMode"];
+        (_groups select _index) params ["_side", "_formation", "_behaviour", "_combatMode", "_speedMode", "_currentWaypoint", "_waypoints"];
 
         _group = createGroup [_side, true];
         _group setCombatMode _combatMode;
@@ -48,10 +48,50 @@ private _fnc_createGroup = {
             _group setBehaviour _behaviour;
         }, [_group, _formation, _behaviour]] call CBA_fnc_execNextFrame;
 
+        for "_i" from 1 to count waypoints _group do {
+            deleteWaypoint [_group, 0];
+        };
+
+        {
+            [_group, _x] call _fnc_createWaypoint;
+        } forEach _waypoints;
+
+        _group setCurrentWaypoint [_group, _currentWaypoint];
+
         [_createdGroups, _index, _group] call CBA_fnc_hashSet;
     };
 
     _group
+};
+
+private _fnc_createWaypoint = {
+    params ["_group", "_waypointData"];
+    _waypointData params ["_type", "_name", "_description", "_position", "_formation", "_behaviour", "_combatMode", "_speedMode", "_timeout", "_completionRadius", "_statements", "_script"];
+
+    _position = _position vectorAdd _centerPos;
+
+    private _waypoint = _group addWaypoint [_position, 0];
+    _waypoint setWaypointType _type;
+    _waypoint setWaypointName _name;
+    _waypoint setWaypointDescription _description;
+    _waypoint setWaypointFormation _formation;
+    _waypoint setWaypointBehaviour _behaviour;
+    _waypoint setWaypointCombatMode _combatMode;
+    _waypoint setWaypointSpeed _speedMode;
+    _waypoint setWaypointTimeout _timeout;
+    _waypoint setWaypointCompletionRadius _completionRadius;
+    _waypoint setWaypointStatements _statements;
+    _waypoint setWaypointScript _script;
+
+    // Waypoint 0 requires special handling
+    // Otherwise it is created at the group's spawn position
+    if (_waypoint select 1 == 0) then {
+        [{
+            params ["_waypoint", "_position"];
+
+            _waypoint setWaypointPosition [_position, 0];
+        }, [_waypoint, _position]] call CBA_fnc_execNextFrame;
+    };
 };
 
 private _fnc_restoreInventory = {

@@ -41,10 +41,33 @@ private _fnc_serializeGroup = {
     if (_index == -1) then {
         _index = _indexedGroups pushBack _group;
 
-        _groups pushBack [side _group, formation _group, behaviour leader _group, combatMode _group, speedMode _group];
+        private _waypoints = waypoints _group apply {
+            _x call _fnc_serializeWaypoint
+        };
+
+        _groups pushBack [side _group, formation _group, behaviour leader _group, combatMode _group, speedMode _group, currentWaypoint _group, _waypoints];
     };
 
     _index
+};
+
+private _fnc_serializeWaypoint = {
+    [_this] params ["_waypoint"];
+
+    [
+        waypointType _waypoint,
+        waypointName _waypoint,
+        waypointDescription _waypoint,
+        waypointPosition _waypoint vectorDiff _centerPos,
+        waypointFormation _waypoint,
+        waypointBehaviour _waypoint,
+        waypointCombatMode _waypoint,
+        waypointSpeed _waypoint,
+        waypointTimeout _waypoint,
+        waypointCompletionRadius _waypoint,
+        waypointStatements _waypoint,
+        waypointScript _waypoint
+    ]
 };
 
 private _fnc_serializeInventory = {
