@@ -139,7 +139,7 @@ private _fnc_restoreInventory = {
 };
 
 private _fnc_createUnit = {
-    params ["_type", "_position", "_direction", "_name", "_rank", "_skill", "_stance", "_loadout", "_group", "_isLeader"];
+    params ["_type", "_position", "_direction", "_identity", "_rank", "_skill", "_stance", "_loadout", "_group", "_isLeader"];
 
     _position = _position vectorAdd _centerPos;
     _group = _group call _fnc_createGroup;
@@ -153,13 +153,14 @@ private _fnc_createUnit = {
     _unit setUnitPos _stance;
 
     [{
-        params ["_unit", "_name", "_loadout"];
+        params ["_unit", "_identity", "_loadout"];
+        _identity params ["_name", "_face", "_speaker", "_pitch", "_nameSound"];
 
-        private _jipID = [QEGVAR(common,setName), [_unit, _name]] call CBA_fnc_globalEventJIP;
+        private _jipID = [QEGVAR(common,setUnitIdentity), [_unit, _name, _face, _speaker, _pitch, _nameSound]] call CBA_fnc_globalEventJIP;
         [_jipID, _unit] call CBA_fnc_removeGlobalEventJIP;
 
         _unit setUnitLoadout _loadout;
-    }, [_unit, _name, _loadout]] call CBA_fnc_execNextFrame;
+    }, [_unit, _identity, _loadout]] call CBA_fnc_execNextFrame;
 
     if (_isLeader) then {
         _group selectLeader _unit;

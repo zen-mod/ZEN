@@ -91,6 +91,11 @@ private _fnc_serializeUnit = {
     private _direction = getDir _unit;
 
     private _name = name _unit;
+    private _face = face _unit;
+    private _speaker = speaker _unit;
+    private _pitch = pitch _unit;
+    private _nameSound = nameSound _unit;
+
     private _rank = rank _unit;
     private _skill = skill _unit;
     private _stance = unitPos _unit;
@@ -99,7 +104,7 @@ private _fnc_serializeUnit = {
     private _group = _unit call _fnc_serializeGroup;
     private _isLeader = leader _unit == _unit;
 
-    [_type, _position, _direction, _name, _rank, _skill, _stance, _loadout, _group, _isLeader]
+    [_type, _position, _direction, [_name, _face, _speaker, _pitch, _nameSound], _rank, _skill, _stance, _loadout, _group, _isLeader]
 };
 
 private _fnc_serializeVehicle = {
