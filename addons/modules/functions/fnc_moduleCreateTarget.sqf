@@ -50,6 +50,8 @@ _defaultName = format [localize LSTRING(ModuleCreateTarget_TargetX), _defaultNam
         private _laserTarget = createVehicle [_laserTargetType, [0, 0, 0], [], 0, "NONE"];
         _laserTarget attachTo [_logic, [0, 0, 0]];
     };
+
+    _logic setVariable [QEGVAR(attributes,disabled), true, true];
 }, {
     params ["", "_logic"];
     deleteVehicle _logic;
