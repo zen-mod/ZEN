@@ -95,6 +95,10 @@ private _fnc_serializeVehicle = {
 
     _position = _position vectorDiff _centerPos;
 
+    private _fuel = fuel _vehicle;
+    private _damage = damage _vehicle;
+    private _hitPointsDamage = getAllHitPointsDamage _vehicle select 2;
+
     private _inventory = _vehicle call _fnc_serializeInventory;
     private _customization = _vehicle call BIS_fnc_getVehicleCustomization;
 
@@ -125,7 +129,7 @@ private _fnc_serializeVehicle = {
         [_unit call _fnc_serializeUnit, toLower _role, _cargoIndex, _turretPath]
     };
 
-    [_type, _position, _dirAndUp, _inventory, _customization, _turretMagazines, _pylonMagazines, _vehicleCargo, _crew]
+    [_type, _position, _dirAndUp, _fuel, _damage, _hitPointsDamage, _inventory, _customization, _turretMagazines, _pylonMagazines, _vehicleCargo, _crew]
 };
 
 private _fnc_serializeStatic = {

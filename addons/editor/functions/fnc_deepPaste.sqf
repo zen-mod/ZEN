@@ -131,13 +131,19 @@ private _fnc_createUnit = {
 };
 
 private _fnc_createVehicle = {
-    params ["_type", "_position", "_dirAndUp", "_inventory", "_customization", "_turretMagazines", "_pylonMagazines", "_vehicleCargo", "_crew"];
+    params ["_type", "_position", "_dirAndUp", "_fuel", "_damage", "_hitPointsDamage", "_inventory", "_customization", "_turretMagazines", "_pylonMagazines", "_vehicleCargo", "_crew"];
 
     _position = _position vectorAdd _centerPos;
 
     private _placement = ["NONE", "FLY"] select (_type isKindOf "Air" && {_position select 2 > 5});
     private _vehicle = createVehicle [_type, _position, [], 0, _placement];
     _vehicle setVectorDirAndUp _dirAndUp;
+    _vehicle setDamage _damage;
+    _vehicle setFuel _fuel;
+
+    {
+        _vehicle setHitIndex [_forEachIndex, _x, false];
+    } forEach _hitPointsDamage;
 
     [_vehicle, _inventory] call _fnc_restoreInventory;
 
