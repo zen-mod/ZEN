@@ -26,7 +26,7 @@ params ["_logic"];
     _dialogValues params ["_radius", "_intensity", "_destroyBuildings"];
 
     private _units = allPlayers select {_x distance _position < _radius};
-    [QGVAR(earthquake), _intensity, _units] call CBA_fnc_targetEvent;
+    [QEGVAR(common,earthquake), _intensity, _units] call CBA_fnc_targetEvent;
 
     if (_destroyBuildings) then {
         private _buildings = _position nearObjects ["Building", _radius];

@@ -143,6 +143,12 @@ class CfgVehicles {
         function = QFUNC(moduleCreateIED);
         icon = QPATHTOF(ui\explosion_ca.paa);
     };
+    class GVAR(moduleCreateIntel): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleCreateIntel);
+        function = QFUNC(moduleCreateIntel);
+        icon = "\a3\ui_f\data\igui\cfg\simpletasks\types\documents_ca.paa";
+    };
     class GVAR(moduleCreateMinefield): GVAR(moduleBase) {
         category = QGVAR(Objects);
         displayName = CSTRING(ModuleCreateMinefield);
@@ -218,15 +224,15 @@ class CfgVehicles {
         displayName = CSTRING(ModuleGarrison);
         function = QFUNC(moduleGarrison);
     };
-    class GVAR(ModuleGroupSide): GVAR(moduleBase) {
-        curatorCanAttach = 1;
-        displayName = CSTRING(ModuleGroupSide);
-        function = QFUNC(moduleGroupSide);
-    };
     class GVAR(moduleGlobalHint): GVAR(moduleBase) {
         category = "Curator";
         displayName = CSTRING(ModuleGlobalHint);
         curatorInfoType = QGVAR(RscGlobalHint);
+    };
+    class GVAR(moduleGroupSide): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleGroupSide);
+        function = QFUNC(moduleGroupSide);
     };
     class GVAR(moduleHeal): GVAR(moduleBase) {
         curatorCanAttach = 1;
@@ -299,6 +305,7 @@ class CfgVehicles {
         displayName = CSTRING(ModuleSmokePillar);
         function = QFUNC(moduleSmokePillar);
         icon = QPATHTOF(ui\smoke_pillar_ca.paa);
+        portrait = QPATHTOF(ui\smoke_pillar_ca.paa);
     };
     class GVAR(moduleSpawnCarrier): GVAR(moduleBase) {
         category = QGVAR(Spawn);
@@ -321,6 +328,20 @@ class CfgVehicles {
         category = QGVAR(Players);
         displayName = CSTRING(ModuleTeleportPlayers);
         function = QFUNC(moduleTeleportPlayers);
+    };
+    class GVAR(moduleToggleFlashlights): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Equipment);
+        displayName = CSTRING(ModuleToggleFlashlights);
+        function = QFUNC(moduleToggleFlashlights);
+        icon = QPATHTOF(ui\flashlight_ca.paa);
+    };
+    class GVAR(moduleToggleIRLasers): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Equipment);
+        displayName = CSTRING(ModuleToggleIRLasers);
+        function = QFUNC(moduleToggleIRLasers);
+        icon = "\a3\ui_f_curator\data\cfgcurator\laser_ca.paa";
     };
     class GVAR(moduleTurretOptics): GVAR(moduleBase) {
         curatorCanAttach = 1;

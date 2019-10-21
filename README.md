@@ -4,7 +4,7 @@
 
 <p align="center">
     <a href="https://github.com/zen-mod/ZEN/releases">
-        <img src="https://img.shields.io/badge/Version-1.4.0-blue.svg" alt="Zeus Enhanced Version">
+        <img src="https://img.shields.io/badge/Version-1.5.0-blue.svg" alt="Zeus Enhanced Version">
     </a>
     <a href="https://github.com/zen-mod/ZEN/issues">
         <img src="https://img.shields.io/github/issues-raw/zen-mod/ZEN.svg?label=Issues" alt="Zeus Enhanced Issues">
@@ -28,13 +28,19 @@ Special thanks to the [ACE3 Team](http://ace3mod.com/team.html) for their open s
 
 ## Features
 
-- A lot of new and improved modules
-- Extended attributes displays
-- Settings to customize the editor display
-- Context menu providing easy access to common actions
-- Various bug fixes for the Zeus interface
-- Rewritten vehicle garage specifically for Zeus
-- Rewritten, faster remote controlling of units
+- A lot of powerful new modules, as well as improved vanilla modules.
+- Completely rewritten attributes system available for all objects.
+- Context menu that provides quick access to common Zeus actions.
+- Settings to customize the Zeus display (move display to edge, remove watermark, etc.).
+- Ability to disable live search to reduce lag when searching through a lot of items.
+- Overhauled markers tree with markers sorted into categories.
+- Ability to create and edit area markers through Zeus.
+- Rewritten, faster remote controlling of units.
+- Player visibility indicator to help ensure mission adjustments are not made in view of players.
+- Vehicle customization garage made specifically for Zeus.
+- Various bug fixes and quality of life improvements to the Zeus interface.
+- Settings to control Zeus camera properties such as speed and available vision modes.
+- New waypoint types such as paradrop available through Zeus.
 
 ## Contributing
 

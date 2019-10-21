@@ -146,6 +146,18 @@
             <German>Seiten</German>
             <Polish>Strony</Polish>
         </Key>
+        <Key ID="STR_ZEN_Common_SelectedGroup">
+            <English>Selected Group</English>
+            <German>Ausgewählte Gruppe</German>
+            <French>Groupe sélectionné</French>
+            <Italian>Gruppo selezionato</Italian>
+            <Japanese>選択されたグループ</Japanese>
+            <Chinese>選擇小隊</Chinese>
+            <Chinesesimp>选择小队</Chinesesimp>
+            <Korean>그룹 선택</Korean>
+            <Polish>Wybrana grupa</Polish>
+            <Russian>Выбранная группа</Russian>
+        </Key>
         <Key ID="STR_ZEN_Common_Faction">
             <English>Faction</English>
             <Russian>Фракция</Russian>
@@ -220,6 +232,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_Teleport">
             <English>Teleport</English>
+            <German>Teleportieren</German>
         </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects">
             <English>Add Objects to Curators</English>
@@ -284,6 +297,7 @@
         <Key ID="STR_ZEN_Common_NotEnoughSpaceInVehicle">
             <English>Not enough space in target vehicle: %1 needed - %2 available</English>
             <Polish>Za mało miejsca w pojeździe docelowym: %1 potrzebne - %2 dostępne</Polish>
+            <German>Nicht genügend Platz im Zielfahrzeug: %1 benötigt - %2 verfügbar</German>
         </Key>
     </Package>
 </Project>

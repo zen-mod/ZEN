@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Garage">
-        <Key ID="STR_ZEN_Garage_ButtonClose_Tooltip">
+        <Key ID="STR_ZEN_Garage_Close_Tooltip">
             <English>Exit Garage (Escape)</English>
             <Russian>Покинуть гараж (Escape)</Russian>
             <German>Garage verlasen (Escape)</German>
             <Polish>Wyjdź z garażu (Escape)</Polish>
         </Key>
-        <Key ID="STR_ZEN_Garage_ButtonHide_Tooltip">
+        <Key ID="STR_ZEN_Garage_Hide_Tooltip">
             <English>Hide Interface (Backspace)</English>
             <German>Benutzeroberfläche verstecken (Rücktaste)</German>
             <Polish>Ukryj interfejs (Backspace)</Polish>
+        </Key>
+        <Key ID="STR_ZEN_Garage_ApplyToAll">
+            <English>Apply To All</English>
+        </Key>
+        <Key ID="STR_ZEN_Garage_ApplyToAll_Tooltip">
+            <English>Apply the current vehicle's customization to all selected vehicles of this type.</English>
+        </Key>
+        <Key ID="STR_ZEN_Garage_CannotApplyToAll">
+            <English>No other vehicles of the same type selected.</English>
         </Key>
     </Package>
 </Project>

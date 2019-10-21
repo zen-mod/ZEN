@@ -29,7 +29,7 @@ _ctrlInfoAuthor ctrlSetText _authorName;
 
 private _ctrlDLC = _display displayCtrl IDC_DLC_ICON;
 private _ctrlDLCBackground = _display displayCtrl IDC_DLC_BACKGROUND;
-private _vehicleDLC = _vehicleConfig call GETDLC;
+private _vehicleDLC = _vehicleConfig call EFUNC(common,getDLC);
 
 if (_vehicleDLC != "") then {
     private _dlcParams = modParams [_vehicleDLC, ["name", "logo", "logoOver"]];
@@ -41,6 +41,9 @@ if (_vehicleDLC != "") then {
     _ctrlDLC ctrlAddEventHandler ["MouseExit", format ["(_this select 0) ctrlSetText '%1'", _logo]];
     _ctrlDLC ctrlAddEventHandler ["MouseEnter", format ["(_this select 0) ctrlSetText '%1'", _logoOver]];
 } else {
-    _ctrlDLC ctrlShow false;
-    _ctrlDLCBackground ctrlShow false;
+    _ctrlDLC ctrlSetFade 1;
+    _ctrlDLC ctrlCommit 0;
+
+    _ctrlDLCBackground ctrlSetFade 1;
+    _ctrlDLCBackground ctrlCommit 0;
 };

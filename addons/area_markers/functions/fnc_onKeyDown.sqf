@@ -11,7 +11,7 @@
  * Handled <BOOL>
  *
  * Example:
- * [DISPLAY, 0] call zen_markers_tree_fnc_keyDown
+ * [DISPLAY, 0] call zen_area_markers_fnc_onKeyDown
  *
  * Public: No
  */
