@@ -26,7 +26,7 @@ GVAR(center) = _vehicle;
 // Create the garage display
 ZEUS_DISPLAY createDisplay QGVAR(display);
 
-// Store the curator camera data to restore camera on exit
+// Store curator camera data to restore it on exit
 GVAR(curatorCameraData) = [getPosASL curatorCamera, [vectorDir curatorCamera, vectorUp curatorCamera]];
 
 // Init tracking variables
