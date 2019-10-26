@@ -64,7 +64,7 @@
             <English>Parachute Sounds</English>
         </Key>
         <Key ID="STR_ZEN_Editor_ParachuteSounds_Description">
-            <English>Controls whether jet flyby sounds are played when object positions are changed to a height where they are attached to parachutes.</English>
+            <English>Controls whether jet flyby sounds are played when an object is paradropped via the Raise Entity keybind.</English>
         </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages_WaypointsOnly">
             <English>Waypoints Only</English>
