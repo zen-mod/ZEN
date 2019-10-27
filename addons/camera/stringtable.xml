@@ -4,38 +4,47 @@
         <Key ID="STR_ZEN_Camera_Camera">
             <English>Camera</English>
             <German>Kamera</German>
+            <Czech>Kamera</Czech>
         </Key>
         <Key ID="STR_ZEN_Camera_FollowTerrain">
             <English>Follow Terrain</English>
             <German>Geländeform folgen</German>
+            <Czech>Sleduj terén</Czech>
         </Key>
         <Key ID="STR_ZEN_Camera_FollowTerrain_Description">
             <English>Controls whether the camera's height should adjust with changes in terrain elevation.</English>
             <German>Steuert, ob sich die Höhe der Kamera bei Änderungen der Geländehöhe anpassen soll.</German>
+            <Czech>Určuje, zda by se měla výška kamery upravovat podle změn výšky terénu.</Czech>
         </Key>
         <Key ID="STR_ZEN_Camera_AdaptiveSpeed">
             <English>Adaptive Speed</English>
             <German>Adaptive Geschwindigkeit</German>
+            <Czech>Adaptivní rychlost</Czech>
         </Key>
         <Key ID="STR_ZEN_Camera_AdaptiveSpeed_Description">
             <English>Adapts the camera's speed based on its current height. Lower height - slower camera movement.</English>
             <German>Passt die Geschwindigkeit der Kamera an die aktuelle Höhe an. Geringere Höhe bedeutet langsamere Kamerabewegungen.</German>
+            <Czech>Upravuje rychlost kamery na základě jeho aktuální výšky. Nižší výška - pomalejší pohyb kamery.</Czech>
         </Key>
         <Key ID="STR_ZEN_Camera_DefaultSpeedCoef">
             <English>Default Speed Coefficient</English>
             <German>Standardmäßiger Geschwindigkeitskoeffizient</German>
+            <Czech>Výchozí koeficient rychlosti</Czech>
         </Key>
         <Key ID="STR_ZEN_Camera_DefaultSpeedCoef_Description">
             <English>Coefficient for the default camera movement speed, higher is faster.</English>
             <German>Koeffizient für die Standard-Bewegungsgeschwindigkeit der Kamera, höher ist schneller.</German>
+            <Czech>Koeficient pro výchozí rychlost pohybu kamery, vyšší je rychlejší.</Czech>
         </Key>
         <Key ID="STR_ZEN_Camera_FastSpeedCoef">
             <English>Fast Speed Coefficient</English>
             <German>Koeffizient für schnelle Geschwindigkeit</German>
+            <Czech>Vysokorychlostní koeficient</Czech>
         </Key>
         <Key ID="STR_ZEN_Camera_FastSpeedCoef_Description">
             <English>Coefficient for the fast camera movement speed (when holding down the shift key), higher is faster.</English>
             <German>Koeffizient für die schnellere Kamerabewegungsgeschwindigkeit (bei gedrückter Shift-Taste), höher ist schneller.</German>
+            <Czech>Koeficient pro vysokou rychlost pohybu kamery (při přidržení klávesy Shift), vyšší je rychlejší.</Czech>
         </Key>
     </Package>
 </Project>

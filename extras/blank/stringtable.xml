@@ -4,6 +4,7 @@
         <Key ID="STR_ZEN_Blank_DisplayName">
             <English>Blank</English>
             <German>Leer</German>
+            <Czech>Prázdný</Czech>
         </Key>
     </Package>
 </Project>
