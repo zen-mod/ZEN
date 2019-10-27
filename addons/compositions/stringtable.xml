@@ -20,7 +20,7 @@
             <English>A composition with this name and category already exists.</English>
         </Key>
         <Key ID="STR_ZEN_Compositions_DeleteConfirmation">
-            <English>Are you sure you want to delete this compoisition?</English>
+            <English>Are you sure you want to delete this composition?</English>
         </Key>
         <Key ID="STR_ZEN_Compositions_NoObjectsSelected">
             <English>No objects to create composition from selected</English>
