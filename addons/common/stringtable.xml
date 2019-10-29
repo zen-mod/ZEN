@@ -5,6 +5,7 @@
             <English>Zeus Enhanced</English>
             <German>Zeus Verbessert</German>
             <Polish>Zeus Enhanced</Polish>
+            <Italian>Zeus Enhanced</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Enabled">
             <English>Enabled</English>
@@ -79,72 +80,84 @@
             <Russian>Оч. низкий</Russian>
             <German>Sehr niedrieg</German>
             <Polish>Bardzo niski</Polish>
+            <Italian>Molto Basso</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Low">
             <English>Low</English>
             <Russian>Низкий</Russian>
             <German>Niedrig</German>
             <Polish>Niski</Polish>
+            <Italian>Basso</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Medium">
             <English>Medium</English>
             <Russian>Средний</Russian>
             <German>Medium</German>
             <Polish>Średni</Polish>
+            <Italian>Medio</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_High">
             <English>High</English>
             <Russian>Высокий</Russian>
             <German>Hoch</German>
             <Polish>Wysoki</Polish>
+            <Italian>Alto</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_VeryHigh">
             <English>Very High</English>
             <Russian>Оч. высокий</Russian>
             <German>Sehr hoch</German>
             <Polish>Bardzo wysoki</Polish>
+            <Italian>Molto Alto</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_VeryWeak">
             <English>Very Weak</English>
             <Russian>Оч. слабый</Russian>
             <German>Sehr schwach</German>
             <Polish>Bardzo słaby</Polish>
+            <Italian>Molto Debole</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Weak">
             <English>Weak</English>
             <Russian>Слабый</Russian>
             <German>Schwach</German>
             <Polish>Słaby</Polish>
+            <Italian>Debole</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Strong">
             <English>Strong</English>
             <Russian>Сильный</Russian>
             <German>Stark</German>
             <Polish>Silny</Polish>
+            <Italian>Forte</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Extreme">
             <English>Extreme</English>
             <Russian>Экстремальный</Russian>
             <German>Extrem</German>
             <Polish>Ekstremalny</Polish>
+            <Italian>Estremo</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_All">
             <English>All</English>
             <Russian>Все</Russian>
             <German>Alle</German>
             <Polish>Wszystko</Polish>
+            <Italian>Tutti</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Side">
             <English>Side</English>
             <Russian>Сторона</Russian>
             <German>Seite</German>
             <Polish>Strona</Polish>
+            <Italian>Lato</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Sides">
             <English>Sides</English>
             <Russian>Стороны</Russian>
             <German>Seiten</German>
             <Polish>Strony</Polish>
+            <Italian>Lati</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_SelectedGroup">
             <English>Selected Group</English>
@@ -163,30 +176,35 @@
             <Russian>Фракция</Russian>
             <German>Fraktion</German>
             <Polish>Frakcja</Polish>
+            <Italian>Fazione</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Aircraft">
             <English>Aircraft</English>
             <Russian>Самолёт</Russian>
             <German>Fluggerät</German>
             <Polish>Pojazd latający</Polish>
+            <Italian>Aerei</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Filter">
             <English>Filter</English>
             <Russian>Фильтр</Russian>
             <German>Filter</German>
             <Polish>Filtr</Polish>
+            <Italian>Filtri</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Units">
             <English>Units</English>
             <Russian>Солдаты</Russian>
             <German>Einheiten</German>
             <Polish>Jednostki</Polish>
+            <Italian>Unità</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Vehicles">
             <English>Vehicles</English>
             <Russian>Машины</Russian>
             <German>Fahrzeuge</German>
             <Polish>Pojazdy</Polish>
+            <Italian>Veicoli</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Static">
             <English>Static</English>
@@ -199,12 +217,14 @@
             <Russian>Ближайший</Russian>
             <German>Am nächsten</German>
             <Polish>Najbliższe</Polish>
+            <Italian>Più vicino</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Speed">
             <English>Speed</English>
             <Russian>Скорость</Russian>
             <German>Geschwindigkeit</German>
             <Polish>Prędkość</Polish>
+            <Italian>Velocità</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Range">
             <English>Range</English>
@@ -223,16 +243,19 @@
             <Russian>Высота</Russian>
             <German>Höhe</German>
             <Polish>Wysokość</Polish>
+            <Italian>Altezza</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Height_Units">
             <English>Height (m)</English>
             <Russian>Высота (м)</Russian>
             <German>Höhe (m)</German>
             <Polish>Wysokość (m)</Polish>
+            <Italian>Altezza (m)</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Teleport">
             <English>Teleport</English>
             <German>Teleportieren</German>
+            <Italian>Teletrasporto</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects">
             <English>Add Objects to Curators</English>

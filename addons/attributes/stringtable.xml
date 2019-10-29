@@ -6,18 +6,21 @@
             <Russian>Двигатель</Russian>
             <German>Motor</German>
             <Polish>Silnik</Polish>
+            <Italian>Motore</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_Lights">
             <English>Lights</English>
             <Russian>Фары</Russian>
             <German>Lichter</German>
             <Polish>Światła</Polish>
+            <Italian>Luci</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_PlateNumber">
             <English>Plate Number</English>
             <Russian>Госномер</Russian>
             <German>Kennzeichen</German>
             <Polish>Tablica rejestracyjna</Polish>
+            <Italian>Numero di targa</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_Exec_Tooltip">
             <English>This code will be executed in the unscheduled environment on the machine where this object is local.\nThe object will be passed in the "_this" variable.</English>
@@ -29,6 +32,7 @@
             <Russian>Таймаут (с)</Russian>
             <German>Zeitüberschreitung (s)</German>
             <Polish>Limit czasu (s)</Polish>
+            <Italian>Tempo limite (s)</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_Timeout_Tooltip">
             <English>The time (in seconds) between waypoint condition satisfaction and waypoint completion.</English>
@@ -38,26 +42,32 @@
         <Key ID="STR_ZEN_Attributes_Sensors">
             <English>Sensors</English>
             <German>Sensoren</German>
+            <Italian>Sensori</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeSide">
             <English>Change Side</English>
             <German>Seite ändern</German>
+            <Italian>Cambia Lato</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeSkills">
             <English>Change Skills</English>
             <German>Fähigkeiten ändern</German>
+            <Italian>Cambia Abilità</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_Skills">
             <English>Skills</English>
             <German>Fähigkeiten</German>
+            <Italian>Abilità</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_AimingAccuracy">
             <English>Aiming Accuracy</English>
             <German>Zielgenauigkeit</German>
+            <Italian>Precisione</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_AimingSpeed">
             <English>Aiming Speed</English>
             <German>Zilelgeschwindigkeit</German>
+            <Italian>Velcoità di puntamento</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_AimingShake">
             <English>Aiming Shake</English>
@@ -66,46 +76,57 @@
         <Key ID="STR_ZEN_Attributes_Commanding">
             <English>Commanding</English>
             <German>Kommandierend</German>
+            <Italian>Comando</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_Courage">
             <English>Courage</English>
             <German>Mut</German>
+            <Italian>Coraggio</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_SpotDistance">
             <English>Spotting Distance</English>
             <German>Aufklärungsdistanz</German>
+            <Italian>Distanza di Spotting</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_SpotTime">
             <English>Spotting Speed</English>
             <German>Aufklärungszeit</German>
+            <Italian>Velocità di Spotting</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_ReloadSpeed">
             <English>Reload Speed</English>
             <German>Nachladezeit</German>
+            <Italian>Velocità di Ricarica</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeTraits">
             <English>Change Traits</English>
             <German>Eigenschaften ändern</German>
+            <Italian>Cambia Tratti</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_Traits">
             <English>Traits</English>
             <German>Eigenschaften</German>
+            <Italian>Tratti</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_MedicalTraining">
             <English>Medical Training</English>
             <German>Medizinische Ausbildung</German>
+            <Italian>Addestramento Medico</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_EngineeringSkill">
             <English>Engineering Skill</English>
             <German>Technische Fähigkeiten</German>
+            <Italian>Abilità di Ingegneriia</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_Doctor">
             <English>Doctor</English>
             <German>Doktor</German>
+            <Italian>Dottore</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_AdvEngineer">
             <English>Adv. Engineer</English>
             <German>Erfahrene Techniker</German>
+            <Italian>Ingegnere Avanzato</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_EOD">
             <English>EOD</English>
