@@ -25,7 +25,7 @@ Name | Type | Description
 
 **Example:**
 
-```clike
+```cpp
 class zen_context_menu_actions {
     class HintName {
         displayName = "Hint Name";

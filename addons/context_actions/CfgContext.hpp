@@ -258,6 +258,7 @@ class EGVAR(context_menu,actions) {
             priority = 1;
         };
     };
+    // (GVAR(appearances)) temp fix for release build, without the brackets the GVAR is concatenated with the getVariable/setVariable
     class Garage {
         displayName = "$STR_3den_display3den_entitymenu_garage_text";
         icon = "\a3\3DEN\Data\Displays\Display3DEN\EntityMenu\garage_ca.paa";
@@ -275,15 +276,15 @@ class EGVAR(context_menu,actions) {
         class CopyAppearance {
             displayName = "$STR_3DEN_Display3DEN_MenuBar_EntityCopy_text";
             icon = QPATHTOF(ui\copy_ca.paa);
-            statement = QUOTE(GVAR(appearances) setVariable [ARR_2(typeOf _hoveredEntity, _hoveredEntity call BIS_fnc_getVehicleCustomization)]);
+            statement = QUOTE((GVAR(appearances)) setVariable [ARR_2(typeOf _hoveredEntity, _hoveredEntity call BIS_fnc_getVehicleCustomization)]);
             priority = 2;
         };
         class PasteAppearance {
             displayName = "$STR_3DEN_Display3DEN_MenuBar_EntityPaste_text";
             icon = QPATHTOF(ui\paste_ca.paa);
-            condition = QUOTE(!isNil {GVAR(appearances) getVariable typeOf _hoveredEntity});
+            condition = QUOTE(!isNil {(GVAR(appearances)) getVariable typeOf _hoveredEntity});
             statement = QUOTE( \
-                GVAR(appearances) getVariable typeOf _hoveredEntity params [ARR_2('_texture','_animations')]; \
+                (GVAR(appearances)) getVariable typeOf _hoveredEntity params [ARR_2('_texture','_animations')]; \
                 [ARR_4(_hoveredEntity,_texture,_animations,true)] call BIS_fnc_initVehicle; \
             );
             priority = 1;

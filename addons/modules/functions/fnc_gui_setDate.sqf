@@ -28,7 +28,6 @@
 params ["_display"];
 
 private _ctrlButtonOK = _display displayCtrl IDC_OK;
-private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 
 date params ["_currentYear", "_currentMonth", "_currentDay", "_currentHour", "_currentMinute"];
 
