@@ -94,50 +94,6 @@ private _fnc_createWaypoint = {
     };
 };
 
-private _fnc_restoreInventory = {
-    params ["_object", "_inventory"];
-    _inventory params ["_items", "_weapons", "_magazines", "_backpacks", "_containers"];
-
-    clearItemCargoGlobal _object;
-    clearWeaponCargoGlobal _object;
-    clearMagazineCargoGlobal _object;
-    clearBackpackCargoGlobal _object;
-
-    _items params ["_itemTypes", "_itemCounts"];
-
-    {
-        _object addItemCargoGlobal [_x, _itemCounts select _forEachIndex];
-    } forEach _itemTypes;
-
-    {
-        _object addWeaponWithAttachmentsCargoGlobal [_x, 1];
-    } forEach _weapons;
-
-    _magazines params ["_magazineTypes", "_magazineCounts"];
-
-    {
-        _object addMagazineCargoGlobal [_x, _magazineCounts select _forEachIndex];
-    } forEach _magazineTypes;
-
-    _backpacks params ["_backpackTypes", "_backpackCounts"];
-
-    {
-        _object addBackpackCargoGlobal [_x, _backpackCounts select _forEachIndex];
-    } forEach _backpackTypes;
-
-    // Handle containers inside the object's inventory
-    private _allContainers = everyContainer _object;
-
-    {
-        _x params ["_type", "_inventory"];
-
-        private _index = _allContainers findIf {_x select 0 == _type};
-        private _container = _allContainers deleteAt _index select 1;
-
-        [_container, _inventory] call _fnc_restoreInventory;
-    } forEach _containers;
-};
-
 private _fnc_createUnit = {
     params ["_type", "_position", "_direction", "_identity", "_rank", "_skill", "_stance", "_loadout", "_group", "_isLeader"];
 
@@ -186,7 +142,7 @@ private _fnc_createVehicle = {
         _vehicle setHitIndex [_forEachIndex, _x, false];
     } forEach _hitPointsDamage;
 
-    [_vehicle, _inventory] call _fnc_restoreInventory;
+    [_vehicle, _inventory] call EFUNC(common,deserializeInventory);
 
     _customization params ["_textures", "_animations"];
     [_vehicle, _textures, _animations, true] call BIS_fnc_initVehicle;
@@ -256,7 +212,7 @@ private _fnc_createStatic = {
     _object setVectorDirAndUp _dirAndUp;
     _object setDamage _damage;
 
-    [_object, _inventory] call _fnc_restoreInventory;
+    [_object, _inventory] call EFUNC(common,deserializeInventory);
 
     _createdObjects pushBack _object;
 

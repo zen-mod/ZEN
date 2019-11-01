@@ -70,19 +70,6 @@ private _fnc_serializeWaypoint = {
     ]
 };
 
-private _fnc_serializeInventory = {
-    params ["_object"];
-
-    // Handle containers inside the object's inventory
-    private _containers = everyContainer _object apply {
-        _x params ["_type", "_object"];
-
-        [_type, _object call _fnc_serializeInventory]
-    };
-
-    [getItemCargo _object, weaponsItemsCargo _object, getMagazineCargo _object, getBackpackCargo _object, _containers]
-};
-
 private _fnc_serializeUnit = {
     params ["_unit"];
 
@@ -127,7 +114,7 @@ private _fnc_serializeVehicle = {
     private _damage = damage _vehicle;
     private _hitPointsDamage = getAllHitPointsDamage _vehicle select 2;
 
-    private _inventory = _vehicle call _fnc_serializeInventory;
+    private _inventory = _vehicle call EFUNC(common,serializeInventory);
     private _customization = _vehicle call BIS_fnc_getVehicleCustomization;
 
     private _allPylonMagazines = getPylonMagazines _vehicle;
@@ -168,7 +155,7 @@ private _fnc_serializeStatic = {
     private _dirAndUp = [vectorDir _object, vectorUp _object];
 
     private _damage = damage _object;
-    private _inventory = _object call _fnc_serializeInventory;
+    private _inventory = _object call EFUNC(common,serializeInventory);
 
     [_type, _position, _dirAndUp, _damage, _inventory]
 };
