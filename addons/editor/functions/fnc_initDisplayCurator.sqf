@@ -19,7 +19,7 @@
 params ["_display"];
 
 // Reset editable icons visibility tracking variable
-// Prevents unwanted behaviour if display is closed when icons are hidden
+// Prevents unwanted behaviour if display is closed while icons are hidden
 GVAR(iconsVisible) = true;
 
 if (GVAR(removeWatermark)) then {
