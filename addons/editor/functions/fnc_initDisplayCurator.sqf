@@ -45,10 +45,29 @@ if (GVAR(disableLiveSearch)) then {
     _ctrlSearchButton ctrlAddEventHandler ["ButtonClick", {call FUNC(handleSearchButton)}];
 };
 
+_display displayAddEventHandler ["KeyDown", {call FUNC(handleKeyDown)}];
+
 {
     private _ctrl = _display displayCtrl _x;
-    _ctrl ctrlAddEventHandler ["ButtonClick", {call FUNC(fixSideButtons)}];
+    _ctrl ctrlAddEventHandler ["ButtonClick", {call FUNC(handleModeButtons)}];
 } forEach IDCS_MODE_BUTTONS;
+
+// Need events to check if side buttons are hovered since changing the mode
+// also triggers the button click event for the side buttons
+{
+    private _ctrl = _display displayCtrl _x;
+    _ctrl ctrlAddEventHandler ["ButtonClick", {call FUNC(handleSideButtons)}];
+
+    _ctrl ctrlAddEventHandler ["MouseEnter", {
+        params ["_ctrl"];
+        _ctrl setVariable [QGVAR(hovered), true];
+    }];
+
+    _ctrl ctrlAddEventHandler ["MouseExit", {
+        params ["_ctrl"];
+        _ctrl setVariable [QGVAR(hovered), false];
+    }];
+} forEach IDCS_SIDE_BUTTONS;
 
 private _ctrlTreeRecent = _display displayCtrl IDC_RSCDISPLAYCURATOR_CREATE_RECENT;
 _ctrlTreeRecent ctrlAddEventHandler ["TreeSelChanged", {
