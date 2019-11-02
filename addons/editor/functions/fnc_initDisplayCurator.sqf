@@ -18,6 +18,10 @@
 
 params ["_display"];
 
+// Reset editable icons visibility tracking variable
+// Prevents unwanted behaviour if display is closed when icons are hidden
+GVAR(iconsVisible) = true;
+
 if (GVAR(removeWatermark)) then {
     private _ctrlWatermark = _display displayCtrl IDC_RSCDISPLAYCURATOR_WATERMARK;
     _ctrlWatermark ctrlSetText "";
