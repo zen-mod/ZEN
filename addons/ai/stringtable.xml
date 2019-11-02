@@ -8,6 +8,7 @@
         <Key ID="STR_ZEN_AI_Paradrop">
             <English>Paradrop</English>
             <German>Fallschirmsprung</German>
+            <Portuguese>Queda Livre</Portuguese>
         </Key>
         <Key ID="STR_ZEN_AI_CouldNotGarrisonAll">
             <English>Unable to garrison all units - not enough positions</English>

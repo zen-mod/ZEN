@@ -1,23 +1,23 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Handles clicking the Zeus mode buttons.
+ * Handles changing the mode of the create trees.
  *
  * Arguments:
- * 0: Mode Button <CONTROL>
+ * 0: Display <DISPLAY>
+ * 1: Mode <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL] call zen_markers_tree_fnc_handleModeChange
+ * [DISPLAY, 0] call zen_markers_tree_fnc_handleModeChange
  *
  * Public: No
  */
 
-params ["_ctrlMode"];
+params ["_display", "_mode"];
 
 // Show the custom markers tree when the markers mode is selected, otherwise hide
-private _display = ctrlParent _ctrlMode;
 private _ctrlTree = _display displayCtrl IDC_MARKERS_TREE;
-_ctrlTree ctrlShow (ctrlIDC _ctrlMode == IDC_RSCDISPLAYCURATOR_MODEMARKERS);
+_ctrlTree ctrlShow (_mode == 3);

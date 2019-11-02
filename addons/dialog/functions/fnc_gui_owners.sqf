@@ -141,7 +141,7 @@ private _fnc_updateGroupList = {
     lbClear _ctrlList;
 
     {
-        if (units _x findIf {isPlayer _x} != -1 && {toLower groupID _x find _filter != -1}) then {
+        if (units _x findIf {isPlayer _x} != -1 && {_filter in toLower groupID _x}) then {
             private _index = _ctrlList lbAdd groupID _x;
             _ctrlList lbSetPicture [_index, [ICON_UNCHECKED, ICON_CHECKED] select (_x in _groups)];
             _ctrlList lbSetPictureRight [_index, [_x] call EFUNC(common,getSideIcon)];
@@ -213,7 +213,7 @@ private _fnc_updatePlayerList = {
     lbClear _ctrlList;
 
     {
-        if (alive _x && {toLower name _x find _filter != -1}) then {
+        if (alive _x && {_filter in toLower name _x}) then {
             private _index = _ctrlList lbAdd name _x;
             _ctrlList lbSetPicture [_index, [ICON_UNCHECKED, ICON_CHECKED] select (_x in _players)];
             _ctrlList lbSetPictureRight [_index, [_x] call EFUNC(common,getSideIcon)];
