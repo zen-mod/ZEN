@@ -1,29 +1,28 @@
 #include "script_component.hpp"
 
-GVAR(previewVehicle) = objNull;
-GVAR(lastMouse) = getMousePosition;
-
 ["ZEN_displayCuratorLoad", {
+    if (!GVAR(enabled)) exitWith {};
+
     params ["_display"];
-    GVAR(previewDraw) = addMissionEventHandler ["Draw3D", {
-        call FUNC(updatePreview);
-    }];
+
+    {
+        private _ctrl = _display displayCtrl _x;
+        _ctrl ctrlAddEventHandler ["TreeSelChanged", {call FUNC(handleTreeSelect)}];
+    } forEach [
+        IDC_RSCDISPLAYCURATOR_CREATE_UNITS_EAST,
+        IDC_RSCDISPLAYCURATOR_CREATE_UNITS_WEST,
+        IDC_RSCDISPLAYCURATOR_CREATE_UNITS_GUER,
+        IDC_RSCDISPLAYCURATOR_CREATE_UNITS_CIV,
+        IDC_RSCDISPLAYCURATOR_CREATE_UNITS_EMPTY
+    ];
 }] call CBA_fnc_addEventHandler;
 
+["ZEN_displayCuratorUnload", {
+    GVAR(updatePFH) call CBA_fnc_removePerFrameHandler;
 
-[{!isNull (getAssignedCuratorLogic player)}, {
-    (getAssignedCuratorLogic player) addEventHandler ["CuratorObjectPlaced", {
-        params ["_curator", "_object"];
-        _object setPosASL [0,0,100];
-        _object setDir (getDir GVAR(previewVehicle));
-        private _pos = AGLtoASL screenToWorld getMousePosition;
-        _object setVectorUp surfaceNormal _pos;
-        private _intersections = lineIntersectsSurfaces [getPosASL curatorCamera, _pos, GVAR(previewVehicle)];
-        if (count _intersections != 0) then {
-            private _placePos = ((_intersections select 0) select 0);
-            _object setPosASL [_placePos select 0, _placePos select 1, (_placePos select 2) + 1];
-        } else {
-            _object setPosASL [_pos select 0, _pos select 1, (_pos select 2) + 1];
-        };
-    }];
-}] call CBA_fnc_waitUntilAndExecute;
+    deleteVehicle GVAR(object);
+    deleteVehicle GVAR(helper);
+}] call CBA_fnc_addEventHandler;
+
+[QEGVAR(editor,modeChanged), LINKFUNC(handleTreeChange)] call CBA_fnc_addEventHandler;
+[QEGVAR(editor,sideChanged), LINKFUNC(handleTreeChange)] call CBA_fnc_addEventHandler;
