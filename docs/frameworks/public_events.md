@@ -31,3 +31,29 @@ Executed **locally** when Zeus starts remote controlling a unit.
 **Parameters:**
 
 - 0: Unit &lt;OBJECT&gt;
+
+---
+
+#### zen_editor_modeChanged
+
+Executed **locally** when Zeus display's create trees mode is changed.
+Event still fires if the new mode is the same as old.
+
+**Parameters:**
+
+- 0: Display &lt;DISPLAY&gt;
+- 1: Mode &lt;NUMBER&gt;
+- 2: Side &lt;NUMBER&gt;
+
+---
+
+#### zen_editor_sideChanged
+
+Executed **locally** when Zeus display's create trees side is changed.
+Event still fires if the new side is the same as old.
+
+**Parameters:**
+
+- 0: Display &lt;DISPLAY&gt;
+- 1: Mode &lt;NUMBER&gt;
+- 2: Side &lt;NUMBER&gt;

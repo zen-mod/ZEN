@@ -52,6 +52,8 @@ _display displayAddEventHandler ["KeyDown", {call FUNC(handleKeyDown)}];
     _ctrl ctrlAddEventHandler ["ButtonClick", {call FUNC(handleModeButtons)}];
 } forEach IDCS_MODE_BUTTONS;
 
+// Need events to check if side buttons are hovered since changing the mode
+// also triggers the button click event for the side buttons
 {
     private _ctrl = _display displayCtrl _x;
     _ctrl ctrlAddEventHandler ["ButtonClick", {call FUNC(handleSideButtons)}];
