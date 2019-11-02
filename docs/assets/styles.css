@@ -1,6 +1,8 @@
 :root {
     --theme-color: #2684c1;
     --theme-color-dark: #2275ac;
+    --color-primary: #000;
+    --color-secondary: #111;
 }
 
 body {
@@ -33,7 +35,16 @@ a {
 
 /*** Sidebar ***/
 
+.sidebar {
+    color: var(--color-primary);
+}
+
+.sidebar .app-name .app-name-link {
+    text-transform: uppercase;
+}
+
 .sidebar ul li a {
+    color: var(--color-secondary);
     font-size: 15px;
 }
 
@@ -51,9 +62,25 @@ a {
 
 /*** Markdown General ***/
 
+.markdown-section {
+    color: var(--color-primary);
+}
+
+.markdown-section h1,
+.markdown-section h2,
+.markdown-section h3,
+.markdown-section h4,
+.markdown-section strong {
+    color: var(--color-primary);
+}
+
+.anchor span {
+    color: var(--color-primary);
+}
+
 .markdown-section hr {
-    margin: 1.5em 0;
-    border-bottom: 1px solid #c0c0c0;
+    margin: 20px 0;
+    border-bottom: 1px solid #aaa;
 }
 
 .markdown-section pre:after {
@@ -75,6 +102,29 @@ a {
     border: none;
 }
 
+.md-tabs pre:not(:first-of-type) {
+    margin-top: 1em;
+}
+
+.markdown-section pre {
+    margin: 0 !important;
+    padding: 1.5em !important;
+}
+
+.markdown-section code {
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+}
+
+.markdown-section pre:not(:first-child) {
+    margin-top: 1em !important;
+}
+
+.markdown-section pre > code {
+    color: var(--color-primary);
+}
+
 /*** Markdown Table ***/
 
 .markdown-section table {
@@ -91,7 +141,7 @@ a {
     text-transform: uppercase;
     font-size: 95%;
     border-top: none;
-    border-color: #c0c0c0;
+    border-color: #333;
 }
 
 .markdown-section table tbody tr:last-of-type {
@@ -117,6 +167,10 @@ a {
 
 .token.string {
     color: #42b983;
+}
+
+.token.punctuation {
+    color: var(--color-primary);
 }
 
 .lang-cpp .token.class-name {

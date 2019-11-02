@@ -4,7 +4,13 @@
 
 ### 1.1 Variable Names
 
-#### 1.1.1 Global Variable Naming
+#### 1.1.1 Private Variable Naming
+
+To make code as readable as possible, try to use self explanatory variable names and avoid using single character variable names.
+
+Example: `_velocity` instead of `_v`
+
+#### 1.1.2 Global Variable Naming
 
 All global variables must start with the ZEN prefix followed by the component, separated by underscores. Global variables may not contain the `fnc_` prefix if the value is not callable code.
 
@@ -12,17 +18,11 @@ Example: `zen_component_variableName`
 
 _For ZEN this is done automatically through the usage of the `GVAR` macro family._
 
-#### 1.1.2 Private Variable Naming
-
-To make code as readable as possible, try to use self explanatory variable names and avoid using single character variable names.
-
-Example: `_velocity` instead of `_v`
-
 #### 1.1.3 Function Naming
 
 All functions shall use ZEN and the component name as a prefix, as well as the `fnc_` prefix behind the component name.
 
-Example: `PREFIX_COMPONENT_fnc_functionName`
+Example: `zen_component_fnc_functionName`
 
 _For ZEN this is done automatically through the usage of the `PREP` macro._
 
@@ -668,7 +668,7 @@ _a append [1,2,3];
 
 ```clike
 _a set [count _a, _value];
-_a = a + [_value];
+_a = _a + [_value];
 ```
 
 When adding an new element to a dynamic location in an array or when the index is pre-calculated, `set` may be used.
