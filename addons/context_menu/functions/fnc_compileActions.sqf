@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Compiles context menu actions from config.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _fnc_getActionData = {
     params ["_actionsConfig"];
@@ -34,20 +34,28 @@ private _fnc_getActionData = {
         private _condition = compile getText (_entryConfig >> "condition");
         if (_condition isEqualTo {}) then {_condition = {true}};
 
-        private _priority = getNumber (_entryConfig >> "priority");
+        private _insertChildren = compile getText (_entryConfig >> "insertChildren");
+        private _modifierFunction = compile getText (_entryConfig >> "modifierFunction");
 
         private _children = [_entryConfig] call _fnc_getActionData;
-        [_children, 6, false] call CBA_fnc_sortNestedArray;
+        [_children, 2, false] call CBA_fnc_sortNestedArray;
+
+        private _priority = getNumber (_entryConfig >> "priority");
 
         private _actionEntry = [
-            _actionName,
-            _displayName,
-            _iconFile,
-            _iconColor,
-            _statement,
-            _condition,
-            _priority,
-            _children
+            [
+                _actionName,
+                _displayName,
+                _iconFile,
+                _iconColor,
+                _statement,
+                _condition,
+                [],
+                _insertChildren,
+                _modifierFunction
+            ],
+            _children,
+            _priority
         ];
 
         _actions pushBack _actionEntry;
@@ -65,21 +73,22 @@ private _fnc_addMissionActions = {
     params ["_actionsArray", "_actionsToAdd"];
 
     {
-        _x params ["_actionName", "", "", "", "", "", "", "_actionChildren"];
+        _x params ["_action", "_actionChildren"];
+        _action params ["_actionName"];
 
         private _index = _actionsArray findIf {
-            (_x select 0) isEqualTo _actionName;
+            (_x select 0 select 0) isEqualTo _actionName;
         };
 
         if (_index == -1) then {
             _actionsArray pushBack _x;
         } else {
-            private _children = _actionsArray select _index select 7;
+            private _children = _actionsArray select _index select 1;
             [_children, _actionChildren] call _fnc_addMissionActions;
         };
     } forEach _actionsToAdd;
 
-    [_actionsArray, 6, false] call CBA_fnc_sortNestedArray;
+    [_actionsArray, 2, false] call CBA_fnc_sortNestedArray;
 };
 
 [_contextActions, _missionActions] call _fnc_addMissionActions;
@@ -88,14 +97,19 @@ missionNamespace setVariable [QGVAR(actions), _contextActions];
 /*
 [
     [
-        _actionName,
-        _displayName,
-        _iconFile,
-        _iconColor,
-        _statement,
-        _condition,
-        _priority,
-        [childrenActions]
+        [
+            _actionName,
+            _displayName,
+            _iconFile,
+            _iconColor,
+            _statement,
+            _condition,
+            _args,
+            _insertChildren,
+            _modifierFunction
+        ],
+        [childrenActions],
+        _priority
     ]
 ]
 */

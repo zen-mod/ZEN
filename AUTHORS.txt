@@ -7,17 +7,24 @@
 
 # CORE TEAM
 mharis001 <mhariszakar@gmail.com>
+CreepPork <github@garkaklis.com>
+oOKexOo <rc_mapper@yahoo.com>
+NeilZar
 
 # CONTRIBUTORS
+3Mydlo3
 654wak654
 Alganthe
+BaerMitUmlaut
 Beaumont
 Brett
 Dedmen
+diwako
 Dystopian
 GitHawk
 Glowbal
 Jonpas
+KoffeinFlummi
 PabstMirror
 SilentSpike
 Tuupertunut

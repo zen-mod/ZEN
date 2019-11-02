@@ -1,6 +1,6 @@
 class CfgFactionClasses {
     class GVAR(AI) {
-        displayName = CSTRING(AI);
+        displayName = "$STR_Team_Switch_AI";
         priority = 2;
         side = 7;
     };
@@ -16,6 +16,11 @@ class CfgFactionClasses {
     };
     class GVAR(Equipment) {
         displayName = CSTRING(Equipment);
+        priority = 2;
+        side = 7;
+    };
+    class GVAR(Inventory) {
+        displayName = "$STR_A3_Gear1";
         priority = 2;
         side = 7;
     };

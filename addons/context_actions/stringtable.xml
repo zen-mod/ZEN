@@ -3,12 +3,40 @@
     <Package name="Context_Actions">
         <Key ID="STR_ZEN_Context_Actions_EditInventory">
             <English>Edit Inventory</English>
+            <Russian>Редактировать снаряжение</Russian>
+            <German>Inventar bearbeiten</German>
+            <Polish>Edytuj wyposażenie</Polish>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_TeleportPlayers">
             <English>Teleport Players</English>
+            <Russian>Телепортировать игроков</Russian>
+            <German>Spieler teleportieren</German>
+            <Polish>Teleportuj graczy</Polish>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_TeleportZeus">
             <English>Teleport Zeus</English>
+            <German>Zeus teleportieren</German>
+            <Polish>Teleportuj Zeusa</Polish>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_VehicleLogistics">
+            <English>Vehicle Logistics</English>
+            <Polish>Logistyka pojazdów</Polish>
+            <German>Fahrzeuglogistik</German>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_Rearm">
+            <English>Rearm</English>
+            <Polish>Przezbrój</Polish>
+            <German>Waffen zurücksetzen</German>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_Refuel">
+            <English>Refuel</English>
+            <Polish>Zatankuj</Polish>
+            <German>Auftanken</German>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_Repair">
+            <English>Repair</English>
+            <Polish>Napraw</Polish>
+            <German>Repariern</German>
         </Key>
     </Package>
 </Project>

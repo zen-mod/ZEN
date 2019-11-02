@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Camera">
+        <Key ID="STR_ZEN_Camera_Camera">
+            <English>Camera</English>
+            <German>Kamera</German>
+        </Key>
+        <Key ID="STR_ZEN_Camera_FollowTerrain">
+            <English>Follow Terrain</English>
+            <German>Geländeform folgen</German>
+        </Key>
+        <Key ID="STR_ZEN_Camera_FollowTerrain_Description">
+            <English>Controls whether the camera's height should adjust with changes in terrain elevation.</English>
+            <German>Steuert, ob sich die Höhe der Kamera bei Änderungen der Geländehöhe anpassen soll.</German>
+        </Key>
+        <Key ID="STR_ZEN_Camera_AdaptiveSpeed">
+            <English>Adaptive Speed</English>
+            <German>Adaptive Geschwindigkeit</German>
+        </Key>
+        <Key ID="STR_ZEN_Camera_AdaptiveSpeed_Description">
+            <English>Adapts the camera's speed based on its current height. Lower height - slower camera movement.</English>
+            <German>Passt die Geschwindigkeit der Kamera an die aktuelle Höhe an. Geringere Höhe bedeutet langsamere Kamerabewegungen.</German>
+        </Key>
+        <Key ID="STR_ZEN_Camera_DefaultSpeedCoef">
+            <English>Default Speed Coefficient</English>
+            <German>Standardmäßiger Geschwindigkeitskoeffizient</German>
+        </Key>
+        <Key ID="STR_ZEN_Camera_DefaultSpeedCoef_Description">
+            <English>Coefficient for the default camera movement speed, higher is faster.</English>
+            <German>Koeffizient für die Standard-Bewegungsgeschwindigkeit der Kamera, höher ist schneller.</German>
+        </Key>
+        <Key ID="STR_ZEN_Camera_FastSpeedCoef">
+            <English>Fast Speed Coefficient</English>
+            <German>Koeffizient für schnelle Geschwindigkeit</German>
+        </Key>
+        <Key ID="STR_ZEN_Camera_FastSpeedCoef_Description">
+            <English>Coefficient for the fast camera movement speed (when holding down the shift key), higher is faster.</English>
+            <German>Koeffizient für die schnellere Kamerabewegungsgeschwindigkeit (bei gedrückter Shift-Taste), höher ist schneller.</German>
+        </Key>
+    </Package>
+</Project>

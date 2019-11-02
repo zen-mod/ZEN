@@ -1,0 +1,12 @@
+PREP(applyProperties);
+PREP(configure);
+PREP(createIcon);
+PREP(deleteIcon);
+PREP(module);
+PREP(onDraw);
+PREP(onKeyDown);
+PREP(onMouseButtonDown);
+PREP(onMouseButtonUp);
+PREP(onMouseDblClick);
+PREP(onMouseMoving);
+PREP(updateIcon);

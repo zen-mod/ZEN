@@ -1,7 +1,8 @@
 PREP(addAction);
 PREP(closeMenu);
 PREP(compileActions);
+PREP(createAction);
 PREP(createContextGroup);
-PREP(getContextPos);
+PREP(getActiveActions);
 PREP(initDisplayCurator);
 PREP(openMenu);

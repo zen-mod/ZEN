@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Zeus module function to make a unit sit on a chair.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define CHAIR_CLASSES [ \
     "Land_CampingChair_V1_F", \
@@ -81,7 +81,7 @@ private _unit = attachedTo _logic;
 deleteVehicle _logic;
 
 if (isNull _unit) exitWith {
-    [LSTRING(NothingSelected)] call EFUNC(common,showMessage);
+    [LSTRING(NoUnitSelected)] call EFUNC(common,showMessage);
 };
 
 if !(_unit isKindOf "CAManBase") exitWith {

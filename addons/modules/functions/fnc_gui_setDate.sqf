@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Initializes the "Set Date" Zeus module display.
@@ -13,9 +14,8 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-#define YEARS_START 1982
+#define YEARS_START 1900
 #define YEARS_END   2050
 
 #define FORMAT_TIME(x) ([floor (x), 2] call CBA_fnc_formatNumber)
@@ -28,7 +28,6 @@
 params ["_display"];
 
 private _ctrlButtonOK = _display displayCtrl IDC_OK;
-private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 
 date params ["_currentYear", "_currentMonth", "_currentDay", "_currentHour", "_currentMinute"];
 
@@ -282,7 +281,7 @@ private _fnc_onConfirm = {
         round (floor (_sliderPos / 60 % 60) + _sliderPos % 60 / 60)
     ];
 
-    [QEGVAR(common,setDate), [_date]] call CBA_fnc_serverEvent;
+    [QEGVAR(common,setDate), _date] call CBA_fnc_globalEvent;
 };
 
 _display displayAddEventHandler ["Unload", _fnc_onUnload];

@@ -1,9 +1,11 @@
+PREP(applyToAll);
 PREP(buttonGarage);
 PREP(closeGarage);
 PREP(getVehicleData);
 PREP(handleMouse);
 PREP(onAnimationSelect);
 PREP(onKeyDown);
+PREP(onMouseButtonClick);
 PREP(onMouseButtonDown);
 PREP(onMouseButtonUp);
 PREP(onMouseZChanged);

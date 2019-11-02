@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * Zeus module function to un-garrison units.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic"];
 
@@ -21,7 +21,7 @@ private _unit = effectiveCommander attachedTo _logic;
 deleteVehicle _logic;
 
 if (isNull _unit) exitWith {
-    [LSTRING(NothingSelected)] call EFUNC(common,showMessage);
+    [LSTRING(NoUnitSelected)] call EFUNC(common,showMessage);
 };
 
 if !(_unit isKindOf "CAManBase") exitWith {

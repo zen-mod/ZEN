@@ -4,6 +4,7 @@
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
+// #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_CONTEXT_ACTIONS
     #define DEBUG_MODE_FULL
@@ -14,3 +15,7 @@
 #endif
 
 #include "\x\zen\addons\main\script_macros.hpp"
+
+#define HEAL_MODE_ALL 0
+#define HEAL_MODE_PLAYERS 1
+#define HEAL_MODE_AI 2

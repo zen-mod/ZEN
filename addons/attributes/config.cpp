@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"zen_common"};
+        requiredAddons[] = {"zen_dialog"};
         author = ECSTRING(main,Author);
         authors[] = {"mharis001"};
         url = ECSTRING(main,URL);
@@ -19,3 +19,4 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "RscAttributes.hpp"
 #include "CfgCurator.hpp"
+#include "CfgWaypointTypes.hpp"

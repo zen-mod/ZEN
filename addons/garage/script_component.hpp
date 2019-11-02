@@ -4,6 +4,7 @@
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
+// #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_GARAGE
     #define DEBUG_MODE_FULL
@@ -17,7 +18,6 @@
 
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 #include "\a3\ui_f\hpp\defineCommonGrids.inc"
-#include "\a3\ui_f\hpp\defineCommonColors.inc"
 #include "\x\zen\addons\common\defineResinclDesign.inc"
 
 #define POS_X(N) ((N) * GUI_GRID_W + GUI_GRID_CENTER_X)
@@ -28,19 +28,6 @@
 #define ICON_CHECKED   "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_checked_ca.paa"
 #define ICON_UNCHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_unchecked_ca.paa"
 #define CHECK_ICONS    [ICON_UNCHECKED, ICON_CHECKED]
-
-#define GETDLC \
-    { \
-        private _dlc = ""; \
-        private _addons = configSourceAddonList _this; \
-        if !(_addons isEqualTo []) then { \
-            private _mods = configSourceModList (configFile >> "CfgPatches" >> _addons select 0); \
-            if !(_mods isEqualTo []) then { \
-                _dlc = _mods select 0; \
-            }; \
-        }; \
-        _dlc \
-    }
 
 #define FADE_DELAY 0.15
 
@@ -63,6 +50,7 @@
 #define IDC_LIST_EMPTY 332
 
 #define IDC_MENU_BAR 340
+#define IDC_BUTTON_APPLY 341
 
 #define IDC_INFO_GROUP 350
 #define IDC_INFO_NAME 351

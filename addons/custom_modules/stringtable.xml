@@ -3,6 +3,8 @@
     <Package name="Custom_Modules">
         <Key ID="STR_ZEN_Custom_Modules_DisplayName">
             <English>Custom Module</English>
+            <German>Benutzerdefinierte Module</German>
+            <Polish>Moduł niestandardowy</Polish>
         </Key>
     </Package>
 </Project>

@@ -4,6 +4,7 @@
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
+// #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_DIALOG
     #define DEBUG_MODE_FULL
@@ -17,7 +18,6 @@
 
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 #include "\a3\ui_f\hpp\defineCommonGrids.inc"
-#include "\a3\ui_f\hpp\defineCommonColors.inc"
 #include "\x\zen\addons\common\defineResinclDesign.inc"
 
 #define POS_X(N) ((N) * GUI_GRID_W + GUI_GRID_CENTER_X)
@@ -37,5 +37,8 @@
 #define POS_BACKGROUND_H(HEIGHT) (HEIGHT + 2 * CONTENT_SPACING)
 #define POS_TITLE_Y(HEIGHT)      (POS_BACKGROUND_Y(HEIGHT) - VERTICAL_SPACING - POS_H(1))
 #define POS_BUTTON_Y(HEIGHT)     (0.5 + HEIGHT / 2 + CONTENT_SPACING + VERTICAL_SPACING)
+
+#define ICON_CHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_checked_ca.paa"
+#define ICON_UNCHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_unchecked_ca.paa"
 
 #include "script_idc.hpp"

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Initializes the "Fire Mission" Zeus module display.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_display"];
 
@@ -33,7 +33,7 @@ private _fnc_errorAndClose = {
 private _vehicle = attachedTo _logic;
 
 if (isNull _vehicle) then {
-    [LSTRING(NothingSelected)] call _fnc_errorAndClose;
+    [LSTRING(NoUnitSelected)] call _fnc_errorAndClose;
 };
 
 // Attached unit is an artillery vehicle
@@ -54,7 +54,7 @@ _logic setVariable [QGVAR(vehicles), _vehicles];
 
 // Get previously selected parameters
 if (isNil QGVAR(lastFireMission)) then {
-    GVAR(lastFireMission) = [0, "", objNull, 0, 99, "", 1];
+    GVAR(lastFireMission) = [1, "", objNull, 0, 99, "", 1];
 };
 
 GVAR(lastFireMission) params ["_mode", "_grid", "_target", "_spread", "_units", "_ammo", "_rounds"];

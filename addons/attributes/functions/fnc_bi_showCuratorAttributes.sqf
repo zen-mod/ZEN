@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Bohemia Interactive, mharis001
  * Show Zeus attributes window for an entity.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 // Prevent attributes from opening if remote controlling (cannot override double click EH)
 if (!isNull (missionNamespace getVariable ["bis_fnc_moduleRemoteControl_unit", objNull])) exitWith {};
@@ -23,24 +23,24 @@ if (!isNull (missionNamespace getVariable ["bis_fnc_moduleRemoteControl_unit", o
 [_this] params [["_entity", objNull, [objNull, grpNull, [], ""]]];
 
 // Opening attributes disabled for object
-if (_entity isEqualType objNull && {_entity getVariable [QGVAR(disable), false]}) exitWith {};
+if (_entity isEqualType objNull && {_entity getVariable [QGVAR(disabled), false]}) exitWith {};
 
 private _curator = getAssignedCuratorLogic player;
 private _curatorInfoType = switch (typeName _entity) do {
     case (typeName objNull): {
-		private _infoTypeClass = if (isNull group _entity && {side _entity != sideLogic}) then {"curatorInfoTypeEmpty"} else {"curatorInfoType"};
+        private _infoTypeClass = if (isNull group _entity && {side _entity != sideLogic}) then {"curatorInfoTypeEmpty"} else {"curatorInfoType"};
         getText (configfile >> "CfgVehicles" >> typeOf _entity >> _infoTypeClass);
     };
-	case (typeName grpNull): {
+    case (typeName grpNull): {
         getText (configFile >> "CfgCurator" >> "groupInfoType");
     };
-	case (typeName []): {
+    case (typeName []): {
         getText (configFile >> "CfgCurator" >> "waypointInfoType");
-	};
-	case (typeName ""): {
+    };
+    case (typeName ""): {
         getText (configFile >> "CfgCurator" >> "markerInfoType");
-	};
-	default {""};
+    };
+    default {""};
 };
 
 if (isClass (configFile >> _curatorInfoType)) then {

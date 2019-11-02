@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "\a3\ui_f\hpp\defineResinclDesign.inc" // can't put this in config due to undef error
 /*
  * Author: mharis001
  * Initializes the Zeus Display.
@@ -13,8 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
-#include "\a3\ui_f\hpp\defineResinclDesign.inc" // can't put this in config due to undef error
 
 params ["_display"];
 
@@ -45,10 +45,41 @@ if (GVAR(disableLiveSearch)) then {
     _ctrlSearchButton ctrlAddEventHandler ["ButtonClick", {call FUNC(handleSearchButton)}];
 };
 
+_display displayAddEventHandler ["KeyDown", {call FUNC(handleKeyDown)}];
+
 {
     private _ctrl = _display displayCtrl _x;
-    _ctrl ctrlAddEventHandler ["ButtonClick", {call FUNC(fixSideButtons)}];
+    _ctrl ctrlAddEventHandler ["ButtonClick", {call FUNC(handleModeButtons)}];
 } forEach IDCS_MODE_BUTTONS;
+
+// Need events to check if side buttons are hovered since changing the mode
+// also triggers the button click event for the side buttons
+{
+    private _ctrl = _display displayCtrl _x;
+    _ctrl ctrlAddEventHandler ["ButtonClick", {call FUNC(handleSideButtons)}];
+
+    _ctrl ctrlAddEventHandler ["MouseEnter", {
+        params ["_ctrl"];
+        _ctrl setVariable [QGVAR(hovered), true];
+    }];
+
+    _ctrl ctrlAddEventHandler ["MouseExit", {
+        params ["_ctrl"];
+        _ctrl setVariable [QGVAR(hovered), false];
+    }];
+} forEach IDCS_SIDE_BUTTONS;
+
+private _ctrlTreeRecent = _display displayCtrl IDC_RSCDISPLAYCURATOR_CREATE_RECENT;
+_ctrlTreeRecent ctrlAddEventHandler ["TreeSelChanged", {
+    params ["_ctrlTreeRecent", "_selectedPath"];
+
+    // Store data of selected item to allow for deleting the of crew of objects placed through the recent tree
+    // tvCurSel is unavailable once the selected item has been placed, the empty path check ensures that the
+    // data is not cleared since this event occurs before the object placed event
+    if !(_selectedPath isEqualTo []) then {
+        GVAR(recentTreeData) = _ctrlTreeRecent tvData _selectedPath;
+    };
+}];
 
 [{
     params ["_display"];

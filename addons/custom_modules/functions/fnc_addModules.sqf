@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Adds custom modules to the Zeus modules tree.
@@ -13,9 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
-
-params ["_display"];
 
 if (isNil QGVAR(modulesList)) exitWith {};
 
@@ -57,4 +55,4 @@ if (isNil QGVAR(modulesList)) exitWith {};
     for "_i" from 0 to ((_ctrlTree tvCount []) - 1) do {
         _ctrlTree tvSort [[_i], false];
     };
-}, _display] call CBA_fnc_execNextFrame;
+}, _this] call CBA_fnc_execNextFrame;

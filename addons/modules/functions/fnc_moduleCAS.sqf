@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Zeus module function to make an aircraft perform CAS.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define CAS_DISTANCE 3000
 #define CAS_ALTITUDE 1000

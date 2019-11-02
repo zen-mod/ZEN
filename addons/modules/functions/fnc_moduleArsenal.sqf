@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Zeus module function to open an arsenal on a unit.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic"];
 
@@ -21,7 +21,7 @@ private _unit = attachedTo _logic;
 deleteVehicle _logic;
 
 if (isNull _unit) exitWith {
-    [LSTRING(NothingSelected)] call EFUNC(common,showMessage);
+    [LSTRING(NoUnitSelected)] call EFUNC(common,showMessage);
 };
 
 if !(_unit isKindOf "CAManBase") exitWith {
