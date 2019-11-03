@@ -734,18 +734,6 @@
             <German>Ändert das Verhalten, den Geschwindigkeitsmodus und die Formation der Gruppe.</German>
             <Polish>Zmieni zachowanie, prędkość i formację grupy.</Polish>
         </Key>
-        <Key ID="STR_ZEN_Modules_ModulePatrolArea_Relaxed">
-            <English>Relaxed</English>
-            <Russian>Расслабленный</Russian>
-            <German>Entspannt</German>
-            <Polish>Spokojni</Polish>
-        </Key>
-        <Key ID="STR_ZEN_Modules_ModulePatrolArea_Cautious">
-            <English>Cautious</English>
-            <Russian>Осторожный</Russian>
-            <German>Vorsichtig</German>
-            <Polish>Ostrożni</Polish>
-        </Key>
         <Key ID="STR_ZEN_Modules_ModuleSideRelations">
             <English>Side Relations</English>
             <Russian>Отношения сторон</Russian>
@@ -1394,6 +1382,36 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateRP_Format">
             <English>RP %1</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_SpawnReinforcements">
+            <English>Spawn Reinforcements</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_VehicleSelect">
+            <English>Vehicle Select</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_Category">
+            <English>Category</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_GroupSelect">
+            <English>Group Select</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_CurrentGroup">
+            <English>Current Group</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_VehicleLZ">
+            <English>Vehicle LZ/DZ</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_VehicleBehaviour">
+            <English>Vehicle Behaviour</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_InsertionMethod">
+            <English>Insertion Method</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_UnitRP">
+            <English>Unit RP</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_UnitBehaviour">
+            <English>Unit Behaviour</English>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel">
             <English>Create/Edit Intel</English>

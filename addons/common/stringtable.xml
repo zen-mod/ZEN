@@ -128,9 +128,6 @@
             <German>Extrem</German>
             <Polish>Ekstremalny</Polish>
         </Key>
-        <Key ID="STR_ZEN_Common_Farthest">
-            <English>Farthest</English>
-        </Key>
         <Key ID="STR_ZEN_Common_All">
             <English>All</English>
             <Russian>Все</Russian>
@@ -185,6 +182,9 @@
             <German>Einheiten</German>
             <Polish>Jednostki</Polish>
         </Key>
+        <Key ID="STR_ZEN_Common_Vehicle">
+            <English>Vehicle</English>
+        </Key>
         <Key ID="STR_ZEN_Common_Vehicles">
             <English>Vehicles</English>
             <Russian>Машины</Russian>
@@ -202,6 +202,21 @@
             <Russian>Ближайший</Russian>
             <German>Am nächsten</German>
             <Polish>Najbliższe</Polish>
+        </Key>
+        <Key ID="STR_ZEN_Common_Farthest">
+            <English>Farthest</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_Relaxed">
+            <English>Relaxed</English>
+            <Russian>Расслабленный</Russian>
+            <German>Entspannt</German>
+            <Polish>Spokojni</Polish>
+        </Key>
+        <Key ID="STR_ZEN_Common_Cautious">
+            <English>Cautious</English>
+            <Russian>Осторожный</Russian>
+            <German>Vorsichtig</German>
+            <Polish>Ostrożni</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_Speed">
             <English>Speed</English>

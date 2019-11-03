@@ -54,7 +54,6 @@ private _fnc_addSorted = {
 private _vehicles = [];
 private _infantry = [];
 
-
 {
     if (getNumber (_x >> "scope") == 2) then {
         private _className = configName _x;

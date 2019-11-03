@@ -333,7 +333,7 @@ class CfgVehicles {
     };
     class GVAR(moduleSpawnReinforcements): GVAR(moduleBase) {
         category = QGVAR(Reinforcements);
-        displayName = "Spawn Reinforcements";
+        displayName = CSTRING(SpawnReinforcements);
         curatorInfoType = QGVAR(RscSpawnReinforcements);
     };
     class GVAR(moduleSuicideBomber): GVAR(moduleBase) {

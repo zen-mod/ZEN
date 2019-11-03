@@ -1053,7 +1053,7 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
         h = POS_H(26.3);
         class controls {
             class SideLabel: EGVAR(attributes,RscLabel) {
-                text = ECSTRING(common,Side);
+                text = "$STR_eval_typeside";
             };
             class Side: GVAR(RscSidesCombo) {
                 idc = IDC_SPAWNREINFORCEMENTS_SIDE;
@@ -1066,7 +1066,7 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
                 h = POS_H(4.4);
                 class controls {
                     class Title: EGVAR(attributes,RscLabel) {
-                        text = "Vehicle Select";
+                        text = CSTRING(VehicleSelect);
                         w = POS_W(26);
                     };
                     class Background: EGVAR(attributes,RscBackground) {
@@ -1089,7 +1089,7 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
                         w = POS_W(11);
                     };
                     class CategoryLabel: FactionLabel {
-                        text = "Category";
+                        text = CSTRING(Category);
                         y = POS_H(2.2);
                     };
                     class CategoryCombo: FactionCombo {
@@ -1097,7 +1097,7 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
                         y = POS_H(2.2);
                     };
                     class VehicleLabel: FactionLabel {
-                        text = "Vehicle";
+                        text = ECSTRING(common,Vehicle);
                         y = POS_H(3.3);
                     };
                     class VehicleCombo: FactionCombo {
@@ -1114,7 +1114,7 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
                 h = POS_H(14.2);
                 class controls {
                     class Title: EGVAR(attributes,RscLabel) {
-                        text = "Group Select";
+                        text = CSTRING(GroupSelect);
                         w = POS_W(26);
                     };
                     class Background: EGVAR(attributes,RscBackground) {
@@ -1123,22 +1123,37 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
                         w = POS_W(26);
                         h = POS_H(13.2);
                     };
-                    class Tree: ctrlTree {
-                        idc = IDC_SPAWNREINFORCEMENTS_GROUP_TREE;
+                    class TreeMode: ctrlToolbox {
+                        idc = IDC_SPAWNREINFORCEMENTS_TREE_MODE;
                         x = POS_W(0.1);
                         y = POS_H(1.1);
                         w = POS_W(13);
-                        h = POS_H(13);
+                        h = POS_H(1);
+                        rows = 1;
+                        columns = 2;
+                        strings[] = {ECSTRING(common,Premade), "$STR_Radio_Custom"};
+                        colorBackground[] = {0, 0, 0, 0.7};
+                    };
+                    class TreeGroups: ctrlTree {
+                        idc = IDC_SPAWNREINFORCEMENTS_TREE_GROUPS;
+                        x = POS_W(0.1);
+                        y = POS_H(2.1) - pixelH;
+                        w = POS_W(13);
+                        h = POS_H(12);
                         sizeEx = 3.96 * (1 / (getResolution select 3)) * pixelGrid * 0.5;
                         colorBackground[] = {0, 0, 0, 0.3};
                         colorBorder[] = {0, 0, 0, 0};
                         disableKeyboardSearch = 1;
                     };
+                    class TreeUnits: TreeGroups {
+                        idc = IDC_SPAWNREINFORCEMENTS_TREE_UNITS;
+                    };
                     class Label: EGVAR(attributes,RscLabel) {
-                        text = "Current Group";
+                        text = CSTRING(CurrentGroup);
                         x = POS_W(13.2);
                         y = POS_H(1.1);
                         w = POS_W(12.7);
+                        colorBackground[] = {0, 0, 0, 0.7};
                     };
                     class Count: Label {
                         idc = IDC_SPAWNREINFORCEMENTS_GROUP_COUNT;
@@ -1147,7 +1162,7 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
                         w = POS_W(12);
                         colorBackground[] = {0, 0, 0, 0};
                     };
-                    class MaxIcon: RscPicture {
+                    class PersonIcon: RscPicture {
                         idc = -1;
                         text = QPATHTOF(ui\person_ca.paa);
                         x = POS_W(24.9);
@@ -1173,7 +1188,7 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
                 h = POS_H(6.6);
                 class controls {
                     class Title: EGVAR(attributes,RscLabel) {
-                        text = "Properties";
+                        text = "$STR_A3_RscDisplayLogin_Properties";
                         w = POS_W(26);
                     };
                     class Background: EGVAR(attributes,RscBackground) {
@@ -1182,35 +1197,27 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
                         w = POS_W(26);
                         h = POS_H(5.6);
                     };
-                    class LZLabel: EGVAR(attributes,RscLabel) {
-                        text = "LZ/DZ";
+                    class VehicleLZLabel: EGVAR(attributes,RscLabel) {
+                        text = CSTRING(VehicleLZ);
                         x = POS_W(3);
                         y = POS_H(1.1);
                         w = POS_W(8.9);
                         colorBackground[] = {0, 0, 0, 0.7};
                     };
-                    class LZ: EGVAR(attributes,RscCombo) {
-                        idc = IDC_SPAWNREINFORCEMENTS_LZ;
+                    class VehicleLZ: EGVAR(attributes,RscCombo) {
+                        idc = IDC_SPAWNREINFORCEMENTS_VEHICLE_LZ;
                         x = POS_W(12);
                         y = POS_H(1.1);
                         w = POS_W(11);
                     };
-                    class RPLabel: LZLabel {
-                        text = "Unit RP";
-                        y = POS_H(2.2);
-                    };
-                    class RP: LZ {
-                        idc = IDC_SPAWNREINFORCEMENTS_RP;
-                        y = POS_H(2.2);
-                    };
-                    class VehicleBehaviourLabel: LZLabel {
+                    class VehicleBehaviourLabel: VehicleLZLabel {
                         text = "Vehicle Behaviour";
-                        y = POS_H(3.3);
+                        y = POS_H(2.2);
                     };
                     class VehicleBehaviour: ctrlToolbox {
                         idc = IDC_SPAWNREINFORCEMENTS_VEHICLE_BEHAVIOUR;
                         x = POS_W(12);
-                        y = POS_H(3.3);
+                        y = POS_H(2.2);
                         w = POS_W(11);
                         h = POS_H(1);
                         rows = 1;
@@ -1218,23 +1225,13 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
                         strings[] = {"Stay at LZ", "RTB and Despawn"};
                         colorBackground[] = {0, 0, 0, 0.7};
                     };
-                    class UnitBehaviourLabel: LZLabel {
-                        text = "Unit Behaviour";
-                        y = POS_H(4.4);
+                    class InsertionLabel: VehicleLZLabel {
+                        text = CSTRING(InsertionMethod);
+                        y = POS_H(3.3);
                     };
-                    class UnitBehaviour: VehicleBehaviour {
-                        idc = IDC_SPAWNREINFORCEMENTS_UNIT_BEHAVIOUR;
-                        y = POS_H(4.4);
-                        columns = 4;
-                        strings[] = {"Default", "Relaxed", "Cautious", "Combat"};
-                    };
-                    class InsertionLabel: LZLabel {
-                        text = "Insertion Method";
-                        y = POS_H(5.5);
-                    };
-                    class Insertion: LZ {
-                        idc = IDC_SPAWNREINFORCEMENTS_INSERTION;
-                        y = POS_H(5.5);
+                    class Insertion: VehicleLZ {
+                        idc = IDC_SPAWNREINFORCEMENTS_VEHICLE_INSERTION;
+                        y = POS_H(3.3);
                         class Items {
                             class Land {
                                 text = ECSTRING(ai,Land);
@@ -1243,6 +1240,29 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
                             class Paradrop {
                                 text = ECSTRING(ai,Paradrop);
                             };
+                        };
+                    };
+                    class UnitRPLabel: VehicleLZLabel {
+                        text = CSTRING(UnitRP);
+                        y = POS_H(4.4);
+                    };
+                    class UnitRP: VehicleLZ {
+                        idc = IDC_SPAWNREINFORCEMENTS_UNIT_RP;
+                        y = POS_H(4.4);
+                    };
+                    class UnitBehaviourLabel: VehicleLZLabel {
+                        text = CSTRING(UnitBehaviour);
+                        y = POS_H(5.5);
+                    };
+                    class UnitBehaviour: VehicleBehaviour {
+                        idc = IDC_SPAWNREINFORCEMENTS_UNIT_BEHAVIOUR;
+                        y = POS_H(5.5);
+                        columns = 4;
+                        strings[] = {
+                            "$STR_3den_attributes_default_unchanged_text",
+                            ECSTRING(common,Relaxed),
+                            ECSTRING(common,Cautious),
+                            "$STR_combat"
                         };
                     };
                 };
