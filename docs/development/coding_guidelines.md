@@ -6,7 +6,7 @@
 
 #### 1.1.1 Private Variable Naming
 
-To make code as readable as possible, try to use self explanatory variable names and avoid using single character variable names.
+To improve the readability of code, try to use self-explanatory variable names and avoid using single-character variable names.
 
 Example: `_velocity` instead of `_v`
 
@@ -16,7 +16,7 @@ All global variables must start with the ZEN prefix followed by the component, s
 
 Example: `zen_component_variableName`
 
-_For ZEN this is done automatically through the usage of the `GVAR` macro family._
+_For ZEN this is done automatically through the use of the `GVAR` macro family._
 
 #### 1.1.3 Function Naming
 
