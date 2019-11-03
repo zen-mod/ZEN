@@ -56,6 +56,7 @@
             <German>Sensoren</German>
             <Czech>Senzory</Czech>
             <Italian>Sensori</Italian>
+            <Polish>Sensory</Polish>
             <Portuguese>Sensores</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeSide">
@@ -63,6 +64,7 @@
             <German>Seite ändern</German>
             <Czech>Změnit stranu</Czech>
             <Italian>Cambia Lato</Italian>
+            <Polish>Zmień Stronę</Polish>
             <Portuguese>Alterar Lado</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeSkills">
@@ -70,6 +72,7 @@
             <German>Fähigkeiten ändern</German>
             <Czech>Změnit dovednosti</Czech>
             <Italian>Cambia Abilità</Italian>
+            <Polish>Zmień umiejętności</Polish>
             <Portuguese>Alterar Habilidades</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Skills">
@@ -77,6 +80,7 @@
             <German>Fähigkeiten</German>
             <Czech>Dovednosti</Czech>
             <Italian>Abilità</Italian>
+            <Polish>Umiejętności</Polish>
             <Portuguese>Habilidades</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_AimingAccuracy">
@@ -84,6 +88,7 @@
             <German>Zielgenauigkeit</German>
             <Czech>Přesnost míření</Czech>
             <Italian>Precisione</Italian>
+            <Polish>Celność</Polish>
             <Portuguese>Precisão da Mira</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_AimingSpeed">
@@ -91,12 +96,14 @@
             <German>Zilelgeschwindigkeit</German>
             <Czech>Rychlost míření</Czech>
             <Italian>Velcoità di puntamento</Italian>
+            <Polish>Prędkość celowania</Polish>
             <Portuguese>Velocidade da Mira</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_AimingShake">
             <English>Aiming Shake</English>
             <German>Waffenschwankung</German>
             <Czech>Chvění míření</Czech>
+            <Polish>Niestabilność celowania</Polish>
             <Portuguese>Balanço da Mira</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Commanding">
@@ -104,6 +111,7 @@
             <German>Kommandierend</German>
             <Czech>Velení</Czech>
             <Italian>Comando</Italian>
+            <Polish>Wyżej położony</Polish>
             <Portuguese>Comandante</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Courage">
@@ -111,6 +119,7 @@
             <German>Mut</German>
             <Czech>Odvaha</Czech>
             <Italian>Coraggio</Italian>
+            <Polish>Odwaga</Polish>
             <Portuguese>Coragem</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_SpotDistance">
@@ -132,6 +141,7 @@
             <German>Nachladezeit</German>
             <Czech>Rychlost přebíjení</Czech>
             <Italian>Velocità di Ricarica</Italian>
+            <Polish>Prędkość przeładowania</Polish>
             <Portuguese>Velocidade de Recarga</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeTraits">
@@ -139,6 +149,7 @@
             <German>Eigenschaften ändern</German>
             <Czech>Změnit vlastnosti</Czech>
             <Italian>Cambia Tratti</Italian>
+            <Polish>Zmien Cechy</Polish>
             <Portuguese>Alterar Propriedades</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Traits">
@@ -146,6 +157,7 @@
             <German>Eigenschaften</German>
             <Czech>Vlastnosti</Czech>
             <Italian>Tratti</Italian>
+            <Polish>Cechy</Polish>
             <Portuguese>Propriedades</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_MedicalTraining">
@@ -153,6 +165,7 @@
             <German>Medizinische Ausbildung</German>
             <Czech>Lékařské školení</Czech>
             <Italian>Addestramento Medico</Italian>
+            <Polish>Szkolenie Medyczne</Polish>
             <Portuguese>Treinamento Médico</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_EngineeringSkill">
@@ -160,6 +173,7 @@
             <German>Technische Fähigkeiten</German>
             <Czech>Inženýrská dovednost</Czech>
             <Italian>Abilità di Ingegneriia</Italian>
+            <Polish>Szkolenie Inżynieryjne</Polish>
             <Portuguese>Habilidade de Engenharia</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Doctor">
@@ -167,6 +181,7 @@
             <German>Doktor</German>
             <Czech>Doktor</Czech>
             <Italian>Dottore</Italian>
+            <Polish>Doktor</Polish>
             <Portuguese>Doutor</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_AdvEngineer">
@@ -174,12 +189,14 @@
             <German>Erfahrene Techniker</German>
             <Czech>Pokročilý Inženýr</Czech>
             <Italian>Ingegnere Avanzato</Italian>
+            <Polish>Zaawansowany Inżynier</Polish>
             <Portuguese>Engenheiros Experientes</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_EOD">
             <English>EOD</English>
             <German>Kampfmittelbeseitigung</German>
             <Czech>Likvidace bomb</Czech>
+            <Polish>Saper</Polish>
             <Portuguese>Eliminação Explosiva de Ordenamento</Portuguese>
         </Key>
     </Package>

@@ -5,18 +5,21 @@
             <English>Create Area Marker</English>
             <German>Bereichsmarkierungen erstellen</German>
             <Czech>Vytvořit značku oblasti</Czech>
+            <Polish>Stwórz Marker Obszarowy</Polish>
             <Portuguese>Criar marcador de área</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Area_Markers_EditAreaMarker">
             <English>EDIT AREA MARKER</English>
             <German>BEREICHSMARKIERUNG BEARBEITEN</German>
             <Czech>ÚPRAVA ZNAČKY OBLASTI</Czech>
+            <Polish>EDYTUJ MARKER OBSZAROWY</Polish>
             <Portuguese>Editar marcador de área</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Area_Markers_PlaceOnMap">
             <English>Place On Map</English>
             <German>Auf Karte platzieren</German>
             <Czech>Umístit na mapu</Czech>
+            <Polish>Zaznacz Na Mapie</Polish>
             <Portuguese>Coloque no mapa</Portuguese>
         </Key>
     </Package>
