@@ -6,6 +6,7 @@
             <Russian>Двигатель</Russian>
             <German>Motor</German>
             <Polish>Silnik</Polish>
+            <Italian>Motore</Italian>
             <Portuguese>Motor</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Lights">
@@ -13,6 +14,7 @@
             <Russian>Фары</Russian>
             <German>Lichter</German>
             <Polish>Światła</Polish>
+            <Italian>Luci</Italian>
             <Portuguese>Luzes</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_PlateNumber">
@@ -20,6 +22,7 @@
             <Russian>Госномер</Russian>
             <German>Kennzeichen</German>
             <Polish>Tablica rejestracyjna</Polish>
+            <Italian>Numero di targa</Italian>
             <Portuguese>Número da Placa</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Exec_Tooltip">
@@ -33,6 +36,7 @@
             <Russian>Таймаут (с)</Russian>
             <German>Zeitüberschreitung (s)</German>
             <Polish>Limit czasu (s)</Polish>
+            <Italian>Tempo limite (s)</Italian>
             <Portuguese>Tempo Esgotado (s)</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Timeout_Tooltip">
@@ -44,36 +48,42 @@
         <Key ID="STR_ZEN_Attributes_Sensors">
             <English>Sensors</English>
             <German>Sensoren</German>
+            <Italian>Sensori</Italian>
             <Polish>Sensory</Polish>
             <Portuguese>Sensores</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeSide">
             <English>Change Side</English>
             <German>Seite ändern</German>
+            <Italian>Cambia Lato</Italian>
             <Polish>Zmień Stronę</Polish>
             <Portuguese>Alterar Lado</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeSkills">
             <English>Change Skills</English>
             <German>Fähigkeiten ändern</German>
+            <Italian>Cambia Abilità</Italian>
             <Polish>Zmień umiejętności</Polish>
             <Portuguese>Alterar Habilidades</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Skills">
             <English>Skills</English>
             <German>Fähigkeiten</German>
+            <Italian>Abilità</Italian>
             <Polish>Umiejętności</Polish>
             <Portuguese>Habilidades</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_AimingAccuracy">
             <English>Aiming Accuracy</English>
             <German>Zielgenauigkeit</German>
+            <Italian>Precisione</Italian>
             <Polish>Celność</Polish>
             <Portuguese>Precisão da Mira</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_AimingSpeed">
             <English>Aiming Speed</English>
             <German>Zilelgeschwindigkeit</German>
+            <Italian>Velcoità di puntamento</Italian>
             <Polish>Prędkość celowania</Polish>
             <Portuguese>Velocidade da Mira</Portuguese>
         </Key>
@@ -86,64 +96,75 @@
         <Key ID="STR_ZEN_Attributes_Commanding">
             <English>Commanding</English>
             <German>Kommandierend</German>
+            <Italian>Comando</Italian>
             <Polish>Wyżej położony</Polish>
             <Portuguese>Comandante</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Courage">
             <English>Courage</English>
             <German>Mut</German>
+            <Italian>Coraggio</Italian>
             <Polish>Odwaga</Polish>
             <Portuguese>Coragem</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_SpotDistance">
             <English>Spotting Distance</English>
             <German>Aufklärungsdistanz</German>
+            <Italian>Distanza di Spotting</Italian>
             <Portuguese>Distância de Detecção</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_SpotTime">
             <English>Spotting Speed</English>
             <German>Aufklärungszeit</German>
+            <Italian>Velocità di Spotting</Italian>
             <Portuguese>Velocidade de Detecção</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_ReloadSpeed">
             <English>Reload Speed</English>
             <German>Nachladezeit</German>
+            <Italian>Velocità di Ricarica</Italian>
             <Polish>Prędkość przeładowania</Polish>
             <Portuguese>Velocidade de Recarga</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeTraits">
             <English>Change Traits</English>
             <German>Eigenschaften ändern</German>
+            <Italian>Cambia Tratti</Italian>
             <Polish>Zmien Cechy</Polish>
             <Portuguese>Alterar Propriedades</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Traits">
             <English>Traits</English>
             <German>Eigenschaften</German>
+            <Italian>Tratti</Italian>
             <Polish>Cechy</Polish>
             <Portuguese>Propriedades</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_MedicalTraining">
             <English>Medical Training</English>
             <German>Medizinische Ausbildung</German>
+            <Italian>Addestramento Medico</Italian>
             <Polish>Szkolenie Medyczne</Polish>
             <Portuguese>Treinamento Médico</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_EngineeringSkill">
             <English>Engineering Skill</English>
             <German>Technische Fähigkeiten</German>
+            <Italian>Abilità di Ingegneriia</Italian>
             <Polish>Szkolenie Inżynieryjne</Polish>
             <Portuguese>Habilidade de Engenharia</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Doctor">
             <English>Doctor</English>
             <German>Doktor</German>
+            <Italian>Dottore</Italian>
             <Polish>Doktor</Polish>
             <Portuguese>Doutor</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_AdvEngineer">
             <English>Adv. Engineer</English>
             <German>Erfahrene Techniker</German>
+            <Italian>Ingegnere Avanzato</Italian>
             <Polish>Zaawansowany Inżynier</Polish>
             <Portuguese>Engenheiros Experientes</Portuguese>
         </Key>

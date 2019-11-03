@@ -14,6 +14,7 @@
         <Key ID="STR_ZEN_Visibility_Visible">
             <English>VISIBLE</English>
             <German>SICHTBAR</German>
+            <Italian>VISIBILE</Italian>
             <Polish>WIDOCZNY</Polish>
         </Key>
     </Package>

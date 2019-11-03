@@ -4,11 +4,13 @@
         <Key ID="STR_ZEN_Camera_Camera">
             <English>Camera</English>
             <German>Kamera</German>
+            <Italian>Camera</Italian>
             <Polish>Kamera</Polish>
         </Key>
         <Key ID="STR_ZEN_Camera_FollowTerrain">
             <English>Follow Terrain</English>
             <German>Geländeform folgen</German>
+            <Italian>Segui il terreno</Italian>
             <Polish>Śledz Teren</Polish>
         </Key>
         <Key ID="STR_ZEN_Camera_FollowTerrain_Description">
