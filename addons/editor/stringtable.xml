@@ -87,5 +87,11 @@
             <English>Makes all selected vehicles deploy countermeasures such as smokes and flares.</English>
             <German>Alle ausgewählten Fahrzeuge setzen Gegenmaßnahmen wie Rauch und Leuchtfackeln ein.</German>
         </Key>
+        <Key ID="STR_ZEN_Editor_ToggleIcons">
+            <English>Toggle Editable Icons</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_ToggleIcons_Description">
+            <English>Toggles the visibility of all editable icons. Useful for temporarily reducing lag or onscreen clutter when there are a lot of icons.</English>
+        </Key>
     </Package>
 </Project>
