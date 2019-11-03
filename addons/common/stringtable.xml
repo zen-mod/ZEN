@@ -6,6 +6,7 @@
             <German>Zeus Verbessert</German>
             <Polish>Zeus Enhanced</Polish>
             <Czech>Zeus vylepšený</Czech>
+            <Italian>Zeus Enhanced</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Enabled">
             <English>Enabled</English>
@@ -82,6 +83,7 @@
             <German>Sehr niedrieg</German>
             <Polish>Bardzo niski</Polish>
             <Czech>Velmi nízký</Czech>
+            <Italian>Molto Basso</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Low">
             <English>Low</English>
@@ -89,6 +91,7 @@
             <German>Niedrig</German>
             <Polish>Niski</Polish>
             <Czech>Nízký</Czech>
+            <Italian>Basso</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Medium">
             <English>Medium</English>
@@ -96,6 +99,7 @@
             <German>Medium</German>
             <Polish>Średni</Polish>
             <Czech>Střední</Czech>
+            <Italian>Medio</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_High">
             <English>High</English>
@@ -103,6 +107,7 @@
             <German>Hoch</German>
             <Polish>Wysoki</Polish>
             <Czech>Vysoký</Czech>
+            <Italian>Alto</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_VeryHigh">
             <English>Very High</English>
@@ -110,6 +115,7 @@
             <German>Sehr hoch</German>
             <Polish>Bardzo wysoki</Polish>
             <Czech>Velmi vysoký</Czech>
+            <Italian>Molto Alto</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_VeryWeak">
             <English>Very Weak</English>
@@ -117,6 +123,7 @@
             <German>Sehr schwach</German>
             <Polish>Bardzo słaby</Polish>
             <Czech>Velmi slabý</Czech>
+            <Italian>Molto Debole</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Weak">
             <English>Weak</English>
@@ -124,6 +131,7 @@
             <German>Schwach</German>
             <Polish>Słaby</Polish>
             <Czech>Slabý</Czech>
+            <Italian>Debole</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Strong">
             <English>Strong</English>
@@ -131,6 +139,7 @@
             <German>Stark</German>
             <Polish>Silny</Polish>
             <Czech>Silný</Czech>
+            <Italian>Forte</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Extreme">
             <English>Extreme</English>
@@ -138,6 +147,7 @@
             <German>Extrem</German>
             <Polish>Ekstremalny</Polish>
             <Czech>Extrémní</Czech>
+            <Italian>Estremo</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_All">
             <English>All</English>
@@ -145,6 +155,7 @@
             <German>Alle</German>
             <Polish>Wszystko</Polish>
             <Czech>Všechno</Czech>
+            <Italian>Tutti</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Side">
             <English>Side</English>
@@ -152,6 +163,7 @@
             <German>Seite</German>
             <Polish>Strona</Polish>
             <Czech>Strana</Czech>
+            <Italian>Lato</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Sides">
             <English>Sides</English>
@@ -159,6 +171,7 @@
             <German>Seiten</German>
             <Polish>Strony</Polish>
             <Czech>Strany</Czech>
+            <Italian>Lati</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_SelectedGroup">
             <English>Selected Group</English>
@@ -179,6 +192,7 @@
             <German>Fraktion</German>
             <Polish>Frakcja</Polish>
             <Czech>Frakce</Czech>
+            <Italian>Fazione</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Aircraft">
             <English>Aircraft</English>
@@ -186,6 +200,7 @@
             <German>Fluggerät</German>
             <Polish>Pojazd latający</Polish>
             <Czech>Letadlo</Czech>
+            <Italian>Aerei</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Filter">
             <English>Filter</English>
@@ -193,6 +208,7 @@
             <German>Filter</German>
             <Polish>Filtr</Polish>
             <Czech>Filtr</Czech>
+            <Italian>Filtri</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Units">
             <English>Units</English>
@@ -200,6 +216,7 @@
             <German>Einheiten</German>
             <Polish>Jednostki</Polish>
             <Czech>Jednotky</Czech>
+            <Italian>Unità</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Vehicles">
             <English>Vehicles</English>
@@ -207,6 +224,7 @@
             <German>Fahrzeuge</German>
             <Polish>Pojazdy</Polish>
             <Czech>Vozidla</Czech>
+            <Italian>Veicoli</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Static">
             <English>Static</English>
@@ -221,6 +239,7 @@
             <German>Am nächsten</German>
             <Polish>Najbliższe</Polish>
             <Czech>Nejbližší</Czech>
+            <Italian>Più vicino</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Speed">
             <English>Speed</English>
@@ -228,6 +247,7 @@
             <German>Geschwindigkeit</German>
             <Polish>Prędkość</Polish>
             <Czech>Rychlost</Czech>
+            <Italian>Velocità</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Range">
             <English>Range</English>
@@ -249,6 +269,7 @@
             <German>Höhe</German>
             <Polish>Wysokość</Polish>
             <Czech>Výška</Czech>
+            <Italian>Altezza</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Height_Units">
             <English>Height (m)</English>
@@ -256,10 +277,12 @@
             <German>Höhe (m)</German>
             <Polish>Wysokość (m)</Polish>
             <Czech>Výška (m)</Czech>
+            <Italian>Altezza (m)</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Teleport">
             <English>Teleport</English>
             <German>Teleportieren</German>
+            <Italian>Teletrasporto</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects">
             <English>Add Objects to Curators</English>

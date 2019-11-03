@@ -5,11 +5,13 @@
             <English>Camera</English>
             <German>Kamera</German>
             <Czech>Kamera</Czech>
+            <Italian>Camera</Italian>
         </Key>
         <Key ID="STR_ZEN_Camera_FollowTerrain">
             <English>Follow Terrain</English>
             <German>Geländeform folgen</German>
             <Czech>Sleduj terén</Czech>
+            <Italian>Segui il terreno</Italian>
         </Key>
         <Key ID="STR_ZEN_Camera_FollowTerrain_Description">
             <English>Controls whether the camera's height should adjust with changes in terrain elevation.</English>
