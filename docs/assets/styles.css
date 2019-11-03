@@ -79,8 +79,8 @@ a {
 }
 
 .markdown-section hr {
-    margin: 20px 0;
-    border-bottom: 1px solid #aaa;
+    margin: 1.5em 0;
+    border-bottom: 1px solid #999;
 }
 
 .markdown-section pre:after {
