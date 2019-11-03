@@ -4,10 +4,12 @@
         <Key ID="STR_ZEN_Camera_Camera">
             <English>Camera</English>
             <German>Kamera</German>
+            <Italian>Camera</Italian>
         </Key>
         <Key ID="STR_ZEN_Camera_FollowTerrain">
             <English>Follow Terrain</English>
             <German>Geländeform folgen</German>
+            <Italian>Segui il terreno</Italian>
         </Key>
         <Key ID="STR_ZEN_Camera_FollowTerrain_Description">
             <English>Controls whether the camera's height should adjust with changes in terrain elevation.</English>
