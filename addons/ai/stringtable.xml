@@ -8,12 +8,14 @@
         <Key ID="STR_ZEN_AI_Paradrop">
             <English>Paradrop</English>
             <German>Fallschirmsprung</German>
+            <Czech>Seskok padákem</Czech>
             <Portuguese>Queda Livre</Portuguese>
         </Key>
         <Key ID="STR_ZEN_AI_CouldNotGarrisonAll">
             <English>Unable to garrison all units - not enough positions</English>
             <German>Das Gebäude hat zu wenig Positionen - Nicht alle Einheiten konnten das Gebäude besetzen</German>
             <Polish>Nie udało się zgarnizonować wszystkich jednostek - za mało pozycji</Polish>
+            <Czech>Nelze obsadit všechny jednotky - nedostatek pozic</Czech>
             <Portuguese>Incapaz de guarnecer todas as unidades - não há posições o suficiente</Portuguese>
         </Key>
     </Package>
