@@ -25,6 +25,7 @@
             <German>Adaptive Geschwindigkeit</German>
             <Czech>Adaptivní rychlost</Czech>
             <Polish>Prędkość adaptacyjna</Polish>
+            <Italian>Velocità adattiva</Italian>
         </Key>
         <Key ID="STR_ZEN_Camera_AdaptiveSpeed_Description">
             <English>Adapts the camera's speed based on its current height. Lower height - slower camera movement.</English>
@@ -36,6 +37,7 @@
             <German>Standardmäßiger Geschwindigkeitskoeffizient</German>
             <Czech>Výchozí koeficient rychlosti</Czech>
             <Polish>Współczynnik prędkości domyślnej </Polish>
+            <Italian>Coefficente velocità default</Italian>
         </Key>
         <Key ID="STR_ZEN_Camera_DefaultSpeedCoef_Description">
             <English>Coefficient for the default camera movement speed, higher is faster.</English>

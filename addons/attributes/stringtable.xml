@@ -34,6 +34,7 @@
             <Polish>Ten kod zostanie wykonany w środowisku unscheduled na maszynie gdzie obiekt jest lokalny.\nObiekt zostanie przekazany w zmiennej "_this".</Polish>
             <Czech>Tento kód bude spuštěn v neplánovaném prostředí na počítači, kde je tento objekt lokální. \n Objekt bude předán v proměnné "_this".</Czech>
             <Portuguese>Este código será executado no ambiente unscheduled na máquina onde este objeto é local.\nO objeto será passado na variável "_this".</Portuguese>
+            <Italian>Questo codice verrà eseguito nell'ambiente non schedulato sulla macchina in cui l'oggetto è locato. \n L'oggetto è passato tramite la variabile "_this"</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_Timeout">
             <English>Timeout (s)</English>
@@ -41,8 +42,8 @@
             <German>Zeitüberschreitung (s)</German>
             <Polish>Limit czasu (s)</Polish>
             <Czech>Časový limit(s)</Czech>
-            <Italian>Tempo limite (s)</Italian>
             <Portuguese>Tempo Esgotado (s)</Portuguese>
+            <Italian>Tempo limite (s)</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_Timeout_Tooltip">
             <English>The time (in seconds) between waypoint condition satisfaction and waypoint completion.</English>
@@ -50,6 +51,7 @@
             <Polish>Czas (w sekundach) pomiędzy wypełnieniem warunku zaliczenia punktu trasy a jego faktycznym zaliczeniem.</Polish>
             <Czech>Čas (v sekundách) mezi splněním podmínky trasového bodu a dokončením trasového bodu.</Czech>
             <Portuguese>O tempo (em segundos) entre a condição satisfatória da parada e a conclusão da parada.</Portuguese>
+            <Italian>Il tempo (in secondi) che passa tra il soddisfacimento della condizione dell'obiettivo e il suo completamento </Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_Sensors">
             <English>Sensors</English>

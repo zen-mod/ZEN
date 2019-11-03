@@ -13,16 +13,19 @@
             <Russian>Телепортировать игроков</Russian>
             <German>Spieler teleportieren</German>
             <Polish>Teleportuj graczy</Polish>
+            <Italian>Teletrasporta giocatore</Italian>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_TeleportZeus">
             <English>Teleport Zeus</English>
             <German>Zeus teleportieren</German>
             <Polish>Teleportuj Zeusa</Polish>
+            <Italian>Teletrasporta Zeus</Italian>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_VehicleLogistics">
             <English>Vehicle Logistics</English>
             <Polish>Logistyka pojazdów</Polish>
             <German>Fahrzeuglogistik</German>
+            <Italian>Logistica dei veicoli</Italian>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_Rearm">
             <English>Rearm</English>

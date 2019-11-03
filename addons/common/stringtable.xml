@@ -76,6 +76,7 @@
             <German>Unverändert</German>
             <Polish>Niezmieniony</Polish>
             <Czech>Beze změny</Czech>
+            <Italian>Invariato</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_VeryLow">
             <English>Very Low</English>
@@ -232,6 +233,7 @@
             <German>Statische Waffen</German>
             <Polish>Obiekty statyczne</Polish>
             <Czech>Statický</Czech>
+            <Italian>Statico</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Nearest">
             <English>Nearest</English>
@@ -255,6 +257,7 @@
             <German>Reichweite</German>
             <Polish>Zasięg</Polish>
             <Czech>Dosah</Czech>
+            <Italian>Raggio</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Radius">
             <English>Radius</English>
@@ -262,6 +265,7 @@
             <German>Radius</German>
             <Polish>Promień</Polish>
             <Czech>Rádius</Czech>
+            <Italian>Raggio</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Height">
             <English>Height</English>
@@ -313,6 +317,7 @@
             <Russian>Тёмная тема</Russian>
             <German>Dunkler Modus</German>
             <Polish>Tryb ciemny</Polish>
+            <Italian>Modalità scura</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_DarkMode_Description">
             <English>Changes the appearance of various user interface elements to a darker color theme.</English>
