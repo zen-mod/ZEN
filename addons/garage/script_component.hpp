@@ -50,6 +50,7 @@
 #define IDC_LIST_EMPTY 332
 
 #define IDC_MENU_BAR 340
+#define IDC_BUTTON_APPLY 341
 
 #define IDC_INFO_GROUP 350
 #define IDC_INFO_NAME 351

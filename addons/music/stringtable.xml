@@ -3,9 +3,11 @@
     <Package name="Music">
         <Key ID="STR_ZEN_Music_ThisIsWarPartOne">
             <English>This Is War - Part 1</English>
+            <Polish>To jest Wojna - Część 1</Polish>
         </Key>
         <Key ID="STR_ZEN_Music_ThisIsWarPartTwo">
             <English>This Is War - Part 2</English>
+            <Polish>To jest Wojna - Część 2</Polish>
         </Key>
         <Key ID="STR_ZEN_Music_EagleWing_Defcon">
             <English>A2 EW - Defcon</English>

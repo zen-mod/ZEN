@@ -6,7 +6,7 @@
             <Russian>Редактировать снаряжение</Russian>
             <German>Inventar bearbeiten</German>
             <Polish>Edytuj wyposażenie</Polish>
-            <Italian>Modifica inventario</Italian>
+            <Italian>Modifica Inventario</Italian>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_TeleportPlayers">
             <English>Teleport Players</English>
@@ -37,7 +37,7 @@
             <English>Refuel</English>
             <Polish>Zatankuj</Polish>
             <German>Auftanken</German>
-            <Italian>Fai rifornimento</Italian>
+            <Italian>Rifornimento</Italian>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_Repair">
             <English>Repair</English>
