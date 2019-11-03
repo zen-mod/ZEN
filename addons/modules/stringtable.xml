@@ -1309,6 +1309,7 @@
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogDecay">
             <English>Fog Decay</English>
             <German>Nebelzerfall</German>
+            <Polish>Zanik mgły</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogDecay_Tooltip">
             <English>Sets how much the fog density decays with altitude. Larger values result in a sharper fog ceiling (more defined fog start).\nSmaller values lead to a more smooth transition from no fog to full fog, and as a result, the fog will cross the base altitude line more.\nWhen this is a positive value, the fog will be generated below the base altitude (valley fog); if negative, above the base altitude (mountain fog).</English>
@@ -1411,6 +1412,7 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ShareWith">
             <English>Share With</English>
+            <Polish>Współdziel z</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_DeleteOnCompletion">
             <English>Delete On Completion</English>
@@ -1418,6 +1420,7 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ActionText">
             <English>Action Text</English>
+            <Polish>Tekst akcji</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ActionDuration">
             <English>Action Duration</English>
@@ -1440,6 +1443,7 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_PlayerFoundIntel">
             <English>%1 found intel: "%2"</English>
+            <Polish>%1 znalazł dane wywiadowcze: "%2"</Polish>
         </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_Buildings">
