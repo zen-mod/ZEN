@@ -2,26 +2,22 @@
 /*
  * Author: mharis001
  * Fixes disappearing side buttons when changing modes.
- * Called from ButtonClick EH.
  *
  * Arguments:
- * 0: Mode button <CONTROL>
+ * 0: Display <DISPLAY>
+ * 1: Mode <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL] call zen_editor_fnc_fixSideButtons
+ * [DISPLAY, 0] call zen_editor_fnc_fixSideButtons
  *
  * Public: No
  */
 
-// One frame later so RscDisplayCurator_sections is updated
 [{
-    params ["_ctrl"];
-
-    private _display = ctrlParent _ctrl;
-    RscDisplayCurator_sections params ["_mode"];
+    params ["_display", "_mode"];
 
     // Get side buttons to show based on mode
     private _idcs = switch (_mode) do {

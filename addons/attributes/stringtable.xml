@@ -6,127 +6,152 @@
             <Russian>Двигатель</Russian>
             <German>Motor</German>
             <Polish>Silnik</Polish>
+            <Portuguese>Motor</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Lights">
             <English>Lights</English>
             <Russian>Фары</Russian>
             <German>Lichter</German>
             <Polish>Światła</Polish>
+            <Portuguese>Luzes</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_PlateNumber">
             <English>Plate Number</English>
             <Russian>Госномер</Russian>
             <German>Kennzeichen</German>
             <Polish>Tablica rejestracyjna</Polish>
+            <Portuguese>Número da Placa</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Exec_Tooltip">
             <English>This code will be executed in the unscheduled environment on the machine where this object is local.\nThe object will be passed in the "_this" variable.</English>
             <German>Der eingegebene Code wird in einer unscheduled Umgebung lokal zum Objkekt ausgeführt.\nDas Objekt wird in der Variable names "_this" übergeben.</German>
             <Polish>Ten kod zostanie wykonany w środowisku unscheduled na maszynie gdzie obiekt jest lokalny.\nObiekt zostanie przekazany w zmiennej "_this".</Polish>
+            <Portuguese>Este código será executado no ambiente unscheduled na máquina onde este objeto é local.\nO objeto será passado na variável "_this".</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Timeout">
             <English>Timeout (s)</English>
             <Russian>Таймаут (с)</Russian>
             <German>Zeitüberschreitung (s)</German>
             <Polish>Limit czasu (s)</Polish>
+            <Portuguese>Tempo Esgotado (s)</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Timeout_Tooltip">
             <English>The time (in seconds) between waypoint condition satisfaction and waypoint completion.</English>
             <German>Zeit (in Sekunden) zwischen der Erfüllung der Wegpunktbedingung und der Vervollständigung des Wegpunktes.</German>
             <Polish>Czas (w sekundach) pomiędzy wypełnieniem warunku zaliczenia punktu trasy a jego faktycznym zaliczeniem.</Polish>
+            <Portuguese>O tempo (em segundos) entre a condição satisfatória da parada e a conclusão da parada.</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Sensors">
             <English>Sensors</English>
             <German>Sensoren</German>
             <Polish>Sensory</Polish>
+            <Portuguese>Sensores</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeSide">
             <English>Change Side</English>
             <German>Seite ändern</German>
             <Polish>Zmień Stronę</Polish>
+            <Portuguese>Alterar Lado</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeSkills">
             <English>Change Skills</English>
             <German>Fähigkeiten ändern</German>
             <Polish>Zmień umiejętności</Polish>
+            <Portuguese>Alterar Habilidades</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Skills">
             <English>Skills</English>
             <German>Fähigkeiten</German>
             <Polish>Umiejętności</Polish>
+            <Portuguese>Habilidades</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_AimingAccuracy">
             <English>Aiming Accuracy</English>
             <German>Zielgenauigkeit</German>
             <Polish>Celność</Polish>
+            <Portuguese>Precisão da Mira</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_AimingSpeed">
             <English>Aiming Speed</English>
             <German>Zilelgeschwindigkeit</German>
             <Polish>Prędkość celowania</Polish>
+            <Portuguese>Velocidade da Mira</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_AimingShake">
             <English>Aiming Shake</English>
             <German>Waffenschwankung</German>
             <Polish>Niestabilność celowania</Polish>
+            <Portuguese>Balanço da Mira</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Commanding">
             <English>Commanding</English>
             <German>Kommandierend</German>
             <Polish>Wyżej położony</Polish>
+            <Portuguese>Comandante</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Courage">
             <English>Courage</English>
             <German>Mut</German>
             <Polish>Odwaga</Polish>
+            <Portuguese>Coragem</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_SpotDistance">
             <English>Spotting Distance</English>
             <German>Aufklärungsdistanz</German>
+            <Portuguese>Distância de Detecção</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_SpotTime">
             <English>Spotting Speed</English>
             <German>Aufklärungszeit</German>
+            <Portuguese>Velocidade de Detecção</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_ReloadSpeed">
             <English>Reload Speed</English>
             <German>Nachladezeit</German>
             <Polish>Prędkość przeładowania</Polish>
+            <Portuguese>Velocidade de Recarga</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeTraits">
             <English>Change Traits</English>
             <German>Eigenschaften ändern</German>
             <Polish>Zmien Cechy</Polish>
+            <Portuguese>Alterar Propriedades</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Traits">
             <English>Traits</English>
             <German>Eigenschaften</German>
             <Polish>Cechy</Polish>
+            <Portuguese>Propriedades</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_MedicalTraining">
             <English>Medical Training</English>
             <German>Medizinische Ausbildung</German>
             <Polish>Szkolenie Medyczne</Polish>
+            <Portuguese>Treinamento Médico</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_EngineeringSkill">
             <English>Engineering Skill</English>
             <German>Technische Fähigkeiten</German>
             <Polish>Szkolenie Inżynieryjne</Polish>
+            <Portuguese>Habilidade de Engenharia</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Doctor">
             <English>Doctor</English>
             <German>Doktor</German>
             <Polish>Doktor</Polish>
+            <Portuguese>Doutor</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_AdvEngineer">
             <English>Adv. Engineer</English>
             <German>Erfahrene Techniker</German>
             <Polish>Zaawansowany Inżynier</Polish>
+            <Portuguese>Engenheiros Experientes</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Attributes_EOD">
             <English>EOD</English>
             <German>Kampfmittelbeseitigung</German>
             <Polish>Saper</Polish>
+            <Portuguese>Eliminação Explosiva de Ordenamento</Portuguese>
         </Key>
     </Package>
 </Project>
