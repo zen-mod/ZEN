@@ -18,10 +18,6 @@
 
 params ["_display"];
 
-// Reset editable icons visibility tracking variable
-// Prevents unwanted behaviour if display is closed while icons are hidden
-GVAR(iconsVisible) = true;
-
 if (GVAR(removeWatermark)) then {
     private _ctrlWatermark = _display displayCtrl IDC_RSCDISPLAYCURATOR_WATERMARK;
     _ctrlWatermark ctrlSetText "";
@@ -73,6 +69,25 @@ _display displayAddEventHandler ["KeyDown", {call FUNC(handleKeyDown)}];
     }];
 } forEach IDCS_SIDE_BUTTONS;
 
+// Fix selecting a path in group trees preventing selecting an editable icon using left click
+// This matches the behaviour of other trees by deselecting any non-placement path when selecting an editable icon
+{
+    private _ctrl = _display displayCtrl _x;
+    _ctrl ctrlAddEventHandler ["MouseButtonDown", {
+        if (RscDisplayCurator_sections select 0 == 1) then {
+            private _ctrlTree = call EFUNC(common,getActiveTree);
+            private _pathLength = count tvCurSel _ctrlTree;
+
+            if (_pathLength > 0 && {_pathLength < 4}) then {
+                _ctrlTree tvSetCurSel [-1];
+            };
+        };
+    }];
+} forEach [
+    IDC_RSCDISPLAYCURATOR_MOUSEAREA,
+    IDC_RSCDISPLAYCURATOR_MAINMAP
+];
+
 private _ctrlTreeRecent = _display displayCtrl IDC_RSCDISPLAYCURATOR_CREATE_RECENT;
 _ctrlTreeRecent ctrlAddEventHandler ["TreeSelChanged", {
     params ["_ctrlTreeRecent", "_selectedPath"];
@@ -84,6 +99,10 @@ _ctrlTreeRecent ctrlAddEventHandler ["TreeSelChanged", {
         GVAR(recentTreeData) = _ctrlTreeRecent tvData _selectedPath;
     };
 }];
+
+// Reset editable icons visibility tracking variable
+// Prevents unwanted behaviour if display is closed while icons are hidden
+GVAR(iconsVisible) = true;
 
 [{
     params ["_display"];
