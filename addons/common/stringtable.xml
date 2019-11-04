@@ -7,6 +7,7 @@
             <Polish>Zeus Enhanced</Polish>
             <Czech>Zeus vylepšený</Czech>
             <Italian>Zeus Enhanced</Italian>
+            <Japanese>Zeus Enhanced</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Enabled">
             <English>Enabled</English>
@@ -77,6 +78,7 @@
             <Polish>Niezmieniony</Polish>
             <Czech>Beze změny</Czech>
             <Italian>Invariato</Italian>
+            <Japanese>変更無し</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_VeryLow">
             <English>Very Low</English>
@@ -85,6 +87,7 @@
             <Polish>Bardzo niski</Polish>
             <Czech>Velmi nízký</Czech>
             <Italian>Molto Basso</Italian>
+            <Japanese>とても低い</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Low">
             <English>Low</English>
@@ -93,6 +96,7 @@
             <Polish>Niski</Polish>
             <Czech>Nízký</Czech>
             <Italian>Basso</Italian>
+            <Japanese>低い</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Medium">
             <English>Medium</English>
@@ -101,6 +105,7 @@
             <Polish>Średni</Polish>
             <Czech>Střední</Czech>
             <Italian>Medio</Italian>
+            <Japanese>普通</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_High">
             <English>High</English>
@@ -109,6 +114,7 @@
             <Polish>Wysoki</Polish>
             <Czech>Vysoký</Czech>
             <Italian>Alto</Italian>
+            <Japanese>高い</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_VeryHigh">
             <English>Very High</English>
@@ -117,6 +123,7 @@
             <Polish>Bardzo wysoki</Polish>
             <Czech>Velmi vysoký</Czech>
             <Italian>Molto Alto</Italian>
+            <Japanese>とても高い</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_VeryWeak">
             <English>Very Weak</English>
@@ -125,6 +132,7 @@
             <Polish>Bardzo słaby</Polish>
             <Czech>Velmi slabý</Czech>
             <Italian>Molto Debole</Italian>
+            <Japanese>とても弱い</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Weak">
             <English>Weak</English>
@@ -133,6 +141,7 @@
             <Polish>Słaby</Polish>
             <Czech>Slabý</Czech>
             <Italian>Debole</Italian>
+            <Japanese>弱い</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Strong">
             <English>Strong</English>
@@ -141,6 +150,7 @@
             <Polish>Silny</Polish>
             <Czech>Silný</Czech>
             <Italian>Forte</Italian>
+            <Japanese>強い</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Extreme">
             <English>Extreme</English>
@@ -149,6 +159,7 @@
             <Polish>Ekstremalny</Polish>
             <Czech>Extrémní</Czech>
             <Italian>Estremo</Italian>
+            <Japanese>強力</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_All">
             <English>All</English>
@@ -157,6 +168,7 @@
             <Polish>Wszystko</Polish>
             <Czech>Všechno</Czech>
             <Italian>Tutti</Italian>
+            <Japanese>全て</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Side">
             <English>Side</English>
@@ -165,6 +177,7 @@
             <Polish>Strona</Polish>
             <Czech>Strana</Czech>
             <Italian>Lato</Italian>
+            <Japanese>陣営</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Sides">
             <English>Sides</English>
@@ -173,6 +186,7 @@
             <Polish>Strony</Polish>
             <Czech>Strany</Czech>
             <Italian>Lati</Italian>
+            <Japanese>陣営</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_SelectedGroup">
             <English>Selected Group</English>
@@ -210,6 +224,7 @@
             <Polish>Filtr</Polish>
             <Czech>Filtr</Czech>
             <Italian>Filtri</Italian>
+            <Japanese>フィルタ</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Units">
             <English>Units</English>
@@ -218,6 +233,7 @@
             <Polish>Jednostki</Polish>
             <Czech>Jednotky</Czech>
             <Italian>Unità</Italian>
+            <Japanese>ユニット</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Vehicles">
             <English>Vehicles</English>
@@ -226,6 +242,7 @@
             <Polish>Pojazdy</Polish>
             <Czech>Vozidla</Czech>
             <Italian>Veicoli</Italian>
+            <Japanese>車両</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Static">
             <English>Static</English>
@@ -234,6 +251,7 @@
             <Polish>Obiekty statyczne</Polish>
             <Czech>Statický</Czech>
             <Italian>Statico</Italian>
+            <Japanese>固定式</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Nearest">
             <English>Nearest</English>
@@ -242,6 +260,7 @@
             <Polish>Najbliższe</Polish>
             <Czech>Nejbližší</Czech>
             <Italian>Più vicino</Italian>
+            <Japanese>直近</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Speed">
             <English>Speed</English>
@@ -250,6 +269,7 @@
             <Polish>Prędkość</Polish>
             <Czech>Rychlost</Czech>
             <Italian>Velocità</Italian>
+            <Japanese>速度</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Range">
             <English>Range</English>
@@ -258,6 +278,7 @@
             <Polish>Zasięg</Polish>
             <Czech>Dosah</Czech>
             <Italian>Raggio</Italian>
+            <Japanese>距離</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Radius">
             <English>Radius</English>
@@ -266,6 +287,7 @@
             <Polish>Promień</Polish>
             <Czech>Rádius</Czech>
             <Italian>Raggio</Italian>
+            <Japanese>範囲</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Height">
             <English>Height</English>
@@ -274,6 +296,7 @@
             <Polish>Wysokość</Polish>
             <Czech>Výška</Czech>
             <Italian>Altezza</Italian>
+            <Japanese>高さ</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Height_Units">
             <English>Height (m)</English>
@@ -282,35 +305,41 @@
             <Polish>Wysokość (m)</Polish>
             <Czech>Výška (m)</Czech>
             <Italian>Altezza (m)</Italian>
+            <Japanese>高さ (m)</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Teleport">
             <English>Teleport</English>
             <German>Teleportieren</German>
             <Italian>Teletrasporto</Italian>
+            <Japanese>テレポート</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects">
             <English>Add Objects to Curators</English>
             <Russian>Сдалвть объекты редактируемыми</Russian>
             <German>Objekte zum Kurator hinzufügen</German>
             <Polish>Dodaj obiekty do Zeusa</Polish>
+            <Japanese>キュレーターにオブジェクト追加</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects_Description">
             <English>Automatically adds spawned objects to all curators.</English>
             <Russian>Автоматически делает все добавленные объекты редактируемыми</Russian>
             <German>Fügt automatisch gespawnte Objekte zu allen Kuratoren hinzu.</German>
             <Polish>Automatycznie dodaj zespawnowane obiekty do Zeusa.</Polish>
+            <Japanese>自動的に生成されたオブジェクトをキュレーターへ追加します。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_DisableGearAnim">
             <English>Disable Gear Animation</English>
             <Russian>Отключить анимацию шестерёнки</Russian>
             <German>Inventar Animation deaktivieren</German>
             <Polish>Wyłącz animację grzebania w ekwipunku</Polish>
+            <Japanese>装備アニメーション無効化</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_DisableGearAnim_Description">
             <English>Disables the "Gear" animation from playing when entering Zeus.</English>
             <German>Deaktiviert die "Inventar" Animation der Spielerfigur wenn man in dem Zeusmodus geht.</German>
             <Polish>Wyłącza animację grzebania w ekwipunku po wejściu do Zeusa.</Polish>
             <Russian>Отключает анимированную шестерёнку при входе в режим ГМ</Russian>
+            <Japanese>Zeus 中は "装備" アニメーションの再生を停止させます。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_DarkMode">
             <English>Dark Mode</English>
@@ -318,41 +347,48 @@
             <German>Dunkler Modus</German>
             <Polish>Tryb ciemny</Polish>
             <Italian>Modalità scura</Italian>
+            <Japanese>ダーク モード</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_DarkMode_Description">
             <English>Changes the appearance of various user interface elements to a darker color theme.</English>
             <German>Ändert das Aussehen veschiedener Elemente der Benutzeroberfläche zu einem dunkleren Farbschema.</German>
             <Polish>Zmienia kolorystykę elementów interfejsu na ciemniejszą.</Polish>
             <Russian>Меняет вид интерфейса пользователя на более тёмные</Russian>
+            <Japanese>UI の様々な部分の見た目を暗色へ変更します。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_PreferredArsenal">
             <English>Preferred Arsenal</English>
             <Russian>Предпочитаемый арсенал</Russian>
             <German>Bevorzugtes Arsenal</German>
             <Polish>Preferowany arsenał</Polish>
+            <Japanese>優先武器庫</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_PreferredArsenal_Description">
             <English>Selects the preferred arsenal used by Zeus Enhanced.\nIf ACE Arsenal is not installed, will fall back to BI Virtual Arsenal.</English>
             <German>Regelt welches Arsenal von Zeus Enhanced geöffnet wird.\nWenn ACE Arsenal nicht installiert ist, wird auf das Vanilla BI Virtual Arsenal zurückgegriffen.</German>
             <Polish>Wybierz preferowany arsenał używany przez Zeus Enhanced.\nJeśli arsenał ACE nie będzie dostępny to uruchomi się podstawowy wirtualny arsenał BI.</Polish>
             <Russian>Выбор предпочитаемого Арсенала\nlfЕсли не установлен ACE, будет запущен стандартный Виртуальный Арсенал.</Russian>
+            <Japanese>Zeus Ehnhanced により優先された武器庫を選択します。\nACE3 武器庫が有効化されていない場合、ゲーム標準のバーチャル武器庫へ戻されます。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_BIVirtualArsenal">
             <English>BI Virtual Arsenal</English>
             <Russian>Виртуальный Арсенал</Russian>
             <German>BI Virtuelle Arsenal</German>
             <Polish>Wirtualny arsenał BI</Polish>
+            <Japanese>バーチャル武器庫</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_AceArsenal">
             <English>ACE Arsenal</English>
             <Russian>ACE Арсенал</Russian>
             <German>ACE Arsenal</German>
             <Polish>Arsenał ACE</Polish>
+            <Japanese>ACE 武器庫</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_NotEnoughSpaceInVehicle">
             <English>Not enough space in target vehicle: %1 needed - %2 available</English>
             <Polish>Za mało miejsca w pojeździe docelowym: %1 potrzebne - %2 dostępne</Polish>
             <German>Nicht genügend Platz im Zielfahrzeug: %1 benötigt - %2 verfügbar</German>
+            <Japanese>選択された車両に空きがありません: 必要量 %1 - 空き容量 %2</Japanese>
         </Key>
     </Package>
 </Project>
