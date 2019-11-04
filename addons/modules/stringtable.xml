@@ -1587,5 +1587,8 @@
             <German>Es gibt keine Zielmodule, platzieren Sie zuerst ein Zielmodul</German>
             <Polish>Brak modułów celu, najpierw ustaw moduł celu</Polish>
         </Key>
+        <Key ID="STR_ZEN_Modules_PlaceAnLZ">
+            <English>Place an LZ</English>
+        </Key>
     </Package>
 </Project>

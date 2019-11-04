@@ -74,6 +74,9 @@
             <German>Unverändert</German>
             <Polish>Niezmieniony</Polish>
         </Key>
+        <Key ID="STR_ZEN_Common_Premade">
+            <English>Premade</English>
+        </Key>
         <Key ID="STR_ZEN_Common_VeryLow">
             <English>Very Low</English>
             <Russian>Оч. низкий</Russian>

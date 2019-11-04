@@ -25,6 +25,9 @@
 #define POS_W(N) ((N) * GUI_GRID_W)
 #define POS_H(N) ((N) * GUI_GRID_H)
 
+#define VAR_SELECTIONS(name) GVAR(DOUBLES(saved_selections,name))
+#define GET_SELECTIONS(name) GETMVAR(VAR_SELECTIONS(name),[])
+
 #define IDC_SIDERELATIONS 60200
 #define IDC_SIDERELATIONS_TOGGLE 60201
 #define IDC_SIDERELATIONS_SIDE_1 60202

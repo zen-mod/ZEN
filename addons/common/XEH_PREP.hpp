@@ -19,6 +19,7 @@ PREP(getPosFromScreen);
 PREP(getSideIcon);
 PREP(getTargetPos);
 PREP(getVehicleAmmo);
+PREP(getVehicleIcon);
 PREP(healUnit);
 PREP(initSliderEdit);
 PREP(isInScreenshotMode);

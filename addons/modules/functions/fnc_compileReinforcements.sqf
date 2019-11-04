@@ -71,4 +71,59 @@ private _infantry = [];
     };
 } forEach configProperties [configFile >> "CfgVehicles", "isClass _x"];
 
-uiNamespace setVariable [QGVAR(reinforcementsCache), [_vehicles, _infantry]];
+private _groups = [];
+
+{
+    private _side = getNumber (_x >> "side");
+
+    if (_side in [0, 1, 2, 3]) then {
+        // Switch BLUFOR and OPFOR side IDs
+        _side = [1, 0, 2, 3] select _side;
+
+        private _sideHash = _groups param [_side];
+
+        if (isNil "_sideHash") then {
+            _sideHash = [] call CBA_fnc_hashCreate;
+            _groups set [_side, _sideHash];
+        };
+
+        {
+            private _faction = getText (_x >> "name");
+
+            {
+                private _category = getText (_x >> "name");
+
+                {
+                    private _units = configProperties [_x, "isClass _x"] apply {
+                        getText (_x >> "vehicle");
+                    };
+
+                    // Add groups with only infantry units
+                    if (_units findIf {!(_x isKindOf "CAManBase")} == -1) then {
+                        private _name = getText (_x >> "name");
+                        private _icon = getText (_x >> "icon");
+
+                        private _factionHash = [_sideHash, _faction] call CBA_fnc_hashGet;
+
+                        if (isNil "_factionHash") then {
+                            _factionHash = [] call CBA_fnc_hashCreate;
+                            [_sideHash, _faction, _factionHash] call CBA_fnc_hashSet;
+                        };
+
+                        private _categoryList = [_factionHash, _category] call CBA_fnc_hashGet;
+
+                        if (isNil "_categoryList") then {
+                            _categoryList = [];
+                            [_factionHash, _category, _categoryList] call CBA_fnc_hashSet;
+                        };
+
+                        _categoryList pushBack [_name, _icon, _units];
+                    };
+                } forEach configProperties [_x, "isClass _x"];
+            } forEach configProperties [_x, "isClass _x"];
+        } forEach configProperties [_x, "isClass _x"];
+    };
+} forEach configProperties [configFile >> "CfgGroups", "isClass _x"];
+
+
+uiNamespace setVariable [QGVAR(reinforcementsCache), [_vehicles, _infantry, _groups]];

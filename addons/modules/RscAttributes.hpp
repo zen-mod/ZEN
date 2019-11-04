@@ -1155,12 +1155,20 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
                         w = POS_W(12.7);
                         colorBackground[] = {0, 0, 0, 0.7};
                     };
-                    class Count: Label {
-                        idc = IDC_SPAWNREINFORCEMENTS_GROUP_COUNT;
+                    class UnitCount: Label {
+                        idc = IDC_SPAWNREINFORCEMENTS_UNITS_COUNT;
                         style = ST_RIGHT;
                         text = "0";
                         w = POS_W(12);
                         colorBackground[] = {0, 0, 0, 0};
+                    };
+                    class UnitList: ctrlListBox {
+                        idc = IDC_SPAWNREINFORCEMENTS_UNITS_LIST;
+                        x = POS_W(13.2);
+                        y = POS_H(2.1) - pixelH;
+                        w = POS_W(12.7);
+                        h = POS_H(12);
+                        colorBackground[] = {0, 0, 0, 0.3};
                     };
                     class PersonIcon: RscPicture {
                         idc = -1;
@@ -1169,14 +1177,6 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
                         y = POS_H(1.1);
                         w = POS_W(1);
                         h = POS_H(1);
-                    };
-                    class List: ctrlListBox {
-                        idc = IDC_SPAWNREINFORCEMENTS_GROUP_LIST;
-                        x = POS_W(13.2);
-                        y = POS_H(2.1) - pixelH;
-                        w = POS_W(12.7);
-                        h = POS_H(12);
-                        colorBackground[] = {0, 0, 0, 0.3};
                     };
                 };
             };
@@ -1259,10 +1259,10 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
                         y = POS_H(5.5);
                         columns = 4;
                         strings[] = {
-                            "$STR_3den_attributes_default_unchanged_text",
+                            "$STR_Disp_Default",
                             ECSTRING(common,Relaxed),
                             ECSTRING(common,Cautious),
-                            "$STR_combat"
+                            "$STR_Combat"
                         };
                     };
                 };

@@ -15,16 +15,14 @@
  * Public: No
  */
 
+#define LOGIC_TYPE_LZ QGVAR(moduleCreateLZ)
+#define LOGIC_TYPE_RP QGVAR(moduleCreateRP)
+
 params ["_display"];
-
-if (isNil QGVAR(lastSpawnReinforcements)) then {
-    GVAR(lastSpawnReinforcements) = [0, 0, 0, 0, [], -3, -3, 1, 0, 0];
-};
-
-GVAR(lastSpawnReinforcements) params ["_side", "_faction", "_category", "_vehicle", "_group", "_LZ", "_RP", "_vehicleBehaviour", "_unitBehaviour", "_insertionMethod"];
 
 private _ctrlButtonOK = _display displayCtrl IDC_OK;
 private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
+_display setVariable [QGVAR(position), ASLtoAGL getPosASL _logic];
 
 scopeName "Main";
 private _fnc_errorAndClose = {
@@ -35,21 +33,38 @@ private _fnc_errorAndClose = {
     breakOut "Main";
 };
 
-if !(QGVAR(moduleCreateLZ) call EFUNC(position_logics,exists)) then {
-    ["Place an LZ"] call _fnc_errorAndClose;
+if !(LOGIC_TYPE_LZ call EFUNC(position_logics,exists)) then {
+    [LSTRING(PlaceAnLZ)] call _fnc_errorAndClose;
 };
+
+GET_SELECTIONS(RscSpawnReinforcements) params [
+    ["_side", 0],
+    ["_faction", 0],
+    ["_category", 0],
+    ["_vehicle", 0],
+    ["_treeMode", 0],
+    ["_unitList", []],
+    ["_vehicleLZ", -3],
+    ["_vehicleBehaviour", 1],
+    ["_insertionMethod", 0],
+    ["_unitRP", -3],
+    ["_unitBehaviour", 0]
+];
 
 private _fnc_sideChanged = {
     params ["_ctrlSide", "_sideIndex"];
 
+    private _sideID = [1, 0, 2, 3] select _sideIndex;
+    private _sideColor = [_sideID] call BIS_fnc_sideColor;
+
     private _display = ctrlParent _ctrlSide;
     private _cfgVehicles = configFile >> "CfgVehicles";
-    private _cfgVehicleIcons = configFile >> "CfgVehicleIcons";
     private _cfgFactionClasses = configFile >> "CfgFactionClasses";
     private _cfgEditorSubcategories = configFile >> "CfgEditorSubcategories";
 
-    uiNamespace getVariable QGVAR(reinforcementsCache) params ["_vehiclesCache", "_infantryCache"];
+    uiNamespace getVariable QGVAR(reinforcementsCache) params ["_vehiclesCache", "_infantryCache", "_groupsCache"];
 
+    // Add vehicle factions of the selected side
     private _ctrlFaction = _display displayCtrl IDC_SPAWNREINFORCEMENTS_FACTION;
     lbClear _ctrlFaction;
 
@@ -57,10 +72,10 @@ private _fnc_sideChanged = {
 
     {
         private _config = _cfgFactionClasses >> _x;
-        private _displayName = getText (_config >> "displayName");
+        private _name = getText (_config >> "displayName");
         private _icon = getText (_config >> "icon");
 
-        private _index = _ctrlFaction lbAdd _displayName;
+        private _index = _ctrlFaction lbAdd _name;
         _ctrlFaction lbSetPicture [_index, _icon];
         _ctrlFaction lbSetData [_index, _x];
     } forEach _vehicleFactions;
@@ -68,52 +83,76 @@ private _fnc_sideChanged = {
     lbSort _ctrlFaction;
     _ctrlFaction lbSetCurSel 0;
 
-    private _ctrlGroupTree = _display displayCtrl IDC_SPAWNREINFORCEMENTS_GROUP_TREE;
-    tvClear _ctrlGroupTree;
+    // Populate tree with premade groups of the selected side
+    private _ctrlTreeGroups = _display displayCtrl IDC_SPAWNREINFORCEMENTS_TREE_GROUPS;
+    tvClear _ctrlTreeGroups;
 
-    private _sideColor = [[west, east, independent, civilian] select _sideIndex] call BIS_fnc_sideColor;
-
-    [_infantryCache select _sideIndex, {
-        private _factionConfig = _cfgFactionClasses >> _key;
-        private _factionName = getText (_factionConfig >> "displayName");
-        private _factionIcon = getText (_factionConfig >> "icon");
-
-        private _factionIndex = _ctrlGroupTree tvAdd [[], _factionName];
-        _ctrlGroupTree tvSetPicture [[_factionIndex], _factionIcon];
+    [_groupsCache select _sideIndex, {
+        private _factionIndex = _ctrlTreeGroups tvAdd [[], _key];
 
         [_value, {
-            private _categoryConfig = _cfgEditorSubcategories >> _key;
-            private _categoryName = getText (_categoryConfig >> "displayName");
-
-            private _categoryIndex = _ctrlGroupTree tvAdd [[_factionIndex], _categoryName];
+            private _categoryIndex = _ctrlTreeGroups tvAdd [[_factionIndex], _key];
 
             {
-                private _unitConfig = _cfgVehicles >> _x;
-                private _unitName = getText (_unitConfig >> "displayName");
-                private _unitIcon = getText (_unitConfig >> "icon");
+                _x params ["_name", "_icon", "_units"];
 
-                if (isText (_cfgVehicleIcons >> _unitIcon)) then {
-                    _unitIcon = getText (_cfgVehicleIcons >> _unitIcon);
-                };
+                private _groupIndex = _ctrlTreeGroups tvAdd [[_factionIndex, _categoryIndex], _name];
+                private _groupPath  = [_factionIndex, _categoryIndex, _groupIndex];
 
-                private _unitIndex = _ctrlGroupTree tvAdd [[_factionIndex, _categoryIndex], _unitName];
-                _ctrlGroupTree tvSetTooltip [[_factionIndex, _categoryIndex, _unitIndex], _unitName];
-                _ctrlGroupTree tvSetPicture [[_factionIndex, _categoryIndex, _unitIndex], _unitIcon];
-                _ctrlGroupTree tvSetPictureColor [[_factionIndex, _categoryIndex, _unitIndex], _sideColor];
-                _ctrlGroupTree tvSetData [[_factionIndex, _categoryIndex, _unitIndex], _x];
+                _ctrlTreeGroups tvSetTooltip [_groupPath, _name];
+                _ctrlTreeGroups tvSetPicture [_groupPath, _icon];
+                _ctrlTreeGroups tvSetPictureColor [_groupPath, _sideColor];
+
+                _ctrlTreeGroups tvSetData [_groupPath, str _groupPath];
+                _ctrlTreeGroups setVariable [str _groupPath, _units];
             } forEach _value;
 
-            _ctrlGroupTree tvSort [[_factionIndex, _categoryIndex], false];
+            _ctrlTreeGroups tvSort [[_factionIndex, _categoryIndex], false];
         }] call CBA_fnc_hashEachPair;
 
-        _ctrlGroupTree tvSort [[_factionIndex], false];
+        _ctrlTreeGroups tvSort [[_factionIndex], false];
     }] call CBA_fnc_hashEachPair;
 
-    _ctrlGroupTree tvSort [[], false];
+    _ctrlTreeGroups tvSort [[], false];
 
-    private _ctrlList = _display displayCtrl IDC_SPAWNREINFORCEMENTS_GROUP_LIST;
-    lbClear _ctrlList;
+    // Populate tree with units of the selected side
+    private _ctrlTreeUnits = _display displayCtrl IDC_SPAWNREINFORCEMENTS_TREE_UNITS;
+    tvClear _ctrlTreeUnits;
+
+    [_infantryCache select _sideIndex, {
+        private _faction = getText (_cfgFactionClasses >> _key >> "displayName");
+        private _factionIndex = _ctrlTreeUnits tvAdd [[], _faction];
+
+        [_value, {
+            private _category = getText (_cfgEditorSubcategories >> _key >> "displayName");
+            private _categoryIndex = _ctrlTreeUnits tvAdd [[_factionIndex], _category];
+
+            {
+                private _name = getText (_cfgVehicles >> _x >> "displayName");
+                private _icon = [_x] call EFUNC(common,getVehicleIcon);
+
+                private _unitIndex = _ctrlTreeUnits tvAdd [[_factionIndex, _categoryIndex], _name];
+                private _unitPath  = [_factionIndex, _categoryIndex, _unitIndex];
+
+                _ctrlTreeUnits tvSetTooltip [_unitPath, _name];
+                _ctrlTreeUnits tvSetPicture [_unitPath, _icon];
+                _ctrlTreeUnits tvSetPictureColor [_unitPath, _sideColor];
+                _ctrlTreeUnits tvSetData [_unitPath, _x];
+            } forEach _value;
+
+            _ctrlTreeUnits tvSort [[_factionIndex, _categoryIndex], false];
+        }] call CBA_fnc_hashEachPair;
+
+        _ctrlTreeUnits tvSort [[_factionIndex], false];
+    }] call CBA_fnc_hashEachPair;
+
+    _ctrlTreeUnits tvSort [[], false];
+
+    private _ctrlUnitList = _display displayCtrl IDC
 };
+
+private _ctrlSide = _display displayCtrl IDC_SPAWNREINFORCEMENTS_SIDE;
+_ctrlSide ctrlAddEventHandler ["LBSelChanged", _fnc_sideChanged];
 
 private _fnc_factionChanged = {
     params ["_ctrlFaction", "_factionIndex"];
@@ -127,23 +166,24 @@ private _fnc_factionChanged = {
     private _sideHash = _vehiclesCache select lbCurSel _ctrlSide;
     private _factionHash = [_sideHash, _ctrlFaction lbData _factionIndex] call CBA_fnc_hashGet;
 
-    private _vehicleCategories = [_factionHash] call CBA_fnc_hashKeys;
-
+    // Add vehicle categories of the selected side and faction
     private _ctrlCategory = _display displayCtrl IDC_SPAWNREINFORCEMENTS_CATEGORY;
     lbClear _ctrlCategory;
 
-    {
-        private _config = _cfgEditorSubcategories >> _x;
-        private _displayName = getText (_config >> "displayName");
+    private _vehicleCategories = [_factionHash] call CBA_fnc_hashKeys;
 
-        private _index = _ctrlCategory lbAdd _displayName;
-        _ctrlCategory lbSetPicture [_index, "#(argb,8,8,3)color(0,0,0,0)"]; // todo: keep?
+    {
+        private _index = _ctrlCategory lbAdd getText (_cfgEditorSubcategories >> _x >> "displayName");
+        _ctrlCategory lbSetPicture [_index, "#(argb,8,8,3)color(0,0,0,0)"]; // Align text with other combo boxes
         _ctrlCategory lbSetData [_index, _x];
     } forEach _vehicleCategories;
 
     lbSort _ctrlCategory;
     _ctrlCategory lbSetCurSel 0;
 };
+
+private _ctrlFaction = _display displayCtrl IDC_SPAWNREINFORCEMENTS_FACTION;
+_ctrlFaction ctrlAddEventHandler ["LBSelChanged", _fnc_factionChanged];
 
 private _fnc_categoryChanged = {
     params ["_ctrlCategory", "_categoryIndex"];
@@ -154,23 +194,25 @@ private _fnc_categoryChanged = {
     uiNamespace getVariable QGVAR(reinforcementsCache) params ["_vehiclesCache"];
 
     private _ctrlSide = _display displayCtrl IDC_SPAWNREINFORCEMENTS_SIDE;
-    private _ctrlFaction = _display displayCtrl IDC_SPAWNREINFORCEMENTS_FACTION;
     private _sideHash = _vehiclesCache select lbCurSel _ctrlSide;
+
+    private _ctrlFaction = _display displayCtrl IDC_SPAWNREINFORCEMENTS_FACTION;
     private _factionHash = [_sideHash, _ctrlFaction lbData lbCurSel _ctrlFaction] call CBA_fnc_hashGet;
 
-    private _vehicles = [_factionHash, _ctrlCategory lbData _categoryIndex] call CBA_fnc_hashGet;
-
+    // Add vehicles of the selected side, faction, and category
     private _ctrlVehicle = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE;
     lbClear _ctrlVehicle;
 
+    private _vehicles = [_factionHash, _ctrlCategory lbData _categoryIndex] call CBA_fnc_hashGet;
+
     {
         private _config = _cfgVehicles >> _x;
-        private _displayName = getText (_config >> "displayName");
+        private _name = getText (_config >> "displayName");
         private _icon = getText (_config >> "icon");
-        private _maxCargo = format ["(%1)", _x call EFUNC(common,getCargoPositionsCount)];
+        private _capacity = format ["(%1)", [_x] call EFUNC(common,getCargoPositionsCount)];
 
-        private _index = _ctrlVehicle lbAdd _displayName;
-        _ctrlVehicle lbSetTextRight [_index, _maxCargo];
+        private _index = _ctrlVehicle lbAdd _name;
+        _ctrlVehicle lbSetTextRight [_index, _capacity];
         _ctrlVehicle lbSetPicture [_index, _icon];
         _ctrlVehicle lbSetData [_index, _x];
     } forEach _vehicles;
@@ -179,130 +221,161 @@ private _fnc_categoryChanged = {
     _ctrlVehicle lbSetCurSel 0;
 };
 
-private _fnc_vehicleChanged = {
-    params ["_ctrlVehicle", "_selectedIndex"];
-
-    private _display = ctrlParent _ctrlVehicle;
-    private _ctrlGroupList = _display displayCtrl IDC_SPAWNREINFORCEMENTS_GROUP_LIST;
-    private _ctrlGroupCount = _display displayCtrl IDC_SPAWNREINFORCEMENTS_GROUP_COUNT;
-
-    private _vehicleClass = _ctrlVehicle lbData _selectedIndex;
-    private _maxCargo = [_vehicleClass] call EFUNC(common,getCargoPositionsCount);
-
-    while {lbSize _ctrlGroupList > _maxCargo} do {
-        _ctrlGroupList lbDelete (lbSize _ctrlGroupList - 1);
-    };
-
-    _ctrlGroupCount ctrlSetText str lbSize _ctrlGroupList;
-};
-
-private _ctrlSide = _display displayCtrl IDC_SPAWNREINFORCEMENTS_SIDE;
-_ctrlSide ctrlAddEventHandler ["LBSelChanged", _fnc_sideChanged];
-
-private _ctrlFaction = _display displayCtrl IDC_SPAWNREINFORCEMENTS_FACTION;
-_ctrlFaction ctrlAddEventHandler ["LBSelChanged", _fnc_factionChanged];
-
 private _ctrlCategory = _display displayCtrl IDC_SPAWNREINFORCEMENTS_CATEGORY;
 _ctrlCategory ctrlAddEventHandler ["LBSelChanged", _fnc_categoryChanged];
+
+private _fnc_vehicleChanged = {
+    params ["_ctrlVehicle", "_vehicleIndex"];
+
+    private _display = ctrlParent _ctrlVehicle;
+    private _ctrlUnitList  = _display displayCtrl IDC_SPAWNREINFORCEMENTS_GROUP_LIST;
+    private _ctrlUnitCount = _display displayCtrl IDC_SPAWNREINFORCEMENTS_GROUP_COUNT;
+
+    private _vehicle = _ctrlVehicle lbData _vehicleIndex;
+    private _capacity = [_vehicle] call EFUNC(common,getCargoPositionsCount);
+
+    for "_i" from lbSize _ctrlUnitList to _capacity do {
+        _ctrlUnitList lbDelete (_i - 1);
+    };
+
+    _ctrlUnitCount ctrlSetText str _capacity;
+};
 
 private _ctrlVehicle = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE;
 _ctrlVehicle ctrlAddEventHandler ["LBSelChanged", _fnc_vehicleChanged];
 
-_ctrlSide lbSetCurSel _side;
-_ctrlFaction lbSetCurSel _faction;
+_ctrlSide     lbSetCurSel _side;
+_ctrlFaction  lbSetCurSel _faction;
 _ctrlCategory lbSetCurSel _category;
-_ctrlVehicle lbSetCurSel _vehicle;
+_ctrlVehicle  lbSetCurSel _vehicle;
 
-private _fnc_treeDblClick = {
-    params ["_ctrlGroupTree", "_selectedPath"];
+private _fnc_treeModeChanged = {
+    params ["_ctrlTreeMode", "_mode"];
 
-    if (count _selectedPath < 3) exitWith {};
+    private _display = ctrlParent _ctrlTreeMode;
+    private _ctrlTreeGroups = _display displayCtrl IDC_SPAWNREINFORCEMENTS_TREE_GROUPS;
+    private _ctrlTreeUnits  = _display displayCtrl IDC_SPAWNREINFORCEMENTS_TREE_UNITS;
 
-    private _display = ctrlParent _ctrlGroupTree;
-    private _unitClass = _ctrlGroupTree tvData _selectedPath;
-
-    [_display, _unitClass] call (_display getVariable QFUNC(addToGroup));
+    _ctrlTreeGroups ctrlShow (_mode == 0);
+    _ctrlTreeUnits  ctrlShow (_mode == 1);
 };
 
-private _ctrlTree = _display displayCtrl IDC_SPAWNREINFORCEMENTS_GROUP_TREE;
-_ctrlTree ctrlAddEventHandler ["TreeDblClick", _fnc_treeDblClick];
+private _ctrlTreeMode = _display displayCtrl IDC_SPAWNREINFORCEMENTS_TREE_MODE;
+_ctrlTreeMode ctrlAddEventHandler ["ToolBoxSelChanged", _fnc_treeModeChanged];
+_ctrlTreeMode lbSetCurSel _treeMode;
 
-private _fnc_addToGroup = {
+[_ctrlTreeMode, _treeMode] call _fnc_treeModeChanged;
+
+private _fnc_groupTreeDblClicked = {
+    params ["_ctrlTreeGroups", "_selectedPath"];
+
+    // Exit if a group path was not selected
+    if (count _selectedPath < 3) exitWith {};
+
+    private _display = ctrlParent _ctrlTreeGroups;
+    // _display call (_display getVariable QFUNC(clearList));
+
+    private _dataVar = _ctrlTreeGroups tvData _selectedPath;
+    private _units = _ctrlTreeGroups getVariable _dataVar;
+    private _fnc_addUnit = _display getVariable QFUNC(addUnit);
+
+    {
+        [_display, _x] call _fnc_addUnit;
+    } forEach _units;
+};
+
+private _ctrlTreeGroups = _display displayCtrl IDC_SPAWNREINFORCEMENTS_TREE_GROUPS;
+_ctrlTreeGroups ctrlAddEventHandler ["TreeDblClick", _fnc_groupTreeDblClicked];
+
+private _fnc_unitTreeDblClicked = {
+    params ["_ctrlTreeUnits", "_selectedPath"];
+
+    // Exit if a unit path was not selected
+    if (count _selectedPath < 3) exitWith {};
+
+    private _unit = _ctrlTreeUnits tvData _selectedPath;
+    private _display = ctrlParent _ctrlTreeUnits;
+    [_display, _unit] call (_display getVariable QFUNC(addUnit));
+};
+
+private _ctrlTreeUnits = _display displayCtrl IDC_SPAWNREINFORCEMENTS_TREE_UNITS;
+_ctrlTreeUnits ctrlAddEventHandler ["TreeDblClick", _fnc_unitTreeDblClicked];
+
+private _fnc_addUnit = {
     params ["_display", "_unitClass"];
 
-    private _ctrlList = _display displayCtrl IDC_SPAWNREINFORCEMENTS_GROUP_LIST;
-    private _ctrlVehicle = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE;
+    private _ctrlVehicle  = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE;
+    private _ctrlUnitList = _display displayCtrl IDC_SPAWNREINFORCEMENTS_UNITS_LIST;
+    private _capacity = [_ctrlVehicle lbData lbCurSel _ctrlVehicle] call EFUNC(common,getCargoPositionsCount);
 
-    if (lbSize _ctrlList == [_ctrlVehicle lbData lbCurSel _ctrlVehicle] call EFUNC(common,getCargoPositionsCount)) exitWith {};
+    // Exit if max number of units have already been added
+    if (lbSize _ctrlUnitList >= _capacity) exitWith {};
 
     private _unitConfig = configFile >> "CfgVehicles" >> _unitClass;
     private _unitName = getText (_unitConfig >> "displayName");
-    private _unitIcon = getText (_unitConfig >> "icon");
     private _unitSide = getNumber (_unitConfig >> "side");
-    private _unitFaction = getText (_unitConfig >> "faction");
+    private _unitIcon = [_unitClass] call EFUNC(common,getVehicleIcon);
+    private _unitFaction  = getText (_unitConfig >> "faction");
     private _unitCategory = getText (_unitConfig >> "editorSubcategory");
-
-    if (isText (configFile >> "CfgVehicleIcons" >> _unitIcon)) then {
-        _unitIcon = getText (configFile >> "CfgVehicleIcons" >> _unitIcon);
-    };
 
     private _factionConfig = configFile >> "CfgFactionClasses" >> _unitFaction;
     private _factionName = getText (_factionConfig >> "displayName");
     private _factionIcon = getText (_factionConfig >> "icon");
 
     private _categoryName = getText (configFile >> "CfgEditorSubcategories" >> _unitCategory >> "displayName");
-
     private _tooltip = format ["%1\n%2\n%3", _unitName, _categoryName, _factionName];
 
-    private _index = _ctrlList lbAdd _unitName;
-    _ctrlList lbSetTooltip [_index, _tooltip];
-    _ctrlList lbSetPicture [_index, _unitIcon];
-    _ctrlList lbSetPictureRight [_index, _factionIcon];
-    _ctrlList lbSetPictureColor [_index, [_unitSide] call BIS_fnc_sideColor];
-    _ctrlList lbSetData [_index, _unitClass];
+    private _index = _ctrlUnitList lbAdd _unitName;
+    _ctrlUnitList lbSetTooltip [_index, _tooltip];
+    _ctrlUnitList lbSetPicture [_index, _unitIcon];
+    _ctrlUnitList lbSetPictureRight [_index, _factionIcon];
+    _ctrlUnitList lbSetPictureColor [_index, [_unitSide] call BIS_fnc_sideColor];
+    _ctrlUnitList lbSetData [_index, _unitClass];
 
-    private _ctrlCount = _display displayCtrl IDC_SPAWNREINFORCEMENTS_GROUP_COUNT;
-    _ctrlCount ctrlSetText str lbSize _ctrlList;
+    private _ctrlUnitCount = _display displayCtrl IDC_SPAWNREINFORCEMENTS_UNITS_COUNT;
+    _ctrlUnitCount ctrlSetText str lbSize _ctrlUnitList;
 };
 
-_display setVariable [QFUNC(addToGroup), _fnc_addToGroup];
+_display setVariable [QFUNC(addUnit), _fnc_addUnit];
+
+{
+    [_display, _x] call _fnc_addUnit;
+} forEach _unitList;
 
 private _fnc_listKeyDown = {
-    params ["_ctrlList", "_keyCode"];
+    call {
+        params ["_ctrlUnitList", "_keyCode"];
 
-    if (_keyCode == DIK_DELETE && {lbCurSel _ctrlList != -1}) then {
-        _ctrlList lbDelete lbCurSel _ctrlList;
+        if (_keyCode == DIK_DELETE && {lbCurSel _ctrlUnitList != -1}) exitWith {
+            _ctrlUnitList lbDelete lbCurSel _ctrlUnitList;
 
-        private _ctrlCount = ctrlParent _ctrlList displayCtrl IDC_SPAWNREINFORCEMENTS_GROUP_COUNT;
-        _ctrlCount ctrlSetText str lbSize _ctrlList;
+            private _ctrlUnitCount = ctrlParent _ctrlUnitList displayCtrl IDC_SPAWNREINFORCEMENTS_UNITS_COUNT;
+            _ctrlUnitCount ctrlSetText str lbSize _ctrlUnitList;
 
-        true // handled
-    } else {
+            true // handled
+        };
+
         false
     };
 };
 
-private _ctrlList = _display displayCtrl IDC_SPAWNREINFORCEMENTS_GROUP_LIST;
-_ctrlList ctrlAddEventHandler ["KeyDown", _fnc_listKeyDown];
+private _ctrlUnitList = _display displayCtrl IDC_SPAWNREINFORCEMENTS_UNITS_LIST;
+_ctrlUnitList ctrlAddEventHandler ["KeyDown", _fnc_listKeyDown];
 
-{
-    [_display, _x] call _fnc_addToGroup;
-} forEach _group;
-
-private _ctrlLZ = _display displayCtrl IDC_SPAWNREINFORCEMENTS_LZ;
-[_ctrlLZ, QGVAR(moduleCreateLZ), _LZ] call EFUNC(position_logics,initList);
-
-private _ctrlRP = _display displayCtrl IDC_SPAWNREINFORCEMENTS_RP;
-[_ctrlRP, QGVAR(moduleCreateRP), _RP, true] call EFUNC(position_logics,initList);
+private _ctrlVehicleLZ = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_LZ;
+[_ctrlVehicleLZ, LOGIC_TYPE_LZ, _vehicleLZ] call EFUNC(position_logics,initList);
 
 private _ctrlVehicleBehaviour = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_BEHAVIOUR;
 _ctrlVehicleBehaviour lbSetCurSel _vehicleBehaviour;
 
+private _ctrlInsertion = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_INSERTION;
+_ctrlInsertion lbSetCurSel _insertionMethod;
+
+private _ctrlUnitRP = _display displayCtrl IDC_SPAWNREINFORCEMENTS_UNIT_RP;
+[_ctrlUnitRP, LOGIC_TYPE_RP, _unitRP, true] call EFUNC(position_logics,initList);
+
 private _ctrlUnitBehaviour = _display displayCtrl IDC_SPAWNREINFORCEMENTS_UNIT_BEHAVIOUR;
 _ctrlUnitBehaviour lbSetCurSel _unitBehaviour;
-
-private _ctrlInsertion = _display displayCtrl IDC_SPAWNREINFORCEMENTS_INSERTION;
-_ctrlInsertion lbSetCurSel _insertionMethod;
 
 private _fnc_onUnload = {
     private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
@@ -332,46 +405,57 @@ private _fnc_onConfirm = {
     private _ctrlVehicle = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE;
     private _vehicle = lbCurSel _ctrlVehicle;
 
-    private _ctrlGroupList = _display displayCtrl IDC_SPAWNREINFORCEMENTS_GROUP_LIST;
-    private _group = [];
+    private _ctrlTreeMode = _display displayCtrl IDC_SPAWNREINFORCEMENTS_TREE_MODE;
+    private _treeMode = lbCurSel _ctrlTreeMode;
 
-    for "_i" from 0 to (lbSize _ctrlGroupList - 1) do {
-        _group pushBack (_ctrlGroupList lbData _i);
+    private _ctrlUnitList = _display displayCtrl IDC_SPAWNREINFORCEMENTS_UNITS_LIST;
+    private _unitList = [];
+
+    for "_i" from 0 to (lbSize _ctrlUnitList - 1) do {
+        _unitList pushBack (_ctrlUnitList lbData _i);
     };
 
-    private _ctrlLZ = _display displayCtrl IDC_SPAWNREINFORCEMENTS_LZ;
-    private _LZ = _ctrlLZ lbValue lbCurSel _ctrlLZ;
-
-    private _ctrlRP = _display displayCtrl IDC_SPAWNREINFORCEMENTS_RP;
-    private _RP = _ctrlRP lbValue lbCurSel _ctrlRP;
+    private _ctrlVehicleLZ = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_LZ;
+    private _vehicleLZ = _ctrlVehicleLZ lbValue lbCurSel _ctrlVehicleLZ;
 
     private _ctrlVehicleBehaviour = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_BEHAVIOUR;
     private _vehicleBehaviour = lbCurSel _ctrlVehicleBehaviour;
 
+    private _ctrlInsertion = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_INSERTION;
+    private _insertionMethod = lbCurSel _ctrlInsertion;
+
+    private _ctrlUnitRP = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_RP;
+    private _unitRP = _ctrlUnitRP lbValue lbCurSel _ctrlUnitRP;
+
     private _ctrlUnitBehaviour = _display displayCtrl IDC_SPAWNREINFORCEMENTS_UNIT_BEHAVIOUR;
     private _unitBehaviour = lbCurSel _ctrlUnitBehaviour;
 
-    private _ctrlInsertion = _display displayCtrl IDC_SPAWNREINFORCEMENTS_INSERTION;
-    private _insertionMethod = lbCurSel _ctrlInsertion;
+    VAR_SELECTIONS(RscSpawnReinforcements) = [
+        _side,
+        _faction,
+        _category,
+        _vehicle,
+        _treeMode,
+        _unitList,
+        _vehicleLZ,
+        _vehicleBehaviour,
+        _insertionMethod,
+        _unitRP,
+        _unitBehaviour
+    ];
 
-    GVAR(lastSpawnReinforcements) = [_side, _faction, _category, _vehicle, _group, _LZ, _RP, _vehicleBehaviour, _unitBehaviour, _insertionMethod];
+    private _position = _display getVariable QGVAR(position);
 
+    // Convert vehicle index to type
     _vehicle = _ctrlVehicle lbData _vehicle;
-    _LZ = [QGVAR(moduleCreateLZ), _LZ, _logic] call EFUNC(position_logics,select);
-    _RP = [QGVAR(moduleCreateRP), _RP, _logic] call EFUNC(position_logics,select);
 
-    _LZ = ASLtoAGL getPosASL _LZ;
-
-    // Handle none option for RP
-    if (isNull _RP) then {
-        _RP = [];
-    } else {
-        _RP = ASLtoAGL getPosASL _RP;
-    };
+    // Convert position logic index to object
+    _vehicleLZ = [LOGIC_TYPE_LZ, _vehicleLZ, _logic] call EFUNC(position_logics,select);
+    _unitRP = [LOGIC_TYPE_RP, _unitRP, _logic] call EFUNC(position_logics,select);
 
     [
         QGVAR(moduleSpawnreinforcements),
-        [_vehicle, _group, ASLtoAGL getPosASL _logic, _LZ, _RP, _vehicleBehaviour > 0, _unitBehaviour, _insertionMethod]
+        [_vehicle, _unitList, _position, _vehicleLZ, _unitRP, _vehicleBehaviour > 0, _unitBehaviour, _insertionMethod]
     ] call CBA_fnc_serverEvent;
 };
 
