@@ -1445,6 +1445,9 @@
             <English>%1 found intel: "%2"</English>
             <Polish>%1 znalazł dane wywiadowcze: "%2"</Polish>
         </Key>
+        <Key ID="STR_ZEN_Modules_ToggleLamps">
+            <English>Toggle Lamps</English>
+        </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_Buildings">
             <English>Buildings</English>

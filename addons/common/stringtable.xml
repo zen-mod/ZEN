@@ -70,6 +70,12 @@
             <Chinese>否</Chinese>
             <Chinesesimp>否</Chinesesimp>
         </Key>
+        <Key ID="STR_ZEN_Common_On">
+            <English>On</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_Off">
+            <English>Off</English>
+        </Key>
         <Key ID="STR_ZEN_Common_Unchanged">
             <English>Unchanged</English>
             <Russian>Не изменилось</Russian>
@@ -266,6 +272,9 @@
             <Polish>Promień</Polish>
             <Czech>Rádius</Czech>
             <Italian>Raggio</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Common_Radius_Units">
+            <English>Radius (m)</English>
         </Key>
         <Key ID="STR_ZEN_Common_Height">
             <English>Height</English>
