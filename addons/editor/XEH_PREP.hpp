@@ -1,6 +1,7 @@
 PREP(declutterEmptyTree);
 PREP(fixSideButtons);
 PREP(handleKeyDown);
+PREP(handleLoad);
 PREP(handleModeButtons);
 PREP(handleObjectPlaced);
 PREP(handleSearchButton);
@@ -9,4 +10,4 @@ PREP(handleSearchKeyDown);
 PREP(handleSearchKeyUp);
 PREP(handleSideButtons);
 PREP(handleTreeButtons);
-PREP(initDisplayCurator);
+PREP(handleUnload);
