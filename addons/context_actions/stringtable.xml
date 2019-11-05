@@ -7,6 +7,7 @@
             <German>Inventar bearbeiten</German>
             <Polish>Edytuj wyposażenie</Polish>
             <Italian>Modifica Inventario</Italian>
+            <Japanese>インベントリ編集</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_TeleportPlayers">
             <English>Teleport Players</English>
@@ -14,36 +15,42 @@
             <German>Spieler teleportieren</German>
             <Polish>Teleportuj graczy</Polish>
             <Italian>Teletrasporta giocatore</Italian>
+            <Japanese>プレイヤーのテレポート</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_TeleportZeus">
             <English>Teleport Zeus</English>
             <German>Zeus teleportieren</German>
             <Polish>Teleportuj Zeusa</Polish>
             <Italian>Teletrasporta Zeus</Italian>
+            <Japanese>Zeus のテレポート</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_VehicleLogistics">
             <English>Vehicle Logistics</English>
             <Polish>Logistyka pojazdów</Polish>
             <German>Fahrzeuglogistik</German>
             <Italian>Logistica dei veicoli</Italian>
+            <Japanese>車両ロジスティクス</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_Rearm">
             <English>Rearm</English>
             <Polish>Przezbrój</Polish>
             <German>Waffen zurücksetzen</German>
             <Italian>Riarma</Italian>
+            <Japanese>再武装</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_Refuel">
             <English>Refuel</English>
             <Polish>Zatankuj</Polish>
             <German>Auftanken</German>
             <Italian>Rifornimento</Italian>
+            <Japanese>給油</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_Repair">
             <English>Repair</English>
             <Polish>Napraw</Polish>
             <German>Repariern</German>
             <Italian>Ripara</Italian>
+            <Japanese>修理</Japanese>
         </Key>
     </Package>
 </Project>
