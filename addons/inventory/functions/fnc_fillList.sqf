@@ -59,12 +59,12 @@ if (_category == -1) then {
             };
 
             // Add item to listbox if not filtered
-            private _controlsGroupName = getText (_config >> "displayName");
-            if (toLower _controlsGroupName find _filter != -1) then {
+            private _displayName = getText (_config >> "displayName");
+            if (_filter in toLower _displayName) then {
                 private _picture = getText (_config >> "picture");
-                private _tooltip = format ["%1\n%2", _controlsGroupName, _x];
+                private _tooltip = format ["%1\n%2", _displayName, _x];
 
-                private _index = _ctrlList lnbAddRow ["", _controlsGroupName, str _count];
+                private _index = _ctrlList lnbAddRow ["", _displayName, str _count];
                 _ctrlList lnbSetData    [[_index, 0], _x];
                 _ctrlList lnbSetPicture [[_index, 0], _picture];
                 _ctrlList lbSetTooltip  [_index * count lnbGetColumnsPosition _ctrlList, _tooltip];
@@ -94,10 +94,10 @@ if (_category == -1) then {
 
     {
         // Add item to listbox if not filtered
-        private _controlsGroupName = getText (_config >> _x >> "displayName");
-        if (toLower _controlsGroupName find _filter != -1) then {
+        private _displayName = getText (_config >> _x >> "displayName");
+        if (_filter in toLower _displayName) then {
             private _picture = getText (_config >> _x >> "picture");
-            private _tooltip = format ["%1\n%2", _controlsGroupName, _x];
+            private _tooltip = format ["%1\n%2", _displayName, _x];
             private _count = "0";
             private _alpha = 0.5;
 
@@ -109,7 +109,7 @@ if (_category == -1) then {
                 _alpha = 1;
             };
 
-            private _index = _ctrlList lnbAddRow ["", _controlsGroupName, _count];
+            private _index = _ctrlList lnbAddRow ["", _displayName, _count];
             _ctrlList lnbSetData    [[_index, 0], _x];
             _ctrlList lnbSetPicture [[_index, 0], _picture];
             _ctrlList lnbSetColor   [[_index, 1], [1, 1, 1, _alpha]];

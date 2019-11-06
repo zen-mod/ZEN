@@ -11,7 +11,7 @@ class RscTitles {
                 idc = IDC_MODE_0;
                 style = ST_CENTER;
                 x = 0;
-                y = safeZoneY + POS_H(2.2);
+                y = safeZoneY + POS_H(3.3);
                 w = WIDTH_SINGLE;
                 h = POS_H(0.9);
                 sizeEx = POS_H(0.8);

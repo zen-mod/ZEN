@@ -39,7 +39,11 @@ GVAR(camera) cameraEffect ["terminate", "back"];
 camDestroy GVAR(camera);
 
 if (!isNull curatorCamera) then {
+    GVAR(curatorCameraData) params ["_position", "_dirAndUp"];
+
     curatorCamera cameraEffect ["internal", "back"];
+    curatorCamera setPosASL _position;
+    curatorCamera setVectorDirAndUp _dirAndUp;
 };
 
 GVAR(camera) = nil;
