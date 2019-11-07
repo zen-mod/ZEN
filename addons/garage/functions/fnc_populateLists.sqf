@@ -52,7 +52,7 @@ private _currentTextures = getObjectTextures GVAR(center) apply {toLower _x};
     private _configTextures = getArray (_sourcesConfig >> _configName >> "textures");
     private _isChecked = true;
     if (count _configTextures == count _currentTextures) then {
-        {if (toLower _x find (_currentTextures select _forEachIndex) < 0) exitWith {_isChecked = false}} forEach _configTextures;
+        {if !((_currentTextures select _forEachIndex) in toLower _x) exitWith {_isChecked = false}} forEach _configTextures;
     } else {
         _isChecked = false;
     };

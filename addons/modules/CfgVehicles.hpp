@@ -94,6 +94,7 @@ class CfgVehicles {
         displayName = "$STR_A3_CfgVehicles_ModuleCAS_F_Arguments_Type_values_Gun";
         curatorInfoType = QGVAR(RscCAS);
         icon = "\a3\Modules_F_Curator\Data\portraitCASGun_ca.paa";
+        portrait = "\a3\Modules_F_Curator\Data\portraitCASGun_ca.paa";
         model = "\a3\Modules_F_Curator\CAS\surfaceGun.p3d";
         simulation = "house";
         GVAR(casType) = 0;
@@ -101,18 +102,21 @@ class CfgVehicles {
     class GVAR(moduleCASMissile): GVAR(moduleCASGun) {
         displayName = "$STR_A3_CfgVehicles_ModuleCAS_F_Arguments_Type_values_Missiles";
         icon = "\a3\Modules_F_Curator\Data\portraitCASMissile_ca.paa";
+        portrait = "\a3\Modules_F_Curator\Data\portraitCASMissile_ca.paa";
         model = "\a3\Modules_F_Curator\CAS\surfaceMissile.p3d";
         GVAR(casType) = 1;
     };
     class GVAR(moduleCASGunMissile): GVAR(moduleCASGun) {
         displayName = "$STR_A3_CfgVehicles_ModuleCAS_F_Arguments_Type_values_GunMissiles";
         icon = "\a3\Modules_F_Curator\Data\portraitCASGunMissile_ca.paa";
+        portrait = "\a3\Modules_F_Curator\Data\portraitCASGunMissile_ca.paa";
         model = "\a3\Modules_F_Curator\CAS\surfaceGunMissile.p3d";
         GVAR(casType) = 2;
     };
     class GVAR(moduleCASBomb): GVAR(moduleCASGun) {
         displayName = CSTRING(ModuleCAS_Bomb);
         icon = "\a3\Modules_F_Curator\Data\portraitCASBomb_ca.paa";
+        portrait = "\a3\Modules_F_Curator\Data\portraitCASBomb_ca.paa";
         model = "\a3\Modules_F_Curator\CAS\surfaceMissile.p3d";
         GVAR(casType) = 3;
     };
@@ -142,6 +146,12 @@ class CfgVehicles {
         displayName = CSTRING(CreateIED);
         function = QFUNC(moduleCreateIED);
         icon = QPATHTOF(ui\explosion_ca.paa);
+    };
+    class GVAR(moduleCreateIntel): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleCreateIntel);
+        function = QFUNC(moduleCreateIntel);
+        icon = "\a3\ui_f\data\igui\cfg\simpletasks\types\documents_ca.paa";
     };
     class GVAR(moduleCreateMinefield): GVAR(moduleBase) {
         category = QGVAR(Objects);
@@ -218,15 +228,15 @@ class CfgVehicles {
         displayName = CSTRING(ModuleGarrison);
         function = QFUNC(moduleGarrison);
     };
-    class GVAR(ModuleGroupSide): GVAR(moduleBase) {
-        curatorCanAttach = 1;
-        displayName = CSTRING(ModuleGroupSide);
-        function = QFUNC(moduleGroupSide);
-    };
     class GVAR(moduleGlobalHint): GVAR(moduleBase) {
         category = "Curator";
         displayName = CSTRING(ModuleGlobalHint);
         curatorInfoType = QGVAR(RscGlobalHint);
+    };
+    class GVAR(moduleGroupSide): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleGroupSide);
+        function = QFUNC(moduleGroupSide);
     };
     class GVAR(moduleHeal): GVAR(moduleBase) {
         curatorCanAttach = 1;

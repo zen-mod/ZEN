@@ -4,14 +4,21 @@
         <Key ID="STR_ZEN_Visibility_Enabled">
             <English>Visibility Indicator</English>
             <French>Indicateur de visibilité</French>
+            <German>Sichtbarkeitsindikator</German>
+            <Polish>Wskażnik widoczności</Polish>
         </Key>
         <Key ID="STR_ZEN_Visibility_Enabled_Description">
             <English>Indicates when a player can see the Zeus' cursor.</English>
             <French>Indique quand un joueur peut voir le curseur de Zeus.</French>
+            <German>Zeigt an, wann ein Spieler den Zeuszeiger sehen könnte.</German>
+            <Polish>Wskazuje czy kursor Zeusa jest widoczny dla gracza.</Polish>
         </Key>
         <Key ID="STR_ZEN_Visibility_Visible">
             <English>VISIBLE</English>
             <French>VISIBLE</French>
+            <German>SICHTBAR</German>
+            <Italian>VISIBILE</Italian>
+            <Polish>WIDOCZNY</Polish>
         </Key>
     </Package>
 </Project>

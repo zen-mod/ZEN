@@ -86,18 +86,30 @@
         <Key ID="STR_ZEN_Editor_EjectPassengers">
             <English>Eject Passengers</English>
             <French>Ejecter les passagers</French>
+            <German>Passagiere rauswerfen</German>
+            <Polish>Wysadź pasażerów</Polish>
         </Key>
         <Key ID="STR_ZEN_Editor_EjectPassengers_Description">
             <English>Ejects the passengers of all selected vehicles. If the vehicle is currently flying, the units will be given parachutes.\nUnlike vanilla eject, units will disembark one after another (not immediately, with a short delay in-between).</English>
             <French>Éjecte les passagers de tous les véhicules sélectionnés. Si le véhicule est actuellement en vol, les unités recevront des parachutes. Contrairement à l'éjection standard, les unités débarqueront les unes après les autres (pas immédiatement, avec un court délai entre les deux).</French>
+            <German>Wirft die Fahrgäste aller ausgewählten Fahrzeuge raus. Wenn das Fahrzeug gerade fliegt, erhalten die Einheiten Fallschirme.\nIm Gegensatz zu "Vanilla" sitzen die Einheiten nacheinander ab (nicht alle sofort, sondern mit einer kurzen Verzögerung dazwischen).</German>
+            <Polish>Wysadza pasażerów ze wszystkich wybranych pojazdów. Jeżeli pojazd jest w powietrzu, pasażerowie dostaną spadochron.\nJednostki zostaną wysadzone jedna po drugiej (nie wszystkie na raz).</Polish>
         </Key>
         <Key ID="STR_ZEN_Editor_DeployCountermeasures">
             <English>Deploy Countermeasures</English>
             <French>Déployer des contre-mesures</French>
+            <German>Gegenmaßnahmen einleiten</German>
         </Key>
         <Key ID="STR_ZEN_Editor_DeployCountermeasures_Description">
             <English>Makes all selected vehicles deploy countermeasures such as smokes and flares.</English>
             <French>Tous les véhicules sélectionnés déploient des contre-mesures telles que des fumées et des fusées éclairantes.</French>
+            <German>Alle ausgewählten Fahrzeuge setzen Gegenmaßnahmen wie Rauch und Leuchtfackeln ein.</German>
+        </Key>
+        <Key ID="STR_ZEN_Editor_ToggleIcons">
+            <English>Toggle Editable Icons</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_ToggleIcons_Description">
+            <English>Toggles the visibility of all editable icons. Useful for temporarily reducing lag or onscreen clutter when there are a lot of icons.</English>
         </Key>
     </Package>
 </Project>

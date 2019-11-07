@@ -18,7 +18,6 @@
 params ["_display"];
 
 private _ctrlButtonOK = _display displayCtrl IDC_OK;
-private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 
 // Add EHs to update preview
 private _fnc_updatePreview = {
