@@ -7,47 +7,21 @@ class CfgVehicles {
     // Hide ACE Zeus modules for which replacements exist
     class ACEGVAR(zeus,moduleBase);
 
-    class ACEGVAR(zeus,moduleEditableObjects): ACEGVAR(zeus,moduleBase) {
-        scopeCurator = 1;
-    };
+    #define HIDE_MODULE(moduleName) \
+        class ACEGVAR(zeus,moduleName): ACEGVAR(zeus,moduleBase) { \
+            scopeCurator = QUOTE(2 - parseNumber GETMVAR(QGVAR(hideModules),true)); \
+        }
 
-    class ACEGVAR(zeus,moduleGroupSide): ACEGVAR(zeus,moduleBase) {
-        scopeCurator = 1;
-    };
-
-    class ACEGVAR(zeus,modulePatrolArea): ACEGVAR(zeus,moduleBase) {
-        scopeCurator = 1;
-    };
-
-    class ACEGVAR(zeus,moduleSimulation): ACEGVAR(zeus,moduleBase) {
-        scopeCurator = 1;
-    };
-
-    class ACEGVAR(zeus,moduleSuicideBomber): ACEGVAR(zeus,moduleBase) {
-        scopeCurator = 1;
-    };
-
-    class ACEGVAR(zeus,moduleTeleportPlayers): ACEGVAR(zeus,moduleBase) {
-        scopeCurator = 1;
-    };
-
-    class ACEGVAR(zeus,moduleToggleFlashlight): ACEGVAR(zeus,moduleBase) {
-        scopeCurator = 1;
-    };
-
-    class ACEGVAR(zeus,AddFullArsenal): ACEGVAR(zeus,moduleBase) {
-        scopeCurator = 1;
-    };
-
-    class ACEGVAR(zeus,RemoveFullArsenal): ACEGVAR(zeus,moduleBase) {
-        scopeCurator = 1;
-    };
-
-    class ACEGVAR(zeus,AddFullAceArsenal): ACEGVAR(zeus,moduleBase) {
-        scopeCurator = 1;
-    };
-
-    class ACEGVAR(zeus,RemoveFullAceArsenal): ACEGVAR(zeus,moduleBase) {
-        scopeCurator = 1;
-    };
+    HIDE_MODULE(moduleEditableObjects);
+    HIDE_MODULE(moduleGroupSide);
+    HIDE_MODULE(moduleHeal);
+    HIDE_MODULE(modulePatrolArea);
+    HIDE_MODULE(moduleSimulation);
+    HIDE_MODULE(moduleSuicideBomber);
+    HIDE_MODULE(moduleTeleportPlayers);
+    HIDE_MODULE(moduleToggleFlashlight);
+    HIDE_MODULE(AddFullArsenal);
+    HIDE_MODULE(RemoveFullArsenal);
+    HIDE_MODULE(AddFullAceArsenal);
+    HIDE_MODULE(RemoveFullAceArsenal);
 };
