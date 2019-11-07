@@ -45,5 +45,8 @@
             <German>Repariern</German>
             <Italian>Ripara</Italian>
         </Key>
+        <Key ID="STR_ZEN_Context_Actions_EditableObjects">
+            <English>Editable Objects</English>
+        </Key>
     </Package>
 </Project>
