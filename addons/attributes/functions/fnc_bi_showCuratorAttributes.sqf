@@ -43,7 +43,7 @@ if (_entity isEqualType objNull) then {
         } else {
             BIS_fnc_initCuratorAttributes_target = _entity;
             BIS_fnc_initCuratorAttributes_attributes = _attributes;
-            createDialog _infoType breakOut "Main";
+            (createDialog _infoType) breakOut "Main";
         };
     };
 };

@@ -9,7 +9,7 @@ PREP_RECOMPILE_END;
 // Disable CBA inventory attribute preload
 uiNamespace setVariable ["cba_ui_curatorItemCache", []];
 
-// Register Inventory attributes display and button to access it from Object display
+// Register Inventory attribute display and button to access it from Object display
 ["Inventory", LSTRING(EditInventory), true] call EFUNC(attributes,addDisplay);
 
 [

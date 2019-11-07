@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Initializes the "Inventory" Zeus attribute.
+ * Initializes the `inventory` attribute control type.
  *
  * Arguments:
  * 0: Display <DISPLAY>
