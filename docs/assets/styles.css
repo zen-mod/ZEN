@@ -37,6 +37,11 @@ a {
 
 .sidebar {
     color: var(--color-primary);
+    padding-top: 0;
+}
+
+.sidebar .app-name {
+    margin: 1.5rem;
 }
 
 .sidebar .app-name .app-name-link {
