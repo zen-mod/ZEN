@@ -4,13 +4,13 @@
 
 <p align="center">
     <a href="https://github.com/zen-mod/ZEN/releases">
-        <img src="https://img.shields.io/badge/Version-1.5.0-blue.svg" alt="Zeus Enhanced Version">
+        <img src="https://img.shields.io/badge/Version-1.5.0-blue.svg?style=flat-square" alt="Zeus Enhanced Version">
     </a>
     <a href="https://github.com/zen-mod/ZEN/issues">
-        <img src="https://img.shields.io/github/issues-raw/zen-mod/ZEN.svg?label=Issues" alt="Zeus Enhanced Issues">
+        <img src="https://img.shields.io/github/issues-raw/zen-mod/ZEN.svg?style=flat-square&label=Issues" alt="Zeus Enhanced Issues">
     </a>
     <a href="https://github.com/zen-mod/ZEN/blob/master/LICENSE">
-        <img src="https://img.shields.io/badge/License-GPLv3-red.svg" alt="Zeus Enhanced License">
+        <img src="https://img.shields.io/badge/License-GPLv3-red.svg?style=flat-square" alt="Zeus Enhanced License">
     </a>
 </p>
 
