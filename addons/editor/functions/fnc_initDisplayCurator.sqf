@@ -47,6 +47,16 @@ if (GVAR(disableLiveSearch)) then {
 
     private _ctrlSearchButton = _display displayCtrl IDC_SEARCH_BUTTON;
     _ctrlSearchButton ctrlAddEventHandler ["ButtonClick", {call FUNC(handleSearchButton)}];
+} else {
+    private _ctrlSearchEngine = _display displayCtrl IDC_RSCDISPLAYCURATOR_CREATE_SEARCH;
+    _ctrlSearchEngine ctrlAddEventHandler ["MouseButtonClick", {
+        params ["_ctrlSearchEngine", "_button"];
+
+        if (_button == 1) then {
+            _ctrlSearchEngine ctrlSetText "";
+            ctrlSetFocus _ctrlSearchEngine;
+        };
+    }];
 };
 
 _display displayAddEventHandler ["KeyDown", {call FUNC(handleKeyDown)}];
