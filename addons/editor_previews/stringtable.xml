@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Editor_Previews">
+        <Key ID="STR_ZEN_Editor_Previews_Enabled">
+            <English>Editor Previews</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_Previews_Enabled_Description">
+            <English>Enables the displaying of object preview images when an item is hovered in the create trees.</English>
+        </Key>
+    </Package>
+</Project>
