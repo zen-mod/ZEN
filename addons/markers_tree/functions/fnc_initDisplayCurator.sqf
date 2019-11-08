@@ -33,10 +33,3 @@ _ctrlCollapseAll ctrlAddEventHandler ["ButtonClick", {false call FUNC(handleTree
 
 private _ctrlExpandAll = _display displayCtrl IDC_EXPAND_ALL;
 _ctrlExpandAll ctrlAddEventHandler ["ButtonClick", {true call FUNC(handleTreeButtons)}];
-
-{
-    private _ctrl = _display displayCtrl _x;
-    _ctrl ctrlAddEventHandler ["ButtonClick", {call FUNC(handleModeChange)}];
-} forEach IDCS_MODE_BUTTONS;
-
-_display displayAddEventHandler ["KeyDown", {call FUNC(handleKeyDown)}];
