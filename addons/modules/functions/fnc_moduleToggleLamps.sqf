@@ -30,15 +30,23 @@ deleteVehicle _logic;
         "TOOLBOX",
         "STR_A3_RscAttributeTargetState_Title",
         [true, 1, 2, [ELSTRING(common,Off), ELSTRING(common,On)]]
+    ],
+    [
+        "TOOLBOX:YESNO",
+        ["STR_State_Repair", LSTRING(ToggleLamps_Repair_Tooltip)],
+        true
     ]
 ], {
     params ["_values", "_position"];
-    _values params ["_radius", "_state"];
+    _values params ["_radius", "_state", "_repair"];
+
+    // Only set damage when turning lights on, otherwise lights would be broken when turning off
+    _repair = _repair && {_state};
 
     {
         // Prevent unnecessary events for objects with no lights
         if !(_x call EFUNC(common,getLightingSelections) isEqualTo []) then {
-            [QEGVAR(common,setLampState), [_x, _state], _x call BIS_fnc_netId] call CBA_fnc_globalEventJIP;
+            [QEGVAR(common,setLampState), [_x, _state, _repair], _x call BIS_fnc_netId] call CBA_fnc_globalEventJIP;
         };
     } forEach nearestObjects [_position, ["Building"], parseNumber _radius, true];
 }, {}, _position] call EFUNC(dialog,create);

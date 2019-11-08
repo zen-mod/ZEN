@@ -6,6 +6,7 @@
  * Arguments:
  * 0: Lamp <OBJECT>
  * 1: State <BOOL>
+ * 2: Damage <BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -18,13 +19,15 @@
 
 #define LAMP_DISABLE_DAMAGE 0.95
 
-params ["_lamp", "_state"];
+params ["_lamp", "_state", ["_damage", false]];
 
-private _damage = [LAMP_DISABLE_DAMAGE, 0] select _state;
+if (_damage) then {
+    private _damage = [LAMP_DISABLE_DAMAGE, 0] select _state;
 
-{
-    _lamp setHit [_x, _damage];
-} forEach (_lamp call FUNC(getLightingSelections));
+    {
+        _lamp setHit [_x, _damage];
+    } forEach (_lamp call FUNC(getLightingSelections));
+};
 
 private _mode = ["OFF", "ON"] select _state;
 _lamp switchLight _mode;

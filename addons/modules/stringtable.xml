@@ -1448,6 +1448,9 @@
         <Key ID="STR_ZEN_Modules_ToggleLamps">
             <English>Toggle Lamps</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_ToggleLamps_Repair_Tooltip">
+            <English>Repair broken lights when turning them on.</English>
+        </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_Buildings">
             <English>Buildings</English>
