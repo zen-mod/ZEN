@@ -10,7 +10,7 @@
  * Selections <ARRAY>
  *
  * Example:
- * [_object] call zen_common_fnc_getReflectorSelections
+ * [_object] call zen_common_fnc_getLightingSelections
  *
  * Public: No
  */

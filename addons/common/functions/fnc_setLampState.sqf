@@ -24,4 +24,7 @@ private _damage = [LAMP_DISABLE_DAMAGE, 0] select _state;
 
 {
     _lamp setHit [_x, _damage];
-} forEach (_lamp call FUNC(getReflectorSelections));
+} forEach (_lamp call FUNC(getLightingSelections));
+
+private _mode = ["OFF", "ON"] select _state;
+_lamp switchLight _mode;
