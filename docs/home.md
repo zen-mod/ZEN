@@ -17,6 +17,7 @@ Special thanks to the [ACE3 Team](http://ace3mod.com/team.html) for their open s
 - Overhauled markers tree with markers sorted into categories.
 - Ability to create and edit area markers through Zeus.
 - Rewritten, faster remote controlling of units.
+- Object editor preview images displaying in Zeus.
 - Player visibility indicator to help ensure mission adjustments are not made in view of players.
 - Vehicle customization garage made specifically for Zeus.
 - Various bug fixes and quality of life improvements to the Zeus interface.
