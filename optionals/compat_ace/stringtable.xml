@@ -5,7 +5,7 @@
             <English>Hide ACE Modules</English>
         </Key>
         <Key ID="STR_ZEN_Compat_ACE_HideModules_Description">
-            <English>Hides ACE modules for which replacements exist.</English>
+            <English>Hides ACE modules for which replacements exist. Requires display reload.</English>
         </Key>
     </Package>
 </Project>
