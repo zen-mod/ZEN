@@ -1,4 +1,11 @@
 jobs:
+  - job: Test
+    pool:
+      vmImage: 'ubuntu-18.04'
+    steps:
+      - bash: |
+          python ./tools/stringtable_validator.py
+        displayName: 'Validate Stringtable'
   - job: Build
     pool:
       vmImage: 'vs2017-win2016'
