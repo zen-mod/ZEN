@@ -347,6 +347,12 @@ class CfgVehicles {
         function = QFUNC(moduleToggleIRLasers);
         icon = "\a3\ui_f_curator\data\cfgcurator\laser_ca.paa";
     };
+    class GVAR(moduleToggleLamps): GVAR(moduleBase) {
+        category = QGVAR(Buildings);
+        displayName = CSTRING(ToggleLamps);
+        function = QFUNC(moduleToggleLamps);
+        icon = QPATHTOF(ui\street_lamp_ca.paa);
+    };
     class GVAR(moduleTurretOptics): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Equipment);

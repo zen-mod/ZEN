@@ -63,6 +63,7 @@ PREP(moduleSuicideBomber);
 PREP(moduleTeleportPlayers);
 PREP(moduleToggleFlashlights);
 PREP(moduleToggleIRLasers);
+PREP(moduleToggleLamps);
 PREP(moduleTurretOptics);
 PREP(moduleUnGarrison);
 PREP(moduleVisibility);

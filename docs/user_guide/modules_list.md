@@ -214,6 +214,10 @@ The "Add Gear" option, will add a random, compatible flashlight to unit's weapon
 Toggles the IR lasers of all AI units of the given side (or group, when placed on a unit) to the selected state.
 The "Add Gear" option, will add a random, compatible IR laser to unit's weapon if possible and the weapon does not already have one.
 
+## Toggle Lamps
+
+Sets the state (on/off) of all building light sources such as street lamps within the specified radius.
+
 ## Toggle Simulation
 
 Toggles the simulation of the attached object.

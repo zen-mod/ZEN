@@ -51,12 +51,12 @@ This function is used to ensure that the created action array is in the correct 
 :---: | ----------- | ---- | ---------------------------
 0 | Action Name | STRING |
 1 | Display Name | STRING |
-2 | Icon and Icon Color | STRING or ARRAY | ["", [1, 1, 1, 1]]
+2 | Icon and Icon Color | STRING or ARRAY | `["", [1, 1, 1, 1]]`
 3 | Statement | CODE |
-4 | Condition | CODE | {true}
-5 | Arguments | ANY | []
-6 | Dynamic Children | CODE | {}
-7 | Modifier Function | CODE | {}
+4 | Condition | CODE | `{true}`
+5 | Arguments | ANY | `[]`
+6 | Dynamic Children | CODE | `{}`
+7 | Modifier Function | CODE | `{}`
 
 **Return Value:**
 
@@ -65,7 +65,12 @@ This function is used to ensure that the created action array is in the correct 
 **Example:**
 
 ```clike
-["HintTime", "Hint Time", "", {hint ([daytime] call BIS_fnc_timeToString)}] call zen_context_menu_fnc_createAction
+private _action = [
+    "HintTime",
+    "Hint Time",
+    "\a3\ui_f\data\igui\rsctitles\mpprogress\timer_ca.paa",
+    {hint format ["Time - %1", [daytime] call BIS_fnc_timeToString]}
+] call zen_context_menu_fnc_createAction
 ```
 
 #### Adding the Created Action
