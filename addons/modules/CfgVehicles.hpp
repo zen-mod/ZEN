@@ -157,8 +157,8 @@ class CfgVehicles {
         category = QGVAR(Reinforcements);
         displayName = CSTRING(ModuleCreateLZ);
         function = QFUNC(moduleCreateLZ);
-        icon = QPATHTOF(ui\lz_ca.paa);
-        portrait = QPATHTOF(ui\lz_ca.paa);
+        icon = "\a3\modules_f\data\portraitsector_ca.paa";
+        portrait = "\a3\modules_f\data\portraitsector_ca.paa";
     };
     class GVAR(moduleCreateMinefield): GVAR(moduleBase) {
         category = QGVAR(Objects);
