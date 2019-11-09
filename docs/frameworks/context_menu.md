@@ -96,7 +96,7 @@ Actions are added locally and as a result the function must be executed on each 
 
 _Requires Zeus Enhanced v1.6.0 or later._
 
-Context menu actions can be removed by using the `zen_context_menu_fnc_removeAction` function with the full action path.
+Context menu actions can be removed using the `zen_context_menu_fnc_removeAction` function with the full action path.
 
 **Arguments:**
 
