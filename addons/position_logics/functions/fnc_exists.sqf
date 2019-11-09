@@ -7,7 +7,7 @@
  * 0: Type <STRING|OBJECT>
  *
  * Return Value:
- * Position Logic Exists <BOOL>
+ * Exists <BOOL>
  *
  * Example:
  * [_logicType] call zen_position_logics_fnc_exists
@@ -17,10 +17,4 @@
 
 params [["_type", "", ["", objNull]]];
 
-if (_type isEqualType objNull) then {
-    _type = typeOf _type;
-};
-
-private _list = missionNamespace getVariable [VAR_LIST(_type), []];
-
-!(_list isEqualTo [])
+!(_type call FUNC(get) isEqualTo [])

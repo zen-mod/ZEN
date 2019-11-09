@@ -363,7 +363,7 @@ private _ctrlUnitList = _display displayCtrl IDC_SPAWNREINFORCEMENTS_UNITS_LIST;
 _ctrlUnitList ctrlAddEventHandler ["KeyDown", _fnc_listKeyDown];
 
 private _ctrlVehicleLZ = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_LZ;
-[_ctrlVehicleLZ, LOGIC_TYPE_LZ, _vehicleLZ] call EFUNC(position_logics,initList);
+[_ctrlVehicleLZ, LOGIC_TYPE_LZ, _vehicleLZ, false, _logic] call EFUNC(position_logics,initList);
 
 private _ctrlVehicleBehaviour = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_BEHAVIOUR;
 _ctrlVehicleBehaviour lbSetCurSel _vehicleBehaviour;
@@ -372,7 +372,7 @@ private _ctrlInsertion = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_IN
 _ctrlInsertion lbSetCurSel _insertionMethod;
 
 private _ctrlUnitRP = _display displayCtrl IDC_SPAWNREINFORCEMENTS_UNIT_RP;
-[_ctrlUnitRP, LOGIC_TYPE_RP, _unitRP, true] call EFUNC(position_logics,initList);
+[_ctrlUnitRP, LOGIC_TYPE_RP, _unitRP, true, _logic] call EFUNC(position_logics,initList);
 
 private _ctrlUnitBehaviour = _display displayCtrl IDC_SPAWNREINFORCEMENTS_UNIT_BEHAVIOUR;
 _ctrlUnitBehaviour lbSetCurSel _unitBehaviour;

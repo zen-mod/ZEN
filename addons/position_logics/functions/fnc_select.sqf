@@ -21,9 +21,13 @@
  * Public: No
  */
 
-params [["_type", "", ["", objNull]], ["_mode", "", ["", 0]], ["_position", [0, 0, 0], [[], objNull], 3]];
+params [
+    ["_type", "", ["", objNull]],
+    ["_mode", "", ["", 0]],
+    ["_position", [0, 0, 0], [[], objNull], 3]
+];
 
-private _list = missionNamespace getVariable [VAR_LIST(_type), []];
+private _list = _type call FUNC(get);
 
 // Exit if the list is empty
 if (_list isEqualTo []) exitWith {objNull};

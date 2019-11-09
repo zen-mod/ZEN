@@ -27,5 +27,4 @@ if (isLocalized _format) then {
 };
 
 private _nextID = missionNamespace getVariable [VAR_NEXTID(_type), 0];
-
 format [_format, _nextID call EFUNC(common,getPhoneticName)]

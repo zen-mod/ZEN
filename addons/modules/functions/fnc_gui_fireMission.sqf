@@ -85,7 +85,7 @@ if (QGVAR(moduleCreateTarget) call EFUNC(position_logics,exists)) then {
 
     [_ctrlMode, _mode] call _fnc_onModeChanged;
 
-    [_ctrlTarget, QGVAR(moduleCreateTarget), _target] call EFUNC(position_logics,initList);
+    [_ctrlTarget, QGVAR(moduleCreateTarget), _target, false, _logic] call EFUNC(position_logics,initList);
 } else {
     _ctrlTarget ctrlShow false;
     _ctrlMode ctrlSetTooltip localize LSTRING(NoTargetModules);

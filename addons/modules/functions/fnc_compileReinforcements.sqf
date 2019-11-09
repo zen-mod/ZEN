@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Compiles a list of all infantry and vehicles avaiable for reinforcements.
+ * Compiles a list of all infantry, vehicles, and groups avaiable for reinforcements.
  *
  * Arguments:
  * None
@@ -124,6 +124,5 @@ private _groups = [];
         } forEach configProperties [_x, "isClass _x"];
     };
 } forEach configProperties [configFile >> "CfgGroups", "isClass _x"];
-
 
 uiNamespace setVariable [QGVAR(reinforcementsCache), [_vehicles, _infantry, _groups]];
