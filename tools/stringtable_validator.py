@@ -24,7 +24,7 @@ def check_stringtable(filepath):
     try:
         tree = ET.parse(filepath)
     except:
-        print("Failed to parse file.")
+        print("  ERROR: Failed to parse file.")
         return 1
 
     errors = 0
