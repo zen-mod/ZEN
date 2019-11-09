@@ -18,6 +18,10 @@
 
 params ["_display"];
 
+// Reset editable icons visibility tracking variable
+// Prevents unwanted behaviour if display is closed while icons are hidden
+GVAR(iconsVisible) = true;
+
 if (GVAR(removeWatermark)) then {
     private _ctrlWatermark = _display displayCtrl IDC_RSCDISPLAYCURATOR_WATERMARK;
     _ctrlWatermark ctrlSetText "";
@@ -43,12 +47,41 @@ if (GVAR(disableLiveSearch)) then {
 
     private _ctrlSearchButton = _display displayCtrl IDC_SEARCH_BUTTON;
     _ctrlSearchButton ctrlAddEventHandler ["ButtonClick", {call FUNC(handleSearchButton)}];
+} else {
+    private _ctrlSearchEngine = _display displayCtrl IDC_RSCDISPLAYCURATOR_CREATE_SEARCH;
+    _ctrlSearchEngine ctrlAddEventHandler ["MouseButtonClick", {
+        params ["_ctrlSearchEngine", "_button"];
+
+        if (_button == 1) then {
+            _ctrlSearchEngine ctrlSetText "";
+            ctrlSetFocus _ctrlSearchEngine;
+        };
+    }];
 };
+
+_display displayAddEventHandler ["KeyDown", {call FUNC(handleKeyDown)}];
 
 {
     private _ctrl = _display displayCtrl _x;
-    _ctrl ctrlAddEventHandler ["ButtonClick", {call FUNC(fixSideButtons)}];
+    _ctrl ctrlAddEventHandler ["ButtonClick", {call FUNC(handleModeButtons)}];
 } forEach IDCS_MODE_BUTTONS;
+
+// Need events to check if side buttons are hovered since changing the mode
+// also triggers the button click event for the side buttons
+{
+    private _ctrl = _display displayCtrl _x;
+    _ctrl ctrlAddEventHandler ["ButtonClick", {call FUNC(handleSideButtons)}];
+
+    _ctrl ctrlAddEventHandler ["MouseEnter", {
+        params ["_ctrl"];
+        _ctrl setVariable [QGVAR(hovered), true];
+    }];
+
+    _ctrl ctrlAddEventHandler ["MouseExit", {
+        params ["_ctrl"];
+        _ctrl setVariable [QGVAR(hovered), false];
+    }];
+} forEach IDCS_SIDE_BUTTONS;
 
 private _ctrlTreeRecent = _display displayCtrl IDC_RSCDISPLAYCURATOR_CREATE_RECENT;
 _ctrlTreeRecent ctrlAddEventHandler ["TreeSelChanged", {

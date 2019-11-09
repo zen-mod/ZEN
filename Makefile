@@ -73,13 +73,13 @@ push: commit
 release: clean version commit
 	@"$(MAKE)" $(MAKEFLAGS) signatures
 	@echo "  ZIP  $(ZIP)_$(VERSION_F)-$(GIT_HASH).zip"
-	@cp mod.cpp README.md AUTHORS.txt LICENSE logo_zen_ca.paa logo_zen_small_ca.paa $(BIN)
+	@cp mod.cpp README.md AUTHORS.txt LICENSE logo_zen_ca.paa logo_zen_small_ca.paa meta.cpp $(BIN)
 	@zip -qr $(ZIP)_$(VERSION_F)-$(GIT_HASH).zip $(BIN)
 
 releaseCI: clean version
 	@"$(MAKE)" $(MAKEFLAGS) signatures
 	@echo "  TAR  $(ZIP)_$(VERSION_F)-$(GIT_HASH).tar.gz"
-	@cp mod.cpp README.md AUTHORS.txt LICENSE logo_zen_ca.paa logo_zen_small_ca.paa $(BIN)
+	@cp mod.cpp README.md AUTHORS.txt LICENSE logo_zen_ca.paa logo_zen_small_ca.paa meta.cpp $(BIN)
 	@tar -czf $(ZIP)_$(VERSION_F)-$(GIT_HASH).tar.gz $(BIN)
 	@ls
 

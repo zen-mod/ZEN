@@ -94,6 +94,7 @@ class CfgVehicles {
         displayName = "$STR_A3_CfgVehicles_ModuleCAS_F_Arguments_Type_values_Gun";
         curatorInfoType = QGVAR(RscCAS);
         icon = "\a3\Modules_F_Curator\Data\portraitCASGun_ca.paa";
+        portrait = "\a3\Modules_F_Curator\Data\portraitCASGun_ca.paa";
         model = "\a3\Modules_F_Curator\CAS\surfaceGun.p3d";
         simulation = "house";
         GVAR(casType) = 0;
@@ -101,18 +102,21 @@ class CfgVehicles {
     class GVAR(moduleCASMissile): GVAR(moduleCASGun) {
         displayName = "$STR_A3_CfgVehicles_ModuleCAS_F_Arguments_Type_values_Missiles";
         icon = "\a3\Modules_F_Curator\Data\portraitCASMissile_ca.paa";
+        portrait = "\a3\Modules_F_Curator\Data\portraitCASMissile_ca.paa";
         model = "\a3\Modules_F_Curator\CAS\surfaceMissile.p3d";
         GVAR(casType) = 1;
     };
     class GVAR(moduleCASGunMissile): GVAR(moduleCASGun) {
         displayName = "$STR_A3_CfgVehicles_ModuleCAS_F_Arguments_Type_values_GunMissiles";
         icon = "\a3\Modules_F_Curator\Data\portraitCASGunMissile_ca.paa";
+        portrait = "\a3\Modules_F_Curator\Data\portraitCASGunMissile_ca.paa";
         model = "\a3\Modules_F_Curator\CAS\surfaceGunMissile.p3d";
         GVAR(casType) = 2;
     };
     class GVAR(moduleCASBomb): GVAR(moduleCASGun) {
         displayName = CSTRING(ModuleCAS_Bomb);
         icon = "\a3\Modules_F_Curator\Data\portraitCASBomb_ca.paa";
+        portrait = "\a3\Modules_F_Curator\Data\portraitCASBomb_ca.paa";
         model = "\a3\Modules_F_Curator\CAS\surfaceMissile.p3d";
         GVAR(casType) = 3;
     };

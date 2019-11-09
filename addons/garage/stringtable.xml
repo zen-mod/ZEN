@@ -3,20 +3,35 @@
     <Package name="Garage">
         <Key ID="STR_ZEN_Garage_Close_Tooltip">
             <English>Exit Garage (Escape)</English>
+            <French>Quitter le garage (Echap)</French>
             <Russian>Покинуть гараж (Escape)</Russian>
             <German>Garage verlasen (Escape)</German>
             <Polish>Wyjdź z garażu (Escape)</Polish>
+            <Portuguese>Sair da Garagem (ESC)</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Garage_Hide_Tooltip">
             <English>Hide Interface (Backspace)</English>
+            <French>Cacher l'interface (Retour)</French>
             <German>Benutzeroberfläche verstecken (Rücktaste)</German>
             <Polish>Ukryj interfejs (Backspace)</Polish>
+            <Portuguese>Esconder Interface (Escape)</Portuguese>
         </Key>
         <Key ID="STR_ZEN_Garage_ApplyToAll">
             <English>Apply To All</English>
+            <Polish>Zastosuj do Wszystkich</Polish>
         </Key>
         <Key ID="STR_ZEN_Garage_ApplyToAll_Tooltip">
             <English>Apply the current vehicle's customization to all selected vehicles of this type.</English>
+            <Polish>Zastosuj Właściwości wybranego pojazdu do wszystkich pojazdów tego typu.</Polish>
+            <Portuguese>Aplicar Para Todos</Portuguese>
+        </Key>
+        <Key ID="STR_ZEN_Garage_ApplyToAll_Tooltip">
+            <English>Apply the current vehicle's customization to all selected vehicles of this type.</English>
+            <Portuguese>Aplicar a customização atual para todos os veículos selecionados deste tipo.</Portuguese>
+        </Key>
+        <Key ID="STR_ZEN_Garage_CannotApplyToAll">
+            <English>No other vehicles of the same type selected.</English>
+            <Portuguese>Nenhum outro veículo do mesmo tipo selecionado.</Portuguese>
         </Key>
     </Package>
 </Project>
