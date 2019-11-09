@@ -3,26 +3,33 @@
     <Package name="Music">
         <Key ID="STR_ZEN_Music_ThisIsWarPartOne">
             <English>This Is War - Part 1</English>
+            <French>This Is War - Partie 1</French>
             <Polish>To jest Wojna - Część 1</Polish>
         </Key>
         <Key ID="STR_ZEN_Music_ThisIsWarPartTwo">
             <English>This Is War - Part 2</English>
+            <French>This Is War - Partie 2</French>
             <Polish>To jest Wojna - Część 2</Polish>
         </Key>
         <Key ID="STR_ZEN_Music_EagleWing_Defcon">
             <English>A2 EW - Defcon</English>
+            <French>A2 EW - Defcon</French>
         </Key>
         <Key ID="STR_ZEN_Music_EagleWing_Fallout">
             <English>A2 EW - Fallout</English>
+            <French>A2 EW - Fallout</French>
         </Key>
         <Key ID="STR_ZEN_Music_EagleWing_MAD">
             <English>A2 EW - Mad</English>
+            <French>A2 EW - Mad</French>
         </Key>
         <Key ID="STR_ZEN_Music_EagleWing_SkyNet">
             <English>A2 EW - Skynet</English>
+            <French>A2 EW - Skynet</French>
         </Key>
         <Key ID="STR_ZEN_Music_EagleWing_Wasteland">
             <English>A2 EW - Wasteland</English>
+            <French>A2 EW - Wasteland</French>
         </Key>
     </Package>
 </Project>
