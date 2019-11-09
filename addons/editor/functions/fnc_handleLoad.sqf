@@ -2,7 +2,7 @@
 #include "\a3\ui_f\hpp\defineResinclDesign.inc" // can't put this in config due to undef error
 /*
  * Author: mharis001
- * Initializes the Zeus Display.
+ * Handles initializing the Zeus Display.
  *
  * Arguments:
  * 0: Display <DISPLAY>
@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [DISPLAY] call zen_editor_fnc_initDisplayCurator
+ * [DISPLAY] call zen_editor_fnc_handleLoad
  *
  * Public: No
  */
@@ -109,6 +109,18 @@ _ctrlTreeRecent ctrlAddEventHandler ["TreeSelChanged", {
         GVAR(recentTreeData) = _ctrlTreeRecent tvData _selectedPath;
     };
 }];
+
+// Initially open the map fully zoomed out and centered
+if (isNil QGVAR(previousMapState)) then {
+    GVAR(previousMapState) = [1, [worldSize / 2, worldSize / 2]];
+};
+
+// Restore previous map state from when display was closed
+GVAR(previousMapState) params ["_mapScale", "_mapPosition"];
+
+private _ctrlMap = _display displayCtrl IDC_RSCDISPLAYCURATOR_MAINMAP;
+_ctrlMap ctrlMapAnimAdd [0, _mapScale, _mapPosition];
+ctrlMapAnimCommit _ctrlMap;
 
 // Reset editable icons visibility tracking variable
 // Prevents unwanted behaviour if display is closed while icons are hidden
