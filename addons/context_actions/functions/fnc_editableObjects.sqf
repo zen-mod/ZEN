@@ -19,7 +19,7 @@
 params ["_mode", "_radius"];
 
 private _curator = getAssignedCuratorLogic player;
-private _objects = nearestObjects [ASLtoAGL _contextPosASL, ["All"], _radius];
+private _objects = nearestObjects [ASLtoAGL _contextPosASL, ["All"], _radius, true];
 private _eventName = [QEGVAR(common,removeObjects), QEGVAR(common,addObjects)] select _mode;
 
 [_eventName, [_objects, _curator]] call CBA_fnc_serverEvent;
