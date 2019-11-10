@@ -3,6 +3,7 @@
     <Package name="Main">
         <Key ID="STR_ZEN_Main_Author">
             <English>ZEN Team</English>
+            <French>ZEN Team</French>
             <German>ZEN Team</German>
             <Polish>ZEN Team</Polish>
             <Italian>ZEN Team</Italian>
