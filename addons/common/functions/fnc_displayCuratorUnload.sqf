@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [DISPLAY] call zen_common_fnc_curatorDisplayUnload
+ * [DISPLAY] call zen_common_fnc_displayCuratorUnload
  *
  * Public: No
  */

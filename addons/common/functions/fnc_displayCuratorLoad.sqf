@@ -10,14 +10,14 @@
  * None
  *
  * Example:
- * [DISPLAY] call zen_common_fnc_curatorDisplayLoad
+ * [DISPLAY] call zen_common_fnc_displayCuratorLoad
  *
  * Public: No
  */
 
 params ["_display"];
 
-private _module = getAssignedCuratorLogic player;
+private _curator = getAssignedCuratorLogic player;
 
 // Remove "Gear" animation when entering Zeus
 if (GVAR(disableGearAnim) && {vehicle player == player}) then {
@@ -25,9 +25,9 @@ if (GVAR(disableGearAnim) && {vehicle player == player}) then {
 };
 
 // Emit one time module setup event
-if !(_module getVariable [QGVAR(setupComplete), false]) then {
-    ["ZEN_moduleSetup", _module] call CBA_fnc_localEvent;
-    _module setVariable [QGVAR(setupComplete), true];
+if !(_curator getVariable [QGVAR(setupComplete), false]) then {
+    ["ZEN_moduleSetup", _curator] call CBA_fnc_localEvent;
+    _curator setVariable [QGVAR(setupComplete), true];
 };
 
 // Emit display load event
