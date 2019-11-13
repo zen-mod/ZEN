@@ -3,6 +3,7 @@
     <Package name="Attributes">
         <Key ID="STR_ZEN_Attributes_Engine">
             <English>Engine</English>
+            <French>Moteur</French>
             <Russian>Двигатель</Russian>
             <German>Motor</German>
             <Polish>Silnik</Polish>
@@ -13,6 +14,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_Lights">
             <English>Lights</English>
+            <French>Lumières</French>
             <Russian>Фары</Russian>
             <German>Lichter</German>
             <Polish>Światła</Polish>
@@ -23,6 +25,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_PlateNumber">
             <English>Plate Number</English>
+            <French>Plaque d'immatriculation</French>
             <Russian>Госномер</Russian>
             <German>Kennzeichen</German>
             <Polish>Tablica rejestracyjna</Polish>
@@ -33,6 +36,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_Exec_Tooltip">
             <English>This code will be executed in the unscheduled environment on the machine where this object is local.\nThe object will be passed in the "_this" variable.</English>
+            <French>Ce code sera exécuté dans l'environnement non planifié de la machine où cet objet est local.\nL'objet sera passé dans la variable "_this".</French>
             <German>Der eingegebene Code wird in einer unscheduled Umgebung lokal zum Objkekt ausgeführt.\nDas Objekt wird in der Variable names "_this" übergeben.</German>
             <Polish>Ten kod zostanie wykonany w środowisku unscheduled na maszynie gdzie obiekt jest lokalny.\nObiekt zostanie przekazany w zmiennej "_this".</Polish>
             <Czech>Tento kód bude spuštěn v neplánovaném prostředí na počítači, kde je tento objekt lokální. \n Objekt bude předán v proměnné "_this".</Czech>
@@ -42,6 +46,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_Timeout">
             <English>Timeout (s)</English>
+            <French>Délai d'attente (s)</French>
             <Russian>Таймаут (с)</Russian>
             <German>Zeitüberschreitung (s)</German>
             <Polish>Limit czasu (s)</Polish>
@@ -52,6 +57,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_Timeout_Tooltip">
             <English>The time (in seconds) between waypoint condition satisfaction and waypoint completion.</English>
+            <French>Le temps (en secondes) entre la satisfaction des conditions du repère de balisage et l'achèvement du repère de balisage.</French>
             <German>Zeit (in Sekunden) zwischen der Erfüllung der Wegpunktbedingung und der Vervollständigung des Wegpunktes.</German>
             <Polish>Czas (w sekundach) pomiędzy wypełnieniem warunku zaliczenia punktu trasy a jego faktycznym zaliczeniem.</Polish>
             <Czech>Čas (v sekundách) mezi splněním podmínky trasového bodu a dokončením trasového bodu.</Czech>
@@ -61,6 +67,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_Sensors">
             <English>Sensors</English>
+            <French>Capteurs</French>
             <German>Sensoren</German>
             <Czech>Senzory</Czech>
             <Italian>Sensori</Italian>
@@ -70,6 +77,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeSide">
             <English>Change Side</English>
+            <French>Changer de côté</French>
             <German>Seite ändern</German>
             <Czech>Změnit stranu</Czech>
             <Italian>Cambia Lato</Italian>
@@ -79,6 +87,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeSkills">
             <English>Change Skills</English>
+            <French>Changer de compétences</French>
             <German>Fähigkeiten ändern</German>
             <Czech>Změnit dovednosti</Czech>
             <Italian>Cambia Abilità</Italian>
@@ -88,6 +97,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_Skills">
             <English>Skills</English>
+            <French>Compétences</French>
             <German>Fähigkeiten</German>
             <Czech>Dovednosti</Czech>
             <Italian>Abilità</Italian>
@@ -97,6 +107,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_AimingAccuracy">
             <English>Aiming Accuracy</English>
+            <French>Précision de visée</French>
             <German>Zielgenauigkeit</German>
             <Czech>Přesnost míření</Czech>
             <Italian>Precisione</Italian>
@@ -106,6 +117,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_AimingSpeed">
             <English>Aiming Speed</English>
+            <French>Vitesse de visée</French>
             <German>Zilelgeschwindigkeit</German>
             <Czech>Rychlost míření</Czech>
             <Italian>Velcoità di puntamento</Italian>
@@ -115,6 +127,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_AimingShake">
             <English>Aiming Shake</English>
+            <French>Secousse de visée</French>
             <German>Waffenschwankung</German>
             <Czech>Chvění míření</Czech>
             <Polish>Niestabilność celowania</Polish>
@@ -123,6 +136,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_Commanding">
             <English>Commanding</English>
+            <French>Commandement</French>
             <German>Kommandierend</German>
             <Czech>Velení</Czech>
             <Italian>Comando</Italian>
@@ -132,6 +146,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_Courage">
             <English>Courage</English>
+            <French>Courage</French>
             <German>Mut</German>
             <Czech>Odvaha</Czech>
             <Italian>Coraggio</Italian>
@@ -141,6 +156,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_SpotDistance">
             <English>Spotting Distance</English>
+            <French>Distance de repérage</French>
             <German>Aufklärungsdistanz</German>
             <Czech>Pozorovacívzdálenost</Czech>
             <Italian>Distanza di Spotting</Italian>
@@ -149,6 +165,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_SpotTime">
             <English>Spotting Speed</English>
+            <French>Vitesse de repérage</French>
             <German>Aufklärungszeit</German>
             <Czech>Pozorovací rychlost</Czech>
             <Italian>Velocità di Spotting</Italian>
@@ -157,6 +174,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_ReloadSpeed">
             <English>Reload Speed</English>
+            <French>vitesse de recharge</French>
             <German>Nachladezeit</German>
             <Czech>Rychlost přebíjení</Czech>
             <Italian>Velocità di Ricarica</Italian>
@@ -166,6 +184,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeTraits">
             <English>Change Traits</English>
+            <French>Changer les caractéristiques</French>
             <German>Eigenschaften ändern</German>
             <Czech>Změnit vlastnosti</Czech>
             <Italian>Cambia Tratti</Italian>
@@ -175,6 +194,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_Traits">
             <English>Traits</English>
+            <French>Caractéristiques</French>
             <German>Eigenschaften</German>
             <Czech>Vlastnosti</Czech>
             <Italian>Tratti</Italian>
@@ -184,6 +204,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_MedicalTraining">
             <English>Medical Training</English>
+            <French>Entrainement médical</French>
             <German>Medizinische Ausbildung</German>
             <Czech>Lékařské školení</Czech>
             <Italian>Addestramento Medico</Italian>
@@ -193,6 +214,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_EngineeringSkill">
             <English>Engineering Skill</English>
+            <French>Compétences d'ingénierie</French>
             <German>Technische Fähigkeiten</German>
             <Czech>Inženýrská dovednost</Czech>
             <Italian>Abilità di Ingegneriia</Italian>
@@ -202,6 +224,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_Doctor">
             <English>Doctor</English>
+            <French>Docteur</French>
             <German>Doktor</German>
             <Czech>Doktor</Czech>
             <Italian>Dottore</Italian>
@@ -211,6 +234,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_AdvEngineer">
             <English>Adv. Engineer</English>
+            <French>Ingénieur d'études</French>
             <German>Erfahrene Techniker</German>
             <Czech>Pokročilý Inženýr</Czech>
             <Italian>Ingegnere Avanzato</Italian>
@@ -220,6 +244,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_EOD">
             <English>EOD</English>
+            <French>EOD</French>
             <German>Kampfmittelbeseitigung</German>
             <Czech>Likvidace bomb</Czech>
             <Polish>Saper</Polish>

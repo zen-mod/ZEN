@@ -71,8 +71,15 @@
             <Chinese>否</Chinese>
             <Chinesesimp>否</Chinesesimp>
         </Key>
+        <Key ID="STR_ZEN_Common_On">
+            <English>On</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_Off">
+            <English>Off</English>
+        </Key>
         <Key ID="STR_ZEN_Common_Unchanged">
             <English>Unchanged</English>
+            <French>Inchangé</French>
             <Russian>Не изменилось</Russian>
             <German>Unverändert</German>
             <Polish>Niezmieniony</Polish>
@@ -82,6 +89,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_VeryLow">
             <English>Very Low</English>
+            <French>Très faible</French>
             <Russian>Оч. низкий</Russian>
             <German>Sehr niedrieg</German>
             <Polish>Bardzo niski</Polish>
@@ -91,6 +99,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_Low">
             <English>Low</English>
+            <French>Faible</French>
             <Russian>Низкий</Russian>
             <German>Niedrig</German>
             <Polish>Niski</Polish>
@@ -100,6 +109,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_Medium">
             <English>Medium</English>
+            <French>Moyen</French>
             <Russian>Средний</Russian>
             <German>Medium</German>
             <Polish>Średni</Polish>
@@ -109,6 +119,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_High">
             <English>High</English>
+            <French>Élevé</French>
             <Russian>Высокий</Russian>
             <German>Hoch</German>
             <Polish>Wysoki</Polish>
@@ -118,6 +129,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_VeryHigh">
             <English>Very High</English>
+            <French>Très élevé</French>
             <Russian>Оч. высокий</Russian>
             <German>Sehr hoch</German>
             <Polish>Bardzo wysoki</Polish>
@@ -127,6 +139,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_VeryWeak">
             <English>Very Weak</English>
+            <French>Très fragile</French>
             <Russian>Оч. слабый</Russian>
             <German>Sehr schwach</German>
             <Polish>Bardzo słaby</Polish>
@@ -136,6 +149,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_Weak">
             <English>Weak</English>
+            <French>Fragile</French>
             <Russian>Слабый</Russian>
             <German>Schwach</German>
             <Polish>Słaby</Polish>
@@ -145,6 +159,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_Strong">
             <English>Strong</English>
+            <French>Fort</French>
             <Russian>Сильный</Russian>
             <German>Stark</German>
             <Polish>Silny</Polish>
@@ -154,6 +169,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_Extreme">
             <English>Extreme</English>
+            <French>Extrême</French>
             <Russian>Экстремальный</Russian>
             <German>Extrem</German>
             <Polish>Ekstremalny</Polish>
@@ -163,6 +179,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_All">
             <English>All</English>
+            <French>Tout</French>
             <Russian>Все</Russian>
             <German>Alle</German>
             <Polish>Wszystko</Polish>
@@ -172,6 +189,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_Side">
             <English>Side</English>
+            <French>Camp</French>
             <Russian>Сторона</Russian>
             <German>Seite</German>
             <Polish>Strona</Polish>
@@ -181,6 +199,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_Sides">
             <English>Sides</English>
+            <French>Camps</French>
             <Russian>Стороны</Russian>
             <German>Seiten</German>
             <Polish>Strony</Polish>
@@ -203,6 +222,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_Faction">
             <English>Faction</English>
+            <French>Faction</French>
             <Russian>Фракция</Russian>
             <German>Fraktion</German>
             <Polish>Frakcja</Polish>
@@ -211,6 +231,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_Aircraft">
             <English>Aircraft</English>
+            <French>Avion</French>
             <Russian>Самолёт</Russian>
             <German>Fluggerät</German>
             <Polish>Pojazd latający</Polish>
@@ -219,6 +240,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_Filter">
             <English>Filter</English>
+            <French>Filtre</French>
             <Russian>Фильтр</Russian>
             <German>Filter</German>
             <Polish>Filtr</Polish>
@@ -228,6 +250,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_Units">
             <English>Units</English>
+            <French>Unités</French>
             <Russian>Солдаты</Russian>
             <German>Einheiten</German>
             <Polish>Jednostki</Polish>
@@ -237,6 +260,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_Vehicles">
             <English>Vehicles</English>
+            <French>Véhicules</French>
             <Russian>Машины</Russian>
             <German>Fahrzeuge</German>
             <Polish>Pojazdy</Polish>
@@ -246,6 +270,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_Static">
             <English>Static</English>
+            <French>Statique</French>
             <Russian>Турели</Russian>
             <German>Statische Waffen</German>
             <Polish>Obiekty statyczne</Polish>
@@ -255,6 +280,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_Nearest">
             <English>Nearest</English>
+            <French>Le plus proche</French>
             <Russian>Ближайший</Russian>
             <German>Am nächsten</German>
             <Polish>Najbliższe</Polish>
@@ -264,6 +290,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_Speed">
             <English>Speed</English>
+            <French>Vitesse</French>
             <Russian>Скорость</Russian>
             <German>Geschwindigkeit</German>
             <Polish>Prędkość</Polish>
@@ -273,6 +300,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_Range">
             <English>Range</English>
+            <French>Portée</French>
             <Russian>Дистанция</Russian>
             <German>Reichweite</German>
             <Polish>Zasięg</Polish>
@@ -282,6 +310,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_Radius">
             <English>Radius</English>
+            <French>Rayon</French>
             <Russian>Радиус</Russian>
             <German>Radius</German>
             <Polish>Promień</Polish>
@@ -289,8 +318,12 @@
             <Italian>Raggio</Italian>
             <Japanese>範囲</Japanese>
         </Key>
+        <Key ID="STR_ZEN_Common_Radius_Units">
+            <English>Radius (m)</English>
+        </Key>
         <Key ID="STR_ZEN_Common_Height">
             <English>Height</English>
+            <French>Hauteur</French>
             <Russian>Высота</Russian>
             <German>Höhe</German>
             <Polish>Wysokość</Polish>
@@ -300,6 +333,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_Height_Units">
             <English>Height (m)</English>
+            <French>Hauteur (m)</French>
             <Russian>Высота (м)</Russian>
             <German>Höhe (m)</German>
             <Polish>Wysokość (m)</Polish>
@@ -309,12 +343,14 @@
         </Key>
         <Key ID="STR_ZEN_Common_Teleport">
             <English>Teleport</English>
+            <French>Téléportation</French>
             <German>Teleportieren</German>
             <Italian>Teletrasporto</Italian>
             <Japanese>テレポート</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects">
             <English>Add Objects to Curators</English>
+            <French>Ajouter des objets aux curateurs</French>
             <Russian>Сдалвть объекты редактируемыми</Russian>
             <German>Objekte zum Kurator hinzufügen</German>
             <Polish>Dodaj obiekty do Zeusa</Polish>
@@ -322,6 +358,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects_Description">
             <English>Automatically adds spawned objects to all curators.</English>
+            <French>Ajouter automatiquement les objets générés à tous les curateurs.</French>
             <Russian>Автоматически делает все добавленные объекты редактируемыми</Russian>
             <German>Fügt automatisch gespawnte Objekte zu allen Kuratoren hinzu.</German>
             <Polish>Automatycznie dodaj zespawnowane obiekty do Zeusa.</Polish>
@@ -329,6 +366,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_DisableGearAnim">
             <English>Disable Gear Animation</English>
+            <French>Désactiver l'animation de l'équipement</French>
             <Russian>Отключить анимацию шестерёнки</Russian>
             <German>Inventar Animation deaktivieren</German>
             <Polish>Wyłącz animację grzebania w ekwipunku</Polish>
@@ -336,6 +374,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_DisableGearAnim_Description">
             <English>Disables the "Gear" animation from playing when entering Zeus.</English>
+            <French>Désactiver l'animation "Gear" lors de l'entrée dans Zeus.</French>
             <German>Deaktiviert die "Inventar" Animation der Spielerfigur wenn man in dem Zeusmodus geht.</German>
             <Polish>Wyłącza animację grzebania w ekwipunku po wejściu do Zeusa.</Polish>
             <Russian>Отключает анимированную шестерёнку при входе в режим ГМ</Russian>
@@ -343,6 +382,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_DarkMode">
             <English>Dark Mode</English>
+            <French>Mode sombre</French>
             <Russian>Тёмная тема</Russian>
             <German>Dunkler Modus</German>
             <Polish>Tryb ciemny</Polish>
@@ -351,6 +391,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_DarkMode_Description">
             <English>Changes the appearance of various user interface elements to a darker color theme.</English>
+            <French>Change l'apparence des divers éléments de l'interface utilisateur en un thème de couleur plus foncée.</French>
             <German>Ändert das Aussehen veschiedener Elemente der Benutzeroberfläche zu einem dunkleren Farbschema.</German>
             <Polish>Zmienia kolorystykę elementów interfejsu na ciemniejszą.</Polish>
             <Russian>Меняет вид интерфейса пользователя на более тёмные</Russian>
@@ -358,6 +399,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_PreferredArsenal">
             <English>Preferred Arsenal</English>
+            <French>Arsenal préféré</French>
             <Russian>Предпочитаемый арсенал</Russian>
             <German>Bevorzugtes Arsenal</German>
             <Polish>Preferowany arsenał</Polish>
@@ -365,6 +407,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_PreferredArsenal_Description">
             <English>Selects the preferred arsenal used by Zeus Enhanced.\nIf ACE Arsenal is not installed, will fall back to BI Virtual Arsenal.</English>
+            <French>Sélectionner l'arsenal préféré utilisé par Zeus Enhanced.\nSi ACE Arsenal n'est pas installé, il retournera à BI Virtual Arsenal.</French>
             <German>Regelt welches Arsenal von Zeus Enhanced geöffnet wird.\nWenn ACE Arsenal nicht installiert ist, wird auf das Vanilla BI Virtual Arsenal zurückgegriffen.</German>
             <Polish>Wybierz preferowany arsenał używany przez Zeus Enhanced.\nJeśli arsenał ACE nie będzie dostępny to uruchomi się podstawowy wirtualny arsenał BI.</Polish>
             <Russian>Выбор предпочитаемого Арсенала\nlfЕсли не установлен ACE, будет запущен стандартный Виртуальный Арсенал.</Russian>
@@ -372,6 +415,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_BIVirtualArsenal">
             <English>BI Virtual Arsenal</English>
+            <French>Arsenal BI Virtual</French>
             <Russian>Виртуальный Арсенал</Russian>
             <German>BI Virtuelle Arsenal</German>
             <Polish>Wirtualny arsenał BI</Polish>
@@ -379,6 +423,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_AceArsenal">
             <English>ACE Arsenal</English>
+            <French>ACE Arsenal</French>
             <Russian>ACE Арсенал</Russian>
             <German>ACE Arsenal</German>
             <Polish>Arsenał ACE</Polish>
@@ -386,6 +431,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_NotEnoughSpaceInVehicle">
             <English>Not enough space in target vehicle: %1 needed - %2 available</English>
+            <French>Pas assez d'espace dans le véhicule cible : %1 nécessaire - %2 disponible</French>
             <Polish>Za mało miejsca w pojeździe docelowym: %1 potrzebne - %2 dostępne</Polish>
             <German>Nicht genügend Platz im Zielfahrzeug: %1 benötigt - %2 verfügbar</German>
             <Japanese>選択された車両に空きがありません: 必要量 %1 - 空き容量 %2</Japanese>

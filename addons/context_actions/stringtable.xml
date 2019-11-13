@@ -3,6 +3,7 @@
     <Package name="Context_Actions">
         <Key ID="STR_ZEN_Context_Actions_EditInventory">
             <English>Edit Inventory</English>
+            <French>Modifier l'inventaire</French>
             <Russian>Редактировать снаряжение</Russian>
             <German>Inventar bearbeiten</German>
             <Polish>Edytuj wyposażenie</Polish>
@@ -11,6 +12,7 @@
         </Key>
         <Key ID="STR_ZEN_Context_Actions_TeleportPlayers">
             <English>Teleport Players</English>
+            <French>Téléporter les joueurs</French>
             <Russian>Телепортировать игроков</Russian>
             <German>Spieler teleportieren</German>
             <Polish>Teleportuj graczy</Polish>
@@ -19,6 +21,7 @@
         </Key>
         <Key ID="STR_ZEN_Context_Actions_TeleportZeus">
             <English>Teleport Zeus</English>
+            <French>Téléporter Zeus</French>
             <German>Zeus teleportieren</German>
             <Polish>Teleportuj Zeusa</Polish>
             <Italian>Teletrasporta Zeus</Italian>
@@ -26,6 +29,7 @@
         </Key>
         <Key ID="STR_ZEN_Context_Actions_VehicleLogistics">
             <English>Vehicle Logistics</English>
+            <French>Logistique des véhicules</French>
             <Polish>Logistyka pojazdów</Polish>
             <German>Fahrzeuglogistik</German>
             <Italian>Logistica dei veicoli</Italian>
@@ -33,6 +37,7 @@
         </Key>
         <Key ID="STR_ZEN_Context_Actions_Rearm">
             <English>Rearm</English>
+            <French>Réarmer</French>
             <Polish>Przezbrój</Polish>
             <German>Waffen zurücksetzen</German>
             <Italian>Riarma</Italian>
@@ -40,6 +45,7 @@
         </Key>
         <Key ID="STR_ZEN_Context_Actions_Refuel">
             <English>Refuel</English>
+            <French>Ravitailler</French>
             <Polish>Zatankuj</Polish>
             <German>Auftanken</German>
             <Italian>Rifornimento</Italian>
@@ -47,6 +53,7 @@
         </Key>
         <Key ID="STR_ZEN_Context_Actions_Repair">
             <English>Repair</English>
+            <French>Réparer</French>
             <Polish>Napraw</Polish>
             <German>Repariern</German>
             <Italian>Ripara</Italian>

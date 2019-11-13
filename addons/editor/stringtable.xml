@@ -3,6 +3,7 @@
     <Package name="Editor">
         <Key ID="STR_ZEN_Editor_MoveDisplayToEdge">
             <English>Move Display to Edge</English>
+            <French>Déplacer l'affichage sur le bord</French>
             <Russian>Убрать панель за край</Russian>
             <German>Display an den Rand verschieben</German>
             <Polish>Przesuń wyświetlacz do krawędzi</Polish>
@@ -10,6 +11,7 @@
         </Key>
         <Key ID="STR_ZEN_Editor_MoveDisplayToEdge_Description">
             <English>Moves the Zeus Editor Display to the edge of the screen.</English>
+            <French>Déplace l'affichage de l'éditeur Zeus sur le bord de l'écran.</French>
             <German>Bewegt die Zeus Editor Anzeige an den Rand des Bildschirms.</German>
             <Polish>Przesuwa wyświetlacz edytora Zeusa do krawędzi ekranu.</Polish>
             <Russian>Убирает панель за край</Russian>
@@ -17,6 +19,7 @@
         </Key>
         <Key ID="STR_ZEN_Editor_RemoveWatermark">
             <English>Remove Watermark</English>
+            <French>Retirer le filigrane</French>
             <Russian>Убрать водяной знак</Russian>
             <German>Wasserzeichen verstecken</German>
             <Polish>Usuń znak wodny</Polish>
@@ -24,6 +27,7 @@
         </Key>
         <Key ID="STR_ZEN_Editor_RemoveWatermark_Description">
             <English>Removes the watermark shown when hiding the display.</English>
+            <French>Supprime le filigrane affiché lors du masquage de l'affichage.</French>
             <German>Versteckt das Wasserzeichen, das gezeigt wird wenn die Oberfläche versteckt wird.</German>
             <Polish>Usuwa znak wodny pokazywany po ukryciu wyświetlacza.</Polish>
             <Russian>Убирает водяной знак ГМ когда интерфейс спрятан</Russian>
@@ -31,6 +35,7 @@
         </Key>
         <Key ID="STR_ZEN_Editor_DisableLiveSearch">
             <English>Disable Live Search</English>
+            <French>Désactiver la recherche en direct</French>
             <Russian>Отключить мгновенный поиск</Russian>
             <German>Live Suche deaktivieren</German>
             <Polish>Wyłącz wyszukiwanie na żywo</Polish>
@@ -38,6 +43,7 @@
         </Key>
         <Key ID="STR_ZEN_Editor_DisableLiveSearch_Description">
             <English>Requires pressing Enter or clicking the search button to confirm a search.\nHelps reduce lag when searching through a lot of items.</English>
+            <French>Nécessite d'appuyer sur Entrée ou de cliquer sur le bouton de recherche pour confirmer une recherche. \nAide à réduire le retard dans la recherche d'un grand nombre d'items.</French>
             <German>Suche wird erst ausgeführt, wenn die Eingabetaste oder die Lupe neben dem Eingabefeld betätigt wird.\nHilft, Verzögerungen bei der Suche durch viele Elemente zu reduzieren.</German>
             <Polish>Wymaga wciśnięcia Enter lub kliknięcia przycisku wyszukiwania by potwierdzić wyszukiwanie.\nPomaga zredukować lag przy przeszukiwaniu wielu przedmiotów.</Polish>
             <Russian>Для подтверждения поиска тебуется нажатие клавиши Ввод\nПомогает уменьшить лаг при поиске </Russian>
@@ -45,6 +51,7 @@
         </Key>
         <Key ID="STR_ZEN_Editor_DeclutterEmptyTree">
             <English>Declutter Empty Tree</English>
+            <French>Vider l'arborescence</French>
             <Russian>Очистить пустое дерево</Russian>
             <German>Leer Kategorie aufräumen</German>
             <Polish>Oczyść drzewo pustych obiektów</Polish>
@@ -52,12 +59,14 @@
         </Key>
         <Key ID="STR_ZEN_Editor_DeclutterEmptyTree_Description">
             <English>Declutters the empty tree by removing empty vehicles as those are available in the side specific trees.</English>
+            <French>Déclenche le désencombrement de l'arborescence en enlevant les véhicules vides comme ceux qui sont disponibles dans les arborescences latéraux spécifiques.</French>
             <German>Räumt die Kategorie "Leer" auf. Leere Fahrzeuge werden versteckt, da diese in den Seiten spezifischen Kategorien vorhanden sind.</German>
             <Polish>Oczyszcza drzewo pustych obiektów przez usunięcie pustych pojazdów, gdyż są one dostępne w drzewach poszczególnych stron.</Polish>
             <Japanese>陣営特有として使用できる空の車両がある空ツリーを整理します。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages">
             <English>Unit Radio Messages</English>
+            <French>Messages radio d'unité</French>
             <Russian>Радиосообшения ИИ</Russian>
             <German>Funkmeldungen von Einheiten</German>
             <Polish>Wiadomość radiowa jednostki</Polish>
@@ -65,13 +74,21 @@
         </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages_Description">
             <English>Controls whether unit radio messages are played on placement and waypoint orders, waypoints only, or disabled.</English>
+            <French>Contrôle si les messages radio de l'appareil sont diffusés en fonction de l'emplacement et de l'ordre des points de passage, points de passsages uniquement ou désactivés.</French>
             <German>Steuert, ob die  Einheit eine Funkmeldung absetzt wenn diese platziert wird und eine Anweisung von Wegpunkten erhält oder nur bei Wegpunkten oder niemals.</German>
             <Polish>Kontroluje czy wiadomości radiowe jednostki są odtwarzane przy postawieniu i wyznaczeniu punktu trasy, jedynie przy wyznaczeniu punktu trasy lub czy są wyłączone.</Polish>
             <Russian>Определяет будут ли ИИ подразделения сообщать по радио о своих действиях или нет.</Russian>
             <Japanese>ユニットが配置についたり、ウェイポイント指示、ウェイポイントのみ、無効化された時に無線でメッセージを送信するかどうかを決定します。</Japanese>
         </Key>
+        <Key ID="STR_ZEN_Editor_ParachuteSounds">
+            <English>Parachute Sounds</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_ParachuteSounds_Description">
+            <English>Controls whether jet flyby sounds are played when an object is paradropped via the Raise Entity keybind.</English>
+        </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages_WaypointsOnly">
             <English>Waypoints Only</English>
+            <French>Points de passage seulement</French>
             <Russian>Только путевые точки</Russian>
             <German>Nur Wegpunkte</German>
             <Polish>Tylko punkty trasy</Polish>
@@ -79,29 +96,34 @@
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleIncludeCrew">
             <English>Toggle Include Crew</English>
+            <French>Commutation de l'équipage</French>
             <German>Besatzung hinzufügen umschalten</German>
             <Polish>Przełącz 'dołącz załogę'</Polish>
             <Japanese>乗員含むに切り替え</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_EjectPassengers">
             <English>Eject Passengers</English>
+            <French>Ejecter les passagers</French>
             <German>Passagiere rauswerfen</German>
             <Polish>Wysadź pasażerów</Polish>
             <Japanese>後部座席を脱出</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_EjectPassengers_Description">
             <English>Ejects the passengers of all selected vehicles. If the vehicle is currently flying, the units will be given parachutes.\nUnlike vanilla eject, units will disembark one after another (not immediately, with a short delay in-between).</English>
+            <French>Éjecte les passagers de tous les véhicules sélectionnés. Si le véhicule est actuellement en vol, les unités recevront des parachutes. Contrairement à l'éjection standard, les unités débarqueront les unes après les autres (pas immédiatement, avec un court délai entre les deux).</French>
             <German>Wirft die Fahrgäste aller ausgewählten Fahrzeuge raus. Wenn das Fahrzeug gerade fliegt, erhalten die Einheiten Fallschirme.\nIm Gegensatz zu "Vanilla" sitzen die Einheiten nacheinander ab (nicht alle sofort, sondern mit einer kurzen Verzögerung dazwischen).</German>
             <Polish>Wysadza pasażerów ze wszystkich wybranych pojazdów. Jeżeli pojazd jest w powietrzu, pasażerowie dostaną spadochron.\nJednostki zostaną wysadzone jedna po drugiej (nie wszystkie na raz).</Polish>
             <Japanese>選択された全車両から後部座席のユニットを脱出させます。もし車両が飛行中の場合はパラシュートが与えられます。\nなお脱出は一人づつ降りるようになっています (即時ではなく数秒づつ)。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_DeployCountermeasures">
             <English>Deploy Countermeasures</English>
+            <French>Déployer des contre-mesures</French>
             <German>Gegenmaßnahmen einleiten</German>
             <Japanese>欺瞞装置作動</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_DeployCountermeasures_Description">
             <English>Makes all selected vehicles deploy countermeasures such as smokes and flares.</English>
+            <French>Tous les véhicules sélectionnés déploient des contre-mesures telles que des fumées et des fusées éclairantes.</French>
             <German>Alle ausgewählten Fahrzeuge setzen Gegenmaßnahmen wie Rauch und Leuchtfackeln ein.</German>
             <Japanese>選択された全車両から煙幕やフレアといった欺瞞装置を作動させます。</Japanese>
         </Key>
