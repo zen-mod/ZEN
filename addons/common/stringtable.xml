@@ -73,9 +73,11 @@
         </Key>
         <Key ID="STR_ZEN_Common_On">
             <English>On</English>
+            <Japanese>オン</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Off">
             <English>Off</English>
+            <Japanese>オフ</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Unchanged">
             <English>Unchanged</English>
@@ -320,6 +322,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_Radius_Units">
             <English>Radius (m)</English>
+            <Japanese>範囲 (m)</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Height">
             <English>Height</English>
