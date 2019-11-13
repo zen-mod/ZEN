@@ -111,6 +111,18 @@
             <French>Tous les véhicules sélectionnés déploient des contre-mesures telles que des fumées et des fusées éclairantes.</French>
             <German>Alle ausgewählten Fahrzeuge setzen Gegenmaßnahmen wie Rauch und Leuchtfackeln ein.</German>
         </Key>
+        <Key ID="STR_ZEN_Editor_DeepCopy">
+            <English>Deep Copy</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_DeepCopy_Description">
+            <English>Performs a "deep copy" of selected objects - copying an extended set of object properties such as unit loadouts, vehicle inventories and customization.</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_DeepPaste">
+            <English>Deep Paste</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_DeepPaste_Description">
+            <English>Pastes the current deep copied object data.</English>
+        </Key>
         <Key ID="STR_ZEN_Editor_ToggleIcons">
             <English>Toggle Editable Icons</English>
         </Key>

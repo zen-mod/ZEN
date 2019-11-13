@@ -238,6 +238,16 @@
 
 [QGVAR(setDate), {setDate _this}] call CBA_fnc_addEventHandler;
 
+[QGVAR(setUnitIdentity), {
+    params ["_unit", "_name", "_face", "_speaker", "_pitch", "_nameSound"];
+
+    _unit setName _name;
+    _unit setFace _face;
+    _unit setSpeaker _speaker;
+    _unit setPitch _pitch;
+    _unit setNameSound _nameSound;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(earthquake), LINKFUNC(earthquake)] call CBA_fnc_addEventHandler;
 [QGVAR(setLampState), LINKFUNC(setLampState)] call CBA_fnc_addEventHandler;
 [QGVAR(setMagazineAmmo), LINKFUNC(setMagazineAmmo)] call CBA_fnc_addEventHandler;
