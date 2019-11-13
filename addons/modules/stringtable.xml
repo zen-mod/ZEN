@@ -1682,9 +1682,11 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ToggleLamps">
             <English>Toggle Lamps</English>
+            <Japanese>ランプを切り替え</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ToggleLamps_Repair_Tooltip">
             <English>Repair broken lights when turning them on.</English>
+            <Japanese>ランプを点灯した際に壊れたライトを修理します。</Japanese>
         </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_Buildings">
