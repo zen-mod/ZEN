@@ -2,8 +2,6 @@
 /*
  * Author: mharis001
  * Zeus module function to spawn reinforcements.
- * Infantry behaviour: 0 - default, 1 - relaxed, 2 - cautious, 3 - combat.
- * Insertion method (only for air vehicles): 0 - land, 1 - paradrop, 2 - fastrope.
  *
  * Arguments:
  * 0: Vehicle Type <STRING>
@@ -12,25 +10,28 @@
  * 3: LZ Position <ARRAY>
  * 4: RP Position <ARRAY>
  * 5: RTB and Despawn <BOOL>
- * 6: Infantry Behaviour <NUMBER>
- * 7: Insertion Method <NUMBER>
+ * 6: Insertion Method <NUMBER>
+ *   - 0: Land, 1: Paradrop, 2: Fastrope
+ * 7: Infantry Behaviour <NUMBER>
+ *   - 0: Default, 1: Relaxed, 2: Cautious, 3: Combat
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call zen_modules_fnc_moduleSpawnReinforcements
+ * ["B_MRAP_01_F", ["B_Soldier_F"], [0, 0, 0], [100, 100, 100], [200, 200, 200], true, 0, 0] call zen_modules_fnc_moduleSpawnReinforcements
  *
  * Public: No
  */
 
 #define AIRCRAFT_HEIGHT 100
 #define WAYPOINT_RADIUS 30
+#define LOITER_RADIUS 250
 
-params ["_vehicleType", "_infantryTypes", "_spawnPosition", "_lzPosition", "_rpPosition", "_despawnVehicle", "_unitBehaviour", "_insertionMethod"];
+params ["_vehicleType", "_infantryTypes", "_spawnPosition", "_positionLZ", "_positionRP", "_despawnVehicle", "_insertionMethod", "_infantryBehaviour"];
 
 // Determine the direction the vehicle should face on spawn
-private _direction = _spawnPosition getDir _lzPosition;
+private _direction = _spawnPosition getDir _positionLZ;
 
 // Adjust spawn position for air vehicles
 private _isAir = _vehicleType isKindOf "Air";
@@ -82,37 +83,36 @@ private _infantryGroup = createGroup [_side, true];
     _unit moveInCargo _vehicle;
 } forEach _infantryTypes;
 
-// Add waypoint to make vehicle drop units off at the LZ
-// Handle insertion mode parameter for air vehicles
-private _waypoint = _vehicleGroup addWaypoint [_lzPosition, WAYPOINT_RADIUS];
-
 // Use normal transport unload if fastroping is not available
 if (_insertionMethod == 2 && {!isClass (configFile >> "CfgPatches" >> "ace_fastroping") || {getNumber (_vehicleConfig >> "ace_fastroping_enabled") == 0}}) then {
     _insertionMethod = 0;
 };
 
-if (_isAir && {_insertionMethod > 0}) then {
-    _waypoint setWaypointType "SCRIPTED";
+// Add waypoint to make vehicle drop units off at the LZ
+// Handle insertion method parameter for air vehicles
+private _waypoint = _vehicleGroup addWaypoint [_positionLZ, WAYPOINT_RADIUS];
 
+if (_isAir && {_insertionMethod > 0}) then {
     private _script = [
         QPATHTOEF(ai,functions\fnc_waypointParadrop.sqf),
         QPATHTOEF(ai,functions\fnc_waypointFastrope.sqf)
     ] select (_insertionMethod == 2);
 
+    _waypoint setWaypointType "SCRIPTED";
     _waypoint setWaypointScript _script;
 } else {
     _waypoint setWaypointType "TR UNLOAD";
 };
 
 // Add waypoint to make infantry units move to RP after they arrive at LZ
-if !(_rpPosition isEqualTo []) then {
-    _infantryGroup addWaypoint [_rpPosition, WAYPOINT_RADIUS];
+if (_positionRP isEqualType []) then {
+    _infantryGroup addWaypoint [_positionRP, WAYPOINT_RADIUS];
 };
 
 // Adjust behaviour of infantry units if not default
-if (_unitBehaviour > 0) then {
-    private _behaviour = ["SAFE", "AWARE", "COMBAT"] select (_unitBehaviour - 1);
-    private _speedMode = ["LIMITED", "NORMAL"] select (_unitBehaviour > 1);
+if (_infantryBehaviour > 0) then {
+    private _behaviour = ["SAFE", "AWARE", "COMBAT"] select (_infantryBehaviour - 1);
+    private _speedMode = ["LIMITED", "NORMAL"] select (_infantryBehaviour > 1);
 
     _infantryGroup setBehaviour _behaviour;
     _infantryGroup setSpeedMode _speedMode;
@@ -120,8 +120,17 @@ if (_unitBehaviour > 0) then {
 
 // Add waypoint to make vehicle return to spawn position and despawn if needed
 if (_despawnVehicle) then {
-    private _waypointRTB = _vehicleGroup addWaypoint [_spawnPosition, WAYPOINT_RADIUS];
-    _waypointRTB setWaypointStatements ["true", "deleteVehicle vehicle this; {deleteVehicle _x} forEach thisList"];
+    private _waypoint = _vehicleGroup addWaypoint [_spawnPosition, WAYPOINT_RADIUS];
+    _waypoint setWaypointStatements ["true", "deleteVehicle vehicle this; {deleteVehicle _x} forEach thisList"];
+    _waypoint setWaypointTimeout [5, 7.5, 10];
+} else {
+    // Otherwise make aircraft loiter around the LZ
+    if (_isAir) then {
+        private _waypoint = _vehicleGroup addWaypoint [_positionLZ, WAYPOINT_RADIUS];
+        _waypoint setWaypointType "LOITER";
+        _waypoint setWaypointLoiterType "CIRCLE";
+        _waypoint setWaypointLoiterRadius LOITER_RADIUS;
+    };
 };
 
 // Add the vehicle and crew + passengers to curators

@@ -15,6 +15,4 @@
  * Public: No
  */
 
-params [["_type", "", ["", objNull]]];
-
-!(_type call FUNC(get) isEqualTo [])
+!(call FUNC(get) isEqualTo [])

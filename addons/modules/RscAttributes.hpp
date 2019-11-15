@@ -4,16 +4,18 @@ class RscCombo;
 class RscFrame;
 class RscPicture;
 class RscListBox;
-class ctrlTree;
 class RscCheckBox;
+class RscEditMulti;
+class RscStructuredText;
+class RscControlsGroup;
+class RscControlsGroupNoScrollbars;
+
+class ctrlTree;
+class ctrlListBox;
 class ctrlToolbox;
 class ctrlXSliderH;
 class ctrlListNBox;
-class RscEditMulti;
-class RscStructuredText;
 class ctrlButtonPictureKeepAspect;
-class RscControlsGroup;
-class RscControlsGroupNoScrollbars;
 
 class EGVAR(attributes,RscLabel);
 class EGVAR(attributes,RscBackground);
@@ -1041,8 +1043,6 @@ BEGIN_MODULE_DIALOG(RscFireMission)
     };
 END_MODULE_DIALOG;
 
-class ctrlListBox;
-
 BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
     class spawnReinforcements: RscControlsGroupNoScrollbars {
         idc = IDC_SPAWNREINFORCEMENTS;
@@ -1156,14 +1156,14 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
                         colorBackground[] = {0, 0, 0, 0.7};
                     };
                     class UnitCount: Label {
-                        idc = IDC_SPAWNREINFORCEMENTS_UNITS_COUNT;
+                        idc = IDC_SPAWNREINFORCEMENTS_UNIT_COUNT;
                         style = ST_RIGHT;
                         text = "0";
                         w = POS_W(12);
                         colorBackground[] = {0, 0, 0, 0};
                     };
                     class UnitList: ctrlListBox {
-                        idc = IDC_SPAWNREINFORCEMENTS_UNITS_LIST;
+                        idc = IDC_SPAWNREINFORCEMENTS_UNIT_LIST;
                         x = POS_W(13.2);
                         y = POS_H(2.1) - pixelH;
                         w = POS_W(12.7);
@@ -1222,7 +1222,7 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
                         h = POS_H(1);
                         rows = 1;
                         columns = 2;
-                        strings[] = {"Stay at LZ", "RTB and Despawn"};
+                        strings[] = {CSTRING(StayAtLZ), CSTRING(RTBAndDespawn)};
                         colorBackground[] = {0, 0, 0, 0.7};
                     };
                     class InsertionLabel: VehicleLZLabel {

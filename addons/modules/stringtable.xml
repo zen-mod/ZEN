@@ -1429,6 +1429,12 @@
         <Key ID="STR_ZEN_Modules_VehicleBehaviour">
             <English>Vehicle Behaviour</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_StayAtLZ">
+            <English>Stay at LZ</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_RTBAndDespawn">
+            <English>RTB and Despawn</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_InsertionMethod">
             <English>Insertion Method</English>
         </Key>
