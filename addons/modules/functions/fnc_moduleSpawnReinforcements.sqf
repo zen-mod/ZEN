@@ -26,7 +26,6 @@
 
 #define AIRCRAFT_HEIGHT 100
 #define WAYPOINT_RADIUS 30
-#define LOITER_RADIUS 250
 
 params ["_vehicleType", "_infantryTypes", "_spawnPosition", "_positionLZ", "_positionRP", "_despawnVehicle", "_insertionMethod", "_infantryBehaviour"];
 
@@ -124,12 +123,10 @@ if (_despawnVehicle) then {
     _waypoint setWaypointStatements ["true", "deleteVehicle vehicle this; {deleteVehicle _x} forEach thisList"];
     _waypoint setWaypointTimeout [5, 7.5, 10];
 } else {
-    // Otherwise make aircraft loiter around the LZ
+    // Otherwise make aircraft stay around the LZ and provide air support
     if (_isAir) then {
         private _waypoint = _vehicleGroup addWaypoint [_positionLZ, WAYPOINT_RADIUS];
-        _waypoint setWaypointType "LOITER";
-        _waypoint setWaypointLoiterType "CIRCLE";
-        _waypoint setWaypointLoiterRadius LOITER_RADIUS;
+        _waypoint setWaypointType "SAD";
     };
 };
 

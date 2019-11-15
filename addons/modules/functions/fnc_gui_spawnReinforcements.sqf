@@ -431,7 +431,7 @@ private _fnc_onConfirm = {
     private _ctrlVehicleLZ = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_LZ;
     private _vehicleLZ = _ctrlVehicleLZ lbValue lbCurSel _ctrlVehicleLZ;
 
-    private _ctrlUnitRP = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_RP;
+    private _ctrlUnitRP = _display displayCtrl IDC_SPAWNREINFORCEMENTS_UNIT_RP;
     private _unitRP = _ctrlUnitRP lbValue lbCurSel _ctrlUnitRP;
 
     private _selections = [_side, _faction, _category, _vehicle, _treeMode, _unitList, _vehicleLZ, _vehicleBehaviour, _insertionMethod, _unitRP, _unitBehaviour];
@@ -447,7 +447,7 @@ private _fnc_onConfirm = {
     _positionLZ = ASLtoAGL getPosASL _positionLZ;
 
     // Handle none option RP
-    if (!isNull _logic) then {
+    if (!isNull _positionRP) then {
         _positionRP = ASLtoAGL getPosASL _positionRP;
     };
 
