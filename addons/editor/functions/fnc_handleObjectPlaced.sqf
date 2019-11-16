@@ -18,6 +18,13 @@
 
 params ["", "_object"];
 
+// Re-collapse the entities tree if editable icons are hidden
+// Placing an object expands a portion of the tree
+if (!GVAR(iconsVisible)) then {
+    private _ctrlEntites = findDisplay IDD_RSCDISPLAYCURATOR displayCtrl IDC_RSCDISPLAYCURATOR_ENTITIES;
+    _ctrlEntites call EFUNC(common,collapseTree);
+};
+
 RscDisplayCurator_sections params ["_mode"];
 
 if (!GVAR(includeCrew) && {_mode == 0 || {_mode == 4 && {isClass (configFile >> "CfgVehicles" >> GVAR(recentTreeData))}}}) then {
