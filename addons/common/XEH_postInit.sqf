@@ -16,6 +16,9 @@
 
             curatorCamera setPosASL _position;
             curatorCamera setVectorDirAndUp _dirAndUp;
+
+            // Fix drawIcon3D icons being hidden after using arsenal
+            cameraEffectEnableHUD true;
         };
     } call CBA_fnc_directCall;
 }] call BIS_fnc_addScriptedEventHandler;
