@@ -1518,6 +1518,9 @@
             <German>Spieler</German>
             <Polish>Gracze</Polish>
         </Key>
+        <Key ID="STR_ZEN_Modules_Reinforcements">
+            <English>Reinforcements</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_Spawn">
             <English>Spawn</English>
             <Russian>Спавн</Russian>

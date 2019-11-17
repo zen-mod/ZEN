@@ -82,12 +82,21 @@ Makes the attached object act as an IED that is activated by the selected side w
 The "Extreme" explosion size option creates many explosions all around the IED instead of a single explosion.
 IEDs that are able to be jammed will not be activated by vehicles equipped with an ECM.
 
+## Create LZ
+
+Creates an LZ module with the given name which can be used in conjunction with other modules (such as the "Spawn Reinforcements" module) to specify a position.
+The module also acts as a helipad, which helps in directing AI helicopters to land at a specific position.
+
 ## Create Minefield
 
 Creates a minefield of the given area centered at the module's position filled with the selected mine types.
 The mine density option affects the spacing of the mines from: Very Low = 30 m to Very High = 10 m.
 
 !> Caution should be used when using a large area with a high mine density.
+
+## Create RP
+
+Creates an RP module with the given name which can be used in conjunction with other modules (such as the "Spawn Reinforcements" module) to specify a position.
 
 ## Create Target
 
@@ -190,6 +199,14 @@ The unit will stand up if it is already sitting.
 ## Smoke Pillar
 
 Creates a persistent smoke pillar of the selected type.
+
+## Spawn Reinforcements
+
+Spawns a reinforcement (at the module's position) group composed of the selected units which will be transported to an LZ by the selected vehicle.
+Optionally, the group can be made to move to an RP after arriving at the LZ.
+
+The vehicle can be directed to return to its spawn position and despawn or stay at the LZ and provide support.
+Air vehicles have additional insertion methods available such as land, paradrop, or fastrope.
 
 ## Suicide Bomber
 

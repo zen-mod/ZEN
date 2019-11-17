@@ -35,7 +35,7 @@ class CfgFactionClasses {
         side = 7;
     };
     class GVAR(Reinforcements) {
-        displayName = "Reinforcements";
+        displayName = CSTRING(Reinforcements);
         priority = 2;
         side = 7;
     };
