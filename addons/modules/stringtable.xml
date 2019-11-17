@@ -1451,6 +1451,27 @@
         <Key ID="STR_ZEN_Modules_ToggleLamps_Repair_Tooltip">
             <English>Repair broken lights when turning them on.</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_CustomFire">
+            <English>Custom Fire</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_CustomFire_EffectSize">
+            <English>Effect Size</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_CustomFire_ParticleDensity">
+            <English>Particle Density</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_CustomFire_ParticleLifetime">
+            <English>Particle Lifetime</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_CustomFire_ParticleSpeed">
+            <English>Particle Speed</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_CustomFire_ParticleSize">
+            <English>Particle Size</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_CustomFire_ParticleOrientation">
+            <English>Particle Orientation</English>
+        </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_Buildings">
             <English>Buildings</English>
