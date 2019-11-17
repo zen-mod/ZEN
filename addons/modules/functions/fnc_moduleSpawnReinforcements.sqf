@@ -127,6 +127,8 @@ if (_despawnVehicle) then {
     if (_isAir) then {
         private _waypoint = _vehicleGroup addWaypoint [_positionLZ, WAYPOINT_RADIUS];
         _waypoint setWaypointType "SAD";
+        _waypoint setWaypointBehaviour "AWARE";
+        _waypoint setWaypointCombatMode "RED";
     };
 };
 

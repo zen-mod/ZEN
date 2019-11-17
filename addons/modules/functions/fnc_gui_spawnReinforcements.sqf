@@ -451,7 +451,7 @@ private _fnc_onConfirm = {
         _positionRP = ASLtoAGL getPosASL _positionRP;
     };
 
-    [QGVAR(moduleSpawnReinforcements), [_vehicle, _unitList, _position, _positionLZ, _positionRP, _vehicleBehaviour > 0, _unitBehaviour, _insertionMethod]] call CBA_fnc_serverEvent;
+    [QGVAR(moduleSpawnReinforcements), [_vehicle, _unitList, _position, _positionLZ, _positionRP, _vehicleBehaviour > 0, _insertionMethod, _unitBehaviour]] call CBA_fnc_serverEvent;
 };
 
 _display displayAddEventHandler ["Unload", _fnc_onUnload];
