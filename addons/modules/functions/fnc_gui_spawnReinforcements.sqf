@@ -239,7 +239,7 @@ private _fnc_vehicleChanged = {
 
     private _ctrlUnitList = _display displayCtrl IDC_SPAWNREINFORCEMENTS_UNIT_LIST;
 
-    for "_i" from _capacity to lbSize _ctrlUnitList - 1 do {
+    for "_i" from lbSize _ctrlUnitList to _capacity + 1 step -1 do {
         _ctrlUnitList lbDelete _i - 1;
     };
 
