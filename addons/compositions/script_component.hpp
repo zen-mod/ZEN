@@ -56,6 +56,6 @@
 #define IDC_DISPLAY_LIST 92882
 #define IDC_DISPLAY_NAME 92883
 
-#define ICON_CUSTOM QPATHTOF(ui\custom_ca.paa)
+#define ICON_CUSTOM "\a3\3den\data\cfg3den\group\iconcustomcomposition_ca.paa"
 
 #define POS_EDGE(DEFAULT,MOVED) ([ARR_2(DEFAULT,MOVED)] select GETMVAR(EGVAR(editor,moveDisplayToEdge),false))

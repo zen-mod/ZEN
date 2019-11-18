@@ -55,7 +55,3 @@
 ]
 
 #define POS_EDGE(DEFAULT,MOVED) ([ARR_2(DEFAULT,MOVED)] select GETMVAR(GVAR(moveDisplayToEdge),false))
-
-#define LOCK GVAR(lock) = nil
-#define UNLOCK GVAR(lock) = false
-#define EXIT_LOCKED if (isNil QGVAR(lock)) exitWith {}
