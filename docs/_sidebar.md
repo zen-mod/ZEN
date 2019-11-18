@@ -3,6 +3,7 @@
   - [<i class="fas fa-list"></i> Modules List](/user_guide/modules_list.md)
   - [<i class="fas fa-table"></i> Attributes](/user_guide/attributes.md)
   - [<i class="fas fa-caret-square-right"></i> Context Actions](/user_guide/context_actions.md)
+  - [<i class="fas fa-warehouse"></i> Vehicle Garage](/user_guide/garage.md)
   - [<i class="fas fa-map-marked"></i> Area Markers](/user_guide/area_markers.md)
 - **Frameworks**
   - [<i class="fas fa-bars"></i> Context Menu](/frameworks/context_menu.md)

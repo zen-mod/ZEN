@@ -15,9 +15,9 @@
  * Public: No
  */
 
-EXIT_LOCKED;
-
 params ["_ctrlButton"];
+
+if !(_ctrlButton getVariable [QGVAR(hovered), false]) exitWith {};
 
 private _display = ctrlParent _ctrlButton;
 private _mode = GETMVAR(RscDisplayCurator_sections,[]) param [0, 0];

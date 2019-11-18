@@ -55,6 +55,11 @@
     _unit vehicleChat _message;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(say3D), {
+    params ["_object", "_sound"];
+    _object say3D _sound;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(setUnitPos), {
     params ["_unit", "_mode"];
     _unit setUnitPos _mode;
@@ -233,12 +238,22 @@
 
 [QGVAR(setDate), {setDate _this}] call CBA_fnc_addEventHandler;
 
-[QGVAR(earthquake), LINKFUNC(earthquake)] call CBA_fnc_addEventHandler;
-[QGVAR(showMessage), LINKFUNC(showMessage)] call CBA_fnc_addEventHandler;
+[QGVAR(setUnitIdentity), {
+    params ["_unit", "_name", "_face", "_speaker", "_pitch", "_nameSound"];
 
-[QGVAR(setMagazineAmmo), FUNC(setMagazineAmmo)] call CBA_fnc_addEventHandler;
-[QGVAR(setTurretAmmo), FUNC(setTurretAmmo)] call CBA_fnc_addEventHandler;
-[QGVAR(setVehicleAmmo), FUNC(setVehicleAmmo)] call CBA_fnc_addEventHandler;
+    _unit setName _name;
+    _unit setFace _face;
+    _unit setSpeaker _speaker;
+    _unit setPitch _pitch;
+    _unit setNameSound _nameSound;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(earthquake), LINKFUNC(earthquake)] call CBA_fnc_addEventHandler;
+[QGVAR(setLampState), LINKFUNC(setLampState)] call CBA_fnc_addEventHandler;
+[QGVAR(setMagazineAmmo), LINKFUNC(setMagazineAmmo)] call CBA_fnc_addEventHandler;
+[QGVAR(setTurretAmmo), LINKFUNC(setTurretAmmo)] call CBA_fnc_addEventHandler;
+[QGVAR(setVehicleAmmo), LINKFUNC(setVehicleAmmo)] call CBA_fnc_addEventHandler;
+[QGVAR(showMessage), LINKFUNC(showMessage)] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
     [QGVAR(hideObjectGlobal), {

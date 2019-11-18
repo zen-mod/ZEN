@@ -4,13 +4,13 @@
 
 <p align="center">
     <a href="https://github.com/zen-mod/ZEN/releases">
-        <img src="https://img.shields.io/badge/Version-1.5.0-blue.svg" alt="Zeus Enhanced Version">
+        <img src="https://img.shields.io/badge/Version-1.5.0-blue.svg?style=flat-square" alt="Zeus Enhanced Version">
     </a>
     <a href="https://github.com/zen-mod/ZEN/issues">
-        <img src="https://img.shields.io/github/issues-raw/zen-mod/ZEN.svg?label=Issues" alt="Zeus Enhanced Issues">
+        <img src="https://img.shields.io/github/issues-raw/zen-mod/ZEN.svg?style=flat-square&label=Issues" alt="Zeus Enhanced Issues">
     </a>
     <a href="https://github.com/zen-mod/ZEN/blob/master/LICENSE">
-        <img src="https://img.shields.io/badge/License-GPLv3-red.svg" alt="Zeus Enhanced License">
+        <img src="https://img.shields.io/badge/License-GPLv3-red.svg?style=flat-square" alt="Zeus Enhanced License">
     </a>
 </p>
 
@@ -36,6 +36,7 @@ Special thanks to the [ACE3 Team](http://ace3mod.com/team.html) for their open s
 - Overhauled markers tree with markers sorted into categories.
 - Ability to create and edit area markers through Zeus.
 - Rewritten, faster remote controlling of units.
+- 3DEN editor object preview images in Zeus.
 - Player visibility indicator to help ensure mission adjustments are not made in view of players.
 - Vehicle customization garage made specifically for Zeus.
 - Various bug fixes and quality of life improvements to the Zeus interface.

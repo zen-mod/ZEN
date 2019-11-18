@@ -38,7 +38,7 @@ class zen_context_menu_actions {
 
 ## Adding Actions Through Script
 
-_Requires Zeus Enhanced v1.4.0 or later._
+_Requires v1.4.0 or later._
 
 #### Creating an Action
 
@@ -51,12 +51,12 @@ This function is used to ensure that the created action array is in the correct 
 :---: | ----------- | ---- | ---------------------------
 0 | Action Name | STRING |
 1 | Display Name | STRING |
-2 | Icon and Icon Color | STRING or ARRAY | ["", [1, 1, 1, 1]]
+2 | Icon and Icon Color | STRING or ARRAY | `["", [1, 1, 1, 1]]`
 3 | Statement | CODE |
-4 | Condition | CODE | {true}
-5 | Arguments | ANY | []
-6 | Dynamic Children | CODE | {}
-7 | Modifier Function | CODE | {}
+4 | Condition | CODE | `{true}`
+5 | Arguments | ANY | `[]`
+6 | Dynamic Children | CODE | `{}`
+7 | Modifier Function | CODE | `{}`
 
 **Return Value:**
 
@@ -65,7 +65,12 @@ This function is used to ensure that the created action array is in the correct 
 **Example:**
 
 ```clike
-["HintTime", "Hint Time", "", {hint ([daytime] call BIS_fnc_timeToString)}] call zen_context_menu_fnc_createAction
+private _action = [
+    "HintTime",
+    "Hint Time",
+    "\a3\ui_f\data\igui\rsctitles\mpprogress\timer_ca.paa",
+    {hint format ["Time - %1", [daytime] call BIS_fnc_timeToString]}
+] call zen_context_menu_fnc_createAction
 ```
 
 #### Adding the Created Action
@@ -90,6 +95,28 @@ Actions are added locally and as a result the function must be executed on each 
 
 ```clike
 [_action, [], 0] call zen_context_menu_fnc_addAction
+```
+
+## Removing Actions Through Script
+
+_Requires v1.6.0 or later._
+
+Context menu actions can be removed using the `zen_context_menu_fnc_removeAction` function with the full action path.
+
+**Arguments:**
+
+ \#   | Description | Type | Default Value (if optional)
+:---: | ----------- | ---- | ---------------------------
+0 | Action Path | ARRAY
+
+**Return Value:**
+
+- Removed &lt;BOOL&gt;
+
+**Example:**
+
+```clike
+["HintTime"] call zen_context_menu_fnc_removeAction
 ```
 
 ## Statement and Condition
