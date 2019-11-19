@@ -47,14 +47,10 @@
     private _ctrlSearch = _display displayCtrl _searchIDC;
     _ctrlSearch ctrlAddEventHandler ["KeyDown", _fnc_processAdditions];
     _ctrlSearch ctrlAddEventHandler ["KeyUp", _fnc_processAdditions];
+    _ctrlSearch ctrlAddEventHandler ["MouseButtonClick", _fnc_processAdditions];
 
-    // Need extra handling for when live search is disabled (search button, mouse clear)
-    if (EGVAR(editor,disableLiveSearch)) then {
-        private _ctrlSearchButton = _display displayCtrl IDC_SEARCH_BUTTON;
-        _ctrlSearchButton ctrlAddEventHandler ["ButtonClick", _fnc_processAdditions];
-
-        _ctrlSearch ctrlAddEventHandler ["MouseButtonClick", _fnc_processAdditions];
-    };
+    private _ctrlSearchButton = _display displayCtrl IDC_SEARCH_BUTTON;
+    _ctrlSearchButton ctrlAddEventHandler ["ButtonClick", _fnc_processAdditions];
 
     // Add the custom compositions category (with custom icon on right)
     private _index = _ctrlTree tvAdd [[0], localize "str_radio_custom"];
