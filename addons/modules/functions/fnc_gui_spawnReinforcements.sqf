@@ -239,8 +239,8 @@ private _fnc_vehicleChanged = {
 
     private _ctrlUnitList = _display displayCtrl IDC_SPAWNREINFORCEMENTS_UNIT_LIST;
 
-    for "_i" from lbSize _ctrlUnitList to _capacity + 1 step -1 do {
-        _ctrlUnitList lbDelete _i - 1;
+    for "_i" from lbSize _ctrlUnitList - 1 to _capacity step -1 do {
+        _ctrlUnitList lbDelete _i;
     };
 
     private _ctrlUnitCount = _display displayCtrl IDC_SPAWNREINFORCEMENTS_UNIT_COUNT;
@@ -380,8 +380,15 @@ private _fnc_listKeyDown = {
     };
 };
 
+private _fnc_listDblClicked = {
+    params ["_ctrlUnitList", "_selectedIndex"];
+
+    _ctrlUnitList lbDelete _selectedIndex;
+};
+
 private _ctrlUnitList = _display displayCtrl IDC_SPAWNREINFORCEMENTS_UNIT_LIST;
 _ctrlUnitList ctrlAddEventHandler ["KeyDown", _fnc_listKeyDown];
+_ctrlUnitList ctrlAddEventHandler ["LBDblClick", _fnc_listDblClicked];
 
 private _ctrlVehicleLZ = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_LZ;
 [_ctrlVehicleLZ, LOGIC_TYPE_LZ, _vehicleLZ, false, _logic] call EFUNC(position_logics,initList);
