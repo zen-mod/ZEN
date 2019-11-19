@@ -23,7 +23,7 @@
             <English>Are you sure you want to delete this composition?</English>
         </Key>
         <Key ID="STR_ZEN_Compositions_NoObjectsSelected">
-            <English>No objects to create composition from selected</English>
+            <English>Select objects to create composition from</English>
         </Key>
     </Package>
 </Project>
