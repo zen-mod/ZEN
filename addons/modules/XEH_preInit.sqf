@@ -12,6 +12,7 @@ PREP_RECOMPILE_END;
 
     _logic addEventHandler ["CuratorObjectPlaced", {
         params ["", "_object"];
+
         if (_object isKindOf "Module_F" && {!(_object isKindOf QGVAR(moduleBase))}) then {
             _object setVariable ["BIS_fnc_initModules_activate", true, true];
         };
