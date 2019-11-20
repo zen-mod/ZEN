@@ -202,7 +202,7 @@ Creates a persistent smoke pillar of the selected type.
 
 ## Spawn Reinforcements
 
-Spawns a reinforcement (at the module's position) group composed of the selected units which will be transported to an LZ by the selected vehicle.
+Spawns a reinforcement group (at the module's position) composed of the selected units which will be transported to an LZ by the selected vehicle.
 Optionally, the group can be made to move to an RP after arriving at the LZ.
 
 The vehicle can be directed to return to its spawn position and despawn or stay at the LZ and provide support.
