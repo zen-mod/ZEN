@@ -55,5 +55,20 @@
         <Key ID="STR_ZEN_Context_Actions_EditableObjects">
             <English>Editable Objects</English>
         </Key>
+        <Key ID="STR_ZEN_Context_Actions_10m">
+            <English>10 m</English>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_25m">
+            <English>25 m</English>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_50m">
+            <English>50 m</English>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_100m">
+            <English>100 m</English>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_250m">
+            <English>250 m</English>
+        </Key>
     </Package>
 </Project>

@@ -299,27 +299,27 @@ class EGVAR(context_menu,actions) {
             icon = QPATHTOF(ui\add_ca.paa);
             priority = 2;
             class 10m {
-                displayName = "10 m";
+                displayName = CSTRING(10m);
                 statement = QUOTE([ARR_2(true,10)] call FUNC(editableObjects));
                 priority = 5;
             };
             class 25m {
-                displayName = "25 m";
+                displayName = CSTRING(25m);
                 statement = QUOTE([ARR_2(true,25)] call FUNC(editableObjects));
                 priority = 4;
             };
             class 50m {
-                displayName = "50 m";
+                displayName = CSTRING(50m);
                 statement = QUOTE([ARR_2(true,50)] call FUNC(editableObjects));
                 priority = 3;
             };
             class 100m {
-                displayName = "100 m";
+                displayName = CSTRING(100m);
                 statement = QUOTE([ARR_2(true,100)] call FUNC(editableObjects));
                 priority = 2;
             };
             class 250m {
-                displayName = "250 m";
+                displayName = CSTRING(250m);
                 statement = QUOTE([ARR_2(true,250)] call FUNC(editableObjects));
                 priority = 1;
             };
@@ -329,27 +329,27 @@ class EGVAR(context_menu,actions) {
             icon = QPATHTOF(ui\remove_ca.paa);
             priority = 1;
             class 10m {
-                displayName = "10 m";
+                displayName = CSTRING(10m);
                 statement = QUOTE([ARR_2(false,10)] call FUNC(editableObjects));
                 priority = 5;
             };
             class 25m {
-                displayName = "25 m";
+                displayName = CSTRING(25m);
                 statement = QUOTE([ARR_2(false,25)] call FUNC(editableObjects));
                 priority = 4;
             };
             class 50m {
-                displayName = "50 m";
+                displayName = CSTRING(50m);
                 statement = QUOTE([ARR_2(false,50)] call FUNC(editableObjects));
                 priority = 3;
             };
             class 100m {
-                displayName = "100 m";
+                displayName = CSTRING(100m);
                 statement = QUOTE([ARR_2(false,100)] call FUNC(editableObjects));
                 priority = 2;
             };
             class 250m {
-                displayName = "250 m";
+                displayName = CSTRING(250m);
                 statement = QUOTE([ARR_2(false,250)] call FUNC(editableObjects));
                 priority = 1;
             };
