@@ -133,4 +133,8 @@ if (_despawnVehicle) then {
 };
 
 // Add the vehicle and crew + passengers to curators
-[QEGVAR(common,addObjects), [[_vehicle]]] call CBA_fnc_localEvent;
+private _objects = [_vehicle];
+_objects append units _vehicleGroup;
+_objects append units _infantryGroup;
+
+[QEGVAR(common,addObjects), [_objects]] call CBA_fnc_serverEvent;
