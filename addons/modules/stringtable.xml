@@ -862,20 +862,6 @@
             <Polish>Zmieni zachowanie, prędkość i formację grupy.</Polish>
             <Japanese>グループの移動速度や陣形といった挙動を変更できます。</Japanese>
         </Key>
-        <Key ID="STR_ZEN_Modules_ModulePatrolArea_Relaxed">
-            <English>Relaxed</English>
-            <Russian>Расслабленный</Russian>
-            <German>Entspannt</German>
-            <Polish>Spokojni</Polish>
-            <Japanese>無警戒</Japanese>
-        </Key>
-        <Key ID="STR_ZEN_Modules_ModulePatrolArea_Cautious">
-            <English>Cautious</English>
-            <Russian>Осторожный</Russian>
-            <German>Vorsichtig</German>
-            <Polish>Ostrożni</Polish>
-            <Japanese>警戒</Japanese>
-        </Key>
         <Key ID="STR_ZEN_Modules_ModuleSideRelations">
             <English>Side Relations</English>
             <Russian>Отношения сторон</Russian>
@@ -1280,30 +1266,6 @@
             <Polish>Globalnie i JIP</Polish>
             <Japanese>グローバルと JIP</Japanese>
         </Key>
-        <Key ID="STR_ZEN_Modules_ModuleCreateTarget">
-            <English>Create Target</English>
-            <German>Ziel erstellen</German>
-            <Polish>Utwórz cel</Polish>
-            <Japanese>目標を生成</Japanese>
-        </Key>
-        <Key ID="STR_ZEN_Modules_ModuleCreateTarget_Name">
-            <English>Target Name</English>
-            <German>Zielname</German>
-            <Polish>Nazwa celu</Polish>
-            <Japanese>目標名</Japanese>
-        </Key>
-        <Key ID="STR_ZEN_Modules_ModuleCreateTarget_AttachLaser">
-            <English>Attach Laser Target For</English>
-            <German>Laser-Target anbringen für</German>
-            <Polish>Przyczep cel laserowy dla</Polish>
-            <Japanese>レーザ目標を次に取り付け</Japanese>
-        </Key>
-        <Key ID="STR_ZEN_Modules_ModuleCreateTarget_TargetX">
-            <English>Target %1</English>
-            <German>Ziel %1</German>
-            <Polish>Cel %1</Polish>
-            <Japanese>目標 %1</Japanese>
-        </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission">
             <English>Artillery Fire Mission</English>
             <German>Artilleriefeuermission</German>
@@ -1630,21 +1592,25 @@
             <English>Create Target</English>
             <German>Ziel erstellen</German>
             <Polish>Utwórz cel</Polish>
+            <Japanese>目標を生成</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateTarget_Name">
             <English>Target Name</English>
             <German>Zielname</German>
             <Polish>Nazwa celu</Polish>
+            <Japanese>目標名</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateTarget_Format">
             <English>Target %1</English>
             <German>Ziel %1</German>
             <Polish>Cel %1</Polish>
+            <Japanese>目標 %1</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateTarget_AttachLaser">
             <English>Attach Laser Target For</English>
             <German>Laser-Target anbringen für</German>
             <Polish>Przyczep cel laserowy dla</Polish>
+            <Japanese>レーザ目標を次に取り付け</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateLZ">
             <English>Create LZ</English>

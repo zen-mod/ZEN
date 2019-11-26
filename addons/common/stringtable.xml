@@ -310,12 +310,14 @@
             <Russian>Расслабленный</Russian>
             <German>Entspannt</German>
             <Polish>Spokojni</Polish>
+            <Japanese>無警戒</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Cautious">
             <English>Cautious</English>
             <Russian>Осторожный</Russian>
             <German>Vorsichtig</German>
             <Polish>Ostrożni</Polish>
+            <Japanese>警戒</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Speed">
             <English>Speed</English>
