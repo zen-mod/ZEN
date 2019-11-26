@@ -1626,6 +1626,80 @@
             <Chinese>移除軍火庫</Chinese>
             <Polish>Usuń arsenał</Polish>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateTarget">
+            <English>Create Target</English>
+            <German>Ziel erstellen</German>
+            <Polish>Utwórz cel</Polish>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateTarget_Name">
+            <English>Target Name</English>
+            <German>Zielname</German>
+            <Polish>Nazwa celu</Polish>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateTarget_Format">
+            <English>Target %1</English>
+            <German>Ziel %1</German>
+            <Polish>Cel %1</Polish>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateTarget_AttachLaser">
+            <English>Attach Laser Target For</English>
+            <German>Laser-Target anbringen für</German>
+            <Polish>Przyczep cel laserowy dla</Polish>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateLZ">
+            <English>Create LZ</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateLZ_Name">
+            <English>LZ Name</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateLZ_Format">
+            <English>LZ %1</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateRP">
+            <English>Create RP</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateRP_Name">
+            <English>RP Name</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateRP_Format">
+            <English>RP %1</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_SpawnReinforcements">
+            <English>Spawn Reinforcements</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_VehicleSelect">
+            <English>Vehicle Select</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_Category">
+            <English>Category</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_GroupSelect">
+            <English>Group Select</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_CurrentGroup">
+            <English>Current Group</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_VehicleLZ">
+            <English>Vehicle LZ/DZ</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_VehicleBehaviour">
+            <English>Vehicle Behaviour</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_StayAtLZ">
+            <English>Stay at LZ</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_RTBAndDespawn">
+            <English>RTB and Despawn</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_InsertionMethod">
+            <English>Insertion Method</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_UnitRP">
+            <English>Unit RP</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_UnitBehaviour">
+            <English>Unit Behaviour</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel">
             <English>Create/Edit Intel</English>
             <Polish>Stwórz/Edytuj dane wywiadowcze</Polish>
@@ -1723,6 +1797,9 @@
             <German>Spieler</German>
             <Polish>Gracze</Polish>
             <Japanese>プレイヤー</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Modules_Reinforcements">
+            <English>Reinforcements</English>
         </Key>
         <Key ID="STR_ZEN_Modules_Spawn">
             <English>Spawn</English>
@@ -1839,6 +1916,9 @@
             <German>Es gibt keine Zielmodule, platzieren Sie zuerst ein Zielmodul</German>
             <Polish>Brak modułów celu, najpierw ustaw moduł celu</Polish>
             <Japanese>モジュールの目標が無い為、何か設置して下さい。</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Modules_PlaceAnLZ">
+            <English>Place an LZ</English>
         </Key>
     </Package>
 </Project>

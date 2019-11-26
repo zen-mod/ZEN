@@ -127,6 +127,18 @@
             <German>Alle ausgewählten Fahrzeuge setzen Gegenmaßnahmen wie Rauch und Leuchtfackeln ein.</German>
             <Japanese>選択された全車両から煙幕やフレアといった欺瞞装置を作動させます。</Japanese>
         </Key>
+        <Key ID="STR_ZEN_Editor_DeepCopy">
+            <English>Deep Copy</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_DeepCopy_Description">
+            <English>Performs a "deep copy" of selected objects - copying an extended set of object properties such as unit loadouts, vehicle inventories and customization.</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_DeepPaste">
+            <English>Deep Paste</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_DeepPaste_Description">
+            <English>Pastes the current deep copied object data.</English>
+        </Key>
         <Key ID="STR_ZEN_Editor_ToggleIcons">
             <English>Toggle Editable Icons</English>
             <Japanese>編集可アイコン切り替え</Japanese>

@@ -71,6 +71,12 @@
             <Chinese>否</Chinese>
             <Chinesesimp>否</Chinesesimp>
         </Key>
+        <Key ID="STR_ZEN_Common_Add">
+            <English>Add</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_Remove">
+            <English>Remove</English>
+        </Key>
         <Key ID="STR_ZEN_Common_On">
             <English>On</English>
             <Japanese>オン</Japanese>
@@ -88,6 +94,9 @@
             <Czech>Beze změny</Czech>
             <Italian>Invariato</Italian>
             <Japanese>変更無し</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Common_Premade">
+            <English>Premade</English>
         </Key>
         <Key ID="STR_ZEN_Common_VeryLow">
             <English>Very Low</English>
@@ -260,6 +269,9 @@
             <Italian>Unità</Italian>
             <Japanese>ユニット</Japanese>
         </Key>
+        <Key ID="STR_ZEN_Common_Vehicle">
+            <English>Vehicle</English>
+        </Key>
         <Key ID="STR_ZEN_Common_Vehicles">
             <English>Vehicles</English>
             <French>Véhicules</French>
@@ -289,6 +301,21 @@
             <Czech>Nejbližší</Czech>
             <Italian>Più vicino</Italian>
             <Japanese>直近</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Common_Farthest">
+            <English>Farthest</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_Relaxed">
+            <English>Relaxed</English>
+            <Russian>Расслабленный</Russian>
+            <German>Entspannt</German>
+            <Polish>Spokojni</Polish>
+        </Key>
+        <Key ID="STR_ZEN_Common_Cautious">
+            <English>Cautious</English>
+            <Russian>Осторожный</Russian>
+            <German>Vorsichtig</German>
+            <Polish>Ostrożni</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_Speed">
             <English>Speed</English>

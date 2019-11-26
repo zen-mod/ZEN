@@ -38,7 +38,7 @@ class zen_context_menu_actions {
 
 ## Adding Actions Through Script
 
-_Requires Zeus Enhanced v1.4.0 or later._
+_Requires v1.4.0 or later._
 
 #### Creating an Action
 
@@ -95,6 +95,28 @@ Actions are added locally and as a result the function must be executed on each 
 
 ```clike
 [_action, [], 0] call zen_context_menu_fnc_addAction
+```
+
+## Removing Actions Through Script
+
+_Requires v1.6.0 or later._
+
+Context menu actions can be removed using the `zen_context_menu_fnc_removeAction` function with the full action path.
+
+**Arguments:**
+
+ \#   | Description | Type | Default Value (if optional)
+:---: | ----------- | ---- | ---------------------------
+0 | Action Path | ARRAY
+
+**Return Value:**
+
+- Removed &lt;BOOL&gt;
+
+**Example:**
+
+```clike
+["HintTime"] call zen_context_menu_fnc_removeAction
 ```
 
 ## Statement and Condition
