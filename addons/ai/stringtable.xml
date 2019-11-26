@@ -8,6 +8,7 @@
             <English>Fastrope</English>
             <Polish>Zjazd na linach</Polish>
             <Portuguese>Cabo rápido</Portuguese>
+            <Japanese>ファストロープ</Japanese>
         </Key>
         <Key ID="STR_ZEN_AI_Paradrop">
             <English>Paradrop</English>
@@ -15,6 +16,7 @@
             <Czech>Seskok padákem</Czech>
             <Polish>Desant ze spadochronem</Polish>
             <Portuguese>Queda Livre</Portuguese>
+            <Japanese>空挺降下</Japanese>
         </Key>
         <Key ID="STR_ZEN_AI_CouldNotGarrisonAll">
             <English>Unable to garrison all units - not enough positions</English>
@@ -24,6 +26,7 @@
             <Italian>Impossibile schierare tutte le unità - non ci sono abbastanza posizioni libere</Italian>
             <Czech>Nelze obsadit všechny jednotky - nedostatek pozic</Czech>
             <Portuguese>Incapaz de guarnecer todas as unidades - não há posições o suficiente</Portuguese>
+            <Japanese>全てのユニットを歩哨にできません - 空きスペース無し</Japanese>
         </Key>
     </Package>
 </Project>
