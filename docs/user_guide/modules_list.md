@@ -102,7 +102,7 @@ When used on a vehicle, players will first be teleported into an empty seat if p
 
 ## Custom Fire
 
-Creates a custom fire effect based on the selected properties.
+Creates a custom fire effect based on the selected fire color, fire damage, effect size, and particle density, lifetime, speed, size, and orientation.
 
 ## Damage Buildings
 
