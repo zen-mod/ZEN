@@ -14,7 +14,7 @@ def valid_keyword_after_code(content, index):
     return False
 
 
-def check_sqf(filepath, root_dir = "."):
+def check_sqf(filepath):
     errors = []
 
     with open(filepath, "r", encoding = "utf-8", errors = "ignore") as file:
