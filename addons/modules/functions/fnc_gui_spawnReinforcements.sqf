@@ -390,6 +390,16 @@ private _ctrlUnitList = _display displayCtrl IDC_SPAWNREINFORCEMENTS_UNIT_LIST;
 _ctrlUnitList ctrlAddEventHandler ["KeyDown", _fnc_listKeyDown];
 _ctrlUnitList ctrlAddEventHandler ["LBDblClick", _fnc_listDblClicked];
 
+private _fnc_clearList = {
+    params ["_ctrlUnitClear"];
+
+    private _display = ctrlParent _ctrlUnitClear;
+    lbClear (_display displayCtrl IDC_SPAWNREINFORCEMENTS_UNIT_LIST);
+};
+
+private _ctrlUnitClear = _display displayCtrl IDC_SPAWNREINFORCEMENTS_UNIT_CLEAR;
+_ctrlUnitClear ctrlAddEventHandler ["ButtonClick", _fnc_clearList];
+
 private _ctrlVehicleLZ = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_LZ;
 [_ctrlVehicleLZ, LOGIC_TYPE_LZ, _vehicleLZ, false, _logic] call EFUNC(position_logics,initList);
 
