@@ -1,13 +1,14 @@
 #include "script_component.hpp"
 /*
  * Author: Jonpas
- * Finds the localized string of the given hitpoint name or uses the hitpoint name if none found.
+ * Finds a localized string for the given hitpoint name.
+ * Uses the hitpoint name if a string could not be found.
  *
  * Arguments:
- * Hitpoint <STRING>
+ * 0: Hitpoint Name <STRING>
  *
  * Return Value:
- * Localized Hit Point Name <STRING>
+ * Localized Hitpoint String <STRING>
  *
  * Example:
  * ["HitFuel"] call zen_common_fnc_getHitPointString
@@ -31,6 +32,7 @@ private _toFind = if ((toLower _hitPoint) find "hit" == 0) then {
 for "_i" from 0 to (count _hitPoint) do {
     // Localize if localization found
     private _combinedString = _text + _toFind;
+
     if (isLocalized _combinedString) exitWith {
         _text = localize _combinedString;
     };
@@ -39,7 +41,9 @@ for "_i" from 0 to (count _hitPoint) do {
     _toFind = [_toFind, 0, count _toFind - 1] call CBA_fnc_substr;
 };
 
-// Don't display part name if no string is found in stringtable
-if (_text == LSTRING(Hit)) then { _text = _hitPoint };
+// Use hitpoint name if a localized string was not found
+if (_text == LSTRING(Hit)) then {
+    _text = _hitPoint;
+};
 
 _text

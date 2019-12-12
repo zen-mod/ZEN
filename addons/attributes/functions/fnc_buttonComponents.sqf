@@ -22,7 +22,10 @@ private _components = [];
 {
     private _component = _x;
 
-    if (_component isEqualTo "") then { _component = _selectionNames select _forEachIndex };
+    if (_component isEqualTo "") then {
+        _component = _selectionNames select _forEachIndex
+    };
+
     private _componentName = _component call EFUNC(common,getHitPointString);
 
     _components pushBack ["SLIDER:PERCENT", [_componentName, _component], [0, 1, _damageValues select _forEachIndex], true];
