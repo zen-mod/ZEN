@@ -23,7 +23,7 @@ private _components = [];
     private _component = _x;
 
     if (_component isEqualTo "") then {
-        _component = _selectionNames select _forEachIndex
+        _component = _selectionNames select _forEachIndex;
     };
 
     private _componentName = _component call EFUNC(common,getHitPointString);
