@@ -17,28 +17,27 @@
 
 params ["_logic"];
 
-private _defaultName = [count GVAR(targetLogics)] call EFUNC(common,getPhoneticName);
-_defaultName = format [localize LSTRING(ModuleCreateTarget_TargetX), _defaultName];
-
 [LSTRING(ModuleCreateTarget), [
-    ["EDIT", LSTRING(ModuleCreateTarget_Name), _defaultName, true],
-    ["COMBO", LSTRING(ModuleCreateTarget_AttachLaser), [[], [
-        ["STR_A3_None", "", QPATHTOF(ui\none_ca.paa)],
-        ["STR_WEST", "", ICON_BLUFOR],
-        ["STR_EAST", "", ICON_OPFOR],
-        ["STR_Guerrila", "", ICON_INDEPENDENT]
-    ], 0]]
+    [
+        "EDIT",
+        LSTRING(ModuleCreateTarget_Name),
+        [_logic, LSTRING(ModuleCreateTarget_Format)] call EFUNC(position_logics,nextName),
+        true
+    ],
+    [
+        "COMBO",
+        LSTRING(ModuleCreateTarget_AttachLaser),
+        [nil, [
+            ["STR_A3_None", "", QPATHTOF(ui\none_ca.paa)],
+            ["STR_WEST", "", ICON_BLUFOR],
+            ["STR_EAST", "", ICON_OPFOR],
+            ["STR_Guerrila", "", ICON_INDEPENDENT]
+        ]]
+    ]
 ], {
-    params ["_dialogValues", "_logic"];
-    _dialogValues params ["_targetName", "_attachedLaser"];
+    params ["_values", "_logic"];
+    _values params ["_name", "_attachedLaser"];
 
-    // Add the logic as a target logic
-    _logic setName _targetName;
-
-    GVAR(targetLogics) pushBack _logic;
-    publicVariable QGVAR(targetLogics);
-
-    // Handle creating an attached laser target
     if (_attachedLaser != 0) then {
         if (_attachedLaser == 3) then {
             _attachedLaser = parseNumber ([west, independent] call BIS_fnc_sideIsEnemy);
@@ -46,11 +45,15 @@ _defaultName = format [localize LSTRING(ModuleCreateTarget_TargetX), _defaultNam
             _attachedLaser = _attachedLaser - 1;
         };
 
-        private _laserTargetType = ["LaserTargetW", "LaserTargetE"] select _attachedLaser;
-        private _laserTarget = createVehicle [_laserTargetType, [0, 0, 0], [], 0, "NONE"];
-        _laserTarget attachTo [_logic, [0, 0, 0]];
+        private _laserType = ["LaserTargetW", "LaserTargetE"] select _attachedLaser;
+        private _laser = createVehicle [_laserType, [0, 0, 0], [], 0, "NONE"];
+        _laser setVariable [QEGVAR(position_logics,delete), true, true];
+        _laser attachTo [_logic, [0, 0, 0]];
     };
+
+    [_logic, _name] call EFUNC(position_logics,add);
 }, {
     params ["", "_logic"];
+
     deleteVehicle _logic;
 }, _logic] call EFUNC(dialog,create);

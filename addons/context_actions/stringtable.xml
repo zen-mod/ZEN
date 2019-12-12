@@ -3,36 +3,79 @@
     <Package name="Context_Actions">
         <Key ID="STR_ZEN_Context_Actions_EditInventory">
             <English>Edit Inventory</English>
+            <French>Modifier l'inventaire</French>
             <Russian>Редактировать снаряжение</Russian>
             <German>Inventar bearbeiten</German>
             <Polish>Edytuj wyposażenie</Polish>
+            <Italian>Modifica Inventario</Italian>
+            <Japanese>インベントリ編集</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_TeleportPlayers">
             <English>Teleport Players</English>
+            <French>Téléporter les joueurs</French>
             <Russian>Телепортировать игроков</Russian>
             <German>Spieler teleportieren</German>
             <Polish>Teleportuj graczy</Polish>
+            <Italian>Teletrasporta giocatore</Italian>
+            <Japanese>プレイヤーのテレポート</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_TeleportZeus">
             <English>Teleport Zeus</English>
+            <French>Téléporter Zeus</French>
             <German>Zeus teleportieren</German>
             <Polish>Teleportuj Zeusa</Polish>
+            <Italian>Teletrasporta Zeus</Italian>
+            <Japanese>Zeus のテレポート</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_VehicleLogistics">
             <English>Vehicle Logistics</English>
+            <French>Logistique des véhicules</French>
             <Polish>Logistyka pojazdów</Polish>
+            <German>Fahrzeuglogistik</German>
+            <Italian>Logistica dei veicoli</Italian>
+            <Japanese>車両ロジスティクス</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_Rearm">
             <English>Rearm</English>
+            <French>Réarmer</French>
             <Polish>Przezbrój</Polish>
+            <German>Waffen zurücksetzen</German>
+            <Italian>Riarma</Italian>
+            <Japanese>再武装</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_Refuel">
             <English>Refuel</English>
+            <French>Ravitailler</French>
             <Polish>Zatankuj</Polish>
+            <German>Auftanken</German>
+            <Italian>Rifornimento</Italian>
+            <Japanese>給油</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_Repair">
             <English>Repair</English>
+            <French>Réparer</French>
             <Polish>Napraw</Polish>
+            <German>Repariern</German>
+            <Italian>Ripara</Italian>
+            <Japanese>修理</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_EditableObjects">
+            <English>Editable Objects</English>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_10m">
+            <English>10 m</English>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_25m">
+            <English>25 m</English>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_50m">
+            <English>50 m</English>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_100m">
+            <English>100 m</English>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_250m">
+            <English>250 m</English>
         </Key>
     </Package>
 </Project>

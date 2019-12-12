@@ -28,6 +28,7 @@ class GVAR(display) {
             onMouseMoving = QUOTE(_this call FUNC(handleMouse));
             onMouseHolding = QUOTE(_this call FUNC(handleMouse));
             onMouseZChanged = QUOTE(_this call FUNC(onMouseZChanged));
+            onMouseButtonClick = QUOTE(_this call FUNC(onMouseButtonClick));
             style = ST_MULTI;
             x = safeZoneX;
             y = safeZoneY;
@@ -46,18 +47,25 @@ class GVAR(display) {
                 class ButtonClose: RscButtonMenu {
                     onButtonClick = QUOTE(_this call FUNC(closeGarage));
                     text = "$STR_DISP_CLOSE";
-                    tooltip = CSTRING(ButtonClose_Tooltip);
+                    tooltip = CSTRING(Close_Tooltip);
                     x = 0;
                     y = 0;
-                    w = (safeZoneW - POS_W(1)) / 5 - POS_W(0.1);
+                    w = (safeZoneW - POS_W(1)) / 5;
                     h = POS_H(1);
                 };
                 class ButtonHide: ButtonClose {
                     onButtonClick = QUOTE(_this call FUNC(toggleInterface));
                     text = "$STR_CA_HIDE";
-                    tooltip = CSTRING(ButtonHide_Tooltip);
-                    x = (safeZoneW - POS_W(1)) / 5;
-                    w = (safeZoneW - POS_W(1)) / 10 - POS_W(0.1);
+                    tooltip = CSTRING(Hide_Tooltip);
+                    x = (safeZoneW - POS_W(1)) / 5 + POS_W(0.1);
+                    w = (safeZoneW - POS_W(1)) / 8;
+                };
+                class ButtonApply: ButtonHide {
+                    idc = IDC_BUTTON_APPLY;
+                    onButtonClick = QUOTE(_this call FUNC(applyToAll));
+                    text = CSTRING(ApplyToAll);
+                    tooltip = CSTRING(ApplyToAll_Tooltip);
+                    x = (safeZoneW - POS_W(1)) / 5 + (safeZoneW - POS_W(1)) / 8 + POS_W(0.2);
                 };
             };
         };
@@ -119,11 +127,10 @@ class GVAR(display) {
             w = POS_W(3.5);
             h = POS_H(2);
             colorBackground[] = {0, 0, 0, 1};
-            fade = 1;
         };
         class ButtonAnimations: RscButtonArsenal {
             idc = IDC_BUTTON_ANIMATIONS;
-            onButtonClick = QUOTE(_this call FUNC(onTabSelect));
+            onButtonClick = QUOTE(0 call FUNC(onTabSelect));
             text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGarage\AnimationSources_ca.paa";
             tooltip = "$STR_A3_RscDisplayGarage_tab_AnimationSources";
             x = safeZoneX + POS_W(0.5);
@@ -138,6 +145,7 @@ class GVAR(display) {
         };
         class ButtonTextures: ButtonAnimations {
             idc = IDC_BUTTON_TEXTURES;
+            onButtonClick = QUOTE(1 call FUNC(onTabSelect));
             text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGarage\TextureSources_ca.paa";
             tooltip = "$STR_A3_RscDisplayGarage_tab_TextureSources";
             y = safeZoneY + POS_H(2.8);
