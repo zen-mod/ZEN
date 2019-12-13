@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Position_Logics">
+        <Key ID="STR_ZEN_Position_Logics_DistanceKM">
+            <English>(%1 km)</English>
+        </Key>
+    </Package>
+</Project>

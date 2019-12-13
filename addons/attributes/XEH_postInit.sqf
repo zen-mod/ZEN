@@ -26,3 +26,11 @@
         "reloadSpeed"
     ];
 }] call CBA_fnc_addEventHandler;
+
+[QGVAR(setAllHitPointsDamage), {
+    params ["_vehicle", "_damageValues"];
+
+    {
+        _vehicle setHitIndex [_forEachIndex, _x, false];
+    } forEach _damageValues;
+}] call CBA_fnc_addEventHandler;
