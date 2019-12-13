@@ -26,5 +26,3 @@
 
 #define IDC_PREVIEW_GROUP 98470
 #define IDC_PREVIEW_IMAGE 98480
-
-#define POS_EDGE(DEFAULT,MOVED) ([ARR_2(DEFAULT,MOVED)] select GETMVAR(EGVAR(editor,moveDisplayToEdge),false))
