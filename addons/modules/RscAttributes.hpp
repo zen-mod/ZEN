@@ -1159,7 +1159,7 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
                         idc = IDC_SPAWNREINFORCEMENTS_UNIT_COUNT;
                         style = ST_RIGHT;
                         text = "0";
-                        w = POS_W(11);
+                        w = POS_W(11.1);
                         colorBackground[] = {0, 0, 0, 0};
                     };
                     class UnitList: ctrlListBox {
@@ -1173,7 +1173,7 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
                     class UnitIcon: RscPicture {
                         idc = -1;
                         text = QPATHTOF(ui\person_ca.paa);
-                        x = POS_W(23.9);
+                        x = POS_W(24);
                         y = POS_H(1.1);
                         w = POS_W(1);
                         h = POS_H(1);
@@ -1181,8 +1181,8 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
                     class UnitClear: ctrlButtonPictureKeepAspect {
                         idc = IDC_SPAWNREINFORCEMENTS_UNIT_CLEAR;
                         text = "\a3\3den\data\cfg3den\history\deleteitems_ca.paa";
-                        x = 0;
-                        y = POS_H(24.9);
+                        x = POS_W(24.9);
+                        y = POS_H(1.1);
                         w = POS_W(1);
                         h = POS_H(1);
                         colorBackground[] = {0, 0, 0, 0};
