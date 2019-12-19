@@ -1050,7 +1050,7 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
         x = 0;
         y = 0;
         w = POS_W(26);
-        h = POS_H(26.3);
+        h = POS_H(27.4);
         class controls {
             class SideLabel: EGVAR(attributes,RscLabel) {
                 text = "$STR_eval_typeside";
