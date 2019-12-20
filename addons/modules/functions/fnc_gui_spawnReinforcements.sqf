@@ -394,7 +394,12 @@ private _fnc_clearList = {
     params ["_ctrlUnitClear"];
 
     private _display = ctrlParent _ctrlUnitClear;
-    lbClear (_display displayCtrl IDC_SPAWNREINFORCEMENTS_UNIT_LIST);
+
+    private _ctrlUnitList = _display displayCtrl IDC_SPAWNREINFORCEMENTS_UNIT_LIST;
+    lbClear _ctrlUnitList;
+
+    private _ctrlUnitCount = _display displayCtrl IDC_SPAWNREINFORCEMENTS_UNIT_COUNT;
+    _ctrlUnitCount ctrlSetText "0";
 };
 
 private _ctrlUnitClear = _display displayCtrl IDC_SPAWNREINFORCEMENTS_UNIT_CLEAR;
