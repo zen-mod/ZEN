@@ -29,7 +29,10 @@ if (_type isEqualTo "") then {
     _ctrlGroup ctrlShow false;
 } else {
     private _image = getText (configFile >> "CfgVehicles" >> _type >> "editorPreview");
-    if (_image isEqualTo "") exitWith {};
+
+    if (_image isEqualTo "") exitWith {
+        _ctrlGroup ctrlShow false;
+    };
 
     private _ctrlImage = _display displayCtrl IDC_PREVIEW_IMAGE;
     _ctrlImage ctrlSetText _image;
