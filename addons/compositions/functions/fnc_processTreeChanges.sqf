@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [DISPLAY] call zen_compositions_fnc_processTreeChanges
+ * [DISPLAY] call zen_compositions_fnc_processTreeAdditions
  *
  * Public: No
  */
@@ -50,7 +50,6 @@ for "_i" from 0 to ((_ctrlTree tvCount [0]) - 1) do {
                 _categories pushBack _category;
                 _path = [0, _i, _ctrlTree tvAdd [[0, _i], _category]];
                 _ctrlTree tvSetData [_path, SUBCATEGORY_STR];
-                _ctrlTree tvSort [_path, false];
             };
 
             // Add the composition to the tree if a path for the category currently exists
@@ -59,7 +58,7 @@ for "_i" from 0 to ((_ctrlTree tvCount [0]) - 1) do {
 
                 _ctrlTree tvSetTooltip [_path, _name];
                 _ctrlTree tvSetData [_path, COMPOSITION_STR];
-                _ctrlTree tvSort [_path, false];
+                _ctrlTree tvSort [GET_PARENT_PATH(_path), false];
 
                 _ctrlTree setVariable [FORMAT_OBJECT_DATA_VAR(_category,_name), _data];
 
@@ -67,6 +66,9 @@ for "_i" from 0 to ((_ctrlTree tvCount [0]) - 1) do {
                 _delete = true;
             };
         } forEach GVAR(treeAdditions);
+
+        // Sort categories at the end to prevent issues with changing indices
+        _ctrlTree tvSort [[0, _i], false];
     };
 };
 

@@ -7,5 +7,5 @@ PREP(initDisplay3DEN);
 PREP(initDisplayCurator);
 PREP(initHelper);
 PREP(openDisplay);
-PREP(processTreeChanges);
+PREP(processTreeAdditions);
 PREP(removeFromTree);

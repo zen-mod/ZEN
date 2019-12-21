@@ -125,5 +125,5 @@ private _ctrlButtonOK = _display displayCtrl IDC_OK;
     };
 
     GVAR(treeAdditions) pushBack _composition;
-    [findDisplay IDD_RSCDISPLAYCURATOR] call FUNC(processTreeChanges);
+    [findDisplay IDD_RSCDISPLAYCURATOR] call FUNC(processTreeAdditions);
 }, _this] call CBA_fnc_addBISEventHandler;

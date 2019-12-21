@@ -40,7 +40,7 @@
         params ["_ctrl"];
 
         private _display = ctrlParent _ctrl;
-        _display call FUNC(processTreeChanges);
+        _display call FUNC(processTreeAdditions);
     };
 
     private _searchIDC = [IDC_RSCDISPLAYCURATOR_CREATE_SEARCH, IDC_SEARCH_CUSTOM] select EGVAR(editor,disableLiveSearch);
@@ -66,7 +66,7 @@
         GVAR(treeAdditions) pushBack _x;
     } forEach GET_COMPOSITIONS;
 
-    _display call FUNC(processTreeChanges);
+    _display call FUNC(processTreeAdditions);
 
     _ctrlTree ctrlAddEventHandler ["TreeSelChanged", {call FUNC(handleTreeSelect)}];
 }, _this] call CBA_fnc_execNextFrame;

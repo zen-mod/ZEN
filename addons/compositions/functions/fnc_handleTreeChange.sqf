@@ -35,4 +35,4 @@ if (_mode == 4) then {
 };
 
 // Process any tree additions
-[_display] call FUNC(processTreeChanges);
+[_display] call FUNC(processTreeAdditions);
