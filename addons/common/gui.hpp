@@ -1,8 +1,8 @@
 class RscText;
 class RscStructuredText;
-class ctrlStaticPictureKeepAspect;
 class RscButtonMenuOK;
 class RscButtonMenuCancel;
+class ctrlStaticPictureKeepAspect;
 
 class GVAR(messageBox) {
     idd = -1;

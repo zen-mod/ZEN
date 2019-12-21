@@ -12,7 +12,7 @@
  * Example:
  * [_helper] call zen_compositions_fnc_initHelper
  *
- * Public: None
+ * Public: No
  */
 
 params ["_helper"];
@@ -20,8 +20,8 @@ params ["_helper"];
 if (!local _helper) exitWith {};
 
 private _position = getPosATL _helper;
-_position set [2, 0]; // does not spawn at height of 0
+_position set [2, 0]; // Does not spawn at height of 0
 
 deleteVehicle _helper;
 
-[QGVAR(spawn), [_position, GVAR(selected)]] call CBA_fnc_serverEvent;
+[QGVAR(spawn), [GVAR(selected), _position]] call CBA_fnc_serverEvent;

@@ -84,7 +84,7 @@
 
 #define COLOR_BACKGROUND_SETTING COLOR_SETTING(EGVAR(common,darkMode),1,1,1,0.1,0,0,0,0.2)
 
-#define POS_EDGE(default,moved) ([ARR_2(default,moved)] select GETMVAR(EGVAR(edtior,moveDisplayToEdge),false))
+#define POS_EDGE(DEFAULT,MOVED) ([ARR_2(DEFAULT,MOVED)] select GETMVAR(EGVAR(editor,moveDisplayToEdge),false))
 
 #define DEGREE_SYMBOL toString [176]
 

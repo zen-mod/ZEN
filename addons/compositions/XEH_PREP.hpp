@@ -9,5 +9,3 @@ PREP(initHelper);
 PREP(openDisplay);
 PREP(processTreeChanges);
 PREP(removeFromTree);
-PREP(serialize);
-PREP(spawn);

@@ -15,10 +15,10 @@
  * Public: No
  */
 
-private _data = [SELECTED_OBJECTS] call FUNC(serialize);
+private _objectData = [SELECTED_OBJECTS] call EFUNC(common,serializeObjects);
 
-if (_data isEqualTo []) exitWith {
+if (_objectData isEqualTo []) exitWith {
     [LSTRING(NoObjectsSelected)] call EFUNC(common,showMessage);
 };
 
-["create", ["", "", _data]] call FUNC(openDisplay);
+["create", ["", "", _objectData]] call FUNC(openDisplay);
