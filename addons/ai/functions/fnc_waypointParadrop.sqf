@@ -16,7 +16,7 @@
  * Public: No
  */
 
-#define MOVE_DELAY 3
+#define MOVE_DELAY 2
 #define OFFSET_DISTANCE 2000
 #define TIME_PER_UNIT 1.2
 
@@ -37,16 +37,16 @@ private _skill = skill _driver;
 _driver setSkill 1;
 _driver allowFleeing 0;
 
-private "_position";
+private ["_position", "_passengers"];
 private _nextMove = CBA_missionTime;
 
 waitUntil {
-    // Periodically issue move commands to 2 km past the waypoint's position
+    // Periodically issue move commands past the waypoint's position
     // Makes the aircraft fly over the waypoint's position and not stop at it
     if (CBA_missionTime >= _nextMove) then {
         private _direction = _vehicle getDir _waypointPosition;
         _position = _waypointPosition getPos [OFFSET_DISTANCE, _direction];
-        _vehicle move _position;
+        _vehicle doMove _position;
 
         _nextMove = CBA_missionTime + MOVE_DELAY;
     };
@@ -55,11 +55,14 @@ waitUntil {
 
     // Check if the aircraft is close enough to the waypoint to begin paradropping
     // Distance is based on the current speed of aircraft and the number of passengers
-    private _passengers = {assignedVehicleRole _x select 0 == "cargo"} count crew _vehicle;
+    _passengers = {assignedVehicleRole _x select 0 == "cargo"} count crew _vehicle;
     _vehicle distance2D _position < vectorMagnitude velocity _vehicle * TIME_PER_UNIT * _passengers / 2 + OFFSET_DISTANCE
 };
 
 [_vehicle] call EFUNC(common,ejectPassengers);
+
+// Allow units to jump out before finishing the waypoint
+sleep (TIME_PER_UNIT * _passengers + 5);
 
 _driver setSkill _skill;
 
