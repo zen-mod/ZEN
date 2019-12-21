@@ -317,7 +317,8 @@ if (isServer) then {
         } forEach allCurators;
     }] call CBA_fnc_addEventHandler;
 
-    [QGVAR(createZeus), FUNC(createZeus)] call CBA_fnc_addEventHandler;
+    [QGVAR(createZeus), LINKFUNC(createZeus)] call CBA_fnc_addEventHandler;
+    [QGVAR(deserializeObjects), LINKFUNC(deserializeObjects)] call CBA_fnc_addEventHandler;
 };
 
 ["CBA_settingsInitialized", {

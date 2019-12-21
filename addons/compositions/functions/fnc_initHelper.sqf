@@ -24,4 +24,4 @@ _position set [2, 0]; // Does not spawn at height of 0
 
 deleteVehicle _helper;
 
-[QGVAR(spawn), [GVAR(selected), _position]] call CBA_fnc_serverEvent;
+[QEGVAR(common,deserializeObjects), [GVAR(selected), _position]] call CBA_fnc_serverEvent;
