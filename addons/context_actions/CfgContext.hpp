@@ -247,14 +247,14 @@ class EGVAR(context_menu,actions) {
         class CopyInventory {
             displayName = "$STR_3DEN_Display3DEN_MenuBar_EntityCopy_text";
             icon = QPATHTOF(ui\copy_ca.paa);
-            statement = QUOTE(GVAR(inventory) = _hoveredEntity call EFUNC(common,getInventory));
+            statement = QUOTE(GVAR(inventory) = _hoveredEntity call EFUNC(common,serializeInventory));
             priority = 2;
         };
         class PasteInventory {
             displayName = "$STR_3DEN_Display3DEN_MenuBar_EntityPaste_text";
             icon = QPATHTOF(ui\paste_ca.paa);
             condition = QUOTE(!isNil QQGVAR(inventory));
-            statement = QUOTE([ARR_2(_hoveredEntity, GVAR(inventory))] call EFUNC(common,setInventory));
+            statement = QUOTE([ARR_2(_hoveredEntity, GVAR(inventory))] call EFUNC(common,deserializeInventory));
             priority = 1;
         };
     };
