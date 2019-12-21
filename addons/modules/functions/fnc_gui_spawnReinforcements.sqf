@@ -49,6 +49,7 @@ _selections params [
     ["_vehicleLZ", -3],
     ["_vehicleBehaviour", 1],
     ["_insertionMethod", 0],
+    ["_flyHeight", 100],
     ["_unitRP", -3],
     ["_unitBehaviour", 0]
 ];
@@ -246,8 +247,13 @@ private _fnc_vehicleChanged = {
     private _ctrlUnitCount = _display displayCtrl IDC_SPAWNREINFORCEMENTS_UNIT_COUNT;
     _ctrlUnitCount ctrlSetText str lbSize _ctrlUnitList;
 
+    private _isAir = _vehicle isKindOf "Air";
+
     private _ctrlInsertion = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_INSERTION;
-    _ctrlInsertion ctrlEnable (_vehicle isKindOf "Air");
+    _ctrlInsertion ctrlEnable _isAir;
+
+    private _ctrlFlyHeight = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_HEIGHT;
+    _ctrlFlyHeight ctrlEnable _isAir;
 
     if (
         isClass (configFile >> "CfgPatches" >> "ace_fastroping")
@@ -414,6 +420,9 @@ _ctrlVehicleBehaviour lbSetCurSel _vehicleBehaviour;
 private _ctrlInsertion = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_INSERTION;
 _ctrlInsertion lbSetCurSel _insertionMethod;
 
+private _ctrlFlyHeight = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_HEIGHT;
+_ctrlFlyHeight ctrlSetText str _flyHeight;
+
 private _ctrlUnitRP = _display displayCtrl IDC_SPAWNREINFORCEMENTS_UNIT_RP;
 [_ctrlUnitRP, LOGIC_TYPE_RP, _unitRP, true, _logic] call EFUNC(position_logics,initList);
 
@@ -450,13 +459,15 @@ private _fnc_onConfirm = {
     private _insertionMethod  = lbCurSel (_display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_INSERTION);
     private _unitBehaviour    = lbCurSel (_display displayCtrl IDC_SPAWNREINFORCEMENTS_UNIT_BEHAVIOUR);
 
+    private _flyHeight = parseNumber ctrlText (_display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_HEIGHT) max 50;
+
     private _ctrlVehicleLZ = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_LZ;
     private _vehicleLZ = _ctrlVehicleLZ lbValue lbCurSel _ctrlVehicleLZ;
 
     private _ctrlUnitRP = _display displayCtrl IDC_SPAWNREINFORCEMENTS_UNIT_RP;
     private _unitRP = _ctrlUnitRP lbValue lbCurSel _ctrlUnitRP;
 
-    private _selections = [_side, _faction, _category, _vehicle, _treeMode, _unitList, _vehicleLZ, _vehicleBehaviour, _insertionMethod, _unitRP, _unitBehaviour];
+    private _selections = [_side, _faction, _category, _vehicle, _treeMode, _unitList, _vehicleLZ, _vehicleBehaviour, _insertionMethod, _flyHeight, _unitRP, _unitBehaviour];
     missionNamespace setVariable [VAR_SELECTIONS(RscSpawnReinforcements), _selections];
 
     // Convert vehicle index to type
@@ -473,7 +484,7 @@ private _fnc_onConfirm = {
         _positionRP = ASLtoAGL getPosASL _positionRP;
     };
 
-    [QGVAR(moduleSpawnReinforcements), [_vehicle, _unitList, _position, _positionLZ, _positionRP, _vehicleBehaviour > 0, _insertionMethod, _unitBehaviour]] call CBA_fnc_serverEvent;
+    [QGVAR(moduleSpawnReinforcements), [_vehicle, _unitList, _position, _positionLZ, _positionRP, _vehicleBehaviour > 0, _insertionMethod, _unitBehaviour, _flyHeight]] call CBA_fnc_serverEvent;
 };
 
 _display displayAddEventHandler ["Unload", _fnc_onUnload];
