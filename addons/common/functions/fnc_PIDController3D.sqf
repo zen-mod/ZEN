@@ -21,7 +21,7 @@
  */
 
 params [["_error", [0, 0, 0], [[]], 3], ["_variables", [], [[]]], ["_constants", [], [[]]]];
-_variables params [["_lastError", [0, 0, 0], [[]], 3], ["_integral", [0, 0, 0], [[]], 3];
+_variables params [["_lastError", [0, 0, 0], [[]], 3], ["_integral", [0, 0, 0], [[]], 3]];
 _constants params [["_kp", 1 [0]], ["_ki", 1 [0]], ["_kd", 1, [0]]];
 
 _integral = _integral vectorAdd _error;
