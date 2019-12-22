@@ -29,6 +29,7 @@ PREP(initSliderEdit);
 PREP(isInScreenshotMode);
 PREP(isPlacementActive);
 PREP(openArsenal);
+PREP(PIDController3D);
 PREP(serializeInventory);
 PREP(setInventory);
 PREP(setLampState);
