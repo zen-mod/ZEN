@@ -918,6 +918,10 @@ class GVAR(RscAttributesVehicle): GVAR(RscAttributesBase) {
             text = CSTRING(Sensors);
             function = QFUNC(buttonSensors);
         };
+        class Components {
+            text = CSTRING(Components);
+            function = QFUNC(buttonComponents);
+        };
     };
 };
 
@@ -947,6 +951,10 @@ class GVAR(RscAttributesVehicleEmpty): GVAR(RscAttributesBase) {
         class Sensors {
             text = CSTRING(Sensors);
             function = QFUNC(buttonSensors);
+        };
+        class Components {
+            text = CSTRING(Components);
+            function = QFUNC(buttonComponents);
         };
     };
 };

@@ -1,3 +1,4 @@
+PREP(editableObjects);
 PREP(healUnits);
 PREP(rearmVehicles);
 PREP(refuelVehicles);

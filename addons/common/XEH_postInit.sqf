@@ -16,6 +16,9 @@
 
             curatorCamera setPosASL _position;
             curatorCamera setVectorDirAndUp _dirAndUp;
+
+            // Fix drawIcon3D icons being hidden after using arsenal
+            cameraEffectEnableHUD true;
         };
     } call CBA_fnc_directCall;
 }] call BIS_fnc_addScriptedEventHandler;
@@ -252,7 +255,6 @@
 [QGVAR(setLampState), LINKFUNC(setLampState)] call CBA_fnc_addEventHandler;
 [QGVAR(setMagazineAmmo), LINKFUNC(setMagazineAmmo)] call CBA_fnc_addEventHandler;
 [QGVAR(setTurretAmmo), LINKFUNC(setTurretAmmo)] call CBA_fnc_addEventHandler;
-[QGVAR(setVehicleAmmo), LINKFUNC(setVehicleAmmo)] call CBA_fnc_addEventHandler;
 [QGVAR(showMessage), LINKFUNC(showMessage)] call CBA_fnc_addEventHandler;
 
 if (isServer) then {

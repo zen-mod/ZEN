@@ -18,6 +18,10 @@
 
 params ["", "_button"];
 
-if (!GVAR(interfaceShown) || {_button == 1}) then {
+if (_button == 1 || {!GVAR(interfaceShown)}) exitWith {
     [] call FUNC(toggleInterface);
+};
+
+if (_button == 0 && {GVAR(interfaceShown)} && {GVAR(currentTab) != -1} && {GVAR(mouseButtons) isEqualTo [[], []]}) exitWith {
+    [-1] call FUNC(onTabSelect);
 };
