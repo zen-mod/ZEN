@@ -16,11 +16,6 @@
  * Public: No
  */
 
-// Only run on server (turretOwner command requires server execution)
-if (!isServer) exitWith {
-    [QGVAR(setVehicleAmmo), _this] call CBA_fnc_serverEvent;
-};
-
 params ["_vehicle", "_percentage"];
 
 // Set ammo for pylons with magazines, group pylons with the same
@@ -50,11 +45,5 @@ private _cfgMagazines = configFile >> "CfgMagazines";
 
 // Broadcast set turret ammo events to handle turret locality
 {
-    private _turretOwner = _vehicle turretOwner _x;
-
-    if (_turretOwner == 0) then {
-        [QGVAR(setTurretAmmo), [_vehicle, _x, _percentage], _vehicle] call CBA_fnc_targetEvent;
-    } else {
-        [QGVAR(setTurretAmmo), [_vehicle, _x, _percentage], _turretOwner] call CBA_fnc_ownerEvent;
-    };
+    [QGVAR(setTurretAmmo), [_vehicle, _x, _percentage], _vehicle, _x] call CBA_fnc_turretEvent;
 } forEach (_vehicle call FUNC(getAllTurrets));

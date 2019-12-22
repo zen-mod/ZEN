@@ -6,3 +6,4 @@ PREP(createContextGroup);
 PREP(getActiveActions);
 PREP(initDisplayCurator);
 PREP(openMenu);
+PREP(removeAction);

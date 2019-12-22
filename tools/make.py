@@ -72,7 +72,7 @@ dssignfile = ""
 prefix = "zen"
 pbo_name_prefix = "zen_"
 signature_blacklist = []
-importantFiles = ["mod.cpp", "README.md", "AUTHORS.txt", "LICENSE", "logo_zen_ca.paa", "logo_zen_small_ca.paa"]
+importantFiles = ["mod.cpp", "meta.cpp", "README.md", "AUTHORS.txt", "LICENSE", "logo_zen_ca.paa", "logo_zen_small_ca.paa"]
 versionFiles = ["README.md", "mod.cpp"]
 
 ciBuild = False # Used for CI builds
