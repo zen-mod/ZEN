@@ -11,7 +11,7 @@
         if (isNull findDisplay IDD_RSCDISPLAYCURATOR) exitWith {};
 
         if (!_value) then {
-            [""] call FUNC(setupPreview);
+            [] call FUNC(setupPreview);
         };
     }
 ] call CBA_settings_fnc_init;

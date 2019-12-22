@@ -5,7 +5,7 @@
  * Will delete current preview object if "" is provided.
  *
  * Arguments:
- * 0: Object Type <STRING>
+ * 0: Object Type <STRING> (default: "")
  *
  * Return Value:
  * None
@@ -16,7 +16,7 @@
  * Public: No
  */
 
-params ["_objectType"];
+params [["_objectType", "", [""]]];
 
 // Exit if the given object type is the same as the current preview type
 if (_objectType == typeOf GVAR(object)) exitWith {};

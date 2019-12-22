@@ -43,4 +43,4 @@ _object allowDamage false;
 // Do not cancel the preview if the control key is held
 if (cba_events_control) exitWith {};
 
-[""] call FUNC(setupPreview);
+[] call FUNC(setupPreview);
