@@ -37,7 +37,7 @@ private _skill = skill _driver;
 _driver setSkill 1;
 _driver allowFleeing 0;
 
-private ["_position", "_passengers"];
+private ["_position", "_passengerCount"];
 private _nextMove = CBA_missionTime;
 
 waitUntil {
@@ -55,14 +55,14 @@ waitUntil {
 
     // Check if the aircraft is close enough to the waypoint to begin paradropping
     // Distance is based on the current speed of aircraft and the number of passengers
-    _passengers = {assignedVehicleRole _x select 0 == "cargo"} count crew _vehicle;
-    _vehicle distance2D _position < vectorMagnitude velocity _vehicle * TIME_PER_UNIT * _passengers / 2 + OFFSET_DISTANCE
+    _passengerCount = {assignedVehicleRole _x select 0 == "cargo"} count crew _vehicle;
+    _vehicle distance2D _position < vectorMagnitude velocity _vehicle * TIME_PER_UNIT * _passengerCount / 2 + OFFSET_DISTANCE
 };
 
 [_vehicle] call EFUNC(common,ejectPassengers);
 
 // Allow units to jump out before finishing the waypoint
-sleep (TIME_PER_UNIT * _passengers + 5);
+sleep (TIME_PER_UNIT * _passengerCount + 5);
 
 _driver setSkill _skill;
 
