@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Kex
  *
@@ -18,7 +19,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_targetPosition", "_magazineClass", "_rounds"];
 
