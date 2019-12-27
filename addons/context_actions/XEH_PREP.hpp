@@ -9,3 +9,5 @@ PREP(setSpeed);
 PREP(setStance);
 PREP(teleportPlayers);
 PREP(teleportZeus);
+PREP(toggleCaptive);
+PREP(toggleSurrender);

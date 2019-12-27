@@ -137,6 +137,31 @@ class EGVAR(context_menu,actions) {
             statement = QUOTE([ARR_2(_selectedObjects,'DOWN')] call FUNC(setStance));
         };
     };
+    class Captives {
+        displayName = "$STR_ACE_Captives_DisplayName";
+        condition = QUOTE( \
+            isClass (configFile >> 'CfgPatches' >> 'ace_captives') \
+            && {isClass (configFile >> 'CfgPatches' >> 'ace_zeus')} \
+            && {_selectedObjects findIf {_x isKindOf 'CAManBase' && {alive _x}} != -1});
+        priority = -60;
+        class ToggleCaptive {
+            displayName = "$STR_ACE_Zeus_ModuleCaptive_DisplayName";
+            statement = QUOTE(_selectedObjects call FUNC(toggleCaptive));
+            icon = "\z\ace\addons\zeus\UI\Icon_Module_Zeus_Captive_ca.paa";
+            priority = 2;
+        };
+        class ToggleSurrender {
+            displayName = "$STR_ACE_Zeus_ModuleSurrender_DisplayName";
+            statement = QUOTE(_selectedObjects call FUNC(toggleSurrender));
+            condition = QUOTE(_selectedObjects findIf { \
+                _x isKindOf 'CAManBase' \
+                && { alive _x } \
+                && {!(_x getVariable [ARR_2('ace_captives_isHandcuffed',false)])} \
+            } != -1);
+            icon = "\z\ace\addons\zeus\UI\Icon_Module_Zeus_Surrender_ca.paa";
+            priority = 1;
+        };
+    };
     class HealUnits {
         displayName = ECSTRING(modules,ModuleHeal);
         icon = QPATHTOF(ui\medical_cross_ca.paa);
