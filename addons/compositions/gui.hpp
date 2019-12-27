@@ -11,7 +11,7 @@ class EGVAR(attributes,RscCombo);
 
 class GVAR(display) {
     idd = -1;
-    enableMoving = 1;
+    movingEnable = 1;
     onLoad = QUOTE(with uiNamespace do {GVAR(display) = _this select 0});
     class controls {
         class Title: RscText {
