@@ -45,6 +45,7 @@ PREP(moduleDamageBuildings);
 PREP(moduleEarthquake);
 PREP(moduleEditableObjects);
 PREP(moduleEquipWithECM);
+PREP(moduleExportMissionSQF);
 PREP(moduleFireMission);
 PREP(moduleFlyHeight);
 PREP(moduleFunctionsViewer);

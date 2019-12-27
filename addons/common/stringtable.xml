@@ -353,6 +353,9 @@
             <English>Radius (m)</English>
             <Japanese>範囲 (m)</Japanese>
         </Key>
+        <Key ID="STR_ZEN_Common_Radius_Units">
+            <English>Radius (m)</English>
+        </Key>
         <Key ID="STR_ZEN_Common_Height">
             <English>Height</English>
             <French>Hauteur</French>
@@ -467,6 +470,9 @@
             <Polish>Za mało miejsca w pojeździe docelowym: %1 potrzebne - %2 dostępne</Polish>
             <German>Nicht genügend Platz im Zielfahrzeug: %1 benötigt - %2 verfügbar</German>
             <Japanese>選択された車両に空きがありません: 必要量 %1 - 空き容量 %2</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Common_CopyToClipboard">
+            <English>Copy to Clipboard</English>
         </Key>
         <Key ID="STR_ZEN_Common_HitBody">
             <English>Body</English>

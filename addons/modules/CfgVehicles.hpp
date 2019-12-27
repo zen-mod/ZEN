@@ -210,6 +210,11 @@ class CfgVehicles {
         displayName = CSTRING(ModuleEquipWithECM);
         function = QFUNC(moduleEquipWithECM);
     };
+    class GVAR(moduleExportMissionSQF): GVAR(moduleBase) {
+        category = QGVAR(DevTools);
+        displayName = CSTRING(ExportMissionSQF);
+        function = QFUNC(moduleExportMissionSQF);
+    };
     class GVAR(moduleExecuteCode): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(DevTools);

@@ -1728,6 +1728,9 @@
             <English>Repair broken lights when turning them on.</English>
             <Japanese>ランプを点灯した際に壊れたライトを修理します。</Japanese>
         </Key>
+        <Key ID="STR_ZEN_Modules_ExportMissionSQF">
+            <English>Export Mission SQF</English>
+        </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_Buildings">
             <English>Buildings</English>
