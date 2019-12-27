@@ -353,9 +353,6 @@
             <English>Radius (m)</English>
             <Japanese>範囲 (m)</Japanese>
         </Key>
-        <Key ID="STR_ZEN_Common_Radius_Units">
-            <English>Radius (m)</English>
-        </Key>
         <Key ID="STR_ZEN_Common_Height">
             <English>Height</English>
             <French>Hauteur</French>
