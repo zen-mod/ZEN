@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Compiles a list of all aircraft sorted by side and faction.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 // Base array: east, west, independent, civilian
 private _aircraftCache = [[], [], [], []];

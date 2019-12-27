@@ -1,20 +1,22 @@
+#include "script_component.hpp"
 /*
- * Author: mharis001
- * Teleports Zeus to the given position.
+ * Author: mharis001, 3Mydlo3
+ * Teleports Zeus to the given position or vehicle.
  *
  * Arguments:
- * 0: Position <ARRAY>
+ * None
  *
  * Return Value:
  * None
  *
  * Example:
- * [[0, 0, 0]] call zen_context_actions_fnc_teleportZeus
+ * [] call zen_context_actions_fnc_teleportZeus
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-params ["_posASL"];
-
-player setPosASL _posASL;
+if (_hoveredEntity isEqualType objNull && {_hoveredEntity isKindOf "AllVehicles"} && {!(_hoveredEntity isKindOf "CAManBase")}) then {
+    [[player], _hoveredEntity] call EFUNC(common,teleportIntoVehicle);
+} else {
+    player setPosASL _contextPosASL;
+};

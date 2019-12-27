@@ -1,3 +1,8 @@
+PREP(editableObjects);
+PREP(healUnits);
+PREP(rearmVehicles);
+PREP(refuelVehicles);
+PREP(repairVehicles);
 PREP(setBehaviour);
 PREP(setFormation);
 PREP(setSpeed);

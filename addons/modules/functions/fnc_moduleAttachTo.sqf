@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Zeus module function to attach an object to another.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic"];
 
@@ -21,15 +21,12 @@ private _object = attachedTo _logic;
 deleteVehicle _logic;
 
 if (isNull _object) exitWith {
-    [LSTRING(NothingSelected)] call EFUNC(common,showMessage);
+    [LSTRING(NoObjectSelected)] call EFUNC(common,showMessage);
 };
 
 // Detach object if currently attached
-private _attached = _object getVariable [QGVAR(attached), objNull];
-
-if (!isNull _attached) exitWith {
+if (!isNull attachedTo _object) exitWith {
     detach _object;
-    _object setVariable [QGVAR(attached), nil];
 
     [LSTRING(ObjectDetached)] call EFUNC(common,showMessage);
 };
@@ -50,7 +47,6 @@ if (!isNull _attached) exitWith {
     private _direction = getDir _object - getDir _entity;
 
     _object attachTo [_entity];
-    _object setVariable [QGVAR(attached), _entity];
     [QEGVAR(common,setDir), [_object, _direction], _object] call CBA_fnc_targetEvent;
 
     [LSTRING(ObjectAttached)] call EFUNC(common,showMessage);

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Populates the listbox with items from the current category.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_display"];
 
@@ -60,7 +60,7 @@ if (_category == -1) then {
 
             // Add item to listbox if not filtered
             private _displayName = getText (_config >> "displayName");
-            if (toLower _displayName find _filter != -1) then {
+            if (_filter in toLower _displayName) then {
                 private _picture = getText (_config >> "picture");
                 private _tooltip = format ["%1\n%2", _displayName, _x];
 
@@ -95,7 +95,7 @@ if (_category == -1) then {
     {
         // Add item to listbox if not filtered
         private _displayName = getText (_config >> _x >> "displayName");
-        if (toLower _displayName find _filter != -1) then {
+        if (_filter in toLower _displayName) then {
             private _picture = getText (_config >> _x >> "picture");
             private _tooltip = format ["%1\n%2", _displayName, _x];
             private _count = "0";

@@ -30,7 +30,7 @@ class GVAR(RscBackground): RscText {
     w = POS_W(16);
     h = POS_H(2.5);
     colorText[] = {1, 1, 1, 0.5};
-    SET_BACKGROUND_COLOR;
+    colorBackground[] = COLOR_BACKGROUND_SETTING;
 };
 
 class GVAR(RscEdit): RscEdit {
@@ -724,13 +724,15 @@ class GVAR(RscAttributeSpeedMode): RscControlsGroupNoScrollbars {
     };
 };
 
+#define WAYPOINT_ROWS (ceil (count (uiNamespace getVariable 'GVAR(waypointTypes)') / 3))
+
 class GVAR(RscAttributeWaypointType): RscControlsGroupNoScrollbars {
     idc = IDC_WAYPOINTTYPE;
     function = QFUNC(attributeWaypointType);
     x = 0;
     y = 0;
     w = POS_W(26);
-    h = POS_H(5);
+    h = POS_H(WAYPOINT_ROWS + 1);
     class controls {
         class Label: GVAR(RscLabel) {
             text = "$STR_3DEN_Object_Attribute_Type_displayName";
@@ -741,31 +743,20 @@ class GVAR(RscAttributeWaypointType): RscControlsGroupNoScrollbars {
             x = 0;
             y = POS_H(1);
             w = POS_W(26);
-            h = POS_H(4);
+            h = POS_H(WAYPOINT_ROWS);
         };
         class Toolbox: ctrlToolbox {
             idc = IDC_WAYPOINTTYPE_TOOLBOX;
             x = 0;
             y = POS_H(1);
             w = POS_W(26);
-            h = POS_H(4);
+            h = POS_H(WAYPOINT_ROWS);
             colorBackground[] = {0, 0, 0, 0};
-            rows = 4;
+            tooltipColorBox[] = {0, 0, 0, 0};
+            tooltipColorText[] = {0, 0, 0, 0};
+            tooltipColorShade[] = {0, 0, 0, 0};
+            rows = QUOTE(WAYPOINT_ROWS);
             columns = 3;
-            strings[] = {
-                "$STR_ac_move",
-                "$STR_ac_cycle",
-                "$STR_ac_seekanddestroy",
-                "$STR_ac_hold",
-                "$STR_ac_sentry",
-                "$STR_ac_getout",
-                "$STR_ac_unload",
-                "$STR_ac_transportunload",
-                "$STR_A3_CfgWaypoints_Land",
-                "$STR_ac_hook",
-                "$STR_ac_unhook",
-                "$STR_A3_Functions_F_Orange_Demine"
-            };
         };
     };
 };
@@ -882,10 +873,18 @@ class GVAR(RscAttributesMan): GVAR(RscAttributesBase) {
         class ButtonOK: ButtonOK {};
         class ButtonCancel: ButtonCancel {};
     };
-    class buttons {
+    class Buttons {
         class Arsenal {
             text = "$STR_A3_Arsenal";
             function = QFUNC(buttonArsenal);
+        };
+        class Skills {
+            text = CSTRING(Skills);
+            function = QFUNC(buttonSkills);
+        };
+        class Traits {
+            text = CSTRING(Traits);
+            function = QFUNC(buttonTraits);
         };
     };
 };
@@ -914,10 +913,14 @@ class GVAR(RscAttributesVehicle): GVAR(RscAttributesBase) {
         class ButtonOK: ButtonOK {};
         class ButtonCancel: ButtonCancel {};
     };
-    class buttons {
-        class Garage {
-            text = "$STR_A3_Garage";
-            function = QFUNC(buttonGarage);
+    class Buttons {
+        class Sensors {
+            text = CSTRING(Sensors);
+            function = QFUNC(buttonSensors);
+        };
+        class Components {
+            text = CSTRING(Components);
+            function = QFUNC(buttonComponents);
         };
     };
 };
@@ -944,10 +947,14 @@ class GVAR(RscAttributesVehicleEmpty): GVAR(RscAttributesBase) {
         class ButtonOK: ButtonOK {};
         class ButtonCancel: ButtonCancel {};
     };
-    class buttons {
-        class Garage {
-            text = "$STR_A3_Garage";
-            function = QFUNC(buttonGarage);
+    class Buttons {
+        class Sensors {
+            text = CSTRING(Sensors);
+            function = QFUNC(buttonSensors);
+        };
+        class Components {
+            text = CSTRING(Components);
+            function = QFUNC(buttonComponents);
         };
     };
 };
@@ -1056,6 +1063,16 @@ class GVAR(RscAttributesGroup): GVAR(RscAttributesBase) {
         };
         class ButtonOK: ButtonOK {};
         class ButtonCancel: ButtonCancel {};
+    };
+    class Buttons {
+        class Skills {
+            text = CSTRING(Skills);
+            function = QFUNC(buttonSkills);
+        };
+        class Side {
+            text = ECSTRING(common,Side);
+            function = QFUNC(buttonSide);
+        };
     };
 };
 

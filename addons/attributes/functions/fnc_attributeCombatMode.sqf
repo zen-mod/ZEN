@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Initializes the "Combat Mode" Zeus attribute.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define IDCS [IDC_COMBATMODE_BLUE, IDC_COMBATMODE_GREEN, IDC_COMBATMODE_WHITE, IDC_COMBATMODE_YELLOW, IDC_COMBATMODE_RED, IDC_COMBATMODE_DEFAULT]
 #define COMBATMODES ["BLUE", "GREEN", "WHITE", "YELLOW", "RED", "NO CHANGE"]

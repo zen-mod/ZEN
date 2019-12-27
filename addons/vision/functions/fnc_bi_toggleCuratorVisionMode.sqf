@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Bohemia Interactive, mharis001
  * Toggles between avaiable curator vision modes.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params [["_curator", objNull, [objNull]], ["_change", 1, [0]]];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Initializes the TOOLBOX content control.
@@ -12,19 +13,41 @@
  * None
  *
  * Example:
- * [CONTROL, 0, true, [["No", "Yes", true]]] call zen_dialog_fnc_gui_toolbox
+ * [CONTROL, 0, true, [true, 1, 2, ["No", "Yes"], 1, false]] call zen_dialog_fnc_gui_toolbox
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_controlsGroup", "_rowIndex", "_currentValue", "_rowSettings"];
-_rowSettings params ["_strings", "_returnBool"];
+_rowSettings params ["_returnBool", "_rows", "_columns", "_strings", "_height", "_isWide"];
 
-private _ctrlToolbox = _controlsGroup controlsGroupCtrl IDC_ROW_TOOLBOX;
+GVAR(toolboxRows) = _rows;
+GVAR(toolboxColumns) = _columns;
+
+// Create the toolbox control
+private _ctrlToolbox = ctrlParent _controlsGroup ctrlCreate [QGVAR(RscToolbox), IDC_ROW_TOOLBOX, _controlsGroup];
+private _ctrlName = _controlsGroup controlsGroupCtrl IDC_ROW_NAME;
+
+// Adjust the toolbox and label positions based on if this is the wide variant
+if (_isWide) then {
+    _ctrlToolbox ctrlSetPosition [0, POS_H(1), POS_W(26), POS_H(_height)];
+    _ctrlName ctrlSetPositionW POS_W(26);
+
+    // Extra height for controls group in wide variant
+    _height = _height + 1;
+} else {
+    _ctrlToolbox ctrlSetPositionH POS_H(_height);
+    _ctrlName ctrlSetPositionH POS_H(_height);
+};
+
+_ctrlToolbox ctrlCommit 0;
+_ctrlName ctrlCommit 0;
+
+// Adjust the height of the controls group
+_controlsGroup ctrlSetPositionH POS_H(_height);
+_controlsGroup ctrlCommit 0;
 
 // Currently the only way to add options to toolbox controls through script
-// Unfortunately also sets the name as the tooltip
 {
     _ctrlToolbox lbAdd _x;
 } forEach _strings;
@@ -37,6 +60,7 @@ if (_returnBool) then {
 _ctrlToolbox lbSetCurSel _currentValue;
 
 _ctrlToolbox setVariable [QGVAR(params), [_rowIndex, _returnBool]];
+
 _ctrlToolbox ctrlAddEventHandler ["ToolBoxSelChanged", {
     params ["_ctrlToolbox", "_value"];
     (_ctrlToolbox getVariable QGVAR(params)) params ["_rowIndex", "_returnBool"];

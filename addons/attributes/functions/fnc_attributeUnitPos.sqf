@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Initializes the "Unit Pos" Zeus attribute.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define IDCS [IDC_UNITPOS_DOWN, IDC_UNITPOS_CROUCH, IDC_UNITPOS_UP, IDC_UNITPOS_AUTO]
 #define STANCES ["DOWN", "MIDDLE", "UP", "AUTO"]

@@ -3,12 +3,27 @@
     <Package name="Doors">
         <Key ID="STR_ZEN_Doors_Configure">
             <English>Configure Doors</English>
+            <French>Configurer les portes</French>
+            <Russian>Конфигурация дверей</Russian>
+            <German>Türen konfigurieren</German>
+            <Polish>Konfiguruj drzwi</Polish>
+            <Japanese>ドア設定</Japanese>
         </Key>
         <Key ID="STR_ZEN_Doors_NoBuilding">
             <English>Place on a building</English>
+            <French>Placer sur un bâtiment</French>
+            <Russian>Поместите на здание</Russian>
+            <German>Auf Gebäude platzieren</German>
+            <Polish>Ustaw na budynku</Polish>
+            <Japanese>建物に設置</Japanese>
         </Key>
         <Key ID="STR_ZEN_Doors_NoDoors">
             <English>Building has no doors</English>
+            <French>Le bâtiment n'a pas de portes</French>
+            <Russian>У этого здания нет дверей!</Russian>
+            <German>Das Gebäude hat keine Türen</German>
+            <Polish>Budynek nie ma drzwi</Polish>
+            <Japanese>建物にドアはありません！</Japanese>
         </Key>
     </Package>
 </Project>

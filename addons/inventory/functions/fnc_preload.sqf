@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dedmen, Alganthe
  * Compiles a list of all compatible items for the inventory attribute.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _itemsList = [
     [], // 0  - Primary

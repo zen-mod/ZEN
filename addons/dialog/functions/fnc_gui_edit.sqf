@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Initializes the EDIT content control.
@@ -16,13 +17,21 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_controlsGroup", "_rowIndex", "_currentValue", "_rowSettings"];
-_rowSettings params ["_fnc_sanitizeValue"];
+_rowSettings params ["_fnc_sanitizeValue", "_isMulti", "_height"];
 
 private _ctrlEdit = _controlsGroup controlsGroupCtrl IDC_ROW_EDIT;
 _ctrlEdit ctrlSetText _currentValue;
+
+// Adjust the height of multi-line edit boxes based on settings
+if (_isMulti) then {
+    _controlsGroup ctrlSetPositionH POS_H(_height + 1);
+    _controlsGroup ctrlCommit 0;
+
+    _ctrlEdit ctrlSetPositionH POS_H(_height);
+    _ctrlEdit ctrlCommit 0;
+};
 
 _ctrlEdit setVariable [QGVAR(params), [_rowIndex, _fnc_sanitizeValue]];
 

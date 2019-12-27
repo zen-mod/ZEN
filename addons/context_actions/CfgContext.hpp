@@ -115,7 +115,7 @@ class EGVAR(context_menu,actions) {
     };
     class Stance {
         displayName = "$STR_A3_RscAttributeUnitPos_Title";
-        condition = QUOTE(_selectedObjects findIf {_x isKindOf 'CAManBase' && {!isPlayer _x}} > -1);
+        condition = QUOTE(_selectedObjects findIf {alive _x && {_x isKindOf 'CAManBase'} && {!isPlayer _x}} != -1);
         class Auto {
             displayName = "$STR_A3_RscAttributeUnitPos_Auto_tooltip";
             icon = QPATHTOF(ui\default_ca.paa);
@@ -136,6 +136,80 @@ class EGVAR(context_menu,actions) {
             icon = "\a3\Ui_f\data\IGUI\RscIngameUI\RscUnitInfo\SI_prone_ca.paa";
             statement = QUOTE([ARR_2(_selectedObjects,'DOWN')] call FUNC(setStance));
         };
+    };
+    class HealUnits {
+        displayName = ECSTRING(modules,ModuleHeal);
+        icon = QPATHTOF(ui\medical_cross_ca.paa);
+        class All {
+            displayName = ECSTRING(common,All);
+            statement = QUOTE([ARR_2(_selectedObjects,HEAL_MODE_ALL)] call FUNC(healUnits));
+            condition = QUOTE(_selectedObjects findIf {crew _x findIf {_x isKindOf 'CAManBase' && {alive _x}} != -1} != -1);
+            icon = QPATHTOF(ui\medical_cross_ca.paa);
+            priority = 3;
+        };
+        class Players {
+            displayName = ECSTRING(modules,Players);
+            condition = QUOTE(_selectedObjects findIf {crew _x findIf {isPlayer _x && {alive _x}} != -1} != -1);
+            statement = QUOTE([ARR_2(_selectedObjects,HEAL_MODE_PLAYERS)] call FUNC(healUnits));
+            icon = QPATHTOF(ui\medical_cross_ca.paa);
+            priority = 2;
+        };
+        class AI {
+            displayName = "$STR_Team_Switch_AI";
+            condition = QUOTE(_selectedObjects findIf {crew _x findIf {!isPlayer _x && {_x isKindOf 'CAManBase'} && {alive _x}} != -1} != -1);
+            statement = QUOTE([ARR_2(_selectedObjects,HEAL_MODE_AI)] call FUNC(healUnits));
+            icon = QPATHTOF(ui\medical_cross_ca.paa);
+            priority = 1;
+        };
+        priority = -70;
+    };
+    class VehicleLogistics {
+        displayName = CSTRING(VehicleLogistics);
+        icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\truck_ca.paa";
+        condition = QUOTE( \
+            _selectedObjects findIf { \
+                alive _x \
+                && {_x isKindOf 'AllVehicles'} \
+                && {!(_x isKindOf 'CAManBase')} \
+                && { \
+                    damage _x > 0 \
+                    || { \
+                        private _ammo = [_x] call EFUNC(common,getVehicleAmmo); \
+                        _ammo != -1 \
+                        && {_ammo < 1} \
+                    } \
+                    || {fuel _x < 1} \
+                } \
+            } != -1 \
+        );
+        class Repair {
+            displayName = CSTRING(Repair);
+            icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\repair_ca.paa";
+            condition = QUOTE(_selectedObjects findIf {damage _x > 0 && {!(_x isKindOf 'CAManBase')}} != -1);
+            statement = QUOTE(_selectedObjects call FUNC(repairVehicles));
+            priority = 3;
+        };
+        class Rearm {
+            displayName = CSTRING(Rearm);
+            icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\rearm_ca.paa";
+            condition = QUOTE(_selectedObjects findIf { \
+                    private _ammo = [_x] call EFUNC(common,getVehicleAmmo); \
+                    _ammo != -1 \
+                    && {_ammo < 1} \
+                    && {!(_x isKindOf 'CAManBase')} \
+                } != -1 \
+            );
+            statement = QUOTE(_selectedObjects call FUNC(rearmVehicles));
+            priority = 2;
+        };
+        class Refuel {
+            displayName = CSTRING(Refuel);
+            icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\refuel_ca.paa";
+            condition = QUOTE(_selectedObjects findIf {fuel _x < 1} != -1);
+            statement = QUOTE(_selectedObjects call FUNC(refuelVehicles));
+            priority = 1;
+        };
+        priority = -71;
     };
     class Loadout {
         displayName = "$STR_3den_display3den_entitymenu_arsenal_text";
@@ -173,17 +247,18 @@ class EGVAR(context_menu,actions) {
         class CopyInventory {
             displayName = "$STR_3DEN_Display3DEN_MenuBar_EntityCopy_text";
             icon = QPATHTOF(ui\copy_ca.paa);
-            statement = QUOTE(GVAR(inventory) = _hoveredEntity call EFUNC(common,getInventory));
+            statement = QUOTE(GVAR(inventory) = _hoveredEntity call EFUNC(common,serializeInventory));
             priority = 2;
         };
         class PasteInventory {
             displayName = "$STR_3DEN_Display3DEN_MenuBar_EntityPaste_text";
             icon = QPATHTOF(ui\paste_ca.paa);
             condition = QUOTE(!isNil QQGVAR(inventory));
-            statement = QUOTE([ARR_2(_hoveredEntity, GVAR(inventory))] call EFUNC(common,setInventory));
+            statement = QUOTE([ARR_2(_hoveredEntity, GVAR(inventory))] call EFUNC(common,deserializeInventory));
             priority = 1;
         };
     };
+    // (GVAR(appearances)) temp fix for release build, without the brackets the GVAR is concatenated with the getVariable/setVariable
     class Garage {
         displayName = "$STR_3den_display3den_entitymenu_garage_text";
         icon = "\a3\3DEN\Data\Displays\Display3DEN\EntityMenu\garage_ca.paa";
@@ -198,6 +273,87 @@ class EGVAR(context_menu,actions) {
         );
         statement = QUOTE(_hoveredEntity call EFUNC(garage,openGarage));
         priority = -82;
+        class CopyAppearance {
+            displayName = "$STR_3DEN_Display3DEN_MenuBar_EntityCopy_text";
+            icon = QPATHTOF(ui\copy_ca.paa);
+            statement = QUOTE((GVAR(appearances)) setVariable [ARR_2(typeOf _hoveredEntity, _hoveredEntity call BIS_fnc_getVehicleCustomization)]);
+            priority = 2;
+        };
+        class PasteAppearance {
+            displayName = "$STR_3DEN_Display3DEN_MenuBar_EntityPaste_text";
+            icon = QPATHTOF(ui\paste_ca.paa);
+            condition = QUOTE(!isNil {(GVAR(appearances)) getVariable typeOf _hoveredEntity});
+            statement = QUOTE( \
+                (GVAR(appearances)) getVariable typeOf _hoveredEntity params [ARR_2('_texture','_animations')]; \
+                [ARR_4(_hoveredEntity,_texture,_animations,true)] call BIS_fnc_initVehicle; \
+            );
+            priority = 1;
+        };
+    };
+    class EditableObjects {
+        displayName = CSTRING(EditableObjects);
+        icon = QPATHTOEF(modules,ui\edit_obj_ca.paa);
+        priority = -98;
+        class Add {
+            displayName = ECSTRING(common,Add);
+            icon = QPATHTOF(ui\add_ca.paa);
+            priority = 2;
+            class 10m {
+                displayName = CSTRING(10m);
+                statement = QUOTE([ARR_2(true,10)] call FUNC(editableObjects));
+                priority = 5;
+            };
+            class 25m {
+                displayName = CSTRING(25m);
+                statement = QUOTE([ARR_2(true,25)] call FUNC(editableObjects));
+                priority = 4;
+            };
+            class 50m {
+                displayName = CSTRING(50m);
+                statement = QUOTE([ARR_2(true,50)] call FUNC(editableObjects));
+                priority = 3;
+            };
+            class 100m {
+                displayName = CSTRING(100m);
+                statement = QUOTE([ARR_2(true,100)] call FUNC(editableObjects));
+                priority = 2;
+            };
+            class 250m {
+                displayName = CSTRING(250m);
+                statement = QUOTE([ARR_2(true,250)] call FUNC(editableObjects));
+                priority = 1;
+            };
+        };
+        class Remove {
+            displayName = ECSTRING(common,Remove);
+            icon = QPATHTOF(ui\remove_ca.paa);
+            priority = 1;
+            class 10m {
+                displayName = CSTRING(10m);
+                statement = QUOTE([ARR_2(false,10)] call FUNC(editableObjects));
+                priority = 5;
+            };
+            class 25m {
+                displayName = CSTRING(25m);
+                statement = QUOTE([ARR_2(false,25)] call FUNC(editableObjects));
+                priority = 4;
+            };
+            class 50m {
+                displayName = CSTRING(50m);
+                statement = QUOTE([ARR_2(false,50)] call FUNC(editableObjects));
+                priority = 3;
+            };
+            class 100m {
+                displayName = CSTRING(100m);
+                statement = QUOTE([ARR_2(false,100)] call FUNC(editableObjects));
+                priority = 2;
+            };
+            class 250m {
+                displayName = CSTRING(250m);
+                statement = QUOTE([ARR_2(false,250)] call FUNC(editableObjects));
+                priority = 1;
+            };
+        };
     };
     class TeleportPlayers {
         displayName = CSTRING(TeleportPlayers);

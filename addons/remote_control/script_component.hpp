@@ -4,6 +4,7 @@
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
+// #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_REMOTE_CONTROL
     #define DEBUG_MODE_FULL
@@ -19,3 +20,5 @@
 
 #define VAR_UNIT  "bis_fnc_moduleRemoteControl_unit"
 #define VAR_OWNER "bis_fnc_moduleRemoteControl_owner"
+
+#define MAX_CAMERA_DISTANCE 50

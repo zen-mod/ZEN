@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Zeus module function to attach a flag to an object.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic"];
 
@@ -21,7 +21,7 @@ private _object = attachedTo _logic;
 deleteVehicle _logic;
 
 if (isNull _object) exitWith {
-    [LSTRING(NothingSelected)] call EFUNC(common,showMessage);
+    [LSTRING(NoObjectSelected)] call EFUNC(common,showMessage);
 };
 
 if !(alive _object) exitWith {
@@ -42,13 +42,13 @@ private _comboLabels = [];
 } forEach _displayNames;
 
 // Special handling to give "None" entry an icon
-_comboLabels select 0 set [2, QPATHTOF(ui\none_ca.paa)];
+_comboLabels select 0 set [2, QPATHTOF(ui\flag_none_ca.paa)];
 
 // Get current flag texture index
 private _currentIndex = (_flagTextures find getForcedFlagTexture _object) max 0;
 
 [LSTRING(ModuleAttachFlag), [
-    ["COMBO", LSTRING(ModuleAttachFlag_Type), [_flagTextures, _comboLabels, _currentIndex], true]
+    ["LIST", LSTRING(ModuleAttachFlag_Type), [_flagTextures, _comboLabels, _currentIndex, 10], true]
 ], {
     params ["_dialogValues", "_object"];
     _dialogValues params ["_flagTexture"];
