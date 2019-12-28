@@ -30,7 +30,7 @@ private _position = if (_target isEqualType "") then {
 private _artilleryETA = 1e9;
 
 {
-    _artilleryETA = ([_x, _position _ammo] call EFUNC(common,getArtilleryETA)) min _artilleryETA;
+    _artilleryETA = ([_x, _position, _ammo] call EFUNC(common,getArtilleryETA)) min _artilleryETA;
 } forEach _vehicles;
 
 if (_artilleryETA == -1) then {

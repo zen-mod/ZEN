@@ -167,3 +167,6 @@
 
 #define MS_TO_KMH(value) ((value) * 3.6)
 #define KMH_TO_MS(value) ((value) / 3.6)
+
+#define CLASS_VLS_BASE   "B_Ship_MRLS_01_base_F"
+

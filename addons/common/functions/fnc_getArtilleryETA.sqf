@@ -19,14 +19,15 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-params ["_vehicle", "_targetPosition", "_ammoClass"];
+params [["_vehicle", objNull, [objNull]], ["_targetPosition", [0, 0, 0], [[]], 3], ["_ammoClass", "", [""]]];
 
 if (_vehicle isKindOf CLASS_VLS_BASE) then {
     private _missileClass = getText (configfile >> "CfgMagazines" >> _ammoClass >> "ammo");
     private _missileMaxSpeed = getNumber (configfile >> "CfgAmmo" >> _missileClass >> "maxSpeed");
-    (_targetPosition distance _vehicle) / _missileMaxSpeed
+    // The max speed of the missile is approximately 0.94 of the config's maxSpeed
+    // The acceleration phase roughly takes 10 s over 900 m
+    10 + (((_targetPosition distance _vehicle) - 900) max 0) / (0.94 * _missileMaxSpeed)
 } else {
     _vehicle getArtilleryETA [_targetPosition, _ammoClass]
 } // return

@@ -45,7 +45,7 @@ if (isNull _vehicle) then {
 // Attached unit is an artillery vehicle
 private _vehicleType = typeOf _vehicle;
 
-if (getNumber (configFile >> "CfgVehicles" >> _vehicleType >> "artilleryScanner") == 0) then {
+if (getNumber (configFile >> "CfgVehicles" >> _vehicleType >> "artilleryScanner") == 0 && !(_vehicle isKindOf CLASS_VLS_BASE)) then {
     [LSTRING(ModuleFireMission_NotArtillery)] call _fnc_errorAndClose;
 };
 
@@ -109,7 +109,12 @@ _ctrlUnits lbSetCurSel (lbSize _ctrlUnits min _units) - 1;
 
 private _ctrlAmmo = _display displayCtrl IDC_FIREMISSION_AMMO;
 private _cfgMagazines = configFile >> "CfgMagazines";
-private _artilleryAmmo = getArtilleryAmmo _vehicles;
+private _artilleryAmmo = [];
+if (_vehicle isKindOf CLASS_VLS_BASE) then {
+    _artilleryAmmo = magazines _vehicle;
+} else {
+    _artilleryAmmo = getArtilleryAmmo _vehicles;
+};
 
 {
     private _index = _ctrlAmmo lbAdd (getText (_cfgMagazines >> _x >> "displayName"));
@@ -161,7 +166,7 @@ private _fnc_onConfirm = {
     GVAR(lastFireMission) = [_mode, _grid, _target, _spread, _numberOfUnits, _ammo, _rounds];
 
     private _vehicles = _logic getVariable QGVAR(vehicles);
-    _vehicles = _vehicles select {alive _x && {_ammo in getArtilleryAmmo [_x]}};
+    _vehicles = _vehicles select {alive _x && {_ammo in getArtilleryAmmo [_x] || {_ammo in magazines _x}}};
     _vehicles resize (_numberOfUnits min count _vehicles);
 
     _target = [QGVAR(moduleCreateTarget), _target, _logic] call EFUNC(position_logics,select);
