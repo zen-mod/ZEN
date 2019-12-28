@@ -3,6 +3,7 @@
  * Author: PabstMirror, mharis001
  * Allows Zeus to click to indicate position in 3D or on map.
  * Will not overwrite currently running getTargetPos.
+ *
  * Code is passed:
  *   0: Successful <BOOL>
  *   1: Object(s) <OBJECT|ARRAY>
@@ -18,7 +19,7 @@
  * 2: Arguments <ANY> (default: [])
  * 3: Text <STRING> (default: "")
  * 4: Icon File and Angle <STRING|ARRAY> (default: ["\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa", 45])
- * 5: Color <ARRAY> (default: [1, 0, 0, 1])
+ * 5: Color <ARRAY|CODE> (default: [1, 0, 0, 1])
  *
  * Return Value:
  * None
@@ -30,7 +31,7 @@
  */
 
 // Handle only one object passed, convert to array for loops
-#define GET_ARRAY(x) (if !(x isEqualType []) then {[x]} else {x})
+#define GET_ARRAY(x) (if (x isEqualType []) then {x} else {[x]})
 
 params ["_objects", "_code", ["_args", []], ["_text", ""], ["_iconArg", [ICON_TARGET, 45]], ["_color", [1, 0, 0, 1]]];
 _iconArg params ["_icon", ["_angle", 0]];
@@ -85,16 +86,22 @@ private _keyboardEH = [_display, "KeyDown", {
 
 private _drawEH = [_ctrlMap, "Draw", {
     params ["_ctrlMap"];
-    _thisArgs params ["_objects", "_text", "_icon", "_color", "_angle"];
+    _thisArgs params ["_objects", "_args", "_text", "_icon", "_color", "_angle"];
 
     private _pos2D = _ctrlMap ctrlMapScreenToWorld getMousePosition;
     private _textSize = ctrlMapScale _ctrlMap min 0.07 max 0.05;
+
+    if (_color isEqualType {}) then {
+        private _posASL = [] call FUNC(getPosFromScreen);
+        _color = [_objects, _posASL, _args] call _color;
+    };
+
     _ctrlMap drawIcon [_icon, _color, _pos2D, 24, 24, _angle, _text, 1, _textSize, "RobotoCondensed", "right"];
 
     {
         _ctrlMap drawLine [_x, _pos2D, _color];
     } forEach GET_ARRAY(_objects);
-}, [_objects, _text, _icon, _color, _angle]] call CBA_fnc_addBISEventHandler;
+}, [_objects, _args, _text, _icon, _color, _angle]] call CBA_fnc_addBISEventHandler;
 
 [{
     params ["_arguments", "_pfhID"];
@@ -123,6 +130,12 @@ private _drawEH = [_ctrlMap, "Draw", {
     };
 
     private _posAGL = screenToWorld getMousePosition;
+
+    if (_color isEqualType {}) then {
+        private _posASL = [] call FUNC(getPosFromScreen);
+        _color = [_objects, _posASL, _args] call _color;
+    };
+
     drawIcon3D [_icon, _color, _posAGL, 1.5, 1.5, _angle, _text];
 
     {

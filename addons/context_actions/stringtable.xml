@@ -77,5 +77,11 @@
         <Key ID="STR_ZEN_Context_Actions_250m">
             <English>250 m</English>
         </Key>
+        <Key ID="STR_ZEN_Context_Actions_FireArtillery">
+            <English>Fire Artillery</English>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_NotAllVehiclesInRange">
+            <English>Not all vehicles are in range to fire</English>
+        </Key>
     </Package>
 </Project>

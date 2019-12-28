@@ -1,4 +1,10 @@
 class EGVAR(context_menu,actions) {
+    class Artillery {
+        displayName = "$STR_a3_cfgchainofcommand_types_artillery_namemasculine";
+        icon = "\a3\ui_f\data\gui\cfg\communicationmenu\artillery_ca.paa";
+        insertChildren = QUOTE(_selectedObjects call FUNC(getArtilleryActions));
+        priority = 50;
+    };
     class Formation {
         displayName = "$STR_3DEN_Group_Attribute_Formation_displayName";
         icon = "\a3\3den\data\displays\display3den\entitymenu\movetoformation_ca.paa";

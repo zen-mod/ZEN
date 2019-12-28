@@ -1,8 +1,10 @@
 PREP(editableObjects);
+PREP(getArtilleryActions);
 PREP(healUnits);
 PREP(rearmVehicles);
 PREP(refuelVehicles);
 PREP(repairVehicles);
+PREP(selectArtilleryPos);
 PREP(setBehaviour);
 PREP(setFormation);
 PREP(setSpeed);
