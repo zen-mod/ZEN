@@ -1728,6 +1728,15 @@
             <English>Repair broken lights when turning them on.</English>
             <Japanese>ランプを点灯した際に壊れたライトを修理します。</Japanese>
         </Key>
+        <Key ID="STR_ZEN_Modules_GlobalAISkill">
+            <English>Global AI Skill</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_GlobalAISkill_Enabled">
+            <English>Global Skill</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_GlobalAISkill_Enabled_Description">
+            <English>Enables applying the following skill values to all current and newly created AI units.</English>
+        </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_Buildings">
             <English>Buildings</English>

@@ -49,6 +49,7 @@ PREP(moduleFireMission);
 PREP(moduleFlyHeight);
 PREP(moduleFunctionsViewer);
 PREP(moduleGarrison);
+PREP(moduleGlobalAISkill);
 PREP(moduleGroupSide);
 PREP(moduleHeal);
 PREP(moduleHideZeus);
