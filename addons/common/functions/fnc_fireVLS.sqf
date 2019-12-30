@@ -19,17 +19,17 @@
  * Public: No
  */
 
+#define GUNNER_TURRET [0]
+
 params [["_unit", objNull, [objNull]], ["_targetPosition", [0, 0, 0], [[]], 3], ["_spread", 0, [0]], ["_magazine", "", [""]], ["_rounds", 1, [0]]];
 
-private _turretPath = [0];
-private _muzzle = (_unit weaponsTurret _turretPath) param [0, ""];
+private _muzzle = (_unit weaponsTurret GUNNER_TURRET) param [0, ""];
 
 private _eta = [_unit, _targetPosition, _magazine] call FUNC(getArtilleryETA);
-private _reloadTime = [_unit, _muzzle, _turretPath] call FUNC(getWeaponReloadTime);
+private _reloadTime = [_unit, _muzzle, GUNNER_TURRET] call FUNC(getWeaponReloadTime);
 
-if (_unit currentMagazineTurret _turretPath != _magazine) then {
-   [_unit, _turretPath, _muzzle, _magazine] call  FUNC(loadMagazineInstant);
-};
+// Load magazine even if it is the right one in order to suppress a possible ongoing magazine loading
+[_unit, GUNNER_TURRET, _muzzle, _magazine] call FUNC(loadMagazineInstant);
 
 _unit setVariable [QGVAR(roundCounter), 0];
 [
@@ -39,7 +39,9 @@ _unit setVariable [QGVAR(roundCounter), 0];
 
         // VLS needs an actual dummy target to fire at
         _targetPosition = [_targetPosition, _spread] call CBA_fnc_randPos;
-        private _target = (createGroup sideLogic) createUnit ["Module_F", _targetPosition, [], 0, "CAN_COLLIDE"];
+        private _logicGroup = createGroup sideLogic;
+        private _target = _logicGroup createUnit ["Module_F", _targetPosition, [], 0, "CAN_COLLIDE"];
+        _logicGroup deleteGroupWhenEmpty true;
         // +30% tolerance for possible underestimation of ETAs
         private _targetLifeTime = 1.3 * _eta + _reloadTime;
         (side _unit) reportRemoteTarget [_target, _targetLifeTime];
