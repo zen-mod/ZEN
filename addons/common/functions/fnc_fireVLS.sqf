@@ -1,14 +1,14 @@
 #include "script_component.hpp"
 /*
  * Author: Kex
- *
- * Orders a unit to commence fire burst on the given position (silently).
+ * Orders a VLS unit to commence fire burst on the given position (silently).
  *
  * Arguments:
  * 0: VLS unit <OBJECT>
  * 1: Target position <ARRAY>
- * 2: Magazine class <STRING>
- * 3: Number of rounds <NUMBER>
+ * 2: Spread <NUMBER>
+ * 3: Magazine class <STRING>
+ * 4: Number of rounds <NUMBER>
  *
  * Return Value:
  * None

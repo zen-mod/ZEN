@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Kex
- * Same as `loadMagazine`, but the new magazine is available instantly.
+ * Instantly loads the given magazine into the specified weapon.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>

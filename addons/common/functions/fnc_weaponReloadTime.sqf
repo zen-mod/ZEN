@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Kex
- * Returns the ammo reloading time for a given weapon
+ * Returns the ammo reloading time for a given weapon.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>

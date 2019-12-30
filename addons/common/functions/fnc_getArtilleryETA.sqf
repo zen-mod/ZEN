@@ -1,7 +1,6 @@
 #include "script_component.hpp"
 /*
  * Author: Kex
- * 
  * Returns ETA to the target in seconds for given artillery unit based on
  * target position and used magazine, -1 if target can't be hit.
  * Also supports VLS.
@@ -30,4 +29,4 @@ if (_vehicle isKindOf CLASS_VLS_BASE) then {
     10 + (((_targetPosition distance _vehicle) - 900) max 0) / (0.94 * _missileMaxSpeed)
 } else {
     _vehicle getArtilleryETA [_targetPosition, _ammoClass]
-} // return
+}
