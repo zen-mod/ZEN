@@ -20,28 +20,32 @@
 
 params [["_vehicle", objNull, [objNull]], ["_turretPath", [], [[]]], ["_muzzle", "", [""]], ["_magazine", "", [""]]];
 
-private _magazines = _vehicle magazinesTurret _turretPath;
+private _magazines = [];
+private _ammoCounts = [];
+{
+    _x params ["_currentMagazine", "_currentTurretPath", "_currentAmmoCount"];
+    if (_turretPath isEqualTo _currentTurretPath) then {
+        _magazines pushBack _currentMagazine;
+        _ammoCounts pushBack _currentAmmoCount;
+    };
+} forEach (magazinesAllTurrets _vehicle);
+
 private _magIdx = _magazines findIf {_x == _magazine};
 if (_magIdx != -1) then {
-    private _magazinesUnique = _magazines arrayIntersect _magazines;
-    private _ammoArray = _magazinesUnique apply {_vehicle magazineTurretAmmo [_x, _turretPath]};
-
     // Remove weapon and magazines
     {
-        _vehicle removeMagazinesTurret [_x, _turretPath] 
-    } forEach _magazinesUnique;
+        _vehicle removeMagazineTurret [_x, _turretPath];
+    } forEach _magazines;
     _vehicle removeWeaponTurret [_muzzle, _turretPath];
 
     // Add desired magazine first
-    _vehicle addMagazineTurret [_magazine, _turretPath];
+    _vehicle addMagazineTurret [_magazine, _turretPath, _ammoCounts select _magIdx];
     _magazines deleteAt _magIdx;
+    _ammoCounts deleteAt _magIdx;
 
     // Restore weapon and magazines
     _vehicle addWeaponTurret [_muzzle, _turretPath];
     {
-        _vehicle addMagazineTurret [_x, _turretPath];
+        _vehicle addMagazineTurret [_x, _turretPath, _ammoCounts select _forEachIndex];
     } forEach _magazines;
-    {
-        _vehicle setMagazineTurretAmmo [_magazinesUnique select _forEachIndex, _x, _turretPath];
-    } forEach _ammoArray;
 };
