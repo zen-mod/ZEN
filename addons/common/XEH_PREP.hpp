@@ -31,6 +31,7 @@ PREP(initSliderEdit);
 PREP(loadMagazineInstant);
 PREP(isInScreenshotMode);
 PREP(isPlacementActive);
+PREP(isVLS);
 PREP(openArsenal);
 PREP(serializeInventory);
 PREP(setInventory);

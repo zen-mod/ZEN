@@ -45,7 +45,7 @@ if (isNull _vehicle) then {
 // Attached unit is an artillery vehicle
 private _vehicleType = typeOf _vehicle;
 
-if (getNumber (configFile >> "CfgVehicles" >> _vehicleType >> "artilleryScanner") == 0 && !(_vehicle isKindOf CLASS_VLS_BASE)) then {
+if (getNumber (configFile >> "CfgVehicles" >> _vehicleType >> "artilleryScanner") == 0 && !(_vehicle call EFUNC(common,isVLS))) then {
     [LSTRING(ModuleFireMission_NotArtillery)] call _fnc_errorAndClose;
 };
 
@@ -109,7 +109,7 @@ _ctrlUnits lbSetCurSel (lbSize _ctrlUnits min _units) - 1;
 
 private _ctrlAmmo = _display displayCtrl IDC_FIREMISSION_AMMO;
 private _cfgMagazines = configFile >> "CfgMagazines";
-private _artilleryAmmo = if (_vehicle isKindOf CLASS_VLS_BASE) then {
+private _artilleryAmmo = if (_vehicle call EFUNC(common,isVLS)) then {
     magazines _vehicle
 } else {
     getArtilleryAmmo _vehicles

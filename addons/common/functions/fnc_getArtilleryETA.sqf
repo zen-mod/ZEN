@@ -21,7 +21,7 @@
 
 params [["_vehicle", objNull, [objNull]], ["_targetPosition", [0, 0, 0], [[]], 3], ["_ammoClass", "", [""]]];
 
-if (_vehicle isKindOf CLASS_VLS_BASE) then {
+if (_vehicle call FUNC(isVLS)) then {
     private _missileClass = getText (configfile >> "CfgMagazines" >> _ammoClass >> "ammo");
     private _missileMaxSpeed = getNumber (configfile >> "CfgAmmo" >> _missileClass >> "maxSpeed");
     // The max speed of the missile is approximately 0.94 of the config's maxSpeed

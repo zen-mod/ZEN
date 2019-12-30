@@ -76,28 +76,24 @@ if (isServer) then {
 [QGVAR(fireArtillery), {
     params ["_unit", "_position", "_spread", "_ammo", "_rounds"];
 
+    if (_unit call EFUNC(common,isVLS)) exitWith {
+        _this call EFUNC(common,fireVLS);
+    };
+
     // For small spread values, use doArtilleryFire directly to avoid delay
     // between firing caused by using doArtilleryFire one round at a time
     if (_spread <= 10) exitWith {
-        if (_unit isKindOf CLASS_VLS_BASE) then {
-             [_unit, _position, 0, _ammo, _rounds] call EFUNC(common,fireVLS);
-        } else {
-            _unit doArtilleryFire [_position, _ammo, _rounds];
+        _unit doArtilleryFire [_position, _ammo, _rounds];
+    };
+
+    [{
+        params ["_unit", "_position", "_spread", "_ammo", "_rounds", "_fired"];
+
+        if (unitReady _unit) then {
+            _unit doArtilleryFire [[_position, _spread] call CBA_fnc_randPos, _ammo, 1];
+            _this set [5, _fired + 1];
         };
-    };
 
-    if (_unit isKindOf CLASS_VLS_BASE) then {
-         _this call EFUNC(common,fireVLS);
-    } else {
-        [{
-            params ["_unit", "_position", "_spread", "_ammo", "_rounds", "_fired"];
-
-            if (unitReady _unit) then {
-                _unit doArtilleryFire [[_position, _spread] call CBA_fnc_randPos, _ammo, 1];
-                _this set [5, _fired + 1];
-            };
-
-            _fired >= _rounds || {!alive _unit} || {!alive gunner _unit}
-        }, {}, [_unit, _position, _spread, _ammo, _rounds, 0]] call CBA_fnc_waitUntilAndExecute;
-    };
+        _fired >= _rounds || {!alive _unit} || {!alive gunner _unit}
+    }, {}, [_unit, _position, _spread, _ammo, _rounds, 0]] call CBA_fnc_waitUntilAndExecute;
 }] call CBA_fnc_addEventHandler;
