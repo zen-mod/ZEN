@@ -109,11 +109,10 @@ _ctrlUnits lbSetCurSel (lbSize _ctrlUnits min _units) - 1;
 
 private _ctrlAmmo = _display displayCtrl IDC_FIREMISSION_AMMO;
 private _cfgMagazines = configFile >> "CfgMagazines";
-private _artilleryAmmo = [];
-if (_vehicle isKindOf CLASS_VLS_BASE) then {
-    _artilleryAmmo = magazines _vehicle;
+private _artilleryAmmo = if (_vehicle isKindOf CLASS_VLS_BASE) then {
+    magazines _vehicle
 } else {
-    _artilleryAmmo = getArtilleryAmmo _vehicles;
+    getArtilleryAmmo _vehicles
 };
 
 {

@@ -22,7 +22,7 @@ params [["_vehicle", objNull, [objNull]], ["_turretPath", [], [[]]], ["_muzzle",
 
 private _magazines = _vehicle magazinesTurret _turretPath;
 private _magIdx = _magazines findIf {_x == _magazine};
-if (_magIdx >= 0) then {
+if (_magIdx != -1) then {
     private _magazinesUnique = _magazines arrayIntersect _magazines;
     private _ammoArray = _magazinesUnique apply {_vehicle magazineTurretAmmo [_x, _turretPath]};
 

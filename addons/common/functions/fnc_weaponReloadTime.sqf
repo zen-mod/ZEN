@@ -21,42 +21,27 @@
 params [["_entity", objNull, [objNull]], ["_muzzle", "", [""]], ["_turretPath", [], [[]]]];
 
 // Get the weapon mode
-private _state = [];
-if (_entity isKindOf "CAManBase") then
-{
+private "_state";
+if (_entity isKindOf "CAManBase") then {
     // Need to set the desired muzzle in order to get the correct fire mode
     private _currentMuzzle = (weaponState _entity) select 1;
     _entity selectWeapon _muzzle; 
     _state = weaponState _entity;
     // Restore the original muzzle
     _entity selectWeapon _currentMuzzle; 
-}
-else
-{
+} else {
     _state = weaponState [_entity, _turretPath, _muzzle];
 };
 _state params [["_weapon", ""], "", ["_mode", ""]];
 
-// Get the muzzle config
-private _muzzleCfg = configNull;
-if (_muzzle == _weapon) then
-{
-    _muzzleCfg = (configFile >> "CfgWeapons" >> _weapon);
-}
-else
-{
-    _muzzleCfg = (configFile >> "CfgWeapons" >> _weapon >> _muzzle);
+private _config = configFile >> "CfgWeapons" >> _weapon;
+
+if (_muzzle != _weapon) then {
+    _config = _config >> _muzzle;
 };
 
-// Get the reload time
-private _reloadTime = 0.1;
-if (_mode == "this") then
-{
-    _reloadTime = getNumber (_muzzleCfg >> "reloadTime");
-}
-else
-{
-    _reloadTime = getNumber (_muzzleCfg >> _mode >> "reloadTime");
+if (_mode != "this") then {
+    _config = _config >> _mode;
 };
 
-_reloadTime
+getNumber (_config >> "reloadTime")
