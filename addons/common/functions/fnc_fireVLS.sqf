@@ -25,10 +25,10 @@ private _turretPath = [0];
 private _muzzle = (_unit weaponsTurret _turretPath) param [0, ""];
 
 private _eta = [_unit, _targetPosition, _magazine] call FUNC(getArtilleryETA);
-private _reloadTime = [_unit, _muzzle, _turretPath] call FUNC(weaponReloadTime);
+private _reloadTime = [_unit, _muzzle, _turretPath] call FUNC(getWeaponReloadTime);
 
 if (_unit currentMagazineTurret _turretPath != _magazine) then {
-   [_unit, _turretPath, _muzzle, _magazine] call  FUNC(instantMagazineLoading);
+   [_unit, _turretPath, _muzzle, _magazine] call  FUNC(loadMagazineInstant);
 };
 
 _unit setVariable [QGVAR(roundCounter), 0];

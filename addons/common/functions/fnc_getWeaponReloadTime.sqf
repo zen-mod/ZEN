@@ -4,7 +4,7 @@
  * Returns the ammo reloading time for a given weapon.
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
+ * 0: Unit or vehicle <OBJECT>
  * 1: Muzzle class <STRING>
  * 2: Turret path <ARRAY>
  *
@@ -12,8 +12,8 @@
  * Reload time <NUMBER>
  *
  * Example:
- * [player, "arifle_MX_ACO_pointer_F"] call zen_common_fnc_fire;
- * [vehicle player, "HE", [0]] call zen_common_fnc_weaponReloadTime;
+ * [player, "arifle_MX_ACO_pointer_F"] call zen_common_fnc_getWeaponReloadTime;
+ * [vehicle player, "HE", [0]] call zen_common_fnc_getWeaponReloadTime;
  *
  * Public: No
  */

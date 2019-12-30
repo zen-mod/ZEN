@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [vehicle player, [0] "HE", "60Rnd_40mm_GPR_Tracer_Red_shells"] call zen_common_fnc_instantMagazineLoading;
+ * [vehicle player, [0] "HE", "60Rnd_40mm_GPR_Tracer_Red_shells"] call zen_common_fnc_loadMagazineInstant
  *
  * Public: No
  */
