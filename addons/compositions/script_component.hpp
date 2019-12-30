@@ -25,6 +25,18 @@
 #define POS_W(N) ((N) * GUI_GRID_W)
 #define POS_H(N) ((N) * GUI_GRID_H)
 
+#define IDC_PANEL 92780
+#define IDC_PANEL_CREATE 92781
+#define IDC_PANEL_EDIT 92782
+#define IDC_PANEL_DELETE 92783
+
+#define IDC_DISPLAY_TITLE 92880
+#define IDC_DISPLAY_CATEGORY 92881
+#define IDC_DISPLAY_LIST 92882
+#define IDC_DISPLAY_NAME 92883
+
+#define ICON_CUSTOM "\a3\3den\data\cfg3den\group\iconcustomcomposition_ca.paa"
+
 #define CATEGORY GVAR(category)
 #define CATEGORY_STR QUOTE(CATEGORY)
 
@@ -38,22 +50,10 @@
 #define GET_COMPOSITIONS (profileNamespace getVariable [VAR_COMPOSITIONS, []])
 #define SET_COMPOSITIONS(value) (profileNamespace setVariable [VAR_COMPOSITIONS, value])
 
-#define FORMAT_OBJECT_DATA_VAR(category,name) format [QGVAR(%1:%2), category, name]
-
 #define CATEGORY_EXISTS(category) (GET_COMPOSITIONS findIf {category isEqualTo (_x select 0)} != -1)
 
 #define FIND_COMPOSITION(category,name) (GET_COMPOSITIONS findIf {category isEqualTo (_x select 0) && {name isEqualTo (_x select 1)}})
 
+#define OBJECT_DATA_VAR(category,name) format [QGVAR(%1:%2), category, name]
+
 #define GET_PARENT_PATH(path) (path select [0, count path - 1])
-
-#define IDC_PANEL 92780
-#define IDC_PANEL_CREATE 92781
-#define IDC_PANEL_EDIT 92782
-#define IDC_PANEL_DELETE 92783
-
-#define IDC_DISPLAY_TITLE 92880
-#define IDC_DISPLAY_CATEGORY 92881
-#define IDC_DISPLAY_LIST 92882
-#define IDC_DISPLAY_NAME 92883
-
-#define ICON_CUSTOM "\a3\3den\data\cfg3den\group\iconcustomcomposition_ca.paa"

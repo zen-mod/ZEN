@@ -32,5 +32,5 @@ if (_enable) then {
     private _category = _ctrlTree tvText GET_PARENT_PATH(_selectedPath);
     private _name     = _ctrlTree tvText _selectedPath;
 
-    GVAR(selected) = _ctrlTree getVariable [FORMAT_OBJECT_DATA_VAR(_category,_name), []];
+    GVAR(selected) = _ctrlTree getVariable [OBJECT_DATA_VAR(_category,_name), []];
 };

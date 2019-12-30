@@ -60,7 +60,7 @@ for "_i" from 0 to ((_ctrlTree tvCount [0]) - 1) do {
                 _ctrlTree tvSetData [_path, COMPOSITION_STR];
                 _ctrlTree tvSort [GET_PARENT_PATH(_path), false];
 
-                _ctrlTree setVariable [FORMAT_OBJECT_DATA_VAR(_category,_name), _data];
+                _ctrlTree setVariable [OBJECT_DATA_VAR(_category,_name), _data];
 
                 GVAR(treeAdditions) set [_forEachIndex, []];
                 _delete = true;

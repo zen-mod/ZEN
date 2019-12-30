@@ -16,7 +16,7 @@
  */
 
 [
-    nil,
+    "",
     format ["<t size='0.8'>%1</t>", localize LSTRING(DeleteConfirmation)],
     FUNC(removeFromTree)
 ] call EFUNC(common,messageBox);
