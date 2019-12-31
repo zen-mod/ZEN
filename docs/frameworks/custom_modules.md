@@ -16,7 +16,7 @@ Modules are added locally and as a result the function must be executed on each 
 0 | Category | STRING |
 1 | Module Name | STRING |
 2 | Function | CODE |
-3 | Icon File | STRING | "\a3\modules_f\data\portraitmodule_ca.paa"
+3 | Icon File | STRING | `"\a3\modules_f\data\portraitmodule_ca.paa"`
 
 **Return Value:**
 

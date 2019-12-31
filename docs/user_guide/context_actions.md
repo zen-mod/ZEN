@@ -27,6 +27,10 @@ Sub-actions allow for copying and pasting the hovered units' loadout onto anothe
 Opens the Zeus garage on the hovered vehicle.
 Sub-actions allow for copying and pasting the hovered vehicle's customization onto another.
 
+# Editable Objects
+
+Allows Zeus to add or remove editable objects within the selected radius.
+
 ## Formation
 
 Applies the selected formation to all currently selected groups.
