@@ -31,7 +31,6 @@ private _reloadTime = [_unit, _muzzle, GUNNER_TURRET] call FUNC(getWeaponReloadT
 // Load magazine even if it is the right one in order to suppress a possible ongoing magazine loading
 [_unit, GUNNER_TURRET, _muzzle, _magazine] call FUNC(loadMagazineInstant);
 
-_unit setVariable [QGVAR(roundCounter), 0];
 [
     {
         params ["_args", "_handle"];
@@ -58,5 +57,5 @@ _unit setVariable [QGVAR(roundCounter), 0];
         };
     },
     _reloadTime,
-    [_unit, _targetPosition, _spread, _muzzle, _eta, _reloadTime, _rounds, 0];
+    [_unit, _targetPosition, _spread, _muzzle, _eta, _reloadTime, _rounds, 0]
 ] call CBA_fnc_addPerFrameHandler;
