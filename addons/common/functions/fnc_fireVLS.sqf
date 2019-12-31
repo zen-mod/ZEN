@@ -14,7 +14,7 @@
  * None
  *
  * Example:
- * [_vlsUnit, getPos player, _magazine, 1] call zen_common_fnc_fireVLS;
+ * [_vlsUnit, getPos player, _magazine, 1] call zen_common_fnc_fireVLS
  *
  * Public: No
  */
@@ -35,13 +35,12 @@ _unit setVariable [QGVAR(roundCounter), 0];
 [
     {
         params ["_args", "_handle"];
-        _args params ["_unit", "_targetPosition", "_spread", "_muzzle", "_eta", "_reloadTime", "_rounds"];
+        _args params ["_unit", "_targetPosition", "_spread", "_muzzle", "_eta", "_reloadTime", "_rounds", "_fired"];
 
         // VLS needs an actual dummy target to fire at
         _targetPosition = [_targetPosition, _spread] call CBA_fnc_randPos;
-        private _logicGroup = createGroup sideLogic;
+        private _logicGroup = createGroup [sideLogic, true];
         private _target = _logicGroup createUnit ["Module_F", _targetPosition, [], 0, "CAN_COLLIDE"];
-        _logicGroup deleteGroupWhenEmpty true;
         // +30% tolerance for possible underestimation of ETAs
         private _targetLifeTime = 1.3 * _eta + _reloadTime;
         (side _unit) reportRemoteTarget [_target, _targetLifeTime];
@@ -50,16 +49,14 @@ _unit setVariable [QGVAR(roundCounter), 0];
         _unit setWeaponReloadingTime [gunner _unit, _muzzle, 0];
         _unit fireAtTarget [_target, _muzzle];
 
-        private _counter = _unit getVariable [QGVAR(roundCounter), _rounds];
-        _counter = _counter + 1;
-        if (_counter >= _rounds) then {
+        _fired = _fired + 1;
+        if (_fired >= _rounds) then {
             // Clean-up
-            _unit setVariable [QGVAR(roundCounter), nil];
             [_handle] call CBA_fnc_removePerFrameHandler;
         } else {
-            _unit setVariable [QGVAR(roundCounter), _counter];
+            _args set [7, _fired];
         };
     },
     _reloadTime,
-    [_unit, _targetPosition, _spread, _muzzle, _eta, _reloadTime, _rounds]
+    [_unit, _targetPosition, _spread, _muzzle, _eta, _reloadTime, _rounds, 0];
 ] call CBA_fnc_addPerFrameHandler;

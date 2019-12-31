@@ -12,8 +12,7 @@
  * Reload time <NUMBER>
  *
  * Example:
- * [player, "arifle_MX_ACO_pointer_F"] call zen_common_fnc_getWeaponReloadTime;
- * [vehicle player, "HE", [0]] call zen_common_fnc_getWeaponReloadTime;
+ * [player, "arifle_MX_ACO_pointer_F"] call zen_common_fnc_getWeaponReloadTime
  *
  * Public: No
  */
