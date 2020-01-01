@@ -44,6 +44,8 @@ if (!isNull curatorCamera) then {
     curatorCamera cameraEffect ["internal", "back"];
     curatorCamera setPosASL _position;
     curatorCamera setVectorDirAndUp _dirAndUp;
+
+    cameraEffectEnableHUD true;
 };
 
 GVAR(camera) = nil;
