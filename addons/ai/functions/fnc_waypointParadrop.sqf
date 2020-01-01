@@ -55,7 +55,7 @@ waitUntil {
 
     // Check if the aircraft is close enough to the waypoint to begin paradropping
     // Distance is based on the current speed of aircraft and the number of passengers
-    _passengerCount = {assignedVehicleRole _x select 0 == "cargo"} count crew _vehicle;
+    _passengerCount = {(assignedVehicleRole _x) select 0 == "cargo"} count crew _vehicle;
     _vehicle distance2D _position < vectorMagnitude velocity _vehicle * TIME_PER_UNIT * _passengerCount / 2 + OFFSET_DISTANCE
 };
 
