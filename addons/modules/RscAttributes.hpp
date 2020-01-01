@@ -10,6 +10,13 @@ class RscStructuredText;
 class RscControlsGroup;
 class RscControlsGroupNoScrollbars;
 
+class ctrlTree;
+class ctrlListBox;
+class ctrlToolbox;
+class ctrlXSliderH;
+class ctrlListNBox;
+class ctrlButtonPictureKeepAspect;
+
 class EGVAR(common,RscLabel);
 class EGVAR(common,RscBackground);
 class EGVAR(common,RscEdit);
@@ -26,7 +33,7 @@ class GVAR(RscToolboxYesNo): ctrlToolbox {
     strings[] = {ECSTRING(common,No), ECSTRING(common,Yes)};
 };
 
-class GVAR(RscSidesCombo): EGVAR(attributes,RscCombo) {
+class GVAR(RscSidesCombo): EGVAR(common,RscCombo) {
     class Items {
         class BLUFOR {
             text = "$STR_West";
@@ -1045,7 +1052,7 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
         w = POS_W(26);
         h = POS_H(27.4);
         class controls {
-            class SideLabel: EGVAR(attributes,RscLabel) {
+            class SideLabel: EGVAR(common,RscLabel) {
                 text = "$STR_eval_typeside";
             };
             class Side: GVAR(RscSidesCombo) {
@@ -1058,24 +1065,24 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
                 w = POS_W(26);
                 h = POS_H(4.4);
                 class controls {
-                    class Title: EGVAR(attributes,RscLabel) {
+                    class Title: EGVAR(common,RscLabel) {
                         text = CSTRING(VehicleSelect);
                         w = POS_W(26);
                     };
-                    class Background: EGVAR(attributes,RscBackground) {
+                    class Background: EGVAR(common,RscBackground) {
                         x = 0;
                         y = POS_H(1);
                         w = POS_W(26);
                         h = POS_H(3.4);
                     };
-                    class FactionLabel: EGVAR(attributes,RscLabel) {
+                    class FactionLabel: EGVAR(common,RscLabel) {
                         text = ECSTRING(common,Faction);
                         x = POS_W(3);
                         y = POS_H(1.1);
                         w = POS_W(8.9);
                         colorBackground[] = {0, 0, 0, 0.7};
                     };
-                    class FactionCombo: EGVAR(attributes,RscCombo) {
+                    class FactionCombo: EGVAR(common,RscCombo) {
                         idc = IDC_SPAWNREINFORCEMENTS_FACTION;
                         x = POS_W(12);
                         y = POS_H(1.1);
@@ -1106,11 +1113,11 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
                 w = POS_W(26);
                 h = POS_H(14.2);
                 class controls {
-                    class Title: EGVAR(attributes,RscLabel) {
+                    class Title: EGVAR(common,RscLabel) {
                         text = CSTRING(GroupSelect);
                         w = POS_W(26);
                     };
-                    class Background: EGVAR(attributes,RscBackground) {
+                    class Background: EGVAR(common,RscBackground) {
                         x = 0;
                         y = POS_H(1);
                         w = POS_W(26);
@@ -1141,7 +1148,7 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
                     class TreeUnits: TreeGroups {
                         idc = IDC_SPAWNREINFORCEMENTS_TREE_UNITS;
                     };
-                    class Label: EGVAR(attributes,RscLabel) {
+                    class Label: EGVAR(common,RscLabel) {
                         text = CSTRING(CurrentGroup);
                         x = POS_W(13.2);
                         y = POS_H(1.1);
@@ -1191,24 +1198,24 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
                 w = POS_W(26);
                 h = POS_H(7.7);
                 class controls {
-                    class Title: EGVAR(attributes,RscLabel) {
+                    class Title: EGVAR(common,RscLabel) {
                         text = "$STR_A3_RscDisplayLogin_Properties";
                         w = POS_W(26);
                     };
-                    class Background: EGVAR(attributes,RscBackground) {
+                    class Background: EGVAR(common,RscBackground) {
                         x = 0;
                         y = POS_H(1);
                         w = POS_W(26);
                         h = POS_H(6.7);
                     };
-                    class VehicleLZLabel: EGVAR(attributes,RscLabel) {
+                    class VehicleLZLabel: EGVAR(common,RscLabel) {
                         text = CSTRING(VehicleLZ);
                         x = POS_W(3);
                         y = POS_H(1.1);
                         w = POS_W(8.9);
                         colorBackground[] = {0, 0, 0, 0.7};
                     };
-                    class VehicleLZ: EGVAR(attributes,RscCombo) {
+                    class VehicleLZ: EGVAR(common,RscCombo) {
                         idc = IDC_SPAWNREINFORCEMENTS_VEHICLE_LZ;
                         x = POS_W(12);
                         y = POS_H(1.1);
@@ -1250,7 +1257,7 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
                         text = CSTRING(ModuleFlyHeight);
                         y = POS_H(4.4);
                     };
-                    class FlyHeight: EGVAR(attributes,RscEdit) {
+                    class FlyHeight: EGVAR(common,RscEdit) {
                         idc = IDC_SPAWNREINFORCEMENTS_VEHICLE_HEIGHT;
                         x = POS_W(12);
                         y = POS_H(4.4);
