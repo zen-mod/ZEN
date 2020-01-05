@@ -23,7 +23,7 @@ params [["_entity", objNull, [objNull]], ["_muzzle", "", [""]], ["_turretPath", 
 private "_state";
 if (_entity isKindOf "CAManBase") then {
     // Need to set the desired muzzle in order to get the correct fire mode
-    private _currentMuzzle = (weaponState _entity) select 1;
+    private _currentMuzzle = weaponState _entity select 1;
     _entity selectWeapon _muzzle; 
     _state = weaponState _entity;
     
