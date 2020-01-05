@@ -32,7 +32,7 @@ PREP(initSliderEdit);
 PREP(isInScreenshotMode);
 PREP(isPlacementActive);
 PREP(isVLS);
-PREP(loadMagazineInstant);
+PREP(loadMagazineInstantly);
 PREP(openArsenal);
 PREP(serializeInventory);
 PREP(setInventory);

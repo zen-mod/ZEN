@@ -29,7 +29,7 @@ private _eta = [_unit, _targetPosition, _magazine] call FUNC(getArtilleryETA);
 private _reloadTime = [_unit, _muzzle, GUNNER_TURRET] call FUNC(getWeaponReloadTime);
 
 // Load magazine even if it is the right one in order to suppress a possible ongoing magazine loading
-[_unit, GUNNER_TURRET, _muzzle, _magazine] call FUNC(loadMagazineInstant);
+[_unit, GUNNER_TURRET, _muzzle, _magazine] call FUNC(loadMagazineInstantly);
 
 [
     {
