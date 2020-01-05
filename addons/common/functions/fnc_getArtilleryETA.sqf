@@ -19,14 +19,18 @@
  * Public: No
  */
 
+// The acceleration phase roughly takes 10 s over 900 m
+#define ACCELERATION_TIME 10
+#define ACCELERATION_DISTANCE 900
+// The max speed of the missile is approximately 0.94 of the config's maxSpeed
+#define SPEED_MULTIPLIER 0.94
+
 params [["_vehicle", objNull, [objNull]], ["_targetPosition", [0, 0, 0], [[]], 3], ["_ammoClass", "", [""]]];
 
 if (_vehicle call FUNC(isVLS)) then {
     private _missileClass = getText (configfile >> "CfgMagazines" >> _ammoClass >> "ammo");
     private _missileMaxSpeed = getNumber (configfile >> "CfgAmmo" >> _missileClass >> "maxSpeed");
-    // The max speed of the missile is approximately 0.94 of the config's maxSpeed
-    // The acceleration phase roughly takes 10 s over 900 m
-    10 + (((_targetPosition distance _vehicle) - 900) max 0) / (0.94 * _missileMaxSpeed)
+    ACCELERATION_TIME + (((_targetPosition distance _vehicle) - ACCELERATION_DISTANCE) max 0) / (SPEED_MULTIPLIER * _missileMaxSpeed)
 } else {
     _vehicle getArtilleryETA [_targetPosition, _ammoClass]
 }
