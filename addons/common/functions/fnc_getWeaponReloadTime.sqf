@@ -26,6 +26,7 @@ if (_entity isKindOf "CAManBase") then {
     private _currentMuzzle = (weaponState _entity) select 1;
     _entity selectWeapon _muzzle; 
     _state = weaponState _entity;
+    
     // Restore the original muzzle
     _entity selectWeapon _currentMuzzle; 
 } else {
