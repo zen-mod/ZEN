@@ -108,7 +108,7 @@ waitUntil {
 };
 
 // Make units fastrope once the helicopter is in position
-[_vehicle, false, true] call ace_fastroping_fnc_deployAI;
+[_vehicle, false, false] call ace_fastroping_fnc_deployAI;
 
 // Wait for all units to finish fastroping
 waitUntil {!(_vehicle getVariable ["ace_fastroping_deployedRopes", []] isEqualTo [])};
