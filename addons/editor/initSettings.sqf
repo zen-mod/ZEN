@@ -42,3 +42,12 @@
     [[0, 1, 2], [ELSTRING(common,Enabled), LSTRING(UnitRadioMessages_WaypointsOnly), ELSTRING(common,Disabled)], 0],
     false
 ] call CBA_settings_fnc_init;
+
+[
+    QGVAR(parachuteSounds),
+    "CHECKBOX",
+    [LSTRING(ParachuteSounds), LSTRING(ParachuteSounds_Description)],
+    ELSTRING(common,Category),
+    true,
+    true
+] call CBA_settings_fnc_init;

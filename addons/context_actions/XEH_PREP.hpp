@@ -1,4 +1,5 @@
 PREP(compileGrenades);
+PREP(editableObjects);
 PREP(getGrenadeActions);
 PREP(healUnits);
 PREP(rearmVehicles);

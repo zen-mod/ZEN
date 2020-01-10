@@ -3,12 +3,33 @@
     <Package name="Area_Markers">
         <Key ID="STR_ZEN_Area_Markers_CreateAreaMarker">
             <English>Create Area Marker</English>
+            <French>Créer un marqueur de zone</French>
+            <German>Bereichsmarkierungen erstellen</German>
+            <Italian>Crea un marker</Italian>
+            <Czech>Vytvořit značku oblasti</Czech>
+            <Polish>Stwórz Marker Obszarowy</Polish>
+            <Portuguese>Criar marcador de área</Portuguese>
+            <Japanese>範囲マーカーを作成</Japanese>
         </Key>
         <Key ID="STR_ZEN_Area_Markers_EditAreaMarker">
             <English>EDIT AREA MARKER</English>
+            <French>EDITER LE MARQUEUR DE ZONE</French>
+            <German>BEREICHSMARKIERUNG BEARBEITEN</German>
+            <Italian>Modifica un marker</Italian>
+            <Czech>ÚPRAVA ZNAČKY OBLASTI</Czech>
+            <Polish>EDYTUJ MARKER OBSZAROWY</Polish>
+            <Portuguese>Editar marcador de área</Portuguese>
+            <Japanese>範囲マーカーを編集</Japanese>
         </Key>
         <Key ID="STR_ZEN_Area_Markers_PlaceOnMap">
             <English>Place On Map</English>
+            <French>Placer sur la carte</French>
+            <German>Auf Karte platzieren</German>
+            <Italian>Aggiungi sulla mappa</Italian>
+            <Czech>Umístit na mapu</Czech>
+            <Polish>Zaznacz Na Mapie</Polish>
+            <Portuguese>Coloque no mapa</Portuguese>
+            <Japanese>マップ上に設置</Japanese>
         </Key>
     </Package>
 </Project>

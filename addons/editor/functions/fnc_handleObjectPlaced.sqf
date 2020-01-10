@@ -4,8 +4,8 @@
  * Handles placement of an object by Zeus.
  *
  * Arguments:
- * 0: Curator module (not used) <OBJECT>
- * 1: Placed object <OBJECT>
+ * 0: Curator (not used) <OBJECT>
+ * 1: Placed Object <OBJECT>
  *
  * Return Value:
  * None
@@ -18,7 +18,16 @@
 
 params ["", "_object"];
 
-if (!GVAR(includeCrew) && {RscDisplayCurator_sections select 0 == 0}) then {
+// Re-collapse the entities tree if editable icons are hidden
+// Placing an object expands a portion of the tree
+if (!GVAR(iconsVisible)) then {
+    private _ctrlEntites = findDisplay IDD_RSCDISPLAYCURATOR displayCtrl IDC_RSCDISPLAYCURATOR_ENTITIES;
+    _ctrlEntites call EFUNC(common,collapseTree);
+};
+
+RscDisplayCurator_sections params ["_mode"];
+
+if (!GVAR(includeCrew) && {_mode == 0 || {_mode == 4 && {isClass (configFile >> "CfgVehicles" >> GVAR(recentTreeData))}}}) then {
     TRACE_2("Deleting crew",_object,crew _object);
     {_object deleteVehicleCrew _x} forEach crew _object;
 };
