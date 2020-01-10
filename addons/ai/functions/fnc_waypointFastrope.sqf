@@ -19,6 +19,7 @@
 
 #define MOVE_DELAY 3
 #define FASTROPE_HEIGHT 25
+#define HEIGHT_DISTANCE 2000
 #define MANUAL_DISTANCE 100
 #define MANUAL_SPEED 12
 
@@ -56,16 +57,20 @@ _driver setSkill 1;
 private _behaviour = behaviour _vehicle;
 _group setBehaviour "CARELESS";
 
-// Set the helicopter to fly at the fastrope height
-_vehicle flyInHeight FASTROPE_HEIGHT;
-
 private _nextMove = CBA_missionTime;
+private _adjustHeight = true;
 
 waitUntil {
     // Periodically issue move commands the waypoint's position
     if (CBA_missionTime >= _nextMove) then {
         _vehicle doMove _waypointPosition;
         _nextMove = CBA_missionTime + MOVE_DELAY;
+    };
+
+    // Set the helicopter to fly at the fastrope height once it is close to the waypoint
+    if (_adjustHeight && {_vehicle distance2D _waypointPosition < HEIGHT_DISTANCE}) then {
+        _vehicle flyInHeight FASTROPE_HEIGHT;
+        _adjustHeight = false;
     };
 
     sleep 0.5;
