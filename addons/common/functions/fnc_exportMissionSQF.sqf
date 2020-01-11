@@ -6,6 +6,7 @@
  * Arguments:
  * 0: Position <ARRAY> (default: [0, 0, 0])
  * 1: Radius <NUMBER> (default: -1)
+ *   - in meters, -1 for entire mission
  * 2: Include Waypoints <BOOL> (default: true)
  * 3: Include Markers <BOOL> (default: false)
  * 4: Add To Curators <BOOL> (default: false)
@@ -42,6 +43,7 @@ private _outputCrew      = [];
 private _outputCargo     = [];
 private _outputSlingload = [];
 private _outputAttach    = [];
+private _outputMarkers   = [];
 
 private _fnc_processGroup = {
     params ["_group"];
@@ -347,7 +349,22 @@ if (_radius > 0) then {
 } forEach _objects;
 
 if (_includeMarkers) then {
-    // todo
+    {
+        if (markerShape _x != "POLYLINE") then {
+            private _varName = format ["_marker%1", _forEachIndex];
+
+            _outputMarkers pushBack ["%1 = createMarker [%2, %3];", _varName, str _x, markerPos [_x, true]];
+            _outputMarkers pushBack ["%1 setMarkerDir %2;", _varName, markerDir _x];
+            _outputMarkers pushBack ["%1 setMarkerType %2;", _varName, str markerType _x];
+            _outputMarkers pushBack ["%1 setMarkerShape %2;", _varName, str markerShape _x];
+            _outputMarkers pushBack ["%1 setMarkerSize %2;", _varName, markerSize _x];
+            _outputMarkers pushBack ["%1 setMarkerText %2;", _varName, str markerText _x];
+            _outputMarkers pushBack ["%1 setMarkerBrush %2;", _varName, str markerBrush _x];
+            _outputMarkers pushBack ["%1 setMarkerColor %2;", _varName, str markerColor _x];
+            _outputMarkers pushBack ["%1 setMarkerAlpha %2;", _varName, markerAlpha _x];
+            _outputMarkers pushBack "";
+        };
+    } forEach allMapMarkers;
 };
 
 if (_addToCurators) then {
@@ -359,6 +376,6 @@ private _output = "";
 {
     _x = _x apply {if (_x isEqualType []) then {format _x} else {_x}};
     _output = _output + (_x joinString NEWLINE) + NEWLINE + NEWLINE;
-} forEach [_outputGroups1, _outputObjects, _outputGroups2, _outputCrew, _outputCargo, _outputSlingload, _outputAttach];
+} forEach [_outputGroups1, _outputObjects, _outputGroups2, _outputCrew, _outputCargo, _outputSlingload, _outputAttach, _outputMarkers];
 
 _output

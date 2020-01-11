@@ -40,10 +40,10 @@ if (_object isKindOf "CAManBase") exitWith {
 scopeName "Main";
 
 // For all other objects, compare current inventory against config defined one for any missing or extra items
-private _objectConfig = configFile >> "CfgVehicles" >> typeOf _object;
+private _config = configFile >> "CfgVehicles" >> typeOf _object;
 
 {
-    _x params ["_inventory", "_config", "_entry"];
+    _x params ["_inventory", "_subConfig", "_entry"];
     _inventory params ["_types", "_counts"];
 
     // Config may not be in config case, use lowercase for comparisons
@@ -72,7 +72,7 @@ private _objectConfig = configFile >> "CfgVehicles" >> typeOf _object;
         } else {
             _counts set [_index, _count];
         };
-    } forEach configProperties [_objectConfig >> _config, "isClass _x"];
+    } forEach configProperties [_config >> _subConfig, "isClass _x"];
 
     // Exit if the current inventory has extra items compared to config defined one
     if !(_types isEqualTo []) then {

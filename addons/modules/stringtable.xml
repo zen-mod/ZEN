@@ -1731,6 +1731,12 @@
         <Key ID="STR_ZEN_Modules_ExportMissionSQF">
             <English>Export Mission SQF</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_EntireMission">
+            <English>Entire Mission</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_IncludeMarkers">
+            <English>Include Markers</English>
+        </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_Buildings">
             <English>Buildings</English>

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: mharis001
+ * Author: commy2, mharis001
  * Creates an export dialog with the given title and export text.
  * Allows users to copy text by clicking a button if possible.
  *
@@ -79,11 +79,11 @@ private _fnc_update = {
     _ctrlEdit ctrlSetPositionH _height;
     _ctrlEdit ctrlCommit 0;
 
-    private _currentText  = ctrlText _ctrlEdit;
-    private _previousText = _ctrlEdit getVariable [QGVAR(previous), _currentText];
-    _ctrlEdit setVariable [QGVAR(previous), _currentText];
+    private _text = ctrlText _ctrlEdit;
+    private _previousText = _ctrlEdit getVariable [QGVAR(previous), _text];
+    _ctrlEdit setVariable [QGVAR(previous), _text];
 
-    if (_currentText != _previousText && {_currentText find _previousText == 0}) then {
+    if (_text != _previousText && {_ctrlEdit ctrlSetText _text; _text find _previousText == 0}) then {
         _ctrlGroup ctrlSetAutoScrollSpeed 0.00001;
         _ctrlGroup ctrlSetAutoScrollDelay 0;
     } else {
