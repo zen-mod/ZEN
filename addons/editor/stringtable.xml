@@ -139,6 +139,12 @@
         <Key ID="STR_ZEN_Editor_DeepPaste_Description">
             <English>Pastes the current deep copied object data.</English>
         </Key>
+        <Key ID="STR_ZEN_Editor_FocusSearchBar">
+            <English>Focus Search Bar</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_FocusSearchBar_Description">
+            <English>Sets focus to the search bar.</English>
+        </Key>
         <Key ID="STR_ZEN_Editor_ToggleIcons">
             <English>Toggle Editable Icons</English>
             <Japanese>編集可アイコン切り替え</Japanese>
