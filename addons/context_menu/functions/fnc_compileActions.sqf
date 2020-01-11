@@ -28,11 +28,32 @@ private _fnc_getActionData = {
 
         private _iconFile = getText (_entryConfig >> "icon");
         private _iconColor = getArray (_entryConfig >> "iconColor");
-        if !(_iconColor isEqualTypeArray [1, 1, 1, 1]) then {_iconColor = [1, 1, 1, 1]};
+
+        if !(_iconColor isEqualTypeArray [1, 1, 1, 1]) then {
+            _iconColor = [1, 1, 1, 1];
+        };
 
         private _statement = compile getText (_entryConfig >> "statement");
         private _condition = compile getText (_entryConfig >> "condition");
-        if (_condition isEqualTo {}) then {_condition = {true}};
+
+        if (_condition isEqualTo {}) then {
+            _condition = {true};
+        };
+
+        // Action arguments can be a string, number or an array - default: []
+        private _argsEntry = _entryConfig >> "args";
+
+        private _args = switch (true) do {
+            case (isText _argsEntry): {
+                getText _argsEntry
+            };
+            case (isNumber _argsEntry): {
+                getNumber _argsEntry
+            };
+            default {
+                getArray _argsEntry
+            };
+        };
 
         private _insertChildren = compile getText (_entryConfig >> "insertChildren");
         private _modifierFunction = compile getText (_entryConfig >> "modifierFunction");
@@ -50,7 +71,7 @@ private _fnc_getActionData = {
                 _iconColor,
                 _statement,
                 _condition,
-                [],
+                _args,
                 _insertChildren,
                 _modifierFunction
             ],

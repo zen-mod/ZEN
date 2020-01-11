@@ -1,16 +1,16 @@
 #include "script_component.hpp"
 /*
  * Author: 3Mydlo3
- * Repairs units in given selection.
+ * Repairs vehicles from the objects list.
  *
  * Arguments:
- * N: Selected Objects <ARRAY>
+ * N: Objects <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [vehicle1, vehicle2, vehicle3] call zen_context_actions_fnc_repairVehicles
+ * [_object1, _object2] call zen_context_actions_fnc_repairVehicles
  *
  * Public: No
  */
@@ -19,7 +19,7 @@ private _vehicles = _this select {
     alive _x
     && {damage _x > 0}
     && {_x isKindOf "AllVehicles"}
-    && {!(_x isKindOf 'CAManBase')}
+    && {!(_x isKindOf "CAManBase")}
 };
 
 {
