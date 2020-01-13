@@ -48,6 +48,9 @@ if (_entity isEqualType objNull) then {
     };
 };
 
+// Exit if the entity is a logic side group
+if (_entity isEqualType grpNull && {side _entity == sideLogic}) exitWith {false};
+
 private _type = switch (true) do {
     case (_entity isEqualType objNull): {"Object"};
     case (_entity isEqualType grpNull): {"Group"};
