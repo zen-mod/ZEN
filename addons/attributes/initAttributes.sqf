@@ -23,8 +23,7 @@
         };
     },
     {name _entity},
-    {alive _entity && {_entity isKindOf "CAManBase"}},
-    100
+    {alive _entity && {_entity isKindOf "CAManBase"}}
 ] call FUNC(addAttribute);
 
 [
@@ -38,8 +37,7 @@
         } forEach call EFUNC(common,getSelectedUnits);
     },
     {skill _entity},
-    {alive _entity && {!isNull group _entity && {side _entity != sideLogic}}},
-    95
+    {alive _entity && {!isNull group _entity && {side _entity != sideLogic}}}
 ] call FUNC(addAttribute);
 
 [
@@ -54,8 +52,7 @@
         } forEach SELECTED_OBJECTS;
     },
     {1 - damage _entity},
-    {alive _entity},
-    90
+    {alive _entity}
 ] call FUNC(addAttribute);
 
 [
@@ -69,8 +66,7 @@
         } forEach call EFUNC(common,getSelectedVehicles);
     },
     {fuel _entity},
-    {alive _entity && {getNumber (configFile >> "CfgVehicles" >> typeOf _entity >> "fuelCapacity") > 0}},
-    85
+    {alive _entity && {getNumber (configFile >> "CfgVehicles" >> typeOf _entity >> "fuelCapacity") > 0}}
 ] call FUNC(addAttribute);
 
 [
@@ -84,8 +80,7 @@
         } forEach call EFUNC(common,getSelectedVehicles);
     },
     {_entity call EFUNC(common,getVehicleAmmo)},
-    {alive _entity && {!(_entity isKindOf "CAManBase")} && {_entity call EFUNC(common,getVehicleAmmo) != -1}},
-    80
+    {alive _entity && {!(_entity isKindOf "CAManBase")} && {_entity call EFUNC(common,getVehicleAmmo) != -1}}
 ] call FUNC(addAttribute);
 
 [
@@ -108,8 +103,7 @@
         } forEach call EFUNC(common,getSelectedUnits);
     },
     {RANKS find toUpper rank _entity},
-    {alive _entity && {_entity isKindOf "CAManBase"}},
-    75
+    {alive _entity && {_entity isKindOf "CAManBase"}}
 ] call FUNC(addAttribute);
 
 [
@@ -129,8 +123,7 @@
         } forEach call EFUNC(common,getSelectedUnits);
     },
     {STANCES find toUpper unitPos _entity},
-    {alive _entity && {_entity isKindOf "CAManBase"}},
-    70
+    {alive _entity && {_entity isKindOf "CAManBase"}}
 ] call FUNC(addAttribute);
 
 [
@@ -149,8 +142,7 @@
         } forEach call EFUNC(common,getSelectedVehicles);
     },
     {locked _entity},
-    {alive _entity && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}},
-    65
+    {alive _entity && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}}
 ] call FUNC(addAttribute);
 
 [
@@ -168,8 +160,7 @@
         } forEach call EFUNC(common,getSelectedVehicles);
     },
     {parseNumber !isEngineOn _entity},
-    {alive _entity && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}},
-    60
+    {alive _entity && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}}
 ] call FUNC(addAttribute);
 
 [
@@ -195,8 +186,7 @@
         } forEach call EFUNC(common,getSelectedVehicles);
     },
     {parseNumber !isLightOn _entity},
-    {alive _entity && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}},
-    55
+    {alive _entity && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}}
 ] call FUNC(addAttribute);
 
 [
@@ -208,8 +198,7 @@
         [QEGVAR(common,setPlateNumber), [_entity, _value], _entity] call CBA_fnc_targetEvent;
     },
     {getPlateNumber _entity},
-    {alive _entity && {isClass (configFile >> "CfgVehicles" >> typeOf _entity >> "PlateInfos")}},
-    50
+    {alive _entity && {isClass (configFile >> "CfgVehicles" >> typeOf _entity >> "PlateInfos")}}
 ] call FUNC(addAttribute);
 
 [
@@ -225,8 +214,7 @@
         } forEach SELECTED_OBJECTS;
     },
     {isDamageAllowed _entity},
-    {alive _entity},
-    45
+    {alive _entity}
 ] call FUNC(addAttribute);
 
 [
@@ -242,8 +230,7 @@
         } forEach SELECTED_OBJECTS;
     },
     {simulationEnabled _entity},
-    {alive _entity},
-    40
+    {alive _entity}
 ] call FUNC(addAttribute);
 
 
@@ -256,8 +243,7 @@
         [QEGVAR(common,execute), [compile _value, _entity], _entity] call CBA_fnc_targetEvent;
     },
     {},
-    {IS_ADMIN || {!GETMVAR(ZEN_disableCodeExecution,false)}},
-    -100
+    {IS_ADMIN || {!GETMVAR(ZEN_disableCodeExecution,false)}}
 ] call FUNC(addAttribute);
 
 // - Group --------------------------------------------------------------------
@@ -270,9 +256,7 @@
     QGVAR(edit),
     nil,
     {_entity setGroupIdGlobal [_value]},
-    {groupID _entity},
-    {true},
-    100
+    {groupID _entity}
 ] call FUNC(addAttribute);
 
 [
@@ -287,9 +271,7 @@
             } forEach units _x;
         } forEach SELECTED_GROUPS;
     },
-    {skill leader _entity},
-    {true},
-    95
+    {skill leader _entity}
 ] call FUNC(addAttribute);
 
 [
@@ -313,9 +295,7 @@
             [QEGVAR(common,setFormation), [_x, _formation], _x] call CBA_fnc_targetEvent;
         } forEach SELECTED_GROUPS;
     },
-    {FORMATIONS find toUpper formation _entity},
-    {true},
-    90
+    {FORMATIONS find toUpper formation _entity}
 ] call FUNC(addAttribute);
 
 [
@@ -335,9 +315,7 @@
             [QEGVAR(common,setBehaviour), [_x, _behaviour], _x] call CBA_fnc_targetEvent;
         } forEach SELECTED_GROUPS;
     },
-    {BEHAVIOURS find toUpper behaviour leader _entity},
-    {true},
-    85
+    {BEHAVIOURS find toUpper behaviour leader _entity}
 ] call FUNC(addAttribute);
 
 [
@@ -357,9 +335,7 @@
             [QEGVAR(common,setCombatMode), [_x, _combatMode], _x] call CBA_fnc_targetEvent;
         } forEach SELECTED_GROUPS;
     },
-    {COMBATMODES find toUpper combatMode _entity},
-    {true},
-    80
+    {COMBATMODES find toUpper combatMode _entity}
 ] call FUNC(addAttribute);
 
 [
@@ -377,9 +353,7 @@
             [QEGVAR(common,setSpeedMode), [_x, _speedMode], _x] call CBA_fnc_targetEvent;
         } forEach SELECTED_GROUPS;
     },
-    {SPEEDMODES find toUpper speedMode _entity},
-    {true},
-    75
+    {SPEEDMODES find toUpper speedMode _entity}
 ] call FUNC(addAttribute);
 
 [
@@ -400,9 +374,7 @@
             } forEach units _x;
         } forEach SELECTED_GROUPS;
     },
-    {STANCES find toUpper unitPos leader _entity},
-    {true},
-    70
+    {STANCES find toUpper unitPos leader _entity}
 ] call FUNC(addAttribute);
 
 [
@@ -414,8 +386,7 @@
         [QEGVAR(common,execute), [compile _value, _entity], _entity] call CBA_fnc_targetEvent;
     },
     {},
-    {IS_ADMIN || {!GETMVAR(ZEN_disableCodeExecution,false)}},
-    -100
+    {IS_ADMIN || {!GETMVAR(ZEN_disableCodeExecution,false)}}
 ] call FUNC(addAttribute);
 
 // - Waypoint -----------------------------------------------------------------
@@ -433,10 +404,7 @@
             _x setWaypointType _type;
             if (_type == "SCRIPTED") then {_x setWaypointScript _script};
         } forEach SELECTED_WAYPOINTS;
-    },
-    {},
-    {true},
-    100
+    }
 ] call FUNC(addAttribute);
 
 [
@@ -445,9 +413,7 @@
     QGVAR(slider),
     [0, 1800, 15, false, 0],
     {_entity setWaypointTimeout [_value, _value, _value]},
-    {random waypointTimeout _entity},
-    {true},
-    95
+    {random waypointTimeout _entity}
 ] call FUNC(addAttribute);
 
 [
@@ -478,9 +444,7 @@
             [QEGVAR(common,setWaypointFormation), [_x, _formation]] call CBA_fnc_serverEvent;
         } forEach SELECTED_WAYPOINTS;
     },
-    {FORMATIONS find toUpper waypointFormation _entity},
-    {true},
-    90
+    {FORMATIONS find toUpper waypointFormation _entity}
 ] call FUNC(addAttribute);
 
 [
@@ -507,9 +471,7 @@
             [QEGVAR(common,setWaypointBehaviour), [_x, _behaviour]] call CBA_fnc_serverEvent;
         } forEach SELECTED_WAYPOINTS;
     },
-    {BEHAVIOURS find toUpper waypointBehaviour _entity},
-    {true},
-    85
+    {BEHAVIOURS find toUpper waypointBehaviour _entity}
 ] call FUNC(addAttribute);
 
 [
@@ -536,9 +498,7 @@
             [QEGVAR(common,setWaypointCombatMode), [_x, _combatMode]] call CBA_fnc_serverEvent;
         } forEach SELECTED_WAYPOINTS;
     },
-    {COMBATMODES find toUpper waypointCombatMode _entity},
-    {true},
-    80
+    {COMBATMODES find toUpper waypointCombatMode _entity}
 ] call FUNC(addAttribute);
 
 [
@@ -563,9 +523,7 @@
             [QEGVAR(common,setWaypointSpeed), [_x, _speedMode]] call CBA_fnc_serverEvent;
         } forEach SELECTED_WAYPOINTS;
     },
-    {SPEEDMODES find toUpper waypointSpeed _entity},
-    {true},
-    75
+    {SPEEDMODES find toUpper waypointSpeed _entity}
 ] call FUNC(addAttribute);
 
 // - Marker -------------------------------------------------------------------
@@ -578,9 +536,7 @@
     QGVAR(edit),
     nil,
     {_entity setMarkerText _value},
-    {markerText _entity},
-    {true},
-    100
+    {markerText _entity}
 ] call FUNC(addAttribute);
 
 [
@@ -596,9 +552,7 @@
         // Set this color to be applied to new markers of this type
         GVAR(previousMarkerColors) setVariable [markerType _entity, _value];
     },
-    {markerColor _entity},
-    {true},
-    95
+    {markerColor _entity}
 ] call FUNC(addAttribute);
 
 [
@@ -607,9 +561,7 @@
     QGVAR(slider),
     [0, 1, 0.1, true],
     {_entity setMarkerAlpha _value},
-    {markerAlpha _entity},
-    {true},
-    90
+    {markerAlpha _entity}
 ] call FUNC(addAttribute);
 
 // - Skills -------------------------------------------------------------------
@@ -633,9 +585,7 @@
             [QEGVAR(common,setSkill), [_x, ["aimingAccuracy", _value]], _x] call CBA_fnc_targetEvent;
         } forEach call EFUNC(common,getSelectedUnits);
     },
-    {_entity skill "aimingAccuracy"},
-    {true},
-    8
+    {_entity skill "aimingAccuracy"}
 ] call FUNC(addAttribute);
 
 [
@@ -648,9 +598,7 @@
             [QEGVAR(common,setSkill), [_x, ["aimingSpeed", _value]], _x] call CBA_fnc_targetEvent;
         } forEach call EFUNC(common,getSelectedUnits);
     },
-    {_entity skill "aimingSpeed"},
-    {true},
-    7
+    {_entity skill "aimingSpeed"}
 ] call FUNC(addAttribute);
 
 [
@@ -663,9 +611,7 @@
             [QEGVAR(common,setSkill), [_x, ["aimingShake", _value]], _x] call CBA_fnc_targetEvent;
         } forEach call EFUNC(common,getSelectedUnits);
     },
-    {_entity skill "aimingShake"},
-    {true},
-    6
+    {_entity skill "aimingShake"}
 ] call FUNC(addAttribute);
 
 [
@@ -678,9 +624,7 @@
             [QEGVAR(common,setSkill), [_x, ["commanding", _value]], _x] call CBA_fnc_targetEvent;
         } forEach call EFUNC(common,getSelectedUnits);
     },
-    {_entity skill "commanding"},
-    {true},
-    5
+    {_entity skill "commanding"}
 ] call FUNC(addAttribute);
 
 [
@@ -693,9 +637,7 @@
             [QEGVAR(common,setSkill), [_x, ["courage", _value]], _x] call CBA_fnc_targetEvent;
         } forEach call EFUNC(common,getSelectedUnits);
     },
-    {_entity skill "courage"},
-    {true},
-    4
+    {_entity skill "courage"}
 ] call FUNC(addAttribute);
 
 [
@@ -708,9 +650,7 @@
             [QEGVAR(common,setSkill), [_x, ["spotDistance", _value]], _x] call CBA_fnc_targetEvent;
         } forEach call EFUNC(common,getSelectedUnits);
     },
-    {_entity skill "spotDistance"},
-    {true},
-    3
+    {_entity skill "spotDistance"}
 ] call FUNC(addAttribute);
 
 [
@@ -723,9 +663,7 @@
             [QEGVAR(common,setSkill), [_x, ["spotTime", _value]], _x] call CBA_fnc_targetEvent;
         } forEach call EFUNC(common,getSelectedUnits);
     },
-    {_entity skill "spotTime"},
-    {true},
-    2
+    {_entity skill "spotTime"}
 ] call FUNC(addAttribute);
 
 [
@@ -738,9 +676,7 @@
             [QEGVAR(common,setSkill), [_x, ["reloadSpeed", _value]], _x] call CBA_fnc_targetEvent;
         } forEach call EFUNC(common,getSelectedUnits);
     },
-    {_entity skill "reloadSpeed"},
-    {true},
-    1
+    {_entity skill "reloadSpeed"}
 ] call FUNC(addAttribute);
 
 // - Traits -------------------------------------------------------------------
@@ -765,9 +701,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_medical")) then {
                 _x setVariable ["ace_medical_medicClass", _value, true];
             } forEach call EFUNC(common,getSelectedUnits);
         },
-        {_entity getVariable ["ace_medical_medicClass", parseNumber (_entity getUnitTrait "medic")]},
-        {true},
-        3
+        {_entity getVariable ["ace_medical_medicClass", parseNumber (_entity getUnitTrait "medic")]}
     ] call FUNC(addAttribute);
 } else {
     [
@@ -780,9 +714,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_medical")) then {
                 [QEGVAR(common,setUnitTrait), [_x, "medic", _value], _x] call CBA_fnc_targetEvent;
             } forEach call EFUNC(common,getSelectedUnits);
         },
-        {_entity getUnitTrait "medic"},
-        {true},
-        3
+        {_entity getUnitTrait "medic"}
     ] call FUNC(addAttribute);
 };
 
@@ -797,9 +729,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_repair")) then {
                 _x setVariable ["ACE_isEngineer", _value, true];
             } forEach call EFUNC(common,getSelectedUnits);
         },
-        {[0, 1, 2] select (_entity getVariable ["ACE_isEngineer", _entity getUnitTrait "engineer"])},
-        {true},
-        2
+        {[0, 1, 2] select (_entity getVariable ["ACE_isEngineer", _entity getUnitTrait "engineer"])}
     ] call FUNC(addAttribute);
 } else {
     [
@@ -812,9 +742,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_repair")) then {
                 [QEGVAR(common,setUnitTrait), [_x, "engineer", _value], _x] call CBA_fnc_targetEvent;
             } forEach call EFUNC(common,getSelectedUnits);
         },
-        {_entity getUnitTrait "engineer"},
-        {true},
-        2
+        {_entity getUnitTrait "engineer"}
     ] call FUNC(addAttribute);
 };
 
@@ -829,9 +757,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_explosives")) then {
                 _x setVariable ["ACE_isEOD", _value, true];
             } forEach call EFUNC(common,getSelectedUnits);
         },
-        {_entity call ace_common_fnc_isEOD},
-        {true},
-        1
+        {_entity call ace_common_fnc_isEOD}
     ] call FUNC(addAttribute);
 } else {
     [
@@ -844,9 +770,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_explosives")) then {
                 [QEGVAR(common,setUnitTrait), [_x, "explosiveSpecialist", _value], _x] call CBA_fnc_targetEvent;
             } forEach call EFUNC(common,getSelectedUnits);
         },
-        {_entity getUnitTrait "explosiveSpecialist"},
-        {true},
-        1
+        {_entity getUnitTrait "explosiveSpecialist"}
     ] call FUNC(addAttribute);
 };
 
@@ -875,9 +799,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_explosives")) then {
             [QEGVAR(common,setVehicleRadar), [_x, _value], _x] call CBA_fnc_targetEvent;
         } forEach call EFUNC(common,getSelectedVehicles);
     },
-    {[2, 1] select isVehicleRadarOn _entity},
-    {true},
-    4
+    {[2, 1] select isVehicleRadarOn _entity}
 ] call FUNC(addAttribute);
 
 [
@@ -890,9 +812,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_explosives")) then {
             [QEGVAR(common,setVehicleReportRemoteTargets), [_x, _value], _x] call CBA_fnc_targetEvent;
         } forEach call EFUNC(common,getSelectedVehicles);
     },
-    {vehicleReportRemoteTargets _entity},
-    {true},
-    3
+    {vehicleReportRemoteTargets _entity}
 ] call FUNC(addAttribute);
 
 [
@@ -905,9 +825,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_explosives")) then {
             [QEGVAR(common,setVehicleReceiveRemoteTargets), [_x, _value], _x] call CBA_fnc_targetEvent;
         } forEach call EFUNC(common,getSelectedVehicles);
     },
-    {vehicleReceiveRemoteTargets _entity},
-    {true},
-    2
+    {vehicleReceiveRemoteTargets _entity}
 ] call FUNC(addAttribute);
 
 [
@@ -920,9 +838,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_explosives")) then {
             [QEGVAR(common,setVehicleReportOwnPosition), [_x, _value], _x] call CBA_fnc_targetEvent;
         } forEach call EFUNC(common,getSelectedVehicles);
     },
-    {vehicleReportOwnPosition _entity},
-    {true},
-    1
+    {vehicleReportOwnPosition _entity}
 ] call FUNC(addAttribute);
 
 // - Side ---------------------------------------------------------------------
