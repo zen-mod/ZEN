@@ -129,6 +129,7 @@ GVAR(iconsVisible) = true;
 [{
     params ["_display"];
 
+    [_display] call FUNC(addGroupIcons);
     [_display] call FUNC(declutterEmptyTree);
 
     {
