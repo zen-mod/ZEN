@@ -1,4 +1,14 @@
 jobs:
+  - job: Validate
+    pool:
+      vmImage: 'ubuntu-18.04'
+    steps:
+      - bash: |
+          python3 ./tools/sqf_validator.py
+        displayName: 'Validate SQF'
+      - bash: |
+          python3 ./tools/stringtable_validator.py
+        displayName: 'Validate Stringtables'
   - job: Build
     pool:
       vmImage: 'vs2017-win2016'

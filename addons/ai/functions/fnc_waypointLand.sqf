@@ -20,7 +20,7 @@
 params ["_group", "_waypointPosition"];
 
 private _waypoint = [_group, currentWaypoint _group];
-_waypoint setWaypointDescription localize "STR_A3_CfgWaypoints_Land";
+_waypoint setWaypointDescription localize LSTRING(Land);
 
 // Create an invisible helipad at the waypoint's position
 // AI tend to land better if there is a helipad nearby
