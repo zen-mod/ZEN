@@ -390,6 +390,9 @@ private _fnc_listDblClicked = {
     params ["_ctrlUnitList", "_selectedIndex"];
 
     _ctrlUnitList lbDelete _selectedIndex;
+
+    private _ctrlUnitCount = ctrlParent _ctrlUnitList displayCtrl IDC_SPAWNREINFORCEMENTS_UNIT_COUNT;
+    _ctrlUnitCount ctrlSetText str lbSize _ctrlUnitList;
 };
 
 private _ctrlUnitList = _display displayCtrl IDC_SPAWNREINFORCEMENTS_UNIT_LIST;
