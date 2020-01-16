@@ -11,7 +11,7 @@
  * Localized Hitpoint String <STRING>
  *
  * Example:
- * ["HitFuel"] call zen_common_fnc_getHitPointString
+ * ["HitFuel"] call zen_damage_fnc_getHitPointString
  *
  * Public: No
  */

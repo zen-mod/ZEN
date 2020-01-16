@@ -13,7 +13,6 @@ PREP(getActiveTree);
 PREP(getAllTurrets);
 PREP(getCargoPositionsCount);
 PREP(getDLC);
-PREP(getHitPointString);
 PREP(getInventory);
 PREP(getLightingSelections);
 PREP(getPhoneticName);
