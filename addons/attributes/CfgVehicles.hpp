@@ -5,8 +5,13 @@ class CfgVehicles {
         curatorInfoTypeEmpty = "";
     };
 
-    class Man;
-    class CAManBase: Man {
+    class FloatingStructure_F: All {
+        curatorInfoType = "";
+        curatorInfoTypeEmpty = "";
+    };
+
+    class Land;
+    class Man: Land {
         curatorInfoType = "";
         curatorInfoTypeEmpty = "";
     };
