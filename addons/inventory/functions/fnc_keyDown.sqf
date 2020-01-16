@@ -19,18 +19,17 @@
 params ["_display", "_keyCode"];
 
 // Exit if list is not in focus
-private _controlsGroup = _display getVariable QGVAR(listFocus);
-if (isNil "_controlsGroup") exitWith {false};
+if !(_display getVariable [QGVAR(listFocus), false]) exitWith {false};
 
 switch (_keyCode) do {
     case DIK_LEFT;
     case DIK_NUMPADMINUS: {
-        [_controlsGroup, false] call FUNC(modify);
+        [_display, false] call FUNC(modify);
         true
     };
     case DIK_RIGHT;
     case DIK_NUMPADPLUS: {
-        [_controlsGroup, true] call FUNC(modify);
+        [_display, true] call FUNC(modify);
         true
     };
     default {false};

@@ -1,5 +1,6 @@
 PREP(calculateLoad);
 PREP(clear);
+PREP(confirm);
 PREP(fillList);
 PREP(getCargo);
 PREP(getItemMass);

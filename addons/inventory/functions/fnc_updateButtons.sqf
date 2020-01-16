@@ -15,22 +15,22 @@
  * Public: No
  */
 
-params ["_controlsGroup"];
+params ["_display"];
 
 // Get mass of currently selected item
-private _ctrlList = _controlsGroup controlsGroupCtrl IDC_LIST;
+private _ctrlList = _display displayCtrl IDC_LIST;
 private _currentRow = lnbCurSelRow _ctrlList;
 private _item = _ctrlList lnbData [_currentRow, 0];
 private _mass = [_item] call FUNC(getItemMass);
 
 // Get current and max load for object
-private _maxLoad = _controlsGroup getVariable QGVAR(maxLoad);
-private _currentLoad = _controlsGroup getVariable QGVAR(currentLoad);
+private _maxLoad = _display getVariable QGVAR(maxLoad);
+private _currentLoad = _display getVariable QGVAR(currentLoad);
 
 // Enable add button if object has enough space
-private _ctrlButtonAdd = _controlsGroup controlsGroupCtrl IDC_BTN_ADD;
+private _ctrlButtonAdd = _display displayCtrl IDC_BTN_ADD;
 _ctrlButtonAdd ctrlEnable (_maxLoad - _currentLoad >= _mass);
 
 // Enable remove button if item count is not zero
-private _ctrlButtonRemove = _controlsGroup controlsGroupCtrl IDC_BTN_REMOVE;
+private _ctrlButtonRemove = _display displayCtrl IDC_BTN_REMOVE;
 _ctrlButtonRemove ctrlEnable (_ctrlList lnbText [_currentRow, 2] != "0");

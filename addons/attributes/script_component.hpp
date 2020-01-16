@@ -24,15 +24,6 @@
 #define POS_W(N) ((N) * GUI_GRID_W)
 #define POS_H(N) ((N) * GUI_GRID_H)
 
-#define IDC_TITLE      110
-#define IDC_BACKGROUND 120
-#define IDC_CONTENT    130
-
-#define IDD_DISPLAY 26514
-#define IDC_DISPLAY_TITLE      100
-#define IDC_DISPLAY_BACKGROUND 200
-#define IDC_DISPLAY_CONTENT    300
-
 #define IDC_ATTRIBUTE_GROUP      400
 #define IDC_ATTRIBUTE_LABEL      401
 #define IDC_ATTRIBUTE_BACKGROUND 402

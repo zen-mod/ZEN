@@ -16,20 +16,20 @@
  * Public: No
  */
 
-params ["_controlsGroup", "_addItem"];
+params ["_display", "_addItem"];
 
 // Get currently selected item and its mass
-private _ctrlList = _controlsGroup controlsGroupCtrl IDC_LIST;
+private _ctrlList = _display displayCtrl IDC_LIST;
 private _currentRow = lnbCurSelRow _ctrlList;
 private _item = _ctrlList lnbData [_currentRow, 0];
 private _mass = [_item] call FUNC(getItemMass);
 
 // Get current and max load for object
-private _maxLoad = _controlsGroup getVariable QGVAR(maxLoad);
-private _currentLoad = _controlsGroup getVariable QGVAR(currentLoad);
+private _maxLoad = _display getVariable QGVAR(maxLoad);
+private _currentLoad = _display getVariable QGVAR(currentLoad);
 
 // Get relevant cargo list based on selected item
-private _categoryCargo = [_controlsGroup, _item] call FUNC(getCargo);
+private _categoryCargo = [_display, _item] call FUNC(getCargo);
 _categoryCargo params ["_cargoItems", "_cargoCounts"];
 
 private _itemIndex = _cargoItems find _item;
@@ -76,8 +76,8 @@ if (!_addItem && {_itemIndex != -1}) then {
     _ctrlList lnbSetColor [[_currentRow, 2], [1, 1, 1, _alpha]];
 };
 
-_controlsGroup setVariable [QGVAR(currentLoad), _currentLoad];
+_display setVariable [QGVAR(currentLoad), _currentLoad];
 
 // Update the load bar and list buttons
-[_controlsGroup] call FUNC(updateloadBar);
-[_controlsGroup] call FUNC(updateButtons);
+[_display] call FUNC(updateloadBar);
+[_display] call FUNC(updateButtons);

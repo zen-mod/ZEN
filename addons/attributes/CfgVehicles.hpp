@@ -10,4 +10,10 @@ class CfgVehicles {
         curatorInfoType = "";
         curatorInfoTypeEmpty = "";
     };
+
+    class ThingX;
+    class ReammoBox_F: ThingX {
+        curatorInfoType = "";
+        curatorInfoTypeEmpty = "";
+    };
 };

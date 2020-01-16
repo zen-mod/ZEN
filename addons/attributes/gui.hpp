@@ -14,12 +14,12 @@ class EGVAR(common,RscCombo);
 class EGVAR(common,RscControlsGroup);
 
 class GVAR(display) {
-    idd = IDD_DISPLAY;
+    idd = -1;
     movingEnable = 1;
     onLoad = QUOTE(with uiNamespace do {GVAR(display) = _this select 0});
     class controls {
         class Title: RscText {
-            idc = IDC_DISPLAY_TITLE;
+            idc = IDC_TITLE;
             x = POS_X(6.5);
             y = POS_Y(8.4);
             w = POS_W(27);
@@ -28,7 +28,7 @@ class GVAR(display) {
             moving = 1;
         };
         class Background: RscText {
-            idc = IDC_DISPLAY_BACKGROUND;
+            idc = IDC_BACKGROUND;
             x = POS_X(6.5);
             y = POS_Y(9.5);
             w = POS_W(27);
@@ -36,7 +36,7 @@ class GVAR(display) {
             colorBackground[] = {0, 0, 0, 0.7};
         };
         class Content: EGVAR(common,RscControlsGroup) {
-            idc = IDC_DISPLAY_CONTENT;
+            idc = IDC_CONTENT;
             x = POS_X(7);
             y = POS_Y(10);
             w = POS_W(26);

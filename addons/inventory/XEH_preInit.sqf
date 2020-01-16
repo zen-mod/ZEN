@@ -9,29 +9,17 @@ PREP_RECOMPILE_END;
 // Disable CBA inventory attribute preload
 uiNamespace setVariable ["cba_ui_curatorItemCache", []];
 
-// Register Inventory attribute display and button to access it from Object display
-["Inventory", LSTRING(EditInventory), true] call EFUNC(attributes,addDisplay);
-
+// Add inventory button to Object attributes display
 [
     "Object",
     "STR_A3_Gear1",
     {
-        [_entity, "Inventory"] call EFUNC(attributes,open);
+        GVAR(object) = _this;
+        createDialog QGVAR(display);
     },
     {
         alive _entity && {getNumber (configFile >> "CfgVehicles" >> typeOf _entity >> "maximumLoad") > 0}
     }
 ] call EFUNC(attributes,addButton);
-
-[
-    "Inventory",
-    "",
-    QGVAR(attribute),
-    nil,
-    {
-        [_entity, _value] call EFUNC(common,setInventory)
-    },
-    {_entity call EFUNC(common,getInventory)}
-] call EFUNC(attributes,addAttribute);
 
 ADDON = true;

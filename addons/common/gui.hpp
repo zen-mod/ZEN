@@ -1,9 +1,13 @@
 class RscText;
 class RscEdit;
 class RscCheckBox;
+class RscButtonMenuOK;
+class RscButtonMenuCancel;
+
 class RscCombo {
     class ComboScrollBar;
 };
+
 class RscControlsGroup {
     class HScrollbar;
     class VScrollbar;
@@ -80,5 +84,42 @@ class GVAR(RscControlsGroup): RscControlsGroup {
         arrowFull = "\a3\3DEN\Data\Controls\ctrlDefault\arrowFull_ca.paa";
         arrowEmpty = "\a3\3DEN\Data\Controls\ctrlDefault\arrowEmpty_ca.paa";
         width = POS_W(0.5);
+    };
+};
+
+class GVAR(RscDisplay) {
+    idd = -1;
+    movingEnable = 1;
+    onLoad = QUOTE(call FUNC(initDisplay));
+    class controls {
+        class Title: RscText {
+            idc = IDC_TITLE;
+            x = POS_X(6.5);
+            w = POS_W(27);
+            h = POS_H(1);
+            colorBackground[] = GUI_THEME_COLOR;
+            moving = 1;
+        };
+        class Background: RscText {
+            idc = IDC_BACKGROUND;
+            x = POS_X(6.5);
+            w = POS_W(27);
+            colorBackground[] = {0, 0, 0, 0.7};
+        };
+        class Content: GVAR(RscControlsGroup) {
+            idc = IDC_CONTENT;
+            x = POS_X(7);
+            w = POS_W(26);
+        };
+        class ButtonOK: RscButtonMenuOK {
+            x = POS_X(28.5);
+            w = POS_W(5);
+            h = POS_H(1);
+        };
+        class ButtonCancel: RscButtonMenuCancel {
+            x = POS_X(6.5);
+            w = POS_W(5);
+            h = POS_H(1);
+        };
     };
 };

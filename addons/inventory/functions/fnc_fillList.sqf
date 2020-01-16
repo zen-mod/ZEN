@@ -15,14 +15,14 @@
  * Public: No
  */
 
-params ["_controlsGroup"];
+params ["_display"];
 
 private _itemsList = uiNamespace getVariable QGVAR(itemsList);
-private _category = lbCurSel (_controlsGroup controlsGroupCtrl IDC_CATEGORY) - 1;
-private _filter = toLower ctrlText (_controlsGroup controlsGroupCtrl IDC_SEARCH_BAR);
+private _category = lbCurSel (_display displayCtrl IDC_CATEGORY) - 1;
+private _filter = toLower ctrlText (_display displayCtrl IDC_SEARCH_BAR);
 
 // Clear the listbox
-private _ctrlList = _controlsGroup controlsGroupCtrl IDC_LIST;
+private _ctrlList = _display displayCtrl IDC_LIST;
 lnbClear _ctrlList;
 
 // Handle current cargo, no specific category
@@ -32,7 +32,7 @@ if (_category == -1) then {
     private _cfgGlassess  = configFile >> "CfgGlasses";
     private _cfgWeapons   = configFile >> "CfgWeapons";
 
-    private _cargo = _controlsGroup getVariable QEGVAR(attributes,value);
+    private _cargo = _display getVariable QGVAR(cargo);
 
     {
         _x params ["_cargoItems", "_cargoCounts"];
@@ -89,7 +89,7 @@ if (_category == -1) then {
     };
 
     // Get cargo for current category
-    private _categoryCargo = [_controlsGroup] call FUNC(getCargo);
+    private _categoryCargo = [_display] call FUNC(getCargo);
     _categoryCargo params ["_cargoItems", "_cargoCounts"];
 
     {
@@ -121,4 +121,4 @@ if (_category == -1) then {
 
 _ctrlList lnbSort [1];
 
-[_controlsGroup] call FUNC(updateButtons);
+[_display] call FUNC(updateButtons);

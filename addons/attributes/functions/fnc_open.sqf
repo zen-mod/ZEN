@@ -37,7 +37,7 @@ private _display = uiNamespace getVariable [QGVAR(display), displayNull];
 _display setVariable [QGVAR(controls), _controls];
 _display setVariable [QGVAR(entity), _entity];
 
-private _ctrlContent = _display displayCtrl IDC_DISPLAY_CONTENT;
+private _ctrlContent = _display displayCtrl IDC_CONTENT;
 private _contentPosY = 0;
 
 {
@@ -152,12 +152,12 @@ if (_title == "") then {
 _title = toUpper format [_title, _entityText];
 
 // Reposition other controls based on the content height
-private _ctrlTitle = _display displayCtrl IDC_DISPLAY_TITLE;
+private _ctrlTitle = _display displayCtrl IDC_TITLE;
 _ctrlTitle ctrlSetPositionY (0.5 - _contentHeight / 2 - POS_H(1.6));
 _ctrlTitle ctrlSetText _title;
 _ctrlTitle ctrlCommit 0;
 
-private _ctrlBackground = _display displayCtrl IDC_DISPLAY_BACKGROUND;
+private _ctrlBackground = _display displayCtrl IDC_BACKGROUND;
 _ctrlBackground ctrlSetPositionY (0.5 - _contentHeight / 2 - POS_H(0.5));
 _ctrlBackground ctrlSetPositionH (_contentHeight + POS_H(1));
 _ctrlBackground ctrlCommit 0;
