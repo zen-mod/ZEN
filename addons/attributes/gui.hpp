@@ -1,9 +1,10 @@
 class RscText;
-class ctrlToolbox;
-class ctrlXSliderH;
 class RscButtonMenuOK;
 class RscButtonMenuCancel;
 class RscControlsGroupNoScrollbars;
+
+class ctrlToolbox;
+class ctrlXSliderH;
 
 class EGVAR(common,RscLabel);
 class EGVAR(common,RscBackground);
@@ -79,6 +80,18 @@ class GVAR(checkbox): GVAR(base) {
         class CheckBox: EGVAR(common,RscCheckBox) {
             idc = IDC_ATTRIBUTE_CHECKBOX;
         };
+    };
+};
+
+class GVAR(checkboxes): GVAR(base) {
+    GVAR(function) = QFUNC(gui_checkboxes);
+    class controls: controls {
+        class Label: Label {};
+        class Background: EGVAR(common,RscBackground) {
+            idc = IDC_ATTRIBUTE_BACKGROUND;
+            h = POS_H(1);
+        };
+        // Checkboxes created through script based on value info
     };
 };
 
@@ -170,6 +183,7 @@ class GVAR(toolbox): GVAR(base) {
 };
 
 class GVAR(RscToolbox): ctrlToolbox {
+    idc = -1;
     x = POS_W(10.1);
     y = 0;
     w = POS_W(15.9);
