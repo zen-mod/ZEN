@@ -3,7 +3,6 @@ PREP(addButton);
 PREP(addDisplay);
 PREP(compileWaypoints);
 PREP(confirm);
-PREP(gui_checkbox);
 PREP(gui_checkboxes);
 PREP(gui_code);
 PREP(gui_combo);

@@ -73,16 +73,6 @@ class GVAR(base): RscControlsGroupNoScrollbars {
     };
 };
 
-class GVAR(checkbox): GVAR(base) {
-    GVAR(function) = QFUNC(gui_checkbox);
-    class controls: controls {
-        class Label: Label {};
-        class CheckBox: EGVAR(common,RscCheckBox) {
-            idc = IDC_ATTRIBUTE_CHECKBOX;
-        };
-    };
-};
-
 class GVAR(checkboxes): GVAR(base) {
     GVAR(function) = QFUNC(gui_checkboxes);
     class controls: controls {

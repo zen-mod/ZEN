@@ -796,8 +796,8 @@ if (isClass (configFile >> "CfgPatches" >> "ace_explosives")) then {
 [
     "Sensors",
     ["STR_3DEN_Object_Attribute_ReportRemoteTargets_displayName", "STR_3DEN_Object_Attribute_ReportRemoteTargets_tooltip"],
-    QGVAR(checkbox),
-    nil,
+    QGVAR(toolbox),
+    [1, 2, [ELSTRING(common,Disabled), ELSTRING(common,Enabled)]],
     {
         {
             [QEGVAR(common,setVehicleReportRemoteTargets), [_x, _value], _x] call CBA_fnc_targetEvent;
@@ -809,8 +809,8 @@ if (isClass (configFile >> "CfgPatches" >> "ace_explosives")) then {
 [
     "Sensors",
     ["STR_3DEN_Object_Attribute_ReceiveRemoteTargets_displayName", "STR_3DEN_Object_Attribute_ReceiveRemoteTargets_tooltip"],
-    QGVAR(checkbox),
-    nil,
+    QGVAR(toolbox),
+    [1, 2, [ELSTRING(common,Disabled), ELSTRING(common,Enabled)]],
     {
         {
             [QEGVAR(common,setVehicleReceiveRemoteTargets), [_x, _value], _x] call CBA_fnc_targetEvent;
@@ -822,8 +822,8 @@ if (isClass (configFile >> "CfgPatches" >> "ace_explosives")) then {
 [
     "Sensors",
     ["STR_3DEN_Object_Attribute_ReportOwnPosition_displayName", "STR_3DEN_Object_Attribute_ReportOwnPosition_tooltip"],
-    QGVAR(checkbox),
-    nil,
+    QGVAR(toolbox),
+    [1, 2, [ELSTRING(common,Disabled), ELSTRING(common,Enabled)]],
     {
         {
             [QEGVAR(common,setVehicleReportOwnPosition), [_x, _value], _x] call CBA_fnc_targetEvent;
