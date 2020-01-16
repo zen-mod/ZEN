@@ -2,7 +2,7 @@
 /*
  * Author: Bohemia Interactive, mharis001
  * Shows the Zeus attribute display for an entity.
- * Edited to work with the ZEN attributes framework.
+ * Edited for compatibility with the ZEN attributes framework.
  *
  * Arguments:
  * 0: Entity <OBJECT|GROUP|ARRAY|STRING>

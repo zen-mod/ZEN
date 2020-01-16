@@ -19,4 +19,3 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWaypointTypes.hpp"
 #include "gui.hpp"
-#include "RscAttributes.hpp"

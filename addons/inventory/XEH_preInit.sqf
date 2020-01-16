@@ -9,7 +9,7 @@ PREP_RECOMPILE_END;
 // Disable CBA inventory attribute preload
 uiNamespace setVariable ["cba_ui_curatorItemCache", []];
 
-// Add inventory button to Object attributes display
+// Add inventory button to attribute display
 [
     "Object",
     "STR_A3_Gear1",

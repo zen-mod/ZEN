@@ -3,6 +3,7 @@ class RscEdit;
 class RscCheckBox;
 class RscButtonMenuOK;
 class RscButtonMenuCancel;
+class RscControlsGroupNoScrollbars;
 
 class RscCombo {
     class ComboScrollBar;
@@ -106,7 +107,7 @@ class GVAR(RscDisplay) {
             w = POS_W(27);
             colorBackground[] = {0, 0, 0, 0.7};
         };
-        class Content: GVAR(RscControlsGroup) {
+        class Content: RscControlsGroupNoScrollbars {
             idc = IDC_CONTENT;
             x = POS_X(7);
             w = POS_W(26);
