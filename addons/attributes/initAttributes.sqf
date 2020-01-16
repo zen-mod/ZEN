@@ -150,8 +150,8 @@
     LSTRING(Engine),
     QGVAR(icons),
     [[
-        [QPATHTOF(ui\engine_on_ca.paa),  LSTRING(TurnOn),  14.5, 0.25, 2],
-        [QPATHTOF(ui\engine_off_ca.paa), LSTRING(TurnOff), 19.5, 0.25, 2]
+        [QPATHTOF(ui\engine_on_ca.paa),  ELSTRING(common,On),  14.5, 0.25, 2],
+        [QPATHTOF(ui\engine_off_ca.paa), ELSTRING(common,Off), 19.5, 0.25, 2]
     ]],
     {
         private _state = _value == 0;
@@ -168,8 +168,8 @@
     LSTRING(Lights),
     QGVAR(icons),
     [[
-        [QPATHTOF(ui\lights_on_ca.paa),  LSTRING(TurnOn),  14.5, 0.25, 2],
-        [QPATHTOF(ui\lights_off_ca.paa), LSTRING(TurnOff), 19.5, 0.25, 2]
+        [QPATHTOF(ui\lights_on_ca.paa),  ELSTRING(common,On),  14.5, 0.25, 2],
+        [QPATHTOF(ui\lights_off_ca.paa), ELSTRING(common,Off), 19.5, 0.25, 2]
     ]],
     {
         private _state = _value == 0;

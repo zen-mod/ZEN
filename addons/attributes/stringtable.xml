@@ -23,12 +23,6 @@
             <Portuguese>Luzes</Portuguese>
             <Japanese>ライト</Japanese>
         </Key>
-        <Key ID="STR_ZEN_Attributes_TurnOn">
-            <English>Turn On</English>
-        </Key>
-        <Key ID="STR_ZEN_Attributes_TurnOff">
-            <English>Turn Off</English>
-        </Key>
         <Key ID="STR_ZEN_Attributes_LockedForPlayers">
             <English>Locked For Players</English>
         </Key>
