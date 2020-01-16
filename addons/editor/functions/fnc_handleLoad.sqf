@@ -137,6 +137,7 @@ GVAR(iconsVisible) = true;
 
         if (isNull _display) exitWith {};
 
+        [_display] call FUNC(addGroupIcons);
         [_display] call FUNC(declutterEmptyTree);
 
         {
