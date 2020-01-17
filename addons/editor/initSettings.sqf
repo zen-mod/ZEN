@@ -35,6 +35,15 @@
 ] call CBA_settings_fnc_init;
 
 [
+    QGVAR(addGroupIcons),
+    "CHECKBOX",
+    [LSTRING(AddGroupIcons), LSTRING(AddGroupIcons_Description)],
+    ELSTRING(common,Category),
+    false,
+    false
+] call CBA_settings_fnc_init;
+
+[
     QGVAR(unitRadioMessages),
     "LIST",
     [LSTRING(UnitRadioMessages), LSTRING(UnitRadioMessages_Description)],
