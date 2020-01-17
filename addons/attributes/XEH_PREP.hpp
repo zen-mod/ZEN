@@ -1,6 +1,7 @@
 PREP(addAttribute);
 PREP(addButton);
 PREP(addDisplay);
+PREP(check);
 PREP(compileWaypoints);
 PREP(confirm);
 PREP(gui_checkboxes);

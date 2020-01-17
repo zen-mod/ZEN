@@ -172,41 +172,5 @@ _ctrlButtonCancel ctrlCommit 0;
 
 // Handle closing the display if the entity is no longer valid
 if (_checkEntity) then {
-    private _fnc_closeDisplay = {
-        params ["_display"];
-
-        _display closeDisplay IDC_CANCEL;
-    };
-
-    switch (true) do {
-        case (_entity isEqualType objNull): {
-            [{
-                params ["_display", "_entity", "_wasAlive"];
-
-                isNull _display || {_wasAlive && {!alive _entity}}
-            }, _fnc_closeDisplay, [_display, _entity, alive _entity]] call CBA_fnc_waitUntilAndExecute;
-        };
-        case (_entity isEqualType grpNull): {
-            [{
-                params ["_display", "_entity"];
-
-                isNull _display || {isNull _entity}
-            }, _fnc_closeDisplay, [_display, _entity]] call CBA_fnc_waitUntilAndExecute;
-        };
-        case (_entity isEqualType []): {
-            _entity params ["_group"];
-            [{
-                params ["_display", "_entity", "_waypointCount"];
-
-                isNull _display || {count waypoints _entity != _waypointCount}
-            }, _fnc_closeDisplay, [_display, _group, count waypoints _group]] call CBA_fnc_waitUntilAndExecute;
-        };
-        case (_entity isEqualType ""): {
-            [{
-                params ["_display", "_entity"];
-
-                isNull _display || {markerType _entity == ""}
-            }, _fnc_closeDisplay, [_display, _entity]] call CBA_fnc_waitUntilAndExecute;
-        };
-    };
+    [_display, _entity] call FUNC(check);
 };
