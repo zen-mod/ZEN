@@ -139,26 +139,24 @@ class EGVAR(context_menu,actions) {
     };
     class Captives {
         displayName = "$STR_ACE_Captives_DisplayName";
-        condition = QUOTE( \
-            isClass (configFile >> 'CfgPatches' >> 'ace_captives') \
-            && {isClass (configFile >> 'CfgPatches' >> 'ace_zeus')} \
-            && {_selectedObjects findIf {_x isKindOf 'CAManBase' && {alive _x}} != -1});
+        condition = QUOTE(isClass (configFile >> 'CfgPatches' >> 'ace_captives'));
         priority = -60;
         class ToggleCaptive {
-            displayName = "$STR_ACE_Zeus_ModuleCaptive_DisplayName";
+            displayName = CSTRING(Captive);
             statement = QUOTE(_selectedObjects call FUNC(toggleCaptive));
-            icon = "\z\ace\addons\zeus\UI\Icon_Module_Zeus_Captive_ca.paa";
+            condition = QUOTE(_selectedObjects findIf {_x isKindOf 'CAManBase' && {alive _x}} != -1);
+            icon = "\z\ace\addons\captives\UI\handcuff_ca.paa";
             priority = 2;
         };
         class ToggleSurrender {
-            displayName = "$STR_ACE_Zeus_ModuleSurrender_DisplayName";
+            displayName = CSTRING(Surrender);
             statement = QUOTE(_selectedObjects call FUNC(toggleSurrender));
             condition = QUOTE(_selectedObjects findIf { \
                 _x isKindOf 'CAManBase' \
                 && { alive _x } \
                 && {!(_x getVariable [ARR_2('ace_captives_isHandcuffed',false)])} \
             } != -1);
-            icon = "\z\ace\addons\zeus\UI\Icon_Module_Zeus_Surrender_ca.paa";
+            icon = "\z\ace\addons\captives\UI\Surrender_ca.paa";
             priority = 1;
         };
     };

@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Eclipser
- * Toggles ACE captive states of units
+ * Toggles the ACE captive state of the given units.
  *
  * Arguments:
  * 0: Objects <ARRAY>
@@ -17,7 +17,7 @@
 
 private _units = _this select {
     alive _x
-    && { _x isKindOf "CAManBase" }
+    && {_x isKindOf "CAManBase"}
 };
 
 {

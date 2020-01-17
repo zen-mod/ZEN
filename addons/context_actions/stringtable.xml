@@ -77,5 +77,37 @@
         <Key ID="STR_ZEN_Context_Actions_250m">
             <English>250 m</English>
         </Key>
+        <Key ID="STR_ZEN_Context_Actions_Captive">
+            <English>Toggle Captive</English>
+            <Polish>Przełącz więźnia</Polish>
+            <Spanish>Alternar cautivo</Spanish>
+            <Czech>Přepnout - Vězeň</Czech>
+            <German>Gefangennahme umschalten</German>
+            <Portuguese>Alternar prisioneiro</Portuguese>
+            <French>Commuter captivité</French>
+            <Hungarian>Elfogott állapot váltása</Hungarian>
+            <Russian>Пленный (вкл./выкл.)</Russian>
+            <Italian>Attivatore Prigioniero</Italian>
+            <Japanese>捕虜に切り替え</Japanese>
+            <Korean>포로 토글</Korean>
+            <Chinesesimp>切换俘虏</Chinesesimp>
+            <Chinese>切換俘虜</Chinese>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_Surrender">
+            <English>Toggle Surrender</English>
+            <Polish>Przełącz kapitulację</Polish>
+            <Spanish>Alternar rendición</Spanish>
+            <Czech>Přepnout - Vzdávání</Czech>
+            <German>Aufgabe umschalten</German>
+            <Portuguese>Alternar rendição</Portuguese>
+            <French>Commuter capitulation</French>
+            <Hungarian>Kapituláló állapot váltása</Hungarian>
+            <Russian>Сдавшийся (вкл./выкл.)</Russian>
+            <Italian>Attivatore Resa</Italian>
+            <Japanese>投降として切り替え</Japanese>
+            <Korean>항복 토글</Korean>
+            <Chinesesimp>切换投降</Chinesesimp>
+            <Chinese>切換投降</Chinese>
+        </Key>
     </Package>
 </Project>
