@@ -17,4 +17,6 @@
 
 params ["_entity"];
 
-_entity isEqualType objNull && {alive _entity} && {getNumber (configFile >> "CfgVehicles" >> typeOf _entity >> "maximumLoad") > 0}
+_entity isEqualType objNull
+&& {alive _entity}
+&& {getNumber (configFile >> "CfgVehicles" >> typeOf _entity >> "maximumLoad") > 0}

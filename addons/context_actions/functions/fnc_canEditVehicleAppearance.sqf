@@ -17,4 +17,6 @@
 
 params ["_entity"];
 
-_entity isEqualType objNull && {alive _entity} && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}
+_entity isEqualType objNull
+&& {alive _entity}
+&& {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}
