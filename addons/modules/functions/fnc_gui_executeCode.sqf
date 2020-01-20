@@ -101,8 +101,12 @@ private _fnc_onConfirm = {
             [QEGVAR(common,execute), [_code, _args]] call CBA_fnc_globalEvent;
         };
         case 3: {
-            private _jipID = [_args, _code] remoteExec ["call", 0, _logic];
-            _logic setName format ["JIP ID: %1", _jipID];
+            private _jipID = [QEGVAR(common,execute), [_code, _args]] call CBA_fnc_globalEventJIP;
+            [_jipID, _logic] call CBA_fnc_removeGlobalEventJIP;
+
+            private _jipID = [QEGVAR(common,setName), [_logic, format ["JIP ID - %1", _jipID]]] call CBA_fnc_globalEventJIP;
+            [_jipID, _logic] call CBA_fnc_removeGlobalEventJIP;
+
             _delete = false;
         };
     };
