@@ -11,7 +11,7 @@
  * Display Opened <BOOL>
  *
  * Example:
- * [player] call BIS_fnc_showCuratorAttributes
+ * [_object] call BIS_fnc_showCuratorAttributes
  *
  * Public: No
  */
@@ -40,16 +40,16 @@ if (_entity isEqualType objNull) then {
 
         if (_attributes isEqualTo []) then {
             false breakOut "Main";
-        } else {
-            BIS_fnc_initCuratorAttributes_target = _entity;
-            BIS_fnc_initCuratorAttributes_attributes = _attributes;
-            (createDialog _infoType) breakOut "Main";
         };
+
+        BIS_fnc_initCuratorAttributes_target = _entity;
+        BIS_fnc_initCuratorAttributes_attributes = _attributes;
+        (createDialog _infoType) breakOut "Main";
     };
 };
 
-// Exit if the entity is a logic side group
-if (_entity isEqualType grpNull && {side _entity == sideLogic}) exitWith {false};
+// Exit if opening attributes is disabled for this group or if it is a logic side group
+if (_entity isEqualType grpNull && {_entity getVariable [QGVAR(disabled), false] || {side _entity == sideLogic}}) exitWith {false};
 
 private _type = switch (true) do {
     case (_entity isEqualType objNull): {"Object"};
