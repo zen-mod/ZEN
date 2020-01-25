@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Populates the listbox with items from the current category.
+ * Refreshes the list by populating it with items based on the current category.
  *
  * Arguments:
  * 0: Display <DISPLAY>
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [DISPLAY] call zen_inventory_fnc_fillList
+ * [DISPLAY] call zen_inventory_fnc_refreshList
  *
  * Public: No
  */
@@ -21,26 +21,22 @@ private _itemsList = uiNamespace getVariable QGVAR(itemsList);
 private _category = lbCurSel (_display displayCtrl IDC_CATEGORY) - 1;
 private _filter = toLower ctrlText (_display displayCtrl IDC_SEARCH_BAR);
 
-// Clear the listbox
+// Clear the list
 private _ctrlList = _display displayCtrl IDC_LIST;
 lnbClear _ctrlList;
 
-// Handle current cargo, no specific category
+// No specific category, process all items in current cargo
 if (_category == -1) then {
+    private _cfgGlasses   = configFile >> "CfgGlasses";
     private _cfgMagazines = configFile >> "CfgMagazines";
     private _cfgVehicles  = configFile >> "CfgVehicles";
-    private _cfgGlassess  = configFile >> "CfgGlasses";
     private _cfgWeapons   = configFile >> "CfgWeapons";
 
-    private _cargo = _display getVariable QGVAR(cargo);
-
     {
-        _x params ["_cargoItems", "_cargoCounts"];
+        _x params ["_types", "_counts"];
 
         {
-            private _count = _cargoCounts select _forEachIndex;
-
-            // Get appropriate config for each item (items can be from any category)
+            // Get appropriate config for each item, items can be from any category
             private _config = switch (true) do {
                 case (_x in (_itemsList select 7));
                 case (_x in (_itemsList select 20));
@@ -51,26 +47,27 @@ if (_category == -1) then {
                     _cfgVehicles >> _x;
                 };
                 case (_x in (_itemsList select 12)): {
-                    _cfgGlassess >> _x;
+                    _cfgGlasses >> _x;
                 };
                 default {
                     _cfgWeapons >> _x;
                 };
             };
 
-            // Add item to listbox if not filtered
             private _displayName = getText (_config >> "displayName");
+
+            // Check if the item is matches the current filter
             if (_filter in toLower _displayName) then {
                 private _picture = getText (_config >> "picture");
                 private _tooltip = format ["%1\n%2", _displayName, _x];
 
-                private _index = _ctrlList lnbAddRow ["", _displayName, str _count];
+                private _index = _ctrlList lnbAddRow ["", _displayName, str (_counts select _forEachIndex)];
                 _ctrlList lnbSetData    [[_index, 0], _x];
                 _ctrlList lnbSetPicture [[_index, 0], _picture];
                 _ctrlList lbSetTooltip  [_index * count lnbGetColumnsPosition _ctrlList, _tooltip];
             };
-        } forEach _cargoItems;
-    } forEach _cargo;
+        } forEach _types;
+    } forEach (_display getVariable QGVAR(cargo));
 } else {
     // Get config for current category
     private _config = switch (true) do {
@@ -88,24 +85,25 @@ if (_category == -1) then {
         };
     };
 
-    // Get cargo for current category
-    private _categoryCargo = [_display] call FUNC(getCargo);
-    _categoryCargo params ["_cargoItems", "_cargoCounts"];
+    // Get cargo for the current category
+    (_display call FUNC(getCargo)) params ["_types", "_counts"];
 
     {
-        // Add item to listbox if not filtered
-        private _displayName = getText (_config >> _x >> "displayName");
+        private _config = _config >> _x;
+        private _displayName = getText (_config >> "displayName");
+
+        // Check if the item is matches the current filter
         if (_filter in toLower _displayName) then {
-            private _picture = getText (_config >> _x >> "picture");
+            private _picture = getText (_config >> "picture");
             private _tooltip = format ["%1\n%2", _displayName, _x];
             private _count = "0";
             private _alpha = 0.5;
 
-            // Get item count and increase alpha if item is in cargo
-            private _itemIndex = _cargoItems find _x;
+            // Get item count and increase alpha if the item is in cargo
+            private _itemIndex = _types find _x;
 
             if (_itemIndex != -1) then {
-                _count = str (_cargoCounts select _itemIndex);
+                _count = str (_counts select _itemIndex);
                 _alpha = 1;
             };
 
@@ -119,6 +117,8 @@ if (_category == -1) then {
     } forEach (_itemsList select _category);
 };
 
+// Sort the list by item name
 _ctrlList lnbSort [1];
 
+// Update list buttons
 [_display] call FUNC(updateButtons);

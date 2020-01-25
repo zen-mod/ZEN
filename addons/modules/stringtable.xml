@@ -521,10 +521,7 @@
             <Japanese>ダメージ状態</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_DamageState_Tooltip">
-            <English>Selects the damage state to apply.\nIn nearest mode, only damage states that the nearest building supports are selectable.\nIn radius mode, the module will default to undamaged if a building does not support the selected state.</English>
-            <German>Wählt den anzuwendenden Schadenszustand aus. Im "Nächsten" Modus wird nur das nächstgelegene Gebäude ausgewählt. Im "Radius" Modus wird das Modul standardmäßig auf unbeschädigt gesetzt, wenn ein Gebäude den ausgewählten Zustand nicht unterstützt.</German>
-            <Polish>Wybiera stopień zniszczenia do zastosowania.\nW trybie wyszukiwania najbliżej można wybrać tylko stopnie zniszczenia wspierane przez najbliższy budynek.\nW trybie wyszukiwania w promieniu domyślny stopień zniszczenia to nieuszkodzony, jeśli budynek nie wspiera wybranego stopnia zniszczenia.</Polish>
-            <Japanese>適用するダメージを選択します。\n近傍モードでは選択可能な対応している近くの建物にだけダメージを与えます。\n範囲モードでは非対応の建物が選択されていても標準でダメージを与えません。</Japanese>
+            <English>Selects the damage state to apply.\nIn nearest mode, only damage states that the nearest building supports are selectable.\nIn radius mode, the selected damage state will be applied only to buildings that support it.</English>
         </Key>
         <Key ID="STR_ZEN_Modules_DestructionEffects">
             <English>Destruction Effects</English>
@@ -534,7 +531,7 @@
             <Japanese>破壊エフェクト</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_DestructionEffects_Tooltip">
-            <English>WARNING: Enabling destruction effects when using the module on a\nlarge amount of buildings can create a lot of lag.</English>
+            <English>WARNING: Enabling destruction effects when using the module on a large amount of buildings can create a lot of lag.</English>
             <Russian>ПРЕДУПРЕЖДЕНИЕ: включение эффектов разрушения\nдля большого количества зданий\nможет привести к серьёзным\nзадержкам в управлении</Russian>
             <German>WARNUNG: Das Aktivieren von Zerstörungseffekten für eine größere Anzahl von Gebäuden kann zu erheblichem Ruckeln führen.</German>
             <Polish>OSTRZEŻENIE: Włączenie efektów zniszczenia na wielu budynkach jednocześnie może spowodować bardzo duży lag.</Polish>
@@ -643,33 +640,12 @@
             <Polish>USS Liberty</Polish>
             <Japanese>USS リバティー</Japanese>
         </Key>
-        <Key ID="STR_ZEN_Modules_ModuleAttachEffect">
+        <Key ID="STR_ZEN_Modules_AttachEffect">
             <English>Attach/Detach Effect</English>
             <Russian>Прикрепить/открепить эффект</Russian>
             <German>Effekt anhängen/abtrennen</German>
             <Polish>Przyczep/Odczep efekt</Polish>
             <Japanese>取り付け/外しエフェクト</Japanese>
-        </Key>
-        <Key ID="STR_ZEN_Modules_ModuleAttachEffect_Target">
-            <English>Target</English>
-            <Russian>Цель</Russian>
-            <German>Ziel</German>
-            <Polish>Cel</Polish>
-            <Japanese>目標</Japanese>
-        </Key>
-        <Key ID="STR_ZEN_Modules_ModuleAttachEffect_SelectedGroup">
-            <English>Selected Group</English>
-            <Russian>Выбранная группа</Russian>
-            <German>Ausgewählte Gruppe</German>
-            <Polish>Wybrana grupa</Polish>
-            <Japanese>選択済みグループ</Japanese>
-        </Key>
-        <Key ID="STR_ZEN_Modules_ModuleAttachEffect_Effect">
-            <English>Effect</English>
-            <Russian>Эффект</Russian>
-            <German>Effekt</German>
-            <Polish>Efekt</Polish>
-            <Japanese>エフェクト</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSetDate">
             <English>Set Date</English>
@@ -1284,12 +1260,6 @@
             <Polish>Pojazd artyleryjski nie ma strzelca</Polish>
             <Japanese>砲撃車両に射手がいません</Japanese>
         </Key>
-        <Key ID="STR_ZEN_Modules_ModuleFireMission_NotInRange">
-            <English>Target is not in range</English>
-            <German>Ziel ist nicht in Reichweite</German>
-            <Polish>Cel jest poza zasięgiem</Polish>
-            <Japanese>目標は射程外です</Japanese>
-        </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_ArtilleryETA">
             <English>Artillery ETA: %1 seconds</English>
             <German>Zeit bis zum Einschlag: %1 Sekunden</German>
@@ -1319,12 +1289,6 @@
             <German>Zielmodul</German>
             <Polish>Moduł celu</Polish>
             <Japanese>目標モジュール</Japanese>
-        </Key>
-        <Key ID="STR_ZEN_Modules_ModuleFireMission_Target">
-            <English>Target</English>
-            <German>Ziel</German>
-            <Polish>Cel</Polish>
-            <Japanese>目標</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Spread">
             <English>Spread</English>
@@ -1882,6 +1846,9 @@
             <German>Es gibt keine Zielmodule, platzieren Sie zuerst ein Zielmodul</German>
             <Polish>Brak modułów celu, najpierw ustaw moduł celu</Polish>
             <Japanese>モジュールの目標が無い為、何か設置して下さい。</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Modules_NotInRangeOfArtillery">
+            <English>Target position is not in range for all vehicles</English>
         </Key>
         <Key ID="STR_ZEN_Modules_PlaceAnLZ">
             <English>Place an LZ</English>

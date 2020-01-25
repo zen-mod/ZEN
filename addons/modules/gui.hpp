@@ -1,10 +1,8 @@
 class RscText;
 class RscEdit;
 class RscCombo;
-class RscFrame;
 class RscPicture;
 class RscListBox;
-class RscCheckBox;
 class RscEditMulti;
 class RscStructuredText;
 class RscControlsGroup;
@@ -21,7 +19,9 @@ class ctrlButtonPictureKeepAspect;
 class EGVAR(common,RscLabel);
 class EGVAR(common,RscBackground);
 class EGVAR(common,RscEdit);
+class EGVAR(common,RscCheckbox);
 class EGVAR(common,RscCombo);
+class EGVAR(common,RscControlsGroup);
 
 class EGVAR(common,RscDisplay) {
     class controls {
@@ -31,6 +31,12 @@ class EGVAR(common,RscDisplay) {
         class ButtonOK;
         class ButtonCancel;
     };
+};
+
+class GVAR(RscDisplay): EGVAR(common,RscDisplay) {
+    onLoad = QUOTE(call FUNC(initDisplay));
+    function = "";
+    checkLogic = 0;
 };
 
 class GVAR(RscToolboxYesNo): ctrlToolbox {
@@ -70,8 +76,8 @@ class GVAR(RscLightSourceHelper) {
     onLoad = QUOTE(call FUNC(moduleLightSource));
 };
 
-class GVAR(RscAmbientFlyby): EGVAR(common,RscDisplay) {
-    onLoad = QUOTE(call EFUNC(common,initDisplay); call FUNC(gui_ambientFlyby));
+class GVAR(RscAmbientFlyby): GVAR(RscDisplay) {
+    function = QFUNC(gui_ambientFlyby);
     class controls: controls {
         class Title: Title {};
         class Background: Background {};
@@ -102,29 +108,11 @@ class GVAR(RscAmbientFlyby): EGVAR(common,RscDisplay) {
                             w = POS_W(8.9);
                             colorBackground[] = {0, 0, 0, 0.7};
                         };
-                        class SideCombo: EGVAR(common,RscCombo) {
+                        class SideCombo: GVAR(RscSidesCombo) {
                             idc = IDC_AMBIENTFLYBY_SIDE;
                             x = POS_W(12);
                             y = POS_H(1.1);
                             w = POS_W(11);
-                            class Items {
-                                class BLUFOR {
-                                    text = "$STR_West";
-                                    picture = ICON_BLUFOR;
-                                };
-                                class OPFOR {
-                                    text = "$STR_East";
-                                    picture = ICON_OPFOR;
-                                };
-                                class Independent {
-                                    text = "$STR_Guerrila";
-                                    picture = ICON_INDEPENDENT;
-                                };
-                                class Civilian {
-                                    text = "$STR_Civilian";
-                                    picture = ICON_CIVILIAN;
-                                };
-                            };
                         };
                         class FactionLabel: SideLabel {
                             text = ECSTRING(common,Faction);
@@ -237,99 +225,9 @@ class GVAR(RscAmbientFlyby): EGVAR(common,RscDisplay) {
     };
 };
 
-class GVAR(RscAttachEffect): EGVAR(common,RscDisplay) {
-    onLoad = QUOTE(call EFUNC(common,initDisplay); call FUNC(gui_attachEffect));
-    class controls: controls {
-        class Title: Title {};
-        class Background: Background {};
-        class Content: Content {
-            h = POS_H(7.5);
-            class controls {
-                class TargetLabel: EGVAR(common,RscLabel) {
-                    text = CSTRING(ModuleAttachEffect_Target);
-                };
-                class Target: EGVAR(common,RscCombo) {
-                    idc = IDC_ATTACHEFFECT_TARGET;
-                    class Items {
-                        class Group {
-                            text = CSTRING(ModuleAttachEffect_SelectedGroup);
-                            picture = ICON_GROUP;
-                            default = 1;
-                        };
-                        class BLUFOR {
-                            text = "$STR_WEST";
-                            picture = ICON_BLUFOR;
-                        };
-                        class OPFOR {
-                            text = "$STR_EAST";
-                            picture = ICON_OPFOR;
-                        };
-                        class Independent {
-                            text = "$STR_guerrila";
-                            picture = ICON_INDEPENDENT;
-                        };
-                        class Civilian {
-                            text = "$STR_Civilian";
-                            picture = ICON_CIVILIAN;
-                        };
-                    };
-                };
-                class EffectLabel: EGVAR(common,RscLabel) {
-                    text = CSTRING(ModuleAttachEffect_Effect);
-                    y = POS_H(1.1);
-                    w = POS_W(26);
-                };
-                class Effect: RscListBox {
-                    idc = IDC_ATTACHEFFECT_EFFECT;
-                    x = 0;
-                    y = POS_H(2.1);
-                    w = POS_W(26);
-                    h = POS_H(5.4);
-                    sizeEx = POS_H(0.9);
-                    class Items {
-                        class None {
-                            text = "$STR_A3_None";
-                            picture = QPATHTOF(ui\none_ca.paa);
-                            data = "";
-                            colorPictureSelected[] = {0, 0, 0, 1};
-                            default = 1;
-                        };
-                        class Strobe {
-                            text = "$STR_A3_CFGMAGAZINES_IR_GRENADE_DNS";
-                            picture = "\a3\Modules_F_Curator\Data\portraitIRGrenade_ca.paa";
-                            data = "O_IRStrobe";
-                        };
-                        class Blue {
-                            text = "$STR_A3_CFGMAGAZINES_CHEMLIGHTT_BLUE_DNS";
-                            picture = "\a3\Modules_F_Curator\Data\portraitChemlightBlue_ca.paa";
-                            data = "Chemlight_Blue";
-                        };
-                        class Green {
-                            text = "$STR_A3_CfgMagazines_Chemlight_dns";
-                            picture = "\a3\Modules_F_Curator\Data\portraitChemlightGreen_ca.paa";
-                            data = "Chemlight_Green";
-                        };
-                        class Red {
-                            text = "$STR_A3_CFGMAGAZINES_CHEMLIGHTT_RED_DNS";
-                            picture = "\a3\Modules_F_Curator\Data\portraitChemlightRed_ca.paa";
-                            data = "Chemlight_Red";
-                        };
-                        class Yellow {
-                            text = "$STR_A3_CFGMAGAZINES_CHEMLIGHTT_YELLOW_DNS";
-                            picture = "\a3\Modules_F_Curator\Data\portraitChemlightYellow_ca.paa";
-                            data = "Chemlight_Yellow";
-                        };
-                    };
-                };
-            };
-        };
-        class ButtonOK: ButtonOK {};
-        class ButtonCancel: ButtonCancel {};
-    };
-};
-
-class GVAR(RscCAS): EGVAR(common,RscDisplay) {
-    onLoad = QUOTE(call EFUNC(common,initDisplay); call FUNC(gui_cas));
+class GVAR(RscCAS): GVAR(RscDisplay) {
+    function = QFUNC(gui_cas);
+    checkLogic = 1;
     class controls: controls {
         class Title: Title {};
         class Background: Background {};
@@ -361,8 +259,8 @@ class GVAR(RscCAS): EGVAR(common,RscDisplay) {
     };
 };
 
-class GVAR(RscDamageBuildings): EGVAR(common,RscDisplay) {
-    onLoad = QUOTE(call EFUNC(common,initDisplay); call FUNC(gui_damageBuildings));
+class GVAR(RscDamageBuildings): GVAR(RscDisplay) {
+    function = QFUNC(gui_damageBuildings);
     class controls: controls {
         class Title: Title {};
         class Background: Background {};
@@ -406,7 +304,7 @@ class GVAR(RscDamageBuildings): EGVAR(common,RscDisplay) {
                     x = POS_W(20.2);
                     w = POS_W(5.8);
                 };
-                class Undamaged: RscCheckBox {
+                class Undamaged: EGVAR(common,RscCheckbox) {
                     idc = IDC_DAMAGEBUILDINGS_UNDAMAGED;
                     tooltip = "$STR_a3_to_editTerrainObject15";
                     x = POS_W(10.1);
@@ -461,8 +359,8 @@ class GVAR(RscDamageBuildings): EGVAR(common,RscDisplay) {
     };
 };
 
-class GVAR(RscEditableObjects): EGVAR(common,RscDisplay) {
-    onLoad = QUOTE(call EFUNC(common,initDisplay); call FUNC(gui_editableObjects));
+class GVAR(RscEditableObjects): GVAR(RscDisplay) {
+    function = QFUNC(gui_editableObjects);
     class controls: controls {
         class Title: Title {};
         class Background: Background {};
@@ -573,8 +471,9 @@ class GVAR(RscEditableObjects): EGVAR(common,RscDisplay) {
     };
 };
 
-class GVAR(RscExecuteCode): EGVAR(common,RscDisplay) {
-    onLoad = QUOTE(call EFUNC(common,initDisplay); call FUNC(gui_executeCode));
+class GVAR(RscExecuteCode): GVAR(RscDisplay) {
+    function = QFUNC(gui_executeCode);
+    checkLogic = 1;
     class controls: controls {
         class Title: Title {};
         class Background: Background {};
@@ -623,8 +522,8 @@ class GVAR(RscExecuteCode): EGVAR(common,RscDisplay) {
     };
 };
 
-class GVAR(RscFireMission): EGVAR(common,RscDisplay) {
-    onLoad = QUOTE(call EFUNC(common,initDisplay); call FUNC(gui_fireMission));
+class GVAR(RscFireMission): GVAR(RscDisplay) {
+    function = QFUNC(gui_fireMission);
     class controls: controls {
         class Title: Title {};
         class Background: Background {};
@@ -735,35 +634,35 @@ class GVAR(RscFireMission): EGVAR(common,RscDisplay) {
     };
 };
 
-class GVAR(RscGlobalHint): EGVAR(common,RscDisplay) {
-    onLoad = QUOTE(call EFUNC(common,initDisplay); call FUNC(gui_globalHint));
+class GVAR(RscGlobalHint): GVAR(RscDisplay) {
+    function = QFUNC(gui_globalHint);
     class controls: controls {
         class Title: Title {};
         class Background: Background {};
         class Content: Content {
-            h = POS_H(6);
+            h = POS_H(10);
             class controls {
                 class Edit: RscEditMulti {
                     idc = IDC_GLOBALHINT_EDIT;
                     x = pixelW;
                     y = pixelH;
-                    w = POS_W(13) - pixelW;
-                    h = POS_H(6) - pixelH;
+                    w = POS_W(13.2) - pixelW;
+                    h = POS_H(10) - pixelH;
                     colorBackground[] = {0.25, 0.25, 0.25, 0.1};
                 };
-                class Container: RscControlsGroup {
+                class Container: EGVAR(common,RscControlsGroup) {
                     idc = -1;
-                    x = POS_W(13.1);
+                    x = POS_W(13.3);
                     y = 0;
-                    w = POS_W(12.9);
-                    h = POS_H(6);
+                    w = POS_W(12.7);
+                    h = POS_H(10);
                     class controls {
                         class Preview: RscStructuredText {
                             idc = IDC_GLOBALHINT_PREVIEW;
                             x = 0;
                             y = 0;
                             w = POS_W(12.2);
-                            h = 2 * safeZoneH;
+                            h = 1;
                             size = POS_H(0.9); // Trial and error to get best representation of actual hint
                             colorBackground[] = {0, 0, 0, 0.6};
                             class Attributes {
@@ -783,8 +682,8 @@ class GVAR(RscGlobalHint): EGVAR(common,RscDisplay) {
     };
 };
 
-class GVAR(RscSetDate): EGVAR(common,RscDisplay) {
-    onLoad = QUOTE(call EFUNC(common,initDisplay); call FUNC(gui_setDate));
+class GVAR(RscSetDate): GVAR(RscDisplay) {
+    function = QFUNC(gui_setDate);
     class controls: controls {
         class Title: Title {};
         class Background: Background {};
@@ -926,16 +825,6 @@ class GVAR(RscSetDate): EGVAR(common,RscDisplay) {
                     border = "\a3\3DEN\Data\Attributes\SliderTimeDay\border_ca.paa";
                     thumb  = "\a3\3DEN\Data\Attributes\SliderTimeDay\thumb_ca.paa";
                 };
-                /*
-                class Frame: RscFrame {
-                    idc = -1;
-                    x = POS_W(16.1);
-                    y = POS_H(4.6);
-                    w = POS_W(6);
-                    h = POS_H(1);
-                    colorText[] = {0.75, 0.75, 0.75, 1};
-                };
-                */
                 class Separator: RscText {
                     idc = -1;
                     style = ST_CENTER;
@@ -977,8 +866,8 @@ class GVAR(RscSetDate): EGVAR(common,RscDisplay) {
     };
 };
 
-class GVAR(RscSideRelations): EGVAR(common,RscDisplay) {
-    onLoad = QUOTE(call EFUNC(common,initDisplay); call FUNC(gui_sideRelations));
+class GVAR(RscSideRelations): GVAR(RscDisplay) {
+    function = QFUNC(gui_sideRelations);
     class controls: controls {
         class Title: Title {};
         class Background: Background {};
@@ -1046,8 +935,8 @@ class GVAR(RscSideRelations): EGVAR(common,RscDisplay) {
     };
 };
 
-class GVAR(RscSpawnReinforcements): EGVAR(common,RscDisplay) {
-    onLoad = QUOTE(call EFUNC(common,initDisplay); call FUNC(gui_spawnReinforcements));
+class GVAR(RscSpawnReinforcements): GVAR(RscDisplay) {
+    function = QFUNC(gui_spawnReinforcements);
     class controls: controls {
         class Title: Title {};
         class Background: Background {};

@@ -1,51 +1,64 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Initializes the "Inventory" Zeus attribute.
+ * Opens a dialog to configure the inventory of the given object.
  *
  * Arguments:
- * 0: Display <DISPLAY>
+ * 0: Object <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [DISPLAY] call zen_inventory_fnc_init
+ * [_object] call zen_inventory_fnc_configure
  *
  * Public: No
  */
 
-params ["_display"];
+params ["_object"];
 
-private _object  = GVAR(object);
-private _cargo   = _object call EFUNC(common,getInventory);
-private _maxLoad = getNumber (configFile >> "CfgVehicles" >> typeOf _object >> "maximumLoad");
+if (!createDialog QGVAR(display)) exitWith {};
 
+private _config = configFile >> "CfgVehicles" >> typeOf _object;
+private _displayName = getText (_config >> "displayName");
+private _maximumLoad = getNumber (_config >> "maximumLoad");
+
+// Get the object's current inventory and calculate its load
+private _cargo = [getItemCargo _object, getWeaponCargo _object, getMagazineCargo _object, getBackpackCargo _object];
+private _currentLoad = [_cargo] call FUNC(calculateLoad);
+
+private _display = uiNamespace getVariable QGVAR(display);
+_display setVariable [QGVAR(currentLoad), _currentLoad];
+_display setVariable [QGVAR(maximumLoad), _maximumLoad];
+_display setVariable [QGVAR(object), _object];
 _display setVariable [QGVAR(cargo), _cargo];
-_display setVariable [QGVAR(maxLoad), _maxLoad];
 
-// Calculate the current load
-[_display] call FUNC(calculateLoad);
+// Set the display's title to the object name
+private _ctrlTitle = _display displayCtrl IDC_TITLE;
+_ctrlTitle ctrlSetText toUpper format [localize LSTRING(EditInventory), _displayName];
 
-// Refresh list when category is changed
+// Adjust display element positions based on the content height
+[_display] call EFUNC(common,initDisplayPositioning);
+
+// Refresh the items list when category is changed
 private _ctrlCategory = _display displayCtrl IDC_CATEGORY;
 _ctrlCategory ctrlAddEventHandler ["ToolBoxSelChanged", {
     params ["_ctrlCategory"];
 
     private _display = ctrlParent _ctrlCategory;
-    [_display] call FUNC(fillList);
+    [_display] call FUNC(refreshList);
 }];
 
-// Refresh list with filter on search
+// Refresh the items list when the search field changes
 private _ctrlSearchBar = _display displayCtrl IDC_SEARCH_BAR;
 _ctrlSearchBar ctrlAddEventHandler ["KeyUp", {
     params ["_ctrlSearchBar"];
 
     private _display = ctrlParent _ctrlSearchBar;
-    [_display] call FUNC(fillList);
+    [_display] call FUNC(refreshList);
 }];
 
-// Clear search when search bar is right clicked
+// Clear search when the search bar is right clicked
 _ctrlSearchBar ctrlAddEventHandler ["MouseButtonClick", {
     params ["_ctrlSearchBar", "_button"];
 
@@ -55,10 +68,10 @@ _ctrlSearchBar ctrlAddEventHandler ["MouseButtonClick", {
     ctrlSetFocus _ctrlSearchBar;
 
     private _display = ctrlParent _ctrlSearchBar;
-    [_display] call FUNC(fillList);
+    [_display] call FUNC(refreshList);
 }];
 
-// Clear search when search button is clicked
+// Clear search when the search button is clicked
 private _ctrlButtonSearch = _display displayCtrl IDC_BTN_SEARCH;
 _ctrlButtonSearch ctrlAddEventHandler ["ButtonClick", {
     params ["_ctrlButtonSearch"];
@@ -68,10 +81,10 @@ _ctrlButtonSearch ctrlAddEventHandler ["ButtonClick", {
     _ctrlSearchBar ctrlSetText "";
     ctrlSetFocus _ctrlSearchBar;
 
-    [_display] call FUNC(fillList);
+    [_display] call FUNC(refreshList);
 }];
 
-// Add or remove items using the list buttons
+// Handle adding/removing items using the list buttons
 private _ctrlButtonAdd = _display displayCtrl IDC_BTN_ADD;
 _ctrlButtonAdd ctrlAddEventHandler ["ButtonClick", {
     params ["_ctrlButtonAdd"];
@@ -88,25 +101,25 @@ _ctrlButtonRemove ctrlAddEventHandler ["ButtonClick", {
     [_display, false] call FUNC(modify);
 }];
 
-// Add or remove items using keyboard
+// Handle adding/removing items using keyboard
 private _ctrlList = _display displayCtrl IDC_LIST;
 _ctrlList ctrlAddEventHandler ["SetFocus", {
     params ["_ctrlList"];
 
     private _display = ctrlParent _ctrlList;
-    _display setVariable [QGVAR(listFocus), true];
+    _display setVariable [QGVAR(listFocused), true];
 }];
 
 _ctrlList ctrlAddEventHandler ["KillFocus", {
     params ["_ctrlList"];
 
     private _display = ctrlParent _ctrlList;
-    _display setVariable [QGVAR(listFocus), false];
+    _display setVariable [QGVAR(listFocused), false];
 }];
 
 _display displayAddEventHandler ["KeyDown", {call FUNC(keyDown)}];
 
-// Update add or remove buttons when list selection changes
+// Update add/remove buttons when list selection changes
 _ctrlList ctrlAddEventHandler ["LBSelChanged", {
     params ["_ctrlList"];
 
@@ -114,16 +127,16 @@ _ctrlList ctrlAddEventHandler ["LBSelChanged", {
     [_display] call FUNC(updateButtons);
 }];
 
-// Clear cargo from current category
+// Clear items from the current category when the clear button is clicked
 private _ctrlButtonClear = _display displayCtrl IDC_BTN_CLEAR;
 _ctrlButtonClear ctrlAddEventHandler ["ButtonClick", {call FUNC(clear)}];
 
-// Confirm changes to inventory
+// Confirm changes to the inventory when the OK button is clicked
 private _ctrlButtonOK = _display displayCtrl IDC_OK;
 _ctrlButtonOK ctrlAddEventHandler ["ButtonClick", {call FUNC(confirm)}];
 
-// Update the load bar for current load
+// Update the load bar for the current load
 [_display] call FUNC(updateLoadBar);
 
-// Populate the list with items
-[_display] call FUNC(fillList);
+// Initially populate the list with items
+[_display] call FUNC(refreshList);

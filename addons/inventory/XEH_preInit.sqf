@@ -14,8 +14,7 @@ uiNamespace setVariable ["cba_ui_curatorItemCache", []];
     "Object",
     "STR_A3_Gear1",
     {
-        GVAR(object) = _this;
-        createDialog QGVAR(display);
+        [_entity] call FUNC(configure);
     },
     {
         alive _entity && {getNumber (configFile >> "CfgVehicles" >> typeOf _entity >> "maximumLoad") > 0}

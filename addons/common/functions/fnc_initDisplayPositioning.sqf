@@ -11,12 +11,12 @@
  * None
  *
  * Example:
- * [DISPLAY] call zen_common_fnc_initDisplay
+ * [DISPLAY] call zen_common_fnc_initDisplayPositioning
  *
  * Public: No
  */
 
-params ["_display"];
+params ["_display", ["_isScrollable", false], ["_maxHeight", 0.9 * safeZoneH]];
 
 private _ctrlContent = _display displayCtrl IDC_CONTENT;
 

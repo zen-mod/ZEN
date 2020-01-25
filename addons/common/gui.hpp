@@ -44,7 +44,7 @@ class GVAR(RscEdit): RscEdit {
     colorBackground[] = {0, 0, 0, 0.2};
 };
 
-class GVAR(RscCheckBox): RscCheckBox {
+class GVAR(RscCheckbox): RscCheckBox {
     idc = -1;
     x = POS_W(10.1);
     y = 0;
@@ -91,10 +91,16 @@ class GVAR(RscControlsGroup): RscControlsGroup {
 class GVAR(RscDisplay) {
     idd = -1;
     movingEnable = 1;
-    onLoad = QUOTE(call FUNC(initDisplay));
     class controls {
         class Title: RscText {
             idc = IDC_TITLE;
+            // Store the display's config, onLoad event for displays is not passed the config
+            onLoad = QUOTE( \
+                params [ARR_2('_control','_config')]; \
+                private _display = ctrlParent _control; \
+                _config = configHierarchy _config select 1; \
+                _display setVariable [ARR_2(QQGVAR(config),_config)]; \
+            );
             x = POS_X(6.5);
             w = POS_W(27);
             h = POS_H(1);
@@ -122,5 +128,19 @@ class GVAR(RscDisplay) {
             w = POS_W(5);
             h = POS_H(1);
         };
+    };
+};
+
+class GVAR(RscDisplayScrollable): GVAR(RscDisplay) {
+    class controls: controls {
+        class Title: Title {};
+        class Background: Background {};
+        class Content: GVAR(RscControlsGroup) {
+            idc = IDC_CONTENT;
+            x = POS_X(7);
+            w = POS_W(26);
+        };
+        class ButtonOK: ButtonOK {};
+        class ButtonCancel: ButtonCancel {};
     };
 };

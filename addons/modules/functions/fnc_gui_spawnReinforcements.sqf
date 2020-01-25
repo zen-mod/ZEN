@@ -5,12 +5,13 @@
  *
  * Arguments:
  * 0: Display <DISPLAY>
+ * 1: Logic <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [DISPLAY] call zen_modules_fnc_gui_spawnReinforcements
+ * [DISPLAY, LOGIC] call zen_modules_fnc_gui_spawnReinforcements
  *
  * Public: No
  */
@@ -18,41 +19,19 @@
 #define LOGIC_TYPE_LZ QGVAR(moduleCreateLZ)
 #define LOGIC_TYPE_RP QGVAR(moduleCreateRP)
 
-params ["_display"];
+params ["_display", "_logic"];
 
-private _ctrlButtonOK = _display displayCtrl IDC_OK;
-private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-_display setVariable [QGVAR(position), ASLtoAGL getPosASL _logic];
+private _selections = GVAR(saved) getVariable [QGVAR(spawnReinforcements), [0, 0, 0, 0, 0, [], -3, 1, 0, 100, -3, 0]];
+_selections params ["_side", "_faction", "_category", "_vehicle", "_treeMode", "_unitList", "_vehicleLZ", "_vehicleBehaviour", "_insertionMethod", "_flyHeight", "_unitRP", "_unitBehaviour"];
 
-scopeName "Main";
-private _fnc_errorAndClose = {
-    params ["_msg"];
-    _display closeDisplay 0;
-    deleteVehicle _logic;
-    [_msg] call EFUNC(common,showMessage);
-    breakOut "Main";
+private _position = ASLtoAGL getPosASL _logic;
+_display setVariable [QGVAR(position), _position];
+deleteVehicle _logic;
+
+if !(LOGIC_TYPE_LZ call EFUNC(position_logics,exists)) exitWith {
+    _display closeDisplay IDC_CANCEL;
+    [LSTRING(PlaceAnLZ)] call EFUNC(common,showMessage);
 };
-
-if !(LOGIC_TYPE_LZ call EFUNC(position_logics,exists)) then {
-    [LSTRING(PlaceAnLZ)] call _fnc_errorAndClose;
-};
-
-private _selections = missionNamespace getVariable [VAR_SELECTIONS(RscSpawnReinforcements), []];
-
-_selections params [
-    ["_side", 0],
-    ["_faction", 0],
-    ["_category", 0],
-    ["_vehicle", 0],
-    ["_treeMode", 0],
-    ["_unitList", []],
-    ["_vehicleLZ", -3],
-    ["_vehicleBehaviour", 1],
-    ["_insertionMethod", 0],
-    ["_flyHeight", 100],
-    ["_unitRP", -3],
-    ["_unitBehaviour", 0]
-];
 
 private _fnc_sideChanged = {
     params ["_ctrlSide", "_sideIndex"];
@@ -415,7 +394,7 @@ private _ctrlUnitClear = _display displayCtrl IDC_SPAWNREINFORCEMENTS_UNIT_CLEAR
 _ctrlUnitClear ctrlAddEventHandler ["ButtonClick", _fnc_clearList];
 
 private _ctrlVehicleLZ = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_LZ;
-[_ctrlVehicleLZ, LOGIC_TYPE_LZ, _vehicleLZ, false, _logic] call EFUNC(position_logics,initList);
+[_ctrlVehicleLZ, LOGIC_TYPE_LZ, _vehicleLZ, false, _position] call EFUNC(position_logics,initList);
 
 private _ctrlVehicleBehaviour = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_BEHAVIOUR;
 _ctrlVehicleBehaviour lbSetCurSel _vehicleBehaviour;
@@ -427,17 +406,10 @@ private _ctrlFlyHeight = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_HE
 _ctrlFlyHeight ctrlSetText str _flyHeight;
 
 private _ctrlUnitRP = _display displayCtrl IDC_SPAWNREINFORCEMENTS_UNIT_RP;
-[_ctrlUnitRP, LOGIC_TYPE_RP, _unitRP, true, _logic] call EFUNC(position_logics,initList);
+[_ctrlUnitRP, LOGIC_TYPE_RP, _unitRP, true, _position] call EFUNC(position_logics,initList);
 
 private _ctrlUnitBehaviour = _display displayCtrl IDC_SPAWNREINFORCEMENTS_UNIT_BEHAVIOUR;
 _ctrlUnitBehaviour lbSetCurSel _unitBehaviour;
-
-private _fnc_onUnload = {
-    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-    if (isNull _logic) exitWith {};
-
-    deleteVehicle _logic;
-};
 
 private _fnc_onConfirm = {
     params ["_ctrlButtonOK"];
@@ -471,7 +443,7 @@ private _fnc_onConfirm = {
     private _unitRP = _ctrlUnitRP lbValue lbCurSel _ctrlUnitRP;
 
     private _selections = [_side, _faction, _category, _vehicle, _treeMode, _unitList, _vehicleLZ, _vehicleBehaviour, _insertionMethod, _flyHeight, _unitRP, _unitBehaviour];
-    missionNamespace setVariable [VAR_SELECTIONS(RscSpawnReinforcements), _selections];
+    GVAR(saved) setVariable [QGVAR(spawnReinforcements), _selections];
 
     // Convert vehicle index to type
     _vehicle = (_display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE) lbData _vehicle;
@@ -482,7 +454,7 @@ private _fnc_onConfirm = {
 
     _positionLZ = ASLtoAGL getPosASL _positionLZ;
 
-    // Handle none option RP
+    // Handle none option for RP
     if (!isNull _positionRP) then {
         _positionRP = ASLtoAGL getPosASL _positionRP;
     };
@@ -490,5 +462,5 @@ private _fnc_onConfirm = {
     [QGVAR(moduleSpawnReinforcements), [_vehicle, _unitList, _position, _positionLZ, _positionRP, _vehicleBehaviour > 0, _insertionMethod, _unitBehaviour, _flyHeight]] call CBA_fnc_serverEvent;
 };
 
-_display displayAddEventHandler ["Unload", _fnc_onUnload];
+private _ctrlButtonOK = _display displayCtrl IDC_OK;
 _ctrlButtonOK ctrlAddEventHandler ["ButtonClick", _fnc_onConfirm];

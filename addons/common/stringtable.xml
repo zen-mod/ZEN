@@ -218,6 +218,16 @@
             <Italian>Lati</Italian>
             <Japanese>陣営</Japanese>
         </Key>
+        <Key ID="STR_ZEN_Common_Target">
+            <English>Target</English>
+            <Russian>Цель</Russian>
+            <German>Ziel</German>
+            <Polish>Cel</Polish>
+            <Japanese>目標</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Common_SelectedUnit">
+            <English>Selected Unit</English>
+        </Key>
         <Key ID="STR_ZEN_Common_SelectedGroup">
             <English>Selected Group</English>
             <German>Ausgewählte Gruppe</German>
@@ -379,6 +389,13 @@
             <German>Teleportieren</German>
             <Italian>Teletrasporto</Italian>
             <Japanese>テレポート</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Common_Effect">
+            <English>Effect</English>
+            <Russian>Эффект</Russian>
+            <German>Effekt</German>
+            <Polish>Efekt</Polish>
+            <Japanese>エフェクト</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects">
             <English>Add Objects to Curators</English>
