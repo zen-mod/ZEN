@@ -61,7 +61,7 @@ class GVAR(display) {
 
 class GVAR(base): RscControlsGroupNoScrollbars {
     idc = IDC_ATTRIBUTE_GROUP;
-    GVAR(function) = "";
+    function = "";
     x = 0;
     y = 0;
     w = POS_W(26);
@@ -74,7 +74,7 @@ class GVAR(base): RscControlsGroupNoScrollbars {
 };
 
 class GVAR(checkboxes): GVAR(base) {
-    GVAR(function) = QFUNC(gui_checkboxes);
+    function = QFUNC(gui_checkboxes);
     class controls: controls {
         class Label: Label {};
         class Background: EGVAR(common,RscBackground) {
@@ -86,7 +86,7 @@ class GVAR(checkboxes): GVAR(base) {
 };
 
 class GVAR(code): GVAR(base) {
-    GVAR(function) = QFUNC(gui_code);
+    function = QFUNC(gui_code);
     h = POS_H(5);
     class controls: controls {
         class Label: Label {};
@@ -112,7 +112,7 @@ class GVAR(code): GVAR(base) {
 };
 
 class GVAR(combo): GVAR(base) {
-    GVAR(function) = QFUNC(gui_combo);
+    function = QFUNC(gui_combo);
     class controls: controls {
         class Label: Label {};
         class Combo: EGVAR(common,RscCombo) {
@@ -122,7 +122,7 @@ class GVAR(combo): GVAR(base) {
 };
 
 class GVAR(edit): GVAR(base) {
-    GVAR(function) = QFUNC(gui_edit);
+    function = QFUNC(gui_edit);
     class controls: controls {
         class Label: Label {};
         class Edit: EGVAR(common,RscEdit) {
@@ -132,7 +132,7 @@ class GVAR(edit): GVAR(base) {
 };
 
 class GVAR(icons): GVAR(base) {
-    GVAR(function) = QFUNC(gui_icons);
+    function = QFUNC(gui_icons);
     h = POS_H(2.5);
     class controls: controls {
         class Label: Label {
@@ -146,7 +146,7 @@ class GVAR(icons): GVAR(base) {
 };
 
 class GVAR(slider): GVAR(base) {
-    GVAR(function) = QFUNC(gui_slider);
+    function = QFUNC(gui_slider);
     class controls: controls {
         class Label: Label {};
         class Slider: ctrlXSliderH {
@@ -165,7 +165,7 @@ class GVAR(slider): GVAR(base) {
 };
 
 class GVAR(toolbox): GVAR(base) {
-    GVAR(function) = QFUNC(gui_toolbox);
+    function = QFUNC(gui_toolbox);
     class controls: controls {
         class Label: Label {};
         // Toolbox created through script based on value info
@@ -188,7 +188,7 @@ class GVAR(RscToolbox): ctrlToolbox {
 #define WAYPOINT_ROWS (ceil (count (uiNamespace getVariable QGVAR(waypointTypes)) / 3))
 
 class GVAR(waypoint): GVAR(base) {
-    GVAR(function) = QFUNC(gui_waypoint);
+    function = QFUNC(gui_waypoint);
     h = POS_H(WAYPOINT_ROWS + 1);
     class controls: controls {
         class Label: Label {

@@ -1,22 +1,24 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Initializes the `waypoint` attribute control type.
+ * Initializes the "waypoint" attribute control type.
  *
  * Arguments:
  * 0: Controls Group <CONTROL>
- * 1: Entity <OBJECT|GROUP|ARRAY|STRING>
+ * 1: Default Value (not used, determined from entity) <ANY>
+ * 2: Value Info (not used) <ANY>
+ * 3: Entity <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL, _entity] call zen_attributes_fnc_gui_waypoint
+ * [CONTROL, nil, [], _entity] call zen_attributes_fnc_gui_waypoint
  *
  * Public: No
  */
 
-params ["_controlsGroup", "_entity"];
+params ["_controlsGroup", "", "", "_entity"];
 
 // Exit and display message if waypoint is attached to a vehicle
 if (!isNull waypointAttachedVehicle _entity) exitWith {

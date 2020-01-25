@@ -5,9 +5,8 @@
  *
  * Arguments:
  * 0: Controls Group <CONTROL>
- * 1: Entity <OBJECT|GROUP|ARRAY|STRING>
- * 2: Default Value <NUMBER>
- * 3: Value Info <ARRAY>
+ * 1: Default Value <NUMBER>
+ * 2: Value Info <ARRAY>
  *   0: Minimum Value <NUMBER>
  *   1: Maximum Value <NUMBER>
  *   2: Slider Speed <NUMBER>
@@ -18,12 +17,12 @@
  * None
  *
  * Example:
- * [_controlsGroup, _entity, 0.5, [0, 1, 0.1, true]] call zen_attributes_fnc_gui_slider
+ * [_controlsGroup, 0.5, [0, 1, 0.1, true]] call zen_attributes_fnc_gui_slider
  *
  * Public: No
  */
 
-params ["_controlsGroup", "_entity", "_defaultValue", "_valueInfo"];
+params ["_controlsGroup", "_defaultValue", "_valueInfo"];
 _valueInfo params [["_min", 0, [0]], ["_max", 1, [0]], ["_speed", -1, [0]], ["_isPercentage", false, [false]], ["_formatting", 2, [0, {}]]];
 
 private _ctrlSlider = _controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_SLIDER;

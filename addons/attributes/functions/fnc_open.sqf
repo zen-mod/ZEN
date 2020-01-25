@@ -51,8 +51,8 @@ private _contentPosY = 0;
     _ctrlLabel ctrlSetTooltip _tooltip;
 
     // Execute attribute control specific init function
-    private _function = getText (configFile >> ctrlClassName _ctrlAttribute >> QGVAR(function));
-    [_ctrlAttribute, _entity, _entity call _defaultValue, _valueInfo] call (missionNamespace getVariable _function);
+    private _function = getText (configFile >> ctrlClassName _ctrlAttribute >> "function");
+    [_ctrlAttribute, _entity call _defaultValue, _valueInfo, _entity] call (missionNamespace getVariable _function);
 
     // Adjust the position of the attribute control in the content group
     _ctrlAttribute ctrlSetPositionY _contentPosY;

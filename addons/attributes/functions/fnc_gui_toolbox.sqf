@@ -1,13 +1,12 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Initializes the `toolbox` attribute control type.
+ * Initializes the "toolbox" attribute control type.
  *
  * Arguments:
  * 0: Controls Group <CONTROL>
- * 1: Entity <OBJECT|GROUP|ARRAY|STRING>
- * 2: Default Value <BOOL|NUMBER>
- * 3: Value Info <ARRAY>
+ * 1: Default Value <BOOL|NUMBER>
+ * 2: Value Info <ARRAY>
  *   0: Rows <NUMBER>
  *   1: Columns <NUMBER>
  *   2: Strings <NUMBER>
@@ -16,12 +15,12 @@
  * None
  *
  * Example:
- * [_controlsGroup, _entity, true, [1, 2, ["No", "Yes"]]] call zen_attributes_fnc_gui_toolbox
+ * [_controlsGroup, true, [1, 2, ["No", "Yes"]]] call zen_attributes_fnc_gui_toolbox
  *
  * Public: No
  */
 
-params ["_controlsGroup", "_entity", "_defaultValue", "_valueInfo"];
+params ["_controlsGroup", "_defaultValue", "_valueInfo"];
 _valueInfo params [["_rows", 1, [0]], ["_columns", 2, [0]], ["_strings", [], [[]]]];
 
 private _returnBool = _defaultValue isEqualType false;

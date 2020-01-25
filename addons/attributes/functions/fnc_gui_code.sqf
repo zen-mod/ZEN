@@ -1,13 +1,12 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Initializes the `code` attribute control type.
+ * Initializes the "code" attribute control type.
  *
  * Arguments:
  * 0: Controls Group <CONTROL>
- * 1: Entity <OBJECT|GROUP|ARRAY|STRING>
- * 2: Default Value <STRING>
- * 3: Value Info <ARRAY>
+ * 1: Default Value <STRING>
+ * 2: Value Info <ARRAY>
  *   0: History Variable Name <STRING>
  *   1: Statements History Length <NUMBER>
  *   2: Editbox Tooltip <STRING>
@@ -16,14 +15,14 @@
  * None
  *
  * Example:
- * [_controlsGroup, _entity, "", ["", 20, ""]] call zen_attributes_fnc_gui_code
+ * [_controlsGroup, "", ["", 20, ""]] call zen_attributes_fnc_gui_code
  *
  * Public: No
  */
 
 #define PREVIEW_LENGTH 30
 
-params ["_controlsGroup", "_entity", "_defaultValue", "_valueInfo"];
+params ["_controlsGroup", "_defaultValue", "_valueInfo"];
 _valueInfo params [["_historyVarName", "", [""]], ["_maxStatements", 20, [0]], ["_tooltip", "", [""]]];
 
 if (isLocalized _tooltip) then {

@@ -1,25 +1,24 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Initializes the `combo` attribute control type.
+ * Initializes the "combo" attribute control type.
  *
  * Arguments:
  * 0: Controls Group <CONTROL>
- * 1: Entity <OBJECT|GROUP|ARRAY|STRING>
- * 2: Default Value <ANY>
- * 3: Value Info <ARRAY>
+ * 1: Default Value <ANY>
+ * 2: Value Info <ARRAY>
  *   N: [Value <ANY>, Display Name and Tooltip <STRING|ARRAY>, Icon and Icon Color <STRING|ARRAY>] <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [_controlsGroup, _entity, 1, [[1, "Option 1"], [2, "Option 2"]]] call zen_attributes_fnc_gui_combo
+ * [_controlsGroup, 1, [[1, "Option 1"], [2, "Option 2"]]] call zen_attributes_fnc_gui_combo
  *
  * Public: No
  */
 
-params ["_controlsGroup", "_entity", "_defaultValue", "_valueInfo"];
+params ["_controlsGroup", "_defaultValue", "_valueInfo"];
 
 private _ctrlCombo = _controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_COMBO;
 _ctrlCombo setVariable [QGVAR(params), [_controlsGroup]];

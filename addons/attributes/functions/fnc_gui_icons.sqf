@@ -1,13 +1,12 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Initializes the `icons` attribute control type.
+ * Initializes the "icons" attribute control type.
  *
  * Arguments:
  * 0: Controls Group <CONTROL>
- * 1: Entity <OBJECT|GROUP|ARRAY|STRING>
- * 2: Default Value <NUMBER>
- * 3: Value Info <ARRAY>
+ * 1: Default Value <NUMBER>
+ * 2: Value Info <ARRAY>
  *   0: Icons <ARRAY>
  *     N: [Icon <STRING>, Tooltip <STRING>, X Position <NUMBER>, Y Position <NUMBER>, Size <NUMBER>, Color <ARRAY>, Condition <CODE>] <ARRAY>
  *   1: Height <NUMBER>
@@ -16,7 +15,7 @@
  * None
  *
  * Example:
- * [_controlsGroup, _entity, 0, [[], 1]] call zen_attributes_fnc_gui_icons
+ * [_controlsGroup, 0, [[], 1]] call zen_attributes_fnc_gui_icons
  *
  * Public: No
  */
@@ -27,7 +26,7 @@
 #define SCALE_NORMAL   1
 #define SCALE_SELECTED 1.2
 
-params ["_controlsGroup", "_entity", "_defaultValue", "_valueInfo"];
+params ["_controlsGroup", "_defaultValue", "_valueInfo"];
 _valueInfo params [["_icons", [], [[]]], ["_height", 1, [0]]];
 
 private _fnc_onButtonClick = {

@@ -5,9 +5,8 @@
  *
  * Arguments:
  * 0: Controls Group <CONTROL>
- * 1: Entity <OBJECT|GROUP|ARRAY|STRING>
- * 2: Default Value <ARRAY>
- * 3: Value Info <ARRAY>
+ * 1: Default Value <ARRAY>
+ * 2: Value Info <ARRAY>
  *   0: Check Boxes <NUMBER>
  *     N: [X Position <NUMBER>, Y Position <NUMBER>, Width <NUMBER>, Text <STRING>, Tooltip <STRING>] <ARRAY>
  *   1: Height <NUMBER>
@@ -16,12 +15,12 @@
  * None
  *
  * Example:
- * [_controlsGroup, _entity, [true], [[0, 0, 16, "Confirm"]]] call zen_attributes_fnc_gui_toolbox
+ * [_controlsGroup, [true], [[0, 0, 16, "Confirm"]]] call zen_attributes_fnc_gui_toolbox
  *
  * Public: No
  */
 
-params ["_controlsGroup", "_entity", "_defaultValue", "_valueInfo"];
+params ["_controlsGroup", "_defaultValue", "_valueInfo"];
 _valueInfo params [["_checkboxes", [], [[]]], ["_height", 1, [0]]];
 
 private _display = ctrlParent _controlsGroup;
