@@ -88,21 +88,20 @@
     "STR_3DEN_Object_Attribute_Rank_displayName",
     QGVAR(icons),
     [[
-        ["\a3\Ui_f\data\GUI\Cfg\Ranks\private_gs.paa",    "STR_Private",    11.25, 0.5, 1.5],
-        ["\a3\Ui_f\data\GUI\Cfg\Ranks\corporal_gs.paa",   "STR_Corporal",   13.25, 0.5, 1.5],
-        ["\a3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa",   "STR_Sergeant",   15.25, 0.5, 1.5],
-        ["\a3\Ui_f\data\GUI\Cfg\Ranks\lieutenant_gs.paa", "STR_Lieutenant", 17.25, 0.5, 1.5],
-        ["\a3\Ui_f\data\GUI\Cfg\Ranks\captain_gs.paa",    "STR_Captain",    19.25, 0.5, 1.5],
-        ["\a3\Ui_f\data\GUI\Cfg\Ranks\major_gs.paa",      "STR_Major",      21.25, 0.5, 1.5],
-        ["\a3\Ui_f\data\GUI\Cfg\Ranks\colonel_gs.paa",    "STR_Colonel",    23.25, 0.5, 1.5]
+        ["PRIVATE",    "\a3\Ui_f\data\GUI\Cfg\Ranks\private_gs.paa",    "STR_Private",    11.25, 0.5, 1.5],
+        ["CORPORAL",   "\a3\Ui_f\data\GUI\Cfg\Ranks\corporal_gs.paa",   "STR_Corporal",   13.25, 0.5, 1.5],
+        ["SERGEANT",   "\a3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa",   "STR_Sergeant",   15.25, 0.5, 1.5],
+        ["LIEUTENANT", "\a3\Ui_f\data\GUI\Cfg\Ranks\lieutenant_gs.paa", "STR_Lieutenant", 17.25, 0.5, 1.5],
+        ["CAPTAIN",    "\a3\Ui_f\data\GUI\Cfg\Ranks\captain_gs.paa",    "STR_Captain",    19.25, 0.5, 1.5],
+        ["MAJOR",      "\a3\Ui_f\data\GUI\Cfg\Ranks\major_gs.paa",      "STR_Major",      21.25, 0.5, 1.5],
+        ["COLONEL",    "\a3\Ui_f\data\GUI\Cfg\Ranks\colonel_gs.paa",    "STR_Colonel",    23.25, 0.5, 1.5]
     ]],
     {
-        private _rank = RANKS select _value;
         {
-            _x setUnitRank _rank;
+            _x setUnitRank _value;
         } forEach call EFUNC(common,getSelectedUnits);
     },
-    {RANKS find toUpper rank _entity},
+    {rank _entity},
     {alive _entity && {_entity isKindOf "CAManBase"}}
 ] call FUNC(addAttribute);
 
@@ -111,18 +110,17 @@
     "STR_A3_RscAttributeUnitPos_Title",
     QGVAR(icons),
     [[
-        ["\a3\Ui_f\data\IGUI\RscIngameUI\RscUnitInfo\SI_prone_ca.paa",  "STR_A3_RscAttributeUnitPos_Down_tooltip",   13.25, 0, 2.5],
-        ["\a3\Ui_f\data\IGUI\RscIngameUI\RscUnitInfo\SI_crouch_ca.paa", "STR_A3_RscAttributeUnitPos_Crouch_tooltip", 15.75, 0, 2.5],
-        ["\a3\Ui_f\data\IGUI\RscIngameUI\RscUnitInfo\SI_stand_ca.paa",  "STR_A3_RscAttributeUnitPos_Up_tooltip",     18.25, 0, 2.5],
-        ["\a3\ui_f_curator\Data\default_ca.paa",                        "STR_A3_RscAttributeUnitPos_Auto_tooltip",   24,  0.5, 1.5]
+        ["DOWN",   "\a3\Ui_f\data\IGUI\RscIngameUI\RscUnitInfo\SI_prone_ca.paa",  "STR_A3_RscAttributeUnitPos_Down_tooltip",   13.25, 0, 2.5],
+        ["MIDDLE", "\a3\Ui_f\data\IGUI\RscIngameUI\RscUnitInfo\SI_crouch_ca.paa", "STR_A3_RscAttributeUnitPos_Crouch_tooltip", 15.75, 0, 2.5],
+        ["UP",     "\a3\Ui_f\data\IGUI\RscIngameUI\RscUnitInfo\SI_stand_ca.paa",  "STR_A3_RscAttributeUnitPos_Up_tooltip",     18.25, 0, 2.5],
+        ["AUTO",   "\a3\ui_f_curator\Data\default_ca.paa",                        "STR_A3_RscAttributeUnitPos_Auto_tooltip",   24,  0.5, 1.5]
     ]],
     {
-        private _stance = STANCES select _value;
         {
-            [QEGVAR(common,setUnitPos), [_x, _stance], _x] call CBA_fnc_targetEvent;
+            [QEGVAR(common,setUnitPos), [_x, _value], _x] call CBA_fnc_targetEvent;
         } forEach call EFUNC(common,getSelectedUnits);
     },
-    {STANCES find toUpper unitPos _entity},
+    {toUpper unitPos _entity},
     {alive _entity && {_entity isKindOf "CAManBase"}}
 ] call FUNC(addAttribute);
 
@@ -150,16 +148,15 @@
     LSTRING(Engine),
     QGVAR(icons),
     [[
-        [QPATHTOF(ui\engine_on_ca.paa),  ELSTRING(common,On),  14.5, 0.25, 2],
-        [QPATHTOF(ui\engine_off_ca.paa), ELSTRING(common,Off), 19.5, 0.25, 2]
+        [true,  QPATHTOF(ui\engine_on_ca.paa),  ELSTRING(common,On),  14.5, 0.25, 2],
+        [false, QPATHTOF(ui\engine_off_ca.paa), ELSTRING(common,Off), 19.5, 0.25, 2]
     ]],
     {
-        private _state = _value == 0;
         {
-            [QEGVAR(common,engineOn), [_x, _state], _x] call CBA_fnc_targetEvent;
+            [QEGVAR(common,engineOn), [_x, _value], _x] call CBA_fnc_targetEvent;
         } forEach call EFUNC(common,getSelectedVehicles);
     },
-    {parseNumber !isEngineOn _entity},
+    {isEngineOn _entity},
     {alive _entity && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}}
 ] call FUNC(addAttribute);
 
@@ -168,14 +165,13 @@
     LSTRING(Lights),
     QGVAR(icons),
     [[
-        [QPATHTOF(ui\lights_on_ca.paa),  ELSTRING(common,On),  14.5, 0.25, 2],
-        [QPATHTOF(ui\lights_off_ca.paa), ELSTRING(common,Off), 19.5, 0.25, 2]
+        [true,  QPATHTOF(ui\lights_on_ca.paa),  ELSTRING(common,On),  14.5, 0.25, 2],
+        [false, QPATHTOF(ui\lights_off_ca.paa), ELSTRING(common,Off), 19.5, 0.25, 2]
     ]],
     {
-        private _state = _value == 0;
         {
-            [QEGVAR(common,setPilotLight), [_x, _state], _x] call CBA_fnc_targetEvent;
-            [QEGVAR(common,setCollisionLight), [_x, _state], _x] call CBA_fnc_targetEvent;
+            [QEGVAR(common,setPilotLight), [_x, _value], _x] call CBA_fnc_targetEvent;
+            [QEGVAR(common,setCollisionLight), [_x, _value], _x] call CBA_fnc_targetEvent;
 
             // Prevent AI from switching forced lights state
             private _driver = driver _x;
@@ -185,7 +181,7 @@
             };
         } forEach call EFUNC(common,getSelectedVehicles);
     },
-    {parseNumber !isLightOn _entity},
+    {isLightOn _entity},
     {alive _entity && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}}
 ] call FUNC(addAttribute);
 
@@ -203,7 +199,49 @@
 
 [
     "Object",
-    "States",
+    [LSTRING(RespawnPosition), LSTRING(RespawnPosition_Tooltip)],
+    QGVAR(icons),
+    [[
+        [
+            west, "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnPosition\west_ca.paa", "STR_West", 11.5, 0.25, 2, west call BIS_fnc_sideColor,
+            {playableSlotsNumber west > 0 && {[west, _entity call BIS_fnc_objectSide] call BIS_fnc_areFriendly}}
+        ],
+        [
+            east, "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnPosition\east_ca.paa", "STR_East", 14.5, 0.25, 2, east call BIS_fnc_sideColor,
+            {playableSlotsNumber east > 0 && {[east, _entity call BIS_fnc_objectSide] call BIS_fnc_areFriendly}}
+        ],
+        [
+            independent, "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnPosition\guer_ca.paa", "STR_Guerrila", 17.5, 0.25, 2, independent call BIS_fnc_sideColor,
+            {playableSlotsNumber independent > 0 && {[independent, _entity call BIS_fnc_objectSide] call BIS_fnc_areFriendly}}
+        ],
+        [
+            civilian, "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnPosition\civ_ca.paa", "STR_Civilian", 20.5, 0.25, 2, civilian call BIS_fnc_sideColor,
+            {playableSlotsNumber civilian > 0 && {[civilian, _entity call BIS_fnc_objectSide] call BIS_fnc_areFriendly}}
+        ],
+        [
+            sideEmpty, "\a3\Ui_F_Curator\Data\default_ca.paa", "STR_sensoractiv_none", 24, 0.5, 1.5
+        ]
+    ]],
+    {
+        private _respawnPos = _entity getVariable [QGVAR(respawnPos), []];
+        _respawnPos call BIS_fnc_removeRespawnPosition;
+
+        if (_value isEqualTo sideEmpty) then {
+            _entity setVariable [QGVAR(respawnPos), nil, true];
+        } else {
+            _respawnPos = [_value, _entity] call BIS_fnc_addRespawnPosition;
+            _entity setVariable [QGVAR(respawnPos), _respawnPos, true];
+        };
+    },
+    {
+        _entity getVariable [QGVAR(respawnPos), []] param [0, sideEmpty]
+    },
+    {alive _entity && {canMove _entity} && {_entity isKindOf "AllVehicles"}}
+] call FUNC(addAttribute);
+
+[
+    "Object",
+    LSTRING(States),
     QGVAR(checkboxes),
     [[
         [10,   0, 5.5, "STR_3DEN_Object_Attribute_AllowDamage_displayName"],
@@ -270,23 +308,22 @@
     "STR_3DEN_Group_Attribute_Formation_displayName",
     QGVAR(icons),
     [[
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\wedge_ca.paa",       "STR_Wedge",     11.75,   0, 2.5],
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\vee_ca.paa",         "STR_Vee",       14.25,   0, 2.5],
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\line_ca.paa",        "STR_Line",      16.75,   0, 2.5],
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\column_ca.paa",      "STR_Column",    19.25,   0, 2.5],
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\file_ca.paa",        "STR_File",      21.75,   0, 2.5],
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\stag_column_ca.paa", "STR_Staggered", 11.75, 2.5, 2.5],
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\ech_left_ca.paa",    "STR_Echl",      14.25, 2.5, 2.5],
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\ech_right_ca.paa",   "STR_Echr",      16.75, 2.5, 2.5],
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\diamond_ca.paa",     "STR_Diamond",   19.25, 2.5, 2.5]
+        ["WEDGE",       "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\wedge_ca.paa",       "STR_Wedge",     11.75,   0, 2.5],
+        ["VEE",         "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\vee_ca.paa",         "STR_Vee",       14.25,   0, 2.5],
+        ["LINE",        "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\line_ca.paa",        "STR_Line",      16.75,   0, 2.5],
+        ["COLUMN",      "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\column_ca.paa",      "STR_Column",    19.25,   0, 2.5],
+        ["FILE",        "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\file_ca.paa",        "STR_File",      21.75,   0, 2.5],
+        ["STAG COLUMN", "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\stag_column_ca.paa", "STR_Staggered", 11.75, 2.5, 2.5],
+        ["ECH LEFT",    "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\ech_left_ca.paa",    "STR_Echl",      14.25, 2.5, 2.5],
+        ["ECH RIGHT",   "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\ech_right_ca.paa",   "STR_Echr",      16.75, 2.5, 2.5],
+        ["DIAMOND",     "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\diamond_ca.paa",     "STR_Diamond",   19.25, 2.5, 2.5]
     ], 2],
     {
-        private _formation = FORMATIONS select _value;
         {
-            [QEGVAR(common,setFormation), [_x, _formation], _x] call CBA_fnc_targetEvent;
+            [QEGVAR(common,setFormation), [_x, _value], _x] call CBA_fnc_targetEvent;
         } forEach SELECTED_GROUPS;
     },
-    {FORMATIONS find toUpper formation _entity}
+    {formation _entity}
 ] call FUNC(addAttribute);
 
 [
@@ -294,19 +331,18 @@
     "STR_3DEN_Group_Attribute_Behaviour_displayName",
     QGVAR(icons),
     [[
-        [QPATHTOF(ui\careless_ca.paa), "STR_3DEN_Attributes_Behaviour_Careless_text", 12.25, 0.5, 1.5],
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeBehaviour\safe_ca.paa",    "STR_Safe",    14.75, 0.5, 1.5, [0, 1, 0]],
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeBehaviour\aware_ca.paa",   "STR_Aware",   17.25, 0.5, 1.5, [1, 1, 0]],
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeBehaviour\combat_ca.paa",  "STR_Combat",  19.75, 0.5, 1.5, [1, 0, 0]],
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeBehaviour\stealth_ca.paa", "STR_Stealth", 22.25, 0.5, 1.5, [0, 1, 1]]
+        ["CARELESS", QPATHTOF(ui\careless_ca.paa), "STR_3DEN_Attributes_Behaviour_Careless_text", 12.25, 0.5, 1.5],
+        ["SAFE",     "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeBehaviour\safe_ca.paa",    "STR_Safe",    14.75, 0.5, 1.5, [0, 1, 0]],
+        ["AWARE",    "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeBehaviour\aware_ca.paa",   "STR_Aware",   17.25, 0.5, 1.5, [1, 1, 0]],
+        ["COMBAT",   "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeBehaviour\combat_ca.paa",  "STR_Combat",  19.75, 0.5, 1.5, [1, 0, 0]],
+        ["STEALTH",  "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeBehaviour\stealth_ca.paa", "STR_Stealth", 22.25, 0.5, 1.5, [0, 1, 1]]
     ]],
     {
-        private _behaviour = BEHAVIOURS select _value;
         {
-            [QEGVAR(common,setBehaviour), [_x, _behaviour], _x] call CBA_fnc_targetEvent;
+            [QEGVAR(common,setBehaviour), [_x, _value], _x] call CBA_fnc_targetEvent;
         } forEach SELECTED_GROUPS;
     },
-    {BEHAVIOURS find toUpper behaviour leader _entity}
+    {behaviour leader _entity}
 ] call FUNC(addAttribute);
 
 [
@@ -314,19 +350,18 @@
     "STR_3DEN_Group_Attribute_CombatMode_displayName",
     QGVAR(icons),
     [[
-        [QPATHTOF(ui\hold_ca.paa),   "STR_3DEN_Attributes_CombatMode_Blue_text",   12.25, 0.5, 1.5, [1, 0, 0]],
-        [QPATHTOF(ui\defend_ca.paa), "STR_3DEN_Attributes_CombatMode_Green_text",  14.75, 0.5, 1.5, [1, 0, 0]],
-        [QPATHTOF(ui\engage_ca.paa), "STR_3DEN_Attributes_CombatMode_White_text",  17.25, 0.5, 1.5, [1, 0, 0]],
-        [QPATHTOF(ui\hold_ca.paa),   "STR_3DEN_Attributes_CombatMode_Yellow_text", 19.75, 0.5, 1.5],
-        [QPATHTOF(ui\engage_ca.paa), "STR_3DEN_Attributes_CombatMode_Red_text",    22.25, 0.5, 1.5]
+        ["BLUE",   QPATHTOF(ui\hold_ca.paa),   "STR_3DEN_Attributes_CombatMode_Blue_text",   12.25, 0.5, 1.5, [1, 0, 0]],
+        ["GREEN",  QPATHTOF(ui\defend_ca.paa), "STR_3DEN_Attributes_CombatMode_Green_text",  14.75, 0.5, 1.5, [1, 0, 0]],
+        ["WHITE",  QPATHTOF(ui\engage_ca.paa), "STR_3DEN_Attributes_CombatMode_White_text",  17.25, 0.5, 1.5, [1, 0, 0]],
+        ["YELLOW", QPATHTOF(ui\hold_ca.paa),   "STR_3DEN_Attributes_CombatMode_Yellow_text", 19.75, 0.5, 1.5],
+        ["RED",    QPATHTOF(ui\engage_ca.paa), "STR_3DEN_Attributes_CombatMode_Red_text",    22.25, 0.5, 1.5]
     ]],
     {
-        private _combatMode = COMBATMODES select _value;
         {
-            [QEGVAR(common,setCombatMode), [_x, _combatMode], _x] call CBA_fnc_targetEvent;
+            [QEGVAR(common,setCombatMode), [_x, _value], _x] call CBA_fnc_targetEvent;
         } forEach SELECTED_GROUPS;
     },
-    {COMBATMODES find toUpper combatMode _entity}
+    {combatMode _entity}
 ] call FUNC(addAttribute);
 
 [
@@ -334,17 +369,16 @@
     "STR_HC_Menu_Speed",
     QGVAR(icons),
     [[
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeSpeedMode\limited_ca.paa", "STR_Speed_Limited", 14.25, 0, 2.5],
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeSpeedMode\normal_ca.paa",  "STR_Speed_Normal",  16.75, 0, 2.5],
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeSpeedMode\full_ca.paa",    "STR_Speed_Full",    19.25, 0, 2.5]
+        ["LIMITED", "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeSpeedMode\limited_ca.paa", "STR_Speed_Limited", 14.25, 0, 2.5],
+        ["NORMAL",  "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeSpeedMode\normal_ca.paa",  "STR_Speed_Normal",  16.75, 0, 2.5],
+        ["FULL",    "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeSpeedMode\full_ca.paa",    "STR_Speed_Full",    19.25, 0, 2.5]
     ]],
     {
-        private _speedMode = SPEEDMODES select _value;
         {
-            [QEGVAR(common,setSpeedMode), [_x, _speedMode], _x] call CBA_fnc_targetEvent;
+            [QEGVAR(common,setSpeedMode), [_x, _value], _x] call CBA_fnc_targetEvent;
         } forEach SELECTED_GROUPS;
     },
-    {SPEEDMODES find toUpper speedMode _entity}
+    {speedMode _entity}
 ] call FUNC(addAttribute);
 
 [
@@ -352,20 +386,19 @@
     "STR_A3_RscAttributeUnitPos_Title",
     QGVAR(icons),
     [[
-        ["\a3\Ui_f\data\IGUI\RscIngameUI\RscUnitInfo\SI_prone_ca.paa",  "STR_A3_RscAttributeUnitPos_Down_tooltip",   14.25, 0, 2.5],
-        ["\a3\Ui_f\data\IGUI\RscIngameUI\RscUnitInfo\SI_crouch_ca.paa", "STR_A3_RscAttributeUnitPos_Crouch_tooltip", 16.75, 0, 2.5],
-        ["\a3\Ui_f\data\IGUI\RscIngameUI\RscUnitInfo\SI_stand_ca.paa",  "STR_A3_RscAttributeUnitPos_Up_tooltip",     19.25, 0, 2.5],
-        ["\a3\ui_f_curator\Data\default_ca.paa",                        "STR_A3_RscAttributeUnitPos_Auto_tooltip",   24,  0.5, 1.5]
+        ["DOWN",   "\a3\Ui_f\data\IGUI\RscIngameUI\RscUnitInfo\SI_prone_ca.paa",  "STR_A3_RscAttributeUnitPos_Down_tooltip",   14.25, 0, 2.5],
+        ["MIDDLE", "\a3\Ui_f\data\IGUI\RscIngameUI\RscUnitInfo\SI_crouch_ca.paa", "STR_A3_RscAttributeUnitPos_Crouch_tooltip", 16.75, 0, 2.5],
+        ["UP",     "\a3\Ui_f\data\IGUI\RscIngameUI\RscUnitInfo\SI_stand_ca.paa",  "STR_A3_RscAttributeUnitPos_Up_tooltip",     19.25, 0, 2.5],
+        ["AUTO",   "\a3\ui_f_curator\Data\default_ca.paa",                        "STR_A3_RscAttributeUnitPos_Auto_tooltip",   24,  0.5, 1.5]
     ]],
     {
-        private _stance = STANCES select _value;
         {
             {
-                [QEGVAR(common,setUnitPos), [_x, _stance], _x] call CBA_fnc_targetEvent;
+                [QEGVAR(common,setUnitPos), [_x, _value], _x] call CBA_fnc_targetEvent;
             } forEach units _x;
         } forEach SELECTED_GROUPS;
     },
-    {STANCES find toUpper unitPos leader _entity}
+    {toUpper unitPos leader _entity}
 ] call FUNC(addAttribute);
 
 [
@@ -412,30 +445,29 @@
     "STR_3DEN_Group_Attribute_Formation_displayName",
     QGVAR(icons),
     [[
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\wedge_ca.paa",       "STR_Wedge",     11.75,   0, 2.5],
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\vee_ca.paa",         "STR_Vee",       14.25,   0, 2.5],
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\line_ca.paa",        "STR_Line",      16.75,   0, 2.5],
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\column_ca.paa",      "STR_Column",    19.25,   0, 2.5],
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\file_ca.paa",        "STR_File",      21.75,   0, 2.5],
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\stag_column_ca.paa", "STR_Staggered", 11.75, 2.5, 2.5],
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\ech_left_ca.paa",    "STR_Echl",      14.25, 2.5, 2.5],
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\ech_right_ca.paa",   "STR_Echr",      16.75, 2.5, 2.5],
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\diamond_ca.paa",     "STR_Diamond",   19.25, 2.5, 2.5],
-        ["\a3\ui_f_curator\Data\default_ca.paa",                                     "STR_No_Change", 22.25,   3, 1.5]
+        ["WEDGE",       "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\wedge_ca.paa",       "STR_Wedge",     11.75,   0, 2.5],
+        ["VEE",         "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\vee_ca.paa",         "STR_Vee",       14.25,   0, 2.5],
+        ["LINE",        "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\line_ca.paa",        "STR_Line",      16.75,   0, 2.5],
+        ["COLUMN",      "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\column_ca.paa",      "STR_Column",    19.25,   0, 2.5],
+        ["FILE",        "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\file_ca.paa",        "STR_File",      21.75,   0, 2.5],
+        ["STAG COLUMN", "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\stag_column_ca.paa", "STR_Staggered", 11.75, 2.5, 2.5],
+        ["ECH LEFT",    "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\ech_left_ca.paa",    "STR_Echl",      14.25, 2.5, 2.5],
+        ["ECH RIGHT",   "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\ech_right_ca.paa",   "STR_Echr",      16.75, 2.5, 2.5],
+        ["DIAMOND",     "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\diamond_ca.paa",     "STR_Diamond",   19.25, 2.5, 2.5],
+        ["NO CHANGE",   "\a3\ui_f_curator\Data\default_ca.paa",                                     "STR_No_Change", 22.25,   3, 1.5]
     ], 2],
     {
-        private _formation = FORMATIONS select _value;
         {
             _x params ["_group", "_waypointID"];
 
-            if (currentWaypoint _group == _waypointID && {_formation != "NO CHANGE"}) then {
-                [QEGVAR(common,setFormation), [_group, _formation], _group] call CBA_fnc_targetEvent;
+            if (currentWaypoint _group == _waypointID && {_value != "NO CHANGE"}) then {
+                [QEGVAR(common,setFormation), [_group, _value], _group] call CBA_fnc_targetEvent;
             };
 
-            [QEGVAR(common,setWaypointFormation), [_x, _formation]] call CBA_fnc_serverEvent;
+            [QEGVAR(common,setWaypointFormation), [_x, _value]] call CBA_fnc_serverEvent;
         } forEach SELECTED_WAYPOINTS;
     },
-    {FORMATIONS find toUpper waypointFormation _entity}
+    {waypointFormation _entity}
 ] call FUNC(addAttribute);
 
 [
@@ -443,26 +475,25 @@
     "STR_3DEN_Group_Attribute_Behaviour_displayName",
     QGVAR(icons),
     [[
-        [QPATHTOF(ui\careless_ca.paa), "STR_3DEN_Attributes_Behaviour_Careless_text", 11.25, 0.5, 1.5],
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeBehaviour\safe_ca.paa",    "STR_Safe",    13.75, 0.5, 1.5, [0, 1, 0]],
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeBehaviour\aware_ca.paa",   "STR_Aware",   16.25, 0.5, 1.5, [1, 1, 0]],
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeBehaviour\combat_ca.paa",  "STR_Combat",  18.75, 0.5, 1.5, [1, 0, 0]],
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeBehaviour\stealth_ca.paa", "STR_Stealth", 21.25, 0.5, 1.5, [0, 1, 1]],
-        ["\a3\ui_f_curator\Data\default_ca.paa", "STR_Combat_Unchanged", 24, 0.5, 1.5]
+        ["CARELESS",  QPATHTOF(ui\careless_ca.paa), "STR_3DEN_Attributes_Behaviour_Careless_text", 11.25, 0.5, 1.5],
+        ["SAFE",      "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeBehaviour\safe_ca.paa",    "STR_Safe",    13.75, 0.5, 1.5, [0, 1, 0]],
+        ["AWARE",     "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeBehaviour\aware_ca.paa",   "STR_Aware",   16.25, 0.5, 1.5, [1, 1, 0]],
+        ["COMBAT",    "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeBehaviour\combat_ca.paa",  "STR_Combat",  18.75, 0.5, 1.5, [1, 0, 0]],
+        ["STEALTH",   "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeBehaviour\stealth_ca.paa", "STR_Stealth", 21.25, 0.5, 1.5, [0, 1, 1]],
+        ["UNCHANGED", "\a3\ui_f_curator\Data\default_ca.paa", "STR_Combat_Unchanged", 24, 0.5, 1.5]
     ]],
     {
-        private _behaviour = BEHAVIOURS select _value;
         {
             _x params ["_group", "_waypointID"];
 
-            if (currentWaypoint _group == _waypointID && {_behaviour != "UNCHANGED"}) then {
-                [QEGVAR(common,setBehaviour), [_group, _behaviour], _group] call CBA_fnc_targetEvent;
+            if (currentWaypoint _group == _waypointID && {_value != "UNCHANGED"}) then {
+                [QEGVAR(common,setBehaviour), [_group, _value], _group] call CBA_fnc_targetEvent;
             };
 
-            [QEGVAR(common,setWaypointBehaviour), [_x, _behaviour]] call CBA_fnc_serverEvent;
+            [QEGVAR(common,setWaypointBehaviour), [_x, _value]] call CBA_fnc_serverEvent;
         } forEach SELECTED_WAYPOINTS;
     },
-    {BEHAVIOURS find toUpper waypointBehaviour _entity}
+    {waypointBehaviour _entity}
 ] call FUNC(addAttribute);
 
 [
@@ -470,26 +501,25 @@
     "STR_3DEN_Group_Attribute_CombatMode_displayName",
     QGVAR(icons),
     [[
-        [QPATHTOF(ui\hold_ca.paa),   "STR_3DEN_Attributes_CombatMode_Blue_text",   11.25, 0.5, 1.5, [1, 0, 0]],
-        [QPATHTOF(ui\defend_ca.paa), "STR_3DEN_Attributes_CombatMode_Green_text",  13.75, 0.5, 1.5, [1, 0, 0]],
-        [QPATHTOF(ui\engage_ca.paa), "STR_3DEN_Attributes_CombatMode_White_text",  16.25, 0.5, 1.5, [1, 0, 0]],
-        [QPATHTOF(ui\hold_ca.paa),   "STR_3DEN_Attributes_CombatMode_Yellow_text", 18.75, 0.5, 1.5],
-        [QPATHTOF(ui\engage_ca.paa), "STR_3DEN_Attributes_CombatMode_Red_text",    21.25, 0.5, 1.5],
-        ["\a3\ui_f_curator\Data\default_ca.paa", "STR_Combat_Unchanged", 24, 0.5, 1.5]
+        ["BLUE",      QPATHTOF(ui\hold_ca.paa),   "STR_3DEN_Attributes_CombatMode_Blue_text",   11.25, 0.5, 1.5, [1, 0, 0]],
+        ["GREEN",     QPATHTOF(ui\defend_ca.paa), "STR_3DEN_Attributes_CombatMode_Green_text",  13.75, 0.5, 1.5, [1, 0, 0]],
+        ["WHITE",     QPATHTOF(ui\engage_ca.paa), "STR_3DEN_Attributes_CombatMode_White_text",  16.25, 0.5, 1.5, [1, 0, 0]],
+        ["YELLOW",    QPATHTOF(ui\hold_ca.paa),   "STR_3DEN_Attributes_CombatMode_Yellow_text", 18.75, 0.5, 1.5],
+        ["RED",       QPATHTOF(ui\engage_ca.paa), "STR_3DEN_Attributes_CombatMode_Red_text",    21.25, 0.5, 1.5],
+        ["NO CHANGE", "\a3\ui_f_curator\Data\default_ca.paa", "STR_Combat_Unchanged", 24, 0.5, 1.5]
     ]],
     {
-        private _combatMode = COMBATMODES select _value;
         {
             _x params ["_group", "_waypointID"];
 
-            if (currentWaypoint _group == _waypointID && {_combatMode != "NO CHANGE"}) then {
-                [QEGVAR(common,setCombatMode), [_group, _combatMode], _group] call CBA_fnc_targetEvent;
+            if (currentWaypoint _group == _waypointID && {_value != "NO CHANGE"}) then {
+                [QEGVAR(common,setCombatMode), [_group, _value], _group] call CBA_fnc_targetEvent;
             };
 
-            [QEGVAR(common,setWaypointCombatMode), [_x, _combatMode]] call CBA_fnc_serverEvent;
+            [QEGVAR(common,setWaypointCombatMode), [_x, _value]] call CBA_fnc_serverEvent;
         } forEach SELECTED_WAYPOINTS;
     },
-    {COMBATMODES find toUpper waypointCombatMode _entity}
+    {waypointCombatMode _entity}
 ] call FUNC(addAttribute);
 
 [
@@ -497,24 +527,23 @@
     "STR_HC_Menu_Speed",
     QGVAR(icons),
     [[
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeSpeedMode\limited_ca.paa", "STR_Speed_Limited", 13.25, 0, 2.5],
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeSpeedMode\normal_ca.paa",  "STR_Speed_Normal",  15.75, 0, 2.5],
-        ["\a3\Ui_F_Curator\Data\RscCommon\RscAttributeSpeedMode\full_ca.paa",    "STR_Speed_Full",    18.25, 0, 2.5],
-        ["\a3\ui_f_curator\Data\default_ca.paa", "STR_Speed_Unchanged", 24, 0.5, 1.5]
+        ["LIMITED",   "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeSpeedMode\limited_ca.paa", "STR_Speed_Limited", 13.25, 0, 2.5],
+        ["NORMAL",    "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeSpeedMode\normal_ca.paa",  "STR_Speed_Normal",  15.75, 0, 2.5],
+        ["FULL",      "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeSpeedMode\full_ca.paa",    "STR_Speed_Full",    18.25, 0, 2.5],
+        ["UNCHANGED", "\a3\ui_f_curator\Data\default_ca.paa", "STR_Speed_Unchanged", 24, 0.5, 1.5]
     ]],
     {
-        private _speedMode = SPEEDMODES select _value;
         {
             _x params ["_group", "_waypointID"];
 
-            if (currentWaypoint _group == _waypointID && {_speedMode != "UNCHANGED"}) then {
-                [QEGVAR(common,setSpeedMode), [_group, _speedMode], _group] call CBA_fnc_targetEvent;
+            if (currentWaypoint _group == _waypointID && {_value != "UNCHANGED"}) then {
+                [QEGVAR(common,setSpeedMode), [_group, _value], _group] call CBA_fnc_targetEvent;
             };
 
-            [QEGVAR(common,setWaypointSpeed), [_x, _speedMode]] call CBA_fnc_serverEvent;
+            [QEGVAR(common,setWaypointSpeed), [_x, _value]] call CBA_fnc_serverEvent;
         } forEach SELECTED_WAYPOINTS;
     },
-    {SPEEDMODES find toUpper waypointSpeed _entity}
+    {waypointSpeed _entity}
 ] call FUNC(addAttribute);
 
 // - Marker -------------------------------------------------------------------
@@ -847,16 +876,15 @@ if (isClass (configFile >> "CfgPatches" >> "ace_explosives")) then {
     "STR_Eval_TypeSide",
     QGVAR(icons),
     [[
-        ["\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_west_ca.paa", "STR_West",     12.5, 0.25, 2, west call BIS_fnc_sideColor],
-        ["\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_east_ca.paa", "STR_East",     15.5, 0.25, 2, east call BIS_fnc_sideColor],
-        ["\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_guer_ca.paa", "STR_Guerrila", 18.5, 0.25, 2, independent call BIS_fnc_sideColor],
-        ["\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_civ_ca.paa",  "STR_Civilian", 21.5, 0.25, 2, civilian call BIS_fnc_sideColor]
+        [west,        "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_west_ca.paa", "STR_West",     12.5, 0.25, 2, west call BIS_fnc_sideColor],
+        [east,        "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_east_ca.paa", "STR_East",     15.5, 0.25, 2, east call BIS_fnc_sideColor],
+        [independent, "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_guer_ca.paa", "STR_Guerrila", 18.5, 0.25, 2, independent call BIS_fnc_sideColor],
+        [civilian,    "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_civ_ca.paa",  "STR_Civilian", 21.5, 0.25, 2, civilian call BIS_fnc_sideColor]
     ]],
     {
-        private _side = [west, east, independent, civilian] select _value;
         {
-            [_x, _side] call EFUNC(common,changeGroupSide);
+            [_x, _value] call EFUNC(common,changeGroupSide);
         } forEach SELECTED_GROUPS;
     },
-    {[west, east, independent, civilian] find side _entity}
+    {side _entity}
 ] call FUNC(addAttribute);

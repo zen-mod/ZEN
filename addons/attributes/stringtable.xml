@@ -37,6 +37,15 @@
             <Portuguese>Número da Placa</Portuguese>
             <Japanese>ナンバー プレート</Japanese>
         </Key>
+        <Key ID="STR_ZEN_Attributes_RespawnPosition">
+            <English>Respawn Position</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_RespawnPosition_Tooltip">
+            <English>Selects the side that is able to respawn on this object.</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_States">
+            <English>States</English>
+        </Key>
         <Key ID="STR_ZEN_Attributes_Exec_TooltipObject">
             <English>This code will be executed in the unscheduled environment on the machine where this object is local.\nThe object will be passed in the "_this" variable.</English>
             <French>Ce code sera exécuté dans l'environnement non planifié de la machine où cet objet est local.\nL'objet sera passé dans la variable "_this".</French>

@@ -15,7 +15,7 @@
  * None
  *
  * Example:
- * [_controlsGroup, [true], [[0, 0, 16, "Confirm"]]] call zen_attributes_fnc_gui_toolbox
+ * [_controlsGroup, _defaultValue, _valueInfo] call zen_attributes_fnc_gui_checkboxes
  *
  * Public: No
  */
