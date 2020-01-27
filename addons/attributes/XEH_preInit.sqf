@@ -17,7 +17,6 @@ GVAR(previousMarkerColors) = [] call CBA_fnc_createNamespace;
     params ["_logic"];
 
     _logic addEventHandler ["CuratorMarkerPlaced", {call FUNC(handleMarkerPlaced)}];
-    _logic addEventHandler ["CuratorObjectPlaced", {call FUNC(handleObjectPlaced)}];
 }, true, [], true] call CBA_fnc_addClassEventHandler;
 
 #include "initAttributes.sqf"

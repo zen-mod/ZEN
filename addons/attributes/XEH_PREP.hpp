@@ -13,5 +13,4 @@ PREP(gui_slider);
 PREP(gui_toolbox);
 PREP(gui_waypoint);
 PREP(handleMarkerPlaced);
-PREP(handleObjectPlaced);
 PREP(open);
