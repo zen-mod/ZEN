@@ -263,10 +263,16 @@ private _fnc_vehicleChanged = {
             _ctrlInsertion lbAdd localize ELSTRING(ai,Fastrope);
         };
     } else {
-        _ctrlInsertion lbDelete 2;
-    };
+        private _index = lbCurSel _ctrlInsertion;
 
-    _ctrlInsertion lbSetCurSel (lbCurSel _ctrlInsertion min lbSize _ctrlInsertion);
+        // Switch to land if fastroping is not available
+        if (_index == 2) then {
+            _index = 0;
+        };
+
+        _ctrlInsertion lbDelete 2;
+        _ctrlInsertion lbSetCurSel _index;
+    };
 };
 
 private _ctrlVehicle = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE;
