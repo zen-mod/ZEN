@@ -597,7 +597,20 @@
 
 [
     "Skills",
-    LSTRING(AimingAccuracy),
+    "STR_General",
+    QGVAR(slider),
+    [0, 1, 0.1, true],
+    {
+        {
+            [QEGVAR(common,setSkill), [_x, ["general", _value]], _x] call CBA_fnc_targetEvent;
+        } forEach call EFUNC(common,getSelectedUnits);
+    },
+    {_entity skill "general"}
+] call FUNC(addAttribute);
+
+[
+    "Skills",
+    ELSTRING(ai,AimingAccuracy),
     QGVAR(slider),
     [0, 1, 0.1, true],
     {
@@ -610,7 +623,7 @@
 
 [
     "Skills",
-    LSTRING(AimingSpeed),
+    ELSTRING(ai,AimingSpeed),
     QGVAR(slider),
     [0, 1, 0.1, true],
     {
@@ -623,7 +636,7 @@
 
 [
     "Skills",
-    LSTRING(AimingShake),
+    ELSTRING(ai,AimingShake),
     QGVAR(slider),
     [0, 1, 0.1, true],
     {
@@ -636,7 +649,7 @@
 
 [
     "Skills",
-    LSTRING(Commanding),
+    ELSTRING(ai,Commanding),
     QGVAR(slider),
     [0, 1, 0.1, true],
     {
@@ -649,7 +662,7 @@
 
 [
     "Skills",
-    LSTRING(Courage),
+    ELSTRING(ai,Courage),
     QGVAR(slider),
     [0, 1, 0.1, true],
     {
@@ -662,7 +675,7 @@
 
 [
     "Skills",
-    LSTRING(SpotDistance),
+    ELSTRING(ai,SpotDistance),
     QGVAR(slider),
     [0, 1, 0.1, true],
     {
@@ -675,7 +688,7 @@
 
 [
     "Skills",
-    LSTRING(SpotTime),
+    ELSTRING(ai,SpotTime),
     QGVAR(slider),
     [0, 1, 0.1, true],
     {
@@ -688,7 +701,7 @@
 
 [
     "Skills",
-    LSTRING(ReloadSpeed),
+    ELSTRING(ai,ReloadSpeed),
     QGVAR(slider),
     [0, 1, 0.1, true],
     {
