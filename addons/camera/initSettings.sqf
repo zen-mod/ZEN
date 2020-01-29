@@ -21,7 +21,7 @@
     "SLIDER",
     [LSTRING(DefaultSpeedCoef), LSTRING(DefaultSpeedCoef_Description)],
     [ELSTRING(common,Category), LSTRING(Camera)],
-    [1, 5, 1, 2],
+    [0.1, 5, 1, 2],
     false
 ] call CBA_settings_fnc_init;
 
@@ -30,6 +30,6 @@
     "SLIDER",
     [LSTRING(FastSpeedCoef), LSTRING(FastSpeedCoef_Description)],
     [ELSTRING(common,Category), LSTRING(Camera)],
-    [1, 5, 1, 2],
+    [0.1, 5, 1, 2],
     false
 ] call CBA_settings_fnc_init;

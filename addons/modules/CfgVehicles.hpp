@@ -243,6 +243,11 @@ class CfgVehicles {
         displayName = CSTRING(ModuleGarrison);
         function = QFUNC(moduleGarrison);
     };
+    class GVAR(moduleGlobalAISkill): GVAR(moduleBase) {
+        category = QGVAR(AI);
+        displayName = CSTRING(GlobalAISkill);
+        function = QFUNC(moduleGlobalAISkill);
+    };
     class GVAR(moduleGlobalHint): GVAR(moduleBase) {
         category = "Curator";
         displayName = CSTRING(ModuleGlobalHint);
