@@ -28,5 +28,91 @@
             <Portuguese>Incapaz de guarnecer todas as unidades - não há posições o suficiente</Portuguese>
             <Japanese>全てのユニットを歩哨にできません - 空きスペース無し</Japanese>
         </Key>
+        <Key ID="STR_ZEN_AI_AimingAccuracy">
+            <English>Aiming Accuracy</English>
+            <French>Précision de visée</French>
+            <German>Zielgenauigkeit</German>
+            <Czech>Přesnost míření</Czech>
+            <Italian>Precisione</Italian>
+            <Polish>Celność</Polish>
+            <Portuguese>Precisão da Mira</Portuguese>
+            <Japanese>照準精度</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_AI_AimingSpeed">
+            <English>Aiming Speed</English>
+            <French>Vitesse de visée</French>
+            <German>Zilelgeschwindigkeit</German>
+            <Czech>Rychlost míření</Czech>
+            <Italian>Velcoità di puntamento</Italian>
+            <Polish>Prędkość celowania</Polish>
+            <Portuguese>Velocidade da Mira</Portuguese>
+            <Japanese>照準速度</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_AI_AimingShake">
+            <English>Aiming Shake</English>
+            <French>Secousse de visée</French>
+            <German>Waffenschwankung</German>
+            <Czech>Chvění míření</Czech>
+            <Polish>Niestabilność celowania</Polish>
+            <Portuguese>Balanço da Mira</Portuguese>
+            <Japanese>照準安定性</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_AI_Commanding">
+            <English>Commanding</English>
+            <French>Commandement</French>
+            <German>Kommandierend</German>
+            <Czech>Velení</Czech>
+            <Italian>Comando</Italian>
+            <Polish>Wyżej położony</Polish>
+            <Portuguese>Comandante</Portuguese>
+            <Japanese>指揮能力</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_AI_Courage">
+            <English>Courage</English>
+            <French>Courage</French>
+            <German>Mut</German>
+            <Czech>Odvaha</Czech>
+            <Italian>Coraggio</Italian>
+            <Polish>Odwaga</Polish>
+            <Portuguese>Coragem</Portuguese>
+            <Japanese>度胸</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_AI_SpotDistance">
+            <English>Spotting Distance</English>
+            <French>Distance de repérage</French>
+            <German>Aufklärungsdistanz</German>
+            <Czech>Pozorovacívzdálenost</Czech>
+            <Italian>Distanza di Spotting</Italian>
+            <Portuguese>Distância de Detecção</Portuguese>
+            <Japanese>探知距離</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_AI_SpotTime">
+            <English>Spotting Speed</English>
+            <French>Vitesse de repérage</French>
+            <German>Aufklärungszeit</German>
+            <Czech>Pozorovací rychlost</Czech>
+            <Italian>Velocità di Spotting</Italian>
+            <Portuguese>Velocidade de Detecção</Portuguese>
+            <Japanese>探知速度</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_AI_ReloadSpeed">
+            <English>Reload Speed</English>
+            <French>vitesse de recharge</French>
+            <German>Nachladezeit</German>
+            <Czech>Rychlost přebíjení</Czech>
+            <Italian>Velocità di Ricarica</Italian>
+            <Polish>Prędkość przeładowania</Polish>
+            <Portuguese>Velocidade de Recarga</Portuguese>
+            <Japanese>リロード速度</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_AI_SeekCover">
+            <English>Seek Cover</English>
+        </Key>
+        <Key ID="STR_ZEN_AI_AutoCombat">
+            <English>Auto Combat</English>
+        </Key>
+        <Key ID="STR_ZEN_AI_Suppression">
+            <English>Suppression</English>
+        </Key>
     </Package>
 </Project>
