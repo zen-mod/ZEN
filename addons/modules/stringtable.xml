@@ -1895,5 +1895,8 @@
         <Key ID="STR_ZEN_Modules_PlaceAnLZ">
             <English>Place an LZ</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_NoTeleportPosition">
+            <English>Unable to find suitable position to teleport vehicle to.</English>
+        </Key>
     </Package>
 </Project>
