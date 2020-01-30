@@ -38,6 +38,7 @@ Special thanks to the [ACE3 Team](http://ace3mod.com/team.html) for their open s
 - Rewritten, faster remote controlling of units.
 - 3DEN editor object preview images in Zeus.
 - Player visibility indicator to help ensure mission adjustments are not made in view of players.
+- Placement preview that enables precise object placement on surfaces.
 - Vehicle customization garage made specifically for Zeus.
 - Various bug fixes and quality of life improvements to the Zeus interface.
 - Settings to control Zeus camera properties such as speed and available vision modes.
