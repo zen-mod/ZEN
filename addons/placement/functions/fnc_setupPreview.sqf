@@ -39,8 +39,8 @@ GVAR(object) disableCollisionWith player;
 GVAR(object) enableSimulation false;
 GVAR(object) allowDamage false;
 
-// Calculate the vertical offset as the difference between model center position
-// and position transformed
+// Calculate the vertical offset as the difference between the model center position
+// and the land contact transformed position
 private _offset = (getPosWorld GVAR(object) select 2) - (getPosASL GVAR(object) select 2);
 GVAR(object) attachTo [GVAR(helper), [0, 0, _offset]];
 
