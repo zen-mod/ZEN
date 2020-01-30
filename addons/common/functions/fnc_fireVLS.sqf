@@ -30,7 +30,7 @@ private _muzzle = (_unit weaponsTurret GUNNER_TURRET) param [0, ""];
 private _eta = [_unit, _targetPosition, _magazine] call FUNC(getArtilleryETA);
 private _reloadTime = [_unit, _muzzle, GUNNER_TURRET] call FUNC(getWeaponReloadTime);
 
-// Load magazine even if it is the right one in order to suppress a possible ongoing magazine loading
+// Load magazine even if it is the right one in order to ignore a possible reload occurring at the same time
 [_unit, GUNNER_TURRET, _muzzle, _magazine] call FUNC(loadMagazineInstantly);
 
 [
