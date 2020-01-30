@@ -12,7 +12,7 @@
         </Key>
         <Key ID="STR_ZEN_AI_Paradrop">
             <English>Paradrop</English>
-            <Russian>Парашютное десантирование</Russian>
+            <Russian>Десант</Russian>
             <German>Fallschirmsprung</German>
             <Czech>Seskok padákem</Czech>
             <Polish>Desant ze spadochronem</Polish>
@@ -21,7 +21,7 @@
         </Key>
         <Key ID="STR_ZEN_AI_CouldNotGarrisonAll">
             <English>Unable to garrison all units - not enough positions</English>
-            <Russian>Невозможно вывести все единицы - недостаточно позиций</Russian>
+            <Russian>Невозможно разместить всех солдат - недостаточно позиций</Russian>
             <French>Impossible de poster toutes les unités en garnison - pas assez de places</French>
             <German>Das Gebäude hat zu wenig Positionen - Nicht alle Einheiten konnten das Gebäude besetzen</German>
             <Polish>Nie udało się zgarnizonować wszystkich jednostek - za mało pozycji</Polish>
@@ -54,7 +54,7 @@
         </Key>
         <Key ID="STR_ZEN_AI_AimingShake">
             <English>Aiming Shake</English>
-            <Russian>Прицел</Russian>
+            <Russian>Дрожание Прицела</Russian>
             <French>Secousse de visée</French>
             <German>Waffenschwankung</German>
             <Czech>Chvění míření</Czech>
@@ -75,7 +75,7 @@
         </Key>
         <Key ID="STR_ZEN_AI_Courage">
             <English>Courage</English>
-            <Russian>Мужество</Russian>
+            <Russian>Храбрость</Russian>
             <French>Courage</French>
             <German>Mut</German>
             <Czech>Odvaha</Czech>
@@ -86,7 +86,6 @@
         </Key>
         <Key ID="STR_ZEN_AI_SpotDistance">
             <English>Spotting Distance</English>
-            <Russian>Расстояние Точки</Russian>
             <French>Distance de repérage</French>
             <German>Aufklärungsdistanz</German>
             <Czech>Pozorovacívzdálenost</Czech>
@@ -96,7 +95,6 @@
         </Key>
         <Key ID="STR_ZEN_AI_SpotTime">
             <English>Spotting Speed</English>
-            <Russian>Время Точки</Russian>
             <French>Vitesse de repérage</French>
             <German>Aufklärungszeit</German>
             <Czech>Pozorovací rychlost</Czech>

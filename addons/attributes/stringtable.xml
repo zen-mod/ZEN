@@ -36,7 +36,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_Exec_Tooltip">
             <English>This code will be executed in the unscheduled environment on the machine where this object is local.\nThe object will be passed in the "_this" variable.</English>
-            <Russian>Этот код будет выполнен в незапланированной среде на машине, где этот объект является локальным.\nОбъект будет передан в "_this" переменную.</Russian>
+            <Russian>Этот код будет выполнен вне окружения планировщика на машине, где этот объект является локальным.\nОбъект будет передан в "_this" переменную.</Russian>
             <French>Ce code sera exécuté dans l'environnement non planifié de la machine où cet objet est local.\nL'objet sera passé dans la variable "_this".</French>
             <German>Der eingegebene Code wird in einer unscheduled Umgebung lokal zum Objkekt ausgeführt.\nDas Objekt wird in der Variable names "_this" übergeben.</German>
             <Polish>Ten kod zostanie wykonany w środowisku unscheduled na maszynie gdzie obiekt jest lokalny.\nObiekt zostanie przekazany w zmiennej "_this".</Polish>
@@ -58,7 +58,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_Timeout_Tooltip">
             <English>The time (in seconds) between waypoint condition satisfaction and waypoint completion.</English>
-            <Russian>Время (в секундах) между удовлетворением условия путевой точки и завершением путевой точки.</Russian>
+            <Russian>Время (в секундах) между выполнением условия путевой точки и завершением путевой точки.</Russian>
             <French>Le temps (en secondes) entre la satisfaction des conditions du repère de balisage et l'achèvement du repère de balisage.</French>
             <German>Zeit (in Sekunden) zwischen der Erfüllung der Wegpunktbedingung und der Vervollständigung des Wegpunktes.</German>
             <Polish>Czas (w sekundach) pomiędzy wypełnieniem warunku zaliczenia punktu trasy a jego faktycznym zaliczeniem.</Polish>
@@ -168,7 +168,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_AdvEngineer">
             <English>Adv. Engineer</English>
-            <Russian>Продвинутый Инженер</Russian>
+            <Russian>Старший Инженер</Russian>
             <French>Ingénieur d'études</French>
             <German>Erfahrene Techniker</German>
             <Czech>Pokročilý Inženýr</Czech>
