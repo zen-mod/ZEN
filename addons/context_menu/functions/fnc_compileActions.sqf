@@ -40,20 +40,7 @@ private _fnc_getActionData = {
             _condition = {true};
         };
 
-        // Action arguments can be a string, number or an array - default: []
-        private _argsEntry = _entryConfig >> "args";
-
-        private _args = switch (true) do {
-            case (isText _argsEntry): {
-                getText _argsEntry
-            };
-            case (isNumber _argsEntry): {
-                getNumber _argsEntry
-            };
-            default {
-                getArray _argsEntry
-            };
-        };
+        private _args = [_entryConfig, "args", []] call BIS_fnc_returnConfigEntry;
 
         private _insertChildren = compile getText (_entryConfig >> "insertChildren");
         private _modifierFunction = compile getText (_entryConfig >> "modifierFunction");
