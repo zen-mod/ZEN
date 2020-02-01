@@ -10,7 +10,7 @@
  * Can Refuel Vehicles <BOOL>
  *
  * Example:
- * [_object1, _object2] call zen_context_actions_fnc_canRefuelVehicles
+ * [_object] call zen_context_actions_fnc_canRefuelVehicles
  *
  * Public: No
  */

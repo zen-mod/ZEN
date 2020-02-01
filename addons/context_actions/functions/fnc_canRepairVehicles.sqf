@@ -10,7 +10,7 @@
  * Can Repair Vehicles <BOOL>
  *
  * Example:
- * [_object1, _object2] call zen_context_actions_fnc_canRepairVehicles
+ * [_object] call zen_context_actions_fnc_canRepairVehicles
  *
  * Public: No
  */

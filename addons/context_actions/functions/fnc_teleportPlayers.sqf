@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [_object1, _object2] call zen_context_actions_fnc_teleportPlayers
+ * [_object] call zen_context_actions_fnc_teleportPlayers
  *
  * Public: No
  */

@@ -10,7 +10,7 @@
  * Can Rearm Vehicles <BOOL>
  *
  * Example:
- * [_object1, _object2] call zen_context_actions_fnc_canRearmVehicles
+ * [_object] call zen_context_actions_fnc_canRearmVehicles
  *
  * Public: No
  */

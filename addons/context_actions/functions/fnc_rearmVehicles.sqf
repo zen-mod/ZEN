@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [_object1, _object2] call zen_context_actions_fnc_rearmVehicles
+ * [_object] call zen_context_actions_fnc_rearmVehicles
  *
  * Public: No
  */

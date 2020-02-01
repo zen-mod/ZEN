@@ -16,8 +16,8 @@
  * Public: No
  */
 
-params ["_groups", "_speed"];
+params ["_groups", "_speedMode"];
 
 {
-    [QEGVAR(common,setSpeedMode), [_x, _speed], _x] call CBA_fnc_targetEvent;
+    [QEGVAR(common,setSpeedMode), [_x, _speedMode], _x] call CBA_fnc_targetEvent;
 } forEach _groups;
