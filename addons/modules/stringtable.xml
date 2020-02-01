@@ -1749,6 +1749,15 @@
         <Key ID="STR_ZEN_Modules_CustomFire_ParticleOrientation">
             <English>Particle Orientation</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_GlobalAISkill">
+            <English>Global AI Skill</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_GlobalAISkill_Enabled">
+            <English>Global Skill</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_GlobalAISkill_Enabled_Description">
+            <English>Enables applying the following skill values to all current and newly created AI units.</English>
+        </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_Buildings">
             <English>Buildings</English>
@@ -1906,6 +1915,9 @@
         </Key>
         <Key ID="STR_ZEN_Modules_PlaceAnLZ">
             <English>Place an LZ</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_NoTeleportPosition">
+            <English>Unable to find suitable position to teleport vehicle to.</English>
         </Key>
     </Package>
 </Project>

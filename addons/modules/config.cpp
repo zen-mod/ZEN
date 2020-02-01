@@ -37,6 +37,7 @@ class CfgPatches {
             QGVAR(moduleFlyHeight),
             QGVAR(moduleFunctionsViewer),
             QGVAR(moduleGarrison),
+            QGVAR(moduleGlobalAISkill),
             QGVAR(moduleGlobalHint),
             QGVAR(moduleGroupSide),
             QGVAR(moduleHeal),
