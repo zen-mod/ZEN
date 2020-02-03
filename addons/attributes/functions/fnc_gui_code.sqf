@@ -8,14 +8,15 @@
  * 1: Default Value <STRING>
  * 2: Value Info <ARRAY>
  *   0: History Variable Name <STRING>
- *   1: Statements History Length <NUMBER>
- *   2: Editbox Tooltip <STRING>
+ *   1: Editbox Tooltip <STRING>
+ *   2: Maximum Statements <NUMBER>
+ *   3: Maximum Characters <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [_controlsGroup, "", ["", 20, ""]] call zen_attributes_fnc_gui_code
+ * [_controlsGroup, _defaultValue, _valueInfo] call zen_attributes_fnc_gui_code
  *
  * Public: No
  */
@@ -23,20 +24,14 @@
 #define PREVIEW_LENGTH 30
 
 params ["_controlsGroup", "_defaultValue", "_valueInfo"];
-_valueInfo params [["_historyVarName", "", [""]], ["_maxStatements", 20, [0]], ["_tooltip", "", [""]]];
+_valueInfo params [["_historyVarName", "", [""]], ["_editboxTooltip", "", [""]], ["_maxStatements", 20, [0]], ["_maxCharacters", -1, [0]]];
 
 if (isLocalized _tooltip) then {
     _tooltip = localize _tooltip;
 };
 
-if (isNil "_defaultValue") then {
-    _defaultValue = "";
-};
-
 private _ctrlCombo = _controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_COMBO;
-private _ctrlEdit  = _controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_EDIT;
-
-_ctrlCombo setVariable [QGVAR(params), [_controlsGroup, _ctrlEdit, _historyVarName]];
+_ctrlCombo setVariable [QGVAR(params), [_historyVarName]];
 _ctrlCombo lbAdd localize "STR_A3_RscAttributeTaskDescription_New";
 _ctrlCombo lbSetCurSel 0;
 
@@ -51,7 +46,7 @@ _ctrlCombo lbSetCurSel 0;
 
 _ctrlCombo ctrlAddEventHandler ["LBSelChanged", {
     params ["_ctrlCombo", "_index"];
-    (_ctrlCombo getVariable QGVAR(params)) params ["_controlsGroup", "_ctrlEdit", "_historyVarName"];
+    (_ctrlCombo getVariable QGVAR(params)) params ["_historyVarName"];
 
     private _text = if (_index > 0) then {
         private _history = profileNamespace getVariable [_historyVarName, []];
@@ -60,31 +55,35 @@ _ctrlCombo ctrlAddEventHandler ["LBSelChanged", {
         "" // New
     };
 
+    private _controlsGroup = ctrlParentControlsGroup _ctrlCombo;
     _controlsGroup setVariable [QGVAR(value), _text];
+
+    private _ctrlEdit = _controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_EDIT;
     _ctrlEdit ctrlSetText _text;
 }];
 
-_ctrlEdit setVariable [QGVAR(params), [_controlsGroup]];
-_ctrlEdit ctrlSetTooltip _tooltip;
+private _ctrlEdit = _controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_EDIT;
+_ctrlEdit ctrlSetTooltip _editboxTooltip;
 _ctrlEdit ctrlSetText _defaultValue;
 
 _ctrlEdit ctrlAddEventHandler ["KeyUp", {
     params ["_ctrlEdit"];
-    (_ctrlEdit getVariable QGVAR(params)) params ["_controlsGroup"];
 
+    private _controlsGroup = ctrlParentControlsGroup _ctrlEdit;
     _controlsGroup setVariable [QGVAR(value), ctrlText _ctrlEdit];
 }];
 
 // Save code history if a variable name is given
 if (_historyVarName != "") then {
-    _controlsGroup setVariable [QGVAR(params), [_historyVarName, _maxStatements]];
+    _controlsGroup setVariable [QGVAR(params), [_historyVarName, _maxStatements, _maxCharacters]];
 
     _controlsGroup setVariable [QFUNC(confirmed), {
         params ["_controlsGroup"];
-        (_controlsGroup getVariable QGVAR(params)) params ["_historyVarName", "_maxStatements"];
+        (_controlsGroup getVariable QGVAR(params)) params ["_historyVarName", "_maxStatements", "_maxCharacters"];
 
+        // Do not save empty strings and strings that are longer that the maximum number of characters
         private _value = _controlsGroup getVariable [QGVAR(value), ""];
-        if (_value isEqualTo "") exitwith {};
+        if (_value == "" || {_maxCharacters > 0 && {count _value > _maxCharacters}}) exitwith {};
 
         private _history = profileNamespace getVariable [_historyVarName, []];
         _history deleteAt (_history find _value);

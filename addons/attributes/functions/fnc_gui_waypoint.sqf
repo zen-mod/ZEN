@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Controls Group <CONTROL>
- * 1: Default Value (not used, determined from entity) <ANY>
+ * 1: Default Value (not used) <ANY>
  * 2: Value Info (not used) <ANY>
  * 3: Entity <ARRAY>
  *
@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [CONTROL, nil, [], _entity] call zen_attributes_fnc_gui_waypoint
+ * [CONTROL, _defaultValue, _valueInfo, _entity] call zen_attributes_fnc_gui_waypoint
  *
  * Public: No
  */
@@ -27,7 +27,6 @@ if (!isNull waypointAttachedVehicle _entity) exitWith {
 };
 
 private _ctrlToolbox = _controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_TOOLBOX;
-_ctrlToolbox setVariable [QGVAR(params), [_controlsGroup]];
 
 // Determine the waypoint type from the given entity
 private _waypointType   = waypointType _entity;
@@ -47,8 +46,9 @@ private _waypointTypes  = uiNamespace getVariable QGVAR(waypointTypes);
 
 _ctrlToolbox ctrlAddEventHandler ["ToolBoxSelChanged", {
     params ["_ctrlToolbox", "_index"];
-    (_ctrlToolbox getVariable QGVAR(params)) params ["_controlsGroup"];
 
     private _value = _ctrlToolbox getVariable str _index;
+
+    private _controlsGroup = ctrlParentControlsGroup _ctrlToolbox;
     _controlsGroup setVariable [QGVAR(value), _value];
 }];

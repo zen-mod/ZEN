@@ -7,36 +7,37 @@
  * 0: Controls Group <CONTROL>
  * 1: Default Value <ANY>
  * 2: Value Info <ARRAY>
- *   N: [Value <ANY>, Display Name and Tooltip <STRING|ARRAY>, Icon and Icon Color <STRING|ARRAY>] <ARRAY>
+ *   0: Entries <ARRAY>
+ *     N: [Value <ANY>, Text and Tooltip <STRING|ARRAY>, Picture and Color <STRING|ARRAY>] <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [_controlsGroup, 1, [[1, "Option 1"], [2, "Option 2"]]] call zen_attributes_fnc_gui_combo
+ * [_controlsGroup, _defaultValue, _valueInfo] call zen_attributes_fnc_gui_combo
  *
  * Public: No
  */
 
 params ["_controlsGroup", "_defaultValue", "_valueInfo"];
+_valueInfo params [["_entries", [], [[]]]];
 
 private _ctrlCombo = _controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_COMBO;
-_ctrlCombo setVariable [QGVAR(params), [_controlsGroup]];
 
 {
     _x params [["_value", _forEachIndex], ["_name", "", ["", []]], ["_icon", "", ["", []]]];
-    _name params [["_displayName", "", [""]], ["_tooltip", "", [""]]];
+    _name params [["_text", "", [""]], ["_tooltip", "", [""]]];
     _icon params [["_picture", "", [""]], ["_pictureColor", [1, 1, 1, 1], [[]], 4]];
 
-    if (isLocalized _displayName) then {
-        _displayName = localize _displayName;
+    if (isLocalized _text) then {
+        _text = localize _text;
     };
 
     if (isLocalized _tooltip) then {
         _tooltip = localize _tooltip;
     };
 
-    private _index = _ctrlCombo lbAdd _displayName;
+    private _index = _ctrlCombo lbAdd _text;
     _ctrlCombo lbSetTooltip [_index, _tooltip];
     _ctrlCombo lbSetPicture [_index, _picture];
     _ctrlCombo lbSetPictureColor [_index, _pictureColor];
@@ -46,12 +47,13 @@ _ctrlCombo setVariable [QGVAR(params), [_controlsGroup]];
     if (_value isEqualTo _defaultValue) then {
         _ctrlCombo lbSetCurSel _index;
     };
-} forEach _valueInfo;
+} forEach _entries;
 
 _ctrlCombo ctrlAddEventHandler ["LBSelChanged", {
     params ["_ctrlCombo", "_index"];
-    (_ctrlCombo getVariable QGVAR(params)) params ["_controlsGroup"];
 
     private _value = _ctrlCombo getVariable str _index;
+
+    private _controlsGroup = ctrlParentControlsGroup _ctrlCombo;
     _controlsGroup setVariable [QGVAR(value), _value];
 }];

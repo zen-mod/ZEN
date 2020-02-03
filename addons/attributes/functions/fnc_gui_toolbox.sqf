@@ -15,7 +15,7 @@
  * None
  *
  * Example:
- * [_controlsGroup, true, [1, 2, ["No", "Yes"]]] call zen_attributes_fnc_gui_toolbox
+ * [_controlsGroup, _defaultValue, _valueInfo] call zen_attributes_fnc_gui_toolbox
  *
  * Public: No
  */
@@ -29,14 +29,14 @@ if (_returnBool) then {
     _defaultValue = parseNumber _defaultValue;
 };
 
-parsingNamespace setVariable [QGVAR(rows), _rows max 1];
-parsingNamespace setVariable [QGVAR(columns), _columns max 2];
-
 private _display = ctrlParent _controlsGroup;
-private _ctrlToolbox = _display ctrlCreate [QGVAR(RscToolbox), IDC_ATTRIBUTE_TOOLBOX, _controlsGroup];
-_ctrlToolbox setVariable [QGVAR(params), [_controlsGroup, _returnBool]];
 
-// Currently the only way to add options to toolbox controls through script
+parsingNamespace setVariable [QGVAR(rows), _rows max 1];
+parsingNamespace setVariable [QGVAR(columns), _columns max 1];
+
+private _ctrlToolbox = _display ctrlCreate [QGVAR(RscToolbox), -1, _controlsGroup];
+_ctrlToolbox setVariable [QGVAR(params), [_returnBool]];
+
 {
     if (isLocalized _x) then {
         _x = localize _x;
@@ -49,12 +49,13 @@ _ctrlToolbox lbSetCurSel _defaultValue;
 
 _ctrlToolbox ctrlAddEventHandler ["ToolBoxSelChanged", {
     params ["_ctrlToolbox", "_value"];
-    (_ctrlToolbox getVariable QGVAR(params)) params ["_controlsGroup", "_returnBool"];
+    (_ctrlToolbox getVariable QGVAR(params)) params ["_returnBool"];
 
     if (_returnBool) then {
         _value = _value > 0;
     };
 
+    private _controlsGroup = ctrlParentControlsGroup _ctrlToolbox;
     _controlsGroup setVariable [QGVAR(value), _value];
 }];
 

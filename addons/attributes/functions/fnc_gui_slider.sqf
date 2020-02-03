@@ -17,7 +17,7 @@
  * None
  *
  * Example:
- * [_controlsGroup, 0.5, [0, 1, 0.1, true]] call zen_attributes_fnc_gui_slider
+ * [_controlsGroup, _defaultValue, _valueInfo] call zen_attributes_fnc_gui_slider
  *
  * Public: No
  */
