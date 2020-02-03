@@ -45,6 +45,8 @@ PREP(moduleCreateTeleporterServer);
 PREP(moduleDamageBuildings);
 PREP(moduleEarthquake);
 PREP(moduleEditableObjects);
+PREP(moduleEffectFire);
+PREP(moduleEffectFireLocal);
 PREP(moduleEquipWithECM);
 PREP(moduleFireMission);
 PREP(moduleFlyHeight);
