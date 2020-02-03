@@ -54,6 +54,11 @@ class GVAR(RscSidesCombo): EGVAR(attributes,RscCombo) {
     };
 };
 
+class GVAR(RscEffectFireHelper) {
+    idd = -1;
+    onLoad = QUOTE(call FUNC(moduleEffectFire));
+};
+
 class GVAR(RscLightSourceHelper) {
     idd = -1;
     onLoad = QUOTE(call FUNC(moduleLightSource));

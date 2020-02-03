@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Declutters empty unit tree by removing empty vehicles.
+ * Declutters the empty unit tree by removing empty vehicles.
  *
  * Arguments:
  * 0: Display <DISPLAY>

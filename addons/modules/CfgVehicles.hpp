@@ -204,6 +204,13 @@ class CfgVehicles {
         curatorInfoType = QGVAR(RscEditableObjects);
         icon = QPATHTOF(ui\edit_obj_ca.paa);
     };
+    class GVAR(moduleEffectFire): GVAR(moduleBase) {
+        category = "Effects";
+        displayName = CSTRING(CustomFire);
+        curatorInfoType = QGVAR(RscEffectFireHelper);
+        icon = QPATHTOF(ui\fire_ca.paa);
+        portrait = QPATHTOF(ui\fire_ca.paa);
+    };
     class GVAR(moduleEquipWithECM): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Objects);
@@ -241,6 +248,11 @@ class CfgVehicles {
         category = QGVAR(AI);
         displayName = CSTRING(ModuleGarrison);
         function = QFUNC(moduleGarrison);
+    };
+    class GVAR(moduleGlobalAISkill): GVAR(moduleBase) {
+        category = QGVAR(AI);
+        displayName = CSTRING(GlobalAISkill);
+        function = QFUNC(moduleGlobalAISkill);
     };
     class GVAR(moduleGlobalHint): GVAR(moduleBase) {
         category = "Curator";
