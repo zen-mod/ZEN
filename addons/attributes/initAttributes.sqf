@@ -128,12 +128,12 @@
     "Object",
     "STR_3DEN_Object_Attribute_Lock_displayName",
     QGVAR(combo),
-    [
+    [[
         [0, ["STR_3DEN_Attributes_Lock_Unlocked_text", "STR_3DEN_Attributes_Lock_Unlocked_tooltip"], "\a3\modules_f\data\iconunlock_ca.paa"],
         [1, ["STR_3DEN_Attributes_Lock_Default_text", "STR_3DEN_Attributes_Lock_Default_tooltip"], "\a3\ui_f_curator\Data\default_ca.paa"],
         [2, ["STR_3DEN_Attributes_Lock_Locked_text", "STR_3DEN_Attributes_Lock_Locked_tooltip"], "\a3\modules_f\data\iconlock_ca.paa"],
         [3, [LSTRING(LockedForPlayers), "STR_3DEN_Attributes_Lock_LockedForPlayer_tooltip"], ["\a3\modules_f\data\iconlock_ca.paa", [0.7, 0.1, 0, 1]]]
-    ],
+    ]],
     {
         {
             [QEGVAR(common,lock), [_x, _value], _x] call CBA_fnc_targetEvent;
@@ -267,11 +267,11 @@
     "Object",
     "STR_a3_rscdebugconsole_expressiontext",
     QGVAR(code),
-    [QGVAR(objectExecHistory), 20, LSTRING(Exec_TooltipObject)],
+    [QGVAR(objectExecHistory), LSTRING(Exec_TooltipObject), 20, 1000],
     {
         [QEGVAR(common,execute), [compile _value, _entity], _entity] call CBA_fnc_targetEvent;
     },
-    {},
+    {""},
     {IS_ADMIN || {!GETMVAR(ZEN_disableCodeExecution,false)}}
 ] call FUNC(addAttribute);
 
@@ -405,11 +405,11 @@
     "Group",
     "STR_a3_rscdebugconsole_expressiontext",
     QGVAR(code),
-    [QGVAR(groupExecHistory), 20, LSTRING(Exec_TooltipGroup)],
+    [QGVAR(groupExecHistory), LSTRING(Exec_TooltipGroup), 20, 1000],
     {
         [QEGVAR(common,execute), [compile _value, _entity], _entity] call CBA_fnc_targetEvent;
     },
-    {},
+    {""},
     {IS_ADMIN || {!GETMVAR(ZEN_disableCodeExecution,false)}}
 ] call FUNC(addAttribute);
 
@@ -563,9 +563,11 @@
     "Marker",
     "STR_3DEN_Marker_Attribute_Color_displayName",
     QGVAR(combo),
-    configProperties [configFile >> "CfgMarkerColors", "isClass _x && {getNumber (_x >> 'scope') > 0}"] apply {
-        [configName _x, getText (_x >> "name"), ["#(argb,8,8,3)color(1,1,1,1)", (_x >> "color") call BIS_fnc_colorConfigToRGBA]]
-    },
+    [
+        configProperties [configFile >> "CfgMarkerColors", "isClass _x && {getNumber (_x >> 'scope') > 0}"] apply {
+            [configName _x, getText (_x >> "name"), ["#(argb,8,8,3)color(1,1,1,1)", (_x >> "color") call BIS_fnc_colorConfigToRGBA]]
+        }
+    ],
     {
         _entity setMarkerColor _value;
 
@@ -822,11 +824,11 @@ if (isClass (configFile >> "CfgPatches" >> "ace_explosives")) then {
     "Sensors",
     ["STR_3DEN_Object_Attribute_Radar_displayName", "STR_3DEN_Object_Attribute_Radar_tooltip"],
     QGVAR(combo),
-    [
+    [[
         [0, ["STR_3DEN_Attributes_Radar_Default_text",  "STR_3DEN_Attributes_Radar_Default_tooltip"]],
         [1, ["STR_3DEN_Attributes_Radar_RadarOn_text",  "STR_3DEN_Attributes_Radar_RadarOn_tooltip"]],
         [2, ["STR_3DEN_Attributes_Radar_RadarOff_text", "STR_3DEN_Attributes_Radar_RadarOff_tooltip"]]
-    ],
+    ]],
     {
         {
             [QEGVAR(common,setVehicleRadar), [_x, _value], _x] call CBA_fnc_targetEvent;
