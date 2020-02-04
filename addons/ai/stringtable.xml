@@ -3,9 +3,11 @@
     <Package name="AI">
         <Key ID="STR_ZEN_AI_Land">
             <English>Land</English>
+            <German>Landen</German>
         </Key>
         <Key ID="STR_ZEN_AI_Fastrope">
             <English>Fastrope</English>
+            <German>Fastrope</German>
             <Polish>Zjazd na linach</Polish>
             <Portuguese>Cabo rápido</Portuguese>
             <Japanese>ファストロープ</Japanese>
@@ -21,7 +23,7 @@
         <Key ID="STR_ZEN_AI_CouldNotGarrisonAll">
             <English>Unable to garrison all units - not enough positions</English>
             <French>Impossible de poster toutes les unités en garnison - pas assez de places</French>
-            <German>Das Gebäude hat zu wenig Positionen - Nicht alle Einheiten konnten das Gebäude besetzen</German>
+            <German>Nicht alle Einheiten konnten das Gebäude besetzen, zu wenig freie Positionen</German>
             <Polish>Nie udało się zgarnizonować wszystkich jednostek - za mało pozycji</Polish>
             <Italian>Impossibile schierare tutte le unità - non ci sono abbastanza posizioni libere</Italian>
             <Czech>Nelze obsadit všechny jednotky - nedostatek pozic</Czech>
@@ -41,7 +43,7 @@
         <Key ID="STR_ZEN_AI_AimingSpeed">
             <English>Aiming Speed</English>
             <French>Vitesse de visée</French>
-            <German>Zilelgeschwindigkeit</German>
+            <German>Zielgeschwindigkeit</German>
             <Czech>Rychlost míření</Czech>
             <Italian>Velcoità di puntamento</Italian>
             <Polish>Prędkość celowania</Polish>
@@ -60,7 +62,7 @@
         <Key ID="STR_ZEN_AI_Commanding">
             <English>Commanding</English>
             <French>Commandement</French>
-            <German>Kommandierend</German>
+            <German>Kommandieren</German>
             <Czech>Velení</Czech>
             <Italian>Comando</Italian>
             <Polish>Wyżej położony</Polish>
@@ -107,12 +109,15 @@
         </Key>
         <Key ID="STR_ZEN_AI_SeekCover">
             <English>Seek Cover</English>
+            <German>Deckung suchen</German>
         </Key>
         <Key ID="STR_ZEN_AI_AutoCombat">
             <English>Auto Combat</English>
+            <German>Automatischer Kampf</German>
         </Key>
         <Key ID="STR_ZEN_AI_Suppression">
             <English>Suppression</English>
+            <German>Unterdrückung</German>
         </Key>
     </Package>
 </Project>
