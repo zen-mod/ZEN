@@ -12,6 +12,7 @@
         </Key>
         <Key ID="STR_ZEN_AI_Paradrop">
             <English>Paradrop</English>
+            <Russian>Десант</Russian>
             <German>Fallschirmsprung</German>
             <Czech>Seskok padákem</Czech>
             <Polish>Desant ze spadochronem</Polish>
@@ -20,6 +21,7 @@
         </Key>
         <Key ID="STR_ZEN_AI_CouldNotGarrisonAll">
             <English>Unable to garrison all units - not enough positions</English>
+            <Russian>Невозможно разместить всех солдат - недостаточно позиций</Russian>
             <French>Impossible de poster toutes les unités en garnison - pas assez de places</French>
             <German>Das Gebäude hat zu wenig Positionen - Nicht alle Einheiten konnten das Gebäude besetzen</German>
             <Polish>Nie udało się zgarnizonować wszystkich jednostek - za mało pozycji</Polish>
@@ -30,6 +32,7 @@
         </Key>
         <Key ID="STR_ZEN_AI_AimingAccuracy">
             <English>Aiming Accuracy</English>
+            <Russian>Точность прицеливания</Russian>
             <French>Précision de visée</French>
             <German>Zielgenauigkeit</German>
             <Czech>Přesnost míření</Czech>
@@ -40,6 +43,7 @@
         </Key>
         <Key ID="STR_ZEN_AI_AimingSpeed">
             <English>Aiming Speed</English>
+            <Russian>Скорость прицеливания</Russian>
             <French>Vitesse de visée</French>
             <German>Zilelgeschwindigkeit</German>
             <Czech>Rychlost míření</Czech>
@@ -50,6 +54,7 @@
         </Key>
         <Key ID="STR_ZEN_AI_AimingShake">
             <English>Aiming Shake</English>
+            <Russian>Дрожание Прицела</Russian>
             <French>Secousse de visée</French>
             <German>Waffenschwankung</German>
             <Czech>Chvění míření</Czech>
@@ -59,6 +64,7 @@
         </Key>
         <Key ID="STR_ZEN_AI_Commanding">
             <English>Commanding</English>
+            <Russian>Командование</Russian>
             <French>Commandement</French>
             <German>Kommandierend</German>
             <Czech>Velení</Czech>
@@ -69,6 +75,7 @@
         </Key>
         <Key ID="STR_ZEN_AI_Courage">
             <English>Courage</English>
+            <Russian>Храбрость</Russian>
             <French>Courage</French>
             <German>Mut</German>
             <Czech>Odvaha</Czech>
@@ -97,6 +104,7 @@
         </Key>
         <Key ID="STR_ZEN_AI_ReloadSpeed">
             <English>Reload Speed</English>
+            <Russian>Время Перезарядки</Russian>
             <French>vitesse de recharge</French>
             <German>Nachladezeit</German>
             <Czech>Rychlost přebíjení</Czech>
