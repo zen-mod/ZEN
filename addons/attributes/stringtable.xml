@@ -158,7 +158,7 @@
         <Key ID="STR_ZEN_Attributes_AdvEngineer">
             <English>Adv. Engineer</English>
             <French>Ingénieur d'études</French>
-            <German>Erfahrene Techniker</German>
+            <German>Erfahrener Techniker</German>
             <Czech>Pokročilý Inženýr</Czech>
             <Italian>Ingegnere Avanzato</Italian>
             <Polish>Zaawansowany Inżynier</Polish>
@@ -176,9 +176,11 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_ComponentsDamage">
             <English>Components Damage</English>
+            <German>Komponent Schaden</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_Components">
             <English>Damage</English>
+            <German>Schaden</German>
         </Key>
     </Package>
 </Project>
