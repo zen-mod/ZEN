@@ -4,7 +4,7 @@
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim">
             <English>Ambient Animation</English>
             <Russian>Фоновая анимация</Russian>
-            <German>Ambiente Animation</German>
+            <German>Ambient Animation</German>
             <Polish>Animacje</Polish>
             <Japanese>雰囲気アニメーション</Japanese>
         </Key>
@@ -262,20 +262,24 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Mode_AGL">
             <English>Follow Terrain</English>
+            <German>Gelände folgen</German>
             <Polish>Śledz Teren</Polish>
             <Japanese>地形追随</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Mode_ASL">
             <English>Fixed Altitude</English>
+            <German>Feste Höhe</German>
             <Polish>Stała wysokość</Polish>
             <Japanese>高度固定</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Mode_AGL_Tooltip">
             <English>The aircraft will follow the terrain, staying at the same height relative to the ground. Based on AGL.</English>
+            <German>Das Flugzeug versucht dem Gelände zu folgen und bleibt auf der gleichen Höhe, basierend von der Oberfläche (AGL).</German>
             <Japanese>航空機は地形に沿って飛ぶようになり、高度が地形によって変化します。AGL をベースとします。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Mode_ASL_Tooltip">
             <English>The aircraft will fly at a constant altitude, only following the terrain if less than 10 meters from the ground. Based on ASL, final altitude is the elevation of the module plus the height given.</English>
+            <German>Das Flugzeug fliegt auf der angegebenen Höhe, außer es ist weniger als 10m über dem Boden, basierend auf der Meereshöhe (ASL).</German>
             <Japanese>航空機は常に一定の高度を飛ぶようになりますが、飛行高度が 10m 未満では地形追随します。ASL をベースとし、高度は海面からの高さになります。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Distance">
@@ -377,14 +381,14 @@
         <Key ID="STR_ZEN_Modules_CreateIED">
             <English>Create IED</English>
             <Russian>Создать СВУ</Russian>
-            <German>IED erstellen</German>
+            <German>USBV erstellen</German>
             <Polish>Stwórz IED</Polish>
             <Japanese>IED を生成</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_AlreadyAnIED">
             <English>Object is already an IED</English>
             <Russian>Объект уже является СВУ!</Russian>
-            <German>Objekt ist bereits eine IED</German>
+            <German>Objekt ist bereits eine USBV</German>
             <Polish>Obiekt jest już IEDem</Polish>
             <Japanese>オブジェクトは既に IED です</Japanese>
         </Key>
@@ -454,7 +458,7 @@
         <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_ForceRoad">
             <English>Stay On Road</English>
             <Russian>Оставаться на дороге</Russian>
-            <German>Bleiben Sie auf der Straße</German>
+            <German>Auf der Straße bleiben</German>
             <Polish>Trzymaj się drogi</Polish>
             <Japanese>道路上を維持</Japanese>
         </Key>
@@ -475,7 +479,7 @@
         <Key ID="STR_ZEN_Modules_BindVariable">
             <English>Bind Variable To Object</English>
             <Russian>Привязать переменную к объекту</Russian>
-            <German>Variable an Objekt binden</German>
+            <German>Variable an das Objekt binden</German>
             <Polish>Przypisz zmienną do obiektu</Polish>
             <Japanese>オブジェクトに変数を割り当て</Japanese>
         </Key>
@@ -751,7 +755,7 @@
         <Key ID="STR_ZEN_Modules_ModuleSitOnChair">
             <English>Sit On Chair</English>
             <Russian>Сесть на стул</Russian>
-            <German>Auf dem Stuhl sitzen</German>
+            <German>Auf den Stuhl setzen</German>
             <Polish>Siedź na krześle</Polish>
             <Japanese>椅子に座る</Japanese>
         </Key>
@@ -1044,14 +1048,14 @@
         <Key ID="STR_ZEN_Modules_ModuleEquipWithECM">
             <English>Equip With ECM</English>
             <Russian>Установить аппаратуру РЭП</Russian>
-            <German>Mit ECM ausstatten</German>
+            <German>Mit Störer ausstatten</German>
             <Polish>Wyposaż w ECM</Polish>
             <Japanese>ECM 付きで装備</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEquipWithECM_HasECM">
             <English>Has ECM</English>
             <Russian>РЭП</Russian>
-            <German>Hat ECM</German>
+            <German>Hat Störer</German>
             <Polish>Posiada ECM</Polish>
             <Japanese>ECM を所持</Japanese>
         </Key>
@@ -1065,7 +1069,7 @@
         <Key ID="STR_ZEN_Modules_ModuleFlyHeight_Tooltip">
             <English>Sets the flying altitude for the aircraft relative to the ground.</English>
             <Russian>Устанавливает высоту полёта воздушного ТС относительно земли</Russian>
-            <German>Legt die Flughöhe für das Flugzeug in Bezug auf den Boden fest.</German>
+            <German>Legt die Flughöhe, für das Flugzeug, in Bezug auf den Boden fest.</German>
             <Polish>Ustala wysokość lotu w stosunku do ziemi.</Polish>
             <Japanese>地面に並行して飛行する航空機の高度を決定します。</Japanese>
         </Key>
@@ -1127,13 +1131,13 @@
         <Key ID="STR_ZEN_Modules_ModuleGarrison_TopDown">
             <English>Fill From Top Down</English>
             <Russian>Сверху вниз</Russian>
-            <German>Von oben nach unten füllen </German>
+            <German>Von oben nach unten füllen</German>
             <Polish>Wypełniaj od góry do dołu</Polish>
             <Japanese>上から埋める</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleUnGarrison">
             <English>Un-Garrison Group</English>
-            <German>Besetzung ausfheben</German>
+            <German>Besetzung aufheben</German>
             <Polish>Odgarnizonuj grupę</Polish>
             <Japanese>非歩哨グループ</Japanese>
         </Key>
@@ -1614,149 +1618,190 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateLZ">
             <English>Create LZ</English>
+            <German>Erstelle LZ</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateLZ_Name">
             <English>LZ Name</English>
+            <German>LZ Name</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateLZ_Format">
             <English>LZ %1</English>
+            <German>LZ %1</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateRP">
             <English>Create RP</English>
+            <German>Erstelle RP</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateRP_Name">
             <English>RP Name</English>
+            <German>RP Name</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateRP_Format">
             <English>RP %1</English>
+            <German>RP %1</German>
         </Key>
         <Key ID="STR_ZEN_Modules_SpawnReinforcements">
             <English>Spawn Reinforcements</English>
+            <German>Erstelle Verstärkung</German>
         </Key>
         <Key ID="STR_ZEN_Modules_VehicleSelect">
             <English>Vehicle Select</English>
+            <German>Fahrzeugauswahl</German>
         </Key>
         <Key ID="STR_ZEN_Modules_Category">
             <English>Category</English>
+            <German>Kategorie</German>
         </Key>
         <Key ID="STR_ZEN_Modules_GroupSelect">
             <English>Group Select</English>
+            <German>Gruppenauswahl</German>
         </Key>
         <Key ID="STR_ZEN_Modules_CurrentGroup">
             <English>Current Group</English>
+            <German>Derzeitige Gruppe</German>
         </Key>
         <Key ID="STR_ZEN_Modules_VehicleLZ">
             <English>Vehicle LZ/DZ</English>
+            <German>Fahrzeug LZ/DZ</German>
         </Key>
         <Key ID="STR_ZEN_Modules_VehicleBehaviour">
             <English>Vehicle Behaviour</English>
+            <German>Fahrzeugverhalten</German>
         </Key>
         <Key ID="STR_ZEN_Modules_StayAtLZ">
             <English>Stay at LZ</English>
+            <German>Bei LZ verbleiben</German>
         </Key>
         <Key ID="STR_ZEN_Modules_RTBAndDespawn">
             <English>RTB and Despawn</English>
+            <German>Zurück und Löschen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_InsertionMethod">
             <English>Insertion Method</English>
+            <German>Absetzmethode</German>
         </Key>
         <Key ID="STR_ZEN_Modules_UnitRP">
             <English>Unit RP</English>
+            <German>Einheiten RP</German>
         </Key>
         <Key ID="STR_ZEN_Modules_UnitBehaviour">
             <English>Unit Behaviour</English>
+            <German>Einheitenverhalten</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel">
             <English>Create/Edit Intel</English>
+            <German>Hinweis erstellen/bearbeiten</German>
             <Polish>Stwórz/Edytuj dane wywiadowcze</Polish>
             <Japanese>インテル作成/編集</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ObjectType">
             <English>Object Type</English>
+            <German>Objekttyp</German>
             <Polish>Typ Obiektu</Polish>
             <Japanese>オブジェクト種類</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ShareWith">
             <English>Share With</English>
+            <German>Teilen mit</German>
             <Polish>Współdziel z</Polish>
             <Japanese>次と共有</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_DeleteOnCompletion">
             <English>Delete On Completion</English>
+            <German>Wenn abgeschlossen löschen</German>
             <Polish>Usuń po zakończeniu</Polish>
             <Japanese>完了時に削除</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ActionText">
             <English>Action Text</English>
+            <German>Aktionstext</German>
             <Polish>Tekst akcji</Polish>
             <Japanese>アクション文章</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ActionDuration">
             <English>Action Duration</English>
+            <German>Aktionsdauer</German>
             <Japanese>アクション持続時間</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_IntelTitle">
             <English>Intel Title</English>
+            <German>Hinweistitel</German>
             <Polish>Tytuł danych wywiadowczych</Polish>
             <Japanese>インテルのタイトル</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_IntelText">
             <English>Intel Text</English>
+            <German>Hinweistext</German>
             <Polish>Treść danych wywiadowczych</Polish>
             <Japanese>インテルの文章</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_PickUpIntel">
             <English>Pick Up Intel</English>
+            <German>Hinweis aufheben</German>
             <Polish>Podnieś dane wywiadowcze</Polish>
             <Japanese>インテルを拾う</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_IntelFound">
             <English>Intel Found</English>
+            <German>Hinweis gefunden</German>
             <Polish>Znaleziono dane wywiadowcze</Polish>
             <Japanese>インテルを発見</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_PlayerFoundIntel">
             <English>%1 found intel: "%2"</English>
+            <German>%1 hat den Hinweis "%2" gefunden</German>
             <Polish>%1 znalazł dane wywiadowcze: "%2"</Polish>
             <Japanese>%1 がインテルを発見: "%2"</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ToggleLamps">
             <English>Toggle Lamps</English>
+            <German>Lampen umschalten</German>
             <Japanese>ランプを切り替え</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ToggleLamps_Repair_Tooltip">
             <English>Repair broken lights when turning them on.</English>
+            <German>Lampen beim Umschalten reparieren</German>
             <Japanese>ランプを点灯した際に壊れたライトを修理します。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire">
             <English>Custom Fire</English>
+            <German>Benutzerdefiniertes Feuer</German>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire_EffectSize">
             <English>Effect Size</English>
+            <German>Effektgröße</German>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire_ParticleDensity">
             <English>Particle Density</English>
+            <German>Patrikeldichte</German>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire_ParticleLifetime">
             <English>Particle Lifetime</English>
+            <German>Partikellebenszeit</German>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire_ParticleSpeed">
             <English>Particle Speed</English>
+            <German>Partikelgeschwindigkeit</German>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire_ParticleSize">
             <English>Particle Size</English>
+            <German>Partikelgröße</German>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire_ParticleOrientation">
             <English>Particle Orientation</English>
+            <German>Partikelrichtung</German>
         </Key>
         <Key ID="STR_ZEN_Modules_GlobalAISkill">
             <English>Global AI Skill</English>
+            <German>Globale KI Fähigkeit</German>
         </Key>
         <Key ID="STR_ZEN_Modules_GlobalAISkill_Enabled">
             <English>Global Skill</English>
+            <German>Globale Fähigkeit</German>
         </Key>
         <Key ID="STR_ZEN_Modules_GlobalAISkill_Enabled_Description">
             <English>Enables applying the following skill values to all current and newly created AI units.</English>
+            <German>Wendet die Fähigkeitseinstellung auf alle neuen und bestehenden Einheiten an.</German>
         </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_Buildings">
@@ -1796,6 +1841,7 @@
         </Key>
         <Key ID="STR_ZEN_Modules_Reinforcements">
             <English>Reinforcements</English>
+            <German>Verstärkung</German>
         </Key>
         <Key ID="STR_ZEN_Modules_Spawn">
             <English>Spawn</English>
@@ -1901,7 +1947,7 @@
             <Czech>Nejbližší budova je příliš daleko</Czech>
             <Japanese>近くに建物がありません</Japanese>
             <Polish>Najbliższy budynek jest zbyt daleko</Polish>
-            <German>Nächstgelegenes Gebäude ist zu weit entfernt</German>
+            <German>Das nächstgelegene Gebäude ist zu weit entfernt</German>
             <Korean>가장가까운 건물이 너무 멈</Korean>
             <Italian>L'edificio più vicino è troppo lontano</Italian>
             <Chinesesimp>最近的房子离太远了</Chinesesimp>
@@ -1915,9 +1961,11 @@
         </Key>
         <Key ID="STR_ZEN_Modules_PlaceAnLZ">
             <English>Place an LZ</English>
+            <German>Platziere eine LZ</German>
         </Key>
         <Key ID="STR_ZEN_Modules_NoTeleportPosition">
             <English>Unable to find suitable position to teleport vehicle to.</English>
+            <German>Kein valide Position zum Teleporieren des Fahrzeugs gefunden.</German>
         </Key>
     </Package>
 </Project>
