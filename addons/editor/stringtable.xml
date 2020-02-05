@@ -66,11 +66,11 @@
         </Key>
         <Key ID="STR_ZEN_Editor_AddGroupIcons">
             <English>Add Group Icons</English>
-            <German>Gruppenicons anzeigen</German>
+            <German>Gruppensymbole anzeigen</German>
         </Key>
         <Key ID="STR_ZEN_Editor_AddGroupIcons_Description">
             <English>Adds group icons to the create group trees.</English>
-            <German>Zeigt Gruppenicons im Gruppenbaum an.</German>
+            <German>Zeigt Gruppensymbole im Gruppenbaum an.</German>
         </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages">
             <English>Unit Radio Messages</English>
@@ -151,7 +151,7 @@
         </Key>
         <Key ID="STR_ZEN_Editor_DeepPaste_Description">
             <English>Pastes the current deep copied object data.</English>
-            <German>Fügt die derzeitig gespeicherte Komplette Kopie ein.</German>
+            <German>Fügt die derzeitig gespeicherte komplette Kopie ein.</German>
         </Key>
         <Key ID="STR_ZEN_Editor_FocusSearchBar">
             <English>Focus Search Bar</English>
@@ -163,12 +163,12 @@
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleIcons">
             <English>Toggle Editable Icons</English>
-            <German>Bearbeitbare Icons umschalten</German>
+            <German>Bearbeitbare Symbole umschalten</German>
             <Japanese>編集可アイコン切り替え</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleIcons_Description">
             <English>Toggles the visibility of all editable icons. Useful for temporarily reducing lag or onscreen clutter when there are a lot of icons.</English>
-            <German>Schaltet die Sichtbarkeit von bearbeitbaren Icons um. Nützlich um temporär die Leistung zu verbessern oder für die Übersichtlichkeit.</German>
+            <German>Schaltet die Sichtbarkeit von bearbeitbaren Symbolen um. Nützlich um temporär die Leistung zu verbessern oder für die Übersichtlichkeit.</German>
             <Japanese>全編集可アイコンの視認性を切り替えます。一時的な処理軽減や整理に使用できます。</Japanese>
         </Key>
     </Package>
