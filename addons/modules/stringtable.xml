@@ -274,7 +274,7 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Mode_AGL_Tooltip">
             <English>The aircraft will follow the terrain, staying at the same height relative to the ground. Based on AGL.</English>
-            <German>Das Flugzeug versucht dem Gelände zu folgen und bleibt auf der gleichen Höhe, basierend von der Oberfläche (AGL).</German>
+            <German>Das Flugzeug versucht dem Gelände zu folgen und bleibt auf der gleichen Höhe, basierend auf der Oberfläche (AGL).</German>
             <Japanese>航空機は地形に沿って飛ぶようになり、高度が地形によって変化します。AGL をベースとします。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Mode_ASL_Tooltip">
