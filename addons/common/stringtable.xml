@@ -420,7 +420,7 @@
         <Key ID="STR_ZEN_Common_DisableGearAnim_Description">
             <English>Disables the "Gear" animation from playing when entering Zeus.</English>
             <French>Désactiver l'animation "Gear" lors de l'entrée dans Zeus.</French>
-            <German>Deaktiviert die "Inventar" Animation der Spielerfigur, wenn man in dem Zeusmodus geht.</German>
+            <German>Deaktiviert die "Inventar"-Animation der Spielerfigur, wenn man in den Zeusmodus geht.</German>
             <Polish>Wyłącza animację grzebania w ekwipunku po wejściu do Zeusa.</Polish>
             <Russian>Отключает анимированную шестерёнку при входе в режим ГМ</Russian>
             <Japanese>Zeus 中は "装備" アニメーションの再生を停止させます。</Japanese>
