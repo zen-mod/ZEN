@@ -381,14 +381,14 @@
         <Key ID="STR_ZEN_Modules_CreateIED">
             <English>Create IED</English>
             <Russian>Создать СВУ</Russian>
-            <German>USBV erstellen</German>
+            <German>IED erstellen</German>
             <Polish>Stwórz IED</Polish>
             <Japanese>IED を生成</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_AlreadyAnIED">
             <English>Object is already an IED</English>
             <Russian>Объект уже является СВУ!</Russian>
-            <German>Objekt ist bereits eine USBV</German>
+            <German>Objekt ist bereits eine IED</German>
             <Polish>Obiekt jest już IEDem</Polish>
             <Japanese>オブジェクトは既に IED です</Japanese>
         </Key>
@@ -1069,7 +1069,7 @@
         <Key ID="STR_ZEN_Modules_ModuleFlyHeight_Tooltip">
             <English>Sets the flying altitude for the aircraft relative to the ground.</English>
             <Russian>Устанавливает высоту полёта воздушного ТС относительно земли</Russian>
-            <German>Legt die Flughöhe, für das Flugzeug, in Bezug auf den Boden fest.</German>
+            <German>Legt die Flughöhe für das Flugzeug, in Bezug zum Boden fest.</German>
             <Polish>Ustala wysokość lotu w stosunku do ziemi.</Polish>
             <Japanese>地面に並行して飛行する航空機の高度を決定します。</Japanese>
         </Key>
@@ -1622,7 +1622,7 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateLZ_Name">
             <English>LZ Name</English>
-            <German>LZ Name</German>
+            <German>LZ-Name</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateLZ_Format">
             <English>LZ %1</English>
@@ -1634,7 +1634,7 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateRP_Name">
             <English>RP Name</English>
-            <German>RP Name</German>
+            <German>RP-Name</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateRP_Format">
             <English>RP %1</English>
@@ -1682,7 +1682,7 @@
         </Key>
         <Key ID="STR_ZEN_Modules_UnitRP">
             <English>Unit RP</English>
-            <German>Einheiten RP</German>
+            <German>Einheiten-RP</German>
         </Key>
         <Key ID="STR_ZEN_Modules_UnitBehaviour">
             <English>Unit Behaviour</English>
@@ -1708,7 +1708,7 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_DeleteOnCompletion">
             <English>Delete On Completion</English>
-            <German>Wenn abgeschlossen löschen</German>
+            <German>Löschen wenn abgeschlossen</German>
             <Polish>Usuń po zakończeniu</Polish>
             <Japanese>完了時に削除</Japanese>
         </Key>
@@ -1793,7 +1793,7 @@
         </Key>
         <Key ID="STR_ZEN_Modules_GlobalAISkill">
             <English>Global AI Skill</English>
-            <German>Globale KI Fähigkeit</German>
+            <German>Globale KI-Fähigkeit</German>
         </Key>
         <Key ID="STR_ZEN_Modules_GlobalAISkill_Enabled">
             <English>Global Skill</English>
