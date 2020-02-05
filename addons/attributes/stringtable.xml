@@ -176,7 +176,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_ComponentsDamage">
             <English>Components Damage</English>
-            <German>Komponent Schaden</German>
+            <German>Komponentenschaden</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_Components">
             <English>Damage</English>
