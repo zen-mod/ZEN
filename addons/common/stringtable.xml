@@ -3,7 +3,7 @@
     <Package name="Common">
         <Key ID="STR_ZEN_Common_Category">
             <English>Zeus Enhanced</English>
-            <German>Verbesserter Zeus</German>
+            <German>Zeus Enhanced</German>
             <Polish>Zeus Enhanced</Polish>
             <Czech>Zeus vylepšený</Czech>
             <Italian>Zeus Enhanced</Italian>
@@ -101,7 +101,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_Premade">
             <English>Premade</English>
-            <German>Fertig</German>
+            <German>Vorgefertigt</German>
         </Key>
         <Key ID="STR_ZEN_Common_VeryLow">
             <English>Very Low</English>
