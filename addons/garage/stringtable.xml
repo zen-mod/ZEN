@@ -27,7 +27,7 @@
         </Key>
         <Key ID="STR_ZEN_Garage_ApplyToAll_Tooltip">
             <English>Apply the current vehicle's customization to all selected vehicles of this type.</English>
-            <German>Wendet die derzeitige Fahrzeuganpassung auf alle gleichen Fahrzeuge dieses Typs an.</German>
+            <German>Wendet die derzeitige Fahrzeuganpassung auf alle Fahrzeuge dieses Typs an.</German>
             <Polish>Zastosuj Właściwości wybranego pojazdu do wszystkich pojazdów tego typu.</Polish>
             <Portuguese>Aplicar a customização atual para todos os veículos selecionados deste tipo.</Portuguese>
             <Japanese>現在の車両カスタマイズを選択した同じ種類の全車両にも適用します。</Japanese>
