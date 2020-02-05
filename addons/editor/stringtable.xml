@@ -83,7 +83,7 @@
         <Key ID="STR_ZEN_Editor_UnitRadioMessages_Description">
             <English>Controls whether unit radio messages are played on placement and waypoint orders, waypoints only, or disabled.</English>
             <French>Contrôle si les messages radio de l'appareil sont diffusés en fonction de l'emplacement et de l'ordre des points de passage, points de passsages uniquement ou désactivés.</French>
-            <German>Steuert, ob die  Einheit eine Funkmeldung absetzt, wenn diese platziert wird und eine Anweisung von Wegpunkten erhält oder nur bei Wegpunkten oder niemals.</German>
+            <German>Steuert, ob die Einheit eine Funkmeldung absetzt, wenn diese platziert wird und eine Anweisung von Wegpunkten erhält oder nur bei Wegpunkten oder niemals.</German>
             <Polish>Kontroluje czy wiadomości radiowe jednostki są odtwarzane przy postawieniu i wyznaczeniu punktu trasy, jedynie przy wyznaczeniu punktu trasy lub czy są wyłączone.</Polish>
             <Russian>Определяет будут ли ИИ подразделения сообщать по радио о своих действиях или нет.</Russian>
             <Japanese>ユニットが配置についたり、ウェイポイント指示、ウェイポイントのみ、無効化された時に無線でメッセージを送信するかどうかを決定します。</Japanese>
