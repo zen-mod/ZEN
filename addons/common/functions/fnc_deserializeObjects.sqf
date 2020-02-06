@@ -33,30 +33,30 @@ private _fnc_deserializeGroup = {
         (_groups select _index) params ["_side", "_formation", "_behaviour", "_combatMode", "_speedMode", "_waypoints", "_currentWaypoint"];
 
         _group = createGroup [_side, true];
-        _group setCombatMode _combatMode;
-        _group setSpeedMode _speedMode;
 
-        // Group formation and behaviour need a frame delay in order to be correctly applied
+        // Apply group properties and waypoints after units are created
         [{
-            params ["_group", "_formation", "_behaviour"];
+            params ["_group", "_formation", "_behaviour", "_combatMode", "_speedMode", "_waypoints", "_currentWaypoint"];
 
             _group setFormation _formation;
             _group setBehaviour _behaviour;
-        }, [_group, _formation, _behaviour]] call CBA_fnc_execNextFrame;
+            _group setCombatMode _combatMode;
+            _group setSpeedMode _speedMode;
+
+            if (_waypoints isEqualTo []) exitWith {};
+
+            for "_i" from 1 to count waypoints _group do {
+                deleteWaypoint [_group, 0];
+            };
+
+            {
+                [_group, _x] call _fnc_deserializeWaypoint;
+            } forEach _waypoints;
+
+            _group setCurrentWaypoint [_group, _currentWaypoint];
+        }, [_group, _formation, _behaviour, _combatMode, _speedMode, _waypoints, _currentWaypoint]] call CBA_fnc_execNextFrame;
 
         [_createdGroups, _index, _group] call CBA_fnc_hashSet;
-
-        if (_waypoints isEqualTo []) exitWith {};
-
-        for "_i" from 1 to count waypoints _group do {
-            deleteWaypoint [_group, 0];
-        };
-
-        {
-            [_group, _x] call _fnc_deserializeWaypoint;
-        } forEach _waypoints;
-
-        _group setCurrentWaypoint [_group, _currentWaypoint];
     };
 
     _group

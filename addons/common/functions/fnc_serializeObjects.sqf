@@ -54,12 +54,12 @@ private _fnc_serializeGroup = {
     if (_index == -1) then {
         _index = _indexedGroups pushBack _group;
 
-        private _waypoints = if (_includeWaypoints) then {
-            waypoints _group apply {
+        private _waypoints = [];
+
+        if (_includeWaypoints) then {
+            _waypoints = waypoints _group apply {
                 [_x] call _fnc_serializeWaypoint
-            }
-        } else {
-            [] // Empty array to indicate waypoints were not serialized
+            };
         };
 
         _groups pushBack [side _group, formation _group, behaviour leader _group, combatMode _group, speedMode _group, _waypoints, currentWaypoint _group];
