@@ -267,7 +267,7 @@
     "Object",
     "STR_a3_rscdebugconsole_expressiontext",
     QGVAR(code),
-    [QGVAR(objectExecHistory), LSTRING(Exec_TooltipObject), 20, 1000],
+    [QGVAR(objectExecHistory), LSTRING(ExecObject_Tooltip), 20, 1000],
     {
         [QEGVAR(common,execute), [compile _value, _entity], _entity] call CBA_fnc_targetEvent;
     },
@@ -405,7 +405,7 @@
     "Group",
     "STR_a3_rscdebugconsole_expressiontext",
     QGVAR(code),
-    [QGVAR(groupExecHistory), LSTRING(Exec_TooltipGroup), 20, 1000],
+    [QGVAR(groupExecHistory), LSTRING(ExecGroup_Tooltip), 20, 1000],
     {
         [QEGVAR(common,execute), [compile _value, _entity], _entity] call CBA_fnc_targetEvent;
     },
