@@ -26,8 +26,8 @@
 params ["_controlsGroup", "_defaultValue", "_valueInfo"];
 _valueInfo params [["_historyVarName", "", [""]], ["_editboxTooltip", "", [""]], ["_maxStatements", 20, [0]], ["_maxCharacters", -1, [0]]];
 
-if (isLocalized _tooltip) then {
-    _tooltip = localize _tooltip;
+if (isLocalized _editboxTooltip) then {
+    _editboxTooltip = localize _editboxTooltip;
 };
 
 private _ctrlCombo = _controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_COMBO;
@@ -77,7 +77,7 @@ _ctrlEdit ctrlAddEventHandler ["KeyUp", {
 if (_historyVarName != "") then {
     _controlsGroup setVariable [QGVAR(params), [_historyVarName, _maxStatements, _maxCharacters]];
 
-    _controlsGroup setVariable [QFUNC(confirmed), {
+    _controlsGroup setVariable [QFUNC(onConfirm), {
         params ["_controlsGroup"];
         (_controlsGroup getVariable QGVAR(params)) params ["_historyVarName", "_maxStatements", "_maxCharacters"];
 

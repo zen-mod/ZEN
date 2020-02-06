@@ -17,22 +17,19 @@
 
 params ["_ctrlButtonOK"];
 
-private _display  = ctrlParent _ctrlButtonOK;
+private _display = ctrlParent _ctrlButtonOK;
 private _controls = _display getVariable QGVAR(controls);
-private _entity   = _display getVariable QGVAR(entity);
+private _entity = _display getVariable QGVAR(entity);
 
 {
-    _x params ["_ctrlAttribute", "_condition", "_statement"];
+    _x params ["_controlsGroup", "_condition", "_statement"];
 
-    // Execute control specific confirmation function if defined
-    private _fnc_confirmed = _ctrlAttribute getVariable QFUNC(confirmed);
-
-    if (!isNil "_fnc_confirmed") then {
-        _ctrlAttribute call _fnc_confirmed;
-    };
+    // Execute control specific confirmation function
+    private _fnc_onConfirm = _controlsGroup getVariable [QFUNC(onConfirm), {}];
+    _controlsGroup call _fnc_onConfirm;
 
     // Call the attribute statement if the value was changed and the condition still holds
-    private _value = _ctrlAttribute getVariable QGVAR(value);
+    private _value = _controlsGroup getVariable QGVAR(value);
 
     if (!isNil "_value" && {_entity call _condition}) then {
         [_entity, _value] call _statement;

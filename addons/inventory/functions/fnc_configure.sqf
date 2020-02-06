@@ -27,7 +27,7 @@ private _maximumLoad = getNumber (_config >> "maximumLoad");
 private _cargo = [getItemCargo _object, getWeaponCargo _object, getMagazineCargo _object, getBackpackCargo _object];
 private _currentLoad = [_cargo] call FUNC(calculateLoad);
 
-private _display = uiNamespace getVariable QGVAR(display);
+private _display = uiNamespace getVariable QEGVAR(common,display);
 _display setVariable [QGVAR(currentLoad), _currentLoad];
 _display setVariable [QGVAR(maximumLoad), _maximumLoad];
 _display setVariable [QGVAR(object), _object];

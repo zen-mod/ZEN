@@ -19,7 +19,6 @@ class EGVAR(common,RscDisplay) {
 };
 
 class GVAR(display): EGVAR(common,RscDisplay) {
-    onLoad = QUOTE(with uiNamespace do {GVAR(display) = _this select 0});
     class controls: controls {
         class Title: Title {};
         class Background: Background {};

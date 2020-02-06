@@ -91,6 +91,7 @@ class GVAR(RscControlsGroup): RscControlsGroup {
 class GVAR(RscDisplay) {
     idd = -1;
     movingEnable = 1;
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(display),_this select 0)]);
     class controls {
         class Title: RscText {
             idc = IDC_TITLE;
@@ -131,7 +132,7 @@ class GVAR(RscDisplay) {
     };
 };
 
-class GVAR(RscDisplayScrollable): GVAR(RscDisplay) {
+class GVAR(RscDisplayScrollbars): GVAR(RscDisplay) {
     class controls: controls {
         class Title: Title {};
         class Background: Background {};

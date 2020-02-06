@@ -6,11 +6,11 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-// Namespace to store data of all attribute displays
+// Namespace thats stores data of all attribute displays
 GVAR(displays) = [] call CBA_fnc_createNamespace;
 
-// Namespace to track previously selected marker colors by marker type
-// Color is applied to newly placed markers of the same type
+// Namespace that tracks selected marker colors by marker type
+// Colors are applied to newly placed markers of the same type
 GVAR(previousMarkerColors) = [] call CBA_fnc_createNamespace;
 
 ["ModuleCurator_F", "Init", {
@@ -19,6 +19,7 @@ GVAR(previousMarkerColors) = [] call CBA_fnc_createNamespace;
     _logic addEventHandler ["CuratorMarkerPlaced", {call FUNC(handleMarkerPlaced)}];
 }, true, [], true] call CBA_fnc_addClassEventHandler;
 
+// Initialize the core/default attributes
 #include "initAttributes.sqf"
 
 ADDON = true;

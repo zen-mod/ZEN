@@ -11,76 +11,69 @@
  * None
  *
  * Example:
- * [player, "Object"] call zen_attributes_fnc_open
+ * [_object, "Object"] call zen_attributes_fnc_open
  *
  * Public: No
  */
 
-params ["_entity", "_displayType"];
+params ["_entity", "_type"];
 
 // Get the data for this display type, exit if the display has not been registered
-private _displayData = GVAR(displays) getVariable _displayType;
-if (isNil "_displayData") exitWith {};
+private _data = GVAR(displays) getVariable _type;
+if (isNil "_data") exitWith {};
 
-_displayData params ["_title", "_checkEntity", "_attributes", "_buttons"];
+_data params ["_title", "_check", "_attributes", "_buttons"];
 
 // Filter active attributes, exit if none are active
 _attributes = _attributes select {_entity call (_x select 6)};
 if (_attributes isEqualTo []) exitWith {};
 
 // Create the attributes display, exit if dialog creation fails
-if (!createDialog QGVAR(display)) exitWith {};
+if (!createDialog QEGVAR(common,RscDisplayScrollbars)) exitWith {};
 
+private _display = uiNamespace getVariable [QEGVAR(common,display), displayNull];
 private _controls = [];
-
-private _display = uiNamespace getVariable [QGVAR(display), displayNull];
-_display setVariable [QGVAR(controls), _controls];
-_display setVariable [QGVAR(entity), _entity];
 
 private _ctrlContent = _display displayCtrl IDC_CONTENT;
 private _contentPosY = 0;
 
+// Create the attributes for this attributes display
 {
     _x params ["_displayName", "_tooltip", "_control", "_valueInfo", "_statement", "_defaultValue", "_condition"];
 
-    private _ctrlAttribute = _display ctrlCreate [_control, IDC_ATTRIBUTE_GROUP, _ctrlContent];
+    private _controlsGroup = _display ctrlCreate [_control, IDC_ATTRIBUTE_GROUP, _ctrlContent];
 
     // Set the attribute label text and tooltip
-    private _ctrlLabel = _ctrlAttribute controlsGroupCtrl IDC_ATTRIBUTE_LABEL;
+    private _ctrlLabel = _controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_LABEL;
     _ctrlLabel ctrlSetText _displayName;
     _ctrlLabel ctrlSetTooltip _tooltip;
 
     // Execute attribute control specific init function
-    private _function = getText (configFile >> ctrlClassName _ctrlAttribute >> "function");
-    [_ctrlAttribute, _entity call _defaultValue, _valueInfo, _entity] call (missionNamespace getVariable _function);
+    private _function = getText (configFile >> _control >> "function");
+    [_controlsGroup, _entity call _defaultValue, _valueInfo, _entity] call (missionNamespace getVariable _function);
 
     // Adjust the position of the attribute control in the content group
-    _ctrlAttribute ctrlSetPositionY _contentPosY;
-    _ctrlAttribute ctrlCommit 0;
+    _controlsGroup ctrlSetPositionY _contentPosY;
+    _controlsGroup ctrlCommit 0;
 
-    _contentPosY = _contentPosY + (ctrlPosition _ctrlAttribute select 3) + VERTICAL_SPACING;
+    _contentPosY = _contentPosY + (ctrlPosition _controlsGroup select 3) + VERTICAL_SPACING;
 
-    _controls pushBack [_ctrlAttribute, _condition, _statement];
+    _controls pushBack [_controlsGroup, _condition, _statement];
 } forEach _attributes;
 
-private _contentHeight = _contentPosY - VERTICAL_SPACING;
-
-if (_contentHeight > MAX_HEIGHT) then {
-    _contentHeight = MAX_HEIGHT;
-
-    // Increase width of the controls group to prevent overlap between scrollbar and controls
-    ctrlPosition _ctrlContent params ["_posX", "", "_posW"];
-    _ctrlContent ctrlSetPositionX (_posX - POS_W(0.25));
-    _ctrlContent ctrlSetPositionW (_posW + POS_W(0.5));
-    _ctrlContent ctrlCommit 0;
-};
-
-_ctrlContent ctrlSetPositionY (0.5 - _contentHeight / 2);
-_ctrlContent ctrlSetPositionH _contentHeight;
+// Set the content control's height, subtract extra spacing added by loop
+_ctrlContent ctrlSetPositionH (_contentPosY - VERTICAL_SPACING);
 _ctrlContent ctrlCommit 0;
 
-// Create additional buttons for this attributes display
-private _buttonIndex = 0;
+// Adjust display element positions based on the content height
+[_display, true] call EFUNC(common,initDisplayPositioning);
+
+_display setVariable [QGVAR(controls), _controls];
+_display setVariable [QGVAR(entity), _entity];
+
+// Create the buttons for this attributes display
+private _buttonPosY = 0.5 + (ctrlPosition _ctrlContent select 3) / 2 + POS_H(0.6);
+private _index = 0;
 
 {
     _x params ["_displayName", "_tooltip", "_statement", "_condition", "_closeDisplay"];
@@ -90,8 +83,8 @@ private _buttonIndex = 0;
         _ctrlButton setVariable [QGVAR(params), [_statement, _condition, _closeDisplay]];
 
         _ctrlButton ctrlSetPosition [
-            POS_X(23.4) - POS_W(5.1) * (_buttonIndex mod 3),
-            0.5 + _contentHeight / 2 + POS_H(0.6) + POS_H(1.1) * floor (_buttonIndex / 3),
+            POS_X(23.4) - POS_W(5.1) * (_index mod 3),
+            _buttonPosY + POS_H(1.1) * floor (_index / 3),
             POS_W(5),
             POS_H(1)
         ];
@@ -105,7 +98,7 @@ private _buttonIndex = 0;
             (_ctrlButton getVariable QGVAR(params)) params ["_statement", "_condition", "_closeDisplay"];
 
             private _display = ctrlParent _ctrlButton;
-            private _entity  = _display getVariable QGVAR(entity);
+            private _entity = _display getVariable QGVAR(entity);
 
             if (_closeDisplay) then {
                 _display closeDisplay IDC_CANCEL;
@@ -116,7 +109,7 @@ private _buttonIndex = 0;
             };
         }];
 
-        _buttonIndex = _buttonIndex + 1;
+        _index = _index + 1;
     };
 } forEach _buttons;
 
@@ -149,26 +142,12 @@ if (_title == "") then {
 };
 
 // Format the title with the entity specific text
-_title = toUpper format [_title, _entityText];
-
-// Reposition other controls based on the content height
 private _ctrlTitle = _display displayCtrl IDC_TITLE;
-_ctrlTitle ctrlSetPositionY (0.5 - _contentHeight / 2 - POS_H(1.6));
-_ctrlTitle ctrlSetText _title;
-_ctrlTitle ctrlCommit 0;
+_ctrlTitle ctrlSetText toUpper format [_title, _entityText];
 
-private _ctrlBackground = _display displayCtrl IDC_BACKGROUND;
-_ctrlBackground ctrlSetPositionY (0.5 - _contentHeight / 2 - POS_H(0.5));
-_ctrlBackground ctrlSetPositionH (_contentHeight + POS_H(1));
-_ctrlBackground ctrlCommit 0;
-
+// Handle confirming attribute changes
 private _ctrlButtonOK = _display displayCtrl IDC_OK;
-_ctrlButtonOK ctrlSetPositionY (0.5 + _contentHeight / 2 + POS_H(0.6));
-_ctrlButtonOK ctrlCommit 0;
-
-private _ctrlButtonCancel = _display displayCtrl IDC_CANCEL;
-_ctrlButtonCancel ctrlSetPositionY (0.5 + _contentHeight / 2 + POS_H(0.6));
-_ctrlButtonCancel ctrlCommit 0;
+_ctrlButtonOK ctrlAddEventHandler ["ButtonClick", {call FUNC(confirm)}];
 
 // Handle closing the display if the entity is no longer valid
 if (_checkEntity) then {

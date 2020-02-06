@@ -1,62 +1,23 @@
-class RscText;
-class RscButtonMenuOK;
-class RscButtonMenuCancel;
-class RscControlsGroupNoScrollbars;
-
 class ctrlToolbox;
 class ctrlXSliderH;
+class RscControlsGroupNoScrollbars;
 
 class EGVAR(common,RscLabel);
 class EGVAR(common,RscBackground);
 class EGVAR(common,RscEdit);
-class EGVAR(common,RscCheckBox);
 class EGVAR(common,RscCombo);
-class EGVAR(common,RscControlsGroup);
 
-class GVAR(display) {
-    idd = -1;
-    movingEnable = 1;
-    onLoad = QUOTE(with uiNamespace do {GVAR(display) = _this select 0});
-    class controls {
-        class Title: RscText {
-            idc = IDC_TITLE;
-            x = POS_X(6.5);
-            y = POS_Y(8.4);
-            w = POS_W(27);
-            h = POS_H(1);
-            colorBackground[] = GUI_THEME_COLOR;
-            moving = 1;
-        };
-        class Background: RscText {
-            idc = IDC_BACKGROUND;
-            x = POS_X(6.5);
-            y = POS_Y(9.5);
-            w = POS_W(27);
-            h = POS_H(6.5);
-            colorBackground[] = {0, 0, 0, 0.7};
-        };
-        class Content: EGVAR(common,RscControlsGroup) {
-            idc = IDC_CONTENT;
-            x = POS_X(7);
-            y = POS_Y(10);
-            w = POS_W(26);
-            h = POS_H(5.5);
-            class controls {};
-        };
-        class ButtonOK: RscButtonMenuOK {
-            onButtonClick = QUOTE(call FUNC(confirm));
-            x = POS_X(28.5);
-            y = POS_Y(16.1);
-            w = POS_W(5);
-            h = POS_H(1);
-        };
-        class ButtonCancel: RscButtonMenuCancel {
-            x = POS_X(6.5);
-            y = POS_Y(16.1);
-            w = POS_W(5);
-            h = POS_H(1);
-        };
-    };
+class GVAR(RscToolbox): ctrlToolbox {
+    idc = -1;
+    x = POS_W(10.1);
+    y = 0;
+    w = POS_W(15.9);
+    h = POS_H(1);
+    tooltipColorBox[] = {0, 0, 0, 0};
+    tooltipColorText[] = {0, 0, 0, 0};
+    tooltipColorShade[] = {0, 0, 0, 0};
+    rows = QGVAR(rows);
+    columns = QGVAR(columns);
 };
 
 class GVAR(base): RscControlsGroupNoScrollbars {
@@ -170,19 +131,6 @@ class GVAR(toolbox): GVAR(base) {
         class Label: Label {};
         // Toolbox created through script based on value info
     };
-};
-
-class GVAR(RscToolbox): ctrlToolbox {
-    idc = -1;
-    x = POS_W(10.1);
-    y = 0;
-    w = POS_W(15.9);
-    h = POS_H(1);
-    tooltipColorBox[] = {0, 0, 0, 0};
-    tooltipColorText[] = {0, 0, 0, 0};
-    tooltipColorShade[] = {0, 0, 0, 0};
-    rows = QGVAR(rows);
-    columns = QGVAR(columns);
 };
 
 #define WAYPOINT_ROWS (ceil (count (uiNamespace getVariable QGVAR(waypointTypes)) / 3))
