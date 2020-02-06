@@ -57,6 +57,7 @@ for "_i" from 0 to ((_ctrlTree tvCount [0]) - 1) do {
                 _path pushBack (_ctrlTree tvAdd [_path, _name]);
 
                 _ctrlTree tvSetTooltip [_path, _name];
+                _ctrlTree tvSetPicture [_path, ICON_CUSTOM];
                 _ctrlTree tvSetData [_path, COMPOSITION_STR];
                 _ctrlTree tvSort [GET_PARENT_PATH(_path), false];
 
