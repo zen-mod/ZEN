@@ -54,6 +54,11 @@ class GVAR(RscSidesCombo): EGVAR(attributes,RscCombo) {
     };
 };
 
+class GVAR(RscEffectFireHelper) {
+    idd = -1;
+    onLoad = QUOTE(call FUNC(moduleEffectFire));
+};
+
 class GVAR(RscLightSourceHelper) {
     idd = -1;
     onLoad = QUOTE(call FUNC(moduleLightSource));
@@ -1050,7 +1055,7 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
         x = 0;
         y = 0;
         w = POS_W(26);
-        h = POS_H(26.3);
+        h = POS_H(27.4);
         class controls {
             class SideLabel: EGVAR(attributes,RscLabel) {
                 text = "$STR_eval_typeside";
@@ -1159,7 +1164,7 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
                         idc = IDC_SPAWNREINFORCEMENTS_UNIT_COUNT;
                         style = ST_RIGHT;
                         text = "0";
-                        w = POS_W(12);
+                        w = POS_W(11.1);
                         colorBackground[] = {0, 0, 0, 0};
                     };
                     class UnitList: ctrlListBox {
@@ -1170,13 +1175,24 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
                         h = POS_H(12);
                         colorBackground[] = {0, 0, 0, 0.3};
                     };
-                    class PersonIcon: RscPicture {
+                    class UnitIcon: RscPicture {
                         idc = -1;
                         text = QPATHTOF(ui\person_ca.paa);
+                        x = POS_W(24);
+                        y = POS_H(1.1);
+                        w = POS_W(1);
+                        h = POS_H(1);
+                    };
+                    class UnitClear: ctrlButtonPictureKeepAspect {
+                        idc = IDC_SPAWNREINFORCEMENTS_UNIT_CLEAR;
+                        text = "\a3\3den\data\cfg3den\history\deleteitems_ca.paa";
                         x = POS_W(24.9);
                         y = POS_H(1.1);
                         w = POS_W(1);
                         h = POS_H(1);
+                        colorBackground[] = {0, 0, 0, 0};
+                        offsetPressedX = 0;
+                        offsetPressedY = 0;
                     };
                 };
             };
@@ -1185,7 +1201,7 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
                 x = 0;
                 y = POS_H(19.7);
                 w = POS_W(26);
-                h = POS_H(6.6);
+                h = POS_H(7.7);
                 class controls {
                     class Title: EGVAR(attributes,RscLabel) {
                         text = "$STR_A3_RscDisplayLogin_Properties";
@@ -1195,7 +1211,7 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
                         x = 0;
                         y = POS_H(1);
                         w = POS_W(26);
-                        h = POS_H(5.6);
+                        h = POS_H(6.7);
                     };
                     class VehicleLZLabel: EGVAR(attributes,RscLabel) {
                         text = CSTRING(VehicleLZ);
@@ -1242,21 +1258,33 @@ BEGIN_MODULE_DIALOG(RscSpawnReinforcements)
                             };
                         };
                     };
+                    class FlyHeightLabel: VehicleLZLabel {
+                        text = CSTRING(ModuleFlyHeight);
+                        y = POS_H(4.4);
+                    };
+                    class FlyHeight: EGVAR(attributes,RscEdit) {
+                        idc = IDC_SPAWNREINFORCEMENTS_VEHICLE_HEIGHT;
+                        x = POS_W(12);
+                        y = POS_H(4.4);
+                        w = POS_W(11);
+                        h = POS_H(1);
+                        colorBackground[] = {0, 0, 0, 0.3};
+                    };
                     class UnitRPLabel: VehicleLZLabel {
                         text = CSTRING(UnitRP);
-                        y = POS_H(4.4);
+                        y = POS_H(5.5);
                     };
                     class UnitRP: VehicleLZ {
                         idc = IDC_SPAWNREINFORCEMENTS_UNIT_RP;
-                        y = POS_H(4.4);
+                        y = POS_H(5.5);
                     };
                     class UnitBehaviourLabel: VehicleLZLabel {
                         text = CSTRING(UnitBehaviour);
-                        y = POS_H(5.5);
+                        y = POS_H(6.6);
                     };
                     class UnitBehaviour: VehicleBehaviour {
                         idc = IDC_SPAWNREINFORCEMENTS_UNIT_BEHAVIOUR;
-                        y = POS_H(5.5);
+                        y = POS_H(6.6);
                         columns = 4;
                         strings[] = {
                             "$STR_Disp_Default",

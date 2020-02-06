@@ -16,6 +16,7 @@
     {
         _unit setSkill [_x, _skills select _forEachIndex];
     } forEach [
+        "general",
         "aimingAccuracy",
         "aimingSpeed",
         "aimingShake",

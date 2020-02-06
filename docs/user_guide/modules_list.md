@@ -109,6 +109,10 @@ Creates a teleport location at the attached object or, if not attached, at a new
 Players can use the "Teleport" action on any teleporter objects to teleport between them.
 When used on a vehicle, players will first be teleported into an empty seat if possible.
 
+## Custom Fire
+
+Creates a custom fire effect based on the selected fire color, fire damage, effect size, and particle density, lifetime, speed, size, and orientation.
+
 ## Damage Buildings
 
 Sets the damaged state of the nearest building to the module or all buildings within the given radius, depending on the selected mode.

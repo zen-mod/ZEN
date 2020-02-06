@@ -317,12 +317,28 @@ if (isServer) then {
         } forEach allCurators;
     }] call CBA_fnc_addEventHandler;
 
-    [QGVAR(createZeus), LINKFUNC(createZeus)] call CBA_fnc_addEventHandler;
+    ["CBA_settingsInitialized", {
+        ["AllVehicles", "InitPost", {
+            params ["_object"];
+
+            if (_object getVariable [QGVAR(autoAddObject), GVAR(autoAddObjects)]) then {
+                [{
+                    {
+                        _x addCuratorEditableObjects [[_this], true];
+                    } forEach allCurators;
+                }, _object] call CBA_fnc_execNextFrame;
+            };
+        }, true, [], true] call CBA_fnc_addClassEventHandler;
+
+        ["ModuleCurator_F", "Init", {
+            params ["_logic"];
+
+            if (GVAR(autoAddObjects)) then {
+                _logic addCuratorEditableObjects [allMissionObjects "AllVehicles", true];
+            };
+        }, true, [], false] call CBA_fnc_addClassEventHandler;
+    }] call CBA_fnc_addEventHandler;
+
+    [QGVAR(createZeus), FUNC(createZeus)] call CBA_fnc_addEventHandler;
     [QGVAR(deserializeObjects), LINKFUNC(deserializeObjects)] call CBA_fnc_addEventHandler;
 };
-
-["CBA_settingsInitialized", {
-    if (isServer && {GVAR(autoAddObjects)}) then {
-        ["AllVehicles", "InitPost", FUNC(addObjectToCurators), true, [], true] call CBA_fnc_addClassEventHandler;
-    };
-}] call CBA_fnc_addEventHandler;

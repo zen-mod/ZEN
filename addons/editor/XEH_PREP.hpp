@@ -1,3 +1,4 @@
+PREP(addGroupIcons);
 PREP(declutterEmptyTree);
 PREP(fixSideButtons);
 PREP(handleKeyDown);

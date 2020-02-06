@@ -1,4 +1,3 @@
-PREP(addObjectToCurators);
 PREP(changeGroupSide);
 PREP(collapseTree);
 PREP(createZeus);
