@@ -219,13 +219,13 @@ class EGVAR(context_menu,actions) {
     class Inventory {
         displayName = "$STR_A3_Gear1";
         condition = QUOTE(_hoveredEntity call FUNC(canEditInventory));
-        statement = QUOTE(BIS_fnc_initCuratorAttributes_target = _hoveredEntity; createDialog QQEGVAR(attributes,RscAttributesInventory));
+        statement = QUOTE(_hoveredEntity call EFUNC(inventory,configure));
         icon = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeInventory\filter_0_ca.paa";
         priority = 39;
         class Edit {
             displayName = "$STR_3DEN_Display3DEN_MenUBar_Edit_text";
             condition = QUOTE(_hoveredEntity call FUNC(canEditInventory));
-            statement = QUOTE(BIS_fnc_initCuratorAttributes_target = _hoveredEntity; createDialog QQEGVAR(attributes,RscAttributesInventory));
+            statement = QUOTE(_hoveredEntity call EFUNC(inventory,configure));
             icon = "\a3\3DEN\Data\Displays\Display3DEN\PanelRight\customcomposition_edit_ca.paa";
         };
         class Copy {
