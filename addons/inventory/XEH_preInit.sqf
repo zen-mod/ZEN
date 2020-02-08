@@ -9,4 +9,16 @@ PREP_RECOMPILE_END;
 // Disable CBA inventory attribute preload
 uiNamespace setVariable ["cba_ui_curatorItemCache", []];
 
+// Add inventory button to attribute display
+[
+    "Object",
+    "STR_A3_Gear1",
+    {
+        [_entity] call FUNC(configure);
+    },
+    {
+        alive _entity && {getNumber (configFile >> "CfgVehicles" >> typeOf _entity >> "maximumLoad") > 0}
+    }
+] call EFUNC(attributes,addButton);
+
 ADDON = true;

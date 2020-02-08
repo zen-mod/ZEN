@@ -42,6 +42,9 @@ if (isServer) then {
     // Make the logic editable for all curators
     [QEGVAR(common,addObjects), [[_logic]]] call CBA_fnc_localEvent;
 
+    // Disable attributes for the logic
+    _logic setVariable [QEGVAR(attributes,disabled), true, true];
+
     // Add event to remove the logic from the list if it is deleted
     // Also, handle the cleanup of any attached objects
     _logic addEventHandler ["Deleted", {

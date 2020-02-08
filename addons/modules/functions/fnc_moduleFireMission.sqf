@@ -14,7 +14,7 @@
  * None
  *
  * Example:
- * [[artillery1, artillery2], "015734", 50, "ArtilleryMag", 4] call zen_modules_fnc_moduleFireMission
+ * [_vehicles, "015734", 50, "8Rnd_82mm_Mo_shells", 4] call zen_modules_fnc_moduleFireMission
  *
  * Public: No
  */
@@ -22,23 +22,19 @@
 params ["_vehicles", "_target", "_spread", "_ammo", "_rounds"];
 
 private _position = if (_target isEqualType "") then {
-    [_target, true] call CBA_fnc_mapGridToPos;
+    [_target, true] call CBA_fnc_mapGridToPos
 } else {
-    ASLtoAGL getPosASL _target;
+    ASLtoAGL getPosASL _target
 };
 
-private _artilleryETA = 1e9;
+private _eta = selectMin (_vehicles apply {_x getArtilleryETA [_position, _ammo]});
+
+if (_eta == -1) exitWith {
+    [LSTRING(NotInRangeOfArtillery)] call EFUNC(common,showMessage);
+};
 
 {
-    _artilleryETA = (_x getArtilleryETA [_position, _ammo]) min _artilleryETA;
+    [QGVAR(fireArtillery), [_x, _position, _spread, _ammo, _rounds], _x] call CBA_fnc_targetEvent;
 } forEach _vehicles;
 
-if (_artilleryETA == -1) then {
-    [LSTRING(ModuleFireMission_NotInRange)] call EFUNC(common,showMessage);
-} else {
-    {
-        [QGVAR(fireArtillery), [_x, _position, _spread, _ammo, _rounds], _x] call CBA_fnc_targetEvent;
-    } forEach _vehicles;
-
-    [LSTRING(ModuleFireMission_ArtilleryETA), _artilleryETA toFixed 1] call EFUNC(common,showMessage);
-};
+[LSTRING(ModuleFireMission_ArtilleryETA), _eta toFixed 1] call EFUNC(common,showMessage);

@@ -6,6 +6,8 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
+GVAR(saved) = [] call CBA_fnc_createNamespace;
+
 // Fix copy/pasted modules that use BI's module framework
 ["ModuleCurator_F", "Init", {
     params ["_logic"];
