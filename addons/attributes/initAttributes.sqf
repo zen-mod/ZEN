@@ -80,7 +80,7 @@
         } forEach call EFUNC(common,getSelectedVehicles);
     },
     {_entity call EFUNC(common,getVehicleAmmo)},
-    {alive _entity && {!(_entity isKindOf "CAManBase")} && {_entity call EFUNC(common,getVehicleAmmo) != -1}}
+    {alive _entity && {_entity call EFUNC(common,getVehicleAmmo) != -1}}
 ] call FUNC(addAttribute);
 
 [

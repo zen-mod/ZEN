@@ -239,7 +239,7 @@ class EGVAR(context_menu,actions) {
             && {alive _hoveredEntity} \
             && {getNumber (configFile >> 'CfgVehicles' >> typeOf _hoveredEntity >> 'maximumLoad') > 0} \
         );
-        statement = QUOTE([ARR_2(_hoveredEntity,'Inventory')] call EFUNC(attributes,open));
+        statement = QUOTE(_hoveredEntity call EFUNC(inventory,configure));
         priority = -81;
         class CopyInventory {
             displayName = "$STR_3DEN_Display3DEN_MenuBar_EntityCopy_text";
