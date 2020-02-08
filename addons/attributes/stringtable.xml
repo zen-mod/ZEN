@@ -23,6 +23,9 @@
             <Portuguese>Luzes</Portuguese>
             <Japanese>ライト</Japanese>
         </Key>
+        <Key ID="STR_ZEN_Attributes_LockedForPlayers">
+            <English>Locked For Players</English>
+        </Key>
         <Key ID="STR_ZEN_Attributes_PlateNumber">
             <English>Plate Number</English>
             <French>Plaque d'immatriculation</French>
@@ -34,16 +37,20 @@
             <Portuguese>Número da Placa</Portuguese>
             <Japanese>ナンバー プレート</Japanese>
         </Key>
-        <Key ID="STR_ZEN_Attributes_Exec_Tooltip">
-            <English>This code will be executed in the unscheduled environment on the machine where this object is local.\nThe object will be passed in the "_this" variable.</English>
-            <Russian>Этот код будет выполнен вне окружения планировщика на машине, где этот объект является локальным.\nОбъект будет передан в "_this" переменную.</Russian>
-            <French>Ce code sera exécuté dans l'environnement non planifié de la machine où cet objet est local.\nL'objet sera passé dans la variable "_this".</French>
-            <German>Der eingegebene Code wird in einer unscheduled Umgebung lokal zum Objkekt ausgeführt.\nDas Objekt wird in der Variable names "_this" übergeben.</German>
-            <Polish>Ten kod zostanie wykonany w środowisku unscheduled na maszynie gdzie obiekt jest lokalny.\nObiekt zostanie przekazany w zmiennej "_this".</Polish>
-            <Czech>Tento kód bude spuštěn v neplánovaném prostředí na počítači, kde je tento objekt lokální. \n Objekt bude předán v proměnné "_this".</Czech>
-            <Portuguese>Este código será executado no ambiente unscheduled na máquina onde este objeto é local.\nO objeto será passado na variável "_this".</Portuguese>
-            <Italian>Questo codice verrà eseguito nell'ambiente non schedulato sulla macchina in cui l'oggetto è locato. \n L'oggetto è passato tramite la variabile "_this"</Italian>
-            <Japanese>このコードはこのオブジェクトがローカルの場合、マシン上の非スケジュール環境で実行されます。\nオブジェクトは変数 "_this" で渡されます。</Japanese>
+        <Key ID="STR_ZEN_Attributes_RespawnPosition">
+            <English>Respawn Position</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_RespawnPosition_Tooltip">
+            <English>Selects the side that is able to respawn on this object.</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_States">
+            <English>States</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_ExecObject_Tooltip">
+            <English>This code will be executed in the unscheduled environment on the machine where this object is local.\nThe variable "_this" refers to this object.</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_ExecGroup_Tooltip">
+            <English>This code will be executed in the unscheduled environment on the machine where this group is local.\nThe variable "_this" refers to this group.</English>
         </Key>
         <Key ID="STR_ZEN_Attributes_Timeout">
             <English>Timeout (s)</English>
@@ -186,12 +193,6 @@
             <Polish>Saper</Polish>
             <Portuguese>Eliminação Explosiva de Ordenamento</Portuguese>
             <Japanese>爆発物専門家</Japanese>
-        </Key>
-        <Key ID="STR_ZEN_Attributes_ComponentsDamage">
-            <English>Components Damage</English>
-        </Key>
-        <Key ID="STR_ZEN_Attributes_Components">
-            <English>Damage</English>
         </Key>
     </Package>
 </Project>

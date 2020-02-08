@@ -78,4 +78,4 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgFactionClasses.hpp"
 #include "CfgVehicles.hpp"
-#include "RscAttributes.hpp"
+#include "gui.hpp"
