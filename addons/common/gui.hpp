@@ -1,9 +1,11 @@
 class RscText;
 class RscEdit;
 class RscCheckBox;
+class RscStructuredText;
 class RscButtonMenuOK;
 class RscButtonMenuCancel;
 class RscControlsGroupNoScrollbars;
+class ctrlStaticPictureKeepAspect;
 
 class RscCombo {
     class ComboScrollBar;
@@ -145,12 +147,6 @@ class GVAR(RscDisplayScrollbars): GVAR(RscDisplay) {
         class ButtonCancel: ButtonCancel {};
     };
 };
-
-class RscText;
-class RscStructuredText;
-class RscButtonMenuOK;
-class RscButtonMenuCancel;
-class ctrlStaticPictureKeepAspect;
 
 class GVAR(messageBox) {
     idd = -1;

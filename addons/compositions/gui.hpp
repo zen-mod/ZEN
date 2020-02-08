@@ -4,10 +4,10 @@ class RscButtonMenuCancel;
 class RscControlsGroupNoScrollbars;
 class ctrlButtonPictureKeepAspect;
 
-class EGVAR(attributes,RscLabel);
-class EGVAR(attributes,RscBackground);
-class EGVAR(attributes,RscEdit);
-class EGVAR(attributes,RscCombo);
+class EGVAR(common,RscLabel);
+class EGVAR(common,RscBackground);
+class EGVAR(common,RscEdit);
+class EGVAR(common,RscCombo);
 
 class GVAR(display) {
     idd = -1;
@@ -31,19 +31,19 @@ class GVAR(display) {
             h = POS_H(3.1);
             colorBackground[] = {0, 0, 0, 0.7};
         };
-        class CategoryLabel: EGVAR(attributes,RscLabel) {
+        class CategoryLabel: EGVAR(common,RscLabel) {
             text = "$STR_3DEN_Display3DENEditComposition_CategoryLabel_text";
             x = POS_X(7);
             y = POS_Y(11.45);
             w = POS_W(10);
         };
-        class CategoryEdit: EGVAR(attributes,RscEdit) {
+        class CategoryEdit: EGVAR(common,RscEdit) {
             idc = IDC_DISPLAY_CATEGORY;
             x = POS_X(17.1);
             y = POS_Y(11.45);
             w = POS_W(14.8);
         };
-        class CategoryList: EGVAR(attributes,RscCombo) {
+        class CategoryList: EGVAR(common,RscCombo) {
             idc = IDC_DISPLAY_LIST;
             x = POS_X(31.9);
             y = POS_Y(11.45);
