@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [_logic, _marker] call zen_attributes_fnc_handleMarkerPlaced
+ * [_curator, _marker] call zen_attributes_fnc_handleMarkerPlaced
  *
  * Public: No
  */

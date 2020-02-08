@@ -11,7 +11,7 @@
  * 2: Check Entity <BOOL> (default: false)
  *
  * Return Value:
- * Successfully Registered <BOOL>
+ * Successfully Added <BOOL>
  *
  * Example:
  * ["Object", "", true] call zen_attributes_fnc_addDisplay
