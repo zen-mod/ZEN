@@ -67,8 +67,8 @@ class CfgVehicles {
     class GVAR(moduleAttachEffect): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Equipment);
-        displayName = CSTRING(ModuleAttachEffect);
-        curatorInfoType = QGVAR(RscAttachEffect);
+        displayName = CSTRING(AttachEffect);
+        function = QFUNC(moduleAttachEffect);
     };
     class GVAR(moduleAttachFlag): GVAR(moduleBase) {
         curatorCanAttach = 1;
@@ -188,6 +188,7 @@ class CfgVehicles {
         icon = "\a3\3den\data\displays\display3den\panelleft\entitylist_location_ca.paa";
     };
     class GVAR(moduleDamageBuildings): GVAR(moduleBase) {
+        curatorCanAttach = 1;
         category = QGVAR(Buildings);
         displayName = CSTRING(ModuleDamageBuildings);
         curatorInfoType = QGVAR(RscDamageBuildings);
