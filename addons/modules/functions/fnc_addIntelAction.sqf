@@ -16,7 +16,7 @@
  * None
  *
  * Example:
- * [notebook, 0, true, "Pick Up Intel", 1, "Intel!", "Notes..."] call zen_modules_fnc_addIntelAction
+ * [_object, 0, true, "Pick Up Intel", 1, "Intel!", "Notes..."] call zen_modules_fnc_addIntelAction
  *
  * Public: No
  */

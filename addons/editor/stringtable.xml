@@ -64,6 +64,12 @@
             <Polish>Oczyszcza drzewo pustych obiektów przez usunięcie pustych pojazdów, gdyż są one dostępne w drzewach poszczególnych stron.</Polish>
             <Japanese>陣営特有として使用できる空の車両がある空ツリーを整理します。</Japanese>
         </Key>
+        <Key ID="STR_ZEN_Editor_AddGroupIcons">
+            <English>Add Group Icons</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_AddGroupIcons_Description">
+            <English>Adds group icons to the create group trees.</English>
+        </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages">
             <English>Unit Radio Messages</English>
             <French>Messages radio d'unité</French>
@@ -138,6 +144,12 @@
         </Key>
         <Key ID="STR_ZEN_Editor_DeepPaste_Description">
             <English>Pastes the current deep copied object data.</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_FocusSearchBar">
+            <English>Focus Search Bar</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_FocusSearchBar_Description">
+            <English>Sets focus to the search bar.</English>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleIcons">
             <English>Toggle Editable Icons</English>
