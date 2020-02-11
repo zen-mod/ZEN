@@ -205,6 +205,7 @@ params ["_logic"];
         {deleteVehicle _x} forEach _particleSources;
     }];
 
+    _logic setVariable [QEGVAR(attributes,disabled), true, true];
     [_jipID, _logic] call CBA_fnc_removeGlobalEventJIP;
 }, {
     params ["", "_logic"];

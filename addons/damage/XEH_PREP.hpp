@@ -1,0 +1,2 @@
+PREP(configure);
+PREP(getHitPointString);

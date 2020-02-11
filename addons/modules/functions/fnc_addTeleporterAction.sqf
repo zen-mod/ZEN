@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [cursorObject] call zen_modules_fnc_addTeleporterAction
+ * [_object] call zen_modules_fnc_addTeleporterAction
  *
  * Public: No
  */
