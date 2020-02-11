@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Sets the formation of groups in given selection.
+ * Sets the formation of the given groups.
  *
  * Arguments:
  * 0: Groups <ARRAY>
@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [[group], "WEDGE"] call zen_context_actions_fnc_setFormation
+ * [_groups, "WEDGE"] call zen_context_actions_fnc_setFormation
  *
  * Public: No
  */

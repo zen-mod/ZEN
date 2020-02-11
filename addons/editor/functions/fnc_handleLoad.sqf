@@ -127,18 +127,28 @@ ctrlMapAnimCommit _ctrlMap;
 GVAR(iconsVisible) = true;
 
 [{
-    params ["_display"];
+    // For compatibility with Zeus Game Master missions, wait until the respawn placement phase is complete
+    [{
+        params ["_display"];
 
-    [_display] call FUNC(declutterEmptyTree);
+        isNull _display || {entities "ModuleMPTypeGameMaster_F" isEqualTo []} || {GETMVAR(BIS_moduleMPTypeGameMaster_init,false)}
+    }, {
+        params ["_display"];
 
-    {
-        private _ctrl = _display displayCtrl _x;
-        _ctrl call EFUNC(common,collapseTree);
-    } forEach IDCS_UNIT_TREES;
+        if (isNull _display) exitWith {};
 
-    {
-        private _ctrl = _display displayCtrl _x;
-        _ctrl call EFUNC(common,collapseTree);
-        _ctrl tvExpand [0]; // Expand side level path so all factions are visible
-    } forEach IDCS_GROUP_TREES;
+        [_display] call FUNC(addGroupIcons);
+        [_display] call FUNC(declutterEmptyTree);
+
+        {
+            private _ctrl = _display displayCtrl _x;
+            _ctrl call EFUNC(common,collapseTree);
+        } forEach IDCS_UNIT_TREES;
+
+        {
+            private _ctrl = _display displayCtrl _x;
+            _ctrl call EFUNC(common,collapseTree);
+            _ctrl tvExpand [0]; // Expand side level path so all factions are visible
+        } forEach IDCS_GROUP_TREES;
+    }, _this] call CBA_fnc_waitUntilAndExecute;
 }, _display] call CBA_fnc_execNextFrame;

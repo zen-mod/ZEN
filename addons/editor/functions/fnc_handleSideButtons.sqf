@@ -23,4 +23,6 @@ private _display = ctrlParent _ctrlButton;
 private _mode = GETMVAR(RscDisplayCurator_sections,[]) param [0, 0];
 private _side = IDCS_SIDE_BUTTONS find ctrlIDC _ctrlButton;
 
-[QGVAR(sideChanged), [_display, _mode, _side]] call CBA_fnc_localEvent;
+[{
+    [QGVAR(sideChanged), _this] call CBA_fnc_localEvent;
+}, [_display, _mode, _side]] call CBA_fnc_execNextFrame;

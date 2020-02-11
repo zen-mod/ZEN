@@ -1,16 +1,16 @@
 #include "script_component.hpp"
 /*
  * Author: 3Mydlo3
- * Refuels units in given selection.
+ * Refuels vehicles from the objects list.
  *
  * Arguments:
- * N: Selected Objects <ARRAY>
+ * N: Objects <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [vehicle1, vehicle2, vehicle3] call zen_context_actions_fnc_refuelVehicles
+ * [_object] call zen_context_actions_fnc_refuelVehicles
  *
  * Public: No
  */
@@ -19,7 +19,7 @@ private _vehicles = _this select {
     alive _x
     && {fuel _x < 1}
     && {_x isKindOf "AllVehicles"}
-    && {!(_x isKindOf 'CAManBase')}
+    && {!(_x isKindOf "CAManBase")}
 };
 
 {
