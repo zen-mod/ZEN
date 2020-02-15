@@ -1,12 +1,12 @@
 PREP(calculateLoad);
 PREP(clear);
+PREP(configure);
 PREP(confirm);
-PREP(fillList);
 PREP(getCargo);
 PREP(getItemMass);
-PREP(init);
 PREP(keyDown);
 PREP(modify);
 PREP(preload);
+PREP(refreshList);
 PREP(updateButtons);
 PREP(updateLoadBar);

@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Compiles a list of all aircraft sorted by side and faction.
+ * Compiles a cache of all aircraft sorted by side and faction.
  *
  * Arguments:
  * None
@@ -15,32 +15,34 @@
  * Public: No
  */
 
-// Base array: east, west, independent, civilian
-private _aircraftCache = [[], [], [], []];
+private _aircraftCache = [];
 
-// Compile all aircraft sorted based on side and faction
 {
-    private _vehicle = configName _x;
+    private _className = configName _x;
 
-    if (getNumber (_x >> "scope") == 2 && {_vehicle isKindOf "Air"}) then {
-        private _side = getNumber (_x >> "side");
-        private _sideArray = _aircraftCache select _side;
+    if (getNumber (_x >> "scope") == 2 && {_className isKindOf "Air"}) then {
+        // Switch BLUFOR and OPFOR side IDs
+        private _side = [1, 0, 2, 3] select getNumber (_x >> "side");
 
-        private _faction = getText (_x >> "faction");
-        private _index   = _sideArray findIf {_x select 0 == _faction};
+        // Get the side's faction hash which maps factions to lists of aircraft
+        private _factions = _aircraftCache param [_side];
 
-        if (_index == -1) then {
-            _sideArray pushBack [_faction, [_vehicle]];
-        } else {
-            (_sideArray select _index select 1) pushBack _vehicle;
+        if (isNil "_factions") then {
+            _factions = [] call CBA_fnc_hashCreate;
+            _aircraftCache set [_side, _factions];
         };
+
+        // Add the aircraft type to the faction's aircraft list
+        private _faction = getText (_x >> "faction");
+        private _aircraft = [_factions, _faction] call CBA_fnc_hashGet;
+
+        if (isNil "_aircraft") then {
+            _aircraft = [];
+            [_factions, _faction, _aircraft] call CBA_fnc_hashSet;
+        };
+
+        _aircraft pushBack _className;
     };
 } forEach configProperties [configFile >> "CfgVehicles", "isClass _x"];
-
-// Switch position of first two elements to make array easier to work with
-// Final array: west, east, resistance, civilian
-private _temp = +(_aircraftCache select 0);
-_aircraftCache set [0, +(_aircraftCache select 1)];
-_aircraftCache set [1, _temp];
 
 uiNamespace setVariable [QGVAR(aircraftCache), _aircraftCache];

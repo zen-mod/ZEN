@@ -1,63 +1,62 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Calculates the total mass of all items in the inventory attribute.
- * Properly handles sub-configs and CfgGlasses entries.
+ * Calculates the total mass of all items in the given inventory.
  *
  * Arguments:
- * 0: Display <DISPLAY>
+ * 0: Inventory <ARRAY>
  *
  * Return Value:
  * Load <NUMBER>
  *
  * Example:
- * [DISPLAY] call zen_inventory_fnc_calculateLoad
+ * [_inventory] call zen_inventory_fnc_calculateLoad
  *
  * Public: No
  */
 
-params ["_display"];
-
-private _cargo = +(_display getVariable QGVAR(cargo));
-_cargo params ["_itemCargo", "_weaponCargo", "_magazineCargo", "_backpackCargo"];
+params ["_inventory"];
+_inventory params ["_itemCargo", "_weaponCargo", "_magazineCargo", "_backpackCargo"];
 
 private _load = 0;
+private _cfgGlasses   = configFile >> "CfgGlasses";
+private _cfgMagazines = configFile >> "CfgMagazines";
+private _cfgVehicles  = configFile >> "CfgVehicles";
+private _cfgWeapons   = configFile >> "CfgWeapons";
 
-private _fnc_addMasses = {
-    params ["_cargoList", "_baseConfig", "_subConfig"];
-    _cargoList params ["_cargoItems", "_cargoCounts"];
-
-    {
-        private _config = _baseConfig >> _x;
-
-        if (!isNil "_subConfig") then {
-            _config = _config >> _subConfig;
-        };
-
-        _load = _load + getNumber (_config >> "mass") * (_cargoCounts select _forEachIndex);
-    } forEach _cargoItems;
-};
-
-// Special handling for facewear in item cargo, separate out CfgGlasses entries
-private _glassesCargo = [[], []];
-_glassesCargo params ["_glassesItems", "_glassesCounts"];
-
-private _cfgGlasses = configFile >> "CfgGlasses";
-_itemCargo params ["_itemCargoItems", "_itemCargoCounts"];
+// Add the masses of "regular" items in the inventory
+// Handle separating CfgGlasses items from the items cargo
+_itemCargo params ["_itemTypes", "_itemCounts"];
 
 {
-    if (isClass (_cfgGlasses >> _x)) then {
-        _glassesItems  pushBack (_itemCargoItems  deleteAt _forEachIndex);
-        _glassesCounts pushBack (_itemCargoCounts deleteAt _forEachIndex);
+    private _config = if (isClass (_cfgGlasses >> _x)) then {
+        _cfgGlasses >> _x
+    } else {
+        _cfgWeapons >> _x >> "ItemInfo"
     };
-} forEach _itemCargoItems;
 
-[_itemCargo,     configFile >> "CfgWeapons", "ItemInfo"] call _fnc_addMasses;
-[_weaponCargo,   configFile >> "CfgWeapons", "WeaponSlotsInfo"] call _fnc_addMasses;
-[_magazineCargo, configFile >> "CfgMagazines"] call _fnc_addMasses;
-[_backpackCargo, configFile >> "CfgVehicles"] call _fnc_addMasses;
-[_glassesCargo, _cfgGlasses] call _fnc_addMasses;
+    _load = _load + getNumber (_config >> "mass") * (_itemCounts select _forEachIndex);
+} forEach _itemTypes;
 
-_display setVariable [QGVAR(currentLoad), _load];
+// Add the masses of weapons in the inventory
+_weaponCargo params ["_weaponTypes", "_weaponCounts"];
+
+{
+    _load = _load + getNumber (_cfgWeapons >> _x >> "WeaponSlotsInfo" >> "mass") * (_weaponCounts select _forEachIndex);
+} forEach _weaponTypes;
+
+// Add the masses of magazines in the inventory
+_magazineCargo params ["_magazineTypes", "_magazineCounts"];
+
+{
+    _load = _load + getNumber (_cfgMagazines >> _x >> "mass") * (_magazineCounts select _forEachIndex);
+} forEach _magazineTypes;
+
+// Add the masses of backpacks in the inventory
+_backpackCargo params ["_backpackTypes", "_backpackCounts"];
+
+{
+    _load = _load + getNumber (_cfgVehicles >> _x >> "mass") * (_backpackCounts select _forEachIndex);
+} forEach _backpackTypes;
 
 _load

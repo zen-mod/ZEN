@@ -1,16 +1,16 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Returns the relevant cargo list array based on given item.
+ * Returns the relevant cargo array based on given item.
  * If no item is provided, will return based on current category.
  * Used by other functions to work with the correct cargo array.
  *
  * Arguments:
  * 0: Display <DISPLAY>
- * 1: Item Classname <STRING> (default: "")
+ * 1: Item <STRING> (default: "")
  *
  * Return Value:
- * Cargo List <ARRAY>
+ * Cargo <ARRAY>
  *
  * Example:
  * [DISPLAY] call zen_inventory_fnc_getCargo
@@ -19,8 +19,6 @@
  */
 
 params ["_display", ["_item", ""]];
-
-private _cargo = _display getVariable QGVAR(cargo);
 
 private _index = if (_item == "") then {
     private _category = lbCurSel (_display displayCtrl IDC_CATEGORY) - 1;
@@ -47,4 +45,4 @@ private _index = if (_item == "") then {
     };
 };
 
-_cargo select _index
+_display getVariable QGVAR(cargo) select _index

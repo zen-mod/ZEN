@@ -229,6 +229,31 @@
     _vehicle setAmmoOnPylon [_pylon, _ammoCount];
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(doArtilleryFire), {
+    params ["_unit", "_position", "_magazine", "_rounds"];
+    _unit doArtilleryFire [_position, _magazine, _rounds];
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setVehicleRadar), {
+    params ["_vehicle", "_mode"];
+    _vehicle setVehicleRadar _mode;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setVehicleReportRemoteTargets), {
+    params ["_vehicle", "_mode"];
+    _vehicle setVehicleReportRemoteTargets _mode;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setVehicleReceiveRemoteTargets), {
+    params ["_vehicle", "_mode"];
+    _vehicle setVehicleReceiveRemoteTargets _mode;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setVehicleReportOwnPosition), {
+    params ["_vehicle", "_mode"];
+    _vehicle setVehicleReportOwnPosition _mode;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(addWeaponItem), {
     params ["_unit", "_weapon", "_item"];
     _unit addweaponItem [_weapon, _item];
@@ -312,11 +337,27 @@ if (isServer) then {
         } forEach allCurators;
     }] call CBA_fnc_addEventHandler;
 
+    ["CBA_settingsInitialized", {
+        ["AllVehicles", "InitPost", {
+            params ["_object"];
+
+            if (_object getVariable [QGVAR(autoAddObject), GVAR(autoAddObjects)]) then {
+                [{
+                    {
+                        _x addCuratorEditableObjects [[_this], true];
+                    } forEach allCurators;
+                }, _object] call CBA_fnc_execNextFrame;
+            };
+        }, true, [], true] call CBA_fnc_addClassEventHandler;
+
+        ["ModuleCurator_F", "Init", {
+            params ["_logic"];
+
+            if (GVAR(autoAddObjects)) then {
+                _logic addCuratorEditableObjects [allMissionObjects "AllVehicles", true];
+            };
+        }, true, [], false] call CBA_fnc_addClassEventHandler;
+    }] call CBA_fnc_addEventHandler;
+
     [QGVAR(createZeus), FUNC(createZeus)] call CBA_fnc_addEventHandler;
 };
-
-["CBA_settingsInitialized", {
-    if (isServer && {GVAR(autoAddObjects)}) then {
-        ["AllVehicles", "InitPost", FUNC(addObjectToCurators), true, [], true] call CBA_fnc_addClassEventHandler;
-    };
-}] call CBA_fnc_addEventHandler;
