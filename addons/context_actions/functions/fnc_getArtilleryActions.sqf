@@ -10,31 +10,29 @@
  * Actions <ARRAY>
  *
  * Example:
- * _objects call zen_context_actions_fnc_getArtilleryActions
+ * [_object] call zen_context_actions_fnc_getArtilleryActions
  *
  * Public: No
  */
 
-// Filter vehicles that do not have a gunner
+// Get artillery magazines for vehicles with gunners
 private _vehicles = _this select {!isNull gunner _x};
-
-// Get all artillery magazines for vehicles with gunners
 private _cfgMagazines = configFile >> "CfgMagazines";
 
 private _magazines = getArtilleryAmmo _vehicles apply {
     [getText (_cfgMagazines >> _x >> "displayName"), _x]
 };
 
-_magazines sort false;
+_magazines sort true;
 
 // Create actions for every artillery ammo type
 private _actions = [];
 
 {
-    _x params ["_displayName", "_magazine"];
+    _x params ["_name", "_magazine"];
 
-    private _action = [_magazine, _displayName, "", LINKFUNC(selectArtilleryPos), {true}, _magazine] call EFUNC(context_menu,createAction);
-    _actions pushBack [_action, [], _forEachIndex];
+    private _action = [_magazine, _name, QPATHTOF(ui\ammo_ca.paa), FUNC(selectArtilleryPos), {true}, _magazine] call EFUNC(context_menu,createAction);
+    _actions pushBack [_action, [], 0];
 } forEach _magazines;
 
 _actions

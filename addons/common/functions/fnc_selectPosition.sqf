@@ -65,10 +65,6 @@ if (GVAR(selectPositionActive) || {isNull _display}) exitWith {
 
 GVAR(selectPositionActive) = true;
 
-if (isLocalized _text) then {
-    _text = localize _text;
-};
-
 private _drawArgs = [_text, _icon, _angle, _color];
 private _ctrlMap = _display displayCtrl IDC_RSCDISPLAYCURATOR_MAINMAP;
 
@@ -112,6 +108,10 @@ private _drawEH = [_ctrlMap, "Draw", {
     [_objects, _posASL, _args, _drawArgs] call _modifierFnc;
     _drawArgs params ["_text", "_icon", "_angle", "_color"];
 
+    if (isLocalized _text) then {
+        _text = localize _text;
+    };
+
     private _pos2D = _ctrlMap ctrlMapScreenToWorld getMousePosition;
     private _textSize = 0.05 max ctrlMapScale _ctrlMap min 0.07;
 
@@ -154,6 +154,10 @@ private _drawEH = [_ctrlMap, "Draw", {
     private _posASL = [] call FUNC(getPosFromScreen);
     [_objects, _posASL, _args, _drawArgs] call _modifierFnc;
     _drawArgs params ["_text", "_icon", "_angle", "_color"];
+
+    if (isLocalized _text) then {
+        _text = localize _text;
+    };
 
     private _posAGL = ASLtoAGL _posASL;
 

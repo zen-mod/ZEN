@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Allows Zeus to select a position to make AI fire artillery at.
+ * Allows Zeus to select a position to fire artillery at.
  *
  * Arguments:
  * None
@@ -15,7 +15,10 @@
  * Public: No
  */
 
-private _vehicles = _selectedObjects select {
+#define COLOR_IN_RANGE [0, 0.9, 0, 1]
+#define COLOR_OUT_OF_RANGE [0.9, 0, 0, 1]
+
+private _vehicles = _objects select {
     !isNull gunner _x && {_args in getArtilleryAmmo [_x]}
 };
 
@@ -25,11 +28,11 @@ private _fnc_modifier = {
     params ["_vehicles", "_position", "_magazine", "_drawArgs"];
 
     if (ASLtoAGL _position inRangeOfArtillery [_vehicles, _magazine]) then {
-        _drawArgs set [0, localize LSTRING(FireArtillery)];
-        _drawArgs set [3, [0, 1, 0, 1]];
+        _drawArgs set [0, LSTRING(FireArtillery)];
+        _drawArgs set [3, COLOR_IN_RANGE];
     } else {
-        _drawArgs set [0, localize LSTRING(UnableToFire)];
-        _drawArgs set [3, [1, 0, 0, 1]];
+        _drawArgs set [0, LSTRING(UnableToFire)];
+        _drawArgs set [3, COLOR_OUT_OF_RANGE];
     };
 };
 
