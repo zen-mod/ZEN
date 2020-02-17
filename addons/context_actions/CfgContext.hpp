@@ -1,5 +1,5 @@
 class EGVAR(context_menu,actions) {
-    class Artillery {
+    class FireArtillery {
         displayName = CSTRING(FireArtillery);
         icon = "\a3\ui_f\data\gui\cfg\communicationmenu\artillery_ca.paa";
         insertChildren = QUOTE(_objects call FUNC(getArtilleryActions));

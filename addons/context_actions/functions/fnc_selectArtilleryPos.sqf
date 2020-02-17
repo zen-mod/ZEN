@@ -24,15 +24,15 @@ private _vehicles = _objects select {
 
 if (_vehicles isEqualTo []) exitwith {};
 
-private _fnc_modifier = {
-    params ["_vehicles", "_position", "_magazine", "_drawArgs"];
+private _modifierFunction = {
+    params ["_vehicles", "_position", "_magazine", "_visuals"];
 
     if (ASLtoAGL _position inRangeOfArtillery [_vehicles, _magazine]) then {
-        _drawArgs set [0, LSTRING(FireArtillery)];
-        _drawArgs set [3, COLOR_IN_RANGE];
+        _visuals set [0, LSTRING(FireArtillery)];
+        _visuals set [3, COLOR_IN_RANGE];
     } else {
-        _drawArgs set [0, LSTRING(UnableToFire)];
-        _drawArgs set [3, COLOR_OUT_OF_RANGE];
+        _visuals set [0, LSTRING(UnableToFire)];
+        _visuals set [3, COLOR_OUT_OF_RANGE];
     };
 };
 
@@ -50,4 +50,4 @@ private _fnc_modifier = {
     } else {
         [LSTRING(NotAllVehiclesInRange)] call EFUNC(common,showMessage);
     };
-}, _args, nil, nil, nil, _fnc_modifier] call EFUNC(common,selectPosition);
+}, _args, nil, nil, nil, nil, _modifierFunction] call EFUNC(common,selectPosition);
