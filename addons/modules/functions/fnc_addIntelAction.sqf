@@ -63,11 +63,11 @@ if (isClass (configFile >> "CfgPatches" >> "ace_interact_menu")) then {
         "\a3\ui_f\data\igui\cfg\simpletasks\types\documents_ca.paa",
         {
             params ["_object", "_unit", "_args"];
-            _args params ["_title", "_text", "_share", "_delete", "_actionText", "_duration"];
+            _args params ["_title", "_text", "_share", "_delete", "_actionText", "_duration", "_fnc_addIntel"];
 
             [
                 _duration,
-                [_object, _unit, _title, _text, _share, _delete],
+                [_object, _unit, _title, _text, _share, _delete, _fnc_addIntel],
                 {
                     (_this select 0) params ["_object", "_unit", "_title", "_text", "_share", "_delete", "_fnc_addIntel"];
 

@@ -28,7 +28,7 @@
         <Key ID="STR_ZEN_Editor_RemoveWatermark_Description">
             <English>Removes the watermark shown when hiding the display.</English>
             <French>Supprime le filigrane affiché lors du masquage de l'affichage.</French>
-            <German>Versteckt das Wasserzeichen, das gezeigt wird wenn die Oberfläche versteckt wird.</German>
+            <German>Versteckt das Wasserzeichen, welches gezeigt wird, wenn die Oberfläche versteckt wird.</German>
             <Polish>Usuwa znak wodny pokazywany po ukryciu wyświetlacza.</Polish>
             <Russian>Убирает водяной знак ГМ когда интерфейс спрятан</Russian>
             <Japanese>UI 非表示に出る透かしを削除します。</Japanese>
@@ -66,9 +66,11 @@
         </Key>
         <Key ID="STR_ZEN_Editor_AddGroupIcons">
             <English>Add Group Icons</English>
+            <German>Gruppensymbole anzeigen</German>
         </Key>
         <Key ID="STR_ZEN_Editor_AddGroupIcons_Description">
             <English>Adds group icons to the create group trees.</English>
+            <German>Zeigt Gruppensymbole im Gruppenbaum an.</German>
         </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages">
             <English>Unit Radio Messages</English>
@@ -81,16 +83,18 @@
         <Key ID="STR_ZEN_Editor_UnitRadioMessages_Description">
             <English>Controls whether unit radio messages are played on placement and waypoint orders, waypoints only, or disabled.</English>
             <French>Contrôle si les messages radio de l'appareil sont diffusés en fonction de l'emplacement et de l'ordre des points de passage, points de passsages uniquement ou désactivés.</French>
-            <German>Steuert, ob die  Einheit eine Funkmeldung absetzt wenn diese platziert wird und eine Anweisung von Wegpunkten erhält oder nur bei Wegpunkten oder niemals.</German>
+            <German>Steuert, ob die Einheit eine Funkmeldung absetzt, wenn diese platziert wird und eine Anweisung von Wegpunkten erhält oder nur bei Wegpunkten oder niemals.</German>
             <Polish>Kontroluje czy wiadomości radiowe jednostki są odtwarzane przy postawieniu i wyznaczeniu punktu trasy, jedynie przy wyznaczeniu punktu trasy lub czy są wyłączone.</Polish>
             <Russian>Определяет будут ли ИИ подразделения сообщать по радио о своих действиях или нет.</Russian>
             <Japanese>ユニットが配置についたり、ウェイポイント指示、ウェイポイントのみ、無効化された時に無線でメッセージを送信するかどうかを決定します。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_ParachuteSounds">
             <English>Parachute Sounds</English>
+            <German>Fallschirmgeräusche</German>
         </Key>
         <Key ID="STR_ZEN_Editor_ParachuteSounds_Description">
             <English>Controls whether jet flyby sounds are played when an object is paradropped via the Raise Entity keybind.</English>
+            <German>Bestimmt ob Fallschirmgeräusche abgespielt werden, wenn ein Objekt per Hochheben-Tastenkombination abgeworfen wird.</German>
         </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages_WaypointsOnly">
             <English>Waypoints Only</English>
@@ -135,28 +139,36 @@
         </Key>
         <Key ID="STR_ZEN_Editor_DeepCopy">
             <English>Deep Copy</English>
+            <German>Komplette Kopie</German>
         </Key>
         <Key ID="STR_ZEN_Editor_DeepCopy_Description">
             <English>Performs a "deep copy" of selected objects - copying an extended set of object properties such as unit loadouts, vehicle inventories and customization.</English>
+            <German>Legt eine komplette Kopie von Objekten an, welches die Einheiten- und Fahrzeugausrüstung, sowie benutzerdefinierte Anpassungen speichert.</German>
         </Key>
         <Key ID="STR_ZEN_Editor_DeepPaste">
             <English>Deep Paste</English>
+            <German>Komplettes Einfügen</German>
         </Key>
         <Key ID="STR_ZEN_Editor_DeepPaste_Description">
             <English>Pastes the current deep copied object data.</English>
+            <German>Fügt die derzeitig gespeicherte komplette Kopie ein.</German>
         </Key>
         <Key ID="STR_ZEN_Editor_FocusSearchBar">
             <English>Focus Search Bar</English>
+            <German>Suchfeld fokussieren</German>
         </Key>
         <Key ID="STR_ZEN_Editor_FocusSearchBar_Description">
             <English>Sets focus to the search bar.</English>
+            <German>Setzt den Fokus auf das Suchfeld.</German>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleIcons">
             <English>Toggle Editable Icons</English>
+            <German>Bearbeitbare Symbole umschalten</German>
             <Japanese>編集可アイコン切り替え</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleIcons_Description">
             <English>Toggles the visibility of all editable icons. Useful for temporarily reducing lag or onscreen clutter when there are a lot of icons.</English>
+            <German>Schaltet die Sichtbarkeit von bearbeitbaren Symbolen um. Nützlich um temporär die Leistung zu verbessern oder für die Übersichtlichkeit.</German>
             <Japanese>全編集可アイコンの視認性を切り替えます。一時的な処理軽減や整理に使用できます。</Japanese>
         </Key>
     </Package>

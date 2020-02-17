@@ -37,36 +37,47 @@
         </Key>
         <Key ID="STR_ZEN_Context_Actions_VehicleAppearance">
             <English>Vehicle Appearance</English>
+            <German>Fahrzeugaussehen</German>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_EditableObjects">
             <English>Editable Objects</English>
+            <German>Editierbare Objekte</German>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_10m">
             <English>10 m</English>
+            <German>10 m</German>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_50m">
             <English>50 m</English>
+            <German>50 m</German>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_100m">
             <English>100 m</English>
+            <German>100 m</German>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_250m">
             <English>250 m</English>
+            <German>250 m</German>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_HoldFire">
             <English>Hold Fire</English>
+            <German>Feuer halten</German>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_HoldFireDefend">
             <English>Hold Fire, Defend Only</English>
+            <German>Feuer halten, nur verteidigen</German>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_HoldFireEngage">
             <English>Hold Fire, Engage At Will</English>
+            <German>Feuer halten, selbstständiger Angriff</German>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_FireAtWill">
             <English>Fire At Will</English>
+            <German>Feuerfreigabe</German>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_FireAtWillEngage">
             <English>Fire &amp; Engage At Will</English>
+            <German>Feuerfreigabe und selbstständiger Angriff</German>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_FireArtillery">
             <English>Fire Artillery</English>
