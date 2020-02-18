@@ -123,7 +123,7 @@ class CfgVehicles {
     class GVAR(moduleChangeHeight): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Objects);
-        displayName = CSTRING(ModuleChangeHeight);
+        displayName = CSTRING(ChangeHeight);
         function = QFUNC(moduleChangeHeight);
     };
     class GVAR(moduleChatter): GVAR(moduleBase) {
