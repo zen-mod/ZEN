@@ -6,10 +6,10 @@ class RscButtonMenuCancel;
 class ctrlToolboxPictureKeepAspect;
 class RscControlsGroupNoScrollbars;
 
-class EGVAR(attributes,RscLabel);
-class EGVAR(attributes,RscBackground);
-class EGVAR(attributes,RscEdit);
-class EGVAR(attributes,RscCombo);
+class EGVAR(common,RscLabel);
+class EGVAR(common,RscBackground);
+class EGVAR(common,RscEdit);
+class EGVAR(common,RscCombo);
 
 class GVAR(icon): RscControlsGroupNoScrollbars {
     idc = IDC_ICON_GROUP;
@@ -78,17 +78,17 @@ class GVAR(configure): RscControlsGroupNoScrollbars {
                     w = POS_W(26);
                     h = POS_H(3.3);
                     class controls {
-                        class Title: EGVAR(attributes,RscLabel) {
+                        class Title: EGVAR(common,RscLabel) {
                             text = "$STR_3DEN_Object_AttributeCategory_Transformation";
                             w = POS_W(26);
                         };
-                        class Background: EGVAR(attributes,RscBackground) {
+                        class Background: EGVAR(common,RscBackground) {
                             x = 0;
                             y = POS_H(1);
                             w = POS_W(26);
                             h = POS_H(2.3);
                         };
-                        class SizeLabel: EGVAR(attributes,RscLabel) {
+                        class SizeLabel: EGVAR(common,RscLabel) {
                             text = "$STR_3DEN_Trigger_Attribute_Size_displayName";
                             tooltip = "$STR_3DEN_Trigger_Attribute_Size_tooltip";
                             x = POS_W(3);
@@ -108,7 +108,7 @@ class GVAR(configure): RscControlsGroupNoScrollbars {
                             colorBackground[] = {0.77, 0.18, 0.1, 1};
                             shadow = 0;
                         };
-                        class EditA: EGVAR(attributes,RscEdit) {
+                        class EditA: EGVAR(common,RscEdit) {
                             idc = IDC_CONFIGURE_SIZE_A;
                             x = POS_W(13.1);
                             y = POS_H(1.1) + pixelH;
@@ -137,7 +137,7 @@ class GVAR(configure): RscControlsGroupNoScrollbars {
                             w = POS_W(8.7);
                             h = POS_H(1);
                         };
-                        class RotationEdit: EGVAR(attributes,RscEdit) {
+                        class RotationEdit: EGVAR(common,RscEdit) {
                             idc = IDC_CONFIGURE_ROTATION_EDIT;
                             x = POS_W(20.8);
                             y = POS_H(2.2) + pixelH;
@@ -153,17 +153,17 @@ class GVAR(configure): RscControlsGroupNoScrollbars {
                     w = POS_W(26);
                     h = POS_H(6.5);
                     class controls {
-                        class Title: EGVAR(attributes,RscLabel) {
+                        class Title: EGVAR(common,RscLabel) {
                             text = "$STR_3DEN_Marker_AttributeCategory_Style";
                             w = POS_W(26);
                         };
-                        class Background: EGVAR(attributes,RscBackground) {
+                        class Background: EGVAR(common,RscBackground) {
                             x = 0;
                             y = POS_H(1);
                             w = POS_W(26);
                             h = POS_H(5.5);
                         };
-                        class ShapeLabel: EGVAR(attributes,RscLabel) {
+                        class ShapeLabel: EGVAR(common,RscLabel) {
                             text = "$STR_3DEN_Trigger_Attribute_Shape_displayName";
                             tooltip = "$STR_3DEN_Trigger_Attribute_Shape_tooltip";
                             x = POS_W(3);
@@ -196,7 +196,7 @@ class GVAR(configure): RscControlsGroupNoScrollbars {
                             y = POS_H(3.2);
                             h = POS_H(1);
                         };
-                        class Brush: EGVAR(attributes,RscCombo) {
+                        class Brush: EGVAR(common,RscCombo) {
                             idc = IDC_CONFIGURE_BRUSH;
                             x = POS_W(12);
                             y = POS_H(3.2);
@@ -223,7 +223,7 @@ class GVAR(configure): RscControlsGroupNoScrollbars {
                             w = POS_W(8.7);
                             h = POS_H(1);
                         };
-                        class AlphaEdit: EGVAR(attributes,RscEdit) {
+                        class AlphaEdit: EGVAR(common,RscEdit) {
                             idc = IDC_CONFIGURE_ALPHA_EDIT;
                             x = POS_W(20.8);
                             y = POS_H(5.4) + pixelH;

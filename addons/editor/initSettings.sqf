@@ -35,10 +35,28 @@
 ] call CBA_settings_fnc_init;
 
 [
+    QGVAR(addGroupIcons),
+    "CHECKBOX",
+    [LSTRING(AddGroupIcons), LSTRING(AddGroupIcons_Description)],
+    ELSTRING(common,Category),
+    false,
+    false
+] call CBA_settings_fnc_init;
+
+[
     QGVAR(unitRadioMessages),
     "LIST",
     [LSTRING(UnitRadioMessages), LSTRING(UnitRadioMessages_Description)],
     ELSTRING(common,Category),
     [[0, 1, 2], [ELSTRING(common,Enabled), LSTRING(UnitRadioMessages_WaypointsOnly), ELSTRING(common,Disabled)], 0],
     false
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(parachuteSounds),
+    "CHECKBOX",
+    [LSTRING(ParachuteSounds), LSTRING(ParachuteSounds_Description)],
+    ELSTRING(common,Category),
+    true,
+    true
 ] call CBA_settings_fnc_init;

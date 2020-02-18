@@ -27,8 +27,8 @@ private _cfgMagazines = configFile >> "CfgMagazines";
     _x params ["_magazineClass", "", "_currentAmmo"];
 
     if !(_magazineClass in BLACKLIST_MAGAZINES) then {
-    	private _maxAmmo = getNumber (_cfgMagazines >> _magazineClass >> "count");
-    	_percentages pushBack _currentAmmo / _maxAmmo;
+        private _maxAmmo = getNumber (_cfgMagazines >> _magazineClass >> "count");
+        _percentages pushBack _currentAmmo / _maxAmmo;
     };
 } forEach magazinesAllTurrets _vehicle;
 

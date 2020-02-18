@@ -3,203 +3,202 @@
     <Package name="Attributes">
         <Key ID="STR_ZEN_Attributes_Engine">
             <English>Engine</English>
+            <French>Moteur</French>
             <Russian>Двигатель</Russian>
             <German>Motor</German>
             <Polish>Silnik</Polish>
             <Czech>Motor</Czech>
             <Italian>Motore</Italian>
             <Portuguese>Motor</Portuguese>
+            <Japanese>エンジン</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Lights">
             <English>Lights</English>
+            <French>Lumières</French>
             <Russian>Фары</Russian>
             <German>Lichter</German>
             <Polish>Światła</Polish>
             <Czech>Světla</Czech>
             <Italian>Luci</Italian>
             <Portuguese>Luzes</Portuguese>
+            <Japanese>ライト</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_LockedForPlayers">
+            <English>Locked For Players</English>
+            <German>Für Spieler verschlossen</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_PlateNumber">
             <English>Plate Number</English>
+            <French>Plaque d'immatriculation</French>
             <Russian>Госномер</Russian>
             <German>Kennzeichen</German>
             <Polish>Tablica rejestracyjna</Polish>
             <Czech>Číslo vozu</Czech>
             <Italian>Numero di targa</Italian>
             <Portuguese>Número da Placa</Portuguese>
+            <Japanese>ナンバー プレート</Japanese>
         </Key>
-        <Key ID="STR_ZEN_Attributes_Exec_Tooltip">
-            <English>This code will be executed in the unscheduled environment on the machine where this object is local.\nThe object will be passed in the "_this" variable.</English>
-            <German>Der eingegebene Code wird in einer unscheduled Umgebung lokal zum Objkekt ausgeführt.\nDas Objekt wird in der Variable names "_this" übergeben.</German>
-            <Polish>Ten kod zostanie wykonany w środowisku unscheduled na maszynie gdzie obiekt jest lokalny.\nObiekt zostanie przekazany w zmiennej "_this".</Polish>
-            <Czech>Tento kód bude spuštěn v neplánovaném prostředí na počítači, kde je tento objekt lokální. \n Objekt bude předán v proměnné "_this".</Czech>
-            <Portuguese>Este código será executado no ambiente unscheduled na máquina onde este objeto é local.\nO objeto será passado na variável "_this".</Portuguese>
-            <Italian>Questo codice verrà eseguito nell'ambiente non schedulato sulla macchina in cui l'oggetto è locato. \n L'oggetto è passato tramite la variabile "_this"</Italian>
+        <Key ID="STR_ZEN_Attributes_RespawnPosition">
+            <English>Respawn Position</English>
+            <German>Wiedereinstiegspunkt</German>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_RespawnPosition_Tooltip">
+            <English>Selects the side that is able to respawn on this object.</English>
+            <German>Wähle eine Seite, welche an diesem Objekt wiedereinsteigen kann.</German>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_States">
+            <English>States</English>
+            <German>Zustände</German>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_ExecObject_Tooltip">
+            <English>This code will be executed in the unscheduled environment on the machine where this object is local.\nThe variable "_this" refers to this object.</English>
+            <German>Der Code wird unscheduled auf der Maschine, wo das Objekt lokal ist, ausgeführt.\nDie Variable "_this" ist dabei das Objekt.</German>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_ExecGroup_Tooltip">
+            <English>This code will be executed in the unscheduled environment on the machine where this group is local.\nThe variable "_this" refers to this group.</English>
+            <German>Der Code wird unscheduled auf der Maschine, wo die Gruppe lokal ist, ausgeführt.\nDie Variable "_this" ist dabei die gruppe.</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_Timeout">
             <English>Timeout (s)</English>
+            <French>Délai d'attente (s)</French>
             <Russian>Таймаут (с)</Russian>
             <German>Zeitüberschreitung (s)</German>
             <Polish>Limit czasu (s)</Polish>
             <Czech>Časový limit(s)</Czech>
             <Portuguese>Tempo Esgotado (s)</Portuguese>
             <Italian>Tempo limite (s)</Italian>
+            <Japanese>タイムアウト (秒)</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Timeout_Tooltip">
             <English>The time (in seconds) between waypoint condition satisfaction and waypoint completion.</English>
+            <Russian>Время (в секундах) между выполнением условия путевой точки и завершением путевой точки.</Russian>
+            <French>Le temps (en secondes) entre la satisfaction des conditions du repère de balisage et l'achèvement du repère de balisage.</French>
             <German>Zeit (in Sekunden) zwischen der Erfüllung der Wegpunktbedingung und der Vervollständigung des Wegpunktes.</German>
             <Polish>Czas (w sekundach) pomiędzy wypełnieniem warunku zaliczenia punktu trasy a jego faktycznym zaliczeniem.</Polish>
             <Czech>Čas (v sekundách) mezi splněním podmínky trasového bodu a dokončením trasového bodu.</Czech>
             <Portuguese>O tempo (em segundos) entre a condição satisfatória da parada e a conclusão da parada.</Portuguese>
             <Italian>Il tempo (in secondi) che passa tra il soddisfacimento della condizione dell'obiettivo e il suo completamento </Italian>
+            <Japanese>タイムアウト (秒) はウェイポイントの条件達成とウェイポイント完了の間に適用されます。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Sensors">
             <English>Sensors</English>
+            <Russian>Датчики</Russian>
+            <French>Capteurs</French>
             <German>Sensoren</German>
             <Czech>Senzory</Czech>
             <Italian>Sensori</Italian>
             <Polish>Sensory</Polish>
             <Portuguese>Sensores</Portuguese>
+            <Japanese>センサー</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeSide">
             <English>Change Side</English>
+            <Russian>Изменить сторону</Russian>
+            <French>Changer de côté</French>
             <German>Seite ändern</German>
             <Czech>Změnit stranu</Czech>
             <Italian>Cambia Lato</Italian>
             <Polish>Zmień Stronę</Polish>
             <Portuguese>Alterar Lado</Portuguese>
+            <Japanese>陣営変更</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeSkills">
             <English>Change Skills</English>
+            <Russian>Изменить навыки</Russian>
+            <French>Changer de compétences</French>
             <German>Fähigkeiten ändern</German>
             <Czech>Změnit dovednosti</Czech>
             <Italian>Cambia Abilità</Italian>
             <Polish>Zmień umiejętności</Polish>
             <Portuguese>Alterar Habilidades</Portuguese>
+            <Japanese>スキル変更</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Skills">
             <English>Skills</English>
+            <Russian>Навыки</Russian>
+            <French>Compétences</French>
             <German>Fähigkeiten</German>
             <Czech>Dovednosti</Czech>
             <Italian>Abilità</Italian>
             <Polish>Umiejętności</Polish>
             <Portuguese>Habilidades</Portuguese>
-        </Key>
-        <Key ID="STR_ZEN_Attributes_AimingAccuracy">
-            <English>Aiming Accuracy</English>
-            <German>Zielgenauigkeit</German>
-            <Czech>Přesnost míření</Czech>
-            <Italian>Precisione</Italian>
-            <Polish>Celność</Polish>
-            <Portuguese>Precisão da Mira</Portuguese>
-        </Key>
-        <Key ID="STR_ZEN_Attributes_AimingSpeed">
-            <English>Aiming Speed</English>
-            <German>Zilelgeschwindigkeit</German>
-            <Czech>Rychlost míření</Czech>
-            <Italian>Velcoità di puntamento</Italian>
-            <Polish>Prędkość celowania</Polish>
-            <Portuguese>Velocidade da Mira</Portuguese>
-        </Key>
-        <Key ID="STR_ZEN_Attributes_AimingShake">
-            <English>Aiming Shake</English>
-            <German>Waffenschwankung</German>
-            <Czech>Chvění míření</Czech>
-            <Polish>Niestabilność celowania</Polish>
-            <Portuguese>Balanço da Mira</Portuguese>
-        </Key>
-        <Key ID="STR_ZEN_Attributes_Commanding">
-            <English>Commanding</English>
-            <German>Kommandierend</German>
-            <Czech>Velení</Czech>
-            <Italian>Comando</Italian>
-            <Polish>Wyżej położony</Polish>
-            <Portuguese>Comandante</Portuguese>
-        </Key>
-        <Key ID="STR_ZEN_Attributes_Courage">
-            <English>Courage</English>
-            <German>Mut</German>
-            <Czech>Odvaha</Czech>
-            <Italian>Coraggio</Italian>
-            <Polish>Odwaga</Polish>
-            <Portuguese>Coragem</Portuguese>
-        </Key>
-        <Key ID="STR_ZEN_Attributes_SpotDistance">
-            <English>Spotting Distance</English>
-            <German>Aufklärungsdistanz</German>
-            <Czech>Pozorovacívzdálenost</Czech>
-            <Italian>Distanza di Spotting</Italian>
-            <Portuguese>Distância de Detecção</Portuguese>
-        </Key>
-        <Key ID="STR_ZEN_Attributes_SpotTime">
-            <English>Spotting Speed</English>
-            <German>Aufklärungszeit</German>
-            <Czech>Pozorovací rychlost</Czech>
-            <Italian>Velocità di Spotting</Italian>
-            <Portuguese>Velocidade de Detecção</Portuguese>
-        </Key>
-        <Key ID="STR_ZEN_Attributes_ReloadSpeed">
-            <English>Reload Speed</English>
-            <German>Nachladezeit</German>
-            <Czech>Rychlost přebíjení</Czech>
-            <Italian>Velocità di Ricarica</Italian>
-            <Polish>Prędkość przeładowania</Polish>
-            <Portuguese>Velocidade de Recarga</Portuguese>
+            <Japanese>スキル</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeTraits">
             <English>Change Traits</English>
+            <Russian>Изменить Характер</Russian>
+            <French>Changer les caractéristiques</French>
             <German>Eigenschaften ändern</German>
             <Czech>Změnit vlastnosti</Czech>
             <Italian>Cambia Tratti</Italian>
             <Polish>Zmien Cechy</Polish>
             <Portuguese>Alterar Propriedades</Portuguese>
+            <Japanese>特性変更</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Traits">
             <English>Traits</English>
+            <Russian>Характер</Russian>
+            <French>Caractéristiques</French>
             <German>Eigenschaften</German>
             <Czech>Vlastnosti</Czech>
             <Italian>Tratti</Italian>
             <Polish>Cechy</Polish>
             <Portuguese>Propriedades</Portuguese>
+            <Japanese>特性</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_MedicalTraining">
             <English>Medical Training</English>
+            <Russian>Медицинская Тренировка</Russian>
+            <French>Entrainement médical</French>
             <German>Medizinische Ausbildung</German>
             <Czech>Lékařské školení</Czech>
             <Italian>Addestramento Medico</Italian>
             <Polish>Szkolenie Medyczne</Polish>
             <Portuguese>Treinamento Médico</Portuguese>
+            <Japanese>衛生スキル</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_EngineeringSkill">
             <English>Engineering Skill</English>
+            <Russian>Инженерные Навыки</Russian>
+            <French>Compétences d'ingénierie</French>
             <German>Technische Fähigkeiten</German>
             <Czech>Inženýrská dovednost</Czech>
             <Italian>Abilità di Ingegneriia</Italian>
             <Polish>Szkolenie Inżynieryjne</Polish>
             <Portuguese>Habilidade de Engenharia</Portuguese>
+            <Japanese>工兵スキル</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Doctor">
             <English>Doctor</English>
+            <Russian>Доктор</Russian>
+            <French>Docteur</French>
             <German>Doktor</German>
             <Czech>Doktor</Czech>
             <Italian>Dottore</Italian>
             <Polish>Doktor</Polish>
             <Portuguese>Doutor</Portuguese>
+            <Japanese>医師</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_AdvEngineer">
             <English>Adv. Engineer</English>
-            <German>Erfahrene Techniker</German>
+            <Russian>Ст. Инженер</Russian>
+            <French>Ingénieur d'études</French>
+            <German>Erfahrener Techniker</German>
             <Czech>Pokročilý Inženýr</Czech>
             <Italian>Ingegnere Avanzato</Italian>
             <Polish>Zaawansowany Inżynier</Polish>
             <Portuguese>Engenheiros Experientes</Portuguese>
+            <Japanese>上級工兵</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_EOD">
             <English>EOD</English>
+            <Russian>Сапёр</Russian>
+            <French>EOD</French>
             <German>Kampfmittelbeseitigung</German>
             <Czech>Likvidace bomb</Czech>
             <Polish>Saper</Polish>
             <Portuguese>Eliminação Explosiva de Ordenamento</Portuguese>
+            <Japanese>爆発物専門家</Japanese>
         </Key>
     </Package>
 </Project>

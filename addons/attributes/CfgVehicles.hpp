@@ -1,13 +1,24 @@
 class CfgVehicles {
     class All;
     class AllVehicles: All {
-        curatorInfoType = QGVAR(RscAttributesVehicle);
-        curatorInfoTypeEmpty = QGVAR(RscAttributesVehicleEmpty);
+        curatorInfoType = "";
+        curatorInfoTypeEmpty = "";
     };
 
-    class Man;
-    class CAManBase: Man {
-        curatorInfoType = QGVAR(RscAttributesMan);
-        curatorInfoTypeEmpty = QGVAR(RscAttributesMan);
+    class FloatingStructure_F: All {
+        curatorInfoType = "";
+        curatorInfoTypeEmpty = "";
+    };
+
+    class Land;
+    class Man: Land {
+        curatorInfoType = "";
+        curatorInfoTypeEmpty = "";
+    };
+
+    class ThingX;
+    class ReammoBox_F: ThingX {
+        curatorInfoType = "";
+        curatorInfoTypeEmpty = "";
     };
 };

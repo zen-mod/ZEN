@@ -22,18 +22,22 @@ class CfgPatches {
             QGVAR(moduleConvoyParameters),
             QGVAR(moduleCreateIED),
             QGVAR(moduleCreateIntel),
+            QGVAR(moduleCreateLZ),
             QGVAR(moduleCreateMinefield),
+            QGVAR(moduleCreateRP),
             QGVAR(moduleCreateTarget),
             QGVAR(moduleCreateTeleporter),
             QGVAR(moduleDamageBuildings),
             QGVAR(moduleEarthquake),
             QGVAR(moduleEditableObjects),
+            QGVAR(moduleEffectFire),
             QGVAR(moduleEquipWithECM),
             QGVAR(moduleExecuteCode),
             QGVAR(moduleFireMission),
             QGVAR(moduleFlyHeight),
             QGVAR(moduleFunctionsViewer),
             QGVAR(moduleGarrison),
+            QGVAR(moduleGlobalAISkill),
             QGVAR(moduleGlobalHint),
             QGVAR(moduleGroupSide),
             QGVAR(moduleHeal),
@@ -50,10 +54,12 @@ class CfgPatches {
             QGVAR(moduleSmokePillar),
             QGVAR(moduleSpawnCarrier),
             QGVAR(moduleSpawnDestroyer),
+            QGVAR(moduleSpawnReinforcements),
             QGVAR(moduleSuicideBomber),
             QGVAR(moduleTeleportPlayers),
             QGVAR(moduleToggleFlashlights),
             QGVAR(moduleToggleIRLasers),
+            QGVAR(moduleToggleLamps),
             QGVAR(moduleTurretOptics),
             QGVAR(moduleUnGarrison),
             QGVAR(moduleVisibility),
@@ -72,4 +78,4 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgFactionClasses.hpp"
 #include "CfgVehicles.hpp"
-#include "RscAttributes.hpp"
+#include "gui.hpp"
