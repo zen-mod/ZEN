@@ -13,6 +13,7 @@ class CfgVehicles {
         }
 
     HIDE_MODULE(moduleEditableObjects);
+    HIDE_MODULE(moduleGlobalSetSkill);
     HIDE_MODULE(moduleGroupSide);
     HIDE_MODULE(moduleHeal);
     HIDE_MODULE(modulePatrolArea);

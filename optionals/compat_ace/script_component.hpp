@@ -19,7 +19,7 @@
 // ACE3 reference macros
 #define ACE_PREFIX ace
 
-#define ACEGVAR(component,variable)  TRIPLES(ACE_PREFIX,component,variable)
+#define ACEGVAR(component,variable) TRIPLES(ACE_PREFIX,component,variable)
 #define QACEGVAR(component,variable) QUOTE(ACEGVAR(component,variable))
 
 #define ACEFUNC(component,function) TRIPLES(DOUBLES(ACE_PREFIX,component),fnc,function)
