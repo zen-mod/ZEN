@@ -35,47 +35,49 @@
             <Italian>Logistica dei veicoli</Italian>
             <Japanese>車両ロジスティクス</Japanese>
         </Key>
-        <Key ID="STR_ZEN_Context_Actions_Rearm">
-            <English>Rearm</English>
-            <French>Réarmer</French>
-            <Polish>Przezbrój</Polish>
-            <German>Waffen zurücksetzen</German>
-            <Italian>Riarma</Italian>
-            <Japanese>再武装</Japanese>
-        </Key>
-        <Key ID="STR_ZEN_Context_Actions_Refuel">
-            <English>Refuel</English>
-            <French>Ravitailler</French>
-            <Polish>Zatankuj</Polish>
-            <German>Auftanken</German>
-            <Italian>Rifornimento</Italian>
-            <Japanese>給油</Japanese>
-        </Key>
-        <Key ID="STR_ZEN_Context_Actions_Repair">
-            <English>Repair</English>
-            <French>Réparer</French>
-            <Polish>Napraw</Polish>
-            <German>Repariern</German>
-            <Italian>Ripara</Italian>
-            <Japanese>修理</Japanese>
+        <Key ID="STR_ZEN_Context_Actions_VehicleAppearance">
+            <English>Vehicle Appearance</English>
+            <German>Fahrzeugaussehen</German>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_EditableObjects">
             <English>Editable Objects</English>
+            <German>Editierbare Objekte</German>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_10m">
             <English>10 m</English>
-        </Key>
-        <Key ID="STR_ZEN_Context_Actions_25m">
-            <English>25 m</English>
+            <German>10 m</German>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_50m">
             <English>50 m</English>
+            <German>50 m</German>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_100m">
             <English>100 m</English>
+            <German>100 m</German>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_250m">
             <English>250 m</English>
+            <German>250 m</German>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_HoldFire">
+            <English>Hold Fire</English>
+            <German>Feuer halten</German>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_HoldFireDefend">
+            <English>Hold Fire, Defend Only</English>
+            <German>Feuer halten, nur verteidigen</German>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_HoldFireEngage">
+            <English>Hold Fire, Engage At Will</English>
+            <German>Feuer halten, selbstständiger Angriff</German>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_FireAtWill">
+            <English>Fire At Will</English>
+            <German>Feuerfreigabe</German>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_FireAtWillEngage">
+            <English>Fire &amp; Engage At Will</English>
+            <German>Feuerfreigabe und selbstständiger Angriff</German>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_Captive">
             <English>Toggle Captive</English>

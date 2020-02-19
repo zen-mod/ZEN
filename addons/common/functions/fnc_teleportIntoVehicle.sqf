@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: 3Mydlo3
- * Teleports units into the given vehicle.
+ * Teleports the given units into the given vehicle.
  * Will only teleport if there is enough space in the vehicle for all units.
  *
  * Arguments:
@@ -9,10 +9,10 @@
  * 1: Vehicle <OBJECT>
  *
  * Return Value:
- * Success <BOOL>
+ * Successful <BOOL>
  *
  * Example:
- * [[player1, player2, player3], vehicle player] call zen_common_fnc_teleportIntoVehicle
+ * [_units, _vehicle] call zen_common_fnc_teleportIntoVehicle
  *
  * Public: No
  */

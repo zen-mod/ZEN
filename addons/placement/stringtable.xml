@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Placement">
+        <Key ID="STR_ZEN_Placement_Enabled">
+            <English>Placement Preview</English>
+            <German>Plazierungsvorschau</German>
+        </Key>
+        <Key ID="STR_ZEN_Placement_Enabled_Description">
+            <English>Enables the displaying of a preview object when placing an object.\nIf the placement is confirmed, the object will be placed at the preview's position.\nThis also enables placement of objects on surfaces other than the terrain.</English>
+            <German>Aktiviert die Plazierungsvorschau beim Setzen eines Objekts.\nWenn die Platzierung bestätigt wurde, wird das Objekt an dieser Stelle global erstellt.\nDies ermöglicht es Objekte auch auf Flugzeugträgern oder andere Sachen zu plazieren.</German>
+        </Key>
+    </Package>
+</Project>

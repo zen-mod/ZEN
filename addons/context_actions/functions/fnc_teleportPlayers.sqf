@@ -4,13 +4,13 @@
  * Allows Zeus to select a position or vehicle to teleport players to.
  *
  * Arguments:
- * N: Selected Objects <OBJECT>
+ * N: Objects <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player1, player2, player3] call zen_context_actions_fnc_teleportPlayers
+ * [_object] call zen_context_actions_fnc_teleportPlayers
  *
  * Public: No
  */
@@ -23,7 +23,7 @@ private _players = _this select {isPlayer _x};
     if (_successful) then {
         curatorMouseOver params ["_type", "_entity"];
 
-        if (_type isEqualTo "OBJECT" && {_entity isKindOf "AllVehicles"} && {!(_entity isKindOf "CAManBase")}) then {
+        if (_type == "OBJECT" && {_entity isKindOf "AllVehicles"} && {!(_entity isKindOf "CAManBase")}) then {
             [_players, _entity] call EFUNC(common,teleportIntoVehicle);
         } else {
             {

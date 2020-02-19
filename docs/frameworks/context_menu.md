@@ -22,6 +22,7 @@ Name | Type | Description
 `priority` | NUMBER | Action sorting priority
 `insertChildren` | STRING | Code to dynamically add children actions
 `modifierFunction` | STRING | Code to modify the action before condition checking
+`args` | ANY | Arguments passed to the action
 
 **Example:**
 
@@ -137,11 +138,11 @@ This removes the need to duplicate condition checks for actions that are only th
 
  \#   | Description | Type | Variable
 :---: | ----------- | ---- | --------
-0 | Context Position | ARRAY | `_contextPosASL`
-1 | Selected Objects | ARRAY | `_selectedObjects`
-2 | Selected Groups | ARRAY | `_selectedGroups`
-3 | Selected Waypoints | ARRAY | `_selectedWaypoints`
-4 | Selected Markers | ARRAY | `_selectedMarkers`
+0 | Context Position | ARRAY | `_position`
+1 | Selected Objects | ARRAY | `_objects`
+2 | Selected Groups | ARRAY | `_groups`
+3 | Selected Waypoints | ARRAY | `_waypoints`
+4 | Selected Markers | ARRAY | `_markers`
 5 | Hovered Entity | OBJECT, GROUP,<br/>ARRAY, or STRING | `_hoveredEntity`
 6 | Arguments | ANY | `_args`
 
