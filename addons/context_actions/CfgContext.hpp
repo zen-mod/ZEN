@@ -172,29 +172,6 @@ class EGVAR(context_menu,actions) {
             args = "AUTO";
         };
     };
-    class Captives {
-        displayName = "$STR_ACE_Captives_DisplayName";
-        condition = QUOTE(isClass (configFile >> 'CfgPatches' >> 'ace_captives'));
-        priority = -60;
-        class ToggleCaptive {
-            displayName = CSTRING(Captive);
-            statement = QUOTE(_selectedObjects call FUNC(toggleCaptive));
-            condition = QUOTE(_selectedObjects findIf {_x isKindOf 'CAManBase' && {alive _x}} != -1);
-            icon = "\z\ace\addons\captives\UI\handcuff_ca.paa";
-            priority = 2;
-        };
-        class ToggleSurrender {
-            displayName = CSTRING(Surrender);
-            statement = QUOTE(_selectedObjects call FUNC(toggleSurrender));
-            condition = QUOTE(_selectedObjects findIf { \
-                _x isKindOf 'CAManBase' \
-                && { alive _x } \
-                && {!(_x getVariable [ARR_2('ace_captives_isHandcuffed',false)])} \
-            } != -1);
-            icon = "\z\ace\addons\captives\UI\Surrender_ca.paa";
-            priority = 1;
-        };
-    };
     class HealUnits {
         displayName = "$STR_State_Heal";
         icon = QPATHTOF(ui\medical_cross_ca.paa);
@@ -213,6 +190,24 @@ class EGVAR(context_menu,actions) {
         class AI: All {
             displayName = "$STR_Team_Switch_AI";
             args = HEAL_MODE_AI;
+        };
+    };
+    class Captives {
+        displayName = CSTRING(Captives);
+        condition = QUOTE(isClass (configFile >> 'CfgPatches' >> 'ace_captives'));
+        icon = "\z\ace\addons\captives\UI\handcuff_ca.paa";
+        priority = 50;
+        class ToggleCaptive {
+            displayName = CSTRING(ToggleCaptive);
+            condition = QUOTE(_objects findIf {alive _x && {_x isKindOf 'CAManBase'}} != -1);
+            statement = QUOTE(_objects call FUNC(toggleCaptive));
+            icon = "\z\ace\addons\captives\UI\handcuff_ca.paa";
+        };
+        class ToggleSurrender {
+            displayName = CSTRING(ToggleSurrender);
+            condition = QUOTE(_objects call FUNC(canToggleSurrender));
+            statement = QUOTE(_objects call FUNC(toggleSurrender));
+            icon = "\z\ace\addons\captives\UI\Surrender_ca.paa";
         };
     };
     class Loadout {

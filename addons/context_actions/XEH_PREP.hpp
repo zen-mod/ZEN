@@ -6,6 +6,7 @@ PREP(canPasteVehicleAppearance);
 PREP(canRearmVehicles);
 PREP(canRefuelVehicles);
 PREP(canRepairVehicles);
+PREP(canToggleSurrender);
 PREP(copyVehicleAppearance);
 PREP(editableObjects);
 PREP(healUnits);
