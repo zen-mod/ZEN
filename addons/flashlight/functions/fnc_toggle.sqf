@@ -19,9 +19,9 @@ params ["_state"];
 
 if (_state) then {
     GVAR(light) = "#lightpoint" createVehicleLocal [0, 0, 0];
-	GVAR(light) setLightBrightness LIGHT_INTENSITY;
-	GVAR(light) setLightAmbient [1, 1, 1];
-	GVAR(light) setLightColor [0, 0, 0];
+    GVAR(light) setLightBrightness LIGHT_INTENSITY;
+    GVAR(light) setLightAmbient [1, 1, 1];
+    GVAR(light) setLightColor [0, 0, 0];
     GVAR(light) lightAttachObject [curatorCamera, [0, 0, -7 * LIGHT_INTENSITY]];
 } else {
     deleteVehicle GVAR(light);
