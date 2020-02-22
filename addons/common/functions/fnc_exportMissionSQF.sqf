@@ -372,8 +372,11 @@ if (_addToCurators) then {
 private _output = "";
 
 {
-    _x = _x apply {if (_x isEqualType []) then {format _x} else {_x}};
-    _output = _output + (_x joinString NEWLINE) + NEWLINE + NEWLINE;
+
+    if !(_x isEqualTo []) then {
+        _x = _x apply {if (_x isEqualType []) then {format _x} else {_x}};
+        _output = _output + (_x joinString NEWLINE) + NEWLINE + NEWLINE;
+    };
 } forEach [_outputGroups1, _outputObjects, _outputGroups2, _outputCrew, _outputCargo, _outputSlingload, _outputAttach, _outputMarkers];
 
 _output
