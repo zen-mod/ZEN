@@ -351,17 +351,15 @@ if (_radius > 0) then {
 if (_includeMarkers) then {
     {
         if (markerShape _x != "POLYLINE") then {
-            private _varName = format ["_marker%1", _forEachIndex];
-
-            _outputMarkers pushBack ["%1 = createMarker [%2, %3];", _varName, str _x, markerPos [_x, true]];
-            _outputMarkers pushBack ["%1 setMarkerDir %2;", _varName, markerDir _x];
-            _outputMarkers pushBack ["%1 setMarkerType %2;", _varName, str markerType _x];
-            _outputMarkers pushBack ["%1 setMarkerShape %2;", _varName, str markerShape _x];
-            _outputMarkers pushBack ["%1 setMarkerSize %2;", _varName, markerSize _x];
-            _outputMarkers pushBack ["%1 setMarkerText %2;", _varName, str markerText _x];
-            _outputMarkers pushBack ["%1 setMarkerBrush %2;", _varName, str markerBrush _x];
-            _outputMarkers pushBack ["%1 setMarkerColor %2;", _varName, str markerColor _x];
-            _outputMarkers pushBack ["%1 setMarkerAlpha %2;", _varName, markerAlpha _x];
+            _outputMarkers pushBack ["_marker = createMarker [%1, %2];", str _x, markerPos [_x, true]];
+            _outputMarkers pushBack ["_marker setMarkerDir %1;", markerDir _x];
+            _outputMarkers pushBack ["_marker setMarkerType %1;", str markerType _x];
+            _outputMarkers pushBack ["_marker setMarkerShape %1;", str markerShape _x];
+            _outputMarkers pushBack ["_marker setMarkerSize %1;", markerSize _x];
+            _outputMarkers pushBack ["_marker setMarkerText %1;", str markerText _x];
+            _outputMarkers pushBack ["_marker setMarkerBrush %1;", str markerBrush _x];
+            _outputMarkers pushBack ["_marker setMarkerColor %1;", str markerColor _x];
+            _outputMarkers pushBack ["_marker setMarkerAlpha %1;", markerAlpha _x];
             _outputMarkers pushBack "";
         };
     } forEach allMapMarkers;
