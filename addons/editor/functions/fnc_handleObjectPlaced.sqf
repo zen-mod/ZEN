@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [_logic, _object] call zen_editor_fnc_handleObjectPlaced
+ * [_curator, _object] call zen_editor_fnc_handleObjectPlaced
  *
  * Public: No
  */

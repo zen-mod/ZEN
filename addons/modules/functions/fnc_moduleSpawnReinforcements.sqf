@@ -126,10 +126,11 @@ if (_despawnVehicle) then {
 } else {
     // Otherwise make aircraft stay around the LZ and provide air support
     if (_isAir) then {
-        private _waypoint = _vehicleGroup addWaypoint [_positionLZ, WAYPOINT_RADIUS];
-        _waypoint setWaypointType "SAD";
-        _waypoint setWaypointBehaviour "AWARE";
-        _waypoint setWaypointCombatMode "RED";
+        private _statement = format ["private _waypoint = group this addWaypoint [%1, %2];", _positionLZ, WAYPOINT_RADIUS];
+        _statement = _statement + "_waypoint setWaypointType 'SAD'; _waypoint setWaypointBehaviour 'AWARE'; _waypoint setWaypointCombatMode 'RED'";
+
+        // Add waypoint after insertion waypoint completes to avoid issue with seek and destroy waypoints causing aircraft to slow down
+        _waypoint setWaypointStatements ["true", _statement];
     };
 };
 

@@ -5,12 +5,13 @@
  *
  * Arguments:
  * 0: Display <DISPLAY>
+ * 1: Logic <OBJECt>
  *
  * Return Value:
  * None
  *
  * Example:
- * [DISPLAY] call zen_modules_fnc_gui_setDate
+ * [DISPLAY, LOGIC] call zen_modules_fnc_gui_setDate
  *
  * Public: No
  */
@@ -25,9 +26,9 @@
     _ctrlMinute ctrlSetText FORMAT_TIME(_value / 60 % 60); \
     _ctrlSecond ctrlSetText FORMAT_TIME(_value % 60)
 
-params ["_display"];
+params ["_display", "_logic"];
 
-private _ctrlButtonOK = _display displayCtrl IDC_OK;
+deleteVehicle _logic;
 
 date params ["_currentYear", "_currentMonth", "_currentDay", "_currentHour", "_currentMinute"];
 
@@ -38,9 +39,6 @@ private _ctrlDay   = _display displayCtrl IDC_SETDATE_DAY;
 for "_year" from YEARS_START to YEARS_END do {
     _ctrlYear lbSetValue [_ctrlYear lbAdd str _year, _year];
 };
-
-_ctrlMonth lbSetCurSel (_currentMonth - 1);
-_ctrlDay lbSetCurSel (_currentDay - 1);
 
 private _fnc_changedYearOrMonth = {
     params ["_ctrl"];
@@ -99,6 +97,7 @@ private _fnc_changedYearOrMonth = {
         };
 
         private _moonPhase = moonPhase [_year, _month, _day, 0, 0];
+
         private _picture = switch (true) do {
             case (_moonPhase > 0.964): {
                 "\a3\3DEN\Data\Attributes\Date\moon_full_ca.paa"
@@ -110,6 +109,7 @@ private _fnc_changedYearOrMonth = {
                 "#(argb,8,8,3)color(0,0,0,0)"
             };
         };
+
         _ctrlDay lbSetPictureRight [_index, _picture];
     };
 
@@ -192,7 +192,9 @@ _ctrlYear  ctrlAddEventHandler ["LBSelChanged", _fnc_changedYearOrMonth];
 _ctrlMonth ctrlAddEventHandler ["LBSelChanged", _fnc_changedYearOrMonth];
 _ctrlDay   ctrlAddEventHandler ["LBSelChanged", _fnc_changedDay];
 
-_ctrlYear lbSetCurSel (_currentYear - YEARS_START);
+_ctrlYear  lbSetCurSel (_currentYear - YEARS_START);
+_ctrlMonth lbSetCurSel (_currentMonth - 1);
+_ctrlDay   lbSetCurSel (_currentDay - 1);
 
 private _ctrlSlider = _display displayCtrl IDC_SETDATE_SLIDER;
 _ctrlSlider sliderSetPosition (_currentHour * 3600 + _currentMinute * 60);
@@ -250,22 +252,10 @@ _ctrlHour   ctrlAddEventHandler ["KillFocus", _fnc_onKillFocus];
 _ctrlMinute ctrlAddEventHandler ["KillFocus", _fnc_onKillFocus];
 _ctrlSecond ctrlAddEventHandler ["KillFocus", _fnc_onKillFocus];
 
-private _fnc_onUnload = {
-    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-    if (isNull _logic) exitWith {};
-
-    deleteVehicle _logic;
-};
-
 private _fnc_onConfirm = {
     params ["_ctrlButtonOK"];
 
     private _display = ctrlParent _ctrlButtonOK;
-    if (isNull _display) exitWith {};
-
-    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-    if (isNull _logic) exitWith {};
-
     private _ctrlYear   = _display displayCtrl IDC_SETDATE_YEAR;
     private _ctrlMonth  = _display displayCtrl IDC_SETDATE_MONTH;
     private _ctrlDay    = _display displayCtrl IDC_SETDATE_DAY;
@@ -284,5 +274,5 @@ private _fnc_onConfirm = {
     [QEGVAR(common,setDate), _date] call CBA_fnc_globalEvent;
 };
 
-_display displayAddEventHandler ["Unload", _fnc_onUnload];
+private _ctrlButtonOK = _display displayCtrl IDC_OK;
 _ctrlButtonOK ctrlAddEventHandler ["ButtonClick", _fnc_onConfirm];
