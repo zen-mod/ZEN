@@ -1,9 +1,11 @@
 class RscText;
 class RscEdit;
 class RscCheckBox;
+class RscButtonMenu;
 class RscButtonMenuOK;
 class RscButtonMenuCancel;
 class RscControlsGroupNoScrollbars;
+class ctrlControlsGroup;
 
 class RscCombo {
     class ComboScrollBar;
@@ -146,15 +148,10 @@ class GVAR(RscDisplayScrollbars): GVAR(RscDisplay) {
     };
 };
 
-class RscText;
-class RscEdit;
-class RscButtonMenu;
-class ctrlControlsGroup;
-
 class GVAR(export) {
     idd = -1;
     movingEnable = 1;
-    onLoad = QUOTE(with uiNamespace do {GVAR(export) = _this select 0});
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(export),_this select 0)]);
     class controls {
         class Title: RscText {
             idc = IDC_EXPORT_TITLE;
