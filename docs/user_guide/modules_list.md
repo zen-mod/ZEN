@@ -135,6 +135,10 @@ Equips the attached vehicle with an ECM which prevents the detonation of jammabl
 Executes the entered code on the selected machine(s).
 When used in JIP mode, the module can be deleted to stop execution on new JIP clients.
 
+## Export Mission SQF
+
+Outputs SQF code that can be executed to restore the current mission.
+
 ## Fly Height
 
 Sets the flying altitude of the attached aircraft relative to the ground.
