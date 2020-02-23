@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Common">
-        <Key ID="STR_ZEN_Common_Category">
-            <English>Zeus Enhanced</English>
-            <German>Zeus Enhanced</German>
-            <Polish>Zeus Enhanced</Polish>
-            <Czech>Zeus vylepšený</Czech>
-            <Italian>Zeus Enhanced</Italian>
-            <Japanese>Zeus Enhanced</Japanese>
-        </Key>
         <Key ID="STR_ZEN_Common_Enabled">
             <English>Enabled</English>
             <Czech>Povoleno</Czech>

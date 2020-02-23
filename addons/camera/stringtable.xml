@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Camera">
-        <Key ID="STR_ZEN_Camera_Camera">
+        <Key ID="STR_ZEN_Camera_DisplayName">
             <English>Camera</English>
             <Russian>Камера</Russian>
             <French>Caméra</French>
