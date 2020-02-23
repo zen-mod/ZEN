@@ -91,5 +91,5 @@ private _fnc_update = {
     };
 };
 
-_display displayAddEventHandler ["MouseMoving", _fnc_update];
+_display displayAddEventHandler ["MouseMoving",  _fnc_update];
 _display displayAddEventHandler ["MouseHolding", _fnc_update];

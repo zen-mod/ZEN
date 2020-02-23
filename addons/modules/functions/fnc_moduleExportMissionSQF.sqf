@@ -39,7 +39,7 @@ deleteVehicle _logic;
     params ["_values", "_position"];
     _values params ["_radius", "_includeMarkers"];
 
-    private _missionSQF = [_position, _radius, true, _includeMarkers, true] call EFUNC(common,exportMissionSQF);
+    private _missionSQF = [_position, _radius, true, _includeMarkers] call EFUNC(common,exportMissionSQF);
 
     [EFUNC(common,exportText), [LSTRING(ExportMissionSQF), _missionSQF, "EtelkaMonospacePro", 0.7]] call CBA_fnc_execNextFrame;
 }, {}, _position] call EFUNC(dialog,create);
