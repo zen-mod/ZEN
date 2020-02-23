@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Editor">
+        <Key ID="STR_ZEN_Editor_DisplayName">
+            <English>Editor</English>
+        </Key>
         <Key ID="STR_ZEN_Editor_MoveDisplayToEdge">
             <English>Move Display to Edge</English>
             <French>Déplacer l'affichage sur le bord</French>
