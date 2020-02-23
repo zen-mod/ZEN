@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Compat_ACE">
+        <Key ID="STR_ZEN_Compat_ACE_DisplayName">
+            <English>ACE Compatibility</English>
+        </Key>
         <Key ID="STR_ZEN_Compat_ACE_HideModules">
             <English>Hide ACE Modules</English>
         </Key>
         <Key ID="STR_ZEN_Compat_ACE_HideModules_Description">
-            <English>Hides ACE modules for which replacements exist. Requires display reload.</English>
+            <English>Hides duplicate modules added by ACE Zeus. Requires display reload.</English>
         </Key>
     </Package>
 </Project>

@@ -4,7 +4,7 @@ class CfgVehicles {
         function = QEFUNC(modules,bi_moduleMine);
     };
 
-    // Hide ACE Zeus modules for which replacements exist
+    // Hide duplicate modules added by ACE Zeus
     class ACEGVAR(zeus,moduleBase);
 
     #define HIDE_MODULE(moduleName) \
