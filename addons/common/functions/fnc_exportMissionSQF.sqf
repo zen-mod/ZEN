@@ -234,7 +234,6 @@ private _fnc_processVehicle = {
             _outputObjects pushBack ["%1 setDamage %2;", _varName, _damage];
         };
 
-
         private _hitPointsDamage = getAllHitPointsDamage _vehicle param [2, []];
 
         if (_hitPointsDamage findIf {_x > 0} != -1) then {
