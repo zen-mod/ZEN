@@ -10,6 +10,7 @@
  *   - in meters, -1 for entire mission
  * 2: Include Waypoints <BOOL> (default: true)
  * 3: Include Markers <BOOL> (default: false)
+ * 4: Curator Editable Objects Only <BOOL> (default: false)
  *
  * Return Value:
  * Mission SQF <STRING>
@@ -30,6 +31,7 @@ params [
     ["_radius", -1, [0]],
     ["_includeWaypoints", true, [true]],
     ["_includeMarkers", false, [true]],
+    ["_editableOnly", false, [true]]
 ];
 
 // Keep track of all processed objects and groups, their index in their corresponding array
@@ -374,7 +376,11 @@ private _fnc_processObject = {
     };
 };
 
-private _objects = allMissionObjects "All";
+private _objects = if (_editableOnly) then {
+    curatorEditableObjects getAssignedCuratorLogic player
+} else {
+    allMissionObjects "All"
+};
 
 if (_radius > 0) then {
     _objects = _objects inAreaArray [_position, _radius, _radius, 0, false, -1];

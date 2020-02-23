@@ -34,12 +34,17 @@ deleteVehicle _logic;
         "TOOLBOX:YESNO",
         LSTRING(IncludeMarkers),
         false
+    ],
+    [
+        "TOOLBOX:YESNO",
+        [LSTRING(EditableObjectsOnly), LSTRING(EditableObjectsOnly_Tooltip)],
+        false
     ]
 ], {
     params ["_values", "_position"];
-    _values params ["_radius", "_includeMarkers"];
+    _values params ["_radius", "_includeMarkers", "_editableOnly"];
 
-    private _missionSQF = [_position, _radius, true, _includeMarkers] call EFUNC(common,exportMissionSQF);
+    private _missionSQF = [_position, _radius, true, _includeMarkers, _editableOnly] call EFUNC(common,exportMissionSQF);
 
     [EFUNC(common,exportText), [LSTRING(ExportMissionSQF), _missionSQF, "EtelkaMonospacePro", 0.7]] call CBA_fnc_execNextFrame;
 }, {}, _position] call EFUNC(dialog,create);

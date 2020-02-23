@@ -1777,6 +1777,12 @@
         <Key ID="STR_ZEN_Modules_IncludeMarkers">
             <English>Include Markers</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_EditableObjectsOnly">
+            <English>Editable Objects Only</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_EditableObjectsOnly_Tooltip">
+            <English>Only objects that are currently editable by the local curator will be exported.</English>
+        </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_Buildings">
             <English>Buildings</English>
