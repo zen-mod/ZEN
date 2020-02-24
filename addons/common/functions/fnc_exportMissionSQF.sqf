@@ -366,6 +366,7 @@ private _fnc_processObject = {
         if (_object isKindOf "CAManBase") then {
             _object call _fnc_processUnit
         } else {
+            if (_object isKindOf "Animal") exitWith {};
             _object call _fnc_processVehicle
         };
     } else {
