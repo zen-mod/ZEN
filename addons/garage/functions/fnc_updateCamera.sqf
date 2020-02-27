@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Updates the camera position and rotation.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 [GVAR(camHelper), [GVAR(camYaw) + 180, -GVAR(camPitch), 0]] call BIS_fnc_setObjectRotation;
 GVAR(camHelper) attachTo [GVAR(center), GVAR(helperPos)];

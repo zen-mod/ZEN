@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Bohemia Interactive
  * Scripted waypoint that makes a group land at the waypoint's position.
@@ -11,16 +12,15 @@
  * Waypoint Finished <BOOL>
  *
  * Example:
- * [group, [0, 0, 0]] call zen_ai_fnc_waypointLand
+ * _waypoint setWaypointScript "\x\zen\addons\ai\functions\fnc_waypointLand.sqf"
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_group", "_waypointPosition"];
 
 private _waypoint = [_group, currentWaypoint _group];
-_waypoint setWaypointDescription localize "STR_A3_CfgWaypoints_Land";
+_waypoint setWaypointDescription localize LSTRING(Land);
 
 // Create an invisible helipad at the waypoint's position
 // AI tend to land better if there is a helipad nearby

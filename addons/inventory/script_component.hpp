@@ -4,6 +4,7 @@
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
+// #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_INVENTORY
     #define DEBUG_MODE_FULL
@@ -24,7 +25,6 @@
 #define POS_W(N) ((N) * GUI_GRID_W)
 #define POS_H(N) ((N) * GUI_GRID_H)
 
-#define IDC_INVENTORY  1500
 #define IDC_CATEGORY   1510
 #define IDC_LIST       1520
 #define IDC_BTN_REMOVE 1530

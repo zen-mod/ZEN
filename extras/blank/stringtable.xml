@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Blank">
+        <Key ID="STR_ZEN_Blank_DisplayName">
+            <English>Blank</English>
+            <Russian>Пусто</Russian>
+            <German>Leer</German>
+            <Czech>Prázdný</Czech>
+            <Italian>vuoto</Italian>
+        </Key>
+    </Package>
+</Project>

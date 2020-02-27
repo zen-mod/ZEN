@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Creates a dialog with given rows of content.
@@ -17,7 +18,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 if (canSuspend) exitWith {
     [FUNC(create), _this] call CBA_fnc_directCall;
@@ -67,6 +67,34 @@ scopeName "Main";
     private _controlType = "";
     private _rowSettings = [];
 
+    private _fnc_verifyListData = {
+        if (_values isEqualTo []) then {
+            {
+                _values pushBack _forEachIndex;
+            } forEach _labels;
+        };
+
+        _labels resize count _values;
+
+        _labels = _labels apply {
+            if (isNil "_x") then {
+                _x = str (_values select _forEachIndex);
+            };
+
+            _x params [["_label", "", [""]], ["_tooltip", "", [""]], ["_picture", "", [""]], ["_textColor", [1, 1, 1, 1], [[]], 4]];
+
+            if (isLocalized _label) then {
+                _label = localize _label;
+            };
+
+            if (isLocalized _tooltip) then {
+                _tooltip = localize _tooltip;
+            };
+
+            [_label, _tooltip, _picture, _textColor]
+        };
+    };
+
     switch (_type) do {
         case "CHECKBOX": {
             _defaultValue = _valueInfo param [0, false, [false]];
@@ -79,60 +107,71 @@ scopeName "Main";
         case "COMBO": {
             _valueInfo params [["_values", [], [[]]], ["_labels", [], [[]]], ["_defaultIndex", 0, [0]]];
 
-            if (_values isEqualTo []) then {
-                {
-                    _values pushBack _forEachIndex;
-                } forEach _labels;
-            };
-
-            {
-                if (isNil "_x") then {
-                    _x = _values select _forEachIndex;
-                };
-
-                _x params ["_label", ["_tooltip", ""], ["_picture", "", [""]], ["_textColor", [1, 1, 1, 1], [[]], 4]];
-
-                if !(_label isEqualType "") then {
-                    _label = str _label;
-                };
-
-                if !(_tooltip isEqualType "") then {
-                    _tooltip = str _tooltip;
-                };
-
-                if (isLocalized _label) then {
-                    _label = localize _label;
-                };
-
-                if (isLocalized _tooltip) then {
-                    _tooltip = localize _tooltip;
-                };
-
-                _labels set [_forEachIndex, [_label, _tooltip, _picture, _textColor]];
-            } forEach _labels;
-
+            [] call _fnc_verifyListData;
             _rowSettings append [_values, _labels];
             _defaultValue = _values param [_defaultIndex];
             _controlType = QGVAR(Row_Combo);
         };
         case "EDIT": {
-            _valueInfo params [["_default", "", [""]], ["_fnc_sanitizeValue", {_this}, [{}]]];
-            _rowSettings append [_fnc_sanitizeValue];
+            _valueInfo params [["_default", ""], ["_fnc_sanitizeValue", {_this}, [{}]], ["_height", 5, [0]]];
+
+            if !(_default isEqualType "") then {
+                _default = str _default;
+            };
+
+            private _isMulti = _subType in ["MULTI", "CODE"];
+            _rowSettings append [_fnc_sanitizeValue, _isMulti, _height];
             _defaultValue = _default;
-            _controlType = QGVAR(Row_Edit);
+
+            _controlType = switch (_subType) do {
+                case "MULTI": {
+                    QGVAR(Row_EditMulti);
+                };
+                case "CODE": {
+                    QGVAR(Row_EditCode);
+                };
+                default {
+                    QGVAR(Row_Edit);
+                };
+            };
+        };
+        case "LIST": {
+            _valueInfo params [["_values", [], [[]]], ["_labels", [], [[]]], ["_defaultIndex", 0, [0]], ["_height", 6, [0]]];
+
+            [] call _fnc_verifyListData;
+            _rowSettings append [_values, _labels, _height];
+            _defaultValue = _values param [_defaultIndex];
+            _controlType = QGVAR(Row_List);
+        };
+        case "OWNERS": {
+            _valueInfo params [["_sides", [], [[]], [0, 1, 2, 3, 4]], ["_groups", [], [[]]], ["_players", [], [[]]], ["_tab", 2, [0]]];
+
+            _sides = _sides select {_x in [west, east, independent, civilian]};
+            _groups = _groups select {units _x findIf {isPlayer _x} != -1};
+            _players = _players call EFUNC(common,getPlayers);
+            _tab = 0 max _tab min 2;
+
+            _defaultValue = [_sides, _groups, _players, _tab];
+            _controlType = [QGVAR(Row_Owners), QGVAR(Row_OwnersNoTitle)] select (_subType == "NOTITLE");
         };
         case "SIDES": {
             _defaultValue = _valueInfo param [0, nil, [west]];
             _controlType = QGVAR(Row_Sides);
         };
         case "SLIDER": {
-            _valueInfo params [["_min", 0, [0]], ["_max", 1, [0]], ["_default", 0, [0]], ["_decimals", 2, [0]]];
-            _rowSettings append [_min, _max, _decimals];
+            _valueInfo params [["_min", 0, [0]], ["_max", 1, [0]], ["_default", 0, [0]], ["_formatting", 2, [0, {}]]];
+            _rowSettings append [_min, _max, _formatting, _subType == "PERCENT"];
             _defaultValue = _default;
             _controlType = QGVAR(Row_Slider);
         };
         case "TOOLBOX": {
-            _valueInfo params [["_default", 0, [0, false]], ["_strings", [], [[]]]];
+            // Backwards compatibility for old value info format
+            if (_valueInfo param [1] isEqualType []) then {
+                _valueInfo params ["_default", "_strings"];
+                _valueInfo = [_default, 1, 2 max count _strings min 5, _strings];
+            };
+
+            _valueInfo params [["_default", 0, [0, false]], ["_rows", 1, [0]], ["_columns", 2, [0]], ["_strings", [], [[]]], ["_height", -1, [0]]];
 
             // Common toolbox use cases, for QOL mostly
             switch (_subType) do {
@@ -144,20 +183,24 @@ scopeName "Main";
                 };
             };
 
-            _strings = _strings apply {if (isLocalized _x) then {localize _x} else {_x}};
+            _strings = _strings select [0, _rows * _columns] apply {if (isLocalized _x) then {localize _x} else {_x}};
 
             // Return bool if there are only two options and default is a bool
-            private _countStrings = count _strings;
-            private _returnBool = _countStrings == 2 && {_default isEqualType false};
+            private _returnBool = count _strings == 2 && {_default isEqualType false};
 
             // Ensure default is number if not returning bool
             if (!_returnBool && {_default isEqualType false}) then {
                 _default = parseNumber _default;
             };
 
-            _rowSettings append [_strings, _returnBool];
+            // Adjust height based on number of rows when undefined
+            if (_height == -1) then {
+                _height = _rows;
+            };
+
+            _rowSettings append [_returnBool, _rows, _columns, _strings, _height, _subType == "WIDE"];
             _defaultValue = _default;
-            _controlType = format [QGVAR(Row_Toolbox%1), _countStrings];
+            _controlType = QGVAR(Row_Toolbox);
         };
         case "VECTOR": {
             _defaultValue = [_valueInfo] param [0, [0, 0], [], [2, 3]];

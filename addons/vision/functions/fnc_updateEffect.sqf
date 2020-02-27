@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Handles enabling and adjusting the NVG brightness effect.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _ppBrightness = missionNamespace getVariable [QGVAR(ppBrightness), -1];
 

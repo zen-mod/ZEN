@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Zeus module function to update editable objects.
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_position", "_editingMode", "_curator", "_range", "_filter"];
 _filter params ["_allowAll", "_allowUnits", "_allowVehicles", "_allowStatic"];
@@ -59,11 +59,8 @@ if (_range == -1) then {
         };
     };
 
-    _objects = nearestObjects [_position, _types, _range];
+    _objects = nearestObjects [_position, _types, _range, true];
 };
 
-if (_editingMode) then {
-    [QEGVAR(common,addObjects), [_objects, _curator]] call CBA_fnc_localEvent;
-} else {
-    [QEGVAR(common,removeObjects), [_objects, _curator]] call CBA_fnc_localEvent;
-};
+private _eventName = [QEGVAR(common,removeObjects), QEGVAR(common,addObjects)] select _editingMode;
+[_eventName, [_objects, _curator]] call CBA_fnc_serverEvent;

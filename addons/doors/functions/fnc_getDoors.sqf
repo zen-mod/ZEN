@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Returns the door positions of the given building.
@@ -13,14 +14,13 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_building"];
 
 private _doors = [];
 
 {
-    if (toLower configName _x find "opendoor" != -1) then {
+    if ("opendoor" in toLower configName _x) then {
         private _position = getText (_x >> "position");
         _doors pushBack (_building selectionPosition _position);
     };

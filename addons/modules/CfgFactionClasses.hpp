@@ -1,6 +1,9 @@
 class CfgFactionClasses {
+    class Chemlights {
+        displayName = "$STR_A3_Chemlights1";
+    };
     class GVAR(AI) {
-        displayName = CSTRING(AI);
+        displayName = "$STR_Team_Switch_AI";
         priority = 2;
         side = 7;
     };
@@ -19,6 +22,11 @@ class CfgFactionClasses {
         priority = 2;
         side = 7;
     };
+    class GVAR(Inventory) {
+        displayName = "$STR_A3_Gear1";
+        priority = 2;
+        side = 7;
+    };
     class GVAR(Objects) {
         displayName = CSTRING(Objects);
         priority = 2;
@@ -26,6 +34,11 @@ class CfgFactionClasses {
     };
     class GVAR(Players) {
         displayName = CSTRING(Players);
+        priority = 2;
+        side = 7;
+    };
+    class GVAR(Reinforcements) {
+        displayName = CSTRING(Reinforcements);
         priority = 2;
         side = 7;
     };

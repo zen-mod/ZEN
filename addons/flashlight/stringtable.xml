@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Flashlight">
+        <Key ID="STR_ZEN_Flashlight_Toggle">
+            <English>Toggle Flashlight</English>
+        </Key>
+        <Key ID="STR_ZEN_Flashlight_Toggle_Description">
+            <English>Toggles the state of the Zeus camera flashlight.</English>
+        </Key>
+    </Package>
+</Project>

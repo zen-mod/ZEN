@@ -1,7 +1,9 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Registers a custom module to be available in the Zeus modules tree.
- * Function is executed in unscheduled environment where module is placed.
+ * Function is executed in an unscheduled environment where module is placed.
+ *
  * Passed parameters:
  *   0: Module Position ASL <ARRAY>
  *   1: Attached Object (objNull if not attached) <OBJECT>
@@ -20,7 +22,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 if (canSuspend) exitWith {
     [FUNC(register), _this] call CBA_fnc_directCall;

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Handles the KeyDown event for the garage display.
@@ -14,9 +15,14 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["", "_keyCode"];
+
+if (_keyCode == DIK_TAB) exitWith {
+    private _nextTab = [1, 0] param [GVAR(currentTab), 0];
+    [_nextTab] call FUNC(onTabSelect);
+    true
+};
 
 if (_keyCode == DIK_ESCAPE) exitWith {
     [] call FUNC(closeGarage);

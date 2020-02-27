@@ -12,3 +12,5 @@ CHANGELOG.md
 *.bisign
 hemtt*
 !hemtt.json
+@zen
+tools/armake.exe

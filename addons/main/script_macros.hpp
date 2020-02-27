@@ -72,22 +72,25 @@
 #define SELECTED_WAYPOINTS (curatorSelected select 2)
 #define SELECTED_MARKERS   (curatorSelected select 3)
 
-#define COLOR_BACKGROUND_LIGHT 1, 1, 1, 0.1
-#define COLOR_BACKGROUND_DARK  0, 0, 0, 0.2
-
-#define GUI_THEME_RGB_R "(profilenamespace getvariable ['GUI_BCG_RGB_R',0.13])"
-#define GUI_THEME_RGB_G "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.54])"
-#define GUI_THEME_RGB_B "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.21])"
-#define GUI_THEME_ALPHA "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.8])"
+#define GUI_THEME_RGB_R "(profileNamespace getVariable ['GUI_BCG_RGB_R',0.13])"
+#define GUI_THEME_RGB_G "(profileNamespace getVariable ['GUI_BCG_RGB_G',0.54])"
+#define GUI_THEME_RGB_B "(profileNamespace getVariable ['GUI_BCG_RGB_B',0.21])"
+#define GUI_THEME_ALPHA "(profileNamespace getVariable ['GUI_BCG_RGB_A',0.8])"
 
 #define GUI_THEME_COLOR {GUI_THEME_RGB_R,GUI_THEME_RGB_G,GUI_THEME_RGB_B,GUI_THEME_ALPHA}
 
- #define SET_BACKGROUND_COLOR \
-    onLoad = QUOTE( \
-        params ['_ctrl']; \
-        private _color = if (EGVAR(common,darkMode)) then {[COLOR_BACKGROUND_DARK]} else {[COLOR_BACKGROUND_LIGHT]}; \
-        _ctrl ctrlSetBackgroundColor _color; \
-    )
+// Common IDCs that are used by most displays along with IDC_OK and IDC_CANCEL
+#define IDC_TITLE 10
+#define IDC_BACKGROUND 20
+#define IDC_CONTENT 30
+
+#define COLOR_SETTING_SYS(SETTING,VALUE1,VALUE2) QUOTE(with missionNamespace do {if (SETTING) then {VALUE2} else {VALUE1}})
+#define COLOR_SETTING(SETTING,R1,G1,B1,A1,R2,G2,B2,A2) {COLOR_SETTING_SYS(SETTING,R1,R2),COLOR_SETTING_SYS(SETTING,G1,G2),COLOR_SETTING_SYS(SETTING,B1,B2),COLOR_SETTING_SYS(SETTING,A1,A2)}
+
+#define COLOR_BACKGROUND_SETTING COLOR_SETTING(EGVAR(common,darkMode),1,1,1,0.1,0,0,0,0.2)
+
+#define ASCII_PERIOD 46
+#define ASCII_DEGREE 176
 
 #ifdef DISABLE_COMPILE_CACHE
     #undef PREP
@@ -97,18 +100,4 @@
     #define PREP(fncName) [QPATHTOF(functions\DOUBLES(fnc,fncName).sqf), QFUNC(fncName)] call CBA_fnc_compileFunction
 #endif
 
-/**
-Fast Recompiling via Function
-**/
-// #define DISABLE_COMPILE_CACHE
-// To Use: [] call ZEN_PREP_RECOMPILE;
-
-#ifdef DISABLE_COMPILE_CACHE
-    #define LINKFUNC(x) {_this call FUNC(x)}
-    #define PREP_RECOMPILE_START    if (isNil "ZEN_PREP_RECOMPILE") then {ZEN_RECOMPILES = []; ZEN_PREP_RECOMPILE = {{call _x} forEach ZEN_RECOMPILES;}}; private _recomp = {
-    #define PREP_RECOMPILE_END      }; call _recomp; ZEN_RECOMPILES pushBack _recomp;
-#else
-    #define LINKFUNC(x) FUNC(x)
-    #define PREP_RECOMPILE_START /* */
-    #define PREP_RECOMPILE_END /* */
-#endif
+#include "script_debug.hpp"

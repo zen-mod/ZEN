@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * Zeus module function to garrison units.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic"];
 
@@ -37,8 +37,8 @@ if (isPlayer _unit) exitWith {
 };
 
 [LSTRING(ModuleGarrison), [
-    ["SLIDER", ELSTRING(common,Radius), [50, 5000, 100, 0]],
-    ["TOOLBOX", LSTRING(ModuleGarrison_FillMode), [0, [LSTRING(ModuleGarrison_Even), LSTRING(ModuleGarrison_ByBuilding), LSTRING(ModuleGarrison_Random)]]],
+    ["SLIDER", ELSTRING(common,Radius), [5, 5000, 100, 0]],
+    ["TOOLBOX", LSTRING(ModuleGarrison_FillMode), [0, 1, 3, [LSTRING(ModuleGarrison_Even), LSTRING(ModuleGarrison_ByBuilding), LSTRING(ModuleGarrison_Random)]]],
     ["TOOLBOX:YESNO", LSTRING(ModuleGarrison_TopDown), false]
 ], {
     params ["_dialogValues", "_unit"];

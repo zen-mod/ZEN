@@ -1,16 +1,16 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/zen-mod/ZEN/master/extras/assets/logo/logo_zen_black.png" height="384">
+    <img src="https://raw.githubusercontent.com/zen-mod/ZEN/master/extras/assets/logo/logo_zen_black.png" width="500">
 </p>
 
 <p align="center">
     <a href="https://github.com/zen-mod/ZEN/releases">
-        <img src="https://img.shields.io/badge/Version-1.1.0-blue.svg" alt="Zeus Enhanced Version">
+        <img src="https://img.shields.io/badge/Version-1.6.1-blue.svg?style=flat-square" alt="Zeus Enhanced Version">
     </a>
     <a href="https://github.com/zen-mod/ZEN/issues">
-        <img src="https://img.shields.io/github/issues-raw/zen-mod/ZEN.svg?label=Issues" alt="Zeus Enhanced Issues">
+        <img src="https://img.shields.io/github/issues-raw/zen-mod/ZEN.svg?style=flat-square&label=Issues" alt="Zeus Enhanced Issues">
     </a>
     <a href="https://github.com/zen-mod/ZEN/blob/master/LICENSE">
-        <img src="https://img.shields.io/badge/License-GPLv3-red.svg" alt="Zeus Enhanced License">
+        <img src="https://img.shields.io/badge/License-GPLv3-red.svg?style=flat-square" alt="Zeus Enhanced License">
     </a>
 </p>
 
@@ -28,13 +28,22 @@ Special thanks to the [ACE3 Team](http://ace3mod.com/team.html) for their open s
 
 ## Features
 
-- A lot of new and improved modules
-- Extended attributes displays
-- Settings to customize the editor display
-- Context menu providing easy access to common actions
-- Various bug fixes for the Zeus interface
-- Rewritten vehicle garage specifically for Zeus
-- Rewritten, faster remote controlling of units
+- A lot of powerful new modules, as well as improved vanilla modules.
+- Completely rewritten attributes system available for all objects.
+- Context menu that provides quick access to common Zeus actions.
+- Settings to customize the Zeus display (move display to edge, remove watermark, etc.).
+- Ability to disable live search to reduce lag when searching through a lot of items.
+- Overhauled markers tree with markers sorted into categories.
+- Ability to create and edit area markers through Zeus.
+- Rewritten, faster remote controlling of units.
+- 3DEN editor object preview images in Zeus.
+- Player visibility indicator to help ensure mission adjustments are not made in view of players.
+- Placement preview that enables precise object placement on surfaces.
+- Vehicle customization garage made specifically for Zeus.
+- Various bug fixes and quality of life improvements to the Zeus interface.
+- Settings to control Zeus camera properties such as speed and available vision modes.
+- Zeus camera flashlight for easier editing at night.
+- New waypoint types such as paradrop available through Zeus.
 
 ## Contributing
 

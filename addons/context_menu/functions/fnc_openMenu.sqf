@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Opens base level context menu.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 // Close previously opened context menu
 [] call FUNC(closeMenu);
@@ -47,4 +47,5 @@ if (_category != -1) then {
 };
 
 // Create base level context menu
-[GVAR(actions)] call FUNC(createContextGroup);
+private _actions = [GVAR(actions)] call FUNC(getActiveActions);
+[_actions] call FUNC(createContextGroup);

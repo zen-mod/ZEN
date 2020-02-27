@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Zeus module function to heal a unit.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic"];
 
@@ -32,14 +32,4 @@ if (!alive _unit) exitWith {
     [LSTRING(OnlyAlive)] call EFUNC(common,showMessage);
 };
 
-if (isClass (configFile >> "CfgPatches" >> "ace_medical") && {ace_medical_level > 0}) then {
-    ["ace_medical_treatmentAdvanced_fullHealLocal", [_unit, _unit], _unit] call CBA_fnc_targetEvent;
-} else {
-    // BI's scripted revive system
-    if ((missionNamespace getVariable ["bis_revive_mode", 0]) != 0) then {
-        ["#rev", 1, _unit] call BIS_fnc_reviveOnState;
-        _unit setVariable ["#rev", 1, true];
-    } else {
-        _unit setDamage 0;
-    };
-};
+[_unit] call EFUNC(common,healUnit);

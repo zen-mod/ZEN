@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Zeus module function to create a persistent smoke pillar.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic"];
 
@@ -205,6 +205,7 @@ params ["_logic"];
         {deleteVehicle _x} forEach _particleSources;
     }];
 
+    _logic setVariable [QEGVAR(attributes,disabled), true, true];
     [_jipID, _logic] call CBA_fnc_removeGlobalEventJIP;
 }, {
     params ["", "_logic"];

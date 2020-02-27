@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SilentSpike, Brett
  * Zeus module function to change the side of a group.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic"];
 
@@ -36,26 +36,7 @@ if !(alive _unit) exitWith {
     ["SIDES", ELSTRING(common,Side), side group _unit, true]
 ], {
     params ["_dialogValues", "_unit"];
-    _dialogValues params ["_newSide"];
+    _dialogValues params ["_side"];
 
-    private _oldGroup = group _unit;
-
-    // Exit if same side selected
-    if (side _oldGroup == _newSide) exitWith {};
-
-    private _newGroup = createGroup _newSide;
-
-    // Preserve group id from the previous group if doesn't already exist
-    if (allGroups findIf {side _x isEqualTo _newSide && {groupId _oldGroup isEqualTo groupId _newGroup}} == -1) then {
-        _newGroup setGroupIdGlobal [groupId _oldGroup];
-    };
-
-    // Preserve assigned team for each unit
-    {
-        private _team = assignedTeam _x;
-        [_x] joinSilent _newGroup;
-        _x assignTeam _team;
-    } forEach units _unit;
-
-    deleteGroup _oldGroup;
+    [group _unit, _side] call EFUNC(common,changeGroupSide);
 }, {}, _unit] call EFUNC(dialog,create);

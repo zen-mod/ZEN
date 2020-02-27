@@ -3,18 +3,129 @@
     <Package name="Context_Actions">
         <Key ID="STR_ZEN_Context_Actions_EditInventory">
             <English>Edit Inventory</English>
+            <French>Modifier l'inventaire</French>
+            <Russian>Редактировать снаряжение</Russian>
             <German>Inventar bearbeiten</German>
             <Polish>Edytuj wyposażenie</Polish>
+            <Italian>Modifica Inventario</Italian>
+            <Japanese>インベントリ編集</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_TeleportPlayers">
             <English>Teleport Players</English>
+            <French>Téléporter les joueurs</French>
+            <Russian>Телепортировать игроков</Russian>
             <German>Spieler teleportieren</German>
             <Polish>Teleportuj graczy</Polish>
+            <Italian>Teletrasporta giocatore</Italian>
+            <Japanese>プレイヤーのテレポート</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_TeleportZeus">
             <English>Teleport Zeus</English>
+            <French>Téléporter Zeus</French>
             <German>Zeus teleportieren</German>
             <Polish>Teleportuj Zeusa</Polish>
+            <Italian>Teletrasporta Zeus</Italian>
+            <Japanese>Zeus のテレポート</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_VehicleLogistics">
+            <English>Vehicle Logistics</English>
+            <French>Logistique des véhicules</French>
+            <Polish>Logistyka pojazdów</Polish>
+            <German>Fahrzeuglogistik</German>
+            <Italian>Logistica dei veicoli</Italian>
+            <Japanese>車両ロジスティクス</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_VehicleAppearance">
+            <English>Vehicle Appearance</English>
+            <German>Fahrzeugaussehen</German>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_EditableObjects">
+            <English>Editable Objects</English>
+            <German>Editierbare Objekte</German>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_10m">
+            <English>10 m</English>
+            <German>10 m</German>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_50m">
+            <English>50 m</English>
+            <German>50 m</German>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_100m">
+            <English>100 m</English>
+            <German>100 m</German>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_250m">
+            <English>250 m</English>
+            <German>250 m</German>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_HoldFire">
+            <English>Hold Fire</English>
+            <German>Feuer halten</German>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_HoldFireDefend">
+            <English>Hold Fire, Defend Only</English>
+            <German>Feuer halten, nur verteidigen</German>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_HoldFireEngage">
+            <English>Hold Fire, Engage At Will</English>
+            <German>Feuer halten, selbstständiger Angriff</German>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_FireAtWill">
+            <English>Fire At Will</English>
+            <German>Feuerfreigabe</German>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_FireAtWillEngage">
+            <English>Fire &amp; Engage At Will</English>
+            <German>Feuerfreigabe und selbstständiger Angriff</German>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_Captives">
+            <English>Captives</English>
+            <German>Gefangene</German>
+            <Italian>Prigionieri</Italian>
+            <Chinese>俘虜</Chinese>
+            <Chinesesimp>俘虏</Chinesesimp>
+            <Japanese>捕虜</Japanese>
+            <Korean>포로설정</Korean>
+            <Polish>Jeńcy</Polish>
+            <Russian>Пленные</Russian>
+            <Portuguese>Prisioneiros</Portuguese>
+            <French>Prisonniers</French>
+            <Czech>Zajatci</Czech>
+            <Turkish>Tutsaklar</Turkish>
+            <Spanish>Prisioneros</Spanish>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_ToggleCaptive">
+            <English>Toggle Captive</English>
+            <Polish>Przełącz więźnia</Polish>
+            <Spanish>Alternar cautivo</Spanish>
+            <Czech>Přepnout - Vězeň</Czech>
+            <German>Gefangennahme umschalten</German>
+            <Portuguese>Alternar prisioneiro</Portuguese>
+            <French>Commuter captivité</French>
+            <Hungarian>Elfogott állapot váltása</Hungarian>
+            <Russian>Пленный (вкл./выкл.)</Russian>
+            <Italian>Attivatore Prigioniero</Italian>
+            <Japanese>捕虜に切り替え</Japanese>
+            <Korean>포로 토글</Korean>
+            <Chinesesimp>切换俘虏</Chinesesimp>
+            <Chinese>切換俘虜</Chinese>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_ToggleSurrender">
+            <English>Toggle Surrender</English>
+            <Polish>Przełącz kapitulację</Polish>
+            <Spanish>Alternar rendición</Spanish>
+            <Czech>Přepnout - Vzdávání</Czech>
+            <German>Aufgabe umschalten</German>
+            <Portuguese>Alternar rendição</Portuguese>
+            <French>Commuter capitulation</French>
+            <Hungarian>Kapituláló állapot váltása</Hungarian>
+            <Russian>Сдавшийся (вкл./выкл.)</Russian>
+            <Italian>Attivatore Resa</Italian>
+            <Japanese>投降として切り替え</Japanese>
+            <Korean>항복 토글</Korean>
+            <Chinesesimp>切换投降</Chinesesimp>
+            <Chinese>切換投降</Chinese>
         </Key>
     </Package>
 </Project>

@@ -1,15 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Garage">
-        <Key ID="STR_ZEN_Garage_ButtonClose_Tooltip">
+        <Key ID="STR_ZEN_Garage_Close_Tooltip">
             <English>Exit Garage (Escape)</English>
+            <French>Quitter le garage (Echap)</French>
+            <Russian>Покинуть гараж (Escape)</Russian>
             <German>Garage verlasen (Escape)</German>
             <Polish>Wyjdź z garażu (Escape)</Polish>
+            <Portuguese>Sair da Garagem (ESC)</Portuguese>
+            <Japanese>ガレージを出ます (ESC)</Japanese>
         </Key>
-        <Key ID="STR_ZEN_Garage_ButtonHide_Tooltip">
+        <Key ID="STR_ZEN_Garage_Hide_Tooltip">
             <English>Hide Interface (Backspace)</English>
+            <French>Cacher l'interface (Retour)</French>
             <German>Benutzeroberfläche verstecken (Rücktaste)</German>
             <Polish>Ukryj interfejs (Backspace)</Polish>
+            <Portuguese>Esconder Interface (Escape)</Portuguese>
+            <Japanese>インターフェイスを隠します (Backspace)</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Garage_ApplyToAll">
+            <English>Apply To All</English>
+            <German>Auf alle anwenden</German>
+            <Polish>Zastosuj do Wszystkich</Polish>
+            <Portuguese>Aplicar Para Todos</Portuguese>
+            <Japanese>全てに適用</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Garage_ApplyToAll_Tooltip">
+            <English>Apply the current vehicle's customization to all selected vehicles of this type.</English>
+            <German>Wendet die derzeitige Fahrzeuganpassung auf alle Fahrzeuge dieses Typs an.</German>
+            <Polish>Zastosuj Właściwości wybranego pojazdu do wszystkich pojazdów tego typu.</Polish>
+            <Portuguese>Aplicar a customização atual para todos os veículos selecionados deste tipo.</Portuguese>
+            <Japanese>現在の車両カスタマイズを選択した同じ種類の全車両にも適用します。</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Garage_CannotApplyToAll">
+            <English>No other vehicles of the same type selected.</English>
+            <German>Kein anderes Fahrzeug dieses Typs ausgewählt.</German>
+            <Portuguese>Nenhum outro veículo do mesmo tipo selecionado.</Portuguese>
+            <Japanese>他に同じ種類の車両がありません。</Japanese>
         </Key>
     </Package>
 </Project>

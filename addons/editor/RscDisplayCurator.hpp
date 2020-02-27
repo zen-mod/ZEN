@@ -60,13 +60,14 @@ class RscDisplayCurator {
                     x = 7.9 * GUI_GRID_W;
                 };
                 class CollapseAll: CreateSearchButton {
-                    idc = -1;
+                    idc = IDC_COLLAPSE_ALL;
                     text = "\a3\3DEN\Data\Displays\Display3DEN\tree_collapse_ca.paa";
                     tooltip = "$STR_3DEN_ctrlButtonCollapseAll_text";
                     x = 8.9 * GUI_GRID_W;
                     onButtonClick = QUOTE(false call FUNC(handleTreeButtons));
                 };
                 class ExpandAll: CollapseAll {
+                    idc = IDC_EXPAND_ALL;
                     text = QPATHTOF(ui\tree_expand_ca.paa);
                     tooltip = "$STR_3DEN_ctrlButtonExpandAll_text";
                     x = 9.9 * GUI_GRID_W;
@@ -111,6 +112,10 @@ class RscDisplayCurator {
                             y = POS_EDGE(0,1) * pixelH;
                             w = GUI_GRID_W;
                             h = GUI_GRID_H;
+                            soundClick[] = {"\a3\ui_f\data\sound\rscbutton\soundclick", 0.09, 1};
+                            soundEnter[] = {"\a3\ui_f\data\sound\rscbutton\soundenter", 0.09, 1};
+                            soundEscape[] = {"\a3\ui_f\data\sound\rscbutton\soundescape", 0.09, 1};
+                            soundPush[] = {"\a3\ui_f\data\sound\rscbutton\soundpush", 0.09, 1};
                         };
                     };
                 };

@@ -1,10 +1,11 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Handles adding or removing items from cargo.
  *
  * Arguments:
  * 0: Display <DISPLAY>
- * 1: Add or Remove Item <BOOL>
+ * 1: Add or Remove <BOOL>
  *
  * Return Value:
  * None
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_display", "_addItem"];
 
@@ -24,27 +24,27 @@ private _currentRow = lnbCurSelRow _ctrlList;
 private _item = _ctrlList lnbData [_currentRow, 0];
 private _mass = [_item] call FUNC(getItemMass);
 
-// Get current and max load for object
-private _maxLoad = _display getVariable QGVAR(maxLoad);
+// Get current and maximum load for object
 private _currentLoad = _display getVariable QGVAR(currentLoad);
+private _maximumLoad = _display getVariable QGVAR(maximumLoad);
 
 // Get relevant cargo list based on selected item
-private _categoryCargo = [_display, _item] call FUNC(getCargo);
-_categoryCargo params ["_cargoItems", "_cargoCounts"];
+private _cargo = [_display, _item] call FUNC(getCargo);
+_cargo params ["_types", "_counts"];
 
-private _itemIndex = _cargoItems find _item;
+private _index = _types find _item;
 
-if (_addItem && {_maxLoad - _currentLoad >= _mass}) then {
+if (_addItem && {_maximumLoad - _currentLoad >= _mass}) then {
     private _count = 1;
 
-    if (_itemIndex == -1) then {
+    if (_index == -1) then {
         // Item is not in list, add item and count
-        _cargoItems pushBack _item;
-        _cargoCounts pushBack _count;
+        _types  pushBack _item;
+        _counts pushBack _count;
     } else {
-        // Item is in list, increase count by one
-        _count = (_cargoCounts select _itemIndex) + 1;
-        _cargoCounts set [_itemIndex, _count];
+        // Item is in list, increase the count
+        _count = (_counts select _index) + 1;
+        _counts set [_index, _count];
     };
 
     _currentLoad = _currentLoad + _mass;
@@ -55,16 +55,16 @@ if (_addItem && {_maxLoad - _currentLoad >= _mass}) then {
     _ctrlList lnbSetColor [[_currentRow, 2], [1, 1, 1, 1]];
 };
 
-if (!_addItem && {_itemIndex != -1}) then {
-    private _count = (_cargoCounts select _itemIndex) - 1;
+if (!_addItem && {_index != -1}) then {
+    private _count = (_counts select _index) - 1;
 
     if (_count > 0) then {
         // Count is not zero, update counts with new value
-        _cargoCounts set [_itemIndex, _count];
+        _counts set [_index, _count];
     } else {
         // Count is now zero, remove item from list
-        _cargoItems deleteAt _itemIndex;
-        _cargoCounts deleteAt _itemIndex;
+        _types  deleteAt _index;
+        _counts deleteAt _index;
     };
 
     _currentLoad = _currentLoad - _mass;
@@ -79,5 +79,5 @@ if (!_addItem && {_itemIndex != -1}) then {
 _display setVariable [QGVAR(currentLoad), _currentLoad];
 
 // Update the load bar and list buttons
-[_display] call FUNC(updateloadBar);
+[_display] call FUNC(updateLoadBar);
 [_display] call FUNC(updateButtons);

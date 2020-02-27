@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Handles clearing all items from the current category.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_ctrlButtonClear"];
 
@@ -27,20 +27,21 @@ if (_category == -1) then {
 } else {
     // Remove category items from cargo
     private _itemsList = uiNamespace getVariable QGVAR(itemsList);
-    private _categoryCargo = [_display] call FUNC(getCargo);
-    _categoryCargo params ["_cargoItems", "_cargoCounts"];
+    (_display call FUNC(getCargo)) params ["_types", "_counts"];
 
     {
-        private _itemIndex = _cargoItems find _x;
-        _cargoItems deleteAt _itemIndex;
-        _cargoCounts deleteAt _itemIndex;
+        private _index = _types find _x;
+        _types  deleteAt _index;
+        _counts deleteAt _index;
     } forEach (_itemsList select _category);
 
-    [_display] call FUNC(calculateLoad);
+    // Recalculate the current load of the inventory
+    private _cargo = _display getVariable QGVAR(cargo);
+    _display setVariable [QGVAR(currentLoad), [_cargo] call FUNC(calculateLoad)];
 };
 
-// Update the load bar for new load
+// Update the load bar for the new load
 [_display] call FUNC(updateLoadBar);
 
 // Refresh the list after clearing
-[_display] call FUNC(fillList);
+[_display] call FUNC(refreshList);

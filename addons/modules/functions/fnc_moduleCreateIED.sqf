@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Zeus module function to make an object an IED.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define EXPLOSIVES ["R_TBG32V_F", "M_Mo_120mm_AT", "Bo_GBU12_LGB", "Bo_GBU12_LGB"]
 #define SCANNING_PERIOD 0.5
@@ -42,7 +42,7 @@ if (_object getVariable [QGVAR(isIED), false]) exitWith {
 [LSTRING(CreateIED), [
     ["SIDES", LSTRING(ActivationSide), west],
     ["SLIDER", LSTRING(ActivationRadius), [5, 50, 10, 0]],
-    ["TOOLBOX", LSTRING(ExplosionSize), [0, ["str_small", ELSTRING(common,Medium), "str_large", ELSTRING(common,Extreme)]]],
+    ["TOOLBOX", LSTRING(ExplosionSize), [0, 1, 4, ["str_small", ELSTRING(common,Medium), "str_large", ELSTRING(common,Extreme)]]],
     ["TOOLBOX:YESNO", LSTRING(IsJammable), false]
 ], {
     params ["_dialogValues", "_object"];

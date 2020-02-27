@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Zeus module function to create a light source.
@@ -13,12 +14,11 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_display"];
 
 private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-_display closeDisplay 0; // Close helper display
+_display closeDisplay IDC_CANCEL; // Close helper display
 
 // Need to delay dialog creation by one frame to avoid weird input blocking bug
 [{

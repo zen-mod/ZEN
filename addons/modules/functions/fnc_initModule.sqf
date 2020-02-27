@@ -1,7 +1,8 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Initializes modules created by Zeus. Simplified to only execute function where local.
- * Function is executed one frame later in unscheduled scope.
+ * Function is executed one frame later in an unscheduled environment.
  *
  * Arguments:
  * 0: Logic <OBJECT>
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic"];
 
