@@ -11,6 +11,6 @@ CHANGELOG.md
 .hephaestus.json
 *.bisign
 hemtt*
-!hemtt.json
+!hemtt.toml
 @zen
 tools/armake.exe
