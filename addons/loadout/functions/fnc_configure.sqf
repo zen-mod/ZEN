@@ -20,11 +20,6 @@ params ["_display"];
 private _vehicle = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 private _weaponList = _vehicle call FUNC(getWeaponList);
 
-if (_weaponList isEqualTo []) exitWith {
-    [LSTRING(NoWeapons)] call EFUNC(common,showMessage);
-    _display closeDisplay 2;
-};
-
 _display setVariable [QGVAR(weaponList), _weaponList];
 _display setVariable [QGVAR(changes), []];
 

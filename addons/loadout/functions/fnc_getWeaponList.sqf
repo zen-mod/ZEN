@@ -26,19 +26,13 @@ private _result = [];
     private _turret = _x;
     {
         if (getText (_cfgWeapons >> _x >> "displayName") != "" && !(_x in BLACKLIST_WEAPONS)) then {
-            private _magazines = [];
             private _weapon = _x;
             TRACE_2("Checking weapon",_weapon,_turret);
-            {
-                TRACE_3("Checking weapon muzzle",_weapon,_turret,_x);
-                private _temp = getArray ((if (_x isEqualTo "this") then { _cfgWeapons >> _weapon } else { _cfgWeapons >> _weapon >> _x }) >> "magazines");
-                _magazines append (_temp apply {
-                    private _magazine = _x;
-                    private _count = { (_x select 0) == _magazine && (_x select 1) isEqualTo _turret } count _allMagazines;
-                    [_magazine, _count]
-                });
-                TRACE_4("Found magazines in weapon muzzle",_weapon,_turret,_x,_temp);
-            } forEach getArray (_cfgWeapons >> _weapon >> "muzzles");
+            private _magazines = ([_cfgWeapons >> _weapon] call CBA_fnc_compatibleMagazines) apply {
+                private _magazine = _x;
+                private _count = { (_x select 0) == _magazine && (_x select 1) isEqualTo _turret } count _allMagazines;
+                [_magazine, _count]
+            };
             TRACE_3("Found magazines in weapon",_weapon,_turret,_magazines);
             if !(_magazines isEqualTo []) then { _result pushback [_weapon, _turret, _magazines] };
         };

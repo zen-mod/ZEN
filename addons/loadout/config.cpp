@@ -15,4 +15,4 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
-#include "RscAttributes.hpp"
+#include "gui.hpp"

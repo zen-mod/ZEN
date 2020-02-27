@@ -13,7 +13,7 @@ class EGVAR(attributes,RscBackground);
 class EGVAR(attributes,RscEdit);
 class EGVAR(attributes,RscCombo);
 
-class EGVAR(attributes,RscAttributesBase) {
+class EGVAR(common,RscDisplay) {
     class controls {
         class Title;
         class Background;
@@ -23,27 +23,9 @@ class EGVAR(attributes,RscAttributesBase) {
     };
 };
 
-class EGVAR(attributes,RscAttributesVehicle): EGVAR(attributes,RscAttributesBase) {
-    class Buttons {
-        class Loadout {
-            text = "Loadout";
-            function = QUOTE(createDialog QQEGVAR(attributes,RscAttributesLoadout));
-        };
-    };
-};
-
-class EGVAR(attributes,RscAttributesVehicleEmpty): EGVAR(attributes,RscAttributesBase) {
-    class Buttons {
-        class Loadout {
-            text = "Loadout";
-            function = QUOTE(createDialog QQEGVAR(attributes,RscAttributesLoadout));
-        };
-    };
-};
-
-class EGVAR(attributes,RscAttributesLoadout): EGVAR(attributes,RscAttributesBase) {
-    onLoad = QUOTE([ARR_2(_this select 0, QQEGVAR(attributes,RscAttributesLoadout))] call EFUNC(attributes,initAttributesDisplay));
-    filterAttributes = 1;
+class GVAR(display): EGVAR(common,RscDisplay) {
+    // onLoad = QUOTE([ARR_2(_this select 0, QQEGVAR(attributes,RscAttributesLoadout))] call EFUNC(attributes,initAttributesDisplay));
+    // filterAttributes = 1;
     class controls: controls {
         class Title: Title {};
         class Background: Background {};
@@ -57,14 +39,14 @@ class EGVAR(attributes,RscAttributesLoadout): EGVAR(attributes,RscAttributesBase
                     w = POS_W(26);
                     h = POS_H(19);
                     class controls {
-                        class Weapon: EGVAR(attributes,RscCombo) {
+                        class Weapon: EGVAR(common,RscCombo) {
                             idc = IDC_WEAPON;
                             x = 0;
                             y = 0;
                             w = POS_W(26);
                             h = POS_H(1);
                         };
-                        class ListBackground: EGVAR(attributes,RscBackground) {
+                        class ListBackground: EGVAR(common,RscBackground) {
                             x = 0;
                             y = POS_H(1);
                             w = POS_W(26);
@@ -107,7 +89,7 @@ class EGVAR(attributes,RscAttributesLoadout): EGVAR(attributes,RscAttributesBase
                             offsetPressedX = 0;
                             offsetPressedY = 0;
                         };
-                        class SearchBar: EGVAR(attributes,RscEdit) {
+                        class SearchBar: EGVAR(common,RscEdit) {
                             idc = IDC_SEARCH_BAR;
                             x = POS_W(1.2);
                             y = POS_H(18);
