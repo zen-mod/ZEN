@@ -77,6 +77,10 @@ if (isServer) then {
 [QGVAR(fireArtillery), {
     params ["_unit", "_position", "_spread", "_ammo", "_rounds"];
 
+    if (_unit call EFUNC(common,isVLS)) exitWith {
+        _this call EFUNC(common,fireVLS);
+    };
+
     // For small spread values, use doArtilleryFire directly to avoid delay
     // between firing caused by using doArtilleryFire one round at a time
     if (_spread <= 10) exitWith {

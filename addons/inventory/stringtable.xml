@@ -3,6 +3,7 @@
     <Package name="Inventory">
         <Key ID="STR_ZEN_Inventory_EditInventory">
             <English>Edit Inventory (%1)</English>
+            <German>Inventar bearbeiten (%1)</German>
         </Key>
     </Package>
 </Project>

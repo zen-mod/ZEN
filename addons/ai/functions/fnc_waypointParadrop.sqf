@@ -11,7 +11,7 @@
  * Waypoint Finished <BOOL>
  *
  * Example:
- * [group, [0, 0, 0]] call zen_ai_fnc_waypointParadrop
+ * _waypoint setWaypointScript "\x\zen\addons\ai\functions\fnc_waypointParadrop.sqf"
  *
  * Public: No
  */

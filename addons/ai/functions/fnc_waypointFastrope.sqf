@@ -12,13 +12,13 @@
  * Waypoint Finished <BOOL>
  *
  * Example:
- * [group, [0, 0, 0]] call zen_ai_fnc_waypointFastrope
+ * _waypoint setWaypointScript "\x\zen\addons\ai\functions\fnc_waypointFastrope.sqf"
  *
  * Public: No
  */
 
 #define MOVE_DELAY 3
-#define FASTROPE_HEIGHT 25
+#define FASTROPE_HEIGHT 15
 #define HEIGHT_DISTANCE 2000
 #define MANUAL_DISTANCE 100
 #define MANUAL_SPEED 12
@@ -86,10 +86,12 @@ waitUntil {
 private _startPos = getPosASL _vehicle;
 private _endPos   = +_waypointPosition;
 
-_endPos set [2, FASTROPE_HEIGHT];
+// Using the waypointPosition command to get the height of the waypoint
+// since the position provided to the waypoint script always has a height of zero
+_endPos set [2, FASTROPE_HEIGHT + (waypointPosition _waypoint select 2)];
 _endPos = AGLtoASL _endPos;
 
-private _initalVelocity = velocity _vehicle;
+private _initialVelocity = velocity _vehicle;
 private _vectorDir = vectorDir _vehicle;
 private _vectorUp = vectorUp _vehicle;
 
@@ -100,7 +102,7 @@ waitUntil {
     _vehicle setVelocityTransformation [
         _startPos,
         _endPos,
-        _initalVelocity,
+        _initialVelocity,
         [0, 0, 0],
         _vectorDir,
         _vectorDir,
@@ -122,6 +124,7 @@ waitUntil {  _vehicle getVariable ["ace_fastroping_deployedRopes", []] isEqualTo
 // Stow the helicopter's fastrope system
 _vehicle call ace_fastroping_fnc_stowFRIES;
 
+_vehicle flyInHeight 100;
 _driver setSkill _skill;
 _group setBehaviour _behaviour;
 

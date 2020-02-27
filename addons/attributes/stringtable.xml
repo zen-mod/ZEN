@@ -25,6 +25,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_LockedForPlayers">
             <English>Locked For Players</English>
+            <German>Für Spieler verschlossen</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_PlateNumber">
             <English>Plate Number</English>
@@ -39,18 +40,23 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_RespawnPosition">
             <English>Respawn Position</English>
+            <German>Wiedereinstiegspunkt</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_RespawnPosition_Tooltip">
             <English>Selects the side that is able to respawn on this object.</English>
+            <German>Wähle eine Seite, welche an diesem Objekt wiedereinsteigen kann.</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_States">
             <English>States</English>
+            <German>Zustände</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_ExecObject_Tooltip">
             <English>This code will be executed in the unscheduled environment on the machine where this object is local.\nThe variable "_this" refers to this object.</English>
+            <German>Der Code wird unscheduled auf der Maschine, wo das Objekt lokal ist, ausgeführt.\nDie Variable "_this" ist dabei das Objekt.</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_ExecGroup_Tooltip">
             <English>This code will be executed in the unscheduled environment on the machine where this group is local.\nThe variable "_this" refers to this group.</English>
+            <German>Der Code wird unscheduled auf der Maschine, wo die Gruppe lokal ist, ausgeführt.\nDie Variable "_this" ist dabei die gruppe.</German>
         </Key>
         <Key ID="STR_ZEN_Attributes_Timeout">
             <English>Timeout (s)</English>
@@ -177,7 +183,7 @@
             <English>Adv. Engineer</English>
             <Russian>Ст. Инженер</Russian>
             <French>Ingénieur d'études</French>
-            <German>Erfahrene Techniker</German>
+            <German>Erfahrener Techniker</German>
             <Czech>Pokročilý Inženýr</Czech>
             <Italian>Ingegnere Avanzato</Italian>
             <Polish>Zaawansowany Inżynier</Polish>
