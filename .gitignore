@@ -10,6 +10,8 @@ Thumbs.db
 CHANGELOG.md
 .hephaestus.json
 *.bisign
+*.tar.gz
+*.zip
 hemtt*
 !hemtt.toml
 @zen
