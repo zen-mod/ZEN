@@ -2,7 +2,6 @@ name = "Zeus Enhanced"
 prefix = "zen"
 author = "ZEN Team"
 mainprefix = "x"
-sigversion = 3
 files = [
     "mod.cpp",
     "logo_zen_ca.paa",
@@ -13,8 +12,8 @@ files = [
 ]
 include = ["./include"]
 
-keyname = "{{prefix}}_{{version}}"
-signame = "{{prefix}}_{{version}}-{{git \"id 8\"}}"
+key_name = "{{prefix}}_{{version}}"
+authority = "{{prefix}}_{{version}}-{{git \"id 8\"}}"
 
 releasebuild = [
     "@zip @ZEN-{{version}}"

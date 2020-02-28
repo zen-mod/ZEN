@@ -1,4 +1,4 @@
-name: Build
+name: Validate and Build
 
 on: [push]
 
@@ -28,5 +28,4 @@ jobs:
           command: 'build --release'
       - uses: actions/upload-artifact@konradpabjan/v2-is-almost-here
         with:
-          name: 'ZEN-Build'
           path: 'releases/@ZEN-*.zip'
