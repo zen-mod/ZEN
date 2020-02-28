@@ -21,7 +21,7 @@ jobs:
       uses: actions/checkout@master
     - name: Lint (sqflint)
       uses: jokoho48/sqflint@master
-      #continue-on-error: true # No failure due to many false-positives
+      continue-on-error: true # No failure due to many false-positives
   build:
     runs-on: ubuntu-latest
     steps:
