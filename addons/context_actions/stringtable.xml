@@ -79,5 +79,53 @@
             <English>Fire &amp; Engage At Will</English>
             <German>Feuerfreigabe und selbstständiger Angriff</German>
         </Key>
+        <Key ID="STR_ZEN_Context_Actions_Captives">
+            <English>Captives</English>
+            <German>Gefangene</German>
+            <Italian>Prigionieri</Italian>
+            <Chinese>俘虜</Chinese>
+            <Chinesesimp>俘虏</Chinesesimp>
+            <Japanese>捕虜</Japanese>
+            <Korean>포로설정</Korean>
+            <Polish>Jeńcy</Polish>
+            <Russian>Пленные</Russian>
+            <Portuguese>Prisioneiros</Portuguese>
+            <French>Prisonniers</French>
+            <Czech>Zajatci</Czech>
+            <Turkish>Tutsaklar</Turkish>
+            <Spanish>Prisioneros</Spanish>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_ToggleCaptive">
+            <English>Toggle Captive</English>
+            <Polish>Przełącz więźnia</Polish>
+            <Spanish>Alternar cautivo</Spanish>
+            <Czech>Přepnout - Vězeň</Czech>
+            <German>Gefangennahme umschalten</German>
+            <Portuguese>Alternar prisioneiro</Portuguese>
+            <French>Commuter captivité</French>
+            <Hungarian>Elfogott állapot váltása</Hungarian>
+            <Russian>Пленный (вкл./выкл.)</Russian>
+            <Italian>Attivatore Prigioniero</Italian>
+            <Japanese>捕虜に切り替え</Japanese>
+            <Korean>포로 토글</Korean>
+            <Chinesesimp>切换俘虏</Chinesesimp>
+            <Chinese>切換俘虜</Chinese>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_ToggleSurrender">
+            <English>Toggle Surrender</English>
+            <Polish>Przełącz kapitulację</Polish>
+            <Spanish>Alternar rendición</Spanish>
+            <Czech>Přepnout - Vzdávání</Czech>
+            <German>Aufgabe umschalten</German>
+            <Portuguese>Alternar rendição</Portuguese>
+            <French>Commuter capitulation</French>
+            <Hungarian>Kapituláló állapot váltása</Hungarian>
+            <Russian>Сдавшийся (вкл./выкл.)</Russian>
+            <Italian>Attivatore Resa</Italian>
+            <Japanese>投降として切り替え</Japanese>
+            <Korean>항복 토글</Korean>
+            <Chinesesimp>切换投降</Chinesesimp>
+            <Chinese>切換投降</Chinese>
+        </Key>
     </Package>
 </Project>
