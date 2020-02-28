@@ -28,4 +28,5 @@ jobs:
           command: 'build --release'
       - uses: actions/upload-artifact@v2-preview
         with:
+          name: 'ZEN-Build'
           path: 'releases/@ZEN-*.zip'
