@@ -28,4 +28,4 @@ jobs:
           command: 'build --release'
       - uses: actions/upload-artifact@konradpabjan/v2-is-almost-here
         with:
-          path: 'releases/@ZEN-*.zip'
+          path: releases/@ZEN-*.zip
