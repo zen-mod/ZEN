@@ -362,8 +362,6 @@ private _fnc_processStatic = {
 private _fnc_processObject = {
     params ["_object"];
 
-    if (getNumber (configFile >> "CfgVehicles" >> typeOf _object >> "scope") != 2) exitWith {};
-
     if (_object isKindOf "AllVehicles") then {
         if (_object isKindOf "CAManBase") then {
             _object call _fnc_processUnit
@@ -373,6 +371,7 @@ private _fnc_processObject = {
         };
     } else {
         if (_object isKindOf "Static" || {_object isKindOf "Thing"}) then {
+            if (_object isKindOf "ThingEffect") exitWith {};
             _object call _fnc_processStatic
         };
     };
