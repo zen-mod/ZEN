@@ -19,7 +19,7 @@ keyname = "{{prefix}}_{{version}}"
 signame = "{{prefix}}_{{version}}-{{git \"id 8\"}}"
 
 releasebuild = [
-    "@zip @zen_{{version}}"
+    "@zip @ZEN"
 ]
 
 [header_exts]
