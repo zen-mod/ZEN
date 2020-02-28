@@ -2,7 +2,7 @@
     QGVAR(enabled),
     "CHECKBOX",
     [LSTRING(Enabled), LSTRING(Enabled_Description)],
-    ELSTRING(common,Category),
+    ELSTRING(main,DisplayName),
     false,
     false,
     {

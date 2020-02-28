@@ -198,6 +198,24 @@ class EGVAR(context_menu,actions) {
             args = HEAL_MODE_AI;
         };
     };
+    class Captives {
+        displayName = CSTRING(Captives);
+        condition = QUOTE(isClass (configFile >> 'CfgPatches' >> 'ace_captives'));
+        icon = "\z\ace\addons\captives\UI\handcuff_ca.paa";
+        priority = 50;
+        class ToggleCaptive {
+            displayName = CSTRING(ToggleCaptive);
+            condition = QUOTE(_objects findIf {alive _x && {_x isKindOf 'CAManBase'}} != -1);
+            statement = QUOTE(_objects call FUNC(toggleCaptive));
+            icon = "\z\ace\addons\captives\UI\handcuff_ca.paa";
+        };
+        class ToggleSurrender {
+            displayName = CSTRING(ToggleSurrender);
+            condition = QUOTE(_objects call FUNC(canToggleSurrender));
+            statement = QUOTE(_objects call FUNC(toggleSurrender));
+            icon = "\z\ace\addons\captives\UI\Surrender_ca.paa";
+        };
+    };
     class Loadout {
         displayName = "$STR_A3_VR_Stamina_01_Loadout";
         condition = QUOTE(_hoveredEntity call FUNC(canEditLoadout));

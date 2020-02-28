@@ -22,6 +22,7 @@ bux
 Dedmen
 diwako
 Dystopian
+Eclipser
 GitHawk
 Glowbal
 Jonpas

@@ -694,19 +694,19 @@
             <Polish>Przełącz widoczność</Polish>
             <Japanese>視認性切り替え</Japanese>
         </Key>
-        <Key ID="STR_ZEN_Modules_ModuleChangeHeight">
+        <Key ID="STR_ZEN_Modules_ChangeHeight">
             <English>Change Height</English>
             <Russian>Изменить высоту</Russian>
             <German>Höhe ändern</German>
             <Polish>Zmień wysokość</Polish>
             <Japanese>高度変更</Japanese>
         </Key>
-        <Key ID="STR_ZEN_Modules_ModuleChangeHeight_Tooltip">
-            <English>Change the height of the object by this value (can be negative)</English>
-            <Russian>Изменяет значение высоты, на которой находится объект (может быть отрицательной)</Russian>
-            <German>Ändert die Höhe des Objekts um gegebenen Wert (kann negativ sein)</German>
-            <Polish>Zmień wysokość na której jest obiekt (może być ujemne)</Polish>
-            <Japanese>オブジェクトの高さをこの値で変更します (負の値も可能)</Japanese>
+        <Key ID="STR_ZEN_Modules_ChangeHeight_Tooltip">
+            <English>Change the height of the object by this value (can be negative).</English>
+            <Russian>Изменяет значение высоты, на которой находится объект (может быть отрицательной).</Russian>
+            <German>Ändert die Höhe des Objekts um gegebenen Wert (kann negativ sein).</German>
+            <Polish>Zmień wysokość na której jest obiekt (może być ujemne).</Polish>
+            <Japanese>オブジェクトの高さをこの値で変更します (負の値も可能).</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleChatter">
             <English>Chatter</English>

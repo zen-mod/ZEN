@@ -43,6 +43,8 @@
 
 #define ICON_TARGET "\a3\ui_f\data\igui\cfg\cursors\select_target_ca.paa"
 
+#define VLS_BASE_CLASS "B_Ship_MRLS_01_base_F"
+
 #define ICON_BLUFOR      QPATHTOF(ui\icon_blufor_ca.paa)
 #define ICON_OPFOR       QPATHTOF(ui\icon_opfor_ca.paa)
 #define ICON_INDEPENDENT QPATHTOF(ui\icon_independent_ca.paa)
