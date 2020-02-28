@@ -15,11 +15,11 @@
  * Public: No
  */
 
-params ["_display"];
+params ["_vehicle"];
 
-private _vehicle = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 private _weaponList = _vehicle call FUNC(getWeaponList);
 
+private _display = uiNamespace getVariable QEGVAR(common,display);
 _display setVariable [QGVAR(weaponList), _weaponList];
 _display setVariable [QGVAR(changes), []];
 

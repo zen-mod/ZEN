@@ -24,8 +24,6 @@ class EGVAR(common,RscDisplay) {
 };
 
 class GVAR(display): EGVAR(common,RscDisplay) {
-    // onLoad = QUOTE([ARR_2(_this select 0, QQEGVAR(attributes,RscAttributesLoadout))] call EFUNC(attributes,initAttributesDisplay));
-    // filterAttributes = 1;
     class controls: controls {
         class Title: Title {};
         class Background: Background {};
