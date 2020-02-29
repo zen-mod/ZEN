@@ -41,7 +41,7 @@
     IDC_RSCDISPLAYCURATOR_CREATE_GROUPS_EMPTY \
 ]
 
-#define ICON_TARGET "\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa"
+#define ICON_TARGET "\a3\ui_f\data\igui\cfg\cursors\select_target_ca.paa"
 
 #define VLS_BASE_CLASS "B_Ship_MRLS_01_base_F"
 

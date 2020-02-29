@@ -79,6 +79,15 @@
             <English>Fire &amp; Engage At Will</English>
             <German>Feuerfreigabe und selbstständiger Angriff</German>
         </Key>
+        <Key ID="STR_ZEN_Context_Actions_FireArtillery">
+            <English>Fire Artillery</English>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_UnableToFire">
+            <English>Unable To Fire</English>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_NotAllVehiclesInRange">
+            <English>Not all vehicles are in range to fire</English>
+        </Key>
         <Key ID="STR_ZEN_Context_Actions_Captives">
             <English>Captives</English>
             <German>Gefangene</German>

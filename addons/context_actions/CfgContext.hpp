@@ -1,4 +1,10 @@
 class EGVAR(context_menu,actions) {
+    class FireArtillery {
+        displayName = CSTRING(FireArtillery);
+        icon = "\a3\ui_f\data\gui\cfg\communicationmenu\artillery_ca.paa";
+        insertChildren = QUOTE(_objects call FUNC(getArtilleryActions));
+        priority = 70;
+    };
     class Formation {
         displayName = "$STR_3DEN_Group_Attribute_Formation_displayName";
         condition = QUOTE(_groups findIf {units _x findIf {!isPlayer _x} != -1} != -1);
