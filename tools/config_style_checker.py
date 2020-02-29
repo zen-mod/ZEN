@@ -11,7 +11,7 @@ def check_config_style(filepath):
     bad_count_file = 0
     def pushClosing(t):
         closingStack.append(closing.expr)
-        closing << Literal( closingFor[t[0]] )
+        closing << Literal(closingFor[t[0]])
 
     def popClosing():
         closing << closingStack.pop()
