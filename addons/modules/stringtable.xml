@@ -1118,7 +1118,7 @@
             <Polish>Odgarnizonuj grupę</Polish>
             <Japanese>非歩哨グループ</Japanese>
         </Key>
-        <Key ID="STR_ZEN_Modules_ModuleGroupSide">
+        <Key ID="STR_ZEN_Modules_GroupSide">
             <English>Group Side</English>
             <Russian>Сторона группы</Russian>
             <German>Gruppenseite</German>

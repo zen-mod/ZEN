@@ -262,7 +262,7 @@ class CfgVehicles {
     };
     class GVAR(moduleGroupSide): GVAR(moduleBase) {
         curatorCanAttach = 1;
-        displayName = CSTRING(ModuleGroupSide);
+        displayName = CSTRING(GroupSide);
         function = QFUNC(moduleGroupSide);
     };
     class GVAR(moduleHeal): GVAR(moduleBase) {
