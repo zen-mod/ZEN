@@ -25,13 +25,23 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout the source code
+        uses: actions/checkout@v2
         with:
           fetch-depth: 1
       - name: Build addon with HEMTT
         uses: arma-actions/hemtt@master
         with:
           command: 'build --release'
-      - uses: actions/upload-artifact@konradpabjan/v2-is-almost-here
+      - name: Upload Artifact
+        uses: actions/upload-artifact@konradpabjan/v2-is-almost-here
         with:
           path: releases/@ZEN-*.zip
+  notify:
+    needs: [validate, build]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Discord of Failure
+        if: jobs.validate.status == success
+        run: echo failure
