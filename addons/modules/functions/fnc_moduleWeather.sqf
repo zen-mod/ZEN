@@ -57,7 +57,7 @@ params ["_logic"];
     [
         "SLIDER",
         [LSTRING(ModuleWeather_WindDirection), LSTRING(ModuleWeather_WindDirection_Tooltip)],
-        [0, 360, windDir, {format ["%1%2", round _this, DEGREE_SYMBOL]}],
+        [0, 360, windDir, {format ["%1%2", round _this, toString [ASCII_DEGREE]]}],
         true
     ],
     [

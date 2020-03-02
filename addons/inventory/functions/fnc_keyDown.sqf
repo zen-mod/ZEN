@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Handles keyboard input for the inventory attribute.
+ * Handles keyboard input for the inventory display.
  *
  * Arguments:
  * 0: Display <DISPLAY>
@@ -18,8 +18,8 @@
 
 params ["_display", "_keyCode"];
 
-// Exit if list is not in focus
-if !(_display getVariable [QGVAR(listFocus), false]) exitWith {false};
+// Exit if the items list is not in focus
+if !(_display getVariable [QGVAR(listFocused), false]) exitWith {false};
 
 switch (_keyCode) do {
     case DIK_LEFT;

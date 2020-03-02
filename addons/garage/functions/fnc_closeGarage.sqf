@@ -12,7 +12,7 @@
  * Example:
  * [] call zen_garage_fnc_closeGarage
  *
- * Public: None
+ * Public: No
  */
 
 // Close the garage display
@@ -44,6 +44,8 @@ if (!isNull curatorCamera) then {
     curatorCamera cameraEffect ["internal", "back"];
     curatorCamera setPosASL _position;
     curatorCamera setVectorDirAndUp _dirAndUp;
+
+    cameraEffectEnableHUD true;
 };
 
 GVAR(camera) = nil;

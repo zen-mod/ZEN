@@ -112,13 +112,31 @@ def check_stringtable(filepath):
             count = key_ids.count(id)
 
             if count > 1:
-                print("  ERROR: Key '{}' is duplicated {} time(s).".format(id, count))
+                print("  ERROR: Key '{}' is defined {} times.".format(id, count))
                 errors += 1
 
-    if errors == 0:
-        print("No errors found.")
-    else:
-        print("Found {} error(s).".format(errors))
+    # Check whitespace for tabs and correct number of indenting spaces
+    with open(filepath, "r", encoding = "utf-8") as file:
+       spacing_depth = 0
+
+       for line_number, line in enumerate(file, 1):
+           if "\t" in line:
+               print("  ERROR: Found a tab on line {}.".format(line_number))
+               errors += 1
+
+           line_clean = line.lstrip().lower()
+
+           if line_clean.startswith("</key") or line_clean.startswith("</package") or line_clean.startswith("</project") or line_clean.startswith("</container"):
+               spacing_depth -= 4
+
+           line_spacing = len(line) - len(line_clean)
+
+           if line_spacing != spacing_depth:
+               print("  ERROR: Incorrect number of indenting spaces on line {}, currently {}, should be {}.".format(line_number, line_spacing, spacing_depth))
+               errors += 1
+
+           if line_clean.startswith("<key") or line_clean.startswith("<package") or line_clean.startswith("<project") or line_clean.startswith("<container"):
+               spacing_depth += 4
 
     return errors
 
@@ -133,15 +151,26 @@ def main():
         root_dir = "."
 
     # Check all stringtable.xml files in the project directory
-    bad_count = 0
+    stringtable_files = []
 
     for root, _, files in os.walk(root_dir):
         for file in fnmatch.filter(files, "stringtable.xml"):
-            filepath = os.path.join(root, file)
+            stringtable_files.append(os.path.join(root, file))
 
-            print("\nChecking {}:".format(os.path.relpath(filepath, root_dir)))
+    stringtable_files.sort()
 
-            bad_count += check_stringtable(filepath)
+    bad_count = 0
+
+    for filepath in stringtable_files:
+        print("\nChecking {}:".format(os.path.relpath(filepath, root_dir)))
+
+        errors = check_stringtable(filepath)
+
+        if errors == 0:
+            print("No errors found.")
+        else:
+            print("Found {} error(s).".format(errors))
+            bad_count += 1
 
     print()
 
@@ -153,5 +182,5 @@ def main():
     return bad_count
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     sys.exit(main())

@@ -18,9 +18,11 @@ Alganthe
 BaerMitUmlaut
 Beaumont
 Brett
+bux
 Dedmen
 diwako
 Dystopian
+Eclipser
 GitHawk
 Glowbal
 Jonpas
@@ -28,3 +30,4 @@ KoffeinFlummi
 PabstMirror
 SilentSpike
 Tuupertunut
+veteran29

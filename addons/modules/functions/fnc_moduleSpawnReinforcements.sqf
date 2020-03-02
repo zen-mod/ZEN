@@ -14,20 +14,20 @@
  *   - 0: Land, 1: Paradrop, 2: Fastrope
  * 7: Infantry Behaviour <NUMBER>
  *   - 0: Default, 1: Relaxed, 2: Cautious, 3: Combat
+ * 8: Fly Height <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * ["B_MRAP_01_F", ["B_Soldier_F"], [0, 0, 0], [100, 100, 100], [200, 200, 200], true, 0, 0] call zen_modules_fnc_moduleSpawnReinforcements
+ * ["B_MRAP_01_F", ["B_Soldier_F"], [0, 0, 0], [100, 100, 100], [200, 200, 200], true, 0, 0, 250] call zen_modules_fnc_moduleSpawnReinforcements
  *
  * Public: No
  */
 
-#define AIRCRAFT_HEIGHT 100
 #define WAYPOINT_RADIUS 30
 
-params ["_vehicleType", "_infantryTypes", "_spawnPosition", "_positionLZ", "_positionRP", "_despawnVehicle", "_insertionMethod", "_infantryBehaviour"];
+params ["_vehicleType", "_infantryTypes", "_spawnPosition", "_positionLZ", "_positionRP", "_despawnVehicle", "_insertionMethod", "_infantryBehaviour", "_flyHeight"];
 
 // Determine the direction the vehicle should face on spawn
 private _direction = _spawnPosition getDir _positionLZ;
@@ -37,12 +37,13 @@ private _isAir = _vehicleType isKindOf "Air";
 private _placement = "NONE";
 
 if (_isAir) then {
-    _spawnPosition set [2, AIRCRAFT_HEIGHT];
+    _spawnPosition set [2, _flyHeight];
     _placement = "FLY";
 };
 
 // Spawn vehicle at the start position and set its direction
 private _vehicle = createVehicle [_vehicleType, _spawnPosition, [], 0, _placement];
+_vehicle setPos _spawnPosition;
 _vehicle setDir _direction;
 
 private _vehicleConfig = configFile >> "CfgVehicles" >> _vehicleType;
@@ -68,7 +69,7 @@ _vehicleGroup allowFleeing 0;
 // Force aircraft to fly at the correct height and ignore surroundings
 if (_isAir) then {
     _vehicleGroup setBehaviour "CARELESS";
-    _vehicle flyInHeight AIRCRAFT_HEIGHT;
+    _vehicle flyInHeight _flyHeight;
 };
 
 // Increase the skill of the driver/pilot for better driving/flying
@@ -125,10 +126,11 @@ if (_despawnVehicle) then {
 } else {
     // Otherwise make aircraft stay around the LZ and provide air support
     if (_isAir) then {
-        private _waypoint = _vehicleGroup addWaypoint [_positionLZ, WAYPOINT_RADIUS];
-        _waypoint setWaypointType "SAD";
-        _waypoint setWaypointBehaviour "AWARE";
-        _waypoint setWaypointCombatMode "RED";
+        private _statement = format ["private _waypoint = group this addWaypoint [%1, %2];", _positionLZ, WAYPOINT_RADIUS];
+        _statement = _statement + "_waypoint setWaypointType 'SAD'; _waypoint setWaypointBehaviour 'AWARE'; _waypoint setWaypointCombatMode 'RED'";
+
+        // Add waypoint after insertion waypoint completes to avoid issue with seek and destroy waypoints causing aircraft to slow down
+        _waypoint setWaypointStatements ["true", _statement];
     };
 };
 

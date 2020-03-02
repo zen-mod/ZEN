@@ -15,6 +15,7 @@ if (isServer) then {
 
 [QGVAR(addIntelAction), LINKFUNC(addIntelAction)] call CBA_fnc_addEventHandler;
 [QGVAR(addTeleporterAction), LINKFUNC(addTeleporterAction)] call CBA_fnc_addEventHandler;
+[QGVAR(moduleEffectFire), LINKFUNC(moduleEffectFireLocal)] call CBA_fnc_addEventHandler;
 
 [QGVAR(sayMessage), BIS_fnc_sayMessage] call CBA_fnc_addEventHandler;
 [QGVAR(carrierInit), BIS_fnc_Carrier01Init] call CBA_fnc_addEventHandler;
@@ -75,6 +76,10 @@ if (isServer) then {
 
 [QGVAR(fireArtillery), {
     params ["_unit", "_position", "_spread", "_ammo", "_rounds"];
+
+    if (_unit call EFUNC(common,isVLS)) exitWith {
+        _this call EFUNC(common,fireVLS);
+    };
 
     // For small spread values, use doArtilleryFire directly to avoid delay
     // between firing caused by using doArtilleryFire one round at a time

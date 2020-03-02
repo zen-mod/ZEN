@@ -9,7 +9,8 @@ class CfgPatches {
         requiredAddons[] = {
             "zen_context_menu",
             "zen_garage",
-            "zen_inventory"
+            "zen_inventory",
+            "zen_remote_control"
         };
         author = ECSTRING(main,Author);
         authors[] = {"mharis001"};

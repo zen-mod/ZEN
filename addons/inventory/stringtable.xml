@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Inventory">
+        <Key ID="STR_ZEN_Inventory_EditInventory">
+            <English>Edit Inventory (%1)</English>
+            <German>Inventar bearbeiten (%1)</German>
+        </Key>
+    </Package>
+</Project>

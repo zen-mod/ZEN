@@ -1,4 +1,7 @@
 class CfgFactionClasses {
+    class Chemlights {
+        displayName = "$STR_A3_Chemlights1";
+    };
     class GVAR(AI) {
         displayName = "$STR_Team_Switch_AI";
         priority = 2;
