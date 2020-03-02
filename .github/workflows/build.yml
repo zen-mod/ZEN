@@ -44,5 +44,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Notify Discord on Failure
-        if: status=$(curl "https://api.github.com/repos/zen-mod/ZEN/actions/workflows/650750/runs?per_page=1" | jq -r ".workflow_runs | .[0] | .conclusion" | tr -d "\n") && [[ "$status" != success ]]
-        run: "curl -H \"Authorization: Bearer ${MECHILLES_TOKEN}\" \"$MECHILLES_URI?id=650750\""
+        if: always() # todo: change this to failure()
+        run: |
+          curl -H "Authorization: Bearer ${MECHILLES_TOKEN}" "$MECHILLES_URI?id=650750"
