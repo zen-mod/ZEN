@@ -18,4 +18,4 @@
 params ["_display"];
 
 // Emit display unload event
-["ZEN_displayCuratorUnload", _display] call CBA_fnc_localEvent;
+["zen_curatorDisplayUnloaded", _display] call CBA_fnc_localEvent;

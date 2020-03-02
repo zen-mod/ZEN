@@ -4,7 +4,7 @@ This is a list of public CBA events executed by ZEN.
 
 ---
 
-#### ZEN_displayCuratorLoad
+#### zen_curatorDisplayLoaded
 
 Executed **locally** when the Zeus display is loaded.
 
@@ -14,7 +14,7 @@ Executed **locally** when the Zeus display is loaded.
 
 ---
 
-#### ZEN_displayCuratorUnload
+#### zen_curatorDisplayUnloaded
 
 Executed **locally** when the Zeus display is unloaded.
 
@@ -24,7 +24,7 @@ Executed **locally** when the Zeus display is unloaded.
 
 ---
 
-#### ZEN_remoteControlStarted
+#### zen_remoteControlStarted
 
 Executed **locally** when Zeus starts remote controlling a unit.
 
