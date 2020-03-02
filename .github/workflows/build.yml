@@ -46,4 +46,4 @@ jobs:
       - name: Notify Discord on Failure
         if: always() # todo: change this to failure()
         run: |
-          curl -H "Authorization: Bearer ${MECHILLES_TOKEN}" "$MECHILLES_URI?id=650750"
+          curl -H "Authorization: Bearer ${MECHILLES_TOKEN}" "$MECHILLES_URI"
