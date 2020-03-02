@@ -29,6 +29,7 @@ if (_object isKindOf "CAManBase") exitWith {
     // Sort uniform, vest, and backpack item arrays, their contents can be indentical
     // but the arrays may be different depending on the order they were added to the container
     {
+        // 3, 4, and 5 are indices of uniform, vest, and backpack info in loadout arrays, respectively
         for "_i" from 3 to 5 do {
             (_x select _i param [1, []]) sort true;
         };
