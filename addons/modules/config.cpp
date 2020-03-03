@@ -32,6 +32,7 @@ class CfgPatches {
             QGVAR(moduleEditableObjects),
             QGVAR(moduleEffectFire),
             QGVAR(moduleEquipWithECM),
+            QGVAR(moduleExportMissionSQF),
             QGVAR(moduleExecuteCode),
             QGVAR(moduleFireMission),
             QGVAR(moduleFlyHeight),
