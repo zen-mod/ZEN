@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Common">
-        <Key ID="STR_ZEN_Common_Category">
-            <English>Zeus Enhanced</English>
-            <German>Zeus Verbessert</German>
-            <Polish>Zeus Enhanced</Polish>
-            <Czech>Zeus vylepšený</Czech>
-            <Italian>Zeus Enhanced</Italian>
-            <Japanese>Zeus Enhanced</Japanese>
-        </Key>
         <Key ID="STR_ZEN_Common_Enabled">
             <English>Enabled</English>
             <Czech>Povoleno</Czech>
@@ -73,16 +65,20 @@
         </Key>
         <Key ID="STR_ZEN_Common_Add">
             <English>Add</English>
+            <German>Hinzufügen</German>
         </Key>
         <Key ID="STR_ZEN_Common_Remove">
             <English>Remove</English>
+            <German>Entfernen</German>
         </Key>
         <Key ID="STR_ZEN_Common_On">
             <English>On</English>
+            <German>An</German>
             <Japanese>オン</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Off">
             <English>Off</English>
+            <German>Aus</German>
             <Japanese>オフ</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Unchanged">
@@ -97,6 +93,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_Premade">
             <English>Premade</English>
+            <German>Vorgefertigt</German>
         </Key>
         <Key ID="STR_ZEN_Common_VeryLow">
             <English>Very Low</English>
@@ -227,6 +224,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_SelectedUnit">
             <English>Selected Unit</English>
+            <German>Ausgewählte Einheit</German>
         </Key>
         <Key ID="STR_ZEN_Common_SelectedGroup">
             <English>Selected Group</English>
@@ -281,6 +279,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_Vehicle">
             <English>Vehicle</English>
+            <German>Fahrzeug</German>
         </Key>
         <Key ID="STR_ZEN_Common_Vehicles">
             <English>Vehicles</English>
@@ -314,6 +313,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_Farthest">
             <English>Farthest</English>
+            <German>Weiteste</German>
         </Key>
         <Key ID="STR_ZEN_Common_Relaxed">
             <English>Relaxed</English>
@@ -361,6 +361,12 @@
         </Key>
         <Key ID="STR_ZEN_Common_Radius_Units">
             <English>Radius (m)</English>
+            <French>Rayon (m)</French>
+            <Russian>Радиус (m)</Russian>
+            <German>Radius (m)</German>
+            <Polish>Promień (m)</Polish>
+            <Czech>Rádius (m)</Czech>
+            <Italian>Raggio (m)</Italian>
             <Japanese>範囲 (m)</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Height">
@@ -424,7 +430,7 @@
         <Key ID="STR_ZEN_Common_DisableGearAnim_Description">
             <English>Disables the "Gear" animation from playing when entering Zeus.</English>
             <French>Désactiver l'animation "Gear" lors de l'entrée dans Zeus.</French>
-            <German>Deaktiviert die "Inventar" Animation der Spielerfigur wenn man in dem Zeusmodus geht.</German>
+            <German>Deaktiviert die "Inventar"-Animation der Spielerfigur, wenn man in den Zeusmodus geht.</German>
             <Polish>Wyłącza animację grzebania w ekwipunku po wejściu do Zeusa.</Polish>
             <Russian>Отключает анимированную шестерёнку при входе в режим ГМ</Russian>
             <Japanese>Zeus 中は "装備" アニメーションの再生を停止させます。</Japanese>
@@ -457,7 +463,7 @@
         <Key ID="STR_ZEN_Common_PreferredArsenal_Description">
             <English>Selects the preferred arsenal used by Zeus Enhanced.\nIf ACE Arsenal is not installed, will fall back to BI Virtual Arsenal.</English>
             <French>Sélectionner l'arsenal préféré utilisé par Zeus Enhanced.\nSi ACE Arsenal n'est pas installé, il retournera à BI Virtual Arsenal.</French>
-            <German>Regelt welches Arsenal von Zeus Enhanced geöffnet wird.\nWenn ACE Arsenal nicht installiert ist, wird auf das Vanilla BI Virtual Arsenal zurückgegriffen.</German>
+            <German>Regelt, welches Arsenal von Zeus Enhanced geöffnet wird.\nWenn ACE Arsenal nicht installiert ist, wird auf das Vanilla BI Virtual Arsenal zurückgegriffen.</German>
             <Polish>Wybierz preferowany arsenał używany przez Zeus Enhanced.\nJeśli arsenał ACE nie będzie dostępny to uruchomi się podstawowy wirtualny arsenał BI.</Polish>
             <Russian>Выбор предпочитаемого Арсенала\nlfЕсли не установлен ACE, будет запущен стандартный Виртуальный Арсенал.</Russian>
             <Japanese>Zeus Ehnhanced により優先された武器庫を選択します。\nACE3 武器庫が有効化されていない場合、ゲーム標準のバーチャル武器庫へ戻されます。</Japanese>

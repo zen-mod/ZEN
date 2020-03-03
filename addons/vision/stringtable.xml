@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Vision">
-        <Key ID="STR_ZEN_Vision_VisionModes">
+        <Key ID="STR_ZEN_Vision_DisplayName">
             <English>Vision Modes</English>
             <French>Mode de vision</French>
             <Russian>Режимы зрения</Russian>

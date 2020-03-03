@@ -24,17 +24,12 @@ if (isNull _object) exitWith {
     [LSTRING(NoObjectSelected)] call EFUNC(common,showMessage);
 };
 
-[LSTRING(ModuleChangeHeight), [
-    ["EDIT", [ELSTRING(common,Height_Units), LSTRING(ModuleChangeHeight_Tooltip)], ["", {
-        params ["_value"];
-
-        private _filter = toArray "-0123456789";
-        toString (toArray _value select {_x in _filter})
-    }]]
+[LSTRING(ChangeHeight), [
+    ["EDIT", [ELSTRING(common,Height_Units), LSTRING(ChangeHeight_Tooltip)], ""]
 ], {
-    params ["_dialogValues", "_object"];
-    _dialogValues params ["_changeInHeight"];
+    params ["_values", "_object"];
+    _values params ["_change"];
 
-    _changeInHeight = parseNumber _changeInHeight;
-    _object setPosASL (getPosASL _object vectorAdd [0, 0, _changeInHeight]);
+    private _position = getPosASL _object vectorAdd [0, 0, parseNumber _change];
+    _object setPosASL _position;
 }, {}, _object] call EFUNC(dialog,create);

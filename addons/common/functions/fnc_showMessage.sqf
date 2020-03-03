@@ -1,8 +1,8 @@
 #include "script_component.hpp"
 /*
  * Author: 654wak654
- * Shows a Zeus message through the BIS function, handles localization.
- * If multiple args are given, they get formatted.
+ * Shows the given Zeus feedback message.
+ * Handles localization and formatting multiple arguments.
  *
  * Arguments:
  * 0: Message <STRING>
@@ -12,13 +12,14 @@
  * None
  *
  * Example:
- * ["something"] call zen_common_fnc_showMessage
- * ["something %1 in %2", "strange", getPos neighborhood] call zen_common_fnc_showMessage
+ * ["Message: %1", _hint] call zen_common_fnc_showMessage
  *
  * Public: Yes
  */
 
-if !(_this isEqualTypeParams [""]) exitWith {ERROR_1("First arg must be string [%1]",_this)};
+if !(_this isEqualTypeParams [""]) exitWith {
+    ERROR_1("First argument must be a string - %1.",_this);
+};
 
 private _message = _this apply {if (_x isEqualType "" && {isLocalized _x}) then {localize _x} else {_x}};
 [objNull, format _message] call BIS_fnc_showCuratorFeedbackMessage;
