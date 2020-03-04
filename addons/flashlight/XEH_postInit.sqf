@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-["ZEN_displayCuratorLoad", {
+["zen_curatorDisplayLoaded", {
     {
         if (GVAR(state)) then {
             [true] call FUNC(toggle);
@@ -8,6 +8,6 @@
     } call CBA_fnc_execNextFrame;
 }] call CBA_fnc_addEventHandler;
 
-["ZEN_displayCuratorUnload", {
+["zen_curatorDisplayUnloaded", {
     [false] call FUNC(toggle);
 }] call CBA_fnc_addEventHandler;

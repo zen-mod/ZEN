@@ -18,4 +18,6 @@ GVAR(canContext) = true;
 GVAR(holdingRMB) = false;
 GVAR(contextGroups) = [];
 
+["zen_curatorDisplayLoaded", LINKFUNC(initDisplayCurator)] call CBA_fnc_addEventHandler;
+
 ADDON = true;

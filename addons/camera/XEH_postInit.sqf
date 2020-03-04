@@ -10,6 +10,6 @@ if (!hasInterface) exitWith {};
     };
 }] call CBA_fnc_addEventHandler;
 
-["ZEN_displayCuratorLoad", {
+["zen_curatorDisplayLoaded", {
     FUNC(updateSettings) call CBA_fnc_execNextFrame;
 }] call CBA_fnc_addEventHandler;

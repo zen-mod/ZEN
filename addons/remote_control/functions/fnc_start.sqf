@@ -42,7 +42,7 @@ private _cameraPos = _cameraDir vectorMultiply ((_unit distance curatorCamera) m
     private _handle = player addEventHandler ["HandleRating", {0}];
     player setVariable [QGVAR(handle), _handle];
 
-    ["ZEN_remoteControlStarted", _unit] call CBA_fnc_localEvent;
+    ["zen_remoteControlStarted", _unit] call CBA_fnc_localEvent;
 
     [{
         [{
