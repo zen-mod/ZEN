@@ -43,7 +43,7 @@ jobs:
     if: always()
     runs-on: ubuntu-latest
     steps:
-      - name: Notify Discord on Failure
+      - name: Notify Discord
         env:
           REZENT_TOKEN: ${{ secrets.REZENT_TOKEN }}
           REZENT_URI: ${{ secrets.REZENT_URI }}
