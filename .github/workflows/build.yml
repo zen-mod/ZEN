@@ -49,4 +49,9 @@ jobs:
           REZENT_URI: ${{ secrets.REZENT_URI }}
         if: always() # todo: change this to failure()
         run: |
-          curl -H "Authorization: Bearer ${REZENT_TOKEN}" "$REZENT_URI"
+          curl -H "Authorization: Bearer ${REZENT_TOKEN}" \
+            -H "Content-Type: application/json" \
+            -H "Accept: application/json" \
+            -X POST \
+            -d '{"organisation": "zen-mod", "repository": "ZEN", "workflow_id": 650750}' \
+            "$REZENT_URI"
