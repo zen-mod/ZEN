@@ -29,7 +29,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 1
-      - name: Build addon with HEMTT
+      - name: Build with HEMTT
         uses: arma-actions/hemtt@master
         with:
           command: 'build --release'
