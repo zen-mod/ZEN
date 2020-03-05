@@ -1,4 +1,5 @@
 releases/*
+release/*
 keys/*
 tools/temp
 *.cache
