@@ -8,7 +8,8 @@ files = [
     "logo_zen_small_ca.paa",
     "LICENSE",
     "AUTHORS.txt",
-    "README.md"
+    "README.md",
+    "meta.cpp"
 ]
 include = ["./include"]
 
