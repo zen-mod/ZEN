@@ -25,6 +25,11 @@
 #define POS_W(N) ((N) * GUI_GRID_W)
 #define POS_H(N) ((N) * GUI_GRID_H)
 
+#define IDC_MESSAGE_TITLE      100
+#define IDC_MESSAGE_BACKGROUND 110
+#define IDC_MESSAGE_PICTURE    120
+#define IDC_MESSAGE_TEXT       130
+
 #define IDC_EXPORT_TITLE 200
 #define IDC_EXPORT_GROUP 210
 #define IDC_EXPORT_EDIT  220
