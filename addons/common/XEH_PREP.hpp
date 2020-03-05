@@ -1,11 +1,11 @@
 PREP(changeGroupSide);
 PREP(collapseTree);
 PREP(createZeus);
-PREP(curatorDisplayLoad);
-PREP(curatorDisplayUnload);
 PREP(deployCountermeasures);
 PREP(deserializeInventory);
 PREP(deserializeObjects);
+PREP(displayCuratorLoad);
+PREP(displayCuratorUnload);
 PREP(dumpPerformanceCounters);
 PREP(earthquake);
 PREP(ejectPassengers);
