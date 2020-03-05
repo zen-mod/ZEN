@@ -30,7 +30,7 @@
 [ELSTRING(main,DisplayName), QGVAR(deepCopy), [LSTRING(DeepCopy), LSTRING(DeepCopy_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
         private _position = [nil, false] call EFUNC(common,getPosFromScreen);
-        GVAR(clipboard) = [SELECTED_OBJECTS, ASLtoATL _position, true] call EFUNC(common,serializeObjects);
+        GVAR(clipboard) = [SELECTED_OBJECTS, _position, true] call EFUNC(common,serializeObjects);
 
         playSound ["RscDisplayCurator_error01", true];
 
@@ -41,7 +41,7 @@
 [ELSTRING(main,DisplayName), QGVAR(deepPaste), [LSTRING(DeepPaste), LSTRING(DeepPaste_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
         private _position = [nil, false] call EFUNC(common,getPosFromScreen);
-        [QEGVAR(common,deserializeObjects), [GVAR(clipboard), ASLtoATL _position]] call CBA_fnc_serverEvent;
+        [QEGVAR(common,deserializeObjects), [GVAR(clipboard), _position]] call CBA_fnc_serverEvent;
 
         playSound ["RscDisplayCurator_error01", true];
 

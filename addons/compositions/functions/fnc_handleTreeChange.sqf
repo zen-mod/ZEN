@@ -20,7 +20,7 @@
 params ["_display", "_mode", "_side"];
 
 // Only show compositions panel when the empty compositions tree is shown
-private _ctrlPanel = _display displayCtrl IDC_PANEL;
+private _ctrlPanel = _display displayCtrl IDC_PANEL_GROUP;
 _ctrlPanel ctrlShow (_mode == 1 && {_side == 4});
 
 // Remove the helper composition from the recent tree if it is shown

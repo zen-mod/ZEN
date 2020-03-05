@@ -20,15 +20,15 @@ params ["_ctrlTree", "_selectedPath"];
 
 // Enable the edit and delete buttons if the selected path is a custom composition
 private _display = ctrlParent _ctrlTree;
-private _enable = _ctrlTree tvData _selectedPath == COMPOSITION_STR;
+private _enabled = _ctrlTree tvData _selectedPath == COMPOSITION_STR;
 
 {
     private _ctrl = _display displayCtrl _x;
-    _ctrl ctrlEnable _enable;
+    _ctrl ctrlEnable _enabled;
 } forEach [IDC_PANEL_EDIT, IDC_PANEL_DELETE];
 
 // If the selected path is a custom composition, get its data for when it is placed
-if (_enable) then {
+if (_enabled) then {
     private _category = _ctrlTree tvText GET_PARENT_PATH(_selectedPath);
     private _name     = _ctrlTree tvText _selectedPath;
 

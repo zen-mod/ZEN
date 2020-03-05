@@ -12,7 +12,7 @@ class EGVAR(common,RscCombo);
 class GVAR(display) {
     idd = -1;
     movingEnable = 1;
-    onLoad = QUOTE(with uiNamespace do {GVAR(display) = _this select 0});
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(display),_this select 0)]);
     class controls {
         class Title: RscText {
             idc = IDC_DISPLAY_TITLE;
@@ -48,6 +48,7 @@ class GVAR(display) {
             x = POS_X(31.9);
             y = POS_Y(11.45);
             w = POS_W(1);
+            sizeEx = POS_H(0.9);
         };
         class NameLabel: CategoryLabel {
             text = "$STR_3DEN_Object_Attribute_UnitName_displayName";

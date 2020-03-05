@@ -64,10 +64,10 @@ _display setVariable [QFUNC(verify), {
         _ctrlButtonOK ctrlSetTooltip localize LSTRING(NameCannotBeEmpty);
     };
 
-    private _enable = FIND_COMPOSITION(_category,_name) == -1;
-    private _tooltip = if (_enable) then {""} else {localize LSTRING(CompositionAlreadyExists)};
+    private _enabled = FIND_COMPOSITION(_category,_name) == -1;
+    private _tooltip = if (_enabled) then {""} else {localize LSTRING(CompositionAlreadyExists)};
 
-    _ctrlButtonOK ctrlEnable _enable;
+    _ctrlButtonOK ctrlEnable _enabled;
     _ctrlButtonOK ctrlSetTooltip _tooltip;
 }];
 
@@ -88,8 +88,8 @@ _ctrlName ctrlAddEventHandler ["KeyDown", _fnc_update];
 _ctrlName ctrlAddEventHandler ["KeyUp", _fnc_update];
 
 // Set the title based on the mode
-private _ctrlTitle = _display displayCtrl IDC_DISPLAY_TITLE;
 private _title = [LSTRING(EditCustomComposition), LSTRING(CreateCustomComposition)] select (_mode == "create");
+private _ctrlTitle = _display displayCtrl IDC_DISPLAY_TITLE;
 _ctrlTitle ctrlSetText localize _title;
 
 // Set the current composition category and name
@@ -124,6 +124,9 @@ private _ctrlButtonOK = _display displayCtrl IDC_OK;
         [false] call FUNC(removeFromTree);
     };
 
-    GVAR(treeAdditions) pushBack _composition;
+    // Add the new/updated composition to the tree
+    GVAR(treeAdditions) pushBack +_composition;
     [findDisplay IDD_RSCDISPLAYCURATOR] call FUNC(processTreeAdditions);
+
+    saveProfileNamespace;
 }, _this] call CBA_fnc_addBISEventHandler;

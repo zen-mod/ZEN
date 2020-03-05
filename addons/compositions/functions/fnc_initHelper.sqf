@@ -19,9 +19,7 @@ params ["_helper"];
 
 if (!local _helper) exitWith {};
 
-private _position = getPosATL _helper;
-_position set [2, 0]; // Does not spawn at height of 0
-
+private _position = getPos _helper;
 deleteVehicle _helper;
 
 [QEGVAR(common,deserializeObjects), [GVAR(selected), _position]] call CBA_fnc_serverEvent;

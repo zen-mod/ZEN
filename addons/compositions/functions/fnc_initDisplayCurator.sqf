@@ -21,7 +21,7 @@
 
     private _ctrlTree = _display displayCtrl IDC_RSCDISPLAYCURATOR_CREATE_GROUPS_EMPTY;
 
-    // Find the value associated with the helper composition and remove it from the tree
+    // Remove the helper composition from the tree
     for "_i" from 0 to ((_ctrlTree tvCount [0]) - 1) do {
         if (_ctrlTree tvData [0, _i] == CATEGORY_STR) exitWith {
             _ctrlTree tvDelete [0, _i];
@@ -30,7 +30,7 @@
 
     // Initially hide the custom compositions panel if the compositions tree is not active
     if !(GETMVAR(RscDisplayCurator_sections,[]) isEqualTo [1, 4]) then {
-        private _ctrlPanel = _display displayCtrl IDC_PANEL;
+        private _ctrlPanel = _display displayCtrl IDC_PANEL_GROUP;
         _ctrlPanel ctrlShow false;
     };
 
@@ -40,14 +40,14 @@
         params ["_ctrl"];
 
         private _display = ctrlParent _ctrl;
-        _display call FUNC(processTreeAdditions);
+        [_display] call FUNC(processTreeAdditions);
     };
 
     private _searchIDC = [IDC_RSCDISPLAYCURATOR_CREATE_SEARCH, IDC_SEARCH_CUSTOM] select EGVAR(editor,disableLiveSearch);
     private _ctrlSearch = _display displayCtrl _searchIDC;
+    _ctrlSearch ctrlAddEventHandler ["MouseButtonClick", _fnc_processAdditions];
     _ctrlSearch ctrlAddEventHandler ["KeyDown", _fnc_processAdditions];
     _ctrlSearch ctrlAddEventHandler ["KeyUp", _fnc_processAdditions];
-    _ctrlSearch ctrlAddEventHandler ["MouseButtonClick", _fnc_processAdditions];
 
     private _ctrlSearchButton = _display displayCtrl IDC_SEARCH_BUTTON;
     _ctrlSearchButton ctrlAddEventHandler ["ButtonClick", _fnc_processAdditions];
@@ -60,13 +60,8 @@
     _ctrlTree tvSetPictureRightColorSelected [[0, _index], [1, 1, 1, 1]];
 
     // Initially add all compositions to the tree
-    GVAR(treeAdditions) = [];
-
-    {
-        GVAR(treeAdditions) pushBack _x;
-    } forEach GET_COMPOSITIONS;
-
-    _display call FUNC(processTreeAdditions);
+    GVAR(treeAdditions) = +GET_COMPOSITIONS;
+    [_display] call FUNC(processTreeAdditions);
 
     _ctrlTree ctrlAddEventHandler ["TreeSelChanged", {call FUNC(handleTreeSelect)}];
 }, _this] call CBA_fnc_execNextFrame;

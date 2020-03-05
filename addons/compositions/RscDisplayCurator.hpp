@@ -7,7 +7,7 @@ class RscDisplayCurator {
                     h = safeZoneH - POS_EDGE(9.3,8.3) * GUI_GRID_H;
                 };
                 class GVAR(panel): RscControlsGroupNoScrollbars {
-                    idc = IDC_PANEL;
+                    idc = IDC_PANEL_GROUP;
                     x = 0;
                     y = safeZoneH - POS_EDGE(4.2,3.2) * GUI_GRID_H;
                     w = POS_W(11);

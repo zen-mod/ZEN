@@ -30,7 +30,7 @@ private _name     = _ctrlTree tvText _path;
 // Delete the composition from the tree
 _ctrlTree tvDelete _path;
 
-// Delete the composition from saved data in needed
+// Delete the composition from saved data if needed
 if (_deleteFromData) then {
     GET_COMPOSITIONS deleteAt FIND_COMPOSITION(_category,_name);
 };

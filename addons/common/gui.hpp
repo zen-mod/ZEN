@@ -6,6 +6,7 @@ class RscButtonMenu;
 class RscButtonMenuOK;
 class RscButtonMenuCancel;
 class RscControlsGroupNoScrollbars;
+
 class ctrlControlsGroup;
 class ctrlStaticPictureKeepAspect;
 
@@ -153,7 +154,7 @@ class GVAR(RscDisplayScrollbars): GVAR(RscDisplay) {
 class GVAR(messageBox) {
     idd = -1;
     movingEnable = 1;
-    onLoad = QUOTE(with uiNamespace do {GVAR(messageBox) = _this select 0});
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(messageBox),_this select 0)]);
     class controls {
         class Title: RscText {
             idc = IDC_MESSAGE_TITLE;
@@ -186,14 +187,14 @@ class GVAR(messageBox) {
             w = POS_W(11.5);
             h = POS_H(5);
         };
-        class ButtonCancel: RscButtonMenuCancel {
-            x = POS_X(12.5);
+        class ButtonOK: RscButtonMenuOK {
+            x = POS_X(22.5);
             y = POS_Y(10);
             w = POS_W(5);
             h = POS_H(1);
         };
-        class ButtonOK: RscButtonMenuOK {
-            x = POS_X(22.5);
+        class ButtonCancel: RscButtonMenuCancel {
+            x = POS_X(12.5);
             y = POS_Y(10);
             w = POS_W(5);
             h = POS_H(1);
