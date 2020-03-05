@@ -16,7 +16,7 @@ key_name = "{{prefix}}_{{version}}"
 authority = "{{prefix}}_{{version}}-{{git \"id 8\"}}"
 
 releasebuild = [
-    "@zip @ZEN-{{version}}"
+    "@zip @zen_{{version}}"
 ]
 
 [header_exts]
