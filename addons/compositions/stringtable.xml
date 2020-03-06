@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Compositions">
+        <Key ID="STR_ZEN_Compositions_Helper_DisplayName">
+            <English>ZEN Composition Helper</English>
+        </Key>
+        <Key ID="STR_ZEN_Compositions_CreateCustomComposition">
+            <English>CREATE CUSTOM COMPOSITION</English>
+        </Key>
+        <Key ID="STR_ZEN_Compositions_EditCustomComposition">
+            <English>EDIT CUSTOM COMPOSITION</English>
+        </Key>
+        <Key ID="STR_ZEN_Compositions_CategoryCannotBeEmpty">
+            <English>Category cannot be empty.</English>
+        </Key>
+        <Key ID="STR_ZEN_Compositions_NameCannotBeEmpty">
+            <English>Name cannot be empty.</English>
+        </Key>
+        <Key ID="STR_ZEN_Compositions_CompositionAlreadyExists">
+            <English>A composition with this name and category already exists.</English>
+        </Key>
+        <Key ID="STR_ZEN_Compositions_DeleteConfirmation">
+            <English>Are you sure you want to delete this composition?</English>
+        </Key>
+        <Key ID="STR_ZEN_Compositions_NoObjectsSelected">
+            <English>Select objects to create composition from</English>
+        </Key>
+    </Package>
+</Project>

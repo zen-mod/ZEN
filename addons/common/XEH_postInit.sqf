@@ -234,6 +234,26 @@
     _unit doArtilleryFire [_position, _magazine, _rounds];
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setVehicleRadar), {
+    params ["_vehicle", "_mode"];
+    _vehicle setVehicleRadar _mode;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setVehicleReportRemoteTargets), {
+    params ["_vehicle", "_mode"];
+    _vehicle setVehicleReportRemoteTargets _mode;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setVehicleReceiveRemoteTargets), {
+    params ["_vehicle", "_mode"];
+    _vehicle setVehicleReceiveRemoteTargets _mode;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setVehicleReportOwnPosition), {
+    params ["_vehicle", "_mode"];
+    _vehicle setVehicleReportOwnPosition _mode;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(addWeaponItem), {
     params ["_unit", "_weapon", "_item"];
     _unit addweaponItem [_weapon, _item];
@@ -256,6 +276,15 @@
 [QGVAR(setMagazineAmmo), LINKFUNC(setMagazineAmmo)] call CBA_fnc_addEventHandler;
 [QGVAR(setTurretAmmo), LINKFUNC(setTurretAmmo)] call CBA_fnc_addEventHandler;
 [QGVAR(showMessage), LINKFUNC(showMessage)] call CBA_fnc_addEventHandler;
+
+// BWC for deprecated public events, remove in 1.9.0
+["zen_curatorDisplayLoaded", {
+    ["ZEN_displayCuratorLoad", _this] call CBA_fnc_localEvent;
+}] call CBA_fnc_addEventHandler;
+
+["zen_curatorDisplayUnloaded", {
+    ["ZEN_displayCuratorUnload", _this] call CBA_fnc_localEvent;
+}] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
     [QGVAR(hideObjectGlobal), {
@@ -317,11 +346,28 @@ if (isServer) then {
         } forEach allCurators;
     }] call CBA_fnc_addEventHandler;
 
-    [QGVAR(createZeus), FUNC(createZeus)] call CBA_fnc_addEventHandler;
-};
+    ["CBA_settingsInitialized", {
+        ["AllVehicles", "InitPost", {
+            params ["_object"];
 
-["CBA_settingsInitialized", {
-    if (isServer && {GVAR(autoAddObjects)}) then {
-        ["AllVehicles", "InitPost", FUNC(addObjectToCurators), true, [], true] call CBA_fnc_addClassEventHandler;
-    };
-}] call CBA_fnc_addEventHandler;
+            if (_object getVariable [QGVAR(autoAddObject), GVAR(autoAddObjects)]) then {
+                [{
+                    {
+                        _x addCuratorEditableObjects [[_this], true];
+                    } forEach allCurators;
+                }, _object] call CBA_fnc_execNextFrame;
+            };
+        }, true, [], true] call CBA_fnc_addClassEventHandler;
+
+        ["ModuleCurator_F", "Init", {
+            params ["_logic"];
+
+            if (GVAR(autoAddObjects)) then {
+                _logic addCuratorEditableObjects [allMissionObjects "AllVehicles", true];
+            };
+        }, true, [], false] call CBA_fnc_addClassEventHandler;
+    }] call CBA_fnc_addEventHandler;
+
+    [QGVAR(createZeus), FUNC(createZeus)] call CBA_fnc_addEventHandler;
+    [QGVAR(deserializeObjects), LINKFUNC(deserializeObjects)] call CBA_fnc_addEventHandler;
+};

@@ -3,7 +3,7 @@ class CBA_Extended_EventHandlers_base;
 class CfgVehicles {
     class Module_F;
     class GVAR(moduleBase): Module_F {
-        author = "";
+        author = ECSTRING(main,Author);
         category = "NO_CATEGORY";
         function = "";
         scope = 1;
@@ -67,8 +67,8 @@ class CfgVehicles {
     class GVAR(moduleAttachEffect): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Equipment);
-        displayName = CSTRING(ModuleAttachEffect);
-        curatorInfoType = QGVAR(RscAttachEffect);
+        displayName = CSTRING(AttachEffect);
+        function = QFUNC(moduleAttachEffect);
     };
     class GVAR(moduleAttachFlag): GVAR(moduleBase) {
         curatorCanAttach = 1;
@@ -123,7 +123,7 @@ class CfgVehicles {
     class GVAR(moduleChangeHeight): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Objects);
-        displayName = CSTRING(ModuleChangeHeight);
+        displayName = CSTRING(ChangeHeight);
         function = QFUNC(moduleChangeHeight);
     };
     class GVAR(moduleChatter): GVAR(moduleBase) {
@@ -188,6 +188,7 @@ class CfgVehicles {
         icon = "\a3\3den\data\displays\display3den\panelleft\entitylist_location_ca.paa";
     };
     class GVAR(moduleDamageBuildings): GVAR(moduleBase) {
+        curatorCanAttach = 1;
         category = QGVAR(Buildings);
         displayName = CSTRING(ModuleDamageBuildings);
         curatorInfoType = QGVAR(RscDamageBuildings);
@@ -204,11 +205,23 @@ class CfgVehicles {
         curatorInfoType = QGVAR(RscEditableObjects);
         icon = QPATHTOF(ui\edit_obj_ca.paa);
     };
+    class GVAR(moduleEffectFire): GVAR(moduleBase) {
+        category = "Effects";
+        displayName = CSTRING(CustomFire);
+        curatorInfoType = QGVAR(RscEffectFireHelper);
+        icon = QPATHTOF(ui\fire_ca.paa);
+        portrait = QPATHTOF(ui\fire_ca.paa);
+    };
     class GVAR(moduleEquipWithECM): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Objects);
         displayName = CSTRING(ModuleEquipWithECM);
         function = QFUNC(moduleEquipWithECM);
+    };
+    class GVAR(moduleExportMissionSQF): GVAR(moduleBase) {
+        category = QGVAR(DevTools);
+        displayName = CSTRING(ExportMissionSQF);
+        function = QFUNC(moduleExportMissionSQF);
     };
     class GVAR(moduleExecuteCode): GVAR(moduleBase) {
         curatorCanAttach = 1;
@@ -242,6 +255,11 @@ class CfgVehicles {
         displayName = CSTRING(ModuleGarrison);
         function = QFUNC(moduleGarrison);
     };
+    class GVAR(moduleGlobalAISkill): GVAR(moduleBase) {
+        category = QGVAR(AI);
+        displayName = CSTRING(GlobalAISkill);
+        function = QFUNC(moduleGlobalAISkill);
+    };
     class GVAR(moduleGlobalHint): GVAR(moduleBase) {
         category = "Curator";
         displayName = CSTRING(ModuleGlobalHint);
@@ -249,7 +267,7 @@ class CfgVehicles {
     };
     class GVAR(moduleGroupSide): GVAR(moduleBase) {
         curatorCanAttach = 1;
-        displayName = CSTRING(ModuleGroupSide);
+        displayName = CSTRING(GroupSide);
         function = QFUNC(moduleGroupSide);
     };
     class GVAR(moduleHeal): GVAR(moduleBase) {

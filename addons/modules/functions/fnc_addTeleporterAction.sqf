@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [cursorObject] call zen_modules_fnc_addTeleporterAction
+ * [_object] call zen_modules_fnc_addTeleporterAction
  *
  * Public: No
  */
@@ -45,6 +45,18 @@ private _actionID = _object addAction [
             if (isNull _object) exitWith {};
 
             private _unit = call CBA_fnc_currentUnit;
+            private _vehicle = vehicle _unit;
+
+            // Teleport the vehicle of the unit if not on foot
+            if (_vehicle != _unit) exitWith {
+                private _position = getPosATL _object findEmptyPosition [5, 100, typeOf _vehicle];
+
+                if (_position isEqualTo []) exitWith {
+                    [LSTRING(NoTeleportPosition), true] call CBA_fnc_notify;
+                };
+
+                _vehicle setVehiclePosition [_position, [], 0, "NONE"];
+            };
 
             // Attempt to move unit into the object if it is a vehicle
             if (_unit moveInAny _object) exitWith {};
@@ -58,7 +70,7 @@ private _actionID = _object addAction [
     true,
     true,
     "",
-    QUOTE(!(GVAR(teleporters) select {_x select 0 != _target} isEqualTo [])),
+    QUOTE(GVAR(teleporters) findIf {_x select 0 != _target} != -1),
     10
 ];
 

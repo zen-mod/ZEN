@@ -33,7 +33,7 @@ if (isServer) then {
 };
 
 if (hasInterface) then {
-    ["ZEN_displayCuratorLoad", {
+    ["zen_curatorDisplayLoaded", {
         params ["_display"];
 
         // Namespace of marker names and their corresponding icon controls
@@ -72,7 +72,7 @@ if (hasInterface) then {
         }, 0, [visibleMap]] call CBA_fnc_addPerFrameHandler;
     }] call CBA_fnc_addEventHandler;
 
-    ["ZEN_displayCuratorUnload", {
+    ["zen_curatorDisplayUnloaded", {
         GVAR(visiblePFH) call CBA_fnc_removePerFrameHandler;
     }] call CBA_fnc_addEventHandler;
 

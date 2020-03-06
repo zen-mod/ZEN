@@ -1,6 +1,5 @@
+PREP(addGroupIcons);
 PREP(declutterEmptyTree);
-PREP(deepCopy);
-PREP(deepPaste);
 PREP(fixSideButtons);
 PREP(handleKeyDown);
 PREP(handleLoad);

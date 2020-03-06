@@ -12,4 +12,12 @@ GVAR(camDistance) = 100;
 GVAR(camPitch) = 15;
 GVAR(camYaw) = -45;
 
+[
+    "Object",
+    "STR_A3_Garage",
+    {_entity call FUNC(openGarage)},
+    {alive _entity && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}},
+    true
+] call EFUNC(attributes,addButton);
+
 ADDON = true;

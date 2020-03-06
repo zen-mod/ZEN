@@ -1,29 +1,28 @@
 #include "script_component.hpp"
 /*
  * Author: 3Mydlo3
- * Rearms units in given selection.
+ * Rearms vehicles from the objects list.
  *
  * Arguments:
- * N: Selected Objects <ARRAY>
+ * N: Objects <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [vehicle1, vehicle2, vehicle3] call zen_context_actions_fnc_rearmVehicles
+ * [_object] call zen_context_actions_fnc_rearmVehicles
  *
  * Public: No
  */
 
 private _vehicles = _this select {
     alive _x
+    && {_x isKindOf "AllVehicles"}
+    && {!(_x isKindOf "CAManBase")}
     && {
         private _ammo = [_x] call EFUNC(common,getVehicleAmmo);
-        _ammo != -1
-        && {_ammo < 1}
+        _ammo != -1 && {_ammo < 1}
     }
-    && {_x isKindOf "AllVehicles"}
-    && {!(_x isKindOf 'CAManBase')}
 };
 
 {

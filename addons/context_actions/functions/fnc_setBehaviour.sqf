@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Sets the behaviour of groups in given selection.
+ * Sets the behaviour of the given groups.
  *
  * Arguments:
  * 0: Groups <ARRAY>
@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [[group], "AWARE"] call zen_context_actions_fnc_setBehaviour
+ * [_groups, "AWARE"] call zen_context_actions_fnc_setBehaviour
  *
  * Public: No
  */

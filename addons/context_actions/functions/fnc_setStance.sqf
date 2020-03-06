@@ -1,25 +1,25 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Sets the stance of units in given selection.
+ * Sets the stance of AI units in the given objects list.
  *
  * Arguments:
  * 0: Objects <ARRAY>
- * 1: Mode <STRING>
+ * 1: Stance <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * [[unit], "AUTO"] call zen_context_actions_fnc_setStance
+ * [_objects, "AUTO"] call zen_context_actions_fnc_setStance
  *
  * Public: No
  */
 
-params ["_objects", "_mode"];
+params ["_objects", "_stance"];
 
 {
     if (alive _x && {_x isKindOf "CAManBase"} && {!isPlayer _x}) then {
-        [QEGVAR(common,setUnitPos), [_x, _mode], _x] call CBA_fnc_targetEvent;
+        [QEGVAR(common,setUnitPos), [_x, _stance], _x] call CBA_fnc_targetEvent;
     };
 } forEach _objects;

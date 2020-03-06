@@ -23,13 +23,13 @@ private _currentRow = lnbCurSelRow _ctrlList;
 private _item = _ctrlList lnbData [_currentRow, 0];
 private _mass = [_item] call FUNC(getItemMass);
 
-// Get current and max load for object
-private _maxLoad = _display getVariable QGVAR(maxLoad);
+// Get current and maximum load for object
 private _currentLoad = _display getVariable QGVAR(currentLoad);
+private _maximumLoad = _display getVariable QGVAR(maximumLoad);
 
 // Enable add button if object has enough space
 private _ctrlButtonAdd = _display displayCtrl IDC_BTN_ADD;
-_ctrlButtonAdd ctrlEnable (_maxLoad - _currentLoad >= _mass);
+_ctrlButtonAdd ctrlEnable (_maximumLoad - _currentLoad >= _mass);
 
 // Enable remove button if item count is not zero
 private _ctrlButtonRemove = _display displayCtrl IDC_BTN_REMOVE;

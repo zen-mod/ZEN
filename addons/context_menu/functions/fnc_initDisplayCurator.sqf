@@ -71,13 +71,13 @@ if (GVAR(enabled) == 1) exitWith {
 
             // Right clicking with AI selected places waypoints
             // Do not want to open context menu when this is the case
-            curatorSelected params ["_selectedObjects", "_selectedGroups", "_selectedWaypoints"];
             if (
                 GVAR(canContext)
+                && {!EGVAR(common,selectPositionActive)}
                 && {!call EFUNC(common,isPlacementActive)}
-                && {_selectedWaypoints isEqualTo []}
-                && {_selectedGroups findIf {!isPlayer leader _x} == -1}
-                && {_selectedObjects findIf {!isPlayer leader _x && {!isNull group _x}} == -1}
+                && {SELECTED_WAYPOINTS isEqualTo []}
+                && {SELECTED_GROUPS findIf {!isPlayer leader _x && {side _x != sideLogic}} == -1}
+                && {SELECTED_OBJECTS findIf {!isPlayer leader _x && {!isNull group _x} && {side group _x != sideLogic}} == -1}
             ) then {
                 call FUNC(openMenu);
             };
