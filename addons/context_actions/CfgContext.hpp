@@ -221,14 +221,6 @@ class EGVAR(context_menu,actions) {
             statement = QUOTE(_objects call FUNC(toggleSurrender));
             icon = "\z\ace\addons\captives\UI\Surrender_ca.paa";
         };
-        class Refuel {
-            displayName = CSTRING(Refuel);
-            icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\refuel_ca.paa";
-            condition = QUOTE(_selectedObjects findIf {fuel _x < 1} != -1);
-            statement = QUOTE(_selectedObjects call FUNC(refuelVehicles));
-            priority = 1;
-        };
-        priority = -71;
     };
     class Loadout {
         displayName = "$STR_A3_VR_Stamina_01_Loadout";
