@@ -32,7 +32,7 @@ jobs:
       - name: Build with HEMTT
         uses: arma-actions/hemtt@master
         with:
-          command: 'build --release'
+          command: build --release --ci
       - name: Upload Artifact
         uses: actions/upload-artifact@konradpabjan/v2-is-almost-here
         with:
