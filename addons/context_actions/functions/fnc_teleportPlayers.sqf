@@ -31,4 +31,4 @@ private _players = _this select {isPlayer _x};
             } forEach _players;
         };
     };
-}, [], LSTRING(TeleportPlayers)] call EFUNC(common,getTargetPos);
+}, [], LSTRING(TeleportPlayers)] call EFUNC(common,selectPosition);

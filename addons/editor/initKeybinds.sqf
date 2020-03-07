@@ -29,7 +29,9 @@
 
 [ELSTRING(main,DisplayName), QGVAR(deepCopy), [LSTRING(DeepCopy), LSTRING(DeepCopy_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
-        GVAR(clipboard) = [SELECTED_OBJECTS] call FUNC(deepCopy);
+        private _position = [nil, false] call EFUNC(common,getPosFromScreen);
+        GVAR(clipboard) = [SELECTED_OBJECTS, _position, true] call EFUNC(common,serializeObjects);
+
         playSound ["RscDisplayCurator_error01", true];
 
         true // handled, prevents vanilla copy
@@ -38,7 +40,9 @@
 
 [ELSTRING(main,DisplayName), QGVAR(deepPaste), [LSTRING(DeepPaste), LSTRING(DeepPaste_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
-        [QGVAR(deepPaste), GVAR(clipboard)] call CBA_fnc_serverEvent;
+        private _position = [nil, false] call EFUNC(common,getPosFromScreen);
+        [QEGVAR(common,deserializeObjects), [GVAR(clipboard), _position]] call CBA_fnc_serverEvent;
+
         playSound ["RscDisplayCurator_error01", true];
 
         true // handled, prevents vanilla paste

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-["ZEN_displayCuratorLoad", {
+["zen_curatorDisplayLoaded", {
     if (!GVAR(enabled)) exitWith {};
 
     params ["_display"];
@@ -17,7 +17,7 @@
     ];
 }] call CBA_fnc_addEventHandler;
 
-["ZEN_displayCuratorUnload", {
+["zen_curatorDisplayUnloaded", {
     GVAR(updatePFH) call CBA_fnc_removePerFrameHandler;
 
     deleteVehicle GVAR(object);

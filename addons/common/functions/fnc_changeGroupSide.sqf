@@ -1,7 +1,8 @@
 #include "script_component.hpp"
 /*
  * Author: SilentSpike, Brett
- * Changes the group's side to given side.
+ * Changes the given group's side to the specified side.
+ * Preserves team assignments and group ID (when possible).
  *
  * Arguments:
  * 0: Group <GROUP>
@@ -11,7 +12,7 @@
  * None
  *
  * Example:
- * [group player, west] call zen_common_fnc_changeGroupSide
+ * [_group, west] call zen_common_fnc_changeGroupSide
  *
  * Public: No
  */

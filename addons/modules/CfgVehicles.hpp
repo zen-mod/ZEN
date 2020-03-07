@@ -3,7 +3,7 @@ class CBA_Extended_EventHandlers_base;
 class CfgVehicles {
     class Module_F;
     class GVAR(moduleBase): Module_F {
-        author = "";
+        author = ECSTRING(main,Author);
         category = "NO_CATEGORY";
         function = "";
         scope = 1;
@@ -218,6 +218,11 @@ class CfgVehicles {
         displayName = CSTRING(ModuleEquipWithECM);
         function = QFUNC(moduleEquipWithECM);
     };
+    class GVAR(moduleExportMissionSQF): GVAR(moduleBase) {
+        category = QGVAR(DevTools);
+        displayName = CSTRING(ExportMissionSQF);
+        function = QFUNC(moduleExportMissionSQF);
+    };
     class GVAR(moduleExecuteCode): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(DevTools);
@@ -262,7 +267,7 @@ class CfgVehicles {
     };
     class GVAR(moduleGroupSide): GVAR(moduleBase) {
         curatorCanAttach = 1;
-        displayName = CSTRING(ModuleGroupSide);
+        displayName = CSTRING(GroupSide);
         function = QFUNC(moduleGroupSide);
     };
     class GVAR(moduleHeal): GVAR(moduleBase) {

@@ -1118,7 +1118,7 @@
             <Polish>Odgarnizonuj grupę</Polish>
             <Japanese>非歩哨グループ</Japanese>
         </Key>
-        <Key ID="STR_ZEN_Modules_ModuleGroupSide">
+        <Key ID="STR_ZEN_Modules_GroupSide">
             <English>Group Side</English>
             <Russian>Сторона группы</Russian>
             <German>Gruppenseite</German>
@@ -1767,6 +1767,21 @@
         <Key ID="STR_ZEN_Modules_GlobalAISkill_Enabled_Description">
             <English>Enables applying the following skill values to all current and newly created AI units.</English>
             <German>Wendet die Fähigkeitseinstellung auf alle neuen und bestehenden Einheiten an.</German>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ExportMissionSQF">
+            <English>Export Mission SQF</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_EntireMission">
+            <English>Entire Mission</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_IncludeMarkers">
+            <English>Include Markers</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_EditableObjectsOnly">
+            <English>Editable Objects Only</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_EditableObjectsOnly_Tooltip">
+            <English>Only objects that are currently editable by the local curator will be exported.</English>
         </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_Buildings">

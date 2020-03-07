@@ -48,6 +48,7 @@ PREP(moduleEditableObjects);
 PREP(moduleEffectFire);
 PREP(moduleEffectFireLocal);
 PREP(moduleEquipWithECM);
+PREP(moduleExportMissionSQF);
 PREP(moduleFireMission);
 PREP(moduleFlyHeight);
 PREP(moduleFunctionsViewer);

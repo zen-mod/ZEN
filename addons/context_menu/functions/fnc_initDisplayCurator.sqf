@@ -73,6 +73,7 @@ if (GVAR(enabled) == 1) exitWith {
             // Do not want to open context menu when this is the case
             if (
                 GVAR(canContext)
+                && {!EGVAR(common,selectPositionActive)}
                 && {!call EFUNC(common,isPlacementActive)}
                 && {SELECTED_WAYPOINTS isEqualTo []}
                 && {SELECTED_GROUPS findIf {!isPlayer leader _x && {side _x != sideLogic}} == -1}
