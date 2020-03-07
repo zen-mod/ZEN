@@ -33,11 +33,11 @@ jobs:
         uses: arma-actions/hemtt@master
         with:
           command: build --release --ci
-      - name: Upload Artifact
-        uses: actions/upload-artifact@konradpabjan/v2-is-almost-here
-        with:
-          name: zen-${{ github.sha }}
-          path: releases/@zen-*.zip
+      # - name: Upload Artifact # Disabled to avoid warnings and it is useless right now.
+      #   uses: actions/upload-artifact@konradpabjan/v2-is-almost-here
+      #   with:
+      #     name: zen-${{ github.sha }}
+      #     path: releases/@zen-*.zip
   notify:
     needs: [validate, build]
     if: always()
