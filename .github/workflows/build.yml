@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-artifact@konradpabjan/v2-is-almost-here
         with:
           name: zen-${{ github.sha }}
-          path: releases/@ZEN-*.zip
+          path: releases/@zen-*.zip
   notify:
     needs: [validate, build]
     if: always()
