@@ -9,6 +9,9 @@ jobs:
       - bash: |
           python3 ./tools/stringtable_validator.py
         displayName: 'Validate Stringtables'
+      - bash: |
+          python3 ./tools/return_checker.py
+        displayName: 'Validate Return Types'
   - job: Build
     pool:
       vmImage: 'vs2017-win2016'
