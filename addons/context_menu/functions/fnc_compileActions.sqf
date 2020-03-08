@@ -100,7 +100,6 @@ private _fnc_addMissionActions = {
 };
 
 [_contextActions, _missionActions] call _fnc_addMissionActions;
-missionNamespace setVariable [QGVAR(actions), _contextActions];
 
 /*
 [
@@ -121,3 +120,4 @@ missionNamespace setVariable [QGVAR(actions), _contextActions];
     ]
 ]
 */
+missionNamespace setVariable [QGVAR(actions), _contextActions];
