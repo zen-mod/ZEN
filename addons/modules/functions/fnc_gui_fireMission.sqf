@@ -85,7 +85,6 @@ if (LOGIC_TYPE_TARGET call EFUNC(position_logics,exists)) then {
 } else {
     _ctrlTarget ctrlShow false;
     _ctrlMode ctrlSetTooltip localize LSTRING(NoTargetModules);
-    _ctrlMode lbSetCurSel 1;
     _ctrlMode ctrlSetFade 0.5;
     _ctrlMode ctrlEnable false;
     _ctrlMode ctrlCommit 0;
