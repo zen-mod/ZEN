@@ -8,7 +8,7 @@
  * 1: Button <NUMBER>
  *
  * Return Value:
- * Return Name <TYPE>
+ * None
  *
  * Example:
  * [CONTROL, 1] call zen_editor_fnc_handleSearchClick
@@ -26,4 +26,4 @@ private _ctrlSearchEngine = _display displayCtrl IDC_RSCDISPLAYCURATOR_CREATE_SE
 _ctrlSearchEngine ctrlSetText "";
 
 _ctrlSearchCustom ctrlSetText "";
-ctrlSetFocus _ctrlSearchCustom
+ctrlSetFocus _ctrlSearchCustom;
