@@ -123,6 +123,8 @@ def main():
     else:
         print('\nReturn Validation PASSED')
 
+    return error_count
+
 
 if __name__ == "__main__":
     sys.exit(main())
