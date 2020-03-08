@@ -26,4 +26,4 @@ private _ctrlSearchEngine = _display displayCtrl IDC_RSCDISPLAYCURATOR_CREATE_SE
 _ctrlSearchEngine ctrlSetText "";
 
 _ctrlSearchCustom ctrlSetText "";
-ctrlSetFocus _ctrlSearchCustom;
+ctrlSetFocus _ctrlSearchCustom
