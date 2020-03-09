@@ -17,8 +17,6 @@
 
 params ["_unit"];
 
-(
-
 GVAR(skills) params [
     "_enabled",
     "_general",
