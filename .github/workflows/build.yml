@@ -20,15 +20,6 @@ jobs:
       run: python3 tools/stringtable_validator.py
     - name: Check for BOM
       uses: arma-actions/bom-check@master
-    - name: Send Discord notification
-      uses: 8398a7/action-slack@v2
-      if: failure()
-      with:
-        status: ${{ job.status }}
-        author_name: ${{ github.actor }}
-      env:
-        SLACK_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   build:
     runs-on: ubuntu-latest
     steps:
@@ -40,12 +31,20 @@ jobs:
         uses: arma-actions/hemtt@master
         with:
           command: build --release --ci
-      - name: Send Discord notification
-        uses: 8398a7/action-slack@v2
-        if: failure()
-        with:
-          status: ${{ job.status }}
-          author_name: ${{ github.actor }}
+  notify:
+    needs: [validate, build]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Rezent
         env:
-          SLACK_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REZENT_TOKEN: ${{ secrets.REZENT_TOKEN }}
+          REZENT_URI: ${{ secrets.REZENT_URI }}
+        if: always()
+        run: |
+          curl -H "Authorization: Bearer ${REZENT_TOKEN}" \
+            -H "Content-Type: application/json" \
+            -H "Accept: application/json" \
+            -X POST \
+            -d '{"organisation": "zen-mod", "repository": "ZEN", "workflow_id": 650750}' \
+            "$REZENT_URI"
