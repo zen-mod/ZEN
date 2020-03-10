@@ -14,6 +14,7 @@ CHANGELOG.md
 *.bisign
 *.tar.gz
 *.zip
-./.hemtt
+hemtt*
+!hemtt.toml
 @zen
 tools/armake.exe
