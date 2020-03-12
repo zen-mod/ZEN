@@ -44,6 +44,15 @@
 ] call CBA_settings_fnc_init;
 
 [
+    QGVAR(randomizeCopyPaste),
+    "CHECKBOX",
+    [LSTRING(RandomizeCopyPaste), LSTRING(RandomizeCopyPaste_Description)],
+    [ELSTRING(main,DisplayName), LSTRING(DisplayName)],
+    false,
+    false
+] call CBA_settings_fnc_init;
+
+[
     QGVAR(unitRadioMessages),
     "LIST",
     [LSTRING(UnitRadioMessages), LSTRING(UnitRadioMessages_Description)],
