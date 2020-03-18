@@ -1783,6 +1783,18 @@
         <Key ID="STR_ZEN_Modules_EditableObjectsOnly_Tooltip">
             <English>Only objects that are currently editable by the local curator will be exported.</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_AtomicBomb">
+            <English>Atomic Bomb</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_DestructionRadius">
+            <English>Destruction Radius (m)</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ColorCorrections">
+            <English>Color Corrections</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ConfirmDetonation">
+            <English>Are you sure you want to detonate an atomic bomb?</English>
+        </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_Buildings">
             <English>Buildings</English>

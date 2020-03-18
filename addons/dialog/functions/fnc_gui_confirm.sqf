@@ -28,4 +28,4 @@ private _values = _display getVariable QGVAR(values);
 
 [_values, _arguments] call _onConfirm;
 
-closeDialog 0;
+_display closeDisplay IDC_OK;

@@ -45,6 +45,7 @@ class CfgPatches {
             QGVAR(moduleHideZeus),
             QGVAR(moduleLightSource),
             QGVAR(moduleMakeInvincible),
+            QGVAR(moduleNuke),
             QGVAR(modulePatrolArea),
             QGVAR(moduleRemoveArsenal),
             QGVAR(moduleSetDate),

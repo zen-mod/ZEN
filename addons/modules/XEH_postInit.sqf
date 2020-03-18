@@ -16,6 +16,7 @@ if (isServer) then {
 [QGVAR(addIntelAction), LINKFUNC(addIntelAction)] call CBA_fnc_addEventHandler;
 [QGVAR(addTeleporterAction), LINKFUNC(addTeleporterAction)] call CBA_fnc_addEventHandler;
 [QGVAR(moduleEffectFire), LINKFUNC(moduleEffectFireLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(moduleNuke), LINKFUNC(moduleNukeLocal)] call CBA_fnc_addEventHandler;
 
 [QGVAR(sayMessage), BIS_fnc_sayMessage] call CBA_fnc_addEventHandler;
 [QGVAR(carrierInit), BIS_fnc_Carrier01Init] call CBA_fnc_addEventHandler;

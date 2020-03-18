@@ -28,6 +28,7 @@ GitHawk
 Glowbal
 Jonpas
 KoffeinFlummi
+Moerderhoschi
 PabstMirror
 SilentSpike
 Tuupertunut

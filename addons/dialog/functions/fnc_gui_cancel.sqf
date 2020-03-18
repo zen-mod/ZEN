@@ -23,4 +23,4 @@ private _values = _display getVariable QGVAR(values);
 
 [_values, _arguments] call _onCancel;
 
-closeDialog 0;
+_display closeDisplay IDC_CANCEL;

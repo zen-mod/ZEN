@@ -292,6 +292,12 @@ class CfgVehicles {
         displayName = CSTRING(ModuleMakeInvincible);
         function = QFUNC(moduleMakeInvincible);
     };
+    class GVAR(moduleNuke): GVAR(moduleBase) {
+        category = "Ordnance";
+        displayName = CSTRING(AtomicBomb);
+        function = QFUNC(moduleNuke);
+        icon = QPATHTOF(ui\nuke_ca.paa);
+    };
     class GVAR(modulePatrolArea): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(AI);
