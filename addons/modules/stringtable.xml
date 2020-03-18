@@ -490,7 +490,7 @@
             <Polish>Nazwa zmiennej</Polish>
             <Japanese>変数名</Japanese>
         </Key>
-        <Key ID="STR_ZEN_Modules_PublicVariable">
+        <Key ID="STR_ZEN_Modules_BroadcastVariable">
             <English>Public (Broadcast)</English>
             <German>Öffentlich (Übertragung)</German>
             <Polish>Zmienna publiczna</Polish>
