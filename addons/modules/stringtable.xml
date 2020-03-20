@@ -1934,9 +1934,9 @@
             <Chinese>最近的房子離太遠了</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_NoTargetModules">
-            <English>No target modules exist, place one first</English>
-            <German>Es gibt keine Zielmodule, platzieren Sie zuerst ein Zielmodul</German>
-            <Polish>Brak modułów celu, najpierw ustaw moduł celu</Polish>
+            <English>No target modules exist, place one first.</English>
+            <German>Es gibt keine Zielmodule, platzieren Sie zuerst ein Zielmodul.</German>
+            <Polish>Brak modułów celu, najpierw ustaw moduł celu.</Polish>
             <Japanese>モジュールの目標が無い為、何か設置して下さい。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_NotInRangeOfArtillery">
