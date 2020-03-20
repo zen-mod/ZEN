@@ -16,7 +16,8 @@
  * Public: No
  */
 
-if (!GVAR(enabled)) exitWith {};
+// Exit if placement preview is disabled or objects were placed using the map
+if (!GVAR(enabled) || {visibleMap}) exitWith {};
 
 params ["", "_object"];
 
