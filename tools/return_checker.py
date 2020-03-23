@@ -55,7 +55,18 @@ def filter_files(filepaths):
 
 def get_last_line(filepath):
     with open(filepath, 'r') as file_contents:
-        return file_contents.readlines()[-1].strip()
+        lines = file_contents.readlines()
+        last_line = lines[-1].strip()
+
+        # Handle multiple blank lines at the end of the file
+        if last_line == "":
+            i = -2
+
+            while lines[i].strip() == "":
+                i -= 1
+
+            return lines[i].strip()
+        return last_line
 
 
 def check_last_character(filepath, return_value):
