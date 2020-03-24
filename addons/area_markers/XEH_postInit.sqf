@@ -30,7 +30,13 @@ if (isServer) then {
             [QGVAR(deleteIcon), _marker] call CBA_fnc_globalEvent;
         };
     }] call CBA_fnc_addEventHandler;
+
+    #define SIDES_ARRAY_HASH [[], [east, west, independent, civilian]] call CBA_fnc_hashCreate;
+    ISNILS(GVAR(markerVisibilities), SIDES_ARRAY_HASH);
+    publicVariable QGVAR(markerVisibilities);
 };
+
+[QGVAR(updateAlpha), LINKFUNC(updateAlpha)] call CBA_fnc_addEventHandler;
 
 if (hasInterface) then {
     ["zen_curatorDisplayLoaded", {
@@ -79,4 +85,5 @@ if (hasInterface) then {
     [QGVAR(createIcon), LINKFUNC(createIcon)] call CBA_fnc_addEventHandler;
     [QGVAR(deleteIcon), LINKFUNC(deleteIcon)] call CBA_fnc_addEventHandler;
     [QGVAR(updateIcon), LINKFUNC(updateIcon)] call CBA_fnc_addEventHandler;
+    [QGVAR(updateMarkerPos), LINKFUNC(updateMarkerPos)] call CBA_fnc_addEventHandler;
 };

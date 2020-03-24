@@ -41,6 +41,18 @@ _marker setMarkerColor _color;
 
 private _ctrlAlphaSlider = _ctrlConfigure controlsGroupCtrl IDC_CONFIGURE_ALPHA_SLIDER;
 private _alpha = sliderPosition _ctrlAlphaSlider;
-_marker setMarkerAlpha _alpha;
 
 [QGVAR(updateIcon), [_marker, _rotation, _color]] call CBA_fnc_globalEvent;
+
+private _sidesControlGroup = _ctrlConfigure controlsGroupCtrl IDC_CONFIGURE_SIDEVISIBILITY;
+private _sides = IDCS_CONFIGURE_SIDEVISIBILITY_ALL
+    apply { _sidesControlGroup controlsGroupCtrl _x }
+    apply {
+        if (_x getVariable [QGVAR(value), true])
+        then { _x getVariable [QGVAR(side), sideUnknown] }
+        else { sideUnknown }
+    }
+    select {
+        _x != sideUnknown
+    };
+[QGVAR(updateAlpha), [_marker, _sides, _alpha]] call CBA_fnc_globalEvent;
