@@ -8,10 +8,10 @@ class RscCombo {
     class ComboScrollBar;
 };
 
-class EGVAR(attributes,RscLabel);
-class EGVAR(attributes,RscBackground);
-class EGVAR(attributes,RscEdit);
-class EGVAR(attributes,RscCombo);
+class EGVAR(common,RscLabel);
+class EGVAR(common,RscBackground);
+class EGVAR(common,RscEdit);
+class EGVAR(common,RscCombo);
 
 class EGVAR(common,RscDisplay) {
     class controls {
@@ -31,7 +31,7 @@ class GVAR(display): EGVAR(common,RscDisplay) {
             class controls {
                 class Magazines: RscControlsGroupNoScrollbars {
                     idc = IDC_MAGAZINES;
-                    function = QFUNC(init);
+                    function = QFUNC(configure);
                     x = 0;
                     y = 0;
                     w = POS_W(26);

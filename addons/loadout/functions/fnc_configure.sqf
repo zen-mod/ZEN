@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [DISPLAY] call zen_loadout_fnc_init
+ * [DISPLAY] call zen_loadout_fnc_configure
  *
  * Public: No
  */

@@ -3,7 +3,7 @@ PREP(confirm);
 PREP(fillList);
 PREP(getWeaponName);
 PREP(getWeaponList);
-PREP(init);
+PREP(configure);
 PREP(keyDown);
 PREP(modify);
 PREP(updateButtons);
