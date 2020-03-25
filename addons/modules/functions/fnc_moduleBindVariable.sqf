@@ -25,11 +25,11 @@ if (isNull _object) exitWith {
 };
 
 [LSTRING(BindVariable), [
-    ["EDIT", LSTRING(VariableName)],
-    ["TOOLBOX:YESNO", LSTRING(PublicVariable)]
+    ["EDIT", LSTRING(VariableName), ""],
+    ["TOOLBOX:YESNO", LSTRING(BroadcastVariable), false]
 ], {
-    params ["_dialogValues", "_object"];
-    _dialogValues params ["_variableName", "_isPublic"];
+    params ["_values", "_object"];
+    _values params ["_variableName", "_isPublic"];
 
     if (_variableName == "") exitWith {};
 
