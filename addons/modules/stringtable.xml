@@ -31,10 +31,6 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_SitArmed">
             <English>Sit On Floor (Armed)</English>
-            <Russian> </Russian>
-            <German> </German>
-            <Polish> </Polish>
-            <Japanese> </Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Squat">
             <English>Squat</English>
@@ -94,10 +90,6 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_GuardKneeled">
             <English>Guard (Kneel)</English>
-            <Russian> </Russian>
-            <German> </German>
-            <Polish> </Polish>
-            <Japanese> </Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ListenToBriefing">
             <English>Listen To Briefing</English>
@@ -178,10 +170,6 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedLeaned">
             <English>Wounded (Leaned)</English>
-            <Russian> </Russian>
-            <German> </German>
-            <Polish> </Polish>
-            <Japanese> </Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedGeneral">
             <English>Wounded (General)</English>
@@ -234,10 +222,6 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Surrender">
             <English>Surrender</English>
-            <Russian> </Russian>
-            <German> </German>
-            <Polish> </Polish>
-            <Japanese> </Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_SitCaptured">
             <English>Sit Captured</English>
@@ -269,38 +253,16 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Dead">
             <English>Dead</English>
-            <Russian> </Russian>
-            <German> </German>
-            <Polish> </Polish>
-            <Japanese> </Japanese>
-        </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_DeadLeaned">
             <English>Dead (Leaned)</English>
-            <Russian> </Russian>
-            <German> </German>
-            <Polish> </Polish>
-            <Japanese> </Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_DeadSit">
             <English>Dead (Sitting)</English>
-            <Russian> </Russian>
-            <German> </German>
-            <Polish> </Polish>
-            <Japanese> </Japanese>
-        </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_LeanOnTable">
             <English>Lean On Table</English>
-            <Russian> </Russian>
-            <German> </German>
-            <Polish> </Polish>
-            <Japanese> </Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Binoculars">
             <English>Look Through Binoculars</English>
-            <Russian> </Russian>
-            <German> </German>
-            <Polish> </Polish>
-            <Japanese> </Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Combat">
             <English>Combat Ready</English>
