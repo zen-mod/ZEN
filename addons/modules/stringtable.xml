@@ -34,17 +34,9 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Squat">
             <English>Squat</English>
-            <Russian> </Russian>
-            <German> </German>
-            <Polish> </Polish>
-            <Japanese> </Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_SquatArmed">
             <English>Squat (Armed)</English>
-            <Russian> </Russian>
-            <German> </German>
-            <Polish> </Polish>
-            <Japanese> </Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_LeanOnWall">
             <English>Lean On Wall</English>
@@ -253,11 +245,13 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Dead">
             <English>Dead</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_DeadLeaned">
             <English>Dead (Leaned)</English>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_DeadSit">
             <English>Dead (Sitting)</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_LeanOnTable">
             <English>Lean On Table</English>
         </Key>
