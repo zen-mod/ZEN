@@ -68,10 +68,6 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_StandWithPistol">
             <English>Stand Idle (Pistol)</English>
-            <Russian> </Russian>
-            <German> </German>
-            <Polish> </Polish>
-            <Japanese> </Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_AtEase">
             <English>At Ease</English>
