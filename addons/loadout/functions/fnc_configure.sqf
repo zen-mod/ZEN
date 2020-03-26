@@ -17,6 +17,8 @@
 
 params ["_vehicle"];
 
+if (!createDialog QGVAR(display)) exitWith {};
+
 private _weaponList = _vehicle call FUNC(getWeaponList);
 
 private _display = uiNamespace getVariable QEGVAR(common,display);
