@@ -60,7 +60,10 @@ private _animations = switch (_animationType) do {
         ["Acts_AidlPercMstpSloWWrflDnon_warmup_6_loop"]
     };
     case 5: { // LEAN
-        ["inbasemoves_lean1"]
+        selectRandom [
+            ["inbasemoves_lean1"],
+            ["Acts_leaning_against_wall"]
+        ]
     };
     case 6: { // WATCH_1, WATCH_2
         selectRandom [
