@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: mharis001
+ * Author: NeilZar
  * Handles adding or removing magazines to a weapon.
  *
  * Arguments:

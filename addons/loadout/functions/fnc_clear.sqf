@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: mharis001
+ * Author: NeilZar
  * Handles clearing all magazines from the current weapon.
  *
  * Arguments:

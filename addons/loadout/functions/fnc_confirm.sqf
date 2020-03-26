@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: mharis001
+ * Author: NeilZar
  * Handles confirming the loadout attribute changes.
  *
  * Arguments:

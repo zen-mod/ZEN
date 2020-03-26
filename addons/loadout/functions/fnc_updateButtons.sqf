@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: mharis001
+ * Author: NeilZar
  * Enables or disables the list buttons based on currently selected item.
  *
  * Arguments:

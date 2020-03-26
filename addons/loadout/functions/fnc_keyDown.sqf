@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: mharis001
+ * Author: NeilZar
  * Handles keyboard input for the loadout attribute.
  *
  * Arguments:
