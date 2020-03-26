@@ -25,14 +25,13 @@
 #define POS_W(N) ((N) * GUI_GRID_W)
 #define POS_H(N) ((N) * GUI_GRID_H)
 
-#define IDC_MAGAZINES  1501
-#define IDC_WEAPON     1511
-#define IDC_LIST       1521
-#define IDC_BTN_REMOVE 1531
-#define IDC_BTN_ADD    1541
-#define IDC_BTN_SEARCH 1551
-#define IDC_SEARCH_BAR 1561
-#define IDC_BTN_CLEAR  1571
+#define IDC_WEAPON     1501
+#define IDC_LIST       1511
+#define IDC_BTN_REMOVE 1521
+#define IDC_BTN_ADD    1531
+#define IDC_BTN_SEARCH 1541
+#define IDC_SEARCH_BAR 1551
+#define IDC_BTN_CLEAR  1561
 
 // Prevent certain magazines from being handled by ammo functions
 #define BLACKLIST_WEAPONS ["TruckHorn", "SmokeLauncher", "Laserdesignator_mounted", "Laserdesignator_pilotCamera", "CMFlareLauncher", "CMFlareLauncher_Singles", "ProbingWeapon_01_F", "ProbingWeapon_02_F", "ProbingLaser_01_F"]

@@ -1,25 +1,27 @@
 #include "script_component.hpp"
 /*
  * Author: NeilZar
- * Initializes the "Loadout" Zeus attribute.
+ * Get the name of the passed weapon and the turret position.
  *
  * Arguments:
- * 0: Display <DISPLAY>
+ * 0: Vehicle <OBJECT>
+ * 1: Weapon class name <STRING>
+ * 2: Turret path <ARRAY>
  *
  * Return Value:
- * None
+ * Weapon name and turret <STRING>
  *
  * Example:
- * [DISPLAY] call zen_loadout_fnc_getWeaponName
+ * [_vehicle, _weapon, _turret] call zen_loadout_fnc_getWeaponName
  *
  * Public: No
  */
 
-params ["_object", "_weapon", "_turret"];
+params ["_vehicle", "_weapon", "_turret"];
 
 private _weaponName = getText (configFile >> "CfgWeapons" >> _weapon >> "displayName");
 private _turretCopy = +_turret;
-private _path = configFile >> "CfgVehicles" >> typeOf _object;
+private _path = configFile >> "CfgVehicles" >> typeOf _vehicle;
 
 if !(_turretCopy isEqualTo [-1]) then {
     while {!(_turretCopy isEqualTo [])} do {

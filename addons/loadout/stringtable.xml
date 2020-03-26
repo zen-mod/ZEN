@@ -2,7 +2,7 @@
 <Project name="ZEN">
     <Package name="Loadout">
         <Key ID="STR_ZEN_Loadout_NoWeapons">
-            <English>This vehicle has no editable weapons</English>
+            <English>This vehicle has no editable weapons.</English>
         </Key>
         <Key ID="STR_ZEN_Loadout_Button">
             <English>Loadout</English>

@@ -1,16 +1,16 @@
 #include "script_component.hpp"
 /*
  * Author: NeilZar
- * Populates the listbox with items from the current weapon.
+ * Get all turret weapons from the passed vehicle, the compatible magazines, and a count of each magazine currently in the turret.
  *
  * Arguments:
- * 0: Display <DISPLAY>
+ * 0: Vehicle <OBJECT>
  *
  * Return Value:
- * None
+ * Array of all weapons and their magazines <ARRAY>
  *
  * Example:
- * [DISPLAY] call zen_loadout_fnc_fillList
+ * [_vehicle] call zen_loadout_fnc_getWeaponList
  *
  * Public: No
  */
@@ -25,7 +25,7 @@ private _result = [];
 {
     private _turret = _x;
     {
-        if (getText (_cfgWeapons >> _x >> "displayName") != "" && !(_x in BLACKLIST_WEAPONS)) then {
+        if (getText (_cfgWeapons >> _x >> "displayName") != "" && (([_x] call BIS_fnc_returnParents) arrayIntersect BLACKLIST_WEAPONS isEqualTo [])) then {
             private _weapon = _x;
 
             private _magazines = ([_cfgWeapons >> _weapon, true] call CBA_fnc_compatibleMagazines) apply {

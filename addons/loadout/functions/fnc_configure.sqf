@@ -1,16 +1,16 @@
 #include "script_component.hpp"
 /*
  * Author: NeilZar
- * Initializes the "Loadout" Zeus attribute.
+ * Configures the "Loadout" Zeus attribute.
  *
  * Arguments:
- * 0: Display <DISPLAY>
+ * 0: Vehicle <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [DISPLAY] call zen_loadout_fnc_configure
+ * [_vehicle] call zen_loadout_fnc_configure
  *
  * Public: No
  */

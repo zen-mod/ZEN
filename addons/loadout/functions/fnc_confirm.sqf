@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Handles confirming the inventory attribute changes.
+ * Handles confirming the loadout attribute changes.
  *
  * Arguments:
  * 0: Button <CONTROL>
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [CONTROL] call zen_inventory_fnc_confirm
+ * [CONTROL] call zen_loadout_fnc_confirm
  *
  * Public: No
  */

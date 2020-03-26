@@ -90,7 +90,7 @@ class GVAR(display): EGVAR(common,RscDisplay) {
                 };
                 class ButtonClear: ButtonSearch {
                     idc = IDC_BTN_CLEAR;
-                    text = QPATHTOF(ui\clear_ca.paa);
+                    text = "\a3\3den\data\cfg3den\history\deleteitems_ca.paa";
                     tooltip = "$STR_disp_arcmap_clear";
                     x = POS_W(25);
                     y = POS_H(17.6);

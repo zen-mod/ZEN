@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Handles keyboard input for the inventory attribute.
+ * Handles keyboard input for the loadout attribute.
  *
  * Arguments:
  * 0: Display <DISPLAY>
@@ -11,7 +11,7 @@
  * Handled <BOOL>
  *
  * Example:
- * [DISPLAY, 0] call zen_inventory_fnc_keyDown
+ * [DISPLAY, 0] call zen_loadout_fnc_keyDown
  *
  * Public: No
  */

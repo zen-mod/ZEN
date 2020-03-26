@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [DISPLAY] call zen_inventory_fnc_updateButtons
+ * [DISPLAY] call zen_loadout_fnc_updateButtons
  *
  * Public: No
  */
