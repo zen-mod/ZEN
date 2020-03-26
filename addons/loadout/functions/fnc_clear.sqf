@@ -26,7 +26,7 @@ private _weapon = _weaponList select _weaponIndex;
 _weapon params ["", "_turret", "_magazines"];
 
 private _changes = _display getVariable QGVAR(changes);
-
+TRACE_1("Changes before",_changes);
 {
     private _magazine = _x;
     if (_magazine select 1 != 0) then {
@@ -40,7 +40,7 @@ private _changes = _display getVariable QGVAR(changes);
         };
     };
 } forEach _magazines;
-
+TRACE_1("Changes after",_changes);
 _weapon set [2, _magazines];
 _weaponList set [_weaponIndex, _weapon];
 

@@ -24,6 +24,9 @@ private _weaponList = _vehicle call FUNC(getWeaponList);
 private _display = uiNamespace getVariable QEGVAR(common,display);
 _display setVariable [QGVAR(weaponList), _weaponList];
 _display setVariable [QGVAR(changes), []];
+_display setVariable [QGVAR(vehicle), _vehicle];
+
+[_display] call EFUNC(common,initDisplayPositioning);
 
 // Refresh list when weapon is changed
 private _ctrlWeapon = _display displayCtrl IDC_WEAPON;

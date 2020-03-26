@@ -57,13 +57,13 @@ _weapon set [2, _magazines];
 _weaponList set [_weaponIndex, _weapon];
 
 private _changes = _display getVariable QGVAR(changes);
-
+TRACE_1("Changes before",_changes);
 private _changeIndex = _changes findIf {(_x select 0) isEqualTo _turret && (_x select 1) == (_magazineClass)};
 if (_changeIndex == -1) then {
     _changes pushBack ([_turret] + _magazine);
 } else {
     _changes set [_changeIndex, [_turret] + _magazine];
 };
-
+TRACE_1("Changes after",_changes);
 // Update the list buttons
 [_display] call FUNC(updateButtons);

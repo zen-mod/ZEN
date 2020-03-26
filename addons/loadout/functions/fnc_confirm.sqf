@@ -18,7 +18,7 @@
 params ["_ctrlButtonOK"];
 
 private _display = ctrlParent _ctrlButtonOK;
-private _vehicle = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
+private _vehicle = _display getVariable QGVAR(vehicle);
 private _changes = _display getVariable QGVAR(changes);
 
 if !(_changes isEqualTo []) then {
