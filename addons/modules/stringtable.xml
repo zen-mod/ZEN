@@ -157,7 +157,7 @@
             <Japanese>戦闘中に怪我を治療</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedLeaned">
-            <English>Wounded (Leaned)</English>
+            <English>Wounded (Leaning)</English>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedGeneral">
             <English>Wounded (General)</English>
@@ -243,7 +243,7 @@
             <English>Dead</English>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_DeadLeaned">
-            <English>Dead (Leaned)</English>
+            <English>Dead (Leaning)</English>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_DeadSit">
             <English>Dead (Sitting)</English>
