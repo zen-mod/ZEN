@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Handles adding or removing items from cargo.
+ * Handles adding or removing magazines to a weapon.
  *
  * Arguments:
  * 0: Display <DISPLAY>
@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [DISPLAY, true] call zen_inventory_fnc_modify
+ * [DISPLAY, true] call zen_loadout_fnc_modify
  *
  * Public: No
  */
