@@ -329,6 +329,9 @@
             <Polish>Ostrożni</Polish>
             <Japanese>警戒</Japanese>
         </Key>
+        <Key ID="STR_ZEN_Common_Careless">
+            <English>Careless</English>
+        </Key>
         <Key ID="STR_ZEN_Common_Speed">
             <English>Speed</English>
             <French>Vitesse</French>
