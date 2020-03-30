@@ -34,9 +34,8 @@ if !(alive _unit) exitWith {
 
 [LSTRING(ModulePatrolArea), [
     ["SLIDER", [LSTRING(ModulePatrolArea_Radius), LSTRING(ModulePatrolArea_Radius_Tooltip)], [0, 5000, 100, 0]],
-    ["TOOLBOX", ["STR_3DEN_Group_Attribute_Behaviour_displayName", LSTRING(ModulePatrolArea_Behaviour_Tooltip)], [0, 1, 5, [
+    ["TOOLBOX", ["STR_3DEN_Group_Attribute_Behaviour_displayName", LSTRING(ModulePatrolArea_Behaviour_Tooltip)], [0, 1, 4, [
         "STR_3den_attributes_default_unchanged_text",
-        ELSTRING(common,Careless),
         ELSTRING(common,Relaxed),
         ELSTRING(common,Cautious),
         "STR_combat"
@@ -52,7 +51,7 @@ if !(alive _unit) exitWith {
         private _speedMode = ["LIMITED", "NORMAL"] select (_behaviour > 1);
         [QEGVAR(common,setSpeedMode), [_unit, _speedMode], _unit] call CBA_fnc_targetEvent;
 
-        private _behaviourMode = ["CARELESS", "SAFE", "AWARE", "COMBAT"] select (_behaviour - 1);
+        private _behaviourMode = ["SAFE", "AWARE", "COMBAT"] select (_behaviour - 1);
         [QEGVAR(common,setBehaviour), [_unit, _behaviourMode], _unit] call CBA_fnc_targetEvent;
     };
 
