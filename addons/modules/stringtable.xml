@@ -254,6 +254,9 @@
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Binoculars">
             <English>Look Through Binoculars</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Salute">
+            <English>Salute</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Combat">
             <English>Combat Ready</English>
             <Russian>Готовность к бою</Russian>

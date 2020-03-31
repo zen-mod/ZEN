@@ -78,7 +78,8 @@ if (isPlayer _unit) exitWith {
         LSTRING(ModuleAmbientAnim_DeadLeaned),
         LSTRING(ModuleAmbientAnim_DeadSit),
         LSTRING(ModuleAmbientAnim_LeanOnTable),
-        LSTRING(ModuleAmbientAnim_Binoculars)
+        LSTRING(ModuleAmbientAnim_Binoculars),
+        LSTRING(ModuleAmbientAnim_Salute)
     ], 0]],
     ["TOOLBOX:YESNO", LSTRING(ModuleAmbientAnim_Combat), true]
 ], {

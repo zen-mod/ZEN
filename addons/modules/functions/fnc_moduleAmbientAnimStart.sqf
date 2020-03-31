@@ -211,6 +211,9 @@ private _animations = switch (_animationType) do {
     case 40: { // BINOCS
         ["passenger_flatground_1_Aim_binoc"]
     };
+    case 41: { // SALUTE
+        ["AmovPercMstpSrasWrflDnon_Salute"]
+    };
 };
 
 // Store animation list and current animation for resetting
