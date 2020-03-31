@@ -49,7 +49,7 @@ if !(alive _unit) exitWith {
     if (_behaviour > 0) then {
         [QEGVAR(common,setFormation), [_unit, "COLUMN"], _unit] call CBA_fnc_targetEvent;
 
-        private _speedMode = ["LIMITED", "NORMAL"] select (_behaviour > 1);
+        private _speedMode = ["LIMITED", "NORMAL"] select (_behaviour > 2);
         [QEGVAR(common,setSpeedMode), [_unit, _speedMode], _unit] call CBA_fnc_targetEvent;
 
         private _behaviourMode = ["CARELESS", "SAFE", "AWARE", "COMBAT"] select (_behaviour - 1);
