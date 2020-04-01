@@ -33,4 +33,4 @@ if !(_turretCopy isEqualTo [-1]) then {
 
 private _gunnerName = [_path >> "gunnerName", "STRING", "Pilot/Driver"] call CBA_fnc_getConfigEntry;
 
-format ["%1 (%2)", _weaponName, _gunnerName];
+format ["%1 (%2)", _weaponName, _gunnerName]
