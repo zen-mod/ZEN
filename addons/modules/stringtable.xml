@@ -156,15 +156,15 @@
             <Polish>Ranny w boju</Polish>
             <Japanese>戦闘中に怪我を治療</Japanese>
         </Key>
-        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedLeaned">
-            <English>Wounded (Leaning)</English>
-        </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedGeneral">
             <English>Wounded (General)</English>
             <Russian>Ранение (общее)</Russian>
             <German>Verletzt (Generel)</German>
             <Polish>Ranny (Ogólnie)</Polish>
             <Japanese>怪我 (全般)</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedLeaning">
+            <English>Wounded (Leaning)</English>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedHead">
             <English>Wounded (Head)</English>
@@ -242,7 +242,7 @@
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Dead">
             <English>Dead</English>
         </Key>
-        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_DeadLeaned">
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_DeadLeaning">
             <English>Dead (Leaning)</English>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_DeadSit">
