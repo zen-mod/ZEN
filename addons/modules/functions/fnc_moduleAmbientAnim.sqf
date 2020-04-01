@@ -75,7 +75,7 @@ if (isPlayer _unit) exitWith {
         LSTRING(ModuleAmbientAnim_RepairKneel),
         LSTRING(ModuleAmbientAnim_RepairProne),
         LSTRING(ModuleAmbientAnim_Dead),
-        LSTRING(ModuleAmbientAnim_DeadLeaned),
+        LSTRING(ModuleAmbientAnim_DeadLeaning),
         LSTRING(ModuleAmbientAnim_DeadSit),
         LSTRING(ModuleAmbientAnim_LeanOnTable),
         LSTRING(ModuleAmbientAnim_Binoculars),
