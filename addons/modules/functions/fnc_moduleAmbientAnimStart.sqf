@@ -137,14 +137,14 @@ private _animations = switch (_animationType) do {
     case 22: { // PRONE_INJURED
         ["acts_injuredangryrifle01", "acts_injuredcoughrifle02", "acts_injuredlookingrifle01", "acts_injuredlookingrifle02", "acts_injuredlookingrifle03", "acts_injuredlookingrifle04", "acts_injuredlookingrifle05", "acts_injuredlyingrifle01"]
     };
-    case 23: { // LEAN_INJURED
-        ["Acts_SittingWounded_loop"]
-    };
-    case 24: { // PRONE_INJURED_NO_WEAP_1, PRONE_INJURED_NO_WEAP_2
+    case 23: { // PRONE_INJURED_NO_WEAP_1, PRONE_INJURED_NO_WEAP_2
         selectRandom [
             ["ainjppnemstpsnonwnondnon"], 
             ["hubwoundedprone_idle1", "hubwoundedprone_idle2"]
         ]
+    };
+    case 24: { // LEAN_INJURED
+        ["Acts_SittingWounded_loop"]
     };
     case 25: { // INJURY_HEAD
         ["Acts_CivilInjuredHead_1"]
