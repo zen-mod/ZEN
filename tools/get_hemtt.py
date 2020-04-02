@@ -13,7 +13,7 @@ def find_release_json(releaseJson, system):
     for release in releaseJson:
         name = release['name']
 
-        if (system in name):
+        if system in name:
             return release
 
 
@@ -36,8 +36,9 @@ def main():
             releaseJson = find_release_json(
                 releaseJson, 'x86_64-pc-windows-msvc.zip')
         elif (platform.system() == 'Linux'):
+            extension = ''
             releaseJson = find_release_json(
-                releaseJson, 'x86_64-unknown-linux-gnu.tar.gz')
+                releaseJson, 'hemtt')
         elif (platform.system() == 'Darwin'):
             releaseJson = find_release_json(
                 releaseJson, 'x86_64-apple-darwin.tar.gz')
@@ -64,7 +65,7 @@ def main():
         print('Extracting archive')
 
         extractPath = path.join(oneDirUp, 'tmp')
-        if (extension == '.zip'):
+        if extension == '.zip':
             hemtt = zipfile.ZipFile(zipPath, 'r')
             hemtt.extractall(extractPath)
             hemtt.close()
@@ -73,7 +74,10 @@ def main():
             os.remove(path.join(extractPath, 'setup.exe'))
             os.rename(path.join(extractPath, 'hemtt.exe'), hemttFile)
             os.removedirs(extractPath)
-        else:
+
+            print('Removing temp archive file')
+            os.remove(zipPath)
+        elif extension == '.tar.gz':
             hemtt = tarfile.open(zipPath, 'r')
             hemtt.extractall(extractPath)
             hemtt.close()
@@ -82,8 +86,8 @@ def main():
             os.rename(path.join(extractPath, 'hemtt'), hemttFile)
             os.removedirs(extractPath)
 
-        print('Removing temp archive file')
-        os.remove(zipPath)
+            print('Removing temp archive file')
+            os.remove(zipPath)
 
 
 if __name__ == "__main__":
