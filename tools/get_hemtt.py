@@ -45,6 +45,11 @@ def main():
             raise OSError(
                 'Your OS is not supported by this utility. Download HEMTT manually.')
 
+        if not releaseJson:
+            print('Something went wrong when fetching the latest exectuable.')
+            print('Download HEMTT manually.')
+            return 1
+
         releaseUrl = releaseJson['browser_download_url']
 
         zipPath = path.join(oneDirUp, 'hemtt{}'.format(extension))
