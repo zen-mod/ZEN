@@ -3,6 +3,7 @@
     <Package name="Editor">
         <Key ID="STR_ZEN_Editor_DisplayName">
             <English>Editor</English>
+            <Korean>편집기</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_MoveDisplayToEdge">
             <English>Move Display to Edge</English>
@@ -11,6 +12,7 @@
             <German>Display an den Rand verschieben</German>
             <Polish>Przesuń wyświetlacz do krawędzi</Polish>
             <Japanese>端に表示</Japanese>
+            <Korean>모서리로 화면 이동</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_MoveDisplayToEdge_Description">
             <English>Moves the Zeus Editor Display to the edge of the screen.</English>
@@ -19,6 +21,7 @@
             <Polish>Przesuwa wyświetlacz edytora Zeusa do krawędzi ekranu.</Polish>
             <Russian>Убирает панель за край</Russian>
             <Japanese>Zeus のエディタを画面端に移動させます。</Japanese>
+            <Korean>제우스 에디터 화면을 화면의 모서리로 이동합니다.</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_RemoveWatermark">
             <English>Remove Watermark</English>
@@ -27,6 +30,7 @@
             <German>Wasserzeichen verstecken</German>
             <Polish>Usuń znak wodny</Polish>
             <Japanese>透かしを削除</Japanese>
+            <Korean>워터마크 제거</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_RemoveWatermark_Description">
             <English>Removes the watermark shown when hiding the display.</English>
@@ -35,6 +39,7 @@
             <Polish>Usuwa znak wodny pokazywany po ukryciu wyświetlacza.</Polish>
             <Russian>Убирает водяной знак ГМ когда интерфейс спрятан</Russian>
             <Japanese>UI 非表示に出る透かしを削除します。</Japanese>
+            <Korean>디스플레이를 가릴때 나타나는 워터마크를 제거합니다.</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_DisableLiveSearch">
             <English>Disable Live Search</English>
@@ -43,6 +48,7 @@
             <German>Live Suche deaktivieren</German>
             <Polish>Wyłącz wyszukiwanie na żywo</Polish>
             <Japanese>リアルタイム検索を無効化</Japanese>
+            <Korean>실시간 검색 비활성화</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_DisableLiveSearch_Description">
             <English>Requires pressing Enter or clicking the search button to confirm a search.\nHelps reduce lag when searching through a lot of items.</English>
@@ -51,6 +57,7 @@
             <Polish>Wymaga wciśnięcia Enter lub kliknięcia przycisku wyszukiwania by potwierdzić wyszukiwanie.\nPomaga zredukować lag przy przeszukiwaniu wielu przedmiotów.</Polish>
             <Russian>Для подтверждения поиска тебуется нажатие клавиши Ввод\nПомогает уменьшить лаг при поиске </Russian>
             <Japanese>有効化すると検索ボタンをクリックするかエンターを押すまで検索を行いません。\n大量のアイテムがある場合は遅延の低減に繋がります。</Japanese>
+            <Korean>검색을 완료하기 위해 엔터키를 누르거나 검색 버튼을 눌러야 합니다. \n많은 아이템을 검색함으로써 생기는 렉이 줄어드는데 도움이 됩니다.</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_DeclutterEmptyTree">
             <English>Declutter Empty Tree</English>
@@ -88,6 +95,7 @@
             <German>Funkmeldungen von Einheiten</German>
             <Polish>Wiadomość radiowa jednostki</Polish>
             <Japanese>ユニット無線送信</Japanese>
+            <Korean>유닛 무전 대화</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages_Description">
             <English>Controls whether unit radio messages are played on placement and waypoint orders, waypoints only, or disabled.</English>
@@ -119,6 +127,7 @@
             <German>Besatzung hinzufügen umschalten</German>
             <Polish>Przełącz 'dołącz załogę'</Polish>
             <Japanese>乗員含むに切り替え</Japanese>
+            <Korean>승무원 포함 토글</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_EjectPassengers">
             <English>Eject Passengers</English>
@@ -126,6 +135,7 @@
             <German>Passagiere rauswerfen</German>
             <Polish>Wysadź pasażerów</Polish>
             <Japanese>後部座席を脱出</Japanese>
+            <Korean>승객 탈출</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_EjectPassengers_Description">
             <English>Ejects the passengers of all selected vehicles. If the vehicle is currently flying, the units will be given parachutes.\nUnlike vanilla eject, units will disembark one after another (not immediately, with a short delay in-between).</English>
