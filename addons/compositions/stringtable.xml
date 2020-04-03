@@ -25,5 +25,11 @@
         <Key ID="STR_ZEN_Compositions_NoObjectsSelected">
             <English>Select objects to create composition from</English>
         </Key>
+        <Key ID="STR_ZEN_Compositions_RandomizationOff">
+            <English>Randomization disabled.</English>
+        </Key>
+        <Key ID="STR_ZEN_Compositions_RandomizationOn">
+            <English>Randomization enabled.</English>
+        </Key>
     </Package>
 </Project>

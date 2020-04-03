@@ -6,7 +6,8 @@
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
- * 1: Position <ARRAY>
+ * 1: Position <ARRAY|OBJECT|STRING>
+ *   - in AGL format, or a Map Grid when STRING
  * 2: Magazine <STRING>
  *
  * Return Value:
@@ -25,7 +26,15 @@
 // The max speed of the missile is approximately 94% of the config defined max speed
 #define SPEED_COEFFICIENT 0.94
 
-params [["_vehicle", objNull, [objNull]], ["_position", [0, 0, 0], [[]], 3], ["_magazine", "", [""]]];
+params [["_vehicle", objNull, [objNull]], ["_position", [0, 0, 0], [[], objNull, ""], 3], ["_magazine", "", [""]]];
+
+if (_position isEqualType objNull) then {
+    _position = ASLtoAGL getPosASL _position;
+};
+
+if (_position isEqualType "") then {
+    _position = [_position, true] call CBA_fnc_mapGridToPos;
+};
 
 if (_vehicle call FUNC(isVLS)) then {
     private _missileType = getText (configfile >> "CfgMagazines" >> _magazine >> "ammo");

@@ -22,4 +22,4 @@ if (!local _helper) exitWith {};
 private _position = getPos _helper;
 deleteVehicle _helper;
 
-[QEGVAR(common,deserializeObjects), [GVAR(selected), _position]] call CBA_fnc_serverEvent;
+[QEGVAR(common,deserializeObjects), [GVAR(selected), _position, true, GVAR(randomize)]] call CBA_fnc_serverEvent;

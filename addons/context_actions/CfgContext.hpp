@@ -39,7 +39,7 @@ class EGVAR(context_menu,actions) {
         class StagColumn: Wedge {
             displayName = "$STR_staggered";
             icon = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\stag_column_ca.paa";
-            args = "COLUMN";
+            args = "STAG COLUMN";
         };
         class EchLeft: Wedge {
             displayName = "$STR_echl";

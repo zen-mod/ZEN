@@ -75,6 +75,12 @@
             <English>Adds group icons to the create group trees.</English>
             <German>Zeigt Gruppensymbole im Gruppenbaum an.</German>
         </Key>
+        <Key ID="STR_ZEN_Editor_RandomizeCopyPaste">
+            <English>Randomize Deep Copy/Paste</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_RandomizeCopyPaste_Description">
+            <English>Controls whether deep copy/paste will randomize unit identities and vehicle customization (instead of making identical copies).</English>
+        </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages">
             <English>Unit Radio Messages</English>
             <French>Messages radio d'unité</French>
