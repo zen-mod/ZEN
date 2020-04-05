@@ -512,7 +512,7 @@
             <Polish>Wybierz preferowany arsenał używany przez Zeus Enhanced.\nJeśli arsenał ACE nie będzie dostępny to uruchomi się podstawowy wirtualny arsenał BI.</Polish>
             <Russian>Выбор предпочитаемого Арсенала\nlfЕсли не установлен ACE, будет запущен стандартный Виртуальный Арсенал.</Russian>
             <Japanese>Zeus Ehnhanced により優先された武器庫を選択します。\nACE3 武器庫が有効化されていない場合、ゲーム標準のバーチャル武器庫へ戻されます。</Japanese>
-            <Korean>ZEN에서 쓰일 아스널을 선택합니다. \n만약 ACE 아스널이 설치되어있지 않다면, BI 아스널로 변경될 것입니다.</Korean>
+            <Korean>Zeus Enhanced 에서 쓰일 아스널을 선택합니다. \n만약 ACE 아스널이 설치되어있지 않다면, BI 아스널로 변경될 것입니다.</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_BIVirtualArsenal">
             <English>BI Virtual Arsenal</English>
@@ -538,7 +538,7 @@
             <Polish>Za mało miejsca w pojeździe docelowym: %1 potrzebne - %2 dostępne</Polish>
             <German>Nicht genügend Platz im Zielfahrzeug: %1 benötigt - %2 verfügbar</German>
             <Japanese>選択された車両に空きがありません: 必要量 %1 - 空き容量 %2</Japanese>
-            <Korean>목표 차량에 ㅜㅇ분한 자리가 없습니다: %1 요구됨 - %2 가능</Korean>
+            <Korean>목표 차량에 충분한 자리가 없습니다: %1 요구됨 - %2 가능</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_CopyToClipboard">
             <English>Copy to Clipboard</English>
