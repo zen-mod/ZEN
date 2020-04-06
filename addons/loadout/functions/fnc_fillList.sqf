@@ -33,10 +33,10 @@ private _cfgMagazines = configFile >> "CfgMagazines";
 
     if (_filter in toLower _displayName) then {
         private _rounds = getNumber (_cfgMagazines >> _magazine >> "count");
-        private _toolTip = format ["%1\n%2 Rounds\n%3", _displayName, _rounds, _magazine];
+        private _toolTip = format [localize LSTRING(AmmoTooltip), _displayName, _rounds, _magazine];
         private _alpha = [0.5, 1] select (_count > 0);
 
-        private _index = _ctrlList lnbAddRow [(format ["%1 (%2 Rounds)", _displayName, _rounds]), str _count];
+        private _index = _ctrlList lnbAddRow [(format [localize LSTRING(AmmoName), _displayName, _rounds]), str _count];
         _ctrlList lnbSetColor  [[_index, 0], [1, 1, 1, _alpha]];
         _ctrlList lnbSetColor  [[_index, 1], [1, 1, 1, _alpha]];
         _ctrlList lbSetTooltip [_index * count lnbGetColumnsPosition _ctrlList, _tooltip];
