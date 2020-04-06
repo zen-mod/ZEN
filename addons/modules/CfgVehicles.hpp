@@ -285,6 +285,8 @@ class CfgVehicles {
         category = "Effects";
         displayName = CSTRING(ModuleLightSource);
         curatorInfoType = QGVAR(RscLightSourceHelper);
+        icon = QPATHTOF(ui\light_ca.paa);
+        portrait = QPATHTOF(ui\light_ca.paa);
     };
     class GVAR(moduleMakeInvincible): GVAR(moduleBase) {
         curatorCanAttach = 1;
