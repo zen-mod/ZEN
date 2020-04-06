@@ -25,7 +25,7 @@ private _result = [];
 {
     private _turret = _x;
     {
-        if (getText (_cfgWeapons >> _x >> "displayName") != "" && (([_x] call BIS_fnc_returnParents) arrayIntersect BLACKLIST_WEAPONS isEqualTo [])) then {
+        if (getText (_cfgWeapons >> _x >> "displayName") != "" && (([_x, true] call BIS_fnc_returnParents) arrayIntersect BLACKLIST_WEAPONS isEqualTo [])) then {
             private _weapon = _x;
 
             private _magazines = ([_cfgWeapons >> _weapon, true] call CBA_fnc_compatibleMagazines) apply {
