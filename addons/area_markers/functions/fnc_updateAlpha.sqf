@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Marker <STRING>
  * 1: Sides that may see the marker <ARRAY>
- * 2: Alpha value to use for players of passed `sides`
+ * 2: Alpha value to use for players of passed `sides` <SCALAR>
  *
  * Return Value:
  * None
@@ -26,9 +26,10 @@ if (isServer) exitWith {
 
 if (!hasInterface) exitWith {}; // ignore HCs
 
-private _localAlpha = if (
-    (playerSide in _sides) ||
-    (!isNull (getAssignedCuratorLogic player)) // ZEUS should always see the markers!
-) then { _alpha } else { 0 };
-
-_marker setMarkerAlphaLocal _localAlpha;
+private _isVisibleSide = playerSide in _sides;
+private _isZeus = !isNull (getAssignedCuratorLogic player);
+if (_isVisibleSide || _isZeus) then {
+    _marker setMarkerAlphaLocal _alpha;
+} else {
+    _marker setMarkerAlphaLocal 0;
+};

@@ -1,11 +1,10 @@
-#include "script_component.hpp"
 /*
  * Author: Fusselwurm
- * Set the marker position locally
+ * Set the marker position locally.
  *
  * Arguments:
  * 0: Marker <STRING>
- * 1: Marker position
+ * 1: Marker position <ARRAY>
  *
  * Return Value:
  * None
