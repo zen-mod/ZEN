@@ -99,7 +99,7 @@ _ctrlGroupList ctrlAddEventHandler ["LBSelChanged", {
     private _controlsGroup = ctrlParentControlsGroup ctrlParentControlsGroup _ctrlGroupList;
     (_controlsGroup getVariable QGVAR(params)) params ["_groups"];
 
-    private _group = _ctrlGroupList getVariable str _index;
+    private _group = _ctrlGroupList getVariable (_ctrlGroupList lbData _index);
 
     if (_group in _groups) then {
         _ctrlGroupList lbSetPicture [_index, ICON_UNCHECKED];
@@ -171,7 +171,7 @@ _ctrlPlayerList ctrlAddEventHandler ["LBSelChanged", {
     private _controlsGroup = ctrlParentControlsGroup ctrlParentControlsGroup _ctrlPlayerList;
     (_controlsGroup getVariable QGVAR(params)) params ["", "_players"];
 
-    private _player = _ctrlPlayerList getVariable str _index;
+    private _player = _ctrlPlayerList getVariable (_ctrlPlayerList lbData _index);
 
     if (_player in _players) then {
         _ctrlPlayerList lbSetPicture [_index, ICON_UNCHECKED];
@@ -222,6 +222,8 @@ private _fnc_updatePlayerList = {
             _ctrlList setVariable [str _index, _x];
         };
     } forEach call CBA_fnc_players;
+
+    lbSort _ctrlList;
 
     if (lbSize _ctrlList == 0) then {
         _ctrlSearch ctrlSetTextColor [0.9, 0, 0, 1];

@@ -29,6 +29,15 @@
             <Polish>Siedzenie na ziemi</Polish>
             <Japanese>床に座る</Japanese>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_SitArmed">
+            <English>Sit On Floor (Armed)</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Squat">
+            <English>Squat</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_SquatArmed">
+            <English>Squat (Armed)</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_LeanOnWall">
             <English>Lean On Wall</English>
             <Russian>Прислониться к стене</Russian>
@@ -57,12 +66,18 @@
             <Polish>Bezczynne stanie (bez broni)</Polish>
             <Japanese>立ち姿勢のアイドル (武器なし)</Japanese>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_StandWithPistol">
+            <English>Stand Idle (Pistol)</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_AtEase">
             <English>At Ease</English>
             <Russian>Стоять по команде "Вольно"</Russian>
             <German>Locker stehen</German>
             <Polish>Swobodnie</Polish>
             <Japanese>安めの姿勢</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_GuardKneeled">
+            <English>Guard (Kneel)</English>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ListenToBriefing">
             <English>Listen To Briefing</English>
@@ -148,6 +163,9 @@
             <Polish>Ranny (Ogólnie)</Polish>
             <Japanese>怪我 (全般)</Japanese>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedLeaning">
+            <English>Wounded (Leaning)</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedHead">
             <English>Wounded (Head)</English>
             <Russian>Ранение (голова)</Russian>
@@ -190,6 +208,9 @@
             <Polish>Ukrywający się cywil</Polish>
             <Japanese>隠れる市民</Japanese>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Surrender">
+            <English>Surrender</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_SitCaptured">
             <English>Sit Captured</English>
             <Russian>Сидящий пленный</Russian>
@@ -217,6 +238,24 @@
             <German>Fahrzeug reparieren (Liegend)</German>
             <Polish>Naprawianie pojazdu (Na leżąco)</Polish>
             <Japanese>車両の修理 (寝転がり)</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Dead">
+            <English>Dead</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_DeadLeaning">
+            <English>Dead (Leaning)</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_DeadSit">
+            <English>Dead (Sitting)</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_LeanOnTable">
+            <English>Lean On Table</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Binoculars">
+            <English>Look Through Binoculars</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Salute">
+            <English>Salute</English>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Combat">
             <English>Combat Ready</English>
