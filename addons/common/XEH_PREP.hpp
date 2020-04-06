@@ -11,6 +11,7 @@ PREP(earthquake);
 PREP(ejectPassengers);
 PREP(exportMissionSQF);
 PREP(exportText);
+PREP(fireArtillery);
 PREP(fireVLS);
 PREP(getActiveTree);
 PREP(getAllTurrets);

@@ -322,6 +322,9 @@
             <Polish>Spokojni</Polish>
             <Japanese>無警戒</Japanese>
         </Key>
+        <Key ID="STR_ZEN_Common_Careless">
+            <English>Careless</English>
+        </Key>
         <Key ID="STR_ZEN_Common_Cautious">
             <English>Cautious</English>
             <Russian>Осторожный</Russian>

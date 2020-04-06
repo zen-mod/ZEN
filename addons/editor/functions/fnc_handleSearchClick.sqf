@@ -8,7 +8,7 @@
  * 1: Button <NUMBER>
  *
  * Return Value:
- * Return Name <TYPE>
+ * None
  *
  * Example:
  * [CONTROL, 1] call zen_editor_fnc_handleSearchClick

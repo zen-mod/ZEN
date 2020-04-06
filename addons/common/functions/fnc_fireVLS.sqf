@@ -5,9 +5,10 @@
  *
  * Arguments:
  * 0: VLS Unit <OBJECT>
- * 1: Target Position <ARRAY>
+ * 1: Position <ARRAY|OBJECT|STRING>
+ *   - in AGL format, or a Map Grid when STRING
  * 2: Spread <NUMBER>
- * 3: Magazine Class <STRING>
+ * 3: Magazine <STRING>
  * 4: Number of Rounds <NUMBER>
  *
  * Return Value:
@@ -24,11 +25,17 @@
 // +30% tolerance for possible underestimation of ETAs
 #define TARGET_LIFETIME_TOLERANCE 1.3
 
-params [["_unit", objNull, [objNull]], ["_targetPosition", [0, 0, 0], [[]], 3], ["_spread", 0, [0]], ["_magazine", "", [""]], ["_rounds", 1, [0]]];
+params [["_unit", objNull, [objNull]], ["_position", [0, 0, 0], [[], objNull, ""], 3], ["_spread", 0, [0]], ["_magazine", "", [""]], ["_rounds", 1, [0]]];
+
+// If an object is given as the position, the dummy targets will be
+// attached to this object in order to make the missile track the object
+private _isObject = _position isEqualType objNull;
+
+if (_position isEqualType "") then {
+    _position = [_position, true] call CBA_fnc_mapGridToPos;
+};
 
 private _muzzle = (_unit weaponsTurret GUNNER_TURRET) param [0, ""];
-
-private _eta = [_unit, _targetPosition, _magazine] call FUNC(getArtilleryETA);
 private _reloadTime = [_unit, _muzzle, GUNNER_TURRET] call FUNC(getWeaponReloadTime);
 
 // Load magazine even if it is the right one in order to ignore a possible reload occurring at the same time
@@ -36,25 +43,38 @@ private _reloadTime = [_unit, _muzzle, GUNNER_TURRET] call FUNC(getWeaponReloadT
 
 [{
     params ["_args", "_pfhID"];
-    _args params ["_unit", "_targetPosition", "_spread", "_muzzle", "_eta", "_reloadTime", "_rounds", "_fired"];
+    _args params ["_unit", "_isObject", "_position", "_spread", "_magazine", "_muzzle", "_reloadTime", "_rounds"];
 
-    // VLS needs an actual dummy target to fire at
-    _targetPosition = [_targetPosition, _spread] call CBA_fnc_randPos;
-    private _logicGroup = createGroup [sideLogic, true];
-    private _target = _logicGroup createUnit ["Module_F", _targetPosition, [], 0, "CAN_COLLIDE"];
+    // Exit if target object is deleted
+    if (_isObject && {isNull _position}) exitWith {
+        [_pfhID] call CBA_fnc_removePerFrameHandler;
+    };
 
-    private _targetLifeTime = TARGET_LIFETIME_TOLERANCE * _eta + _reloadTime;
-    (side _unit) reportRemoteTarget [_target, _targetLifeTime];
-    [{deleteVehicle _this}, _target, _targetLifeTime] call CBA_fnc_waitAndExecute;
+    // VLS needs a dummy target to fire at
+    private _target = createGroup [sideLogic, true] createUnit ["Logic", [0, 0, 0], [], 0, "CAN_COLLIDE"];
 
+    if (_isObject) then {
+        private _offset = [[0, 0, 0], _spread] call CBA_fnc_randPos;
+        _target attachTo [_position, _offset];
+    } else {
+        private _position = [_position, _spread] call CBA_fnc_randPos;
+        _target setPosASL AGLtoASL _position;
+    };
+
+    // Delete the dummy target after enough time for the missile to reach the target has passed
+    private _eta = [_unit, _target, _magazine] call FUNC(getArtilleryETA);
+    private _lifetime = TARGET_LIFETIME_TOLERANCE * _eta + _reloadTime;
+    [{deleteVehicle _this}, _target, _lifetime] call CBA_fnc_waitAndExecute;
+
+    (side _unit) reportRemoteTarget [_target, _lifetime];
     _unit setWeaponReloadingTime [gunner _unit, _muzzle, 0];
     _unit fireAtTarget [_target, _muzzle];
 
-    _fired = _fired + 1;
+    _rounds = _rounds - 1;
+    _args set [7, _rounds];
 
-    if (_fired >= _rounds) then {
+    // Exit if the specified number of rounds have been fired
+    if (_rounds <= 0) then {
         [_pfhID] call CBA_fnc_removePerFrameHandler;
-    } else {
-        _args set [7, _fired];
     };
-}, _reloadTime, [_unit, _targetPosition, _spread, _muzzle, _eta, _reloadTime, _rounds, 0]] call CBA_fnc_addPerFrameHandler;
+}, _reloadTime, [_unit, _isObject, _position, _spread, _magazine, _muzzle, _reloadTime, _rounds]] call CBA_fnc_addPerFrameHandler;
