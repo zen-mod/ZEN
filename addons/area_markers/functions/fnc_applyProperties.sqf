@@ -49,7 +49,7 @@ private _sides = IDCS_CONFIGURE_SIDEVISIBILITY_ALL
     apply { _sidesControlGroup controlsGroupCtrl _x }
     apply {
         if (_x getVariable [QGVAR(value), true]) then {
-             _x getVariable [QGVAR(side), sideUnknown]
+            _x getVariable [QGVAR(side), sideUnknown]
         } else { sideUnknown };
     }
     select {
