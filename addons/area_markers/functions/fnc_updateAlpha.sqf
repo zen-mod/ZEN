@@ -28,6 +28,7 @@ if (!hasInterface) exitWith {}; // ignore HCs
 
 private _isVisibleSide = playerSide in _sides;
 private _isZeus = !isNull (getAssignedCuratorLogic player);
+
 if (_isVisibleSide || _isZeus) then {
     _marker setMarkerAlphaLocal _alpha;
 } else {
