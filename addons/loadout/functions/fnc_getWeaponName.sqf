@@ -22,6 +22,10 @@ params ["_vehicle", "_weapon", "_turret"];
 private _weaponName = getText (configFile >> "CfgWeapons" >> _weapon >> "displayName");
 private _path = [_vehicle, _turret] call CBA_fnc_getTurret;
 
-private _gunnerName = [_path >> "gunnerName", "STRING", "Pilot/Driver"] call CBA_fnc_getConfigEntry;
+private _gunnerName = getText (_path >> "gunnerName");
+
+if (_gunnerName == "") then {
+    _gunnerName = localize (["str_driver", "str_pilot"] select (_vehicle isKindOf "Air"));
+};
 
 format ["%1 (%2)", _weaponName, _gunnerName]
