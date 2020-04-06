@@ -1,14 +1,7 @@
 class ctrlButton;
 class ctrlListNBox;
-class ctrlProgress;
 class ctrlButtonPicture;
-class ctrlToolboxPictureKeepAspect;
-class RscControlsGroupNoScrollbars;
-class RscCombo {
-    class ComboScrollBar;
-};
 
-class EGVAR(common,RscLabel);
 class EGVAR(common,RscBackground);
 class EGVAR(common,RscEdit);
 class EGVAR(common,RscCombo);
