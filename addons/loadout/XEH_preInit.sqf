@@ -9,7 +9,7 @@ PREP_RECOMPILE_END;
 // Add loadout button to attribute display
 [
     "Object",
-    STR_A3_VR_Stamina_01_Loadout,
+    "STR_A3_VR_Stamina_01_Loadout",
     {
         [_entity] call FUNC(configure);
     },
