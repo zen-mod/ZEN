@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Fusselwurm
- * Set the alpha of a marker depending on the player's side
+ * Set the alpha of a marker depending on the player's side.
  *
  * Arguments:
  * 0: Marker <STRING>
