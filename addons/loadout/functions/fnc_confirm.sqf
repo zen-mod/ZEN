@@ -21,9 +21,7 @@ private _display = ctrlParent _ctrlButtonOK;
 private _vehicle = _display getVariable QGVAR(vehicle);
 private _changes = _display getVariable QGVAR(changes);
 
-if !(_changes isEqualTo []) then {
-    {
-        _x params ["_turretPath", "_magazineClass", "_magazineCount"];
-        [QEGVAR(common,setMagazineAmmo), [_vehicle, _turretPath, _magazineClass, _magazineCount], _vehicle, _turretPath] call CBA_fnc_turretEvent;
-    } forEach _changes;
-};
+{
+    _x params ["_turretPath", "_magazineClass", "_magazineCount"];
+    [QEGVAR(common,setMagazineAmmo), [_vehicle, _turretPath, _magazineClass, _magazineCount], _vehicle, _turretPath] call CBA_fnc_turretEvent;
+} forEach _changes;
