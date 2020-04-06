@@ -20,16 +20,7 @@
 params ["_vehicle", "_weapon", "_turret"];
 
 private _weaponName = getText (configFile >> "CfgWeapons" >> _weapon >> "displayName");
-private _turretCopy = +_turret;
-private _path = configFile >> "CfgVehicles" >> typeOf _vehicle;
-
-if !(_turretCopy isEqualTo [-1]) then {
-    while {!(_turretCopy isEqualTo [])} do {
-        _path = _path >> "Turrets";
-        private _index = _turretCopy deleteAt 0;
-        _path = (_path select _index);
-    };
-};
+private _path = [_vehicle, _turret] call CBA_fnc_getTurret;
 
 private _gunnerName = [_path >> "gunnerName", "STRING", "Pilot/Driver"] call CBA_fnc_getConfigEntry;
 
