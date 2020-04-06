@@ -1500,7 +1500,6 @@
             <German>Legt die Bedeckung der Wolken fest, höhere Werte führen zu einer höheren Wahrscheinlichkeit von Regen/Stürmen und schnelleren Windgeschwindigkeiten.</German>
             <Polish>Ustala pochmurność, wysoka wartość powoduje większe prawdopodobieństwo deszczu/burzy i szybszego wiatru.</Polish>
             <Japanese>雲が覆う量を決定します。高い値では大雨/嵐のようになり、強い風が吹きます。</Japanese>
-            <Korean>ADAADADAD</Korean>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Rain">
             <English>Rain</English>
