@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * ["marker_0", [west,civilian], 0.7] call zen_area_markers_fnc_updateAlpha
+ * ["marker_0", [west, civilian], 0.7] call zen_area_markers_fnc_updateAlpha
  *
  * Public: No
  */
