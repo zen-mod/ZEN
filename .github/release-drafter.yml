@@ -6,21 +6,26 @@ tag-template: 'v$NEXT_PATCH_VERSION'
 
 categories:
   - title: '**ADDED:**'
-    labels: 'feature'
-  - title: '**IMPROVED**'
+    labels:
+      - 'feature'
+  - title: '**IMPROVED:**'
     labels:
       - 'enhancement'
       - 'optimization'
-  - title: '**CHANGED**'
-    labels: 'cleanup'
+  - title: '**CHANGED:**'
+    labels:
+      - 'cleanup'
   - title: '**FIXED:**'
-    labels: 'bug fix'
-  - title: '**TRANSLATIONS**'
-    labels: 'translation'
+    labels:
+      - 'bug fix'
+  - title: '**TRANSLATIONS:**'
+    labels:
+      - 'translation'
 
-exclude-labels: 'ignore changelog'
+exclude-labels:
+  - 'ignore changelog'
 
-change-template: '- $TITLE ($NUMBER)'
+change-template: '- $TITLE (#$NUMBER)'
 template: |
   _Requires CBA Version X.Y.Z or later and Arma 3 Version X.Y or later._
 

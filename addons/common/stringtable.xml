@@ -351,6 +351,9 @@
             <Japanese>無警戒</Japanese>
             <Korean>차분한</Korean>
         </Key>
+        <Key ID="STR_ZEN_Common_Careless">
+            <English>Careless</English>
+        </Key>
         <Key ID="STR_ZEN_Common_Cautious">
             <English>Cautious</English>
             <Russian>Осторожный</Russian>
@@ -511,7 +514,7 @@
             <German>Regelt, welches Arsenal von Zeus Enhanced geöffnet wird.\nWenn ACE Arsenal nicht installiert ist, wird auf das Vanilla BI Virtual Arsenal zurückgegriffen.</German>
             <Polish>Wybierz preferowany arsenał używany przez Zeus Enhanced.\nJeśli arsenał ACE nie będzie dostępny to uruchomi się podstawowy wirtualny arsenał BI.</Polish>
             <Russian>Выбор предпочитаемого Арсенала\nlfЕсли не установлен ACE, будет запущен стандартный Виртуальный Арсенал.</Russian>
-            <Japanese>Zeus Ehnhanced により優先された武器庫を選択します。\nACE3 武器庫が有効化されていない場合、ゲーム標準のバーチャル武器庫へ戻されます。</Japanese>
+            <Japanese>Zeus Enhanced により優先された武器庫を選択します。\nACE3 武器庫が有効化されていない場合、ゲーム標準のバーチャル武器庫へ戻されます。</Japanese>
             <Korean>Zeus Enhanced 에서 쓰일 아스널을 선택합니다. \n만약 ACE 아스널이 설치되어있지 않다면, BI 아스널로 변경될 것입니다.</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_BIVirtualArsenal">
