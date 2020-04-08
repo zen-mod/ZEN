@@ -24,7 +24,7 @@ if (isServer) exitWith {
     publicVariable QGVAR(markerVisibilities);
 };
 
-if (!hasInterface) exitWith {}; // ignore HCs
+if (ZEN_isHC) exitWith {};
 
 private _isVisibleSide = playerSide in _sides;
 private _isZeus = !isNull (getAssignedCuratorLogic player);
