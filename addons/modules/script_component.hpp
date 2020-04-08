@@ -126,8 +126,6 @@
 #define IDC_SPAWNREINFORCEMENTS_UNIT_RP 62315
 #define IDC_SPAWNREINFORCEMENTS_UNIT_BEHAVIOUR 62316
 
-#define IDC_PLAYMUSIC 62200
-
 #define ICON_HOSTILE "\a3\ui_f\data\igui\cfg\simpletasks\types\attack_ca.paa"
 #define ICON_FRIENDLY "\a3\ui_f\data\igui\cfg\simpletasks\types\help_ca.paa"
 
