@@ -6,9 +6,10 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-GVAR(aceMedicalLoaded) = isClass (configFile >> "CfgPatches" >> "ace_medical");
-// Detect next ACE update containing medical rewrite which will change medical functions
-GVAR(aceMedicalTreatmentLoaded) = isClass (configFile >> "CfgPatches" >> "ace_medical_treatment");
+GVAR(aceMedical) = isClass (configFile >> "CfgPatches" >> "ace_medical");
+GVAR(aceMedicalTreatment) = isClass (configFile >> "CfgPatches" >> "ace_medical_treatment");
+
+GVAR(selectPositionActive) = false;
 
 #include "initSettings.sqf"
 

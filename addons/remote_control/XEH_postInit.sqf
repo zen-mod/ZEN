@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-["ZEN_displayCuratorLoad", {
+["zen_curatorDisplayLoaded", {
     params ["_display"];
 
     {

@@ -17,9 +17,9 @@
 
 params ["_unit"];
 
-if (GVAR(aceMedicalLoaded) && {ace_medical_level > 0}) then {
-    if (GVAR(aceMedicalTreatmentLoaded)) then {
-        ["ace_medical_treatment_fnc_fullHealLocal", [_unit], _unit] call CBA_fnc_targetEvent;
+if (GVAR(aceMedical)) then {
+    if (GVAR(aceMedicalTreatment)) then {
+        ["ace_medical_treatment_fullHealLocal", _unit, _unit] call CBA_fnc_targetEvent;
     } else {
         ["ace_medical_treatmentAdvanced_fullHealLocal", [_unit, _unit], _unit] call CBA_fnc_targetEvent;
     };

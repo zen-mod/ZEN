@@ -9,6 +9,7 @@ PREP_RECOMPILE_END;
 #include "initSettings.sqf"
 #include "initKeybinds.sqf"
 
+GVAR(clipboard) = [];
 GVAR(includeCrew) = true;
 
 ["ModuleCurator_F", "Init", {

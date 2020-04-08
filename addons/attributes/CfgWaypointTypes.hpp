@@ -54,4 +54,9 @@ class ZEN_WaypointTypes {
         type = "SCRIPTED";
         script = QPATHTOEF(ai,functions\fnc_waypointParadrop.sqf);
     };
+    class Fastrope {
+        displayName = ECSTRING(ai,Fastrope);
+        type = "SCRIPTED";
+        script = QPATHTOEF(ai,functions\fnc_waypointFastrope.sqf);
+    };
 };

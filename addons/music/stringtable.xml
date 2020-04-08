@@ -3,24 +3,42 @@
     <Package name="Music">
         <Key ID="STR_ZEN_Music_ThisIsWarPartOne">
             <English>This Is War - Part 1</English>
+            <French>This Is War - Partie 1</French>
+            <German>Das ist Krieg - Teil 1</German>
+            <Polish>To jest Wojna - Część 1</Polish>
+            <Japanese>This Is War - パート 1</Japanese>
         </Key>
         <Key ID="STR_ZEN_Music_ThisIsWarPartTwo">
             <English>This Is War - Part 2</English>
+            <French>This Is War - Partie 2</French>
+            <German>Das ist Krieg - Teil 2</German>
+            <Polish>To jest Wojna - Część 2</Polish>
+            <Japanese>This Is War - パート 2</Japanese>
         </Key>
         <Key ID="STR_ZEN_Music_EagleWing_Defcon">
             <English>A2 EW - Defcon</English>
+            <French>A2 EW - Defcon</French>
+            <German>A2 EW - Defcon</German>
         </Key>
         <Key ID="STR_ZEN_Music_EagleWing_Fallout">
             <English>A2 EW - Fallout</English>
+            <French>A2 EW - Fallout</French>
+            <German>A2 EW - Fallout</German>
         </Key>
         <Key ID="STR_ZEN_Music_EagleWing_MAD">
             <English>A2 EW - Mad</English>
+            <French>A2 EW - Mad</French>
+            <German>A2 EW - Mad</German>
         </Key>
         <Key ID="STR_ZEN_Music_EagleWing_SkyNet">
             <English>A2 EW - Skynet</English>
+            <French>A2 EW - Skynet</French>
+            <German>A2 EW - Skynet</German>
         </Key>
         <Key ID="STR_ZEN_Music_EagleWing_Wasteland">
             <English>A2 EW - Wasteland</English>
+            <French>A2 EW - Wasteland</French>
+            <German>A2 EW - Wasteland</German>
         </Key>
     </Package>
 </Project>

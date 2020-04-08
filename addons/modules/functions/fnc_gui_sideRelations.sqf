@@ -5,55 +5,44 @@
  *
  * Arguments:
  * 0: Display <DISPLAY>
+ * 1: Logic <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [DISPLAY] call zen_modules_fnc_gui_sideRelations
+ * [DISPLAY, LOGIC] call zen_modules_fnc_gui_sideRelations
  *
  * Public: No
  */
 
-#define SIDES [\
-    ["STR_WEST", ICON_BLUFOR, 1],\
-    ["STR_EAST", ICON_OPFOR, 0],\
-    ["STR_guerrila", ICON_INDEPENDENT, 2]\
-]
+params ["_display", "_logic"];
 
-params ["_display"];
+private _selections = GVAR(saved) getVariable [QGVAR(sideRelations), [0, 0, true, 0]];
+_selections params ["_side1", "_side2", "_friendly", "_radio"];
 
-private _ctrlButtonOK = _display displayCtrl IDC_OK;
-private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-
-private _ctrlToggle = _display displayCtrl IDC_SIDERELATIONS_TOGGLE;
-_ctrlToggle ctrlAddEventHandler ["ButtonClick", {
-    params ["_ctrlToggle"];
-
-    // Set new value
-    private _value = _ctrlToggle getVariable [QGVAR(value), 1];
-    _ctrlToggle setVariable [QGVAR(value), 1 - _value];
-
-    // Update icon and tooltip
-    _ctrlToggle ctrlSetText ([ICON_FRIENDLY, ICON_HOSTILE] select _value);
-    _ctrlToggle ctrlSetTooltip ([LLSTRING(FriendlyTo), LLSTRING(HostileTo)] select _value);
-}];
+deleteVehicle _logic;
 
 private _ctrlSide1 = _display displayCtrl IDC_SIDERELATIONS_SIDE_1;
+private _ctrlSide2 = _display displayCtrl IDC_SIDERELATIONS_SIDE_2;
+
 _ctrlSide1 ctrlAddEventHandler ["LBSelChanged", {
-    params ["_ctrlSide1", "_index"];
+    params ["_ctrlSide1", "_selectedIndex"];
 
     private _display = ctrlParent _ctrlSide1;
     private _ctrlSide2 = _display displayCtrl IDC_SIDERELATIONS_SIDE_2;
     private _currentValue = _ctrlSide2 lbValue lbCurSel _ctrlSide2;
 
-    // Update second side combo, do not include selected side
+    // Update side 2 combo, do not include selected side
     lbClear _ctrlSide2;
-    {
-        if (_index != _forEachIndex) then {
-            _x params ["_name", "_icon", "_value"];
 
-            private _index = _ctrlSide2 lbAdd localize _name;
+    for "_i" from 0 to (lbSize _ctrlSide1 - 1) do {
+        if (_i != _selectedIndex) then {
+            private _name  = _ctrlSide1 lbText _i;
+            private _icon  = _ctrlSide1 lbPicture _i;
+            private _value = _ctrlSide1 lbValue _i;
+
+            private _index = _ctrlSide2 lbAdd _name;
             _ctrlSide2 lbSetPicture [_index, _icon];
             _ctrlSide2 lbSetValue [_index, _value];
 
@@ -61,44 +50,62 @@ _ctrlSide1 ctrlAddEventHandler ["LBSelChanged", {
                 _ctrlSide2 lbSetCurSel _index;
             };
         };
-    } forEach SIDES;
+    };
 }];
 
-// Trigger EH to populate side combo 2
-_ctrlSide1 lbSetCurSel 0;
+_ctrlSide1 lbSetCurSel _side1;
+_ctrlSide2 lbSetCurSel _side2;
 
-private _fnc_onUnload = {
-    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-    if (isNull _logic) exitWith {};
+private _fnc_relationToggled = {
+    params ["_ctrlToggle"];
 
-    deleteVehicle _logic;
+    private _friendly = _ctrlToggle getVariable [QGVAR(friendly), true];
+    _ctrlToggle setVariable [QGVAR(friendly), !_friendly];
+
+    if (_friendly) then {
+        _ctrlToggle ctrlSetText ICON_HOSTILE;
+        _ctrlToggle ctrlSetTooltip localize LSTRING(HostileTo);
+    } else {
+        _ctrlToggle ctrlSetText ICON_FRIENDLY;
+        _ctrlToggle ctrlSetTooltip localize LSTRING(FriendlyTo);
+    };
 };
+
+private _ctrlToggle = _display displayCtrl IDC_SIDERELATIONS_TOGGLE;
+_ctrlToggle ctrlAddEventHandler ["ButtonClick", _fnc_relationToggled];
+
+if (!_friendly) then {
+    _ctrlToggle call _fnc_relationToggled;
+};
+
+private _ctrlRadio = _display displayCtrl IDC_SIDERELATIONS_RADIO;
+_ctrlRadio lbSetCurSel _radio;
 
 private _fnc_onConfirm = {
     params ["_ctrlButtonOK"];
 
     private _display = ctrlParent _ctrlButtonOK;
-    if (isNull _display) exitWith {};
-
-    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-    if (isNull _logic) exitWith {};
 
     private _ctrlSide1 = _display displayCtrl IDC_SIDERELATIONS_SIDE_1;
-    private _side1 = [_ctrlSide1 lbValue lbCurSel _ctrlSide1] call BIS_fnc_sideType;
+    private _side1 = lbCurSel _ctrlSide1;
 
     private _ctrlSide2 = _display displayCtrl IDC_SIDERELATIONS_SIDE_2;
-    private _side2 = [_ctrlSide2 lbValue lbCurSel _ctrlSide2] call BIS_fnc_sideType;
+    private _side2 = lbCurSel _ctrlSide2;
 
     private _ctrlToggle = _display displayCtrl IDC_SIDERELATIONS_TOGGLE;
-    private _friendValue = _ctrlToggle getVariable [QGVAR(value), 1];
+    private _friendly = _ctrlToggle getVariable [QGVAR(friendly), true];
 
     private _ctrlRadio = _display displayCtrl IDC_SIDERELATIONS_RADIO;
-    private _radio = lbCurSel _ctrlRadio > 0;
+    private _radio = lbCurSel _ctrlRadio;
 
-    [_side1, _side2, _friendValue, _radio] call FUNC(moduleSideRelations);
+    private _selections = [_side1, _side2, _friendly, _radio];
+    GVAR(saved) setVariable [QGVAR(sideRelations), _selections];
 
-    deleteVehicle _logic;
+    _side1 = [_ctrlSide1 lbValue _side1] call BIS_fnc_sideType;
+    _side2 = [_ctrlSide2 lbValue _side2] call BIS_fnc_sideType;
+
+    [_side1, _side2, _friendly, _radio > 0] call FUNC(moduleSideRelations);
 };
 
-_display displayAddEventHandler ["Unload", _fnc_onUnload];
+private _ctrlButtonOK = _display displayCtrl IDC_OK;
 _ctrlButtonOK ctrlAddEventHandler ["ButtonClick", _fnc_onConfirm];

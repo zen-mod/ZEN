@@ -99,7 +99,7 @@ _ctrlGroupList ctrlAddEventHandler ["LBSelChanged", {
     private _controlsGroup = ctrlParentControlsGroup ctrlParentControlsGroup _ctrlGroupList;
     (_controlsGroup getVariable QGVAR(params)) params ["_groups"];
 
-    private _group = _ctrlGroupList getVariable str _index;
+    private _group = _ctrlGroupList getVariable (_ctrlGroupList lbData _index);
 
     if (_group in _groups) then {
         _ctrlGroupList lbSetPicture [_index, ICON_UNCHECKED];
@@ -141,7 +141,7 @@ private _fnc_updateGroupList = {
     lbClear _ctrlList;
 
     {
-        if (units _x findIf {isPlayer _x} != -1 && {toLower groupID _x find _filter != -1}) then {
+        if (units _x findIf {isPlayer _x} != -1 && {_filter in toLower groupID _x}) then {
             private _index = _ctrlList lbAdd groupID _x;
             _ctrlList lbSetPicture [_index, [ICON_UNCHECKED, ICON_CHECKED] select (_x in _groups)];
             _ctrlList lbSetPictureRight [_index, [_x] call EFUNC(common,getSideIcon)];
@@ -171,7 +171,7 @@ _ctrlPlayerList ctrlAddEventHandler ["LBSelChanged", {
     private _controlsGroup = ctrlParentControlsGroup ctrlParentControlsGroup _ctrlPlayerList;
     (_controlsGroup getVariable QGVAR(params)) params ["", "_players"];
 
-    private _player = _ctrlPlayerList getVariable str _index;
+    private _player = _ctrlPlayerList getVariable (_ctrlPlayerList lbData _index);
 
     if (_player in _players) then {
         _ctrlPlayerList lbSetPicture [_index, ICON_UNCHECKED];
@@ -213,7 +213,7 @@ private _fnc_updatePlayerList = {
     lbClear _ctrlList;
 
     {
-        if (alive _x && {toLower name _x find _filter != -1}) then {
+        if (alive _x && {_filter in toLower name _x}) then {
             private _index = _ctrlList lbAdd name _x;
             _ctrlList lbSetPicture [_index, [ICON_UNCHECKED, ICON_CHECKED] select (_x in _players)];
             _ctrlList lbSetPictureRight [_index, [_x] call EFUNC(common,getSideIcon)];
@@ -222,6 +222,8 @@ private _fnc_updatePlayerList = {
             _ctrlList setVariable [str _index, _x];
         };
     } forEach call CBA_fnc_players;
+
+    lbSort _ctrlList;
 
     if (lbSize _ctrlList == 0) then {
         _ctrlSearch ctrlSetTextColor [0.9, 0, 0, 1];

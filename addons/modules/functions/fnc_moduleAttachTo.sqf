@@ -25,11 +25,8 @@ if (isNull _object) exitWith {
 };
 
 // Detach object if currently attached
-private _attached = _object getVariable [QGVAR(attached), objNull];
-
-if (!isNull _attached) exitWith {
+if (!isNull attachedTo _object) exitWith {
     detach _object;
-    _object setVariable [QGVAR(attached), nil];
 
     [LSTRING(ObjectDetached)] call EFUNC(common,showMessage);
 };
@@ -50,8 +47,7 @@ if (!isNull _attached) exitWith {
     private _direction = getDir _object - getDir _entity;
 
     _object attachTo [_entity];
-    _object setVariable [QGVAR(attached), _entity];
     [QEGVAR(common,setDir), [_object, _direction], _object] call CBA_fnc_targetEvent;
 
     [LSTRING(ObjectAttached)] call EFUNC(common,showMessage);
-}, [], LSTRING(ModuleAttachTo)] call EFUNC(common,getTargetPos);
+}, [], LSTRING(ModuleAttachTo)] call EFUNC(common,selectPosition);

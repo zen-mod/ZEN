@@ -33,7 +33,7 @@ if (isServer) then {
 };
 
 if (hasInterface) then {
-    ["ZEN_displayCuratorLoad", {
+    ["zen_curatorDisplayLoaded", {
         params ["_display"];
 
         // Namespace of marker names and their corresponding icon controls
@@ -43,7 +43,7 @@ if (hasInterface) then {
 
         // Add EH to update area marker icon positions when the map is shown
         private _ctrlMap = _display displayCtrl IDC_RSCDISPLAYCURATOR_MAINMAP;
-        _ctrlMap ctrlAddEventHandler ["Draw", {call FUNC(update)}];
+        _ctrlMap ctrlAddEventHandler ["Draw", {call FUNC(onDraw)}];
 
         // Add EH to handle deleting area marker by pressing the DELETE key
         _display displayAddEventHandler ["KeyDown", {call FUNC(onKeyDown)}];
@@ -72,13 +72,11 @@ if (hasInterface) then {
         }, 0, [visibleMap]] call CBA_fnc_addPerFrameHandler;
     }] call CBA_fnc_addEventHandler;
 
-    ["ZEN_displayCuratorUnload", {
+    ["zen_curatorDisplayUnloaded", {
         GVAR(visiblePFH) call CBA_fnc_removePerFrameHandler;
     }] call CBA_fnc_addEventHandler;
 
     [QGVAR(createIcon), LINKFUNC(createIcon)] call CBA_fnc_addEventHandler;
     [QGVAR(deleteIcon), LINKFUNC(deleteIcon)] call CBA_fnc_addEventHandler;
-
-    [QGVAR(setIconAngle), LINKFUNC(setIconAngle)] call CBA_fnc_addEventHandler;
-    [QGVAR(setIconColor), LINKFUNC(setIconColor)] call CBA_fnc_addEventHandler;
+    [QGVAR(updateIcon), LINKFUNC(updateIcon)] call CBA_fnc_addEventHandler;
 };

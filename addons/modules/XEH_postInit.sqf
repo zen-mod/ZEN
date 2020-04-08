@@ -1,13 +1,11 @@
 #include "script_component.hpp"
 
 if (isServer) then {
-    [QGVAR(moduleAmbientAnimStart), FUNC(moduleAmbientAnimStart)] call CBA_fnc_addEventHandler;
-    [QGVAR(moduleAmbientFlyby), FUNC(moduleAmbientFlyby)] call CBA_fnc_addEventHandler;
-    [QGVAR(moduleCAS), FUNC(moduleCAS)] call CBA_fnc_addEventHandler;
-    [QGVAR(moduleEditableObjects), FUNC(moduleEditableObjects)] call CBA_fnc_addEventHandler;
-
-    // Public variable to track created target logics
-    missionNamespace setVariable [QGVAR(targetLogics), [], true];
+    [QGVAR(moduleAmbientAnimStart), LINKFUNC(moduleAmbientAnimStart)] call CBA_fnc_addEventHandler;
+    [QGVAR(moduleAmbientFlyby), LINKFUNC(moduleAmbientFlyby)] call CBA_fnc_addEventHandler;
+    [QGVAR(moduleCAS), LINKFUNC(moduleCAS)] call CBA_fnc_addEventHandler;
+    [QGVAR(moduleEditableObjects), LINKFUNC(moduleEditableObjects)] call CBA_fnc_addEventHandler;
+    [QGVAR(moduleSpawnReinforcements), LINKFUNC(moduleSpawnReinforcements)] call CBA_fnc_addEventHandler;
 
     // Public variable to track created teleporter objects
     missionNamespace setVariable [QGVAR(teleporters), [], true];
@@ -15,7 +13,9 @@ if (isServer) then {
     [QGVAR(moduleCreateTeleporter), LINKFUNC(moduleCreateTeleporterServer)] call CBA_fnc_addEventHandler;
 };
 
+[QGVAR(addIntelAction), LINKFUNC(addIntelAction)] call CBA_fnc_addEventHandler;
 [QGVAR(addTeleporterAction), LINKFUNC(addTeleporterAction)] call CBA_fnc_addEventHandler;
+[QGVAR(moduleEffectFire), LINKFUNC(moduleEffectFireLocal)] call CBA_fnc_addEventHandler;
 
 [QGVAR(sayMessage), BIS_fnc_sayMessage] call CBA_fnc_addEventHandler;
 [QGVAR(carrierInit), BIS_fnc_Carrier01Init] call CBA_fnc_addEventHandler;
@@ -50,7 +50,16 @@ if (isServer) then {
 
         forceWeatherChange;
     };
+}] call CBA_fnc_addEventHandler;
 
+[QGVAR(addIntel), {
+    params ["_title", "_text"];
+
+    if !(player diarySubjectExists QGVAR(intel)) then {
+        player createDiarySubject [QGVAR(intel), localize "str_disp_intel_title"];
+    };
+
+    player createDiaryRecord [QGVAR(intel), [_title, _text]];
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(teleportOutOfVehicle), {
@@ -63,25 +72,4 @@ if (isServer) then {
         _unit setVelocity [0, 0, 0];
         _unit setVehiclePosition [_position, [], 0, "NONE"];
     }, _this] call CBA_fnc_execNextFrame;
-}] call CBA_fnc_addEventHandler;
-
-[QGVAR(fireArtillery), {
-    params ["_unit", "_position", "_spread", "_ammo", "_rounds"];
-
-    // For small spread values, use doArtilleryFire directly to avoid delay
-    // between firing caused by using doArtilleryFire one round at a time
-    if (_spread <= 10) exitWith {
-        _unit doArtilleryFire [_position, _ammo, _rounds];
-    };
-
-    [{
-        params ["_unit", "_position", "_spread", "_ammo", "_rounds", "_fired"];
-
-        if (unitReady _unit) then {
-            _unit doArtilleryFire [[_position, _spread] call CBA_fnc_randPos, _ammo, 1];
-            _this set [5, _fired + 1];
-        };
-
-        _fired >= _rounds || {!alive _unit} || {!alive gunner _unit}
-    }, {}, [_unit, _position, _spread, _ammo, _rounds, 0]] call CBA_fnc_waitUntilAndExecute;
 }] call CBA_fnc_addEventHandler;
