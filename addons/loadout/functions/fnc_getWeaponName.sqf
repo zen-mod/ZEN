@@ -9,7 +9,7 @@
  * 2: Turret path <ARRAY>
  *
  * Return Value:
- * Weapon name and turret <STRING>
+ * Weapon and turret names <STRING>
  *
  * Example:
  * [_vehicle, _weapon, _turret] call zen_loadout_fnc_getWeaponName
@@ -17,12 +17,10 @@
  * Public: No
  */
 
-params ["_vehicle", "_weapon", "_turret"];
+params ["_vehicle", "_weapon", "_turretPath"];
 
 private _weaponName = getText (configFile >> "CfgWeapons" >> _weapon >> "displayName");
-private _path = [_vehicle, _turret] call CBA_fnc_getTurret;
-
-private _gunnerName = getText (_path >> "gunnerName");
+private _gunnerName = getText ([_vehicle, _turretPath] call CBA_fnc_getTurret >> "gunnerName");
 
 if (_gunnerName == "") then {
     _gunnerName = localize (["str_driver", "str_pilot"] select (_vehicle isKindOf "Air"));

@@ -52,10 +52,6 @@ if (!_addItem && {_count > 0}) then {
     _ctrlList lnbSetColor [[_magazineIndex, 1], [1, 1, 1, _alpha]];
 };
 
-_magazines set [_magazineIndex, _magazine];
-_weapon set [2, _magazines];
-_weaponList set [_weaponIndex, _weapon];
-
 private _changes = _display getVariable QGVAR(changes);
 
 private _changeIndex = _changes findIf {(_x select 0) isEqualTo _turret && (_x select 1) == (_magazineClass)};

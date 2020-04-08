@@ -28,11 +28,12 @@ _weapon params ["", "_turret", "_magazines"];
 private _changes = _display getVariable QGVAR(changes);
 
 {
-    private _magazine = _x;
-    if (_magazine select 1 != 0) then {
-        _magazine set [1, 0];
+    _x params ["_magazineClass", "_magazineCount"];
 
-        private _changeIndex = _changes findIf {(_x select 0) isEqualTo _turret && (_x select 1) == (_magazine select 0)};
+    if (_magazineCount != 0) then {
+        _x set [1, 0];
+
+        private _changeIndex = _changes findIf {(_x select 0) isEqualTo _turret && (_x select 1) == _magazineClass};
         if (_changeIndex == -1) then {
             _changes pushBack ([_turret] + _x);
         } else {
@@ -40,9 +41,6 @@ private _changes = _display getVariable QGVAR(changes);
         };
     };
 } forEach _magazines;
-
-_weapon set [2, _magazines];
-_weaponList set [_weaponIndex, _weapon];
 
 // Update the list buttons
 [_display] call FUNC(fillList);

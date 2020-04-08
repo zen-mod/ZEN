@@ -29,14 +29,14 @@ private _cfgMagazines = configFile >> "CfgMagazines";
     _x params ["_magazine", "_count"];
 
     private _displayName = getText (_cfgMagazines >> _magazine >> "displayName");
-    if (_displayName isEqualTo "") then { _displayName = _magazine };
+    if (_displayName isEqualTo "") then {_displayName = _magazine};
 
     if (_filter in toLower _displayName) then {
         private _rounds = getNumber (_cfgMagazines >> _magazine >> "count");
         private _toolTip = format [localize LSTRING(AmmoTooltip), _displayName, _rounds, _magazine];
         private _alpha = [0.5, 1] select (_count > 0);
 
-        private _index = _ctrlList lnbAddRow [(format [localize LSTRING(AmmoName), _displayName, _rounds]), str _count];
+        private _index = _ctrlList lnbAddRow [format [localize LSTRING(AmmoName), _displayName, _rounds], str _count];
         _ctrlList lnbSetColor  [[_index, 0], [1, 1, 1, _alpha]];
         _ctrlList lnbSetColor  [[_index, 1], [1, 1, 1, _alpha]];
         _ctrlList lbSetTooltip [_index * count lnbGetColumnsPosition _ctrlList, _tooltip];

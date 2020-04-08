@@ -20,6 +20,7 @@ params ["_vehicle"];
 if (!createDialog QGVAR(display)) exitWith {};
 
 private _weaponList = _vehicle call FUNC(getWeaponList);
+private _displayName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
 
 private _display = uiNamespace getVariable QEGVAR(common,display);
 _display setVariable [QGVAR(weaponList), _weaponList];
@@ -27,6 +28,10 @@ _display setVariable [QGVAR(changes), []];
 _display setVariable [QGVAR(vehicle), _vehicle];
 
 [_display] call EFUNC(common,initDisplayPositioning);
+
+// Set the display's title to the object name
+private _ctrlTitle = _display displayCtrl IDC_TITLE;
+_ctrlTitle ctrlSetText toUpper format [localize LSTRING(EditLoadout), _displayName];
 
 // Refresh list when weapon is changed
 private _ctrlWeapon = _display displayCtrl IDC_WEAPON;
@@ -125,9 +130,11 @@ _ctrlButtonOK ctrlAddEventHandler ["ButtonClick", {call FUNC(confirm)}];
 
 // Fill the weapons combo box
 {
-    private _weaponName = ([_vehicle] + _x) call FUNC(getWeaponName);
+    _x params ["_weapon", "_turretPath"];
+    private _weaponName = [_vehicle, _weapon, _turretPath] call FUNC(getWeaponName);
     _ctrlWeapon lbAdd _weaponName;
 } forEach _weaponList;
+
 _ctrlWeapon lbSetCurSel 0;
 
 // Populate the list with items
