@@ -1824,6 +1824,7 @@
         </Key>
         <Key ID="STR_ZEN_Modules_SearchBuilding">
             <English>Search Building</English>
+            <German>Gebäude durchsuchen</German>
         </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_Buildings">
@@ -1977,6 +1978,7 @@
         </Key>
         <Key ID="STR_ZEN_Modules_NoBuildingFound">
             <English>Unable to find a building to search</English>
+            <German>Kein Gebäude zum Durchsuchen in der Nähe</German>
         </Key>
         <Key ID="STR_ZEN_Modules_NoTargetModules">
             <English>No target modules exist, place one first.</English>
