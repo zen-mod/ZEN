@@ -307,6 +307,12 @@ class CfgVehicles {
         function = QFUNC(moduleRemoveArsenal);
         icon = "\a3\ui_f\data\logos\a_64_ca.paa";
     };
+    class GVAR(moduleSearchBuilding): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = CSTRING(SearchBuilding);
+        function = QFUNC(moduleSearchBuilding);
+    };
     class GVAR(moduleSetDate): GVAR(moduleBase) {
         category = "Environment";
         displayName = CSTRING(ModuleSetDate);

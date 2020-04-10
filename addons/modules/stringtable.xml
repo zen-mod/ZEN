@@ -1822,6 +1822,9 @@
         <Key ID="STR_ZEN_Modules_EditableObjectsOnly_Tooltip">
             <English>Only objects that are currently editable by the local curator will be exported.</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_SearchBuilding">
+            <English>Search Building</English>
+        </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_Buildings">
             <English>Buildings</English>
@@ -1971,6 +1974,9 @@
             <Italian>L'edificio più vicino è troppo lontano</Italian>
             <Chinesesimp>最近的房子离太远了</Chinesesimp>
             <Chinese>最近的房子離太遠了</Chinese>
+        </Key>
+        <Key ID="STR_ZEN_Modules_NoBuildingFound">
+            <English>Unable to find a building to search</English>
         </Key>
         <Key ID="STR_ZEN_Modules_NoTargetModules">
             <English>No target modules exist, place one first.</English>

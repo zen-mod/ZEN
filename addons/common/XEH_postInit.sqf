@@ -88,6 +88,16 @@
     _group setFormation _formation;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setFormDir), {
+    params ["_group", "_direction"];
+    _group setFormDir _direction;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(lockWP), {
+    params ["_group", "_locked"];
+    _group lockWP _locked;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(setSkill), {
     params ["_unit", "_skill"];
     _unit setSkill _skill;
