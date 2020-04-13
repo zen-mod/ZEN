@@ -36,9 +36,10 @@ if (_addItem) then {
     _magazine set [1, _count];
 
     // Update count text and increase alpha
-    _ctrlList lnbSetText  [[_magazineIndex, 1], str _count];
+    _ctrlList lnbSetText  [[_magazineIndex, 2], str _count];
     _ctrlList lnbSetColor [[_magazineIndex, 0], [1, 1, 1, 1]];
     _ctrlList lnbSetColor [[_magazineIndex, 1], [1, 1, 1, 1]];
+    _ctrlList lnbSetColor [[_magazineIndex, 2], [1, 1, 1, 1]];
 };
 
 if (!_addItem && {_count > 0}) then {
@@ -47,9 +48,10 @@ if (!_addItem && {_count > 0}) then {
 
     // Update count text and decrease alpha if new count is zero
     private _alpha = [0.5, 1] select (_count != 0);
-    _ctrlList lnbSetText  [[_magazineIndex, 1], str _count];
+    _ctrlList lnbSetText  [[_magazineIndex, 2], str _count];
     _ctrlList lnbSetColor [[_magazineIndex, 0], [1, 1, 1, _alpha]];
     _ctrlList lnbSetColor [[_magazineIndex, 1], [1, 1, 1, _alpha]];
+    _ctrlList lnbSetColor [[_magazineIndex, 2], [1, 1, 1, _alpha]];
 };
 
 private _changes = _display getVariable QGVAR(changes);

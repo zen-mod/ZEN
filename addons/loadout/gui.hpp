@@ -46,7 +46,7 @@ class GVAR(display): EGVAR(common,RscDisplay) {
                     h = POS_H(16.6);
                     drawSideArrows = 1;
                     disableOverflow = 1;
-                    columns[] = {0.05, 0.85};
+                    columns[] = {0.05, 0.55, 0.85};
                 };
                 class ButtonRemove: ctrlButton {
                     idc = IDC_BTN_REMOVE;

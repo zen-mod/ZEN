@@ -36,9 +36,10 @@ private _cfgMagazines = configFile >> "CfgMagazines";
         private _toolTip = format [localize LSTRING(AmmoTooltip), _displayName, _rounds, _magazine];
         private _alpha = [0.5, 1] select (_count > 0);
 
-        private _index = _ctrlList lnbAddRow [format [localize LSTRING(AmmoName), _displayName, _rounds], str _count];
+        private _index = _ctrlList lnbAddRow [_displayName, format [localize LSTRING(AmmoRounds), _rounds], str _count];
         _ctrlList lnbSetColor  [[_index, 0], [1, 1, 1, _alpha]];
         _ctrlList lnbSetColor  [[_index, 1], [1, 1, 1, _alpha]];
+        _ctrlList lnbSetColor  [[_index, 2], [1, 1, 1, _alpha]];
         _ctrlList lbSetTooltip [_index * count lnbGetColumnsPosition _ctrlList, _tooltip];
     };
 } forEach (_weapon select 2);

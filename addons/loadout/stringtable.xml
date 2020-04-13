@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Loadout">
-        <Key ID="STR_ZEN_Loadout_AmmoName">
-            <English>%1 (%2 Rounds)</English>
+        <Key ID="STR_ZEN_Loadout_AmmoRounds">
+            <English>%1 Rounds</English>
         </Key>
         <Key ID="STR_ZEN_Loadout_AmmoTooltip">
             <English>%1\n%2 Rounds\n%3</English>
