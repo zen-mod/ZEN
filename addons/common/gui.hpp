@@ -1,6 +1,7 @@
 class RscText;
 class RscEdit;
 class RscCheckBox;
+class RscActivePicture;
 class RscStructuredText;
 class RscButtonMenu;
 class RscButtonMenuOK;
@@ -90,6 +91,43 @@ class GVAR(RscControlsGroup): RscControlsGroup {
         arrowFull = "\a3\3DEN\Data\Controls\ctrlDefault\arrowFull_ca.paa";
         arrowEmpty = "\a3\3DEN\Data\Controls\ctrlDefault\arrowEmpty_ca.paa";
         width = POS_W(0.5);
+    };
+};
+
+class GVAR(RscSides): RscControlsGroupNoScrollbars {
+    idc = -1;
+    x = 0;
+    y = 0;
+    w = POS_W(16);
+    h = POS_H(2.5);
+    class controls {
+        class BLUFOR: RscActivePicture {
+            idc = IDC_SIDES_BLUFOR;
+            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_west_ca.paa";
+            tooltip = "$STR_West";
+            x = POS_W(2.5);
+            y = POS_H(0.25);
+            w = POS_W(2);
+            h = POS_H(2);
+        };
+        class OPFOR: BLUFOR {
+            idc = IDC_SIDES_OPFOR;
+            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_east_ca.paa";
+            tooltip = "$STR_East";
+            x = POS_W(5.5);
+        };
+        class Independent: BLUFOR {
+            idc = IDC_SIDES_INDEPENDENT;
+            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_guer_ca.paa";
+            tooltip = "$STR_Guerrila";
+            x = POS_W(8.5);
+        };
+        class Civilian: BLUFOR {
+            idc = IDC_SIDES_CIVILIAN;
+            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_civ_ca.paa";
+            tooltip = "$STR_Civilian";
+            x = POS_W(11.5);
+        };
     };
 };
 
