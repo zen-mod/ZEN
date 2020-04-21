@@ -406,6 +406,15 @@
             <Polish>Efekt</Polish>
             <Japanese>エフェクト</Japanese>
         </Key>
+        <Key ID="STR_ZEN_Common_Pitch">
+            <English>Pitch</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_Roll">
+            <English>Roll</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_Yaw">
+            <English>Yaw</English>
+        </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects">
             <English>Add Objects to Curators</English>
             <French>Ajouter des objets aux curateurs</French>
