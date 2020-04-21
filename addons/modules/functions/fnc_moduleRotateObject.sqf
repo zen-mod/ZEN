@@ -39,6 +39,5 @@ private _yaw = [getDir _object] call CBA_fnc_simplifyAngle180;
     params ["_values", "_object"];
     _values params ["_pitch", "_roll", "_yaw"];
 
-    private _dirAndUp = [[[0, 1, 0], [0, 0, 1]], -_yaw, -_pitch, -_roll] call BIS_fnc_transformVectorDirAndUp;
-    [QEGVAR(common,setVectorDirAndUp), [_object, _dirAndUp], _object] call CBA_fnc_targetEvent;
+    [QGVAR(setRotation), [_object, _pitch, _roll, _yaw], _object] call CBA_fnc_targetEvent;
 }, {}, _object] call EFUNC(dialog,create);
