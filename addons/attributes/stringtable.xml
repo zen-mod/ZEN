@@ -11,6 +11,7 @@
             <Italian>Motore</Italian>
             <Portuguese>Motor</Portuguese>
             <Japanese>エンジン</Japanese>
+            <Korean>엔진</Korean>
         </Key>
         <Key ID="STR_ZEN_Attributes_Lights">
             <English>Lights</English>
@@ -22,10 +23,12 @@
             <Italian>Luci</Italian>
             <Portuguese>Luzes</Portuguese>
             <Japanese>ライト</Japanese>
+            <Korean>전등</Korean>
         </Key>
         <Key ID="STR_ZEN_Attributes_LockedForPlayers">
             <English>Locked For Players</English>
             <German>Für Spieler verschlossen</German>
+            <Korean>플레이어에게 잠겨짐</Korean>
         </Key>
         <Key ID="STR_ZEN_Attributes_PlateNumber">
             <English>Plate Number</English>
@@ -37,18 +40,22 @@
             <Italian>Numero di targa</Italian>
             <Portuguese>Número da Placa</Portuguese>
             <Japanese>ナンバー プレート</Japanese>
+            <Korean>번호판 숫자</Korean>
         </Key>
         <Key ID="STR_ZEN_Attributes_RespawnPosition">
             <English>Respawn Position</English>
             <German>Wiedereinstiegspunkt</German>
+            <Korean>리스폰 위치</Korean>
         </Key>
         <Key ID="STR_ZEN_Attributes_RespawnPosition_Tooltip">
             <English>Selects the side that is able to respawn on this object.</English>
             <German>Wähle eine Seite, welche an diesem Objekt wiedereinsteigen kann.</German>
+            <Korean>이 오브젝트에 리스폰할 수 있는 진영을 고르시오</Korean>
         </Key>
         <Key ID="STR_ZEN_Attributes_States">
             <English>States</English>
             <German>Zustände</German>
+            <Korean>상태</Korean>
         </Key>
         <Key ID="STR_ZEN_Attributes_ExecObject_Tooltip">
             <English>This code will be executed in the unscheduled environment on the machine where this object is local.\nThe variable "_this" refers to this object.</English>
@@ -68,6 +75,7 @@
             <Portuguese>Tempo Esgotado (s)</Portuguese>
             <Italian>Tempo limite (s)</Italian>
             <Japanese>タイムアウト (秒)</Japanese>
+            <Korean>시간 초과 (s)</Korean>
         </Key>
         <Key ID="STR_ZEN_Attributes_Timeout_Tooltip">
             <English>The time (in seconds) between waypoint condition satisfaction and waypoint completion.</English>
@@ -79,6 +87,7 @@
             <Portuguese>O tempo (em segundos) entre a condição satisfatória da parada e a conclusão da parada.</Portuguese>
             <Italian>Il tempo (in secondi) che passa tra il soddisfacimento della condizione dell'obiettivo e il suo completamento </Italian>
             <Japanese>タイムアウト (秒) はウェイポイントの条件達成とウェイポイント完了の間に適用されます。</Japanese>
+            <Korean>웨이포인트 조건 만족과 완료사이의 시간 (초)</Korean>
         </Key>
         <Key ID="STR_ZEN_Attributes_Sensors">
             <English>Sensors</English>
@@ -90,6 +99,7 @@
             <Polish>Sensory</Polish>
             <Portuguese>Sensores</Portuguese>
             <Japanese>センサー</Japanese>
+            <Korean>센서</Korean>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeSide">
             <English>Change Side</English>
@@ -101,6 +111,7 @@
             <Polish>Zmień Stronę</Polish>
             <Portuguese>Alterar Lado</Portuguese>
             <Japanese>陣営変更</Japanese>
+            <Korean>진영 변경</Korean>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeSkills">
             <English>Change Skills</English>
@@ -112,6 +123,7 @@
             <Polish>Zmień umiejętności</Polish>
             <Portuguese>Alterar Habilidades</Portuguese>
             <Japanese>スキル変更</Japanese>
+            <Korean>숙련도 변경</Korean>
         </Key>
         <Key ID="STR_ZEN_Attributes_Skills">
             <English>Skills</English>
@@ -123,6 +135,7 @@
             <Polish>Umiejętności</Polish>
             <Portuguese>Habilidades</Portuguese>
             <Japanese>スキル</Japanese>
+            <Korean>숙련도</Korean>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeTraits">
             <English>Change Traits</English>
@@ -134,6 +147,7 @@
             <Polish>Zmien Cechy</Polish>
             <Portuguese>Alterar Propriedades</Portuguese>
             <Japanese>特性変更</Japanese>
+            <Korean>특성 변경</Korean>
         </Key>
         <Key ID="STR_ZEN_Attributes_Traits">
             <English>Traits</English>
@@ -145,6 +159,7 @@
             <Polish>Cechy</Polish>
             <Portuguese>Propriedades</Portuguese>
             <Japanese>特性</Japanese>
+            <Korean>특성</Korean>
         </Key>
         <Key ID="STR_ZEN_Attributes_MedicalTraining">
             <English>Medical Training</English>
@@ -156,6 +171,7 @@
             <Polish>Szkolenie Medyczne</Polish>
             <Portuguese>Treinamento Médico</Portuguese>
             <Japanese>衛生スキル</Japanese>
+            <Korean>의료 훈련</Korean>
         </Key>
         <Key ID="STR_ZEN_Attributes_EngineeringSkill">
             <English>Engineering Skill</English>
@@ -167,6 +183,7 @@
             <Polish>Szkolenie Inżynieryjne</Polish>
             <Portuguese>Habilidade de Engenharia</Portuguese>
             <Japanese>工兵スキル</Japanese>
+            <Korean>공업 기술</Korean>
         </Key>
         <Key ID="STR_ZEN_Attributes_Doctor">
             <English>Doctor</English>
@@ -178,6 +195,7 @@
             <Polish>Doktor</Polish>
             <Portuguese>Doutor</Portuguese>
             <Japanese>医師</Japanese>
+            <Korean>의사</Korean>
         </Key>
         <Key ID="STR_ZEN_Attributes_AdvEngineer">
             <English>Adv. Engineer</English>
@@ -189,6 +207,7 @@
             <Polish>Zaawansowany Inżynier</Polish>
             <Portuguese>Engenheiros Experientes</Portuguese>
             <Japanese>上級工兵</Japanese>
+            <Korean>수리공</Korean>
         </Key>
         <Key ID="STR_ZEN_Attributes_EOD">
             <English>EOD</English>
