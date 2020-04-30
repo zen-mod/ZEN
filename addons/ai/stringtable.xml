@@ -132,15 +132,60 @@
             <German>Deckung suchen</German>
             <Korean>엄폐물 수색</Korean>
         </Key>
+        <Key ID="STR_ZEN_AI_AimingError">
+            <English>Aiming Error</English>
+        </Key>
+        <Key ID="STR_ZEN_AI_AnimChange">
+            <English>Anim Change</English>
+        </Key>
         <Key ID="STR_ZEN_AI_AutoCombat">
             <English>Auto Combat</English>
             <German>Automatischer Kampf</German>
             <Korean>자동 전투</Korean>
         </Key>
+        <Key ID="STR_ZEN_AI_AutoTarget">
+            <English>Auto Target</English>
+        </Key>
+        <Key ID="STR_ZEN_AI_CheckVisible">
+            <English>Check Visible</English>
+        </Key>
+        <Key ID="STR_ZEN_AI_Cover">
+            <English>Cover</English>
+        </Key>
+        <Key ID="STR_ZEN_AI_FSM">
+            <English>FSM</English>
+        </Key>
+        <Key ID="STR_ZEN_AI_LightsVehicle">
+            <English>Lights (Vehicle)</English>
+        </Key>
+        <Key ID="STR_ZEN_AI_MineDetection">
+            <English>Mine Detection</English>
+        </Key>
+        <Key ID="STR_ZEN_AI_Move">
+            <English>Move</English>
+        </Key>
+        <Key ID="STR_ZEN_AI_Nightvision">
+            <English>Nightvision</English>
+        </Key>
+        <Key ID="STR_ZEN_AI_Path">
+            <English>Path</English>
+        </Key>
+        <Key ID="STR_ZEN_AI_RadioProtocol">
+            <English>Radio Protocol</English>
+        </Key>
         <Key ID="STR_ZEN_AI_Suppression">
             <English>Suppression</English>
             <German>Unterdrückung</German>
             <Korean>제압</Korean>
+        </Key>
+        <Key ID="STR_ZEN_AI_Target">
+            <English>Target</English>
+        </Key>
+        <Key ID="STR_ZEN_AI_TeamSwitch">
+            <English>Team Switch</English>
+        </Key>
+        <Key ID="STR_ZEN_AI_WeaponAim">
+            <English>Weapon Aim</English>
         </Key>
     </Package>
 </Project>

@@ -219,5 +219,11 @@
             <Portuguese>Eliminação Explosiva de Ordenamento</Portuguese>
             <Japanese>爆発物専門家</Japanese>
         </Key>
+        <Key ID="STR_ZEN_Attributes_ChangeAbilities">
+            <English>Change Abilities</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_Abilities">
+            <English>Abilities</English>
+        </Key>
     </Package>
 </Project>
