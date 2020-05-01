@@ -18,29 +18,31 @@
 params ["_ctrlButtonClear"];
 
 private _display = ctrlParent _ctrlButtonClear;
-private _comboWeapon = _display displayCtrl IDC_WEAPON;
-private _weaponIndex = lbCurSel _comboWeapon;
+private _weaponIndex = lbCurSel (_display displayCtrl IDC_WEAPON);
 
 private _weaponList = _display getVariable QGVAR(weaponList);
 private _weapon = _weaponList select _weaponIndex;
-_weapon params ["", "_turret", "_magazines"];
+_weapon params ["", "_turretPath", "_magazines"];
 
 private _changes = _display getVariable QGVAR(changes);
 
 {
-    _x params ["_magazineClass", "_magazineCount"];
+    _x params ["_magazine", "_count"];
 
-    if (_magazineCount != 0) then {
+    if (_count != 0) then {
+        // Set count to zero in weapons list
         _x set [1, 0];
 
-        private _changeIndex = _changes findIf {(_x select 0) isEqualTo _turret && (_x select 1) == _magazineClass};
-        if (_changeIndex == -1) then {
-            _changes pushBack ([_turret] + _x);
+        // Set count to zero in tracked magazine changes
+        private _index = _changes findIf {(_x select 0) isEqualTo _turretPath && {(_x select 1) == _magazine}};
+
+        if (_index == -1) then {
+            _changes pushBack [_turretPath, _magazine, 0];
         } else {
-            _changes set [_changeIndex, [_turret] + _x];
+            (_changes select _index) set [2, 0];
         };
     };
 } forEach _magazines;
 
-// Update the list buttons
+// Refresh the list after clearing
 [_display] call FUNC(fillList);

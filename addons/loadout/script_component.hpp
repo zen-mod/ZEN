@@ -33,5 +33,5 @@
 #define IDC_SEARCH_BAR 1660
 #define IDC_BTN_CLEAR  1670
 
-// Prevent certain magazines from being handled by ammo functions
+// Prevent certain weapons from being handled
 #define BLACKLIST_WEAPONS ["TruckHorn", "SmokeLauncher", "Laserdesignator_mounted", "Laserdesignator_pilotCamera", "CMFlareLauncher", "CMFlareLauncher_Singles", "ProbingWeapon_01_F", "ProbingWeapon_02_F", "ProbingLaser_01_F"]

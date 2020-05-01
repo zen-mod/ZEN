@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: NeilZar
- * Enables or disables the list buttons based on currently selected item.
+ * Enables or disables the list buttons based on currently selected magazine.
  *
  * Arguments:
  * 0: Display <DISPLAY>
@@ -17,10 +17,10 @@
 
 params ["_display"];
 
-// Get mass of currently selected item
+// Get count of currently selected magazine
 private _ctrlList = _display displayCtrl IDC_LIST;
-private _currentRow = lnbCurSelRow _ctrlList;
+private _count = _ctrlList lnbText [lnbCurSelRow _ctrlList, 2];
 
-// Enable remove button if item count is not zero
+// Enable remove button if magazine count is not zero
 private _ctrlButtonRemove = _display displayCtrl IDC_BTN_REMOVE;
-_ctrlButtonRemove ctrlEnable (_ctrlList lnbText [_currentRow, 1] != "0");
+_ctrlButtonRemove ctrlEnable (_count != "0");

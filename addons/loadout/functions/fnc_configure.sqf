@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: NeilZar
- * Configures the "Loadout" Zeus attribute.
+ * Opens a dialog to configure the magazine loadout of the given vehicle.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
@@ -33,8 +33,19 @@ _display setVariable [QGVAR(vehicle), _vehicle];
 private _ctrlTitle = _display displayCtrl IDC_TITLE;
 _ctrlTitle ctrlSetText toUpper format [localize LSTRING(EditLoadout), _displayName];
 
-// Refresh list when weapon is changed
+// Add the vehicle's weapons to the combo box
 private _ctrlWeapon = _display displayCtrl IDC_WEAPON;
+
+{
+    _x params ["_weapon", "_turretPath"];
+
+    private _weaponName = [_vehicle, _weapon, _turretPath] call FUNC(getWeaponName);
+    _ctrlWeapon lbAdd _weaponName;
+} forEach _weaponList;
+
+_ctrlWeapon lbSetCurSel 0;
+
+// Refresh list when weapon is changed
 _ctrlWeapon ctrlAddEventHandler ["LBSelChanged", {
     params ["_ctrlWeapon"];
 
@@ -77,7 +88,7 @@ _ctrlButtonSearch ctrlAddEventHandler ["ButtonClick", {
     [_display] call FUNC(fillList);
 }];
 
-// Add or remove items using the list buttons
+// Add or remove magazines using the list buttons
 private _ctrlButtonAdd = _display displayCtrl IDC_BTN_ADD;
 _ctrlButtonAdd ctrlAddEventHandler ["ButtonClick", {
     params ["_ctrlButtonAdd"];
@@ -94,7 +105,7 @@ _ctrlButtonRemove ctrlAddEventHandler ["ButtonClick", {
     [_display, false] call FUNC(modify);
 }];
 
-// Add or remove items using keyboard
+// Add or remove magazines using keyboard
 private _ctrlList = _display displayCtrl IDC_LIST;
 _ctrlList ctrlAddEventHandler ["SetFocus", {
     params ["_ctrlList"];
@@ -128,14 +139,5 @@ _ctrlButtonClear ctrlAddEventHandler ["ButtonClick", {call FUNC(clear)}];
 private _ctrlButtonOK = _display displayCtrl IDC_OK;
 _ctrlButtonOK ctrlAddEventHandler ["ButtonClick", {call FUNC(confirm)}];
 
-// Fill the weapons combo box
-{
-    _x params ["_weapon", "_turretPath"];
-    private _weaponName = [_vehicle, _weapon, _turretPath] call FUNC(getWeaponName);
-    _ctrlWeapon lbAdd _weaponName;
-} forEach _weaponList;
-
-_ctrlWeapon lbSetCurSel 0;
-
-// Populate the list with items
+// Populate the list with magazines
 [_display] call FUNC(fillList);

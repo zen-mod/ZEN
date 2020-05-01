@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: NeilZar
- * Handles confirming the loadout attribute changes.
+ * Handles confirming the loadout display changes.
  *
  * Arguments:
  * 0: Button <CONTROL>

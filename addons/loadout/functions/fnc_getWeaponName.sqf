@@ -1,18 +1,18 @@
 #include "script_component.hpp"
 /*
  * Author: NeilZar
- * Get the name of the passed weapon and the turret position.
+ * Returns the name of the given vehicle's turret weapon.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
- * 1: Weapon class name <STRING>
- * 2: Turret path <ARRAY>
+ * 1: Weapon Classname <STRING>
+ * 2: Turret Path <ARRAY>
  *
  * Return Value:
- * Weapon and turret names <STRING>
+ * Weapon Name <STRING>
  *
  * Example:
- * [_vehicle, _weapon, _turret] call zen_loadout_fnc_getWeaponName
+ * [_vehicle, _weapon, _turretPath] call zen_loadout_fnc_getWeaponName
  *
  * Public: No
  */

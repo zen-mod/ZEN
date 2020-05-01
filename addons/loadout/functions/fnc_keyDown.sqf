@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: NeilZar
- * Handles keyboard input for the loadout attribute.
+ * Handles keyboard input for the loadout display.
  *
  * Arguments:
  * 0: Display <DISPLAY>
