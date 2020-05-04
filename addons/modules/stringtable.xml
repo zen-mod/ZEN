@@ -2021,6 +2021,9 @@
         <Key ID="STR_ZEN_Modules_EditableObjectsOnly_Tooltip">
             <English>Only objects that are currently editable by the local curator will be exported.</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_RotateObject">
+            <English>Rotate Object</English>
+        </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_Buildings">
             <English>Buildings</English>

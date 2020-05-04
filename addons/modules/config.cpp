@@ -47,6 +47,7 @@ class CfgPatches {
             QGVAR(moduleMakeInvincible),
             QGVAR(modulePatrolArea),
             QGVAR(moduleRemoveArsenal),
+            QGVAR(moduleRotateObject),
             QGVAR(moduleSetDate),
             QGVAR(moduleShowInConfig),
             QGVAR(moduleSideRelations),
