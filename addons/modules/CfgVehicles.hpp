@@ -318,7 +318,6 @@ class CfgVehicles {
         function = QFUNC(modulePatrolArea);
     };
     class GVAR(moduleToggleThrowTrajectory): GVAR(moduleBase) {
-        curatorCanAttach = 1;
         category = CSTRING(Projectiles);
         displayName = CSTRING(moduleToggleThrowTrajectory);
         function = QFUNC(moduleToggleThrowTrajectory);
