@@ -72,4 +72,4 @@ if (_glMuzzles isEqualTo []) exitWith {
 	private _muzzle = _glMuzzles # 0 # 1;
 	private _firemode = "Single";
 	[_unit, _magazine, _muzzle, _firemode, _mousePosASL] call zen_modules_fnc_projectiles_zeus;
-}, [], LSTRING(GLFrag)] call EFUNC(common,selectPosition);
+}, [], LSTRING(ModuleGLFrag)] call EFUNC(common,selectPosition);

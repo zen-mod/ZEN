@@ -43,4 +43,4 @@ if !(isClass (ConfigFile >> "CfgMagazines" >> "ALiVE_HandGrenade_Bottle")) exitW
 	private _muzzle = "ALiVE_Handgrenade_BottleMuzzle";
 	private _firemode = "ALiVE_Handgrenade_BottleMuzzle";
 	[_unit, _magazine, _muzzle, _firemode, _mousePosASL] call zen_modules_fnc_projectiles_zeus;
-}, [], LSTRING(ThrowBottle)] call EFUNC(common,selectPosition);
+}, [], LSTRING(ModuleThrowBottle)] call EFUNC(common,selectPosition);

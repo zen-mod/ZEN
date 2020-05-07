@@ -11,7 +11,7 @@
  * 5: Trajectory <BOOLEAN>
  *
  * Return Value:
- * Exit position <ARRAY>
+ * NONE
 
  * Example:
  * [_unit, _magazine, _muzzle, _firemode, _targetPos, _throwFlatTrajectory] call tft_zeus_fnc_unitProjectile;
@@ -21,7 +21,7 @@
 params ["_unit", "_magazine", "_muzzle", "_firemode", "_targetPos", "_throwFlatTrajectory"];
 if !(local _unit) exitWith {};
 
-_unit setVariable ["amp_projectiles_throwParams", [_targetPos, _throwFlatTrajectory]];
+_unit setVariable ["zen_projectiles_throwParams", [_targetPos, _throwFlatTrajectory]];
 
 _unit disableAI "PATH";
 _unit setBehaviour "COMBAT";
@@ -35,7 +35,7 @@ _unit doWatch ASLToAGL _targetPos;
 _unit addEventHandler ["Fired", {
 	params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
 	
-	private _throwParams = _unit getVariable ["amp_projectiles_throwParams", []];
+	private _throwParams = _unit getVariable ["zen_projectiles_throwParams", []];
 	if (_throwParams isEqualTo []) exitWith {};
 
 	_throwParams params ["_targetPos", "_throwFlatTrajectory"];
@@ -45,7 +45,7 @@ _unit addEventHandler ["Fired", {
 	private _g = 9.8066;
 	//private _speed = 10 + _distance / 2 - _height / 2;
 	private _speed = getNumber (configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
-
+	
 	private _angle = (acos((_g * _distance^2/_speed^2-_height)/(_projectilePosASL distance _targetPos)) + atan (_distance / _height)) / 2;
 	
 	if !(_angle isEqualType 0) then {
@@ -113,50 +113,40 @@ _unit addEventHandler ["Fired", {
 	
 	// clean up
 	_unit removeEventHandler ["Fired", _thisEventHandler];
-	_unit setVariable ["amp_projectiles_thrown", true];
+	_unit setVariable ["zen_projectiles_thrown", true];
 	_unit enableAI "PATH";
-	
-	// draw testing lines
-	
-	amp_projectiles_unit = _unit;
-	amp_projectiles_projectile = _projectile;
-	amp_projectiles_projectilePos = getPos _projectile;
-	amp_projectiles_pos = ASLToAGL _targetPos;
-	amp_projectiles_velocity = _vectorFinal;
-	onEachFrame {
-		drawLine3D [amp_projectiles_projectilePos, amp_projectiles_pos, [0,1,0,1]];
-		drawLine3D [amp_projectiles_pos, amp_projectiles_pos vectorAdd [0,0,10], [0,1,0,1]];
-		drawLine3D [amp_projectiles_projectilePos, amp_projectiles_projectilePos vectorAdd amp_projectiles_velocity, [0,0,1,1]];
-	};
-	
-	//systemChat format ["d:%1, h:%2, s:%3, a:%4",_distance, _height, _speed, _angle];
 	
 }];
 
-_unit setVariable ["amp_projectiles_thrown", false];
-_unit setVariable ["amp_projectiles_time", diag_tickTime];
+_unit setVariable ["zen_projectiles_thrown", false];
+_unit setVariable ["zen_projectiles_time", diag_tickTime];
 
 _this spawn {
 	params ["_unit", "_magazine", "_muzzle", "_firemode", "_targetPos", "_throwFlatTrajectory"];
 		
-	private _uniformItems = [];
 	private _canAdd = _unit canAdd _magazine;
+	private _removedItems = [];
 	if !_canAdd then {
-		{
-			while {!(_unit canAdd _magazine)} do {
-				_unit removeItemFromUniform _x;
-				_uniformItems pushBack _x;
-			};
-		} forEach uniformItems _unit;
+		private _backpackContainer = backpackContainer _unit;
+		if (_backpackContainer isEqualTo objNull) then {
+			_unit addBackpackGlobal "B_TacticalPack_blk";
+			_backpackContainer = backpackContainer _unit;
+		};
+		
+		while {!(_unit canAddItemToBackpack _magazine)} do {
+			private _item = (backpackItems _unit) # 0;
+			_unit removeItemFromBackpack _item;
+			_removedItems pushBack _item;
+		};
 	};
 	_unit addMagazineGlobal _magazine;
 		
 	waitUntil { 
-		if (_unit getVariable ["amp_projectiles_thrown", false]) exitWith {
+		if (_unit getVariable ["zen_projectiles_thrown", false]) exitWith {
 			//systemChat "Success.";
 			true
 		}; 
-		if (diag_tickTime - (_unit getVariable ["amp_projectiles_time", 0]) > 15) exitWith {
+		if (diag_tickTime - (_unit getVariable ["zen_projectiles_time", 0]) > 15) exitWith {
 			//systemChat "Timed out.";
 			true
 		}; 
@@ -173,12 +163,12 @@ _this spawn {
 		false
 	};
 
-	_unit setVariable ["amp_projectiles_thrown", nil];
+	_unit setVariable ["zen_projectiles_thrown", nil];
 	_unit enableAI "PATH";
 	
 	if !_canAdd then {
 		{
-			_unit addItemToUniform _x;
-		} forEach _uniformItems;
+			_unit addItemToBackpack _x;
+		} forEach _removedItems;
 	};
 };

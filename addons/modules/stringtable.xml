@@ -994,34 +994,34 @@
             <Polish>Zmieni zachowanie, prędkość i formację grupy.</Polish>
             <Japanese>グループの移動速度や陣形といった挙動を変更できます。</Japanese>
         </Key>
-        <Key ID="STR_ZEN_Projectiles">
+        <Key ID="STR_ZEN_Modules_Projectiles">
             <English>Projectiles</English>
         </Key>
-        <Key ID="STR_ZEN_ModuleToggleThrowTrajectory">
+        <Key ID="STR_ZEN_Modules_ModuleToggleThrowTrajectory">
             <English>Toggle Throw Trajectory</English>
         </Key>
-        <Key ID="STR_ZEN_ModuleThrowFrag">
+        <Key ID="STR_ZEN_Modules_ModuleThrowFrag">
             <English>Throw Frag</English>
         </Key>
-        <Key ID="STR_ZEN_ModuleThrowMini">
+        <Key ID="STR_ZEN_Modules_ModuleThrowMini">
             <English>Throw Mini</English>
         </Key>
-        <Key ID="STR_ZEN_ModuleThrowSmoke">
+        <Key ID="STR_ZEN_Modules_ModuleThrowSmoke">
             <English>Throw Smoke</English>
         </Key>
-        <Key ID="STR_ZEN_ModuleThrowStone">
+        <Key ID="STR_ZEN_Modules_ModuleThrowStone">
             <English>Throw Stone</English>
         </Key>
-        <Key ID="STR_ZEN_ModuleThrowCan">
+        <Key ID="STR_ZEN_Modules_ModuleThrowCan">
             <English>Throw Can</English>
         </Key>
-        <Key ID="STR_ZEN_ModuleThrowBottle">
+        <Key ID="STR_ZEN_Modules_ModuleThrowBottle">
             <English>Throw Bottle</English>
         </Key>
-        <Key ID="STR_ZEN_ModuleGLFrag">
+        <Key ID="STR_ZEN_Modules_ModuleGLFrag">
             <English>GL Frag</English>
         </Key>
-        <Key ID="STR_ZEN_ModuleFireLauncher">
+        <Key ID="STR_ZEN_Modules_ModuleFireLauncher">
             <English>Fire Launcher</English>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSideRelations">

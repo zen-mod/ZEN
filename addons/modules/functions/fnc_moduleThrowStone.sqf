@@ -39,4 +39,4 @@ if !(alive _unit) exitWith {
 	private _muzzle = "HandGrenade_Stone";
 	private _firemode = "HandGrenade_Stone";
 	[_unit, _magazine, _muzzle, _firemode, _mousePosASL] call zen_modules_fnc_projectiles_zeus;
-}, [], LSTRING(ThrowStone)] call EFUNC(common,selectPosition);
+}, [], LSTRING(ModuleThrowStone)] call EFUNC(common,selectPosition);

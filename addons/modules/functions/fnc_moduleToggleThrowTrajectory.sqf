@@ -19,7 +19,6 @@ params ["_logic"];
 
 deleteVehicle _logic;
 
-private _throwFlatTrajectory = profileNamespace getVariable ["amp_projectiles_throwFlatTrajectory", true];
-_throwFlatTrajectory = !_throwFlatTrajectory;
-profileNamespace setVariable ["amp_projectiles_throwFlatTrajectory", _throwFlatTrajectory];
-[format ["Throw Trajectory: %1", ["High", "Flat"] select _throwFlatTrajectory]] call EFUNC(common,showMessage);
+if (isNil "zen_projectiles_throwFlatTrajectory") then {zen_projectiles_throwFlatTrajectory = true;};
+zen_projectiles_throwFlatTrajectory = !zen_projectiles_throwFlatTrajectory;
+[format ["Throw Trajectory: %1", ["High", "Flat"] select zen_projectiles_throwFlatTrajectory]] call EFUNC(common,showMessage);

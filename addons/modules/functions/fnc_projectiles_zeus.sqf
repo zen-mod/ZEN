@@ -10,7 +10,7 @@
  * 4: Target Pos ASL <ARRAY>
  *
  * Return Value:
- * Exit position <ARRAY>
+ * NONE
  
  * Example:
  * [_unit, _magazine, _muzzle, _firemode, _mousePosASL] call tft_zeus_fnc_zeusProjectile;
@@ -41,6 +41,7 @@ if !(_angle isEqualType 0) then {
 	[objNull, format ["Can't reach target! D:%1 H:%2", _distance, _height]] call bis_fnc_showCuratorFeedbackMessage;
 };
 
-private _throwFlatTrajectory = profileNamespace getVariable ["amp_projectiles_throwFlatTrajectory", 1];
+if (isNil "zen_projectiles_throwFlatTrajectory") then {zen_projectiles_throwFlatTrajectory = true;};
 
-[_unit, _magazine, _muzzle, _firemode, _targetPos, _throwFlatTrajectory] remoteExecCall ["zen_modules_fnc_projectiles_unit", _unit];
+[_unit, _magazine, _muzzle, _firemode, _targetPos, zen_projectiles_throwFlatTrajectory] remoteExecCall ["zen_modules_fnc_projectiles_unit", _unit];
+

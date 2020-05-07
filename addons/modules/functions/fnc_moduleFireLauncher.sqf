@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [LOGIC] call zen_modules_fnc_moduleGLFrag
+ * [LOGIC] call zen_modules_fnc_moduleFireLauncher
  *
  * Public: No
  */
@@ -44,7 +44,8 @@ if (_launcher isEqualTo "") exitWith {
 	private _weapon = secondaryWeapon _unit;
 	
 	private _magazine = getArray (configFile >> "CfgWeapons" >> _weapon >> "Magazines") # 0;
+
 	private _muzzle = _weapon;
 	private _firemode = "Single";
 	[_unit, _magazine, _muzzle, _firemode, _mousePosASL] call zen_modules_fnc_projectiles_zeus;
-}, [], LSTRING(GLFrag)] call EFUNC(common,selectPosition);
+}, [], LSTRING(ModuleFireLauncher)] call EFUNC(common,selectPosition);
