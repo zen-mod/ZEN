@@ -317,6 +317,60 @@ class CfgVehicles {
         displayName = CSTRING(ModulePatrolArea);
         function = QFUNC(modulePatrolArea);
     };
+    class GVAR(moduleToggleThrowTrajectory): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = CSTRING(Projectiles);
+        displayName = CSTRING(moduleToggleThrowTrajectory);
+        function = QFUNC(moduleToggleThrowTrajectory);
+    };
+    class GVAR(moduleThrowFrag): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = CSTRING(Projectiles);
+		displayName = CSTRING(moduleThrowFrag);
+        function = QFUNC(moduleThrowFrag);
+    };
+    class GVAR(moduleThrowMini): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = CSTRING(Projectiles);
+		displayName = CSTRING(moduleThrowMini);
+        function = QFUNC(moduleThrowMini);
+    };
+    class GVAR(moduleThrowSmoke): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = CSTRING(Projectiles);
+		displayName = CSTRING(moduleThrowSmoke);
+        function = QFUNC(moduleThrowSmoke);
+    };
+    class GVAR(moduleThrowStone): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = CSTRING(Projectiles);
+		displayName = CSTRING(moduleThrowStone);
+        function = QFUNC(moduleThrowStone);
+    };
+    class GVAR(moduleThrowCan): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = CSTRING(Projectiles);
+		displayName = CSTRING(moduleThrowCan);
+        function = QFUNC(moduleThrowCan);
+    };
+    class GVAR(moduleThrowBottle): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = CSTRING(Projectiles);
+		displayName = CSTRING(moduleThrowBottle);
+        function = QFUNC(moduleThrowBottle);
+    };
+    class GVAR(moduleGLFrag): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = CSTRING(Projectiles);
+		displayName = CSTRING(moduleGLFrag);
+        function = QFUNC(moduleGLFrag);
+    };
+    class GVAR(moduleFireLauncher): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = CSTRING(Projectiles);
+		displayName = CSTRING(moduleFireLauncher);
+        function = QFUNC(moduleFireLauncher);
+    };
     class GVAR(moduleRemoveArsenal): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = GVAR(Inventory);
