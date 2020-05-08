@@ -1,5 +1,5 @@
 /*
- Author: Ampers
+ Author: Ampersand
  Makes unit throw the specified magazine to the specified location.
 
  * Arguments:
