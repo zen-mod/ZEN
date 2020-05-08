@@ -346,6 +346,7 @@ class CfgVehicles {
 		displayName = CSTRING(moduleThrowStone);
         function = QFUNC(moduleThrowStone);
     };
+	/*
     class GVAR(moduleThrowCan): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Projectiles);
@@ -358,6 +359,7 @@ class CfgVehicles {
 		displayName = CSTRING(moduleThrowBottle);
         function = QFUNC(moduleThrowBottle);
     };
+	*/
     class GVAR(moduleGLFrag): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Projectiles);
