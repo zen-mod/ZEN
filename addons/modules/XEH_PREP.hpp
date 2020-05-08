@@ -83,6 +83,7 @@ PREP(moduleThrowBottle);
 PREP(moduleThrowCan);
 PREP(moduleThrowFrag);
 PREP(moduleThrowMini);
+PREP(moduleThrowSelect);
 PREP(moduleThrowSmoke);
 PREP(moduleThrowStone);
 PREP(moduleToggleFlashlights);

@@ -1006,6 +1006,9 @@
         <Key ID="STR_ZEN_Modules_ModuleThrowMini">
             <English>Throw Mini</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleThrowSelect">
+            <English>Throw Select</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleThrowSmoke">
             <English>Throw Smoke</English>
         </Key>

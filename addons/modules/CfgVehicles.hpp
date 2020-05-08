@@ -334,6 +334,12 @@ class CfgVehicles {
 		displayName = CSTRING(moduleThrowMini);
         function = QFUNC(moduleThrowMini);
     };
+    class GVAR(moduleThrowSelect): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Projectiles);
+		displayName = CSTRING(moduleThrowSelect);
+        function = QFUNC(moduleThrowSelect);
+    };
     class GVAR(moduleThrowSmoke): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Projectiles);

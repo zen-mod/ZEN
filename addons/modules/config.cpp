@@ -51,6 +51,7 @@ class CfgPatches {
             QGVAR(moduleToggleThrowTrajectory),
             QGVAR(moduleThrowFrag),
             QGVAR(moduleThrowMini),
+            QGVAR(moduleThrowSelect),
             QGVAR(moduleThrowSmoke),
             QGVAR(moduleThrowStone),
             QGVAR(moduleThrowCan),
