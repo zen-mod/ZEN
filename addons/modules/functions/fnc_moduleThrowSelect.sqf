@@ -42,8 +42,7 @@ private _action = [];
 		getText (configFile >> "CfgMagazines" >> _x >> "displayName"),
 		getText (configFile >> "CfgMagazines" >> _x >> "picture"),
 		{
-			(_this # 6) params ["_unit", "_magazine", "_throwables"];
-			_throwables apply {[_x] call zen_context_menu_fnc_removeAction};
+			(_this # 6) params ["_unit", "_magazine"];
 			// Get target position
 			[_unit, {
 				params ["_successful", "_unit", "_mousePosASL", "_arguments"];
@@ -55,30 +54,15 @@ private _action = [];
 			
 		}, 
 		{true}, 
-		[_unit, _x, _throwables]
+		[_unit, _x]
 	] call EFUNC(context_menu,createAction);
 	[_action, [], 0] call EFUNC(context_menu,addAction);
 } forEach _throwables;
 [] call EFUNC(context_menu,openMenu);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// remove actions on menu close
+[{
+	EGVAR(context_menu,contextGroups) isEqualTo []
+},{
+	_this apply {[_x] call zen_context_menu_fnc_removeAction};
+}, _throwables, 15, {}] call CBA_fnc_waitUntilAndExecute;
