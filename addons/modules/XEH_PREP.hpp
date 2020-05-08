@@ -95,4 +95,3 @@ PREP(moduleVisibility);
 PREP(moduleWeather);
 PREP(projectiles_unit);
 PREP(projectiles_zeus);
-PREP(moduleWeather);
