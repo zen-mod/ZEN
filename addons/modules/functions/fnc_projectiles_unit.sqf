@@ -14,15 +14,15 @@
  * NONE
 
  * Example:
- * [_unit, _magazine, _muzzle, _firemode, _targetPos, _throwFlatTrajectory] call tft_zeus_fnc_unitProjectile;
- * [_unit, _magazine, _muzzle, _firemode, _targetPos, _throwFlatTrajectory] remoteExecCall ["tft_zeus_fnc_unitProjectile", _unit];
+ * [_unit, _magazine, _muzzle, _firemode, _targetPos, _throwFlatTrajectory] call zen_modules_fnc_projectiles_unit;
+ * [_unit, _magazine, _muzzle, _firemode, _targetPos, _throwFlatTrajectory] remoteExecCall ["zen_modules_fnc_projectiles_unit", _unit];
  
 // Zeus selected unit throw a thing at mouse position
 private _unit =  (curatorSelected # 0 # 0);
 (currentThrowable _unit) params ["_magazine", "_muzzle"];
 private _firemode = _muzzle;
 private _targetPos = AGLToASL screenToWorld getMousePosition;
-[_unit, _magazine, _muzzle, _firemode, _targetPos, true] execVM "fnc_projectiles_unit.sqf"
+[_unit, _magazine, _muzzle, _firemode, _targetPos, true] call zen_modules_fnc_projectiles_unit
 
 // Zeus selected unit fire launcher at mouse position
 private _unit =  (curatorSelected # 0 # 0);
@@ -31,7 +31,7 @@ private _weapon = secondaryWeapon _unit;
 private _magazine = getArray (configFile >> "CfgWeapons" >> _weapon >> "Magazines") # 0; 
 private _muzzle = _weapon; 
 private _firemode = "Single";
-[_unit, _magazine, _muzzle, _firemode, _targetPos, true] execVM "fnc_projectiles_unit.sqf"
+[_unit, _magazine, _muzzle, _firemode, _targetPos, true] call zen_modules_fnc_projectiles_unit
 
  */
 
