@@ -5,42 +5,42 @@
  *
  * Arguments:
  * 0: Controls Group <CONTROL>
- * 1: Row Index <NUMBER>
- * 2: Current Value <ANY>
- * 3: Row Settings <ARRAY>
+ * 1: Default Value <ANY>
+ * 2: Settings <ARRAY>
+ *   0: Entries <ARRAY>
+ *     N: [Value <ANY>, Text <STRING>, Tooltip <STRING>, Picture <STRING>, Text Color <ARRAY>] <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL, 0, 1] call zen_dialog_fnc_gui_combo
+ * [CONTROL, [_entries]] call zen_dialog_fnc_gui_combo
  *
  * Public: No
  */
 
-params ["_controlsGroup", "_rowIndex", "_currentValue", "_rowSettings"];
-_rowSettings params ["_values", "_labels"];
+params ["_controlsGroup", "_defaultValue", "_settings"];
+_settings params ["_entries"];
 
 private _ctrlCombo = _controlsGroup controlsGroupCtrl IDC_ROW_COMBO;
 
 {
-    _x params ["_label", "_tooltip", "_picture", "_textColor"];
+    _x params ["_value", "_text", "_tooltip", "_picture", "_textColor"];
 
-    private _index = _ctrlCombo lbAdd _label;
+    private _index = _ctrlCombo lbAdd _text;
     _ctrlCombo lbSetTooltip [_index, _tooltip];
     _ctrlCombo lbSetPicture [_index, _picture];
     _ctrlCombo lbSetColor [_index, _textColor];
-} forEach _labels;
+    _ctrlCombo setVariable [str _index, _value];
 
-_ctrlCombo lbSetCurSel (_values find _currentValue);
+    if (_value isEqualTo _defaultValue) then {
+        _ctrlCombo lbSetCurSel _index;
+    };
+} forEach _entries;
 
-_ctrlCombo setVariable [QGVAR(params), [_rowIndex, _values]];
+_controlsGroup setVariable [QFUNC(value), {
+    params ["_controlsGroup"];
 
-_ctrlCombo ctrlAddEventHandler ["LBSelChanged", {
-    params ["_ctrlCombo", "_index"];
-    (_ctrlCombo getVariable QGVAR(params)) params ["_rowIndex", "_lbData"];
-
-    private _display = ctrlParent _ctrlCombo;
-    private _values = _display getVariable QGVAR(values);
-    _values set [_rowIndex, _lbData select _index];
+    private _ctrlCombo = _controlsGroup controlsGroupCtrl IDC_ROW_COMBO;
+    _ctrlCombo getVariable str lbCurSel _ctrlCombo
 }];
