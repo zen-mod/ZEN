@@ -444,6 +444,15 @@
             <Japanese>エフェクト</Japanese>
             <Korean>효과</Korean>
         </Key>
+        <Key ID="STR_ZEN_Common_Pitch">
+            <English>Pitch</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_Roll">
+            <English>Roll</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_Yaw">
+            <English>Yaw</English>
+        </Key>
         <Key ID="STR_ZEN_Common_UncheckAll">
             <English>Uncheck All</English>
         </Key>
