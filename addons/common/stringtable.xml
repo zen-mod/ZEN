@@ -453,6 +453,17 @@
         <Key ID="STR_ZEN_Common_Yaw">
             <English>Yaw</English>
         </Key>
+        <Key ID="STR_ZEN_Common_NotEnoughSpaceInVehicle">
+            <English>Not enough space in target vehicle: %1 needed - %2 available</English>
+            <French>Pas assez d'espace dans le véhicule cible : %1 nécessaire - %2 disponible</French>
+            <Polish>Za mało miejsca w pojeździe docelowym: %1 potrzebne - %2 dostępne</Polish>
+            <German>Nicht genügend Platz im Zielfahrzeug: %1 benötigt - %2 verfügbar</German>
+            <Japanese>選択された車両に空きがありません: 必要量 %1 - 空き容量 %2</Japanese>
+            <Korean>목표 차량에 충분한 자리가 없습니다: %1 요구됨 - %2 가능</Korean>
+        </Key>
+        <Key ID="STR_ZEN_Common_CopyToClipboard">
+            <English>Copy to Clipboard</English>
+        </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects">
             <English>Add Objects to Curators</English>
             <French>Ajouter des objets aux curateurs</French>
@@ -544,16 +555,17 @@
             <Japanese>ACE 武器庫</Japanese>
             <Korean>ACE 아스널</Korean>
         </Key>
-        <Key ID="STR_ZEN_Common_NotEnoughSpaceInVehicle">
-            <English>Not enough space in target vehicle: %1 needed - %2 available</English>
-            <French>Pas assez d'espace dans le véhicule cible : %1 nécessaire - %2 disponible</French>
-            <Polish>Za mało miejsca w pojeździe docelowym: %1 potrzebne - %2 dostępne</Polish>
-            <German>Nicht genügend Platz im Zielfahrzeug: %1 benötigt - %2 verfügbar</German>
-            <Japanese>選択された車両に空きがありません: 必要量 %1 - 空き容量 %2</Japanese>
-            <Korean>목표 차량에 충분한 자리가 없습니다: %1 요구됨 - %2 가능</Korean>
+        <Key ID="STR_ZEN_Common_AscensionMessages">
+            <English>Ascension Messages</English>
         </Key>
-        <Key ID="STR_ZEN_Common_CopyToClipboard">
-            <English>Copy to Clipboard</English>
+        <Key ID="STR_ZEN_Common_AscensionMessages_Description">
+            <English>Controls whether global popup messages are displayed when a player is assigned as Zeus.</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_CameraBird">
+            <English>Camera Eagle</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_CameraBird_Description">
+            <English>Controls whether an eagle that follows the Zeus camera is created.</English>
         </Key>
     </Package>
 </Project>

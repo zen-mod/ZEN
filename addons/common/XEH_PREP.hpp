@@ -40,6 +40,7 @@ PREP(isVLS);
 PREP(loadMagazineInstantly);
 PREP(messageBox);
 PREP(openArsenal);
+PREP(runAfterSettingsInit);
 PREP(selectPosition);
 PREP(serializeInventory);
 PREP(serializeObjects);
