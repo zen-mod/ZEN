@@ -267,16 +267,16 @@ if (_activated) then {
         if (time == 0) then {
             private _addons = [];
 
-    		{
-    			if (typeOf _x == "ModuleCuratorAddAddons_F") then {
-    				private _paramAddons = call compile ("[" + (_x getVariable ["addons", ""]) + "]");
+            {
+                if (typeOf _x == "ModuleCuratorAddAddons_F") then {
+                    private _paramAddons = call compile ("[" + (_x getVariable ["addons", ""]) + "]");
                     _addons append _paramAddons;
 
-    				{
+                    {
                         _addons append unitAddons _x;
-    				} forEach _paramAddons;
-    			};
-    		} forEach synchronizedObjects _logic;
+                    } forEach _paramAddons;
+                };
+            } forEach synchronizedObjects _logic;
 
             _addons call BIS_fnc_activateAddons;
         };
