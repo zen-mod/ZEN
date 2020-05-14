@@ -37,10 +37,10 @@ if (isPlayer _gunner) exitWith {
 };
 
 getCompatibleBases = {
-	params ["_backpack"];
-	private _cfgBase = configFile >> "CfgVehicles" >> _backpack >> "assembleInfo" >> "base";
-	private _compatibleBases = if (isText _cfgBase) then {[getText _cfgBase]} else {getArray _cfgBase};
-	_compatibleBases
+    params ["_backpack"];
+    private _cfgBase = configFile >> "CfgVehicles" >> _backpack >> "assembleInfo" >> "base";
+    private _compatibleBases = if (isText _cfgBase) then {[getText _cfgBase]} else {getArray _cfgBase};
+    _compatibleBases
 };
 
 private _backpack = backpack _gunner;
@@ -54,10 +54,10 @@ if (_compatibleBases isEqualType "") then {_compatibleBases = [_compatibleBases]
 
 private _backpackers = units _gunner select {!(backpack _x isEqualTo "")};
 private _assistant = {
-	if (backpack _x in _compatibleBases) exitWith {_x};
-	if (_backpack in ([backpack _x] call getCompatibleBases)) exitWith {_x};
-	
-	objNull
+    if (backpack _x in _compatibleBases) exitWith {_x};
+    if (_backpack in ([backpack _x] call getCompatibleBases)) exitWith {_x};
+    
+    objNull
 } forEach _backpackers;
 
 if (_assistant isEqualTo objNull) exitWith {
@@ -66,6 +66,6 @@ if (_assistant isEqualTo objNull) exitWith {
 
 // Get target position
 [_gunner, {
-	params ["_successful", "_gunner", "_mousePosASL", "_assistant"],;
-	[_gunner, _assistant, ASLToAGL _mousePosASL] remoteExecCall ["zen_modules_fnc_unpackStaticWeapon", _gunner];
+    params ["_successful", "_gunner", "_mousePosASL", "_assistant"];
+    [_gunner, _assistant, ASLToAGL _mousePosASL] remoteExecCall ["zen_modules_fnc_unpackStaticWeapon", _gunner];
 }, _assistant, "Static Weapon Facing"] call EFUNC(common,selectPosition);
