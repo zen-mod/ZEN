@@ -439,6 +439,7 @@ class CfgVehicles {
         category = QGVAR(AI);
         displayName = CSTRING(moduleUnpackStaticWeapon);
         function = QFUNC(moduleUnpackStaticWeapon);
+        icon = "\a3\static_f_gamma\data\ui\gear_staticturret_mg_high_ca.paa";
     };
     class GVAR(moduleVisibility): GVAR(moduleBase) {
         curatorCanAttach = 1;
