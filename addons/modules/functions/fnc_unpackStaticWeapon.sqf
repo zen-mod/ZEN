@@ -23,11 +23,11 @@ _gunner setVariable ["zen_ai_fnc_unpackStaticWeaponTargetPos", _targetPos];
 
 _gunner addEventHandler ["WeaponAssembled", {
     params ["_gunner", "_weapon"];
-    
+
     _gunner removeEventHandler ["WeaponAssembled", _thisEventHandler];
-    
+
     _weapon setVectorUp surfaceNormal position _weapon;
-    
+
     _gunner assignAsGunner _weapon;
     _gunner moveInGunner _weapon;
 
@@ -39,7 +39,7 @@ _gunner addEventHandler ["WeaponAssembled", {
 
     _group = group _gunner;
     _group addVehicle _weapon;
-}]; 
+}];
 
 _weaponBase = unitBackpack _assistant;
 _gunner action ["PutBag", _assistant];
