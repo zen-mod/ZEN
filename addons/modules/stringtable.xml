@@ -2326,6 +2326,9 @@
             <Korean>LZ에 배치</Korean>
             <Polish>Postaw LZ</Polish>
         </Key>
+        <Key ID="STR_ZEN_Modules_moduleUnpackStaticWeapon">
+            <English>Unpack Static Weapon</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_NoTeleportPosition">
             <English>Unable to find suitable position to teleport vehicle to.</English>
             <German>Kein valide Position zum Teleporieren des Fahrzeugs gefunden.</German>

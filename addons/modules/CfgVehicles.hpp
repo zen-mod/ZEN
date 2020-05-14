@@ -434,6 +434,12 @@ class CfgVehicles {
         displayName = CSTRING(ModuleUnGarrison);
         function = QFUNC(moduleUnGarrison);
     };
+    class GVAR(moduleUnpackStaticWeapon): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = CSTRING(moduleUnpackStaticWeapon);
+        function = QFUNC(moduleUnpackStaticWeapon);
+    };
     class GVAR(moduleVisibility): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Objects);

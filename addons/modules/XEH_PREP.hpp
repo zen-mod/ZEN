@@ -82,5 +82,7 @@ PREP(moduleToggleIRLasers);
 PREP(moduleToggleLamps);
 PREP(moduleTurretOptics);
 PREP(moduleUnGarrison);
+PREP(moduleUnpackStaticWeapon);
 PREP(moduleVisibility);
 PREP(moduleWeather);
+PREP(unpackStaticWeapon);
