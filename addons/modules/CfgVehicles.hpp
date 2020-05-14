@@ -322,18 +322,21 @@ class CfgVehicles {
         category = QGVAR(Projectiles);
         displayName = CSTRING(moduleThrowSelect);
         function = QFUNC(moduleThrowSelect);
+        icon = "\a3\ui_f\data\gui\rsc\rscdisplayarsenal\cargothrow_ca.paa";
     };
     class GVAR(moduleFireGL): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Projectiles);
         displayName = CSTRING(moduleFireGL);
         function = QFUNC(moduleFireGL);
+        icon = QPATHTOF(ui\ugl_shell_ca.paa);
     };
     class GVAR(moduleFireLauncher): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Projectiles);
         displayName = CSTRING(moduleFireLauncher);
         function = QFUNC(moduleFireLauncher);
+        icon = "\a3\ui_f\data\gui\rsc\rscdisplayarsenal\secondaryweapon_ca.paa";
     };
     class GVAR(moduleRemoveArsenal): GVAR(moduleBase) {
         curatorCanAttach = 1;
