@@ -1,6 +1,6 @@
 /*
  Author: Ampers
- Check if projectile can reach target, then remote executes on the unit.  
+ Check if projectile can reach target, then remote executes on the unit.
 
  * Arguments:
  * 0: Unit <OBJECT>
@@ -11,7 +11,7 @@
  *
  * Return Value:
  * NONE
- 
+
  * Example:
  * [_unit, _magazine, _muzzle, _firemode, _mousePosASL] call tft_zeus_fnc_zeusProjectile;
  */
@@ -24,8 +24,8 @@ private _intersections = lineIntersectsSurfaces [AGLToASL _position0, _mousePosA
 
 private _targetPos = _mousePosASL;
 if !(_intersections isEqualTo []) then {
-	_targetPos = _intersections # 0 # 0;
-	//systemChat str _targetPos;
+    _targetPos = _intersections # 0 # 0;
+    //systemChat str _targetPos;
 };
 
 // check if can reach
@@ -37,8 +37,8 @@ private _g = 9.8066;
 private _angle = (acos((_g * _distance^2/_initSpeed^2-_height)/(_eyePos distance _targetPos)) + atan (_distance / _height)) / 2;
 
 if !(_angle isEqualType 0) then {
-	// if can't reach, notify zeus. Will try to throw as far as possible
-	[objNull, format ["Can't reach target! D:%1 H:%2", _distance, _height]] call bis_fnc_showCuratorFeedbackMessage;
+    // if can't reach, notify zeus. Will try to throw as far as possible
+    [objNull, format ["Can't reach target! D:%1 H:%2", _distance, _height]] call bis_fnc_showCuratorFeedbackMessage;
 };
 
 if (isNil "zen_projectiles_throwFlatTrajectory") then {zen_projectiles_throwFlatTrajectory = true;};

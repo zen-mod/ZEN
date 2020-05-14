@@ -37,32 +37,32 @@ private _throwables = (_mags arrayIntersect _mags) select {_x call BIS_fnc_isThr
 
 private _action = [];
 {
-	_action = [
-		_x,
-		getText (configFile >> "CfgMagazines" >> _x >> "displayName"),
-		getText (configFile >> "CfgMagazines" >> _x >> "picture"),
-		{
-			(_this # 6) params ["_unit", "_magazine"];
-			// Get target position
-			[_unit, {
-				params ["_successful", "_unit", "_mousePosASL", "_arguments"];
-				_arguments params ["_magazine"];
-				private _muzzle = configName (("_magazine in (getArray (_x >> 'magazines'))" configClasses (configFile >> "CfgWeapons" >> "Throw")) # 0);
-				private _firemode = _muzzle;
-				[_unit, _magazine, _muzzle, _firemode, _mousePosASL] call FUNC(projectiles_zeus);
-			}, [_magazine], LSTRING(ModuleThrowSelect)] call EFUNC(common,selectPosition);
-			
-		}, 
-		{true}, 
-		[_unit, _x]
-	] call EFUNC(context_menu,createAction);
-	[_action, [], 0] call EFUNC(context_menu,addAction);
+    _action = [
+        _x,
+        getText (configFile >> "CfgMagazines" >> _x >> "displayName"),
+        getText (configFile >> "CfgMagazines" >> _x >> "picture"),
+        {
+            (_this # 6) params ["_unit", "_magazine"];
+            // Get target position
+            [_unit, {
+                params ["_successful", "_unit", "_mousePosASL", "_arguments"];
+                _arguments params ["_magazine"];
+                private _muzzle = configName (("_magazine in (getArray (_x >> 'magazines'))" configClasses (configFile >> "CfgWeapons" >> "Throw")) # 0);
+                private _firemode = _muzzle;
+                [_unit, _magazine, _muzzle, _firemode, _mousePosASL] call FUNC(projectiles_zeus);
+            }, [_magazine], LSTRING(ModuleThrowSelect)] call EFUNC(common,selectPosition);
+
+        },
+        {true},
+        [_unit, _x]
+    ] call EFUNC(context_menu,createAction);
+    [_action, [], 0] call EFUNC(context_menu,addAction);
 } forEach _throwables;
 [] call EFUNC(context_menu,openMenu);
 
 // remove actions on menu close
 [{
-	EGVAR(context_menu,contextGroups) isEqualTo []
+    EGVAR(context_menu,contextGroups) isEqualTo []
 },{
-	_this apply {[_x] call zen_context_menu_fnc_removeAction};
+    _this apply {[_x] call zen_context_menu_fnc_removeAction};
 }, _throwables, 15, {}] call CBA_fnc_waitUntilAndExecute;
