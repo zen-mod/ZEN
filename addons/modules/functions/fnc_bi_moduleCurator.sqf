@@ -31,7 +31,7 @@ if (_activated) then {
 
     // Exit if the module is not created on the server
     if (!isServer && {local _logic} && {isNull getAssignedCuratorUnit _logic}) exitwith {
-        [format ["%1 is trying to create a Curator logic ModuleCurator_F.", profileName], "BIS_fnc_error", false] call BIS_fnc_MP;
+        [format ["%1 is trying to create a Curator logic ModuleCurator_F.", profileName]] remoteExec ["BIS_fnc_error", 2];
         deleteVehicle _logic;
     };
 
