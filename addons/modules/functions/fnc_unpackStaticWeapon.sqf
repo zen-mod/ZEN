@@ -1,7 +1,7 @@
 //#include "script_component.hpp"
 /*
  * Author: Ampersand
- * Unpacks static weapon from units' backpacks.
+ * Unpacks a static weapon from units' backpacks.
  *
  * Arguments:
  * 0: Gunner <OBJECT>
