@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Ampersand
- * Zeus module function to use backpacks to assemble a static weapon
+ * Zeus module function to unpack and assemble a static weapon from supported backpacks.
  *
  * Arguments:
  * 0: Logic <OBJECT>
