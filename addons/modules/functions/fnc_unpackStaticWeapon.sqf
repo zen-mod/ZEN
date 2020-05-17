@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [gunner, assistant] call zen_modules_fnc_unpackStaticWeapon
+ * [_gunner, _assistant] call zen_modules_fnc_unpackStaticWeapon
  *
  * Public: No
  */
