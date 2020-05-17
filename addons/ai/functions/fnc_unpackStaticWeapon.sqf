@@ -1,4 +1,4 @@
-//#include "script_component.hpp"
+#include "script_component.hpp"
 /*
  * Author: Ampersand
  * Unpacks a static weapon from units' backpacks.
@@ -11,15 +11,15 @@
  * None
  *
  * Example:
- * [_gunner, _assistant] call zen_modules_fnc_unpackStaticWeapon
+ * [_gunner, _assistant] call zen_ai_fnc_unpackStaticWeapon
  *
  * Public: No
  */
 
 params ["_gunner", "_assistant", ["_targetPos", [], [[]], 3]];
-if !(local _gunner) exitWith {_this remoteExecCall ["zen_ai_fnc_unpackStaticWeapon", _gunner]};
+if !(local _gunner) exitWith {_this remoteExecCall [FUNC(unpackStaticWeapon), _gunner]};
 
-_gunner setVariable ["zen_ai_fnc_unpackStaticWeaponTargetPos", _targetPos];
+_gunner setVariable [QGVAR(unpackStaticWeaponTargetPos), _targetPos];
 
 _gunner addEventHandler ["WeaponAssembled", {
     params ["_gunner", "_weapon"];
@@ -31,7 +31,7 @@ _gunner addEventHandler ["WeaponAssembled", {
     _gunner assignAsGunner _weapon;
     _gunner moveInGunner _weapon;
 
-    private _targetPos = _gunner getVariable ["zen_ai_fnc_unpackStaticWeaponTargetPos", []];
+    private _targetPos = _gunner getVariable [QGVAR(unpackStaticWeaponTargetPos), []];
     if !(_targetPos isEqualTo []) then {
         _weapon setDir (_weapon getDir _targetPos);
         _gunner doWatch _targetPos;

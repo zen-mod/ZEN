@@ -85,4 +85,3 @@ PREP(moduleUnGarrison);
 PREP(moduleUnpackStaticWeapon);
 PREP(moduleVisibility);
 PREP(moduleWeather);
-PREP(unpackStaticWeapon);
