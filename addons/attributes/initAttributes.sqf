@@ -148,8 +148,8 @@
     LSTRING(Engine),
     QGVAR(icons),
     [[
-        [true,  QPATHTOF(ui\engine_on_ca.paa),  ELSTRING(common,On),  14.5, 0.25, 2],
-        [false, QPATHTOF(ui\engine_off_ca.paa), ELSTRING(common,Off), 19.5, 0.25, 2]
+        [false, QPATHTOF(ui\engine_off_ca.paa), ELSTRING(common,Off), 14.5, 0.25, 2],
+        [true,  QPATHTOF(ui\engine_on_ca.paa),  ELSTRING(common,On),  19.5, 0.25, 2]
     ]],
     {
         {
@@ -165,8 +165,8 @@
     LSTRING(Lights),
     QGVAR(icons),
     [[
-        [true,  QPATHTOF(ui\lights_on_ca.paa),  ELSTRING(common,On),  14.5, 0.25, 2],
-        [false, QPATHTOF(ui\lights_off_ca.paa), ELSTRING(common,Off), 19.5, 0.25, 2]
+        [false, QPATHTOF(ui\lights_off_ca.paa), ELSTRING(common,Off), 14.5, 0.25, 2],
+        [true,  QPATHTOF(ui\lights_on_ca.paa),  ELSTRING(common,On),  19.5, 0.25, 2]
     ]],
     {
         {
