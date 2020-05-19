@@ -88,7 +88,12 @@ _ctrlMode ctrlAddEventHandler ["ButtonClick", {
 private _fnc_updateModeButton = {
     params ["_ctrlMode", "_mode"];
 
-    private _icon = [QPATHTOF(ui\local_ca.paa), QPATHTOF(ui\target_ca.paa), QPATHTOF(ui\global_ca.paa)] select _mode;
+    private _icon = [
+        "\a3\ui_f\data\igui\cfg\simpletasks\letters\l_ca.paa",
+        "\a3\ui_f\data\igui\cfg\simpletasks\letters\t_ca.paa",
+        "\a3\ui_f\data\igui\cfg\simpletasks\letters\g_ca.paa"
+    ] select _mode;
+
     private _tooltip = [LSTRING(LocalExec), LSTRING(TargetExec), LSTRING(GlobalExec)] select _mode;
 
     _ctrlMode ctrlSetText _icon;
