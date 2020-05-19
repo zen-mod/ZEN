@@ -94,6 +94,9 @@ private _fnc_deserializeUnit = {
     _unit setUnitPos _stance;
     _unit forceFlagTexture _flagTexture;
 
+    // Ensure unit belongs to the same side as the group
+    [_unit] joinSilent _group;
+
     if (_isLeader) then {
         _group selectLeader _unit;
         _group setFormDir _direction;

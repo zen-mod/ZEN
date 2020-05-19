@@ -6,14 +6,13 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"zen_modules", "ace_interaction", "ace_zeus"};
+        requiredAddons[] = {"zen_attributes"};
         author = ECSTRING(main,Author);
-        authors[] = {"mharis001"};
+        authors[] = {"NeilZar"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
 #include "CfgEventHandlers.hpp"
-#include "CfgVehicles.hpp"
-#include "ACE_ZeusActions.hpp"
+#include "gui.hpp"

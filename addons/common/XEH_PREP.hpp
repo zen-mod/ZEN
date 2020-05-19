@@ -32,6 +32,7 @@ PREP(getWeaponReloadTime);
 PREP(hasDefaultInventory);
 PREP(healUnit);
 PREP(initDisplayPositioning);
+PREP(initSidesControl);
 PREP(initSliderEdit);
 PREP(isInScreenshotMode);
 PREP(isPlacementActive);

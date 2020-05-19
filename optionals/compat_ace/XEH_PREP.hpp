@@ -1,0 +1,2 @@
+PREP(canRemoteControl);
+PREP(remoteControl);
