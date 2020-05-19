@@ -285,7 +285,7 @@ if (_activated) then {
     if (hasInterface) then {
         waitUntil {local player};
 
-        private _serverCommand = if (_ownerVar == "#adminLogged") then {"#shutdown"} else {"#kick"};
+        private _serverCommand = ["#kick", "#shutdown"] select (_ownerVar == "#adminLogged");
 
         // Black effect until the forced interface is open
         private _forced = _logic getVariable ["forced", 0] > 0;
