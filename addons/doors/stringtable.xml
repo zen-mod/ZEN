@@ -8,6 +8,7 @@
             <German>Türen konfigurieren</German>
             <Polish>Konfiguruj drzwi</Polish>
             <Japanese>ドア設定</Japanese>
+            <Korean>문 설정</Korean>
         </Key>
         <Key ID="STR_ZEN_Doors_NoBuilding">
             <English>Place on a building</English>
@@ -16,6 +17,7 @@
             <German>Auf Gebäude platzieren</German>
             <Polish>Ustaw na budynku</Polish>
             <Japanese>建物に設置</Japanese>
+            <Korean>건물에 설치</Korean>
         </Key>
         <Key ID="STR_ZEN_Doors_NoDoors">
             <English>Building has no doors</English>
@@ -24,6 +26,7 @@
             <German>Das Gebäude hat keine Türen</German>
             <Polish>Budynek nie ma drzwi</Polish>
             <Japanese>建物にドアはありません！</Japanese>
+            <Korean>건물에 문이 없습니다</Korean>
         </Key>
     </Package>
 </Project>
