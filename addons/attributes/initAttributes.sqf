@@ -267,9 +267,23 @@
     "Object",
     "STR_a3_rscdebugconsole_expressiontext",
     QGVAR(code),
-    [QGVAR(objectExecHistory), LSTRING(ExecObject_Tooltip), 20, 1000],
+    [QGVAR(objectExecHistory), QGVAR(objectExecMode), LSTRING(ExecObject_Tooltip), 20, 1000],
     {
-        [QEGVAR(common,execute), [compile _value, _entity], _entity] call CBA_fnc_targetEvent;
+        _value params ["_code", "_mode"];
+
+        _code = compile _code;
+
+        switch (_mode) do {
+            case MODE_LOCAL: {
+                _entity call _code;
+            };
+            case MODE_TARGET: {
+                [QEGVAR(common,execute), [_code, _entity], _entity] call CBA_fnc_targetEvent;
+            };
+            case MODE_GLOBAL: {
+                [QEGVAR(common,execute), [_code, _entity]] call CBA_fnc_globalEvent;
+            };
+        };
     },
     {""},
     {IS_ADMIN || {!GETMVAR(ZEN_disableCodeExecution,false)}}
@@ -405,9 +419,23 @@
     "Group",
     "STR_a3_rscdebugconsole_expressiontext",
     QGVAR(code),
-    [QGVAR(groupExecHistory), LSTRING(ExecGroup_Tooltip), 20, 1000],
+    [QGVAR(groupExecHistory), QGVAR(groupExecMode), LSTRING(ExecGroup_Tooltip), 20, 1000],
     {
-        [QEGVAR(common,execute), [compile _value, _entity], _entity] call CBA_fnc_targetEvent;
+        _value params ["_code", "_mode"];
+
+        _code = compile _code;
+
+        switch (_mode) do {
+            case MODE_LOCAL: {
+                _entity call _code;
+            };
+            case MODE_TARGET: {
+                [QEGVAR(common,execute), [_code, _entity], _entity] call CBA_fnc_targetEvent;
+            };
+            case MODE_GLOBAL: {
+                [QEGVAR(common,execute), [_code, _entity]] call CBA_fnc_globalEvent;
+            };
+        };
     },
     {""},
     {IS_ADMIN || {!GETMVAR(ZEN_disableCodeExecution,false)}}
