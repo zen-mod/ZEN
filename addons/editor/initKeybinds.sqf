@@ -57,7 +57,7 @@
     };
 }, {}, [DIK_F, [false, true, true]]] call CBA_fnc_addKeybind; // Default: CTRL + ALT + F
 
-[ELSTRING(main,DisplayName), QGVAR(orientTerrainNormal), "str_3den_display3den_entitymenu_setatl_text", {
+[ELSTRING(main,DisplayName), QGVAR(orientTerrainNormal), ["str_3den_display3den_entitymenu_setatl_text", LSTRING(OrientTerrainNormal_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
         {
             if (!isPlayer _x) then {
