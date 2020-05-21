@@ -1,5 +1,6 @@
 PREP(applyToAll);
 PREP(closeGarage);
+PREP(defineCustomTexture);
 PREP(getVehicleData);
 PREP(handleMouse);
 PREP(onAnimationSelect);
