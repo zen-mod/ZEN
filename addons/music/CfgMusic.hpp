@@ -237,7 +237,7 @@ class CfgMusic {
         name = CSTRING(OFPCWC_Heroes);
     };
 
-    // Old Man - Unidentified
+    // Old Man
 
     class Track_C_04 {
         musicClass = "Stealth";
