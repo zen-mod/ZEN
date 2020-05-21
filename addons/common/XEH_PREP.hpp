@@ -1,6 +1,7 @@
 PREP(changeGroupSide);
 PREP(collapseTree);
 PREP(createZeus);
+PREP(customizeVehicle);
 PREP(deployCountermeasures);
 PREP(deserializeInventory);
 PREP(deserializeObjects);
@@ -27,6 +28,7 @@ PREP(getSelectedUnits);
 PREP(getSelectedVehicles);
 PREP(getSideIcon);
 PREP(getVehicleAmmo);
+PREP(getVehicleCustomization);
 PREP(getVehicleIcon);
 PREP(getWeaponReloadTime);
 PREP(hasDefaultInventory);
