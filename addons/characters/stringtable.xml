@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Characters">
+        <Key ID="STR_ZEN_Characters_MenSick">
+            <English>Men (Malaria-Infected)</English>
+            <French>Hommes (Infectés par la malaria)</French>
+            <German>Männer (Malariainfiziert)</German>
+        </Key>
+    </Package>
+</Project>
