@@ -118,7 +118,7 @@ private _fnc_serializeVehicle = {
 
     private _fuel = fuel _vehicle;
     private _inventory = _vehicle call FUNC(serializeInventory);
-    private _customization = _vehicle call BIS_fnc_getVehicleCustomization;
+    private _customization = _vehicle call FUNC(getVehicleCustomization);
     private _flagTexture = getForcedFlagTexture _vehicle;
 
     private _pylonMagazines = getPylonMagazines _vehicle;

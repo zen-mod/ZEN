@@ -246,8 +246,9 @@ private _fnc_processVehicle = {
             _outputObjects pushBack ["%1 forceFlagTexture %2;", _varName, str _flagTexture];
         };
 
-        (_vehicle call BIS_fnc_getVehicleCustomization) params ["_textures", "_animations"];
-        _outputObjects pushBack ["[%1, %2, %3, true] call BIS_fnc_initVehicle;", _varName, _textures, _animations];
+        (_vehicle call FUNC(getVehicleCustomization)) params ["_textures", "_animations"];
+        _outputObjects pushBack ["[%1, nil, %2, true] call BIS_fnc_initVehicle;", _varName, _animations];
+        _outputObjects pushBack ["{%1 setObjectTextureGlobal [_forEachIndex, _x]} forEach %2;", _varName, _textures];
 
         [_vehicle, _varName] call _fnc_processInventory;
 
