@@ -12,7 +12,7 @@ class CfgPatches {
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
 
-        // this prevents any patched class from requiring this addon
+        // This prevents any patched class from requiring this addon
         addonRootClass = "A3_Characters_F";
     };
 };
