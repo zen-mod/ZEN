@@ -25,29 +25,31 @@ private _vehicleType = typeOf _vehicle;
 private _vehicleData = GVAR(vehicleDataCache) getVariable _vehicleType;
 
 if (isNil "_vehicleData") then {
-    _vehicleData = [];
-
     private _vehicleConfig = configFile >> "CfgVehicles" >> _vehicleType;
-    private _vehicleFaction = faction _vehicle;
 
+    private _animations = [];
+    ([_vehicle] call EFUNC(common,getVehicleCustomization)) params ["", "_currentAnimations"];
+    for "_i" from 0 to (count _currentAnimations - 2) step 2 do {
+        private _configName = _currentAnimations select _i;
+        private _displayName = getText (_vehicleConfig >> "animationSources" >> _configName >> "displayName");
+        if (_displayName == "") then {
+            _displayName = (_configName splitString "_") joinString " ";
+        };
+        _animations pushBack [_configName, _displayName];
+    };
+
+    private _textures = [];
     {
-        private _entries = [];
+        private _configName = configName _x;
+        private _displayName = getText (_x >> "displayName");
+        _textures pushBack [_configName, _displayName];
+    } forEach configProperties [_vehicleConfig >> "textureSources", "isClass _x", true];
 
-        {
-            private _displayName = getText (_x >> "displayName");
-            private _factions = getArray (_x >> "factions");
+    // Adding custom definitions
+    private _customTextures = GVAR(customVehicleTextures) getVariable [_vehicleType, []];
+    _textures append _customTextures;
 
-            if (
-                _displayName != ""
-                && {getNumber (_x >> "scope") == 2 || {!isNumber (_x >> "scope")}}
-                && {_factions isEqualTo [] || {_factions findIf {_x == _vehicleFaction} > -1}}
-            ) then {
-                _entries pushBack [configName _x, _displayName];
-            };
-        } forEach configProperties [_x, "isClass _x", true];
-
-        _vehicleData pushBack _entries;
-    } forEach [_vehicleConfig >> "animationSources", _vehicleConfig >> "textureSources"];
+    _vehicleData = [_animations, _textures];
 
     GVAR(vehicleDataCache) setVariable [_vehicleType, _vehicleData];
 };

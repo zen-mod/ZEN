@@ -16,12 +16,12 @@
  * Public: No
  */
 
-(GVAR(center) call BIS_fnc_getVehicleCustomization) params ["_texture", "_animations"];
+(GVAR(center) call EFUNC(common,getVehicleCustomization)) params ["_textures", "_animations"];
 
 private _vehicleType = typeOf GVAR(center);
 
 {
     if (typeOf _x isEqualTo _vehicleType) then {
-        [_x, _texture, _animations, true] call BIS_fnc_initVehicle;
+        [_x, _textures, _animations, true] call EFUNC(common,customizeVehicle);
     };
 } forEach SELECTED_OBJECTS;

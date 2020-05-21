@@ -22,12 +22,17 @@ private _vehicleData = [GVAR(center)] call FUNC(getVehicleData);
 _vehicleData params ["_vehicleAnimations", "_vehicleTextures"];
 
 private _fnc_addToList = {
-    params ["_ctrlList", "_configName", "_displayName", "_isChecked"];
+    params ["_ctrlList", "_variant", "_displayName", "_isChecked"];
+
+    if !(_variant isEqualType "") then {
+        _variant = str _variant;
+    };
 
     if (_isChecked isEqualType false) then {_isChecked = parseNumber _isChecked};
 
     private _index = _ctrlList lbAdd _displayName;
-    _ctrlList lbSetData [_index, _configName];
+
+    _ctrlList lbSetData [_index, _variant];
     _ctrlList lbSetValue [_index, _isChecked];
     _ctrlList lbSetTooltip [_index, _displayName];
     _ctrlList lbSetPicture [_index, [ICON_UNCHECKED, ICON_CHECKED] select _isChecked];
@@ -38,7 +43,11 @@ private _ctrlListAnimations = _display displayCtrl IDC_LIST_ANIMATIONS;
 {
     _x params ["_configName", "_displayName"];
 
-    private _isChecked = GVAR(center) animationPhase _configName;
+    private _isChecked = if ("door" in toLower _configName) then {
+        GVAR(center) doorPhase _configName;
+    } else {
+        GVAR(center) animationPhase _configName;
+    };
     [_ctrlListAnimations, _configName, _displayName, _isChecked] call _fnc_addToList;
 } forEach _vehicleAnimations;
 
@@ -47,20 +56,25 @@ private _ctrlListTextures = _display displayCtrl IDC_LIST_TEXTURES;
 private _sourcesConfig = configFile >> "CfgVehicles" >> typeOf GVAR(center) >> "textureSources";
 private _currentTextures = getObjectTextures GVAR(center) apply {toLower _x};
 {
-    _x params ["_configName", "_displayName"];
+    _x params ["_variant", "_displayName"];
 
-    private _configTextures = getArray (_sourcesConfig >> _configName >> "textures");
+    private _textures = if (_variant isEqualType "") then {
+         getArray (_sourcesConfig >> _variant >> "textures");
+    } else {
+        _variant;
+    };
     private _isChecked = true;
-    if (count _configTextures == count _currentTextures) then {
-        {if !((_currentTextures select _forEachIndex) in toLower _x) exitWith {_isChecked = false}} forEach _configTextures;
+    if (count _textures == count _currentTextures) then {
+        {if !((_currentTextures select _forEachIndex) in toLower _x) exitWith {_isChecked = false}} forEach _textures;
     } else {
         _isChecked = false;
     };
 
-    [_ctrlListTextures, _configName, _displayName, _isChecked] call _fnc_addToList;
+    [_ctrlListTextures, _variant, _displayName, _isChecked] call _fnc_addToList;
 } forEach _vehicleTextures;
 
-// Set font height and hide both lists
+// Set font height and sort both lists
 {
     _x ctrlSetFontHeight POS_H(0.8); // Todo: setting for font height?
+    lbSort _x;
 } forEach [_ctrlListAnimations, _ctrlListTextures];
