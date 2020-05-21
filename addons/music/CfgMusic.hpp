@@ -238,7 +238,6 @@ class CfgMusic {
     };
 
     // Old Man
-
     class Track_C_04 {
         musicClass = "Stealth";
         name = CSTRING(OldMan_Stealth);
