@@ -20,4 +20,6 @@ GVAR(camYaw) = -45;
     true
 ] call EFUNC(attributes,addButton);
 
+#include "initCustomVehicleTextures.sqf"
+
 ADDON = true;
