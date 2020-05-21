@@ -1303,6 +1303,9 @@
         <Key ID="STR_ZEN_Modules_ModuleUnpackStaticWeapon_Group">
             <English>Unit group must contain two compatible weapon bags</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleUnpackStaticWeapon_Facing">
+            <English>Static Weapon Facing</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_GroupSide">
             <English>Group Side</English>
             <Russian>Сторона группы</Russian>

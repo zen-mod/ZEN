@@ -67,4 +67,4 @@ if (_assistant isEqualTo objNull) exitWith {
 [_gunner, {
     params ["_successful", "_gunner", "_mousePosASL", "_assistant"];
     [QEGVAR(ai,unpackStaticWeapon), [_gunner, _assistant, ASLToAGL _mousePosASL], _gunner] call CBA_fnc_targetEvent;
-}, _assistant, "Static Weapon Facing"] call EFUNC(common,selectPosition);
+}, _assistant, LSTRING(ModuleUnpackStaticWeapon_Facing)] call EFUNC(common,selectPosition);
