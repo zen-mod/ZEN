@@ -22,8 +22,11 @@
  */
 
 #define MAX_DISTANCE 3
+#define MIN_SOUND_DELAY 1
+#define MID_SOUND_DELAY 2
+#define MAX_SOUND_DELAY 4
 
-params ["_object", "_share", "_delete", "_actionText", "_duration", "_title", "_text"];
+params ["_object", "_share", "_delete", "_actionText", "_actionSounds", "_duration", "_title", "_text"];
 
 private _fnc_addIntel = {
     private _targets = switch (_share) do {
@@ -45,6 +48,7 @@ private _fnc_addIntel = {
         allCurators
     ] call CBA_fnc_targetEvent;
 
+    playSound "Beep_Target";
     [
         ["\a3\ui_f\data\igui\cfg\simpletasks\types\documents_ca.paa", 1.25],
         [localize LSTRING(ModuleCreateIntel_IntelFound)],
@@ -63,13 +67,17 @@ if (isClass (configFile >> "CfgPatches" >> "ace_interact_menu")) then {
         "\a3\ui_f\data\igui\cfg\simpletasks\types\documents_ca.paa",
         {
             params ["_object", "_unit", "_args"];
-            _args params ["_title", "_text", "_share", "_delete", "_actionText", "_duration", "_fnc_addIntel"];
+            _args params ["_title", "_text", "_share", "_delete", "_actionText", "_actionSounds", "_duration", "_fnc_addIntel"];
+
+            if !(_actionSounds isEqualTo []) then {
+                _object setVariable [QGVAR(nextTimeForSound), time];
+            };
 
             [
                 _duration,
-                [_object, _unit, _title, _text, _share, _delete, _fnc_addIntel],
+                [_object, _unit, _title, _text, _actionSounds, _share, _delete, _fnc_addIntel],
                 {
-                    (_this select 0) params ["_object", "_unit", "_title", "_text", "_share", "_delete", "_fnc_addIntel"];
+                    (_this select 0) params ["_object", "_unit", "_title", "_text", "_actionSounds", "_share", "_delete", "_fnc_addIntel"];
 
                     call _fnc_addIntel;
 
@@ -78,14 +86,32 @@ if (isClass (configFile >> "CfgPatches" >> "ace_interact_menu")) then {
                     } else {
                         [_object, 0, ["ACE_MainActions", QGVAR(intelAction)]] call ace_interact_menu_fnc_removeActionFromObject;
                     };
+
+                    _object setVariable [QGVAR(nextTimeForSound), nil];
                 },
-                {},
-                _actionText
+                {
+                    (_this select 0) params ["_object"];
+
+                    _object setVariable [QGVAR(nextTimeForSound), nil];
+                },
+                _actionText,
+                {
+                    (_this select 0) params ["_object", "", "", "", "_actionSounds"];
+
+                    private _time = time;
+                    if (_time > (_object getVariable [QGVAR(nextTimeForSound), _time])) then {
+                        playSound selectRandom _actionSounds;
+                        private _nextDelay = random [MIN_SOUND_DELAY, MID_SOUND_DELAY, MAX_SOUND_DELAY];
+                        _object setVariable [QGVAR(nextTimeForSound), _time + _nextDelay];
+                    };
+
+                    true
+                }
             ] call ace_common_fnc_progressBar;
         },
         {true},
         {},
-        [_title, _text, _share, _delete, _actionText, _duration, _fnc_addIntel]
+        [_title, _text, _share, _delete, _actionText, _actionSounds, _duration, _fnc_addIntel]
     ] call ace_interact_menu_fnc_createAction;
 
     [_object, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
@@ -95,7 +121,6 @@ if (isClass (configFile >> "CfgPatches" >> "ace_interact_menu")) then {
     if (!isNil "_actionID") then {
         [_object, _actionID] call BIS_fnc_holdActionRemove;
     };
-
     _actionID = [
         _object,
         _actionText,
@@ -103,20 +128,41 @@ if (isClass (configFile >> "CfgPatches" >> "ace_interact_menu")) then {
         "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_search_ca.paa",
         QUOTE(_target distance _this < MAX_DISTANCE),
         QUOTE(_target distance _caller < MAX_DISTANCE),
-        {},
-        {},
+        {
+            params ["_object", "", "", "_args"];
+            _args params ["", "", "_actionSounds"];
+
+            if !(_actionSounds isEqualTo []) then {
+                _object setVariable [QGVAR(nextTickForSound), 1];
+            };
+        },
+        {
+            params ["_object", "", "", "_args", "_ticks", "_maxTicks"];
+            _args params ["", "", "_actionSounds", "_duration"];
+
+            if (_ticks == (_object getVariable [QGVAR(nextTickForSound), -1])) then {
+                playSound selectRandom _actionSounds;
+                private _nextDelay = random [MIN_SOUND_DELAY, MID_SOUND_DELAY, MAX_SOUND_DELAY];
+                _object setVariable [QGVAR(nextTickForSound), _ticks + ceil (_maxTicks  * _nextDelay / _duration)];
+            };
+        },
         {
             params ["_object", "_unit", "", "_args"];
-            _args params ["_title", "_text", "_share", "_delete", "_fnc_addIntel"];
+            _args params ["_title", "_text", "", "", "_share", "_delete", "_fnc_addIntel"];
 
             call _fnc_addIntel;
 
             if (_delete) then {
                 deleteVehicle _object;
             };
+
+            _object setVariable [QGVAR(nextTickForSound), nil];
         },
-        {},
-        [_title, _text, _share, _delete, _fnc_addIntel],
+        {
+             params ["_object"];
+            _object setVariable [QGVAR(nextTickForSound), nil];
+        },
+        [_title, _text, _actionSounds, _duration, _share, _delete, _fnc_addIntel],
         _duration,
         100,
         true,
