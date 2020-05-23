@@ -28,7 +28,7 @@ if (GVAR(preferredArsenal) == 1 && {isClass (configFile >> "CfgPatches" >> "ace_
     // Connect CBRN hoses when arsenal is closed
     if (isNil QGVAR(arsenalCbrnEH)) then {
         GVAR(arsenalCbrnEH) = [
-            missionnamespace,
+            missionNamespace,
             "arsenalClosed", {
                 GVAR(arsenalCenter) call BIN_fnc_CBRNHoseInit;
                 GVAR(arsenalCenter) = nil;
