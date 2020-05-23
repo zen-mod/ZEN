@@ -106,6 +106,7 @@ private _fnc_deserializeUnit = {
         params ["_unit", "_loadout"];
 
         _unit setUnitLoadout _loadout;
+        [_unit] call BIN_fnc_CBRNHoseInit;
     }, [_unit, _loadout]] call CBA_fnc_execNextFrame;
 
     if (!_enableRandomization) then {
