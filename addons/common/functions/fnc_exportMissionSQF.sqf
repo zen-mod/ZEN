@@ -114,6 +114,7 @@ private _fnc_processInventory = {
 
     if (_object isKindOf "CAManBase") then {
         _outputObjects pushBack ["%1 setUnitLoadout %2;", _varName, getUnitLoadout _object];
+        _outputObjects pushBack ["%1 call BIN_fnc_CBRNHoseInit;", _varName];
     } else {
         private _fnc_processCargo = {
             params ["_cargo", "_command"];
