@@ -34,11 +34,20 @@ _items params ["_itemTypes", "_itemCounts"];
     _object addWeaponWithAttachmentsCargoGlobal [_x, 1];
 } forEach _weapons;
 
-_magazines params ["_magazineTypes", "_magazineCounts"];
+// BWC for magazines format returned by the getMagazineCargo command
+if (count _magazines == 2 && {_magazines select 0 isEqualTo [] || {_magazines select 0 isEqualTypeAll ""}}) then {
+    _magazines params ["_magazineTypes", "_magazineCounts"];
 
-{
-    _object addMagazineCargoGlobal [_x, _magazineCounts select _forEachIndex];
-} forEach _magazineTypes;
+    {
+        _object addMagazineCargoGlobal [_x, _magazineCounts select _forEachIndex];
+    } forEach _magazineTypes;
+} else {
+    {
+        _x params ["_magazine", "_ammoCount"];
+
+        _object addMagazineAmmoCargo [_magazine, 1, _ammoCount];
+    } forEach _magazines;
+};
 
 _backpacks params ["_backpackTypes", "_backpackCounts"];
 
