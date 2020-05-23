@@ -4,7 +4,7 @@
  * Changes the textures, animation sources and/or mass of a given vehicle.
  * Based on BIS_fnc_initVehicle, but can be applied multiple times without issues.
  * In contrast to BIS_fnc_initVehicle, if texture is passed as an array,
- * it expect an array of texture paths (i.e. output of getObjectTextures).
+ * it can also alternatively be an array of texture paths (i.e. output of getObjectTextures).
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
@@ -40,7 +40,7 @@ if (_animation isEqualType []) then {
     };
 };
 
-if (_texture isEqualType []) then {
+if (_texture isEqualType [] && {count _texture < 2 || {(_texture select 1) isEqualType ""}}) then {
     [_vehicle, nil, _animation, _mass] call BIS_fnc_initVehicle;
     {
         _vehicle setObjectTextureGlobal [_forEachIndex, _x];
