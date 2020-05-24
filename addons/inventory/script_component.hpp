@@ -32,6 +32,7 @@
 #define IDC_BTN_SEARCH 1550
 #define IDC_SEARCH_BAR 1560
 #define IDC_LOAD       1570
-#define IDC_BTN_CLEAR  1580
+#define IDC_BTN_RESET  1580
+#define IDC_BTN_CLEAR  1590
 
 #define EMPTY_CARGO [[[], []], [[], []], [[], []], [[], []]]
