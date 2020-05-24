@@ -1909,16 +1909,16 @@
             <German>Aktionsgeräusch</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_LaptopKeyboard">
-            <English>Laptop keyboard</English>
+            <English>Laptop Keyboard</English>
             <German>Laptop Tastatur</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_PCKeyboard">
-            <English>PC keyboard</English>
+            <English>PC Keyboard</English>
             <German>PC Tastatur</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_SearchBody">
-            <English>Search body</English>
-            <German>Leiche durchsuchen</German>
+            <English>Search Body</English>
+            <German>Leiche Durchsuchen</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ActionDuration">
             <English>Action Duration</English>
