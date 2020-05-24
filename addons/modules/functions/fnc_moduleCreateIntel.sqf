@@ -50,7 +50,7 @@
 ]
 
 #define SOUND_NAMES [ \
-    localize "STR_A3_None", \
+    "STR_A3_None", \
     LSTRING(ModuleCreateIntel_LaptopKeyboard), \
     LSTRING(ModuleCreateIntel_PCKeyboard), \
     LSTRING(ModuleCreateIntel_SearchBody) \
