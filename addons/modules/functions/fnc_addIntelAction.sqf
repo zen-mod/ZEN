@@ -100,8 +100,11 @@ if (isClass (configFile >> "CfgPatches" >> "ace_interact_menu")) then {
                     (_this select 0) params ["_object", "", "", "", "_actionSounds"];
 
                     private _time = CBA_missionTime;
-                    if (_time > (_object getVariable [QGVAR(nextTimeForSound), _time])) then {
+                    private _nextTimeForSound = _object getVariable [QGVAR(nextTimeForSound), _time];
+
+                    if (_time > _nextTimeForSound) then {
                         playSound selectRandom _actionSounds;
+
                         private _nextDelay = random [MIN_SOUND_DELAY, MID_SOUND_DELAY, MAX_SOUND_DELAY];
                         _object setVariable [QGVAR(nextTimeForSound), _time + _nextDelay];
                     };
@@ -141,8 +144,11 @@ if (isClass (configFile >> "CfgPatches" >> "ace_interact_menu")) then {
             params ["_object", "", "", "_args", "_ticks", "_maxTicks"];
             _args params ["", "", "_actionSounds", "_duration"];
 
-            if (_ticks == (_object getVariable [QGVAR(nextTickForSound), -1])) then {
+            private _nextTickForSound = _object getVariable [QGVAR(nextTickForSound), -1];
+
+            if (_ticks == _nextTickForSound) then {
                 playSound selectRandom _actionSounds;
+
                 private _nextDelay = random [MIN_SOUND_DELAY, MID_SOUND_DELAY, MAX_SOUND_DELAY];
                 _object setVariable [QGVAR(nextTickForSound), _ticks + ceil (_maxTicks  * _nextDelay / _duration)];
             };
