@@ -16,52 +16,52 @@
  */
 
 #define INTEL_CLASSES [ \
-        "Land_File1_F", \
-        "Land_File2_F", \
-        "Land_FilePhotos_F", \
-        "Land_File_research_F", \
-        "Land_Document_01_F", \
-        "Land_Map_F", \
-        "Land_Map_unfolded_F", \
-        "Land_Laptop_F", \
-        "Land_Laptop_unfolded_F", \
-        "Land_Laptop_Intel_01_F", \
-        "Land_Laptop_device_F", \
-        "Land_Laptop_02_F", \
-        "Land_Laptop_02_unfolded_F", \
-        "Land_laptop_03_closed_black_F", \
-        "Land_laptop_03_closed_olive_F", \
-        "Land_laptop_03_closed_sand_F", \
-        "Land_Laptop_03_black_F", \
-        "Land_Laptop_03_olive_F", \
-        "Land_Laptop_03_sand_F", \
-        "Land_PCSet_01_screen_F", \
-        "Land_PCSet_Intel_01_F", \
-        "Land_MultiScreenComputer_01_closed_olive_F", \
-        "Land_MultiScreenComputer_01_olive_F", \
-        "Land_MultiScreenComputer_01_closed_sand_F", \
-        "Land_MultiScreenComputer_01_sand_F", \
-        "Land_MobilePhone_old_F", \
-        "Land_MobilePhone_smart_F", \
-        "Land_Tablet_02_F", \
-        "Land_Tablet_02_black_F", \
-        "Land_Tablet_02_sand_F", \
-        "Land_Tablet_01_F" \
-    ]
+    "Land_File1_F", \
+    "Land_File2_F", \
+    "Land_FilePhotos_F", \
+    "Land_File_research_F", \
+    "Land_Document_01_F", \
+    "Land_Map_F", \
+    "Land_Map_unfolded_F", \
+    "Land_Laptop_F", \
+    "Land_Laptop_unfolded_F", \
+    "Land_Laptop_Intel_01_F", \
+    "Land_Laptop_device_F", \
+    "Land_Laptop_02_F", \
+    "Land_Laptop_02_unfolded_F", \
+    "Land_laptop_03_closed_black_F", \
+    "Land_laptop_03_closed_olive_F", \
+    "Land_laptop_03_closed_sand_F", \
+    "Land_Laptop_03_black_F", \
+    "Land_Laptop_03_olive_F", \
+    "Land_Laptop_03_sand_F", \
+    "Land_PCSet_01_screen_F", \
+    "Land_PCSet_Intel_01_F", \
+    "Land_MultiScreenComputer_01_closed_olive_F", \
+    "Land_MultiScreenComputer_01_olive_F", \
+    "Land_MultiScreenComputer_01_closed_sand_F", \
+    "Land_MultiScreenComputer_01_sand_F", \
+    "Land_MobilePhone_old_F", \
+    "Land_MobilePhone_smart_F", \
+    "Land_Tablet_02_F", \
+    "Land_Tablet_02_black_F", \
+    "Land_Tablet_02_sand_F", \
+    "Land_Tablet_01_F" \
+]
 
 #define SOUND_NAMES [ \
-        ELSTRING(Common,Off), \
-        LSTRING(ModuleCreateIntel_LaptopKeyboard), \
-        LSTRING(ModuleCreateIntel_PCKeyboard), \
-        LSTRING(ModuleCreateIntel_SearchBody) \
-    ]
+    ELSTRING(Common,Off), \
+    LSTRING(ModuleCreateIntel_LaptopKeyboard), \
+    LSTRING(ModuleCreateIntel_PCKeyboard), \
+    LSTRING(ModuleCreateIntel_SearchBody) \
+]
 
 #define SOUND_CLASSES [ \
-        [], \
-        ["OMIntelGrabLaptop_01", "OMIntelGrabLaptop_02", "OMIntelGrabLaptop_03"], \
-        ["OMIntelGrabPC_01", "OMIntelGrabPC_02", "OMIntelGrabPC_03"], \
-        ["OMIntelGrabBody_01", "OMIntelGrabBody_02", "OMIntelGrabBody_03"] \
-    ]
+    [], \
+    ["OMIntelGrabLaptop_01", "OMIntelGrabLaptop_02", "OMIntelGrabLaptop_03"], \
+    ["OMIntelGrabPC_01", "OMIntelGrabPC_02", "OMIntelGrabPC_03"], \
+    ["OMIntelGrabBody_01", "OMIntelGrabBody_02", "OMIntelGrabBody_03"] \
+]
 
 params ["_logic"];
 
