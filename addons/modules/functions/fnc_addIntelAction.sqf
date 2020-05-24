@@ -49,6 +49,7 @@ private _fnc_addIntel = {
     ] call CBA_fnc_targetEvent;
 
     playSound "Beep_Target";
+
     [
         ["\a3\ui_f\data\igui\cfg\simpletasks\types\documents_ca.paa", 1.25],
         [localize LSTRING(ModuleCreateIntel_IntelFound)],
