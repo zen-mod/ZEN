@@ -70,7 +70,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_interact_menu")) then {
             _args params ["_title", "_text", "_share", "_delete", "_actionText", "_actionSounds", "_duration", "_fnc_addIntel"];
 
             if !(_actionSounds isEqualTo []) then {
-                _object setVariable [QGVAR(nextTimeForSound), time];
+                _object setVariable [QGVAR(nextTimeForSound), CBA_missionTime];
             };
 
             [
@@ -98,7 +98,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_interact_menu")) then {
                 {
                     (_this select 0) params ["_object", "", "", "", "_actionSounds"];
 
-                    private _time = time;
+                    private _time = CBA_missionTime;
                     if (_time > (_object getVariable [QGVAR(nextTimeForSound), _time])) then {
                         playSound selectRandom _actionSounds;
                         private _nextDelay = random [MIN_SOUND_DELAY, MID_SOUND_DELAY, MAX_SOUND_DELAY];
