@@ -121,4 +121,130 @@ class CfgMusic {
         musicClass = "Stealth";
         name = CSTRING(EagleWing_Wasteland);
     };
+
+    class Track_O_06 {
+        musicClass = "Action";
+        name = CSTRING(EagleWing_AllHellBreaksLoose);
+    };
+
+    // Arma 2 PMC
+    class Track_C_02 {
+        musicClass = "Stealth";
+        name = CSTRING(A2PMC_NoMansLand);
+    };
+
+    // Arma 2 OA
+    class Track_O_01 {
+        musicClass = "Lead";
+        name = CSTRING(A2OA_Arrowhead);
+    };
+
+    class Track_C_18 {
+        musicClass = "Calm";
+        name = CSTRING(A2OA_IronMountain);
+    };
+
+    class Track_C_19 {
+        musicClass = "Calm";
+        name = CSTRING(A2OA_ConcreteCell);
+    };
+
+    class Track_P_05 {
+        musicClass = "Calm";
+        name = CSTRING(A2OA_Arrival);
+    };
+
+    class Track_P_07 {
+        musicClass = "Calm";
+        name = CSTRING(A2OA_ZargabadMarket);
+    };
+
+    class Track_P_09 {
+        musicClass = "Calm";
+        name = CSTRING(A2OA_Nightlife);
+    };
+
+    class Track_P_13 {
+        musicClass = "Calm";
+        name = CSTRING(A2OA_RevolverJam);
+    };
+
+    // Arma 2 BAF
+    class Track_P_17 {
+        musicClass = "Action";
+        name = CSTRING(A2BAF_Jackals);
+    };
+
+    class Track_P_18 {
+        musicClass = "Action";
+        name = CSTRING(A2BAF_ThroughTheValley);
+    };
+
+    // Arma 2
+    class Track_O_08 {
+        musicClass = "Calm";
+        name = CSTRING(A2_RiseOfTheFallen);
+    };
+
+    class Track_O_07 {
+        musicClass = "Lead";
+        name = CSTRING(A2_GhostWaltz);
+    };
+
+    class Track_O_12 {
+        musicClass = "Action";
+        name = CSTRING(A2_DefconThree);
+    };
+
+    class Track_O_16 {
+        musicClass = "Calm";
+        name = CSTRING(A2_Badlands);
+    };
+
+    class Track_P_15 {
+        musicClass = "Calm";
+        name = CSTRING(A2_Reforger);
+    };
+
+    class Track_M_01 {
+        musicClass = "Action";
+        name = CSTRING(A2_CQC);
+    };
+
+    class Track_R_01 {
+        musicClass = "Action";
+        name = CSTRING(A2_Manhattan);
+    };
+
+    class Track_R_09 {
+        musicClass = "Action";
+        name = CSTRING(A2_Logistics);
+    };
+
+    class Track_R_11 {
+        musicClass = "Action";
+        name = CSTRING(A2_SharpingKnives);
+    };
+
+    class Track_R_17 {
+        musicClass = "Action";
+        name = CSTRING(A2_Insertion);
+    };
+
+    // OFP CWC
+    class Track_O_04 {
+        musicClass = "Calm";
+        name = CSTRING(OFPCWC_Heroes);
+    };
+
+    // Old Man
+    class Track_C_04 {
+        musicClass = "Stealth";
+        name = CSTRING(OldMan_Stealth);
+    };
+
+    class Track_C_04 {
+        musicClass = "Calm";
+        name = CSTRING(OldMan_ThisIsWar);
+    };
 };
