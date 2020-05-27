@@ -3,6 +3,7 @@
  * Author: mharis001
  * Initializes the given side icons control.
  * If the default value is an array, multiple sides can be selected.
+ * In this case, the array is modified by reference.
  *
  * Arguments:
  * 0: Controls Group <CONTROL>
@@ -27,11 +28,6 @@ params [["_controlsGroup", controlNull, [controlNull]], ["_defaultValue", west, 
 
 // Allow multiple sides to be selected if default value is an array of sides
 private _allowMultiple = _defaultValue isEqualType [];
-
-if (_allowMultiple) then {
-    _defaultValue = +_defaultValue;
-};
-
 _controlsGroup setVariable [QGVAR(value), _defaultValue];
 
 private _fnc_updateIcon = {

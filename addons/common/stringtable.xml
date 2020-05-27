@@ -453,6 +453,18 @@
         <Key ID="STR_ZEN_Common_Yaw">
             <English>Yaw</English>
         </Key>
+        <Key ID="STR_ZEN_Common_UncheckAll">
+            <English>Uncheck All</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_CheckAll">
+            <English>Check All</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_NoGroupsFound">
+            <English>No groups found.</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_NoPlayersFound">
+            <English>No players found.</English>
+        </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects">
             <English>Add Objects to Curators</English>
             <French>Ajouter des objets aux curateurs</French>
