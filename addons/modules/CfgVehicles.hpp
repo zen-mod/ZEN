@@ -14,6 +14,10 @@ class CfgVehicles {
         };
     };
 
+    class ModuleCurator_F: Module_F {
+        function = QFUNC(bi_moduleCurator);
+    };
+
     class ModuleArsenal_F: Module_F {
         scopeCurator = 1;
     };

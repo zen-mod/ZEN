@@ -1,5 +1,6 @@
 PREP(addIntelAction);
 PREP(addTeleporterAction);
+PREP(bi_moduleCurator);
 PREP(bi_moduleMine);
 PREP(compileAircraft);
 PREP(compileCAS);

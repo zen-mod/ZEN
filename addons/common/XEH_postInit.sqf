@@ -347,7 +347,7 @@ if (isServer) then {
         } forEach allCurators;
     }] call CBA_fnc_addEventHandler;
 
-    ["CBA_settingsInitialized", {
+    {
         ["AllVehicles", "InitPost", {
             params ["_object"];
 
@@ -367,8 +367,8 @@ if (isServer) then {
                 _logic addCuratorEditableObjects [allMissionObjects "AllVehicles", true];
             };
         }, true, [], false] call CBA_fnc_addClassEventHandler;
-    }] call CBA_fnc_addEventHandler;
+    } call FUNC(runAfterSettingsInit);
 
-    [QGVAR(createZeus), FUNC(createZeus)] call CBA_fnc_addEventHandler;
+    [QGVAR(createZeus), LINKFUNC(createZeus)] call CBA_fnc_addEventHandler;
     [QGVAR(deserializeObjects), LINKFUNC(deserializeObjects)] call CBA_fnc_addEventHandler;
 };
