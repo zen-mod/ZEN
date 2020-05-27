@@ -180,6 +180,9 @@
             <English>Sets focus to the search bar.</English>
             <German>Setzt den Fokus auf das Suchfeld.</German>
         </Key>
+        <Key ID="STR_ZEN_Editor_OrientTerrainNormal_Description">
+            <English>Orients all selected objects to match the terrain slope at their position.</English>
+        </Key>
         <Key ID="STR_ZEN_Editor_ToggleIcons">
             <English>Toggle Editable Icons</English>
             <German>Bearbeitbare Symbole umschalten</German>
