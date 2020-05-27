@@ -127,6 +127,10 @@ _ctrlList ctrlAddEventHandler ["LBSelChanged", {
     [_display] call FUNC(updateButtons);
 }];
 
+// Reset to the default inventory when the reset button is clicked
+private _ctrlButtonReset = _display displayCtrl IDC_BTN_RESET;
+_ctrlButtonReset ctrlAddEventHandler ["ButtonClick", {call FUNC(reset)}];
+
 // Clear items from the current category when the clear button is clicked
 private _ctrlButtonClear = _display displayCtrl IDC_BTN_CLEAR;
 _ctrlButtonClear ctrlAddEventHandler ["ButtonClick", {call FUNC(clear)}];

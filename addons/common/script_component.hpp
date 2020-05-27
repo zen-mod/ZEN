@@ -41,6 +41,26 @@
 #define IDC_SIDES_INDEPENDENT 320
 #define IDC_SIDES_CIVILIAN    330
 
+#define IDC_OWNERS_BTN_SIDES          400
+#define IDC_OWNERS_BTN_GROUPS         401
+#define IDC_OWNERS_BTN_PLAYERS        402
+#define IDC_OWNERS_TAB_SIDES          410
+#define IDC_OWNERS_TAB_GROUPS         411
+#define IDC_OWNERS_TAB_PLAYERS        412
+#define IDC_OWNERS_GROUPS_LIST        420
+#define IDC_OWNERS_GROUPS_SEARCH_BAR  421
+#define IDC_OWNERS_GROUPS_SEARCH_BTN  422
+#define IDC_OWNERS_GROUPS_UNCHECK     423
+#define IDC_OWNERS_GROUPS_CHECK       424
+#define IDC_OWNERS_PLAYERS_LIST       430
+#define IDC_OWNERS_PLAYERS_SEARCH_BAR 431
+#define IDC_OWNERS_PLAYERS_SEARCH_BTN 432
+#define IDC_OWNERS_PLAYERS_UNCHECK    433
+#define IDC_OWNERS_PLAYERS_CHECK      434
+
+#define IDCS_OWNERS_BTNS [IDC_OWNERS_BTN_SIDES, IDC_OWNERS_BTN_GROUPS, IDC_OWNERS_BTN_PLAYERS]
+#define IDCS_OWNERS_TABS [IDC_OWNERS_TAB_SIDES, IDC_OWNERS_TAB_GROUPS, IDC_OWNERS_TAB_PLAYERS]
+
 #define IDCS_UNIT_TREES [ \
     IDC_RSCDISPLAYCURATOR_CREATE_UNITS_EAST, \
     IDC_RSCDISPLAYCURATOR_CREATE_UNITS_WEST, \
@@ -58,6 +78,8 @@
 ]
 
 #define ICON_TARGET "\a3\ui_f\data\igui\cfg\cursors\select_target_ca.paa"
+#define ICON_CHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_checked_ca.paa"
+#define ICON_UNCHECKED "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_unchecked_ca.paa"
 
 #define VLS_BASE_CLASS "B_Ship_MRLS_01_base_F"
 

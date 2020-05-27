@@ -18,7 +18,7 @@
  * Public: No
  */
 
-params ["_display", ["_hasScrollbars", false], ["_maxHeight", 0.9 * safeZoneH]];
+params ["_display", ["_hasScrollbars", false], ["_maxHeight", safeZoneH - POS_H(4)]];
 
 private _ctrlContent = _display displayCtrl IDC_CONTENT;
 
@@ -27,6 +27,8 @@ ctrlPosition _ctrlContent params ["_posX", "", "_posW", "_posH"];
 
 if (_posH > _maxHeight) then {
     _posH = _maxHeight;
+
+    _ctrlContent ctrlSetPositionH _posH;
 
     // Increase width of the content control to prevent overlap between scrollbar and controls
     if (_hasScrollbars) then {

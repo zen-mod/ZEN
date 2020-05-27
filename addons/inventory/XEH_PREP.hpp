@@ -8,5 +8,6 @@ PREP(keyDown);
 PREP(modify);
 PREP(preload);
 PREP(refreshList);
+PREP(reset);
 PREP(updateButtons);
 PREP(updateLoadBar);

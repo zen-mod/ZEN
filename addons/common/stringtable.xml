@@ -453,6 +453,18 @@
         <Key ID="STR_ZEN_Common_Yaw">
             <English>Yaw</English>
         </Key>
+        <Key ID="STR_ZEN_Common_UncheckAll">
+            <English>Uncheck All</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_CheckAll">
+            <English>Check All</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_NoGroupsFound">
+            <English>No groups found.</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_NoPlayersFound">
+            <English>No players found.</English>
+        </Key>
         <Key ID="STR_ZEN_Common_NotEnoughSpaceInVehicle">
             <English>Not enough space in target vehicle: %1 needed - %2 available</English>
             <French>Pas assez d'espace dans le véhicule cible : %1 nécessaire - %2 disponible</French>

@@ -94,6 +94,9 @@ private _fnc_deserializeUnit = {
     _unit setUnitPos _stance;
     _unit forceFlagTexture _flagTexture;
 
+    // Ensure unit belongs to the same side as the group
+    [_unit] joinSilent _group;
+
     if (_isLeader) then {
         _group selectLeader _unit;
         _group setFormDir _direction;
@@ -108,10 +111,12 @@ private _fnc_deserializeUnit = {
     if (!_enableRandomization) then {
         [{
             params ["_unit", "_identity"];
-            _identity params ["_name", "_face", "_speaker", "_pitch", "_nameSound"];
+            _identity params ["_name", "_face", "_speaker", "_pitch", "_nameSound", "_insignia"];
 
             private _jipID = [QGVAR(setUnitIdentity), [_unit, _name, _face, _speaker, _pitch, _nameSound]] call CBA_fnc_globalEventJIP;
             [_jipID, _unit] call CBA_fnc_removeGlobalEventJIP;
+
+            [_unit, _insignia] call BIS_fnc_setUnitInsignia;
         }, [_unit, _identity]] call CBA_fnc_execNextFrame;
     };
 
