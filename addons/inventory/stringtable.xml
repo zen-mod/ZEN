@@ -5,5 +5,8 @@
             <English>Edit Inventory (%1)</English>
             <German>Inventar bearbeiten (%1)</German>
         </Key>
+        <Key ID="STR_ZEN_Inventory_Reset_Tooltip">
+            <English>Reset to Default Inventory</English>
+        </Key>
     </Package>
 </Project>

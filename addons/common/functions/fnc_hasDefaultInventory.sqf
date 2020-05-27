@@ -47,7 +47,7 @@ private _config = configFile >> "CfgVehicles" >> typeOf _object;
     _x params ["_inventory", "_subConfig", "_entry"];
     _inventory params ["_types", "_counts"];
 
-    // Config may not be in config case, use lowercase for comparisons
+    // Config may not be in config case, use lower case for comparisons
     _types = _types apply {toLower _x};
 
     {
