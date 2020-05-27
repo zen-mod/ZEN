@@ -243,7 +243,7 @@ class CfgMusic {
         name = CSTRING(OldMan_Stealth);
     };
 
-    class Track_C_04 {
+    class Track_P_14 {
         musicClass = "Calm";
         name = CSTRING(OldMan_ThisIsWar);
     };
