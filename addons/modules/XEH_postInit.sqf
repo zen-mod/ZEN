@@ -75,27 +75,9 @@ if (isServer) then {
     }, _this] call CBA_fnc_execNextFrame;
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(fireArtillery), {
-    params ["_unit", "_position", "_spread", "_ammo", "_rounds"];
+[QGVAR(setRotation), {
+    params ["_object", "_pitch", "_roll", "_yaw"];
 
-    if (_unit call EFUNC(common,isVLS)) exitWith {
-        _this call EFUNC(common,fireVLS);
-    };
-
-    // For small spread values, use doArtilleryFire directly to avoid delay
-    // between firing caused by using doArtilleryFire one round at a time
-    if (_spread <= 10) exitWith {
-        _unit doArtilleryFire [_position, _ammo, _rounds];
-    };
-
-    [{
-        params ["_unit", "_position", "_spread", "_ammo", "_rounds", "_fired"];
-
-        if (unitReady _unit) then {
-            _unit doArtilleryFire [[_position, _spread] call CBA_fnc_randPos, _ammo, 1];
-            _this set [5, _fired + 1];
-        };
-
-        _fired >= _rounds || {!alive _unit} || {!alive gunner _unit}
-    }, {}, [_unit, _position, _spread, _ammo, _rounds, 0]] call CBA_fnc_waitUntilAndExecute;
+    _object setDir _yaw;
+    [_object, _pitch, _roll] call BIS_fnc_setPitchBank;
 }] call CBA_fnc_addEventHandler;

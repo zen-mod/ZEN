@@ -8,6 +8,7 @@
  * 0: Serialized Data <ARRAY>
  * 1: Center Position <ARRAY>
  * 2: Make Editable <BOOL> (default: true)
+ * 3: Randomization <BOOL> (default: false)
  *
  * Return Value:
  * Created Objects <ARRAY>
@@ -18,7 +19,7 @@
  * Public: No
  */
 
-params [["_serializedData", [], [[]]], ["_centerPos", [0, 0, 0], [[]], [2, 3]], ["_makeEditable", true, [true]]];
+params [["_serializedData", [], [[]]], ["_centerPos", [0, 0, 0], [[]], [2, 3]], ["_makeEditable", true, [true]], ["_enableRandomization", false, [true]]];
 _serializedData params [["_objectData", [], [[]]], ["_groupData", [], [[]]]];
 
 // Set center position to ground level over land and water level over the ocean
@@ -93,19 +94,31 @@ private _fnc_deserializeUnit = {
     _unit setUnitPos _stance;
     _unit forceFlagTexture _flagTexture;
 
+    // Ensure unit belongs to the same side as the group
+    [_unit] joinSilent _group;
+
     if (_isLeader) then {
         _group selectLeader _unit;
+        _group setFormDir _direction;
     };
 
     [{
-        params ["_unit", "_identity", "_loadout"];
-        _identity params ["_name", "_face", "_speaker", "_pitch", "_nameSound"];
-
-        private _jipID = [QGVAR(setUnitIdentity), [_unit, _name, _face, _speaker, _pitch, _nameSound]] call CBA_fnc_globalEventJIP;
-        [_jipID, _unit] call CBA_fnc_removeGlobalEventJIP;
+        params ["_unit", "_loadout"];
 
         _unit setUnitLoadout _loadout;
-    }, [_unit, _identity, _loadout]] call CBA_fnc_execNextFrame;
+    }, [_unit, _loadout]] call CBA_fnc_execNextFrame;
+
+    if (!_enableRandomization) then {
+        [{
+            params ["_unit", "_identity"];
+            _identity params ["_name", "_face", "_speaker", "_pitch", "_nameSound", "_insignia"];
+
+            private _jipID = [QGVAR(setUnitIdentity), [_unit, _name, _face, _speaker, _pitch, _nameSound]] call CBA_fnc_globalEventJIP;
+            [_jipID, _unit] call CBA_fnc_removeGlobalEventJIP;
+
+            [_unit, _insignia] call BIS_fnc_setUnitInsignia;
+        }, [_unit, _identity]] call CBA_fnc_execNextFrame;
+    };
 
     [_unit, _attachedObjects] call _fnc_deserializeAttachedObjects;
 
@@ -134,8 +147,12 @@ private _fnc_deserializeVehicle = {
 
     [_vehicle, _inventory] call FUNC(deserializeInventory);
 
-    _customization params ["_textures", "_animations"];
-    [_vehicle, _textures, _animations, true] call BIS_fnc_initVehicle;
+    if (_enableRandomization) then {
+        [_vehicle, "", []] call BIS_fnc_initVehicle;
+    } else {
+        _customization params ["_textures", "_animations"];
+        [_vehicle, _textures, _animations, true] call BIS_fnc_initVehicle;
+    };
 
     {
         _x params ["_magazine", "_turretPath"];

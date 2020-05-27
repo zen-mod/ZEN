@@ -33,3 +33,21 @@
     [[0, 1], [LSTRING(BIVirtualArsenal), LSTRING(AceArsenal)], 1],
     false
 ] call CBA_settings_fnc_init;
+
+[
+    QGVAR(ascensionMessages),
+    "CHECKBOX",
+    [LSTRING(AscensionMessages), LSTRING(AscensionMessages_Description)],
+    ELSTRING(main,DisplayName),
+    false,
+    true
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(cameraBird),
+    "CHECKBOX",
+    [LSTRING(CameraBird), LSTRING(CameraBird_Description)],
+    ELSTRING(main,DisplayName),
+    false,
+    true
+] call CBA_settings_fnc_init;

@@ -10,3 +10,11 @@ if (isServer) then {
         [QEGVAR(common,allowDamage), [_object, _damage], _object] call CBA_fnc_targetEvent;
     }] call CBA_fnc_addEventHandler;
 };
+
+[QGVAR(setAbilities), {
+    params ["_unit", "_abilities"];
+
+    {
+        _unit enableAIFeature [_x, _abilities select _forEachIndex];
+    } forEach AI_ABILITIES;
+}] call CBA_fnc_addEventHandler;

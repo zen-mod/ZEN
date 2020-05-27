@@ -189,6 +189,11 @@
     _object setDir _direction;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setVectorUp), {
+    params ["_object", "_vectorUp"];
+    _object setVectorUp _vectorUp;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(setVelocity), {
     params ["_object", "_velocity"];
     _object setVelocity _velocity;
@@ -272,6 +277,7 @@
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(earthquake), LINKFUNC(earthquake)] call CBA_fnc_addEventHandler;
+[QGVAR(fireArtillery), LINKFUNC(fireArtillery)] call CBA_fnc_addEventHandler;
 [QGVAR(setLampState), LINKFUNC(setLampState)] call CBA_fnc_addEventHandler;
 [QGVAR(setMagazineAmmo), LINKFUNC(setMagazineAmmo)] call CBA_fnc_addEventHandler;
 [QGVAR(setTurretAmmo), LINKFUNC(setTurretAmmo)] call CBA_fnc_addEventHandler;
@@ -346,7 +352,7 @@ if (isServer) then {
         } forEach allCurators;
     }] call CBA_fnc_addEventHandler;
 
-    ["CBA_settingsInitialized", {
+    {
         ["AllVehicles", "InitPost", {
             params ["_object"];
 
@@ -366,8 +372,8 @@ if (isServer) then {
                 _logic addCuratorEditableObjects [allMissionObjects "AllVehicles", true];
             };
         }, true, [], false] call CBA_fnc_addClassEventHandler;
-    }] call CBA_fnc_addEventHandler;
+    } call FUNC(runAfterSettingsInit);
 
-    [QGVAR(createZeus), FUNC(createZeus)] call CBA_fnc_addEventHandler;
+    [QGVAR(createZeus), LINKFUNC(createZeus)] call CBA_fnc_addEventHandler;
     [QGVAR(deserializeObjects), LINKFUNC(deserializeObjects)] call CBA_fnc_addEventHandler;
 };

@@ -48,6 +48,7 @@ class CfgPatches {
             QGVAR(moduleNuke),
             QGVAR(modulePatrolArea),
             QGVAR(moduleRemoveArsenal),
+            QGVAR(moduleRotateObject),
             QGVAR(moduleSetDate),
             QGVAR(moduleShowInConfig),
             QGVAR(moduleSideRelations),

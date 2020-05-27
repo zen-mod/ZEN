@@ -14,6 +14,10 @@ class CfgVehicles {
         };
     };
 
+    class ModuleCurator_F: Module_F {
+        function = QFUNC(bi_moduleCurator);
+    };
+
     class ModuleArsenal_F: Module_F {
         scopeCurator = 1;
     };
@@ -285,6 +289,8 @@ class CfgVehicles {
         category = "Effects";
         displayName = CSTRING(ModuleLightSource);
         curatorInfoType = QGVAR(RscLightSourceHelper);
+        icon = QPATHTOF(ui\light_ca.paa);
+        portrait = QPATHTOF(ui\light_ca.paa);
     };
     class GVAR(moduleMakeInvincible): GVAR(moduleBase) {
         curatorCanAttach = 1;
@@ -310,6 +316,13 @@ class CfgVehicles {
         displayName = CSTRING(ModuleRemoveArsenal);
         function = QFUNC(moduleRemoveArsenal);
         icon = "\a3\ui_f\data\logos\a_64_ca.paa";
+    };
+    class GVAR(moduleRotateObject): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = GVAR(Objects);
+        displayName = CSTRING(RotateObject);
+        function = QFUNC(moduleRotateObject);
+        icon = QPATHTOF(ui\rotate_ca.paa);
     };
     class GVAR(moduleSetDate): GVAR(moduleBase) {
         category = "Environment";

@@ -1,5 +1,6 @@
 PREP(addIntelAction);
 PREP(addTeleporterAction);
+PREP(bi_moduleCurator);
 PREP(bi_moduleMine);
 PREP(compileAircraft);
 PREP(compileCAS);
@@ -63,6 +64,7 @@ PREP(moduleNuke);
 PREP(moduleNukeLocal);
 PREP(modulePatrolArea);
 PREP(moduleRemoveArsenal);
+PREP(moduleRotateObject);
 PREP(moduleShowInConfig);
 PREP(moduleSideRelations);
 PREP(moduleSimulation);

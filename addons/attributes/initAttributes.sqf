@@ -148,8 +148,8 @@
     LSTRING(Engine),
     QGVAR(icons),
     [[
-        [true,  QPATHTOF(ui\engine_on_ca.paa),  ELSTRING(common,On),  14.5, 0.25, 2],
-        [false, QPATHTOF(ui\engine_off_ca.paa), ELSTRING(common,Off), 19.5, 0.25, 2]
+        [false, QPATHTOF(ui\engine_off_ca.paa), ELSTRING(common,Off), 14.5, 0.25, 2],
+        [true,  QPATHTOF(ui\engine_on_ca.paa),  ELSTRING(common,On),  19.5, 0.25, 2]
     ]],
     {
         {
@@ -165,8 +165,8 @@
     LSTRING(Lights),
     QGVAR(icons),
     [[
-        [true,  QPATHTOF(ui\lights_on_ca.paa),  ELSTRING(common,On),  14.5, 0.25, 2],
-        [false, QPATHTOF(ui\lights_off_ca.paa), ELSTRING(common,Off), 19.5, 0.25, 2]
+        [false, QPATHTOF(ui\lights_off_ca.paa), ELSTRING(common,Off), 14.5, 0.25, 2],
+        [true,  QPATHTOF(ui\lights_on_ca.paa),  ELSTRING(common,On),  19.5, 0.25, 2]
     ]],
     {
         {
@@ -267,9 +267,23 @@
     "Object",
     "STR_a3_rscdebugconsole_expressiontext",
     QGVAR(code),
-    [QGVAR(objectExecHistory), LSTRING(ExecObject_Tooltip), 20, 1000],
+    [QGVAR(objectExecHistory), QGVAR(objectExecMode), LSTRING(ExecObject_Tooltip), 20, 1000],
     {
-        [QEGVAR(common,execute), [compile _value, _entity], _entity] call CBA_fnc_targetEvent;
+        _value params ["_code", "_mode"];
+
+        _code = compile _code;
+
+        switch (_mode) do {
+            case MODE_LOCAL: {
+                _entity call _code;
+            };
+            case MODE_TARGET: {
+                [QEGVAR(common,execute), [_code, _entity], _entity] call CBA_fnc_targetEvent;
+            };
+            case MODE_GLOBAL: {
+                [QEGVAR(common,execute), [_code, _entity]] call CBA_fnc_globalEvent;
+            };
+        };
     },
     {""},
     {IS_ADMIN || {!GETMVAR(ZEN_disableCodeExecution,false)}}
@@ -405,9 +419,23 @@
     "Group",
     "STR_a3_rscdebugconsole_expressiontext",
     QGVAR(code),
-    [QGVAR(groupExecHistory), LSTRING(ExecGroup_Tooltip), 20, 1000],
+    [QGVAR(groupExecHistory), QGVAR(groupExecMode), LSTRING(ExecGroup_Tooltip), 20, 1000],
     {
-        [QEGVAR(common,execute), [compile _value, _entity], _entity] call CBA_fnc_targetEvent;
+        _value params ["_code", "_mode"];
+
+        _code = compile _code;
+
+        switch (_mode) do {
+            case MODE_LOCAL: {
+                _entity call _code;
+            };
+            case MODE_TARGET: {
+                [QEGVAR(common,execute), [_code, _entity], _entity] call CBA_fnc_targetEvent;
+            };
+            case MODE_GLOBAL: {
+                [QEGVAR(common,execute), [_code, _entity]] call CBA_fnc_globalEvent;
+            };
+        };
     },
     {""},
     {IS_ADMIN || {!GETMVAR(ZEN_disableCodeExecution,false)}}
@@ -712,6 +740,48 @@
         } forEach call EFUNC(common,getSelectedUnits);
     },
     {_entity skill "reloadSpeed"}
+] call FUNC(addAttribute);
+
+// - Abilities ----------------------------------------------------------------
+
+["Abilities", LSTRING(ChangeAbilities), false] call FUNC(addDisplay);
+
+[
+    "Object",
+    LSTRING(Abilities),
+    {[_entity, "Abilities"] call FUNC(open)},
+    {alive _entity && {_entity isKindOf "CAManBase"}}
+] call FUNC(addButton);
+
+[
+    "Abilities",
+    "",
+    QGVAR(checkboxes),
+    [[
+        [0,    0, 6.5, ELSTRING(ai,AimingError)],
+        [6.5,  0, 6.5, ELSTRING(ai,AnimChange)],
+        [13,   0, 6.5, ELSTRING(ai,AutoCombat)],
+        [19.5, 0, 6.5, ELSTRING(ai,AutoTarget)],
+        [0,    1, 6.5, ELSTRING(ai,CheckVisible)],
+        [6.5,  1, 6.5, ELSTRING(ai,Cover)],
+        [13,   1, 6.5, ELSTRING(ai,FSM)],
+        [19.5, 1, 6.5, ELSTRING(ai,LightsVehicle)],
+        [0,    2, 6.5, ELSTRING(ai,MineDetection)],
+        [6.5,  2, 6.5, ELSTRING(ai,Move)],
+        [13,   2, 6.5, ELSTRING(ai,Nightvision)],
+        [19.5, 2, 6.5, ELSTRING(ai,Path)],
+        [0,    3, 6.5, ELSTRING(ai,RadioProtocol)],
+        [6.5,  3, 6.5, ELSTRING(ai,Suppression)],
+        [13,   3, 6.5, ELSTRING(ai,Target)],
+        [19.5, 3, 6.5, ELSTRING(ai,TeamSwitch)],
+        [0,    4, 6.5, ELSTRING(ai,WeaponAim)]
+    ], 5, true],
+    {
+        {
+            [QGVAR(setAbilities), [_x, _value], _x] call CBA_fnc_targetEvent;
+        } forEach call EFUNC(common,getSelectedUnits);
+    },
+    {AI_ABILITIES apply {_entity checkAIFeature _x}}
 ] call FUNC(addAttribute);
 
 // - Traits -------------------------------------------------------------------
