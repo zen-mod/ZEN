@@ -2046,6 +2046,12 @@
         <Key ID="STR_ZEN_Modules_DestructionRadius">
             <English>Destruction Radius (m)</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_DestructionRate">
+            <English>Destruction Rate</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_DestructionRate_Tooltip">
+            <English>The maximum number of objects destroyed per second.</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ColorCorrections">
             <English>Color Corrections</English>
         </Key>

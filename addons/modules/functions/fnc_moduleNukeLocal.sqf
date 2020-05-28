@@ -6,27 +6,40 @@
  * Arguments:
  * 0: Position ASL <ARRAY>
  * 1: Destruction Radius <NUMBER>
- * 2: Color Corrections <BOOL>
+ * 2: Destruction Rate <NUMBER>
+ * 3: Color Corrections <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [_position, 1000, true] call zen_modules_fnc_moduleNukeLocal
+ * [_position, 500, 300, true] call zen_modules_fnc_moduleNukeLocal
  *
  * Public: No
  */
 
-params ["_position", "_destructionRadius", "_colorCorrections"];
+params ["_position", "_destructionRadius", "_destructionRate", "_colorCorrections"];
 
 // Destruction effects, only handled on the server
-if (isServer) then {
-    {
-        if (isDamageAllowed _x && {!(_x isKindOf "Logic")} && {!(_x isKindOf "VirtualMan_F")}) then {
-            private _delay = linearConversion [0, _destructionRadius, _x distance2D _position, 0, 20, true];
-            [{_this setDamage 1}, _x, _delay] call CBA_fnc_waitAndExecute;
+if (isServer && {_destructionRadius > 0} && {_destructionRate > 0}) then {
+    private _objects = nearestObjects [ASLtoAGL _position, [], _destructionRadius] select {
+        isDamageAllowed _x && {!(_x isKindOf "Logic")} && {!(_x isKindOf "VirtualMan_F")}
+    };
+
+    [{
+        params ["_args", "_pfhID"];
+        _args params ["_objects", "_destructionRate"];
+
+        {
+            _x setDamage 1;
+        } forEach (_objects select [0, _destructionRate]);
+
+        _objects deleteRange [0, _destructionRate];
+
+        if (_objects isEqualTo []) then {
+            [_pfhID] call CBA_fnc_removePerFrameHandler;
         };
-    } forEach nearestObjects [ASLtoAGL _position, [], _destructionRadius];
+    }, 1, [_objects, _destructionRate]] call CBA_fnc_addPerFrameHandler;
 };
 
 // Exit if local visual effects are not needed
