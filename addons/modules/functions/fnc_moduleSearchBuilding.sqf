@@ -41,7 +41,7 @@ if (isPlayer _unit) exitWith {
 
     if (!_successful) exitWith {};
 
-    private _building = nearestBuilding ASLtoAGL _position;
+    private _building = nearestObject [ASLtoAGL _position, "Building"];
 
     if (isNull _building) exitWith {
         [LSTRING(NoBuildingFound)] call EFUNC(common,showMessage);
