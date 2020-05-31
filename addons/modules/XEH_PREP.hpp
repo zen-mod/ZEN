@@ -63,6 +63,7 @@ PREP(moduleMakeInvincible);
 PREP(modulePatrolArea);
 PREP(moduleRemoveArsenal);
 PREP(moduleRotateObject);
+PREP(moduleSearchBuilding);
 PREP(moduleShowInConfig);
 PREP(moduleSideRelations);
 PREP(moduleSimulation);
