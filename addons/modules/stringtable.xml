@@ -2040,6 +2040,10 @@
         <Key ID="STR_ZEN_Modules_RotateObject">
             <English>Rotate Object</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_SearchBuilding">
+            <English>Search Building</English>
+            <German>Gebäude durchsuchen</German>
+        </Key>
         <Key ID="STR_ZEN_Modules_AtomicBomb">
             <English>Atomic Bomb</English>
         </Key>
@@ -2217,6 +2221,10 @@
             <Italian>L'edificio più vicino è troppo lontano</Italian>
             <Chinesesimp>最近的房子离太远了</Chinesesimp>
             <Chinese>最近的房子離太遠了</Chinese>
+        </Key>
+        <Key ID="STR_ZEN_Modules_NoBuildingFound">
+            <English>Unable to find a building to search</English>
+            <German>Kein Gebäude zum Durchsuchen in der Nähe</German>
         </Key>
         <Key ID="STR_ZEN_Modules_NoTargetModules">
             <English>No target modules exist, place one first.</English>
