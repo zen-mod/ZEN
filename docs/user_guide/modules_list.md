@@ -22,6 +22,10 @@ The height, distance, and speed options allow for further control of the flyby.
 Makes the attached artillery unit fire the given number of rounds of the selected ammo at a grid position or target module with the given spread.
 The "Units" option will make the selected number of additional nearby unit's of the same type also fire.
 
+## Atomic Bomb
+
+Detonates an atomic bomb at the module's position with the specified destruction radius.
+
 ## Attach Effect
 
 Attaches an effect (IR Strobe, Chem Light) to the attached group or units of a selected side.

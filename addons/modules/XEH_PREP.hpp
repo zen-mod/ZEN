@@ -60,6 +60,8 @@ PREP(moduleHeal);
 PREP(moduleHideZeus);
 PREP(moduleLightSource);
 PREP(moduleMakeInvincible);
+PREP(moduleNuke);
+PREP(moduleNukeLocal);
 PREP(modulePatrolArea);
 PREP(moduleRemoveArsenal);
 PREP(moduleRotateObject);
