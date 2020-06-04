@@ -30,7 +30,8 @@ private _values = _controls apply {
 // Call the appropriate confirm/cancel function
 if (_confirmed) then {
     // Save values when the selections are confirmed
-    GVAR(saved) setVariable [_saveID, _values];
+    // Make a copy to prevent issues from the values array being modified by reference
+    GVAR(saved) setVariable [_saveID, +_values];
 
     [_values, _args] call _onConfirm;
 } else {
