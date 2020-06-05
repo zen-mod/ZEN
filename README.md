@@ -9,6 +9,9 @@
     <a href="https://github.com/zen-mod/ZEN/issues">
         <img src="https://img.shields.io/github/issues-raw/zen-mod/ZEN.svg?style=flat-square&label=Issues" alt="Zeus Enhanced Issues">
     </a>
+    <a href="https://discord.gg/kN7Jnhr">
+        <img src="https://img.shields.io/discord/364823341506363392.svg?label=Discord&style=flat-square&colorB=7683D5" alt="Zeus Enhanced Discord">
+    </a>
     <a href="https://github.com/zen-mod/ZEN/blob/master/LICENSE">
         <img src="https://img.shields.io/badge/License-GPLv3-red.svg?style=flat-square" alt="Zeus Enhanced License">
     </a>
