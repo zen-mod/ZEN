@@ -59,7 +59,7 @@ private _assistant = {
     objNull
 } forEach _backpackers;
 
-if (_assistant isEqualTo objNull) exitWith {
+if (isNull _assistant) exitWith {
     [LSTRING(ModuleUnpackStaticWeapon_Group)] call EFUNC(common,showMessage);
 };
 
