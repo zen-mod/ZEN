@@ -67,5 +67,7 @@ if (isNull _assistant) exitWith {
 // Get target position
 [_gunner, {
     params ["_successful", "_gunner", "_mousePosASL", "_assistant"];
-    [QEGVAR(ai,unpackStaticWeapon), [_gunner, _assistant, ASLToAGL _mousePosASL], _gunner] call CBA_fnc_targetEvent;
+    if _successful then {
+        [QEGVAR(ai,unpackStaticWeapon), [_gunner, _assistant, ASLToAGL _mousePosASL], _gunner] call CBA_fnc_targetEvent;
+    };
 }, _assistant, LSTRING(ModuleUnpackStaticWeapon_Facing)] call EFUNC(common,selectPosition);
