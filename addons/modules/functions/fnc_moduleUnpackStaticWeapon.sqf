@@ -39,7 +39,8 @@ if (isPlayer _gunner) exitWith {
 private _fnc_getCompatibleBases = {
     params ["_backpack"];
     private _cfgBase = configFile >> "CfgVehicles" >> _backpack >> "assembleInfo" >> "base";
-    [getArray _cfgBase, [getText _cfgBase]] select (isText _cfgBase)
+    if (isText _cfgBase) exitWith { getText _cfgBase };
+    getArray _cfgBase
 };
 
 private _backpack = backpack _gunner;
