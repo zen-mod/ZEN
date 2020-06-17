@@ -41,7 +41,7 @@ _gunner addEventHandler ["WeaponAssembled", {
     _group addVehicle _weapon;
 }];
 
-_weaponBase = unitBackpack _assistant;
+private _weaponBase = unitBackpack _assistant;
 _gunner action ["PutBag", _assistant];
 _gunner action ["Assemble", _weaponBase];
 
