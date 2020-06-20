@@ -48,10 +48,8 @@ if (isNil "_inventory") then {
 
     private _config = _cfgVehicles >> _object;
 
-    private _itemCargo = [[], []];
-    private _weaponCargo = [[], []];
-    private _magazineCargo = [[], []];
-    private _backpackCargo = [[], []];
+    _inventory = [[[], []], [[], []], [[], []], [[], []]];
+    _inventory params ["_itemCargo", "_weaponCargo", "_magazineCargo", "_backpackCargo"];
 
     // Need special handling for TransportItems class
     // It can contain binoculars (or even weapons) which should go under weapon cargo not item cargo
@@ -97,8 +95,7 @@ if (isNil "_inventory") then {
         [_backpackCargo, _backpack, _count] call _fnc_addToCargoArray;
     } forEach configProperties [_config >> "TransportBackpacks", "isClass _x"];
 
-    _inventory = [_itemCargo, _weaponCargo, _magazineCargo, _backpackCargo];
     GVAR(defaultInventories) setVariable [_object, _inventory];
 };
 
-_inventory
++_inventory
