@@ -32,7 +32,8 @@ _gunner addEventHandler ["WeaponAssembled", {
     _weapon setVectorUp surfaceNormal position _weapon;
 
     _gunner assignAsGunner _weapon;
-    _gunner moveInGunner _weapon;
+    //_gunner moveInGunner _weapon;
+    [_gunner] orderGetIn true;
 
     private _targetPos = _gunner getVariable [QGVAR(unpackStaticWeaponTargetPos), []];
     if !(_targetPos isEqualTo []) then {
