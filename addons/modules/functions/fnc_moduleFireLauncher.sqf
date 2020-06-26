@@ -41,11 +41,13 @@ if (_launcher isEqualTo "") exitWith {
 // Get target position
 [_unit, {
     params ["_successful", "_unit", "_mousePosASL"];
-    private _weapon = secondaryWeapon _unit;
+    if _successful then {
+        private _weapon = secondaryWeapon _unit;
 
-    private _magazine = getArray (configFile >> "CfgWeapons" >> _weapon >> "Magazines") # 0;
+        private _magazine = getArray (configFile >> "CfgWeapons" >> _weapon >> "Magazines") # 0;
 
-    private _muzzle = _weapon;
-    private _firemode = "Single";
-    [_unit, _magazine, _muzzle, _firemode, _mousePosASL] call zen_modules_fnc_projectiles_zeus;
+        private _muzzle = _weapon;
+        private _firemode = "Single";
+        [_unit, _magazine, _muzzle, _firemode, _mousePosASL] call zen_modules_fnc_projectiles_zeus;
+    };
 }, [], LSTRING(ModuleFireLauncher)] call EFUNC(common,selectPosition);

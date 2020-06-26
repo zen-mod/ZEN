@@ -46,10 +46,12 @@ private _action = [];
             // Get target position
             [_unit, {
                 params ["_successful", "_unit", "_mousePosASL", "_arguments"];
-                _arguments params ["_magazine"];
-                private _muzzle = configName (("_magazine in (getArray (_x >> 'magazines'))" configClasses (configFile >> "CfgWeapons" >> "Throw")) # 0);
-                private _firemode = _muzzle;
-                [_unit, _magazine, _muzzle, _firemode, _mousePosASL] call FUNC(projectiles_zeus);
+                if _successful then {
+                    _arguments params ["_magazine"];
+                    private _muzzle = configName (("_magazine in (getArray (_x >> 'magazines'))" configClasses (configFile >> "CfgWeapons" >> "Throw")) # 0);
+                    private _firemode = _muzzle;
+                    [_unit, _magazine, _muzzle, _firemode, _mousePosASL] call FUNC(projectiles_zeus);
+                };
             }, [_magazine], LSTRING(ModuleThrowSelect)] call EFUNC(common,selectPosition);
 
         },

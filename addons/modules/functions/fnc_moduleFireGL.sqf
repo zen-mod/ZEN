@@ -52,24 +52,26 @@ if (_glMuzzles isEqualTo []) exitWith {
 // Get target position
 [_unit, {
     params ["_successful", "_unit", "_mousePosASL"];
-    private _weapons = weapons _unit;
-    private _glMuzzles = [];
-    {
-        private _weapon = _x;
+    if _successful then {
+        private _weapons = weapons _unit;
+        private _glMuzzles = [];
         {
-            private _muzzle = _x;
-            if (configName inheritsFrom (configFile >> "CfgWeapons" >> _weapon >> _muzzle) isEqualTo "UGL_F") then {
-                _glMuzzles pushBack [_weapon, _muzzle];
-            };
-        } forEach getArray(configFile >> "cfgWeapons" >> _weapon >> "muzzles");
-    } forEach _weapons;
+            private _weapon = _x;
+            {
+                private _muzzle = _x;
+                if (configName inheritsFrom (configFile >> "CfgWeapons" >> _weapon >> _muzzle) isEqualTo "UGL_F") then {
+                    _glMuzzles pushBack [_weapon, _muzzle];
+                };
+            } forEach getArray(configFile >> "cfgWeapons" >> _weapon >> "muzzles");
+        } forEach _weapons;
 
-    if (_glMuzzles isEqualTo []) exitWith {
-        [objNull, format ["Unit has no GL: %1", _unit]] call bis_fnc_showCuratorFeedbackMessage;
+        if (_glMuzzles isEqualTo []) exitWith {
+            [objNull, format ["Unit has no GL: %1", _unit]] call bis_fnc_showCuratorFeedbackMessage;
+        };
+
+        private _magazine = "1Rnd_HE_Grenade_shell";
+        private _muzzle = _glMuzzles # 0 # 1;
+        private _firemode = "Single";
+        [_unit, _magazine, _muzzle, _firemode, _mousePosASL] call zen_modules_fnc_projectiles_zeus;
     };
-
-    private _magazine = "1Rnd_HE_Grenade_shell";
-    private _muzzle = _glMuzzles # 0 # 1;
-    private _firemode = "Single";
-    [_unit, _magazine, _muzzle, _firemode, _mousePosASL] call zen_modules_fnc_projectiles_zeus;
 }, [], LSTRING(ModuleFireGL)] call EFUNC(common,selectPosition);
