@@ -72,62 +72,82 @@ _unit addEventHandler ["AnimChanged", {
 _unit addEventHandler ["Fired", {
     params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
 
+    // clean up
+    _unit removeEventHandler ["Fired", _thisEventHandler];
+    _unit setVariable ["zen_projectiles_thrown", true];
+    _unit enableAI "PATH";
+
     private _throwParams = _unit getVariable ["zen_projectiles_throwParams", []];
     if (_throwParams isEqualTo []) exitWith {};
     _throwParams params ["_unit", "_magazine", "_muzzle", "_firemode", "_targetPos", "_throwFlatTrajectory"];
+
+    // SACLOS
+    if (
+        isNumber (configfile >> "CfgAmmo" >> _ammo >> "manualControl") &&
+        {1 == (getNumber (configfile >> "CfgAmmo" >> _ammo >> "manualControl"))}
+    ) then {
+        _projectile setMissileTargetPos (ASLToAGL _targetPos);
+    };
 
     private _projectilePosASL = getPosASL _projectile;
     private _distance = _projectilePosASL distance2D _targetPos;
     private _height = _projectilePosASL # 2 - _targetPos # 2;
     private _g = 9.8066;
-    //private _speed = 10 + _distance / 2 - _height / 2;
-    private _speed = getNumber (configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
 
-    // physics
-    private _angle = (acos((_g * _distance^2/_speed^2-_height)/(_projectilePosASL distance _targetPos)) + atan (_distance / _height)) / 2;
-
-    // initSpeed too low to reach target
-    if !(_angle isEqualType 0) then {
-        /* boost speed
-        systemChat format ["d:%1, h:%2, s:%3, a:%4",_distance, _height, _speed, _angle];
-        while {_speed < 20 && {!(_angle isEqualType 0)}} do {
-            _speed = _speed + 1;
-            _angle = (acos((_g * _distance^2/_speed^2-_height)/(_projectilePosASL distance _targetPos)) + atan (_distance / _height)) / 2;
-        };
-        _speed = _speed + 2;
-        _angle = (acos((_g * _distance^2/_speed^2-_height)/(_projectilePosASL distance _targetPos)) + atan (_distance / _height)) / 2;
-        */
-        // just go as far as possible
-        _angle = 45;
+    private _speed = getNumber (configFile >> "CfgAmmo" >> _ammo >> "maxSpeed");
+    if (_speed == 0) then  {
+        _speed = getNumber (configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
     };
 
-    if (_angle < 0) then { _angle = _angle + 90; };
+    _maneuvrability = getNumber (configFile >> "CfgAmmo" >> _ammo >> "maneuvrability");
+    private _vectorLaunch = _projectilePosASL vectorFromTo _targetPos;
+    if (_maneuvrability <= 1) then {
+        // physics
+        private _angle = (acos((_g * _distance^2/_speed^2-_height)/(_projectilePosASL distance _targetPos)) + atan (_distance / _height)) / 2;
 
-    private _speedY = _speed * sin _angle;
-    private _speedx = _speed * cos _angle;
-
-    private _vectorLOS = _projectilePosASL vectorFromTo _targetPos;
-    private _vectorDir = [_projectilePosASL # 0,_projectilePosASL # 1, 0] vectorFromTo [_targetPos # 0, _targetPos # 1, 0];
-    private _vectorLaunch = vectorNormalized (_vectorDir vectorAdd [0,0,_speedY/_speedX]);
-
-    // check if using high angle
-    if _throwFlatTrajectory then {
-        private _angleLOS_Vert = acos (_vectorLOS vectorCos [0,0,1]);
-        private _angleHORZ_LOS = acos (_vectorDir vectorCos _vectorLOS);
-        private _angleLOS_Launch = acos (_vectorLOS vectorCos _vectorLaunch);
-        private _angleLaunch_Vert = acos (_vectorLaunch vectorCos [0,0,1]);
-        //systemChat format ["LV:%1, HL:%2, LA:%3, AV:%4",_angleLOS_Vert, _angleHORZ_LOS, _angleLOS_Launch, _angleLaunch_Vert];
-
-        if (_angleLOS_Launch > (_angleLOS_Vert / 2)) then {
-            if (_angleLOS_Vert > 90) then {
-                _angleHORZ_LOS = -1 * _angleHORZ_LOS;
+        // initSpeed too low to reach target
+        if !(_angle isEqualType 0) then {
+            /* boost speed
+            systemChat format ["d:%1, h:%2, s:%3, a:%4",_distance, _height, _speed, _angle];
+            while {_speed < 20 && {!(_angle isEqualType 0)}} do {
+                _speed = _speed + 1;
+                _angle = (acos((_g * _distance^2/_speed^2-_height)/(_projectilePosASL distance _targetPos)) + atan (_distance / _height)) / 2;
             };
-            _angle = _angleLaunch_Vert + _angleHORZ_LOS;
-            //systemChat format ["FA:%1",_angle];
+            _speed = _speed + 2;
+            _angle = (acos((_g * _distance^2/_speed^2-_height)/(_projectilePosASL distance _targetPos)) + atan (_distance / _height)) / 2;
+            */
+            // just go as far as possible
+            _angle = 45;
+        };
 
-            _speedY = _speed * sin _angle;
-            _speedx = _speed * cos _angle;
-            _vectorLaunch = vectorNormalized (_vectorDir vectorAdd [0,0,_speedY/_speedX]);
+        if (_angle < 0) then { _angle = _angle + 90; };
+
+        private _speedY = _speed * sin _angle;
+        private _speedx = _speed * cos _angle;
+
+        private _vectorLOS = _projectilePosASL vectorFromTo _targetPos;
+        private _vectorDir = [_projectilePosASL # 0,_projectilePosASL # 1, 0] vectorFromTo [_targetPos # 0, _targetPos # 1, 0];
+        _vectorLaunch = vectorNormalized (_vectorDir vectorAdd [0,0,_speedY/_speedX]);
+
+        // check if using high angle
+        if _throwFlatTrajectory then {
+            private _angleLOS_Vert = acos (_vectorLOS vectorCos [0,0,1]);
+            private _angleHORZ_LOS = acos (_vectorDir vectorCos _vectorLOS);
+            private _angleLOS_Launch = acos (_vectorLOS vectorCos _vectorLaunch);
+            private _angleLaunch_Vert = acos (_vectorLaunch vectorCos [0,0,1]);
+            //systemChat format ["LV:%1, HL:%2, LA:%3, AV:%4",_angleLOS_Vert, _angleHORZ_LOS, _angleLOS_Launch, _angleLaunch_Vert];
+
+            if (_angleLOS_Launch > (_angleLOS_Vert / 2)) then {
+                if (_angleLOS_Vert > 90) then {
+                    _angleHORZ_LOS = -1 * _angleHORZ_LOS;
+                };
+                _angle = _angleLaunch_Vert + _angleHORZ_LOS;
+                //systemChat format ["FA:%1",_angle];
+
+                _speedY = _speed * sin _angle;
+                _speedx = _speed * cos _angle;
+                _vectorLaunch = vectorNormalized (_vectorDir vectorAdd [0,0,_speedY/_speedX]);
+            };
         };
     };
 
@@ -143,11 +163,6 @@ _unit addEventHandler ["Fired", {
 
     // set velocity
     _projectile setVelocity _vectorFinal;
-
-    // clean up
-    _unit removeEventHandler ["Fired", _thisEventHandler];
-    _unit setVariable ["zen_projectiles_thrown", true];
-    _unit enableAI "PATH";
 
     /* test draw sight and aim lines
     amp_projectiles_unit = _unit;
@@ -166,6 +181,7 @@ _unit addEventHandler ["Fired", {
 _unit setVariable ["zen_projectiles_thrown", false];
 _unit setVariable ["zen_projectiles_time", diag_tickTime];
 
+// add ammo to unit
 private _canAdd = _unit canAdd _magazine;
 private _removedItems = [];
 if !_canAdd then {
