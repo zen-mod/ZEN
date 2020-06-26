@@ -45,3 +45,4 @@ if (isNil "zen_projectiles_throwFlatTrajectory") then {zen_projectiles_throwFlat
 
 [_unit, _magazine, _muzzle, _firemode, _targetPos, zen_projectiles_throwFlatTrajectory] remoteExecCall ["zen_modules_fnc_projectiles_unit", _unit];
 
+true
