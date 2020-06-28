@@ -15,11 +15,11 @@
         </Key>
         <Key ID="STR_ZEN_Compositions_CategoryCannotBeEmpty">
             <English>Category cannot be empty.</English>
-            <Polish>Pole kategorii nie może byc pusta.</Polish>
+            <Polish>Pole kategorii nie może być puste.</Polish>
         </Key>
         <Key ID="STR_ZEN_Compositions_NameCannotBeEmpty">
             <English>Name cannot be empty.</English>
-            <Polish>Pole nazwy nie może byc pusta</Polish>
+            <Polish>Pole nazwy nie może być puste.</Polish>
         </Key>
         <Key ID="STR_ZEN_Compositions_CompositionAlreadyExists">
             <English>A composition with this name and category already exists.</English>
@@ -39,7 +39,7 @@
         </Key>
         <Key ID="STR_ZEN_Compositions_RandomizationOn">
             <English>Randomization enabled.</English>
-            <Polish>Wybór losowy wyłączony.</Polish>
+            <Polish>Wybór losowy włączony.</Polish>
         </Key>
     </Package>
 </Project>

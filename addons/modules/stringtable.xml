@@ -641,7 +641,7 @@
         <Key ID="STR_ZEN_Modules_DamageState_Tooltip">
             <English>Selects the damage state to apply.\nIn nearest mode, only damage states that the nearest building supports are selectable.\nIn radius mode, the selected damage state will be applied only to buildings that support it.</English>
             <German>Wählt den anzuwendenden Schadenszustand aus. Im "Nächsten" Modus wird nur das nächstgelegene Gebäude ausgewählt. Im "Radius" Modus wird der Schadenszustand nur auf Häuser, die diesen unterstützen angewendet.</German>
-            <Polish>Wybiera stan obrażen do zastosowania.\nTryb najbliższy, obsługuje jedynie typy obrażen możliwe dla najbliszego budynku.\Tryb "Promienny", wybrany typ obrażen zostanie zadany tylko budynkom obsługują taki typ. </Polish>
+            <Polish>Wybiera tryb obrażeń do zastosowania.\nTryb najbliższy, obsługuje jedynie typy obrażeń możliwe dla najbliższego budynku.\Tryb "Promienny", wybrany typ obrażen zostanie zadany tylko budynkom które obsługują taki typ. </Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_DestructionEffects">
             <English>Destruction Effects</English>
@@ -1053,7 +1053,7 @@
             <English>Teleports vehicles of players instead of the players themselves.\nIf the module was attached to a vehicle, this is ignored and players will be moved into the attached vehicle.</English>
             <German>Teleportiert Fahrzeuge von Spielern anstelle der Spieler selbst.\nWenn das Modul auf einem Fahrzeug platziert war, wird dies ignoriert und die Spieler werden in das angehängte Fahrzeug bewegt.</German>
             <Japanese>プレイヤー車両もテレポートさせます。\nもしモジュールが車両に取り付けされていても、無視してプレイヤーは取り付けされた車両に移動されます。</Japanese>
-            <Polish>Teleportuje jedynie pojazdy graczy zamiast graczy.\nJeżeli moduł był przyczepiony do pojazdu wtedy bedzie zignorowany a gracze zostaną przeniesieni do przyczepionego pojazdu.</Polish>
+            <Polish>Teleportuje jedynie pojazdy graczy zamiast graczy.\nJeżeli moduł był przyczepiony do pojazdu wtedy będzie zignorowany a gracze zostaną przeniesieni do przyczepionego pojazdu.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSmokePillar">
             <English>Smoke Pillar</English>

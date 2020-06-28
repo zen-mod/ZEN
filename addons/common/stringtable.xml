@@ -592,7 +592,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_CameraBird">
             <English>Camera Eagle</English>
-            <Polish>Orla kamera</Polish>
+            <Polish>Orzeł przy kamerze</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_CameraBird_Description">
             <English>Controls whether an eagle that follows the Zeus camera is created.</English>

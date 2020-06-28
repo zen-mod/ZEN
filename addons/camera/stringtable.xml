@@ -31,7 +31,7 @@
             <Czech>Určuje, zda by se měla výška kamery upravovat podle změn výšky terénu.</Czech>
             <Japanese>標高に合わせてカメラの高さを変化させます。</Japanese>
             <Korean>카메라의 높이가 지형의 고도 변화에 따라 변화되는지를 제어합니다.</Korean>
-            <Polish>Kontroluje czy kamera podążą względem wysokości terenu.</Polish>
+            <Polish>Kontroluje czy kamera podąża względem wysokości terenu.</Polish>
         </Key>
         <Key ID="STR_ZEN_Camera_AdaptiveSpeed">
             <English>Adaptive Speed</English>
