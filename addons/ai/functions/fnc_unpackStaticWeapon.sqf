@@ -23,32 +23,72 @@ if !(local _gunner) exitWith {
 };
 
 _gunner setVariable [QGVAR(unpackStaticWeaponTargetPos), _targetPos];
+private _startTime = CBA_MissionTime;
+_gunner disableAI "PATH";
+[_assistant] joinSilent grpNull;
+private _g = (group _assistant);
+_g setBehaviourStrong "CARELESS";
+_g deleteGroupWhenEmpty true;
+_g enableAttack false;
+_assistant doMove getPos _gunner;
+_assistant disableAI "FSM";
+[{
+    params ["_args", "_pfID"];
+    _args params ["_gunner", "_assistant", "_mousePosASL", "_startTime"];
 
-_gunner addEventHandler ["WeaponAssembled", {
-    params ["_gunner", "_weapon"];
-
-    _gunner removeEventHandler ["WeaponAssembled", _thisEventHandler];
-
-    _weapon setVectorUp surfaceNormal position _weapon;
-
-    _gunner assignAsGunner _weapon;
-    //_gunner moveInGunner _weapon;
-    [_gunner] orderGetIn true;
-
-    private _targetPos = _gunner getVariable [QGVAR(unpackStaticWeaponTargetPos), []];
-    if !(_targetPos isEqualTo []) then {
-        _weapon setDir (_weapon getDir _targetPos);
-        _gunner doWatch _targetPos;
+    if (CBA_MissionTime > (_startTime + 60) || {!alive _gunner || {!alive _assistant}}) exitWith {
+        [_pfID] call CBA_fnc_removePerFrameHandler;
+        _gunner enableAI "PATH";
+        private _g = group _gunner;
+        [_assistant] joinSilent _g;
+        _g setBehaviour (behaviour _gunner);
+        _assistant enableAI "FSM";
+        //(group _assistant) enableAttack true;
     };
 
-    _group = group _gunner;
-    _group addVehicle _weapon;
-}];
+    if (_gunner distance _assistant < 3) exitWith {
+        [_pfID] call CBA_fnc_removePerFrameHandler;
+        _gunner enableAI "PATH";
+        private _g = group _gunner;
+        [_assistant] joinSilent _g;
+        _g setBehaviour (behaviour _gunner); //
+        _assistant enableAI "FSM";
+        //(group _assistant) enableAttack true;
+        _canUnpack = true;
+        //[QEGVAR(ai,unpackStaticWeapon), [_gunner, _assistant, ASLToAGL _mousePosASL], _gunner] call CBA_fnc_targetEvent;
 
-private _weaponBase = unitBackpack _assistant;
-_gunner action ["PutBag", _assistant];
-_gunner action ["Assemble", _weaponBase];
+        _gunner addEventHandler ["WeaponAssembled", {
+            params ["_gunner", "_weapon"];
 
-if !(_targetPos isEqualTo []) then {
-    _assistant doWatch _targetPos;
-};
+            _gunner removeEventHandler ["WeaponAssembled", _thisEventHandler];
+
+            private _targetPos = _gunner getVariable [QGVAR(unpackStaticWeaponTargetPos), []];
+            if !(_targetPos isEqualTo []) then {
+                _weapon setDir (_weapon getDir _targetPos);
+                _gunner doWatch _targetPos;
+            };
+
+            _weapon setVectorUp surfaceNormal position _weapon;
+
+            _gunner assignAsGunner _weapon;
+            //_gunner moveInGunner _weapon;
+            [_gunner] orderGetIn true;
+
+            _group = group _gunner;
+            _group addVehicle _weapon;
+        }];
+
+        private _weaponBase = unitBackpack _assistant;
+        _gunner action ["PutBag", _assistant];
+        _gunner action ["Assemble", _weaponBase];
+
+        if !(_targetPos isEqualTo []) then {
+            _assistant doWatch _targetPos;
+        };
+    };
+
+    if (unitReady _assistant) then {
+        _assistant doMove getPos _gunner;
+    };
+
+}, 0.1, [_gunner, _assistant, _mousePosASL, _startTime]] call CBA_fnc_addPerFrameHandler;

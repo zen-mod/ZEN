@@ -67,39 +67,7 @@ if (isNull _assistant) exitWith {
 // Get target position
 [_gunner, {
     params ["_successful", "_gunner", "_mousePosASL", "_assistant"];
-    if _successful then {
-        if (_gunner distance _assistant < 3) then {
-            [QEGVAR(ai,unpackStaticWeapon), [_gunner, _assistant, ASLToAGL _mousePosASL], _gunner] call CBA_fnc_targetEvent;
-        } else {
-            private _startTime = CBA_MissionTime;
-            _assistant disableAI "FSM";
-            _gunner disableAI "PATH";
-            (group _assistant) enableAttack false;
-            _assistant doMove getPos _gunner;
-            [{
-                params ["_args", "_pfID"];
-                _args params ["_gunner", "_assistant", "_mousePosASL", "_startTime"];
-
-                if (CBA_MissionTime > (_startTime + 60) || {!alive _gunner || {!alive _assistant}}) exitWith {
-                    [_pfID] call CBA_fnc_removePerFrameHandler;
-                    _assistant enableAI "FSM";
-                    _gunner enableAI "PATH";
-                    (group _assistant) enableAttack true;
-                };
-
-                if (_gunner distance _assistant < 3) exitWith {
-                    [_pfID] call CBA_fnc_removePerFrameHandler;
-                    _assistant enableAI "FSM";
-                    _gunner enableAI "PATH";
-                    (group _assistant) enableAttack true;
-                    [QEGVAR(ai,unpackStaticWeapon), [_gunner, _assistant, ASLToAGL _mousePosASL], _gunner] call CBA_fnc_targetEvent;
-                };
-
-                if (unitReady _assistant) then {
-                    _assistant doMove getPos _gunner;
-                };
-
-            }, 0.1, [_gunner, _assistant, _mousePosASL, _startTime]] call CBA_fnc_addPerFrameHandler;
-        };
+    if (_successful) then {
+        [QEGVAR(ai,unpackStaticWeapon), [_gunner, _assistant, ASLToAGL _mousePosASL], _gunner] call CBA_fnc_targetEvent;
     };
 }, _assistant, LSTRING(ModuleUnpackStaticWeapon_Facing)] call EFUNC(common,selectPosition);
