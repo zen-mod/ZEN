@@ -39,8 +39,8 @@ if (isPlayer _gunner) exitWith {
 private _fnc_getCompatibleBases = {
     params ["_backpack"];
     private _cfgBase = configFile >> "CfgVehicles" >> _backpack >> "assembleInfo" >> "base";
-    if (isText _cfgBase) exitWith { getText _cfgBase };
-    getArray _cfgBase
+    if (isText _cfgBase) exitWith { toLower (getText _cfgBase) };
+    (getArray _cfgBase) apply {toLower _x}
 };
 
 private _backpack = backpack _gunner;
@@ -54,8 +54,8 @@ if (_compatibleBases isEqualType "") then {_compatibleBases = [_compatibleBases]
 
 private _backpackers = units _gunner select {!(backpack _x isEqualTo "")};
 private _assistant = {
-    if (backpack _x in _compatibleBases) exitWith {_x};
-    if (_backpack in ([backpack _x] call _fnc_getCompatibleBases)) exitWith {_x};
+    if ((toLower backpack _x) in _compatibleBases) exitWith {_x};
+    if ((toLower _backpack) in ([backpack _x] call _fnc_getCompatibleBases)) exitWith {_x};
 
     objNull
 } forEach _backpackers;
