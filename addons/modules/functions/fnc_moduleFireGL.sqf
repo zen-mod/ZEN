@@ -52,7 +52,7 @@ if (_glMuzzles isEqualTo []) exitWith {
 // Get target position
 [_unit, {
     params ["_successful", "_unit", "_mousePosASL"];
-    if _successful then {
+    if (_successful) then {
         private _weapons = weapons _unit;
         private _glMuzzles = [];
         {

@@ -41,7 +41,7 @@ if (_launcher isEqualTo "") exitWith {
 // Get target position
 [_unit, {
     params ["_successful", "_unit", "_mousePosASL"];
-    if _successful then {
+    if (_successful) then {
         private _weapon = secondaryWeapon _unit;
 
         private _magazine = getArray (configFile >> "CfgWeapons" >> _weapon >> "Magazines") # 0;
