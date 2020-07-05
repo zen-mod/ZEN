@@ -2244,11 +2244,14 @@
             <English>Unable to find suitable position to teleport vehicle to.</English>
             <German>Kein valide Position zum Teleporieren des Fahrzeugs gefunden.</German>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCrewToGunner">
+            <English>Crew To Gunner</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_MustHaveGunner">
             <English>Vehicle must have a primary gunner seat.</English>
         </Key>
-        <Key ID="STR_ZEN_Modules_ModuleCrewToGunner">
-            <English>Crew To Gunner</English>
+        <Key ID="STR_ZEN_Modules_NoCrewAvailable">
+            <English>Vehicle must have other crew available.</English>
         </Key>
     </Package>
 </Project>
