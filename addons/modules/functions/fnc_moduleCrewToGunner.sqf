@@ -37,14 +37,13 @@ private _gunner = gunner _vehicle;
 private _newGunners = crew _vehicle;
 
 if (!isNull _gunner) then {
-    [_gunner] remoteExec ["moveOut", _gunner];
+    [QGVAR(teleportOutOfVehicle), [_gunner], _gunner] call CBA_fnc_targetEvent;
     _newGunners = crew _vehicle - [_gunner];
 };
 
 if (_newGunners isEqualTo []) exitWith {false};
 
 private _newGunner = _newGunners # (count _newGunners -1);
-_newGunner assignAsGunner _vehicle;
-[_newGunner] orderGetIn true;
+[QGVAR(crewToGunner), [_newGunner, _vehicle], _newGunner] call CBA_fnc_targetEvent;
 
 true
