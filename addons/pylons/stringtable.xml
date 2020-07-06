@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Pylons">
+        <Key ID="STR_ZEN_Pylons_DisplayName">
+            <English>Pylons</English>
+        </Key>
+        <Key ID="STR_ZEN_Pylons_Title">
+            <English>Configure Pylons (%1)</English>
+        </Key>
+        <Key ID="STR_ZEN_Pylons_Empty">
+            <English>&lt;Empty&gt;</English>
+        </Key>
+    </Package>
+</Project>
