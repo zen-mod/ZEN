@@ -54,7 +54,7 @@ class GVAR(display) {
         class MirrorLabel: ctrlStatic {
             style = ST_RIGHT;
             text = "$STR_3DEN_Object_Attribute_PylonsMirror_displayName";
-			tooltip = "$STR_3DEN_Object_Attribute_PylonsMirror_tooltip";
+            tooltip = "$STR_3DEN_Object_Attribute_PylonsMirror_tooltip";
             x = CENTER_X + PICTURE_W / 2 - GRID_W(35);
             y = CENTER_Y + (PICTURE_H + GRID_H(6)) / 2 - GRID_H(5);
             w = GRID_W(30);
