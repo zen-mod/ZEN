@@ -17,23 +17,22 @@
  */
 
 params ["_gunner", "_assistant", ["_targetPos", [], [[]], 3]];
-//if !(local _gunner) exitWith {_this remoteExecCall [FUNC(unpackStaticWeapon), _gunner]};
+
 if !(local _gunner) exitWith {
     [QGVAR(unpackStaticWeapon), _this, _gunner] call CBA_fnc_targetEvent;
 };
 
 _gunner setVariable [QGVAR(unpackStaticWeaponTargetPos), _targetPos];
 
+// close enough, set up weapon
 if (_gunner distance _assistant < 3) exitWith {
     [_pfID] call CBA_fnc_removePerFrameHandler;
     _gunner enableAI "PATH";
     private _g = group _gunner;
     [_assistant] joinSilent _g;
-    _g setBehaviour (behaviour _gunner); //
+    _g setBehaviour (behaviour _gunner);
     _assistant enableAI "FSM";
-    //(group _assistant) enableAttack true;
     _canUnpack = true;
-    //[QEGVAR(ai,unpackStaticWeapon), [_gunner, _assistant, ASLToAGL _mousePosASL], _gunner] call CBA_fnc_targetEvent;
 
     _gunner addEventHandler ["WeaponAssembled", {
         params ["_gunner", "_weapon"];
@@ -49,7 +48,6 @@ if (_gunner distance _assistant < 3) exitWith {
         _weapon setVectorUp surfaceNormal position _weapon;
 
         _gunner assignAsGunner _weapon;
-        //_gunner moveInGunner _weapon;
         [_gunner] orderGetIn true;
 
         _group = group _gunner;
@@ -63,6 +61,7 @@ if (_gunner distance _assistant < 3) exitWith {
     _assistant doWatch _targetPos;
 };
 
+// too far, order assistant to move to gunner and start pfh
 private _startTime = CBA_MissionTime;
 _gunner disableAI "PATH";
 [_assistant] joinSilent grpNull;
@@ -83,7 +82,6 @@ _assistant disableAI "FSM";
         [_assistant] joinSilent _g;
         _g setBehaviour (behaviour _gunner);
         _assistant enableAI "FSM";
-        //(group _assistant) enableAttack true;
     };
 
     if (_gunner distance _assistant < 3) exitWith {
@@ -93,9 +91,7 @@ _assistant disableAI "FSM";
         [_assistant] joinSilent _g;
         _g setBehaviour (behaviour _gunner);
         _assistant enableAI "FSM";
-        //(group _assistant) enableAttack true;
         _canUnpack = true;
-        //[QEGVAR(ai,unpackStaticWeapon), [_gunner, _assistant, ASLToAGL _mousePosASL], _gunner] call CBA_fnc_targetEvent;
 
         _gunner addEventHandler ["WeaponAssembled", {
             params ["_gunner", "_weapon"];
@@ -111,7 +107,6 @@ _assistant disableAI "FSM";
             _weapon setVectorUp surfaceNormal position _weapon;
 
             _gunner assignAsGunner _weapon;
-            //_gunner moveInGunner _weapon;
             [_gunner] orderGetIn true;
 
             _group = group _gunner;
