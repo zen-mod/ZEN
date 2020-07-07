@@ -91,7 +91,7 @@ _assistant disableAI "FSM";
         _gunner enableAI "PATH";
         private _g = group _gunner;
         [_assistant] joinSilent _g;
-        _g setBehaviour (behaviour _gunner); //
+        _g setBehaviour (behaviour _gunner);
         _assistant enableAI "FSM";
         //(group _assistant) enableAttack true;
         _canUnpack = true;
