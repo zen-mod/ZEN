@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Tasks">
+        <Key ID="STR_ZEN_Tasks_ModulePosition">
+            <English>Module Position</English>
+        </Key>
+        <Key ID="STR_ZEN_Tasks_ModulePosition_Tooltip">
+            <English>The task's position will be synchronized with the position of the module.</English>
+        </Key>
+        <Key ID="STR_ZEN_Tasks_DestinationDisabled_Tooltip">
+            <English>The task will not have position associated with it.</English>
+        </Key>
+        <Key ID="STR_ZEN_Tasks_Type_Tooltip">
+            <English>Sets the task's icon.</English>
+        </Key>
+        <Key ID="STR_ZEN_Tasks_TitleDescription">
+            <English>Title &amp; Description</English>
+        </Key>
+        <Key ID="STR_ZEN_Tasks_TitleDescription_Tooltip">
+            <English>The task's title and description. Task description can use tags supported by diary records.</English>
+        </Key>
+    </Package>
+</Project>
