@@ -587,42 +587,52 @@
         <Key ID="STR_ZEN_Damage_Hitera_front">
             <English>ERA Front</English>
             <German>Reaktivpanzerung vorne</German>
+            <Polish>ERA Przód</Polish>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitera_back">
             <English>ERA Back</English>
             <German>Reaktivpanzerung hinten</German>
+            <Polish>ERA tył</Polish>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitera_left">
             <English>ERA Left</English>
             <German>Reaktivpanzerung links</German>
+            <Polish>ERA lewa strona</Polish>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitera_right">
             <English>ERA Right</English>
             <German>Reaktivpanzerung rechts</German>
+            <Polish>ERA prawa strona</Polish>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitera_top">
             <English>ERA Top</English>
             <German>Reaktivpanzerung oben</German>
+            <Polish>ERA góra</Polish>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitslat">
             <English>Slat</English>
             <German>Käfig</German>
+            <Polish>Klapa</Polish>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitslat_left">
             <English>Slat Left</English>
             <German>Käfig links</German>
+            <Polish>Klapa lewa</Polish>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitslat_right">
             <English>Slat Right</English>
             <German>Käfig rechts</German>
+            <Polish>Klapa prawa</Polish>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitslat_front">
             <English>Slat Front</English>
             <German>Käfig vorne</German>
+            <Polish>Klapa przód</Polish>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitslat_back">
             <English>Slat Back</English>
             <German>Käfig hinten</German>
+            <Polish>Klapa tył</Polish>
         </Key>
     </Package>
 </Project>

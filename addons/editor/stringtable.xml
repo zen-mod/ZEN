@@ -77,16 +77,20 @@
         <Key ID="STR_ZEN_Editor_AddGroupIcons">
             <English>Add Group Icons</English>
             <German>Gruppensymbole anzeigen</German>
+            <Polish>Dodaj ikone grupy</Polish>
         </Key>
         <Key ID="STR_ZEN_Editor_AddGroupIcons_Description">
             <English>Adds group icons to the create group trees.</English>
             <German>Zeigt Gruppensymbole im Gruppenbaum an.</German>
+            <Polish>Dodaje ikone grupy do drzewka tworzenia grup.</Polish>
         </Key>
         <Key ID="STR_ZEN_Editor_RandomizeCopyPaste">
             <English>Randomize Deep Copy/Paste</English>
+            <Polish>Losowe kopiowanie/Wklejanie (Głębokie)</Polish>
         </Key>
         <Key ID="STR_ZEN_Editor_RandomizeCopyPaste_Description">
             <English>Controls whether deep copy/paste will randomize unit identities and vehicle customization (instead of making identical copies).</English>
+            <Polish>Kontoluje czy głębokie kopiowanie/wklejanie będzie losowo zmieniało ustawienia jednostek (zamiast tworzenia identycznych kopii)</Polish>
         </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages">
             <English>Unit Radio Messages</English>
@@ -108,10 +112,12 @@
         <Key ID="STR_ZEN_Editor_ParachuteSounds">
             <English>Parachute Sounds</English>
             <German>Fallschirmgeräusche</German>
+            <Polish>Dzwięki spadochronu</Polish>
         </Key>
         <Key ID="STR_ZEN_Editor_ParachuteSounds_Description">
             <English>Controls whether jet flyby sounds are played when an object is paradropped via the Raise Entity keybind.</English>
             <German>Bestimmt ob Fallschirmgeräusche abgespielt werden, wenn ein Objekt per Hochheben-Tastenkombination abgeworfen wird.</German>
+            <Polish>Kontroluje czy odtwarzany jest dzwięk przelatującego samolotu gdy obiekt jest zrzucany z spadochronem przy pomocy klawisza do podniesienia jednostki</Polish>
         </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages_WaypointsOnly">
             <English>Waypoints Only</English>
@@ -149,49 +155,60 @@
             <French>Déployer des contre-mesures</French>
             <German>Gegenmaßnahmen einleiten</German>
             <Japanese>欺瞞装置作動</Japanese>
+            <Polish>Odpal środki przeciw namierzające</Polish>
         </Key>
         <Key ID="STR_ZEN_Editor_DeployCountermeasures_Description">
             <English>Makes all selected vehicles deploy countermeasures such as smokes and flares.</English>
             <French>Tous les véhicules sélectionnés déploient des contre-mesures telles que des fumées et des fusées éclairantes.</French>
             <German>Alle ausgewählten Fahrzeuge setzen Gegenmaßnahmen wie Rauch und Leuchtfackeln ein.</German>
             <Japanese>選択された全車両から煙幕やフレアといった欺瞞装置を作動させます。</Japanese>
+            <Polish>Powoduje że wszystkie wybrane pojazdy odpalają środki przeciw namierzające, czyli flary, dymy itp.</Polish>
         </Key>
         <Key ID="STR_ZEN_Editor_DeepCopy">
             <English>Deep Copy</English>
             <German>Komplette Kopie</German>
+            <Polish>Głęboka Kopia</Polish>
         </Key>
         <Key ID="STR_ZEN_Editor_DeepCopy_Description">
             <English>Performs a "deep copy" of selected objects - copying an extended set of object properties such as unit loadouts, vehicle inventories and customization.</English>
             <German>Legt eine komplette Kopie von Objekten an, welches die Einheiten- und Fahrzeugausrüstung, sowie benutzerdefinierte Anpassungen speichert.</German>
+            <Polish>Powoduje "Głębokie" kopiowanie wybranych przedmiotów, oznacza to że ustawienia, wartości, przedmioty i inwentarz jednostki także zostanie skopiowany.</Polish>
         </Key>
         <Key ID="STR_ZEN_Editor_DeepPaste">
             <English>Deep Paste</English>
             <German>Komplettes Einfügen</German>
+            <Polish>Głębokie wklejanie</Polish>
         </Key>
         <Key ID="STR_ZEN_Editor_DeepPaste_Description">
             <English>Pastes the current deep copied object data.</English>
             <German>Fügt die derzeitig gespeicherte komplette Kopie ein.</German>
+            <Polish>Wkleja z schowka obiekty które zostały głęboko skopiowane.</Polish>
         </Key>
         <Key ID="STR_ZEN_Editor_FocusSearchBar">
             <English>Focus Search Bar</English>
             <German>Suchfeld fokussieren</German>
+            <Polish>Skieruj na wyszukiwarke</Polish>
         </Key>
         <Key ID="STR_ZEN_Editor_FocusSearchBar_Description">
             <English>Sets focus to the search bar.</English>
             <German>Setzt den Fokus auf das Suchfeld.</German>
+            <Polish>Kieruje na listwe wyszukiwarki</Polish>
         </Key>
         <Key ID="STR_ZEN_Editor_OrientTerrainNormal_Description">
             <English>Orients all selected objects to match the terrain slope at their position.</English>
+            <Polish>Orientuje wszystkie wybrane obiekty aby ustawiły się względem terenu na swojej pozycji.</Polish>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleIcons">
             <English>Toggle Editable Icons</English>
             <German>Bearbeitbare Symbole umschalten</German>
             <Japanese>編集可アイコン切り替え</Japanese>
+            <Polish>Przełącz Ikony z możliwością edytowania</Polish>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleIcons_Description">
             <English>Toggles the visibility of all editable icons. Useful for temporarily reducing lag or onscreen clutter when there are a lot of icons.</English>
             <German>Schaltet die Sichtbarkeit von bearbeitbaren Symbolen um. Nützlich um temporär die Leistung zu verbessern oder für die Übersichtlichkeit.</German>
             <Japanese>全編集可アイコンの視認性を切り替えます。一時的な処理軽減や整理に使用できます。</Japanese>
+            <Polish>Przełącza widoczność wszsytkich ustawionych ikon, przydatne by tymczasowo zmniejszyć lag, bądź niepotrzebne zaśmiecenie ekranu gdy znajduje się na nim dużo ikon.</Polish>
         </Key>
     </Package>
 </Project>

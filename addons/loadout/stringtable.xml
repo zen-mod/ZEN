@@ -3,12 +3,15 @@
     <Package name="Loadout">
         <Key ID="STR_ZEN_Loadout_AmmoRounds">
             <English>%1 Rounds</English>
+            <Polish>%1 Naboi</Polish>
         </Key>
         <Key ID="STR_ZEN_Loadout_AmmoTooltip">
             <English>%1\n%2 Rounds\n%3</English>
+            <Polish>%1\n%2 Naboi\n%3</Polish>
         </Key>
         <Key ID="STR_ZEN_Loadout_EditLoadout">
             <English>Edit Loadout (%1)</English>
+            <Polish>Edytuj wyposażenie</Polish>
         </Key>
     </Package>
 </Project>
