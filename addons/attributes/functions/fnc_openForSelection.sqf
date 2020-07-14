@@ -23,5 +23,3 @@ switch (true) do {
     case !(_markers isEqualTo []): {[_markers select 0, "Marker"] call zen_attributes_fnc_open};
     case !(_waypoints isEqualTo []): {[_waypoints select 0, "Waypoint"] call zen_attributes_fnc_open};
 };
-
-true
