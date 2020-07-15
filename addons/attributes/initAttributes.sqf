@@ -236,7 +236,56 @@
     {
         _entity getVariable [QGVAR(respawnPos), []] param [0, sideEmpty]
     },
-    {alive _entity && {canMove _entity} && {_entity isKindOf "AllVehicles"}}
+    {alive _entity && {canMove _entity} && {_entity isKindOf "AllVehicles"} && {!(_entity isKindOf "Animal")}}
+] call FUNC(addAttribute);
+
+[
+    "Object",
+    [LSTRING(RespawnVehicle), LSTRING(RespawnVehicle_Tooltip)],
+    QGVAR(icons),
+    [[
+        [
+            4, "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnVehicle\west_ca.paa", "STR_A3_RscAttributeRespawnVehicle_West_tooltip", 11.5, 0.25, 2, west call BIS_fnc_sideColor,
+            {playableSlotsNumber west > 0 && {[west, _entity call BIS_fnc_objectSide] call BIS_fnc_areFriendly}}
+        ],
+        [
+            3, "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnVehicle\east_ca.paa", "STR_A3_RscAttributeRespawnVehicle_East_tooltip", 14, 0.25, 2, east call BIS_fnc_sideColor,
+            {playableSlotsNumber east > 0 && {[east, _entity call BIS_fnc_objectSide] call BIS_fnc_areFriendly}}
+        ],
+        [
+            5, "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnVehicle\guer_ca.paa", "STR_A3_RscAttributeRespawnVehicle_Guer_tooltip", 16.5, 0.25, 2, independent call BIS_fnc_sideColor,
+            {playableSlotsNumber independent > 0 && {[independent, _entity call BIS_fnc_objectSide] call BIS_fnc_areFriendly}}
+        ],
+        [
+            6, "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnVehicle\civ_ca.paa", "STR_A3_RscAttributeRespawnVehicle_Civ_tooltip", 19, 0.25, 2, civilian call BIS_fnc_sideColor,
+            {playableSlotsNumber civilian > 0 && {[civilian, _entity call BIS_fnc_objectSide] call BIS_fnc_areFriendly}}
+        ],
+        [
+            0, "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnVehicle\start_ca.paa", "STR_A3_RscAttributeRespawnVehicle_Start_tooltip", 21.5, 0.25, 2
+        ],
+        [
+            -1, "\a3\Ui_F_Curator\Data\default_ca.paa", "STR_Disabled", 24, 0.5, 1.5
+        ]
+    ]],
+    {
+        [QGVAR(setVehicleRespawn), _this] call CBA_fnc_serverEvent;
+    },
+    {
+        private _respawnID = [_entity, false] call BIS_fnc_moduleRespawnVehicle;
+
+        switch (_respawnID) do {
+            case 1;
+            case 7: {
+                _respawnID = 0;
+            };
+            case 2: {
+                _respawnID = [3, 4, 5, 6] param [(_entity call BIS_fnc_objectSide) call BIS_fnc_sideID, -1];
+            };
+        };
+
+        _respawnID
+    },
+    {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}
 ] call FUNC(addAttribute);
 
 [
