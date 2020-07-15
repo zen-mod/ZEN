@@ -238,5 +238,11 @@
             <English>Abilities</English>
             <Polish>Zdolności</Polish>
         </Key>
+        <Key ID="STR_ZEN_Attributes_AttributesDisplay">
+            <English>Show Attributes Display</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_AttributesDisplay_Description">
+            <English>Shows the Zeus attribute display for the selected entity.</English>
+        </Key>
     </Package>
 </Project>
