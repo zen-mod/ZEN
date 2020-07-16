@@ -461,6 +461,39 @@
 
 [
     "Waypoint",
+    "STR_3DEN_Waypoint_Attribute_LoiterDirection_displayname",
+    QGVAR(loiter),
+    nil,
+    {
+        {
+            if (waypointType _x == "LOITER") then {
+                _x setWaypointLoiterType _value;
+            };
+        } forEach SELECTED_WAYPOINTS;
+    },
+    {waypointLoiterType _entity},
+    {waypointType _entity == "LOITER"}
+] call FUNC(addAttribute);
+
+[
+    "Waypoint",
+    "STR_3DEN_Waypoint_Attribute_LoiterRadius_displayname",
+    QGVAR(edit),
+    nil,
+    {
+        private _radius = parseNumber _value;
+        {
+            if (waypointType _x == "LOITER") then {
+                _x setWaypointLoiterRadius _radius;
+            };
+        } forEach SELECTED_WAYPOINTS;
+    },
+    {str waypointLoiterRadius _entity},
+    {waypointType _entity == "LOITER"}
+] call FUNC(addAttribute);
+
+[
+    "Waypoint",
     [LSTRING(Timeout), LSTRING(Timeout_Tooltip)],
     QGVAR(slider),
     [0, 1800, 15, false, 0],
