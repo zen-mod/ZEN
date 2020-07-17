@@ -238,10 +238,10 @@
             <English>Abilities</English>
             <Polish>Zdolności</Polish>
         </Key>
-        <Key ID="STR_ZEN_Attributes_AttributesDisplay">
+        <Key ID="STR_ZEN_Attributes_OpenAttributesDisplay">
             <English>Open Attributes Display</English>
         </Key>
-        <Key ID="STR_ZEN_Attributes_AttributesDisplay_Description">
+        <Key ID="STR_ZEN_Attributes_OpenAttributesDisplay_Description">
             <English>Opens the Zeus attribute display for the selected entity.</English>
         </Key>
     </Package>
