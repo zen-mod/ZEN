@@ -14,4 +14,3 @@ PREP(gui_toolbox);
 PREP(gui_waypoint);
 PREP(handleMarkerPlaced);
 PREP(open);
-PREP(openForSelection);
