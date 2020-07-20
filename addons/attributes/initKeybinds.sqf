@@ -1,5 +1,14 @@
 [ELSTRING(main,DisplayName), QGVAR(open), [LSTRING(OpenAttributesDisplay), LSTRING(OpenAttributesDisplay_Description)], {
     if (!isNull curatorCamera && {!dialog && {!GETMVAR(RscDisplayCurator_search,false)}}) then {
+        if (count curatorMouseOver > 1) exitWith {
+            curatorMouseOver params ["_type", "_entity", ["_waypoint", -1]];
+            if (_type isEqualTo "ARRAY") then {
+                [_entity, _waypoint] call BIS_fnc_showCuratorAttributes;
+            } else {
+                _entity call BIS_fnc_showCuratorAttributes;
+            };
+        };
+
         curatorSelected params ["_objects", "_groups", "_waypoints", "_markers"];
 
         private _entity = switch (true) do {
