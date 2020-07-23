@@ -30,7 +30,7 @@ if (_gunner distance _assistant < 3) exitWith {
     [_gunner, _assistant] call FUNC(unpackStaticWeapon);
 };
 
-// too far, order assistant to move to gunner and start pfh
+// Too far, order assistant to move to gunner and start pfh
 _gunner disableAI "PATH";
 [_assistant] joinSilent grpNull;
 private _g = (group _assistant);
@@ -50,9 +50,10 @@ _assistant disableAI "FSM";
     if (_closeEnough || {_elapsedtime > 60 || {!alive _gunner || {!alive _assistant}}}) exitWith {
         [_pfID] call CBA_fnc_removePerFrameHandler;
         _gunner enableAI "PATH";
+        // Reset assistant behaviour
         private _g = group _gunner;
         [_assistant] joinSilent _g;
-        _g setBehaviour (behaviour _gunner); // reset assistant behaviour
+        _g setBehaviour (behaviour _gunner);
         _assistant enableAI "FSM";
 
         if (_closeEnough) then {
