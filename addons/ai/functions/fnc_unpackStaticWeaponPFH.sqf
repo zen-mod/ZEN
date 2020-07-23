@@ -25,7 +25,7 @@ if !(local _gunner) exitWith {
 
 _gunner setVariable [QGVAR(unpackStaticWeaponTargetPos), _targetPos];
 
-// close enough, set up weapon
+// Close enough, set up weapon
 if (_gunner distance _assistant < 3) exitWith {
     [_gunner, _assistant] call FUNC(unpackStaticWeapon);
 };
