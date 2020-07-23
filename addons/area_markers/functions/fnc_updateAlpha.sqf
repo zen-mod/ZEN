@@ -19,21 +19,20 @@
 
 params ["_marker", "_sides", "_alpha"];
 
-if (isServer) exitWith {
+if (isServer) then {
     [GVAR(markerVisibilities), _marker, _sides] call CBA_fnc_hashSet;
     publicVariable QGVAR(markerVisibilities);
     [GVAR(markerAlphas), _marker, _alpha] call CBA_fnc_hashSet;
     publicVariable QGVAR(markerAlphas);
-
 };
 
-if (ZEN_isHC) exitWith {};
+if (hasInterface) then {
+    private _isVisibleSide = (side player) in _sides;
+    private _isZeus = !isNull curatorCamera;
 
-private _isVisibleSide = (side player) in _sides;
-private _isZeus = !isNull curatorCamera;
-
-if (_isVisibleSide || _isZeus) then {
-    _marker setMarkerAlphaLocal _alpha;
-} else {
-    _marker setMarkerAlphaLocal 0;
+    if (_isVisibleSide || _isZeus) then {
+        _marker setMarkerAlphaLocal _alpha;
+    } else {
+        _marker setMarkerAlphaLocal 0;
+    };
 };
