@@ -21,7 +21,7 @@ class GVAR(display): EGVAR(common,RscDisplay) {
         class Title: Title {};
         class Background: Background {};
         class Content: Content {
-            h = POS_H(18.6);
+            h = POS_H(18.9);
             class controls {
                 class Weapon: EGVAR(common,RscCombo) {
                     idc = IDC_WEAPON;
@@ -66,7 +66,7 @@ class GVAR(display): EGVAR(common,RscDisplay) {
                     idc = IDC_BTN_SEARCH;
                     text = "\a3\Ui_f\data\GUI\RscCommon\RscButtonSearch\search_start_ca.paa";
                     x = 0;
-                    y = POS_H(17.6);
+                    y = POS_H(17.9);
                     w = POS_W(1);
                     h = POS_H(1);
                     colorBackground[] = {0, 0, 0, 0.5};
@@ -76,7 +76,7 @@ class GVAR(display): EGVAR(common,RscDisplay) {
                 class SearchBar: EGVAR(common,RscEdit) {
                     idc = IDC_SEARCH_BAR;
                     x = POS_W(1.2);
-                    y = POS_H(17.6);
+                    y = POS_H(17.9);
                     w = POS_W(8);
                     h = POS_H(1);
                     sizeEx = POS_H(0.9);
@@ -86,7 +86,6 @@ class GVAR(display): EGVAR(common,RscDisplay) {
                     text = "\a3\3den\data\cfg3den\history\deleteitems_ca.paa";
                     tooltip = "$STR_disp_arcmap_clear";
                     x = POS_W(25);
-                    y = POS_H(17.6);
                 };
             };
         };
