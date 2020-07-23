@@ -25,15 +25,15 @@ GVAR(selectedEntity) = objNull;
 
     // Handle group being select when all of its sub entities are selected
     private _fnc_checkGroupSelection = {
-        private _entity = _this # 1;
+        private _entity = _this select 1;
         if (_entity isEqualType grpNull) then {
             GVAR(selectedGroup) = _entity;
         } else {
-            private _groups = curatorSelected # 1;
-            if (count _groups != 1 || {(_groups # 0) != GVAR(selectedGroup)}) then {
+            private _groups = curatorSelected select 1;
+            if (count _groups != 1 || {(_groups select 0) != GVAR(selectedGroup)}) then {
                 GVAR(selectedGroup) = grpNull;
             };
-            // selecing group with only 1 entity, deselecting, then re-selecting that entity
+            // Selecing group with only 1 entity, deselecting, then re-selecting that entity
             // should switch the focus from the group to the entity, and vice versa
             if (_entity isEqualType GVAR(selectedEntity) && {_entity == GVAR(selectedEntity)}) then {
                 GVAR(selectedGroup) = grpNull;
