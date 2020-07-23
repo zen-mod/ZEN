@@ -55,4 +55,4 @@ private _sides = IDCS_CONFIGURE_SIDEVISIBILITY_ALL
     select {
         _x != sideUnknown
     };
-[QGVAR(updateAlpha), [_marker, _sides, _alpha]] call CBA_fnc_globalEvent;
+[QGVAR(updateAlpha), [_marker, _sides, _alpha]] call CBA_fnc_globalEventJIP;
