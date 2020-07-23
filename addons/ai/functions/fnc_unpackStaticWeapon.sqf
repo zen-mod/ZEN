@@ -36,7 +36,7 @@ _gunner addEventHandler ["WeaponAssembled", {
         _gunner doWatch _targetPos;
     };
 
-    // added due to occassional tripod leg clipping through ground
+    // Added due to occassional tripod leg clipping through ground
     _weapon setPos (position _weapon vectorAdd [0,0,0.05]);
     _weapon setVectorUp surfaceNormal position _weapon;
 
