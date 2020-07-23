@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Ampers
+ * Author: Ampersand
  * Zeus module function to have AI crew take the place of an incapacitated gunner.
  *
  * Arguments:
