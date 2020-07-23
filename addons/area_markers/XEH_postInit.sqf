@@ -35,8 +35,7 @@ if (isServer) then {
     ISNILS(GVAR(markerVisibilities), SIDES_ARRAY_HASH);
     publicVariable QGVAR(markerVisibilities);
 
-    #define ALPHAS_HASH [[], 1] call CBA_fnc_hashCreate;
-    ISNILS(GVAR(markerAlphas), ALPHAS_HASH);
+    ISNILS(GVAR(markerAlphas), call CBA_fnc_hashCreate);
     publicVariable QGVAR(markerAlphas);
 };
 
