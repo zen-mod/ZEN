@@ -34,6 +34,10 @@ if (isServer) then {
     #define SIDES_ARRAY_HASH [[], [east, west, independent, civilian]] call CBA_fnc_hashCreate;
     ISNILS(GVAR(markerVisibilities), SIDES_ARRAY_HASH);
     publicVariable QGVAR(markerVisibilities);
+
+    #define ALPHAS_HASH [[], 1] call CBA_fnc_hashCreate;
+    ISNILS(GVAR(markerAlphas), ALPHAS_HASH);
+    publicVariable QGVAR(markerAlphas);
 };
 
 [QGVAR(updateAlpha), LINKFUNC(updateAlpha)] call CBA_fnc_addEventHandler;
@@ -61,6 +65,10 @@ if (hasInterface) then {
             } forEach GVAR(markers);
         } call CBA_fnc_execNextFrame;
 
+        [GVAR(markerAlphas), {
+            _key setMarkerAlphaLocal _value;
+        }] call CBA_fnc_hashEachPair;
+
         // Add PFH to update visibility of area marker icons
         GVAR(visiblePFH) = [{
             params ["_args"];
@@ -80,6 +88,13 @@ if (hasInterface) then {
 
     ["zen_curatorDisplayUnloaded", {
         GVAR(visiblePFH) call CBA_fnc_removePerFrameHandler;
+
+        [GVAR(markerVisibilities), {
+            if (!((side player) in _value)) then {
+                _key setMarkerAlphaLocal 0;
+            };
+        }] call CBA_fnc_hashEachPair;
+
     }] call CBA_fnc_addEventHandler;
 
     [QGVAR(createIcon), LINKFUNC(createIcon)] call CBA_fnc_addEventHandler;

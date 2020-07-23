@@ -22,12 +22,15 @@ params ["_marker", "_sides", "_alpha"];
 if (isServer) exitWith {
     [GVAR(markerVisibilities), _marker, _sides] call CBA_fnc_hashSet;
     publicVariable QGVAR(markerVisibilities);
+    [GVAR(markerAlphas), _marker, _alpha] call CBA_fnc_hashSet;
+    publicVariable QGVAR(markerAlphas);
+
 };
 
 if (ZEN_isHC) exitWith {};
 
-private _isVisibleSide = playerSide in _sides;
-private _isZeus = !isNull (getAssignedCuratorLogic player);
+private _isVisibleSide = (side player) in _sides;
+private _isZeus = !isNull curatorCamera;
 
 if (_isVisibleSide || _isZeus) then {
     _marker setMarkerAlphaLocal _alpha;
