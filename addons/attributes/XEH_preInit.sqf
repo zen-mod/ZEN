@@ -23,7 +23,7 @@ GVAR(selectedEntity) = objNull;
 
     _logic addEventHandler ["CuratorMarkerPlaced", {call FUNC(handleMarkerPlaced)}];
 
-    // handle group being select when all of its sub entities are selected
+    // Handle group being select when all of its sub entities are selected
     private _fnc_checkGroupSelection = {
         private _entity = _this # 1;
         if (_entity isEqualType grpNull) then {
