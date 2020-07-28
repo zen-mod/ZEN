@@ -70,4 +70,4 @@ if (isNull _assistant) exitWith {
     if (_successful) then {
         [QEGVAR(ai,unpackStaticWeapon), [_gunner, _assistant, ASLToAGL _mousePosASL], _gunner] call CBA_fnc_targetEvent;
     };
-}, _assistant, LSTRING(ModuleUnpackStaticWeapon_Facing)] call EFUNC(common,selectPosition);
+}, _assistant, LSTRING(ModuleUnpackStaticWeapon_Direction)] call EFUNC(common,selectPosition);
