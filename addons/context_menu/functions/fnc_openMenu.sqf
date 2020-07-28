@@ -23,7 +23,13 @@ GVAR(mousePos) = getMousePosition;
 GVAR(selected) = curatorSelected;
 
 // Handle hovered entity
-curatorMouseOver params ["_type", "_entity"];
+curatorMouseOver params ["_type", "_entity", "_index"];
+
+// curatorMouseOver returns group and index separately when hovering over a waypoint
+if (_type == "ARRAY") then {
+    _entity = [_entity, _index];
+};
+
 private _category = ["OBJECT", "GROUP", "ARRAY", "STRING"] find _type;
 
 if (_category != -1) then {
