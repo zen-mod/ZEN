@@ -43,11 +43,13 @@
             <English>Vehicle Appearance</English>
             <German>Fahrzeugaussehen</German>
             <Korean>차량 외견</Korean>
+            <Polish>Wygląd pojazdu</Polish>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_EditableObjects">
             <English>Editable Objects</English>
             <German>Editierbare Objekte</German>
             <Korean>수정 가능한 물체</Korean>
+            <Polish>Obiekty z możliwością edytowania</Polish>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_10m">
             <English>10 m</English>
@@ -69,38 +71,46 @@
             <English>Hold Fire</English>
             <German>Feuer halten</German>
             <Korean>사격 자제</Korean>
+            <Polish>Wstrzymaj Ogień</Polish>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_HoldFireDefend">
             <English>Hold Fire, Defend Only</English>
             <German>Feuer halten, nur verteidigen</German>
             <Korean>사격 자제, 오직 방어만</Korean>
+            <Polish>Wstrzymaj ogień, tylko obraniaj</Polish>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_HoldFireEngage">
             <English>Hold Fire, Engage At Will</English>
             <German>Feuer halten, selbstständiger Angriff</German>
             <Korean>사격 자제, 대응 개시</Korean>
+            <Polish>Wstrzymaj ogień, Inicjuj samowolnie</Polish>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_FireAtWill">
             <English>Fire At Will</English>
             <German>Feuerfreigabe</German>
             <Korean>사격 개시</Korean>
+            <Polish>Otwórz ogień samowolnie</Polish>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_FireAtWillEngage">
             <English>Fire &amp; Engage At Will</English>
             <German>Feuerfreigabe und selbstständiger Angriff</German>
             <Korean>사격 &amp; 대응 개시</Korean>
+            <Polish>Ogien i samowolona inicjacja</Polish>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_FireArtillery">
             <English>Fire Artillery</English>
             <Korean>포병 발사</Korean>
+            <Polish>Ogień Artyleryjski</Polish>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_UnableToFire">
             <English>Unable To Fire</English>
             <Korean>사격 불가</Korean>
+            <Polish>Otworzenie ognia niemożliwe</Polish>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_NotAllVehiclesInRange">
             <English>Not all vehicles are in range to fire</English>
             <Korean>차량이 사격할 수 있는 범위 내에 없습니다.</Korean>
+            <Polish>Nie wszystkie pojazdy są w zasięgu do otwarcia ognia.</Polish>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_Captives">
             <English>Captives</English>

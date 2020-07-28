@@ -18,7 +18,7 @@
 private _players = _this select {isPlayer _x};
 
 [_players, {
-    params ["_successful", "_players", "_posASL"];
+    params ["_successful", "_players", "_position"];
 
     if (_successful) then {
         curatorMouseOver params ["_type", "_entity"];
@@ -26,8 +26,13 @@ private _players = _this select {isPlayer _x};
         if (_type == "OBJECT" && {_entity isKindOf "AllVehicles"} && {!(_entity isKindOf "CAManBase")}) then {
             [_players, _entity] call EFUNC(common,teleportIntoVehicle);
         } else {
+            // setVehiclePosition places units on surface directly below position
+            // Sometimes this will be the second surface below the selected position
+            // Adding a small vertical offset allows units to be teleported consistently onto surfaces such as rooftops
+            _position = ASLtoATL _position vectorAdd [0, 0, 0.1];
+
             {
-                _x setPosASL _posASL;
+                _x setVehiclePosition [_position, [], 0, "NONE"];
             } forEach _players;
         };
     };
