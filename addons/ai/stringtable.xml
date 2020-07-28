@@ -104,6 +104,7 @@
             <Portuguese>Distância de Detecção</Portuguese>
             <Japanese>探知距離</Japanese>
             <Korean>색적 거리</Korean>
+            <Polish>Odległość Spottingu</Polish>
         </Key>
         <Key ID="STR_ZEN_AI_SpotTime">
             <English>Spotting Speed</English>
@@ -114,6 +115,7 @@
             <Portuguese>Velocidade de Detecção</Portuguese>
             <Japanese>探知速度</Japanese>
             <Korean>색적 속도</Korean>
+            <Polish>Prędkość spottingu</Polish>
         </Key>
         <Key ID="STR_ZEN_AI_ReloadSpeed">
             <English>Reload Speed</English>
@@ -131,61 +133,78 @@
             <English>Seek Cover</English>
             <German>Deckung suchen</German>
             <Korean>엄폐물 수색</Korean>
+            <Polish>Szukaj Osłony</Polish>
         </Key>
         <Key ID="STR_ZEN_AI_AimingError">
             <English>Aiming Error</English>
+            <Polish>Błąd w celowaniu</Polish>
         </Key>
         <Key ID="STR_ZEN_AI_AnimChange">
             <English>Anim Change</English>
+            <Polish>Zmiana animacji</Polish>
         </Key>
         <Key ID="STR_ZEN_AI_AutoCombat">
             <English>Auto Combat</English>
             <German>Automatischer Kampf</German>
             <Korean>자동 전투</Korean>
+            <Polish>Automatyczna walka</Polish>
         </Key>
         <Key ID="STR_ZEN_AI_AutoTarget">
             <English>Auto Target</English>
+            <Polish>Automatyczne namierzanie</Polish>
         </Key>
         <Key ID="STR_ZEN_AI_CheckVisible">
             <English>Check Visible</English>
+            <Polish>Sprawdź Widoczne</Polish>
         </Key>
         <Key ID="STR_ZEN_AI_Cover">
             <English>Cover</English>
+            <Polish>Osłona</Polish>
         </Key>
         <Key ID="STR_ZEN_AI_FSM">
             <English>FSM</English>
         </Key>
         <Key ID="STR_ZEN_AI_LightsVehicle">
             <English>Lights (Vehicle)</English>
+            <Polish>Światła (Pojazd)</Polish>
         </Key>
         <Key ID="STR_ZEN_AI_MineDetection">
             <English>Mine Detection</English>
+            <Polish>Wykrywanie Min</Polish>
         </Key>
         <Key ID="STR_ZEN_AI_Move">
             <English>Move</English>
+            <Polish>Rusz</Polish>
         </Key>
         <Key ID="STR_ZEN_AI_Nightvision">
             <English>Nightvision</English>
+            <Polish>Noktowizja</Polish>
         </Key>
         <Key ID="STR_ZEN_AI_Path">
             <English>Path</English>
+            <Polish>Ścieżka</Polish>
         </Key>
         <Key ID="STR_ZEN_AI_RadioProtocol">
             <English>Radio Protocol</English>
+            <Polish>Protokół radiowy</Polish>
         </Key>
         <Key ID="STR_ZEN_AI_Suppression">
             <English>Suppression</English>
             <German>Unterdrückung</German>
             <Korean>제압</Korean>
+            <Polish>Przygwożdżenie</Polish>
         </Key>
         <Key ID="STR_ZEN_AI_Target">
             <English>Target</English>
+            <Polish>Cel</Polish>
         </Key>
         <Key ID="STR_ZEN_AI_TeamSwitch">
             <English>Team Switch</English>
+            <Polish>Zmiana drużyny</Polish>
         </Key>
         <Key ID="STR_ZEN_AI_WeaponAim">
             <English>Weapon Aim</English>
+            <Polish>Celowanie Bronią</Polish>
         </Key>
     </Package>
 </Project>

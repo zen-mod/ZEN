@@ -31,6 +31,7 @@ PREP(getVehicleAmmo);
 PREP(getVehicleIcon);
 PREP(getWeaponReloadTime);
 PREP(hasDefaultInventory);
+PREP(hasPylons);
 PREP(healUnit);
 PREP(initDisplayPositioning);
 PREP(initOwnersControl);

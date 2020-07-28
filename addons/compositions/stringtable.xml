@@ -3,33 +3,43 @@
     <Package name="Compositions">
         <Key ID="STR_ZEN_Compositions_Helper_DisplayName">
             <English>ZEN Composition Helper</English>
+            <Polish>Pomocnik Kompozycji ZEN</Polish>
         </Key>
         <Key ID="STR_ZEN_Compositions_CreateCustomComposition">
             <English>CREATE CUSTOM COMPOSITION</English>
+            <Polish>STWÓRZ SWOJĄ KOMPOZYCJE</Polish>
         </Key>
         <Key ID="STR_ZEN_Compositions_EditCustomComposition">
             <English>EDIT CUSTOM COMPOSITION</English>
+            <Polish>EDYTUJ SWOJĄ KOMPOZYCJE</Polish>
         </Key>
         <Key ID="STR_ZEN_Compositions_CategoryCannotBeEmpty">
             <English>Category cannot be empty.</English>
+            <Polish>Pole kategorii nie może być puste.</Polish>
         </Key>
         <Key ID="STR_ZEN_Compositions_NameCannotBeEmpty">
             <English>Name cannot be empty.</English>
+            <Polish>Pole nazwy nie może być puste.</Polish>
         </Key>
         <Key ID="STR_ZEN_Compositions_CompositionAlreadyExists">
             <English>A composition with this name and category already exists.</English>
+            <Polish>Kompozycja z tą nazwą i kategorią już istnieje.</Polish>
         </Key>
         <Key ID="STR_ZEN_Compositions_DeleteConfirmation">
             <English>Are you sure you want to delete this composition?</English>
+            <Polish>Jesteś pewnien usunięcia tej kompozycji?</Polish>
         </Key>
         <Key ID="STR_ZEN_Compositions_NoObjectsSelected">
             <English>Select objects to create composition from</English>
+            <Polish>Wybierz obiekty do stworzenia kompozycji</Polish>
         </Key>
         <Key ID="STR_ZEN_Compositions_RandomizationOff">
             <English>Randomization disabled.</English>
+            <Polish>Wybór losowy wyłączony.</Polish>
         </Key>
         <Key ID="STR_ZEN_Compositions_RandomizationOn">
             <English>Randomization enabled.</English>
+            <Polish>Wybór losowy włączony.</Polish>
         </Key>
     </Package>
 </Project>

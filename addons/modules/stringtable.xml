@@ -35,12 +35,15 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_SitArmed">
             <English>Sit On Floor (Armed)</English>
+            <Polish>Siedzenie na ziemi (Z Bronią)</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Squat">
             <English>Squat</English>
+            <Polish>Przysiad</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_SquatArmed">
             <English>Squat (Armed)</English>
+            <Polish>Przysiad (Z Bronią)</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_LeanOnWall">
             <English>Lean On Wall</English>
@@ -87,6 +90,7 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_GuardKneeled">
             <English>Guard (Kneel)</English>
+            <Polish>Straż (Klęknięcie)</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ListenToBriefing">
             <English>Listen To Briefing</English>
@@ -186,6 +190,7 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedLeaning">
             <English>Wounded (Leaning)</English>
+            <Polish>Ranny (Opierając)</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedHead">
             <English>Wounded (Head)</English>
@@ -272,21 +277,27 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Dead">
             <English>Dead</English>
+            <Polish>Martwy</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_DeadLeaning">
             <English>Dead (Leaning)</English>
+            <Polish>Martwy (Opierający)</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_DeadSit">
             <English>Dead (Sitting)</English>
+            <Polish>Martwy (Siedzący)</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_LeanOnTable">
             <English>Lean On Table</English>
+            <Polish>Oparty o stół</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Binoculars">
             <English>Look Through Binoculars</English>
+            <Polish>Patrzący przez lornetke</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Salute">
             <English>Salute</English>
+            <Polish>Salutujący</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Combat">
             <English>Combat Ready</English>
@@ -351,11 +362,13 @@
             <German>Das Flugzeug versucht dem Gelände zu folgen und bleibt auf der gleichen Höhe, basierend auf der Oberfläche (AGL).</German>
             <Japanese>航空機は地形に沿って飛ぶようになり、高度が地形によって変化します。AGL をベースとします。</Japanese>
             <Korean>항공기는 지형을 따르고, 같은 고도에 위치하게 될것입니다. AGL에 기반합니다. </Korean>
+            <Polish>Statek powietrzny będzie podążał wzdłuż terenu, pozostając na tym samym pułapie względem wysokości terenu (AGL).</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Mode_ASL_Tooltip">
             <English>The aircraft will fly at a constant altitude, only following the terrain if less than 10 meters from the ground. Based on ASL, final altitude is the elevation of the module plus the height given.</English>
             <German>Das Flugzeug fliegt auf der angegebenen Höhe, außer es ist weniger als 10m über dem Boden, basierend auf der Meereshöhe (ASL).</German>
             <Japanese>航空機は常に一定の高度を飛ぶようになりますが、飛行高度が 10m 未満では地形追随します。ASL をベースとし、高度は海面からの高さになります。</Japanese>
+            <Polish>Statek Powietrzny będzie podążał na tej samej wysokości, podążając za terenem jedynie w przypadku gdy znajdzie się mniej niż 10 metrów od powierzchni, bazując na wysokości nad poziomem morza (ASL).</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Distance">
             <English>Distance</English>
@@ -628,6 +641,7 @@
         <Key ID="STR_ZEN_Modules_DamageState_Tooltip">
             <English>Selects the damage state to apply.\nIn nearest mode, only damage states that the nearest building supports are selectable.\nIn radius mode, the selected damage state will be applied only to buildings that support it.</English>
             <German>Wählt den anzuwendenden Schadenszustand aus. Im "Nächsten" Modus wird nur das nächstgelegene Gebäude ausgewählt. Im "Radius" Modus wird der Schadenszustand nur auf Häuser, die diesen unterstützen angewendet.</German>
+            <Polish>Wybiera tryb obrażeń do zastosowania.\nTryb najbliższy, obsługuje jedynie typy obrażeń możliwe dla najbliższego budynku.\Tryb "Promienny", wybrany typ obrażen zostanie zadany tylko budynkom które obsługują taki typ. </Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_DestructionEffects">
             <English>Destruction Effects</English>
@@ -910,6 +924,7 @@
             <English>Controls whether mines will be placed uniformly or randomly within the area.</English>
             <German>Kontrolliert, ob die Minen einheitlich oder zufällig innerhalb des Bereichs platziert werden.</German>
             <Japanese>地雷が範囲内で規則的に設置されるかランダムで設置されるかを決定します。</Japanese>
+            <Polish>Kontroluje rozmieszczenie min na terenie, równomiernie albo losowo.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGlobalHint">
             <English>Global Hint</English>
@@ -1038,6 +1053,7 @@
             <English>Teleports vehicles of players instead of the players themselves.\nIf the module was attached to a vehicle, this is ignored and players will be moved into the attached vehicle.</English>
             <German>Teleportiert Fahrzeuge von Spielern anstelle der Spieler selbst.\nWenn das Modul auf einem Fahrzeug platziert war, wird dies ignoriert und die Spieler werden in das angehängte Fahrzeug bewegt.</German>
             <Japanese>プレイヤー車両もテレポートさせます。\nもしモジュールが車両に取り付けされていても、無視してプレイヤーは取り付けされた車両に移動されます。</Japanese>
+            <Polish>Teleportuje jedynie pojazdy graczy zamiast graczy.\nJeżeli moduł był przyczepiony do pojazdu wtedy będzie zignorowany a gracze zostaną przeniesieni do przyczepionego pojazdu.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSmokePillar">
             <English>Smoke Pillar</English>
@@ -1551,6 +1567,7 @@
             <English>Sets the rain strength, requires overcast to be greater than 70%.</English>
             <German>Legt die Regenstärke fest, erfordert, dass die Bewölkung größer als 70% ist.</German>
             <Japanese>雨の強さを決定できますが、雲の量が 70% 以上でなければ動作しません。</Japanese>
+            <Polish>Ustaw intensywność deszczu, wymaga aby pochmurność była większa niż 70%.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Lightning">
             <English>Lightning</English>
@@ -1562,7 +1579,7 @@
         <Key ID="STR_ZEN_Modules_ModuleWeather_Lightning_Tooltip">
             <English>Sets the frequency of lightning strikes, requires overcast to be near 100%.</English>
             <German>Legt die Häufigkeit der Blitzeinschläge fest, erfordert eine Bewölkung von nahezu 100%.</German>
-            <Polish>Ustala częstotliwość piorunów, pochmurność musi być bliska 100%</Polish>
+            <Polish>Ustala częstotliwość piorunów, pochmurność musi być bliska 100%.</Polish>
             <Japanese>落雷の間隔を決定できます。雲の量がほぼ 100% でなければ動作しません。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Rainbow">
@@ -1589,6 +1606,7 @@
             <English>Sets the size of waves (higher values equal taller waves), applied independently of cloud cover settings.</English>
             <German>Legt die Größe der Wellen fest (höhere Werte entsprechen höheren Wellen), unabhängig von den Einstellungen der Bewölkung.</German>
             <Japanese>波の強さを決定します。高い値であるほど高い波が発生します。雲の量設定とは分離されています。</Japanese>
+            <Polish>Ustawia wysokość fal (większa wartość oznacza wyższe fale), stosowane osobno do ustawień zachmurzenia.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_WindSpeed">
             <English>Wind Speed</English>
@@ -1613,6 +1631,7 @@
             <English>Sets the wind direction.</English>
             <German>Legt die Windrichtung fest.</German>
             <Japanese>風向を決定します。</Japanese>
+            <Polish>Ustawia kierunek wiatru.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Gusts">
             <English>Gusts</English>
@@ -1625,6 +1644,7 @@
             <English>Sets the strength of gusts, random changes in wind direction.\nThese changes become stronger and more frequent with worse cloud cover.</English>
             <German>Legt die Stärke von Windböen, zufällige Änderungen in der Windrichtung fest. Diese Änderungen werden mit zunehmender Bewölkung stärker und häufiger.</German>
             <Japanese>突風の強さやランダムで変わる風向を決定します。\nこの変更は</Japanese>
+            <Polish>Ustawia siłe podmuchów wiatru, losowe zmiany w kierunku wiatru.\nTe zmiany są częstrze i silniejsze przy większym zachmurzeniu.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogDensity">
             <English>Fog Density</English>
@@ -1650,6 +1670,7 @@
             <English>Sets how much the fog density decays with altitude. Larger values result in a sharper fog ceiling (more defined fog start).\nSmaller values lead to a more smooth transition from no fog to full fog, and as a result, the fog will cross the base altitude line more.\nWhen this is a positive value, the fog will be generated below the base altitude (valley fog); if negative, above the base altitude (mountain fog).</English>
             <German>Legt fest, wie stark die Nebeldichte mit der Höhe abnimmt. Größere Werte führen zu einer schärferen Nebeldecke (definierterer Nebelbeginn). \nKleinere Werte führen zu einem sanfteren Übergang von keinem Nebel zu vollem Nebel, so dass der Nebel die Basishöhenlinie mehr überschreitet. \nWenn dies ein positiver Wert ist, wird der Nebel unterhalb der Basishöhe (Talnebel) erzeugt, wenn negativ, oberhalb der Basishöhe (Bergnebel).</German>
             <Japanese>標高によりどのくらい霧が減衰するかを決定できます。大きな値では霧の天辺がよりシャープになります。\n小さな値ではよりスムーズに霧が濃くなり、よりもっと標高と混じります。\n正の値では霧が基礎標高より下から生成され、負の値では基礎標高より上から生成されます。</Japanese>
+            <Polish>Ustawia zanikanie mgły wraz z wzrostem wysokości. Wyższe wartości tego pola oznaczają ostrzejszy próg zamglenia.\nNiższe wartości oznaczają gładsze przejscie pomiędzy brakiem mgły a pełną mgłą.\nPozytywne wartości na tym polu oznaczją ze mgła będzie generowana poniżej bazowej wysokości (w dolinach itp), negatywne wartości oznaczją że będzie generowana powyżej bazowej wysokości (na górach itp.) </Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogAltitude">
             <English>Fog Altitude</English>
@@ -1662,6 +1683,7 @@
             <English>Sets the base altitude of the fog layer, in meters above/below sea level.</English>
             <German>Legt die Basishöhe der Nebelschicht in Metern über/unter dem Meeresspiegel fest.</German>
             <Japanese>霧レイヤーを基礎標高で決定します。単位はメートルで海抜を元にしています。</Japanese>
+            <Polish>Ustawia bazową wysokośc pokrycia mgły, w metrach nad/poniżej poziomu morza.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateTeleporter">
             <English>Create Teleporter</English>
@@ -1682,6 +1704,7 @@
             <German>Einheiten, die vom Umschalten betroffen sind.</German>
             <Japanese>ユニットは切り替えによる効果を受けます</Japanese>
             <Korean>유닛은 토글에 의해 영향받습니다.</Korean>
+            <Polish>Jednostki zaznaczone do przełączenia celu.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_AddGear">
             <English>Add Gear</English>
@@ -1724,12 +1747,14 @@
             <German>IR-Laser umschalten</German>
             <Japanese>IR レーザー切り替え</Japanese>
             <Korean>IR 레이저 토글</Korean>
+            <Polish>Przełącz lasery IR</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleToggleIRLasers_IRLasers">
             <English>IR Lasers</English>
             <German>IR-Laser</German>
             <Japanese>IR レーザー</Japanese>
             <Korean>IR 레이저</Korean>
+            <Polish>Laser IR (podczerwony)</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAddFullArsenal">
             <English>Add Full Arsenal</English>
@@ -1784,90 +1809,108 @@
             <English>Create LZ</English>
             <German>Erstelle LZ</German>
             <Korean>LZ 생성</Korean>
+            <Polish>Stwórz LZ (Strefa lądowania)</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateLZ_Name">
             <English>LZ Name</English>
             <German>LZ-Name</German>
             <Korean>LZ 이름</Korean>
+            <Polish>Nazwa LZ</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateLZ_Format">
             <English>LZ %1</English>
             <German>LZ %1</German>
             <Korean>LZ %1</Korean>
+            <Polish>LZ %1</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateRP">
             <English>Create RP</English>
             <German>Erstelle RP</German>
             <Korean>RP 생성</Korean>
+            <Polish>Stwórz RP (Punkt spotkania)</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateRP_Name">
             <English>RP Name</English>
             <German>RP-Name</German>
             <Korean>RP 이름</Korean>
+            <Polish>Nazwa RP</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateRP_Format">
             <English>RP %1</English>
             <German>RP %1</German>
             <Korean>RP %1</Korean>
+            <Polish>RP %1</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_SpawnReinforcements">
             <English>Spawn Reinforcements</English>
             <German>Erstelle Verstärkung</German>
             <Korean>증원군 소환</Korean>
+            <Polish>Spawnuj Wzmocnienia (posiłki)</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_VehicleSelect">
             <English>Vehicle Select</English>
             <German>Fahrzeugauswahl</German>
             <Korean>차량 선택</Korean>
+            <Polish>Wybór pojazdu</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_Category">
             <English>Category</English>
             <German>Kategorie</German>
             <Korean>분류</Korean>
+            <Polish>Kategorie</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_GroupSelect">
             <English>Group Select</English>
             <German>Gruppenauswahl</German>
             <Korean>분대 선택</Korean>
+            <Polish>Wybór grupy</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_CurrentGroup">
             <English>Current Group</English>
             <German>Derzeitige Gruppe</German>
             <Korean>현재 분대</Korean>
+            <Polish>Obecnie wybrana Grupa</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_VehicleLZ">
             <English>Vehicle LZ/DZ</English>
             <German>Fahrzeug LZ/DZ</German>
             <Korean>차량 LZ/DZ</Korean>
+            <Polish>Punkt LZ/DZ pojazdu</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_VehicleBehaviour">
             <English>Vehicle Behaviour</English>
             <German>Fahrzeugverhalten</German>
             <Korean>차량 행동</Korean>
+            <Polish>Zachowanie pojazdu</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_StayAtLZ">
             <English>Stay at LZ</English>
             <German>Bei LZ verbleiben</German>
             <Korean>LZ에 머물르기</Korean>
+            <Polish>Pozostań na LZ</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_RTBAndDespawn">
             <English>RTB and Despawn</English>
             <German>Zurück und Löschen</German>
             <Korean>귀환 후 삭제</Korean>
+            <Polish>Wróc do bazy i despawnuj</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_InsertionMethod">
             <English>Insertion Method</English>
             <German>Absetzmethode</German>
+            <Polish>Sposób wprowadzenia</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_UnitRP">
             <English>Unit RP</English>
             <German>Einheiten-RP</German>
             <Korean>유닛 RP</Korean>
+            <Polish>RP Jednostki</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_UnitBehaviour">
             <English>Unit Behaviour</English>
             <German>Einheitenverhalten</German>
             <Korean>유닛 행동</Korean>
+            <Polish>Zachowanie jednostki</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel">
             <English>Create/Edit Intel</English>
@@ -1907,24 +1950,29 @@
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ActionSound">
             <English>Action Sound</English>
             <German>Aktionsgeräusch</German>
+            <Polish>Dzwięk akcji</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_LaptopKeyboard">
             <English>Laptop Keyboard</English>
             <German>Laptop Tastatur</German>
+            <Polish>Klawiatura laptopa</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_PCKeyboard">
             <English>PC Keyboard</English>
             <German>PC Tastatur</German>
+            <Polish>Klawiatura Komputera</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_SearchBody">
             <English>Search Body</English>
             <German>Leiche Durchsuchen</German>
+            <Polish>Przeszukaj ciało</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ActionDuration">
             <English>Action Duration</English>
             <German>Aktionsdauer</German>
             <Japanese>アクション持続時間</Japanese>
             <Korean>동작 지속기간</Korean>
+            <Polish>Długość Akcji</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_IntelTitle">
             <English>Intel Title</English>
@@ -1966,27 +2014,32 @@
             <German>Lampen umschalten</German>
             <Japanese>ランプを切り替え</Japanese>
             <Korean>전등 토글</Korean>
+            <Polish>Przełącz lampy</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ToggleLamps_Repair_Tooltip">
             <English>Repair broken lights when turning them on.</English>
             <German>Lampen beim Umschalten reparieren</German>
             <Japanese>ランプを点灯した際に壊れたライトを修理します。</Japanese>
             <Korean>전등이 켜질때 부러진 것들을 수리합니다.</Korean>
+            <Polish>Napraw zepsute lampy przed włączeniem.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire">
             <English>Custom Fire</English>
             <German>Benutzerdefiniertes Feuer</German>
             <Korean>커스텀 화염</Korean>
+            <Polish>Ustawienie Ognia</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire_EffectSize">
             <English>Effect Size</English>
             <German>Effektgröße</German>
             <Korean>효과 크기</Korean>
+            <Polish>Rozmiar efektu</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire_ParticleDensity">
             <English>Particle Density</English>
             <German>Patrikeldichte</German>
             <Korean>입자 밀도</Korean>
+            <Polish>Gęstość cząstek</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire_ParticleLifetime">
             <English>Particle Lifetime</English>
@@ -1997,70 +2050,89 @@
             <English>Particle Speed</English>
             <German>Partikelgeschwindigkeit</German>
             <Korean>입자 속도</Korean>
+            <Polish>Prędkość cząstek</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire_ParticleSize">
             <English>Particle Size</English>
             <German>Partikelgröße</German>
             <Korean>입자 크기</Korean>
+            <Polish>Rozmiar cząstek</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire_ParticleOrientation">
             <English>Particle Orientation</English>
             <German>Partikelrichtung</German>
             <Korean>입자 방향</Korean>
+            <Polish>Orientacja cząstek</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_GlobalAISkill">
             <English>Global AI Skill</English>
             <German>Globale KI-Fähigkeit</German>
             <Korean>광역 AI 숙련도</Korean>
+            <Polish>Globalne ustawienie wyszkolenia AI</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_GlobalAISkill_Enabled">
             <English>Global Skill</English>
             <German>Globale Fähigkeit</German>
             <Korean>광역 숙련도</Korean>
+            <Polish>Globalne wyszkolenie</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_GlobalAISkill_Enabled_Description">
             <English>Enables applying the following skill values to all current and newly created AI units.</English>
             <German>Wendet die Fähigkeitseinstellung auf alle neuen und bestehenden Einheiten an.</German>
+            <Polish>Ustawia wybrane wyszkolenie dla wszystkich obecnych i nowo stworzonych jednostek AI.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ExportMissionSQF">
             <English>Export Mission SQF</English>
+            <Polish>Exportuj SQF misji</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_EntireMission">
             <English>Entire Mission</English>
+            <Polish>Cała misja</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_IncludeMarkers">
             <English>Include Markers</English>
+            <Polish>Załącz markery</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_EditableObjectsOnly">
             <English>Editable Objects Only</English>
+            <Polish>Tylko obiekty z możliwością edytowania</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_EditableObjectsOnly_Tooltip">
             <English>Only objects that are currently editable by the local curator will be exported.</English>
+            <Polish>Tylko obiekty które mogą być edytowane przez lokalnego kuratora zostaną eksportowane.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_RotateObject">
             <English>Rotate Object</English>
+            <Polish>Obróć obiekt</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_SearchBuilding">
             <English>Search Building</English>
             <German>Gebäude durchsuchen</German>
+            <Polish>Przeszukaj budynek</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_AtomicBomb">
             <English>Atomic Bomb</English>
+            <Polish>Bomba atomowa</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_DestructionRadius">
             <English>Destruction Radius (m)</English>
+            <Polish>Zasięg zniszczeń (m)</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_DestructionRate">
             <English>Destruction Rate</English>
+            <Polish>Częstotliwość destrukcji</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_DestructionRate_Tooltip">
             <English>The maximum number of objects destroyed per second.</English>
+            <Polish>Maksymalna liczba obiektów które zostaną zniszczone co sekunde.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ColorCorrections">
             <English>Color Corrections</English>
+            <Polish>Dostosowanie koloru</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ConfirmDetonation">
             <English>Are you sure you want to detonate an atomic bomb?</English>
+            <Polish>Jesteś pewien że chcesz detonować bombe atomową?</Polish>
         </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_Buildings">
@@ -2106,6 +2178,7 @@
             <English>Reinforcements</English>
             <German>Verstärkung</German>
             <Korean>증원군</Korean>
+            <Polish>Wzmocnienia/Posiłki</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_Spawn">
             <English>Spawn</English>
@@ -2137,6 +2210,7 @@
             <German>Auf einem Objekt platzieren</German>
             <Japanese>オブジェクトの上に設置</Japanese>
             <Korean>물체에 배치하기</Korean>
+            <Polish>Postaw na obiekcie</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_OnlyAlive">
             <English>Unit must be alive</English>
@@ -2225,6 +2299,7 @@
         <Key ID="STR_ZEN_Modules_NoBuildingFound">
             <English>Unable to find a building to search</English>
             <German>Kein Gebäude zum Durchsuchen in der Nähe</German>
+            <Polish>Nie znaleziono budynku do przeszukania</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_NoTargetModules">
             <English>No target modules exist, place one first.</English>
@@ -2234,15 +2309,18 @@
         </Key>
         <Key ID="STR_ZEN_Modules_NotInRangeOfArtillery">
             <English>Target position is not in range for all vehicles</English>
+            <Polish>Pozycja celu nie jest w zasięgu wszystkich pojazdów</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_PlaceAnLZ">
             <English>Place an LZ</English>
             <German>Platziere eine LZ</German>
             <Korean>LZ에 배치</Korean>
+            <Polish>Postaw LZ</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_NoTeleportPosition">
             <English>Unable to find suitable position to teleport vehicle to.</English>
             <German>Kein valide Position zum Teleporieren des Fahrzeugs gefunden.</German>
+            <Polish>Nie znaleziono stosownej pozycji do teleportacji pojazdu.</Polish>
         </Key>
     </Package>
 </Project>
