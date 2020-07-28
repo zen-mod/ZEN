@@ -33,27 +33,27 @@ if (_gunner distance _assistant < 3) exitWith {
 // Too far, order assistant to move to gunner and start pfh
 _gunner disableAI "PATH";
 [_assistant] joinSilent grpNull;
-private _g = (group _assistant);
+private _g = group _assistant;
 _g setBehaviourStrong "CARELESS";
 _g deleteGroupWhenEmpty true;
 _g enableAttack false;
-_assistant doMove getPos _gunner;
+_assistant doMove getPosATL _gunner;
 _assistant disableAI "FSM";
+_assistant setVariable [QGVAR(nextMoveTime), CBA_MissionTime + 5];
 
 [{
-    params ["_args", "_pfID"];
+    params ["_args", "_pfhID"];
     _args params ["_gunner", "_assistant", "_startTime"];
 
     private _closeEnough = _gunner distance _assistant < 3;
-    private _elapsedtime = CBA_MissionTime - _startTime;
 
-    if (_closeEnough || {_elapsedtime > 60 || {!alive _gunner || {!alive _assistant}}}) exitWith {
-        [_pfID] call CBA_fnc_removePerFrameHandler;
+    if (_closeEnough || {CBA_MissionTime - _startTime > 60 || {!alive _gunner || {!alive _assistant}}}) exitWith {
+        [_pfhID] call CBA_fnc_removePerFrameHandler;
         _gunner enableAI "PATH";
         // Reset assistant behaviour
-        private _g = group _gunner;
-        [_assistant] joinSilent _g;
-        _g setBehaviour (behaviour _gunner);
+        private _group = group _gunner;
+        [_assistant] joinSilent _group;
+        _group setBehaviour (behaviour _gunner);
         _assistant enableAI "FSM";
 
         if (_closeEnough) then {
@@ -61,8 +61,10 @@ _assistant disableAI "FSM";
         };
     };
 
-    if (unitReady _assistant || {_elapsedtime % 5 < 0.1}) then {
-        _assistant doMove getPos _gunner;
+    private _nextMoveTime = _assistant getVariable [QGVAR(nextMoveTime), CBA_MissionTime];
+    if (unitReady _assistant || {CBA_MissionTime > _nextMoveTime}) then {
+        _assistant setVariable [QGVAR(nextMoveTime), CBA_MissionTime + 5];
+        _assistant doMove getPosATL _gunner;
     };
 
 }, 0.1, [_gunner, _assistant, CBA_MissionTime]] call CBA_fnc_addPerFrameHandler;
