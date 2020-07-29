@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Spectrum">
+        <Key ID="STR_ZEN_Spectrum_DisplayName">
+            <English>Spectrum</English>
+        </Key>
+    </Package>
+</Project>
