@@ -3,10 +3,12 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        units[] = {};
+        units[] = {
+            QGVAR(moduleSpectrumInit)
+        };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"zen_common"};
+        requiredAddons[] = {"zen_common", "zen_modules"};
         author = ECSTRING(main,Author);
         authors[] = {"CreepPork"};
         url = ECSTRING(main,URL);
@@ -17,3 +19,4 @@ class CfgPatches {
 PRELOAD_ADDONS;
 
 #include "CfgEventHandlers.hpp"
+#include "CfgVehicles.hpp"
