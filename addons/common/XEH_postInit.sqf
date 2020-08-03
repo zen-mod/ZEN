@@ -293,15 +293,6 @@
 [QGVAR(setTurretAmmo), LINKFUNC(setTurretAmmo)] call CBA_fnc_addEventHandler;
 [QGVAR(showMessage), LINKFUNC(showMessage)] call CBA_fnc_addEventHandler;
 
-// BWC for deprecated public events, remove in 1.9.0
-["zen_curatorDisplayLoaded", {
-    ["ZEN_displayCuratorLoad", _this] call CBA_fnc_localEvent;
-}] call CBA_fnc_addEventHandler;
-
-["zen_curatorDisplayUnloaded", {
-    ["ZEN_displayCuratorUnload", _this] call CBA_fnc_localEvent;
-}] call CBA_fnc_addEventHandler;
-
 if (isServer) then {
     [QGVAR(hideObjectGlobal), {
         params ["_object", "_hide"];
