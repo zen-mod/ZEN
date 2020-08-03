@@ -5,6 +5,6 @@
             call EFUNC(common,getActiveTree) tvSetCurSel [-1];
         };
 
-        call FUNC(openMenu);
+        [] call FUNC(open);
     };
 }, {}, [DIK_V, [false, false, false]]] call CBA_fnc_addKeybind; // Default: V
