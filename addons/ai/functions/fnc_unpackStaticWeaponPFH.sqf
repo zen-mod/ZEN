@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 #define DISTANCE_CLOSE 3
-#define MOVE_DELAY 0.1
+#define MOVE_DELAY 5
 #define MOVE_TIMEOUT 60
 /*
  * Author: Ampersand
@@ -37,10 +37,9 @@ _assistant setVariable [QGVAR(nextMoveTime), CBA_MissionTime + 5];
 
 [{
     params ["_args", "_pfhID"];
-    _args params ["_gunner", "_assistant", "_targetPos", "_startTime"];
+    _args params ["_gunner", "_assistant", "_targetPos", "_nextMoveTime", "_endTime"];
 
     private _closeEnough = _gunner distance _assistant <= DISTANCE_CLOSE;
-    private _endTime = _startTime + MOVE_TIMEOUT;
 
     if (_closeEnough || {CBA_MissionTime > _endTime || {!alive _gunner || {!alive _assistant}}}) exitWith {
         [_pfhID] call CBA_fnc_removePerFrameHandler;
@@ -64,9 +63,8 @@ _assistant setVariable [QGVAR(nextMoveTime), CBA_MissionTime + 5];
         };
     };
 
-    private _nextMoveTime = _assistant getVariable [QGVAR(nextMoveTime), CBA_MissionTime];
     if (unitReady _assistant || {CBA_MissionTime >= _nextMoveTime}) then {
-        _assistant setVariable [QGVAR(nextMoveTime), CBA_MissionTime + 5];
         _assistant doMove ASLtoAGL getPosASL _gunner;
+        _args set [3, CBA_missionTime + MOVE_DELAY];
     };
-}, MOVE_DELAY, [_gunner, _assistant, _targetPos, CBA_MissionTime]] call CBA_fnc_addPerFrameHandler;
+}, 0.1, [_gunner, _assistant, _targetPos, CBA_MissionTime + MOVE_DELAY, CBA_missionTime + MOVE_TIMEOUT]] call CBA_fnc_addPerFrameHandler;
