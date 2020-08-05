@@ -19,7 +19,7 @@
 
 params ["_gunner", "_assistant", ["_targetPos", [], [[]], 3]];
 
-if !(_targetPos isEqualTo []) then {
+if (!(_targetPos isEqualTo [])) then {
     _assistant doWatch _targetPos;
     _gunner setVariable [QGVAR(unpackStaticWeaponTargetPos), _targetPos];
 };
@@ -30,7 +30,7 @@ _gunner addEventHandler ["WeaponAssembled", {
     _gunner removeEventHandler ["WeaponAssembled", _thisEventHandler];
 
     private _targetPos = _gunner getVariable [QGVAR(unpackStaticWeaponTargetPos), []];
-    if (!_targetPos isEqualTo []) then {
+    if (!(_targetPos isEqualTo [])) then {
         _weapon setDir (_weapon getDir _targetPos);
         _gunner doWatch _targetPos;
     };
