@@ -70,5 +70,4 @@ _assistant setVariable [QGVAR(nextMoveTime), CBA_MissionTime + 5];
         _assistant setVariable [QGVAR(nextMoveTime), CBA_MissionTime + 5];
         _assistant doMove ASLtoAGL getPosASL _gunner;
     };
-
 }, MOVE_DELAY, [_gunner, _assistant, CBA_MissionTime]] call CBA_fnc_addPerFrameHandler;
