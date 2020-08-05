@@ -1,4 +1,7 @@
 #include "script_component.hpp"
+#define DISTANCE_CLOSE 3
+#define MOVE_DELAY 0.1
+#define MOVE_TIMEOUT 60
 /*
  * Author: Ampersand
  * Move units together if needed and unpacks a static weapon from units' backpacks.
@@ -45,9 +48,9 @@ _assistant setVariable [QGVAR(nextMoveTime), CBA_MissionTime + 5];
     params ["_args", "_pfhID"];
     _args params ["_gunner", "_assistant", "_startTime"];
 
-    private _closeEnough = _gunner distance _assistant < 3;
+    private _closeEnough = _gunner distance _assistant < DISTANCE_CLOSE;
 
-    if (_closeEnough || {CBA_MissionTime - _startTime > 60 || {!alive _gunner || {!alive _assistant}}}) exitWith {
+    if (_closeEnough || {CBA_MissionTime - _startTime > MOVE_TIMEOUT || {!alive _gunner || {!alive _assistant}}}) exitWith {
         [_pfhID] call CBA_fnc_removePerFrameHandler;
         _gunner enableAI "PATH";
         // Reset assistant behaviour
@@ -67,4 +70,4 @@ _assistant setVariable [QGVAR(nextMoveTime), CBA_MissionTime + 5];
         _assistant doMove ASLtoAGL getPosASL _gunner;
     };
 
-}, 0.1, [_gunner, _assistant, CBA_MissionTime]] call CBA_fnc_addPerFrameHandler;
+}, MOVE_DELAY, [_gunner, _assistant, CBA_MissionTime]] call CBA_fnc_addPerFrameHandler;
