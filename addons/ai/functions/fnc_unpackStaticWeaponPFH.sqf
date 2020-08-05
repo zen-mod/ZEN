@@ -22,7 +22,8 @@
 
 params ["_gunner", "_assistant", ["_targetPos", [], [[]], 3]];
 
-// Too far, order assistant to move to gunner and start pfh
+// Order assistant to move to gunner and start pfh
+_gunner setVariable [QGVAR(statePATH), _gunner checkAIFeature "PATH"];
 _gunner disableAI "PATH";
 [_assistant] joinSilent grpNull;
 private _group = group _assistant;
@@ -30,6 +31,7 @@ _group setBehaviourStrong "CARELESS";
 _group deleteGroupWhenEmpty true;
 _group enableAttack false;
 _assistant doMove getPosATL _gunner;
+_assistant setVariable [QGVAR(stateFSM), _assistant checkAIFeature "FSM"];
 _assistant disableAI "FSM";
 _assistant setVariable [QGVAR(nextMoveTime), CBA_MissionTime + 5];
 
@@ -42,13 +44,21 @@ _assistant setVariable [QGVAR(nextMoveTime), CBA_MissionTime + 5];
 
     if (_closeEnough || {CBA_MissionTime > _endTime || {!alive _gunner || {!alive _assistant}}}) exitWith {
         [_pfhID] call CBA_fnc_removePerFrameHandler;
-        _gunner enableAI "PATH";
+        // Gunner AI PATH
+        if (_gunner getVariable [QGVAR(statePATH), true]) then {
+            _gunner setVariable [QGVAR(statePATH), nil];
+            _gunner enableAI "PATH";
+        };
         // Reset assistant behaviour
         private _group = group _gunner;
         [_assistant] joinSilent _group;
         _group setBehaviour (behaviour _gunner);
-        _assistant enableAI "FSM";
-
+        // Assistant AI FSM
+        if (_assistant getVariable [QGVAR(stateFSM), true]) then {
+            _assistant setVariable [QGVAR(stateFSM), nil];
+            _assistant enableAI "FSM";
+        };
+        // CLose enough, unpack
         if (_closeEnough) then {
             [_gunner, _assistant, _targetPos] call FUNC(unpackStaticWeapon);
         };
