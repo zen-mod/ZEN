@@ -33,10 +33,10 @@ if (_gunner distance _assistant < 3) exitWith {
 // Too far, order assistant to move to gunner and start pfh
 _gunner disableAI "PATH";
 [_assistant] joinSilent grpNull;
-private _g = group _assistant;
-_g setBehaviourStrong "CARELESS";
-_g deleteGroupWhenEmpty true;
-_g enableAttack false;
+private _group = group _assistant;
+_group setBehaviourStrong "CARELESS";
+_group deleteGroupWhenEmpty true;
+_group enableAttack false;
 _assistant doMove getPosATL _gunner;
 _assistant disableAI "FSM";
 _assistant setVariable [QGVAR(nextMoveTime), CBA_MissionTime + 5];
