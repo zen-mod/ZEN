@@ -22,17 +22,6 @@
 
 params ["_gunner", "_assistant", ["_targetPos", [], [[]], 3]];
 
-if (!local _gunner) exitWith {
-    [QGVAR(unpackStaticWeapon), _this, _gunner] call CBA_fnc_targetEvent;
-};
-
-_gunner setVariable [QGVAR(unpackStaticWeaponTargetPos), _targetPos];
-
-// Close enough, set up weapon
-if (_gunner distance _assistant < 3) exitWith {
-    [_gunner, _assistant] call FUNC(unpackStaticWeapon);
-};
-
 // Too far, order assistant to move to gunner and start pfh
 _gunner disableAI "PATH";
 [_assistant] joinSilent grpNull;
@@ -46,7 +35,7 @@ _assistant setVariable [QGVAR(nextMoveTime), CBA_MissionTime + 5];
 
 [{
     params ["_args", "_pfhID"];
-    _args params ["_gunner", "_assistant", "_startTime"];
+    _args params ["_gunner", "_assistant", "_targetPos", "_startTime"];
 
     private _closeEnough = _gunner distance _assistant < DISTANCE_CLOSE;
     private _endTime = _startTime + MOVE_TIMEOUT;
@@ -61,7 +50,7 @@ _assistant setVariable [QGVAR(nextMoveTime), CBA_MissionTime + 5];
         _assistant enableAI "FSM";
 
         if (_closeEnough) then {
-            [_gunner, _assistant] call FUNC(unpackStaticWeapon);
+            [_gunner, _assistant, _targetPos] call FUNC(unpackStaticWeapon);
         };
     };
 
@@ -70,4 +59,4 @@ _assistant setVariable [QGVAR(nextMoveTime), CBA_MissionTime + 5];
         _assistant setVariable [QGVAR(nextMoveTime), CBA_MissionTime + 5];
         _assistant doMove ASLtoAGL getPosASL _gunner;
     };
-}, MOVE_DELAY, [_gunner, _assistant, CBA_MissionTime]] call CBA_fnc_addPerFrameHandler;
+}, MOVE_DELAY, [_gunner, _assistant, _targetPos, CBA_MissionTime]] call CBA_fnc_addPerFrameHandler;

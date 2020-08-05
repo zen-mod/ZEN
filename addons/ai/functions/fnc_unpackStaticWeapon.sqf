@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#define DISTANCE_CLOSE 3
 /*
  * Author: Ampersand
  * Unpacks a static weapon from units' backpacks.
@@ -18,6 +19,15 @@
  */
 
 params ["_gunner", "_assistant", ["_targetPos", [], [[]], 3]];
+
+if (!local _gunner) exitWith {
+    [QGVAR(unpackStaticWeapon), _this, _gunner] call CBA_fnc_targetEvent;
+};
+
+// too far, run PFH
+if (_gunner distance _assistant > DISTANCE_CLOSE) exitWith {
+    [_gunner, _assistant, _targetPos] call FUNC(unpackStaticWeaponPFH);
+};
 
 if (!(_targetPos isEqualTo [])) then {
     _assistant doWatch _targetPos;
