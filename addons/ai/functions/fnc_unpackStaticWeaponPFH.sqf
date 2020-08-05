@@ -49,8 +49,9 @@ _assistant setVariable [QGVAR(nextMoveTime), CBA_MissionTime + 5];
     _args params ["_gunner", "_assistant", "_startTime"];
 
     private _closeEnough = _gunner distance _assistant < DISTANCE_CLOSE;
+    private _endTime = _startTime + MOVE_TIMEOUT;
 
-    if (_closeEnough || {CBA_MissionTime - _startTime > MOVE_TIMEOUT || {!alive _gunner || {!alive _assistant}}}) exitWith {
+    if (_closeEnough || {CBA_MissionTime > _endTime || {!alive _gunner || {!alive _assistant}}}) exitWith {
         [_pfhID] call CBA_fnc_removePerFrameHandler;
         _gunner enableAI "PATH";
         // Reset assistant behaviour
