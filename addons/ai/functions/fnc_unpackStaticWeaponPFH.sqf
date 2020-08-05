@@ -66,7 +66,7 @@ _assistant setVariable [QGVAR(nextMoveTime), CBA_MissionTime + 5];
     };
 
     private _nextMoveTime = _assistant getVariable [QGVAR(nextMoveTime), CBA_MissionTime];
-    if (unitReady _assistant || {CBA_MissionTime > _nextMoveTime}) then {
+    if (unitReady _assistant || {CBA_MissionTime >= _nextMoveTime}) then {
         _assistant setVariable [QGVAR(nextMoveTime), CBA_MissionTime + 5];
         _assistant doMove ASLtoAGL getPosASL _gunner;
     };
