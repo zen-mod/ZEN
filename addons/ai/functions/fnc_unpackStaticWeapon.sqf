@@ -42,8 +42,7 @@ _gunner addEventHandler ["WeaponAssembled", {
     _gunner assignAsGunner _weapon;
     _gunner moveInGunner _weapon;
 
-    _group = group _gunner;
-    _group addVehicle _weapon;
+    group _gunner addVehicle _weapon;
 }];
 
 _gunner action ["PutBag", _assistant];
