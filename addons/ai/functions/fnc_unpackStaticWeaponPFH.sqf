@@ -22,7 +22,7 @@
 
 params ["_gunner", "_assistant", ["_targetPos", [], [[]], 3]];
 
-if !(local _gunner) exitWith {
+if (!local _gunner) exitWith {
     [QGVAR(unpackStaticWeapon), _this, _gunner] call CBA_fnc_targetEvent;
 };
 
