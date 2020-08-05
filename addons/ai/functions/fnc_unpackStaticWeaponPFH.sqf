@@ -64,7 +64,7 @@ _assistant setVariable [QGVAR(nextMoveTime), CBA_MissionTime + 5];
     private _nextMoveTime = _assistant getVariable [QGVAR(nextMoveTime), CBA_MissionTime];
     if (unitReady _assistant || {CBA_MissionTime > _nextMoveTime}) then {
         _assistant setVariable [QGVAR(nextMoveTime), CBA_MissionTime + 5];
-        _assistant doMove getPosATL _gunner;
+        _assistant doMove ASLtoAGL getPosASL _gunner;
     };
 
 }, 0.1, [_gunner, _assistant, CBA_MissionTime]] call CBA_fnc_addPerFrameHandler;
