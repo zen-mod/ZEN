@@ -42,6 +42,7 @@ _gunner addEventHandler ["WeaponAssembled", {
     params ["_gunner", "_weapon"];
 
     _gunner removeEventHandler ["WeaponAssembled", _thisEventHandler];
+    [QEGVAR(common,addObjects), [[_weapon]]] call CBA_fnc_serverEvent;
 
     private _targetPos = _gunner getVariable [QGVAR(unpackStaticWeaponTargetPos), []];
     if (!(_targetPos isEqualTo [])) then {
