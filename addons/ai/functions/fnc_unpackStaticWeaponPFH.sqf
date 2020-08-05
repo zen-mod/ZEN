@@ -37,7 +37,7 @@ _assistant setVariable [QGVAR(nextMoveTime), CBA_MissionTime + 5];
     params ["_args", "_pfhID"];
     _args params ["_gunner", "_assistant", "_targetPos", "_startTime"];
 
-    private _closeEnough = _gunner distance _assistant < DISTANCE_CLOSE;
+    private _closeEnough = _gunner distance _assistant <= DISTANCE_CLOSE;
     private _endTime = _startTime + MOVE_TIMEOUT;
 
     if (_closeEnough || {CBA_MissionTime > _endTime || {!alive _gunner || {!alive _assistant}}}) exitWith {
