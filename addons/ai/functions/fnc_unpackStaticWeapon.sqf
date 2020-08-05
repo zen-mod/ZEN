@@ -30,7 +30,7 @@ _gunner addEventHandler ["WeaponAssembled", {
     _gunner removeEventHandler ["WeaponAssembled", _thisEventHandler];
 
     private _targetPos = _gunner getVariable [QGVAR(unpackStaticWeaponTargetPos), []];
-    if !(_targetPos isEqualTo []) then {
+    if (!_targetPos isEqualTo []) then {
         _weapon setDir (_weapon getDir _targetPos);
         _gunner doWatch _targetPos;
     };
