@@ -24,7 +24,7 @@ if (!local _gunner) exitWith {
     [QGVAR(unpackStaticWeapon), _this, _gunner] call CBA_fnc_targetEvent;
 };
 
-// too far, run PFH
+// Too far, run PFH
 if (_gunner distance _assistant > DISTANCE_CLOSE) exitWith {
     [_gunner, _assistant, _targetPos] call FUNC(unpackStaticWeaponPFH);
 };
