@@ -52,7 +52,7 @@ _assistant setVariable [QGVAR(nextMoveTime), CBA_MissionTime + 5];
         // Reset assistant behaviour
         private _group = group _gunner;
         [_assistant] joinSilent _group;
-        _group setBehaviour (behaviour _gunner);
+        _group setBehaviour behaviour _gunner;
         // Assistant AI FSM
         if (_assistant getVariable [QGVAR(stateFSM), true]) then {
             _assistant setVariable [QGVAR(stateFSM), nil];
