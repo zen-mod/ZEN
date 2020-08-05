@@ -36,7 +36,7 @@ _gunner addEventHandler ["WeaponAssembled", {
     };
 
     // Added due to occassional tripod leg clipping through ground
-    _weapon setPosASL (getPosASL _weapon vectorAdd [0,0,0.05]);
+    _weapon setPosASL (getPosASL _weapon vectorAdd [0, 0, 0.05]);
     _weapon setVectorUp surfaceNormal position _weapon;
 
     _gunner assignAsGunner _weapon;
