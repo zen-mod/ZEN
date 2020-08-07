@@ -65,7 +65,7 @@ This function is used to ensure that the created action array is in the correct 
 
 **Example:**
 
-```clike
+```sqf
 private _action = [
     "HintTime",
     "Hint Time",
@@ -94,7 +94,7 @@ Actions are added locally and as a result the function must be executed on each 
 
 **Example:**
 
-```clike
+```sqf
 [_action, [], 0] call zen_context_menu_fnc_addAction
 ```
 
@@ -116,7 +116,7 @@ Context menu actions can be removed using the `zen_context_menu_fnc_removeAction
 
 **Example:**
 
-```clike
+```sqf
 ["HintTime"] call zen_context_menu_fnc_removeAction
 ```
 

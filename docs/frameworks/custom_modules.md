@@ -24,7 +24,7 @@ Modules are added locally and as a result the function must be executed on each 
 
 **Example:**
 
-```clike
+```sqf
 ["Custom Modules", "Cool Hint", {hint str _this}] call zen_custom_modules_fnc_register
 ```
 
