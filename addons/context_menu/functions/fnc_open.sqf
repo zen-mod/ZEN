@@ -15,12 +15,8 @@
  * Public: No
  */
 
-params ["_actions"];
-
 // Open context menu with full actions tree if none are given
-if (isNil "_actions") then {
-    _actions = GVAR(actions);
-};
+params [["_actions", GVAR(actions)]];
 
 // Close previously opened context menu
 [] call FUNC(close);
