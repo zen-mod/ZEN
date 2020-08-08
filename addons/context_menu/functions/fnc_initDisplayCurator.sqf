@@ -24,7 +24,7 @@ if (GVAR(enabled) == 0) exitWith {};
 {
     private _ctrl = _display displayCtrl _x;
     _ctrl ctrlAddEventHandler ["MouseButtonDown", {
-        call FUNC(closeMenu);
+        call FUNC(close);
     }];
 } forEach [
     IDC_RSCDISPLAYCURATOR_ADD,
@@ -41,7 +41,7 @@ if (GVAR(enabled) == 1) exitWith {
     {
         private _ctrl = _display displayCtrl _x;
         _ctrl ctrlAddEventHandler ["MouseButtonDown", {
-            call FUNC(closeMenu);
+            call FUNC(close);
         }];
     } forEach [
         IDC_RSCDISPLAYCURATOR_MAINMAP,
@@ -59,7 +59,7 @@ if (GVAR(enabled) == 1) exitWith {
         if (_button isEqualTo 1) then {
             GVAR(holdingRMB) = true;
         } else {
-            call FUNC(closeMenu);
+            call FUNC(close);
         };
     }];
 
@@ -79,7 +79,7 @@ if (GVAR(enabled) == 1) exitWith {
                 && {SELECTED_GROUPS findIf {!isPlayer leader _x && {side _x != sideLogic}} == -1}
                 && {SELECTED_OBJECTS findIf {!isPlayer leader _x && {!isNull group _x} && {side group _x != sideLogic}} == -1}
             ) then {
-                call FUNC(openMenu);
+                [] call FUNC(open);
             };
         };
     }];
