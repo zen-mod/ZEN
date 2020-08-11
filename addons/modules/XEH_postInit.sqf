@@ -84,6 +84,7 @@ if (isServer) then {
 
 [QGVAR(crewToGunner), {
     params ["_unit", "_vehicle"];
+
     _unit assignAsGunner _vehicle;
     [_unit] orderGetIn true;
 }] call CBA_fnc_addEventHandler;
