@@ -24,7 +24,7 @@ if (isNull _vehicle) exitWith {
     [LSTRING(NoObjectSelected)] call EFUNC(common,showMessage);
 };
 
-if !(alive _vehicle) exitWith {
+if (!alive _vehicle) exitWith {
     [LSTRING(OnlyAlive)] call EFUNC(common,showMessage);
 };
 
