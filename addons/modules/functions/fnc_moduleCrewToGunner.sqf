@@ -44,5 +44,5 @@ if (!isNull _gunner) then {
 if (_newGunners isEqualTo []) exitWith {
     [LSTRING(NoCrewAvailable)] call EFUNC(common,showMessage);
 };
-private _newGunner = _newGunners # (count _newGunners -1);
+private _newGunner = _newGunners select (count _newGunners - 1);
 [QGVAR(crewToGunner), [_newGunner, _vehicle], _newGunner] call CBA_fnc_targetEvent;
