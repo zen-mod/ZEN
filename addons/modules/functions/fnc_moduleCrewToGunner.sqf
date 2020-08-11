@@ -33,6 +33,7 @@ if (fullCrew [_vehicle, "gunner", true] isEqualTo []) exitWith {
 };
 
 _vehicle allowCrewInImmobile true;
+
 private _gunner = gunner _vehicle;
 private _newGunners = crew _vehicle;
 
