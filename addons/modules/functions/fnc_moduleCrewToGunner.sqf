@@ -35,11 +35,10 @@ if (fullCrew [_vehicle, "gunner", true] isEqualTo []) exitWith {
 _vehicle allowCrewInImmobile true;
 
 private _gunner = gunner _vehicle;
-private _newGunners = crew _vehicle;
+private _newGunners = (crew _vehicle - [_gunner]) select {canMove _x};
 
 if (!isNull _gunner) then {
     [QGVAR(teleportOutOfVehicle), [_gunner], _gunner] call CBA_fnc_targetEvent;
-    _newGunners = crew _vehicle - [_gunner];
 };
 
 if (_newGunners isEqualTo []) exitWith {
