@@ -64,9 +64,11 @@ if (isServer) then {
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(teleportOutOfVehicle), {
-    params ["_unit", "_position"];
+    params ["_unit", ["_position", []]];
 
     moveOut _unit;
+
+    if (_position isEqualTo []) exitWith {};
 
     [{
         params ["_unit", "_position"];
