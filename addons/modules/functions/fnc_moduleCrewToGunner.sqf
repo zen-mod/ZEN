@@ -47,4 +47,4 @@ if (_newGunners isEqualTo []) exitWith {
 };
 
 private _newGunner = _newGunners select (count _newGunners - 1);
-[QGVAR(crewToGunner), [_newGunner, _vehicle], _newGunner] call CBA_fnc_targetEvent;
+[QGVAR(moveToGunner), [_newGunner, _vehicle], _newGunner] call CBA_fnc_targetEvent;

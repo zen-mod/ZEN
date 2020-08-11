@@ -82,7 +82,7 @@ if (isServer) then {
     [_object, _pitch, _roll] call BIS_fnc_setPitchBank;
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(crewToGunner), {
+[QGVAR(moveToGunner), {
     params ["_unit", "_vehicle"];
 
     _unit assignAsGunner _vehicle;
