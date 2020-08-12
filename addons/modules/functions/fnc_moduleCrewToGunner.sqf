@@ -35,7 +35,7 @@ if (fullCrew [_vehicle, "gunner", true] isEqualTo []) exitWith {
 _vehicle allowCrewInImmobile true;
 
 private _gunner = gunner _vehicle;
-private _newGunners = (crew _vehicle - [_gunner]) select {canMove _x};
+private _newGunners = (crew _vehicle - [_gunner]) select {lifeState _x in ["HEALTHY", "INJURED"]};
 
 if (!isNull _gunner) then {
     moveOut _gunner;
