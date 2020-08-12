@@ -38,7 +38,7 @@ private _gunner = gunner _vehicle;
 private _newGunners = (crew _vehicle - [_gunner]) select {canMove _x};
 
 if (!isNull _gunner) then {
-    [QGVAR(teleportOutOfVehicle), [_gunner], _gunner] call CBA_fnc_targetEvent;
+    moveOut _gunner;
 };
 
 if (_newGunners isEqualTo []) exitWith {
