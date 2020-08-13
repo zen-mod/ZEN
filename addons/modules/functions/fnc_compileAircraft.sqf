@@ -22,7 +22,7 @@ private _aircraftCache = [];
 
     if (getNumber (_x >> "scope") == 2 && {_className isKindOf "Air"}) then {
         // Switch BLUFOR and OPFOR side IDs
-        private _side = [1, 0, 2, 3] select getNumber (_x >> "side");
+        private _side = [1, 0, 2, 3] param [getNumber (_x >> "side"), 3];
 
         // Get the side's faction hash which maps factions to lists of aircraft
         private _factions = _aircraftCache param [_side];
