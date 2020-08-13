@@ -109,13 +109,27 @@
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(enableAI), {
-    params ["_unit", "_section"];
-    _unit enableAI _section;
+    params ["_unit", "_sections"];
+
+    if (_sections isEqualType "") then {
+        _sections = [_sections];
+    };
+
+    {
+        _unit enableAI _x;
+    } forEach _sections;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(disableAI), {
-    params ["_unit", "_section"];
-    _unit disableAI _section;
+    params ["_unit", "_sections"];
+
+    if (_sections isEqualType "") then {
+        _sections = [_sections];
+    };
+
+    {
+        _unit disableAI _x;
+    } forEach _sections;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(doMove), {
