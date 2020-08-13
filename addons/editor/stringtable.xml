@@ -66,6 +66,7 @@
             <German>Leer Kategorie aufräumen</German>
             <Polish>Oczyść drzewo pustych obiektów</Polish>
             <Japanese>空ツリー整理</Japanese>
+            <Korean>빈 나무 정리하기</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_DeclutterEmptyTree_Description">
             <English>Declutters the empty tree by removing empty vehicles as those are available in the side specific trees.</English>
@@ -78,19 +79,23 @@
             <English>Add Group Icons</English>
             <German>Gruppensymbole anzeigen</German>
             <Polish>Dodaj ikone grupy</Polish>
+            <Korean>그룹 아이콘 추가</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_AddGroupIcons_Description">
             <English>Adds group icons to the create group trees.</English>
             <German>Zeigt Gruppensymbole im Gruppenbaum an.</German>
             <Polish>Dodaje ikone grupy do drzewka tworzenia grup.</Polish>
+            <Korean>그룹 나무를 생성하기 위해 그룹 아이콘을 추가합니다.</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_RandomizeCopyPaste">
             <English>Randomize Deep Copy/Paste</English>
             <Polish>Losowe kopiowanie/Wklejanie (Głębokie)</Polish>
+            <Korean>전체 복사/붙여 넣기 랜덤</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_RandomizeCopyPaste_Description">
             <English>Controls whether deep copy/paste will randomize unit identities and vehicle customization (instead of making identical copies).</English>
             <Polish>Kontoluje czy głębokie kopiowanie/wklejanie będzie losowo zmieniało ustawienia jednostek (zamiast tworzenia identycznych kopii)</Polish>
+            <Korean>(동일한 복사본을 만드는 대신) 전체 복사/붙여 넣기의 유닛 설정 랜덤 여부를 제어합니다.</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages">
             <English>Unit Radio Messages</English>
@@ -113,6 +118,7 @@
             <English>Parachute Sounds</English>
             <German>Fallschirmgeräusche</German>
             <Polish>Dzwięki spadochronu</Polish>
+            <Korean>낙하산 소음</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_ParachuteSounds_Description">
             <English>Controls whether jet flyby sounds are played when an object is paradropped via the Raise Entity keybind.</English>
