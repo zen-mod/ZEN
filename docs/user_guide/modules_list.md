@@ -26,22 +26,22 @@ The "Units" option will make the selected number of additional nearby unit's of 
 
 Detonates an atomic bomb at the module's position with the specified destruction radius.
 
-## Attach Effect
+## Attach/Detach Effect
 
-Attaches an effect (IR Strobe, Chem Light) to the attached group or units of a selected side.
-Attached items can be removed using the "None" option.
+Attaches an effect (IR Strobe, Chemlight) to the attached group or units of a selected side.
+Attached items can be removed by selecting the "None" option.
 
 ## Attach Flag
 
 Attaches the selected flag to the attached vehicle or unit.
-The flag can be removed using "None" option.
+The flag can be removed by selecting "None" option.
 
 ## Attach To
 
 Attaches the object the module is placed on to a selected object.
 If the object is already attached, it will be detached.
 
-## Bind Variable
+## Bind Variable To Object
 
 Sets the given variable name in `missionNamespace` to the attached object.
 Selecting the public option will broadcast this value.
@@ -160,6 +160,10 @@ Garrisons units from the attached group in nearby buildings.
 Sends the entered message as a global hint.
 The message preview shows the message with all of the formatting applied.
 
+## Group Side
+
+Changes the side of the attached unit's group.
+
 ## Heal
 
 Heals the attached unit. Works with BI's scripted revive system and ACE medical.
@@ -190,11 +194,15 @@ Assigns the attached player as a Zeus.
 
 Removes any existing arsenal from the attached object. The type of arsenal removed is based on the "Preferred Arsenal" setting.
 
+## Rotate Object
+
+Sets the attached object's pitch, roll, and yaw.
+
 ## Set Date
 
 Sets the current date (and time of day) in the mission.
 
-## Show In Config
+## Show In Config Viewer
 
 Opens the config viewer. If placed on an object, the config viewer will be opened to that object's config entry.
 
