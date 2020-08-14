@@ -98,7 +98,7 @@
             <Portuguese>O tempo (em segundos) entre a condição satisfatória da parada e a conclusão da parada.</Portuguese>
             <Italian>Il tempo (in secondi) che passa tra il soddisfacimento della condizione dell'obiettivo e il suo completamento </Italian>
             <Japanese>タイムアウト (秒) はウェイポイントの条件達成とウェイポイント完了の間に適用されます。</Japanese>
-            <Korean>경유지 조건 만족 및 경유지 완료 사이의 시간 (초)</Korean>
+            <Korean>웨이포인트 조건 만족 및 웨이포인트 완료 사이의 시간 (초)</Korean>
         </Key>
         <Key ID="STR_ZEN_Attributes_Sensors">
             <English>Sensors</English>
