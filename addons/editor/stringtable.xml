@@ -66,7 +66,7 @@
             <German>Leer Kategorie aufräumen</German>
             <Polish>Oczyść drzewo pustych obiektów</Polish>
             <Japanese>空ツリー整理</Japanese>
-            <Korean>빈 나무 정리하기</Korean>
+            <Korean> 범주 정리하기</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_DeclutterEmptyTree_Description">
             <English>Declutters the empty tree by removing empty vehicles as those are available in the side specific trees.</English>
@@ -74,6 +74,7 @@
             <German>Räumt die Kategorie "Leer" auf. Leere Fahrzeuge werden versteckt, da diese in den Seiten spezifischen Kategorien vorhanden sind.</German>
             <Polish>Oczyszcza drzewo pustych obiektów przez usunięcie pustych pojazdów, gdyż są one dostępne w drzewach poszczególnych stron.</Polish>
             <Japanese>陣営特有として使用できる空の車両がある空ツリーを整理します。</Japanese>
+            <Korean>특정 진영에 한정된 범주에서만 사용 가능한 비어있는 차량을 제거하여 비어있는 범주 정리하기</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_AddGroupIcons">
             <English>Add Group Icons</English>
@@ -104,7 +105,7 @@
             <German>Funkmeldungen von Einheiten</German>
             <Polish>Wiadomość radiowa jednostki</Polish>
             <Japanese>ユニット無線送信</Japanese>
-            <Korean>유닛 무전 대화</Korean>
+            <Korean>유닛 무전</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages_Description">
             <English>Controls whether unit radio messages are played on placement and waypoint orders, waypoints only, or disabled.</English>
@@ -113,6 +114,7 @@
             <Polish>Kontroluje czy wiadomości radiowe jednostki są odtwarzane przy postawieniu i wyznaczeniu punktu trasy, jedynie przy wyznaczeniu punktu trasy lub czy są wyłączone.</Polish>
             <Russian>Определяет будут ли ИИ подразделения сообщать по радио о своих действиях или нет.</Russian>
             <Japanese>ユニットが配置についたり、ウェイポイント指示、ウェイポイントのみ、無効化された時に無線でメッセージを送信するかどうかを決定します。</Japanese>
+            <Korean>유닛 무전이 배치, 웨이포인트 명령, 혹은 웨이포인트에서만 재생되는지 또는 비활성화되는지 여부를 제어합니다.</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_ParachuteSounds">
             <English>Parachute Sounds</English>
@@ -132,6 +134,7 @@
             <German>Nur Wegpunkte</German>
             <Polish>Tylko punkty trasy</Polish>
             <Japanese>ウェイポイントのみ</Japanese>
+            <Korean>웨이포인트 한정</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleIncludeCrew">
             <English>Toggle Include Crew</English>
