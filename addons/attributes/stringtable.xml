@@ -242,7 +242,7 @@
             <English>Open Attributes Display</English>
         </Key>
         <Key ID="STR_ZEN_Attributes_OpenAttributesDisplay_Description">
-            <English>Opens the Zeus attributes display for the mouse-overed or selected entity.</English>
+            <English>Opens the Zeus attributes display for the selected entity.\nWhen multiple entitie are selected (i.e. due to selecting a Group), the moused-over entity will be used.</English>
         </Key>
     </Package>
 </Project>
