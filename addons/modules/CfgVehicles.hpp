@@ -191,6 +191,13 @@ class CfgVehicles {
         function = QFUNC(moduleCreateTeleporter);
         icon = "\a3\3den\data\displays\display3den\panelleft\entitylist_location_ca.paa";
     };
+    class GVAR(moduleCrewToGunner): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = CSTRING(ModuleCrewToGunner);
+        function = QFUNC(moduleCrewToGunner);
+        icon = "\a3\ui_f\data\IGUI\Cfg\Actions\getingunner_ca.paa";
+    };
     class GVAR(moduleDamageBuildings): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Buildings);

@@ -2009,6 +2009,9 @@
             <Japanese>%1 がインテルを発見: "%2"</Japanese>
             <Korean>%1이 인텔 취득: "%2"</Korean>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCrewToGunner">
+            <English>Crew To Gunner</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ToggleLamps">
             <English>Toggle Lamps</English>
             <German>Lampen umschalten</German>
@@ -2321,6 +2324,12 @@
             <English>Unable to find suitable position to teleport vehicle to.</English>
             <German>Kein valide Position zum Teleporieren des Fahrzeugs gefunden.</German>
             <Polish>Nie znaleziono stosownej pozycji do teleportacji pojazdu.</Polish>
+        </Key>
+        <Key ID="STR_ZEN_Modules_MustHaveGunner">
+            <English>Vehicle must have a primary gunner seat</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_NoCrewAvailable">
+            <English>Vehicle must have other crew available</English>
         </Key>
     </Package>
 </Project>
