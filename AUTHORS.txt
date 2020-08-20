@@ -26,6 +26,7 @@ Dystopian
 Eclipser
 GitHawk
 Glowbal
+Goleedev
 Jonpas
 KoffeinFlummi
 Moerderhoschi

@@ -8,6 +8,7 @@
             <German>Kontextmenu aktivieren</German>
             <Polish>Włącz menu kontekstowe</Polish>
             <Japanese>コンテキスト有効化</Japanese>
+            <Korean>맞춤형 메뉴 활성화</Korean>
         </Key>
         <Key ID="STR_ZEN_Context_Menu_Enabled_Description">
             <English>Enables opening of context menu using the keybind or right clicking.</English>
@@ -16,6 +17,7 @@
             <Polish>Pozwala otwierać menu kontekstowe używając skrótu klawiaturowego lub prawego przycisku myszy.</Polish>
             <Russian>Включает открытие контекстного меню по правой клавише мыши или сочетанию клавиш</Russian>
             <Japanese>割り当てられたキーか右クリックによりコンテキスト メニューを使えるようにします。</Japanese>
+            <Korean>키 바인드 또는 마우스 우클릭을 사용해 맞춤형 메뉴를 열 수 있습니다.</Korean>
         </Key>
         <Key ID="STR_ZEN_Context_Menu_KeybindOnly">
             <English>Keybind Only</English>
@@ -24,6 +26,7 @@
             <German>Nur Tastenkombination</German>
             <Polish>Tylko skrót klawiaturowy</Polish>
             <Japanese>割り当てキーからのみ</Japanese>
+            <Korean>키 바인드만 사용 가능</Korean>
         </Key>
         <Key ID="STR_ZEN_Context_Menu_KeybindAndMouse">
             <English>Keybind and Mouse</English>
@@ -32,6 +35,7 @@
             <German>Tastenkombination und Rechtsklick</German>
             <Polish>Skrót klawiaturowy i mysz</Polish>
             <Japanese>割り当てキーとマウス</Japanese>
+            <Korean>마우스 우클릭만 사용 가능</Korean>
         </Key>
         <Key ID="STR_ZEN_Context_Menu_OpenContextMenu">
             <English>Open Context Menu</English>
@@ -40,6 +44,7 @@
             <German>Kontextmenu öffnen</German>
             <Polish>Otwórz menu kontekstowe</Polish>
             <Japanese>コンテキスト メニューを開く</Japanese>
+            <Korean>맞춤형 메뉴 열기</Korean>
         </Key>
     </Package>
 </Project>

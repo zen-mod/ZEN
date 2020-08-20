@@ -104,6 +104,7 @@
             <English>Premade</English>
             <German>Vorgefertigt</German>
             <Polish>Predefiniowane</Polish>
+            <Korean>팀 결성 완료</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_VeryLow">
             <English>Very Low</English>
@@ -456,28 +457,35 @@
         </Key>
         <Key ID="STR_ZEN_Common_Pitch">
             <English>Pitch</English>
+            <Korean>피치</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_Roll">
             <English>Roll</English>
+            <Korean>롤</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_Yaw">
             <English>Yaw</English>
+            <Korean>요</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_UncheckAll">
             <English>Uncheck All</English>
             <Polish>Odznacz wszystkie</Polish>
+            <Korean>전체 선택 해제</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_CheckAll">
             <English>Check All</English>
             <Polish>Zaznacz wszystkie</Polish>
+            <Korean>전체 선택</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_NoGroupsFound">
             <English>No groups found.</English>
             <Polish>Nie znaleziono grup</Polish>
+            <Korean>그룹을 찾을 수 없습니다.</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_NoPlayersFound">
             <English>No players found.</English>
             <Polish>Nie znaleziono graczy</Polish>
+            <Korean>플레이어를 찾을 수 없습니다.</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_NotEnoughSpaceInVehicle">
             <English>Not enough space in target vehicle: %1 needed - %2 available</English>
@@ -490,6 +498,7 @@
         <Key ID="STR_ZEN_Common_CopyToClipboard">
             <English>Copy to Clipboard</English>
             <Polish>Kopiuj do schowka</Polish>
+            <Korean>복사됨</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects">
             <English>Add Objects to Curators</English>
@@ -498,7 +507,7 @@
             <German>Objekte zum Kurator hinzufügen</German>
             <Polish>Dodaj obiekty do Zeusa</Polish>
             <Japanese>キュレーターにオブジェクト追加</Japanese>
-            <Korean>큐레이터에 물체 추가</Korean>
+            <Korean>큐레이터에 아이템 추가</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects_Description">
             <English>Automatically adds spawned objects to all curators.</English>
@@ -535,7 +544,7 @@
             <Polish>Tryb ciemny</Polish>
             <Italian>Modalità scura</Italian>
             <Japanese>ダーク モード</Japanese>
-            <Korean>어두운 모드</Korean>
+            <Korean>다크 모드</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_DarkMode_Description">
             <English>Changes the appearance of various user interface elements to a darker color theme.</English>
@@ -544,7 +553,7 @@
             <Polish>Zmienia kolorystykę elementów interfejsu na ciemniejszą.</Polish>
             <Russian>Меняет вид интерфейса пользователя на более тёмные</Russian>
             <Japanese>UI の様々な部分の見た目を暗色へ変更します。</Japanese>
-            <Korean>사용자 인터페이스 구성요소를 어두운 색상 테마로 변환합니다.</Korean>
+            <Korean>사용자 인터페이스 구성요소를 다크 모드로 변환합니다.</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_PreferredArsenal">
             <English>Preferred Arsenal</English>
@@ -553,7 +562,7 @@
             <German>Bevorzugtes Arsenal</German>
             <Polish>Preferowany arsenał</Polish>
             <Japanese>優先武器庫</Japanese>
-            <Korean>선호되는 아스널</Korean>
+            <Korean>선호하는 무기 창고</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_PreferredArsenal_Description">
             <English>Selects the preferred arsenal used by Zeus Enhanced.\nIf ACE Arsenal is not installed, will fall back to BI Virtual Arsenal.</English>
@@ -562,7 +571,7 @@
             <Polish>Wybierz preferowany arsenał używany przez Zeus Enhanced.\nJeśli arsenał ACE nie będzie dostępny to uruchomi się podstawowy wirtualny arsenał BI.</Polish>
             <Russian>Выбор предпочитаемого Арсенала\nlfЕсли не установлен ACE, будет запущен стандартный Виртуальный Арсенал.</Russian>
             <Japanese>Zeus Enhanced により優先された武器庫を選択します。\nACE3 武器庫が有効化されていない場合、ゲーム標準のバーチャル武器庫へ戻されます。</Japanese>
-            <Korean>Zeus Enhanced 에서 쓰일 아스널을 선택합니다. \n만약 ACE 아스널이 설치되어있지 않다면, BI 아스널로 변경될 것입니다.</Korean>
+            <Korean>Zeus Enhanced 에서 쓰일 무기 창고를 선택합니다. \n만약 ACE 무기 창고가 설치되어있지 않다면, BI 무기 창고로 변경됩니다.</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_BIVirtualArsenal">
             <English>BI Virtual Arsenal</English>
@@ -571,7 +580,7 @@
             <German>BI Virtuelle Arsenal</German>
             <Polish>Wirtualny arsenał BI</Polish>
             <Japanese>バーチャル武器庫</Japanese>
-            <Korean>BI 가상 아스널</Korean>
+            <Korean>BI 가상 무기고</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_AceArsenal">
             <English>ACE Arsenal</English>
@@ -580,7 +589,7 @@
             <German>ACE Arsenal</German>
             <Polish>Arsenał ACE</Polish>
             <Japanese>ACE 武器庫</Japanese>
-            <Korean>ACE 아스널</Korean>
+            <Korean>ACE 무기 창고</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_AscensionMessages">
             <English>Ascension Messages</English>
@@ -589,14 +598,17 @@
         <Key ID="STR_ZEN_Common_AscensionMessages_Description">
             <English>Controls whether global popup messages are displayed when a player is assigned as Zeus.</English>
             <Polish>Kontroluje czy po wyznaczeniu nowego gracza na Zeusa zostaje wyświetlona wiadomość globalna.</Polish>
+            <Korean>새로운 플레이어가 Zeus로 지정될 때 전체 메시지의 표시 여부를 제어합니다.</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_CameraBird">
             <English>Camera Eagle</English>
             <Polish>Orzeł przy kamerze</Polish>
+            <Korean>독수리 카메라</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_CameraBird_Description">
             <English>Controls whether an eagle that follows the Zeus camera is created.</English>
             <Polish>Kontroluje czy orzeł podążający za kamerą Zeusa jest aktywowany.</Polish>
+            <Korean>Zeus 카메라를 따라다니는 독수리의 생성 여부를 제어합니다</Korean>
         </Key>
     </Package>
 </Project>

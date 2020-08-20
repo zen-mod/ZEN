@@ -23,7 +23,7 @@
             <Italian>Luci</Italian>
             <Portuguese>Luzes</Portuguese>
             <Japanese>ライト</Japanese>
-            <Korean>전등</Korean>
+            <Korean>조명</Korean>
         </Key>
         <Key ID="STR_ZEN_Attributes_LockedForPlayers">
             <English>Locked For Players</English>
@@ -46,13 +46,13 @@
         <Key ID="STR_ZEN_Attributes_RespawnPosition">
             <English>Respawn Position</English>
             <German>Wiedereinstiegspunkt</German>
-            <Korean>리스폰 위치</Korean>
+            <Korean>부활 위치</Korean>
             <Polish>Pozycja odrodzenia</Polish>
         </Key>
         <Key ID="STR_ZEN_Attributes_RespawnPosition_Tooltip">
             <English>Selects the side that is able to respawn on this object.</English>
             <German>Wähle eine Seite, welche an diesem Objekt wiedereinsteigen kann.</German>
-            <Korean>이 오브젝트에 리스폰할 수 있는 진영을 고르시오</Korean>
+            <Korean>이 아이템으로 부활할 수 있는 진영을 고르시오</Korean>
             <Polish>Ustawia strone która może się odrodzić na tym obiekcie.</Polish>
         </Key>
         <Key ID="STR_ZEN_Attributes_States">
@@ -86,7 +86,7 @@
             <Portuguese>Tempo Esgotado (s)</Portuguese>
             <Italian>Tempo limite (s)</Italian>
             <Japanese>タイムアウト (秒)</Japanese>
-            <Korean>시간 초과 (s)</Korean>
+            <Korean>시간 초과 (초)</Korean>
         </Key>
         <Key ID="STR_ZEN_Attributes_Timeout_Tooltip">
             <English>The time (in seconds) between waypoint condition satisfaction and waypoint completion.</English>
@@ -98,7 +98,7 @@
             <Portuguese>O tempo (em segundos) entre a condição satisfatória da parada e a conclusão da parada.</Portuguese>
             <Italian>Il tempo (in secondi) che passa tra il soddisfacimento della condizione dell'obiettivo e il suo completamento </Italian>
             <Japanese>タイムアウト (秒) はウェイポイントの条件達成とウェイポイント完了の間に適用されます。</Japanese>
-            <Korean>웨이포인트 조건 만족과 완료사이의 시간 (초)</Korean>
+            <Korean>웨이포인트 조건 만족 및 웨이포인트 완료 사이의 시간 (초)</Korean>
         </Key>
         <Key ID="STR_ZEN_Attributes_Sensors">
             <English>Sensors</English>
@@ -134,7 +134,7 @@
             <Polish>Zmień umiejętności</Polish>
             <Portuguese>Alterar Habilidades</Portuguese>
             <Japanese>スキル変更</Japanese>
-            <Korean>숙련도 변경</Korean>
+            <Korean>기술 변경</Korean>
         </Key>
         <Key ID="STR_ZEN_Attributes_Skills">
             <English>Skills</English>
@@ -146,7 +146,7 @@
             <Polish>Umiejętności</Polish>
             <Portuguese>Habilidades</Portuguese>
             <Japanese>スキル</Japanese>
-            <Korean>숙련도</Korean>
+            <Korean>기술</Korean>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeTraits">
             <English>Change Traits</English>
@@ -218,7 +218,7 @@
             <Polish>Zaawansowany Inżynier</Polish>
             <Portuguese>Engenheiros Experientes</Portuguese>
             <Japanese>上級工兵</Japanese>
-            <Korean>수리공</Korean>
+            <Korean>고급 엔지니어</Korean>
         </Key>
         <Key ID="STR_ZEN_Attributes_EOD">
             <English>EOD</English>
@@ -229,14 +229,17 @@
             <Polish>Saper</Polish>
             <Portuguese>Eliminação Explosiva de Ordenamento</Portuguese>
             <Japanese>爆発物専門家</Japanese>
+            <Korean>폭발물 처리반</Korean>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeAbilities">
             <English>Change Abilities</English>
             <Polish>Zmień zdolności</Polish>
+            <Korean>능력 변경</Korean>
         </Key>
         <Key ID="STR_ZEN_Attributes_Abilities">
             <English>Abilities</English>
             <Polish>Zdolności</Polish>
+            <Korean>능력</Korean>
         </Key>
     </Package>
 </Project>
