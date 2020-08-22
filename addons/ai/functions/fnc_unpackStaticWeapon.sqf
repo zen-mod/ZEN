@@ -1,5 +1,4 @@
 #include "script_component.hpp"
-#define DISTANCE_CLOSE 3
 /*
  * Author: Ampersand
  * Unpacks a static weapon from units' backpacks.
@@ -17,6 +16,8 @@
  *
  * Public: No
  */
+
+#define DISTANCE_CLOSE 3
 
 params ["_gunner", "_assistant", ["_targetPos", [], [[]], 3]];
 

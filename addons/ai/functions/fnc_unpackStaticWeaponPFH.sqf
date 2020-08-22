@@ -1,7 +1,4 @@
 #include "script_component.hpp"
-#define DISTANCE_CLOSE 3
-#define MOVE_DELAY 5
-#define MOVE_TIMEOUT 60
 /*
  * Author: Ampersand
  * Move units together if needed and unpacks a static weapon from units' backpacks.
@@ -19,6 +16,10 @@
  *
  * Public: No
  */
+
+#define DISTANCE_CLOSE 3
+#define MOVE_DELAY 5
+#define MOVE_TIMEOUT 60
 
 params ["_gunner", "_assistant", ["_targetPos", [], [[]], 3]];
 
