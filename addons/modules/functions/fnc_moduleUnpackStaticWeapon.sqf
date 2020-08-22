@@ -40,7 +40,7 @@ private _fnc_getCompatibleBases = {
     params ["_backpack"];
     private _cfgBase = configFile >> "CfgVehicles" >> _backpack >> "assembleInfo" >> "base";
     if (isText _cfgBase) exitWith {[getText _cfgBase]};
-    (getArray _cfgBase) //apply {toLower _x}
+    getArray _cfgBase
 };
 
 private _backpack = backpack _gunner;
