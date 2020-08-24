@@ -1543,6 +1543,12 @@
             <Japanese>天気変更</Japanese>
             <Korean>날씨 변경</Korean>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleWeather_Forced">
+            <English>Force Changes</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleWeather_Forced_Tooltip">
+            <English>Forces the following weather conditions instead of allowing the engine to simulate a transition from the current weather.\nNOTE: Weather in Arma can desync and differ between the server and clients. For consistent weather, it is best to force the changes.</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Overcast">
             <English>Overcast</English>
             <German>Bewölkung</German>
