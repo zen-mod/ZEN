@@ -123,7 +123,11 @@ private _putList = [];
         private _configName = configName _x;
 
         switch (true) do {
-            case (getNumber (_x >> "type") in [TYPE_MAGAZINE_PRIMARY_AND_THROW, TYPE_MAGAZINE_SECONDARY_AND_PUT, 1536, TYPE_MAGAZINE_HANDGUN_AND_GL] && {!(_configName in _grenadeList)} && {!(_configName in _putList)}): {
+            case (
+                getNumber (_x >> "type") in [TYPE_MAGAZINE_PRIMARY_AND_THROW, TYPE_MAGAZINE_SECONDARY_AND_PUT, 1536, TYPE_MAGAZINE_HANDGUN_AND_GL, TYPE_MAGAZINE_MISSILE]
+                && {!(_configName in _grenadeList)}
+                && {!(_configName in _putList)}
+            ): {
                 _itemsList select 7 pushBackUnique _configName;
             };
             case (_configName in _grenadeList): {
