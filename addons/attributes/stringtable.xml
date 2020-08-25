@@ -55,6 +55,12 @@
             <Korean>이 아이템으로 부활할 수 있는 진영을 고르시오</Korean>
             <Polish>Ustawia strone która może się odrodzić na tym obiekcie.</Polish>
         </Key>
+        <Key ID="STR_ZEN_Attributes_RespawnVehicle">
+            <English>Respawn Vehicle</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_RespawnVehicle_Tooltip">
+            <English>Selects where the vehicle will respawn when it is destroyed.</English>
+        </Key>
         <Key ID="STR_ZEN_Attributes_States">
             <English>States</English>
             <German>Zustände</German>
