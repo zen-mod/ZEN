@@ -1,4 +1,5 @@
 class ctrlToolbox;
+class ctrlToolboxPictureKeepAspect;
 class ctrlXSliderH;
 class ctrlButtonPictureKeepAspect;
 class RscControlsGroupNoScrollbars;
@@ -172,6 +173,29 @@ class GVAR(waypoint): GVAR(base) {
             tooltipColorShade[] = {0, 0, 0, 0};
             rows = WAYPOINT_ROWS;
             columns = 3;
+        };
+    };
+};
+
+class GVAR(loiter): GVAR(base) {
+    function = QFUNC(gui_loiter);
+    h = POS_H(2);
+    class controls: controls {
+        class Label: Label {
+            h = POS_H(2);
+        };
+        class Toolbox: ctrlToolboxPictureKeepAspect {
+            idc = IDC_ATTRIBUTE_TOOLBOX;
+            x = POS_W(10.1);
+            y = 0;
+            w = POS_W(15.9);
+            h = POS_H(2);
+            rows = 1;
+            columns = 2;
+            strings[] = {
+                "\a3\3den\data\attributes\loiterdirection\ccw_ca.paa",
+                "\a3\3den\data\attributes\loiterdirection\cw_ca.paa"
+            };
         };
     };
 };
