@@ -60,7 +60,7 @@ private _action = [];
     ] call EFUNC(context_menu,createAction);
     [_action, [], 0] call EFUNC(context_menu,addAction);
 } forEach _throwables;
-[] call EFUNC(context_menu,openMenu);
+[] call EFUNC(context_menu,open);
 
 // remove actions on menu close
 [{
