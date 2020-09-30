@@ -41,7 +41,7 @@ if (_object isKindOf "CAManBase") exitWith {
 scopeName "Main";
 
 // For all other objects, compare current inventory against config defined one for any missing or extra items
-private _config = configFile >> "CfgVehicles" >> typeOf _object;
+private _config = configOf _object;
 
 {
     _x params ["_inventory", "_subConfig", "_entry"];

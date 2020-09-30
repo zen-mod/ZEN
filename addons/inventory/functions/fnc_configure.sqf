@@ -19,7 +19,7 @@ params ["_object"];
 
 if (!createDialog QGVAR(display)) exitWith {};
 
-private _config = configFile >> "CfgVehicles" >> typeOf _object;
+private _config = configOf _object;
 private _displayName = getText (_config >> "displayName");
 private _maximumLoad = getNumber (_config >> "maximumLoad");
 

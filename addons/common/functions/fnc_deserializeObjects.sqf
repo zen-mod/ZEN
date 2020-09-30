@@ -179,7 +179,7 @@ private _fnc_deserializeVehicle = {
 
         switch (_role) do {
             case "driver": {
-                if (getText (configFile >> "CfgVehicles" >> typeOf _unit >> "simulation") == "UAVPilot") then {
+                if (getText (configOf _unit >> "simulation") == "UAVPilot") then {
                     _unit moveInAny _vehicle; // moveInDriver does not work for virtual UAV crew, moveInAny does
                 } else {
                     _unit moveInDriver _vehicle;
