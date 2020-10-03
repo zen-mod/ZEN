@@ -73,12 +73,12 @@
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
         GVAR(iconsVisible) = !GVAR(iconsVisible);
 
-        private _ctrlEntites = findDisplay IDD_RSCDISPLAYCURATOR displayCtrl IDC_RSCDISPLAYCURATOR_ENTITIES;
+        private _ctrlEntities = findDisplay IDD_RSCDISPLAYCURATOR displayCtrl IDC_RSCDISPLAYCURATOR_ENTITIES;
 
         if (GVAR(iconsVisible)) then {
-            tvExpandAll _ctrlEntites;
+            tvExpandAll _ctrlEntities;
         } else {
-            _ctrlEntites call EFUNC(common,collapseTree);
+            _ctrlEntities call EFUNC(common,collapseTree);
         };
     };
 }, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
