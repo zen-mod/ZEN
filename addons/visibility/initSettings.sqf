@@ -16,4 +16,4 @@
             call FUNC(stop);
         };
     }
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;

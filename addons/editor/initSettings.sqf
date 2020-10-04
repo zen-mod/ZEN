@@ -5,7 +5,7 @@
     [ELSTRING(main,DisplayName), LSTRING(DisplayName)],
     true,
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(removeWatermark),
@@ -14,7 +14,7 @@
     [ELSTRING(main,DisplayName), LSTRING(DisplayName)],
     true,
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(disableLiveSearch),
@@ -23,7 +23,7 @@
     [ELSTRING(main,DisplayName), LSTRING(DisplayName)],
     false,
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(declutterEmptyTree),
@@ -32,7 +32,7 @@
     [ELSTRING(main,DisplayName), LSTRING(DisplayName)],
     true,
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(addGroupIcons),
@@ -41,7 +41,7 @@
     [ELSTRING(main,DisplayName), LSTRING(DisplayName)],
     false,
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(randomizeCopyPaste),
@@ -50,7 +50,7 @@
     [ELSTRING(main,DisplayName), LSTRING(DisplayName)],
     false,
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(unitRadioMessages),
@@ -59,7 +59,7 @@
     [ELSTRING(main,DisplayName), LSTRING(DisplayName)],
     [[0, 1, 2], [ELSTRING(common,Enabled), LSTRING(UnitRadioMessages_WaypointsOnly), ELSTRING(common,Disabled)], 0],
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(parachuteSounds),
@@ -68,4 +68,4 @@
     [ELSTRING(main,DisplayName), LSTRING(DisplayName)],
     true,
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
