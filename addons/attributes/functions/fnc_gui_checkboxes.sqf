@@ -47,6 +47,7 @@ private _controls = [];
 
     private _ctrlText = _display ctrlCreate ["ctrlStatic", -1, _controlsGroup];
     _ctrlText ctrlSetPosition [POS_W(_posX + 0.8), POS_H(_posY), POS_W(_width - 0.8), POS_H(1)];
+    _ctrlText ctrlSetFontHeight POS_H(0.85);
     _ctrlText ctrlSetTooltip _tooltip;
     _ctrlText ctrlSetText _text;
     _ctrlText ctrlCommit 0;
