@@ -543,6 +543,23 @@
 
 [
     "Waypoint",
+    ["STR_3DEN_Waypoint_Attribute_LoiterAltitude_displayname", "STR_3DEN_Waypoint_Attribute_LoiterAltitude_tooltip"],
+    QGVAR(edit),
+    nil,
+    {
+        private _altitude = parseNumber _value;
+        {
+            if (waypointType _x == "LOITER") then {
+                _x setWaypointLoiterAltitude _altitude;
+            };
+        } forEach SELECTED_WAYPOINTS;
+    },
+    {str waypointLoiterAltitude _entity},
+    {waypointType _entity == "LOITER"}
+] call FUNC(addAttribute);
+
+[
+    "Waypoint",
     [LSTRING(Timeout), LSTRING(Timeout_Tooltip)],
     QGVAR(slider),
     [0, 1800, 15, false, 0],
