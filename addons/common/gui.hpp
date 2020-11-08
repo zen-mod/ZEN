@@ -1,17 +1,25 @@
 class RscText;
 class RscEdit;
+class RscButton;
 class RscCheckBox;
+class RscActivePicture;
 class RscStructuredText;
 class RscButtonMenu;
 class RscButtonMenuOK;
 class RscButtonMenuCancel;
 class RscControlsGroupNoScrollbars;
 
+class ctrlToolbox;
+class ctrlButtonPicture;
 class ctrlControlsGroup;
 class ctrlStaticPictureKeepAspect;
 
 class RscCombo {
     class ComboScrollBar;
+};
+
+class RscListBox {
+    class ListScrollBar;
 };
 
 class RscControlsGroup {
@@ -37,16 +45,6 @@ class GVAR(RscBackground): RscText {
     h = POS_H(2.5);
     colorText[] = {1, 1, 1, 0.5};
     colorBackground[] = COLOR_BACKGROUND_SETTING;
-};
-
-class GVAR(RscEdit): RscEdit {
-    idc = -1;
-    x = POS_W(10.1);
-    y = pixelH;
-    w = POS_W(15.9);
-    h = POS_H(1) - pixelH;
-    colorText[] = {1, 1, 1, 1};
-    colorBackground[] = {0, 0, 0, 0.2};
 };
 
 class GVAR(RscCheckbox): RscCheckBox {
@@ -77,7 +75,46 @@ class GVAR(RscCombo): RscCombo {
     };
 };
 
+class GVAR(RscEdit): RscEdit {
+    idc = -1;
+    x = POS_W(10.1);
+    y = pixelH;
+    w = POS_W(15.9);
+    h = POS_H(1) - pixelH;
+    colorText[] = {1, 1, 1, 1};
+    colorBackground[] = {0, 0, 0, 0.2};
+};
+
+class GVAR(RscListBox): RscListBox {
+    idc = -1;
+    x = 0;
+    y = POS_H(1);
+    w = POS_W(26);
+    h = POS_H(6);
+    class ListScrollBar: ListScrollBar {
+        arrowEmpty = "\a3\3DEN\Data\Controls\ctrlDefault\arrowEmpty_ca.paa";
+        arrowFull = "\a3\3DEN\Data\Controls\ctrlDefault\arrowFull_ca.paa";
+        border = "\a3\3DEN\Data\Controls\ctrlDefault\border_ca.paa";
+        thumb = "\a3\3DEN\Data\Controls\ctrlDefault\thumb_ca.paa";
+    };
+};
+
+class GVAR(RscToolbox): ctrlToolbox {
+    idc = -1;
+    x = POS_W(10.1);
+    y = 0;
+    w = POS_W(15.9);
+    h = POS_H(1);
+    tooltipColorBox[] = {0, 0, 0, 0};
+    tooltipColorText[] = {0, 0, 0, 0};
+    tooltipColorShade[] = {0, 0, 0, 0};
+    // Allows number of rows and columns to be set dynamically using parsingNamespace
+    rows = QGVAR(rows);
+    columns = QGVAR(columns);
+};
+
 class GVAR(RscControlsGroup): RscControlsGroup {
+    idc = -1;
     class HScrollbar: HScrollbar {
         thumb = "\a3\3DEN\Data\Controls\ctrlDefault\thumb_ca.paa";
         border = "\a3\3DEN\Data\Controls\ctrlDefault\border_ca.paa";
@@ -90,6 +127,195 @@ class GVAR(RscControlsGroup): RscControlsGroup {
         arrowFull = "\a3\3DEN\Data\Controls\ctrlDefault\arrowFull_ca.paa";
         arrowEmpty = "\a3\3DEN\Data\Controls\ctrlDefault\arrowEmpty_ca.paa";
         width = POS_W(0.5);
+    };
+};
+
+class GVAR(RscSides): RscControlsGroupNoScrollbars {
+    idc = -1;
+    x = POS_W(10);
+    y = 0;
+    w = POS_W(16);
+    h = POS_H(2.5);
+    class controls {
+        class BLUFOR: RscActivePicture {
+            idc = IDC_SIDES_BLUFOR;
+            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_west_ca.paa";
+            tooltip = "$STR_West";
+            x = POS_W(2.5);
+            y = POS_H(0.25);
+            w = POS_W(2);
+            h = POS_H(2);
+        };
+        class OPFOR: BLUFOR {
+            idc = IDC_SIDES_OPFOR;
+            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_east_ca.paa";
+            tooltip = "$STR_East";
+            x = POS_W(5.5);
+        };
+        class Independent: BLUFOR {
+            idc = IDC_SIDES_INDEPENDENT;
+            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_guer_ca.paa";
+            tooltip = "$STR_Guerrila";
+            x = POS_W(8.5);
+        };
+        class Civilian: BLUFOR {
+            idc = IDC_SIDES_CIVILIAN;
+            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_civ_ca.paa";
+            tooltip = "$STR_Civilian";
+            x = POS_W(11.5);
+        };
+    };
+};
+
+class GVAR(RscOwners): RscControlsGroupNoScrollbars {
+    idc = -1;
+    x = 0;
+    y = 0;
+    w = POS_W(26);
+    h = POS_H(10);
+    class controls {
+        class Background: GVAR(RscBackground) {
+            x = 0;
+            y = POS_H(1);
+            w = POS_W(26);
+            h = POS_H(9);
+        };
+        class ButtonSides: RscButton {
+            idc = IDC_OWNERS_BTN_SIDES;
+            style = ST_CENTER + ST_UPPERCASE;
+            text = CSTRING(Sides);
+            font = "RobotoCondensedLight";
+            x = 0;
+            y = 0;
+            w = POS_W(26/3);
+            h = POS_H(1);
+            sizeEx = 4.32 * (1 / (getResolution select 3)) * pixelGrid * 0.5;
+            colorBackground[] = {0, 0, 0, 0.5};
+            colorBackgroundActive[] = COLOR_SETTING(EGVAR(common,darkMode),1,1,1,0.15,0.1,0.1,0.1,0.2); // lighter
+            colorBackgroundDisabled[] = COLOR_BACKGROUND_SETTING;
+            colorDisabled[] = {1, 1, 1, 1};
+            colorFocused[] = {1, 1, 1, 0.1};
+            period = 0;
+            periodOver = 0;
+            periodFocus = 0;
+            shadow = 1;
+        };
+        class ButtonGroups: ButtonSides {
+            idc = IDC_OWNERS_BTN_GROUPS;
+            text = "$STR_a3_rscdisplaycurator_modegroups_tooltip";
+            x = POS_W(26/3);
+        };
+        class ButtonPlayers: ButtonSides {
+            idc = IDC_OWNERS_BTN_PLAYERS;
+            text = "$STR_mp_players";
+            x = POS_W(52/3);
+        };
+        class TabSides: GVAR(RscSides) {
+            idc = IDC_OWNERS_TAB_SIDES;
+            x = 0;
+            y = POS_H(1);
+            w = POS_W(26);
+            h = POS_H(9);
+            class controls: controls {
+                class BLUFOR: BLUFOR {
+                    x = POS_W(4.25);
+                    y = POS_H(3.25);
+                    w = POS_W(2.5);
+                    h = POS_H(2.5);
+                };
+                class OPFOR: OPFOR {
+                    x = POS_W(9.25);
+                    y = POS_H(3.25);
+                    w = POS_W(2.5);
+                    h = POS_H(2.5);
+                };
+                class Independent: Independent {
+                    x = POS_W(14.25);
+                    y = POS_H(3.25);
+                    w = POS_W(2.5);
+                    h = POS_H(2.5);
+                };
+                class Civilian: Civilian {
+                    x = POS_W(19.25);
+                    y = POS_H(3.25);
+                    w = POS_W(2.5);
+                    h = POS_H(2.5);
+                };
+            };
+        };
+        class TabGroups: RscControlsGroupNoScrollbars {
+            idc = IDC_OWNERS_TAB_GROUPS;
+            x = 0;
+            y = POS_H(1);
+            w = POS_W(26);
+            h = POS_H(9);
+            class controls {
+                class List: GVAR(RscListBox) {
+                    idc = IDC_OWNERS_GROUPS_LIST;
+                    x = POS_W(0.5);
+                    y = POS_H(0.5);
+                    w = POS_W(25);
+                    h = POS_H(6.8);
+                    colorSelect[] = {1, 1, 1, 1};
+                    colorSelect2[] = {1, 1, 1, 1};
+                    colorBackground[] = {0, 0, 0, 0.3};
+                    colorSelectBackground[] = {0, 0, 0, 0};
+                    colorSelectBackground2[] = {0, 0, 0, 0};
+                };
+                class ButtonSearch: ctrlButtonPicture {
+                    idc = IDC_OWNERS_GROUPS_SEARCH_BTN;
+                    text = "\a3\Ui_f\data\GUI\RscCommon\RscButtonSearch\search_start_ca.paa";
+                    x = POS_W(0.5);
+                    y = POS_H(7.5);
+                    w = POS_W(1);
+                    h = POS_H(1);
+                    colorBackground[] = {0, 0, 0, 0.5};
+                    offsetPressedX = 0;
+                    offsetPressedY = 0;
+                };
+                class SearchBar: GVAR(RscEdit) {
+                    idc = IDC_OWNERS_GROUPS_SEARCH_BAR;
+                    x = POS_W(1.6);
+                    y = POS_H(7.5);
+                    w = POS_W(10);
+                    h = POS_H(1);
+                    sizeEx = POS_H(0.9);
+                    colorBackground[] = {0, 0, 0, 0.3};
+                };
+                class ButtonUncheck: ButtonSearch {
+                    idc = IDC_OWNERS_GROUPS_UNCHECK;
+                    text = QPATHTOF(ui\uncheck_all_ca.paa);
+                    tooltip = CSTRING(UncheckAll);
+                    x = POS_W(23.4);
+                };
+                class ButtonCheck: ButtonSearch {
+                    idc = IDC_OWNERS_GROUPS_CHECK;
+                    text = QPATHTOF(ui\check_all_ca.paa);
+                    tooltip = CSTRING(CheckAll);
+                    x = POS_W(24.5);
+                };
+            };
+        };
+        class TabPlayers: TabGroups {
+            idc = IDC_OWNERS_TAB_PLAYERS;
+            class controls: controls {
+                class List: List {
+                    idc = IDC_OWNERS_PLAYERS_LIST;
+                };
+                class SearchBar: SearchBar {
+                    idc = IDC_OWNERS_PLAYERS_SEARCH_BAR;
+                };
+                class ButtonSearch: ButtonSearch {
+                    idc = IDC_OWNERS_PLAYERS_SEARCH_BTN;
+                };
+                class ButtonUncheck: ButtonUncheck {
+                    idc = IDC_OWNERS_PLAYERS_UNCHECK;
+                };
+                class ButtonCheck: ButtonCheck {
+                    idc = IDC_OWNERS_PLAYERS_CHECK;
+                };
+            };
+        };
     };
 };
 

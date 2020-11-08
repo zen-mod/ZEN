@@ -66,7 +66,7 @@
         } forEach call EFUNC(common,getSelectedVehicles);
     },
     {fuel _entity},
-    {alive _entity && {getNumber (configFile >> "CfgVehicles" >> typeOf _entity >> "fuelCapacity") > 0}}
+    {alive _entity && {getNumber (configOf _entity >> "fuelCapacity") > 0}}
 ] call FUNC(addAttribute);
 
 [
@@ -148,8 +148,8 @@
     LSTRING(Engine),
     QGVAR(icons),
     [[
-        [true,  QPATHTOF(ui\engine_on_ca.paa),  ELSTRING(common,On),  14.5, 0.25, 2],
-        [false, QPATHTOF(ui\engine_off_ca.paa), ELSTRING(common,Off), 19.5, 0.25, 2]
+        [false, QPATHTOF(ui\engine_off_ca.paa), ELSTRING(common,Off), 14.5, 0.25, 2],
+        [true,  QPATHTOF(ui\engine_on_ca.paa),  ELSTRING(common,On),  19.5, 0.25, 2]
     ]],
     {
         {
@@ -165,8 +165,8 @@
     LSTRING(Lights),
     QGVAR(icons),
     [[
-        [true,  QPATHTOF(ui\lights_on_ca.paa),  ELSTRING(common,On),  14.5, 0.25, 2],
-        [false, QPATHTOF(ui\lights_off_ca.paa), ELSTRING(common,Off), 19.5, 0.25, 2]
+        [false, QPATHTOF(ui\lights_off_ca.paa), ELSTRING(common,Off), 14.5, 0.25, 2],
+        [true,  QPATHTOF(ui\lights_on_ca.paa),  ELSTRING(common,On),  19.5, 0.25, 2]
     ]],
     {
         {
@@ -194,7 +194,7 @@
         [QEGVAR(common,setPlateNumber), [_entity, _value], _entity] call CBA_fnc_targetEvent;
     },
     {getPlateNumber _entity},
-    {alive _entity && {isClass (configFile >> "CfgVehicles" >> typeOf _entity >> "PlateInfos")}}
+    {alive _entity && {isClass (configOf _entity >> "PlateInfos")}}
 ] call FUNC(addAttribute);
 
 [
@@ -236,7 +236,56 @@
     {
         _entity getVariable [QGVAR(respawnPos), []] param [0, sideEmpty]
     },
-    {alive _entity && {canMove _entity} && {_entity isKindOf "AllVehicles"}}
+    {alive _entity && {canMove _entity} && {_entity isKindOf "AllVehicles"} && {!(_entity isKindOf "Animal")}}
+] call FUNC(addAttribute);
+
+[
+    "Object",
+    [LSTRING(RespawnVehicle), LSTRING(RespawnVehicle_Tooltip)],
+    QGVAR(icons),
+    [[
+        [
+            4, "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnVehicle\west_ca.paa", "STR_A3_RscAttributeRespawnVehicle_West_tooltip", 11.5, 0.25, 2, west call BIS_fnc_sideColor,
+            {playableSlotsNumber west > 0 && {[west, _entity call BIS_fnc_objectSide] call BIS_fnc_areFriendly}}
+        ],
+        [
+            3, "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnVehicle\east_ca.paa", "STR_A3_RscAttributeRespawnVehicle_East_tooltip", 14, 0.25, 2, east call BIS_fnc_sideColor,
+            {playableSlotsNumber east > 0 && {[east, _entity call BIS_fnc_objectSide] call BIS_fnc_areFriendly}}
+        ],
+        [
+            5, "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnVehicle\guer_ca.paa", "STR_A3_RscAttributeRespawnVehicle_Guer_tooltip", 16.5, 0.25, 2, independent call BIS_fnc_sideColor,
+            {playableSlotsNumber independent > 0 && {[independent, _entity call BIS_fnc_objectSide] call BIS_fnc_areFriendly}}
+        ],
+        [
+            6, "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnVehicle\civ_ca.paa", "STR_A3_RscAttributeRespawnVehicle_Civ_tooltip", 19, 0.25, 2, civilian call BIS_fnc_sideColor,
+            {playableSlotsNumber civilian > 0 && {[civilian, _entity call BIS_fnc_objectSide] call BIS_fnc_areFriendly}}
+        ],
+        [
+            0, "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnVehicle\start_ca.paa", "STR_A3_RscAttributeRespawnVehicle_Start_tooltip", 21.5, 0.25, 2
+        ],
+        [
+            -1, "\a3\Ui_F_Curator\Data\default_ca.paa", "STR_Disabled", 24, 0.5, 1.5
+        ]
+    ]],
+    {
+        [QGVAR(setVehicleRespawn), _this] call CBA_fnc_serverEvent;
+    },
+    {
+        private _respawnID = [_entity, false] call BIS_fnc_moduleRespawnVehicle;
+
+        switch (_respawnID) do {
+            case 1;
+            case 7: {
+                _respawnID = 0;
+            };
+            case 2: {
+                _respawnID = [3, 4, 5, 6] param [(_entity call BIS_fnc_objectSide) call BIS_fnc_sideID, -1];
+            };
+        };
+
+        _respawnID
+    },
+    {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}
 ] call FUNC(addAttribute);
 
 [
@@ -267,9 +316,23 @@
     "Object",
     "STR_a3_rscdebugconsole_expressiontext",
     QGVAR(code),
-    [QGVAR(objectExecHistory), LSTRING(ExecObject_Tooltip), 20, 1000],
+    [QGVAR(objectExecHistory), QGVAR(objectExecMode), LSTRING(ExecObject_Tooltip), 20, 1000],
     {
-        [QEGVAR(common,execute), [compile _value, _entity], _entity] call CBA_fnc_targetEvent;
+        _value params ["_code", "_mode"];
+
+        _code = compile _code;
+
+        switch (_mode) do {
+            case MODE_LOCAL: {
+                _entity call _code;
+            };
+            case MODE_TARGET: {
+                [QEGVAR(common,execute), [_code, _entity], _entity] call CBA_fnc_targetEvent;
+            };
+            case MODE_GLOBAL: {
+                [QEGVAR(common,execute), [_code, _entity]] call CBA_fnc_globalEvent;
+            };
+        };
     },
     {""},
     {IS_ADMIN || {!GETMVAR(ZEN_disableCodeExecution,false)}}
@@ -405,9 +468,23 @@
     "Group",
     "STR_a3_rscdebugconsole_expressiontext",
     QGVAR(code),
-    [QGVAR(groupExecHistory), LSTRING(ExecGroup_Tooltip), 20, 1000],
+    [QGVAR(groupExecHistory), QGVAR(groupExecMode), LSTRING(ExecGroup_Tooltip), 20, 1000],
     {
-        [QEGVAR(common,execute), [compile _value, _entity], _entity] call CBA_fnc_targetEvent;
+        _value params ["_code", "_mode"];
+
+        _code = compile _code;
+
+        switch (_mode) do {
+            case MODE_LOCAL: {
+                _entity call _code;
+            };
+            case MODE_TARGET: {
+                [QEGVAR(common,execute), [_code, _entity], _entity] call CBA_fnc_targetEvent;
+            };
+            case MODE_GLOBAL: {
+                [QEGVAR(common,execute), [_code, _entity]] call CBA_fnc_globalEvent;
+            };
+        };
     },
     {""},
     {IS_ADMIN || {!GETMVAR(ZEN_disableCodeExecution,false)}}
@@ -429,6 +506,39 @@
             if (_type == "SCRIPTED") then {_x setWaypointScript _script};
         } forEach SELECTED_WAYPOINTS;
     }
+] call FUNC(addAttribute);
+
+[
+    "Waypoint",
+    "STR_3DEN_Waypoint_Attribute_LoiterDirection_displayname",
+    QGVAR(loiter),
+    nil,
+    {
+        {
+            if (waypointType _x == "LOITER") then {
+                _x setWaypointLoiterType _value;
+            };
+        } forEach SELECTED_WAYPOINTS;
+    },
+    {waypointLoiterType _entity},
+    {waypointType _entity == "LOITER"}
+] call FUNC(addAttribute);
+
+[
+    "Waypoint",
+    "STR_3DEN_Waypoint_Attribute_LoiterRadius_displayname",
+    QGVAR(edit),
+    nil,
+    {
+        private _radius = parseNumber _value;
+        {
+            if (waypointType _x == "LOITER") then {
+                _x setWaypointLoiterRadius _radius;
+            };
+        } forEach SELECTED_WAYPOINTS;
+    },
+    {str waypointLoiterRadius _entity},
+    {waypointType _entity == "LOITER"}
 ] call FUNC(addAttribute);
 
 [
@@ -712,6 +822,48 @@
         } forEach call EFUNC(common,getSelectedUnits);
     },
     {_entity skill "reloadSpeed"}
+] call FUNC(addAttribute);
+
+// - Abilities ----------------------------------------------------------------
+
+["Abilities", LSTRING(ChangeAbilities), false] call FUNC(addDisplay);
+
+[
+    "Object",
+    LSTRING(Abilities),
+    {[_entity, "Abilities"] call FUNC(open)},
+    {alive _entity && {_entity isKindOf "CAManBase"}}
+] call FUNC(addButton);
+
+[
+    "Abilities",
+    "",
+    QGVAR(checkboxes),
+    [[
+        [0,    0, 6.5, ELSTRING(ai,AimingError)],
+        [6.5,  0, 6.5, ELSTRING(ai,AnimChange)],
+        [13,   0, 6.5, ELSTRING(ai,AutoCombat)],
+        [19.5, 0, 6.5, ELSTRING(ai,AutoTarget)],
+        [0,    1, 6.5, ELSTRING(ai,CheckVisible)],
+        [6.5,  1, 6.5, ELSTRING(ai,Cover)],
+        [13,   1, 6.5, ELSTRING(ai,FSM)],
+        [19.5, 1, 6.5, ELSTRING(ai,LightsVehicle)],
+        [0,    2, 6.5, ELSTRING(ai,MineDetection)],
+        [6.5,  2, 6.5, ELSTRING(ai,Move)],
+        [13,   2, 6.5, ELSTRING(ai,Nightvision)],
+        [19.5, 2, 6.5, ELSTRING(ai,Path)],
+        [0,    3, 6.5, ELSTRING(ai,RadioProtocol)],
+        [6.5,  3, 6.5, ELSTRING(ai,Suppression)],
+        [13,   3, 6.5, ELSTRING(ai,Target)],
+        [19.5, 3, 6.5, ELSTRING(ai,TeamSwitch)],
+        [0,    4, 6.5, ELSTRING(ai,WeaponAim)]
+    ], 5, true],
+    {
+        {
+            [QGVAR(setAbilities), [_x, _value], _x] call CBA_fnc_targetEvent;
+        } forEach call EFUNC(common,getSelectedUnits);
+    },
+    {AI_ABILITIES apply {_entity checkAIFeature _x}}
 ] call FUNC(addAttribute);
 
 // - Traits -------------------------------------------------------------------

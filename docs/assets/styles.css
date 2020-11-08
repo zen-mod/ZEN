@@ -69,6 +69,7 @@ a {
 
 .markdown-section {
     color: var(--color-primary);
+    max-width: 800px;
 }
 
 .markdown-section h1,

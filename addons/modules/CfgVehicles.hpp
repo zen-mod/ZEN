@@ -14,6 +14,10 @@ class CfgVehicles {
         };
     };
 
+    class ModuleCurator_F: Module_F {
+        function = QFUNC(bi_moduleCurator);
+    };
+
     class ModuleArsenal_F: Module_F {
         scopeCurator = 1;
     };
@@ -187,6 +191,13 @@ class CfgVehicles {
         function = QFUNC(moduleCreateTeleporter);
         icon = "\a3\3den\data\displays\display3den\panelleft\entitylist_location_ca.paa";
     };
+    class GVAR(moduleCrewToGunner): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = CSTRING(ModuleCrewToGunner);
+        function = QFUNC(moduleCrewToGunner);
+        icon = "\a3\ui_f\data\IGUI\Cfg\Actions\getingunner_ca.paa";
+    };
     class GVAR(moduleDamageBuildings): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Buildings);
@@ -294,6 +305,12 @@ class CfgVehicles {
         displayName = CSTRING(ModuleMakeInvincible);
         function = QFUNC(moduleMakeInvincible);
     };
+    class GVAR(moduleNuke): GVAR(moduleBase) {
+        category = "Ordnance";
+        displayName = CSTRING(AtomicBomb);
+        function = QFUNC(moduleNuke);
+        icon = QPATHTOF(ui\nuke_ca.paa);
+    };
     class GVAR(modulePatrolArea): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(AI);
@@ -306,6 +323,19 @@ class CfgVehicles {
         displayName = CSTRING(ModuleRemoveArsenal);
         function = QFUNC(moduleRemoveArsenal);
         icon = "\a3\ui_f\data\logos\a_64_ca.paa";
+    };
+    class GVAR(moduleRotateObject): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = GVAR(Objects);
+        displayName = CSTRING(RotateObject);
+        function = QFUNC(moduleRotateObject);
+        icon = QPATHTOF(ui\rotate_ca.paa);
+    };
+    class GVAR(moduleSearchBuilding): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = CSTRING(SearchBuilding);
+        function = QFUNC(moduleSearchBuilding);
     };
     class GVAR(moduleSetDate): GVAR(moduleBase) {
         category = "Environment";

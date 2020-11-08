@@ -14,4 +14,6 @@ class CfgPatches {
     };
 };
 
+PRELOAD_ADDONS;
+
 #include "CfgSettings.hpp"

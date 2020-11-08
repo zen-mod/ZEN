@@ -5,7 +5,7 @@
     ELSTRING(main,DisplayName),
     false,
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(disableGearAnim),
@@ -14,7 +14,7 @@
     ELSTRING(main,DisplayName),
     false,
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(darkMode),
@@ -23,7 +23,7 @@
     ELSTRING(main,DisplayName),
     false,
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(preferredArsenal),
@@ -32,4 +32,22 @@
     ELSTRING(main,DisplayName),
     [[0, 1], [LSTRING(BIVirtualArsenal), LSTRING(AceArsenal)], 1],
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(ascensionMessages),
+    "CHECKBOX",
+    [LSTRING(AscensionMessages), LSTRING(AscensionMessages_Description)],
+    ELSTRING(main,DisplayName),
+    false,
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(cameraBird),
+    "CHECKBOX",
+    [LSTRING(CameraBird), LSTRING(CameraBird_Description)],
+    ELSTRING(main,DisplayName),
+    false,
+    true
+] call CBA_fnc_addSetting;

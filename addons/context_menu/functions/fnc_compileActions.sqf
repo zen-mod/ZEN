@@ -120,4 +120,5 @@ private _fnc_addMissionActions = {
     ]
 ]
 */
+
 missionNamespace setVariable [QGVAR(actions), _contextActions];

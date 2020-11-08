@@ -37,7 +37,7 @@ if (_range == -1) then {
         };
 
         if (_allowStatic) then {
-            _objects append allMissionObjects "Static";
+            _objects append allMissionObjects "Static" + allMissionObjects "Thing";
         };
     };
 } else {
@@ -55,7 +55,7 @@ if (_range == -1) then {
         };
 
         if (_allowStatic) then {
-            _types append ["Static"];
+            _types append ["Static", "Thing"];
         };
     };
 

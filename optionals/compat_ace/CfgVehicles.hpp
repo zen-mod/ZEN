@@ -1,4 +1,9 @@
 class CfgVehicles {
+    class Module_F;
+    class ModuleCurator_F: Module_F {
+        function = QEFUNC(modules,bi_moduleCurator);
+    };
+
     class ModuleEmpty_F;
     class ModuleMine_F: ModuleEmpty_F {
         function = QEFUNC(modules,bi_moduleMine);

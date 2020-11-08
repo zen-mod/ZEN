@@ -51,14 +51,10 @@ private _reloadTime = [_unit, _muzzle, GUNNER_TURRET] call FUNC(getWeaponReloadT
     };
 
     // VLS needs a dummy target to fire at
-    private _target = createGroup [sideLogic, true] createUnit ["Logic", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+    private _target = createGroup [sideLogic, true] createUnit ["Logic", _position, [], _spread, "CAN_COLLIDE"];
 
     if (_isObject) then {
-        private _offset = [[0, 0, 0], _spread] call CBA_fnc_randPos;
-        _target attachTo [_position, _offset];
-    } else {
-        private _position = [_position, _spread] call CBA_fnc_randPos;
-        _target setPosASL AGLtoASL _position;
+        _target attachTo [_position];
     };
 
     // Delete the dummy target after enough time for the missile to reach the target has passed

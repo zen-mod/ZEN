@@ -1,5 +1,7 @@
 class ctrlToolbox;
+class ctrlToolboxPictureKeepAspect;
 class ctrlXSliderH;
+class ctrlButtonPictureKeepAspect;
 class RscControlsGroupNoScrollbars;
 
 class EGVAR(common,RscLabel);
@@ -55,17 +57,27 @@ class GVAR(code): GVAR(base) {
             idc = IDC_ATTRIBUTE_COMBO;
             font = "EtelkaMonospacePro";
             x = POS_W(10);
-            w = POS_W(16);
+            w = POS_W(15);
             sizeEx = POS_H(0.65);
+        };
+        class Mode: ctrlButtonPictureKeepAspect {
+            idc = IDC_ATTRIBUTE_MODE;
+            x = POS_W(25);
+            y = 0;
+            w = POS_W(1);
+            h = POS_H(1) - pixelH;
+            offsetPressedX = 0;
+            offsetPressedY = 0;
+            colorBackground[] = {0, 0, 0, 0.5};
         };
         class Edit: EGVAR(common,RscEdit) {
             idc = IDC_ATTRIBUTE_EDIT;
             style = ST_MULTI;
             font = "EtelkaMonospacePro";
             x = pixelW;
-            y = POS_H(1);
+            y = POS_H(1) + pixelH;
             w = POS_W(26) - pixelW;
-            h = POS_H(4);
+            h = POS_H(4) - pixelH;
             sizeEx = POS_H(0.7);
             autocomplete = "scripting";
         };
@@ -161,6 +173,29 @@ class GVAR(waypoint): GVAR(base) {
             tooltipColorShade[] = {0, 0, 0, 0};
             rows = WAYPOINT_ROWS;
             columns = 3;
+        };
+    };
+};
+
+class GVAR(loiter): GVAR(base) {
+    function = QFUNC(gui_loiter);
+    h = POS_H(2);
+    class controls: controls {
+        class Label: Label {
+            h = POS_H(2);
+        };
+        class Toolbox: ctrlToolboxPictureKeepAspect {
+            idc = IDC_ATTRIBUTE_TOOLBOX;
+            x = POS_W(10.1);
+            y = 0;
+            w = POS_W(15.9);
+            h = POS_H(2);
+            rows = 1;
+            columns = 2;
+            strings[] = {
+                "\a3\3den\data\attributes\loiterdirection\ccw_ca.paa",
+                "\a3\3den\data\attributes\loiterdirection\cw_ca.paa"
+            };
         };
     };
 };

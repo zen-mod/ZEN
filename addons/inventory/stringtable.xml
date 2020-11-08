@@ -4,6 +4,11 @@
         <Key ID="STR_ZEN_Inventory_EditInventory">
             <English>Edit Inventory (%1)</English>
             <German>Inventar bearbeiten (%1)</German>
+            <Polish>Edytuj Wyposażenie (%1)</Polish>
+        </Key>
+        <Key ID="STR_ZEN_Inventory_Reset_Tooltip">
+            <English>Reset to Default Inventory</English>
+            <Polish>Resetuj do domyślnego wyposażenia</Polish>
         </Key>
     </Package>
 </Project>

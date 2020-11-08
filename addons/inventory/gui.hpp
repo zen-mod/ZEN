@@ -113,11 +113,17 @@ class GVAR(display): EGVAR(common,RscDisplay) {
                 };
                 class Load: ctrlProgress {
                     idc = IDC_LOAD;
-                    x = POS_W(15);
+                    x = POS_W(13.7);
                     y = POS_H(13/3 + 13.3);
                     w = POS_W(9.9);
                     h = POS_H(1);
                     colorFrame[] = {1, 1, 1, 1};
+                };
+                class ButtonReset: ButtonSearch {
+                    idc = IDC_BTN_RESET;
+                    text = QPATHTOF(ui\reset_ca.paa);
+                    tooltip = CSTRING(Reset_Tooltip);
+                    x = POS_W(23.8);
                 };
                 class ButtonClear: ButtonSearch {
                     idc = IDC_BTN_CLEAR;

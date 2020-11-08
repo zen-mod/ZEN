@@ -27,16 +27,16 @@ private _config = configFile >> "CfgGroups";
     private _ctrlTree = _display displayCtrl _x;
     private _color = [_forEachIndex] call BIS_fnc_sideColor;
 
-    for "_i" from 0 to (_ctrlTree tvCount []) do {
+    for "_i" from 0 to ((_ctrlTree tvCount []) - 1) do {
         private _config = _config >> (_ctrlTree tvData [_i]);
 
-        for "_j" from 0 to (_ctrlTree tvCount [_i]) do {
+        for "_j" from 0 to ((_ctrlTree tvCount [_i]) - 1) do {
             private _config = _config >> (_ctrlTree tvData [_i, _j]);
 
-            for "_k" from 0 to (_ctrlTree tvCount [_i, _j]) do {
+            for "_k" from 0 to ((_ctrlTree tvCount [_i, _j]) - 1) do {
                 private _config = _config >> (_ctrlTree tvData [_i, _j, _k]);
 
-                for "_l" from 0 to (_ctrlTree tvCount [_i, _j, _k]) do {
+                for "_l" from 0 to ((_ctrlTree tvCount [_i, _j, _k]) - 1) do {
                     private _path = [_i, _j, _k, _l];
                     private _icon = getText (_config >> (_ctrlTree tvData _path) >> "icon");
 
