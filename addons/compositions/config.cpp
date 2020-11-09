@@ -16,6 +16,8 @@ class CfgPatches {
     };
 };
 
+PRELOAD_ADDONS;
+
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicleIcons.hpp"
 #include "CfgVehicles.hpp"

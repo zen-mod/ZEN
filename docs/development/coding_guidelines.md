@@ -163,7 +163,7 @@ The `PREP` macro allows for CBA function caching, which drastically speeds up lo
 
 Every function should have a header with the following format at the start of their function file. This is not necessary for inline functions or functions not contained in their own file.
 
-```cpp
+```sqf
 /*
  * Author: [Name of Author(s)]
  * [Description]
@@ -250,9 +250,9 @@ class Something : Or {
 
 When using `if`/`else`, the `else` must be on the same line as the closing brace:
 
-```clike
-if (alive player) then {
-    player setDamage 1;
+```sqf
+if (alive _unit) then {
+    _unit setDamage 1;
 } else {
     hint ":(";
 };
@@ -276,7 +276,7 @@ Every new scope should be on a new indent. This will make the code easier to und
 
 **Good:**
 
-```clike
+```sqf
 call {
     call {
         if (/* condition */) then {
@@ -288,7 +288,7 @@ call {
 
 **Bad:**
 
-```clike
+```sqf
 call {
         call {
         if (/* condition */) then {
@@ -304,7 +304,7 @@ Inline comments should use `//`. Usage of `/* */` is allowed for larger comment 
 
 Example:
 
-```clike
+```sqf
 //// Comment   // < incorrect
 // Comment     // < correct
 /* Comment */  // < correct
@@ -318,7 +318,7 @@ Comments within the code shall be used when they are describing a complex and cr
 
 **Good:**
 
-```clike
+```sqf
 // find the object with the most blood loss
 _highestObj = objNull;
 _highestLoss = -1;
@@ -332,29 +332,29 @@ _highestLoss = -1;
 
 **Good:**
 
-```clike
+```sqf
 // Check if the unit is an engineer
-(_obj getvariable [QGVAR(engineerSkill), 0] >= 1);
+_object getvariable [QGVAR(engineerSkill), 0] >= 1;
 ```
 
 **Bad:**
 
-```clike
+```sqf
 // Get the engineer skill and check if it is above 1
-(_obj getvariable [QGVAR(engineerSkill), 0] >= 1);
+_object getvariable [QGVAR(engineerSkill), 0] >= 1;
 ```
 
 **Bad:**
 
-```clike
+```sqf
 // Get the variable myValue from the object
-_myValue = _obj getvariable [QGVAR(myValue), 0];
+_myValue = _object getvariable [QGVAR(myValue), 0];
 ```
 
 **Bad:**
 
-```clike
-// Loop through all units to increase the myvalue variable
+```sqf
+// Loop through all units to increase the myValue variable
 {
     _x setvariable [QGVAR(myValue), (_x getvariable [QGVAR(myValue), 0]) + 1];
 } forEach _units;
@@ -366,19 +366,19 @@ When making use of parentheses `( )`, use as few as possible, unless doing so de
 
 Avoid statements such as:
 
-```clike
+```sqf
 if (!(_value)) then {};
 ```
 
 The following is allowed, but unnecessary:
 
-```clike
+```sqf
 _value = (_array select 0) select 1;
 ```
 
 Any conditions in statements shall always be wrapped around brackets.
 
-```clike
+```sqf
 if (!_value) then {};
 if (_value) then {};
 ```
@@ -395,7 +395,25 @@ There shall be no magic numbers. Any magic number shall be put in a define eithe
 
 [Source](http://en.wikipedia.org/wiki/Magic_number_%28programming%29)
 
-### 5.7 Command Names
+### 5.7 Spaces Between Array Elements
+When using array notation `[]`, always use a space between elements to improve code readability.
+
+**Good:**
+
+```sqf
+params ["_unit", "_vehicle"];
+private _pos = [0, 0, 0];
+```
+
+**Bad:**
+
+```sqf
+params ["_unit","_vehicle"];
+private _pos = [0,0,0];
+```
+
+
+### 5.8 Command Names
 
 Command names will be written with the proper capitalization. For example, `addEventHandler` is good whereas `addeventhandler` is not allowed.
 
@@ -427,19 +445,19 @@ Exceptions to this rule are variables obtained from an array, which shall be don
 
 **Good:**
 
-```clike
+```sqf
 private _myVariable = "hello world";
 ```
 
 **Good:**
 
-```clike
+```sqf
 _myArray params ["_elementOne", "_elementTwo"];
 ```
 
 **Bad:**
 
-```clike
+```sqf
 _elementOne = _myArray select 0;
 _elementTwo = _myArray select 1;
 ```
@@ -454,7 +472,7 @@ Declarations should be at the smallest feasible scope.
 
 **Good:**
 
-```clike
+```sqf
 if (call FUNC(myCondition)) then {
    private _areAllAboveTen = true; // <- smallest feasable scope
 
@@ -472,7 +490,7 @@ if (call FUNC(myCondition)) then {
 
 **Bad:**
 
-```clike
+```sqf
 private _areAllAboveTen = true; // <- this is bad, because it can be initialized in the if statement
 if (call FUNC(myCondition)) then {
    {
@@ -493,7 +511,7 @@ Private variables will not be introduced until they can be initialized with mean
 
 **Good:**
 
-```clike
+```sqf
 private _myVariable = 0; // good because the value will be used
 {
     _x params ["_value", "_amount"];
@@ -505,13 +523,13 @@ private _myVariable = 0; // good because the value will be used
 
 **Good:**
 
-```clike
+```sqf
 private _myVariable = [1, 2] select _condition;
 ```
 
 **Bad:**
 
-```clike
+```sqf
 private _myVariable = 0; // Bad because it is initialized with a zero, but this value does not mean anything
 if (_condition) then {
     _myVariable = 1;
@@ -534,20 +552,20 @@ When using `getVariable`, there shall either be a default value given in the sta
 
 **Bad:**
 
-```clike
+```sqf
 _return = _object getVariable "varName";
 if (isNil "_return") then {_return = 0};
 ```
 
 **Good**:
 
-```clike
+```sqf
 _return = _object getVariable ["varName", 0];
 ```
 
 **Good**:
 
-```clike
+```sqf
 _return = _object getVariable "varName";
 if (isNil "_return") exitWith {};
 ```
@@ -558,27 +576,27 @@ Global variables should not be used to pass along information from one function 
 
 **Bad:**
 
-```clike
+```sqf
 fnc_example = {
     hint GVAR(myVariable);
 };
 ```
 
-```clike
+```sqf
 GVAR(myVariable) = "hello my variable";
 call fnc_example;
 ```
 
 **Good:**
 
-```clike
+```sqf
 fnc_example = {
    params ["_content"];
    hint _content;
 };
 ```
 
-```clike
+```sqf
 ["hello my variable"] call fnc_example;
 ```
 
@@ -633,7 +651,7 @@ More information on the [CBA Events System](https://github.com/CBATeam/CBA_A3/wi
 
 BI's event handlers (`addEventHandler`, `addMissionEventHandler`, `displayAddEventHandler`, `ctrlAddEventHandler`) are **slow** when passing a large code variable. Use a short code block that calls the function you want.
 
-```clike
+```sqf
 addMissionEventHandler ["Draw3D", FUNC(onDraw3D)]; // Bad
 addMissionEventHandler ["Draw3D", {call FUNC(onDraw3D)}]; // Good
 ```
@@ -654,19 +672,19 @@ When adding new elements to an array, `pushBack` shall be used instead of the bi
 
 **Good:**
 
-```clike
+```sqf
 _a pushBack _value;
 ```
 
 **Good:**
 
-```clike
+```sqf
 _a append [1,2,3];
 ```
 
 **Bad:**
 
-```clike
+```sqf
 _a set [count _a, _value];
 _a = _a + [_value];
 ```
@@ -686,14 +704,14 @@ Where possible `[0, 0, 0]` position shall be used, except on `#` objects (e.g. `
 
 This code requires **~1.00ms** and will be higher with more objects near wanted position:
 
-```clike
+```sqf
 _vehicle = _type createVehicleLocal _posATL;
 _vehicle setposATL _posATL;
 ```
 
 While this one requires **~0.04ms**:
 
-```clike
+```sqf
 _vehicle = _type createVehicleLocal [0, 0, 0];
 _vehicle setposATL _posATL;
 ```
@@ -712,13 +730,13 @@ When checking if an array is empty `isEqualTo` shall be used.
 
 ### 8.7 `for` Loops
 
-```clike
+```sqf
 for "_y" from # to # step # do { ... }
 ```
 
 shall be used instead of
 
-```clike
+```sqf
 for [{ ... }, { ... }, { ... }] do { ... };
 ```
 
@@ -730,7 +748,7 @@ While is only allowed when used to perform a unknown finite amount of steps with
 
 **Good:**
 
-```clike
+```sqf
 _original = _object getvariable [QGVAR(value), 0];
 
 while {_original < _weaponThreshold} do {
@@ -740,7 +758,7 @@ while {_original < _weaponThreshold} do {
 
 **Bad:**
 
-```clike
+```sqf
 while {true} do {
     // anything
 };
@@ -750,7 +768,7 @@ while {true} do {
 
 The `waitUntil` command shall not be used. Instead, make use of CBA's `CBA_fnc_waitUntilAndExecute`
 
-```clike
+```sqf
 [{
     params ["_unit"];
     _unit getVariable [QGVAR(myVariable), false];

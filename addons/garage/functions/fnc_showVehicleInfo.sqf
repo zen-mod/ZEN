@@ -16,7 +16,7 @@
  */
 
 private _display = findDisplay IDD_DISPLAY;
-private _vehicleConfig = configFile >> "CfgVehicles" >> typeOf GVAR(center);
+private _vehicleConfig = configOf GVAR(center);
 
 private _ctrlInfoName = _display displayCtrl IDC_INFO_NAME;
 private _displayName = getText (_vehicleConfig >> "displayName");

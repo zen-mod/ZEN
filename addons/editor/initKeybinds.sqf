@@ -57,6 +57,18 @@
     };
 }, {}, [DIK_F, [false, true, true]]] call CBA_fnc_addKeybind; // Default: CTRL + ALT + F
 
+[ELSTRING(main,DisplayName), QGVAR(orientTerrainNormal), ["str_3den_display3den_entitymenu_setatl_text", LSTRING(OrientTerrainNormal_Description)], {
+    if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
+        {
+            if (!isPlayer _x) then {
+                [QEGVAR(common,setVectorUp), [_x, surfaceNormal getPos _x], _x] call CBA_fnc_targetEvent;
+            };
+        } forEach SELECTED_OBJECTS;
+
+        true // handled
+    };
+}, {}, [DIK_X, [false, true, false]]] call CBA_fnc_addKeybind; // Default: CTRL + X
+
 [ELSTRING(main,DisplayName), QGVAR(toggleIcons), [LSTRING(ToggleIcons), LSTRING(ToggleIcons_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
         GVAR(iconsVisible) = !GVAR(iconsVisible);

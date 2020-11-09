@@ -18,5 +18,10 @@
 if (_hoveredEntity isEqualType objNull && {_hoveredEntity isKindOf "AllVehicles"} && {!(_hoveredEntity isKindOf "CAManBase")}) then {
     [[player], _hoveredEntity] call EFUNC(common,teleportIntoVehicle);
 } else {
+    if (vehicle player != player) then {
+        moveOut player;
+    };
+
+    player setVelocity [0, 0, 0];
     player setPosASL _position;
 };

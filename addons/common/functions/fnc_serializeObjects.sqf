@@ -101,7 +101,7 @@ private _fnc_serializeUnit = {
     private _stance = unitPos _unit;
 
     private _loadout = getUnitLoadout _unit;
-    private _identity = [name _unit, face _unit, speaker _unit, pitch _unit, nameSound _unit];
+    private _identity = [name _unit, face _unit, speaker _unit, pitch _unit, nameSound _unit, _unit call BIS_fnc_getUnitInsignia];
     private _flagTexture = getForcedFlagTexture _unit;
 
     private _attachedObjects = _unit call _fnc_serializeAttachedObjects;

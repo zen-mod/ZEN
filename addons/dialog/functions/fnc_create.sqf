@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Creates a dialog with given rows of content.
+ * Creates a dialog with the given rows of content.
  *
  * Arguments:
  * 0: Title <STRING>
@@ -9,6 +9,7 @@
  * 2: On Confirm <CODE>
  * 3: On Cancel <CODE> (default: {})
  * 4: Arguments <ANY> (default: [])
+ * 5: Save ID <STRING> (default: "")
  *
  * Return Value:
  * Dialog Created <BOOL>
@@ -30,70 +31,71 @@ params [
     ["_content", [], [[]]],
     ["_onConfirm", {}, [{}]],
     ["_onCancel", {}, [{}]],
-    ["_arguments", []]
+    ["_args", []],
+    ["_saveID", "", [""]]
 ];
 
-// Create saved values namespace
+// Create a unique save ID from the parameters if one is not given
+// Arguments are excluded since their string representations could change between calls
+if (_saveID isEqualTo "") then {
+    _saveID = [QGVAR(id), _title, _content, _onConfirm, _onCancel] joinString "$";
+};
+
+// Create the saved values namespace if needed
 if (isNil QGVAR(saved)) then {
     GVAR(saved) = [] call CBA_fnc_createNamespace;
 };
 
-// Each unique set of params gets an id
-// Arguments are excluded since their string representations could change between calls
-private _saveId = [QGVAR(value), _title, _content, _onConfirm, _onCancel] joinString "$";
-private _values = [];
+private _savedValues = GVAR(saved) getVariable [_saveID, []];
 
-// Verify content array and exit if invalid parameters given
+// Verify dialog content and exit if invalid parameters are given
 // Split into separate step from control creation as invalid parameters would result in an incomplete dialog
 scopeName "Main";
 
+private _fnc_verifyListEntries = {
+    params ["_values", "_labels", "_sort"];
+
+    private _entries = [];
+
+    {
+        private _label = _labels param [_forEachIndex, str _x];
+        _label params [["_text", "", [""]], ["_tooltip", "", [""]], ["_picture", "", [""]], ["_textColor", [1, 1, 1, 1], [[]], 4]];
+
+        if (isLocalized _text) then {
+            _text = localize _text;
+        };
+
+        if (isLocalized _tooltip) then {
+            _tooltip = localize _tooltip;
+        };
+
+        _entries pushBack [_x, _text, _tooltip, _picture, _textColor];
+    } forEach _values;
+
+    if (_sort) then {
+        [_entries, 1, true] call CBA_fnc_sortNestedArray;
+    };
+
+    _entries
+};
+
 {
     _x params [["_typeArg", "", [""]], ["_name", [], ["", []]], ["_valueInfo", []], ["_forceDefault", false, [true]]];
-    _name params [["_displayName", "", [""]], ["_tooltip", "", [""]]];
+    _name params [["_label", "", [""]], ["_tooltip", "", [""]]];
 
-    // Localize row name and tooltip
-    if (isLocalized _displayName) then {
-        _displayName = localize _displayName;
+    if (isLocalized _label) then {
+        _label = localize _label;
     };
 
     if (isLocalized _tooltip) then {
         _tooltip = localize _tooltip;
     };
 
-    // Get control type, row settings, and default value from value info
+    // Get control type, settings, and default value from value info
     (toUpper _typeArg splitString ":") params [["_type", ""], ["_subType", ""]];
 
-    private "_defaultValue";
-    private _controlType = "";
-    private _rowSettings = [];
-
-    private _fnc_verifyListData = {
-        if (_values isEqualTo []) then {
-            {
-                _values pushBack _forEachIndex;
-            } forEach _labels;
-        };
-
-        _labels resize count _values;
-
-        _labels = _labels apply {
-            if (isNil "_x") then {
-                _x = str (_values select _forEachIndex);
-            };
-
-            _x params [["_label", "", [""]], ["_tooltip", "", [""]], ["_picture", "", [""]], ["_textColor", [1, 1, 1, 1], [[]], 4]];
-
-            if (isLocalized _label) then {
-                _label = localize _label;
-            };
-
-            if (isLocalized _tooltip) then {
-                _tooltip = localize _tooltip;
-            };
-
-            [_label, _tooltip, _picture, _textColor]
-        };
-    };
+    private ["_defaultValue", "_controlType"];
+    private _settings = [];
 
     switch (_type) do {
         case "CHECKBOX": {
@@ -105,12 +107,19 @@ scopeName "Main";
             _controlType = [QGVAR(Row_ColorRGB), QGVAR(Row_ColorRGBA)] select (count _defaultValue > 3);
         };
         case "COMBO": {
-            _valueInfo params [["_values", [], [[]]], ["_labels", [], [[]]], ["_defaultIndex", 0, [0]]];
+            _valueInfo params [["_values", [], [[]]], ["_labels", [], [[]]], ["_defaultIndex", 0, [0]], ["_sort", false, [false]]];
 
-            [] call _fnc_verifyListData;
-            _rowSettings append [_values, _labels];
+            if (_values isEqualTo []) then {
+                {
+                    _values pushBack _forEachIndex;
+                } forEach _labels;
+            };
+
             _defaultValue = _values param [_defaultIndex];
             _controlType = QGVAR(Row_Combo);
+
+            private _entries = [_values, _labels, _sort] call _fnc_verifyListEntries;
+            _settings append [_entries];
         };
         case "EDIT": {
             _valueInfo params [["_default", ""], ["_fnc_sanitizeValue", {_this}, [{}]], ["_height", 5, [0]]];
@@ -119,8 +128,6 @@ scopeName "Main";
                 _default = str _default;
             };
 
-            private _isMulti = _subType in ["MULTI", "CODE"];
-            _rowSettings append [_fnc_sanitizeValue, _isMulti, _height];
             _defaultValue = _default;
 
             _controlType = switch (_subType) do {
@@ -134,14 +141,24 @@ scopeName "Main";
                     QGVAR(Row_Edit);
                 };
             };
+
+            private _isMulti = _subType in ["MULTI", "CODE"];
+            _settings append [_fnc_sanitizeValue, _isMulti, _height];
         };
         case "LIST": {
-            _valueInfo params [["_values", [], [[]]], ["_labels", [], [[]]], ["_defaultIndex", 0, [0]], ["_height", 6, [0]]];
+            _valueInfo params [["_values", [], [[]]], ["_labels", [], [[]]], ["_defaultIndex", 0, [0]], ["_height", 6, [0]], ["_sort", false, [false]]];
 
-            [] call _fnc_verifyListData;
-            _rowSettings append [_values, _labels, _height];
+            if (_values isEqualTo []) then {
+                {
+                    _values pushBack _forEachIndex;
+                } forEach _labels;
+            };
+
             _defaultValue = _values param [_defaultIndex];
             _controlType = QGVAR(Row_List);
+
+            private _entries = [_values, _labels, _sort] call _fnc_verifyListEntries;
+            _settings append [_entries, _height];
         };
         case "OWNERS": {
             _valueInfo params [["_sides", [], [[]], [0, 1, 2, 3, 4]], ["_groups", [], [[]]], ["_players", [], [[]]], ["_tab", 2, [0]]];
@@ -152,17 +169,23 @@ scopeName "Main";
             _tab = 0 max _tab min 2;
 
             _defaultValue = [_sides, _groups, _players, _tab];
-            _controlType = [QGVAR(Row_Owners), QGVAR(Row_OwnersNoTitle)] select (_subType == "NOTITLE");
+            _controlType = QGVAR(Row_Owners);
+
+            private _hideLabel = _subType == "NOTITLE";
+            _settings append [_hideLabel];
         };
         case "SIDES": {
-            _defaultValue = _valueInfo param [0, nil, [west]];
+            _defaultValue = [_valueInfo] param [0, west, [west, []]];
             _controlType = QGVAR(Row_Sides);
         };
         case "SLIDER": {
             _valueInfo params [["_min", 0, [0]], ["_max", 1, [0]], ["_default", 0, [0]], ["_formatting", 2, [0, {}]]];
-            _rowSettings append [_min, _max, _formatting, _subType == "PERCENT"];
+
             _defaultValue = _default;
             _controlType = QGVAR(Row_Slider);
+
+            private _isPercentage = _subType == "PERCENT";
+            _settings append [_min, _max, _formatting, _isPercentage];
         };
         case "TOOLBOX": {
             // Backwards compatibility for old value info format
@@ -188,19 +211,16 @@ scopeName "Main";
             // Return bool if there are only two options and default is a bool
             private _returnBool = count _strings == 2 && {_default isEqualType false};
 
-            // Ensure default is number if not returning bool
-            if (!_returnBool && {_default isEqualType false}) then {
-                _default = parseNumber _default;
-            };
-
             // Adjust height based on number of rows when undefined
             if (_height == -1) then {
                 _height = _rows;
             };
 
-            _rowSettings append [_returnBool, _rows, _columns, _strings, _height, _subType == "WIDE"];
             _defaultValue = _default;
             _controlType = QGVAR(Row_Toolbox);
+
+            private _isWide = _subType == "WIDE";
+            _settings append [_returnBool, _rows, _columns, _strings, _height, _isWide];
         };
         case "VECTOR": {
             _defaultValue = [_valueInfo] param [0, [0, 0], [], [2, 3]];
@@ -211,31 +231,24 @@ scopeName "Main";
     // Exit if default value could not be found
     // Could be wrong control type or invalid value info
     if (isNil "_defaultValue") then {
-        WARNING_1("Wrong control type [%1] - could not find default value",_type);
+        WARNING_1("Wrong control type or invalid value info [%1] - could not find default value.",_typeArg);
         false breakOut "Main";
     };
 
     // Get saved value if default is not forced
     if (!_forceDefault) then {
-        private _valueId = [_saveId, _forEachIndex] joinString "$";
-        _defaultValue = GVAR(saved) getVariable [_valueId, _defaultValue];
+        _defaultValue = _savedValues param [_forEachIndex, _defaultValue];
     };
 
-    _values set [_forEachIndex, _defaultValue];
-    _content set [_forEachIndex, [_controlType, _displayName, _tooltip, _defaultValue, _rowSettings]];
+    _content set [_forEachIndex, [_controlType, _label, _tooltip, _defaultValue, _settings]];
 } forEach _content;
 
-// Create the dialog and store current values array and params
-if (!createDialog QGVAR(display)) exitWith {
-    ERROR("Unable to create dialog");
-    false
-};
+// Exit if dialog creation fails
+if (!createDialog QEGVAR(common,RscDisplayScrollbars)) exitWith {false};
 
-private _display = uiNamespace getVariable QGVAR(display);
-_display setVariable [QGVAR(values), _values];
-_display setVariable [QGVAR(params), [_onConfirm, _onCancel, _arguments, _saveId]];
+private _display = uiNamespace getVariable QEGVAR(common,display);
 
-// Set the dialog title
+// Set the dialog's title
 private _ctrlTitle = _display displayCtrl IDC_TITLE;
 
 if (isLocalized _title) then {
@@ -247,67 +260,68 @@ _ctrlTitle ctrlSetText toUpper _title;
 // Create and initialize the content controls
 private _ctrlContent = _display displayCtrl IDC_CONTENT;
 private _contentPosY = 0;
+private _controls = [];
 
 {
-    _x params ["_controlType", "_displayName", "_tooltip", "_defaultValue", "_rowSettings"];
+    _x params ["_controlType", "_label", "_tooltip", "_defaultValue", "_settings"];
 
-    private _ctrlRowGroup = _display ctrlCreate [_controlType, IDC_ROW_GROUP, _ctrlContent];
+    private _controlsGroup = _display ctrlCreate [_controlType, IDC_ROW_GROUP, _ctrlContent];
 
-    // Set the row name and tooltip
-    private _ctrlRowName = _ctrlRowGroup controlsGroupCtrl IDC_ROW_NAME;
-    _ctrlRowName ctrlSetText _displayName;
-    _ctrlRowName ctrlSetTooltip _tooltip;
+    // Set the control's label and tooltip
+    private _ctrlLabel = _controlsGroup controlsGroupCtrl IDC_ROW_LABEL;
+    _ctrlLabel ctrlSetText _label;
+    _ctrlLabel ctrlSetTooltip _tooltip;
 
-    // Execute control specific init script
-    private _script = getText (configFile >> ctrlClassName _ctrlRowGroup >> QGVAR(script));
-    [_ctrlRowGroup, _forEachIndex, _defaultValue, _rowSettings] call (missionNamespace getVariable _script);
+    // Execute control specific initialization function
+    private _function = getText (configFile >> _controlType >> "function");
+    [_controlsGroup, _defaultValue, _settings] call (missionNamespace getVariable _function);
 
-    // Adjust the y position of the row
-    private _position = ctrlPosition _ctrlRowGroup;
-    _position set [1, _contentPosY];
+    // Adjust the position of the control in the content group
+    _controlsGroup ctrlSetPositionY _contentPosY;
+    _controlsGroup ctrlCommit 0;
 
-    _ctrlRowGroup ctrlSetPosition _position;
-    _ctrlRowGroup ctrlCommit 0;
+    _contentPosY = _contentPosY + (ctrlPosition _controlsGroup select 3) + VERTICAL_SPACING;
 
-    _contentPosY = _contentPosY + (_position select 3) + VERTICAL_SPACING;
+    _controls pushBack [_controlsGroup, _settings];
 } forEach _content;
 
-// Update content position
-private _contentHeight = MIN_HEIGHT max (_contentPosY - VERTICAL_SPACING) min MAX_HEIGHT;
-_ctrlContent ctrlSetPosition [POS_X(7), POS_CONTENT_Y(_contentHeight), POS_W(26), _contentHeight];
+// Set the content control's height, subtract extra spacing added by the loop
+_ctrlContent ctrlSetPositionH (_contentPosY - VERTICAL_SPACING);
 _ctrlContent ctrlCommit 0;
 
-// Update title and background position
-private _ctrlBackground = _display displayCtrl IDC_BACKGROUND;
-_ctrlBackground ctrlSetPosition [POS_X(6.5), POS_BACKGROUND_Y(_contentHeight), POS_W(27), POS_BACKGROUND_H(_contentHeight)];
-_ctrlBackground ctrlCommit 0;
+// Adjust display element positions based on the content height
+[_display, true] call EFUNC(common,initDisplayPositioning);
 
-_ctrlTitle ctrlSetPosition [POS_X(6.5), POS_TITLE_Y(_contentHeight)];
-_ctrlTitle ctrlCommit 0;
+// Store the display's content controls, confirm/cancel functions, arguments, and save ID
+_display setVariable [QGVAR(params), [_controls, _onConfirm, _onCancel, _args, _saveID]];
 
-// Update button positions and add EHs
-private _ctrlButtonOK = _display displayCtrl IDC_BTN_OK;
-_ctrlButtonOK ctrlAddEventHandler ["ButtonClick", FUNC(gui_confirm)];
-_ctrlButtonOK ctrlSetPosition [POS_X(28.5), POS_BUTTON_Y(_contentHeight)];
-_ctrlButtonOK ctrlCommit 0;
+// Close dialog as confirmed when the ok button is clicked
+private _ctrlButtonOK = _display displayCtrl IDC_OK;
+_ctrlButtonOK ctrlAddEventHandler ["ButtonClick", {
+    params ["_ctrlButtonOK"];
 
-private _ctrlButtonCancel = _display displayCtrl IDC_BTN_CANCEL;
-_ctrlButtonCancel ctrlAddEventHandler ["ButtonClick", FUNC(gui_cancel)];
-_ctrlButtonCancel ctrlSetPosition [POS_X(6.5), POS_BUTTON_Y(_contentHeight)];
-_ctrlButtonCancel ctrlCommit 0;
+    private _display = ctrlParent _ctrlButtonOK;
+    [_display, true] call FUNC(close);
+}];
 
-// Add EH to trigger cancel when escape key pressed
+// Close dialog as cancelled when the cancel button is clicked
+private _ctrlButtonCancel = _display displayCtrl IDC_CANCEL;
+_ctrlButtonCancel ctrlAddEventHandler ["ButtonClick", {
+    params ["_ctrlButtonCancel"];
+
+    private _display = ctrlParent _ctrlButtonCancel;
+    [_display, false] call FUNC(close);
+}];
+
+// Close dialog as cancelled when the ESCAPE key is pressed
 _display displayAddEventHandler ["KeyDown", {
-    params ["_display", "_key"];
+    params ["_display", "_keyCode"];
 
-    if (_key == DIK_ESCAPE) then {
-        private _values = _display getVariable QGVAR(values);
-        (_display getVariable QGVAR(params)) params ["", "_onCancel", "_arguments"];
-
-        [_values, _arguments] call _onCancel;
+    if (_keyCode == DIK_ESCAPE) then {
+        [_display, false] call FUNC(close);
     };
 
     false
 }];
 
-true
+true // Dialog successfully created

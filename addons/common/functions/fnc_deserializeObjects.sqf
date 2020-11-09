@@ -111,10 +111,12 @@ private _fnc_deserializeUnit = {
     if (!_enableRandomization) then {
         [{
             params ["_unit", "_identity"];
-            _identity params ["_name", "_face", "_speaker", "_pitch", "_nameSound"];
+            _identity params ["_name", "_face", "_speaker", "_pitch", "_nameSound", "_insignia"];
 
             private _jipID = [QGVAR(setUnitIdentity), [_unit, _name, _face, _speaker, _pitch, _nameSound]] call CBA_fnc_globalEventJIP;
             [_jipID, _unit] call CBA_fnc_removeGlobalEventJIP;
+
+            [_unit, _insignia] call BIS_fnc_setUnitInsignia;
         }, [_unit, _identity]] call CBA_fnc_execNextFrame;
     };
 
@@ -177,7 +179,7 @@ private _fnc_deserializeVehicle = {
 
         switch (_role) do {
             case "driver": {
-                if (getText (configFile >> "CfgVehicles" >> typeOf _unit >> "simulation") == "UAVPilot") then {
+                if (getText (configOf _unit >> "simulation") == "UAVPilot") then {
                     _unit moveInAny _vehicle; // moveInDriver does not work for virtual UAV crew, moveInAny does
                 } else {
                     _unit moveInDriver _vehicle;
