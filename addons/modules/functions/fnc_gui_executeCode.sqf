@@ -27,7 +27,7 @@ if (!IS_ADMIN && {missionNamespace getVariable ["ZEN_disableCodeExecution", fals
     deleteVehicle _logic;
 };
 
-_display setVariable [QGVAR(params), [_logic, [attachedTo _logic, getPosASL _logic]]];
+_display setVariable [QGVAR(params), [_logic, [getPosASL _logic, attachedTo _logic]]];
 
 private _ctrlHistory = _display displayCtrl IDC_EXECUTECODE_HISTORY;
 _ctrlHistory ctrlAddEventHandler ["LBSelChanged", {

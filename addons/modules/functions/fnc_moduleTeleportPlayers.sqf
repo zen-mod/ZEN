@@ -18,7 +18,7 @@
 params ["_logic"];
 
 [LSTRING(ModuleTeleportPlayers), [
-    ["OWNERS:NOTITLE", "", []],
+    ["OWNERS:NOTITLE", "", [], true],
     ["TOOLBOX:YESNO", [LSTRING(ModuleTeleportPlayers_IncludeVehicles), LSTRING(ModuleTeleportPlayers_IncludeVehicles_Tooltip)], false]
 ], {
     params ["_values", "_args"];

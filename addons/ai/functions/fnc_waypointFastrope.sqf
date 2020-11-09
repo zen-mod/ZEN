@@ -36,7 +36,7 @@ private _vehicle = vehicle leader _group;
 // Exit if the helicopter has no passengers that can be deployed by fastrope
 if (crew _vehicle findIf {assignedVehicleRole _x select 0 == "cargo"} == -1) exitWith {true};
 
-private _enabled = getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "ace_fastroping_enabled");
+private _enabled = getNumber (configOf _vehicle >> "ace_fastroping_enabled");
 
 // Exit if fastroping is not enabled for the helicopter
 if (_enabled == 0) exitWith {true};

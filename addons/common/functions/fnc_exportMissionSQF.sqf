@@ -283,7 +283,7 @@ private _fnc_processVehicle = {
                 switch (toLower _role) do {
                     case "driver": {
                         // moveInDriver does not work for virtual UAV crew, moveInAny does
-                        if (getText (configFile >> "CfgVehicles" >> typeOf _unit >> "simulation") == "UAVPilot") then {
+                        if (getText (configOf _unit >> "simulation") == "UAVPilot") then {
                             _outputCrew pushBack ["%1 moveInAny %2;", _unitVarName, _varName];
                         } else {
                             _outputCrew pushBack ["%1 moveInDriver %2;", _unitVarName, _varName];
