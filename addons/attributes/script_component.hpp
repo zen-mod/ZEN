@@ -17,6 +17,7 @@
 #include "\x\zen\addons\main\script_macros.hpp"
 
 #include "\a3\ui_f\hpp\defineCommonGrids.inc"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 #include "\x\zen\addons\common\defineResinclDesign.inc"
 
 #define POS_X(N) ((N) * GUI_GRID_W + GUI_GRID_CENTER_X)
@@ -31,9 +32,14 @@
 #define IDC_ATTRIBUTE_EDIT       404
 #define IDC_ATTRIBUTE_SLIDER     405
 #define IDC_ATTRIBUTE_TOOLBOX    406
+#define IDC_ATTRIBUTE_MODE       407
 
 #define VERTICAL_SPACING POS_H(0.1)
 
 #define MAX_PLATE_CHARACTERS 15
+
+#define MODE_LOCAL  0
+#define MODE_TARGET 1
+#define MODE_GLOBAL 2
 
 #define AI_ABILITIES ["AIMINGERROR", "ANIM", "AUTOCOMBAT", "AUTOTARGET", "CHECKVISIBLE", "COVER", "FSM", "LIGHTS", "MINEDETECTION", "MOVE", "NVG", "PATH", "RADIOPROTOCOL", "SUPPRESSION", "TARGET", "TEAMSWITCH", "WEAPONAIM"]

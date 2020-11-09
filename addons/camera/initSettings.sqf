@@ -5,7 +5,7 @@
     [ELSTRING(main,DisplayName), LSTRING(DisplayName)],
     true,
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(adaptiveSpeed),
@@ -14,7 +14,7 @@
     [ELSTRING(main,DisplayName), LSTRING(DisplayName)],
     true,
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(defaultSpeedCoef),
@@ -23,7 +23,7 @@
     [ELSTRING(main,DisplayName), LSTRING(DisplayName)],
     [0.1, 5, 1, 2],
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(fastSpeedCoef),
@@ -32,4 +32,4 @@
     [ELSTRING(main,DisplayName), LSTRING(DisplayName)],
     [0.1, 5, 1, 2],
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;

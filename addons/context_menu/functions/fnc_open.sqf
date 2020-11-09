@@ -4,26 +4,35 @@
  * Opens base level context menu.
  *
  * Arguments:
- * None
+ * 0: Actions <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call zen_context_menu_fnc_openMenu
+ * [] call zen_context_menu_fnc_open
  *
  * Public: No
  */
 
+// Open context menu with full actions tree if none are given
+params [["_actions", GVAR(actions)]];
+
 // Close previously opened context menu
-[] call FUNC(closeMenu);
+[] call FUNC(close);
 
 // Update variables for this context
 GVAR(mousePos) = getMousePosition;
 GVAR(selected) = curatorSelected;
 
-// Handle hovered entity
-curatorMouseOver params ["_type", "_entity"];
+// Handle currently hovered entity
+curatorMouseOver params ["_type", "_entity", "_index"];
+
+// curatorMouseOver returns group and index separately when hovering over a waypoint
+if (_type == "ARRAY") then {
+    _entity = [_entity, _index];
+};
+
 private _category = ["OBJECT", "GROUP", "ARRAY", "STRING"] find _type;
 
 if (_category != -1) then {
@@ -46,6 +55,6 @@ if (_category != -1) then {
     GVAR(hovered) = objNull;
 };
 
-// Create base level context menu
-private _actions = [GVAR(actions)] call FUNC(getActiveActions);
-[_actions] call FUNC(createContextGroup);
+// Create the context menu
+private _activeActions = [_actions] call FUNC(getActiveActions);
+[_activeActions] call FUNC(createContextGroup);

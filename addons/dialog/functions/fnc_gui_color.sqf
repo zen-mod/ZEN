@@ -5,99 +5,57 @@
  *
  * Arguments:
  * 0: Controls Group <CONTROL>
- * 1: Row Index <NUMBER>
- * 2: Current Value <ARRAY>
+ * 1: Default Value <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL, 0, [1, 0, 0, 1]] call zen_dialog_fnc_gui_color
+ * [CONTROL, [1, 0, 0, 1]] call zen_dialog_fnc_gui_color
  *
  * Public: No
  */
 
-params ["_controlsGroup", "_rowIndex", "_currentValue"];
+params ["_controlsGroup", "_defaultValue"];
 
-_currentValue params [
+_defaultValue params [
     ["_r", 1, [0]],
     ["_g", 1, [0]],
     ["_b", 1, [0]],
     ["_a", 1, [0]]
 ];
 
+// Need full RGBA color array to set the preview's color
 private _color = [_r, _g, _b, _a];
 
-for "_index" from 0 to (count _currentValue - 1) do {
-    private _ctrlColor = _controlsGroup controlsGroupCtrl (IDCS_ROW_COLOR select _index);
+private _ctrlPreview = _controlsGroup controlsGroupCtrl IDC_ROW_COLOR_PREVIEW;
+_ctrlPreview ctrlSetBackgroundColor _color;
 
-    _ctrlColor sliderSetRange [0, 1];
-    _ctrlColor sliderSetPosition (_currentValue param [_index, 1]);
-    _ctrlColor sliderSetSpeed [0.05, 0.1];
+// Update preview when any color component's value is changed
+private _fnc_updatePreview = {
+    params ["", "", "_value", "_args"];
+    _args params ["_ctrlPreview", "_color", "_index"];
 
-    _ctrlColor setVariable [QGVAR(params), [_rowIndex, _currentValue, _color, _index]];
-
-    _ctrlColor ctrlAddEventHandler ["SliderPosChanged", {
-        params ["_ctrlColor", "_value"];
-        (_ctrlColor getVariable QGVAR(params)) params ["_rowIndex", "_currentValue", "_color", "_index"];
-
-        private _controlsGroup = ctrlParentControlsGroup _ctrlColor;
-        private _ctrlColorEdit = _controlsGroup controlsGroupCtrl (IDCS_ROW_COLOR_EDIT select _index);
-        _ctrlColorEdit ctrlSetText ([_value, 1, 2] call CBA_fnc_formatNumber);
-
-        _currentValue set [_index, _value];
-        _color set [_index, _value];
-
-        private _ctrlColorPreview = _controlsGroup controlsGroupCtrl IDC_ROW_COLOR_PREVIEW;
-        _ctrlColorPreview ctrlSetBackgroundColor _color;
-
-        private _display = ctrlParent _ctrlColor;
-        private _values = _display getVariable QGVAR(values);
-        _values set [_rowIndex, _currentValue];
-    }];
-
-    private _ctrlColorEdit = _controlsGroup controlsGroupCtrl (IDCS_ROW_COLOR_EDIT select _index);
-    _ctrlColorEdit ctrlSetText ([_currentValue param [_index, 1], 1, 2] call CBA_fnc_formatNumber);
-    _ctrlColorEdit setVariable [QGVAR(params), [_rowIndex, _currentValue, _color, _index]];
-
-    _ctrlColorEdit ctrlAddEventHandler ["KeyUp", {
-        params ["_ctrlColorEdit"];
-        (_ctrlColorEdit getVariable QGVAR(params)) params ["_rowIndex", "_currentValue", "_color", "_index"];
-
-        private _value = parseNumber ctrlText _ctrlColorEdit;
-
-        private _controlsGroup = ctrlParentControlsGroup _ctrlColorEdit;
-        private _ctrlColor = _controlsGroup controlsGroupCtrl (IDCS_ROW_COLOR select _index);
-
-        _ctrlColor sliderSetPosition _value;
-        _value = sliderPosition _ctrlColor;
-
-        _currentValue set [_index, _value];
-        _color set [_index, _value];
-
-        private _ctrlColorPreview = _controlsGroup controlsGroupCtrl IDC_ROW_COLOR_PREVIEW;
-        _ctrlColorPreview ctrlSetBackgroundColor _color;
-
-        private _display = ctrlParent _ctrlColorEdit;
-        private _values = _display getVariable QGVAR(values);
-        _values set [_rowIndex, _currentValue];
-    }];
-
-    _ctrlColorEdit ctrlAddEventHandler ["KillFocus", {
-        params ["_ctrlColorEdit"];
-        (_ctrlColorEdit getVariable QGVAR(params)) params ["", "_currentValue", "_color", "_index"];
-
-        private _controlsGroup = ctrlParentControlsGroup _ctrlColorEdit;
-        private _ctrlColor = _controlsGroup controlsGroupCtrl (IDCS_ROW_COLOR select _index);
-
-        private _value = sliderPosition _ctrlColor;
-
-        _currentValue set [_index, _value];
-        _color set [_index, _value];
-
-        _ctrlColorEdit ctrlSetText ([_value, 1, 2] call CBA_fnc_formatNumber);
-    }];
+    _color set [_index, _value];
+    _ctrlPreview ctrlSetBackgroundColor _color;
 };
 
-private _ctrlColorPreview = _controlsGroup controlsGroupCtrl IDC_ROW_COLOR_PREVIEW;
-_ctrlColorPreview ctrlSetBackgroundColor _color;
+private _controls = [];
+
+{
+    private _ctrlSlider = _controlsGroup controlsGroupCtrl (IDCS_ROW_COLOR select _forEachIndex);
+    private _ctrlEdit = _controlsGroup controlsGroupCtrl (IDCS_ROW_COLOR_EDIT select _forEachIndex);
+
+    [_ctrlSlider, _ctrlEdit, 0, 1, _x, -1, 2, false, _fnc_updatePreview, [_ctrlPreview, _color, _forEachIndex]] call EFUNC(common,initSliderEdit);
+
+    _controls pushBack _ctrlSlider;
+} forEach _defaultValue;
+
+_controlsGroup setVariable [QGVAR(controls), _controls];
+
+_controlsGroup setVariable [QFUNC(value), {
+    params ["_controlsGroup"];
+
+    private _controls = _controlsGroup getVariable QGVAR(controls);
+    _controls apply {sliderPosition _x}
+}];

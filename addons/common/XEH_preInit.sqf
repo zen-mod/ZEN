@@ -11,6 +11,21 @@ GVAR(aceMedicalTreatment) = isClass (configFile >> "CfgPatches" >> "ace_medical_
 
 GVAR(selectPositionActive) = false;
 
+// Handling for running code after settings are initialized
+GVAR(settingsInitialized) = false;
+GVAR(runAfterSettingsInit) = [];
+
+["CBA_settingsInitialized", {
+    GVAR(settingsInitialized) = true;
+
+    {
+        _x params ["_function", "_args"];
+        _args call _function;
+    } forEach GVAR(runAfterSettingsInit);
+
+    GVAR(runAfterSettingsInit) = nil;
+}] call CBA_fnc_addEventHandler;
+
 #include "initSettings.sqf"
 
 ADDON = true;

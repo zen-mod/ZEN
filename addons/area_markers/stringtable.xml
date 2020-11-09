@@ -11,7 +11,7 @@
             <Polish>Stwórz Marker Obszarowy</Polish>
             <Portuguese>Criar marcador de área</Portuguese>
             <Japanese>範囲マーカーを作成</Japanese>
-            <Korean>구역 표시기 생성</Korean>
+            <Korean>영역 표시기 생성</Korean>
         </Key>
         <Key ID="STR_ZEN_Area_Markers_EditAreaMarker">
             <English>EDIT AREA MARKER</English>
@@ -23,7 +23,7 @@
             <Polish>EDYTUJ MARKER OBSZAROWY</Polish>
             <Portuguese>Editar marcador de área</Portuguese>
             <Japanese>範囲マーカーを編集</Japanese>
-            <Korean>구역 표시기 편집</Korean>
+            <Korean>영역 표시기 편집</Korean>
         </Key>
         <Key ID="STR_ZEN_Area_Markers_PlaceOnMap">
             <English>Place On Map</English>
@@ -35,7 +35,7 @@
             <Polish>Zaznacz Na Mapie</Polish>
             <Portuguese>Coloque no mapa</Portuguese>
             <Japanese>マップ上に設置</Japanese>
-            <Korean>맵에 놓기</Korean>
+            <Korean>지도에 배치</Korean>
         </Key>
     </Package>
 </Project>

@@ -1,5 +1,6 @@
 class RscText;
 class RscEdit;
+class RscLine;
 class RscFrame;
 class RscPicture;
 class RscButtonSearch;
@@ -54,7 +55,7 @@ class RscDisplayCurator {
                     h = safeZoneH - POS_EDGE(6,5) * GUI_GRID_H;
                 };
                 class CreateFrame: RscFrame {
-                    h = safeZoneH - POS_EDGE(7,6) * GUI_GRID_H;
+                    h = safeZoneH - POS_EDGE(6,5) * GUI_GRID_H;
                 };
                 class CreateSearch: RscEdit {
                     x = 0.15 * GUI_GRID_W;
@@ -88,27 +89,28 @@ class RscDisplayCurator {
                 };
                 class VehicleCrew: RscControlsGroupNoScrollbars {
                     x = 0;
-                    y = safeZoneH - POS_EDGE(3,2) * GUI_GRID_H - pixelH;
+                    y = safeZoneH - POS_EDGE(3,2) * GUI_GRID_H;
                     w = 11 * GUI_GRID_W;
-                    h = GUI_GRID_H + 2 * pixelH;
+                    h = GUI_GRID_H;
                     class controls {
                         class Background: RscText {
                             x = 0;
                             y = 0;
                             w = 11 * GUI_GRID_W;
-                            h = GUI_GRID_H + 2 * pixelH;
+                            h = GUI_GRID_H;
                             colorBackground[] = {0, 0, 0, 0.2};
                         };
-                        class Frame: CreateFrame {
+                        class Line: RscLine {
                             x = 0;
-                            y = 0;
+                            y = pixelH;
                             w = 11 * GUI_GRID_W;
-                            h = GUI_GRID_H + 2 * pixelH;
+                            h = 0;
+                            colorText[] = {0, 0, 0, 1};
                         };
                         class Label: RscText {
                             text = "$STR_3DEN_Display3DEN_VehiclePanel_TextEmpty_text";
                             x = GUI_GRID_W;
-                            y = POS_EDGE(0,1) * pixelH;
+                            y = 0;
                             w = 10 * GUI_GRID_W;
                             h = GUI_GRID_H;
                             sizeEx = 0.9 * GUI_GRID_H;
@@ -119,7 +121,7 @@ class RscDisplayCurator {
                             onLoad = QUOTE((_this select 0) cbSetChecked GVAR(includeCrew));
                             onCheckedChanged = QUOTE(GVAR(includeCrew) = !GVAR(includeCrew));
                             x = 0.1 * GUI_GRID_W;
-                            y = POS_EDGE(0,1) * pixelH;
+                            y = 0;
                             w = GUI_GRID_W;
                             h = GUI_GRID_H;
                         };

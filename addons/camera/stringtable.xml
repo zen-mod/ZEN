@@ -30,7 +30,8 @@
             <German>Steuert, ob sich die Höhe der Kamera bei Änderungen der Geländehöhe anpassen soll.</German>
             <Czech>Určuje, zda by se měla výška kamery upravovat podle změn výšky terénu.</Czech>
             <Japanese>標高に合わせてカメラの高さを変化させます。</Japanese>
-            <Korean>카메라의 높이가 지형의 고도 변화에 따라 변화되는지를 제어합니다.</Korean>
+            <Korean>지형의 고도 변화에 따른 카메라 높이 조정 여부를 제어합니다.</Korean>
+            <Polish>Kontroluje czy kamera podąża względem wysokości terenu.</Polish>
         </Key>
         <Key ID="STR_ZEN_Camera_AdaptiveSpeed">
             <English>Adaptive Speed</English>
@@ -41,7 +42,7 @@
             <Polish>Prędkość adaptacyjna</Polish>
             <Italian>Velocità adattiva</Italian>
             <Japanese>順応型速度</Japanese>
-            <Korean>추가적인 속도</Korean>
+            <Korean>속도 자동 조절</Korean>
         </Key>
         <Key ID="STR_ZEN_Camera_AdaptiveSpeed_Description">
             <English>Adapts the camera's speed based on its current height. Lower height - slower camera movement.</English>
@@ -51,6 +52,7 @@
             <Czech>Upravuje rychlost kamery na základě jeho aktuální výšky. Nižší výška - pomalejší pohyb kamery.</Czech>
             <Japanese>現在のカメラの高さに応じてカメラ速度が順応します。低高度では速度が遅くなります。</Japanese>
             <Korean>현재 높이에 따라 카메라의 속도를 조정합니다. 낮은 고도에서는 카메라가 느리게 움직입니다.</Korean>
+            <Polish>Steruje prędkością kamery względem obecnej wysokości, czym wyżej tym szybciej, czym niżej tym wolniej.</Polish>
         </Key>
         <Key ID="STR_ZEN_Camera_DefaultSpeedCoef">
             <English>Default Speed Coefficient</English>
@@ -70,7 +72,8 @@
             <German>Koeffizient für die Standard-Bewegungsgeschwindigkeit der Kamera, höher ist schneller.</German>
             <Czech>Koeficient pro výchozí rychlost pohybu kamery, vyšší je rychlejší.</Czech>
             <Japanese>カメラの標準移動速度を決定する係数で、高いほど早くなります。</Japanese>
-            <Korean>기본 카메라 움직임 속도의 계수입니다, 높을수록 빠릅니다.</Korean>
+            <Korean>기본 카메라 움직임 속도의 계수입니다. 계수가 높을수록 속도가 빠릅니다.</Korean>
+            <Polish>Współczynnik domyślnej prędkości kamery, wyższa wartość równa się szybciej.</Polish>
         </Key>
         <Key ID="STR_ZEN_Camera_FastSpeedCoef">
             <English>Fast Speed Coefficient</English>
@@ -89,7 +92,8 @@
             <German>Koeffizient für die schnellere Kamerabewegungsgeschwindigkeit (bei gedrückter Shift-Taste), höher ist schneller.</German>
             <Czech>Koeficient pro vysokou rychlost pohybu kamery (při přidržení klávesy Shift), vyšší je rychlejší.</Czech>
             <Japanese>カメラの移動速度を決定する係数 (Shift 長押し時) で、高いほど早くなります。</Japanese>
-            <Korean>빠른 카메라의 이동을 위한 계수 (Shift 키를 누르고 있을때), 높을수록 빠릅니다</Korean>
+            <Korean>빠른 카메라의 이동을 위한 계수 (Shift 키를 누르고 있을때), 계수가 높을수록 속도가 빠릅니다.</Korean>
+            <Polish>Wspólczynnik szybkiego ruchu kamery (naciskając shift), wyższa wartość równa się szybciej</Polish>
         </Key>
     </Package>
 </Project>

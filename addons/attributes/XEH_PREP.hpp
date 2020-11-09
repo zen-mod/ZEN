@@ -9,6 +9,7 @@ PREP(gui_code);
 PREP(gui_combo);
 PREP(gui_edit);
 PREP(gui_icons);
+PREP(gui_loiter);
 PREP(gui_slider);
 PREP(gui_toolbox);
 PREP(gui_waypoint);
