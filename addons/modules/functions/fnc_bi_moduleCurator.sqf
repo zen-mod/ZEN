@@ -236,7 +236,7 @@ if (_activated) then {
                         params ["_logic", "_unit"];
 
                         _unit assignCurator _logic;
-                    }, [_logic, _unit], 60] call CBA_fnc_waitUntilAndExecute;
+                    }, [_logic, _unit]] call CBA_fnc_waitUntilAndExecute;
                 };
             };
         }];
