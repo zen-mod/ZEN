@@ -17,7 +17,7 @@
 
 params ["_vehicle"];
 
-private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
+private _vehicleName = getText (configOf _vehicle >> "displayName");
 private _title = format [localize LSTRING(ComponentsDamage), _vehicleName];
 
 private _components = [];

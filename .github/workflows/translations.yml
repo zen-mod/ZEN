@@ -7,6 +7,7 @@ on:
 
 jobs:
   update:
+    if: github.repository == 'zen-mod/ZEN' && ! contains(github.event.head_commit.message, '[ci skip]')
     runs-on: ubuntu-latest
     steps:
     - name: Checkout the source code
@@ -18,7 +19,6 @@ jobs:
         pip3 install pygithub
         pip3 install pygithub3
     - name: Deploy
-      if: github.repository == 'zen-mod/ZEN' && ! contains(github.event.head_commit.message, '[ci skip]')
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: python3 tools/deploy.py

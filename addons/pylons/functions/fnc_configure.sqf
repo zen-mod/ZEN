@@ -21,7 +21,7 @@ if (!createDialog QGVAR(display)) exitWith {};
 
 private _display = uiNamespace getVariable QGVAR(display);
 
-private _config = configFile >> "CfgVehicles" >> typeOf _aircraft;
+private _config = configOf _aircraft;
 private _pylonsConfig = _config >> "Components" >> "TransportPylonsComponent";
 
 // Set the display's title to the aircraft name

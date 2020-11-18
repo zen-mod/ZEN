@@ -116,7 +116,7 @@ private _index = 0;
 // Determine the entity specific description text
 private _entityText = switch (true) do {
     case (_entity isEqualType objNull): {
-        getText (configFile >> "CfgVehicles" >> typeOf _entity >> "displayName");
+        getText (configOf _entity >> "displayName");
     };
     case (_entity isEqualType grpNull): {
         groupId _entity;
