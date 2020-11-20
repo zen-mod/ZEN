@@ -1946,6 +1946,15 @@
             <Japanese>完了時に削除</Japanese>
             <Korean>획득 후 제거</Korean>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ActionType">
+            <English>Action Type</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateIntel_HoldAction">
+            <English>Hold Action</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateIntel_InteractionMenu">
+            <English>ACE Interaction Menu</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ActionText">
             <English>Action Text</English>
             <German>Aktionstext</German>

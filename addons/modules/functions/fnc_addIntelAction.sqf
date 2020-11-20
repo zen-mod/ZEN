@@ -7,16 +7,18 @@
  * 0: Object <OBJECT>
  * 1: Share With (0 - Side, 1 - Group, 2 - Nobody) <NUMBER>
  * 2: Delete On Completion <BOOL>
- * 3: Action Text <STRING>
- * 4: Action Duration <NUMBER>
- * 5: Intel Title <STRING>
- * 6: Intel Text <STRING>
+ * 3: Action Type (0 - Hold Action, 1 - ACE Interaction Menu) <NUMBER>
+ * 4: Action Text <STRING>
+ * 5: Action Sounds <ARRAY>
+ * 6: Action Duration <NUMBER>
+ * 7: Intel Title <STRING>
+ * 8: Intel Text <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * [_object, 0, true, "Pick Up Intel", 1, "Intel!", "Notes..."] call zen_modules_fnc_addIntelAction
+ * [_object, 0, true, 0, "Pick Up Intel", 1, "Intel!", "Notes..."] call zen_modules_fnc_addIntelAction
  *
  * Public: No
  */
@@ -26,7 +28,7 @@
 #define MID_SOUND_DELAY 2
 #define MAX_SOUND_DELAY 4
 
-params ["_object", "_share", "_delete", "_actionText", "_actionSounds", "_duration", "_title", "_text"];
+params ["_object", "_share", "_delete", "_actionType", "_actionText", "_actionSounds", "_duration", "_title", "_text"];
 
 private _fnc_addIntel = {
     private _targets = switch (_share) do {
@@ -59,9 +61,16 @@ private _fnc_addIntel = {
     [QGVAR(addIntel), [_title, _text], _targets] call CBA_fnc_targetEvent;
 };
 
-if (isClass (configFile >> "CfgPatches" >> "ace_interact_menu")) then {
-    [_object, 0, ["ACE_MainActions", QGVAR(intelAction)]] call ace_interact_menu_fnc_removeActionFromObject;
+// Removing previous action regardless of type to handle switching action types
+private _actionID = _object getVariable QGVAR(intelActionID);
 
+if (!isNil "_actionID") then {
+    [_object, _actionID] call BIS_fnc_holdActionRemove;
+};
+
+[_object, 0, ["ACE_MainActions", QGVAR(intelAction)]] call ace_interact_menu_fnc_removeActionFromObject;
+
+if (_actionType == 1 && {isClass (configFile >> "CfgPatches" >> "ace_interact_menu")}) then {
     private _action = [
         QGVAR(intelAction),
         _actionText,
@@ -120,11 +129,6 @@ if (isClass (configFile >> "CfgPatches" >> "ace_interact_menu")) then {
 
     [_object, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
 } else {
-    private _actionID = _object getVariable QGVAR(intelActionID);
-
-    if (!isNil "_actionID") then {
-        [_object, _actionID] call BIS_fnc_holdActionRemove;
-    };
     _actionID = [
         _object,
         _actionText,
