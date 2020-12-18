@@ -254,6 +254,9 @@
             <English>Opens the Zeus attributes display for the selected entity.\nWhen multiple entities are selected (i.e. due to selecting a group), the hovered entity will be used.</English>
         </Key>
         <Key ID="STR_ZEN_Attributes_TracersTarget_Description">
+            <English>Position ASL or object variable name.</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_TracersTargetButton_Description">
             <English>Tracers target the current camera position.</English>
         </Key>
     </Package>

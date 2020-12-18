@@ -365,7 +365,7 @@
 
 [
     "Object",
-    ["str_a3_objecttype_target", "Position [] or object variable name"],
+    ["str_a3_objecttype_target", "STR_ZEN_Attributes_TracersTarget_Description"],
     QGVAR(edit),
     nil,
     {
@@ -378,7 +378,7 @@
 
 [
     "Object",
-    ["str_a3_objecttype_target", "STR_ZEN_Attributes_TracersTarget_Description"],
+    ["str_a3_objecttype_target", "STR_ZEN_Attributes_TracersTargetButton_Description"],
     {
         _entity setVariable ["Target", str AGLToASL positionCameraToWorld [0,0,0], true];
         [QGVAR(setTracers), [_entity]] call CBA_fnc_serverEvent;
