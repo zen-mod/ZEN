@@ -1303,6 +1303,12 @@
         <Key ID="STR_ZEN_Modules_ModuleUnpackStaticWeapon_Group">
             <English>Unit group must contain two compatible weapon bags</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleUnpackStaticWeapon_Distance">
+            <English>Assistant must be closer to gunner (<100m)</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleUnpackStaticWeapon_Player">
+            <English>Unit must not be in a player's group</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleUnpackStaticWeapon_Direction">
             <English>Weapon Direction</English>
         </Key>
