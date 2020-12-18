@@ -28,3 +28,24 @@ if (isServer) then {
         _unit enableAIFeature [_x, _abilities select _forEachIndex];
     } forEach AI_ABILITIES;
 }] call CBA_fnc_addEventHandler;
+
+[QGVAR(setTracers), {
+    params ["_logic"];
+
+    {
+        deletevehicle _x;
+    } forEach attachedObjects _logic;
+    private _handle = [_logic, nil, true] spawn BIS_fnc_moduleTracers;
+
+    // changing multiple attributes at the same time can cause multiple gunners to spawn. Delete all but the last.
+    [{
+        params ["_logic"];
+        private _gunners = attachedObjects _logic;
+        if (count _gunners > 1) then {
+            private _gunner = _logic getvariable ["bis_fnc_moduleTracers_gunner", objnull];
+            {
+                deletevehicle _x;
+            } forEach (_gunners - [_gunner]);
+        };
+    }, {}, [_logic], 1] call CBA_fnc_waitUntilAndExecute;
+}] call CBA_fnc_addEventHandler;

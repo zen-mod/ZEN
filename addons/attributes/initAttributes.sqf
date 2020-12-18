@@ -290,6 +290,104 @@
 
 [
     "Object",
+    LSTRING(ChangeSide),
+    QGVAR(icons),
+    [[
+        [
+            "0", "\a3\3den\Data\Displays\Display3DEN\PanelRight\side_east_ca.paa", "STR_East", 14.5, 0.25, 2, east call BIS_fnc_sideColor
+        ],
+        [
+            "1", "\a3\3den\Data\Displays\Display3DEN\PanelRight\side_west_ca.paa", "STR_West", 11.5, 0.25, 2, west call BIS_fnc_sideColor
+        ],
+        [
+            "2", "\a3\3den\Data\Displays\Display3DEN\PanelRight\side_guer_ca.paa", "STR_Guerrila", 17.5, 0.25, 2, independent call BIS_fnc_sideColor
+        ]
+    ]],
+    {
+        _entity setVariable ["Side", _value, true];
+        [QGVAR(setTracers), [_entity]] call CBA_fnc_serverEvent;
+    },
+    {_entity getVariable ["Side", "0"]},
+    {_entity isKindOf "ModuleTracers_F"}
+] call FUNC(addAttribute);
+
+[
+    "Object",
+    "str_3den_attributes_timeout_titlemin_text",
+    QGVAR(slider),
+    [1, 120, 10, false, 0],
+    {
+        _entity setVariable ["Min", str _value, true];
+        [QGVAR(setTracers), [_entity]] call CBA_fnc_serverEvent;
+    },
+    {(_entity getVariable ["Min", "10"]) call BIS_fnc_parseNumberSafe},
+    {_entity isKindOf "ModuleTracers_F"}
+] call FUNC(addAttribute);
+
+[
+    "Object",
+    "str_3den_attributes_timeout_titlemax_text",
+    QGVAR(slider),
+    [1, 120, 10, false, 0],
+    {
+        _entity setVariable ["Max", str _value, true];
+        [QGVAR(setTracers), [_entity]] call CBA_fnc_serverEvent;
+    },
+    {(_entity getVariable ["Max", "20"]) call BIS_fnc_parseNumberSafe},
+    {_entity isKindOf "ModuleTracers_F"}
+] call FUNC(addAttribute);
+
+[
+    "Object",
+    "str_a3_itemtype_category_weapon",
+    QGVAR(edit),
+    nil,
+    {
+        _entity setVariable ["Weapon", _value, true];
+        [QGVAR(setTracers), [_entity]] call CBA_fnc_serverEvent;
+    },
+    {_entity getVariable ["Weapon", ""]},
+    {_entity isKindOf "ModuleTracers_F"}
+] call FUNC(addAttribute);
+
+[
+    "Object",
+    "str_a3_itemtype_category_magazine",
+    QGVAR(edit),
+    nil,
+    {
+        _entity setVariable ["Magazine", _value, true];
+        [QGVAR(setTracers), [_entity]] call CBA_fnc_serverEvent;
+    },
+    {_entity getVariable ["Magazine", ""]},
+    {_entity isKindOf "ModuleTracers_F"}
+] call FUNC(addAttribute);
+
+[
+    "Object",
+    ["str_a3_objecttype_target", "Position [] or object variable name"],
+    QGVAR(edit),
+    nil,
+    {
+        _entity setVariable ["Target", _value, true];
+        [QGVAR(setTracers), [_entity]] call CBA_fnc_serverEvent;
+    },
+    {_entity getVariable ["Target", ""]},
+    {_entity isKindOf "ModuleTracers_F"}
+] call FUNC(addAttribute);
+
+[
+    "Object",
+    ["str_a3_objecttype_target", "STR_ZEN_Attributes_TracersTarget_Description"],
+    {
+        _entity setVariable ["Target", str AGLToASL positionCameraToWorld [0,0,0], true];
+        [QGVAR(setTracers), [_entity]] call CBA_fnc_serverEvent;
+    },
+    {_entity isKindOf "ModuleTracers_F"}
+] call FUNC(addButton);
+
+[
+    "Object",
     LSTRING(States),
     QGVAR(checkboxes),
     [[
