@@ -315,7 +315,7 @@
     "Object",
     "str_3den_attributes_timeout_titlemin_text",
     QGVAR(slider),
-    [1, 120, 10, false, 0],
+    [1, 120, 1, false, 0],
     {
         _entity setVariable ["Min", str _value, true];
         [QGVAR(setTracers), [_entity]] call CBA_fnc_serverEvent;
@@ -328,12 +328,25 @@
     "Object",
     "str_3den_attributes_timeout_titlemax_text",
     QGVAR(slider),
-    [1, 120, 10, false, 0],
+    [1, 120, 1, false, 0],
     {
         _entity setVariable ["Max", str _value, true];
         [QGVAR(setTracers), [_entity]] call CBA_fnc_serverEvent;
     },
     {(_entity getVariable ["Max", "20"]) call BIS_fnc_parseNumberSafe},
+    {_entity isKindOf "ModuleTracers_F"}
+] call FUNC(addAttribute);
+
+[
+    "Object",
+    "STR_ZEN_Attributes_Dispersion",
+    QGVAR(slider),
+    [0.01, 0.20, 0.01, false, 2],
+    {
+        _entity setVariable ["Dispersion", str _value, true];
+        [QGVAR(setTracers), [_entity]] call CBA_fnc_serverEvent;
+    },
+    {(_entity getVariable ["Dispersion", "0.05"]) call BIS_fnc_parseNumberSafe},
     {_entity isKindOf "ModuleTracers_F"}
 ] call FUNC(addAttribute);
 
