@@ -35,7 +35,7 @@ if (isServer) then {
     {
         deletevehicle _x;
     } forEach attachedObjects _logic;
-    private _handle = [_logic, nil, true] spawn BIS_fnc_moduleTracers;
+    [_logic] call EFUNC(modules,moduleTracers);
 
     // changing multiple attributes at the same time can cause multiple gunners to spawn. Delete all but the last.
     [{
