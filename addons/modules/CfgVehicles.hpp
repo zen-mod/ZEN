@@ -439,7 +439,7 @@ class CfgVehicles {
         category = QGVAR(AI);
         displayName = CSTRING(moduleUnpackStaticWeapon);
         function = QFUNC(moduleUnpackStaticWeapon);
-        icon = "\a3\ui_f\data\map\vehicleicons\iconstaticmg_ca.paa";
+        icon = QPATHTOF(ui\unpack_static_ca.paa);
     };
     class GVAR(moduleVisibility): GVAR(moduleBase) {
         curatorCanAttach = 1;
