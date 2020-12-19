@@ -46,10 +46,10 @@
 #define STATE_LOCKED 1
 #define STATE_OPENED 2
 
-#define VAR_LOCKED(door) format ["bis_disabled_door_%1", door]
+#define VAR_LOCKED(x) format ["bis_disabled_door_%1", x]
 
-#define ANIM_NAME_1(door) format ["door_%1_sound_source", door]
-#define ANIM_NAME_2(door) format ["door_%1_noSound_source", door]
+#define ANIM_NAME_1(x) format ["door_%1_sound_source", x]
+#define ANIM_NAME_2(x) format ["door_%1_noSound_source", x]
 
 #define DISTANCE_DRAW   100
 #define DISTANCE_CANCEL 200
