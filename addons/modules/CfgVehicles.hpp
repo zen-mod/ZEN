@@ -21,6 +21,9 @@ class CfgVehicles {
     class ModuleArsenal_F: Module_F {
         scopeCurator = 1;
     };
+    class ModuleTracers_F: Module_F {
+        scopeCurator = 1;
+    };
 
     class ModuleCAS_F;
     class ModuleCASGun_F: ModuleCAS_F {
