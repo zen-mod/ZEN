@@ -2041,6 +2041,12 @@
             <Korean>전등이 켜질때 부러진 것들을 수리합니다.</Korean>
             <Polish>Napraw zepsute lampy przed włączeniem.</Polish>
         </Key>
+        <Key ID="STR_ZEN_Modules_Tracers_TargetType_Tooltip">
+            <English>Use target field or current camera position.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_Tracers_Target_Tooltip">
+            <English>Position ASL or object variable name.</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_CustomFire">
             <English>Custom Fire</English>
             <German>Benutzerdefiniertes Feuer</German>

@@ -65,6 +65,7 @@ class CfgPatches {
             QGVAR(moduleToggleFlashlights),
             QGVAR(moduleToggleIRLasers),
             QGVAR(moduleToggleLamps),
+            QGVAR(moduleTracers),
             QGVAR(moduleTurretOptics),
             QGVAR(moduleUnGarrison),
             QGVAR(moduleVisibility),

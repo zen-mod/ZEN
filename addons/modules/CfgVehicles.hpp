@@ -422,6 +422,13 @@ class CfgVehicles {
         function = QFUNC(moduleToggleLamps);
         icon = QPATHTOF(ui\street_lamp_ca.paa);
     };
+    class GVAR(moduleTracers): GVAR(moduleBase) {
+        category = "Effects";
+        displayName = "$STR_a3_cfgvehicles_moduletracers_f_0";
+        curatorInfoType = QGVAR(RscTracersHelper);
+        icon = "\a3\modules_f_curator\Data\iconTracers_ca.paa";
+        portrait = "\a3\modules_f_curator\Data\portraitTracers_ca.paa";
+    };
     class GVAR(moduleTurretOptics): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Equipment);

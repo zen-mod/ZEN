@@ -81,6 +81,11 @@ class GVAR(RscLightSourceHelper) {
     onLoad = QUOTE(call FUNC(moduleLightSource));
 };
 
+class GVAR(RscTracersHelper) {
+    idd = -1;
+    onLoad = QUOTE(call FUNC(moduleTracers));
+};
+
 class GVAR(RscAmbientFlyby): GVAR(RscDisplay) {
     function = QFUNC(gui_ambientFlyby);
     class controls: controls {
