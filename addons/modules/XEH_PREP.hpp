@@ -85,3 +85,4 @@ PREP(moduleTurretOptics);
 PREP(moduleUnGarrison);
 PREP(moduleVisibility);
 PREP(moduleWeather);
+PREP(tracers);

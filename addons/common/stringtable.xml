@@ -246,6 +246,9 @@
             <Japanese>目標</Japanese>
             <Korean>목표</Korean>
         </Key>
+        <Key ID="STR_ZEN_Common_SelectPosition">
+            <English>Select Position</English>
+        </Key>
         <Key ID="STR_ZEN_Common_SelectedUnit">
             <English>Selected Unit</English>
             <German>Ausgewählte Einheit</German>
@@ -609,6 +612,9 @@
             <English>Controls whether an eagle that follows the Zeus camera is created.</English>
             <Polish>Kontroluje czy orzeł podążający za kamerą Zeusa jest aktywowany.</Polish>
             <Korean>Zeus 카메라를 따라다니는 독수리의 생성 여부를 제어합니다</Korean>
+        </Key>
+        <Key ID="STR_ZEN_Common_Cursor">
+            <English>Cursor</English>
         </Key>
     </Package>
 </Project>

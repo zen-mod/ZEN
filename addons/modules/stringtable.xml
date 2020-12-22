@@ -2042,10 +2042,7 @@
             <Polish>Napraw zepsute lampy przed włączeniem.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_TargetType_Tooltip">
-            <English>Use target field or current camera position.</English>
-        </Key>
-        <Key ID="STR_ZEN_Modules_Tracers_Target_Tooltip">
-            <English>Position ASL or object variable name.</English>
+            <English>Tracers shoot at target cursor, current camera position, or randomly upward.</English>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire">
             <English>Custom Fire</English>
