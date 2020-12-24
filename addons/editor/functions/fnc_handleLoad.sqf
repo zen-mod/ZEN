@@ -137,6 +137,8 @@ GVAR(iconsVisible) = true;
 
         if (isNull _display) exitWith {};
 
+        [QGVAR(treesLoaded), _display] call CBA_fnc_localEvent;
+
         [_display] call FUNC(addGroupIcons);
         [_display] call FUNC(declutterEmptyTree);
 
