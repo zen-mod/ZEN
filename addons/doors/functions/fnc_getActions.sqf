@@ -46,7 +46,7 @@ if (_doors isEqualTo []) exitWith {
 
 // Calculate the distance from every door to the intersection position
 private _buildingPos = _building worldToModel ASLtoAGL _intersectPos;
-private _distances = _doors apply {_x distance _buildingPos};
+private _distances = _doors apply {_x vectorDistance _buildingPos};
 
 // Exit if the closest door is too far away from the intersection position
 private _minDistance = selectMin _distances;
