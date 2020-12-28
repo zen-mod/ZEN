@@ -22,6 +22,8 @@ _tracersParams params ["_side", "_min", "_max", "_dispersion", "_weapon", "_maga
 
 _max = _max - _min;
 
+_dispersion = [0.001, 0.01, 0.05, 0.15, 0.3] select _dispersion;
+
 if (_weapon != "" ) then {
     // Validate weapon
     private _weaponCfg = configFile >> "CfgWeapons" >> _weapon;

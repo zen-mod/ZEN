@@ -49,7 +49,7 @@
         [
             "TOOLBOX",
             ELSTRING(attributes,Dispersion),
-            [2, 1, 5, [
+            [_dispersion, 1, 5, [
                 ELSTRING(common,VeryLow),
                 ELSTRING(common,Low),
                 ELSTRING(common,Medium),
@@ -77,14 +77,6 @@
     ], {
         params ["_values", "_logic"];
         _values params ["_side", "_min", "_max", "_dispersion", "_weapon", "_magazine", "_targetType"];
-
-        _dispersion = switch (_dispersion) do {
-            case (0): {0.001};
-            case (1): {0.01};
-            case (2): {0.05};
-            case (3): {0.15};
-            case (4): {0.3};
-        };
 
         private _target = objNull;
         // select tracer target using cursor
