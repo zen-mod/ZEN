@@ -267,6 +267,10 @@ Toggles the simulation of the attached object.
 
 Toggles the visibility of the attached object.
 
+## Tracers
+
+Spawns an invisible unit to shoot customizable tracer bursts.
+
 ## Un-Garrison Group
 
 Un-garrisons units from the attached group.
