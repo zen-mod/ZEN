@@ -2048,7 +2048,7 @@
             <English>Maximum delay in seconds between bursts of tracers.</English>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_TargetType_Tooltip">
-            <English>Tracers shoot at target cursor, current camera position, or randomly upward.</English>
+            <English>Tracers shoot randomly upward, at current camera position, or at target cursor.</English>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire">
             <English>Custom Fire</English>

@@ -68,7 +68,7 @@
         [
             "TOOLBOX",
             ["str_a3_cfgvehicles_modulelivefeedsettarget_f_arguments_targettype_0", LSTRING(Tracers_TargetType_Tooltip)],
-            [0, 1, 3, [ELSTRING(common,Cursor), ELSTRING(camera,DisplayName), "str_a3_no_target"]]
+            [0, 1, 3, ["str_a3_no_target", ELSTRING(camera,DisplayName), ELSTRING(common,Cursor)]]
         ]
     ], {
         params ["_values", "_logic"];
@@ -76,7 +76,7 @@
 
         private _target = objNull;
         // select tracer target using cursor
-        if (_targetType == 0) exitWith {
+        if (_targetType == 2) exitWith {
             [_logic, {
                 params ["_successful", "_logic", "_position", "_args"];
                 _args params ["_side", "_min", "_max", "_dispersion", "_weapon", "_magazine", "_targetType"];
