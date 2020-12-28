@@ -121,8 +121,31 @@ _logic setVariable [QGVAR(nextBurstTime), 0];
 
         private _shotDelay = 0.05 + random 0.1;
         private _burstEndTime = CBA_MissionTime + 0.1 + random 0.9;
+        private _burstLength = 0.1 + random 0.9;
         _logic setVariable [QGVAR(nextShotTime), 0];
 
+        [{
+            params ["_logic", "_gunner", "_dispersion", "_weapon", "_shotDelay", "_burstEndTime", "_shotDelay"];
+
+            // Restore ammo
+            private _nextShotTime = _logic getVariable [QGVAR(nextShotTime), CBA_MissionTime + _shotDelay];
+            if (CBA_MissionTime >= _nextShotTime) then {
+                _gunner setAmmo [_weapon, 999];
+                [_gunner, _weapon] call BIS_fnc_fire;
+                _logic setVariable [QGVAR(nextShotTime), CBA_MissionTime + _shotDelay];
+            };
+
+            if (!(_target isEqualTo objNull)) then {
+                _vectorToTarget = _vectorToTarget vectorAdd [random [-_dispersion, 0, _dispersion], random [-_dispersion, 0, _dispersion], random [-_dispersion, 0, _dispersion]];
+                _logic setVectorDirAndUp [_vectorToTarget, _vectorToTarget vectorCrossProduct [-(_vectorToTarget # 1), _vectorToTarget # 0, 0]];
+            } else {
+                _gunner setdir (direction _gunner + _dir);
+                [_gunner, _pitch, 0] call BIS_fnc_setpitchbank;
+            };
+
+        }, {}, [_logic, _gunner, _dispersion, _weapon, _shotDelay, _burstEndTime], _burstLength] call CBA_fnc_waitUntilAndExecute;
+
+/*
         [{
             params ["_args", "_handle"];
             _args params ["_logic", "_gunner", "_dispersion", "_weapon", "_shotDelay", "_burstEndTime", "_shotDelay"];
@@ -148,6 +171,7 @@ _logic setVariable [QGVAR(nextBurstTime), 0];
             };
 
         }, _shotDelay, [_logic, _gunner, _dispersion, _weapon, _shotDelay, _burstEndTime]] call CBA_fnc_addPerFrameHandler;
+*/
 
         _nextBurstTime = CBA_MissionTime + (_min + random _max);
         _logic setVariable [QGVAR(nextBurstTime), _nextBurstTime];
