@@ -86,7 +86,7 @@ _logic setVariable [QGVAR(nextBurstTime), 0];
     private _nextBurstTime = _logic getVariable [QGVAR(nextBurstTime), 0];
     if (
         CBA_MissionTime >= _nextBurstTime && {
-            {_gunner distance _x < 100} count (playableunits + switchableunits) == 0
+            (playableunits + switchableunits) findIf {_gunner distance _x < 100} == -1
         }
     ) then {
         if (_target isEqualType "") then {
