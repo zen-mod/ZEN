@@ -75,11 +75,11 @@ _logic setVariable [QGVAR(tracersGunner), _gunner, true];
 _logic setVariable [QGVAR(nextBurstTime), 0];
 
 [{
-    params ["_args", "_handle"];
+    params ["_args", "_pfhID"];
     _args params ["_logic", "_gunner", "_min", "_max", "_dispersion", "_weapon", "_target"];
 
     if (isNull _gunner || {isNull _logic}) exitWith {
-        [_handle] call CBA_fnc_removePerFrameHandler;
+        [_pfhID] call CBA_fnc_removePerFrameHandler;
         deleteVehicle _gunner;
     };
 
