@@ -29,12 +29,42 @@
     _tracersParams params ["_side", "_min", "_max", "_dispersion", "_weapon", "_magazine", "_targetType", "_target"];
 
     ["str_a3_cfgvehicles_moduletracers_f_0", [
-        ["SIDES",  ELSTRING(attributes,ChangeSide), _side, true],
-        ["SLIDER", "str_3den_attributes_timeout_titlemin_text", [0, 120, _min, 0], true],
-        ["SLIDER", "str_3den_attributes_timeout_titlemax_text", [0, 120, _max, 0], true],
-        ["SLIDER", ELSTRING(attributes,Dispersion), [0.001, 0.300, _dispersion, 3], true],
-        ["EDIT", "str_a3_itemtype_category_weapon", _weapon, true],
-        ["EDIT", "str_a3_itemtype_category_magazine", _magazine, true],
+        [
+            "SIDES",
+            ELSTRING(attributes,ChangeSide),
+            _side,
+            true
+        ],
+        [
+            "SLIDER",
+            "str_3den_attributes_timeout_titlemin_text",
+             [0, 120, _min, 0],
+             true
+         ],
+        [
+            "SLIDER",
+            "str_3den_attributes_timeout_titlemax_text",
+            [0, 120, _max, 0],
+            true
+        ],
+        [
+            "SLIDER",
+            ELSTRING(attributes,Dispersion),
+            [0.001, 0.300, _dispersion, 3],
+            true
+        ],
+        [
+            "EDIT",
+            "str_a3_itemtype_category_weapon",
+            _weapon,
+            true
+        ],
+        [
+            "EDIT",
+            "str_a3_itemtype_category_magazine",
+            _magazine,
+            true
+        ],
         [
             "TOOLBOX",
             ["str_a3_cfgvehicles_modulelivefeedsettarget_f_arguments_targettype_0", LSTRING(Tracers_TargetType_Tooltip)],
