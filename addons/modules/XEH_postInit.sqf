@@ -91,4 +91,4 @@ if (isServer) then {
     [_unit] orderGetIn true;
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(moduleTracers), LINKFUNC(tracers)] call CBA_fnc_addEventHandler;
+[QGVAR(moduleTracers), LINKFUNC(moduleTracersServer)] call CBA_fnc_addEventHandler;
