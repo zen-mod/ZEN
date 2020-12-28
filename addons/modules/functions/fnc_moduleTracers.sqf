@@ -37,13 +37,13 @@
         ],
         [
             "SLIDER",
-            "str_3den_attributes_timeout_titlemin_text",
+            ["str_a3_cfgvehicles_moduletracers_f_arguments_min_0", LSTRING(Tracers_MinDelay_Tooltip)],
              [0, 120, _min, 0],
              true
          ],
         [
             "SLIDER",
-            "str_3den_attributes_timeout_titlemax_text",
+            ["str_a3_cfgvehicles_moduletracers_f_arguments_max_0", LSTRING(Tracers_MaxDelay_Tooltip)],
             [0, 120, _max, 0],
             true
         ],

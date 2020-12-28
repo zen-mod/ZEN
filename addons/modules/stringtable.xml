@@ -2041,6 +2041,12 @@
             <Korean>전등이 켜질때 부러진 것들을 수리합니다.</Korean>
             <Polish>Napraw zepsute lampy przed włączeniem.</Polish>
         </Key>
+        <Key ID="STR_ZEN_Modules_Tracers_MinDelay_Tooltip">
+            <English>Minimum delay in seconds between bursts of tracers.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_Tracers_MaxDelay_Tooltip">
+            <English>Maximum delay in seconds between bursts of tracers.</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_Tracers_TargetType_Tooltip">
             <English>Tracers shoot at target cursor, current camera position, or randomly upward.</English>
         </Key>
