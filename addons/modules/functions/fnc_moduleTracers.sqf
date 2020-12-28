@@ -25,15 +25,14 @@
     params ["_logic"];
 
     // Default values: green tracers, 10-20s between bursts
-    private _tracersParams = _logic getVariable [QGVAR(tracersParams), [east, 10, 20, 0.05, "", "", 0, ""]];
+    private _tracersParams = _logic getVariable [QGVAR(tracersParams), [0, 10, 20, 2, "", "", 0, ""]];
     _tracersParams params ["_side", "_min", "_max", "_dispersion", "_weapon", "_magazine", "_targetType", "_target"];
 
     ["str_a3_cfgvehicles_moduletracers_f_0", [
         [
-            "SIDES",
-            ELSTRING(attributes,ChangeSide),
-            _side,
-            true
+            "TOOLBOX",
+            "str_a3_cfgvehicles_moduletracers_f_arguments_side_0",
+            [_side, 1, 3, ["str_a3_texturesources_green0", "str_a3_texturesources_red0", "str_a3_texturesources_yellow0"]]
         ],
         [
             "SLIDER",

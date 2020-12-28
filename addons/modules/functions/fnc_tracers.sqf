@@ -48,7 +48,7 @@ if (_weapon != "" ) then {
     };
 } else {
     _weapon = "FakeWeapon_moduleTracers_F";
-    _magazine = (["200Rnd_65x39_belt_Tracer_Green", "200Rnd_65x39_belt_Tracer_Red", "200Rnd_65x39_belt_Tracer_Yellow", "200Rnd_65x39_belt_Tracer_Yellow"] select (_side call BIS_fnc_sideID));
+    _magazine = ["200Rnd_65x39_belt_Tracer_Green", "200Rnd_65x39_belt_Tracer_Red", "200Rnd_65x39_belt_Tracer_Yellow"] select _side;
 };
 
 private _gunner = _logic getVariable [QGVAR(tracersGunner), objNull];
