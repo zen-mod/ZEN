@@ -41,8 +41,8 @@
             [0, 1, 3, [ELSTRING(common,Cursor), ELSTRING(camera,DisplayName), "str_a3_no_target"]]
         ]
     ], {
-        params ["_dialogValues", "_logic"];
-        _dialogValues params ["_side", "_min", "_max", "_dispersion", "_weapon", "_magazine", "_targetType"];
+        params ["_values", "_logic"];
+        _values params ["_side", "_min", "_max", "_dispersion", "_weapon", "_magazine", "_targetType"];
 
         private _target = objNull;
         // select tracer target using cursor
@@ -59,7 +59,7 @@
                     _logic setVariable [QGVAR(tracersParams), [_side, _min, _max, _dispersion, _weapon, _magazine, _targetType, _target], true];
                     [QGVAR(moduleTracers), [_logic]] call CBA_fnc_serverEvent;
                 };
-            }, _dialogValues, ELSTRING(common,SelectPosition)] call EFUNC(common,selectPosition);
+            }, _values, ELSTRING(common,SelectPosition)] call EFUNC(common,selectPosition);
         };
 
         if (_targetType == 1) then {_target = AGLToASL positionCameraToWorld [0,0,0]};
