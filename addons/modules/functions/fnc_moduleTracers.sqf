@@ -92,14 +92,14 @@
         if (_targetType == 2) exitWith {
             [_logic, {
                 params ["_successful", "_logic", "_position", "_args"];
-                _args params ["_side", "_min", "_max", "_dispersion", "_weapon", "_magazine", "_targetType"];
+                _args params ["_side", "_min", "_max", "_dispersion", "_weapon", "_magazine"];
 
                 if (_successful) then {
                     curatorMouseOver params ["_type", "_entity"];
 
                     private _target = [_position, _entity] select (_type == "OBJECT");
 
-                    _logic setVariable [QGVAR(tracersParams), [_side, _min, _max, _dispersion, _weapon, _magazine, _targetType, _target], true];
+                    _logic setVariable [QGVAR(tracersParams), [_side, _min, _max, _dispersion, _weapon, _magazine, _target], true];
                     [QGVAR(moduleTracers), [_logic]] call CBA_fnc_serverEvent;
                 };
             }, _values, ELSTRING(common,SelectPosition)] call EFUNC(common,selectPosition);
@@ -107,7 +107,7 @@
 
         if (_targetType == 1) then {_target = AGLToASL positionCameraToWorld [0,0,0]};
 
-        _logic setVariable [QGVAR(tracersParams), [_side, _min, _max, _dispersion, _weapon, _magazine, _targetType, _target], true];
+        _logic setVariable [QGVAR(tracersParams), [_side, _min, _max, _dispersion, _weapon, _magazine, _target], true];
         [QGVAR(moduleTracers), [_logic]] call CBA_fnc_serverEvent;
 
     }, {}, _logic] call EFUNC(dialog,create);

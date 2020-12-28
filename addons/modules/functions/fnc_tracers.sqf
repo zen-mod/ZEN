@@ -18,7 +18,7 @@
 params [ "_logic"];
 
 private _tracersParams = _logic getVariable [QGVAR(tracersParams), [east, 10, 20, 0.05, "", "", 0, ""]];
-_tracersParams params ["_side", "_min", "_max", "_dispersion", "_weapon", "_magazine", "_targetType", "_target"];
+_tracersParams params ["_side", "_min", "_max", "_dispersion", "_weapon", "_magazine", "_target"];
 
 _max = _max - _min;
 
