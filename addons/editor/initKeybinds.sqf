@@ -82,3 +82,60 @@
         };
     };
 }, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
+
+[ELSTRING(main,DisplayName), QGVAR(watchCursor), [LSTRING(WatchCursor), LSTRING(WatchCursor_Description)], {
+    if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
+        curatorMouseOver params ["_type", "_entity", "_index"];
+        private _isCancelling = (_type == "OBJECT") && {_entity in SELECTED_OBJECTS};
+        private _gunners = (SELECTED_OBJECTS apply {gunner vehicle _x}) - [objNull];
+
+        private _cursorPosASL = call EFUNC(common,getCursorPosition);
+        {
+            [QEGVAR(common,doWatch), [_x, [ASLToAGL _cursorPosASL, objNull] select _isCancelling], _x] call CBA_fnc_targetEvent;
+        } forEach _gunners;
+
+        true // handled, prevents vanilla eject
+    };
+}, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
+
+[ELSTRING(main,DisplayName), QGVAR(moveToCursor), [LSTRING(MoveToCursor), LSTRING(MoveToCursor_Description)], {
+    if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
+        private _cursorPosASL = call EFUNC(common,getCursorPosition);
+
+        {
+            if (!isNull driver _x) then {
+                [QEGVAR(common,doMove), [_x, ASLToAGL _cursorPosASL], _x] call CBA_fnc_targetEvent;
+            };
+        } forEach SELECTED_OBJECTS;
+
+        true // handled, prevents vanilla eject
+    };
+}, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
+
+[ELSTRING(main,DisplayName), QGVAR(toggleAIPATH), [LSTRING(ToggleAIPATH), LSTRING(ToggleAIPATH_Description)], {
+    if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
+        private _disabled = 0;
+        private _enabled = 0;
+        private _drivers = (SELECTED_OBJECTS apply {driver vehicle _x}) - [objNull];
+        _drivers = _drivers arrayIntersect _drivers;
+
+        {
+            private _isAIEnalbedPATH = _x getVariable [QEGVAR(common,isAIEnalbedPATH), true];
+            private _AIEvent = [QEGVAR(common,enableAI), QEGVAR(common,disableAI)] select _isAIEnalbedPATH;
+            [_AIEvent, [_x, "PATH"], _x] call CBA_fnc_targetEvent;
+            _x setVariable [QEGVAR(common,isAIEnalbedPATH), !_isAIEnalbedPATH, true];
+            if (_isAIEnalbedPATH) then {
+                _disabled = _disabled + 1;
+            } else {;
+                _enabled = _enabled + 1;
+            };
+        } forEach _drivers;
+
+        private _message = "PATH " +
+            (["", format [" - disabled: %1", _disabled]] select (_disabled > 0)) +
+            (["", format [" - enabled: %1", _enabled]] select (_enabled > 0));
+        [_message] call EFUNC(common,showMessage);
+
+        true // handled, prevents vanilla eject
+    };
+}, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound

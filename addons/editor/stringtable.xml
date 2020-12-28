@@ -219,5 +219,23 @@
             <Japanese>全編集可アイコンの視認性を切り替えます。一時的な処理軽減や整理に使用できます。</Japanese>
             <Polish>Przełącza widoczność wszsytkich ustawionych ikon, przydatne by tymczasowo zmniejszyć lag, bądź niepotrzebne zaśmiecenie ekranu gdy znajduje się na nim dużo ikon.</Polish>
         </Key>
+        <Key ID="STR_ZEN_Editor_WatchCursor">
+            <English>Watch Cursor</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_WatchCursor_Description">
+            <English>Makes all selected units watch the cursor location. Pressing this command with the cursor over a selected unit will cancel the watch target.</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_MoveToCursor">
+            <English>Move To Cursor</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_MoveToCursor_Description">
+            <English>Makes all selected units move to the cursor location. Units will return to formation and waypoint afterward.</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_ToggleAIPATH">
+            <English>Toggle AI PATH</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_ToggleAIPATH_Description">
+            <English>Makes all selected units start or stop moving. Does not affect aiming or shooting.</English>
+        </Key>
     </Package>
 </Project>
