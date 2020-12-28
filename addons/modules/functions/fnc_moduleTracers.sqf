@@ -90,16 +90,14 @@
 
                     private _target = [_position, _entity] select (_type == "OBJECT");
 
-                    _logic setVariable [QGVAR(tracersParams), [_side, _min, _max, _dispersion, _weapon, _magazine, _target], true];
-                    [QGVAR(moduleTracers), [_logic]] call CBA_fnc_serverEvent;
+                    [QGVAR(moduleTracers), [_logic, _side, _min, _max, _dispersion, _weapon, _magazine, _target]] call CBA_fnc_serverEvent;
                 };
             }, [_side, _min, _max, _dispersion, _weapon, _magazine], LSTRING(Tracers_TracersTarget)] call EFUNC(common,selectPosition);
         };
 
         if (_targetType == 1) then {_target = AGLToASL positionCameraToWorld [0,0,0]};
 
-        _logic setVariable [QGVAR(tracersParams), [_side, _min, _max, _dispersion, _weapon, _magazine, _target], true];
-        [QGVAR(moduleTracers), [_logic]] call CBA_fnc_serverEvent;
+        [QGVAR(moduleTracers), [_logic, _side, _min, _max, _dispersion, _weapon, _magazine, _target]] call CBA_fnc_serverEvent;
 
     }, {}, _logic] call EFUNC(dialog,create);
 }, _logic] call CBA_fnc_execNextFrame;

@@ -4,7 +4,14 @@
  * Internal function to shoot tracers at a gamelogic's location.
  *
  * Arguments:
- * 0: Logic <DISPLAY>
+ * 0: Logic <LOGIC>
+ * 1: Side <NUMBER> - Index of tracer colours [Green, Red, Yellow]
+ * 2: Min <NUMBER> - Minimum delay in seconds between bursts
+ * 3: Max <NUMBER> - Maximum delay in seconds between bursts
+ * 4: Dispersion <NUMBER> - Index of dispersion values [0.001, 0.01, 0.05, 0.15, 0.3]
+ * 5: Weapon <STRING> - CLassname of infantry weapon
+ * 6: Magazine <STRING> - CLassname of infantry magazine
+ * 7: Target <ARRAY, OBJECT, STRING> - Target object, position ASL, or string of target object variable name
  *
  * Return Value:
  * None
@@ -15,13 +22,20 @@
  * Public: No
  */
 
-params [ "_logic"];
+params [
+    "_logic",
+    ["_side", 0],
+    ["_min", 10],
+    ["_max", 20],
+    ["_dispersion", 2],
+    ["_weapon", ""],
+    ["_magazine", ""],
+    ["_target", objNull, [objNull, [], ""], 3]
+];
 
-private _tracersParams = _logic getVariable [QGVAR(tracersParams), [east, 10, 20, 0.05, "", "", 0, ""]];
-_tracersParams params ["_side", "_min", "_max", "_dispersion", "_weapon", "_magazine", "_target"];
+_logic setVariable [QGVAR(tracersParams), [_side, _min, _max, _dispersion, _weapon, _magazine, _target], true];
 
 _max = _max - _min;
-
 _dispersion = [0.001, 0.01, 0.05, 0.15, 0.3] select _dispersion;
 
 if (_weapon != "" ) then {
@@ -33,18 +47,14 @@ if (_weapon != "" ) then {
     };
     private _compatibileMagazine = [_weapon] call BIS_fnc_compatibleMagazines;
     // Automatically add first compatibile magazine
-    if (_magazine == "")then
-    {
-        if (_compatibileMagazine isEqualTo [])exitWith
-        {
+    if (_magazine == "") then {
+        if (_compatibileMagazine isEqualTo []) exitWith {
             if (_weapon != "") then {["'%1' doesn't have any valid magazines", _weapon] call BIS_fnc_error;};
         };
         _magazine = _compatibileMagazine # 0;
-    } else
-    {
+    } else {
         // Validate magazine manually selected magazine
-        if (! (_magazine in _compatibileMagazine) )exitWith
-        {
+        if (! (_magazine in _compatibileMagazine) ) exitWith {
             if (_magazine != "") then {["'%1' is not compatible with '%2'", _magazine, _weapon] call BIS_fnc_error;};
         };
     };
