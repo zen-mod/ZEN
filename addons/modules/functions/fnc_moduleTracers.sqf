@@ -102,7 +102,7 @@
                     _logic setVariable [QGVAR(tracersParams), [_side, _min, _max, _dispersion, _weapon, _magazine, _target], true];
                     [QGVAR(moduleTracers), [_logic]] call CBA_fnc_serverEvent;
                 };
-            }, _values, ELSTRING(common,SelectPosition)] call EFUNC(common,selectPosition);
+            }, [_side, _min, _max, _dispersion, _weapon, _magazine], ELSTRING(common,SelectPosition)] call EFUNC(common,selectPosition);
         };
 
         if (_targetType == 1) then {_target = AGLToASL positionCameraToWorld [0,0,0]};
