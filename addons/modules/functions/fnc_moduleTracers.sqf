@@ -48,7 +48,7 @@
         ],
         [
             "TOOLBOX",
-            ELSTRING(attributes,Dispersion),
+            LSTRING(Tracers_Dispersion),
             [_dispersion, 1, 5, [
                 ELSTRING(common,VeryLow),
                 ELSTRING(common,Low),
@@ -93,7 +93,7 @@
                     _logic setVariable [QGVAR(tracersParams), [_side, _min, _max, _dispersion, _weapon, _magazine, _target], true];
                     [QGVAR(moduleTracers), [_logic]] call CBA_fnc_serverEvent;
                 };
-            }, [_side, _min, _max, _dispersion, _weapon, _magazine], ELSTRING(common,SelectPosition)] call EFUNC(common,selectPosition);
+            }, [_side, _min, _max, _dispersion, _weapon, _magazine], LSTRING(Tracers_TracersTarget)] call EFUNC(common,selectPosition);
         };
 
         if (_targetType == 1) then {_target = AGLToASL positionCameraToWorld [0,0,0]};
