@@ -53,7 +53,7 @@ if (_weapon != "" ) then {
 
 private _gunner = _logic getVariable [QGVAR(tracersGunner), objNull];
 deleteVehicle _gunner;
-_gunner = createAgent ["b_soldier_f", position _logic, [], 0, "none"];
+_gunner = createAgent ["b_soldier_f", [0, 0, 0], [], 0, "none"];
 _gunner attachTo [_logic, [0,0,0]];
 _gunner setCaptive true;
 _gunner hideObjectGlobal true;
