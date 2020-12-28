@@ -54,11 +54,7 @@
                 if (_successful) then {
                     curatorMouseOver params ["_type", "_entity"];
 
-                    _target = if (_type == "OBJECT") then {
-                        _entity;
-                    } else {
-                        _position;
-                    };
+                    private _target = [_position, _entity] select (_type == "OBJECT");
 
                     _logic setVariable [QGVAR(tracersParams), [_side, _min, _max, _dispersion, _weapon, _magazine, _targetType, _target], true];
                     [QGVAR(moduleTracers), [_logic]] call CBA_fnc_serverEvent;
