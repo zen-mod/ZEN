@@ -90,3 +90,5 @@ if (isServer) then {
     _unit assignAsGunner _vehicle;
     [_unit] orderGetIn true;
 }] call CBA_fnc_addEventHandler;
+
+[QGVAR(moduleTracers), LINKFUNC(tracers)] call CBA_fnc_addEventHandler;

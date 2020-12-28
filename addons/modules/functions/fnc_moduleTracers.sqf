@@ -61,7 +61,7 @@
                     };
 
                     _logic setVariable [QGVAR(tracersParams), [_side, _min, _max, _dispersion, _weapon, _magazine, _targetType, _target], true];
-                    [_logic] call FUNC(tracers);
+                    [QGVAR(moduleTracers), [_logic]] call CBA_fnc_serverEvent;
                 };
             }, _dialogValues, ELSTRING(common,SelectPosition)] call EFUNC(common,selectPosition);
         };
@@ -69,7 +69,7 @@
         if (_targetType == 1) then {_target = AGLToASL positionCameraToWorld [0,0,0]};
 
         _logic setVariable [QGVAR(tracersParams), [_side, _min, _max, _dispersion, _weapon, _magazine, _targetType, _target], true];
-        [_logic] call FUNC(tracers);
+        [QGVAR(moduleTracers), [_logic]] call CBA_fnc_serverEvent;
 
     }, {}, _logic] call EFUNC(dialog,create);
 }, _logic] call CBA_fnc_execNextFrame;
