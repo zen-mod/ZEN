@@ -132,12 +132,10 @@ _logic setVariable [QGVAR(nextBurstTime), 0];
         };
 
         private _shotDelay = 0.05 + random 0.1;
-        private _burstEndTime = CBA_MissionTime + 0.1 + random 0.9;
         private _burstLength = 0.1 + random 0.9;
-        _logic setVariable [QGVAR(nextShotTime), 0];
 
         [{
-            params ["_logic", "_gunner", "_dispersion", "_weapon", "_shotDelay", "_burstEndTime", "_shotDelay"];
+            params ["_nextShotTime", "_logic", "_gunner", "_dispersion", "_weapon", "_shotDelay"];
 
             // Aim
             if (!(_target isEqualTo objNull)) then {
@@ -149,13 +147,14 @@ _logic setVariable [QGVAR(nextBurstTime), 0];
             };
 
             // Fire
-            private _nextShotTime = _logic getVariable [QGVAR(nextShotTime), CBA_MissionTime + _shotDelay];
             if (CBA_MissionTime >= _nextShotTime) then {
                 _gunner setAmmo [_weapon, 999];
                 [_gunner, _weapon] call BIS_fnc_fire;
                 _logic setVariable [QGVAR(nextShotTime), CBA_MissionTime + _shotDelay];
+                _this set [0, CBA_missionTime + _shotDelay];
             };
-        }, {}, [_logic, _gunner, _dispersion, _weapon, _shotDelay, _burstEndTime], _burstLength] call CBA_fnc_waitUntilAndExecute;
+
+        }, {}, [CBA_missionTime, _logic, _gunner, _dispersion, _weapon, _shotDelay], _burstLength] call CBA_fnc_waitUntilAndExecute;
 
         _nextBurstTime = CBA_MissionTime + (_min + random _max);
         _logic setVariable [QGVAR(nextBurstTime), _nextBurstTime];
