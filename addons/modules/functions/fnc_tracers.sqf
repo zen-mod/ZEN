@@ -150,5 +150,4 @@ _logic setVariable [QGVAR(nextBurstTime), 0];
         _nextBurstTime = CBA_MissionTime + (_min + random _max);
         _logic setVariable [QGVAR(nextBurstTime), _nextBurstTime];
     };
-
 }, 0.1, [_logic, _gunner, _min, _max, _dispersion, _weapon, _target]] call CBA_fnc_addPerFrameHandler;
