@@ -26,10 +26,10 @@ params ["_vehicle", ["_texture", false, [false, [], ""]], ["_animation", false, 
 // Fix: BIS_fnc_initVehicle cannot animate doors multiple times
 if (_animation isEqualType []) then {
     for "_i" from (count _animation - 2) to 0 step -2 do {
-        private _name = _animation select _i;
+        private _configName = _animation select _i;
         private _phase = _animation select (_i + 1);
-        if ("door" in toLower _name) then {
-            _vehicle animateDoor [_name, _phase];
+        if ("door" in toLower _configName && !("hide" in toLower _configName)) then {
+            _vehicle animateDoor [_configName, _phase];
             // Remove entry, since already handled
             _animation deleteAt _i;
             _animation deleteAt _i;

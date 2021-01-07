@@ -43,7 +43,7 @@ private _ctrlListAnimations = _display displayCtrl IDC_LIST_ANIMATIONS;
 {
     _x params ["_configName", "_displayName"];
 
-    private _isChecked = if ("door" in toLower _configName) then {
+    private _isChecked = if ("door" in toLower _configName && !("hide" in toLower _configName)) then {
         GVAR(center) doorPhase _configName;
     } else {
         GVAR(center) animationPhase _configName;
