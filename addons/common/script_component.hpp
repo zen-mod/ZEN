@@ -92,6 +92,6 @@
 #define BLACKLIST_MAGAZINES ["Laserbatteries"]
 
 // Prevent certain source animations from being displayed in the garage
-#define BLACKLIST_ANIMATION_SOURCES ["hit", "markerlight"]
+#define BLACKLIST_ANIMATION_SOURCES ["hit", "markerlight", "reload", "reloadmagazine", "revolving", "ammorandom", "damper", "wheel"]
 #define BLACKLIST_ANIMATION_NAMES ["proxy", "doors"]
 #define BLACKLIST_ANIMATION_ATTRIBUTES ["weapon", "wheel"]
