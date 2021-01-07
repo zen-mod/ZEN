@@ -66,20 +66,28 @@
         <Key ID="STR_ZEN_Common_Add">
             <English>Add</English>
             <German>Hinzufügen</German>
+            <Korean>추가</Korean>
+            <Polish>Dodaj</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_Remove">
             <English>Remove</English>
             <German>Entfernen</German>
+            <Korean>제거</Korean>
+            <Polish>Usuń</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_On">
             <English>On</English>
             <German>An</German>
             <Japanese>オン</Japanese>
+            <Korean>켬</Korean>
+            <Polish>Włączone</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_Off">
             <English>Off</English>
             <German>Aus</German>
             <Japanese>オフ</Japanese>
+            <Korean>끔</Korean>
+            <Polish>Wyłączone</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_Unchanged">
             <English>Unchanged</English>
@@ -90,10 +98,13 @@
             <Czech>Beze změny</Czech>
             <Italian>Invariato</Italian>
             <Japanese>変更無し</Japanese>
+            <Korean>변경되지 않음</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_Premade">
             <English>Premade</English>
             <German>Vorgefertigt</German>
+            <Polish>Predefiniowane</Polish>
+            <Korean>팀 결성 완료</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_VeryLow">
             <English>Very Low</English>
@@ -104,6 +115,7 @@
             <Czech>Velmi nízký</Czech>
             <Italian>Molto Basso</Italian>
             <Japanese>とても低い</Japanese>
+            <Korean>매우 낮음</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_Low">
             <English>Low</English>
@@ -114,6 +126,7 @@
             <Czech>Nízký</Czech>
             <Italian>Basso</Italian>
             <Japanese>低い</Japanese>
+            <Korean>낮음</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_Medium">
             <English>Medium</English>
@@ -124,6 +137,7 @@
             <Czech>Střední</Czech>
             <Italian>Medio</Italian>
             <Japanese>普通</Japanese>
+            <Korean>중간</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_High">
             <English>High</English>
@@ -134,6 +148,7 @@
             <Czech>Vysoký</Czech>
             <Italian>Alto</Italian>
             <Japanese>高い</Japanese>
+            <Korean>높음</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_VeryHigh">
             <English>Very High</English>
@@ -144,6 +159,7 @@
             <Czech>Velmi vysoký</Czech>
             <Italian>Molto Alto</Italian>
             <Japanese>とても高い</Japanese>
+            <Korean>매우 높음</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_VeryWeak">
             <English>Very Weak</English>
@@ -154,6 +170,7 @@
             <Czech>Velmi slabý</Czech>
             <Italian>Molto Debole</Italian>
             <Japanese>とても弱い</Japanese>
+            <Korean>매우 약함</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_Weak">
             <English>Weak</English>
@@ -164,6 +181,7 @@
             <Czech>Slabý</Czech>
             <Italian>Debole</Italian>
             <Japanese>弱い</Japanese>
+            <Korean>약함</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_Strong">
             <English>Strong</English>
@@ -174,6 +192,7 @@
             <Czech>Silný</Czech>
             <Italian>Forte</Italian>
             <Japanese>強い</Japanese>
+            <Korean>강함</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_Extreme">
             <English>Extreme</English>
@@ -184,6 +203,7 @@
             <Czech>Extrémní</Czech>
             <Italian>Estremo</Italian>
             <Japanese>強力</Japanese>
+            <Korean>극한</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_All">
             <English>All</English>
@@ -194,6 +214,7 @@
             <Czech>Všechno</Czech>
             <Italian>Tutti</Italian>
             <Japanese>全て</Japanese>
+            <Korean>전체</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_Side">
             <English>Side</English>
@@ -204,6 +225,7 @@
             <Czech>Strana</Czech>
             <Italian>Lato</Italian>
             <Japanese>陣営</Japanese>
+            <Korean>진영</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_Sides">
             <English>Sides</English>
@@ -214,6 +236,7 @@
             <Czech>Strany</Czech>
             <Italian>Lati</Italian>
             <Japanese>陣営</Japanese>
+            <Korean>진영들</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_Target">
             <English>Target</English>
@@ -221,10 +244,13 @@
             <German>Ziel</German>
             <Polish>Cel</Polish>
             <Japanese>目標</Japanese>
+            <Korean>목표</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_SelectedUnit">
             <English>Selected Unit</English>
             <German>Ausgewählte Einheit</German>
+            <Korean>유닛 선택</Korean>
+            <Polish>Wybrane Jednostki</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_SelectedGroup">
             <English>Selected Group</English>
@@ -247,6 +273,7 @@
             <Polish>Frakcja</Polish>
             <Czech>Frakce</Czech>
             <Italian>Fazione</Italian>
+            <Korean>팩션</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_Aircraft">
             <English>Aircraft</English>
@@ -256,6 +283,7 @@
             <Polish>Pojazd latający</Polish>
             <Czech>Letadlo</Czech>
             <Italian>Aerei</Italian>
+            <Korean>항공기</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_Filter">
             <English>Filter</English>
@@ -266,6 +294,7 @@
             <Czech>Filtr</Czech>
             <Italian>Filtri</Italian>
             <Japanese>フィルタ</Japanese>
+            <Korean>필터</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_Units">
             <English>Units</English>
@@ -276,10 +305,13 @@
             <Czech>Jednotky</Czech>
             <Italian>Unità</Italian>
             <Japanese>ユニット</Japanese>
+            <Korean>유닛들</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_Vehicle">
             <English>Vehicle</English>
             <German>Fahrzeug</German>
+            <Korean>차량</Korean>
+            <Polish>Pojazd</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_Vehicles">
             <English>Vehicles</English>
@@ -290,6 +322,7 @@
             <Czech>Vozidla</Czech>
             <Italian>Veicoli</Italian>
             <Japanese>車両</Japanese>
+            <Korean>차량들</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_Static">
             <English>Static</English>
@@ -300,6 +333,7 @@
             <Czech>Statický</Czech>
             <Italian>Statico</Italian>
             <Japanese>固定式</Japanese>
+            <Korean>고정</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_Nearest">
             <English>Nearest</English>
@@ -310,10 +344,13 @@
             <Czech>Nejbližší</Czech>
             <Italian>Più vicino</Italian>
             <Japanese>直近</Japanese>
+            <Korean>가장 가까운</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_Farthest">
             <English>Farthest</English>
             <German>Weiteste</German>
+            <Korean>가장 먼</Korean>
+            <Polish>Najdalsze</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_Relaxed">
             <English>Relaxed</English>
@@ -321,6 +358,11 @@
             <German>Entspannt</German>
             <Polish>Spokojni</Polish>
             <Japanese>無警戒</Japanese>
+            <Korean>차분한</Korean>
+        </Key>
+        <Key ID="STR_ZEN_Common_Careless">
+            <English>Careless</English>
+            <Polish>Beztroskie</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_Cautious">
             <English>Cautious</English>
@@ -328,6 +370,7 @@
             <German>Vorsichtig</German>
             <Polish>Ostrożni</Polish>
             <Japanese>警戒</Japanese>
+            <Korean>주의 깊은</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_Speed">
             <English>Speed</English>
@@ -338,6 +381,7 @@
             <Czech>Rychlost</Czech>
             <Italian>Velocità</Italian>
             <Japanese>速度</Japanese>
+            <Korean>속도</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_Range">
             <English>Range</English>
@@ -348,6 +392,7 @@
             <Czech>Dosah</Czech>
             <Italian>Raggio</Italian>
             <Japanese>距離</Japanese>
+            <Korean>거리</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_Radius">
             <English>Radius</English>
@@ -358,6 +403,7 @@
             <Czech>Rádius</Czech>
             <Italian>Raggio</Italian>
             <Japanese>範囲</Japanese>
+            <Korean>반경</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_Radius_Units">
             <English>Radius (m)</English>
@@ -368,6 +414,7 @@
             <Czech>Rádius (m)</Czech>
             <Italian>Raggio (m)</Italian>
             <Japanese>範囲 (m)</Japanese>
+            <Korean>반경 (m)</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_Height">
             <English>Height</English>
@@ -378,6 +425,7 @@
             <Czech>Výška</Czech>
             <Italian>Altezza</Italian>
             <Japanese>高さ</Japanese>
+            <Korean>고도</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_Height_Units">
             <English>Height (m)</English>
@@ -388,6 +436,7 @@
             <Czech>Výška (m)</Czech>
             <Italian>Altezza (m)</Italian>
             <Japanese>高さ (m)</Japanese>
+            <Korean>고도 (m)</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_Teleport">
             <English>Teleport</English>
@@ -395,6 +444,8 @@
             <German>Teleportieren</German>
             <Italian>Teletrasporto</Italian>
             <Japanese>テレポート</Japanese>
+            <Korean>순간이동</Korean>
+            <Polish>Teleport</Polish>
         </Key>
         <Key ID="STR_ZEN_Common_Effect">
             <English>Effect</English>
@@ -402,6 +453,52 @@
             <German>Effekt</German>
             <Polish>Efekt</Polish>
             <Japanese>エフェクト</Japanese>
+            <Korean>효과</Korean>
+        </Key>
+        <Key ID="STR_ZEN_Common_Pitch">
+            <English>Pitch</English>
+            <Korean>피치</Korean>
+        </Key>
+        <Key ID="STR_ZEN_Common_Roll">
+            <English>Roll</English>
+            <Korean>롤</Korean>
+        </Key>
+        <Key ID="STR_ZEN_Common_Yaw">
+            <English>Yaw</English>
+            <Korean>요</Korean>
+        </Key>
+        <Key ID="STR_ZEN_Common_UncheckAll">
+            <English>Uncheck All</English>
+            <Polish>Odznacz wszystkie</Polish>
+            <Korean>전체 선택 해제</Korean>
+        </Key>
+        <Key ID="STR_ZEN_Common_CheckAll">
+            <English>Check All</English>
+            <Polish>Zaznacz wszystkie</Polish>
+            <Korean>전체 선택</Korean>
+        </Key>
+        <Key ID="STR_ZEN_Common_NoGroupsFound">
+            <English>No groups found.</English>
+            <Polish>Nie znaleziono grup</Polish>
+            <Korean>그룹을 찾을 수 없습니다.</Korean>
+        </Key>
+        <Key ID="STR_ZEN_Common_NoPlayersFound">
+            <English>No players found.</English>
+            <Polish>Nie znaleziono graczy</Polish>
+            <Korean>플레이어를 찾을 수 없습니다.</Korean>
+        </Key>
+        <Key ID="STR_ZEN_Common_NotEnoughSpaceInVehicle">
+            <English>Not enough space in target vehicle: %1 needed - %2 available</English>
+            <French>Pas assez d'espace dans le véhicule cible : %1 nécessaire - %2 disponible</French>
+            <Polish>Za mało miejsca w pojeździe docelowym: %1 potrzebne - %2 dostępne</Polish>
+            <German>Nicht genügend Platz im Zielfahrzeug: %1 benötigt - %2 verfügbar</German>
+            <Japanese>選択された車両に空きがありません: 必要量 %1 - 空き容量 %2</Japanese>
+            <Korean>목표 차량에 충분한 자리가 없습니다: %1 요구됨 - %2 가능</Korean>
+        </Key>
+        <Key ID="STR_ZEN_Common_CopyToClipboard">
+            <English>Copy to Clipboard</English>
+            <Polish>Kopiuj do schowka</Polish>
+            <Korean>복사됨</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects">
             <English>Add Objects to Curators</English>
@@ -410,6 +507,7 @@
             <German>Objekte zum Kurator hinzufügen</German>
             <Polish>Dodaj obiekty do Zeusa</Polish>
             <Japanese>キュレーターにオブジェクト追加</Japanese>
+            <Korean>큐레이터에 아이템 추가</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects_Description">
             <English>Automatically adds spawned objects to all curators.</English>
@@ -418,6 +516,7 @@
             <German>Fügt automatisch gespawnte Objekte zu allen Kuratoren hinzu.</German>
             <Polish>Automatycznie dodaj zespawnowane obiekty do Zeusa.</Polish>
             <Japanese>自動的に生成されたオブジェクトをキュレーターへ追加します。</Japanese>
+            <Korean>소환된 모든 물체를 자동적으로 모든 큐레이터에 추가합니다.</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_DisableGearAnim">
             <English>Disable Gear Animation</English>
@@ -426,6 +525,7 @@
             <German>Inventar Animation deaktivieren</German>
             <Polish>Wyłącz animację grzebania w ekwipunku</Polish>
             <Japanese>装備アニメーション無効化</Japanese>
+            <Korean>장비 애니메이션 해제</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_DisableGearAnim_Description">
             <English>Disables the "Gear" animation from playing when entering Zeus.</English>
@@ -434,6 +534,7 @@
             <Polish>Wyłącza animację grzebania w ekwipunku po wejściu do Zeusa.</Polish>
             <Russian>Отключает анимированную шестерёнку при входе в режим ГМ</Russian>
             <Japanese>Zeus 中は "装備" アニメーションの再生を停止させます。</Japanese>
+            <Korean>제우스에 입장했을때 "장비" 애니메이션을 해제합니다.</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_DarkMode">
             <English>Dark Mode</English>
@@ -443,6 +544,7 @@
             <Polish>Tryb ciemny</Polish>
             <Italian>Modalità scura</Italian>
             <Japanese>ダーク モード</Japanese>
+            <Korean>다크 모드</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_DarkMode_Description">
             <English>Changes the appearance of various user interface elements to a darker color theme.</English>
@@ -451,6 +553,7 @@
             <Polish>Zmienia kolorystykę elementów interfejsu na ciemniejszą.</Polish>
             <Russian>Меняет вид интерфейса пользователя на более тёмные</Russian>
             <Japanese>UI の様々な部分の見た目を暗色へ変更します。</Japanese>
+            <Korean>사용자 인터페이스 구성요소를 다크 모드로 변환합니다.</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_PreferredArsenal">
             <English>Preferred Arsenal</English>
@@ -459,6 +562,7 @@
             <German>Bevorzugtes Arsenal</German>
             <Polish>Preferowany arsenał</Polish>
             <Japanese>優先武器庫</Japanese>
+            <Korean>선호하는 무기 창고</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_PreferredArsenal_Description">
             <English>Selects the preferred arsenal used by Zeus Enhanced.\nIf ACE Arsenal is not installed, will fall back to BI Virtual Arsenal.</English>
@@ -466,7 +570,8 @@
             <German>Regelt, welches Arsenal von Zeus Enhanced geöffnet wird.\nWenn ACE Arsenal nicht installiert ist, wird auf das Vanilla BI Virtual Arsenal zurückgegriffen.</German>
             <Polish>Wybierz preferowany arsenał używany przez Zeus Enhanced.\nJeśli arsenał ACE nie będzie dostępny to uruchomi się podstawowy wirtualny arsenał BI.</Polish>
             <Russian>Выбор предпочитаемого Арсенала\nlfЕсли не установлен ACE, будет запущен стандартный Виртуальный Арсенал.</Russian>
-            <Japanese>Zeus Ehnhanced により優先された武器庫を選択します。\nACE3 武器庫が有効化されていない場合、ゲーム標準のバーチャル武器庫へ戻されます。</Japanese>
+            <Japanese>Zeus Enhanced により優先された武器庫を選択します。\nACE3 武器庫が有効化されていない場合、ゲーム標準のバーチャル武器庫へ戻されます。</Japanese>
+            <Korean>Zeus Enhanced 에서 쓰일 무기 창고를 선택합니다. \n만약 ACE 무기 창고가 설치되어있지 않다면, BI 무기 창고로 변경됩니다.</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_BIVirtualArsenal">
             <English>BI Virtual Arsenal</English>
@@ -475,6 +580,7 @@
             <German>BI Virtuelle Arsenal</German>
             <Polish>Wirtualny arsenał BI</Polish>
             <Japanese>バーチャル武器庫</Japanese>
+            <Korean>BI 가상 무기고</Korean>
         </Key>
         <Key ID="STR_ZEN_Common_AceArsenal">
             <English>ACE Arsenal</English>
@@ -483,16 +589,26 @@
             <German>ACE Arsenal</German>
             <Polish>Arsenał ACE</Polish>
             <Japanese>ACE 武器庫</Japanese>
+            <Korean>ACE 무기 창고</Korean>
         </Key>
-        <Key ID="STR_ZEN_Common_NotEnoughSpaceInVehicle">
-            <English>Not enough space in target vehicle: %1 needed - %2 available</English>
-            <French>Pas assez d'espace dans le véhicule cible : %1 nécessaire - %2 disponible</French>
-            <Polish>Za mało miejsca w pojeździe docelowym: %1 potrzebne - %2 dostępne</Polish>
-            <German>Nicht genügend Platz im Zielfahrzeug: %1 benötigt - %2 verfügbar</German>
-            <Japanese>選択された車両に空きがありません: 必要量 %1 - 空き容量 %2</Japanese>
+        <Key ID="STR_ZEN_Common_AscensionMessages">
+            <English>Ascension Messages</English>
+            <Polish>Powiadomienia o wyznaczeniu Zeusa</Polish>
         </Key>
-        <Key ID="STR_ZEN_Common_CopyToClipboard">
-            <English>Copy to Clipboard</English>
+        <Key ID="STR_ZEN_Common_AscensionMessages_Description">
+            <English>Controls whether global popup messages are displayed when a player is assigned as Zeus.</English>
+            <Polish>Kontroluje czy po wyznaczeniu nowego gracza na Zeusa zostaje wyświetlona wiadomość globalna.</Polish>
+            <Korean>새로운 플레이어가 Zeus로 지정될 때 전체 메시지의 표시 여부를 제어합니다.</Korean>
+        </Key>
+        <Key ID="STR_ZEN_Common_CameraBird">
+            <English>Camera Eagle</English>
+            <Polish>Orzeł przy kamerze</Polish>
+            <Korean>독수리 카메라</Korean>
+        </Key>
+        <Key ID="STR_ZEN_Common_CameraBird_Description">
+            <English>Controls whether an eagle that follows the Zeus camera is created.</English>
+            <Polish>Kontroluje czy orzeł podążający za kamerą Zeusa jest aktywowany.</Polish>
+            <Korean>Zeus 카메라를 따라다니는 독수리의 생성 여부를 제어합니다</Korean>
         </Key>
     </Package>
 </Project>

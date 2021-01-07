@@ -3,6 +3,7 @@
     <Package name="Editor">
         <Key ID="STR_ZEN_Editor_DisplayName">
             <English>Editor</English>
+            <Korean>편집기</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_MoveDisplayToEdge">
             <English>Move Display to Edge</English>
@@ -11,6 +12,7 @@
             <German>Display an den Rand verschieben</German>
             <Polish>Przesuń wyświetlacz do krawędzi</Polish>
             <Japanese>端に表示</Japanese>
+            <Korean>모서리로 화면 이동</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_MoveDisplayToEdge_Description">
             <English>Moves the Zeus Editor Display to the edge of the screen.</English>
@@ -19,6 +21,7 @@
             <Polish>Przesuwa wyświetlacz edytora Zeusa do krawędzi ekranu.</Polish>
             <Russian>Убирает панель за край</Russian>
             <Japanese>Zeus のエディタを画面端に移動させます。</Japanese>
+            <Korean>제우스 에디터 화면을 화면의 모서리로 이동합니다.</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_RemoveWatermark">
             <English>Remove Watermark</English>
@@ -27,6 +30,7 @@
             <German>Wasserzeichen verstecken</German>
             <Polish>Usuń znak wodny</Polish>
             <Japanese>透かしを削除</Japanese>
+            <Korean>워터마크 제거</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_RemoveWatermark_Description">
             <English>Removes the watermark shown when hiding the display.</English>
@@ -35,6 +39,7 @@
             <Polish>Usuwa znak wodny pokazywany po ukryciu wyświetlacza.</Polish>
             <Russian>Убирает водяной знак ГМ когда интерфейс спрятан</Russian>
             <Japanese>UI 非表示に出る透かしを削除します。</Japanese>
+            <Korean>디스플레이를 가릴때 나타나는 워터마크를 제거합니다.</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_DisableLiveSearch">
             <English>Disable Live Search</English>
@@ -43,6 +48,7 @@
             <German>Live Suche deaktivieren</German>
             <Polish>Wyłącz wyszukiwanie na żywo</Polish>
             <Japanese>リアルタイム検索を無効化</Japanese>
+            <Korean>실시간 검색 비활성화</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_DisableLiveSearch_Description">
             <English>Requires pressing Enter or clicking the search button to confirm a search.\nHelps reduce lag when searching through a lot of items.</English>
@@ -51,6 +57,7 @@
             <Polish>Wymaga wciśnięcia Enter lub kliknięcia przycisku wyszukiwania by potwierdzić wyszukiwanie.\nPomaga zredukować lag przy przeszukiwaniu wielu przedmiotów.</Polish>
             <Russian>Для подтверждения поиска тебуется нажатие клавиши Ввод\nПомогает уменьшить лаг при поиске </Russian>
             <Japanese>有効化すると検索ボタンをクリックするかエンターを押すまで検索を行いません。\n大量のアイテムがある場合は遅延の低減に繋がります。</Japanese>
+            <Korean>검색을 완료하기 위해 엔터키를 누르거나 검색 버튼을 눌러야 합니다. \n많은 아이템을 검색함으로써 생기는 렉이 줄어드는데 도움이 됩니다.</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_DeclutterEmptyTree">
             <English>Declutter Empty Tree</English>
@@ -59,6 +66,7 @@
             <German>Leer Kategorie aufräumen</German>
             <Polish>Oczyść drzewo pustych obiektów</Polish>
             <Japanese>空ツリー整理</Japanese>
+            <Korean> 범주 정리하기</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_DeclutterEmptyTree_Description">
             <English>Declutters the empty tree by removing empty vehicles as those are available in the side specific trees.</English>
@@ -66,14 +74,29 @@
             <German>Räumt die Kategorie "Leer" auf. Leere Fahrzeuge werden versteckt, da diese in den Seiten spezifischen Kategorien vorhanden sind.</German>
             <Polish>Oczyszcza drzewo pustych obiektów przez usunięcie pustych pojazdów, gdyż są one dostępne w drzewach poszczególnych stron.</Polish>
             <Japanese>陣営特有として使用できる空の車両がある空ツリーを整理します。</Japanese>
+            <Korean>특정 진영에 한정된 범주에서만 사용 가능한 비어있는 차량을 제거하여 비어있는 범주 정리하기</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_AddGroupIcons">
             <English>Add Group Icons</English>
             <German>Gruppensymbole anzeigen</German>
+            <Polish>Dodaj ikone grupy</Polish>
+            <Korean>그룹 아이콘 추가</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_AddGroupIcons_Description">
             <English>Adds group icons to the create group trees.</English>
             <German>Zeigt Gruppensymbole im Gruppenbaum an.</German>
+            <Polish>Dodaje ikone grupy do drzewka tworzenia grup.</Polish>
+            <Korean>그룹 나무를 생성하기 위해 그룹 아이콘을 추가합니다.</Korean>
+        </Key>
+        <Key ID="STR_ZEN_Editor_RandomizeCopyPaste">
+            <English>Randomize Deep Copy/Paste</English>
+            <Polish>Losowe kopiowanie/Wklejanie (Głębokie)</Polish>
+            <Korean>전체 복사/붙여 넣기 랜덤</Korean>
+        </Key>
+        <Key ID="STR_ZEN_Editor_RandomizeCopyPaste_Description">
+            <English>Controls whether deep copy/paste will randomize unit identities and vehicle customization (instead of making identical copies).</English>
+            <Polish>Kontoluje czy głębokie kopiowanie/wklejanie będzie losowo zmieniało ustawienia jednostek (zamiast tworzenia identycznych kopii)</Polish>
+            <Korean>(동일한 복사본을 만드는 대신) 전체 복사/붙여 넣기의 유닛 설정 랜덤 여부를 제어합니다.</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages">
             <English>Unit Radio Messages</English>
@@ -82,6 +105,7 @@
             <German>Funkmeldungen von Einheiten</German>
             <Polish>Wiadomość radiowa jednostki</Polish>
             <Japanese>ユニット無線送信</Japanese>
+            <Korean>유닛 무전</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages_Description">
             <English>Controls whether unit radio messages are played on placement and waypoint orders, waypoints only, or disabled.</English>
@@ -90,14 +114,18 @@
             <Polish>Kontroluje czy wiadomości radiowe jednostki są odtwarzane przy postawieniu i wyznaczeniu punktu trasy, jedynie przy wyznaczeniu punktu trasy lub czy są wyłączone.</Polish>
             <Russian>Определяет будут ли ИИ подразделения сообщать по радио о своих действиях или нет.</Russian>
             <Japanese>ユニットが配置についたり、ウェイポイント指示、ウェイポイントのみ、無効化された時に無線でメッセージを送信するかどうかを決定します。</Japanese>
+            <Korean>유닛 무전이 배치, 웨이포인트 명령, 혹은 웨이포인트에서만 재생되는지 또는 비활성화되는지 여부를 제어합니다.</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_ParachuteSounds">
             <English>Parachute Sounds</English>
             <German>Fallschirmgeräusche</German>
+            <Polish>Dzwięki spadochronu</Polish>
+            <Korean>낙하산 소음</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_ParachuteSounds_Description">
             <English>Controls whether jet flyby sounds are played when an object is paradropped via the Raise Entity keybind.</English>
             <German>Bestimmt ob Fallschirmgeräusche abgespielt werden, wenn ein Objekt per Hochheben-Tastenkombination abgeworfen wird.</German>
+            <Polish>Kontroluje czy odtwarzany jest dzwięk przelatującego samolotu gdy obiekt jest zrzucany z spadochronem przy pomocy klawisza do podniesienia jednostki</Polish>
         </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages_WaypointsOnly">
             <English>Waypoints Only</English>
@@ -106,6 +134,7 @@
             <German>Nur Wegpunkte</German>
             <Polish>Tylko punkty trasy</Polish>
             <Japanese>ウェイポイントのみ</Japanese>
+            <Korean>웨이포인트 한정</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleIncludeCrew">
             <English>Toggle Include Crew</English>
@@ -113,6 +142,7 @@
             <German>Besatzung hinzufügen umschalten</German>
             <Polish>Przełącz 'dołącz załogę'</Polish>
             <Japanese>乗員含むに切り替え</Japanese>
+            <Korean>승무원 포함 토글</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_EjectPassengers">
             <English>Eject Passengers</English>
@@ -120,6 +150,7 @@
             <German>Passagiere rauswerfen</German>
             <Polish>Wysadź pasażerów</Polish>
             <Japanese>後部座席を脱出</Japanese>
+            <Korean>승객 탈출</Korean>
         </Key>
         <Key ID="STR_ZEN_Editor_EjectPassengers_Description">
             <English>Ejects the passengers of all selected vehicles. If the vehicle is currently flying, the units will be given parachutes.\nUnlike vanilla eject, units will disembark one after another (not immediately, with a short delay in-between).</English>
@@ -133,46 +164,60 @@
             <French>Déployer des contre-mesures</French>
             <German>Gegenmaßnahmen einleiten</German>
             <Japanese>欺瞞装置作動</Japanese>
+            <Polish>Odpal środki przeciw namierzające</Polish>
         </Key>
         <Key ID="STR_ZEN_Editor_DeployCountermeasures_Description">
             <English>Makes all selected vehicles deploy countermeasures such as smokes and flares.</English>
             <French>Tous les véhicules sélectionnés déploient des contre-mesures telles que des fumées et des fusées éclairantes.</French>
             <German>Alle ausgewählten Fahrzeuge setzen Gegenmaßnahmen wie Rauch und Leuchtfackeln ein.</German>
             <Japanese>選択された全車両から煙幕やフレアといった欺瞞装置を作動させます。</Japanese>
+            <Polish>Powoduje że wszystkie wybrane pojazdy odpalają środki przeciw namierzające, czyli flary, dymy itp.</Polish>
         </Key>
         <Key ID="STR_ZEN_Editor_DeepCopy">
             <English>Deep Copy</English>
             <German>Komplette Kopie</German>
+            <Polish>Głęboka Kopia</Polish>
         </Key>
         <Key ID="STR_ZEN_Editor_DeepCopy_Description">
             <English>Performs a "deep copy" of selected objects - copying an extended set of object properties such as unit loadouts, vehicle inventories and customization.</English>
             <German>Legt eine komplette Kopie von Objekten an, welches die Einheiten- und Fahrzeugausrüstung, sowie benutzerdefinierte Anpassungen speichert.</German>
+            <Polish>Powoduje "Głębokie" kopiowanie wybranych przedmiotów, oznacza to że ustawienia, wartości, przedmioty i inwentarz jednostki także zostanie skopiowany.</Polish>
         </Key>
         <Key ID="STR_ZEN_Editor_DeepPaste">
             <English>Deep Paste</English>
             <German>Komplettes Einfügen</German>
+            <Polish>Głębokie wklejanie</Polish>
         </Key>
         <Key ID="STR_ZEN_Editor_DeepPaste_Description">
             <English>Pastes the current deep copied object data.</English>
             <German>Fügt die derzeitig gespeicherte komplette Kopie ein.</German>
+            <Polish>Wkleja z schowka obiekty które zostały głęboko skopiowane.</Polish>
         </Key>
         <Key ID="STR_ZEN_Editor_FocusSearchBar">
             <English>Focus Search Bar</English>
             <German>Suchfeld fokussieren</German>
+            <Polish>Skieruj na wyszukiwarke</Polish>
         </Key>
         <Key ID="STR_ZEN_Editor_FocusSearchBar_Description">
             <English>Sets focus to the search bar.</English>
             <German>Setzt den Fokus auf das Suchfeld.</German>
+            <Polish>Kieruje na listwe wyszukiwarki</Polish>
+        </Key>
+        <Key ID="STR_ZEN_Editor_OrientTerrainNormal_Description">
+            <English>Orients all selected objects to match the terrain slope at their position.</English>
+            <Polish>Orientuje wszystkie wybrane obiekty aby ustawiły się względem terenu na swojej pozycji.</Polish>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleIcons">
             <English>Toggle Editable Icons</English>
             <German>Bearbeitbare Symbole umschalten</German>
             <Japanese>編集可アイコン切り替え</Japanese>
+            <Polish>Przełącz Ikony z możliwością edytowania</Polish>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleIcons_Description">
             <English>Toggles the visibility of all editable icons. Useful for temporarily reducing lag or onscreen clutter when there are a lot of icons.</English>
             <German>Schaltet die Sichtbarkeit von bearbeitbaren Symbolen um. Nützlich um temporär die Leistung zu verbessern oder für die Übersichtlichkeit.</German>
             <Japanese>全編集可アイコンの視認性を切り替えます。一時的な処理軽減や整理に使用できます。</Japanese>
+            <Polish>Przełącza widoczność wszsytkich ustawionych ikon, przydatne by tymczasowo zmniejszyć lag, bądź niepotrzebne zaśmiecenie ekranu gdy znajduje się na nim dużo ikon.</Polish>
         </Key>
     </Package>
 </Project>

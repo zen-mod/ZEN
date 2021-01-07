@@ -14,11 +14,12 @@
  * The returned value will still be within the min and max values (ideally 0 to 1).
  * This allows the user to input a percent from 0 to 100 instead of 0 to 1.
  *
- * Optionally, a "Value Changed" callback can be provided. This code will be called any time
+ * Optionally, a value changed callback can be provided. This code will be called any time
  * the value of the slider or edit changes. It is passed the following parameters:
  *   0: Slider <CONTROL>
  *   1: Edit <CONTROL>
  *   2: Value <NUMBER>
+ *   3: Arguments <ANY>
  *
  * Arguments:
  * 0: Slider <CONTROL>
@@ -30,6 +31,7 @@
  * 6: Formatting <NUMBER|CODE> (default: 0)
  * 7: Is Percentage <BOOL> (default: false)
  * 8: Value Changed <CODE> (default: {})
+ * 9: Arguments <ANY> (default: [])
  *
  * Return Value:
  * None
@@ -40,20 +42,32 @@
  * Public: No
  */
 
-params ["_ctrlSlider", "_ctrlEdit", "_min", "_max", "_value", ["_speed", -1, [0]], ["_formatting", 0, [0, {}]], ["_isPercentage", false, [false]], ["_fnc_valueChanged", {}, [{}]]];
+params [
+    ["_ctrlSlider", controlNull, [controlNull]],
+    ["_ctrlEdit", controlNull, [controlNull]],
+    ["_min", 0, [0]],
+    ["_max", 1, [0]],
+    ["_value", 0, [0]],
+    ["_speed", -1, [0]],
+    ["_formatting", 0, [0, {}]],
+    ["_isPercentage", false, [false]],
+    ["_fnc_valueChanged", {}, [{}]],
+    ["_args", []]
+];
 
+// Use 5% of the range as the speed value if one is not provided
 if (_speed <= 0) then {
     _speed = 0.05 * (_max - _min);
 };
 
 private _fnc_formatValue = {
     if (_isPercentage) then {
-        format [localize "STR_3DEN_percentageUnit", round (_value * 100), "%"];
+        format [localize "STR_3DEN_percentageUnit", round (_value * 100), "%"]
     } else {
         if (_formatting isEqualType 0) then {
-            [_value, 1, _formatting] call CBA_fnc_formatNumber;
+            [_value, 1, _formatting] call CBA_fnc_formatNumber
         } else {
-            _value call _formatting;
+            _value call _formatting
         };
     };
 };
@@ -61,22 +75,22 @@ private _fnc_formatValue = {
 _ctrlSlider sliderSetRange [_min, _max];
 _ctrlSlider sliderSetSpeed [_speed, _speed];
 _ctrlSlider sliderSetPosition _value;
-_ctrlSlider setVariable [QGVAR(params), [_ctrlEdit, _isPercentage, _formatting, _fnc_formatValue, _fnc_valueChanged]];
+_ctrlSlider setVariable [QGVAR(params), [_ctrlEdit, _isPercentage, _formatting, _fnc_formatValue, _fnc_valueChanged, _args]];
 
 _ctrlSlider ctrlAddEventHandler ["SliderPosChanged", {
     params ["_ctrlSlider", "_value"];
-    (_ctrlSlider getVariable QGVAR(params)) params ["_ctrlEdit", "_isPercentage", "_formatting", "_fnc_formatValue", "_fnc_valueChanged"];
+    (_ctrlSlider getVariable QGVAR(params)) params ["_ctrlEdit", "_isPercentage", "_formatting", "_fnc_formatValue", "_fnc_valueChanged", "_args"];
 
     _ctrlEdit ctrlSetText call _fnc_formatValue;
-    [_ctrlSlider, _ctrlEdit, _value] call _fnc_valueChanged;
+    [_ctrlSlider, _ctrlEdit, _value, _args] call _fnc_valueChanged;
 }];
 
 _ctrlEdit ctrlSetText call _fnc_formatValue;
-_ctrlEdit setVariable [QGVAR(params), [_ctrlSlider, _isPercentage, _formatting, _fnc_formatValue, _fnc_valueChanged]];
+_ctrlEdit setVariable [QGVAR(params), [_ctrlSlider, _isPercentage, _formatting, _fnc_formatValue, _fnc_valueChanged, _args]];
 
 _ctrlEdit ctrlAddEventHandler ["KeyUp", {
     params ["_ctrlEdit"];
-    (_ctrlEdit getVariable QGVAR(params)) params ["_ctrlSlider", "_isPercentage", "", "", "_fnc_valueChanged"];
+    (_ctrlEdit getVariable QGVAR(params)) params ["_ctrlSlider", "_isPercentage", "", "", "_fnc_valueChanged", "_args"];
 
     private _value = parseNumber ctrlText _ctrlEdit;
 
@@ -87,7 +101,7 @@ _ctrlEdit ctrlAddEventHandler ["KeyUp", {
     _ctrlSlider sliderSetPosition _value;
     _value = sliderPosition _ctrlSlider;
 
-    [_ctrlSlider, _ctrlEdit, _value] call _fnc_valueChanged;
+    [_ctrlSlider, _ctrlEdit, _value, _args] call _fnc_valueChanged;
 }];
 
 _ctrlEdit ctrlAddEventHandler ["KillFocus", {

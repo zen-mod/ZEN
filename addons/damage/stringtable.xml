@@ -64,7 +64,7 @@
             <French>Stabilisateur horizontal gauche</French>
             <German>Linkes Höhenleitwerk</German>
             <Japanese>左側の水平安定機</Japanese>
-            <Korean>왼쪽 수평안정판</Korean>
+            <Korean>왼쪽 수평 안정기</Korean>
             <Chinesesimp>左侧悬挂稳定</Chinesesimp>
             <Chinese>左側懸掛穩定</Chinese>
         </Key>
@@ -79,7 +79,7 @@
             <French>Stabilisateur horizontal droit</French>
             <German>Rechtes Höhenleitwerk</German>
             <Japanese>右側の水平安定機</Japanese>
-            <Korean>오른쪽 수평안정판</Korean>
+            <Korean>오른쪽 수평 안정기</Korean>
             <Chinesesimp>右侧悬挂稳定</Chinesesimp>
             <Chinese>右側懸掛穩定</Chinese>
         </Key>
@@ -94,7 +94,7 @@
             <French>Stabilisateur vertical</French>
             <German>Seitenleitwerk</German>
             <Japanese>車両スタビライザ</Japanese>
-            <Korean>수직 안정판</Korean>
+            <Korean>수직 안정기</Korean>
             <Chinesesimp>垂直稳定</Chinesesimp>
             <Chinese>垂直穩定</Chinese>
         </Key>
@@ -247,7 +247,7 @@
             <Hungarian>Ágyú</Hungarian>
             <Russian>Пушку</Russian>
             <Japanese>砲</Japanese>
-            <Korean>포</Korean>
+            <Korean>총</Korean>
             <Chinesesimp>枪</Chinesesimp>
             <Chinese>槍</Chinese>
         </Key>
@@ -263,7 +263,7 @@
             <Hungarian>Parancsnok Lövegtorony</Hungarian>
             <Russian>Башня командира</Russian>
             <Japanese>車長の砲塔</Japanese>
-            <Korean>지휘관 포탑</Korean>
+            <Korean>사령관 포탑</Korean>
             <Chinesesimp>指挥官 炮塔</Chinesesimp>
             <Chinese>指揮官 砲塔</Chinese>
         </Key>
@@ -279,7 +279,7 @@
             <Hungarian>Parancsnok Ágyú</Hungarian>
             <Russian>Пушка командира</Russian>
             <Japanese>車長の砲</Japanese>
-            <Korean>지휘관 포</Korean>
+            <Korean>사령관 총</Korean>
             <Chinesesimp>指挥官 枪</Chinesesimp>
             <Chinese>指揮官 槍</Chinese>
         </Key>
@@ -438,7 +438,7 @@
             <Hungarian>Bal hátsó kerék</Hungarian>
             <Russian>Левое заднее колесо</Russian>
             <Japanese>左の後輪</Japanese>
-            <Korean>왼쪽 뒤쪽 바퀴</Korean>
+            <Korean>왼쪽 뒷바퀴</Korean>
             <Chinesesimp>左后轮</Chinesesimp>
             <Chinese>左後輪</Chinese>
         </Key>
@@ -454,7 +454,7 @@
             <Hungarian>Jobb hátsó kerék</Hungarian>
             <Russian>Правое заднее колесо</Russian>
             <Japanese>右の後輪</Japanese>
-            <Korean>오른쪽 뒤쪽 바퀴</Korean>
+            <Korean>오른쪽 뒷바퀴</Korean>
             <Chinesesimp>右后轮</Chinesesimp>
             <Chinese>右後輪</Chinese>
         </Key>
@@ -486,7 +486,7 @@
             <Hungarian>Főrotor</Hungarian>
             <Russian>Несущий винт</Russian>
             <Japanese>主翼</Japanese>
-            <Korean>주 로터</Korean>
+            <Korean>메인 로터</Korean>
             <Chinesesimp>主旋翼</Chinesesimp>
             <Chinese>主旋翼</Chinese>
         </Key>
@@ -502,7 +502,7 @@
             <Hungarian>Farokrotor</Hungarian>
             <Russian>Рулевой винт</Russian>
             <Japanese>テイル ローター</Japanese>
-            <Korean>꼬리 로터</Korean>
+            <Korean>테일 로터</Korean>
             <Chinesesimp>尾桨</Chinesesimp>
             <Chinese>尾槳</Chinese>
         </Key>
@@ -580,49 +580,69 @@
             <Portuguese>ERA</Portuguese>
             <Russian>ДЗ</Russian>
             <Japanese>ERA</Japanese>
-            <Korean>폭발반응장갑</Korean>
+            <Korean>폭발반응장갑차</Korean>
             <Chinesesimp>爆炸式反应装甲</Chinesesimp>
             <Chinese>爆炸式反應裝甲</Chinese>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitera_front">
             <English>ERA Front</English>
             <German>Reaktivpanzerung vorne</German>
+            <Polish>ERA Przód</Polish>
+            <Korean>폭발반응장갑차 앞</Korean>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitera_back">
             <English>ERA Back</English>
             <German>Reaktivpanzerung hinten</German>
+            <Polish>ERA tył</Polish>
+            <Korean>폭발반응장갑차 뒤</Korean>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitera_left">
             <English>ERA Left</English>
             <German>Reaktivpanzerung links</German>
+            <Polish>ERA lewa strona</Polish>
+            <Korean>폭발반응장갑차 왼쪽</Korean>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitera_right">
             <English>ERA Right</English>
             <German>Reaktivpanzerung rechts</German>
+            <Polish>ERA prawa strona</Polish>
+            <Korean>폭발반응장갑차 오른쪽</Korean>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitera_top">
             <English>ERA Top</English>
             <German>Reaktivpanzerung oben</German>
+            <Polish>ERA góra</Polish>
+            <Korean>폭발반응장갑차 위</Korean>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitslat">
             <English>Slat</English>
             <German>Käfig</German>
+            <Polish>Klapa</Polish>
+            <Korean>슬랫</Korean>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitslat_left">
             <English>Slat Left</English>
             <German>Käfig links</German>
+            <Polish>Klapa lewa</Polish>
+            <Korean>슬랫 왼쪽</Korean>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitslat_right">
             <English>Slat Right</English>
             <German>Käfig rechts</German>
+            <Polish>Klapa prawa</Polish>
+            <Korean>슬랫 오른쪽</Korean>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitslat_front">
             <English>Slat Front</English>
             <German>Käfig vorne</German>
+            <Polish>Klapa przód</Polish>
+            <Korean>슬랫 앞</Korean>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitslat_back">
             <English>Slat Back</English>
             <German>Käfig hinten</German>
+            <Polish>Klapa tył</Polish>
+            <Korean>슬랫 뒤</Korean>
         </Key>
     </Package>
 </Project>

@@ -1,4 +1,14 @@
 #define DEBUG_SYNCHRONOUS
+
+#define PRELOAD_ADDONS \
+    class CfgAddons { \
+        class PreloadAddons { \
+            class PREFIX { \
+                list[] += {QUOTE(ADDON)}; \
+            }; \
+        }; \
+    }
+
 #include "\x\cba\addons\main\script_macros_common.hpp"
 #include "\x\cba\addons\xeh\script_xeh.hpp"
 
@@ -36,6 +46,7 @@
 #define TYPE_MAGAZINE_HANDGUN_AND_GL 16 // mainly
 #define TYPE_MAGAZINE_PRIMARY_AND_THROW 256
 #define TYPE_MAGAZINE_SECONDARY_AND_PUT 512 // mainly
+#define TYPE_MAGAZINE_MISSILE 768
 
 // More types
 #define TYPE_BINOCULAR_AND_NVG 4096

@@ -55,7 +55,7 @@ if (isNull _building) then {
     _ctrlMode ctrlCommit 0;
 } else {
     // Get the available damage states for the nearest building
-    private _config = configFile >> "CfgVehicles" >> typeOf _building >> "HitPoints";
+    private _config = configOf _building >> "HitPoints";
     private _hasHitzone1 = isClass (_config >> "Hitzone_1_hitpoint");
     private _hasHitzone2 = isClass (_config >> "Hitzone_2_hitpoint");
 

@@ -88,6 +88,16 @@
     _group setFormation _formation;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setFormDir), {
+    params ["_group", "_direction"];
+    _group setFormDir _direction;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(lockWP), {
+    params ["_group", "_locked"];
+    _group lockWP _locked;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(setSkill), {
     params ["_unit", "_skill"];
     _unit setSkill _skill;
@@ -99,13 +109,27 @@
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(enableAI), {
-    params ["_unit", "_section"];
-    _unit enableAI _section;
+    params ["_unit", "_sections"];
+
+    if (_sections isEqualType "") then {
+        _sections = [_sections];
+    };
+
+    {
+        _unit enableAI _x;
+    } forEach _sections;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(disableAI), {
-    params ["_unit", "_section"];
-    _unit disableAI _section;
+    params ["_unit", "_sections"];
+
+    if (_sections isEqualType "") then {
+        _sections = [_sections];
+    };
+
+    {
+        _unit disableAI _x;
+    } forEach _sections;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(doMove), {
@@ -187,6 +211,11 @@
 [QGVAR(setDir), {
     params ["_object", "_direction"];
     _object setDir _direction;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setVectorUp), {
+    params ["_object", "_vectorUp"];
+    _object setVectorUp _vectorUp;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(setVelocity), {
@@ -272,19 +301,11 @@
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(earthquake), LINKFUNC(earthquake)] call CBA_fnc_addEventHandler;
+[QGVAR(fireArtillery), LINKFUNC(fireArtillery)] call CBA_fnc_addEventHandler;
 [QGVAR(setLampState), LINKFUNC(setLampState)] call CBA_fnc_addEventHandler;
 [QGVAR(setMagazineAmmo), LINKFUNC(setMagazineAmmo)] call CBA_fnc_addEventHandler;
 [QGVAR(setTurretAmmo), LINKFUNC(setTurretAmmo)] call CBA_fnc_addEventHandler;
 [QGVAR(showMessage), LINKFUNC(showMessage)] call CBA_fnc_addEventHandler;
-
-// BWC for deprecated public events, remove in 1.9.0
-["zen_curatorDisplayLoaded", {
-    ["ZEN_displayCuratorLoad", _this] call CBA_fnc_localEvent;
-}] call CBA_fnc_addEventHandler;
-
-["zen_curatorDisplayUnloaded", {
-    ["ZEN_displayCuratorUnload", _this] call CBA_fnc_localEvent;
-}] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
     [QGVAR(hideObjectGlobal), {
@@ -346,7 +367,7 @@ if (isServer) then {
         } forEach allCurators;
     }] call CBA_fnc_addEventHandler;
 
-    ["CBA_settingsInitialized", {
+    {
         ["AllVehicles", "InitPost", {
             params ["_object"];
 
@@ -366,8 +387,8 @@ if (isServer) then {
                 _logic addCuratorEditableObjects [allMissionObjects "AllVehicles", true];
             };
         }, true, [], false] call CBA_fnc_addClassEventHandler;
-    }] call CBA_fnc_addEventHandler;
+    } call FUNC(runAfterSettingsInit);
 
-    [QGVAR(createZeus), FUNC(createZeus)] call CBA_fnc_addEventHandler;
+    [QGVAR(createZeus), LINKFUNC(createZeus)] call CBA_fnc_addEventHandler;
     [QGVAR(deserializeObjects), LINKFUNC(deserializeObjects)] call CBA_fnc_addEventHandler;
 };

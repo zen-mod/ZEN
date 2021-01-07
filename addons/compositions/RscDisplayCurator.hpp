@@ -35,6 +35,13 @@ class RscDisplayCurator {
                             text = "\a3\3DEN\Data\Displays\Display3DEN\PanelRight\customcomposition_edit_ca.paa";
                             tooltip = "$STR_3DEN_Display3DEN_CustomCompositionPanel_Edit_tooltip";
                         };
+                        class Randomize: Create {
+                            idc = IDC_PANEL_RANDOMIZE;
+                            onButtonClick = QUOTE(call FUNC(buttonRandomize));
+                            x = POS_W(2.4);
+                            text = QPATHTOF(ui\randomize_ca.paa);
+                            tooltip = "";
+                        };
                         class Delete: Edit {
                             idc = IDC_PANEL_DELETE;
                             onButtonClick = QUOTE(call FUNC(buttonDelete));

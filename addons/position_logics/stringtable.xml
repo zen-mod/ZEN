@@ -4,6 +4,7 @@
         <Key ID="STR_ZEN_Position_Logics_DistanceKM">
             <English>(%1 km)</English>
             <German>(%1 km)</German>
+            <Polish>(%1 km)</Polish>
         </Key>
     </Package>
 </Project>

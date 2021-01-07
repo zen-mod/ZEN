@@ -45,7 +45,7 @@ class EGVAR(context_menu,actions) {
         class StagColumn: Wedge {
             displayName = "$STR_staggered";
             icon = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeFormation\stag_column_ca.paa";
-            args = "COLUMN";
+            args = "STAG COLUMN";
         };
         class EchLeft: Wedge {
             displayName = "$STR_echl";
@@ -319,6 +319,7 @@ class EGVAR(context_menu,actions) {
     };
     class EditableObjects {
         displayName = CSTRING(EditableObjects);
+        statement = QUOTE(call FUNC(openEditableObjectsDialog));
         icon = QPATHTOEF(modules,ui\edit_obj_ca.paa);
         priority = 30;
         class Add {
@@ -326,7 +327,7 @@ class EGVAR(context_menu,actions) {
             icon = QPATHTOF(ui\add_ca.paa);
             class 10m {
                 displayName = CSTRING(10m);
-                statement = QUOTE([ARR_2(true,_args)] call FUNC(editableObjects));
+                statement = QUOTE([ARR_3(true,_position,_args)] call FUNC(updateEditableObjects));
                 icon = QPATHTOF(ui\add_ca.paa);
                 args = 10;
             };
@@ -348,7 +349,7 @@ class EGVAR(context_menu,actions) {
             icon = QPATHTOF(ui\remove_ca.paa);
             class 10m {
                 displayName = CSTRING(10m);
-                statement = QUOTE([ARR_2(false,_args)] call FUNC(editableObjects));
+                statement = QUOTE([ARR_3(false,_position,_args)] call FUNC(updateEditableObjects));
                 icon = QPATHTOF(ui\remove_ca.paa);
                 args = 10;
             };

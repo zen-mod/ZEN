@@ -3,9 +3,11 @@
     <Package name="Flashlight">
         <Key ID="STR_ZEN_Flashlight_Toggle">
             <English>Toggle Flashlight</English>
+            <Polish>Przełącz latarke</Polish>
         </Key>
         <Key ID="STR_ZEN_Flashlight_Toggle_Description">
             <English>Toggles the state of the Zeus camera flashlight.</English>
+            <Polish>Włącza/Wyłącza latarke Zeusa.</Polish>
         </Key>
     </Package>
 </Project>

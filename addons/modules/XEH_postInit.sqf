@@ -16,6 +16,7 @@ if (isServer) then {
 [QGVAR(addIntelAction), LINKFUNC(addIntelAction)] call CBA_fnc_addEventHandler;
 [QGVAR(addTeleporterAction), LINKFUNC(addTeleporterAction)] call CBA_fnc_addEventHandler;
 [QGVAR(moduleEffectFire), LINKFUNC(moduleEffectFireLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(moduleNuke), LINKFUNC(moduleNukeLocal)] call CBA_fnc_addEventHandler;
 
 [QGVAR(sayMessage), BIS_fnc_sayMessage] call CBA_fnc_addEventHandler;
 [QGVAR(carrierInit), BIS_fnc_Carrier01Init] call CBA_fnc_addEventHandler;
@@ -35,7 +36,7 @@ if (isServer) then {
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(applyWeather), {
-    params ["_overcast", "_rain", "_lightning", "_rainbow", "_waves", "_wind", "_gusts", "_fog"];
+    params ["_forced", "_overcast", "_rain", "_lightning", "_rainbow", "_waves", "_wind", "_gusts", "_fog"];
 
     0 setOvercast _overcast;
     0 setLightnings _lightning;
@@ -48,7 +49,9 @@ if (isServer) then {
         0 setFog _fog;
         setWind _wind;
 
-        forceWeatherChange;
+        if (_forced) then {
+            forceWeatherChange;
+        };
     };
 }] call CBA_fnc_addEventHandler;
 
@@ -74,27 +77,16 @@ if (isServer) then {
     }, _this] call CBA_fnc_execNextFrame;
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(fireArtillery), {
-    params ["_unit", "_position", "_spread", "_ammo", "_rounds"];
+[QGVAR(setRotation), {
+    params ["_object", "_pitch", "_roll", "_yaw"];
 
-    if (_unit call EFUNC(common,isVLS)) exitWith {
-        _this call EFUNC(common,fireVLS);
-    };
+    _object setDir _yaw;
+    [_object, _pitch, _roll] call BIS_fnc_setPitchBank;
+}] call CBA_fnc_addEventHandler;
 
-    // For small spread values, use doArtilleryFire directly to avoid delay
-    // between firing caused by using doArtilleryFire one round at a time
-    if (_spread <= 10) exitWith {
-        _unit doArtilleryFire [_position, _ammo, _rounds];
-    };
+[QGVAR(moveToGunner), {
+    params ["_unit", "_vehicle"];
 
-    [{
-        params ["_unit", "_position", "_spread", "_ammo", "_rounds", "_fired"];
-
-        if (unitReady _unit) then {
-            _unit doArtilleryFire [[_position, _spread] call CBA_fnc_randPos, _ammo, 1];
-            _this set [5, _fired + 1];
-        };
-
-        _fired >= _rounds || {!alive _unit} || {!alive gunner _unit}
-    }, {}, [_unit, _position, _spread, _ammo, _rounds, 0]] call CBA_fnc_waitUntilAndExecute;
+    _unit assignAsGunner _vehicle;
+    [_unit] orderGetIn true;
 }] call CBA_fnc_addEventHandler;

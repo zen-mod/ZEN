@@ -24,4 +24,4 @@ private _containers = everyContainer _object apply {
     [_type, _object call FUNC(serializeInventory)]
 };
 
-[getItemCargo _object, weaponsItemsCargo _object, getMagazineCargo _object, getBackpackCargo _object, _containers]
+[getItemCargo _object, weaponsItemsCargo _object, magazinesAmmoCargo _object, getBackpackCargo _object, _containers]

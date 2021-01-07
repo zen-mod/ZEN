@@ -1,11 +1,16 @@
 class RscText;
 class RscEdit;
+class RscLine;
 class RscFrame;
 class RscPicture;
-class RscTree;
-class RscCheckBox;
 class RscButtonSearch;
 class RscControlsGroupNoScrollbars;
+
+class RscTree {
+    class ScrollBar;
+};
+
+class EGVAR(common,RscCheckbox);
 
 class RscDisplayCurator {
     class Controls {
@@ -50,7 +55,7 @@ class RscDisplayCurator {
                     h = safeZoneH - POS_EDGE(6,5) * GUI_GRID_H;
                 };
                 class CreateFrame: RscFrame {
-                    h = safeZoneH - POS_EDGE(7,6) * GUI_GRID_H;
+                    h = safeZoneH - POS_EDGE(6,5) * GUI_GRID_H;
                 };
                 class CreateSearch: RscEdit {
                     x = 0.15 * GUI_GRID_W;
@@ -75,47 +80,50 @@ class RscDisplayCurator {
                 };
                 class CreateUnitsWest: RscTree {
                     h = safeZoneH - POS_EDGE(8.1,7.1) * GUI_GRID_H;
+                    class ScrollBar: ScrollBar {
+                        thumb = "\a3\3DEN\Data\Controls\ctrlDefault\thumb_ca.paa";
+                        border = "\a3\3DEN\Data\Controls\ctrlDefault\border_ca.paa";
+                        arrowFull = "\a3\3DEN\Data\Controls\ctrlDefault\arrowFull_ca.paa";
+                        arrowEmpty = "\a3\3DEN\Data\Controls\ctrlDefault\arrowEmpty_ca.paa";
+                    };
                 };
                 class VehicleCrew: RscControlsGroupNoScrollbars {
                     x = 0;
-                    y = safeZoneH - POS_EDGE(3,2) * GUI_GRID_H - pixelH;
+                    y = safeZoneH - POS_EDGE(3,2) * GUI_GRID_H;
                     w = 11 * GUI_GRID_W;
-                    h = GUI_GRID_H + 2 * pixelH;
+                    h = GUI_GRID_H;
                     class controls {
                         class Background: RscText {
                             x = 0;
                             y = 0;
                             w = 11 * GUI_GRID_W;
-                            h = GUI_GRID_H + 2 * pixelH;
+                            h = GUI_GRID_H;
                             colorBackground[] = {0, 0, 0, 0.2};
                         };
-                        class Frame: CreateFrame {
+                        class Line: RscLine {
                             x = 0;
-                            y = 0;
+                            y = pixelH;
                             w = 11 * GUI_GRID_W;
-                            h = GUI_GRID_H + 2 * pixelH;
+                            h = 0;
+                            colorText[] = {0, 0, 0, 1};
                         };
                         class Label: RscText {
                             text = "$STR_3DEN_Display3DEN_VehiclePanel_TextEmpty_text";
                             x = GUI_GRID_W;
-                            y = POS_EDGE(0,1) * pixelH;
+                            y = 0;
                             w = 10 * GUI_GRID_W;
                             h = GUI_GRID_H;
                             sizeEx = 0.9 * GUI_GRID_H;
                             shadow = 0;
                         };
-                        class Toggle: RscCheckBox {
+                        class Toggle: EGVAR(common,RscCheckbox) {
                             idc = IDC_INCLUDE_CREW;
                             onLoad = QUOTE((_this select 0) cbSetChecked GVAR(includeCrew));
                             onCheckedChanged = QUOTE(GVAR(includeCrew) = !GVAR(includeCrew));
                             x = 0.1 * GUI_GRID_W;
-                            y = POS_EDGE(0,1) * pixelH;
+                            y = 0;
                             w = GUI_GRID_W;
                             h = GUI_GRID_H;
-                            soundClick[] = {"\a3\ui_f\data\sound\rscbutton\soundclick", 0.09, 1};
-                            soundEnter[] = {"\a3\ui_f\data\sound\rscbutton\soundenter", 0.09, 1};
-                            soundEscape[] = {"\a3\ui_f\data\sound\rscbutton\soundescape", 0.09, 1};
-                            soundPush[] = {"\a3\ui_f\data\sound\rscbutton\soundpush", 0.09, 1};
                         };
                     };
                 };
@@ -138,6 +146,12 @@ class RscDisplayCurator {
                 };
                 class Entities: RscTree {
                     h = safeZoneH - POS_EDGE(2,1) * GUI_GRID_H;
+                    class ScrollBar: ScrollBar {
+                        thumb = "\a3\3DEN\Data\Controls\ctrlDefault\thumb_ca.paa";
+                        border = "\a3\3DEN\Data\Controls\ctrlDefault\border_ca.paa";
+                        arrowFull = "\a3\3DEN\Data\Controls\ctrlDefault\arrowFull_ca.paa";
+                        arrowEmpty = "\a3\3DEN\Data\Controls\ctrlDefault\arrowEmpty_ca.paa";
+                    };
                 };
             };
         };

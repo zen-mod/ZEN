@@ -8,7 +8,7 @@
  * 1: Target Grid or Logic <STRING|OBJECT>
  * 2: Spread <NUMBER>
  * 3: Ammo Magazine <STRING>
- * 4: Rounds To Fire <NUMBER>
+ * 4: Number of Rounds <NUMBER>
  *
  * Return Value:
  * None
@@ -19,22 +19,18 @@
  * Public: No
  */
 
-params ["_vehicles", "_target", "_spread", "_ammo", "_rounds"];
+params ["_vehicles", "_target", "_spread", "_magazine", "_rounds"];
 
-private _position = if (_target isEqualType "") then {
-    [_target, true] call CBA_fnc_mapGridToPos
-} else {
-    ASLtoAGL getPosASL _target
-};
-
-private _eta = selectMin (_vehicles apply {[_x, _position, _ammo] call EFUNC(common,getArtilleryETA)});
+private _eta = selectMin (_vehicles apply {
+    [_x, _target, _magazine] call EFUNC(common,getArtilleryETA);
+});
 
 if (_eta == -1) exitWith {
     [LSTRING(NotInRangeOfArtillery)] call EFUNC(common,showMessage);
 };
 
 {
-    [QGVAR(fireArtillery), [_x, _position, _spread, _ammo, _rounds], _x] call CBA_fnc_targetEvent;
+    [QEGVAR(common,fireArtillery), [_x, _target, _spread, _magazine, _rounds], _x] call CBA_fnc_targetEvent;
 } forEach _vehicles;
 
 [LSTRING(ModuleFireMission_ArtilleryETA), _eta toFixed 1] call EFUNC(common,showMessage);

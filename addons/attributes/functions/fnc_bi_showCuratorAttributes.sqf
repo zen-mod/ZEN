@@ -31,7 +31,7 @@ if (_entity isEqualType objNull) then {
     };
 
     private _infoTypeClass = ["curatorInfoType", "curatorInfoTypeEmpty"] select (isNull group _entity && {side _entity != sideLogic});
-    private _infoType = getText (configfile >> "CfgVehicles" >> typeOf _entity >> _infoTypeClass);
+    private _infoType = getText (configOf _entity >> _infoTypeClass);
 
     // Use info type instead of ZEN attributes if it is defined
     if (isClass (configFile >> _infoType)) then {

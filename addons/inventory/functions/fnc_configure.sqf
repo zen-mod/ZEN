@@ -19,7 +19,7 @@ params ["_object"];
 
 if (!createDialog QGVAR(display)) exitWith {};
 
-private _config = configFile >> "CfgVehicles" >> typeOf _object;
+private _config = configOf _object;
 private _displayName = getText (_config >> "displayName");
 private _maximumLoad = getNumber (_config >> "maximumLoad");
 
@@ -126,6 +126,10 @@ _ctrlList ctrlAddEventHandler ["LBSelChanged", {
     private _display = ctrlParent _ctrlList;
     [_display] call FUNC(updateButtons);
 }];
+
+// Reset to the default inventory when the reset button is clicked
+private _ctrlButtonReset = _display displayCtrl IDC_BTN_RESET;
+_ctrlButtonReset ctrlAddEventHandler ["ButtonClick", {call FUNC(reset)}];
 
 // Clear items from the current category when the clear button is clicked
 private _ctrlButtonClear = _display displayCtrl IDC_BTN_CLEAR;

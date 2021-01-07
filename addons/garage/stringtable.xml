@@ -37,6 +37,7 @@
             <German>Kein anderes Fahrzeug dieses Typs ausgewählt.</German>
             <Portuguese>Nenhum outro veículo do mesmo tipo selecionado.</Portuguese>
             <Japanese>他に同じ種類の車両がありません。</Japanese>
+            <Polish>Nie wybrano żadnych innych pojazdów tego typu.</Polish>
         </Key>
     </Package>
 </Project>

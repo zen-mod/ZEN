@@ -8,7 +8,7 @@
  * 1: Mode (0 - All, 1 - Players, 2 - AI) <NUMBER>
  *
  * Return Value:
- * None
+ * Can Heal Units <BOOL>
  *
  * Example:
  * [_objects, 2] call zen_context_actions_fnc_canHealUnits
