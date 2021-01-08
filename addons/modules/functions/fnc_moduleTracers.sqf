@@ -101,5 +101,5 @@
 
         [QGVAR(moduleTracers), [_logic, _side, _min, _max, _dispersion, _weapon, _magazine, _target]] call CBA_fnc_serverEvent;
 
-    }, {}, _logic] call EFUNC(dialog,create);
+    }, {}, _logic, QGVAR(moduleTracers)] call EFUNC(dialog,create);
 }, _logic] call CBA_fnc_execNextFrame;
