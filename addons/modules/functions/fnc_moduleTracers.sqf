@@ -37,8 +37,8 @@
         [
             "SLIDER",
             ["str_a3_cfgvehicles_moduletracers_f_arguments_min_0", LSTRING(Tracers_MinDelay_Tooltip)],
-             [0, 120, _min, 0],
-             true
+            [0, 120, _min, 0],
+            true
          ],
         [
             "SLIDER",
