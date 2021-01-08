@@ -135,7 +135,11 @@ private _fnc_deserializeVehicle = {
     private _placement = ["CAN_COLLIDE", "FLY"] select (_type isKindOf "Air" && {_position select 2 > 5});
 
     private _vehicle = createVehicle [_type, _position, [], 0, _placement];
-    _vehicle setDir _direction;
+    if (_direction isEqualType 0) then {
+        _vehicle setDir _direction;
+    } else {
+        _vehicle setVectorDirAndUp _direction;
+    };
 
     // FLY placement always places aircraft at the same height relative to the ground
     if (_placement == "FLY") then {
@@ -151,7 +155,7 @@ private _fnc_deserializeVehicle = {
         [_vehicle, "", []] call BIS_fnc_initVehicle;
     } else {
         _customization params ["_textures", "_animations"];
-        [_vehicle, _textures, _animations, true] call BIS_fnc_initVehicle;
+        [_vehicle, _textures, _animations, true] call FUNC(customizeVehicle);
     };
 
     {
@@ -223,7 +227,11 @@ private _fnc_deserializeStatic = {
 
     private _object = createVehicle [_type, [0, 0, 0], [], 0, "CAN_COLLIDE"];
     _object setPos _position;
-    _object setDir _direction;
+    if (_direction isEqualType 0) then {
+        _object setDir _direction;
+    } else {
+        _object setVectorDirAndUp _direction;
+    };
 
     // Composition placement aligns objects to the surface normal if they are close to the ground
     // This also helps in preventing objects from being destroyed by cliping into the ground
