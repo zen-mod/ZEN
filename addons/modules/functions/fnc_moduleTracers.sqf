@@ -95,7 +95,9 @@
             }, [_side, _min, _max, _dispersion, _weapon, _magazine], LSTRING(Tracers_TracersTarget)] call EFUNC(common,selectPosition);
         };
 
-        if (_targetType == 1) then {_target = AGLToASL positionCameraToWorld [0,0,0]};
+        if (_targetType == 1) then {
+            _target = AGLToASL positionCameraToWorld [0, 0, 0];
+        };
 
         [QGVAR(moduleTracers), [_logic, _side, _min, _max, _dispersion, _weapon, _magazine, _target]] call CBA_fnc_serverEvent;
 
