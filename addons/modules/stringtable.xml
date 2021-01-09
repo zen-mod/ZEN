@@ -590,6 +590,15 @@
             <Japanese>CAS - 爆撃</Japanese>
             <Korean>CAS - 폭탄 투하</Korean>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleTransferOwnership">
+            <English>Transfer Ownership</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleTransferOwnership_Client">
+            <English>Client</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleTransferOwnership_Server">
+            <English>Server</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_BindVariable">
             <English>Bind Variable To Object</English>
             <Russian>Привязать переменную к объекту</Russian>
@@ -2207,6 +2216,9 @@
             <Korean>소환</Korean>
         </Key>
         <!-- Feedback Messages -->
+        <Key ID="STR_ZEN_Modules_OnlyMultiplayer">
+            <English>Module only available in multiplayer</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_NoUnitSelected">
             <English>Place on a unit</English>
             <French>Placez sur une unité</French>

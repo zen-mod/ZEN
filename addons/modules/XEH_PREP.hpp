@@ -80,6 +80,7 @@ PREP(moduleTeleportPlayers);
 PREP(moduleToggleFlashlights);
 PREP(moduleToggleIRLasers);
 PREP(moduleToggleLamps);
+PREP(moduleTransferOwnership);
 PREP(moduleTurretOptics);
 PREP(moduleUnGarrison);
 PREP(moduleVisibility);

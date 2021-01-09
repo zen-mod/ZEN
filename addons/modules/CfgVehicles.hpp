@@ -422,6 +422,14 @@ class CfgVehicles {
         function = QFUNC(moduleToggleLamps);
         icon = QPATHTOF(ui\street_lamp_ca.paa);
     };
+    class GVAR(moduleTransferOwnership): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(DevTools);
+        displayName = CSTRING(ModuleTransferOwnership);
+        function = QFUNC(moduleTransferOwnership);
+        icon = "\a3\ui_f\data\Map\VehicleIcons\iconVirtual_ca.paa";
+        portrait = "\a3\ui_f\data\Map\VehicleIcons\iconVirtual_ca.paa";
+    };
     class GVAR(moduleTurretOptics): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Equipment);
