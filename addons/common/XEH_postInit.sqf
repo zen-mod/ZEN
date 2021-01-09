@@ -314,14 +314,11 @@ if (isServer) then {
     }] call CBA_fnc_addEventHandler;
 
     [QGVAR(enableSimulationGlobal), {
-        diag_log _this;
         params ["_object", "_enable"];
         _object enableSimulationGlobal _enable;
     }] call CBA_fnc_addEventHandler;
 
     [QGVAR(transferOwnership), {
-        diag_log QGVAR(transferOwnership);
-        diag_log _this;
         params ["_entities", "_target"];
         if (!(_entities isEqualType [])) then {
             _entities = [_entities];
