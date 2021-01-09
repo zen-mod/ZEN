@@ -2216,6 +2216,9 @@
             <Korean>소환</Korean>
         </Key>
         <!-- Feedback Messages -->
+        <Key ID="STR_ZEN_Modules_SelectionCannotIncludePlayers">
+            <English>Selection cannot include players</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_OnlyMultiplayer">
             <English>Module only available in multiplayer</English>
         </Key>

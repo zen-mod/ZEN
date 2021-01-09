@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Ampersand
- * Zeus module function to transfer ownership of objects.
+ * Zeus module function to transfer ownership of objects and groups.
  *
  * Arguments:
  * 0: Logic <OBJECT>
@@ -24,17 +24,9 @@ params ["_logic"];
 private _unit = attachedTo _logic;
 deleteVehicle _logic;
 
-private _clientTypes = allPlayers;
-private _clientNames = allPlayers apply {name _x};
-if (!isServer) then {
-    _clientTypes = [0] + _clientTypes;
-    _clientNames = ["str_a3_om_common_definitions.incphone_44"] + _clientNames;
-};
-
 private _entities = [];
-private _mehID = -1;
 if (isNull _unit) then {
-    _mehID = ["\a3\ui_f\data\Map\VehicleIcons\iconVirtual_ca.paa"] call EFUNC(editor,drawSavedSelectionIcons);
+    // No attached unit, get saved selection
     EGVAR(editor,savedSelection) params ["_objects", "_groups"];
     {
         if (isNull group _x) then {
@@ -48,7 +40,22 @@ if (isNull _unit) then {
     _entities = [[group _unit, _unit] select (isNull group _unit)];
 };
 
+if (_entities findIf {units _x findIf {isPlayer _x} > -1} > -1) exitWith {
+    [LSTRING(SelectionCannotIncludePlayers)] call EFUNC(common,showMessage);
+};
+
 private _defaultTarget = !local (_entities select 0);
+private _clientTypes = allPlayers;
+private _clientNames = allPlayers apply {name _x};
+_clientTypes = [0] + _clientTypes;
+_clientNames = ["str_a3_om_common_definitions.incphone_44"] + _clientNames;
+
+// Draw icon over entities in saved selection
+private _mehID = -1;
+if (isNull _unit) then {
+    _mehID = ["\a3\ui_f\data\Map\VehicleIcons\iconVirtual_ca.paa"] call EFUNC(editor,drawSavedSelectionIcons);
+};
+
 [LSTRING(ModuleTransferOwnership), [
     [
         "TOOLBOX",
@@ -68,12 +75,14 @@ private _defaultTarget = !local (_entities select 0);
     params ["_values", "_args"];
     _values params ["_target", "_player"];
     _args params ["_entities", "_mehID"];
+
+    // Stop drawing icons
     if (_mehID > 0) then {
         removeMissionEventHandler ["Draw3D", _mehID];
     };
     private _targetID = switch (_target) do {
         case (0): {
-            2
+            2 // Server
         };
         case (1): {
             clientOwner
@@ -86,6 +95,8 @@ private _defaultTarget = !local (_entities select 0);
 }, {
     params ["", "_args"];
     _args params ["", "_mehID"];
+
+    // Stop drawing icons
     if (_mehID > 0) then {
         removeMissionEventHandler ["Draw3D", _mehID];
     };
