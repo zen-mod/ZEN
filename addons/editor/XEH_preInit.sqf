@@ -11,6 +11,8 @@ PREP_RECOMPILE_END;
 
 GVAR(lastSelection) = [];
 GVAR(savedSelection) = [];
+GVAR(lastModuleIcon) = "";
+GVAR(savedModuleIcon) = "";
 GVAR(colour) = ["IGUI", "TEXT_RGB"] call BIS_fnc_displayColorGet;
 GVAR(clipboard) = [];
 GVAR(includeCrew) = true;
