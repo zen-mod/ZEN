@@ -25,14 +25,20 @@
     params ["_logic"];
 
     // Default values: green tracers, 10-20s between bursts
-    private _tracersParams = _logic getVariable [QGVAR(tracersParams), [0, 10, 20, 2, "", "", 0, ""]];
-    _tracersParams params ["_side", "_min", "_max", "_dispersion", "_weapon", "_magazine", "_targetType", "_target"];
+    private _tracersParams = _logic getVariable [QGVAR(tracersParams), [0, 10, 20, 2, "", "", objNull]];
+    _tracersParams params ["_side", "_min", "_max", "_dispersion", "_weapon", "_magazine", "_target"];
+    private _targetType = [3, 0] select (_target isEqualTo objNull);
 
     ["str_a3_cfgvehicles_moduletracers_f_0", [
         [
             "TOOLBOX",
             "str_a3_cfgvehicles_moduletracers_f_arguments_side_0",
-            [_side, 1, 3, ["str_a3_texturesources_green0", "str_a3_texturesources_red0", "str_a3_texturesources_yellow0"]]
+            [_side, 1, 3, [
+                "str_a3_texturesources_green0",
+                "str_a3_texturesources_red0",
+                "str_a3_texturesources_yellow0"
+            ]],
+            true
         ],
         [
             "SLIDER",
@@ -55,7 +61,8 @@
                 ELSTRING(common,Medium),
                 ELSTRING(common,High),
                 ELSTRING(common,VeryHigh)
-            ]]
+            ]],
+            true
         ],
         [
             "EDIT",
@@ -72,13 +79,19 @@
         [
             "TOOLBOX",
             ["str_a3_cfgvehicles_modulelivefeedsettarget_f_arguments_targettype_0", LSTRING(Tracers_TargetType_Tooltip)],
-            [0, 1, 3, ["str_a3_no_target", ELSTRING(camera,DisplayName), ELSTRING(common,Cursor)]]
+            [_targetType, 1, 4, [
+                "str_a3_no_target",
+                ELSTRING(camera,DisplayName),
+                ELSTRING(common,Cursor),
+                LSTRING(Tracers_CurrentTarget)
+            ]],
+            true
         ]
     ], {
-        params ["_values", "_logic"];
+        params ["_values", "_args"];
+        _args params ["_logic", "_target"];
         _values params ["_side", "_min", "_max", "_dispersion", "_weapon", "_magazine", "_targetType"];
 
-        private _target = objNull;
         // select tracer target using cursor
         if (_targetType == 2) exitWith {
             [_logic, {
@@ -101,5 +114,5 @@
 
         [QGVAR(moduleTracers), [_logic, _side, _min, _max, _dispersion, _weapon, _magazine, _target]] call CBA_fnc_serverEvent;
 
-    }, {}, _logic, QGVAR(moduleTracers)] call EFUNC(dialog,create);
+    }, {}, [_logic, _target], QGVAR(moduleTracers)] call EFUNC(dialog,create);
 }, _logic] call CBA_fnc_execNextFrame;

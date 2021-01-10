@@ -2056,6 +2056,9 @@
         <Key ID="STR_ZEN_Modules_Tracers_TracersTarget">
             <English>Tracers Target</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_Tracers_CurrentTarget">
+            <English>Current Target</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_CustomFire">
             <English>Custom Fire</English>
             <German>Benutzerdefiniertes Feuer</German>
