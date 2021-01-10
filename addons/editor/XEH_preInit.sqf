@@ -25,4 +25,15 @@ GVAR(includeCrew) = true;
     _logic addEventHandler ["CuratorWaypointSelectionChanged", {call FUNC(handleSelectionChanged)}];
 }, true, [], true] call CBA_fnc_addClassEventHandler;
 
+[QGVAR(ModuleSelChanged), {
+    params ["_moduleName"];
+
+    GVAR(savedModuleIcon) = GVAR(lastModuleIcon);
+    GVAR(lastModuleIcon) = getText (configFile >> "CfgVehicles" >> _moduleName >> "icon");
+
+    // Toggle selection preview
+    private _hasSelectionPreview = (getNumber (configFile >> "CfgVehicles" >> _moduleName >> QGVAR(hasSelectionPreview)) isEqualTo 1);
+    [_hasSelectionPreview] call FUNC(toggleSelectionPreview);
+}] call CBA_fnc_addEventHandler;
+
 ADDON = true;

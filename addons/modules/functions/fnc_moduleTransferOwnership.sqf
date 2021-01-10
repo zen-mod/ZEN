@@ -15,30 +15,25 @@
  * Public: No
  */
 
-if (!isMultiplayer) exitWith {
- [LSTRING(OnlyMultiplayer)] call EFUNC(common,showMessage);
-};
-
 params ["_logic"];
 
-private _unit = attachedTo _logic;
+if (!isMultiplayer) exitWith {
+    [LSTRING(OnlyMultiplayer)] call EFUNC(common,showMessage);
+    deleteVehicle _logic;
+};
+
 deleteVehicle _logic;
 
 private _entities = [];
-if (isNull _unit) then {
-    // No attached unit, get saved selection
-    EGVAR(editor,savedSelection) params ["_objects", "_groups"];
-    {
-        if (isNull group _x) then {
-            _entities pushBack _x;
-        } else {
-            _groups pushBackUnique group _x;
-        };
-    } forEach _objects;
-    _entities append _groups;
-} else {
-    _entities = [[group _unit, _unit] select (isNull group _unit)];
-};
+(call EFUNC(editor,getSelection)) params ["_objects", "_groups"];
+{
+    if (isNull group _x) then {
+        _entities pushBack _x;
+    } else {
+        _groups pushBackUnique group _x;
+    };
+} forEach _objects;
+_entities append _groups;
 
 if (_entities findIf {units _x findIf {isPlayer _x} > -1} > -1) exitWith {
     [LSTRING(SelectionCannotIncludePlayers)] call EFUNC(common,showMessage);
@@ -49,13 +44,7 @@ private _clientTypes = allPlayers;
 private _clientNames = allPlayers apply {name _x};
 _clientTypes = [0] + _clientTypes;
 _clientNames = ["str_a3_om_common_definitions.incphone_44"] + _clientNames;
-
-// Draw icon over entities in saved selection
-private _mehID = -1;
-if (isNull _unit) then {
-    _mehID = ["\a3\ui_f\data\Map\VehicleIcons\iconVirtual_ca.paa"] call EFUNC(editor,drawSavedSelectionIcons);
-};
-
+systemChat str _entities;
 [LSTRING(ModuleTransferOwnership), [
     [
         "TOOLBOX",

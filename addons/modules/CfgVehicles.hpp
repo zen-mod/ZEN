@@ -429,6 +429,7 @@ class CfgVehicles {
         function = QFUNC(moduleTransferOwnership);
         icon = "\a3\ui_f\data\Map\VehicleIcons\iconVirtual_ca.paa";
         portrait = "\a3\ui_f\data\Map\VehicleIcons\iconVirtual_ca.paa";
+        EGVAR(editor,hasSelectionPreview) = 1;
     };
     class GVAR(moduleTurretOptics): GVAR(moduleBase) {
         curatorCanAttach = 1;

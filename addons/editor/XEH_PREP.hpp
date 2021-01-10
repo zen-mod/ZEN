@@ -1,7 +1,7 @@
 PREP(addGroupIcons);
 PREP(declutterEmptyTree);
-PREP(drawSavedSelectionIcons);
 PREP(fixSideButtons);
+PREP(getSelection);
 PREP(handleKeyDown);
 PREP(handleLoad);
 PREP(handleModeButtons);
@@ -14,3 +14,4 @@ PREP(handleSelectionChanged);
 PREP(handleSideButtons);
 PREP(handleTreeButtons);
 PREP(handleUnload);
+PREP(toggleSelectionPreview);

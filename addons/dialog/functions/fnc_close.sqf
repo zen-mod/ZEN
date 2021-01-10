@@ -38,5 +38,7 @@ if (_confirmed) then {
     [_values, _args] call _onCancel;
 };
 
+[QGVAR(close), [_display, _confirmed]] call CBA_fnc_localEvent;
+
 // Close dialog, returning false to not override engine driven IDC_OK and IDC_CANCEL
 false
