@@ -17,7 +17,7 @@
  * None
  *
  * Example:
- * [LOGIC] call zen_modules_fnc_moduleTracers
+ * [LOGIC] call zen_modules_fnc_moduleTracersServer
  *
  * Public: No
  */
