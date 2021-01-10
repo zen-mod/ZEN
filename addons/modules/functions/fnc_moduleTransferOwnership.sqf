@@ -44,7 +44,7 @@ private _clientTypes = allPlayers;
 private _clientNames = allPlayers apply {name _x};
 _clientTypes = [0] + _clientTypes;
 _clientNames = ["str_a3_om_common_definitions.incphone_44"] + _clientNames;
-systemChat str _entities;
+
 [LSTRING(ModuleTransferOwnership), [
     [
         "TOOLBOX",
