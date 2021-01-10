@@ -53,7 +53,8 @@ _clientNames = ["str_a3_om_common_definitions.incphone_44"] + _clientNames;
             LSTRING(ModuleTransferOwnership_Server),
             "str_a3_cfgvehicles_module_f_moduledescription_curator_f_1",
             LSTRING(ModuleTransferOwnership_Client)
-        ]]
+        ]],
+        true
     ],
     [
         "COMBO",
