@@ -307,6 +307,35 @@
 [QGVAR(setTurretAmmo), LINKFUNC(setTurretAmmo)] call CBA_fnc_addEventHandler;
 [QGVAR(showMessage), LINKFUNC(showMessage)] call CBA_fnc_addEventHandler;
 
+// Subevent of zen_common_transferOwnership
+// Back up loadouts
+[QGVAR(transferOwnership_backupLoadout), {
+    params ["_units", "_groups", "_newOwner"];
+    _loadouts = _units apply {getUnitLoadout _x};
+    [QGVAR(transferOwnership_transfer), [_units, _loadouts, _groups, _newOwner]] call CBA_fnc_serverEvent;
+}] call CBA_fnc_addEventHandler;
+
+// Subevent of zen_common_transferOwnership
+// Restore loadouts lost by the naked unit bug
+[QGVAR(transferOwnership_restoreLoadout), {
+    params ["_units", "_loadouts"];
+    // Wait until units are transferred
+    [{
+        params ["_units"];
+        _units findIf {!local _x && alive _x} == -1
+    }, {
+        params ["_units", "_loadouts"];
+        {
+            if (uniform _x isEqualTo "") then {
+                private _loadout = _loadouts select _forEachIndex;
+                if !(_loadout isEqualTo []) then {
+                    _x setUnitLoadout _loadout;
+                };
+            };
+        } forEach _units;
+    }, [_units, _loadouts]] call CBA_fnc_waitUntilAndExecute;
+}] call CBA_fnc_addEventHandler;
+
 if (isServer) then {
     [QGVAR(hideObjectGlobal), {
         params ["_object", "_hide"];
@@ -318,29 +347,52 @@ if (isServer) then {
         _object enableSimulationGlobal _enable;
     }] call CBA_fnc_addEventHandler;
 
+    // Subevent of zen_common_transferOwnership
+    [QGVAR(transferOwnership_transfer), {
+        params ["_units", "_loadouts", "_groups", "_newOwner"];
+        {_x setGroupOwner _newOwner} forEach _groups;
+        [QGVAR(transferOwnership_restoreLoadout), [_units, _loadouts], _newOwner] call CBA_fnc_ownerEvent;
+    }] call CBA_fnc_addEventHandler;
+
     [QGVAR(transferOwnership), {
         params ["_entities", "_target"];
+        if (_entities isEqualTo []) exitWith {};
         if (!(_entities isEqualType [])) then {
             _entities = [_entities];
         };
-        private _clientID = 0;
-        if (_target isEqualType 0) then {
-            _clientID = _target;
+        private _newOwner = switch (typeName _target) do {
+            case "SCALAR": {_target};
+            case "GROUP": {groupOwner _target};
+            case "OBJECT": {owner _target};
+            default {0};
         };
-        if (_target isEqualType objNull) then {
-            _clientID = owner _target;
+        private _entity = _entities select 0;
+        private _oldOwner = switch (typeName _entity) do {
+            case "GROUP": {groupOwner _entity};
+            case "OBJECT": {owner _entity};
+            default {0};
         };
+        if (_newOwner isEqualTo _oldOwner) exitWith {};
+
+        // Categorize entities
+        private _units = [];
+        private _groups = [];
         {
             if (_x isEqualType grpNull) then {
-                _x setGroupOwner _clientID;
+                _groups pushBackUnique _x;
+                {_units pushBackUnique _x} forEach units _x;
             } else {
-                if (group _x == grpNull) then {
-                    group _x setGroupOwner _clientID;
+                if !(isNull group _x) then {
+                    _groups pushBackUnique group _x;
+                    _units pushBackUnique _x;
                 } else {
-                    _x setOwner _clientID;
+                    // Objects can already be transferred
+                    _x setOwner _newOwner;
                 };
             };
         } forEach _entities;
+
+        [QGVAR(transferOwnership_backupLoadout), [_units, _groups, _newOwner], _oldOwner] call CBA_fnc_ownerEvent;
     }] call CBA_fnc_addEventHandler;
 
     [QGVAR(setFriend), {
