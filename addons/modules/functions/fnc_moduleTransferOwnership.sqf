@@ -60,10 +60,20 @@ _clientNames = ["str_a3_om_common_definitions.incphone_44"] + _clientNames;
         "COMBO",
         LSTRING(ModuleTransferOwnership_Client),
         [_clientTypes, _clientNames, 0]
+    ],
+    [
+        "TOOLBOX",
+        LSTRING(ModuleTransferOwnership_HCScripts),
+        [_defaultTarget, 1, 3, [
+            ELSTRING(common,Enabled),
+            ELSTRING(common,Disabled),
+            ELSTRING(common,Unchanged)
+        ]],
+        true
     ]
 ], {
     params ["_values", "_args"];
-    _values params ["_target", "_player"];
+    _values params ["_target", "_player", "_HCState"];
     _args params ["_entities", "_mehID"];
 
     // Stop drawing icons
@@ -81,6 +91,16 @@ _clientNames = ["str_a3_om_common_definitions.incphone_44"] + _clientNames;
             _player
         };
     };
+
+    // set headless client script flags
+    if (_HCState < 2) then {
+        if (acex_headless) then {
+            {
+                _x setVariable ["ace_headless_blacklist", [false, true] select _HCState, true];
+            } forEach _entities;
+        };
+    };
+
     [QEGVAR(common,transferOwnership), [_entities, _targetID]] call CBA_fnc_serverEvent;
 }, {
     params ["", "_args"];
