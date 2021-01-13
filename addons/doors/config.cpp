@@ -20,6 +20,7 @@ PRELOAD_ADDONS;
 
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
+#include "CfgContext.hpp"
 
 class RscActivePicture;
 class GVAR(RscActivePicture): RscActivePicture {
