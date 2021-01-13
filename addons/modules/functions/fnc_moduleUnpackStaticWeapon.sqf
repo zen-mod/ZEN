@@ -36,7 +36,7 @@ if (isPlayer _gunner) exitWith {
     ["str_a3_cfgvehicles_moduleremotecontrol_f_errorPlayer"] call EFUNC(common,showMessage);
 };
 
-if ({isPlayer _x} count units _gunner > 0) exitWith {
+if (units _gunner findIf {isPlayer _x} != -1) exitWith {
     [LSTRING(ModuleUnpackStaticWeapon_Player)] call EFUNC(common,showMessage);
 };
 /*
