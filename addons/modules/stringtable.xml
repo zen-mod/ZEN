@@ -592,15 +592,28 @@
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTransferOwnership">
             <English>Transfer Ownership</English>
+            <French>Transférer la propriété</French>
+            <Spanish>Transferir propiedad</Spanish>
+            <Russian>Передать владение</Russian>
+            <German>Besitztum verschieben</German>
+            <Japanese>所有権を移行</Japanese>
+            <Chinesesimp>转让所有权</Chinesesimp>
+            <Chinese>轉讓所有權</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTransferOwnership_Client">
             <English>Client</English>
+            <French>Client</French>
+            <German>Klient<German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTransferOwnership_Server">
             <English>Server</English>
+            <French>Serveur</French>
+            <German>Server<German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTransferOwnership_HCScripts">
             <English>HC Scripts</English>
+            <French>Script pour HC</French>
+            <German>HC Skript<German>
         </Key>
         <Key ID="STR_ZEN_Modules_BindVariable">
             <English>Bind Variable To Object</English>
