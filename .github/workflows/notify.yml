@@ -1,0 +1,21 @@
+name: Notify
+
+on:
+  workflow_run:
+    workflows: ["Build"]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Rezent
+        env:
+          REZENT_TOKEN: ${{ secrets.REZENT_TOKEN }}
+          REZENT_URI: ${{ secrets.REZENT_URI }}
+        run: |
+          curl -H "Authorization: Bearer ${REZENT_TOKEN}" \
+            -H "Content-Type: application/json" \
+            -H "Accept: application/json" \
+            -X POST \
+            -d '{"organisation": "zen-mod", "repository": "ZEN", "workflow_id": 650750}' \
+            "$REZENT_URI"
