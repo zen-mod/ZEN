@@ -24,7 +24,7 @@ def check_stringtable(filepath):
     try:
         tree = ET.parse(filepath)
     except Exception as e:
-        print("  ERROR: Failed to parse file.")
+        print("  ERROR: Failed to parse file. {}".format(e))
         return 1
 
     errors = 0
@@ -162,11 +162,13 @@ def main():
     bad_count = 0
 
     for filepath in stringtable_files:
-        print("Checking {}:".format(os.path.relpath(filepath, root_dir)))
+        print("\nChecking {}:".format(os.path.relpath(filepath, root_dir)))
 
         errors = check_stringtable(filepath)
 
-        if errors != 0:
+        if errors == 0:
+            print("No errors found.")
+        else:
             print("Found {} error(s).".format(errors))
             bad_count += 1
 
