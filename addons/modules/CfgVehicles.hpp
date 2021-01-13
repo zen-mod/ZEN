@@ -334,7 +334,7 @@ class CfgVehicles {
     class GVAR(moduleSearchBuilding): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(AI);
-        displayName = CSTRING(SearchBuilding);
+        displayName = ECSTRING(ai,SearchBuilding);
         function = QFUNC(moduleSearchBuilding);
     };
     class GVAR(moduleSetDate): GVAR(moduleBase) {
