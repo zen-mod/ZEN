@@ -28,17 +28,12 @@ if (_doors isEqualTo []) exitWith {
 private _display = findDisplay IDD_RSCDISPLAYCURATOR;
 private _controls = [];
 
-private _fnc_buttonClicked = {
-    params ["_control"];
-    (_control getVariable QGVAR(params)) params ["_building", "_door"];
-
-    [_building, _door] call FUNC(setState);
-};
-
 {
     private _control = _display ctrlCreate [QGVAR(RscActivePicture), -1];
-    _control ctrlAddEventHandler ["ButtonClick", _fnc_buttonClicked];
-    _control setVariable [QGVAR(params), [_building, _forEachIndex + 1]];
+
+    [_control, "ButtonClick", {
+        _thisArgs call FUNC(setState);
+    }, [_building, _forEachIndex + 1]] call CBA_fnc_addBISEventHandler;
 
     _controls pushBack _control;
 } forEach _doors;

@@ -69,9 +69,7 @@ private _actions = [];
         _name,
         _icon,
         {
-            _args params ["_building", "_door", "_state"];
-
-            [_building, _door, _state] call FUNC(setState);
+            _args call FUNC(setState);
         },
         {true},
         [_building, _door, _state]

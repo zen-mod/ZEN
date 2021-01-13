@@ -26,9 +26,9 @@
 
 #define ICON_DOOR "\a3\ui_f\data\igui\cfg\actions\open_door_ca.paa"
 
-#define TEXT_CLOSED (localize "STR_a3_to_editTerrainObject21")
-#define TEXT_LOCKED (localize "STR_a3_to_editTerrainObject23")
-#define TEXT_OPENED (localize "STR_a3_to_editTerrainObject22")
+#define TEXT_CLOSED localize "STR_a3_to_editTerrainObject21"
+#define TEXT_LOCKED localize "STR_a3_to_editTerrainObject23"
+#define TEXT_OPENED localize "STR_a3_to_editTerrainObject22"
 
 #define ICON2D_CLOSED "\a3\modules_f\data\editterrainobject\texturedoor_closed_ca.paa"
 #define ICON2D_LOCKED "\a3\modules_f\data\editterrainobject\texturedoor_locked_ca.paa"
