@@ -3,7 +3,7 @@
     <Package name="Faction_Filter">
         <Key ID="STR_ZEN_Faction_Filter_DisplayName">
             <English>Zeus Enhanced - Faction Filter</English>
-            <French>Zeus Enhanced - Filtre de Fraction</French>
+            <French>Zeus Enhanced - Filtre des Fractions</French>
             <German>Zeus Enhanced - Fraktionsfilter</German>
         </Key>
     </Package>
