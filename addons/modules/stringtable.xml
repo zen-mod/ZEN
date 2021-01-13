@@ -603,17 +603,17 @@
         <Key ID="STR_ZEN_Modules_ModuleTransferOwnership_Client">
             <English>Client</English>
             <French>Client</French>
-            <German>Klient<German>
+            <German>Klient</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTransferOwnership_Server">
             <English>Server</English>
             <French>Serveur</French>
-            <German>Server<German>
+            <German>Server</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTransferOwnership_HCScripts">
             <English>HC Scripts</English>
             <French>Script pour HC</French>
-            <German>HC Skript<German>
+            <German>HC Skript</German>
         </Key>
         <Key ID="STR_ZEN_Modules_BindVariable">
             <English>Bind Variable To Object</English>
@@ -2234,9 +2234,13 @@
         <!-- Feedback Messages -->
         <Key ID="STR_ZEN_Modules_SelectionCannotIncludePlayers">
             <English>Selection cannot include players</English>
+            <German>Auswahl kann keine Spieler beinhalten</German>
+            <French>La sélection ne permet pas de joueurs</French>
         </Key>
         <Key ID="STR_ZEN_Modules_OnlyMultiplayer">
             <English>Module only available in multiplayer</English>
+            <German>Modul nur im Mehrspieler-Modus verfügbar</German>
+            <French>Module est seulement disponible dans la mode multijoueur</French>
         </Key>
         <Key ID="STR_ZEN_Modules_NoUnitSelected">
             <English>Place on a unit</English>
