@@ -88,7 +88,7 @@ private _offset = [0, 20] select ("missilelauncher" in _weaponTypes);
     private _fireComplete = _plane getVariable [QGVAR(fireComplete), false];
 
     // Update the plane's position if the module is moved or rotated and firing has not started
-    if (!_hasFired && {!(getPosASL _logic isEqualTo _logicPos) || {getDir _logic != _logicDir}}) then {
+    if (!_hasFired && {getPosASL _logic isNotEqualTo _logicPos || {getDir _logic != _logicDir}}) then {
         _logicPos = getPosASL _logic;
         _logicDir = getDir _logic;
 

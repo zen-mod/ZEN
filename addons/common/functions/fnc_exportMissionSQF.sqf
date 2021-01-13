@@ -419,7 +419,7 @@ private _output = "";
 
 {
 
-    if !(_x isEqualTo []) then {
+    if (_x isNotEqualTo []) then {
         _x = _x apply {if (_x isEqualType []) then {format _x} else {_x}};
         _output = _output + (_x joinString NEWLINE) + NEWLINE + NEWLINE;
     };

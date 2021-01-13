@@ -45,7 +45,7 @@ deleteVehicle _logic;
 
     {
         // Prevent unnecessary events for objects with no lights
-        if !(_x call EFUNC(common,getLightingSelections) isEqualTo []) then {
+        if (_x call EFUNC(common,getLightingSelections) isNotEqualTo []) then {
             [QEGVAR(common,setLampState), [_x, _state, _repair], _x call BIS_fnc_netId] call CBA_fnc_globalEventJIP;
         };
     } forEach nearestObjects [_position, ["Building"], parseNumber _radius, true];

@@ -73,7 +73,7 @@ _pylonWeapons = _pylonWeapons arrayIntersect _pylonWeapons;
         !(_x in _weaponsToKeep) && {_x in _pylonWeapons}
     };
 
-    if !(_weaponsToRemove isEqualTo []) then {
+    if (_weaponsToRemove isNotEqualTo []) then {
         [QGVAR(removeWeapons), [_aircraft, _turretPath, _weaponsToRemove], _aircraft, _turretPath] call CBA_fnc_turretEvent;
     };
 } forEach [

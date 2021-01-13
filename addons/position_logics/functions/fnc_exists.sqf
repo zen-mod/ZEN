@@ -15,4 +15,4 @@
  * Public: No
  */
 
-!(call FUNC(get) isEqualTo [])
+call FUNC(get) isNotEqualTo []
