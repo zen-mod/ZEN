@@ -94,7 +94,7 @@ _clientNames = ["str_a3_om_common_definitions.incphone_44"] + _clientNames;
 
     // set headless client script flags
     if (_HCState < 2) then {
-        if (acex_headless) then {
+        if (isClass (configFile >> "CfgPatches" >> "acex_headless")) then {
             {
                 _x setVariable ["ace_headless_blacklist", [false, true] select _HCState, true];
             } forEach _entities;
