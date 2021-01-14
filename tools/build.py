@@ -17,7 +17,7 @@ def tryHemttBuild(projectpath):
         print("Using hemtt: {}".format(ret));
         return True
     else:
-        print("hemtt not installed");
+        print("HEMTT is not available");
     return False
 
 def mod_time(path):
