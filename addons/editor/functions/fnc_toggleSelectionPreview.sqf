@@ -27,7 +27,7 @@ if (_turnOn) then {
                         {
                             drawIcon3D [
                                 GVAR(lastModuleIcon),
-                                GVAR(colour), getPos _x, 1, 1, 0
+                                GVAR(colour), getPosVisual _x, 1, 1, 0
                             ];
                         } forEach (GVAR(lastSelection) select 0);
                     }];
