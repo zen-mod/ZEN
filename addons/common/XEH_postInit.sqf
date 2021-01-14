@@ -335,9 +335,9 @@ if (isServer) then {
                 _x setGroupOwner _clientID;
             } else {
                 if (group _x == grpNull) then {
-                    group _x setGroupOwner _clientID;
-                } else {
                     _x setOwner _clientID;
+                } else {
+                    group _x setGroupOwner _clientID;
                 };
             };
         } forEach _entities;
