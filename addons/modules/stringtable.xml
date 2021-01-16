@@ -2123,11 +2123,6 @@
             <English>Rotate Object</English>
             <Polish>Obróć obiekt</Polish>
         </Key>
-        <Key ID="STR_ZEN_Modules_SearchBuilding">
-            <English>Search Building</English>
-            <German>Gebäude durchsuchen</German>
-            <Polish>Przeszukaj budynek</Polish>
-        </Key>
         <Key ID="STR_ZEN_Modules_AtomicBomb">
             <English>Atomic Bomb</English>
             <Polish>Bomba atomowa</Polish>

@@ -1,8 +1,8 @@
 branches:
   - master
 
-name-template: 'Zeus Enhanced $NEXT_PATCH_VERSION'
-tag-template: 'v$NEXT_PATCH_VERSION'
+name-template: 'Zeus Enhanced $RESOLVED_VERSION'
+tag-template: 'v$RESOLVED_VERSION'
 
 categories:
   - title: '**ADDED:**'
@@ -26,8 +26,18 @@ exclude-labels:
   - 'ignore changelog'
 
 change-template: '- $TITLE (#$NUMBER)'
+version-resolver:
+  minor:
+    labels:
+      - 'feature'
+  patch:
+    labels:
+      - 'enhancement'
+      - 'optimization'
+      - 'bug fix'
+  default: patch
 template: |
-  _Requires CBA Version X.Y.Z or later and Arma 3 Version X.Y or later._
+  _Requires CBA Version 3.Y.Z or later and Arma 3 Version X.Y or later._
 
   DESCRIPTION HERE
 

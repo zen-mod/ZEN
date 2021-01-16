@@ -23,7 +23,12 @@ Applies the selected combat mode to all currently selected groups.
 ## Create Area Marker
 
 Creates an [area marker](/user_guide/area_markers.md) at the context menu's position.
-This context menu must be opened on the map.
+Available only when the context menu is opened on the map.
+
+## Door State
+
+Sets the state of the selected door (closed, locked, opened).
+Available when the context menu is opened with the cursor hovering over a door.
 
 ## Editable Objects
 

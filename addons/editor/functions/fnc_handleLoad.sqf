@@ -142,6 +142,9 @@ GVAR(iconsVisible) = true;
         [_display] call FUNC(addGroupIcons);
         [_display] call FUNC(declutterEmptyTree);
 
+        // Initially fix side buttons (can be hidden if a tree has no entries)
+        [FUNC(fixSideButtons), _display] call CBA_fnc_execNextFrame;
+
         {
             private _ctrl = _display displayCtrl _x;
             _ctrl call EFUNC(common,collapseTree);
