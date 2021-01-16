@@ -111,13 +111,15 @@ private _fnc_processInventory = {
     params ["_object", "_varName"];
 
     if (_object isKindOf "CAManBase") then {
-        _outputObjects pushBack "[{";
+        _nextFrameHandle = format ["%1_nextFrameHandle", _varName];
+        _outputObjects pushBack ["['%1', 'onEachFrame', {", _nextFrameHandle];
         _outputObjects pushBack "    params [""_unit""];";
         if !(_object call FUNC(hasDefaultInventory)) then {
             _outputObjects pushBack ["    _unit setUnitLoadout %1;", getUnitLoadout _object];
         };
         _outputObjects pushBack "    _unit call BIN_fnc_CBRNHoseInit;";
-        _outputObjects pushBack ["}, [%1]] call CBA_fnc_execNextFrame;", _varName];
+        _outputObjects pushBack ["    ['%1', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;", _nextFrameHandle];
+        _outputObjects pushBack ["}, [%1]] call BIS_fnc_addStackedEventHandler;", _varName];
     } else {
         if (_object call FUNC(hasDefaultInventory)) exitWith {};
 
