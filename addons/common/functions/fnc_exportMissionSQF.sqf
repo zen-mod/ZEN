@@ -111,7 +111,7 @@ private _fnc_processInventory = {
     params ["_object", "_varName"];
 
     if (_object isKindOf "CAManBase") then {
-        _nextFrameHandle = format ["%1_nextFrameHandle", _varName];
+        private _nextFrameHandle = format ["%1_nextFrameHandle", _varName];
         _outputObjects pushBack ["['%1', 'onEachFrame', {", _nextFrameHandle];
         _outputObjects pushBack "    params [""_unit""];";
         if !(_object call FUNC(hasDefaultInventory)) then {
