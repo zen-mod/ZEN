@@ -26,7 +26,7 @@ if (isNil QGVAR(customVehicleTextures)) then {
 {
     private _vehicleType = configName _x;
     // Clear garage cache
-    GVAR(vehicleDataCache) setVariable [_vehicleType, []];
+    GVAR(vehicleDataCache) setVariable [_vehicleType, nil];
 
     private _textures = GVAR(customVehicleTextures) getVariable [_vehicleType, []];
     _textures pushBack [_texture, _variantName];
