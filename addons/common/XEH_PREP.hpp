@@ -17,7 +17,6 @@ PREP(getActiveTree);
 PREP(getAllTurrets);
 PREP(getArtilleryETA);
 PREP(getCargoPositionsCount);
-PREP(getCursorPosition);
 PREP(getDefaultInventory);
 PREP(getDLC);
 PREP(getLightingSelections);
