@@ -126,7 +126,7 @@
             _x setVariable [QEGVAR(common,isAIEnalbedPATH), !_isAIEnalbedPATH, true];
             if (_isAIEnalbedPATH) then {
                 _disabled = _disabled + 1;
-            } else {;
+            } else {
                 _enabled = _enabled + 1;
             };
         } forEach _drivers;
