@@ -94,7 +94,7 @@
             [QEGVAR(common,doWatch), [_x, [ASLToAGL _cursorPosASL, objNull] select _isCancelling], _x] call CBA_fnc_targetEvent;
         } forEach _gunners;
 
-        true // handled, prevents vanilla eject
+        true // handled
     };
 }, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
 
@@ -108,7 +108,7 @@
             };
         } forEach SELECTED_OBJECTS;
 
-        true // handled, prevents vanilla eject
+        true // handled
     };
 }, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
 
@@ -136,6 +136,6 @@
             (["", format [" - %1: %2", localize ELSTRING(common,Enabled), _enabled]] select (_enabled > 0));
         [_message] call EFUNC(common,showMessage);
 
-        true // handled, prevents vanilla eject
+        true // handled
     };
 }, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
