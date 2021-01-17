@@ -132,8 +132,8 @@
         } forEach _drivers;
 
         private _message = "PATH " +
-            (["", format [" - disabled: %1", _disabled]] select (_disabled > 0)) +
-            (["", format [" - enabled: %1", _enabled]] select (_enabled > 0));
+            (["", format [" - %1: %2", localize ELSTRING(common,Disabled), _disabled]] select (_disabled > 0)) +
+            (["", format [" - %1: %2", localize ELSTRING(common,Enabled), _enabled]] select (_enabled > 0));
         [_message] call EFUNC(common,showMessage);
 
         true // handled, prevents vanilla eject
