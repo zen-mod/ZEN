@@ -83,8 +83,20 @@
     };
 }, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
 
+[ELSTRING(main,DisplayName), QGVAR(watchCuratorCamera), [LSTRING(WatchCuratorCamera), LSTRING(WatchCuratorCamera_Description)], {
+    if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false) && {count SELECTED_OBJECTS > 0}}) then {
+        private _gunners = (SELECTED_OBJECTS apply {gunner vehicle _x}) - [objNull];
+        private _pos = getPos curatorCamera;
+        {
+            [QEGVAR(common,doWatch), [_x, _pos], _x] call CBA_fnc_targetEvent;
+        } forEach _gunners;
+
+        true // handled
+    };
+}, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
+
 [ELSTRING(main,DisplayName), QGVAR(watchCursor), [LSTRING(WatchCursor), LSTRING(WatchCursor_Description)], {
-    if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
+    if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false) && {count SELECTED_OBJECTS > 0}}) then {
         curatorMouseOver params ["_type", "_entity", ""];
         private _isCancelling = _type == "OBJECT" && {_entity in SELECTED_OBJECTS};
         private _gunners = (SELECTED_OBJECTS apply {gunner vehicle _x}) - [objNull];
@@ -97,6 +109,18 @@
         true // handled
     };
 }, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
+
+[ELSTRING(main,DisplayName), QGVAR(forceFire), [LSTRING(ForceFire), LSTRING(ForceFire_Description)], {
+    if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false) && {count SELECTED_OBJECTS > 0}}) then {
+        private _shooters = SELECTED_OBJECTS select {!isNull group _x};
+        [QEGVAR(common,ForceFire), [clientOwner, _shooters], _shooters] call CBA_fnc_targetEvent;
+
+        true // handled
+    };
+}, {
+    [QEGVAR(common,ForceFire), [clientOwner, []]] call CBA_fnc_localEvent;
+    [QEGVAR(common,ForceFire), [clientOwner, []]] call CBA_fnc_remoteEvent;
+}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
 
 [ELSTRING(main,DisplayName), QGVAR(moveToCursor), [LSTRING(MoveToCursor), LSTRING(MoveToCursor_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {

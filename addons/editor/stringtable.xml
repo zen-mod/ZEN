@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+ForceFireForceFire<?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Editor">
         <Key ID="STR_ZEN_Editor_DisplayName">
@@ -219,11 +219,20 @@
             <Japanese>全編集可アイコンの視認性を切り替えます。一時的な処理軽減や整理に使用できます。</Japanese>
             <Polish>Przełącza widoczność wszsytkich ustawionych ikon, przydatne by tymczasowo zmniejszyć lag, bądź niepotrzebne zaśmiecenie ekranu gdy znajduje się na nim dużo ikon.</Polish>
         </Key>
+        <Key ID="STR_ZEN_Editor_WatchCuratorCamera">
+            <English>Watch Curator Camera</English>
+        </Key>
         <Key ID="STR_ZEN_Editor_WatchCursor">
             <English>Watch Cursor</English>
         </Key>
         <Key ID="STR_ZEN_Editor_WatchCursor_Description">
             <English>Makes all selected units watch the cursor location. Pressing this command with the cursor over a selected unit will cancel the watch target.</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_ForceFire">
+            <English>Force Fire</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_ForceFire_Description">
+            <English>Hold to force all selected units to fire their current weapon.</English>
         </Key>
         <Key ID="STR_ZEN_Editor_MoveToCursor">
             <English>Move To Cursor</English>
