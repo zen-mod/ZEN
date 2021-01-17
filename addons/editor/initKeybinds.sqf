@@ -89,7 +89,7 @@
         private _isCancelling = _type == "OBJECT" && {_entity in SELECTED_OBJECTS};
         private _gunners = (SELECTED_OBJECTS apply {gunner vehicle _x}) - [objNull];
 
-        private _cursorPosASL = call EFUNC(common,getCursorPosition);
+        private _cursorPosASL = [] call EFUNC(common,getPosFromScreen);
         {
             [QEGVAR(common,doWatch), [_x, [ASLToAGL _cursorPosASL, objNull] select _isCancelling], _x] call CBA_fnc_targetEvent;
         } forEach _gunners;
@@ -100,7 +100,7 @@
 
 [ELSTRING(main,DisplayName), QGVAR(moveToCursor), [LSTRING(MoveToCursor), LSTRING(MoveToCursor_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
-        private _cursorPosASL = call EFUNC(common,getCursorPosition);
+        private _cursorPosASL = [] call EFUNC(common,getPosFromScreen);
 
         {
             if (!isNull driver _x) then {
