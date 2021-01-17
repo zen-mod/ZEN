@@ -153,6 +153,34 @@
     _unit enableIRLasers _mode;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(forceFire), {
+    params ["_curatorClientID", "_units"];
+    diag_log QGVAR(forceFire);
+    diag_log _this;
+
+    _units = _units select {local _x};
+    if (_units isEqualTo []) then {
+        GVAR(forceFireCurators) = GVAR(forceFireCurators) - [_curatorClientID];
+    } else {
+        GVAR(forceFireCurators) pushBackUnique _curatorClientID;
+        [{
+            params ["_args", "_pfhID"];
+            _args params ["_curatorClientID", "_units", "_startTime"];
+            if (!(_curatorClientID in GVAR(forceFireCurators)) || {CBA_missionTime - _startTime > 10}) exitWith {
+                [_pfhID] call CBA_fnc_removePerFrameHandler;
+            };
+            {
+                if (_x isKindOf "CAManBase") then {
+                    weaponState _x params ["", "_muzzle", "_firemode"];
+                    _x forceWeaponFire [_muzzle, _firemode];
+                } else {
+                    _x fireAtTarget [objNull];
+                };
+            } forEach _units;
+        }, 0.1, [_curatorClientID, _units, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
+    }
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(moveInDriver), {
     params ["_unit", "_vehicle"];
     _unit moveInDriver _vehicle;
