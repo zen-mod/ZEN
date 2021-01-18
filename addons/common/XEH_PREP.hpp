@@ -39,6 +39,7 @@ PREP(initSidesControl);
 PREP(initSliderEdit);
 PREP(isInScreenshotMode);
 PREP(isPlacementActive);
+PREP(isRemoteControlled);
 PREP(isVLS);
 PREP(loadMagazineInstantly);
 PREP(messageBox);
