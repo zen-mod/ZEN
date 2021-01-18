@@ -1724,6 +1724,9 @@
             <Polish>Dodaj wyposażenie</Polish>
             <Russian>Добавить снаряжение</Russian>
         </Key>
+        <Key ID="STR_ZEM_Modules_RemoveNVG">
+            <English>Remove NVG</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleToggleFlashlights">
             <English>Toggle Flashlights</English>
             <German>Ändere Taschenlampen</German>
