@@ -88,7 +88,7 @@ if (!_isAttached) then {
 
             if (_removeNVG && {_nvg != ""}) then {
                 [QEGVAR(common,unlinkItem), [_x, _nvg], _x] call CBA_fnc_targetEvent;
-            }
+            };
 
             [QEGVAR(common,enableGunLights), [_x, "ForceOn"], _x] call CBA_fnc_targetEvent;
         } forEach _units;
