@@ -97,7 +97,7 @@
 
 [ELSTRING(main,DisplayName), QGVAR(watchCursor), [LSTRING(WatchCursor), LSTRING(WatchCursor_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false) && {count SELECTED_OBJECTS > 0}}) then {
-        curatorMouseOver params ["_type", "_entity", ""];
+        curatorMouseOver params ["_type", "_entity"];
         private _isCancelling = _type == "OBJECT" && {_entity in SELECTED_OBJECTS};
         private _gunners = (SELECTED_OBJECTS apply {gunner vehicle _x}) - [objNull];
 
