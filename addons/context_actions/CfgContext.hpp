@@ -239,6 +239,11 @@ class EGVAR(context_menu,actions) {
             statement = QUOTE(_hoveredEntity setUnitLoadout GVAR(loadout));
             icon = QPATHTOF(ui\paste_ca.paa);
         };
+        class Reset {
+            displayName = "$STR_A3_RSCDisplayCampaignLobby_Reset";
+            statement = QUOTE(_hoveredEntity setUnitLoadout configOf _hoveredEntity);
+            icon = "\a3\3den\Data\Displays\Display3DEN\ToolBar\undo_ca.paa";
+        };
     };
     class Inventory {
         displayName = "$STR_A3_Gear1";
