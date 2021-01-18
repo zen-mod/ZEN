@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: NeilZar
- * Check whether the given unit is currently remote controlled.
+ * Check if the given unit is currently remote controlled.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -17,6 +17,6 @@
 
 params ["_unit"];
 
-if !(_unit isKindOf "CAManBase") exitWith {false};
+_curators = allCurators apply {getAssignedCuratorUnit _x} select {!(isNull _x)};
 
-_unit getVariable ["bis_fnc_moduleremotecontrol_owner", objNull] in allCurators
+_unit getVariable ["bis_fnc_moduleremotecontrol_owner", objNull] in _curators
