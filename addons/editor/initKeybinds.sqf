@@ -118,8 +118,7 @@
         true // handled
     };
 }, {
-    [QEGVAR(common,ForceFire), [clientOwner, []]] call CBA_fnc_localEvent;
-    [QEGVAR(common,ForceFire), [clientOwner, []]] call CBA_fnc_remoteEvent;
+    [QEGVAR(common,ForceFire), [clientOwner, []]] call CBA_fnc_globalEvent;
 }, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
 
 [ELSTRING(main,DisplayName), QGVAR(moveToCursor), [LSTRING(MoveToCursor), LSTRING(MoveToCursor_Description)], {
