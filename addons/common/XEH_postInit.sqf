@@ -186,12 +186,12 @@
                             private _shooter = _x;
                             private _turretPath = _x call CBA_fnc_turretPath;
                             weaponState [_vehicle, _turretPath] params ["_weapon", "_muzzle", "_firemode", "_magazine", "_ammo"];
-        					{
-        						_x params ["_xMagazine", "_xTurret", "_xAmmo", "_id", "_owner"];
-        						if (_xTurret isEqualTo _turretPath && _xMagazine == _magazine && _xAmmo == _ammo && _xAmmo != 0) exitWith {
-        							_vehicle action ["UseMagazine", _vehicle, _shooter, _owner, _id];
-        						};
-        					} forEach magazinesAllTurrets _vehicle;
+                            {
+                                _x params ["_xMagazine", "_xTurret", "_xAmmo", "_id", "_owner"];
+                                if (_xTurret isEqualTo _turretPath && _xMagazine == _magazine && _xAmmo == _ammo && _xAmmo != 0) exitWith {
+                                    _vehicle action ["UseMagazine", _vehicle, _shooter, _owner, _id];
+                                };
+                            } forEach magazinesAllTurrets _vehicle;
                         };
                     };
                 } else {
@@ -208,11 +208,11 @@
                             } else {
                                 private _turretPath = _x;
                                 {
-            						_x params ["_xMagazine", "_xTurret", "_xAmmo", "_id", "_owner"];
-            						if (_xTurret isEqualTo _turretPath && _xMagazine == _magazine && _xAmmo == _ammo && _xAmmo != 0) exitWith {
-            							_vehicle action ["UseMagazine", _vehicle, _shooter, _owner, _id];
-            						};
-            					} forEach magazinesAllTurrets _vehicle;
+                                    _x params ["_xMagazine", "_xTurret", "_xAmmo", "_id", "_owner"];
+                                    if (_xTurret isEqualTo _turretPath && _xMagazine == _magazine && _xAmmo == _ammo && _xAmmo != 0) exitWith {
+                                        _vehicle action ["UseMagazine", _vehicle, _shooter, _owner, _id];
+                                    };
+                                } forEach magazinesAllTurrets _vehicle;
                             };
                         };
                     } forEach (allTurrets _vehicle + [[-1]]);
