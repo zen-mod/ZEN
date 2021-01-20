@@ -171,51 +171,53 @@
             };
 
             {
-                if (_x isKindOf "CAManBase") then {
-                    private _vehicle = vehicle _x;
-                    if (_vehicle == _x) then {
-                        weaponState _x params ["", "_muzzle", "_firemode"];
-                        _x forceWeaponFire [_muzzle, _firemode];
+                private _shooter = _x;
+                private _vehicle = vehicle _shooter;
+                private _reloadTime = 0;
+                if !(_shooter isKindOf "CAManBase") then {
+                    private _currentWeapon = currentWeapon _vehicle;
+                    private _currentWeaponMuzzles = getArray (configFile >> "CfgWeapons" >> _currentWeapon >> "muzzles");
+                    private _currentMagazine = currentMagazine _vehicle;
+
+                    _shooter = gunner _vehicle;
+                    private _primaryTurret = [0];
+                    if (isNull _shooter) then {
+                        _shooter = driver _vehicle;
+                        _primaryTurret = [-1];
+                    };
+                    if (isNull _shooter) exitWith {};
+                };
+                if (CBA_missionTime > (_shooter getVariable [QGVAR(nextFireTime), 0])) then {
+
+                    if (_vehicle == _shooter) then {
+                        weaponState _shooter params ["", "_muzzle", "_firemode"];
+                        _shooter forceWeaponFire [_muzzle, _firemode];
                     } else {
+                        (fullCrew _vehicle select {_x select 0 == _shooter}) params ["", "_role", "_cargoIndex", "_turretPath", "_isFFV"];
+                        // FFV
+                        if (_isFFV) exitWith {
+                            weaponState _shooter params ["", "_muzzle", "_firemode"];
+                            _shooter forceWeaponFire [_muzzle, _firemode];
+                        };
                         // vehicle crew
-                        if (driver _vehicle == _x) then {
+                        if (driver _vehicle == _shooter) then {
                             // horn
                             weaponState [_vehicle, [-1]] params ["_weapon", "_muzzle", "_firemode"];
-                            _x forceWeaponFire [_muzzle, _firemode];
+                            _shooter forceWeaponFire [_muzzle, _firemode];
                         } else {
-                            private _shooter = _x;
-                            private _turretPath = _x call CBA_fnc_turretPath;
-                            weaponState [_vehicle, _turretPath] params ["_weapon", "_muzzle", "_firemode", "_magazine", "_ammo"];
+                            private _turretPath = _shooter call CBA_fnc_turretPath;
+                            weaponState [_vehicle, _turretPath] params ["_weapon", "", "", "_magazine", "_ammo"];
+                            _reloadTime = getNumber (configFile >> "CfgWeapons" >> _weapon >> "reloadTime");
+                            if (_reloadTime < 0.5) then {_reloadTime = 0};
                             {
                                 _x params ["_xMagazine", "_xTurret", "_xAmmo", "_id", "_owner"];
-                                if (_xTurret isEqualTo _turretPath && _xMagazine == _magazine && _xAmmo == _ammo && _xAmmo != 0) exitWith {
+                                if (_xTurret isEqualTo _turretPath && {_xMagazine == _magazine && {_xAmmo == _ammo && {_xAmmo != 0}}}) exitWith {
                                     _vehicle action ["UseMagazine", _vehicle, _shooter, _owner, _id];
+                                    _shooter setVariable [QGVAR(nextFireTime), CBA_missionTime + _reloadTime];
                                 };
                             } forEach magazinesAllTurrets _vehicle;
                         };
                     };
-                } else {
-                    // vehicle
-                    private _vehicle = _x;
-                    private _currentWeapon = currentWeapon _vehicle;
-                    {
-                        weaponState [_vehicle, _x] params ["_weapon", "_muzzle", "_firemode", "_magazine", "_ammo"];
-                        if (_weapon == _currentWeapon) exitWith {
-                            private _shooter = _vehicle turretUnit _x;
-                            if (_x isEqualTo [-1]) then {
-                                // horn
-                                _shooter forceWeaponFire [_muzzle, _firemode];
-                            } else {
-                                private _turretPath = _x;
-                                {
-                                    _x params ["_xMagazine", "_xTurret", "_xAmmo", "_id", "_owner"];
-                                    if (_xTurret isEqualTo _turretPath && _xMagazine == _magazine && _xAmmo == _ammo && _xAmmo != 0) exitWith {
-                                        _vehicle action ["UseMagazine", _vehicle, _shooter, _owner, _id];
-                                    };
-                                } forEach magazinesAllTurrets _vehicle;
-                            };
-                        };
-                    } forEach (allTurrets _vehicle + [[-1]]);
                 };
             } forEach _shooters;
         }, 0.1, [_curatorClientID, _shooters, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
