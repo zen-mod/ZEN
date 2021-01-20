@@ -154,31 +154,71 @@
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(forceFire), {
-    params ["_curatorClientID", "_units"];
-    diag_log QGVAR(forceFire);
-    diag_log _this;
+    params ["_curatorClientID", "_shooters"];
 
-    _units = _units select {local _x};
-    if (_units isEqualTo []) then {
+    _shooters = _shooters select {local _x};
+    if (_shooters isEqualTo []) then {
         GVAR(forceFireCurators) = GVAR(forceFireCurators) - [_curatorClientID];
     } else {
+        // track which curators are forcing fire
         GVAR(forceFireCurators) pushBackUnique _curatorClientID;
         [{
             params ["_args", "_pfhID"];
-            _args params ["_curatorClientID", "_units", "_startTime"];
+            _args params ["_curatorClientID", "_shooters", "_startTime"];
+
             if (!(_curatorClientID in GVAR(forceFireCurators)) || {CBA_missionTime - _startTime > 10}) exitWith {
                 [_pfhID] call CBA_fnc_removePerFrameHandler;
             };
+
             {
                 if (_x isKindOf "CAManBase") then {
-                    weaponState _x params ["", "_muzzle", "_firemode"];
-                    _x forceWeaponFire [_muzzle, _firemode];
+                    private _vehicle = vehicle _x;
+                    if (_vehicle == _x) then {
+                        weaponState _x params ["", "_muzzle", "_firemode"];
+                        _x forceWeaponFire [_muzzle, _firemode];
+                    } else {
+                        // vehicle crew
+                        if (driver _vehicle == _x) then {
+                            // horn
+                            weaponState [_vehicle, [-1]] params ["_weapon", "_muzzle", "_firemode"];
+                            _x forceWeaponFire [_muzzle, _firemode];
+                        } else {
+                            private _shooter = _x;
+                            private _turretPath = _x call CBA_fnc_turretPath;
+                            weaponState [_vehicle, _turretPath] params ["_weapon", "_muzzle", "_firemode", "_magazine", "_ammo"];
+        					{
+        						_x params ["_xMagazine", "_xTurret", "_xAmmo", "_id", "_owner"];
+        						if (_xTurret isEqualTo _turretPath && _xMagazine == _magazine && _xAmmo == _ammo && _xAmmo != 0) exitWith {
+        							_vehicle action ["UseMagazine", _vehicle, _shooter, _owner, _id];
+        						};
+        					} forEach magazinesAllTurrets _vehicle;
+                        };
+                    };
                 } else {
-                    _x fireAtTarget [objNull];
+                    private _vehicle = _x;
+                    private _currentWeapon = currentWeapon _vehicle;
+                    {
+                        weaponState [_vehicle, _x] params ["_weapon", "_muzzle", "_firemode", "_magazine", "_ammo"];
+                        if (_weapon == _currentWeapon) exitWith {
+                            private _shooter = _vehicle turretUnit _x;
+                            if (_x isEqualTo [-1]) then {
+                                // horn
+                                _shooter forceWeaponFire [_muzzle, _firemode];
+                            } else {
+                                private _turretPath = _x;
+                                {
+            						_x params ["_xMagazine", "_xTurret", "_xAmmo", "_id", "_owner"];
+            						if (_xTurret isEqualTo _turretPath && _xMagazine == _magazine && _xAmmo == _ammo && _xAmmo != 0) exitWith {
+            							_vehicle action ["UseMagazine", _vehicle, _shooter, _owner, _id];
+            						};
+            					} forEach magazinesAllTurrets _vehicle;
+                            };
+                        };
+                    } forEach (allTurrets _vehicle + [[-1]]);
                 };
-            } forEach _units;
-        }, 0.1, [_curatorClientID, _units, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
-    }
+            } forEach _shooters;
+        }, 0.1, [_curatorClientID, _shooters, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
+    };
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(moveInDriver), {
