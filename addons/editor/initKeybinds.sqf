@@ -85,7 +85,7 @@
 
 [ELSTRING(main,DisplayName), QGVAR(watchCuratorCamera), [LSTRING(WatchCuratorCamera), LSTRING(WatchCuratorCamera_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false) && {count SELECTED_OBJECTS > 0}}) then {
-        private _gunners = (SELECTED_OBJECTS apply {gunner vehicle _x}) - [objNull];
+        private _gunners = SELECTED_OBJECTS select {!isNull group _x};
         private _pos = getPos curatorCamera;
         {
             [QEGVAR(common,doWatch), [_x, _pos], _x] call CBA_fnc_targetEvent;
@@ -99,8 +99,7 @@
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false) && {count SELECTED_OBJECTS > 0}}) then {
         curatorMouseOver params ["_type", "_entity"];
         private _isCancelling = _type == "OBJECT" && {_entity in SELECTED_OBJECTS};
-        private _gunners = (SELECTED_OBJECTS apply {gunner vehicle _x}) - [objNull];
-
+        private _gunners = SELECTED_OBJECTS select {!isNull group _x};
         private _cursorPosASL = [] call EFUNC(common,getPosFromScreen);
         {
             [QEGVAR(common,doWatch), [_x, [ASLToAGL _cursorPosASL, objNull] select _isCancelling], _x] call CBA_fnc_targetEvent;
