@@ -195,6 +195,7 @@
                         };
                     };
                 } else {
+                    // vehicle
                     private _vehicle = _x;
                     private _currentWeapon = currentWeapon _vehicle;
                     {
