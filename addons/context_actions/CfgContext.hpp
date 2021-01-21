@@ -246,20 +246,20 @@ class EGVAR(context_menu,actions) {
         };
         class Rifle {
             displayName = "$STR_A3_RSCDisplayArsenal_Tab_PrimaryWeapon";
-            condition = QUOTE(primaryWeapon _hoveredEntity != '' && primaryWeapon _hoveredEntity != currentWeapon _hoveredEntity);
-            statement = QUOTE([QGVAR(selectWeapon), [_hoveredEntity, primaryWeapon _hoveredEntity], _hoveredEntity] call CBA_fnc_targetEvent);
+            condition = QUOTE(!isPlayer _hoveredEntity && {primaryWeapon _hoveredEntity != '' && {primaryWeapon _hoveredEntity != currentWeapon _hoveredEntity}});
+            statement = QUOTE([ARR_3('zen_common_selectWeapon', [ARR_2(_hoveredEntity, primaryWeapon _hoveredEntity)], _hoveredEntity)] call CBA_fnc_targetEvent);
             icon = "\a3\ui_f\data\GUI\Rsc\RscDisplayArsenal\primaryWeapon_ca.paa";
         };
         class Handgun {
             displayName = "$STR_A3_RSCDisplayArsenal_Tab_Handgun";
-            condition = QUOTE(handgunWeapon _hoveredEntity != '' && handgunWeapon _hoveredEntity != currentWeapon _hoveredEntity);
-            statement = QUOTE([QGVAR(selectWeapon), [_hoveredEntity, handgunWeapon _hoveredEntity], _hoveredEntity] call CBA_fnc_targetEvent);
+            condition = QUOTE(!isPlayer _hoveredEntity && {handgunWeapon _hoveredEntity != '' && {handgunWeapon _hoveredEntity != currentWeapon _hoveredEntity}});
+            statement = QUOTE([ARR_3('zen_common_selectWeapon', [ARR_2(_hoveredEntity, handgunWeapon _hoveredEntity)], _hoveredEntity)] call CBA_fnc_targetEvent);
             icon = "\a3\ui_f\data\GUI\Rsc\RscDisplayArsenal\handgun_ca.paa";
         };
         class Binoculars {
             displayName = "$STR_A3_RSCDisplayArsenal_Tab_Binoculars";
-            condition = QUOTE(binocular _hoveredEntity != '' && binocular _hoveredEntity != currentWeapon _hoveredEntity);
-            statement = QUOTE([QGVAR(selectWeapon), [_hoveredEntity, binocular _hoveredEntity], _hoveredEntity] call CBA_fnc_targetEvent);
+            condition = QUOTE(!isPlayer _hoveredEntity && {binocular _hoveredEntity != '' && {binocular _hoveredEntity != currentWeapon _hoveredEntity}});
+            statement = QUOTE([ARR_3('zen_common_selectWeapon', [ARR_2(_hoveredEntity, binocular _hoveredEntity)], _hoveredEntity)] call CBA_fnc_targetEvent);
             icon = "\a3\ui_f\data\GUI\Rsc\RscDisplayArsenal\binoculars_ca.paa";
         };
     };
