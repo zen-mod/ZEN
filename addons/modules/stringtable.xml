@@ -1725,7 +1725,7 @@
             <Russian>Добавить снаряжение</Russian>
         </Key>
         <Key ID="STR_ZEN_Modules_RemoveNVG">
-            <English>Remove NVG</English>
+            <English>Remove NVGs</English>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleToggleFlashlights">
             <English>Toggle Flashlights</English>
