@@ -51,7 +51,7 @@ if (!_isAttached) then {
     ["COMBO", [LSTRING(ToggleTarget), LSTRING(ToggleTarget_Tooltip)], _targets],
     ["TOOLBOX:ENABLED", LSTRING(ModuleToggleFlashlights_Flashlights), false],
     ["TOOLBOX:YESNO", LSTRING(AddGear), false],
-    ["TOOLBOX:YESNO", LSTRING(RemoveNVG), false]
+    ["TOOLBOX:YESNO", [LSTRING(RemoveNVG), LSTRING(RemoveNVG_Tooltip)], false]
 ], {
     params ["_values", "_group"];
     _values params ["_target", "_enabled", "_addGear", "_removeNVG"];

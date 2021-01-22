@@ -1727,6 +1727,9 @@
         <Key ID="STR_ZEN_Modules_RemoveNVG">
             <English>Remove NVGs</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_RemoveNVG_Tooltip">
+            <English>Remove any Night Vision Goggles currently equiped.</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleToggleFlashlights">
             <English>Toggle Flashlights</English>
             <German>Ändere Taschenlampen</German>
