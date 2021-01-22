@@ -18,19 +18,20 @@
 
 params ["_display", "_keyCode"];
 
-// Exit if the items list is not in focus
-if !(_display getVariable [QGVAR(listFocused), false]) exitWith {false};
-
-switch (_keyCode) do {
-    case DIK_LEFT;
-    case DIK_NUMPADMINUS: {
-        [_display, false] call FUNC(modify);
-        true
+if (_display getVariable [QGVAR(listFocused), false]) exitWith {
+    switch (_keyCode) do {
+        case DIK_LEFT;
+        case DIK_NUMPADMINUS: {
+            [_display, false] call FUNC(modify);
+            true
+        };
+        case DIK_RIGHT;
+        case DIK_NUMPADPLUS: {
+            [_display, true] call FUNC(modify);
+            true
+        };
+        default {false};
     };
-    case DIK_RIGHT;
-    case DIK_NUMPADPLUS: {
-        [_display, true] call FUNC(modify);
-        true
-    };
-    default {false};
 };
+
+false
