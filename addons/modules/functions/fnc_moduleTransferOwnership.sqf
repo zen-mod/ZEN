@@ -38,13 +38,19 @@ if (_entities findIf {units _x findIf {isPlayer _x} > -1} != -1) exitWith {
 };
 
 private _targets = [2, clientOwner];
-_targets append allPlayers;
 
 private _targetNames = [
     LSTRING(ModuleTransferOwnership_Server),
     "str_a3_cfgvehicles_module_f_moduledescription_curator_f_1"
 ];
-_targetNames append (allPlayers apply {name _x});
+
+private _players = allPlayers apply {[name _x, _x]};
+_players sort true;
+{
+    _x params ["_name", "_entity"];
+    _targetNames pushBack _name;
+    _targets pushBack _entity;
+} forEach _players;
 
 // Set default target to curator or server depending on current locality
 private _defaultTarget = parseNumber !(local (_entities select 0));
