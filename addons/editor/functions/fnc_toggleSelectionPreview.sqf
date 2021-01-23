@@ -32,7 +32,7 @@ if (_turnOn) then {
     };
 } else {
     if !(isNil QGVAR(selectionIconHandler)) then {
-        [GVAR(selectionIconHandler)] call CBA_fnc_removePerFrameHandler;
+        removeMissionEventHandler ["Draw3D", GVAR(selectionIconHandler)];
         GVAR(selectionIconHandler) = nil;
     };
 };
