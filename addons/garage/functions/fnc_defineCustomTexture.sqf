@@ -26,11 +26,11 @@ if (isNil QGVAR(customVehicleTextures)) then {
 {
     private _vehicleType = configName _x;
     // Clear garage cache
-    GVAR(vehicleDataCache) setVariable [_vehicleType, []];
+    GVAR(vehicleDataCache) setVariable [_vehicleType, nil];
 
     private _textures = GVAR(customVehicleTextures) getVariable [_vehicleType, []];
     _textures pushBack [_texture, _variantName];
     GVAR(customVehicleTextures) setVariable [_vehicleType, _textures];
-} forEach (format ["configName _x isKindOf '%1'", _baseVehicleType] configClasses (configFile / "CfgVehicles"));
+} forEach (format ["configName _x isKindOf '%1'", _baseVehicleType] configClasses (configFile >> "CfgVehicles"));
 
 nil

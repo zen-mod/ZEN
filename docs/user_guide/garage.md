@@ -15,3 +15,32 @@ In order to easily apply the same customization to multiple vehicles, all vehicl
 - <kbd>BACKSPACE</kbd> : Toggle interface visibility.
 - <kbd>LMB</kbd> : Show hidden interface.
 - <kbd>RMB</kbd> : Toggle interface (when not panning).
+
+### Register a Texture
+
+A custom texture can be made available for the garage by calling the `zen_garage_fnc_defineCustomTexture` function.
+This function has an effect on all children of the given base vehicle type.
+It is local, and thus must be executed on every Zeus client to have a global effect.
+
+**Arguments:**
+
+ \#   | Description | Type | Default Value (if optional)
+:---: | ----------- | ---- | ---------------------------
+0 | Base vehicle type | STRING |
+1 | Texture variant name | STRING |
+2 | Path to texture for each hidden selection | ARRAY |
+
+**Return Value:**
+
+- None
+
+**Example:**
+```sqf
+[
+    "Heli_Light_01_base_F",
+    "My new shiny AAF texture",
+    [
+        "A3\Air_F\Heli_Light_01\Data\heli_light_01_ext_indp_co.paa"
+    ]
+] call zen_garage_fnc_defineCustomTexture;
+```
