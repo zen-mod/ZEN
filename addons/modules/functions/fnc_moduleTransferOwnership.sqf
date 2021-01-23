@@ -16,13 +16,11 @@
  */
 
 params ["_logic"];
+deleteVehicle _logic;
 
 if (!isMultiplayer) exitWith {
     [LSTRING(OnlyMultiplayer)] call EFUNC(common,showMessage);
-    deleteVehicle _logic;
 };
-
-deleteVehicle _logic;
 
 private _entities = [];
 (call EFUNC(editor,getSelection)) params ["_objects", "_groups"];
