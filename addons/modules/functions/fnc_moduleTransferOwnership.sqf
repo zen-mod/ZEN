@@ -74,12 +74,8 @@ _clientNames = ["str_a3_om_common_definitions.incphone_44"] + _clientNames;
 ], {
     params ["_values", "_args"];
     _values params ["_target", "_player", "_HCState"];
-    _args params ["_entities", "_mehID"];
+    _args params ["_entities"];
 
-    // Stop drawing icons
-    if (_mehID > 0) then {
-        removeMissionEventHandler ["Draw3D", _mehID];
-    };
     private _targetID = switch (_target) do {
         case (0): {
             2 // Server
@@ -102,12 +98,4 @@ _clientNames = ["str_a3_om_common_definitions.incphone_44"] + _clientNames;
     };
 
     [QEGVAR(common,transferOwnership), [_entities, _targetID]] call CBA_fnc_serverEvent;
-}, {
-    params ["", "_args"];
-    _args params ["", "_mehID"];
-
-    // Stop drawing icons
-    if (_mehID > 0) then {
-        removeMissionEventHandler ["Draw3D", _mehID];
-    };
-}, [_entities, _mehID]] call EFUNC(dialog,create);
+}, {}, [_entities]] call EFUNC(dialog,create);
