@@ -26,12 +26,8 @@ for "_i" from 0 to (lbSize _ctrlListTextures - 1) do {
 // Check selected texture
 _ctrlListTextures lbSetPicture [_selectedIndex, ICON_CHECKED];
 
-private _texture = _ctrlListTextures lbData _selectedIndex;
-
-// Handle serialized array
-if (_texture != "" && {_texture select [0, 1] == '['}) then {
-    _texture = parseSimpleArray _texture;
-};
+private _dataVar = _ctrlListTextures lbData _selectedIndex;
+private _texture = _ctrlListTextures getVariable _dataVar;
 
 // Update vehicle textures
 [GVAR(center), _texture] call EFUNC(common,customizeVehicle);

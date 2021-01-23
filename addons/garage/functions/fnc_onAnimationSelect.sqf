@@ -26,7 +26,8 @@ _ctrlListAnimations lbSetPicture [_selectedIndex, CHECK_ICONS select _value];
 // Create array of all animation states
 private _animations = [];
 for "_i" from 0 to (lbSize _ctrlListAnimations - 1) do {
-    _animations pushBack (_ctrlListAnimations lbData _i);
+    private _dataVar = _ctrlListAnimations lbData _i;
+    _animations pushBack (_ctrlListAnimations getVariable _dataVar);
     _animations pushBack (_ctrlListAnimations lbValue _i);
 };
 

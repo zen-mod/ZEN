@@ -32,11 +32,14 @@ private _fnc_addToList = {
     if (_isChecked isEqualType false) then {_isChecked = parseNumber _isChecked};
 
     private _index = _ctrlList lbAdd _displayName;
+    private _dataVar = str _index;
 
-    _ctrlList lbSetData [_index, _variant];
+    _ctrlList lbSetData [_index, _dataVar];
     _ctrlList lbSetValue [_index, _isChecked];
     _ctrlList lbSetTooltip [_index, _displayName];
     _ctrlList lbSetPicture [_index, [ICON_UNCHECKED, ICON_CHECKED] select _isChecked];
+
+    _ctrlList setVariable [_dataVar, _variant];
 };
 
 // Add items to animations list
