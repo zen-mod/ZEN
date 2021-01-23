@@ -11,6 +11,7 @@
  * 1: Texture <BOOLEAN|ARRAY|STRING>
  * 2: Animation <BOOLEAN|ARRAY|STRING>
  * 3: Mass <BOOLEAN|NUMBER>
+ * 4: Instant animation <BOOLEAN>
  *
  * Return Value:
  * None
@@ -21,7 +22,7 @@
  * Public: No
  */
 
-params ["_vehicle", ["_texture", false, [false, [], ""]], ["_animation", false, [false, [], ""]], ["_mass", false, [false, 0]]];
+params ["_vehicle", ["_texture", false, [false, [], ""]], ["_animation", false, [false, [], ""]], ["_mass", false, [false, 0]], ["_instantAnimation", true, [false]]];
 
 private _vehicleType = typeOf _vehicle;
 
@@ -33,13 +34,13 @@ if (_animation isEqualType []) then {
         private _phase = _animation select (_i + 1);
         switch (_source) do {
             case "door": {
-                _vehicle animateDoor [_configName, _phase];
+                _vehicle animateDoor [_configName, _phase, _instantAnimation];
             };
             case "user": {
-                _vehicle animateSource [_configName, _phase];
+                _vehicle animateSource [_configName, _phase, _instantAnimation];
             };
             default {
-                _vehicle animate [_configName, _phase];
+                _vehicle animate [_configName, _phase, _instantAnimation];
             };
         };
     };

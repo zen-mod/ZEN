@@ -22,6 +22,6 @@ private _vehicleType = typeOf GVAR(center);
 
 {
     if (typeOf _x isEqualTo _vehicleType) then {
-        [_x, _textures, _animations, true] call EFUNC(common,customizeVehicle);
+        [_x, _textures, _animations, true, false] call EFUNC(common,customizeVehicle);
     };
 } forEach SELECTED_OBJECTS;

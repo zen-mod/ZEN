@@ -32,4 +32,4 @@ for "_i" from 0 to (lbSize _ctrlListAnimations - 1) do {
 };
 
 // Update vehicle animations
-[GVAR(center), nil, _animations, true] call EFUNC(common,customizeVehicle);
+[GVAR(center), nil, _animations, true, false] call EFUNC(common,customizeVehicle);
