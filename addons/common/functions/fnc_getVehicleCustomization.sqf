@@ -30,10 +30,16 @@ private _animations = [];
     private _source = getText (_config >> "source");
 
     if (!(toLower _configName in BLACKLIST_ANIMATION_NAMES) && {!(toLower _source in BLACKLIST_ANIMATION_SOURCES) && {BLACKLIST_ANIMATION_ATTRIBUTES findIf {isClass (_config >> _x)} == -1}}) then {
-        private _phase = if ("door" in toLower _configName && !("hide" in toLower _configName)) then {
-            _vehicle doorPhase _configName;
-        } else {
-            _vehicle animationPhase _configName;
+        private _phase = switch (_source) do {
+            case "door": {
+                _vehicle doorPhase _configName;
+            };
+            case "user": {
+                _vehicle animationSourcePhase _configName;
+            };
+            default {
+                _vehicle animationPhase _configName;
+            };
         };
         // Some sources will return negative values
         if (_phase >= 0) then {

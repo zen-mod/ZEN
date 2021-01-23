@@ -23,30 +23,35 @@
 
 params ["_vehicle", ["_texture", false, [false, [], ""]], ["_animation", false, [false, [], ""]], ["_mass", false, [false, 0]]];
 
+private _vehicleType = typeOf _vehicle;
+
 // Fix: BIS_fnc_initVehicle cannot animate doors multiple times
 if (_animation isEqualType []) then {
-    for "_i" from (count _animation - 2) to 0 step -2 do {
+    for "_i" from 0 to (count _animation - 2) step 2 do {
         private _configName = _animation select _i;
+        private _source = getText (configFile >> "CfgVehicles" >> _vehicleType >> "animationSources" >> _configName >> "source");
         private _phase = _animation select (_i + 1);
-        if ("door" in toLower _configName && !("hide" in toLower _configName)) then {
-            _vehicle animateDoor [_configName, _phase];
-            // Remove entry, since already handled
-            _animation deleteAt _i;
-            _animation deleteAt _i;
+        switch (_source) do {
+            case "door": {
+                _vehicle animateDoor [_configName, _phase];
+            };
+            case "user": {
+                _vehicle animateSource [_configName, _phase];
+            };
+            default {
+                _vehicle animate [_configName, _phase];
+            };
         };
-    };
-    if (_animation isEqualTo []) then {
-        _animation = nil;
     };
 };
 
 if (_texture isEqualType [] && {count _texture < 2 || {(_texture select 1) isEqualType ""}}) then {
-    [_vehicle, nil, _animation, _mass] call BIS_fnc_initVehicle;
+    [_vehicle, nil, nil, _mass] call BIS_fnc_initVehicle;
     {
         _vehicle setObjectTextureGlobal [_forEachIndex, _x];
     } forEach _texture;
 } else {
-    [_vehicle, _texture, _animation, _mass] call BIS_fnc_initVehicle;
+    [_vehicle, _texture, nil, _mass] call BIS_fnc_initVehicle;
 };
 
 nil

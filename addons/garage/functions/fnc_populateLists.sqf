@@ -20,6 +20,7 @@ private _display = findDisplay IDD_DISPLAY;
 // Get animation and texture data for current vehicle
 private _vehicleData = [GVAR(center)] call FUNC(getVehicleData);
 _vehicleData params ["_vehicleAnimations", "_vehicleTextures"];
+private _vehicleType = typeOf GVAR(center);
 
 private _fnc_addToList = {
     params ["_ctrlList", "_variant", "_displayName", "_isChecked"];
@@ -43,11 +44,19 @@ private _ctrlListAnimations = _display displayCtrl IDC_LIST_ANIMATIONS;
 {
     _x params ["_configName", "_displayName"];
 
-    private _isChecked = if ("door" in toLower _configName && !("hide" in toLower _configName)) then {
-        GVAR(center) doorPhase _configName;
-    } else {
-        GVAR(center) animationPhase _configName;
+    private _source = getText (configFile >> "CfgVehicles" >> _vehicleType >> "animationSources" >> _configName >> "source");
+    private _phase = switch (_source) do {
+        case "door": {
+            _vehicle doorPhase _configName;
+        };
+        case "user": {
+            _vehicle animationSourcePhase _configName;
+        };
+        default {
+            _vehicle animationPhase _configName;
+        };
     };
+    private _isChecked = _phase >= 0.5;
     [_ctrlListAnimations, _configName, _displayName, _isChecked] call _fnc_addToList;
 } forEach _vehicleAnimations;
 
