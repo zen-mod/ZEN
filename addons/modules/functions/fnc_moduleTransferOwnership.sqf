@@ -33,31 +33,27 @@ private _entities = [];
 } forEach _objects;
 _entities append _groups;
 
-if (_entities findIf {units _x findIf {isPlayer _x} > -1} > -1) exitWith {
+if (_entities findIf {units _x findIf {isPlayer _x} > -1} != -1) exitWith {
     [LSTRING(SelectionCannotIncludePlayers)] call EFUNC(common,showMessage);
 };
 
-private _defaultTarget = !local (_entities select 0);
-private _clientTypes = allPlayers;
-private _clientNames = allPlayers apply {name _x};
-_clientTypes = [0] + _clientTypes;
-_clientNames = ["str_a3_om_common_definitions.incphone_44"] + _clientNames;
+private _targets = [2, clientOwner];
+_targets append allPlayers;
+
+private _targetNames = [
+    LSTRING(ModuleTransferOwnership_Server),
+    "str_a3_cfgvehicles_module_f_moduledescription_curator_f_1"
+];
+_targetNames append (allPlayers apply {name _x});
+
+// Set default target to curator or server depending on current locality
+private _defaultTarget = parseNumber !(local (_entities select 0));
 
 [LSTRING(ModuleTransferOwnership), [
     [
-        "TOOLBOX",
-        ELSTRING(common,Target),
-        [_defaultTarget, 1, 3, [
-            LSTRING(ModuleTransferOwnership_Server),
-            "str_a3_cfgvehicles_module_f_moduledescription_curator_f_1",
-            LSTRING(ModuleTransferOwnership_Client)
-        ]],
-        true
-    ],
-    [
         "COMBO",
-        LSTRING(ModuleTransferOwnership_Client),
-        [_clientTypes, _clientNames, 0]
+        ELSTRING(common,Target),
+        [_targets, _targetNames, _defaultTarget]
     ],
     [
         "TOOLBOX",
@@ -71,20 +67,8 @@ _clientNames = ["str_a3_om_common_definitions.incphone_44"] + _clientNames;
     ]
 ], {
     params ["_values", "_args"];
-    _values params ["_target", "_player", "_HCState"];
+    _values params ["_target", "_HCState"];
     _args params ["_entities"];
-
-    private _targetID = switch (_target) do {
-        case (0): {
-            2 // Server
-        };
-        case (1): {
-            clientOwner
-        };
-        case (2): {
-            _player
-        };
-    };
 
     // set headless client script flags
     if (_HCState < 2) then {
@@ -95,5 +79,5 @@ _clientNames = ["str_a3_om_common_definitions.incphone_44"] + _clientNames;
         };
     };
 
-    [QEGVAR(common,transferOwnership), [_entities, _targetID]] call CBA_fnc_serverEvent;
+    [QEGVAR(common,transferOwnership), [_entities, _target]] call CBA_fnc_serverEvent;
 }, {}, [_entities]] call EFUNC(dialog,create);
