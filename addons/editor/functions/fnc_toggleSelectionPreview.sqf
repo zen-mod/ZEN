@@ -19,16 +19,17 @@ params [["_turnOn", true, [true]]];
 
 if (_turnOn) then {
     if (isNil QGVAR(selectionIconHandler)) then {
-    GVAR(selectionIconHandler) = addMissionEventHandler ["Draw3D", {
-        if (curatorMouseOver isEqualTo [""]) then {
-            {
-                drawIcon3D [
-                    GVAR(lastModuleIcon),
-                    GVAR(colour), getPosVisual _x, 1, 1, 0
-                ];
-            } forEach (GVAR(lastSelection) select 0);
-        };
-    }];
+        GVAR(selectionIconHandler) = addMissionEventHandler ["Draw3D", {
+            if (curatorMouseOver isEqualTo [""]) then {
+                {
+                    drawIcon3D [
+                        GVAR(lastModuleIcon),
+                        GVAR(colour), getPosVisual _x, 1, 1, 0
+                    ];
+                } forEach (GVAR(lastSelection) select 0);
+            };
+        }];
+    };
 } else {
     if !(isNil QGVAR(selectionIconHandler)) then {
         [GVAR(selectionIconHandler)] call CBA_fnc_removePerFrameHandler;
