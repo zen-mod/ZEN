@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Curator <OBJECT>
- * 0: Entity: group, marker, object, or waypoint <GROUP, STRING, OBJECT, ARRAY>
+ * 0: Entity: group, marker, object, or waypoint <GROUP|STRING|OBJECT|ARRAY>
  *
  * Return Value:
  * Handled <BOOL>
