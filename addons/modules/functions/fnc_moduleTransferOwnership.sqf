@@ -44,13 +44,22 @@ private _targetNames = [
     "str_a3_cfgvehicles_module_f_moduledescription_curator_f_1"
 ];
 
-private _players = allPlayers apply {[name _x, _x]};
+private _HCs = [];
+private _players = [];
+{
+    if (_x isKindOf "HeadlessClient_F") then {
+        _HCs pushBack [name _x, _x];
+    } else {
+        _players pushBack [name _x, _x];
+    };
+} forEach allPlayers;
+_HCs sort true;
 _players sort true;
 {
     _x params ["_name", "_entity"];
     _targetNames pushBack _name;
     _targets pushBack _entity;
-} forEach _players;
+} forEach (_HCs + _players);
 
 // Set default target to curator or server depending on current locality
 private _defaultTarget = parseNumber !(local (_entities select 0));
