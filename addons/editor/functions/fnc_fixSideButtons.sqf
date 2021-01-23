@@ -5,30 +5,30 @@
  *
  * Arguments:
  * 0: Display <DISPLAY>
- * 1: Mode <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [DISPLAY, 0] call zen_editor_fnc_fixSideButtons
+ * [DISPLAY] call zen_editor_fnc_fixSideButtons
  *
  * Public: No
  */
 
-[{
-    params ["_display", "_mode"];
+params ["_display"];
 
-    // Get side buttons to show based on mode
-    private _idcs = switch (_mode) do {
-        case 0;
-        case 1: {IDCS_SIDE_BUTTONS};
-        case 2;
-        case 3: {[IDC_RSCDISPLAYCURATOR_SIDEEMPTY]};
-        default {[]}
-    };
+private _sections = missionNamespace getVariable ["RscDisplayCurator_sections", [0, 0]];
+_sections params ["_mode"];
 
-    {
-        (_display displayCtrl _x) ctrlShow true;
-    } forEach _idcs;
-}, _this] call CBA_fnc_execNextFrame;
+// Get side buttons to show based on mode
+private _idcs = switch (_mode) do {
+    case 0;
+    case 1: {IDCS_SIDE_BUTTONS};
+    case 2;
+    case 3: {[IDC_RSCDISPLAYCURATOR_SIDEEMPTY]};
+    default {[]};
+};
+
+{
+    (_display displayCtrl _x) ctrlShow true;
+} forEach _idcs;

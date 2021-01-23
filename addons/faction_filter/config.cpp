@@ -3,14 +3,12 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        units[] = {
-            QGVAR(module)
-        };
+        units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"zen_modules"};
+        requiredAddons[] = {"zen_editor"};
         author = ECSTRING(main,Author);
-        authors[] = {"mharis001"};
+        authors[] = {"mharis001", "Kex"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
@@ -19,10 +17,3 @@ class CfgPatches {
 PRELOAD_ADDONS;
 
 #include "CfgEventHandlers.hpp"
-#include "CfgVehicles.hpp"
-#include "CfgContext.hpp"
-
-class RscActivePicture;
-class GVAR(RscActivePicture): RscActivePicture {
-    shadow = 2;
-};
