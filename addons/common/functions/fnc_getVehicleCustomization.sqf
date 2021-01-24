@@ -26,10 +26,10 @@ private _vehicleConfig = configFile >> "CfgVehicles" >> _vehicleType;
 private _animations = [];
 {
     private _config = _x;
-    private _configName = configName _config;
-    private _source = getText (_config >> "source");
+    private _configName = toLower configName _config;
+    private _source = toLower getText (_config >> "source");
 
-    if (!(toLower _configName in BLACKLIST_ANIMATION_NAMES) && {!(toLower _source in BLACKLIST_ANIMATION_SOURCES) && {BLACKLIST_ANIMATION_ATTRIBUTES findIf {isClass (_config >> _x)} == -1}}) then {
+    if (_source in WHITELIST_ANIMATION_SOURCES && {BLACKLIST_ANIMATION_INNAMES findIf {_x in _configName} == -1 && {BLACKLIST_ANIMATION_ATTRIBUTES findIf {isClass (_config >> _x)} == -1}}) then {
         private _phase = switch (_source) do {
             case "door": {
                 _vehicle doorPhase _configName;
