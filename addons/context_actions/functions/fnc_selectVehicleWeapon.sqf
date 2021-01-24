@@ -84,12 +84,14 @@ private _currentIndex = 0;
         true
     ]
 ], {
-    systemChat str _this;
     params ["_dialogValues", "_args"];
     _dialogValues params ["_result"];
     _result params ["_weapon", "_muzzle", "_id"];
     _args params ["_vehicle", "_primaryGunner"];
 
-    _vehicle selectWeapon ([_muzzle, _weapon] select (_muzzle == "this"));
-    //_vehicle action ["SwitchWeapon", _vehicle, _primaryGunner, _id];
+    if (_muzzle == "this") then {
+        _muzzle = _weapon;
+    };
+    _vehicle selectWeapon _weapon;
+    _primaryGunner action ["LoadMagazine", _vehicle, _primaryGunner, 0, _id, _weapon, _muzzle];
 }, {}, [_vehicle, _primaryGunner]] call EFUNC(dialog,create);
