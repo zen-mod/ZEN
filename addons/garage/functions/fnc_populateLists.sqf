@@ -25,10 +25,6 @@ private _vehicleType = typeOf GVAR(center);
 private _fnc_addToList = {
     params ["_ctrlList", "_variant", "_displayName", "_isChecked"];
 
-    if !(_variant isEqualType "") then {
-        _variant = str _variant;
-    };
-
     if (_isChecked isEqualType false) then {_isChecked = parseNumber _isChecked};
 
     private _index = _ctrlList lbAdd _displayName;
