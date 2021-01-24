@@ -224,6 +224,11 @@
     };
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(action), {
+    params ["_unit", "_actionParams"];
+    _unit action _actionParams;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(moveInDriver), {
     params ["_unit", "_vehicle"];
     _unit moveInDriver _vehicle;

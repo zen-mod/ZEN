@@ -60,7 +60,7 @@ private _currentIndex = 0;
                                 _currentIndex = count _uniqueList;
                             };
                             _uniqueList pushBack [_weapon, _muzzle, _magazine];
-                            _results pushBack [_weapon, _muzzle, _id];
+                            _results pushBack [_weapon, _muzzle, _magazine, _id, _owner];
                             private _weaponName = getText(_cfgWeapons >> _weapon >> "displayName");
                             _labels pushBack format [
                                 "%1 %2- %3",
@@ -84,14 +84,23 @@ private _currentIndex = 0;
         true
     ]
 ], {
+    systemChat str _this;
     params ["_dialogValues", "_args"];
     _dialogValues params ["_result"];
-    _result params ["_weapon", "_muzzle", "_id"];
-    _args params ["_vehicle", "_primaryGunner"];
+    _result params ["_weapon", "_muzzle", "_magazine", "_id", "_owner"];
+    _args params ["_vehicle", "_primaryGunner", "_primaryTurret"];
+    weaponState [_vehicle, _primaryTurret] params ["_currentWeapon", "_currentMuzzle", "", "_currentMagazine"];
 
     if (_muzzle == "this") then {
         _muzzle = _weapon;
     };
-    _vehicle selectWeapon _weapon;
-    _primaryGunner action ["LoadMagazine", _vehicle, _primaryGunner, 0, _id, _weapon, _muzzle];
-}, {}, [_vehicle, _primaryGunner]] call EFUNC(dialog,create);
+    if (_currentWeapon != _weapon || {_currentMuzzle != _muzzle}) then {
+        systemChat format ["change weapon %1 to %2", _currentWeapon, _weapon];
+        systemChat format ["change muzzle %1 to %2", _currentMuzzle, _muzzle];
+        [QEGVAR(common,selectWeapon),  [_vehicle,  _muzzle],  _vehicle] call CBA_fnc_targetEvent;
+    };
+    if (_currentMagazine != _magazine) then {
+        systemChat format ["change mag %1 to %2", _currentMagazine, _magazine];
+        [QEGVAR(common,action), [_primaryGunner, ["LoadMagazine", _vehicle, _primaryGunner, _owner, _id, _weapon, _muzzle]], _primaryGunner] call CBA_fnc_targetEvent;
+    };
+}, {}, [_vehicle, _primaryGunner, _primaryTurret]] call EFUNC(dialog,create);
