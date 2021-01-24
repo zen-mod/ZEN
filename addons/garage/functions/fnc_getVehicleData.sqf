@@ -32,7 +32,7 @@ if (isNil "_vehicleData") then {
     for "_i" from 0 to (count _currentAnimations - 2) step 2 do {
         private _configName = _currentAnimations select _i;
         private _displayName = getText (_vehicleConfig >> "animationSources" >> _configName >> "displayName");
-        if (_displayName == "") then {
+        if (_displayName isEqualTo "") then {
             _displayName = (_configName splitString "_") joinString " ";
         };
         _animations pushBack [_configName, _displayName];
@@ -42,6 +42,9 @@ if (isNil "_vehicleData") then {
     {
         private _configName = configName _x;
         private _displayName = getText (_x >> "displayName");
+        if (_displayName isEqualTo "") then {
+            _displayName = (_configName splitString "_") joinString " ";
+        };
         _textures pushBack [_configName, _displayName];
     } forEach configProperties [_vehicleConfig >> "textureSources", "isClass _x", true];
 
