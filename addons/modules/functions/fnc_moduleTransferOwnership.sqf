@@ -61,22 +61,30 @@ _players sort true;
     _targets pushBack _entity;
 } forEach (_HCs + _players);
 
-// Set default target to curator or server depending on current locality
-private _defaultTarget = parseNumber !(local (_entities select 0));
+// Set default target to curator, server, or HC depending on current locality
+private _defaultTarget = if (local (_entities select 0)) then {
+    if (_HCs isEqualTo []) then {
+        0
+    } else {
+        2
+    };
+} else {
+    1
+};
 
 [LSTRING(ModuleTransferOwnership), [
     [
         "COMBO",
         ELSTRING(common,Target),
-        [_targets, _targetNames, _defaultTarget]
+        [_targets, _targetNames, _defaultTarget],
+        true
     ],
     [
         "TOOLBOX",
         LSTRING(ModuleTransferOwnership_HCScripts),
-        [_defaultTarget, 1, 3, [
-            ELSTRING(common,Enabled),
+        [parseNumber (_defaultTarget == 2), 1, 2, [
             ELSTRING(common,Disabled),
-            ELSTRING(common,Unchanged)
+            ELSTRING(common,Enabled)
         ]],
         true
     ]
