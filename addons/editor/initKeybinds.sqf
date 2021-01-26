@@ -32,7 +32,7 @@
         {
             if (isNull isVehicleCargo _x) then {
                 // Not being carried
-                if (!(getVehicleCargo _x isEqualTo [])) then {
+                if !(getVehicleCargo _x isEqualTo []) then {
                     _x setVehicleCargo objNull;
                 };
             } else {
