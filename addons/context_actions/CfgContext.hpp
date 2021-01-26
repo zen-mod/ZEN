@@ -317,8 +317,8 @@ class EGVAR(context_menu,actions) {
         };
         class UnloadViV {
             displayName = "$STR_A3_ModuleDepot_Unload";
-            condition = QUOTE(!(getVehicleCargo _hoveredEntity isEqualTo []) || {!isNull isVehicleCargo _hoveredEntity});
-            statement = QUOTE(if (isNull isVehicleCargo _hoveredEntity) then {_hoveredEntity setVehicleCargo objNull} else {objNull setVehicleCargo _hoveredEntity});
+            condition = QUOTE(_objects call FUNC(canUnloadViV));
+            statement = QUOTE(_objects call FUNC(unloadViV));
             icon = "\a3\ui_f\data\IGUI\Cfg\Actions\unloadVehicle_ca.paa";
         };
     };
