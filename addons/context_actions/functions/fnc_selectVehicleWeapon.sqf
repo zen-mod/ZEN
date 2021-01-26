@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Ampersand
- * Opens dialog to select weapon for turrets with multiple.
+ * Opens dialog to select weapon for turrets with multiple weapons/muzzles/magazines.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
