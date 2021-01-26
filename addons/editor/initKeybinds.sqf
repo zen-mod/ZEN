@@ -21,8 +21,15 @@
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
         {
             [_x] call EFUNC(common,ejectPassengers);
+        } forEach SELECTED_OBJECTS;
 
-            // Handle vehicle cargo
+        true // handled, prevents vanilla eject
+    };
+}, {}, [DIK_G, [false, true, false]]] call CBA_fnc_addKeybind; // Default: CTRL + G
+
+[ELSTRING(main,DisplayName), QGVAR(unloadViV), [localize "STR_A3_ModuleDepot_Unload", LSTRING(UnloadViV_Description)], {
+    if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
+        {
             if (isNull isVehicleCargo _x) then {
                 // Not being carried
                 if (!(getVehicleCargo _x isEqualTo [])) then {
@@ -36,7 +43,7 @@
 
         true // handled, prevents vanilla eject
     };
-}, {}, [DIK_G, [false, true, false]]] call CBA_fnc_addKeybind; // Default: CTRL + G
+}, {}, [DIK_G, [false, false, true]]] call CBA_fnc_addKeybind; // Default: ALT + G
 
 [ELSTRING(main,DisplayName), QGVAR(deepCopy), [LSTRING(DeepCopy), LSTRING(DeepCopy_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {

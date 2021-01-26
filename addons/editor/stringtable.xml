@@ -159,6 +159,9 @@
             <Polish>Wysadza pasażerów ze wszystkich wybranych pojazdów. Jeżeli pojazd jest w powietrzu, pasażerowie dostaną spadochron.\nJednostki zostaną wysadzone jedna po drugiej (nie wszystkie na raz).</Polish>
             <Japanese>選択された全車両から後部座席のユニットを脱出させます。もし車両が飛行中の場合はパラシュートが与えられます。\nなお脱出は一人づつ降りるようになっています (即時ではなく数秒づつ)。</Japanese>
         </Key>
+        <Key ID="STR_ZEN_Editor_UnloadViV_Description">
+            <English>Unloads all selected Vehicle-in-Vehicle cargo or carriers. If a vehicle is simulatenously both, unload it from its carrier.</English>
+        </Key>
         <Key ID="STR_ZEN_Editor_DeployCountermeasures">
             <English>Deploy Countermeasures</English>
             <French>Déployer des contre-mesures</French>
