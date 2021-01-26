@@ -28,7 +28,7 @@
                     _x setVehicleCargo objNull;
                 };
             } else {
-                //being carried
+                // Being carried
                 objNull setVehicleCargo _x;
             };
         } forEach SELECTED_OBJECTS;
