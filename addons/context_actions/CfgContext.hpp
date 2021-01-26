@@ -244,23 +244,33 @@ class EGVAR(context_menu,actions) {
             statement = QUOTE(_hoveredEntity setUnitLoadout configOf _hoveredEntity);
             icon = "\a3\3den\Data\Displays\Display3DEN\ToolBar\undo_ca.paa";
         };
-        class Rifle {
-            displayName = "$STR_A3_RSCDisplayArsenal_Tab_PrimaryWeapon";
-            condition = QUOTE(!isPlayer _hoveredEntity && {primaryWeapon _hoveredEntity != '' && {primaryWeapon _hoveredEntity != currentWeapon _hoveredEntity}});
-            statement = QUOTE([ARR_3('zen_common_selectWeapon', [ARR_2(_hoveredEntity, primaryWeapon _hoveredEntity)], _hoveredEntity)] call CBA_fnc_targetEvent);
-            icon = "\a3\ui_f\data\GUI\Rsc\RscDisplayArsenal\primaryWeapon_ca.paa";
-        };
-        class Handgun {
-            displayName = "$STR_A3_RSCDisplayArsenal_Tab_Handgun";
-            condition = QUOTE(!isPlayer _hoveredEntity && {handgunWeapon _hoveredEntity != '' && {handgunWeapon _hoveredEntity != currentWeapon _hoveredEntity}});
-            statement = QUOTE([ARR_3('zen_common_selectWeapon', [ARR_2(_hoveredEntity, handgunWeapon _hoveredEntity)], _hoveredEntity)] call CBA_fnc_targetEvent);
-            icon = "\a3\ui_f\data\GUI\Rsc\RscDisplayArsenal\handgun_ca.paa";
-        };
-        class Binoculars {
-            displayName = "$STR_A3_RSCDisplayArsenal_Tab_Binoculars";
-            condition = QUOTE(!isPlayer _hoveredEntity && {binocular _hoveredEntity != '' && {binocular _hoveredEntity != currentWeapon _hoveredEntity}});
-            statement = QUOTE([ARR_3('zen_common_selectWeapon', [ARR_2(_hoveredEntity, binocular _hoveredEntity)], _hoveredEntity)] call CBA_fnc_targetEvent);
-            icon = "\a3\ui_f\data\GUI\Rsc\RscDisplayArsenal\binoculars_ca.paa";
+        class SwitchWeapon {
+            displayName = "$STR_A3_Switch1";
+            condition = QUOTE(2 <= {_x != ''} count [ARR_3(primaryWeapon _hoveredEntity, handgunWeapon _hoveredEntity, binocular _hoveredEntity)]);
+            statement = "";
+            icon = "\a3\ui_f\data\IGUI\Cfg\Actions\reammo_ca.paa";
+            class Rifle {
+                displayName = "$STR_A3_RSCDisplayArsenal_Tab_PrimaryWeapon";
+                condition = QUOTE(!isPlayer _hoveredEntity && {primaryWeapon _hoveredEntity != '' && {primaryWeapon _hoveredEntity != currentWeapon _hoveredEntity}});
+                statement = QUOTE([ARR_3('zen_common_selectWeapon', [ARR_2(_hoveredEntity, primaryWeapon _hoveredEntity)], _hoveredEntity)] call CBA_fnc_targetEvent);
+                icon = "\a3\ui_f\data\GUI\Rsc\RscDisplayArsenal\primaryWeapon_ca.paa";
+                args = 0;
+                modifierFunction = QUOTE(call FUNC(switchWeaponModifier));
+            };
+            class Handgun: Rifle {
+                displayName = "$STR_A3_RSCDisplayArsenal_Tab_Handgun";
+                condition = QUOTE(!isPlayer _hoveredEntity && {handgunWeapon _hoveredEntity != '' && {handgunWeapon _hoveredEntity != currentWeapon _hoveredEntity}});
+                statement = QUOTE([ARR_3('zen_common_selectWeapon', [ARR_2(_hoveredEntity, handgunWeapon _hoveredEntity)], _hoveredEntity)] call CBA_fnc_targetEvent);
+                icon = "\a3\ui_f\data\GUI\Rsc\RscDisplayArsenal\handgun_ca.paa";
+                args = 1;
+            };
+            class Binoculars: Rifle {
+                displayName = "$STR_A3_RSCDisplayArsenal_Tab_Binoculars";
+                condition = QUOTE(!isPlayer _hoveredEntity && {binocular _hoveredEntity != '' && {binocular _hoveredEntity != currentWeapon _hoveredEntity}});
+                statement = QUOTE([ARR_3('zen_common_selectWeapon', [ARR_2(_hoveredEntity, binocular _hoveredEntity)], _hoveredEntity)] call CBA_fnc_targetEvent);
+                icon = "\a3\ui_f\data\GUI\Rsc\RscDisplayArsenal\binoculars_ca.paa";
+                args = 2;
+            };
         };
     };
     class Inventory {
