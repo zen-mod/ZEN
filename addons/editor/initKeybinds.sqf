@@ -21,10 +21,10 @@
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
         {
             [_x] call EFUNC(common,ejectPassengers);
-            
+
             // Handle vehicle cargo
             if (isNull isVehicleCargo _x) then {
-                // not being carried
+                // Not being carried
                 if (!(getVehicleCargo _x isEqualTo [])) then {
                     _x setVehicleCargo objNull;
                 };
