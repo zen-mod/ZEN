@@ -191,7 +191,7 @@ class GVAR(RscOwners): RscControlsGroupNoScrollbars {
             h = POS_H(1);
             sizeEx = 4.32 * (1 / (getResolution select 3)) * pixelGrid * 0.5;
             colorBackground[] = {0, 0, 0, 0.5};
-            colorBackgroundActive[] = COLOR_SETTING(EGVAR(common,darkMode),1,1,1,0.15,0.1,0.1,0.1,0.2); // lighter
+            colorBackgroundActive[] = COLOR_SETTING(EGVAR(common,darkMode),1,1,1,0.15,0.1,0.1,0.1,0.2); // Lighter
             colorBackgroundDisabled[] = COLOR_BACKGROUND_SETTING;
             colorDisabled[] = {1, 1, 1, 1};
             colorFocused[] = {1, 1, 1, 0.1};

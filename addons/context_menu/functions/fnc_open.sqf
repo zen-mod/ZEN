@@ -28,7 +28,7 @@ GVAR(selected) = curatorSelected;
 // Handle currently hovered entity
 curatorMouseOver params ["_type", "_entity", "_index"];
 
-// curatorMouseOver returns group and index separately when hovering over a waypoint
+// CuratorMouseOver returns group and index separately when hovering over a waypoint
 if (_type == "ARRAY") then {
     _entity = [_entity, _index];
 };
@@ -45,7 +45,7 @@ if (_category != -1) then {
     };
 
     // Add units of hovered groups to the selected units array to
-    // simulate selecting the group and then opening the menu
+    // Simulate selecting the group and then opening the menu
     if (_type == "GROUP") then {
         {GVAR(selected) select 0 pushBackUnique _x} forEach units _entity;
     };

@@ -1,5 +1,5 @@
 #include "script_component.hpp"
-#include "\a3\ui_f\hpp\defineResinclDesign.inc" // can't put this in config due to undef error
+#include "\a3\ui_f\hpp\defineResinclDesign.inc" // Can't put this in config due to undef error
 /*
  * Author: mharis001
  * Handles initializing the Zeus Display.
@@ -63,7 +63,7 @@ _display displayAddEventHandler ["KeyDown", {call FUNC(handleKeyDown)}];
 } forEach IDCS_MODE_BUTTONS;
 
 // Need events to check if side buttons are hovered since changing the mode
-// also triggers the button click event for the side buttons
+// Also triggers the button click event for the side buttons
 {
     private _ctrl = _display displayCtrl _x;
     _ctrl ctrlAddEventHandler ["ButtonClick", {call FUNC(handleSideButtons)}];
@@ -103,8 +103,8 @@ _ctrlTreeRecent ctrlAddEventHandler ["TreeSelChanged", {
     params ["_ctrlTreeRecent", "_selectedPath"];
 
     // Store data of selected item to allow for deleting the of crew of objects placed through the recent tree
-    // tvCurSel is unavailable once the selected item has been placed, the empty path check ensures that the
-    // data is not cleared since this event occurs before the object placed event
+    // TvCurSel is unavailable once the selected item has been placed, the empty path check ensures that the
+    // Data is not cleared since this event occurs before the object placed event
     if !(_selectedPath isEqualTo []) then {
         GVAR(recentTreeData) = _ctrlTreeRecent tvData _selectedPath;
     };
@@ -128,7 +128,7 @@ GVAR(iconsVisible) = true;
 
 [{
     // For compatibility with Zeus Game Master missions, wait until the respawn placement phase is complete
-    // and the create trees have been refreshed after curator addons are changed
+    // And the create trees have been refreshed after curator addons are changed
     [{
         params ["_display"];
 

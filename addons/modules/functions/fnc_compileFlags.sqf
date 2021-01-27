@@ -26,7 +26,7 @@ private _sortHelper = [];
         private _flagTexture = toLower (_initText splitString "'""" param [1, ""]);
 
         if (_flagTexture != "") then {
-            // getForcedFlagTexture returns texture without leading slash
+            // GetForcedFlagTexture returns texture without leading slash
             if (_flagTexture select [0, 1] == "\") then {
                 _flagTexture = _flagTexture select [1];
             };

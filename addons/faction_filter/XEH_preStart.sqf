@@ -12,7 +12,7 @@ private _cfgEditorCategories = configFile >> "CfgEditorCategories";
         if (_x isKindOf "AllVehicles" && {!(_x isKindOf "Animal")}) then {
             private _config = _cfgVehicles >> _x;
 
-            // scopeCurator always has priority over scope, scope is only used if scopeCurator is not defined
+            // ScopeCurator always has priority over scope, scope is only used if scopeCurator is not defined
             if (getNumber (_config >> "scopeCurator") == 2 || {getNumber (_config >> "scope") == 2 && {!isNumber (_config >> "scopeCurator")}}) then {
                 private _side = getNumber (_config >> "side");
 

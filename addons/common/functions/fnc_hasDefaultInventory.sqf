@@ -27,7 +27,7 @@ if (_object isKindOf "CAManBase") exitWith {
     _default set [7, _current select 7];
 
     // Sort uniform, vest, and backpack item arrays, their contents can be indentical
-    // but the arrays may be different depending on the order they were added to the container
+    // But the arrays may be different depending on the order they were added to the container
     {
         // 3, 4, and 5 are indices of uniform, vest, and backpack info in loadout arrays, respectively
         for "_i" from 3 to 5 do {
@@ -43,7 +43,7 @@ private _current = [getItemCargo _object, getWeaponCargo _object, getMagazineCar
 private _default = [_object] call FUNC(getDefaultInventory);
 
 // Sort inventory arrays, their contents can be indentical but the arrays may be different
-// depending on the order they were added to the container
+// Depending on the order they were added to the container
 {
     {
         {

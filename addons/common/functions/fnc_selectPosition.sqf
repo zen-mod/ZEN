@@ -101,7 +101,7 @@ private _keyboardEH = [_display, "KeyDown", {
 
     GVAR(selectPositionActive) = false;
 
-    true // handled
+    true // Handled
 }, [_objects, _function, _args]] call CBA_fnc_addBISEventHandler;
 
 private _drawEH = [_ctrlMap, "Draw", {

@@ -82,12 +82,12 @@ waitUntil {
 // Manaully position the helicopter to be almost exactly over the waypoint's position
 // Without manual handling, the helicopter will not fly directly over the waypoint's position
 // Instead, it will stop ~100 m away from it - this looks a bit rough but is the most reliable
-// method for getting the helicopter into the correct position
+// Method for getting the helicopter into the correct position
 private _startPos = getPosASL _vehicle;
 private _endPos   = +_waypointPosition;
 
 // Using the waypointPosition command to get the height of the waypoint
-// since the position provided to the waypoint script always has a height of zero
+// Since the position provided to the waypoint script always has a height of zero
 _endPos set [2, FASTROPE_HEIGHT + (waypointPosition _waypoint select 2)];
 _endPos = AGLtoASL _endPos;
 

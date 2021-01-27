@@ -28,7 +28,7 @@
 params [["_unit", objNull, [objNull]], ["_position", [0, 0, 0], [[], objNull, ""], 3], ["_spread", 0, [0]], ["_magazine", "", [""]], ["_rounds", 1, [0]]];
 
 // If an object is given as the position, the dummy targets will be
-// attached to this object in order to make the missile track the object
+// Attached to this object in order to make the missile track the object
 private _isObject = _position isEqualType objNull;
 
 if (_position isEqualType "") then {

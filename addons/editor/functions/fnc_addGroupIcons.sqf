@@ -22,7 +22,7 @@ params ["_display"];
 private _config = configFile >> "CfgGroups";
 
 // Iterate through every tree path and use the tree item data
-// to find the corresponding config for each group
+// To find the corresponding config for each group
 {
     private _ctrlTree = _display displayCtrl _x;
     private _color = [_forEachIndex] call BIS_fnc_sideColor;

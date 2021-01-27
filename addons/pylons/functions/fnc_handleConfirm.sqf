@@ -51,7 +51,7 @@ private _pylonLoadout = [];
 
 // Get all compatible default pylon weapons for the aircraft
 // These are added automatically if a compatible weapon for the magazine
-// does not exist when using the setPylonLoadout command
+// Does not exist when using the setPylonLoadout command
 private _pylonWeapons = [];
 
 {
@@ -65,7 +65,7 @@ _pylonWeapons = _pylonWeapons arrayIntersect _pylonWeapons;
 // Remove default pylons weapons that will no longer be used
 // Prevents weapons with no magazines from showing up when cycling through weapons
 // This will also handle rare situations where a compatible weapon that is not a
-// default pylon weapon was already present on the turret
+// Default pylon weapon was already present on the turret
 {
     _x params ["_weaponsToKeep", "_turretPath"];
 

@@ -364,7 +364,7 @@ private _fnc_listKeyDown = {
             private _ctrlUnitCount = ctrlParent _ctrlUnitList displayCtrl IDC_SPAWNREINFORCEMENTS_UNIT_COUNT;
             _ctrlUnitCount ctrlSetText str lbSize _ctrlUnitList;
 
-            true // handled
+            true // Handled
         };
 
         false

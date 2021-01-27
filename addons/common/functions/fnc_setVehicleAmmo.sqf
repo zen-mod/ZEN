@@ -19,7 +19,7 @@
 params ["_vehicle", "_percentage"];
 
 // Set ammo for pylons with magazines, group pylons with the same
-// magazine to better handle magazines with a low maximum ammo counts
+// Magazine to better handle magazines with a low maximum ammo counts
 private _pylonMagazines = getPylonMagazines _vehicle;
 private _cfgMagazines = configFile >> "CfgMagazines";
 
