@@ -48,6 +48,7 @@ def lint_file_for_comments(filepath: str):
 def main():
     print('Validating code comments')
     print('------------------------')
+    print()
 
     exit_code = 0
     validated_files = 0
