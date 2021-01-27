@@ -302,6 +302,8 @@ call {
 
 Inline comments should use `//`. Usage of `/* */` is allowed for larger comment blocks.
 
+All inline comments must start with a uppercase letter.
+
 Example:
 
 ```sqf
