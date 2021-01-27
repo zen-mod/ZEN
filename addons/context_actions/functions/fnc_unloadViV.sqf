@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Ampersand
- * Unloads vehicles from the objects list.
+ * Unloads Vehicle-in-Vehicle cargo and carriers from the objects list.
  *
  * Arguments:
  * N: Objects <OBJECT>

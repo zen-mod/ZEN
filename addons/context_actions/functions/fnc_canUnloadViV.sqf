@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Ampersand
- * Checks if the given objects list contains ViV cargo or carriers that can be unloaded.
+ * Checks if the given objects list contains Vehicle-in-Vehicle cargo or carriers that can be unloaded.
  *
  * Arguments:
  * N: Objects <OBJECT>
