@@ -307,9 +307,9 @@ All inline comments must start with a uppercase letter.
 Example:
 
 ```sqf
-//// Comment   // < incorrect
-// Comment     // < correct
-/* Comment */  // < correct
+//// Comment   // < Incorrect
+// Comment     // < Correct
+/* Comment */  // < Correct
 ```
 
 ### 5.4 Comments In Code
@@ -321,7 +321,7 @@ Comments within the code shall be used when they are describing a complex and cr
 **Good:**
 
 ```sqf
-// find the object with the most blood loss
+// Find the object with the most blood loss
 _highestObj = objNull;
 _highestLoss = -1;
 {
@@ -476,7 +476,7 @@ Declarations should be at the smallest feasible scope.
 
 ```sqf
 if (call FUNC(myCondition)) then {
-   private _areAllAboveTen = true; // <- smallest feasable scope
+   private _areAllAboveTen = true; // <- Smallest feasable scope
 
    {
       if (_x >= 10) then {
@@ -493,7 +493,7 @@ if (call FUNC(myCondition)) then {
 **Bad:**
 
 ```sqf
-private _areAllAboveTen = true; // <- this is bad, because it can be initialized in the if statement
+private _areAllAboveTen = true; // <- This is bad, because it can be initialized in the if statement
 if (call FUNC(myCondition)) then {
    {
       if (_x >= 10) then {
@@ -514,7 +514,7 @@ Private variables will not be introduced until they can be initialized with mean
 **Good:**
 
 ```sqf
-private _myVariable = 0; // good because the value will be used
+private _myVariable = 0; // Good because the value will be used
 {
     _x params ["_value", "_amount"];
     if (_value > 0) then {
@@ -762,7 +762,7 @@ while {_original < _weaponThreshold} do {
 
 ```sqf
 while {true} do {
-    // anything
+    // Anything
 };
 ```
 
