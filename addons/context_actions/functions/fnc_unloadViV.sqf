@@ -16,5 +16,9 @@
  */
 
  {
-     if (isNull isVehicleCargo _x) then {_x setVehicleCargo objNull} else {objNull setVehicleCargo _x};
+     if (isNull isVehicleCargo _x) then {
+         _x setVehicleCargo objNull
+     } else {
+         objNull setVehicleCargo _x
+     };
  } forEach _this;
