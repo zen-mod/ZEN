@@ -11,6 +11,8 @@ import os
 import re
 import sys
 
+EXCLUDE_PATHS = ['./include']
+
 
 def get_files():
     # Allow running from root directory and tools directory
@@ -22,8 +24,14 @@ def get_files():
 
     for root, _, files in os.walk(root_dir):
         for file in files:
+            filepath = os.path.join(root, file)
+
+            # Ignore filepath if it is excluded from the search
+            if list(filter(filepath.startswith, EXCLUDE_PATHS)) != []:
+                continue
+
             if file.lower().endswith(('.cpp', '.hpp', '.sqf')):
-                code_files.append(os.path.join(root, file))
+                code_files.append(filepath)
 
     code_files.sort()
 
