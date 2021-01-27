@@ -17,8 +17,12 @@
 
  {
      if (isNull isVehicleCargo _x) then {
-         _x setVehicleCargo objNull
+         // Not being carried
+         if !(getVehicleCargo _x isEqualTo []) then {
+             _x setVehicleCargo objNull;
+         };
      } else {
-         objNull setVehicleCargo _x
+         // Being carried
+         objNull setVehicleCargo _x;
      };
  } forEach _this;
