@@ -20,6 +20,8 @@ jobs:
       run: python3 tools/stringtable_validator.py
     - name: Validate Return Types
       run: python3 tools/return_checker.py
+    - name: Validate Comments
+      run: python3 tools/comment_linter.py
     - name: Check for BOM
       uses: arma-actions/bom-check@master
   build:
