@@ -28,8 +28,8 @@ deleteVehicle _logic;
     ["CHECKBOX", "STR_A3_CfgEditorSubcategories_EdSubcat_Plants0", true],
     ["CHECKBOX", "STR_A3_CfgEditorSubcategories_EdSubcat_Default0", true]
 ], {
-    params ["_dialogValues", "_logic"];
-    _dialogValues params ["_hide", "_range", "_hideBuildings", "_hideWalls", "_hidePlants", "_hideOthers"];
+    params ["_values", "_logic"];
+    _values params ["_hide", "_range", "_hideBuildings", "_hideWalls", "_hidePlants", "_hideOthers"];
 
     private _objectTypes = [];
     if (_hideBuildings) then {
