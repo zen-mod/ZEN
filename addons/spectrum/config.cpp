@@ -4,7 +4,8 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {
-            QGVAR(moduleSpectrumInit)
+            QGVAR(moduleSpectrumInit),
+            QGVAR(moduleSpectrumBeacon)
         };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;

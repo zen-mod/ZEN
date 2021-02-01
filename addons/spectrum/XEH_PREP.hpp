@@ -1,1 +1,2 @@
 PREP(moduleSpectrumInit);
+PREP(moduleSpectrumBeacon);
