@@ -35,15 +35,19 @@ deleteVehicle _logic;
     if (_hideBuildings) then {
         _objectTypes append ["BUILDING", "HOUSE", "CHURCH", "CHAPEL", "CROSS", "BUNKER", "FORTRESS", "FOUNTAIN", "VIEW-TOWER", "LIGHTHOUSE", "QUAY", "FUELSTATION", "HOSPITAL", "BUSSTOP", "TRANSMITTER", "STACK", "RUIN", "TOURISM", "WATERTOWER", "POWER LINES", "POWERSOLAR", "POWERWAVE", "POWERWIND"];
     };
+
     if (_hideWalls) then {
         _objectTypes append ["FENCE", "HIDE", "WALL"];
     };
+
     if (_hidePlants) then {
         _objectTypes append ["TREE", "SMALL TREE", "BUSH", "FOREST BORDER", "FOREST TRIANGLE", "FOREST SQUARE", "FOREST"];
     };
+
     if (_hideOthers) then {
         _objectTypes append ["ROCK", "ROCKS", "SHIPWRECK", "HIDE"];
     };
+
     private _objects = nearestTerrainObjects [_position, _objectTypes, parseNumber _range];
     {
         [QEGVAR(common,hideObjectGlobal), [_x, _hide]] call CBA_fnc_serverEvent;
