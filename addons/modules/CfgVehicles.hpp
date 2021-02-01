@@ -291,7 +291,7 @@ class CfgVehicles {
         category = "Environment";
         displayName = "$STR_a3_to_hideTerrainObjects1";
         function = QFUNC(moduleHideTerrainObjects);
-        icon = "A3\Modules_F\Data\HideTerrainObjects\icon32_ca.paa";
+        icon = "\a3\Modules_F\Data\HideTerrainObjects\icon32_ca.paa";
     };
     class GVAR(moduleHideZeus): GVAR(moduleBase) {
         category = "Curator";
