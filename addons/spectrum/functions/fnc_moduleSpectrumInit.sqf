@@ -59,15 +59,15 @@ deleteVehicle _logic;
         ["SLIDER", "Selected Frequency (MHz)", [78, 500, 143, 2]]
     ],
     {
-        params ["_dialogValues"];
-        _dialogValues params ["_minFrequency", "_maxFrequency", "_minSensitivity", "_maxSensitivity", "_selectedFrequency"];
+        params ["_values"];
+        _values params ["_minFrequency", "_maxFrequency", "_minSensitivity", "_maxSensitivity", "_selectedFrequency"];
 
         // Check if selected frequency is in range
         if (_minFrequency > _selectedFrequency || _selectedFrequency > _maxFrequency) exitWith {
             ["Selected frequency must be in range"] call EFUNC(common,showMessage);
         };
 
-        // * -1 the sensitivity
+        // Spectrum device expects the sensitivity to be negative
         _minSensitivity = _minSensitivity * -1;
         _maxSensitivity = _maxSensitivity * -1;
 
