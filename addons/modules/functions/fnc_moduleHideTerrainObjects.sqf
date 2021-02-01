@@ -21,7 +21,7 @@ private _position = getPos _logic;
 deleteVehicle _logic;
 
 [localize "STR_a3_to_hideTerrainObjects1", [
-    ["TOOLBOX:YESNO", "STR_a3_to_hideTerrainObjects1", true, true],
+    ["TOOLBOX:YESNO", "STR_a3_to_hideTerrainObjects1", true],
     ["EDIT", ELSTRING(common,Range), 10],
     ["CHECKBOX", "STR_ZEN_Modules_Buildings", true],
     ["CHECKBOX", "STR_A3_CfgEditorCategories_EdCat_Walls0", true],
