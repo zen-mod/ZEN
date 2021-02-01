@@ -17,6 +17,9 @@
 
 params ["_logic"];
 
+private _position = getPos _logic;
+deleteVehicle _logic;
+
 [localize "STR_a3_to_hideTerrainObjects1", [
     ["TOOLBOX:YESNO", "STR_a3_to_hideTerrainObjects1", true, true],
     ["EDIT", ELSTRING(common,Range), 10],
@@ -41,12 +44,11 @@ params ["_logic"];
     if (_hideOthers) then {
         _objectTypes append ["ROCK", "ROCKS", "SHIPWRECK", "HIDE"];
     };
-    private _objects = nearestTerrainObjects [getPos _logic, _objectTypes, parseNumber _range];
+    private _objects = nearestTerrainObjects [_position, _objectTypes, parseNumber _range];
     {
         [QEGVAR(common,hideObjectGlobal), [_x, _hide]] call CBA_fnc_serverEvent;
     } forEach _objects;
-    deleteVehicle _logic;
 }, {
     params ["", "_logic"];
-    deleteVehicle _logic;
+    deleteVehicle _position;
 }, _logic] call EFUNC(dialog,create);
