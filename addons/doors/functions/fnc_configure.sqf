@@ -30,9 +30,10 @@ private _controls = [];
 
 {
     private _control = _display ctrlCreate [QGVAR(RscActivePicture), -1];
-    _control ctrlAddEventHandler ["ButtonClick", {call FUNC(setState)}];
-    _control setVariable [QGVAR(building), _building];
-    _control setVariable [QGVAR(door), _forEachIndex + 1];
+
+    [_control, "ButtonClick", {
+        _thisArgs call FUNC(setState);
+    }, [_building, _forEachIndex + 1]] call CBA_fnc_addBISEventHandler;
 
     _controls pushBack _control;
 } forEach _doors;

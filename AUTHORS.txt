@@ -10,6 +10,7 @@ mharis001 <mhariszakar@gmail.com>
 CreepPork <github@garkaklis.com>
 oOKexOo <rc_mapper@yahoo.com>
 NeilZar
+Ampersand
 
 # CONTRIBUTORS
 3Mydlo3
@@ -26,6 +27,7 @@ Dystopian
 Eclipser
 GitHawk
 Glowbal
+Goleedev
 Jonpas
 KoffeinFlummi
 Moerderhoschi

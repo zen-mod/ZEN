@@ -24,11 +24,9 @@
 
 params ["_buildings", "_damageState", "_useEffects"];
 
-private _cfgVehicles = configFile >> "CfgVehicles";
-
 {
     private _building = _x;
-    private _config = _cfgVehicles >> typeOf _building >> "HitPoints";
+    private _config = configOf _building >> "HitPoints";
     private _hasHitzone1 = isClass (_config >> "Hitzone_1_hitpoint");
     private _hasHitzone2 = isClass (_config >> "Hitzone_2_hitpoint");
 

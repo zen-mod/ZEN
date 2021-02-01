@@ -43,6 +43,7 @@ PREP(moduleCreateRP);
 PREP(moduleCreateTarget);
 PREP(moduleCreateTeleporter);
 PREP(moduleCreateTeleporterServer);
+PREP(moduleCrewToGunner);
 PREP(moduleDamageBuildings);
 PREP(moduleEarthquake);
 PREP(moduleEditableObjects);

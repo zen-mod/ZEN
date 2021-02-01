@@ -20,21 +20,21 @@ params ["_item"];
 private _itemsList = uiNamespace getVariable QGVAR(itemsList);
 
 private _config = switch (true) do {
-    case (_item in (_itemsList select 0));
-    case (_item in (_itemsList select 1));
-    case (_item in (_itemsList select 2));
-    case (_item in (_itemsList select 14)): {
+    case (_item in (_itemsList select ITEMS_PRIMARY));
+    case (_item in (_itemsList select ITEMS_SECONDARY));
+    case (_item in (_itemsList select ITEMS_HANDGUN));
+    case (_item in (_itemsList select ITEMS_BINOCULARS)): {
         configFile >> "CfgWeapons" >> _item >> "WeaponSlotsInfo";
     };
-    case (_item in (_itemsList select 7));
-    case (_item in (_itemsList select 20));
-    case (_item in (_itemsList select 21)): {
+    case (_item in (_itemsList select ITEMS_MAGAZINES));
+    case (_item in (_itemsList select ITEMS_THROW));
+    case (_item in (_itemsList select ITEMS_PUT)): {
         configFile >> "CfgMagazines" >> _item;
     };
-    case (_item in (_itemsList select 11)): {
+    case (_item in (_itemsList select ITEMS_BACKPACKS)): {
         configFile >> "CfgVehicles" >> _item;
     };
-    case (_item in (_itemsList select 12)): {
+    case (_item in (_itemsList select ITEMS_GOGGLES)): {
         configFile >> "CfgGlasses" >> _item;
     };
     default {

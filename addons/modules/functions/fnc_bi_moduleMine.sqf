@@ -21,7 +21,7 @@
 params ["_logic", "_units", "_activated"];
 
 if (_activated) then {
-    private _explosive = getText (configFile >> "CfgVehicles" >> typeOf _logic >> "explosive");
+    private _explosive = getText (configOf _logic >> "explosive");
 
     if (_explosive != "") then {
         _explosive = createVehicle [_explosive, _logic, [], 0, "NONE"];

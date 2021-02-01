@@ -139,7 +139,7 @@ private _animations = switch (_animationType) do {
     };
     case 23: { // PRONE_INJURED_NO_WEAP_1, PRONE_INJURED_NO_WEAP_2
         selectRandom [
-            ["ainjppnemstpsnonwnondnon"], 
+            ["ainjppnemstpsnonwnondnon"],
             ["hubwoundedprone_idle1", "hubwoundedprone_idle2"]
         ]
     };
@@ -221,9 +221,7 @@ _unit setVariable [QGVAR(ambientAnimList), _animations];
 _unit setVariable [QGVAR(ambientAnimStart), animationState _unit];
 
 // Disable AI intelligence to prevent animation interrupt
-{
-    [QEGVAR(common,disableAI), [_unit, _x], _unit] call CBA_fnc_targetEvent;
-} forEach ["ANIM", "AUTOTARGET", "FSM", "MOVE", "TARGET"];
+[QEGVAR(common,disableAI), [_unit, ["ANIM", "AUTOTARGET", "FSM", "MOVE", "TARGET"]], _unit] call CBA_fnc_targetEvent;
 
 // Play a random animation to start the ambient animation loop
 [QEGVAR(common,switchMove), [_unit, selectRandom _animations]] call CBA_fnc_globalEvent;
@@ -246,6 +244,7 @@ private _killedEH = _unit addMPEventHandler ["MPKilled", {
         _this call FUNC(moduleAmbientAnimEnd);
     };
 }];
+
 _unit setVariable [QGVAR(ambientAnimKilledEH), _killedEH];
 
 // Add event handler to cancel animation if fired near and combat ready enabled
@@ -259,5 +258,6 @@ if (_combatReady) then {
             };
         }, _this, COMBAT_REACTION_DELAY] call CBA_fnc_waitAndExecute;
     }];
+
     _unit setVariable [QGVAR(ambientAnimFiredNearEH), _firedNearEH];
 };

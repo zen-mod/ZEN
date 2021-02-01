@@ -38,7 +38,7 @@ class GVAR(row): RscControlsGroupNoScrollbars {
             idc = IDC_CONTEXT_NAME;
             x = POS_W(1.1);
             y = 0;
-            w = POS_W(6.8);
+            w = POS_W(5.9);
             h = POS_H(1);
             sizeEx = POS_H(0.8);
             shadow = 0;

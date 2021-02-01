@@ -106,6 +106,7 @@ private _fnc_deserializeUnit = {
         params ["_unit", "_loadout"];
 
         _unit setUnitLoadout _loadout;
+        [_unit] call BIN_fnc_CBRNHoseInit;
     }, [_unit, _loadout]] call CBA_fnc_execNextFrame;
 
     if (!_enableRandomization) then {
@@ -135,7 +136,11 @@ private _fnc_deserializeVehicle = {
     private _placement = ["CAN_COLLIDE", "FLY"] select (_type isKindOf "Air" && {_position select 2 > 5});
 
     private _vehicle = createVehicle [_type, _position, [], 0, _placement];
-    _vehicle setDir _direction;
+    if (_direction isEqualType 0) then {
+        _vehicle setDir _direction;
+    } else {
+        _vehicle setVectorDirAndUp _direction;
+    };
 
     // FLY placement always places aircraft at the same height relative to the ground
     if (_placement == "FLY") then {
@@ -179,7 +184,7 @@ private _fnc_deserializeVehicle = {
 
         switch (_role) do {
             case "driver": {
-                if (getText (configFile >> "CfgVehicles" >> typeOf _unit >> "simulation") == "UAVPilot") then {
+                if (getText (configOf _unit >> "simulation") == "UAVPilot") then {
                     _unit moveInAny _vehicle; // moveInDriver does not work for virtual UAV crew, moveInAny does
                 } else {
                     _unit moveInDriver _vehicle;
@@ -223,7 +228,11 @@ private _fnc_deserializeStatic = {
 
     private _object = createVehicle [_type, [0, 0, 0], [], 0, "CAN_COLLIDE"];
     _object setPos _position;
-    _object setDir _direction;
+    if (_direction isEqualType 0) then {
+        _object setDir _direction;
+    } else {
+        _object setVectorDirAndUp _direction;
+    };
 
     // Composition placement aligns objects to the surface normal if they are close to the ground
     // This also helps in preventing objects from being destroyed by cliping into the ground

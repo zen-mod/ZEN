@@ -36,7 +36,7 @@ if (isServer) then {
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(applyWeather), {
-    params ["_overcast", "_rain", "_lightning", "_rainbow", "_waves", "_wind", "_gusts", "_fog"];
+    params ["_forced", "_overcast", "_rain", "_lightning", "_rainbow", "_waves", "_wind", "_gusts", "_fog"];
 
     0 setOvercast _overcast;
     0 setLightnings _lightning;
@@ -49,7 +49,9 @@ if (isServer) then {
         0 setFog _fog;
         setWind _wind;
 
-        forceWeatherChange;
+        if (_forced) then {
+            forceWeatherChange;
+        };
     };
 }] call CBA_fnc_addEventHandler;
 
@@ -80,4 +82,11 @@ if (isServer) then {
 
     _object setDir _yaw;
     [_object, _pitch, _roll] call BIS_fnc_setPitchBank;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(moveToGunner), {
+    params ["_unit", "_vehicle"];
+
+    _unit assignAsGunner _vehicle;
+    [_unit] orderGetIn true;
 }] call CBA_fnc_addEventHandler;

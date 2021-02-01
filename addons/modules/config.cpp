@@ -27,6 +27,7 @@ class CfgPatches {
             QGVAR(moduleCreateRP),
             QGVAR(moduleCreateTarget),
             QGVAR(moduleCreateTeleporter),
+            QGVAR(moduleCrewToGunner),
             QGVAR(moduleDamageBuildings),
             QGVAR(moduleEarthquake),
             QGVAR(moduleEditableObjects),

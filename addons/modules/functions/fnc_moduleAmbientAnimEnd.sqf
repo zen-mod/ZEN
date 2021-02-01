@@ -30,9 +30,7 @@ _unit removeEventHandler ["FiredNear", _firedNearEH];
 // If unit is alive then re-enable AI intelligence and switch to previous animation
 // If unit died, switch to the unit's death animation
 if (alive _unit) then {
-    {
-        [QEGVAR(common,enableAI), [_unit, _x], _unit] call CBA_fnc_targetEvent;
-    } forEach ["ANIM", "AUTOTARGET", "FSM", "MOVE", "TARGET"];
+    [QEGVAR(common,enableAI), [_unit, ["ANIM", "AUTOTARGET", "FSM", "MOVE", "TARGET"]], _unit] call CBA_fnc_targetEvent;
 
     // Try playMoveNow first, use switchMove if animation does not respond
     private _previousAnim = _unit getVariable [QGVAR(ambientAnimStart), ""];

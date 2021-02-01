@@ -24,6 +24,11 @@
             <Japanese>空挺降下</Japanese>
             <Korean>공수</Korean>
         </Key>
+        <Key ID="STR_ZEN_AI_SearchBuilding">
+            <English>Search Building</English>
+            <German>Gebäude durchsuchen</German>
+            <Polish>Przeszukaj budynek</Polish>
+        </Key>
         <Key ID="STR_ZEN_AI_CouldNotGarrisonAll">
             <English>Unable to garrison all units - not enough positions</English>
             <Russian>Невозможно разместить всех солдат - недостаточно позиций</Russian>
@@ -34,7 +39,7 @@
             <Czech>Nelze obsadit všechny jednotky - nedostatek pozic</Czech>
             <Portuguese>Incapaz de guarnecer todas as unidades - não há posições o suficiente</Portuguese>
             <Japanese>全てのユニットを歩哨にできません - 空きスペース無し</Japanese>
-            <Korean>모든 유닛 배치 불가 - 적당한 위치 없음</Korean>
+            <Korean>모든 유닛 배치 불가 - 공간이 충분하지 않음</Korean>
         </Key>
         <Key ID="STR_ZEN_AI_AimingAccuracy">
             <English>Aiming Accuracy</English>
@@ -114,7 +119,7 @@
             <Italian>Velocità di Spotting</Italian>
             <Portuguese>Velocidade de Detecção</Portuguese>
             <Japanese>探知速度</Japanese>
-            <Korean>색적 속도</Korean>
+            <Korean>탐지 속도</Korean>
             <Polish>Prędkość spottingu</Polish>
         </Key>
         <Key ID="STR_ZEN_AI_ReloadSpeed">
@@ -138,6 +143,7 @@
         <Key ID="STR_ZEN_AI_AimingError">
             <English>Aiming Error</English>
             <Polish>Błąd w celowaniu</Polish>
+            <Korean>조준 오류</Korean>
         </Key>
         <Key ID="STR_ZEN_AI_AnimChange">
             <English>Anim Change</English>
@@ -152,41 +158,51 @@
         <Key ID="STR_ZEN_AI_AutoTarget">
             <English>Auto Target</English>
             <Polish>Automatyczne namierzanie</Polish>
+            <Korean>자동 조준</Korean>
         </Key>
         <Key ID="STR_ZEN_AI_CheckVisible">
             <English>Check Visible</English>
             <Polish>Sprawdź Widoczne</Polish>
+            <Korean>표시 확인</Korean>
         </Key>
         <Key ID="STR_ZEN_AI_Cover">
             <English>Cover</English>
             <Polish>Osłona</Polish>
+            <Korean>은신하기</Korean>
         </Key>
         <Key ID="STR_ZEN_AI_FSM">
             <English>FSM</English>
+            <Korean>유한 상태 기계</Korean>
         </Key>
         <Key ID="STR_ZEN_AI_LightsVehicle">
             <English>Lights (Vehicle)</English>
             <Polish>Światła (Pojazd)</Polish>
+            <Korean>조명 (차량)</Korean>
         </Key>
         <Key ID="STR_ZEN_AI_MineDetection">
             <English>Mine Detection</English>
             <Polish>Wykrywanie Min</Polish>
+            <Korean>광산 탐지</Korean>
         </Key>
         <Key ID="STR_ZEN_AI_Move">
             <English>Move</English>
             <Polish>Rusz</Polish>
+            <Korean>이동</Korean>
         </Key>
         <Key ID="STR_ZEN_AI_Nightvision">
             <English>Nightvision</English>
             <Polish>Noktowizja</Polish>
+            <Korean>야간 투시</Korean>
         </Key>
         <Key ID="STR_ZEN_AI_Path">
             <English>Path</English>
             <Polish>Ścieżka</Polish>
+            <Korean>경로</Korean>
         </Key>
         <Key ID="STR_ZEN_AI_RadioProtocol">
             <English>Radio Protocol</English>
             <Polish>Protokół radiowy</Polish>
+            <Korean>무선 프로토콜</Korean>
         </Key>
         <Key ID="STR_ZEN_AI_Suppression">
             <English>Suppression</English>
@@ -197,14 +213,17 @@
         <Key ID="STR_ZEN_AI_Target">
             <English>Target</English>
             <Polish>Cel</Polish>
+            <Korean>목표물</Korean>
         </Key>
         <Key ID="STR_ZEN_AI_TeamSwitch">
             <English>Team Switch</English>
             <Polish>Zmiana drużyny</Polish>
+            <Korean>팀 변경</Korean>
         </Key>
         <Key ID="STR_ZEN_AI_WeaponAim">
             <English>Weapon Aim</English>
             <Polish>Celowanie Bronią</Polish>
+            <Korean>무기 조준</Korean>
         </Key>
     </Package>
 </Project>

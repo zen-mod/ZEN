@@ -12,24 +12,32 @@ Here is a list of these actions and brief descriptions on what they do (and any 
 
 Applies the selected behavior to all currently selected groups.
 
-## Edit Inventory
+## Captives
 
-Opens the inventory attributes display for the hovered object.
-Sub-actions allow for copying and pasting the hovered objects' inventory onto another.
+Toggles the captive/surrender state of all currently selected units. Requires ACE Captives to be installed.
 
-## Edit Loadout
+## Combat Mode
 
-Opens the preferred arsenal type (specified in CBA settings) on the hovered unit.
-Sub-actions allow for copying and pasting the hovered units' loadout onto another.
+Applies the selected combat mode to all currently selected groups.
 
-## Edit Vehicle Appearance
+## Create Area Marker
 
-Opens the Zeus garage on the hovered vehicle.
-Sub-actions allow for copying and pasting the hovered vehicle's customization onto another.
+Creates an [area marker](/user_guide/area_markers.md) at the context menu's position.
+Available only when the context menu is opened on the map.
+
+## Door State
+
+Sets the state of the selected door (closed, locked, opened).
+Available when the context menu is opened with the cursor hovering over a door.
 
 ## Editable Objects
 
 Allows Zeus to add or remove editable objects within the selected radius.
+Clicking the main action will open the "Update Editable Objects" module display.
+
+## Fire Artillery
+
+Makes all currently selected artillery units fire the selected ammo type at the specified position.
 
 ## Formation
 
@@ -38,6 +46,18 @@ Applies the selected formation to all currently selected groups.
 ## Heal
 
 Heals all selected units based on the on the mode (all, players, AI).
+
+## Inventory
+
+Opens the inventory display for the hovered object.
+Sub-actions allow for copying and pasting the hovered object's inventory onto another.
+The main action acts as a shortcut for the "Edit" sub-action.
+
+## Loadout
+
+Opens the preferred arsenal type (specified in CBA settings) on the hovered unit.
+Sub-actions allow for copying and pasting the hovered unit's loadout onto another and resetting the unit's loadout to the config defined one.
+The main action acts as a shortcut for the "Edit" sub-action.
 
 ## Remote Control
 
@@ -59,6 +79,12 @@ The actions starts the 3D position selection process which confirms where to tel
 ## Teleport Zeus
 
 Teleports Zeus to the position where the context menu is opened (top left corner).
+
+## Vehicle Appearance
+
+Opens the Zeus garage on the hovered vehicle.
+Sub-actions allow for copying and pasting the hovered vehicle's customization onto another.
+The main action acts as a shortcut for the "Edit" sub-action.
 
 ## Vehicle Logistics
 

@@ -44,6 +44,10 @@ class ZEN_WaypointTypes {
         displayName = "$STR_ac_unhook";
         type = "UNHOOK";
     };
+    class Loiter {
+        displayName = "$STR_ac_loiter";
+        type = "LOITER";
+    };
     class Demine {
         displayName = "$STR_A3_Functions_F_Orange_Demine";
         type = "SCRIPTED";
@@ -58,5 +62,10 @@ class ZEN_WaypointTypes {
         displayName = ECSTRING(ai,Fastrope);
         type = "SCRIPTED";
         script = QPATHTOEF(ai,functions\fnc_waypointFastrope.sqf);
+    };
+    class SearchBuilding {
+        displayName = ECSTRING(ai,SearchBuilding);
+        type = "SCRIPTED";
+        script = QPATHTOEF(ai,functions\fnc_waypointSearchBuilding.sqf);
     };
 };

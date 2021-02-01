@@ -109,13 +109,27 @@
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(enableAI), {
-    params ["_unit", "_section"];
-    _unit enableAI _section;
+    params ["_unit", "_sections"];
+
+    if (_sections isEqualType "") then {
+        _sections = [_sections];
+    };
+
+    {
+        _unit enableAI _x;
+    } forEach _sections;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(disableAI), {
-    params ["_unit", "_section"];
-    _unit disableAI _section;
+    params ["_unit", "_sections"];
+
+    if (_sections isEqualType "") then {
+        _sections = [_sections];
+    };
+
+    {
+        _unit disableAI _x;
+    } forEach _sections;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(doMove), {
@@ -292,15 +306,6 @@
 [QGVAR(setMagazineAmmo), LINKFUNC(setMagazineAmmo)] call CBA_fnc_addEventHandler;
 [QGVAR(setTurretAmmo), LINKFUNC(setTurretAmmo)] call CBA_fnc_addEventHandler;
 [QGVAR(showMessage), LINKFUNC(showMessage)] call CBA_fnc_addEventHandler;
-
-// BWC for deprecated public events, remove in 1.9.0
-["zen_curatorDisplayLoaded", {
-    ["ZEN_displayCuratorLoad", _this] call CBA_fnc_localEvent;
-}] call CBA_fnc_addEventHandler;
-
-["zen_curatorDisplayUnloaded", {
-    ["ZEN_displayCuratorUnload", _this] call CBA_fnc_localEvent;
-}] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
     [QGVAR(hideObjectGlobal), {

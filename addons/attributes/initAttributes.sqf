@@ -66,7 +66,7 @@
         } forEach call EFUNC(common,getSelectedVehicles);
     },
     {fuel _entity},
-    {alive _entity && {getNumber (configFile >> "CfgVehicles" >> typeOf _entity >> "fuelCapacity") > 0}}
+    {alive _entity && {getNumber (configOf _entity >> "fuelCapacity") > 0}}
 ] call FUNC(addAttribute);
 
 [
@@ -194,7 +194,7 @@
         [QEGVAR(common,setPlateNumber), [_entity, _value], _entity] call CBA_fnc_targetEvent;
     },
     {getPlateNumber _entity},
-    {alive _entity && {isClass (configFile >> "CfgVehicles" >> typeOf _entity >> "PlateInfos")}}
+    {alive _entity && {isClass (configOf _entity >> "PlateInfos")}}
 ] call FUNC(addAttribute);
 
 [
@@ -236,7 +236,56 @@
     {
         _entity getVariable [QGVAR(respawnPos), []] param [0, sideEmpty]
     },
-    {alive _entity && {canMove _entity} && {_entity isKindOf "AllVehicles"}}
+    {alive _entity && {canMove _entity} && {_entity isKindOf "AllVehicles"} && {!(_entity isKindOf "Animal")}}
+] call FUNC(addAttribute);
+
+[
+    "Object",
+    [LSTRING(RespawnVehicle), LSTRING(RespawnVehicle_Tooltip)],
+    QGVAR(icons),
+    [[
+        [
+            4, "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnVehicle\west_ca.paa", "STR_A3_RscAttributeRespawnVehicle_West_tooltip", 11.5, 0.25, 2, west call BIS_fnc_sideColor,
+            {playableSlotsNumber west > 0 && {[west, _entity call BIS_fnc_objectSide] call BIS_fnc_areFriendly}}
+        ],
+        [
+            3, "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnVehicle\east_ca.paa", "STR_A3_RscAttributeRespawnVehicle_East_tooltip", 14, 0.25, 2, east call BIS_fnc_sideColor,
+            {playableSlotsNumber east > 0 && {[east, _entity call BIS_fnc_objectSide] call BIS_fnc_areFriendly}}
+        ],
+        [
+            5, "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnVehicle\guer_ca.paa", "STR_A3_RscAttributeRespawnVehicle_Guer_tooltip", 16.5, 0.25, 2, independent call BIS_fnc_sideColor,
+            {playableSlotsNumber independent > 0 && {[independent, _entity call BIS_fnc_objectSide] call BIS_fnc_areFriendly}}
+        ],
+        [
+            6, "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnVehicle\civ_ca.paa", "STR_A3_RscAttributeRespawnVehicle_Civ_tooltip", 19, 0.25, 2, civilian call BIS_fnc_sideColor,
+            {playableSlotsNumber civilian > 0 && {[civilian, _entity call BIS_fnc_objectSide] call BIS_fnc_areFriendly}}
+        ],
+        [
+            0, "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeRespawnVehicle\start_ca.paa", "STR_A3_RscAttributeRespawnVehicle_Start_tooltip", 21.5, 0.25, 2
+        ],
+        [
+            -1, "\a3\Ui_F_Curator\Data\default_ca.paa", "STR_Disabled", 24, 0.5, 1.5
+        ]
+    ]],
+    {
+        [QGVAR(setVehicleRespawn), _this] call CBA_fnc_serverEvent;
+    },
+    {
+        private _respawnID = [_entity, false] call BIS_fnc_moduleRespawnVehicle;
+
+        switch (_respawnID) do {
+            case 1;
+            case 7: {
+                _respawnID = 0;
+            };
+            case 2: {
+                _respawnID = [3, 4, 5, 6] param [(_entity call BIS_fnc_objectSide) call BIS_fnc_sideID, -1];
+            };
+        };
+
+        _respawnID
+    },
+    {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}
 ] call FUNC(addAttribute);
 
 [
@@ -457,6 +506,56 @@
             if (_type == "SCRIPTED") then {_x setWaypointScript _script};
         } forEach SELECTED_WAYPOINTS;
     }
+] call FUNC(addAttribute);
+
+[
+    "Waypoint",
+    "STR_3DEN_Waypoint_Attribute_LoiterDirection_displayname",
+    QGVAR(loiter),
+    nil,
+    {
+        {
+            if (waypointType _x == "LOITER") then {
+                _x setWaypointLoiterType _value;
+            };
+        } forEach SELECTED_WAYPOINTS;
+    },
+    {waypointLoiterType _entity},
+    {waypointType _entity == "LOITER"}
+] call FUNC(addAttribute);
+
+[
+    "Waypoint",
+    "STR_3DEN_Waypoint_Attribute_LoiterRadius_displayname",
+    QGVAR(edit),
+    nil,
+    {
+        private _radius = parseNumber _value;
+        {
+            if (waypointType _x == "LOITER") then {
+                _x setWaypointLoiterRadius _radius;
+            };
+        } forEach SELECTED_WAYPOINTS;
+    },
+    {str waypointLoiterRadius _entity},
+    {waypointType _entity == "LOITER"}
+] call FUNC(addAttribute);
+
+[
+    "Waypoint",
+    ["STR_3DEN_Waypoint_Attribute_LoiterAltitude_displayname", "STR_3DEN_Waypoint_Attribute_LoiterAltitude_tooltip"],
+    QGVAR(edit),
+    nil,
+    {
+        private _altitude = parseNumber _value;
+        {
+            if (waypointType _x == "LOITER") then {
+                _x setWaypointLoiterAltitude _altitude;
+            };
+        } forEach SELECTED_WAYPOINTS;
+    },
+    {str waypointLoiterAltitude _entity},
+    {waypointType _entity == "LOITER"}
 ] call FUNC(addAttribute);
 
 [
