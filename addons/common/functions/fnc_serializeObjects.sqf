@@ -114,7 +114,7 @@ private _fnc_serializeVehicle = {
 
     private _type = typeOf _vehicle;
     private _position = ASLtoAGL getPosASL _vehicle vectorDiff _centerPos;
-    private _direction = getDir _vehicle;
+    private _direction = [vectorDir _vehicle, vectorUp _vehicle];
 
     private _fuel = fuel _vehicle;
     private _inventory = _vehicle call FUNC(serializeInventory);
@@ -177,7 +177,7 @@ private _fnc_serializeStatic = {
 
     private _type = typeOf _object;
     private _position = ASLtoAGL getPosASL _object vectorDiff _centerPos;
-    private _direction = getDir _object;
+    private _direction = [vectorDir _object, vectorUp _object];
 
     private _simulationEnabled = simulationEnabled _object;
     private _inventory = _object call FUNC(serializeInventory);

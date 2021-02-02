@@ -24,7 +24,7 @@ private _endPos = AGLtoASL screenToWorld getMousePosition;
 
 // Limit the intersection scan distance to prevent interaction with far away buildings
 // Also improves performance of intersection test which can be expensive at long distances
-if (_begPos distance _endPos > MAX_SCAN_DISTANCE) then {
+if (_begPos vectorDistance _endPos > MAX_SCAN_DISTANCE) then {
     _endPos = _begPos vectorAdd (_begPos vectorFromTo _endPos vectorMultiply MAX_SCAN_DISTANCE);
 };
 
