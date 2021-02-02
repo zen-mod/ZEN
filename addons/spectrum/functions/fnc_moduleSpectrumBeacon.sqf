@@ -44,7 +44,7 @@ params ["_logic"];
             [_logic] call FUNC(updateBeacon);
         }];
 
-        [_logic] call FUNC(addBeacon);
+        [_logic, _frequency, _range] call FUNC(addBeacon);
     },
     {},
     [_logic]
