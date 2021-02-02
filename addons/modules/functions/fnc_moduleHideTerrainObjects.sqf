@@ -25,7 +25,7 @@ deleteVehicle _logic;
     ["EDIT", ELSTRING(common,Range), 10],
     ["CHECKBOX", "STR_ZEN_Modules_Buildings", true],
     ["CHECKBOX", "STR_A3_CfgEditorCategories_EdCat_Walls0", true],
-    ["CHECKBOX", "STR_A3_CfgEditorSubcategories_EdSubcat_Plants0", true],
+    ["CHECKBOX", LSTRING(Vegetation), true],
     ["CHECKBOX", "STR_A3_CfgEditorSubcategories_EdSubcat_Default0", true]
 ], {
     params ["_values", "_position"];
