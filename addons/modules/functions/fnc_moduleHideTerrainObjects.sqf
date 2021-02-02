@@ -28,10 +28,11 @@ deleteVehicle _logic;
     ["CHECKBOX", "STR_A3_CfgEditorSubcategories_EdSubcat_Plants0", true],
     ["CHECKBOX", "STR_A3_CfgEditorSubcategories_EdSubcat_Default0", true]
 ], {
-    params ["_values", "_logic"];
+    params ["_values", "_position"];
     _values params ["_hide", "_range", "_hideBuildings", "_hideWalls", "_hidePlants", "_hideOthers"];
 
     private _objectTypes = [];
+
     if (_hideBuildings) then {
         _objectTypes append ["BUILDING", "HOUSE", "CHURCH", "CHAPEL", "CROSS", "BUNKER", "FORTRESS", "FOUNTAIN", "VIEW-TOWER", "LIGHTHOUSE", "QUAY", "FUELSTATION", "HOSPITAL", "BUSSTOP", "TRANSMITTER", "STACK", "RUIN", "TOURISM", "WATERTOWER", "POWER LINES", "POWERSOLAR", "POWERWAVE", "POWERWIND"];
     };
@@ -51,7 +52,4 @@ deleteVehicle _logic;
     {
         [QEGVAR(common,hideObjectGlobal), [_x, _hide]] call CBA_fnc_serverEvent;
     } forEach nearestTerrainObjects [_position, _objectTypes, parseNumber _range];
-}, {
-    params ["", "_logic"];
-    deleteVehicle _position;
-}, _logic] call EFUNC(dialog,create);
+}, {}, _position] call EFUNC(dialog,create);
