@@ -84,8 +84,12 @@ if (!_isAttached) then {
                 [QEGVAR(common,addWeaponItem), [_x, _weapon, selectRandom _flashlights], _x] call CBA_fnc_targetEvent;
             };
 
-            if (_removeNVG && {hmd _x != ""}) then {
-                [QEGVAR(common,unlinkItem), [_x, _nvg], _x] call CBA_fnc_targetEvent;
+            if (_removeNVG) then {
+                private _nvg = hmd _x;
+
+                if (_nvg != "") then {
+                    [QEGVAR(common,unlinkItem), [_x, _nvg], _x] call CBA_fnc_targetEvent;
+                };
             };
 
             [QEGVAR(common,enableGunLights), [_x, "ForceOn"], _x] call CBA_fnc_targetEvent;
