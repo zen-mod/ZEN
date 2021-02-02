@@ -178,7 +178,7 @@ Hides or unhides the Zeus player and bird.
 
 ## Hide Terrain Objects
 
-Hides or unhides terrain objects based on position, radius, and object type.
+Hides or unhides terrain objects of the selected types within the specified radius of the module.
 
 ## Light Source
 
