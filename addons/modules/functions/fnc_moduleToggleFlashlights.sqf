@@ -88,7 +88,7 @@ if (!_isAttached) then {
                 private _nvg = hmd _x;
 
                 if (_nvg != "") then {
-                    [QEGVAR(common,unlinkItem), [_x, _nvg], _x] call CBA_fnc_targetEvent;
+                    _unit unlinkItem _x;
                 };
             };
 

@@ -288,11 +288,6 @@
     _unit addweaponItem [_weapon, _item];
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(unlinkItem), {
-    params ["_unit", "_item"];
-    _unit unlinkItem _item;
-}] call CBA_fnc_addEventHandler;
-
 [QGVAR(setDate), {setDate _this}] call CBA_fnc_addEventHandler;
 
 [QGVAR(setUnitIdentity), {
