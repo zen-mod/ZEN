@@ -2341,8 +2341,5 @@
         <Key ID="STR_ZEN_Modules_NoCrewAvailable">
             <English>Vehicle must have other crew available</English>
         </Key>
-        <Key ID="STR_ZEN_Modules_Vegetation">
-            <English>Vegetation</English>
-        </Key>
     </Package>
 </Project>

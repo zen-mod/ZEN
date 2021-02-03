@@ -23,10 +23,10 @@ deleteVehicle _logic;
 ["STR_a3_to_hideTerrainObjects1", [
     ["TOOLBOX:YESNO", "STR_a3_to_hideTerrainObjects1", true],
     ["EDIT", ELSTRING(common,Range), 10],
-    ["CHECKBOX", "STR_ZEN_Modules_Buildings", true],
-    ["CHECKBOX", "STR_A3_CfgEditorCategories_EdCat_Walls0", true],
-    ["CHECKBOX", LSTRING(Vegetation), true],
-    ["CHECKBOX", "STR_A3_CfgEditorSubcategories_EdSubcat_Default0", true]
+    ["CHECKBOX", "STR_a3_to_hideTerrainObjects6", true], // Buildings
+    ["CHECKBOX", "STR_a3_to_hideTerrainObjects7", true], // Walls & Fences
+    ["CHECKBOX", "STR_a3_to_hideTerrainObjects8", true], // Vegetation
+    ["CHECKBOX", "STR_a3_to_hideTerrainObjects9", true] // Other
 ], {
     params ["_values", "_position"];
     _values params ["_hide", "_range", "_hideBuildings", "_hideWalls", "_hidePlants", "_hideOthers"];
