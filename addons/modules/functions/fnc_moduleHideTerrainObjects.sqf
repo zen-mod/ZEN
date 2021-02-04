@@ -29,23 +29,23 @@ deleteVehicle _logic;
     ["CHECKBOX", "STR_a3_to_hideTerrainObjects9", true] // Other
 ], {
     params ["_values", "_position"];
-    _values params ["_hide", "_range", "_hideBuildings", "_hideWalls", "_hidePlants", "_hideOthers"];
+    _values params ["_hide", "_range", "_includeBuildings", "_includeWalls", "_includePlants", "_includeOthers"];
 
     private _objectTypes = [];
 
-    if (_hideBuildings) then {
+    if (_includeBuildings) then {
         _objectTypes append ["BUILDING", "HOUSE", "CHURCH", "CHAPEL", "CROSS", "BUNKER", "FORTRESS", "FOUNTAIN", "VIEW-TOWER", "LIGHTHOUSE", "QUAY", "FUELSTATION", "HOSPITAL", "BUSSTOP", "TRANSMITTER", "STACK", "RUIN", "TOURISM", "WATERTOWER", "POWER LINES", "POWERSOLAR", "POWERWAVE", "POWERWIND"];
     };
 
-    if (_hideWalls) then {
+    if (_includeWalls) then {
         _objectTypes append ["FENCE", "HIDE", "WALL"];
     };
 
-    if (_hidePlants) then {
+    if (_includePlants) then {
         _objectTypes append ["TREE", "SMALL TREE", "BUSH", "FOREST BORDER", "FOREST TRIANGLE", "FOREST SQUARE", "FOREST"];
     };
 
-    if (_hideOthers) then {
+    if (_includeOthers) then {
         _objectTypes append ["ROCK", "ROCKS", "SHIPWRECK", "HIDE"];
     };
 
