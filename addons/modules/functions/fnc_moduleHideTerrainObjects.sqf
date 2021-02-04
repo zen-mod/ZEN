@@ -21,7 +21,11 @@ private _position = ASLToAGL getPosASL _logic;
 deleteVehicle _logic;
 
 ["STR_a3_to_hideTerrainObjects1", [
-    ["TOOLBOX:YESNO", "STR_a3_to_hideTerrainObjects1", true],
+    [
+        "TOOLBOX",
+        "STR_a3_to_hideTerrainObjects1",
+        [0, 1, 2, ["STR_Disp_Hide", ELSTRING(common,Unhide)]]
+    ],
     ["EDIT", ELSTRING(common,Radius_Units), 10],
     ["CHECKBOX", "STR_a3_to_hideTerrainObjects6", true], // Buildings
     ["CHECKBOX", "STR_a3_to_hideTerrainObjects7", true], // Walls & Fences
@@ -29,7 +33,7 @@ deleteVehicle _logic;
     ["CHECKBOX", "STR_a3_to_hideTerrainObjects9", true] // Other
 ], {
     params ["_values", "_position"];
-    _values params ["_hide", "_range", "_includeBuildings", "_includeWalls", "_includePlants", "_includeOthers"];
+    _values params ["_hideOrUnhide", "_range", "_includeBuildings", "_includeWalls", "_includePlants", "_includeOthers"];
 
     private _objectTypes = [];
 
@@ -50,6 +54,6 @@ deleteVehicle _logic;
     };
 
     {
-        [QEGVAR(common,hideObjectGlobal), [_x, _hide]] call CBA_fnc_serverEvent;
+        [QEGVAR(common,hideObjectGlobal), [_x, [true, false] select _hideOrUnhide]] call CBA_fnc_serverEvent;
     } forEach nearestTerrainObjects [_position, _objectTypes, parseNumber _range];
 }, {}, _position] call EFUNC(dialog,create);
