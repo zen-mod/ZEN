@@ -22,7 +22,7 @@ deleteVehicle _logic;
 
 ["STR_a3_to_hideTerrainObjects1", [
     ["TOOLBOX:YESNO", "STR_a3_to_hideTerrainObjects1", true],
-    ["EDIT", ELSTRING(common,Range), 10],
+    ["EDIT", ELSTRING(common,Radius_Units), 10],
     ["CHECKBOX", "STR_a3_to_hideTerrainObjects6", true], // Buildings
     ["CHECKBOX", "STR_a3_to_hideTerrainObjects7", true], // Walls & Fences
     ["CHECKBOX", "STR_a3_to_hideTerrainObjects8", true], // Vegetation
