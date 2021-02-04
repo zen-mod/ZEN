@@ -88,7 +88,7 @@ if (!_isAttached) then {
                 private _nvg = hmd _x;
 
                 if (_nvg != "") then {
-                    _unit unlinkItem _x;
+                    _unit unlinkItem _nvg;
                 };
             };
 
