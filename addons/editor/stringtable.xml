@@ -160,7 +160,7 @@
             <Japanese>選択された全車両から後部座席のユニットを脱出させます。もし車両が飛行中の場合はパラシュートが与えられます。\nなお脱出は一人づつ降りるようになっています (即時ではなく数秒づつ)。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_UnloadViV_Description">
-            <English>Unloads all selected Vehicle-in-Vehicle cargo and carriers. A vehicle that is simultaneously both is unloaded from its carrier.</English>
+            <English>Unloads all selected Vehicle-in-Vehicle cargo and carriers. A vehicle that is both cargo and carrying cargo will only be unloaded from its carrier.</English>
         </Key>
         <Key ID="STR_ZEN_Editor_DeployCountermeasures">
             <English>Deploy Countermeasures</English>
