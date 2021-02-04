@@ -17,6 +17,4 @@
 
 params ["_unit"];
 
-private _curators = allCurators apply {getAssignedCuratorUnit _x} select {!(isNull _x)};
-
-_unit getVariable ["bis_fnc_moduleremotecontrol_owner", objNull] in _curators
+!isNull (_unit getVariable ["bis_fnc_moduleremotecontrol_owner", objNull])
