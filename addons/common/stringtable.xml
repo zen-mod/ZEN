@@ -82,6 +82,13 @@
             <Korean>켬</Korean>
             <Polish>Włączone</Polish>
         </Key>
+        <Key ID="STR_ZEN_Common_Off">
+            <English>Off</English>
+            <German>Aus</German>
+            <Japanese>オフ</Japanese>
+            <Korean>끔</Korean>
+            <Polish>Wyłączone</Polish>
+        </Key>
         <Key ID="STR_ZEN_Common_Unhide">
             <English>Unhide</English>
         </Key>
