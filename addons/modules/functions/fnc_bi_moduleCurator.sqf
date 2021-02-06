@@ -29,12 +29,6 @@ if (_activated) then {
     // Mark the module as initialized on this machine, fixes double attributes dialog bug
     _logic setVariable [QGVAR(initialized), true];
 
-    // Exit if the module is not created on the server
-    if (!isServer && {local _logic} && {isNull getAssignedCuratorUnit _logic}) exitwith {
-        [format ["%1 is trying to create a Curator logic ModuleCurator_F.", profileName]] remoteExec ["BIS_fnc_error", 2];
-        deleteVehicle _logic;
-    };
-
     // Determine the curator module's owner
     private _ownerVar = _logic getVariable ["owner", ""];
     private _isUID = parseNumber _ownerVar > 0;

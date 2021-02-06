@@ -36,12 +36,7 @@
 
     // Set the initial state of the randomize button
     private _ctrlRandomize = _display displayCtrl IDC_PANEL_RANDOMIZE;
-
-    private _color = [[1, 1, 1, 0.25], [1, 1, 1, 1]] select GVAR(randomize);
-    _ctrlRandomize ctrlSetTextColor _color;
-
-    private _tooltip = [LSTRING(RandomizationOff), LSTRING(RandomizationOn)] select GVAR(randomize);
-    _ctrlRandomize ctrlSetTooltip localize _tooltip;
+    [_ctrlRandomize, false] call FUNC(buttonRandomize);
 
     // There are situations where the custom category is not shown in the tree
     // To workaround this, any needed tree additions are processed when tree items may change

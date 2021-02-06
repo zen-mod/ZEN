@@ -110,11 +110,19 @@ private _fnc_processGroup = {
 private _fnc_processInventory = {
     params ["_object", "_varName"];
 
-    if (_object call FUNC(hasDefaultInventory)) exitWith {};
-
     if (_object isKindOf "CAManBase") then {
-        _outputObjects pushBack ["%1 setUnitLoadout %2;", _varName, getUnitLoadout _object];
+        private _nextFrameHandle = format ["%1_nextFrameHandle", _varName];
+        _outputObjects pushBack ["['%1', 'onEachFrame', {", _nextFrameHandle];
+        _outputObjects pushBack "    params [""_unit""];";
+        if !(_object call FUNC(hasDefaultInventory)) then {
+            _outputObjects pushBack ["    _unit setUnitLoadout %1;", getUnitLoadout _object];
+        };
+        _outputObjects pushBack "    _unit call BIN_fnc_CBRNHoseInit;";
+        _outputObjects pushBack ["    ['%1', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;", _nextFrameHandle];
+        _outputObjects pushBack ["}, [%1]] call BIS_fnc_addStackedEventHandler;", _varName];
     } else {
+        if (_object call FUNC(hasDefaultInventory)) exitWith {};
+
         private _fnc_processCargo = {
             params ["_cargo", "_command"];
             _cargo params ["_types", "_counts"];

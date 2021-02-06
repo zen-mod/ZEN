@@ -20,9 +20,8 @@ params ["_ctrlButton"];
 if !(_ctrlButton getVariable [QGVAR(hovered), false]) exitWith {};
 
 private _display = ctrlParent _ctrlButton;
-private _mode = GETMVAR(RscDisplayCurator_sections,[]) param [0, 0];
-private _side = IDCS_SIDE_BUTTONS find ctrlIDC _ctrlButton;
 
 [{
-    [QGVAR(sideChanged), _this] call CBA_fnc_localEvent;
-}, [_display, _mode, _side]] call CBA_fnc_execNextFrame;
+    RscDisplayCurator_sections params ["_mode", "_side"];
+    [QGVAR(sideChanged), [_this, _mode, _side]] call CBA_fnc_localEvent;
+}, _display] call CBA_fnc_execNextFrame;
