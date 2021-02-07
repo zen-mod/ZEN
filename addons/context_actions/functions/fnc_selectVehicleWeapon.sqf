@@ -14,7 +14,7 @@
  * 7: Owner <NUMBER>
  *
  * Return Value:
- * NOTHING
+ * None
  *
  * Example:
  * [_vehicle] call zen_context_actions_fnc_selectVehicleWeapon

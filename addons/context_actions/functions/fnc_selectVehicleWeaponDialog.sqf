@@ -7,10 +7,10 @@
  * 0: Vehicle <OBJECT>
  *
  * Return Value:
- * NOTHING
+ * None
  *
  * Example:
- * [_vehicle] call zen_context_actions_fnc_selectVehicleWeapon
+ * [_vehicle] call zen_context_actions_fnc_selectVehicleWeaponDialog
  *
  * Public: No
  */
@@ -84,7 +84,6 @@ private _currentIndex = 0;
         true
     ]
 ], {
-    systemChat str _this;
     params ["_dialogValues", "_args"];
     _dialogValues params ["_result"];
     _result params ["_weapon", "_muzzle", "_magazine", "_id", "_owner"];
@@ -95,12 +94,9 @@ private _currentIndex = 0;
         _muzzle = _weapon;
     };
     if (_currentWeapon != _weapon || {_currentMuzzle != _muzzle}) then {
-        systemChat format ["change weapon %1 to %2", _currentWeapon, _weapon];
-        systemChat format ["change muzzle %1 to %2", _currentMuzzle, _muzzle];
         [QEGVAR(common,selectWeapon),  [_vehicle,  _muzzle],  _vehicle] call CBA_fnc_targetEvent;
     };
     if (_currentMagazine != _magazine) then {
-        systemChat format ["change mag %1 to %2", _currentMagazine, _magazine];
         [QEGVAR(common,action), [_primaryGunner, ["LoadMagazine", _vehicle, _primaryGunner, _owner, _id, _weapon, _muzzle]], _primaryGunner] call CBA_fnc_targetEvent;
     };
 }, {}, [_vehicle, _primaryGunner, _primaryTurret]] call EFUNC(dialog,create);
