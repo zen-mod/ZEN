@@ -287,6 +287,12 @@ class CfgVehicles {
         function = QFUNC(moduleHeal);
         icon = QPATHTOF(ui\heal_ca.paa);
     };
+    class GVAR(moduleHideTerrainObjects): GVAR(moduleBase) {
+        category = "Environment";
+        displayName = "$STR_a3_to_hideTerrainObjects1";
+        function = QFUNC(moduleHideTerrainObjects);
+        icon = "\a3\modules_f\data\hideterrainobjects\icon32_ca.paa";
+    };
     class GVAR(moduleHideZeus): GVAR(moduleBase) {
         category = "Curator";
         displayName = CSTRING(ModuleHideZeus);

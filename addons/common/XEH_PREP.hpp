@@ -40,6 +40,7 @@ PREP(initSidesControl);
 PREP(initSliderEdit);
 PREP(isInScreenshotMode);
 PREP(isPlacementActive);
+PREP(isRemoteControlled);
 PREP(isVLS);
 PREP(isWeapon);
 PREP(loadMagazineInstantly);
