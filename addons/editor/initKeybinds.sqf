@@ -104,7 +104,7 @@
 // Hack fix for the Zeus lockup bug, will reopen Zeus interface.
 [ELSTRING(main,DisplayName), QGVAR(reloadDisplay), [LSTRING(ReloadDisplay), LSTRING(ReloadDisplay_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
-        findDisplay 312 closeDisplay 2;
+        findDisplay IDD_RSCDISPLAYCURATOR closeDisplay IDC_CANCEL;
 
         {openCuratorInterface} call CBA_fnc_execNextFrame;
 
