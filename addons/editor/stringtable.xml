@@ -226,7 +226,7 @@
             <English>Reload Display</English>
         </Key>
         <Key ID="STR_ZEN_Editor_ReloadDisplay_Description">
-            <English>Reloads the Display to fix the UI lockup bug.</English>
+            <English>Reloads the Zeus interface (can be used to fix various lockup issues).</English>
         </Key>
     </Package>
 </Project>
