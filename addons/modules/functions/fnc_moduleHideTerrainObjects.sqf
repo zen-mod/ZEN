@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Ampersand
- * Zeus module function to hide terrain objects.
+ * Zeus module function to hide or show terrain objects.
  *
  * Arguments:
  * 0: Logic <OBJECT>
@@ -23,8 +23,8 @@ deleteVehicle _logic;
 ["STR_a3_to_hideTerrainObjects1", [
     [
         "TOOLBOX",
-        "STR_a3_to_hideTerrainObjects1",
-        [0, 1, 2, ["STR_Disp_Hide", ELSTRING(common,Unhide)]]
+        "str_3den_garbagecollection_attribute_mode_displayname",
+        [true, 1, 2, ["STR_Disp_Show", "STR_Disp_Hide"]]
     ],
     ["EDIT", ELSTRING(common,Radius_Units), 10],
     ["CHECKBOX", "STR_a3_to_hideTerrainObjects6", true], // Buildings
@@ -33,7 +33,7 @@ deleteVehicle _logic;
     ["CHECKBOX", "STR_a3_to_hideTerrainObjects9", true] // Other
 ], {
     params ["_values", "_position"];
-    _values params ["_hideOrUnhide", "_range", "_includeBuildings", "_includeWalls", "_includeVegetation", "_includeOthers"];
+    _values params ["_hide", "_range", "_includeBuildings", "_includeWalls", "_includeVegetation", "_includeOthers"];
 
     private _objectTypes = [];
 
@@ -45,7 +45,7 @@ deleteVehicle _logic;
         _objectTypes append ["FENCE", "HIDE", "WALL"];
     };
 
-    if (_include_includeVegetaion) then {
+    if (_includeVegetation) then {
         _objectTypes append ["TREE", "SMALL TREE", "BUSH", "FOREST BORDER", "FOREST TRIANGLE", "FOREST SQUARE", "FOREST"];
     };
 
@@ -54,6 +54,6 @@ deleteVehicle _logic;
     };
 
     {
-        [QEGVAR(common,hideObjectGlobal), [_x, [true, false] select _hideOrUnhide]] call CBA_fnc_serverEvent;
+        [QEGVAR(common,hideObjectGlobal), [_x, _hide]] call CBA_fnc_serverEvent;
     } forEach nearestTerrainObjects [_position, _objectTypes, parseNumber _range];
 }, {}, _position] call EFUNC(dialog,create);
