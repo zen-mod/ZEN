@@ -58,6 +58,7 @@ PREP(moduleGarrison);
 PREP(moduleGlobalAISkill);
 PREP(moduleGroupSide);
 PREP(moduleHeal);
+PREP(moduleHideTerrainObjects);
 PREP(moduleHideZeus);
 PREP(moduleLightSource);
 PREP(moduleMakeInvincible);
