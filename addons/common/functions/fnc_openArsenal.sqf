@@ -17,7 +17,7 @@
 
 params ["_unit"];
 
-if (GVAR(preferredArsenal) == 1 && {isClass (configFile >> "CfgPatches" >> "ace_arsenal")}) then {
+if (GVAR(preferredArsenal) == 1 && {isClass (configFile >> "CfgPatches" >> "ace_arsenal")} && {!(_entity call FUNC(isRemoteControlled))}) then {
     player remoteControl _unit;
     ace_arsenal_moduleUsed = true;
 
