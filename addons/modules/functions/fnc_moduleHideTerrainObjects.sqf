@@ -55,5 +55,5 @@ deleteVehicle _logic;
 
     {
         [QEGVAR(common,hideObjectGlobal), [_x, _hide]] call CBA_fnc_serverEvent;
-    } forEach nearestTerrainObjects [_position, _objectTypes, parseNumber _radius];
+    } forEach nearestTerrainObjects [_position, _objectTypes, _radius];
 }, {}, _position] call EFUNC(dialog,create);
