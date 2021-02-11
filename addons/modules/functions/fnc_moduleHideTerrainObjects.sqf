@@ -26,14 +26,14 @@ deleteVehicle _logic;
         "str_3den_garbagecollection_attribute_mode_displayname",
         [true, 1, 2, ["STR_Disp_Show", "STR_Disp_Hide"]]
     ],
-    ["EDIT", ELSTRING(common,Radius_Units), 10],
+    ["SLIDER", ELSTRING(common,Radius_Units), [1, 100, 10, 0]],
     ["CHECKBOX", "STR_a3_to_hideTerrainObjects6", true], // Buildings
     ["CHECKBOX", "STR_a3_to_hideTerrainObjects7", true], // Walls & Fences
     ["CHECKBOX", "STR_a3_to_hideTerrainObjects8", true], // Vegetation
     ["CHECKBOX", "STR_a3_to_hideTerrainObjects9", true] // Other
 ], {
     params ["_values", "_position"];
-    _values params ["_hide", "_range", "_includeBuildings", "_includeWalls", "_includeVegetation", "_includeOthers"];
+    _values params ["_hide", "_radius", "_includeBuildings", "_includeWalls", "_includeVegetation", "_includeOthers"];
 
     private _objectTypes = [];
 
@@ -55,5 +55,5 @@ deleteVehicle _logic;
 
     {
         [QEGVAR(common,hideObjectGlobal), [_x, _hide]] call CBA_fnc_serverEvent;
-    } forEach nearestTerrainObjects [_position, _objectTypes, parseNumber _range];
+    } forEach nearestTerrainObjects [_position, _objectTypes, parseNumber _radius];
 }, {}, _position] call EFUNC(dialog,create);
