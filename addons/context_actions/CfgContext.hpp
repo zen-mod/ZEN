@@ -315,6 +315,12 @@ class EGVAR(context_menu,actions) {
             statement = QUOTE(_objects call FUNC(refuelVehicles));
             icon = "\a3\ui_f\data\igui\cfg\simpleTasks\types\refuel_ca.paa";
         };
+        class UnloadViV {
+            displayName = "$STR_A3_ModuleDepot_Unload";
+            condition = QUOTE(_objects call FUNC(canUnloadViV));
+            statement = QUOTE(_objects call FUNC(unloadViV));
+            icon = "\a3\ui_f\data\IGUI\Cfg\Actions\unloadVehicle_ca.paa";
+        };
     };
     class EditableObjects {
         displayName = CSTRING(EditableObjects);
