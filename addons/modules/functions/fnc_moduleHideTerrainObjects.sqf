@@ -53,7 +53,5 @@ deleteVehicle _logic;
         _objectTypes append ["ROCK", "ROCKS", "SHIPWRECK", "HIDE"];
     };
 
-    {
-        [QEGVAR(common,hideObjectGlobal), [_x, _hide]] call CBA_fnc_serverEvent;
-    } forEach nearestTerrainObjects [_position, _objectTypes, parseNumber _range];
+    [QGVAR(hideTerrainObjects), [_position, _objectTypes, parseNumber _range, _hide]] call CBA_fnc_serverEvent;
 }, {}, _position] call EFUNC(dialog,create);
