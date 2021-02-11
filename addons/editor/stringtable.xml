@@ -222,5 +222,11 @@
             <Japanese>全編集可アイコンの視認性を切り替えます。一時的な処理軽減や整理に使用できます。</Japanese>
             <Polish>Przełącza widoczność wszsytkich ustawionych ikon, przydatne by tymczasowo zmniejszyć lag, bądź niepotrzebne zaśmiecenie ekranu gdy znajduje się na nim dużo ikon.</Polish>
         </Key>
+        <Key ID="STR_ZEN_Editor_ReloadDisplay">
+            <English>Reload Display</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_ReloadDisplay_Description">
+            <English>Reloads the Zeus interface (can be used to fix various lockup issues).</English>
+        </Key>
     </Package>
 </Project>
