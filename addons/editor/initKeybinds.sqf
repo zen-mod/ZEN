@@ -27,6 +27,24 @@
     };
 }, {}, [DIK_G, [false, true, false]]] call CBA_fnc_addKeybind; // Default: CTRL + G
 
+[ELSTRING(main,DisplayName), QGVAR(unloadViV), [localize "STR_A3_ModuleDepot_Unload", LSTRING(UnloadViV_Description)], {
+    if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
+        {
+            if (isNull isVehicleCargo _x) then {
+                // Not being carried
+                if !(getVehicleCargo _x isEqualTo []) then {
+                    _x setVehicleCargo objNull;
+                };
+            } else {
+                // Being carried
+                objNull setVehicleCargo _x;
+            };
+        } forEach SELECTED_OBJECTS;
+
+        true // handled, prevents vanilla eject
+    };
+}, {}, [DIK_G, [false, false, true]]] call CBA_fnc_addKeybind; // Default: ALT + G
+
 [ELSTRING(main,DisplayName), QGVAR(deepCopy), [LSTRING(DeepCopy), LSTRING(DeepCopy_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
         private _position = [nil, false] call EFUNC(common,getPosFromScreen);
@@ -82,3 +100,13 @@
         };
     };
 }, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
+
+[ELSTRING(main,DisplayName), QGVAR(reloadDisplay), [LSTRING(ReloadDisplay), LSTRING(ReloadDisplay_Description)], {
+    if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
+        findDisplay IDD_RSCDISPLAYCURATOR closeDisplay IDC_CANCEL;
+
+        {openCuratorInterface} call CBA_fnc_execNextFrame;
+
+        true //handled
+    };
+}, {}, [DIK_R, [true, true, false]]] call CBA_fnc_addKeybind; // Default: CTRL + SHIFT + R

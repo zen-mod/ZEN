@@ -92,7 +92,7 @@ class GVAR(display): EGVAR(common,RscDisplay) {
                             x = 0;
                             y = POS_H(1);
                             w = POS_W(28/3);
-                            h = POS_H(10/3)
+                            h = POS_H(10/3);
                         };
                         class Category: ctrlToolboxPictureKeepAspect {
                             idc = IDC_WEAPON_CATEGORY;
