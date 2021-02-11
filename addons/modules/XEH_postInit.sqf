@@ -90,3 +90,9 @@ if (isServer) then {
     _unit assignAsGunner _vehicle;
     [_unit] orderGetIn true;
 }] call CBA_fnc_addEventHandler;
+
+if (hasInterface) then {
+    [QGVAR(moduleHideTerrainObjects), "init", {
+        [_this select 0, 100, 10] call FUNC(gui_radiusHint);
+    }] call CBA_fnc_addClassEventHandler;
+};

@@ -15,6 +15,7 @@ PREP(gui_editableObjects);
 PREP(gui_executeCode);
 PREP(gui_fireMission);
 PREP(gui_globalHint);
+PREP(gui_radiusHint);
 PREP(gui_setDate);
 PREP(gui_sideRelations);
 PREP(gui_spawnReinforcements);

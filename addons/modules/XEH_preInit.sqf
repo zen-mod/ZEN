@@ -7,6 +7,8 @@ PREP_RECOMPILE_START;
 PREP_RECOMPILE_END;
 
 GVAR(saved) = [] call CBA_fnc_createNamespace;
+GVAR(gui_radiusHint_draw) = -1;
+GVAR(gui_radiusHint_info) = [];
 
 // Fix copy/pasted modules that use BI's module framework
 ["ModuleCurator_F", "Init", {

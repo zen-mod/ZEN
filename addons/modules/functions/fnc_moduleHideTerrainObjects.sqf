@@ -56,4 +56,16 @@ deleteVehicle _logic;
     {
         [QEGVAR(common,hideObjectGlobal), [_x, _hide]] call CBA_fnc_serverEvent;
     } forEach nearestTerrainObjects [_position, _objectTypes, _radius];
-}, {}, _position] call EFUNC(dialog,create);
+
+    if (GVAR(gui_radiusHint_draw) > -1) then {
+        GVAR(gui_radiusHint_info) = [];
+        removeMissionEventHandler ["Draw3D", GVAR(gui_radiusHint_draw)];
+        GVAR(gui_radiusHint_draw) = -1;
+    };
+}, {
+    if (GVAR(gui_radiusHint_draw) > -1) then {
+        GVAR(gui_radiusHint_info) = [];
+        removeMissionEventHandler ["Draw3D", GVAR(gui_radiusHint_draw)];
+        GVAR(gui_radiusHint_draw) = -1;
+    };
+}, _position] call EFUNC(dialog,create);
