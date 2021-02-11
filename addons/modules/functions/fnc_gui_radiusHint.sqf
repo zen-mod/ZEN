@@ -34,12 +34,6 @@
      };
  };
 
-if (GVAR(gui_radiusHint_draw) > -1) then {
-    GVAR(gui_radiusHint_info) = [];
-    removeMissionEventHandler ["Draw3D", GVAR(gui_radiusHint_draw)];
-    GVAR(gui_radiusHint_draw) = -1;
-};
-
  GVAR(gui_radiusHint_info) = [_center, _radius, _step, _icon];
 
  GVAR(gui_radiusHint_draw) = addMissionEventHandler ["Draw3D", {
