@@ -50,11 +50,10 @@ if (!_isAttached) then {
 [LSTRING(ModuleToggleFlashlights), [
     ["COMBO", [LSTRING(ToggleTarget), LSTRING(ToggleTarget_Tooltip)], _targets],
     ["TOOLBOX:ENABLED", LSTRING(ModuleToggleFlashlights_Flashlights), false],
-    ["TOOLBOX:YESNO", LSTRING(AddGear), false],
-    ["TOOLBOX:YESNO", [LSTRING(RemoveNVG), LSTRING(RemoveNVG_Tooltip)], false]
+    ["TOOLBOX:YESNO", LSTRING(AddGear), false]
 ], {
     params ["_values", "_group"];
-    _values params ["_target", "_enabled", "_addGear", "_removeNVG"];
+    _values params ["_target", "_enabled", "_addGear"];
 
     // Get units based on target selection
     private _units = if (_target isEqualType west) then {
@@ -82,14 +81,6 @@ if (!_isAttached) then {
 
                 // Add a random flashlight to the unit's weapon
                 [QEGVAR(common,addWeaponItem), [_x, _weapon, selectRandom _flashlights], _x] call CBA_fnc_targetEvent;
-            };
-
-            if (_removeNVG) then {
-                private _nvg = hmd _x;
-
-                if (_nvg != "") then {
-                    _unit unlinkItem _nvg;
-                };
             };
 
             [QEGVAR(common,enableGunLights), [_x, "ForceOn"], _x] call CBA_fnc_targetEvent;
