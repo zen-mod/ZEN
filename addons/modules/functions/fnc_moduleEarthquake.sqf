@@ -18,7 +18,7 @@
 params ["_logic"];
 
 [LSTRING(ModuleEarthquake), [
-    ["SLIDER", LSTRING(ModuleEarthquake_Radius), [0, 5000, 200, 0]],
+    ["SLIDER:RADIUS", LSTRING(ModuleEarthquake_Radius), [0, 5000, 200, 0]],
     ["TOOLBOX", LSTRING(ModuleEarthquake_Intensity), [0, 1, 4, [ELSTRING(common,VeryWeak), ELSTRING(common,Weak), ELSTRING(common,Medium), ELSTRING(common,Strong)]]],
     ["TOOLBOX:YESNO", LSTRING(ModuleEarthquake_Buildings), false]
 ], {
