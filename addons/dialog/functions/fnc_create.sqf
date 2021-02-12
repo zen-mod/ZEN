@@ -185,7 +185,8 @@ private _fnc_verifyListEntries = {
             _controlType = QGVAR(Row_Slider);
 
             private _isPercentage = _subType == "PERCENT";
-            _settings append [_min, _max, _formatting, _isPercentage];
+            private _drawRadius = _subType == "RADIUS";
+            _settings append [_min, _max, _formatting, _isPercentage, _drawRadius];
         };
         case "TOOLBOX": {
             // Backwards compatibility for old value info format

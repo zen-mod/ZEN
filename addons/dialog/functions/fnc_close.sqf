@@ -27,6 +27,11 @@ private _values = _controls apply {
     [_controlsGroup, _settings] call (_controlsGroup getVariable QFUNC(value))
 };
 
+removeMissionEventHandler ["Draw3D", GVAR(drawRadiusEH)];
+GVAR(radius) = nil;
+GVAR(radiusOrigin) = nil;
+GVAR(drawRadiusEH) = nil;
+
 // Call the appropriate confirm/cancel function
 if (_confirmed) then {
     // Save values when the selections are confirmed

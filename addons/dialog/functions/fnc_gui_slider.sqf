@@ -22,12 +22,40 @@
  */
 
 params ["_controlsGroup", "_defaultValue", "_settings"];
-_settings params ["_min", "_max", "_formatting", "_isPercentage"];
+_settings params ["_min", "_max", "_formatting", "_isPercentage", "_drawRadius"];
 
 private _ctrlSlider = _controlsGroup controlsGroupCtrl IDC_ROW_SLIDER;
 private _ctrlEdit = _controlsGroup controlsGroupCtrl IDC_ROW_EDIT;
+private _fnc_valueChanged = {};
 
-[_ctrlSlider, _ctrlEdit, _min, _max, _defaultValue, -1, _formatting, _isPercentage] call EFUNC(common,initSliderEdit);
+if (_drawRadius && isNil QGVAR(drawRadiusEH)) then {
+    if !(isNil "_logic") then {GVAR(radiusOrigin) = ASLToAGL getPosASL _logic};
+    GVAR(radius) = _defaultValue;
+
+    GVAR(drawRadiusEH) = addMissionEventHandler ["Draw3D", {
+        private _center = GVAR(radiusOrigin);
+        private _radius = GVAR(radius);
+
+        private _circumference = floor (2 * pi * _radius);
+        private _count = floor (_circumference / 25);
+        private _factor = 360 / _count;
+
+        for "_i" from 0 to (_count - 1) do {
+            private _phi = (_i * _factor);
+            private _posVector = [_radius * cos(_phi), _radius * sin(_phi), 0];
+
+            drawIcon3d ["\A3\ui_f\data\map\markers\military\dot_CA.paa", [1, 1, 1, 1], _center vectorAdd _posVector, 1, 1, 0];
+        };
+    }];
+
+    _fnc_valueChanged = {
+        params ["", "", "_value"];
+
+        GVAR(radius) = _value;
+    };
+};
+
+[_ctrlSlider, _ctrlEdit, _min, _max, _defaultValue, -1, _formatting, _isPercentage, _fnc_valueChanged] call EFUNC(common,initSliderEdit);
 
 _controlsGroup setVariable [QFUNC(value), {
     params ["_controlsGroup"];
