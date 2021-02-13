@@ -87,9 +87,9 @@ private _ctrlTitle = _display displayCtrl IDC_DISPLAY_TITLE;
 _ctrlTitle ctrlSetText localize _title;
 
 // Set the current composition category and name
-/*_composition params ["_category", "_name"];
+_composition params ["_category", "_name"];
 _ctrlCategory ctrlSetText _category;
-_ctrlName ctrlSetText _name;*/
+_ctrlName ctrlSetText _name;
 
 // Run initial verification of values
 _display call (_display getVariable QFUNC(verify));
@@ -107,6 +107,7 @@ private _ctrlButtonOK = _display displayCtrl IDC_OK;
     // Set the new composition category and name
     private _category = ctrlText _ctrlCategory;
     private _name = ctrlText _ctrlName;
+    private _compositionData = _composition select 2;
 
     if (_mode == "create") then {
         // In create mode, add the composition to saved data
@@ -115,10 +116,10 @@ private _ctrlButtonOK = _display displayCtrl IDC_OK;
 
         if (isNil "_categoryHash") then {
             // Create category hash if category doesn't exist yet.
-            _categoryHash = createHashMapFromArray [[_name, _composition]];
+            _categoryHash = createHashMapFromArray [[_name, _compositionData]];
             _compositions set [_category, _categoryHash];
         } else {
-            _categoryHash set [_name, _composition];
+            _categoryHash set [_name, _compositionData];
         };
     } else {
         // In edit mode, remove the old composition from the tree

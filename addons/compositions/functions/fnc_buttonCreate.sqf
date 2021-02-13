@@ -21,4 +21,4 @@ if (_data isEqualTo [[], []]) exitWith {
     [LSTRING(NoObjectsSelected)] call EFUNC(common,showMessage);
 };
 
-["create", _data] call FUNC(openDisplay);
+["create", ["", "", _data]] call FUNC(openDisplay);

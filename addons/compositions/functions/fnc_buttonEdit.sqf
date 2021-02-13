@@ -27,5 +27,5 @@ private _name     = _ctrlTree tvText _path;
 private _composition = GET_COMPOSITION(_category,_name);
 
 if (!isNil "_composition") then {
-    ["edit", _composition] call FUNC(openDisplay);
+    ["edit", [_category, _name, _composition]] call FUNC(openDisplay);
 };
