@@ -36,15 +36,14 @@ if (_drawRadius && isNil QGVAR(drawRadiusEH)) then {
         private _center = GVAR(radiusOrigin);
         private _radius = GVAR(radius);
 
-        private _circumference = floor (2 * pi * _radius);
-        private _count = 6 max floor (_circumference / 5);
+        private _count = CIRCLE_DOTS_MIN max floor (2 * pi * _radius / CIRCLE_DOTS_SPACING);
         private _factor = 360 / _count;
 
         for "_i" from 0 to (_count - 1) do {
             private _phi = (_i * _factor);
             private _posVector = [_radius * cos(_phi), _radius * sin(_phi), 0];
 
-            drawIcon3d ["\A3\ui_f\data\map\markers\military\dot_CA.paa", [1, 1, 1, 0.7], _center vectorAdd _posVector, 0.5, 0.5, 0];
+            drawIcon3d ["\A3\ui_f\data\map\markers\military\dot_CA.paa", [1, 1, 1, 0.7], _center vectorAdd _posVector, CIRCLE_DOTS_SCALE, CIRCLE_DOTS_SCALE, 0];
         };
     }];
 
