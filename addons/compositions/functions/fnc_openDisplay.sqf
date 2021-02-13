@@ -33,14 +33,8 @@ _ctrlList ctrlAddEventHandler ["LBSelChanged", {
     _display call (_display getVariable QFUNC(verify));
 }];
 
-private _categories = [];
-
 {
-    _x params ["_category"];
-
-    if (_categories pushBackUnique _category != -1) then {
-        _ctrlList lbAdd _category;
-    };
+    _ctrlList lbAdd _x;
 } forEach GET_COMPOSITIONS;
 
 // Verify entered values (not empty, unique category and name combination)
@@ -64,7 +58,7 @@ _display setVariable [QFUNC(verify), {
         _ctrlButtonOK ctrlSetTooltip localize LSTRING(NameCannotBeEmpty);
     };
 
-    private _enabled = FIND_COMPOSITION(_category,_name) == -1;
+    private _enabled = isNil {GET_COMPOSITION};
     private _tooltip = if (_enabled) then {""} else {localize LSTRING(CompositionAlreadyExists)};
 
     _ctrlButtonOK ctrlEnable _enabled;
@@ -93,9 +87,9 @@ private _ctrlTitle = _display displayCtrl IDC_DISPLAY_TITLE;
 _ctrlTitle ctrlSetText localize _title;
 
 // Set the current composition category and name
-_composition params ["_category", "_name"];
+/*_composition params ["_category", "_name"];
 _ctrlCategory ctrlSetText _category;
-_ctrlName ctrlSetText _name;
+_ctrlName ctrlSetText _name;*/
 
 // Run initial verification of values
 _display call (_display getVariable QFUNC(verify));
@@ -111,21 +105,28 @@ private _ctrlButtonOK = _display displayCtrl IDC_OK;
     private _ctrlName     = _display displayCtrl IDC_DISPLAY_NAME;
 
     // Set the new composition category and name
-    _composition set [0, ctrlText _ctrlCategory];
-    _composition set [1, ctrlText _ctrlName];
+    private _category = ctrlText _ctrlCategory;
+    private _name = ctrlText _ctrlName;
 
     if (_mode == "create") then {
         // In create mode, add the composition to saved data
         private _compositions = GET_COMPOSITIONS;
-        _compositions pushBack _composition;
-        SET_COMPOSITIONS(_compositions);
+        private _categoryHash = _compositions get _category;
+
+        if (isNil "_categoryHash") then {
+            // Create category hash if category doesn't exist yet.
+            _categoryHash = createHashMapFromArray [[_name, _composition]];
+            _compositions set [_category, _categoryHash];
+        } else {
+            _categoryHash set [_name, _composition];
+        };
     } else {
         // In edit mode, remove the old composition from the tree
         [false] call FUNC(removeFromTree);
     };
 
     // Add the new/updated composition to the tree
-    GVAR(treeAdditions) pushBack +_composition;
+    GVAR(treeAdditions) pushBack [_category, _name, +_composition];
     [findDisplay IDD_RSCDISPLAYCURATOR] call FUNC(processTreeAdditions);
 
     saveProfileNamespace;

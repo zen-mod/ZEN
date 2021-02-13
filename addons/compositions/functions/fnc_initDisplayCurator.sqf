@@ -64,7 +64,13 @@
     _ctrlTree tvSetPictureRightColorSelected [[0, _index], [1, 1, 1, 1]];
 
     // Initially add all compositions to the tree
-    GVAR(treeAdditions) = +GET_COMPOSITIONS;
+    GVAR(treeAdditions) = [];
+    {
+        private _category = _x;
+        {
+            GVAR(treeAdditions) pushBack [_category, _x, _y];
+        } forEach _y;
+    } forEach GET_COMPOSITIONS;
     [_display] call FUNC(processTreeAdditions);
 
     _ctrlTree ctrlAddEventHandler ["TreeSelChanged", {call FUNC(handleTreeSelect)}];
