@@ -49,7 +49,6 @@
 
 #define VAR_COMPOSITIONS QGVAR(data)
 #define GET_COMPOSITIONS (profileNamespace getVariable [VAR_COMPOSITIONS, createHashMap])
-#define SET_COMPOSITIONS(value) (profileNamespace setVariable [VAR_COMPOSITIONS, value])
 
 #define GET_COMPOSITION(category,name) (GET_COMPOSITIONS get category get name)
 
