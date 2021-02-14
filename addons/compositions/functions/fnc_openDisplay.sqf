@@ -62,7 +62,7 @@ _display setVariable [QFUNC(verify), {
         _ctrlButtonOK ctrlSetTooltip localize LSTRING(NameCannotBeEmpty);
     };
 
-    private _enabled = isNil {GET_COMPOSITION};
+    private _enabled = isNil {GET_COMPOSITION(_category,_name)};
     private _tooltip = if (_enabled) then {""} else {localize LSTRING(CompositionAlreadyExists)};
 
     _ctrlButtonOK ctrlEnable _enabled;
@@ -133,7 +133,7 @@ private _ctrlButtonOK = _display displayCtrl IDC_OK;
     };
 
     // Add the new/updated composition to the tree
-    GVAR(treeAdditions) pushBack [_category, _name, +_composition];
+    GVAR(treeAdditions) pushBack [_category, _name, +_compositionData];
     [findDisplay IDD_RSCDISPLAYCURATOR] call FUNC(processTreeAdditions);
 
     saveProfileNamespace;
