@@ -17,4 +17,4 @@
 
 params ["_entity"];
 
-alive _entity && {!(_entity call EFUNC(loadout,getWeaponList) isEqualTo [])}
+_entity isEqualType objNull && {alive _entity} && {!(_entity call EFUNC(loadout,getWeaponList) isEqualTo [])}
