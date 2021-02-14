@@ -33,8 +33,12 @@ _ctrlList ctrlAddEventHandler ["LBSelChanged", {
     _display call (_display getVariable QFUNC(verify));
 }];
 
+private _categories = [];
+
 {
-    _ctrlList lbAdd _x;
+    if (_categories pushBackUnique _x != -1) then {
+        _ctrlList lbAdd _x;
+    };
 } forEach GET_COMPOSITIONS;
 
 // Verify entered values (not empty, unique category and name combination)
@@ -121,6 +125,8 @@ private _ctrlButtonOK = _display displayCtrl IDC_OK;
         } else {
             _categoryHash set [_name, _compositionData];
         };
+
+        profileNamespace setVariable [VAR_COMPOSITIONS, _compositions];
     } else {
         // In edit mode, remove the old composition from the tree
         [false] call FUNC(removeFromTree);

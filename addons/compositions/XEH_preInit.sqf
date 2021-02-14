@@ -27,7 +27,7 @@ if (typeName _compositions isEqualTo "ARRAY") then {
         };
     } forEach _compositions;
 
-    profileNamespace setVariable [VAR_COMPOSITIONS, (_newCompositions)];
+    profileNamespace setVariable [VAR_COMPOSITIONS, _newCompositions];
 };
 
 ADDON = true;
