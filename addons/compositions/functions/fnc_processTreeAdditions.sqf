@@ -26,13 +26,11 @@ private _delete = false;
 
 private _categories = keys GET_COMPOSITIONS;
 
-diag_log GVAR(treeAdditions);
-
 for "_i" from 0 to ((_ctrlTree tvCount [0]) - 1) do {
     if (_ctrlTree tvData [0, _i] == CATEGORY_STR) exitWith {
         {
             _x params ["_category", "_name", "_data"];
-            diag_log _x;
+
             private "_path";
 
             for "_j" from 0 to ((_ctrlTree tvCount [0, _i]) - 1) do {
