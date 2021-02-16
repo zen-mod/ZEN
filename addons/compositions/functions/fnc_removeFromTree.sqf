@@ -40,7 +40,7 @@ if (_deleteFromData) then {
 // Delete the category from the tree if no more compositions exist under it
 if (keys _categoryHash isEqualTo []) then {
     private _categories = _ctrlTree getVariable [QGVAR(categories), []];
-   _categories deleteAt (_categories find _category);
+    _categories deleteAt (_categories find _category);
 
     _compositions deleteAt _category;
     _ctrlTree tvDelete GET_PARENT_PATH(_path);
