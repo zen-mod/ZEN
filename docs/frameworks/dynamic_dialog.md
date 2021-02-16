@@ -163,6 +163,10 @@ A percentage slider sub-type exists for this control type - `SLIDER:PERCENT`.
 When this sub-type is used, the value displayed in the edit box will be multiplied by 100 and be suffixed by a percent sign.
 The returned value will still be within the min and max values (ideally 0 to 1) and the formatting argument is ignored.
 
+A radius slider sub-type exists for this control type - `SLIDER:RADIUS`.
+When this sub-type is used, a circle will be drawn on the terrain to indicate the radius of the output value.
+The center of the circle will be the module logic if `_logic` is used as variable name for the module, the attributes target if used in an attribute window, or the selected object if neither of those apply. If none of these apply, no circle is drawn.
+
 **Control Specific Argument(s):**
 
 - 0: Minimum value &lt;NUMBER&gt;
