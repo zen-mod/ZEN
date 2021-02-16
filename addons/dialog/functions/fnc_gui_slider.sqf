@@ -34,7 +34,7 @@ if (_drawRadius && isNil QGVAR(drawRadiusEH)) then {
     if (isNull _logic || {!(_logic isEqualType objNull)}) then { _logic = SELECTED_OBJECTS select 0 };
 
     // Don't draw the circle if nothing is selected or no module is placed.
-    if (isNull _logic) then {
+    if !(isNil _logic || isNull _logic) then {
         GVAR(radiusOrigin) = ASLToAGL getPosASL _logic;
         GVAR(radius) = _defaultValue;
 
