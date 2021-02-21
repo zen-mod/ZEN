@@ -27,7 +27,7 @@ private _players = _this select {isPlayer _x};
             [_players, _entity] call EFUNC(common,teleportIntoVehicle);
         } else {
             if (count _players > 1) then {
-                // setVehiclePosition places units on surface directly below position
+                // SetVehiclePosition places units on surface directly below position
                 // Sometimes this will be the second surface below the selected position
                 // Adding a small vertical offset allows units to be teleported consistently onto surfaces such as rooftops
                 _position = ASLtoATL _position vectorAdd [0, 0, 0.1];

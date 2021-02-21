@@ -37,7 +37,7 @@ if (_position isEqualType "") then {
 };
 
 // For small spread values, use doArtilleryFire directly to avoid delay
-// between firing caused by using doArtilleryFire one round at a time
+// Between firing caused by using doArtilleryFire one round at a time
 if (_spread <= LOW_SPREAD_THRESHOLD) exitWith {
     _unit doArtilleryFire [_position, _magazine, _rounds];
 };

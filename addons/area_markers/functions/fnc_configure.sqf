@@ -183,7 +183,7 @@ private _keyDownEH = _display displayAddEventHandler ["KeyDown", {
             ctrlDelete _ctrlConfigure;
         };
 
-        true // handled
+        true // Handled
     };
 }];
 

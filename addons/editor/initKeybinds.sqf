@@ -13,7 +13,7 @@
             [_x] call EFUNC(common,deployCountermeasures);
         } forEach SELECTED_OBJECTS;
 
-        true // handled
+        true // Handled
     };
 }, {}, [DIK_C, [true, false, false]]] call CBA_fnc_addKeybind; // Default: SHIFT + C
 
@@ -23,7 +23,7 @@
             [_x] call EFUNC(common,ejectPassengers);
         } forEach SELECTED_OBJECTS;
 
-        true // handled, prevents vanilla eject
+        true // Handled, prevents vanilla eject
     };
 }, {}, [DIK_G, [false, true, false]]] call CBA_fnc_addKeybind; // Default: CTRL + G
 
@@ -52,7 +52,7 @@
 
         playSound ["RscDisplayCurator_error01", true];
 
-        true // handled, prevents vanilla copy
+        true // Handled, prevents vanilla copy
     };
 }, {}, [DIK_C, [true, true, false]]] call CBA_fnc_addKeybind; // Default: CTRL + SHIFT + C
 
@@ -63,7 +63,7 @@
 
         playSound ["RscDisplayCurator_error01", true];
 
-        true // handled, prevents vanilla paste
+        true // Handled, prevents vanilla paste
     };
 }, {}, [DIK_V, [true, true, false]]] call CBA_fnc_addKeybind; // Default: CTRL + SHIFT + V
 
@@ -83,7 +83,7 @@
             };
         } forEach SELECTED_OBJECTS;
 
-        true // handled
+        true // Handled
     };
 }, {}, [DIK_X, [false, true, false]]] call CBA_fnc_addKeybind; // Default: CTRL + X
 

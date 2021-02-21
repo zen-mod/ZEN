@@ -35,12 +35,12 @@ params [
 ];
 
 // Keep track of all processed objects and groups, their index in their corresponding array
-// is used to determine the variable name used in the exported SQF
+// Is used to determine the variable name used in the exported SQF
 private _processedObjects = [];
 private _processedGroups = [];
 
 // Separate the exported SQF into different sections, this is used to ensure the correct
-// ordering of the output (for example, applying group properties after all units are created)
+// Ordering of the output (for example, applying group properties after all units are created)
 private _outputGroups1 = [];
 private _outputObjects = [];
 private _outputGroups2 = [];
@@ -290,7 +290,7 @@ private _fnc_processVehicle = {
 
                 switch (toLower _role) do {
                     case "driver": {
-                        // moveInDriver does not work for virtual UAV crew, moveInAny does
+                        // MoveInDriver does not work for virtual UAV crew, moveInAny does
                         if (getText (configOf _unit >> "simulation") == "UAVPilot") then {
                             _outputCrew pushBack ["%1 moveInAny %2;", _unitVarName, _varName];
                         } else {
