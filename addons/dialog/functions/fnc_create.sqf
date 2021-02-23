@@ -79,8 +79,6 @@ private _fnc_verifyListEntries = {
     _entries
 };
 
-private _radiusSliders = [];
-
 {
     _x params [["_typeArg", "", [""]], ["_name", [], ["", []]], ["_valueInfo", []], ["_forceDefault", false, [true]]];
     _name params [["_label", "", [""]], ["_tooltip", "", [""]]];
@@ -187,21 +185,9 @@ private _radiusSliders = [];
             _controlType = QGVAR(Row_Slider);
 
             private _isPercentage = _subType == "PERCENT";
-            private _drawRadius = _subType == "RADIUS";
-            if (_drawRadius && {_radiusCenter isNotEqualTo objNull}) then {
-                if (isNil QGVAR(radiuses)) then {
-                    GVAR(radiuses) = [];
-                };
+            private _drawRadius = _subType == "RADIUS" && {_radiusCenter isNotEqualTo objNull};
 
-                if (_radiusCenter isEqualType objNull) then {
-                    _radiusCenter = ASLToAGL getPosASL _radiusCenter;
-                };
-
-                _radiusSliders pushBack [_radiusCenter, _radiusColor];
-                _settings append [_min, _max, _formatting, _isPercentage, GVAR(radiuses) pushBack _defaultValue];
-            };
-
-            _settings append [_min, _max, _formatting, _isPercentage];
+            _settings append [_min, _max, _formatting, _isPercentage, _drawRadius, _radiusCenter, _radiusColor];
         };
         case "TOOLBOX": {
             // Backwards compatibility for old value info format
@@ -339,24 +325,5 @@ _display displayAddEventHandler ["KeyDown", {
 
     false
 }];
-
-if (_radiusSliders isNotEqualTo []) then {
-    GVAR(drawRadiusEH) = [missionNamespace, "Draw3D", {
-        {
-            _x params ["_center", "_color"];
-            private _radius = GVAR(radiuses) select _forEachIndex;
-
-            private _count = CIRCLE_DOTS_MIN max floor (2 * pi * _radius / CIRCLE_DOTS_SPACING);
-            private _factor = 360 / _count;
-
-            for "_i" from 0 to (_count - 1) do {
-                private _phi = _i * _factor;
-                private _posVector = [_radius * cos _phi, _radius * sin _phi, 0];
-
-                drawIcon3D ["\A3\ui_f\data\map\markers\military\dot_CA.paa", _color, _center vectorAdd _posVector, CIRCLE_DOTS_SCALE, CIRCLE_DOTS_SCALE, 0];
-            };
-        } forEach _thisArgs;
-    }, _radiusSliders] call CBA_fnc_addBISEventHandler;
-};
 
 true // Dialog successfully created

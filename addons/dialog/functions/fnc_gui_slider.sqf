@@ -22,22 +22,35 @@
  */
 
 params ["_controlsGroup", "_defaultValue", "_settings"];
-_settings params ["_min", "_max", "_formatting", "_isPercentage", "_radiusIndex"];
+_settings params ["_min", "_max", "_formatting", "_isPercentage", "_drawRadius", "_radiusCenter", "_radiusColor"];
 
 private _ctrlSlider = _controlsGroup controlsGroupCtrl IDC_ROW_SLIDER;
 private _ctrlEdit = _controlsGroup controlsGroupCtrl IDC_ROW_EDIT;
 private _fnc_valueChanged = {};
 
-if !(isNil "_radiusIndex") then {
-    _ctrlSlider setVariable [QGVAR(radiusIndex), _radiusIndex];
-
-    _fnc_valueChanged = {
-        params ["_ctrlSlider", "", "_value"];
-
-        private _radiusIndex = _ctrlSlider getVariable QGVAR(radiusIndex);
-
-        GVAR(radiuses) set [_radiusIndex, _value];
+if (_drawRadius) then {
+    if (_radiusCenter isEqualType objNull) then {
+        _radiusCenter = ASLToAGL getPosASL _radiusCenter;
     };
+
+    [missionNamespace, "Draw3D", {
+        _thisArgs params ["_ctrlSlider", "_center", "_color"];
+
+        if (isNull _ctrlSlider) exitWith {
+            removeMissionEventHandler ["Draw3D", _thisID];
+        };
+
+        private _radius = sliderPosition _ctrlSlider;
+        private _count = CIRCLE_DOTS_MIN max floor (2 * pi * _radius / CIRCLE_DOTS_SPACING);
+        private _factor = 360 / _count;
+
+        for "_i" from 0 to (_count - 1) do {
+            private _phi = _i * _factor;
+            private _posVector = [_radius * cos _phi, _radius * sin _phi, 0];
+
+            drawIcon3D ["\A3\ui_f\data\map\markers\military\dot_CA.paa", _color, _center vectorAdd _posVector, CIRCLE_DOTS_SCALE, CIRCLE_DOTS_SCALE, 0];
+        };
+    }, [_ctrlSlider, _radiusCenter, _radiusColor]] call CBA_fnc_addBISEventHandler;
 };
 
 [_ctrlSlider, _ctrlEdit, _min, _max, _defaultValue, -1, _formatting, _isPercentage, _fnc_valueChanged] call EFUNC(common,initSliderEdit);
