@@ -350,10 +350,10 @@ if (_radiusSliders isNotEqualTo []) then {
             private _factor = 360 / _count;
 
             for "_i" from 0 to (_count - 1) do {
-                private _phi = (_i * _factor);
+                private _phi = _i * _factor;
                 private _posVector = [_radius * cos(_phi), _radius * sin(_phi), 0];
 
-                drawIcon3d ["\A3\ui_f\data\map\markers\military\dot_CA.paa", _color, _center vectorAdd _posVector, CIRCLE_DOTS_SCALE, CIRCLE_DOTS_SCALE, 0];
+                drawIcon3D ["\A3\ui_f\data\map\markers\military\dot_CA.paa", _color, _center vectorAdd _posVector, CIRCLE_DOTS_SCALE, CIRCLE_DOTS_SCALE, 0];
             };
         } forEach _thisArgs;
     }, _radiusSliders] call CBA_fnc_addBISEventHandler;
