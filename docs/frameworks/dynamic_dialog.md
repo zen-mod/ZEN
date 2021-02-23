@@ -165,7 +165,7 @@ The returned value will still be within the min and max values (ideally 0 to 1) 
 
 A radius slider sub-type exists for this control type - `SLIDER:RADIUS`.
 When this sub-type is used, a circle will be drawn on the terrain to indicate the radius of the output value.
-The center of the circle will be the module logic if `_logic` is used as variable name for the module, the attributes target if used in an attribute window, or the selected object if neither of those apply. If none of these apply, no circle is drawn.
+The circle will be drawn around the center given as argument, with the color given.
 
 **Control Specific Argument(s):**
 
@@ -175,6 +175,8 @@ The center of the circle will be the module logic if `_logic` is used as variabl
 - 3: Formatting &lt;NUMBER|CODE&gt;
     - Number specifies the number of displayed decimal places (0, 1, or 2).
     - Code specifies custom formatting which is passed the value in `_this` and **must** return a string.
+- 4: Radius Center &lt;OBJECT|POSITION&gt;
+- 5: Radius Color &lt;OBJECT|POSITION&gt;
 
 **Return Value:**
 
