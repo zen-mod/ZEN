@@ -188,7 +188,7 @@ private _radiusSliders = [];
 
             private _isPercentage = _subType == "PERCENT";
             private _drawRadius = _subType == "RADIUS";
-            if (_drawRadius && {!(isNull _radiusCenter)}) then {
+            if (_drawRadius && {_radiusCenter isNotEqualTo objNull}) then {
                 if (isNil QGVAR(radiuses)) then {
                     GVAR(radiuses) = [];
                 };
