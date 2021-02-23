@@ -28,8 +28,7 @@ private _values = _controls apply {
 };
 
 removeMissionEventHandler ["Draw3D", GVAR(drawRadiusEH)];
-GVAR(radius) = nil;
-GVAR(radiusOrigin) = nil;
+GVAR(radiuses) = nil;
 GVAR(drawRadiusEH) = nil;
 
 // Call the appropriate confirm/cancel function
