@@ -22,6 +22,6 @@ private _vehicleType = typeOf GVAR(center);
 
 {
     if (typeOf _x isEqualTo _vehicleType) then {
-        [QEGVAR(common,initVehicle), [_x, _texture, _animations, true], _x] call cba_fnc_targetEvent;
+        [QEGVAR(common,initVehicle), [_x, _texture, _animations, true], _x] call CBA_fnc_targetEvent;
     };
 } forEach SELECTED_OBJECTS;

@@ -28,4 +28,4 @@ _ctrlListTextures lbSetPicture [_selectedIndex, ICON_CHECKED];
 
 // Update vehicle textures
 private _vehicle = GVAR(center);
-[QEGVAR(common,initVehicle), [_vehicle, [_ctrlListTextures lbData _selectedIndex, 1]], _vehicle] call cba_fnc_targetEvent;
+[QEGVAR(common,initVehicle), [_vehicle, [_ctrlListTextures lbData _selectedIndex, 1]], _vehicle] call CBA_fnc_targetEvent;

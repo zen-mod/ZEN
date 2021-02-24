@@ -32,4 +32,4 @@ for "_i" from 0 to (lbSize _ctrlListAnimations - 1) do {
 
 // Update vehicle animations
 private _vehicle = GVAR(center);
-[QEGVAR(common,initVehicle), [_vehicle, nil, _animations, true], _vehicle] call cba_fnc_targetEvent;
+[QEGVAR(common,initVehicle), [_vehicle, nil, _animations, true], _vehicle] call CBA_fnc_targetEvent;
