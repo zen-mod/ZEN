@@ -271,6 +271,10 @@ Toggles the simulation of the attached object.
 
 Toggles the visibility of the attached object.
 
+## Transfer Ownership
+
+Transfer locality of objects and groups between server and clients.
+
 ## Un-Garrison Group
 
 Un-garrisons units from the attached group.

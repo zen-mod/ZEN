@@ -590,6 +590,31 @@
             <Japanese>CAS - 爆撃</Japanese>
             <Korean>CAS - 폭탄 투하</Korean>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleTransferOwnership">
+            <English>Transfer Ownership</English>
+            <French>Transférer la propriété</French>
+            <Spanish>Transferir propiedad</Spanish>
+            <Russian>Передать владение</Russian>
+            <German>Besitztum verschieben</German>
+            <Japanese>所有権を移行</Japanese>
+            <Chinesesimp>转让所有权</Chinesesimp>
+            <Chinese>轉讓所有權</Chinese>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleTransferOwnership_Client">
+            <English>Client</English>
+            <French>Client</French>
+            <German>Klient</German>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleTransferOwnership_Server">
+            <English>Server</English>
+            <French>Serveur</French>
+            <German>Server</German>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleTransferOwnership_HCScripts">
+            <English>HC Scripts</English>
+            <French>Script pour HC</French>
+            <German>HC Skript</German>
+        </Key>
         <Key ID="STR_ZEN_Modules_BindVariable">
             <English>Bind Variable To Object</English>
             <Russian>Привязать переменную к объекту</Russian>
@@ -2208,6 +2233,16 @@
             <Korean>소환</Korean>
         </Key>
         <!-- Feedback Messages -->
+        <Key ID="STR_ZEN_Modules_SelectionCannotIncludePlayers">
+            <English>Selection cannot include players</English>
+            <French>La sélection ne permet pas de joueurs</French>
+            <German>Auswahl kann keine Spieler beinhalten</German>
+        </Key>
+        <Key ID="STR_ZEN_Modules_OnlyMultiplayer">
+            <English>Module only available in multiplayer</English>
+            <French>Module est seulement disponible dans la mode multijoueur</French>
+            <German>Modul nur im Mehrspieler-Modus verfügbar</German>
+        </Key>
         <Key ID="STR_ZEN_Modules_NoUnitSelected">
             <English>Place on a unit</English>
             <French>Placez sur une unité</French>

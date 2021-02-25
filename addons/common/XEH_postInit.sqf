@@ -320,6 +320,31 @@ if (isServer) then {
         _object enableSimulationGlobal _enable;
     }] call CBA_fnc_addEventHandler;
 
+    [QGVAR(transferOwnership), {
+        params ["_entities", "_target"];
+        if (!(_entities isEqualType [])) then {
+            _entities = [_entities];
+        };
+        private _clientID = 0;
+        if (_target isEqualType 0) then {
+            _clientID = _target;
+        };
+        if (_target isEqualType objNull) then {
+            _clientID = owner _target;
+        };
+        {
+            if (_x isEqualType grpNull) then {
+                _x setGroupOwner _clientID;
+            } else {
+                if (group _x == grpNull) then {
+                    _x setOwner _clientID;
+                } else {
+                    group _x setGroupOwner _clientID;
+                };
+            };
+        } forEach _entities;
+    }] call CBA_fnc_addEventHandler;
+
     [QGVAR(setFriend), {
         params ["_side1", "_side2", "_value"];
         _side1 setFriend [_side2, _value];

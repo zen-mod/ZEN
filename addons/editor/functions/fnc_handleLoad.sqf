@@ -98,15 +98,30 @@ _display displayAddEventHandler ["KeyDown", {call FUNC(handleKeyDown)}];
     IDC_RSCDISPLAYCURATOR_MAINMAP
 ];
 
+// Add tree selection changed events
+private _ctrlTreeModule = _display displayCtrl IDC_RSCDISPLAYCURATOR_CREATE_MODULES;
+_ctrlTreeModule ctrlAddEventHandler ["TreeSelChanged", {
+    params ["_ctrlTreeModule", "_selectedPath"];
+
+    [QGVAR(ModuleSelChanged), _ctrlTreeModule tvData _selectedPath] call CBA_fnc_localEvent;
+}];
+
 private _ctrlTreeRecent = _display displayCtrl IDC_RSCDISPLAYCURATOR_CREATE_RECENT;
 _ctrlTreeRecent ctrlAddEventHandler ["TreeSelChanged", {
     params ["_ctrlTreeRecent", "_selectedPath"];
+    private _recentTreeData = _ctrlTreeRecent tvData _selectedPath;
 
     // Store data of selected item to allow for deleting the of crew of objects placed through the recent tree
-    // tvCurSel is unavailable once the selected item has been placed, the empty path check ensures that the
+    // tvCurSel is unavailable once the selected item has been placed, the empty string check ensures that the
     // data is not cleared since this event occurs before the object placed event
-    if !(_selectedPath isEqualTo []) then {
-        GVAR(recentTreeData) = _ctrlTreeRecent tvData _selectedPath;
+    if !(_recentTreeData isEqualTo "") then {
+        GVAR(recentTreeData) = _recentTreeData;
+    };
+
+    if (_recentTreeData isKindOf "Module_F") then {
+        [QGVAR(ModuleSelChanged), _recentTreeData] call CBA_fnc_localEvent;
+    } else {
+        [QGVAR(ModuleSelChanged), ""] call CBA_fnc_localEvent;
     };
 }];
 
