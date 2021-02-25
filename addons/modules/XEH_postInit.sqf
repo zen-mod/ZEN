@@ -11,6 +11,14 @@ if (isServer) then {
     missionNamespace setVariable [QGVAR(teleporters), [], true];
 
     [QGVAR(moduleCreateTeleporter), LINKFUNC(moduleCreateTeleporterServer)] call CBA_fnc_addEventHandler;
+
+    [QGVAR(hideTerrainObjects), {
+        params ["_position", "_objectTypes", "_radius", "_hide"];
+
+        {
+            _x hideObjectGlobal _hide;
+        } forEach nearestTerrainObjects [_position, _objectTypes, _radius];
+    }] call CBA_fnc_addEventHandler;
 };
 
 [QGVAR(addIntelAction), LINKFUNC(addIntelAction)] call CBA_fnc_addEventHandler;

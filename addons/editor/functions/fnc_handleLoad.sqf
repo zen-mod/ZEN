@@ -128,17 +128,31 @@ GVAR(iconsVisible) = true;
 
 [{
     // For compatibility with Zeus Game Master missions, wait until the respawn placement phase is complete
+    // and the create trees have been refreshed after curator addons are changed
     [{
         params ["_display"];
 
-        isNull _display || {entities "ModuleMPTypeGameMaster_F" isEqualTo []} || {GETMVAR(BIS_moduleMPTypeGameMaster_init,false)}
+        isNull _display
+        || {entities "ModuleMPTypeGameMaster_F" isEqualTo []}
+        || {
+            GETMVAR(BIS_moduleMPTypeGameMaster_init,false)
+            && {
+                (_display displayCtrl IDC_RSCDISPLAYCURATOR_CREATE_MODULES) tvCount [] > 1
+                || {"CuratorModeratorRights" call BIS_fnc_getParamValue < 1 && {player != BIS_curatorUnit}}
+            }
+        }
     }, {
         params ["_display"];
 
         if (isNull _display) exitWith {};
 
+        [QGVAR(treesLoaded), _display] call CBA_fnc_localEvent;
+
         [_display] call FUNC(addGroupIcons);
         [_display] call FUNC(declutterEmptyTree);
+
+        // Initially fix side buttons (can be hidden if a tree has no entries)
+        [FUNC(fixSideButtons), _display] call CBA_fnc_execNextFrame;
 
         {
             private _ctrl = _display displayCtrl _x;

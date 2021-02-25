@@ -24,6 +24,11 @@
             <Japanese>空挺降下</Japanese>
             <Korean>공수</Korean>
         </Key>
+        <Key ID="STR_ZEN_AI_SearchBuilding">
+            <English>Search Building</English>
+            <German>Gebäude durchsuchen</German>
+            <Polish>Przeszukaj budynek</Polish>
+        </Key>
         <Key ID="STR_ZEN_AI_CouldNotGarrisonAll">
             <English>Unable to garrison all units - not enough positions</English>
             <Russian>Невозможно разместить всех солдат - недостаточно позиций</Russian>

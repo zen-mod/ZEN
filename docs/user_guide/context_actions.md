@@ -23,7 +23,12 @@ Applies the selected combat mode to all currently selected groups.
 ## Create Area Marker
 
 Creates an [area marker](/user_guide/area_markers.md) at the context menu's position.
-This context menu must be opened on the map.
+Available only when the context menu is opened on the map.
+
+## Door State
+
+Sets the state of the selected door (closed, locked, opened).
+Available when the context menu is opened with the cursor hovering over a door.
 
 ## Editable Objects
 
@@ -45,13 +50,13 @@ Heals all selected units based on the on the mode (all, players, AI).
 ## Inventory
 
 Opens the inventory display for the hovered object.
-Sub-actions allow for copying and pasting the hovered objects' inventory onto another.
+Sub-actions allow for copying and pasting the hovered object's inventory onto another.
 The main action acts as a shortcut for the "Edit" sub-action.
 
 ## Loadout
 
 Opens the preferred arsenal type (specified in CBA settings) on the hovered unit.
-Sub-actions allow for copying and pasting the hovered units' loadout onto another.
+Sub-actions allow for copying and pasting the hovered unit's loadout onto another and resetting the unit's loadout to the config defined one.
 The main action acts as a shortcut for the "Edit" sub-action.
 
 ## Remote Control

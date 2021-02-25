@@ -239,6 +239,11 @@ class EGVAR(context_menu,actions) {
             statement = QUOTE(_hoveredEntity setUnitLoadout GVAR(loadout));
             icon = QPATHTOF(ui\paste_ca.paa);
         };
+        class Reset {
+            displayName = "$STR_A3_RscDisplayCampaignLobby_Reset";
+            statement = QUOTE(_hoveredEntity setUnitLoadout configOf _hoveredEntity);
+            icon = "\a3\3den\Data\Displays\Display3DEN\ToolBar\undo_ca.paa";
+        };
     };
     class Inventory {
         displayName = "$STR_A3_Gear1";
@@ -309,6 +314,12 @@ class EGVAR(context_menu,actions) {
             condition = QUOTE(_objects call FUNC(canRefuelVehicles));
             statement = QUOTE(_objects call FUNC(refuelVehicles));
             icon = "\a3\ui_f\data\igui\cfg\simpleTasks\types\refuel_ca.paa";
+        };
+        class UnloadViV {
+            displayName = "$STR_A3_ModuleDepot_Unload";
+            condition = QUOTE(_objects call FUNC(canUnloadViV));
+            statement = QUOTE(_objects call FUNC(unloadViV));
+            icon = "\a3\ui_f\data\IGUI\Cfg\Actions\unloadVehicle_ca.paa";
         };
     };
     class EditableObjects {

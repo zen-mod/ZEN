@@ -174,7 +174,11 @@ Heals the attached unit. Works with BI's scripted revive system and ACE medical.
 
 ## Hide Zeus
 
-Hides or unhides the Zeus player and bird.
+Hides or shows the Zeus player and bird.
+
+## Hide Terrain Objects
+
+Hides or shows terrain objects of the selected types within the specified radius of the module.
 
 ## Light Source
 
