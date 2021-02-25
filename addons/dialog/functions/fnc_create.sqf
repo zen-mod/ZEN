@@ -179,7 +179,7 @@ private _fnc_verifyListEntries = {
             _controlType = QGVAR(Row_Sides);
         };
         case "SLIDER": {
-            _valueInfo params [["_min", 0, [0]], ["_max", 1, [0]], ["_default", 0, [0]], ["_formatting", 2, [0, {}]], ["_radiusCenter", objNull, [objNull, []], 3], ["_radiusColor", [1, 1, 1, 0.7], [[]], [3, 4]]];
+            _valueInfo params [["_min", 0, [0]], ["_max", 1, [0]], ["_default", 0, [0]], ["_formatting", 2, [0, {}]], ["_radiusCenter", objNull, [objNull, []], 3], ["_radiusColor", [1, 1, 1, 0.7], [[]], 4]];
 
             _defaultValue = _default;
             _controlType = QGVAR(Row_Slider);
