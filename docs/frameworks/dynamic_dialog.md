@@ -175,8 +175,8 @@ The circle will be drawn around the center given as argument, with the color giv
 - 3: Formatting &lt;NUMBER|CODE&gt;
     - Number specifies the number of displayed decimal places (0, 1, or 2).
     - Code specifies custom formatting which is passed the value in `_this` and **must** return a string.
-- 4: Radius Center &lt;OBJECT|POSITION&gt;
-- 5: Radius Color &lt;OBJECT|POSITION&gt;
+- 4: Radius Center &lt;OBJECT|ARRAY&gt;
+- 5: Radius Color &lt;OBJECT|ARRAY&gt;
 
 **Return Value:**
 
