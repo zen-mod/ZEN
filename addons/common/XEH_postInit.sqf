@@ -391,4 +391,8 @@ if (isServer) then {
 
     [QGVAR(createZeus), LINKFUNC(createZeus)] call CBA_fnc_addEventHandler;
     [QGVAR(deserializeObjects), LINKFUNC(deserializeObjects)] call CBA_fnc_addEventHandler;
+} else {
+    if !(hasInterface) then {
+        [QGVAR(deserializeObjects), LINKFUNC(deserializeObjects)] call CBA_fnc_addEventHandler;
+    };
 };

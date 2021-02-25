@@ -196,6 +196,12 @@
             <German>Fügt die derzeitig gespeicherte komplette Kopie ein.</German>
             <Polish>Wkleja z schowka obiekty które zostały głęboko skopiowane.</Polish>
         </Key>
+        <Key ID="STR_ZEN_Editor_DeepPasteHC">
+            <English>Deep Paste On Headless Client</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_DeepPasteHC_Description">
+            <English>Deep-copied entities will be sent to headless client(s) if available, avoiding subsequent transfer.</English>
+        </Key>
         <Key ID="STR_ZEN_Editor_FocusSearchBar">
             <English>Focus Search Bar</English>
             <German>Suchfeld fokussieren</German>
