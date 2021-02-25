@@ -36,7 +36,7 @@ if (_drawRadius) then {
         _thisArgs params ["_ctrlSlider", "_center", "_color"];
 
         if (isNull _ctrlSlider) exitWith {
-            removeMissionEventHandler ["Draw3D", _thisID];
+            removeMissionEventHandler [_thisType, _thisID];
         };
 
         private _radius = sliderPosition _ctrlSlider;
