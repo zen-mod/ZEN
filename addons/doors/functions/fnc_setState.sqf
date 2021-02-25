@@ -1,28 +1,31 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Cycles the state of a door. Called from the door button click EH.
+ * Sets the state of the given door for the given building.
+ * If a state is not specified, the door's state is cycled.
  *
  * Arguments:
- * 0: Door Button <CONTROL>
+ * 0: Building <OBJECT>
+ * 1: Door Index <NUMBER>
+ * 2: State <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL] call zen_doors_fnc_setState
+ * [_building, _door, 0] call zen_doors_fnc_setState
  *
  * Public: No
  */
 
-params ["_control"];
+params ["_building", "_door", "_state"];
 
-private _building = _control getVariable QGVAR(building);
-private _door     = _control getVariable QGVAR(door);
+// If no state is given, switch the door to the next state (closed -> locked -> opened)
+if (isNil "_state") then {
+    _state = [_building, _door] call FUNC(getState);
+    _state = [STATE_LOCKED, STATE_OPENED, STATE_CLOSED] select _state;
+};
 
-private _state = [_building, _door] call FUNC(getState);
-_state = floor ((_state + 1) % 3);
-
-_building setVariable [LOCKED_VAR(_door), [0, 1, 0] select _state, true];
+_building setVariable [VAR_LOCKED(_door), [0, 1, 0] select _state, true];
 _building animateSource [ANIM_NAME_1(_door), [0, 0, 1] select _state, false];
 _building animateSource [ANIM_NAME_2(_door), [0, 0, 1] select _state, false];

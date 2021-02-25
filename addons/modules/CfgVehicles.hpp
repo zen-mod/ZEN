@@ -287,6 +287,12 @@ class CfgVehicles {
         function = QFUNC(moduleHeal);
         icon = QPATHTOF(ui\heal_ca.paa);
     };
+    class GVAR(moduleHideTerrainObjects): GVAR(moduleBase) {
+        category = "Environment";
+        displayName = "$STR_a3_to_hideTerrainObjects1";
+        function = QFUNC(moduleHideTerrainObjects);
+        icon = "\a3\modules_f\data\hideterrainobjects\icon32_ca.paa";
+    };
     class GVAR(moduleHideZeus): GVAR(moduleBase) {
         category = "Curator";
         displayName = CSTRING(ModuleHideZeus);
@@ -334,7 +340,7 @@ class CfgVehicles {
     class GVAR(moduleSearchBuilding): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(AI);
-        displayName = CSTRING(SearchBuilding);
+        displayName = ECSTRING(ai,SearchBuilding);
         function = QFUNC(moduleSearchBuilding);
     };
     class GVAR(moduleSetDate): GVAR(moduleBase) {

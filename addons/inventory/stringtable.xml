@@ -6,9 +6,21 @@
             <German>Inventar bearbeiten (%1)</German>
             <Polish>Edytuj Wyposażenie (%1)</Polish>
         </Key>
+        <Key ID="STR_ZEN_Inventory_Search_Tooltip">
+            <English>Search the items list. Use 'class ' prefix to search by class name (e.g. 'class FirstAidKit').</English>
+        </Key>
         <Key ID="STR_ZEN_Inventory_Reset_Tooltip">
-            <English>Reset to Default Inventory</English>
-            <Polish>Resetuj do domyślnego wyposażenia</Polish>
+            <English>Reset to default inventory.</English>
+            <Polish>Resetuj do domyślnego wyposażenia.</Polish>
+        </Key>
+        <Key ID="STR_ZEN_Inventory_Clear_Tooltip">
+            <English>Clear items from current category.</English>
+        </Key>
+        <Key ID="STR_ZEN_Inventory_Weapon_Tooltip">
+            <English>View weapon specific items.</English>
+        </Key>
+        <Key ID="STR_ZEN_Inventory_Close_Tooltip">
+            <English>Close weapon specific items.</English>
         </Key>
     </Package>
 </Project>
