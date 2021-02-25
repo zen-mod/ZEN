@@ -1749,6 +1749,12 @@
             <Polish>Dodaj wyposażenie</Polish>
             <Russian>Добавить снаряжение</Russian>
         </Key>
+        <Key ID="STR_ZEN_Modules_RemoveNVG">
+            <English>Remove NVGs</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_RemoveNVG_Tooltip">
+            <English>Remove any currently equipped Night Vision Goggles.</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleToggleFlashlights">
             <English>Toggle Flashlights</English>
             <German>Ändere Taschenlampen</German>
@@ -2147,11 +2153,6 @@
         <Key ID="STR_ZEN_Modules_RotateObject">
             <English>Rotate Object</English>
             <Polish>Obróć obiekt</Polish>
-        </Key>
-        <Key ID="STR_ZEN_Modules_SearchBuilding">
-            <English>Search Building</English>
-            <German>Gebäude durchsuchen</German>
-            <Polish>Przeszukaj budynek</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_AtomicBomb">
             <English>Atomic Bomb</English>

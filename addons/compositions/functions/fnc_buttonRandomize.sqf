@@ -5,19 +5,22 @@
  *
  * Arguments:
  * 0: Button <CONTROL>
+ * 1: Toggle <BOOL> (defualt: true)
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call zen_compositions_fnc_buttonRandomize
+ * [CONTROL] call zen_compositions_fnc_buttonRandomize
  *
  * Public: No
  */
 
-params ["_ctrlRandomize"];
+params ["_ctrlRandomize", ["_toggle", true]];
 
-GVAR(randomize) = !GVAR(randomize);
+if (_toggle) then {
+    GVAR(randomize) = !GVAR(randomize);
+};
 
 private _color = [[1, 1, 1, 0.25], [1, 1, 1, 1]] select GVAR(randomize);
 _ctrlRandomize ctrlSetTextColor _color;

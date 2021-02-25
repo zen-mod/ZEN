@@ -39,11 +39,10 @@ if (isNil "_inventory") then {
         private _index = _types find _item;
 
         if (_index == -1) then {
-            _types pushBack _item;
-            _counts pushBack _count;
-        } else {
-            _counts set [_index, (_counts select _index) + _count];
+            _index = _types pushBack _item;
         };
+
+        _counts set [_index, (_counts param [_index, 0]) + _count];
     };
 
     private _config = _cfgVehicles >> _object;

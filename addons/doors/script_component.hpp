@@ -24,9 +24,19 @@
 #define POS_W(N) ((N) * GUI_GRID_W)
 #define POS_H(N) ((N) * GUI_GRID_H)
 
-#define ICON_CLOSED "\a3\modules_f\data\editterrainobject\icon3d_doorclosed32_ca.paa"
-#define ICON_LOCKED "\a3\modules_f\data\editterrainobject\icon3d_doorlocked32_ca.paa"
-#define ICON_OPENED "\a3\modules_f\data\editterrainobject\icon3d_dooropened32_ca.paa"
+#define ICON_DOOR "\a3\ui_f\data\igui\cfg\actions\open_door_ca.paa"
+
+#define TEXT_CLOSED localize "STR_a3_to_editTerrainObject21"
+#define TEXT_LOCKED localize "STR_a3_to_editTerrainObject23"
+#define TEXT_OPENED localize "STR_a3_to_editTerrainObject22"
+
+#define ICON2D_CLOSED "\a3\modules_f\data\editterrainobject\texturedoor_closed_ca.paa"
+#define ICON2D_LOCKED "\a3\modules_f\data\editterrainobject\texturedoor_locked_ca.paa"
+#define ICON2D_OPENED "\a3\modules_f\data\editterrainobject\texturedoor_opened_ca.paa"
+
+#define ICON3D_CLOSED "\a3\modules_f\data\editterrainobject\icon3d_doorclosed32_ca.paa"
+#define ICON3D_LOCKED "\a3\modules_f\data\editterrainobject\icon3d_doorlocked32_ca.paa"
+#define ICON3D_OPENED "\a3\modules_f\data\editterrainobject\icon3d_dooropened32_ca.paa"
 
 #define COLOR_CLOSED [1, 1, 1, 1]
 #define COLOR_LOCKED [1, 0, 1, 1]
@@ -36,10 +46,10 @@
 #define STATE_LOCKED 1
 #define STATE_OPENED 2
 
-#define LOCKED_VAR(DOOR) (format ["bis_disabled_door_%1", DOOR])
+#define VAR_LOCKED(x) format ["bis_disabled_door_%1", x]
 
-#define ANIM_NAME_1(DOOR) (format ["door_%1_sound_source", DOOR])
-#define ANIM_NAME_2(DOOR) (format ["door_%1_noSound_source", DOOR])
+#define ANIM_NAME_1(x) format ["door_%1_sound_source", x]
+#define ANIM_NAME_2(x) format ["door_%1_noSound_source", x]
 
 #define DISTANCE_DRAW   100
 #define DISTANCE_CANCEL 200

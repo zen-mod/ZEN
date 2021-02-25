@@ -21,27 +21,53 @@
 params ["_display", ["_item", ""]];
 
 private _index = if (_item == "") then {
-    private _category = lbCurSel (_display displayCtrl IDC_CATEGORY) - 1;
+    if (_display getVariable [QGVAR(weapon), ""] == "") then {
+        private _category = lbCurSel (_display displayCtrl IDC_CATEGORY) - 1;
 
-    switch (true) do {
-        case (_category in [0, 1, 2, 14]): {1};
-        case (_category in [7, 20, 21]): {2};
-        case (_category == 11): {3};
-        default {0};
+        switch (_category) do {
+            case ITEMS_PRIMARY;
+            case ITEMS_SECONDARY;
+            case ITEMS_HANDGUN;
+            case ITEMS_BINOCULARS: {
+                CARGO_WEAPONS
+            };
+            case ITEMS_MAGAZINES;
+            case ITEMS_THROW;
+            case ITEMS_PUT: {
+                CARGO_MAGAZINES
+            };
+            case ITEMS_BACKPACKS: {
+                CARGO_BACKPACKS
+            };
+            default {
+                CARGO_ITEMS
+            };
+        };
+    } else {
+        private _category = lbCurSel (_display displayCtrl IDC_WEAPON_CATEGORY);
+        [CARGO_ITEMS, CARGO_MAGAZINES] select (_category == 4)
     };
 } else {
     private _itemsList = uiNamespace getVariable QGVAR(itemsList);
 
     switch (true) do {
-        case (_item in (_itemsList select 0));
-        case (_item in (_itemsList select 1));
-        case (_item in (_itemsList select 2));
-        case (_item in (_itemsList select 14)): {1};
-        case (_item in (_itemsList select 7));
-        case (_item in (_itemsList select 20));
-        case (_item in (_itemsList select 21)): {2};
-        case (_item in (_itemsList select 11)): {3};
-        default {0};
+        case (_item in (_itemsList select ITEMS_PRIMARY));
+        case (_item in (_itemsList select ITEMS_SECONDARY));
+        case (_item in (_itemsList select ITEMS_HANDGUN));
+        case (_item in (_itemsList select ITEMS_BINOCULARS)): {
+            CARGO_WEAPONS
+        };
+        case (_item in (_itemsList select ITEMS_MAGAZINES));
+        case (_item in (_itemsList select ITEMS_THROW));
+        case (_item in (_itemsList select ITEMS_PUT)): {
+            CARGO_MAGAZINES
+        };
+        case (_item in (_itemsList select ITEMS_BACKPACKS)): {
+            CARGO_BACKPACKS
+        };
+        default {
+            CARGO_ITEMS
+        };
     };
 };
 
