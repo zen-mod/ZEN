@@ -28,16 +28,11 @@ private _ctrlSlider = _controlsGroup controlsGroupCtrl IDC_ROW_SLIDER;
 private _ctrlEdit = _controlsGroup controlsGroupCtrl IDC_ROW_EDIT;
 
 if (_drawRadius) then {
-    if (_radiusCenter isEqualType objNull) then {
-        _radiusCenter = ASLToAGL getPosASL _radiusCenter;
-    };
-
-    [missionNamespace, "Draw3D", {
+        [missionNamespace, "Draw3D", {
         _thisArgs params ["_ctrlSlider", "_center", "_color"];
 
-        if (isNull _ctrlSlider) exitWith {
-            removeMissionEventHandler [_thisType, _thisID];
-        };
+        if (isNull _ctrlSlider) exitWith { removeMissionEventHandler [_thisType, _thisID]; };
+        if (_center isEqualType objNull) then { _center = ASLToAGL getPosASL _center; };
 
         private _radius = sliderPosition _ctrlSlider;
         private _count = CIRCLE_DOTS_MIN max floor (2 * pi * _radius / CIRCLE_DOTS_SPACING);
@@ -52,7 +47,7 @@ if (_drawRadius) then {
     }, [_ctrlSlider, _radiusCenter, _radiusColor]] call CBA_fnc_addBISEventHandler;
 };
 
-[_ctrlSlider, _ctrlEdit, _min, _max, _defaultValue, -1, _formatting, _isPercentage, _fnc_valueChanged] call EFUNC(common,initSliderEdit);
+[_ctrlSlider, _ctrlEdit, _min, _max, _defaultValue, -1, _formatting, _isPercentage] call EFUNC(common,initSliderEdit);
 
 _controlsGroup setVariable [QFUNC(value), {
     params ["_controlsGroup"];
