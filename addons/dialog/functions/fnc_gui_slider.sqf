@@ -26,7 +26,6 @@ _settings params ["_min", "_max", "_formatting", "_isPercentage", "_drawRadius",
 
 private _ctrlSlider = _controlsGroup controlsGroupCtrl IDC_ROW_SLIDER;
 private _ctrlEdit = _controlsGroup controlsGroupCtrl IDC_ROW_EDIT;
-private _fnc_valueChanged = {};
 
 if (_drawRadius) then {
     if (_radiusCenter isEqualType objNull) then {
