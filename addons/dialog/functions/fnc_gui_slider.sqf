@@ -31,7 +31,7 @@ if (_drawRadius) then {
         [missionNamespace, "Draw3D", {
         _thisArgs params ["_ctrlSlider", "_center", "_color"];
 
-        if (isNull _ctrlSlider) exitWith { removeMissionEventHandler [_thisType, _thisID]; };
+        if (isNull _ctrlSlider || _center isEqualTo objNull) exitWith { removeMissionEventHandler [_thisType, _thisID]; };
         if (_center isEqualType objNull) then { _center = ASLToAGL getPosASL _center; };
 
         private _radius = sliderPosition _ctrlSlider;
