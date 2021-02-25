@@ -47,7 +47,7 @@ if (_drawRadius) then {
             private _phi = _i * _factor;
             private _posVector = [_radius * cos _phi, _radius * sin _phi, 0];
 
-            drawIcon3D ["\A3\ui_f\data\map\markers\military\dot_CA.paa", _color, _center vectorAdd _posVector, CIRCLE_DOTS_SCALE, CIRCLE_DOTS_SCALE, 0];
+            drawIcon3D ["\a3\ui_f\data\map\markers\military\dot_ca.paa", _color, _center vectorAdd _posVector, CIRCLE_DOTS_SCALE, CIRCLE_DOTS_SCALE, 0];
         };
     }, [_ctrlSlider, _radiusCenter, _radiusColor]] call CBA_fnc_addBISEventHandler;
 };
