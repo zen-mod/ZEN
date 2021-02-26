@@ -12,7 +12,7 @@
  * 5: Vehicle <OBJECT>
  *
  * Return Value:
- * None
+ * 0: Child Actions <ARRAY>
  *
  * Example:
  * ["", "", "", "", "", _vehicle] call zen_context_actions_fnc_getVehicleWeaponActions
