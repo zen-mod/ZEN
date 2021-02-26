@@ -160,7 +160,7 @@
     if (_shooters isEqualTo []) then {
         GVAR(forceFireCurators) = GVAR(forceFireCurators) - [_curatorClientID];
     } else {
-        // track which curators are forcing fire
+        // Track which curators are forcing the unit to fire
         GVAR(forceFireCurators) pushBackUnique _curatorClientID;
         [{
             params ["_args", "_pfhID"];
