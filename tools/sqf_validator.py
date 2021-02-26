@@ -7,7 +7,7 @@ import sys
 
 
 def valid_keyword_after_code(content, index):
-    for word in ["for", "do", "count", "each", "forEach", "else", "and", "not", "isEqualTo", "in", "call", "spawn", "execVM", "catch", "param", "select", "apply", "findIf", "remoteExec"]:
+    for word in ["for", "do", "count", "each", "forEach", "else", "and", "not", "isEqualTo", "isNotEqualTo", "in", "call", "spawn", "execVM", "catch", "param", "select", "apply", "findIf", "remoteExec"]:
         if content.find(word, index, index + len(word)) != -1:
             return True
 

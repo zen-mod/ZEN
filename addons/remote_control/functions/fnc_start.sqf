@@ -48,7 +48,7 @@ private _cameraPos = _cameraDir vectorMultiply ((_unit distance curatorCamera) m
         [{
             params ["_unit", "_vehicle", "_vehicleRole"];
 
-            if (alive _unit && {vehicle _unit != _vehicle || {!(assignedVehicleRole _unit isEqualTo _vehicleRole)}}) then {
+            if (alive _unit && {vehicle _unit != _vehicle || {assignedVehicleRole _unit isNotEqualTo _vehicleRole}}) then {
                 player remoteControl _unit;
                 _this set [1, vehicle _unit];
                 _this set [2, assignedVehicleRole _unit];

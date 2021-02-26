@@ -22,7 +22,7 @@ params ["_ctrlTree"];
 
 private _fnc_collapse = {
     // Collapsing [] path causes tree to disappear
-    if !(_this isEqualTo []) then {
+    if (_this isNotEqualTo []) then {
         _ctrlTree tvCollapse _this;
     };
 

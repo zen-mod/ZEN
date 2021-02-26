@@ -20,7 +20,7 @@ if (call EFUNC(common,isInScreenshotMode)) exitWith {};
 // The cursor position in the world
 private _pos = AGLtoASL screenToWorld getMousePosition;
 private _intersections = lineIntersectsSurfaces [getPosASL curatorCamera, _pos];
-if !(_intersections isEqualTo []) then {
+if (_intersections isNotEqualTo []) then {
     _pos = _intersections select 0 select 0;
 };
 

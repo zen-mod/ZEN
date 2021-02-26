@@ -62,7 +62,7 @@ private _target = [objNull, _logic] select _showDestination;
 // Delete task for no longer active owners
 private _ownersToRemove = _oldOwners - _newOwners;
 
-if !(_ownersToRemove isEqualTo []) then {
+if (_ownersToRemove isNotEqualTo []) then {
     [_taskID, _ownersToRemove] call BIS_fnc_deleteTask;
 };
 
