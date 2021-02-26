@@ -20,7 +20,7 @@
  * Public: No
  */
 
-_vehicle = _this select 5;
+params ["", "", "", "", "", "_vehicle"];
 
 private _cfgAmmo = configFile >> "CfgAmmo";
 private _cfgMagazines = configFile >> "CfgMagazines";
