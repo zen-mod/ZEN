@@ -29,15 +29,23 @@ private _HCLoad = [];
     };
 } forEach allPlayers;
 
-if (_HCIDs isEqualTo []) exitWith {objNull};
-
-// Count local groups for each HC
-{
-    private _HCIndex = _HCIDs find groupOwner _x;
-    if (_HCIndex > -1) then {
-        private _groupCount = _HCLoad select _HCIndex;
-        _HCLoad set [_HCIndex, _groupCount + 1];
+switch (count _HCIDs) do {
+    case (0): {
+        objNull
     };
-} forEach allGroups;
+    case (1): {
+        _HCIDs select 0;
+    };
+    default {
+        // Count local groups for each HC
+        {
+            private _HCIndex = _HCIDs find groupOwner _x;
+            if (_HCIndex > -1) then {
+                private _groupCount = _HCLoad select _HCIndex;
+                _HCLoad set [_HCIndex, _groupCount + 1];
+            };
+        } forEach allGroups;
 
-_HCs select (_HCLoad find selectMin _HCLoad)
+        _HCs select (_HCLoad find selectMin _HCLoad)
+    };
+};
