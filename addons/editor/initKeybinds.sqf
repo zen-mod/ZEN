@@ -107,6 +107,6 @@
 
         {openCuratorInterface} call CBA_fnc_execNextFrame;
 
-        true //handled
+        true // handled
     };
 }, {}, [DIK_R, [true, true, false]]] call CBA_fnc_addKeybind; // Default: CTRL + SHIFT + R
