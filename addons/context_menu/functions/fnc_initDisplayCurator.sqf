@@ -69,34 +69,31 @@ if (GVAR(enabled) == 1) exitWith {
         if (_button isEqualTo 1) then {
             GVAR(holdingRMB) = false;
 
-            // Right clicking with AI selected normally places waypoints
-            // Only open context menu when this is the case if overriding waypoints is enabled and the SHIFT key is held down
-            private _canPlaceWaypoints = SELECTED_WAYPOINTS isNotEqualTo []
-                || {SELECTED_GROUPS findIf {!isPlayer leader _x && {side _x != sideLogic}} != -1}
-                || {SELECTED_OBJECTS findIf {!isPlayer leader _x && {!isNull group _x} && {side group _x != sideLogic}} != -1};
+            if (GVAR(canContext) && {!EGVAR(common,selectPositionActive)} && {!call EFUNC(common,isPlacementActive)}) then {
+                // Right clicking with AI selected normally places waypoints
+                // Only open context menu when this is the case if overriding waypoints is enabled and the SHIFT key is held down
+                private _canPlaceWaypoints = SELECTED_WAYPOINTS isNotEqualTo []
+                    || {SELECTED_GROUPS findIf {!isPlayer leader _x && {side _x != sideLogic}} != -1}
+                    || {SELECTED_OBJECTS findIf {!isPlayer leader _x && {!isNull group _x} && {side group _x != sideLogic}} != -1};
 
-            if (
-                GVAR(canContext)
-                && {!EGVAR(common,selectPositionActive)}
-                && {!call EFUNC(common,isPlacementActive)}
-                && {!_canPlaceWaypoints || {GVAR(overrideWaypoints) && {!_shift}}}
-            ) then {
-                [] call FUNC(open);
+                if (!_canPlaceWaypoints || {GVAR(overrideWaypoints) && {!_shift}}) then {
+                    [] call FUNC(open);
 
-                // Clear selected entities if waypoint placement can occur and restore next frame
-                // Using entities tree as an alternative to the lack of a command to set curator selected entities
-                if (_canPlaceWaypoints) then {
-                    private _ctrlEntities = findDisplay IDD_RSCDISPLAYCURATOR displayCtrl IDC_RSCDISPLAYCURATOR_ENTITIES;
-                    private _selection = tvSelection _ctrlEntities;
-                    _ctrlEntities tvSetCurSel [-1];
+                    // Clear selected entities if waypoint placement can occur and restore next frame
+                    // Using entities tree as an alternative to the lack of a command to set curator selected entities
+                    if (_canPlaceWaypoints) then {
+                        private _ctrlEntities = findDisplay IDD_RSCDISPLAYCURATOR displayCtrl IDC_RSCDISPLAYCURATOR_ENTITIES;
+                        private _selection = tvSelection _ctrlEntities;
+                        _ctrlEntities tvSetCurSel [-1];
 
-                    [{
-                        params ["_ctrlEntities", "_selection"];
+                        [{
+                            params ["_ctrlEntities", "_selection"];
 
-                        {
-                            _ctrlEntities tvSetSelected [_x, true];
-                        } forEach _selection;
-                    }, [_ctrlEntities, _selection]] call CBA_fnc_execNextFrame;
+                            {
+                                _ctrlEntities tvSetSelected [_x, true];
+                            } forEach _selection;
+                        }, [_ctrlEntities, _selection]] call CBA_fnc_execNextFrame;
+                    };
                 };
             };
         };
