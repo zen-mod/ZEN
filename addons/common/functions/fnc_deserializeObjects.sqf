@@ -24,29 +24,9 @@ params [["_serializedData", [], [[]]], ["_centerPos", [0, 0, 0], [[]], [2, 3]], 
 _serializedData params [["_objectData", [], [[]]], ["_groupData", [], [[]]]];
 
 // Check for suitable Headless Client
-private _HCs = [];
-private _HCIDs = [];
-private _HCLoad = [];
-if (isServer && {_useHC}) then {
-    {
-        if (_x isKindOf "HeadlessClient_F") then {
-            _HCs pushBack _x;
-            _HCIDs pushBack owner _x;
-            _HCLoad pushBack 0;
-        };
-    } forEach allPlayers;
-};
-if (_HCIDs isNotEqualTo []) exitWith {
-    // Count HC local groups
-    {
-        private _HCIndex = _HCIDs find groupOwner _x;
-        if (_HCIndex > -1) then {
-            private _groupCount = _HCLoad select _HCIndex;
-            _HCLoad set [_HCIndex, _groupCount + 1];
-        };
-    } forEach allGroups;
-    private _minLoadHC = _HCs select (_HCLoad find selectMin _HCLoad);
-    [QEGVAR(common,deserializeObjects), _this, _minLoadHC] call CBA_fnc_targetEvent;
+private _HC = [] call FUNC(getFewestGroupsHC);
+if !(isNull _HC) exitWith {
+    [QEGVAR(common,deserializeObjects), _this, _HC] call CBA_fnc_targetEvent;
 };
 
 // Set center position to ground level over land and water level over the ocean
