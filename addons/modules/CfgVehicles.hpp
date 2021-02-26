@@ -21,6 +21,7 @@ class CfgVehicles {
     class ModuleArsenal_F: Module_F {
         scopeCurator = 1;
     };
+
     class ModuleTracers_F: Module_F {
         scopeCurator = 1;
     };
@@ -434,7 +435,7 @@ class CfgVehicles {
     class GVAR(moduleTracers): GVAR(moduleBase) {
         category = "Effects";
         displayName = "$STR_a3_cfgvehicles_moduletracers_f_0";
-        curatorInfoType = QGVAR(RscTracersHelper);
+        curatorInfoType = QGVAR(RscTracers);
         icon = "\a3\modules_f_curator\Data\iconTracers_ca.paa";
         portrait = "\a3\modules_f_curator\Data\portraitTracers_ca.paa";
     };

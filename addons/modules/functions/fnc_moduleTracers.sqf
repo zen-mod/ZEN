@@ -1,118 +1,129 @@
 #include "script_component.hpp"
 /*
  * Author: Ampersand
- * Zeus module function to shoot tracers.
+ * Zeus module function create a tracers effect.
  *
  * Arguments:
- * 0: Display <DISPLAY>
+ * 0: Logic <LOGIC>
+ * 1: Weapon <STRING>
+ * 2: Magazine <STRING>
+ * 3: Burst Delay <ARRAY>
+ * 4: Dispersion <NUMBER>
+ * 5: Target <OBJECT|ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [DISPLAY] call zen_modules_fnc_moduleTracers
+ * [LOGIC, _weapon, _magazine, _delay, _dispersion, _target] call zen_modules_fnc_moduleTracers
  *
  * Public: No
  */
 
- params ["_display"];
+params ["_logic", "_weapon", "_magazine", "_delay", "_dispersion", "_target"];
 
- private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
- _display closeDisplay IDC_CANCEL; // Close helper display
+// Broadcast tracer parameters so they available if the module is edited
+_logic setVariable [QGVAR(tracersParams), [_weapon, _magazine, _delay, _dispersion, _target], true];
 
- // Need to delay dialog creation by one frame to avoid weird input blocking bug
- [{
-    params ["_logic"];
+// Create random dispersion array from dispersion index
+_dispersion = [0.001, 0.01, 0.05, 0.15, 0.3] select _dispersion;
+_dispersion = [-_dispersion, 0, _dispersion];
 
-    // Default values: green tracers, 10-20s between bursts
-    private _tracersParams = _logic getVariable [QGVAR(tracersParams), [0, 10, 20, 2, "", "", objNull]];
-    _tracersParams params ["_side", "_min", "_max", "_dispersion", "_weapon", "_magazine", "_target"];
-    private _targetType = [3, 0] select (_target isEqualTo objNull);
+// Delete any already created gunner
+private _gunner = _logic getVariable [QGVAR(tracersGunner), objNull];
+deleteVehicle _gunner;
 
-    ["str_a3_cfgvehicles_moduletracers_f_0", [
-        [
-            "TOOLBOX",
-            "str_a3_cfgvehicles_moduletracers_f_arguments_side_0",
-            [_side, 1, 3, [
-                "str_a3_texturesources_green0",
-                "str_a3_texturesources_red0",
-                "str_a3_texturesources_yellow0"
-            ]],
-            true
-        ],
-        [
-            "SLIDER",
-            ["str_a3_cfgvehicles_moduletracers_f_arguments_min_0", LSTRING(Tracers_MinDelay_Tooltip)],
-            [0, 120, _min, 0],
-            true
-         ],
-        [
-            "SLIDER",
-            ["str_a3_cfgvehicles_moduletracers_f_arguments_max_0", LSTRING(Tracers_MaxDelay_Tooltip)],
-            [0, 120, _max, 0],
-            true
-        ],
-        [
-            "TOOLBOX",
-            LSTRING(Tracers_Dispersion),
-            [_dispersion, 1, 5, [
-                ELSTRING(common,VeryLow),
-                ELSTRING(common,Low),
-                ELSTRING(common,Medium),
-                ELSTRING(common,High),
-                ELSTRING(common,VeryHigh)
-            ]],
-            true
-        ],
-        [
-            "EDIT",
-            "str_a3_itemtype_category_weapon",
-            _weapon,
-            true
-        ],
-        [
-            "EDIT",
-            "str_a3_itemtype_category_magazine",
-            _magazine,
-            true
-        ],
-        [
-            "TOOLBOX",
-            ["str_a3_cfgvehicles_modulelivefeedsettarget_f_arguments_targettype_0", LSTRING(Tracers_TargetType_Tooltip)],
-            [_targetType, 1, 4, [
-                "str_a3_no_target",
-                ELSTRING(camera,DisplayName),
-                ELSTRING(common,Cursor),
-                LSTRING(Tracers_CurrentTarget)
-            ]],
-            true
-        ]
-    ], {
-        params ["_values", "_args"];
-        _args params ["_logic", "_target"];
-        _values params ["_side", "_min", "_max", "_dispersion", "_weapon", "_magazine", "_targetType"];
+_gunner = createAgent ["B_Soldier_F", [0, 0, 0], [], 0, "NONE"];
+_gunner attachTo [_logic, [0, 0, 0]];
+_gunner hideObjectGlobal true;
+_gunner allowDamage false;
+_gunner setCaptive true;
+_gunner switchMove "AmovPercMstpSrasWrflDnon";
+_gunner disableAI "ANIM";
+_gunner disableAI "MOVE";
+_gunner disableAI "TARGET";
+_gunner disableAI "AUTOTARGET";
+_gunner setBehaviour "CARELESS";
+_gunner setCombatMode "BLUE";
 
-        // select tracer target using cursor
-        if (_targetType == 2) exitWith {
-            [_logic, {
-                params ["_successful", "_logic", "_position", "_args"];
-                _args params ["_side", "_min", "_max", "_dispersion", "_weapon", "_magazine"];
+_gunner setUnitLoadout (configFile >> "EmptyLoadout");
+_gunner addWeapon _weapon;
+_gunner selectWeapon _weapon;
+_gunner addWeaponItem [_weapon, _magazine, true];
 
-                if (_successful) then {
-                    curatorMouseOver params ["_type", "_entity"];
+_logic setVariable [QGVAR(tracersGunner), _gunner];
 
-                    private _target = [_position, _entity] select (_type == "OBJECT");
+[{
+    params ["_args", "_pfhID"];
+    _args params ["_logic", "_gunner", "_target", "_weapon", "_delay", "_dispersion", "_nextBurstTime"];
 
-                    [QGVAR(moduleTracers), [_logic, _side, _min, _max, _dispersion, _weapon, _magazine, _target]] call CBA_fnc_serverEvent;
-                };
-            }, [_side, _min, _max, _dispersion, _weapon, _magazine], LSTRING(Tracers_TracersTarget)] call EFUNC(common,selectPosition);
+    if (!alive _logic || {!alive _gunner}) exitWith {
+        [_pfhID] call CBA_fnc_removePerFrameHandler;
+        deleteVehicle _gunner;
+    };
+
+    if (
+        CBA_MissionTime >= _nextBurstTime && {
+            (playableunits + switchableunits) findIf {_gunner distance _x < 100} == -1
+        }
+    ) then {
+        if (_target isEqualType "") then {
+            _target = call compile _target;
+        };
+        if (isNil "_target") then {_target = objNull};
+
+        private _vectorToTarget = [0, 0, 0];
+        private _targetPos = [0, 0, 0];
+        private _logicPos = getPosASLVisual _logic;
+        private _dir = 0;
+        private _pitch = 0;
+
+        // Sets vector to the target if it's specified
+        if (!(_target isEqualTo objNull)) then {
+            // Refresh target
+            if (_target isEqualType objNull) then {
+                _targetPos = getPosASLVisual _target;
+            } else {
+                _targetPos = _target;
+            };
+            _vectorToTarget = _logicPos vectorFromTo _targetPos;
+
+            // Vector randomization
+            _vectorToTarget = _vectorToTarget vectorAdd [random [-_dispersion, 0, _dispersion], random [-_dispersion, 0, _dispersion], random [-_dispersion, 0, _dispersion]];
+            _logic setVectorDirAndUp [_vectorToTarget, _vectorToTarget vectorCrossProduct [-(_vectorToTarget # 1), _vectorToTarget # 0, 0]];
+        } else {
+            // Random firing (old behavior)
+            _dir = -5 + random 10;
+            _pitch = 30 + random 60;
+            _gunner setdir (random 360);
+            [_gunner, _pitch, 0] call BIS_fnc_setpitchbank;
         };
 
-        if (_targetType == 1) then {
-            _target = AGLToASL positionCameraToWorld [0, 0, 0];
-        };
+        private _shotDelay = 0.05 + random 0.1;
+        private _burstLength = 0.1 + random 0.9;
 
-        [QGVAR(moduleTracers), [_logic, _side, _min, _max, _dispersion, _weapon, _magazine, _target]] call CBA_fnc_serverEvent;
+        [{
+            params ["_nextShotTime", "_logic", "_gunner", "_dispersion", "_weapon", "_shotDelay"];
 
-    }, {}, [_logic, _target], QGVAR(moduleTracers)] call EFUNC(dialog,create);
-}, _logic] call CBA_fnc_execNextFrame;
+            // Aim
+            if (!(_target isEqualTo objNull)) then {
+                _vectorToTarget = _vectorToTarget vectorAdd [random [-_dispersion, 0, _dispersion], random [-_dispersion, 0, _dispersion], random [-_dispersion, 0, _dispersion]];
+                _logic setVectorDirAndUp [_vectorToTarget, _vectorToTarget vectorCrossProduct [-(_vectorToTarget # 1), _vectorToTarget # 0, 0]];
+            } else {
+                _gunner setdir (direction _gunner + _dir);
+                [_gunner, _pitch, 0] call BIS_fnc_setpitchbank;
+            };
+
+            // Fire
+            if (CBA_MissionTime >= _nextShotTime) then {
+                _gunner setAmmo [_weapon, 999];
+                [_gunner, _weapon] call BIS_fnc_fire;
+                _logic setVariable [QGVAR(nextShotTime), CBA_MissionTime + _shotDelay];
+                _this set [0, CBA_missionTime + _shotDelay];
+            };
+
+        }, {}, [CBA_missionTime, _logic, _gunner, _dispersion, _weapon, _shotDelay], _burstLength] call CBA_fnc_waitUntilAndExecute;
+
+        _args set [6, CBA_MissionTime + _min + random _max];
+    };
+}, 0.1, [_logic, _gunner, _target, _weapon, _delay, _dispersion, 0]] call CBA_fnc_addPerFrameHandler;
