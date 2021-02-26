@@ -9,7 +9,6 @@ class RscControlsGroup;
 class RscControlsGroupNoScrollbars;
 
 class ctrlTree;
-class ctrlCombo;
 class ctrlListbox;
 class ctrlToolbox;
 class ctrlCheckbox;
@@ -1221,6 +1220,7 @@ class GVAR(RscTracers): GVAR(RscDisplay) {
                     h = POS_H(5);
                     rowHeight = POS_H(1.2);
                     columns[] = {0.05, 0.15};
+                    tooltipPerColumn = 0;
                 };
                 class MagazineLabel: WeaponLabel {
                     text = ECSTRING(common,Magazine);
