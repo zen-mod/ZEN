@@ -76,7 +76,7 @@ private _dynamicChildren = [];
                                         "a3\ui_f_jets\data\gui\cfg\hints\weaponsmissiles_ca.paa"
                                     };
                                     case ("shotIlluminating"): {
-                                        "C:\PDrive\a3\ui_f\data\GUI\Cfg\Hints\Flares_CA.paa"
+                                        "\a3\ui_f\data\gui\cfg\hints\flares_ca.paa"
                                     };
                                     default {
                                         QPATHTOF(ui\ammo_ca.paa)
