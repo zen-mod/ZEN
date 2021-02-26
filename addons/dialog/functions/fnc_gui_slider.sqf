@@ -36,7 +36,7 @@ if (_drawRadius) then {
         };
 
         if (_center isEqualType objNull) then {
-            _center = ASLToAGL getPosASL _center;
+            _center = ASLToAGL getPosASLVisual _center;
         };
 
         private _radius = sliderPosition _ctrlSlider;
