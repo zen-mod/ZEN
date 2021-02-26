@@ -31,8 +31,13 @@ if (_drawRadius) then {
     [missionNamespace, "Draw3D", {
         _thisArgs params ["_ctrlSlider", "_center", "_color"];
 
-        if (isNull _ctrlSlider || _center isEqualTo objNull) exitWith { removeMissionEventHandler [_thisType, _thisID]; };
-        if (_center isEqualType objNull) then { _center = ASLToAGL getPosASL _center; };
+        if (isNull _ctrlSlider || {_center isEqualTo objNull}) exitWith {
+            removeMissionEventHandler [_thisType, _thisID];
+        };
+
+        if (_center isEqualType objNull) then {
+            _center = ASLToAGL getPosASL _center;
+        };
 
         private _radius = sliderPosition _ctrlSlider;
         private _count = CIRCLE_DOTS_MIN max floor (2 * pi * _radius / CIRCLE_DOTS_SPACING);
