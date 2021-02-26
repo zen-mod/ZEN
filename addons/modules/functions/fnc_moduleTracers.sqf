@@ -103,14 +103,6 @@ _logic setVariable [QGVAR(tracersGunner), _gunner];
         [{
             params ["_nextShotTime", "_logic", "_gunner", "_dispersion", "_weapon", "_shotDelay", "_vectorToTarget"];
 
-            // Aim
-            if (!(_target isEqualTo objNull)) then {
-                _vectorToTarget = _vectorToTarget vectorAdd [random _dispersion, random _dispersion, random _dispersion];
-                _logic setVectorDirAndUp [_vectorToTarget, _vectorToTarget vectorCrossProduct [-(_vectorToTarget # 1), _vectorToTarget # 0, 0]];
-            } else {
-                _gunner setdir (direction _gunner + _dir);
-                [_gunner, _pitch, 0] call BIS_fnc_setpitchbank;
-            };
 
             // Fire
             if (CBA_MissionTime >= _nextShotTime) then {
