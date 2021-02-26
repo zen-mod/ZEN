@@ -10,12 +10,13 @@
  * 3: Burst Delay <ARRAY>
  * 4: Dispersion <NUMBER>
  * 5: Target <OBJECT|ARRAY>
+ * 6: Vector To Target <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [LOGIC, _weapon, _magazine, _delay, _dispersion, _target] call zen_modules_fnc_moduleTracers
+ * [LOGIC, _weapon, _magazine, _delay, _dispersion, _target, _vectorToTarget] call zen_modules_fnc_moduleTracers
  *
  * Public: No
  */
