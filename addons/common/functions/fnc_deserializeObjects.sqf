@@ -210,7 +210,7 @@ private _fnc_deserializeVehicle = {
         _vehicle setVehicleCargo (_x call _fnc_deserializeObject);
     } forEach _vehicleCargo;
 
-    if !(_slingLoadedObject isEqualTo []) then {
+    if (_slingLoadedObject isNotEqualTo []) then {
         _vehicle setSlingLoad (_slingLoadedObject call _fnc_deserializeObject);
     };
 

@@ -29,7 +29,7 @@
     };
 
     // Initially hide the custom compositions panel if the compositions tree is not active
-    if !(GETMVAR(RscDisplayCurator_sections,[]) isEqualTo [1, 4]) then {
+    if (GETMVAR(RscDisplayCurator_sections,[]) isNotEqualTo [1, 4]) then {
         private _ctrlPanel = _display displayCtrl IDC_PANEL_GROUP;
         _ctrlPanel ctrlShow false;
     };
