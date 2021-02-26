@@ -28,7 +28,7 @@ private _ctrlSlider = _controlsGroup controlsGroupCtrl IDC_ROW_SLIDER;
 private _ctrlEdit = _controlsGroup controlsGroupCtrl IDC_ROW_EDIT;
 
 if (_drawRadius) then {
-        [missionNamespace, "Draw3D", {
+    [missionNamespace, "Draw3D", {
         _thisArgs params ["_ctrlSlider", "_center", "_color"];
 
         if (isNull _ctrlSlider || _center isEqualTo objNull) exitWith { removeMissionEventHandler [_thisType, _thisID]; };
