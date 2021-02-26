@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Ampersand
- * Dynamically creates child actions to select weapon for turrets with multiple weapons/muzzles/magazines.
+ * Dynamically creates child actions to select a weapon for turrets with multiple weapons/muzzles/magazines.
  *
  * Arguments from CfgContext insertChildren:
  * 0: None <OBJECT>
