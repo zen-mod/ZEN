@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Ampersand
- * Dynamically creates child actions to select weapon for turrets with multiple weapons/muzzles/magazines.
+ * Dynamically creates child actions to select a weapon for turrets with multiple weapons/muzzles/magazines.
  *
  * Arguments from CfgContext insertChildren:
  * 0: None <OBJECT>
@@ -73,10 +73,10 @@ private _dynamicChildren = [];
                                         "\a3\ui_f_jets\Data\GUI\Cfg\Hints\WeaponsGuns_ca.paa"
                                     };
                                     case ("shotMissile"): {
-                                        "P:\a3\ui_f_jets\Data\GUI\Cfg\Hints\WeaponsMissiles_ca.paa"
+                                        "a3\ui_f_jets\data\gui\cfg\hints\weaponsmissiles_ca.paa"
                                     };
                                     case ("shotIlluminating"): {
-                                        "C:\PDrive\a3\ui_f\data\GUI\Cfg\Hints\Flares_CA.paa"
+                                        "\a3\ui_f\data\gui\cfg\hints\flares_ca.paa"
                                     };
                                     default {
                                         QPATHTOF(ui\ammo_ca.paa)
