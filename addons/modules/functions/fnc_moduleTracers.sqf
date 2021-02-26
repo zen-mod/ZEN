@@ -20,14 +20,14 @@
  * Public: No
  */
 
-params ["_logic", "_weapon", "_magazine", "_delay", "_dispersion", "_target"];
+params ["_logic", "_weapon", "_magazine", "_delay", "_dispersion", "_target", "_vectorToTarget"];
 
 // Broadcast tracer parameters so they available if the module is edited
 _logic setVariable [QGVAR(tracersParams), [_weapon, _magazine, _delay, _dispersion, _target], true];
 
 // Create random dispersion array from dispersion index
 _dispersion = [0.001, 0.01, 0.05, 0.15, 0.3] select _dispersion;
-_dispersion = [-_dispersion, 0, _dispersion];
+_dispersion = _dispersion;
 
 // Delete any already created gunner
 private _gunner = _logic getVariable [QGVAR(tracersGunner), objNull];
@@ -89,7 +89,7 @@ _logic setVariable [QGVAR(tracersGunner), _gunner];
             _vectorToTarget = _logicPos vectorFromTo _targetPos;
 
             // Vector randomization
-            _vectorToTarget = _vectorToTarget vectorAdd [random [-_dispersion, 0, _dispersion], random [-_dispersion, 0, _dispersion], random [-_dispersion, 0, _dispersion]];
+            _vectorToTarget = _vectorToTarget vectorAdd [random _dispersion, random _dispersion, random _dispersion];
             _logic setVectorDirAndUp [_vectorToTarget, _vectorToTarget vectorCrossProduct [-(_vectorToTarget # 1), _vectorToTarget # 0, 0]];
         } else {
             // Random firing (old behavior)
@@ -103,11 +103,11 @@ _logic setVariable [QGVAR(tracersGunner), _gunner];
         private _burstLength = 0.1 + random 0.9;
 
         [{
-            params ["_nextShotTime", "_logic", "_gunner", "_dispersion", "_weapon", "_shotDelay"];
+            params ["_nextShotTime", "_logic", "_gunner", "_dispersion", "_weapon", "_shotDelay", "_vectorToTarget"];
 
             // Aim
             if (!(_target isEqualTo objNull)) then {
-                _vectorToTarget = _vectorToTarget vectorAdd [random [-_dispersion, 0, _dispersion], random [-_dispersion, 0, _dispersion], random [-_dispersion, 0, _dispersion]];
+                _vectorToTarget = _vectorToTarget vectorAdd [random _dispersion, random _dispersion, random _dispersion];
                 _logic setVectorDirAndUp [_vectorToTarget, _vectorToTarget vectorCrossProduct [-(_vectorToTarget # 1), _vectorToTarget # 0, 0]];
             } else {
                 _gunner setdir (direction _gunner + _dir);
@@ -122,8 +122,8 @@ _logic setVariable [QGVAR(tracersGunner), _gunner];
                 _this set [0, CBA_missionTime + _shotDelay];
             };
 
-        }, {}, [CBA_missionTime, _logic, _gunner, _dispersion, _weapon, _shotDelay], _burstLength] call CBA_fnc_waitUntilAndExecute;
+        }, {}, [CBA_missionTime, _logic, _gunner, _dispersion, _weapon, _shotDelay, _vectorToTarget], _burstLength] call CBA_fnc_waitUntilAndExecute;
 
-        _args set [6, CBA_MissionTime + _min + random _max];
+        _args set [6, CBA_MissionTime + random _delay];
     };
 }, 0.1, [_logic, _gunner, _target, _weapon, _delay, _dispersion, 0]] call CBA_fnc_addPerFrameHandler;
