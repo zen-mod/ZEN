@@ -3,7 +3,7 @@
  * Author: Ampersand
  * Dynamically creates child actions to select weapon for turrets with multiple weapons/muzzles/magazines.
  *
- * Arguments:
+ * Arguments from CfgContext insertChildren:
  * 0: None <OBJECT>
  * 1: None <OBJECT>
  * 2: None <OBJECT>
@@ -15,7 +15,7 @@
  * None
  *
  * Example:
- * [_vehicle] call zen_context_actions_fnc_getVehicleWeaponActions
+ * ["", "", "", "", "", _vehicle] call zen_context_actions_fnc_getVehicleWeaponActions
  *
  * Public: No
  */
