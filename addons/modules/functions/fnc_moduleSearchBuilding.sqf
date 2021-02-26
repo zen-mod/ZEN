@@ -48,4 +48,4 @@ if (isPlayer _unit) exitWith {
     };
 
     [group _unit, _building] call EFUNC(ai,searchBuilding);
-}, [], LSTRING(SearchBuilding)] call EFUNC(common,selectPosition);
+}, [], ELSTRING(ai,SearchBuilding)] call EFUNC(common,selectPosition);

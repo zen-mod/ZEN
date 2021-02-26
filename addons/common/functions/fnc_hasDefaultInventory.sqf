@@ -38,52 +38,18 @@ if (_object isKindOf "CAManBase") exitWith {
     _current isEqualTo _default
 };
 
-scopeName "Main";
-
 // For all other objects, compare current inventory against config defined one for any missing or extra items
-private _config = configFile >> "CfgVehicles" >> typeOf _object;
+private _current = [getItemCargo _object, getWeaponCargo _object, getMagazineCargo _object, getBackpackCargo _object];
+private _default = [_object] call FUNC(getDefaultInventory);
 
+// Sort inventory arrays, their contents can be indentical but the arrays may be different
+// depending on the order they were added to the container
 {
-    _x params ["_inventory", "_subConfig", "_entry"];
-    _inventory params ["_types", "_counts"];
-
-    // Config may not be in config case, use lower case for comparisons
-    _types = _types apply {toLower _x};
-
     {
-        private _index = _types find toLower getText (_x >> _entry);
+        {
+            _x sort true;
+        } forEach _x;
+    } forEach _x;
+} forEach [_current, _default];
 
-        // Exit if items of this type are not in the current inventory
-        if (_index == -1) then {
-            false breakOut "Main";
-        };
-
-        private _count = (_counts select _index) - getNumber (_x >> "count");
-
-        // Exit if the there is not enough of the item in the current inventory
-        if (_count < 0) then {
-            false breakOut "Main";
-        };
-
-        // Remove the item if there are none remaining in the inventory
-        // Otherwise, update the count in the current inventory
-        if (_count == 0) then {
-            _types  deleteAt _index;
-            _counts deleteAt _index;
-        } else {
-            _counts set [_index, _count];
-        };
-    } forEach configProperties [_config >> _subConfig, "isClass _x"];
-
-    // Exit if the current inventory has extra items compared to config defined one
-    if !(_types isEqualTo []) then {
-        false breakOut "Main";
-    };
-} forEach [
-    [getItemCargo _object,     "TransportItems",     "name"],
-    [getWeaponCargo _object,   "TransportWeapons",   "weapon"],
-    [getMagazineCargo _object, "TransportMagazines", "magazine"],
-    [getBackpackCargo _object, "TransportBackpacks", "backpack"]
-];
-
-true // Unable to find any differences between current and config defined inventory
+_current isEqualTo _default

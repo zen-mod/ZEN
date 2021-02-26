@@ -44,7 +44,7 @@ private _ctrlListAnimations = _display displayCtrl IDC_LIST_ANIMATIONS;
 
 // Add items to textures list
 private _ctrlListTextures = _display displayCtrl IDC_LIST_TEXTURES;
-private _sourcesConfig = configFile >> "CfgVehicles" >> typeOf GVAR(center) >> "textureSources";
+private _sourcesConfig = configOf GVAR(center) >> "textureSources";
 private _currentTextures = getObjectTextures GVAR(center) apply {toLower _x};
 {
     _x params ["_configName", "_displayName"];

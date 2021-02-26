@@ -17,7 +17,7 @@
 
 params ["_logic"];
 
-private _index = getNumber (configFile >> "CfgVehicles" >> typeOf _logic >> QGVAR(index));
+private _index = getNumber (configOf _logic >> QGVAR(index));
 private _function = GVAR(modulesList) param [_index, []] param [3, {}];
 
 private _position = getPosASL _logic;

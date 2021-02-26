@@ -46,5 +46,5 @@ if (count _turretPaths == 1) exitWith {
 
 // More than one turret path or none were found, situation is ambiguous
 // Return the config defined turret path for this pylon
-private _pylonConfig = configFile >> "CfgVehicles" >> typeOf _vehicle >> "Components" >> "TransportPylonsComponent" >> "Pylons";
+private _pylonConfig = configOf _vehicle >> "Components" >> "TransportPylonsComponent" >> "Pylons";
 getArray (configProperties [_pylonConfig, "isClass _x"] select _pylonIndex >> "turret")

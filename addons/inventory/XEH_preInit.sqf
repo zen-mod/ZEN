@@ -6,9 +6,6 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-// Disable CBA inventory attribute preload
-uiNamespace setVariable ["cba_ui_curatorItemCache", []];
-
 // Add inventory button to attribute display
 [
     "Object",
@@ -17,7 +14,7 @@ uiNamespace setVariable ["cba_ui_curatorItemCache", []];
         [_entity] call FUNC(configure);
     },
     {
-        alive _entity && {getNumber (configFile >> "CfgVehicles" >> typeOf _entity >> "maximumLoad") > 0}
+        alive _entity && {getNumber (configOf _entity >> "maximumLoad") > 0}
     }
 ] call EFUNC(attributes,addButton);
 

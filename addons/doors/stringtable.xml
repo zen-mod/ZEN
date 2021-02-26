@@ -10,6 +10,9 @@
             <Japanese>ドア設定</Japanese>
             <Korean>문 설정</Korean>
         </Key>
+        <Key ID="STR_ZEN_Doors_DoorState">
+            <English>Door State</English>
+        </Key>
         <Key ID="STR_ZEN_Doors_NoBuilding">
             <English>Place on a building</English>
             <French>Placer sur un bâtiment</French>

@@ -1389,10 +1389,10 @@
             <Japanese>実行コード</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleExecuteCode_Args_Tooltip">
-            <English>This code will be passed the following arguments:\n0: Attached Object (objNull if none)\n1: Module Position ASL</English>
-            <German>Dieser Code wird mit folgenden Argumenten übergeben:\n0: Angehängtes Objekt (objNull wenn keins) \n1: Modulposition ASL</German>
-            <Polish>Ten kod będzie miał dostępne następujące parametry:\n0: Przyczepiony obiekt (objNull jeśli żaden)\n1: Pozycja modułu ASL</Polish>
-            <Japanese>このコードは引数に渡されます\n0: 取り付けされたオブジェクト (無ければ objNull)\n:1: モジュールの位置は ASL です。</Japanese>
+            <English>This code will be passed the following arguments:\n0: Module Position ASL\n1: Attached Object (objNull if none)</English>
+            <German>Dieser Code wird mit folgenden Argumenten übergeben:\n0: Modulposition ASL\n1: Angehängtes Objekt (objNull wenn keins)</German>
+            <Polish>Ten kod będzie miał dostępne następujące parametry:\n0: Pozycja modułu ASL\n1: Przyczepiony obiekt (objNull jeśli żaden)</Polish>
+            <Japanese>このコードは引数に渡されます\n0: モジュールの位置は ASL です\n:1: 取り付けされたオブジェクト (無ければ objNull)</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleExecuteCode_Disabled">
             <English>Code execution by Zeus is disabled in this mission</English>
@@ -1724,6 +1724,12 @@
             <Polish>Dodaj wyposażenie</Polish>
             <Russian>Добавить снаряжение</Russian>
         </Key>
+        <Key ID="STR_ZEN_Modules_RemoveNVG">
+            <English>Remove NVGs</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_RemoveNVG_Tooltip">
+            <English>Remove any currently equipped Night Vision Goggles.</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleToggleFlashlights">
             <English>Toggle Flashlights</English>
             <German>Ändere Taschenlampen</German>
@@ -1946,6 +1952,15 @@
             <Japanese>完了時に削除</Japanese>
             <Korean>획득 후 제거</Korean>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ActionType">
+            <English>Action Type</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateIntel_HoldAction">
+            <English>Hold Action</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleCreateIntel_InteractionMenu">
+            <English>ACE Interaction Menu</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ActionText">
             <English>Action Text</English>
             <German>Aktionstext</German>
@@ -2113,11 +2128,6 @@
         <Key ID="STR_ZEN_Modules_RotateObject">
             <English>Rotate Object</English>
             <Polish>Obróć obiekt</Polish>
-        </Key>
-        <Key ID="STR_ZEN_Modules_SearchBuilding">
-            <English>Search Building</English>
-            <German>Gebäude durchsuchen</German>
-            <Polish>Przeszukaj budynek</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_AtomicBomb">
             <English>Atomic Bomb</English>

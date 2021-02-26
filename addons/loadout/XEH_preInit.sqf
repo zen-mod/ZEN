@@ -14,7 +14,7 @@ PREP_RECOMPILE_END;
         [_entity] call FUNC(configure);
     },
     {
-        alive _entity && {!(_entity call FUNC(getWeaponList) isEqualTo [])}
+        alive _entity && {_entity call FUNC(getWeaponList) isNotEqualTo []}
     }
 ] call EFUNC(attributes,addButton);
 

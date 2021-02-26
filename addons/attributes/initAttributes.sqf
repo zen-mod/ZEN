@@ -66,7 +66,7 @@
         } forEach call EFUNC(common,getSelectedVehicles);
     },
     {fuel _entity},
-    {alive _entity && {getNumber (configFile >> "CfgVehicles" >> typeOf _entity >> "fuelCapacity") > 0}}
+    {alive _entity && {getNumber (configOf _entity >> "fuelCapacity") > 0}}
 ] call FUNC(addAttribute);
 
 [
@@ -194,7 +194,7 @@
         [QEGVAR(common,setPlateNumber), [_entity, _value], _entity] call CBA_fnc_targetEvent;
     },
     {getPlateNumber _entity},
-    {alive _entity && {isClass (configFile >> "CfgVehicles" >> typeOf _entity >> "PlateInfos")}}
+    {alive _entity && {isClass (configOf _entity >> "PlateInfos")}}
 ] call FUNC(addAttribute);
 
 [
@@ -538,6 +538,23 @@
         } forEach SELECTED_WAYPOINTS;
     },
     {str waypointLoiterRadius _entity},
+    {waypointType _entity == "LOITER"}
+] call FUNC(addAttribute);
+
+[
+    "Waypoint",
+    ["STR_3DEN_Waypoint_Attribute_LoiterAltitude_displayname", "STR_3DEN_Waypoint_Attribute_LoiterAltitude_tooltip"],
+    QGVAR(edit),
+    nil,
+    {
+        private _altitude = parseNumber _value;
+        {
+            if (waypointType _x == "LOITER") then {
+                _x setWaypointLoiterAltitude _altitude;
+            };
+        } forEach SELECTED_WAYPOINTS;
+    },
+    {str waypointLoiterAltitude _entity},
     {waypointType _entity == "LOITER"}
 ] call FUNC(addAttribute);
 

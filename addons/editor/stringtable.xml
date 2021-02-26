@@ -159,6 +159,9 @@
             <Polish>Wysadza pasażerów ze wszystkich wybranych pojazdów. Jeżeli pojazd jest w powietrzu, pasażerowie dostaną spadochron.\nJednostki zostaną wysadzone jedna po drugiej (nie wszystkie na raz).</Polish>
             <Japanese>選択された全車両から後部座席のユニットを脱出させます。もし車両が飛行中の場合はパラシュートが与えられます。\nなお脱出は一人づつ降りるようになっています (即時ではなく数秒づつ)。</Japanese>
         </Key>
+        <Key ID="STR_ZEN_Editor_UnloadViV_Description">
+            <English>Unloads all selected vehicle-in-vehicle cargo and carriers. A vehicle that is both cargo and carrying cargo will only be unloaded from its carrier.</English>
+        </Key>
         <Key ID="STR_ZEN_Editor_DeployCountermeasures">
             <English>Deploy Countermeasures</English>
             <French>Déployer des contre-mesures</French>
@@ -218,6 +221,12 @@
             <German>Schaltet die Sichtbarkeit von bearbeitbaren Symbolen um. Nützlich um temporär die Leistung zu verbessern oder für die Übersichtlichkeit.</German>
             <Japanese>全編集可アイコンの視認性を切り替えます。一時的な処理軽減や整理に使用できます。</Japanese>
             <Polish>Przełącza widoczność wszsytkich ustawionych ikon, przydatne by tymczasowo zmniejszyć lag, bądź niepotrzebne zaśmiecenie ekranu gdy znajduje się na nim dużo ikon.</Polish>
+        </Key>
+        <Key ID="STR_ZEN_Editor_ReloadDisplay">
+            <English>Reload Display</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_ReloadDisplay_Description">
+            <English>Reloads the Zeus interface. Can be used to fix lockup issues.</English>
         </Key>
     </Package>
 </Project>

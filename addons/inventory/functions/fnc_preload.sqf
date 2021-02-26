@@ -46,7 +46,7 @@ private _cfgWeapons = configFile >> "CfgWeapons";
 {
     if (getNumber (_x >> "scope") == 2) then {
         private _configName = configName _x;
-        private _itemType   = getNumber (_x >> "ItemInfo" >> "type");
+        private _itemType = getNumber (_x >> "ItemInfo" >> "type");
         private _simulation = getText (_x >> "simulation");
 
         switch (true) do {
@@ -55,65 +55,64 @@ private _cfgWeapons = configFile >> "CfgWeapons";
                 _itemsList select _index pushBackUnique _configName;
             };
             case (_itemType == TYPE_HEADGEAR): {
-                _itemsList select 8 pushBackUnique _configName;
+                _itemsList select ITEMS_HEADGEAR pushBackUnique _configName;
             };
             case (_itemType == TYPE_UNIFORM): {
-                _itemsList select 9 pushBackUnique _configName;
+                _itemsList select ITEMS_UNIFORMS pushBackUnique _configName;
             };
             case (_itemType == TYPE_VEST): {
-                _itemsList select 10 pushBackUnique _configName;
+                _itemsList select ITEMS_VESTS pushBackUnique _configName;
             };
             case (_simulation == "NVGoggles"): {
-                _itemsList select 13 pushBackUnique _configName;
+                _itemsList select ITEMS_NVGS pushBackUnique _configName;
             };
             case (_simulation == "Binocular" || {_simulation == "Weapon" && {getNumber (_x >> "type") == TYPE_BINOCULAR_AND_NVG}}): {
-                _itemsList select 14 pushBackUnique _configName;
+                _itemsList select ITEMS_BINOCULARS pushBackUnique _configName;
             };
             case (_simulation == "ItemMap"): {
-                _itemsList select 15 pushBackUnique _configName;
+                _itemsList select ITEMS_MAP pushBackUnique _configName;
             };
             case (_simulation == "ItemCompass"): {
-                _itemsList select 16 pushBackUnique _configName;
+                _itemsList select ITEMS_COMPASS pushBackUnique _configName;
             };
             case (_simulation == "ItemRadio"): {
-                _itemsList select 17 pushBackUnique _configName;
+                _itemsList select ITEMS_RADIO pushBackUnique _configName;
             };
             case (_simulation == "ItemWatch"): {
-                _itemsList select 18 pushBackUnique _configName;
+                _itemsList select ITEMS_WATCH pushBackUnique _configName;
             };
-            case (_simulation == "ItemGPS"): {
-                _itemsList select 19 pushBackUnique _configName;
-            };
-            case (_itemType == TYPE_UAV_TERMINAL): {
-                _itemsList select 19 pushBackUnique _configName;
+            case (_simulation == "ItemGPS" || {_itemType == TYPE_UAV_TERMINAL}): {
+                _itemsList select ITEMS_COMMS pushBackUnique _configName;
             };
             case (isClass (_x >> "WeaponSlotsInfo") && {getNumber (_x >> "type") != TYPE_BINOCULAR_AND_NVG}): {
                 switch (getNumber (_x >> "type")) do {
                     case TYPE_WEAPON_PRIMARY: {
-                        _itemsList select 0 pushBackUnique (_configName call BIS_fnc_baseWeapon);
+                        _itemsList select ITEMS_PRIMARY pushBackUnique (_configName call BIS_fnc_baseWeapon);
                     };
                     case TYPE_WEAPON_SECONDARY: {
-                        _itemsList select 1 pushBackUnique (_configName call BIS_fnc_baseWeapon);
+                        _itemsList select ITEMS_SECONDARY pushBackUnique (_configName call BIS_fnc_baseWeapon);
                     };
                     case TYPE_WEAPON_HANDGUN: {
-                        _itemsList select 2 pushBackUnique (_configName call BIS_fnc_baseWeapon);
+                        _itemsList select ITEMS_HANDGUN pushBackUnique (_configName call BIS_fnc_baseWeapon);
                     };
                 };
             };
             case (_itemType in [TYPE_MUZZLE, TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_BIPOD] && {_configName isKindOf ["CBA_MiscItem", _cfgWeapons]});
             case (_itemType in [TYPE_FIRST_AID_KIT, TYPE_MEDIKIT, TYPE_TOOLKIT] || {_simulation == "ItemMineDetector"}): {
-                _itemsList select 22 pushBackUnique _configName;
+                _itemsList select ITEMS_MISC pushBackUnique _configName;
             };
         };
     };
 } forEach configProperties [_cfgWeapons, "isClass _x"];
 
 private _grenadeList = [];
+
 {
     _grenadeList append getArray (_cfgWeapons >> "Throw" >> _x >> "magazines");
 } forEach getArray (_cfgWeapons >> "Throw" >> "muzzles");
 
 private _putList = [];
+
 {
     _putList append getArray (_cfgWeapons >> "Put" >> _x >> "magazines");
 } forEach getArray (_cfgWeapons >> "Put" >> "muzzles");
@@ -128,13 +127,13 @@ private _putList = [];
                 && {!(_configName in _grenadeList)}
                 && {!(_configName in _putList)}
             ): {
-                _itemsList select 7 pushBackUnique _configName;
+                _itemsList select ITEMS_MAGAZINES pushBackUnique _configName;
             };
             case (_configName in _grenadeList): {
-                _itemsList select 20 pushBackUnique _configName;
+                _itemsList select ITEMS_THROW pushBackUnique _configName;
             };
             case (_configName in _putList): {
-                _itemsList select 21 pushBackUnique _configName;
+                _itemsList select ITEMS_PUT pushBackUnique _configName;
             };
         };
     };
@@ -142,13 +141,13 @@ private _putList = [];
 
 {
     if (getNumber (_x >> "scope") == 2 && {getNumber (_x >> "isBackpack") == 1}) then {
-        _itemsList select 11 pushBackUnique configName _x;
+        _itemsList select ITEMS_BACKPACKS pushBackUnique configName _x;
     };
 } forEach configProperties [configFile >> "CfgVehicles", "isClass _x"];
 
 {
     if (getNumber (_x >> "scope") == 2) then {
-        _itemsList select 12 pushBackUnique configName _x;
+        _itemsList select ITEMS_GOGGLES pushBackUnique configName _x;
     };
 } forEach configProperties [configFile >> "CfgGlasses", "isClass _x"];
 
