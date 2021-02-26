@@ -40,7 +40,7 @@ if (_drawRadius) then {
         };
 
         private _radius = sliderPosition _ctrlSlider;
-        private _count = CIRCLE_DOTS_MIN max floor (2 * pi * _radius / CIRCLE_DOTS_SPACING);
+        private _count = CIRCLE_DOTS_MIN max floor (2 * pi * sqrt _radius / CIRCLE_DOTS_SPACING);
         private _factor = 360 / _count;
 
         for "_i" from 0 to (_count - 1) do {
