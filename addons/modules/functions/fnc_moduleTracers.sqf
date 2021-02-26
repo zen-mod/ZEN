@@ -93,10 +93,8 @@ _logic setVariable [QGVAR(tracersGunner), _gunner];
             _logic setVectorDirAndUp [_vectorToTarget, _vectorToTarget vectorCrossProduct [-(_vectorToTarget # 1), _vectorToTarget # 0, 0]];
         } else {
             // Random firing (old behavior)
-            _dir = -5 + random 10;
-            _pitch = 30 + random 60;
-            _gunner setdir (random 360);
-            [_gunner, _pitch, 0] call BIS_fnc_setpitchbank;
+            _logic setdir (random 360);
+            [_gunner, 30 + random 60, 0] call BIS_fnc_setpitchbank;
         };
 
         private _shotDelay = 0.05 + random 0.1;
