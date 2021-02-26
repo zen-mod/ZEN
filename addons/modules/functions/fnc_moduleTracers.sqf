@@ -101,18 +101,26 @@ _logic setVariable [QGVAR(tracersGunner), _gunner];
         private _burstLength = 0.1 + random 0.9;
 
         [{
-            params ["_nextShotTime", "_logic", "_gunner", "_dispersion", "_weapon", "_shotDelay", "_vectorToTarget"];
+            params ["_args", "_delay"];
+            _args params ["", "", "_gunner", "", "", "", "_vectorToTarget"];
+            _vectorToTarget isEqualTo [0, 0, 0] || {
+                // Wait until on-target before starting burst
+                ((vectorDirVisual _gunner) vectorDotProduct (vectorNormalized _vectorToTarget)) > 0.99
+            }
+        }, {
+            params ["_args", "_delay"];
+            [{
+                params ["_nextShotTime", "_logic", "_gunner", "_dispersion", "_weapon", "_shotDelay", "_vectorToTarget"];
 
-
-            // Fire
-            if (CBA_MissionTime >= _nextShotTime) then {
-                _gunner setAmmo [_weapon, 999];
-                [_gunner, _weapon] call BIS_fnc_fire;
-                _logic setVariable [QGVAR(nextShotTime), CBA_MissionTime + _shotDelay];
-                _this set [0, CBA_missionTime + _shotDelay];
-            };
-
-        }, {}, [CBA_missionTime, _logic, _gunner, _dispersion, _weapon, _shotDelay, _vectorToTarget], _burstLength] call CBA_fnc_waitUntilAndExecute;
+                // Fire
+                if (CBA_MissionTime >= _nextShotTime) then {
+                    _gunner setAmmo [_weapon, 999];
+                    [_gunner, _weapon] call BIS_fnc_fire;
+                    //_logic setVariable [QGVAR(nextShotTime), CBA_MissionTime + _shotDelay];
+                    _this set [0, CBA_missionTime + _shotDelay];
+                };
+            }, {}, _args, _delay] call CBA_fnc_waitUntilAndExecute;
+        }, [[CBA_missionTime, _logic, _gunner, _dispersion, _weapon, _shotDelay, _vectorToTarget], _burstLength]] call CBA_fnc_waitUntilAndExecute;
 
         _args set [6, CBA_MissionTime + random _delay];
     };
