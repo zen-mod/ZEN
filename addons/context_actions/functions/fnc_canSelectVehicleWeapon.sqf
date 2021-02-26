@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Ampersand
- * Checks if a vehicle has a turret with multiple weaopns to choose between.
+ * Checks if a vehicle has a turret with multiple weapons to choose from.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
