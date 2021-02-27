@@ -21,7 +21,6 @@ if (typeName _compositions isEqualTo "ARRAY") then {
         if (isNil "_categoryHash") then {
             _categoryHash = createHashMapFromArray [[_name, _data]];
             _newCompositions set [_category, _categoryHash];
-
         } else {
             _categoryHash set [_name, _data];
         };
