@@ -21,7 +21,7 @@
  * Public: No
  */
 
-params ["_logic", "_weapon", "_magazine", "_delay", "_dispersion", "_target", "_vectorToTarget"];
+params ["_logic", "_weapon", "_magazine", "_delay", "_dispersion", "_target"];
 
 // Broadcast tracer parameters so they available if the module is edited
 _logic setVariable [QGVAR(tracersParams), [_weapon, _magazine, _delay, _dispersion, _target], true];
@@ -111,7 +111,7 @@ _logic setVariable [QGVAR(tracersGunner), _gunner];
         }, {
             params ["_args", "_delay"];
             [{
-                params ["_nextShotTime", "_logic", "_gunner", "_dispersion", "_weapon", "_shotDelay", "_vectorToTarget"];
+                params ["_nextShotTime", "_logic", "_gunner", "_dispersion", "_weapon", "_shotDelay"];
 
                 // Fire
                 if (CBA_MissionTime >= _nextShotTime) then {
