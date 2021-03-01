@@ -28,7 +28,7 @@ _logic setVariable [QGVAR(tracersParams), [_weapon, _magazine, _delay, _dispersi
 
 // Create random dispersion array from dispersion index
 _dispersion = [0.001, 0.01, 0.05, 0.15, 0.3] select _dispersion;
-_dispersion = _dispersion;
+_dispersion = [-_dispersion, 0, _dispersion];
 
 // Delete any already created gunner
 private _gunner = _logic getVariable [QGVAR(tracersGunner), objNull];
