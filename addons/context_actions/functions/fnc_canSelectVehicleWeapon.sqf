@@ -23,10 +23,12 @@ private _currentMagazine = currentMagazine _vehicle;
 
 private _primaryGunner = gunner _vehicle;
 private _primaryTurret = [0];
+
 if (isNull _primaryGunner) then {
     _primaryGunner = driver _vehicle;
     _primaryTurret = [-1];
 };
+
 if (isNull _primaryGunner) exitWith {};
 
 private _currentMuzzle = currentMuzzle _primaryGunner;
