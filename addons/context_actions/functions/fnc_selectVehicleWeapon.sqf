@@ -24,12 +24,15 @@
 
  params ["_vehicle", "_primaryGunner", "_primaryTurret", "_weapon", "_muzzle", "_magazine", "_id", "_owner"];
  weaponState [_vehicle, _primaryTurret] params ["_currentWeapon", "_currentMuzzle", "", "_currentMagazine"];
- if (_muzzle == "this") then {
-     _muzzle = _weapon;
- };
- if (_currentWeapon != _weapon || {_currentMuzzle != _muzzle}) then {
-     [QEGVAR(common,selectWeapon),  [_vehicle,  _muzzle],  _vehicle] call CBA_fnc_targetEvent;
- };
+
+if (_muzzle == "this") then {
+    _muzzle = _weapon;
+};
+ 
+if (_currentWeapon != _weapon || {_currentMuzzle != _muzzle}) then {
+    [QEGVAR(common,selectWeapon),  [_vehicle,  _muzzle],  _vehicle] call CBA_fnc_targetEvent;
+};
+ 
  if (_currentMagazine != _magazine) then {
      [QEGVAR(common,action), [_primaryGunner, ["LoadMagazine", _vehicle, _primaryGunner, _owner, _id, _weapon, _muzzle]], _primaryGunner] call CBA_fnc_targetEvent;
- };
+};
