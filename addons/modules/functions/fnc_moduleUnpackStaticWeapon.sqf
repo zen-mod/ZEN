@@ -96,7 +96,7 @@ if (_primary == 1 && {_compatibleBases isEqualTo [] || {_compatibleBases isEqual
         };
     }, [], LSTRING(ModuleUnpackStaticWeapon_Direction)] call EFUNC(common,selectPosition);
 } else {
-    // two-backpack weapon
+    // Two-backpack weapon
     private _backpackers = units _gunner select {!(backpack _x isEqualTo "")};
     private _assistant = objNull;
     {
