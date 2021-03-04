@@ -17,10 +17,6 @@
 
 params ["_vehicle"];
 
-private _currentWeapon = currentWeapon _vehicle;
-private _currentWeaponMuzzles = getArray (configFile >> "CfgWeapons" >> _currentWeapon >> "muzzles");
-private _currentMagazine = currentMagazine _vehicle;
-
 private _primaryGunner = gunner _vehicle;
 private _primaryTurret = [0];
 
@@ -30,8 +26,6 @@ if (isNull _primaryGunner) then {
 };
 
 if (isNull _primaryGunner) exitWith {};
-
-private _currentMuzzle = currentMuzzle _primaryGunner;
 
 private _magazines = [];
 
