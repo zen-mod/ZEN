@@ -95,7 +95,7 @@ _logic setVariable [QGVAR(tracersGunner), _gunner];
         } else {
             // Random firing (old behavior)
             _logic setdir (random 360);
-            [_gunner, 30 + random 60, 0] call BIS_fnc_setpitchbank;
+            [_gunner, 30 + random 60, 0] call BIS_fnc_setPitchBank;
         };
 
         private _shotDelay = 0.05 + random 0.1;
