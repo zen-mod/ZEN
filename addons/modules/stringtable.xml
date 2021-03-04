@@ -615,6 +615,9 @@
             <French>Script pour HC</French>
             <German>HC Skript</German>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleTransferOwnership_HCScripts_Description">
+            <English>Flag the entity to for Headless Client transfer/balancing scripts such as ACEX</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_BindVariable">
             <English>Bind Variable To Object</English>
             <Russian>Привязать переменную к объекту</Russian>

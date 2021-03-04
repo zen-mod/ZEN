@@ -76,7 +76,7 @@ private _defaultTarget = [
     ],
     [
         "TOOLBOX",
-        LSTRING(ModuleTransferOwnership_HCScripts),
+        [LSTRING(ModuleTransferOwnership_HCScripts), LSTRING(ModuleTransferOwnership_HCScripts_Description)],
         [parseNumber (_defaultTarget == 2), 1, 2, [
             ELSTRING(common,Disabled),
             ELSTRING(common,Enabled)
