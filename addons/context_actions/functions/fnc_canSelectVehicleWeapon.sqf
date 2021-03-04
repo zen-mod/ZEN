@@ -41,7 +41,6 @@ private _magazines = [];
         private _ammo = getText (configFile >> "CfgMagazines" >> _magazine >> "ammo");
         private _ammoSimulation = getText (configFile >> "CfgAmmo" >> _ammo >> "simulation");
         if !(_ammoSimulation in ["shotCM", "laserDesignate"]) then {
-
             _magazines pushBackUnique _magazine;
         };
     };
