@@ -23,6 +23,7 @@
  */
 
  params ["_vehicle", "_primaryGunner", "_primaryTurret", "_weapon", "_muzzle", "_magazine", "_id", "_owner"];
+ 
  weaponState [_vehicle, _primaryTurret] params ["_currentWeapon", "_currentMuzzle", "", "_currentMagazine"];
 
 if (_muzzle == "this") then {
