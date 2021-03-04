@@ -117,7 +117,6 @@ _logic setVariable [QGVAR(tracersGunner), _gunner];
                 if (CBA_MissionTime >= _nextShotTime) then {
                     _gunner setAmmo [_weapon, 999];
                     [_gunner, _weapon] call BIS_fnc_fire;
-                    //_logic setVariable [QGVAR(nextShotTime), CBA_MissionTime + _shotDelay];
                     _this set [0, CBA_missionTime + _shotDelay];
                 };
             }, {}, _args, _delay] call CBA_fnc_waitUntilAndExecute;
