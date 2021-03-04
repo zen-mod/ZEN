@@ -49,6 +49,7 @@ _assistant setVariable [QGVAR(nextMoveTime), CBA_MissionTime + 5];
             _gunner setVariable [QGVAR(statePATH), nil];
             _gunner enableAI "PATH";
         };
+
         // Reset assistant behaviour
         private _group = group _gunner;
         [_assistant] joinSilent _group;
