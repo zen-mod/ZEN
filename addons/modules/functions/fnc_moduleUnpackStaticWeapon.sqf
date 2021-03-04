@@ -39,15 +39,7 @@ if (isPlayer _gunner) exitWith {
 if (units _gunner findIf {isPlayer _x} != -1) exitWith {
     [LSTRING(ModuleUnpackStaticWeapon_Player)] call EFUNC(common,showMessage);
 };
-/*
-private _fnc_getCompatibleBases = {
-    params ["_backpack"];
-    private _cfgBase = configFile >> "CfgVehicles" >> _backpack >> "assembleInfo" >> "base";
-    if (isText _cfgBase) exitWith {[getText _cfgBase]};
 
-    getArray _cfgBase
-};
-*/
 private _backpack = backpack _gunner;
 if (_backpack isEqualTo "") exitWith {
     [LSTRING(ModuleUnpackStaticWeapon_Unit)] call EFUNC(common,showMessage);
