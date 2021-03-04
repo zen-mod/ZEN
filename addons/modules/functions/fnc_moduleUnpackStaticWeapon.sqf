@@ -103,7 +103,7 @@ if (_primary == 1 && {_compatibleBases isEqualTo [] || {_compatibleBases isEqual
         if (
             // has matching backpack
             (backpack _x in _compatibleBases || {_backpack in ((configOf backpackContainer _x >> "assembleInfo" >> "base") call BIS_fnc_getCfgData)})
-            // closer than current
+            // Closer than current
             && {_assistant == objNull || {(_gunner distance _x) < (_gunner distance _assistant)}}
         ) then {
             _assistant = _x;
