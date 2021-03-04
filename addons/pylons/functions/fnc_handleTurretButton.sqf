@@ -22,7 +22,7 @@ private _turretPath = _ctrlTurret getVariable QGVAR(turretPath);
 
 // Toggle between driver and gunner turret if required
 if (_toggle) then {
-    _turretPath = [[], [0]] select (_turretPath isEqualTo []);
+    _turretPath = [[-1], [0]] select (_turretPath isEqualTo [-1]);
     _ctrlTurret setVariable [QGVAR(turretPath), _turretPath];
 
     private _display = ctrlParent _ctrlTurret;
@@ -43,7 +43,7 @@ if (_toggle) then {
 };
 
 // Update the button's icon and tooltip
-if (_turretPath isEqualTo []) then {
+if (_turretPath isEqualTo [-1]) then {
     _ctrlTurret ctrlSetText ICON_DRIVER;
     _ctrlTurret ctrlSetTooltip localize "STR_Driver";
 } else {

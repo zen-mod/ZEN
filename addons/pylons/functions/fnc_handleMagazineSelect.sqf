@@ -40,7 +40,7 @@ if (cbChecked (_display displayCtrl IDC_MIRROR)) then {
     {
         _x params ["_ctrlComboMirrored", "", "_mirroredIndex"];
 
-        if (_mirroredIndex == _pylonIndex) then {
+        if (_mirroredIndex == _pylonIndex) exitWith {
             _ctrlComboMirrored lbSetCurSel _selectedIndex;
         };
     } forEach (_display getVariable QGVAR(controls));
