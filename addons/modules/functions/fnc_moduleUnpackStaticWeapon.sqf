@@ -58,7 +58,7 @@ _assembleInfo params ["_assembleTo", "_compatibleBases", "_displayName", "_dissa
 if (_compatibleBases isEqualType "") then {_compatibleBases = [];};
 
 if (_primary == 1 && {_compatibleBases isEqualTo [] || {_compatibleBases isEqualTo "" || {_compatibleBases isEqualTo [""]}}}) then {
-    // single-backpack weapon
+    // Single-backpack weapon
     [_gunner, {
         params ["_successful", "_gunner", "_position"];
         if (_successful) then {
