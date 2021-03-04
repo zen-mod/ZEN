@@ -33,6 +33,7 @@ private _displayName = getText (_cfgWeapon >> "displayName");
 if (_displayName != "") then {
     _action set [1, _displayName];
 };
+
 private _picture = getText (_cfgWeapon >> "picture");
 
 if (_picture != "") then {
