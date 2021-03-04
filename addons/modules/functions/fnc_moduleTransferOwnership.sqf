@@ -23,7 +23,7 @@ if (!isMultiplayer) exitWith {
 };
 
 private _entities = [];
-(call EFUNC(editor,getSelection)) params ["_objects", "_groups"];
+call EFUNC(editor,getSelection) params ["_objects", "_groups"];
 {
     if (isNull group _x) then {
         _entities pushBack _x;
