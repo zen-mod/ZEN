@@ -2,6 +2,7 @@
 /*
  * Author: Ampersand
  * Opens dialog to select a weapon for turrets with multiple weapons/muzzles/magazines.
+ * Triggered by the Vehicle Logistics > Switch Weapons parent action.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
