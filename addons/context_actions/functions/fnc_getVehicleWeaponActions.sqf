@@ -76,7 +76,7 @@ private _dynamicChildren = [];
                                         "\a3\ui_f_jets\Data\GUI\Cfg\Hints\WeaponsGuns_ca.paa"
                                     };
                                     case ("shotMissile"): {
-                                        "a3\ui_f_jets\data\gui\cfg\hints\weaponsmissiles_ca.paa"
+                                        "\a3\ui_f_jets\data\gui\cfg\hints\weaponsmissiles_ca.paa"
                                     };
                                     case ("shotIlluminating"): {
                                         "\a3\ui_f\data\gui\cfg\hints\flares_ca.paa"
