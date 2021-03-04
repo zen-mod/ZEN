@@ -44,8 +44,10 @@ private _magazines = [];
             _magazines pushBackUnique _magazine;
         };
     };
+
     if (count _magazines > 1) exitWith {
         true
     };
+
     false
 } forEach magazinesAllTurrets _vehicle
