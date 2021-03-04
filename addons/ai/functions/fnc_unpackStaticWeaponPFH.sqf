@@ -44,6 +44,7 @@ _assistant setVariable [QGVAR(nextMoveTime), CBA_MissionTime + 5];
 
     if (_closeEnough || {CBA_MissionTime > _endTime || {!alive _gunner || {!alive _assistant}}}) exitWith {
         [_pfhID] call CBA_fnc_removePerFrameHandler;
+
         // Gunner AI PATH
         if (_gunner getVariable [QGVAR(statePATH), true]) then {
             _gunner setVariable [QGVAR(statePATH), nil];
