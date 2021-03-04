@@ -62,15 +62,10 @@ _players sort true;
 } forEach (_HCs + _players);
 
 // Set default target to curator, server, or HC depending on current locality
-private _defaultTarget = if (local (_entities select 0)) then {
-    if (_HCs isEqualTo []) then {
-        0
-    } else {
-        2
-    };
-} else {
-    1
-};
+private _defaultTarget = [
+    1,
+    [2, 0] select (_HCs isEqualTo [])
+] select (local (_entities select 0));
 
 [LSTRING(ModuleTransferOwnership), [
     [
