@@ -27,9 +27,14 @@ jobs:
     steps:
       - name: Checkout the source code
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 1
       - name: Build with HEMTT
         uses: arma-actions/hemtt@master
         with:
           command: build --release --ci
+      - name: Set short commit hash
+      run: echo "SHA_SHORT=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+      - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: zen-${{ env.SHA_SHORT }}-nobin
+        path: releases/*/*  # Upload folder to avoid double-zip artifacts
