@@ -58,7 +58,7 @@ _assistant setVariable [QGVAR(nextMoveTime), CBA_MissionTime + 5];
             _assistant setVariable [QGVAR(stateFSM), nil];
             _assistant enableAI "FSM";
         };
-        // CLose enough, unpack
+        // Close enough, unpack
         if (_closeEnough) then {
             [_gunner, _assistant, _targetPos] call FUNC(unpackStaticWeapon);
         };
