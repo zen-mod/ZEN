@@ -34,7 +34,7 @@ private _magazines = [];
     if (_turretPath isEqualTo _primaryTurret && {_count > 0}) then {
         private _ammo = getText (configFile >> "CfgMagazines" >> _magazine >> "ammo");
         private _ammoSimulation = getText (configFile >> "CfgAmmo" >> _ammo >> "simulation");
-        if !(_ammoSimulation in ["shotCM", "laserDesignate"]) then {
+        if !(_ammoSimulation in AMMO_SIMULATION_BLACKLIST) then {
             _magazines pushBackUnique _magazine;
         };
     };

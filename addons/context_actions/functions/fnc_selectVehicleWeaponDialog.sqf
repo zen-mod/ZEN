@@ -46,7 +46,7 @@ private _currentIndex = 0;
     if (_turretPath isEqualTo _primaryTurret && {_count > 0}) then {
         private _ammo = getText (_cfgMagazines >> _magazine >> "ammo");
         private _ammoSimulation = getText (_cfgAmmo >> _ammo >> "simulation");
-        if !(_ammoSimulation in ["shotCM", "laserDesignate"]) then {
+        if !(_ammoSimulation in AMMO_SIMULATION_BLACKLIST) then {
             {
                 private _weapon = _x;
                 {
