@@ -17,5 +17,3 @@
 #include "\x\zen\addons\main\script_macros.hpp"
 
 #include "\x\zen\addons\common\defineResinclDesign.inc"
-
-#define FACTION_ID(side,name) format [QGVAR(%1:%2), side, name]
