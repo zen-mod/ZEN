@@ -24,9 +24,9 @@ params [["_serializedData", [], [[]]], ["_centerPos", [0, 0, 0], [[]], [2, 3]], 
 _serializedData params [["_objectData", [], [[]]], ["_groupData", [], [[]]]];
 
 // Check for suitable Headless Client
-private _HC = [] call FUNC(getFewestGroupsHC);
-if !(isNull _HC) exitWith {
-    [QEGVAR(common,deserializeObjects), _this, _HC] call CBA_fnc_targetEvent;
+private _hc = [] call FUNC(getFewestGroupsHC);
+if !(isNull _hc) exitWith {
+    [QEGVAR(common,deserializeObjects), _this, _hc] call CBA_fnc_targetEvent;
 };
 
 // Set center position to ground level over land and water level over the ocean

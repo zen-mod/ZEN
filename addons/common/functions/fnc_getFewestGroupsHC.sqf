@@ -17,35 +17,35 @@
 
 if !(isServer) exitWith {objNull};
 
-private _HCs = [];
-private _HCIDs = [];
-private _HCLoad = [];
+private _hcs = [];
+private _hcIDs = [];
+private _hcLoad = [];
 
 {
     if (_x isKindOf "HeadlessClient_F") then {
-        _HCs pushBack _x;
-        _HCIDs pushBack owner _x;
-        _HCLoad pushBack 0;
+        _hcs pushBack _x;
+        _hcIDs pushBack owner _x;
+        _hcLoad pushBack 0;
     };
 } forEach allPlayers;
 
-switch (count _HCIDs) do {
+switch (count _hcIDs) do {
     case (0): {
         objNull
     };
     case (1): {
-        _HCIDs select 0;
+        _hcIDs select 0;
     };
     default {
         // Count local groups for each HC
         {
-            private _HCIndex = _HCIDs find groupOwner _x;
-            if (_HCIndex > -1) then {
-                private _groupCount = _HCLoad select _HCIndex;
-                _HCLoad set [_HCIndex, _groupCount + 1];
+            private _hcIndex = _hcIDs find groupOwner _x;
+            if (_hcIndex > -1) then {
+                private _groupCount = _hcLoad select _hcIndex;
+                _hcLoad set [_hcIndex, _groupCount + 1];
             };
         } forEach allGroups;
 
-        _HCs select (_HCLoad find selectMin _HCLoad)
+        _hcs select (_hcLoad find selectMin _hcLoad)
     };
 };
