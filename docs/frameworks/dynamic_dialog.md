@@ -165,7 +165,6 @@ The returned value will still be within the min and max values (ideally 0 to 1) 
 
 A radius slider sub-type exists for this control type - `SLIDER:RADIUS`.
 When this sub-type is used, a circle is drawn on the terrain to indicate the radius of the output value. The circle is drawn around the center of the object or position in the given color.
-The circle will be drawn around the center given as argument, with the color given.
 
 **Control Specific Argument(s):**
 
