@@ -28,17 +28,17 @@ private _aircraftCache = [];
         private _factions = _aircraftCache param [_side];
 
         if (isNil "_factions") then {
-            _factions = [] call CBA_fnc_hashCreate;
+            _factions = createHashMap;
             _aircraftCache set [_side, _factions];
         };
 
         // Add the aircraft type to the faction's aircraft list
         private _faction = getText (_x >> "faction");
-        private _aircraft = [_factions, _faction] call CBA_fnc_hashGet;
+        private _aircraft = _factions get _faction;
 
         if (isNil "_aircraft") then {
             _aircraft = [];
-            [_factions, _faction, _aircraft] call CBA_fnc_hashSet;
+            _factions set [_faction, _aircraft];
         };
 
         _aircraft pushBack _className;

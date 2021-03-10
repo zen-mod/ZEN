@@ -28,23 +28,23 @@ private _fnc_addSorted = {
         private _sideHash = _baseArray param [_side];
 
         if (isNil "_sideHash") then {
-            _sideHash = [] call CBA_fnc_hashCreate;
+            _sideHash = createHashMap;
             _baseArray set [_side, _sideHash];
         };
 
-        private _factionHash = [_sideHash, _faction] call CBA_fnc_hashGet;
+        private _factionHash = _sideHash get _faction;
 
         if (isNil "_factionHash") then {
-            _factionHash = [] call CBA_fnc_hashCreate;
-            [_sideHash, _faction, _factionHash] call CBA_fnc_hashSet;
+            _factionHash = createHashMap;
+            _sideHash set [_faction, _factionHash];
         };
 
         private _category = getText (_config >> "editorSubcategory");
-        private _categoryList = [_factionHash, _category] call CBA_fnc_hashGet;
+        private _categoryList = _factionHash get _category;
 
         if (isNil "_categoryList") then {
             _categoryList = [];
-            [_factionHash, _category, _categoryList] call CBA_fnc_hashSet;
+            _factionHash set [_category, _categoryList];
         };
 
         _categoryList pushBack _className;
@@ -83,7 +83,7 @@ private _groups = [];
         private _sideHash = _groups param [_side];
 
         if (isNil "_sideHash") then {
-            _sideHash = [] call CBA_fnc_hashCreate;
+            _sideHash = createHashMap;
             _groups set [_side, _sideHash];
         };
 
@@ -103,18 +103,18 @@ private _groups = [];
                         private _name = getText (_x >> "name");
                         private _icon = getText (_x >> "icon");
 
-                        private _factionHash = [_sideHash, _faction] call CBA_fnc_hashGet;
+                        private _factionHash = _sideHash get _faction;
 
                         if (isNil "_factionHash") then {
-                            _factionHash = [] call CBA_fnc_hashCreate;
-                            [_sideHash, _faction, _factionHash] call CBA_fnc_hashSet;
+                            _factionHash = createHashMap;
+                            _sideHash set [_faction, _factionHash];
                         };
 
-                        private _categoryList = [_factionHash, _category] call CBA_fnc_hashGet;
+                        private _categoryList = _factionHash get _category;
 
                         if (isNil "_categoryList") then {
                             _categoryList = [];
-                            [_factionHash, _category, _categoryList] call CBA_fnc_hashSet;
+                            _factionHash set [_category, _categoryList];
                         };
 
                         _categoryList pushBack [_name, _icon, _units];
