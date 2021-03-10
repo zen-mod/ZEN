@@ -25,7 +25,7 @@ _serializedData params [["_objectData", [], [[]]], ["_groupData", [], [[]]]];
 
 // Check for suitable Headless Client
 private _hc = [] call FUNC(getFewestGroupsHC);
-if !(isNull _hc) exitWith {
+if (!isNull _hc) exitWith {
     [QEGVAR(common,deserializeObjects), _this, _hc] call CBA_fnc_targetEvent;
 };
 
