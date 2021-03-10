@@ -37,7 +37,7 @@
                 private _name = _ctrlTree tvText _path;
 
                 // Get the setting variable name that corresponds to this faction's name and side
-                private _varName = GVAR(map) getVariable [FACTION_ID(_forEachIndex,_name), ""];
+                private _varName = GVAR(map) getOrDefault [[_forEachIndex, _name], ""];
 
                 if !(missionNamespace getVariable [_varName, true]) then {
                     _ctrlTree tvDelete _path;
