@@ -20,7 +20,7 @@
  * Public: No
  */
 
-params [["_serializedData", [], [[]]], ["_centerPos", [0, 0, 0], [[]], [2, 3]], ["_makeEditable", true, [true]], ["_enableRandomization", false, [true]], ["_useHC", true, [true]]];
+params [["_serializedData", [], [[]]], ["_centerPos", [0, 0, 0], [[]], [2, 3]], ["_makeEditable", true, [true]], ["_enableRandomization", false, [true]]]];
 _serializedData params [["_objectData", [], [[]]], ["_groupData", [], [[]]]];
 
 // Check for suitable Headless Client
