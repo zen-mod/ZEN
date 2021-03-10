@@ -163,6 +163,9 @@ A percentage slider sub-type exists for this control type - `SLIDER:PERCENT`.
 When this sub-type is used, the value displayed in the edit box will be multiplied by 100 and be suffixed by a percent sign.
 The returned value will still be within the min and max values (ideally 0 to 1) and the formatting argument is ignored.
 
+A radius slider sub-type exists for this control type - `SLIDER:RADIUS`.
+When this sub-type is used, a circle is drawn on the terrain to indicate the radius of the output value. The circle is drawn around the center of the object or position in the given color.
+
 **Control Specific Argument(s):**
 
 - 0: Minimum value &lt;NUMBER&gt;
@@ -171,6 +174,10 @@ The returned value will still be within the min and max values (ideally 0 to 1) 
 - 3: Formatting &lt;NUMBER|CODE&gt;
     - Number specifies the number of displayed decimal places (0, 1, or 2).
     - Code specifies custom formatting which is passed the value in `_this` and **must** return a string.
+- 4: Radius Center &lt;OBJECT|ARRAY&gt;
+    - Array in AGL format.
+- 5: Radius Color &lt;ARRAY&gt;
+    - In RGBA format.
 
 **Return Value:**
 
