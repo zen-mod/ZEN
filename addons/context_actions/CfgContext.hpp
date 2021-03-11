@@ -253,13 +253,13 @@ class EGVAR(context_menu,actions) {
             displayName = "$STR_GEAR_MAGAZINES";
             condition = QUOTE(_hoveredEntity call FUNC(canEditMagazines));
             statement = QUOTE(_hoveredEntity call EFUNC(loadout,configure));
-            icon = QPATHTOF(ui\ammo_ca.paa);
+            icon = "\a3\ui_f\data\igui\cfg\weaponicons\mg_ca.paa";
         };
         class Pylons {
             displayName = ECSTRING(pylons,DisplayName);
             condition = QUOTE(_hoveredEntity call FUNC(canEditPylons));
             statement = QUOTE(_hoveredEntity call EFUNC(pylons,configure));
-            icon = QPATHTOF(ui\ammo_ca.paa);
+            icon = "\a3\ui_f\data\igui\cfg\weaponicons\aa_ca.paa";
         };
     };
     class Inventory {
