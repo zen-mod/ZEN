@@ -21,7 +21,8 @@ params ["_ctrlMouse", "_button"];
 if (_button == 0) then {
     // Update position globally to the current local position once moving is finished
     private _marker = ctrlParentControlsGroup _ctrlMouse getVariable [QGVAR(marker), ""];
-    _marker setMarkerPos markerPos _marker;
+
+    [QGVAR(updateMarkerPos), [_marker, markerPos _marker]] call CBA_fnc_globalEvent;
 
     _ctrlMouse setVariable [QGVAR(moving), false];
 };

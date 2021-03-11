@@ -9,4 +9,6 @@ PREP(onMouseButtonDown);
 PREP(onMouseButtonUp);
 PREP(onMouseDblClick);
 PREP(onMouseMoving);
+PREP(updateAlpha);
 PREP(updateIcon);
+PREP(updateMarkerPos);

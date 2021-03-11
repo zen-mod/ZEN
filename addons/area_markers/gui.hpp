@@ -1,5 +1,6 @@
 class RscText;
 class RscPicture;
+class RscActivePicture;
 class ctrlXSliderH;
 class RscButtonMenuOK;
 class RscButtonMenuCancel;
@@ -51,9 +52,9 @@ class GVAR(configure): RscControlsGroupNoScrollbars {
         class Container: RscControlsGroupNoScrollbars {
             idc = -1;
             x = safeZoneWAbs / 2 - POS_W(13.5);
-            y = safeZoneH / 2 - POS_H(6.5);
+            y = safeZoneH / 2 - POS_H(8.55);
             w = POS_W(27);
-            h = POS_H(13);
+            h = POS_H(17.1);
             class controls {
                 class Title: RscText {
                     text = CSTRING(EditAreaMarker);
@@ -68,7 +69,7 @@ class GVAR(configure): RscControlsGroupNoScrollbars {
                     x = 0;
                     y = POS_H(1.1);
                     w = POS_W(27);
-                    h = POS_H(10.8);
+                    h = POS_H(17.8);
                     colorBackground[] = {0, 0, 0, 0.7};
                 };
                 class Transformation: RscControlsGroupNoScrollbars {
@@ -232,17 +233,94 @@ class GVAR(configure): RscControlsGroupNoScrollbars {
                         };
                     };
                 };
+                class SideVisibility: RscControlsGroupNoScrollbars {
+                    idc = -1;
+                    x = POS_W(0.5);
+                    y = POS_H(11.6);
+                    w = POS_W(26);
+                    h = POS_H(4.1);
+                    class controls {
+                        class Title: EGVAR(common,RscLabel) {
+                            text = "$STR_disp_arcunit_side";
+                            w = POS_W(26);
+                        };
+                        class Background: EGVAR(common,RscBackground) {
+                            x = 0;
+                            y = POS_H(1);
+                            w = POS_W(26);
+                            h = POS_H(3);
+                        };
+
+                        class SideVisibilityIcons: RscControlsGroupNoScrollbars {
+                            idc = IDC_CONFIGURE_SIDEVISIBILITY;
+                            x = POS_W(3);
+                            y = POS_H(1.1);
+                            w = POS_W(20);
+                            h = POS_H(3);
+                            onSetFocus = "[_this,""RscAttributeOwners"",'CuratorCommon'] call (uinamespace getvariable ""BIS_fnc_initCuratorAttribute"")";
+                            class controls {
+                                class Background: RscText {
+                                    x = 0;
+                                    y = 0;
+                                    w = POS_W(20);
+                                    h = POS_H(2.9);
+                                    colorBackground[] = {0, 0, 0, 0.7};
+                                };
+                                class BLUFOR: RscActivePicture
+                                {
+                                    idc=IDC_CONFIGURE_SIDEVISIBILITY_WEST;
+                                    text="\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_west_ca.paa";
+                                    x=POS_W(3);
+                                    y=POS_H(0.4);
+                                    w=POS_W(2);
+                                    h=POS_H(2);
+                                    tooltip="$STR_WEST";
+                                };
+                                class OPFOR: BLUFOR
+                                {
+                                    idc=IDC_CONFIGURE_SIDEVISIBILITY_EAST;
+                                    text="\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_east_ca.paa";
+                                    x=POS_W(7);
+                                    y=POS_H(0.4);
+                                    w=POS_W(2);
+                                    h=POS_H(2);
+                                    tooltip="$STR_EAST";
+                                };
+                                class Independent: BLUFOR
+                                {
+                                    idc=IDC_CONFIGURE_SIDEVISIBILITY_GUER;
+                                    text="\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_guer_ca.paa";
+                                    x=POS_W(11);
+                                    y=POS_H(0.4);
+                                    w=POS_W(2);
+                                    h=POS_H(2);
+                                    tooltip="$STR_guerrila";
+                                };
+                                class Civilian: BLUFOR
+                                {
+                                    idc=IDC_CONFIGURE_SIDEVISIBILITY_CIV;
+                                    text="\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_civ_ca.paa";
+                                    x=POS_W(15);
+                                    y=POS_H(0.4);
+                                    w=POS_W(2);
+                                    h=POS_H(2);
+                                    tooltip="$STR_Civilian";
+                                };
+                            };
+                        };
+                    };
+                };
                 class ButtonOK: RscButtonMenuOK {
                     idc = IDC_CONFIGURE_OK;
                     x = POS_W(22);
-                    y = POS_H(12);
+                    y = POS_H(16.1);
                     w = POS_W(5);
                     h = POS_H(1);
                 };
                 class ButtonCancel: RscButtonMenuCancel {
                     idc = IDC_CONFIGURE_CANCEL;
                     x = 0;
-                    y = POS_H(12);
+                    y = POS_H(16.1);
                     w = POS_W(5);
                     h = POS_H(1);
                 };

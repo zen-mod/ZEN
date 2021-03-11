@@ -93,6 +93,41 @@ private _ctrlAlphaSlider = _ctrlConfigure controlsGroupCtrl IDC_CONFIGURE_ALPHA_
 private _ctrlAlphaEdit   = _ctrlConfigure controlsGroupCtrl IDC_CONFIGURE_ALPHA_EDIT;
 [_ctrlAlphaSlider, _ctrlAlphaEdit, 0, 1, markerAlpha _marker, 0.1, 0, true] call EFUNC(common,initSliderEdit);
 
+
+GVAR(configure_updateSideControl) = {
+    params [
+        ["_control", controlNull],
+        ["_isSet", true, [false, true]]
+    ];
+
+    private _side = _control getVariable [QGVAR(side), sideUnknown];
+    private _color = [_side] call BIS_fnc_sideColor;
+    private _scale = 1;
+    private _alpha = 0.5;
+    if (_isSet) then {
+        _scale = 1.2;
+        _alpha = 1;
+    };
+    _control setVariable [QGVAR(value), _isSet];
+    _color set [3, _alpha];
+    _control ctrlSetTextColor _color;
+    [_control, _scale, 0] call BIS_fnc_ctrlSetScale;
+};
+
+private _selectedSides = [GVAR(markerVisibilities), _marker] call CBA_fnc_hashGet;
+private _sidesControlGroup = _ctrlConfigure controlsGroupCtrl IDC_CONFIGURE_SIDEVISIBILITY;
+{
+    private _control = _sidesControlGroup controlsGroupCtrl _x;
+    _control ctrlAddEventHandler ["ButtonClick", {
+            params ["_control"];
+            [_control, !(_control getVariable [QGVAR(value), true])] call GVAR(configure_updateSideControl);
+    }];
+    private _controlSide = _foreachindex call bis_fnc_sideType;
+    _control setVariable [QGVAR(side), _controlSide];
+    [_control, _controlSide in _selectedSides] call GVAR(configure_updateSideControl);
+} forEach IDCS_CONFIGURE_SIDEVISIBILITY_ALL;
+
+
 private _ctrlButtonCancel = _ctrlConfigure controlsGroupCtrl IDC_CONFIGURE_CANCEL;
 _ctrlButtonCancel ctrlAddEventHandler ["ButtonClick", {
     params ["_ctrlButtonCancel"];
