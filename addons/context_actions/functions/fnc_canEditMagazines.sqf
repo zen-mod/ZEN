@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: mharis001
+ * Author: NeilZar
  * Checks if the loadout of the given entity can be edited.
  *
  * Arguments:
