@@ -1,16 +1,16 @@
 #include "script_component.hpp"
 /*
  * Author: NeilZar
- * Checks if the loadout of the given entity can be edited.
+ * Checks if the pylons of the given entity can be edited.
  *
  * Arguments:
  * 0: Entity <ANY>
  *
  * Return Value:
- * Can Edit Loadout <BOOL>
+ * Can Edit Pylons <BOOL>
  *
  * Example:
- * [_entity] call zen_context_actions_fnc_canEditLoadout
+ * [_entity] call zen_context_actions_fnc_canEditPylons
  *
  * Public: No
  */
