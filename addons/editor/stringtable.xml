@@ -4,6 +4,7 @@
         <Key ID="STR_ZEN_Editor_DisplayName">
             <English>Editor</English>
             <Korean>편집기</Korean>
+            <Japanese>エディタ</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_MoveDisplayToEdge">
             <English>Move Display to Edge</English>
@@ -81,22 +82,26 @@
             <German>Gruppensymbole anzeigen</German>
             <Polish>Dodaj ikone grupy</Polish>
             <Korean>그룹 아이콘 추가</Korean>
+            <Japanese>グループ アイコン追加</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_AddGroupIcons_Description">
             <English>Adds group icons to the create group trees.</English>
             <German>Zeigt Gruppensymbole im Gruppenbaum an.</German>
             <Polish>Dodaje ikone grupy do drzewka tworzenia grup.</Polish>
             <Korean>그룹 나무를 생성하기 위해 그룹 아이콘을 추가합니다.</Korean>
+            <Japanese>グループ ツリーを作成するためにグループ アイコンを追加します。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_RandomizeCopyPaste">
             <English>Randomize Deep Copy/Paste</English>
             <Polish>Losowe kopiowanie/Wklejanie (Głębokie)</Polish>
             <Korean>전체 복사/붙여 넣기 랜덤</Korean>
+            <Japanese>深コピー/ペーストのランダム化</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_RandomizeCopyPaste_Description">
             <English>Controls whether deep copy/paste will randomize unit identities and vehicle customization (instead of making identical copies).</English>
             <Polish>Kontoluje czy głębokie kopiowanie/wklejanie będzie losowo zmieniało ustawienia jednostek (zamiast tworzenia identycznych kopii)</Polish>
             <Korean>(동일한 복사본을 만드는 대신) 전체 복사/붙여 넣기의 유닛 설정 랜덤 여부를 제어합니다.</Korean>
+            <Japanese>深コピー時にユニットのアイデンティティと車両カスタマイズをランダム化するかどうかを設定します。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages">
             <English>Unit Radio Messages</English>
@@ -121,11 +126,13 @@
             <German>Fallschirmgeräusche</German>
             <Polish>Dzwięki spadochronu</Polish>
             <Korean>낙하산 소음</Korean>
+            <Japanese>パラシュート音</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_ParachuteSounds_Description">
             <English>Controls whether jet flyby sounds are played when an object is paradropped via the Raise Entity keybind.</English>
             <German>Bestimmt ob Fallschirmgeräusche abgespielt werden, wenn ein Objekt per Hochheben-Tastenkombination abgeworfen wird.</German>
             <Polish>Kontroluje czy odtwarzany jest dzwięk przelatującego samolotu gdy obiekt jest zrzucany z spadochronem przy pomocy klawisza do podniesienia jednostki</Polish>
+            <Japanese>オブジェクト エンティティを上に持ち上げ空中投下させているときにジェット音を再生するかどうかを設定します。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages_WaypointsOnly">
             <English>Waypoints Only</English>
@@ -161,6 +168,7 @@
         </Key>
         <Key ID="STR_ZEN_Editor_UnloadViV_Description">
             <English>Unloads all selected vehicle-in-vehicle cargo and carriers. A vehicle that is both cargo and carrying cargo will only be unloaded from its carrier.</English>
+            <Japanese>選択した ViV 内の車両とカーゴを全て降ろします。ViV 内に両方が存在する場合は、カーゴのみ降ろします。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_DeployCountermeasures">
             <English>Deploy Countermeasures</English>
@@ -180,35 +188,42 @@
             <English>Deep Copy</English>
             <German>Komplette Kopie</German>
             <Polish>Głęboka Kopia</Polish>
+            <Japanese>深コピー</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_DeepCopy_Description">
             <English>Performs a "deep copy" of selected objects - copying an extended set of object properties such as unit loadouts, vehicle inventories and customization.</English>
             <German>Legt eine komplette Kopie von Objekten an, welches die Einheiten- und Fahrzeugausrüstung, sowie benutzerdefinierte Anpassungen speichert.</German>
             <Polish>Powoduje "Głębokie" kopiowanie wybranych przedmiotów, oznacza to że ustawienia, wartości, przedmioty i inwentarz jednostki także zostanie skopiowany.</Polish>
+            <Japanese>"深コピー" は選択したオブジェクトに対して使用できます。ユニットの装備や車両インベントリとカスタマイズといった、プロパティを含めてコピーできます。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_DeepPaste">
             <English>Deep Paste</English>
             <German>Komplettes Einfügen</German>
             <Polish>Głębokie wklejanie</Polish>
+            <Japanese>深ペースト</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_DeepPaste_Description">
             <English>Pastes the current deep copied object data.</English>
             <German>Fügt die derzeitig gespeicherte komplette Kopie ein.</German>
             <Polish>Wkleja z schowka obiekty które zostały głęboko skopiowane.</Polish>
+            <Japanese>深コピーによってコピーしたオブジェクト データを貼り付けできます。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_FocusSearchBar">
             <English>Focus Search Bar</English>
             <German>Suchfeld fokussieren</German>
             <Polish>Skieruj na wyszukiwarke</Polish>
+            <Japanese>検索バーにフォーカス</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_FocusSearchBar_Description">
             <English>Sets focus to the search bar.</English>
             <German>Setzt den Fokus auf das Suchfeld.</German>
             <Polish>Kieruje na listwe wyszukiwarki</Polish>
+            <Japanese>検索バーにフォーカスします。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_OrientTerrainNormal_Description">
             <English>Orients all selected objects to match the terrain slope at their position.</English>
             <Polish>Orientuje wszystkie wybrane obiekty aby ustawiły się względem terenu na swojej pozycji.</Polish>
+            <Japanese>選択した全てのオブジェクトを地形に合わせます。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleIcons">
             <English>Toggle Editable Icons</English>
@@ -224,9 +239,11 @@
         </Key>
         <Key ID="STR_ZEN_Editor_ReloadDisplay">
             <English>Reload Display</English>
+            <Japanese>再描画</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_ReloadDisplay_Description">
             <English>Reloads the Zeus interface. Can be used to fix lockup issues.</English>
+            <Japanese>Zeus インターフェースを再描画します。不具合の修正に使用可能です。</Japanese>
         </Key>
     </Package>
 </Project>

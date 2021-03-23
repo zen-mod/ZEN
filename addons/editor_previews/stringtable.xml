@@ -5,11 +5,13 @@
             <English>Object Preview Images</English>
             <German>Objektvorschaubilder</German>
             <Polish>Podgląd Obiektów</Polish>
+            <Japanese>オブジェクト プレビュー画像</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_Previews_Enabled_Description">
             <English>Enables object preview images when hovering over an item in the create trees.</English>
             <German>Aktiviert die Objektvorschaubilder, wenn man im Einheitenbaum auf das Objekt zeigt.</German>
             <Polish>Włącza możliwość podglądu obiektów przu najezdżaniu na obiekt w drzewku.</Polish>
+            <Japanese>生成ツリーでアイテムをホバーした時にオブジェクトのプレビュー画像を表示するかどうかを設定します。</Japanese>
         </Key>
     </Package>
 </Project>

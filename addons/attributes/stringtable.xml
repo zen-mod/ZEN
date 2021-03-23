@@ -30,6 +30,7 @@
             <German>Für Spieler verschlossen</German>
             <Korean>플레이어에게 잠겨짐</Korean>
             <Polish>Zamknięte dla graczy</Polish>
+            <Japanese>プレイヤー ロック</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_PlateNumber">
             <English>Plate Number</English>
@@ -48,39 +49,49 @@
             <German>Wiedereinstiegspunkt</German>
             <Korean>부활 위치</Korean>
             <Polish>Pozycja odrodzenia</Polish>
+            <Japanese>リスポーン位置</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_RespawnPosition_Tooltip">
             <English>Selects the side that is able to respawn on this object.</English>
             <German>Wähle eine Seite, welche an diesem Objekt wiedereinsteigen kann.</German>
             <Korean>이 아이템으로 부활할 수 있는 진영을 고르시오</Korean>
             <Polish>Ustawia strone która może się odrodzić na tym obiekcie.</Polish>
+            <Japanese>リスポーン位置になるオブジェクトを選択します。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_RespawnVehicle">
             <English>Respawn Vehicle</English>
+            <Japanese>リスポーン車両</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_RespawnVehicle_Tooltip">
             <English>Selects where the vehicle will respawn when it is destroyed.</English>
+            <Japanese>リスポーンされる車両を選択します。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_States">
             <English>States</English>
             <German>Zustände</German>
             <Korean>상태</Korean>
             <Polish>Stany</Polish>
+            <Japanese>状態</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_LocalExec">
             <English>Local Exec. This code will be executed in the unscheduled environment on this machine only.</English>
+            <Japanese>ローカル実行。このコードはこのマシンでのみ、非スケジュール環境で実行されます。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_TargetExec">
             <English>Target Exec. This code will be executed in the unscheduled environment on the machine where this entity is local.</English>
+            <Japanese>ターゲット実行。このコードはエンティティがローカルにあるマシンの非スケジュール環境で実行されます。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_GlobalExec">
             <English>Global Exec. This code will be executed in the unscheduled environment on all machines (server and clients).</English>
+            <Japanese>グローバル実行。このコードは全マシンの非スケジュール環境で実行されます (サーバとクライアント)</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_ExecObject_Tooltip">
             <English>The variable "_this" refers to this object.</English>
+            <Japanese>変数 "_this" はこのオブジェクトを指します。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_ExecGroup_Tooltip">
             <English>The variable "_this" refers to this group.</English>
+            <Japanese>変数 "_this" はこのグループを指します。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Timeout">
             <English>Timeout (s)</English>
@@ -241,17 +252,21 @@
             <English>Change Abilities</English>
             <Polish>Zmień zdolności</Polish>
             <Korean>능력 변경</Korean>
+            <Japanese>属性変更</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Abilities">
             <English>Abilities</English>
             <Polish>Zdolności</Polish>
             <Korean>능력</Korean>
+            <Japanese>属性</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_OpenAttributesDisplay">
             <English>Open Attributes Display</English>
+            <Japanese>属性パネルを表示</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_OpenAttributesDisplay_Description">
             <English>Opens the Zeus attributes display for the selected entity.\nWhen multiple entities are selected (i.e. due to selecting a group), the hovered entity will be used.</English>
+            <Japanese>選択したエンティティのZeus属性パネルを開きます\n複数のエンティティが選択されている場合は、ホバー選択しているエンティティの属性を使用します。</Japanese>
         </Key>
     </Package>
 </Project>

@@ -5,6 +5,7 @@
             <English>Land</English>
             <German>Landen</German>
             <Korean>착륙</Korean>
+            <Japanese>着陸</Japanese>
         </Key>
         <Key ID="STR_ZEN_AI_Fastrope">
             <English>Fastrope</English>
@@ -28,6 +29,7 @@
             <English>Search Building</English>
             <German>Gebäude durchsuchen</German>
             <Polish>Przeszukaj budynek</Polish>
+            <Japanese>建物捜索</Japanese>
         </Key>
         <Key ID="STR_ZEN_AI_CouldNotGarrisonAll">
             <English>Unable to garrison all units - not enough positions</English>
@@ -139,91 +141,109 @@
             <German>Deckung suchen</German>
             <Korean>엄폐물 수색</Korean>
             <Polish>Szukaj Osłony</Polish>
+            <Japanese>遮蔽検索</Japanese>
         </Key>
         <Key ID="STR_ZEN_AI_AimingError">
             <English>Aiming Error</English>
             <Polish>Błąd w celowaniu</Polish>
             <Korean>조준 오류</Korean>
+            <Japanese>照準エラー</Japanese>
         </Key>
         <Key ID="STR_ZEN_AI_AnimChange">
             <English>Anim Change</English>
             <Polish>Zmiana animacji</Polish>
+            <Japanese>アニメーション変更</Japanese>
         </Key>
         <Key ID="STR_ZEN_AI_AutoCombat">
             <English>Auto Combat</English>
             <German>Automatischer Kampf</German>
             <Korean>자동 전투</Korean>
             <Polish>Automatyczna walka</Polish>
+            <Japanese>自動戦闘</Japanese>
         </Key>
         <Key ID="STR_ZEN_AI_AutoTarget">
             <English>Auto Target</English>
             <Polish>Automatyczne namierzanie</Polish>
             <Korean>자동 조준</Korean>
+            <Japanese>自動捕捉</Japanese>
         </Key>
         <Key ID="STR_ZEN_AI_CheckVisible">
             <English>Check Visible</English>
             <Polish>Sprawdź Widoczne</Polish>
             <Korean>표시 확인</Korean>
+            <Japanese>射線権威</Japanese>
         </Key>
         <Key ID="STR_ZEN_AI_Cover">
             <English>Cover</English>
             <Polish>Osłona</Polish>
             <Korean>은신하기</Korean>
+            <Japanese>遮蔽</Japanese>
         </Key>
         <Key ID="STR_ZEN_AI_FSM">
             <English>FSM</English>
             <Korean>유한 상태 기계</Korean>
+            <Japanese>FSM</Japanese>
         </Key>
         <Key ID="STR_ZEN_AI_LightsVehicle">
             <English>Lights (Vehicle)</English>
             <Polish>Światła (Pojazd)</Polish>
             <Korean>조명 (차량)</Korean>
+            <Japanese>ライト (車両)</Japanese>
         </Key>
         <Key ID="STR_ZEN_AI_MineDetection">
             <English>Mine Detection</English>
             <Polish>Wykrywanie Min</Polish>
             <Korean>광산 탐지</Korean>
+            <Japanese>地雷探知</Japanese>
         </Key>
         <Key ID="STR_ZEN_AI_Move">
             <English>Move</English>
             <Polish>Rusz</Polish>
             <Korean>이동</Korean>
+            <Japanese>移動</Japanese>
         </Key>
         <Key ID="STR_ZEN_AI_Nightvision">
             <English>Nightvision</English>
             <Polish>Noktowizja</Polish>
             <Korean>야간 투시</Korean>
+            <Japanese>暗視装置</Japanese>
         </Key>
         <Key ID="STR_ZEN_AI_Path">
             <English>Path</English>
             <Polish>Ścieżka</Polish>
             <Korean>경로</Korean>
+            <Japanese>経路</Japanese>
         </Key>
         <Key ID="STR_ZEN_AI_RadioProtocol">
             <English>Radio Protocol</English>
             <Polish>Protokół radiowy</Polish>
             <Korean>무선 프로토콜</Korean>
+            <Japanese>無線プロトコル</Japanese>
         </Key>
         <Key ID="STR_ZEN_AI_Suppression">
             <English>Suppression</English>
             <German>Unterdrückung</German>
             <Korean>제압</Korean>
             <Polish>Przygwożdżenie</Polish>
+            <Japanese>制圧射撃</Japanese>
         </Key>
         <Key ID="STR_ZEN_AI_Target">
             <English>Target</English>
             <Polish>Cel</Polish>
             <Korean>목표물</Korean>
+            <Japanese>目標</Japanese>
         </Key>
         <Key ID="STR_ZEN_AI_TeamSwitch">
             <English>Team Switch</English>
             <Polish>Zmiana drużyny</Polish>
             <Korean>팀 변경</Korean>
+            <Japanese>チーム切り替え</Japanese>
         </Key>
         <Key ID="STR_ZEN_AI_WeaponAim">
             <English>Weapon Aim</English>
             <Polish>Celowanie Bronią</Polish>
             <Korean>무기 조준</Korean>
+            <Japanese>武器照準</Japanese>
         </Key>
     </Package>
 </Project>

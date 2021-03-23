@@ -3,198 +3,263 @@
     <Package name="Tasks">
         <Key ID="STR_ZEN_Tasks_ModulePosition">
             <English>Module Position</English>
+            <Japanese>モジュール位置</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_ModulePosition_Tooltip">
             <English>The task's position will be synchronized with the position of the module.</English>
+            <Japanese>タスク位置は同期されたモジュールの位置に設定されます。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_DestinationDisabled_Tooltip">
             <English>The task will not have position associated with it.</English>
+            <Japanese>タスク位置はモジュールの位置に設定されません。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Type_Tooltip">
             <English>Sets the task's icon.</English>
+            <Japanese>タスクアイコンを設定します。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_TitleDescription">
             <English>Title &amp; Description</English>
+            <Japanese>タイトル &amp; 概要</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_TitleDescription_Tooltip">
             <English>The task's title and description. Task description can use tags supported by diary records.</English>
+            <Japanese>タスクのタイトルと概要を設定できます。概要はダイアリーに表示されます。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Default">
             <English>Default</English>
+            <Japanese>標準</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Airdrop">
             <English>Airdrop</English>
+            <Japanese>空中投下</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Armor">
             <English>Armor</English>
+            <Japanese>機甲</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Attack">
             <English>Attack</English>
+            <Japanese>攻撃</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Backpack">
             <English>Backpack</English>
+            <Japanese>バックパック</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Boat">
             <English>Boat</English>
+            <Japanese>ボート</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Box">
             <English>Box</English>
+            <Japanese>箱</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Car">
             <English>Car</English>
+            <Japanese>車</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Container">
             <English>Container</English>
+            <Japanese>コンテナ</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Danger">
             <English>Danger</English>
+            <Japanese>危険</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Defend">
             <English>Defend</English>
+            <Japanese>防衛</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Destroy">
             <English>Destroy</English>
+            <Japanese>破壊</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Documents">
             <English>Documents</English>
+            <Japanese>文章</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Download">
             <English>Download</English>
+            <Japanese>ダウンロード</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Exit">
             <English>Exit</English>
+            <Japanese>脱出</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Getin">
             <English>Get In</English>
+            <Japanese>乗せる</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Getout">
             <English>Get Out</English>
+            <Japanese>降ろす</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Heal">
             <English>Heal</English>
+            <Japanese>治療</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Heli">
             <English>Heli</English>
+            <Japanese>ヘリ</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Help">
             <English>Help</English>
+            <Japanese>ヘルプ</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Intel">
             <English>Intel</English>
+            <Japanese>情報</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Interact">
             <English>Interact</English>
+            <Japanese>会話</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Kill">
             <English>Kill</English>
+            <Japanese>殺害</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Land">
             <English>Land</English>
+            <Japanese>着陸</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Listen">
             <English>Listen</English>
+            <Japanese>聴取</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Map">
             <English>Map</English>
+            <Japanese>地図</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Meet">
             <English>Meet</English>
+            <Japanese>合う</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Mine">
             <English>Mine</English>
+            <Japanese>地雷</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Move">
             <English>Move</English>
+            <Japanese>移動</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Move1">
             <English>Move 1</English>
+            <Japanese>移動 1</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Move2">
             <English>Move 2</English>
+            <Japanese>移動 2</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Move3">
             <English>Move 3</English>
+            <Japanese>移動 3</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Move4">
             <English>Move 4</English>
+            <Japanese>移動 4</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Move5">
             <English>Move 5</English>
+            <Japanese>移動 5</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Navigate">
             <English>Navigate</English>
+            <Japanese>案内</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Plane">
             <English>Plane</English>
+            <Japanese>航空機</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Radio">
             <English>Radio</English>
+            <Japanese>無線</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Rearm">
             <English>Rearm</English>
+            <Japanese>再武装</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Refuel">
             <English>Refuel</English>
+            <Japanese>給油</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Repair">
             <English>Repair</English>
+            <Japanese>修理</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Rifle">
             <English>Rifle</English>
+            <Japanese>ライフル</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Run">
             <English>Run</English>
+            <Japanese>走る</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Scout">
             <English>Scout</English>
+            <Japanese>偵察</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Search">
             <English>Search</English>
+            <Japanese>捜索</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Takeoff">
             <English>Takeoff</English>
+            <Japanese>離陸</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Talk">
             <English>Talk</English>
+            <Japanese>話す</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Talk1">
             <English>Talk 1</English>
+            <Japanese>話す 1</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Talk2">
             <English>Talk 2</English>
+            <Japanese>話す 2</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Talk3">
             <English>Talk 3</English>
+            <Japanese>話す 3</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Talk4">
             <English>Talk 4</English>
+            <Japanese>話す 4</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Talk5">
             <English>Talk 5</English>
+            <Japanese>話す 5</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Target">
             <English>Target</English>
+            <Japanese>目標</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Truck">
             <English>Truck</English>
+            <Japanese>トラック</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Unknown">
             <English>Unknown</English>
+            <Japanese>不明</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Upload">
             <English>Upload</English>
+            <Japanese>アップロード</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Use">
             <English>Use</English>
+            <Japanese>使用</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Wait">
             <English>Wait</English>
+            <Japanese>待機</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Walk">
             <English>Walk</English>
+            <Japanese>歩く</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Whiteboard">
             <English>Whiteboard</English>
+            <Japanese>ホワイトボード</Japanese>
         </Key>
     </Package>
 </Project>

@@ -5,11 +5,13 @@
             <English>Placement Preview</English>
             <German>Plazierungsvorschau</German>
             <Polish>Podgląd ustawienia</Polish>
+            <Japanese>設置プレビュー</Japanese>
         </Key>
         <Key ID="STR_ZEN_Placement_Enabled_Description">
             <English>Enables the displaying of a preview object when placing an object.\nIf the placement is confirmed, the object will be placed at the preview's position.\nThis also enables placement of objects on surfaces other than the terrain.</English>
             <German>Aktiviert die Plazierungsvorschau beim Setzen eines Objekts.\nWenn die Platzierung bestätigt wurde, wird das Objekt an dieser Stelle global erstellt.\nDies ermöglicht es Objekte auch auf Flugzeugträgern oder andere Sachen zu plazieren.</German>
             <Polish>Aktywuje możliwość podglądu obiektu przy stawianiu.\nJeżeli ustawienie obiektu zostanie potwierdzone wtedy obiekt zostanie postawiony w miejscu podglądu.\Również udostępnia możliwość stawiania obiektów na innych powierzchniach niż ziemia.</Polish>
+            <Japanese>オブジェクト設置時にプレビューを有効化します。\n設置が確定後、オブジェクトはプレビュー位置へ設置されます。\nまた地面以外へオブジェクトを設置できるようにします。</Japanese>
         </Key>
     </Package>
 </Project>

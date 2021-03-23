@@ -4,14 +4,17 @@
         <Key ID="STR_ZEN_Loadout_AmmoRounds">
             <English>%1 Rounds</English>
             <Polish>%1 Naboi</Polish>
+            <Japanese>%1 発</Japanese>
         </Key>
         <Key ID="STR_ZEN_Loadout_AmmoTooltip">
             <English>%1\n%2 Rounds\n%3</English>
             <Polish>%1\n%2 Naboi\n%3</Polish>
+            <Japanese>%1\n%2 発\n%3</Japanese>
         </Key>
         <Key ID="STR_ZEN_Loadout_EditLoadout">
             <English>Edit Loadout (%1)</English>
             <Polish>Edytuj wyposażenie</Polish>
+            <Japanese>装備を編集 (%1)</Japanese>
         </Key>
     </Package>
 </Project>

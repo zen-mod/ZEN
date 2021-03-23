@@ -5,22 +5,28 @@
             <English>Edit Inventory (%1)</English>
             <German>Inventar bearbeiten (%1)</German>
             <Polish>Edytuj Wyposażenie (%1)</Polish>
+            <Japanese>インベントリ編集 (%1)</Japanese>
         </Key>
         <Key ID="STR_ZEN_Inventory_Search_Tooltip">
             <English>Search the items list. Use 'class ' prefix to search by class name (e.g. 'class FirstAidKit').</English>
+            <Japanese>アイテム一覧から検索します。'class ' を使用し、クラスネームで検索できます。(例: 'class FirstAidKit')</Japanese>
         </Key>
         <Key ID="STR_ZEN_Inventory_Reset_Tooltip">
             <English>Reset to default inventory.</English>
             <Polish>Resetuj do domyślnego wyposażenia.</Polish>
+            <Japanese>標準インベントリへ初期化します。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Inventory_Clear_Tooltip">
             <English>Clear items from current category.</English>
+            <Japanese>現在のカテゴリからアイテムを削除します。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Inventory_Weapon_Tooltip">
             <English>View weapon specific items.</English>
+            <Japanese>武器固有のアイテムを見ます。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Inventory_Close_Tooltip">
             <English>Close weapon specific items.</English>
+            <Japanese>武器固有アイテムを閉じます。</Japanese>
         </Key>
     </Package>
 </Project>
