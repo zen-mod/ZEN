@@ -31,7 +31,8 @@ params [
     ["_category", "", [""]],
     ["_displayName", "", [""]],
     ["_function", {}, [{}]],
-    ["_icon", "", [""]]
+    ["_icon", "", [""]],
+    ["_persist", false, [false]]
 ];
 
 if (isNil QGVAR(modulesList)) then {
@@ -55,6 +56,6 @@ if (_icon isEqualTo "") then {
     _icon = DEFAULT_ICON;
 };
 
-GVAR(modulesList) pushBack [_category, _displayName, _icon, _function];
+GVAR(modulesList) pushBack [_category, _displayName, _icon, _function, _persist];
 
 true
