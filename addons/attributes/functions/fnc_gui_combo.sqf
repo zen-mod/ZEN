@@ -20,15 +20,7 @@
  */
 
 params ["_controlsGroup", "_defaultValue", "_valueInfo"];
-
-//Value Info Eval
-if(typeName _valueInfo == typeName {}) then {
-    _valueInfo = call _valueInfo;
-    if(typeName _valueInfo != typeName []) then { _valueInfo = [] };
-};
-
 _valueInfo params [["_entries", [], [[]]]];
-
 
 private _ctrlCombo = _controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_COMBO;
 
