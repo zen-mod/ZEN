@@ -19,9 +19,10 @@ params ["_logic"];
 
 private _index = getNumber (configOf _logic >> QGVAR(index));
 private _function = GVAR(modulesList) param [_index, []] param [3, {}];
+private _persist = GVAR(modulesList) param [_index, []] param [4, false];
 
 private _position = getPosASL _logic;
-deleteVehicle _logic;
+if(!_persist) then { deleteVehicle _logic };
 
 // Not using curatorCanAttach because that alters the height of the module
 curatorMouseOver params ["_type", "_entity"];
