@@ -13,6 +13,7 @@ PREP(exportMissionSQF);
 PREP(exportText);
 PREP(fireArtillery);
 PREP(fireVLS);
+PREP(forceFire);
 PREP(getActiveTree);
 PREP(getAllTurrets);
 PREP(getArtilleryETA);

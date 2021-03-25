@@ -153,77 +153,6 @@
     _unit enableIRLasers _mode;
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(forceFire), {
-    params ["_curatorClientID", "_shooters"];
-
-    _shooters = _shooters select {local _x};
-    if (_shooters isEqualTo []) then {
-        GVAR(forceFireCurators) = GVAR(forceFireCurators) - [_curatorClientID];
-    } else {
-        // track which curators are forcing fire
-        GVAR(forceFireCurators) pushBackUnique _curatorClientID;
-        [{
-            params ["_args", "_pfhID"];
-            _args params ["_curatorClientID", "_shooters", "_startTime"];
-
-            if (!(_curatorClientID in GVAR(forceFireCurators)) || {CBA_missionTime - _startTime > 10}) exitWith {
-                [_pfhID] call CBA_fnc_removePerFrameHandler;
-            };
-
-            {
-                private _shooter = _x;
-                private _vehicle = vehicle _shooter;
-                private _reloadTime = 0;
-                if !(_shooter isKindOf "CAManBase") then {
-                    private _currentWeapon = currentWeapon _vehicle;
-                    private _currentWeaponMuzzles = getArray (configFile >> "CfgWeapons" >> _currentWeapon >> "muzzles");
-                    private _currentMagazine = currentMagazine _vehicle;
-
-                    _shooter = gunner _vehicle;
-                    private _primaryTurret = [0];
-                    if (isNull _shooter) then {
-                        _shooter = driver _vehicle;
-                        _primaryTurret = [-1];
-                    };
-                    if (isNull _shooter) exitWith {};
-                };
-                if (CBA_missionTime > (_shooter getVariable [QGVAR(nextFireTime), 0])) then {
-
-                    if (_vehicle == _shooter) then {
-                        weaponState _shooter params ["", "_muzzle", "_firemode"];
-                        _shooter forceWeaponFire [_muzzle, _firemode];
-                    } else {
-                        (fullCrew _vehicle select {_x select 0 == _shooter}) params ["", "_role", "_cargoIndex", "_turretPath", "_isFFV"];
-                        // FFV
-                        if (_isFFV) exitWith {
-                            weaponState _shooter params ["", "_muzzle", "_firemode"];
-                            _shooter forceWeaponFire [_muzzle, _firemode];
-                        };
-                        // vehicle crew
-                        if (driver _vehicle == _shooter) then {
-                            // horn
-                            weaponState [_vehicle, [-1]] params ["_weapon", "_muzzle", "_firemode"];
-                            _shooter forceWeaponFire [_muzzle, _firemode];
-                        } else {
-                            private _turretPath = _shooter call CBA_fnc_turretPath;
-                            weaponState [_vehicle, _turretPath] params ["_weapon", "", "", "_magazine", "_ammo"];
-                            _reloadTime = getNumber (configFile >> "CfgWeapons" >> _weapon >> "reloadTime");
-                            if (_reloadTime < 0.5) then {_reloadTime = 0};
-                            {
-                                _x params ["_xMagazine", "_xTurret", "_xAmmo", "_id", "_owner"];
-                                if (_xTurret isEqualTo _turretPath && {_xMagazine == _magazine && {_xAmmo == _ammo && {_xAmmo != 0}}}) exitWith {
-                                    _vehicle action ["UseMagazine", _vehicle, _shooter, _owner, _id];
-                                    _shooter setVariable [QGVAR(nextFireTime), CBA_missionTime + _reloadTime];
-                                };
-                            } forEach magazinesAllTurrets _vehicle;
-                        };
-                    };
-                };
-            } forEach _shooters;
-        }, 0.1, [_curatorClientID, _shooters, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
-    };
-}] call CBA_fnc_addEventHandler;
-
 [QGVAR(moveInDriver), {
     params ["_unit", "_vehicle"];
     _unit moveInDriver _vehicle;
@@ -373,6 +302,7 @@
 
 [QGVAR(earthquake), LINKFUNC(earthquake)] call CBA_fnc_addEventHandler;
 [QGVAR(fireArtillery), LINKFUNC(fireArtillery)] call CBA_fnc_addEventHandler;
+[QGVAR(forceFire), LINKFUNC(forceFire)] call CBA_fnc_addEventHandler;
 [QGVAR(setLampState), LINKFUNC(setLampState)] call CBA_fnc_addEventHandler;
 [QGVAR(setMagazineAmmo), LINKFUNC(setMagazineAmmo)] call CBA_fnc_addEventHandler;
 [QGVAR(setTurretAmmo), LINKFUNC(setTurretAmmo)] call CBA_fnc_addEventHandler;
