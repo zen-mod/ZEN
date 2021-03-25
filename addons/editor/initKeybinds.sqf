@@ -170,10 +170,9 @@
         _drivers = _drivers arrayIntersect _drivers;
 
         {
-            private _isAIEnabledPATH = _x getVariable [QEGVAR(common,isAIEnabledPATH), true];
+            private _isAIEnabledPATH = _x checkAIFeature "PATH";
             private _AIEvent = [QEGVAR(common,enableAI), QEGVAR(common,disableAI)] select _isAIEnabledPATH;
-            [_AIEvent, [_x, "PATH"], _x] call CBA_fnc_targetEvent;
-            _x setVariable [QEGVAR(common,isAIEnabledPATH), !_isAIEnabledPATH, true];
+            [_AIEvent, [_x, "PATH"], _x] call CBA_fnc_globalEvent;
             if (_isAIEnabledPATH) then {
                 _disabled = _disabled + 1;
             } else {
