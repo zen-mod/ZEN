@@ -58,4 +58,4 @@ params [
         ];
         drawIcon3D [_icon, _color, _position1, _scale, _scale, _angle, _text];
     };
-}, 0, [CBA_missionTime + _timeShown, _position0, _position1, _icon0, _icon1, _color]] call CBA_fnc_addPerFrameHandler;
+}, 0, [CBA_missionTime + _timeShown, _position0, _position1, _icon0, _icon1, _color]] call CBA_fnc_addPerFrameHandler
