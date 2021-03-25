@@ -163,7 +163,7 @@
 }, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
 
 [ELSTRING(main,DisplayName), QGVAR(toggleAIPATH), [LSTRING(ToggleAIPATH), LSTRING(ToggleAIPATH_Description)], {
-    if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false) && {count SELECTED_OBJECTS > 0}}) then {
+    if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false) && {SELECTED_OBJECTS isNotEqualTo []}}) then {
         private _disabled = 0;
         private _enabled = 0;
         private _drivers = (SELECTED_OBJECTS apply {driver vehicle _x}) - [objNull];
