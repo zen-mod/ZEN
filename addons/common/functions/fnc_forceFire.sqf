@@ -39,9 +39,9 @@ GVAR(forceFireCurators) pushBackUnique _curatorClientID;
 // Repeating fire for local shooters
 [{
     params ["_args", "_pfhID"];
-    _args params ["_curatorClientID", "_shooters", "_startTime"];
+    _args params ["_curatorClientID", "_shooters", "_endTime"];
 
-    if (!(_curatorClientID in GVAR(forceFireCurators)) || {CBA_missionTime - _startTime > 10}) exitWith {
+    if (!(_curatorClientID in GVAR(forceFireCurators)) || {CBA_missionTime > _endTime}) exitWith {
         [_pfhID] call CBA_fnc_removePerFrameHandler;
     };
 
@@ -91,4 +91,4 @@ GVAR(forceFireCurators) pushBackUnique _curatorClientID;
             };
         };
     } forEach _shooters;
-}, 0.1, [_curatorClientID, _shooters, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
+}, 0.1, [_curatorClientID, _shooters, CBA_missionTime + 10]] call CBA_fnc_addPerFrameHandler;
