@@ -6,6 +6,7 @@ PREP(deserializeInventory);
 PREP(deserializeObjects);
 PREP(displayCuratorLoad);
 PREP(displayCuratorUnload);
+PREP(drawHintLineIcon);
 PREP(dumpPerformanceCounters);
 PREP(earthquake);
 PREP(ejectPassengers);
