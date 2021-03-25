@@ -153,7 +153,7 @@
 
 [ELSTRING(main,DisplayName), QGVAR(forceFire), [LSTRING(ForceFire), LSTRING(ForceFire_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false) && {count SELECTED_OBJECTS > 0}}) then {
-        private _shooters = SELECTED_OBJECTS select {!isNull group _x};
+        private _shooters = SELECTED_OBJECTS select {!isNull group _x && {!isPlayer _x}};
         [QEGVAR(common,ForceFire), [clientOwner, _shooters], _shooters] call CBA_fnc_targetEvent;
 
         true // handled
