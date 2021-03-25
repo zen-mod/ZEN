@@ -113,11 +113,12 @@
 
 [ELSTRING(main,DisplayName), QGVAR(watchCuratorCamera), [LSTRING(WatchCuratorCamera), LSTRING(WatchCuratorCamera_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false) && {count SELECTED_OBJECTS > 0}}) then {
-        private _gunners = SELECTED_OBJECTS select {!isNull group _x};
         private _pos = getPos curatorCamera;
         {
-            [QEGVAR(common,doWatch), [_x, _pos], _x] call CBA_fnc_targetEvent;
-        } forEach _gunners;
+            if (!isNull group _x && {!isPlayer _x}) then {
+                [QEGVAR(common,doWatch), [_x, _pos], _x] call CBA_fnc_targetEvent;
+            };
+        } forEach SELECTED_OBJECTS;
 
         true // handled
     };
@@ -127,11 +128,12 @@
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false) && {count SELECTED_OBJECTS > 0}}) then {
         curatorMouseOver params ["_type", "_entity"];
         private _isCancelling = _type == "OBJECT" && {_entity in SELECTED_OBJECTS};
-        private _gunners = SELECTED_OBJECTS select {!isNull group _x};
         private _cursorPosASL = [] call EFUNC(common,getPosFromScreen);
         {
-            [QEGVAR(common,doWatch), [_x, [ASLToAGL _cursorPosASL, objNull] select _isCancelling], _x] call CBA_fnc_targetEvent;
-        } forEach _gunners;
+            if (!isNull group _x && {!isPlayer _x}) then {
+                [QEGVAR(common,doWatch), [_x, [ASLToAGL _cursorPosASL, objNull] select _isCancelling], _x] call CBA_fnc_targetEvent;
+            };
+        } forEach SELECTED_OBJECTS;
 
         true // handled
     };
@@ -153,7 +155,7 @@
         private _cursorPosASL = [] call EFUNC(common,getPosFromScreen);
 
         {
-            if (!isNull driver _x) then {
+            if (!isNull driver _x && {!isPlayer _x}) then {
                 [QEGVAR(common,doMove), [_x, ASLToAGL _cursorPosASL], _x] call CBA_fnc_targetEvent;
             };
         } forEach SELECTED_OBJECTS;
@@ -166,19 +168,19 @@
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false) && {SELECTED_OBJECTS isNotEqualTo []}}) then {
         private _disabled = 0;
         private _enabled = 0;
-        private _drivers = (SELECTED_OBJECTS apply {driver vehicle _x}) - [objNull];
-        _drivers = _drivers arrayIntersect _drivers;
 
         {
-            private _isAIEnabledPATH = _x checkAIFeature "PATH";
-            private _AIEvent = [QEGVAR(common,enableAI), QEGVAR(common,disableAI)] select _isAIEnabledPATH;
-            [_AIEvent, [_x, "PATH"], _x] call CBA_fnc_globalEvent;
-            if (_isAIEnabledPATH) then {
-                _disabled = _disabled + 1;
-            } else {
-                _enabled = _enabled + 1;
+            if (_x == driver vehicle _x && {!isPlayer _x}) then {
+                private _isAIEnabledPATH = _x checkAIFeature "PATH";
+                private _AIEvent = [QEGVAR(common,enableAI), QEGVAR(common,disableAI)] select _isAIEnabledPATH;
+                [_AIEvent, [_x, "PATH"], _x] call CBA_fnc_globalEvent;
+                if (_isAIEnabledPATH) then {
+                    _disabled = _disabled + 1;
+                } else {
+                    _enabled = _enabled + 1;
+                };
             };
-        } forEach _drivers;
+        } forEach SELECTED_OBJECTS;
 
         [
             "%1 %2%3",
