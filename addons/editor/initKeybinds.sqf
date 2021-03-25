@@ -180,10 +180,20 @@
             };
         } forEach _drivers;
 
-        private _message = "PATH " +
-            (["", format [" - %1: %2", localize ELSTRING(common,Disabled), _disabled]] select (_disabled > 0)) +
-            (["", format [" - %1: %2", localize ELSTRING(common,Enabled), _enabled]] select (_enabled > 0));
-        [_message] call EFUNC(common,showMessage);
+        [
+            "%1 %2%3",
+            localize LSTRING(ToggleAIPATH),
+            if (_disabled > 0) then {
+                format [" - %1: %2", localize ELSTRING(common,Disabled), _disabled]
+            } else {
+                ""
+            },
+            if (_enabled > 0) then {
+                format [" - %1: %2", localize ELSTRING(common,Enabled), _enabled]
+            } else {
+                ""
+            }
+        ] call EFUNC(common,showMessage);
 
         true // handled
     };
