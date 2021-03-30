@@ -31,7 +31,7 @@ _display closeDisplay IDC_CANCEL; // Close helper display
 
     [LSTRING(ModuleLightSource), [
         ["COLOR",  LSTRING(ModuleLightSource_Color), +_color, true],
-        ["SLIDER", LSTRING(ModuleLightSource_Range), [1, 1000, _range, 0], true],
+        ["SLIDER:RADIUS", LSTRING(ModuleLightSource_Range), [1, 1000, _range, 0, _logic], true],
         ["SLIDER", LSTRING(ModuleLightSource_Constant), [0, 100, _constant, 1], true],
         ["SLIDER", LSTRING(ModuleLightSource_Linear), [0, 100, _linear, 1], true],
         ["SLIDER", LSTRING(ModuleLightSource_Quadratic), [0, 100, _quadratic, 1], true]

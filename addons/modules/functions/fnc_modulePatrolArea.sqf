@@ -33,7 +33,7 @@ if !(alive _unit) exitWith {
 };
 
 [LSTRING(ModulePatrolArea), [
-    ["SLIDER", [LSTRING(ModulePatrolArea_Radius), LSTRING(ModulePatrolArea_Radius_Tooltip)], [0, 5000, 100, 0]],
+    ["SLIDER:RADIUS", [LSTRING(ModulePatrolArea_Radius), LSTRING(ModulePatrolArea_Radius_Tooltip)], [0, 5000, 100, 0, _unit]],
     ["TOOLBOX", ["STR_3DEN_Group_Attribute_Behaviour_displayName", LSTRING(ModulePatrolArea_Behaviour_Tooltip)], [0, 1, 5, [
         "STR_3den_attributes_default_unchanged_text",
         ELSTRING(common,Careless),
