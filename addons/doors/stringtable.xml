@@ -12,6 +12,7 @@
         </Key>
         <Key ID="STR_ZEN_Doors_DoorState">
             <English>Door State</English>
+            <Japanese>ドア状態</Japanese>
         </Key>
         <Key ID="STR_ZEN_Doors_NoBuilding">
             <English>Place on a building</English>

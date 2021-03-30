@@ -4,14 +4,17 @@
         <Key ID="STR_ZEN_Compat_ACE_DisplayName">
             <English>ACE Compatibility</English>
             <Korean>ACE 호환</Korean>
+            <Japanese>ACE 互換</Japanese>
         </Key>
         <Key ID="STR_ZEN_Compat_ACE_HideModules">
             <English>Hide ACE Modules</English>
             <Korean>ACE 모듈 숨기기</Korean>
+            <Japanese>ACE モジュール非表示</Japanese>
         </Key>
         <Key ID="STR_ZEN_Compat_ACE_HideModules_Description">
             <English>Hides duplicate modules added by ACE Zeus. Requires display reload.</English>
             <Korean>ACE 제우스에 의해 추가된 모듈을 숨깁니다. 디스플레이 재시작이 필요합니다.</Korean>
+            <Japanese>ACE Zeus と重複しているモジュールを非表示にします。これには再描画が必要です。</Japanese>
         </Key>
     </Package>
 </Project>

@@ -44,77 +44,91 @@
             <German>Fahrzeugaussehen</German>
             <Korean>차량 외견</Korean>
             <Polish>Wygląd pojazdu</Polish>
+            <Japanese>車両外観</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_EditableObjects">
             <English>Editable Objects</English>
             <German>Editierbare Objekte</German>
             <Korean>수정 가능한 아이템</Korean>
             <Polish>Obiekty z możliwością edytowania</Polish>
+            <Japanese>編集可能オブジェクト</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_10m">
             <English>10 m</English>
             <German>10 m</German>
             <Korean>10 m</Korean>
+            <Japanese>10 m</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_50m">
             <English>50 m</English>
             <German>50 m</German>
             <Korean>50 m</Korean>
+            <Japanese>50 m</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_100m">
             <English>100 m</English>
             <German>100 m</German>
             <Korean>100 m</Korean>
+            <Japanese>100 m</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_250m">
             <English>250 m</English>
             <German>250 m</German>
             <Korean>250 m</Korean>
+            <Japanese>250 m</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_HoldFire">
             <English>Hold Fire</English>
             <German>Feuer halten</German>
             <Korean>사격 중지</Korean>
             <Polish>Wstrzymaj Ogień</Polish>
+            <Japanese>発砲禁止</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_HoldFireDefend">
             <English>Hold Fire, Defend Only</English>
             <German>Feuer halten, nur verteidigen</German>
             <Korean>사격 중지, 방어만 하십시오</Korean>
             <Polish>Wstrzymaj ogień, tylko obraniaj</Polish>
+            <Japanese>発砲禁止、自衛のみ</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_HoldFireEngage">
             <English>Hold Fire, Engage At Will</English>
             <German>Feuer halten, selbstständiger Angriff</German>
             <Korean>사격 중지, 자유 사격 개시</Korean>
             <Polish>Wstrzymaj ogień, Inicjuj samowolnie</Polish>
+            <Japanese>発砲禁止、命令時射撃</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_FireAtWill">
             <English>Fire At Will</English>
             <German>Feuerfreigabe</German>
             <Korean>자유 사격 개시</Korean>
             <Polish>Otwórz ogień samowolnie</Polish>
+            <Japanese>随意射</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_FireAtWillEngage">
             <English>Fire &amp; Engage At Will</English>
             <German>Feuerfreigabe und selbstständiger Angriff</German>
             <Korean>사격 &amp; 자유 사격 개시</Korean>
             <Polish>Ogien i samowolona inicjacja</Polish>
+            <Japanese>随意射、命令時射撃</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_FireArtillery">
             <English>Fire Artillery</English>
             <Korean>포병 발사</Korean>
             <Polish>Ogień Artyleryjski</Polish>
+            <Japanese>砲撃</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_UnableToFire">
             <English>Unable To Fire</English>
             <Korean>사격 불가</Korean>
             <Polish>Otworzenie ognia niemożliwe</Polish>
+            <Japanese>発砲付加</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_NotAllVehiclesInRange">
             <English>Not all vehicles are in range to fire</English>
             <Korean>차량이 사격할 수 있는 범위 내에 없습니다.</Korean>
             <Polish>Nie wszystkie pojazdy są w zasięgu do otwarcia ognia.</Polish>
+            <Japanese>全車両が射程内に無い</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_Captives">
             <English>Captives</English>
