@@ -31,12 +31,6 @@
             <Japanese>割り当てキーからのみ</Japanese>
             <Korean>키 바인드만 사용 가능</Korean>
         </Key>
-        <Key ID="STR_ZEN_Context_Menu_OverrideWaypoints">
-            <English>Override Waypoint Placement</English>
-        </Key>
-        <Key ID="STR_ZEN_Context_Menu_OverrideWaypoints_Description">
-            <English>Requires holding the SHIFT key in order to place waypoints.\nAllows for the context menu to be opened by right clicking when waypoint placement would normally occur.</English>
-        </Key>
         <Key ID="STR_ZEN_Context_Menu_KeybindAndMouse">
             <English>Keybind and Mouse</English>
             <French>Touche et souris</French>
@@ -45,6 +39,12 @@
             <Polish>Skrót klawiaturowy i mysz</Polish>
             <Japanese>割り当てキーとマウス</Japanese>
             <Korean>마우스 우클릭만 사용 가능</Korean>
+        </Key>
+        <Key ID="STR_ZEN_Context_Menu_OverrideWaypoints">
+            <English>Override Waypoint Placement</English>
+        </Key>
+        <Key ID="STR_ZEN_Context_Menu_OverrideWaypoints_Description">
+            <English>Allows for the context menu to be opened by right clicking when waypoint placement would normally occur.\nRequires holding the SHIFT key in order to place waypoints.</English>
         </Key>
         <Key ID="STR_ZEN_Context_Menu_OpenContextMenu">
             <English>Open Context Menu</English>
