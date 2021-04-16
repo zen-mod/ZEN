@@ -10,13 +10,12 @@
  * 3: Burst Delay <ARRAY>
  * 4: Dispersion <NUMBER>
  * 5: Target <OBJECT|ARRAY>
- * 6: Vector To Target <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [LOGIC, _weapon, _magazine, _delay, _dispersion, _target, _vectorToTarget] call zen_modules_fnc_moduleTracers
+ * [LOGIC, _weapon, _magazine, _delay, _dispersion, _target] call zen_modules_fnc_moduleTracers
  *
  * Public: No
  */
@@ -34,6 +33,7 @@ _dispersion = [-_dispersion, 0, _dispersion];
 private _gunner = _logic getVariable [QGVAR(tracersGunner), objNull];
 deleteVehicle _gunner;
 
+// Create a new gunner and add the specified weapon and magazine to it
 _gunner = createAgent ["B_Soldier_F", [0, 0, 0], [], 0, "NONE"];
 _gunner attachTo [_logic, [0, 0, 0]];
 _gunner hideObjectGlobal true;
@@ -63,65 +63,62 @@ _logic setVariable [QGVAR(tracersGunner), _gunner];
         deleteVehicle _gunner;
     };
 
-    if (
-        CBA_MissionTime >= _nextBurstTime && {
-            (playableunits + switchableunits) findIf {_gunner distance _x < 100} == -1
-        }
-    ) then {
-        if (_target isEqualType "") then {
-            _target = call compile _target;
-        };
-        if (isNil "_target") then {_target = objNull};
+    if (CBA_MissionTime >= _nextBurstTime && {allPlayers findIf {_gunner distance _x < 100} == -1}) then {
+        private "_targetVector";
 
-        private _vectorToTarget = [0, 0, 0];
-        private _targetPos = [0, 0, 0];
-        private _logicPos = getPosASLVisual _logic;
-        private _dir = 0;
-        private _pitch = 0;
-
-        // Sets vector to the target if it's specified
-        if (!(_target isEqualTo objNull)) then {
-            // Refresh target
+        if (_target isNotEqualTo objNull) then {
+            // Set vector to target if one is specified
             if (_target isEqualType objNull) then {
-                _targetPos = getPosASLVisual _target;
-            } else {
-                _targetPos = _target;
+                _target = getPosASLVisual _target;
             };
-            _vectorToTarget = _logicPos vectorFromTo _targetPos;
 
-            // Vector randomization
-            _vectorToTarget = _vectorToTarget vectorAdd [random _dispersion, random _dispersion, random _dispersion];
-            _logic setVectorDirAndUp [_vectorToTarget, _vectorToTarget vectorCrossProduct [-(_vectorToTarget # 1), _vectorToTarget # 0, 0]];
+            // Randomize target vector based on dispersion
+            _targetVector = getPosASLVisual _logic vectorFromTo _target;
+            _targetVector = vectorNormalized (_targetVector vectorAdd [random _dispersion, random _dispersion, random _dispersion]);
+            _logic setVectorDirAndUp [_targetVector, _targetVector vectorCrossProduct [-(_targetVector select 1), _targetVector select 0, 0]];
         } else {
-            // Random firing (old behavior)
-            _logic setdir (random 360);
+            // No specific target, fire randomly in the air
+            _gunner setDir random 360;
             [_gunner, 30 + random 60, 0] call BIS_fnc_setPitchBank;
         };
 
-        private _shotDelay = 0.05 + random 0.1;
         private _burstLength = 0.1 + random 0.9;
 
+        // Wait until gunner is on-target before starting burst
         [{
-            params ["_args", "_delay"];
-            _args params ["", "", "_gunner", "", "", "", "_vectorToTarget"];
-            _vectorToTarget isEqualTo [0, 0, 0] || {
-                // Wait until on-target before starting burst
-                ((vectorDirVisual _gunner) vectorDotProduct (vectorNormalized _vectorToTarget)) > 0.99
-            }
-        }, {
-            params ["_args", "_delay"];
-            [{
-                params ["_nextShotTime", "_logic", "_gunner", "_dispersion", "_weapon", "_shotDelay"];
+            params ["_logic", "_gunner", "_targetVector"];
 
-                // Fire
+            !alive _logic
+            || {!alive _gunner}
+            || {isNil "_targetVector"}
+            || {vectorDirVisual _gunner vectorDotProduct _targetVector > 0.95}
+        }, {
+            params ["_logic", "_gunner", "", "_weapon", "_burstLength", "_startTime"];
+
+            // Exit if aligning to target took too long
+            private _timeout = _burstLength - (CBA_MissionTime - _startTime);
+            if (_timeout <= 0) exitWith {};
+
+            [{
+                params ["_logic", "_gunner", "_weapon", "_nextShotTime"];
+
+                if (!alive _logic || {!alive _gunner}) exitWith {
+                    true
+                };
+
                 if (CBA_MissionTime >= _nextShotTime) then {
                     _gunner setAmmo [_weapon, 999];
                     [_gunner, _weapon] call BIS_fnc_fire;
-                    _this set [0, CBA_missionTime + _shotDelay];
-                };
-            }, {}, _args, _delay] call CBA_fnc_waitUntilAndExecute;
-        }, [[CBA_missionTime, _logic, _gunner, _dispersion, _weapon, _shotDelay, _vectorToTarget], _burstLength]] call CBA_fnc_waitUntilAndExecute;
 
-        _args set [6, CBA_MissionTime + random _delay];
+                    private _shotDelay = 0.05 + random 0.1;
+                    _this set [3, CBA_missionTime + _shotDelay];
+                };
+
+                false
+            }, {}, [_logic, _gunner, _weapon, 0], _timeout] call CBA_fnc_waitUntilAndExecute;
+        }, [_logic, _gunner, _targetVector, _weapon, _burstLength, CBA_missionTime], _burstLength] call CBA_fnc_waitUntilAndExecute;
+
+        // Ensure a new burst is not started until this one finishes
+        _args set [6, CBA_MissionTime + (random _delay max _burstLength)];
     };
 }, 0.1, [_logic, _gunner, _target, _weapon, _delay, _dispersion, 0]] call CBA_fnc_addPerFrameHandler;

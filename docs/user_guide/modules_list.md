@@ -273,7 +273,7 @@ Toggles the visibility of the attached object.
 
 ## Tracers
 
-Spawns an invisible unit to shoot customizable tracer bursts.
+Creates an invisible unit that shoots customizable tracer bursts at a specified target when no players are within 100 m of the module.
 
 ## Un-Garrison Group
 
