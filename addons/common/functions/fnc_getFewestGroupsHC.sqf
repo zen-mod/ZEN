@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Ampersand
- * Returns HC with fewest groups, if available.
+ * Returns the headless client with the fewest local groups. objNull if none are available.
  *
  * Arguments:
  * None
