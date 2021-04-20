@@ -249,6 +249,9 @@
             <Japanese>目標</Japanese>
             <Korean>목표</Korean>
         </Key>
+        <Key ID="STR_ZEN_Common_Cursor">
+            <English>Cursor</English>
+        </Key>
         <Key ID="STR_ZEN_Common_SelectedUnit">
             <English>Selected Unit</English>
             <German>Ausgewählte Einheit</German>
@@ -341,6 +344,12 @@
             <Italian>Statico</Italian>
             <Japanese>固定式</Japanese>
             <Korean>고정</Korean>
+        </Key>
+        <Key ID="STR_ZEN_Common_Weapon">
+            <English>Weapon</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_Magazine">
+            <English>Magazine</English>
         </Key>
         <Key ID="STR_ZEN_Common_Nearest">
             <English>Nearest</English>

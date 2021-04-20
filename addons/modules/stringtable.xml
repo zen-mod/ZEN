@@ -2091,6 +2091,30 @@
             <Korean>전등이 켜질때 부러진 것들을 수리합니다.</Korean>
             <Polish>Napraw zepsute lampy przed włączeniem.</Polish>
         </Key>
+        <Key ID="STR_ZEN_Modules_Tracers_BurstDelay">
+            <English>Burst Delay</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_Tracers_BurstDelay_Tooltip">
+            <English>The delay, in seconds, between bursts of tracers.\nSelected randomly in a range from min to max, gravitating towards mid.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_Tracers_Dispersion">
+            <English>Dispersion</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_Tracers_Dispersion_Tooltip">
+            <English>The dispersion of the fired tracer rounds.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_Tracers_Random_Tooltip">
+            <English>Tracers are fired randomly in the air.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_Tracers_Camera_Tooltip">
+            <English>Tracers are fired at the current camera position.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_Tracers_Cursor_Tooltip">
+            <English>Tracers target is selected using the cursor after closing the dialog.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_Tracers_TracersTarget">
+            <English>Tracers Target</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_CustomFire">
             <English>Custom Fire</English>
             <German>Benutzerdefiniertes Feuer</German>

@@ -1192,3 +1192,141 @@ class GVAR(RscSpawnReinforcements): GVAR(RscDisplay) {
         class ButtonCancel: ButtonCancel {};
     };
 };
+
+class GVAR(RscTracers): GVAR(RscDisplay) {
+    function = QFUNC(gui_tracers);
+    checkLogic = 1;
+    class controls: controls {
+        class Title: Title {};
+        class Background: Background {};
+        class Content: Content {
+            h = POS_H(19.4);
+            class controls {
+                class WeaponLabel: EGVAR(common,RscLabel) {
+                    text = ECSTRING(common,Weapon);
+                    w = POS_W(26);
+                };
+                class WeaponBackground: EGVAR(common,RscBackground) {
+                    x = 0;
+                    y = POS_H(1);
+                    w = POS_W(26);
+                    h = POS_H(5);
+                };
+                class Weapon: ctrlListNBox {
+                    idc = IDC_TRACERS_WEAPON;
+                    x = 0;
+                    y = POS_H(1);
+                    w = POS_W(26);
+                    h = POS_H(5);
+                    rowHeight = POS_H(1.2);
+                    columns[] = {0.05, 0.15};
+                    tooltipPerColumn = 0;
+                };
+                class MagazineLabel: WeaponLabel {
+                    text = ECSTRING(common,Magazine);
+                    y = POS_H(6.1);
+                };
+                class MagazineBackground: WeaponBackground {
+                    y = POS_H(7.1);
+                };
+                class Magazine: Weapon {
+                    idc = IDC_TRACERS_MAGAZINE;
+                    y = POS_H(7.1);
+                };
+                class DelayLabel: WeaponLabel {
+                    text = CSTRING(Tracers_BurstDelay);
+                    tooltip = CSTRING(Tracers_BurstDelay_Tooltip);
+                    y = POS_H(12.2);
+                };
+                class DelayBackground: WeaponBackground {
+                    y = POS_H(13.2);
+                    h = POS_H(2);
+                };
+                class DelayMinLabel: RscText {
+                    style = ST_RIGHT;
+                    text = "$STR_3DEN_Attributes_Timeout_TitleMin_text";
+                    font = "RobotoCondensedLight";
+                    x = POS_W(4);
+                    y = POS_H(13.7);
+                    w = POS_W(2);
+                    h = POS_H(1);
+                    shadow = 0;
+                };
+                class DelayMin: EGVAR(common,RscEdit) {
+                    idc = IDC_TRACERS_DELAY_MIN;
+                    font = "EtelkaMonospacePro";
+                    x = POS_W(6);
+                    y = POS_H(13.7);
+                    w = POS_W(4);
+                    h = POS_H(1);
+                    sizeEx = POS_H(0.8);
+                };
+                class DelayMidLabel: DelayMinLabel {
+                    text = "$STR_3DEN_Attributes_Timeout_TitleMid_text";
+                    x = POS_W(10);
+                };
+                class DelayMid: DelayMin {
+                    idc = IDC_TRACERS_DELAY_MID;
+                    x = POS_W(12);
+                };
+                class DelayMaxLabel: DelayMinLabel {
+                    text = "$STR_3DEN_Attributes_Timeout_TitleMax_text";
+                    x = POS_W(16);
+                };
+                class DelayMax: DelayMin {
+                    idc = IDC_TRACERS_DELAY_MAX;
+                    x = POS_W(18);
+                };
+                class DispersionLabel: WeaponLabel {
+                    text = CSTRING(Tracers_Dispersion);
+                    tooltip = CSTRING(Tracers_Dispersion_Tooltip);
+                    y = POS_H(15.3);
+                };
+                class Dispersion: ctrlToolbox {
+                    idc = IDC_TRACERS_DISPERSION;
+                    x = 0;
+                    y = POS_H(16.3);
+                    w = POS_W(26);
+                    h = POS_H(1);
+                    rows = 1;
+                    columns = 5;
+                    strings[] = {
+                        ECSTRING(common,VeryLow),
+                        ECSTRING(common,Low),
+                        ECSTRING(common,Medium),
+                        ECSTRING(common,High),
+                        ECSTRING(common,VeryHigh)
+                    };
+                };
+                class TargetLabel: WeaponLabel {
+                    text = "$STR_A3_CfgVehicles_ModuleAI_F_Arguments_Target_0";
+                    y = POS_H(17.4);
+                };
+                class Target: Dispersion {
+                    idc = IDC_TRACERS_TARGET;
+                    y = POS_H(18.4);
+                    columns = 3;
+                    strings[] = {
+                        "$STR_A3_RscDisplayArsenal_ButtonRandom",
+                        "$STR_3DEN_Camera_textSingular",
+                        ECSTRING(common,Cursor)
+                    };
+                    tooltips[] = {
+                        CSTRING(Tracers_Random_Tooltip),
+                        CSTRING(Tracers_Camera_Tooltip),
+                        CSTRING(Tracers_Cursor_Tooltip)
+                    };
+                };
+                class Change: ctrlCheckbox {
+                    idc = IDC_TRACERS_CHANGE;
+                    x = POS_W(25);
+                    y = POS_H(17.4);
+                    w = POS_W(1);
+                    h = POS_H(1);
+                };
+            };
+        };
+        class ButtonOK: ButtonOK {};
+        class ButtonCancel: ButtonCancel {};
+    };
+};

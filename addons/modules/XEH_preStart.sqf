@@ -8,3 +8,4 @@ call FUNC(compileEffects);
 call FUNC(compileFlags);
 call FUNC(compileMines);
 call FUNC(compileReinforcements);
+call FUNC(compileTracers);
