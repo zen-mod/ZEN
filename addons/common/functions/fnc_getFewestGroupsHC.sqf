@@ -34,7 +34,7 @@ switch (count _hcIDs) do {
         objNull
     };
     case 1: {
-        _hcIDs select 0;
+        _hcIDs select 0
     };
     default {
         // Count local groups for each HC
