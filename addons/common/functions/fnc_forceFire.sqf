@@ -66,7 +66,6 @@ GVAR(forceFireCurators) pushBackUnique _curatorClientID;
                 (fullCrew _vehicle select {_x select 0 == _shooter} select 0) params ["", "", "_cargoIndex", "_turretPath", "_isFFV"];
                 // FFV
                 if (_isFFV) exitWith {
-                    systemChat "FFV";
                     weaponState _shooter params ["", "_muzzle", "_firemode"];
                     _shooter forceWeaponFire [_muzzle, _firemode];
                 };
