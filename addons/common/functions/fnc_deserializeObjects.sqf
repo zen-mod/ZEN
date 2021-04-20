@@ -20,12 +20,12 @@
  * Public: No
  */
 
-params [["_serializedData", [], [[]]], ["_centerPos", [0, 0, 0], [[]], [2, 3]], ["_makeEditable", true, [true]], ["_enableRandomization", false, [true]]];
+params [["_serializedData", [], [[]]], ["_centerPos", [0, 0, 0], [[]], [2, 3]], ["_makeEditable", true, [true]], ["_enableRandomization", false, [true]], ["_useHC", true, [true]]];
 _serializedData params [["_objectData", [], [[]]], ["_groupData", [], [[]]]];
 
 // Check for suitable Headless Client
 private _hc = [] call FUNC(getFewestGroupsHC);
-if (!isNull _hc) exitWith {
+if (isServer && {_useHC} && {!isNull _hc}) exitWith {
     [QEGVAR(common,deserializeObjects), _this, _hc] call CBA_fnc_targetEvent;
 };
 
