@@ -2444,5 +2444,8 @@
             <English>Vehicle must have other crew available</English>
             <Japanese>車両には空いている乗員席がありません</Japanese>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleInjure">
+            <English>Injure</English>
+        </Key>
     </Package>
 </Project>

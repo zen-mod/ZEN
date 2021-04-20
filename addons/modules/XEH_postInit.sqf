@@ -99,3 +99,12 @@ if (isServer) then {
     _unit assignAsGunner _vehicle;
     [_unit] orderGetIn true;
 }] call CBA_fnc_addEventHandler;
+
+[QGVAR(injureUnit), {
+    params ["_unit", "_damageValues"];
+
+    {
+        _x params ["_hitpoint", "_damage"];
+        _unit setHit [_hitpoint, _damage];
+    } forEach _damageValues;
+}] call CBA_fnc_addEventHandler;
