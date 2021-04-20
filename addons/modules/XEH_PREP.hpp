@@ -27,6 +27,7 @@ PREP(moduleAmbientAnim);
 PREP(moduleAmbientAnimEnd);
 PREP(moduleAmbientAnimStart);
 PREP(moduleAmbientFlyby);
+PREP(moduleAnimationViewer);
 PREP(moduleArsenal);
 PREP(moduleAssignZeus);
 PREP(moduleAttachEffect);
