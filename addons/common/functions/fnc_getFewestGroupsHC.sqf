@@ -40,7 +40,7 @@ switch (count _hcIDs) do {
         // Count local groups for each HC
         {
             private _hcIndex = _hcIDs find groupOwner _x;
-            if (_hcIndex > -1) then {
+            if (_hcIndex != -1) then {
                 private _groupCount = _hcLoad select _hcIndex;
                 _hcLoad set [_hcIndex, _groupCount + 1];
             };
