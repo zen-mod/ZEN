@@ -63,7 +63,7 @@ _logic setVariable [QGVAR(tracersGunner), _gunner];
         deleteVehicle _gunner;
     };
 
-    if (CBA_MissionTime >= _nextBurstTime && {allPlayers findIf {_gunner distance _x < 100} == -1}) then {
+    if (CBA_missionTime >= _nextBurstTime && {allPlayers findIf {_gunner distance _x < 100} == -1}) then {
         private "_targetVector";
 
         if (_target isNotEqualTo objNull) then {
@@ -96,7 +96,7 @@ _logic setVariable [QGVAR(tracersGunner), _gunner];
             params ["_logic", "_gunner", "", "_weapon", "_burstLength", "_startTime"];
 
             // Exit if aligning to target took too long
-            private _timeout = _burstLength - (CBA_MissionTime - _startTime);
+            private _timeout = _burstLength - (CBA_missionTime - _startTime);
             if (_timeout <= 0) exitWith {};
 
             [{
@@ -106,7 +106,7 @@ _logic setVariable [QGVAR(tracersGunner), _gunner];
                     true
                 };
 
-                if (CBA_MissionTime >= _nextShotTime) then {
+                if (CBA_missionTime >= _nextShotTime) then {
                     _gunner setAmmo [_weapon, 999];
                     [_gunner, _weapon] call BIS_fnc_fire;
 
@@ -119,6 +119,6 @@ _logic setVariable [QGVAR(tracersGunner), _gunner];
         }, [_logic, _gunner, _targetVector, _weapon, _burstLength, CBA_missionTime], _burstLength] call CBA_fnc_waitUntilAndExecute;
 
         // Ensure a new burst is not started until this one finishes
-        _args set [6, CBA_MissionTime + (random _delay max _burstLength)];
+        _args set [6, CBA_missionTime + (random _delay max _burstLength)];
     };
 }, 0.1, [_logic, _gunner, _target, _weapon, _delay, _dispersion, 0]] call CBA_fnc_addPerFrameHandler;
