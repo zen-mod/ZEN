@@ -30,10 +30,10 @@ private _hcLoad = [];
 } forEach allPlayers;
 
 switch (count _hcIDs) do {
-    case (0): {
+    case 0: {
         objNull
     };
-    case (1): {
+    case 1: {
         _hcIDs select 0;
     };
     default {
