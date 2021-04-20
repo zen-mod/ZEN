@@ -30,7 +30,7 @@ _shooters = _shooters select {
 };
 
 if (_shooters isEqualTo []) exitWith {
- GVAR(forceFireCurators) = GVAR(forceFireCurators) - [_curatorClientID];
+    GVAR(forceFireCurators) = GVAR(forceFireCurators) - [_curatorClientID];
 };
 
 // Track which curators are forcing fire on local machine
