@@ -15,7 +15,7 @@
  * Public: No
  */
 
-if !(isServer) exitWith {objNull};
+if (!isServer) exitWith {objNull};
 
 private _hcs = [];
 private _hcIDs = [];
