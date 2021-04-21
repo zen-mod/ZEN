@@ -117,12 +117,8 @@
         {
             if (!isNull group _x && {!isPlayer _x}) then {
                 [QEGVAR(common,doWatch), [_x, _pos], _x] call CBA_fnc_targetEvent;
-                [
-                    ASLToAGL eyePos _x,
-                    _pos,
-                    [],
-                    ["\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\scout_ca.paa"]
-                ] call EFUNC(common,drawHintLineIcon);
+                [2, [_x, _pos, []]] call EFUNC(common,hintAddElement);
+                [2, ["\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\scout_ca.paa", [], _pos, 1, 1, 0]] call EFUNC(common,hintAddElement);
             };
         } forEach SELECTED_OBJECTS;
 
@@ -138,12 +134,8 @@
         {
             if (!isNull group _x && {!isPlayer _x}) then {
                 [QEGVAR(common,doWatch), [_x, [ASLToAGL _cursorPosASL, objNull] select _isCancelling], _x] call CBA_fnc_targetEvent;
-                [
-                    ASLToAGL eyePos _x,
-                    ASLToAGL _cursorPosASL,
-                    [],
-                    ["\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\scout_ca.paa"]
-                ] call EFUNC(common,drawHintLineIcon);
+                [2, [_x, ASLToAGL _cursorPosASL, []]] call EFUNC(common,hintAddElement);
+                [2, ["\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\scout_ca.paa", [], ASLToAGL _cursorPosASL, 1, 1, 0]] call EFUNC(common,hintAddElement);
             };
         } forEach SELECTED_OBJECTS;
 
@@ -169,12 +161,8 @@
         {
             if (!isNull driver _x && {!isPlayer _x}) then {
                 [QEGVAR(common,doMove), [_x, ASLToAGL _cursorPosASL], _x] call CBA_fnc_targetEvent;
-                [
-                    getPos _x,
-                    ASLToAGL _cursorPosASL,
-                    [],
-                    ["\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\walk_ca.paa"]
-                ] call EFUNC(common,drawHintLineIcon);
+                [2, [_x, ASLToAGL _cursorPosASL, []]] call EFUNC(common,hintAddElement);
+                [2, ["\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\walk_ca.paa", [], ASLToAGL _cursorPosASL, 1, 1, 0]] call EFUNC(common,hintAddElement);
             };
         } forEach SELECTED_OBJECTS;
 
