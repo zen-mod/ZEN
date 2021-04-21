@@ -31,7 +31,7 @@ GVAR(hintEHID) = addMissionEventHandler ["Draw3D", {
         } else {
             _elementParams params ["_p0", "_p1", "_p2"];
 
-            private _drawParams = _elementParams apply {_x};
+            private _drawParams = _elementParams + [];
             if (_p0 isEqualType "") then {
                 // Icon
                 if (_p2 isEqualType objNull) then {
