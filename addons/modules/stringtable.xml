@@ -2445,7 +2445,7 @@
             <Japanese>車両には空いている乗員席がありません</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAnimationViewer">
-            <English>Show in Animation Viewer</English>
+            <English>Show In Animation Viewer</English>
         </Key>
     </Package>
 </Project>
