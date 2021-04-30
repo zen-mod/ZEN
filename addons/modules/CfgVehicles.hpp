@@ -22,6 +22,10 @@ class CfgVehicles {
         scopeCurator = 1;
     };
 
+    class ModuleTracers_F: Module_F {
+        scopeCurator = 1;
+    };
+
     class ModuleCAS_F;
     class ModuleCASGun_F: ModuleCAS_F {
         scopeCurator = 1;
@@ -427,6 +431,13 @@ class CfgVehicles {
         displayName = CSTRING(ToggleLamps);
         function = QFUNC(moduleToggleLamps);
         icon = QPATHTOF(ui\street_lamp_ca.paa);
+    };
+    class GVAR(moduleTracers): GVAR(moduleBase) {
+        category = "Effects";
+        displayName = "$STR_a3_cfgvehicles_moduletracers_f_0";
+        curatorInfoType = QGVAR(RscTracers);
+        icon = "\a3\modules_f_curator\Data\iconTracers_ca.paa";
+        portrait = "\a3\modules_f_curator\Data\portraitTracers_ca.paa";
     };
     class GVAR(moduleTurretOptics): GVAR(moduleBase) {
         curatorCanAttach = 1;
