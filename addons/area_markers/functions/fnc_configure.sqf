@@ -36,7 +36,7 @@ markerSize _marker params ["_sizeA", "_sizeB"];
 
 private _ctrlRotationSlider = _ctrlConfigure controlsGroupCtrl IDC_CONFIGURE_ROTATION_SLIDER;
 private _ctrlRotationEdit   = _ctrlConfigure controlsGroupCtrl IDC_CONFIGURE_ROTATION_EDIT;
-[_ctrlRotationSlider, _ctrlRotationEdit, 0, 360, markerDir _marker, 15, {format ["%1%2", round _this, toString [ASCII_DEGREE]]}] call EFUNC(common,initSliderEdit);
+[_ctrlRotationSlider, _ctrlRotationEdit, 0, 360, markerDir _marker, 15, EFUNC(common,formatDegrees)] call EFUNC(common,initSliderEdit);
 
 private _ctrlShape = _ctrlConfigure controlsGroupCtrl IDC_CONFIGURE_SHAPE;
 _ctrlShape lbSetCurSel (["RECTANGLE", "ELLIPSE"] find markerShape _marker);
