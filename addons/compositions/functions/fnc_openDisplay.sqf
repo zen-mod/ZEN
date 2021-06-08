@@ -33,10 +33,7 @@ _ctrlList ctrlAddEventHandler ["LBSelChanged", {
     _display call (_display getVariable QFUNC(verify));
 }];
 
-private _categories = [];
-
 {
-    _categories pushBack _x;
     _ctrlList lbAdd _x;
 } forEach keys GET_COMPOSITIONS;
 
@@ -119,7 +116,7 @@ private _ctrlButtonOK = _display displayCtrl IDC_OK;
 
         _categoryHash set [_name, _compositionData];
 
-        SET_COMPOSITIONS(VAR_COMPOSITIONS);
+        SET_COMPOSITIONS(_compositions);
     } else {
         // In edit mode, remove the old composition from the tree
         [false] call FUNC(removeFromTree);
