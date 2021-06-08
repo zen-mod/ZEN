@@ -36,10 +36,9 @@ _ctrlList ctrlAddEventHandler ["LBSelChanged", {
 private _categories = [];
 
 {
-    if (_categories pushBackUnique _x != -1) then {
-        _ctrlList lbAdd _x;
-    };
-} forEach GET_COMPOSITIONS;
+    _categories pushBack _x;
+    _ctrlList lbAdd _x;
+} forEach keys GET_COMPOSITIONS;
 
 // Verify entered values (not empty, unique category and name combination)
 _display setVariable [QFUNC(verify), {
@@ -116,17 +115,11 @@ private _ctrlButtonOK = _display displayCtrl IDC_OK;
     if (_mode == "create") then {
         // In create mode, add the composition to saved data
         private _compositions = GET_COMPOSITIONS;
-        private _categoryHash = _compositions get _category;
+        private _categoryHash = _compositions getOrDefault [_category, createHashMap, true];
 
-        if (isNil "_categoryHash") then {
-            // Create category hash if category doesn't exist yet.
-            _categoryHash = createHashMapFromArray [[_name, _compositionData]];
-            _compositions set [_category, _categoryHash];
-        } else {
-            _categoryHash set [_name, _compositionData];
-        };
+        _categoryHash set [_name, _compositionData];
 
-        profileNamespace setVariable [VAR_COMPOSITIONS, _compositions];
+        SET_COMPOSITIONS(VAR_COMPOSITIONS);
     } else {
         // In edit mode, remove the old composition from the tree
         [false] call FUNC(removeFromTree);
