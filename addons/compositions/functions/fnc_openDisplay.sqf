@@ -109,18 +109,16 @@ private _ctrlButtonOK = _display displayCtrl IDC_OK;
     private _name = ctrlText _ctrlName;
     private _compositionData = _composition select 2;
 
-    if (_mode == "create") then {
-        // In create mode, add the composition to saved data
-        private _compositions = GET_COMPOSITIONS;
-        private _categoryHash = _compositions getOrDefault [_category, createHashMap, true];
+    // Add the composition to saved data
+    private _compositions = GET_COMPOSITIONS;
+    private _categoryHash = _compositions getOrDefault [_category, createHashMap, true];
 
-        _categoryHash set [_name, _compositionData];
-
-        SET_COMPOSITIONS(_compositions);
-    } else {
-        // In edit mode, remove the old composition from the tree
+    if (_categoryHash set [_name, _compositionData]) then {
+        // remove the old composition from the tree if it already existed
         [false] call FUNC(removeFromTree);
     };
+
+    SET_COMPOSITIONS(_compositions);
 
     // Add the new/updated composition to the tree
     GVAR(treeAdditions) pushBack [_category, _name, +_compositionData];
