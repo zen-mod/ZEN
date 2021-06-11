@@ -79,6 +79,7 @@ PREP(moduleSpawnCarrier);
 PREP(moduleSpawnDestroyer);
 PREP(moduleSpawnReinforcements);
 PREP(moduleSuicideBomber);
+PREP(moduleSuppressiveFire);
 PREP(moduleTeleportPlayers);
 PREP(moduleToggleFlashlights);
 PREP(moduleToggleIRLasers);

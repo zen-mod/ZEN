@@ -244,6 +244,10 @@ When the "Dead Man's Switch" option is enabled, the unit will detonate if they d
 When "Auto Seek" is enabled, the unit will actively try to find and move towards nearby units of the activation side.
 The range of Auto Seek is based on the unit's spot distance skill with a minimum of 100 meters.
 
+## Suppressive Fire
+
+Makes the attached unit or group perform suppressive fire on a target for the specified amount of time.
+
 ## Teleport Players
 
 Teleports players from the selected side, group(s), or individual player(s) to the module's position.

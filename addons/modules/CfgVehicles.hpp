@@ -406,6 +406,12 @@ class CfgVehicles {
         displayName = CSTRING(ModuleSuicideBomber);
         function = QFUNC(moduleSuicideBomber);
     };
+    class GVAR(moduleSuppressiveFire): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = ECSTRING(ai,SuppressiveFire);
+        function = QFUNC(moduleSuppressiveFire);
+    };
     class GVAR(moduleTeleportPlayers): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Players);

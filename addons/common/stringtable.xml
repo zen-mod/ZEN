@@ -456,6 +456,9 @@
             <Japanese>高さ (m)</Japanese>
             <Korean>고도 (m)</Korean>
         </Key>
+        <Key ID="STR_ZEN_Common_Duration_Units">
+            <English>Duration (s)</English>
+        </Key>
         <Key ID="STR_ZEN_Common_Amount">
             <English>Amount</English>
         </Key>
