@@ -2246,7 +2246,7 @@
         <Key ID="STR_ZEN_Modules_SuppressiveFire_Duration_Tooltip">
             <English>Controls the amount of time, in seconds, the units will suppress for.</English>
         </Key>
-        <Key ID="STR_ZEN_Modules_SuppressiveFire_Duration_Tooltip">
+        <Key ID="STR_ZEN_Modules_SuppressiveFire_Stance_Tooltip">
             <English>Controls the stance units on foot will employ while suppressing.</English>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_EntireGroup">
@@ -2405,7 +2405,7 @@
             <Japanese>ユニットは航空機である必要があります</Japanese>
             <Korean>대상은 항공기가 아니어야 합니다</Korean>
         </Key>
-        <Key ID="STR_ACE_Zeus_OnlySpecificSide">
+        <Key ID="STR_ZEN_Modules_OnlySpecificSide">
             <English>Unit must belong to an appropriate side</English>
             <French>L'unité doit appartenir à un camp approprié.</French>
             <Russian>Юнит должен принадлежать соответствующей стороне</Russian>
