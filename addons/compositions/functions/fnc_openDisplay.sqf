@@ -112,10 +112,14 @@ private _ctrlButtonOK = _display displayCtrl IDC_OK;
     // Add the composition to saved data
     private _compositions = GET_COMPOSITIONS;
     private _categoryHash = _compositions getOrDefault [_category, createHashMap, true];
+    _categoryHash set [_name, _compositionData];
 
-    if (_categoryHash set [_name, _compositionData]) then {
-        // remove the old composition from the tree if it already existed
+    if (_mode isEqualTo "edit") then {
+        // Remove the old composition from the tree if it already existed
         [false] call FUNC(removeFromTree);
+
+        // Delete the old composition from the hash
+        _compositions get (_composition select 0) deleteAt (_composition select 1);
     };
 
     SET_COMPOSITIONS(_compositions);
