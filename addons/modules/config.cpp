@@ -7,6 +7,7 @@ class CfgPatches {
             QGVAR(moduleAddFullArsenal),
             QGVAR(moduleAmbientAnim),
             QGVAR(moduleAmbientFlyby),
+            QGVAR(moduleAnimationViewer),
             QGVAR(moduleArsenal),
             QGVAR(moduleAssignZeus),
             QGVAR(moduleAttachEffect),

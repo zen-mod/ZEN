@@ -2243,6 +2243,9 @@
             <Polish>Jesteś pewien że chcesz detonować bombe atomową?</Polish>
             <Japanese>本当に核爆弾を起爆しますか？</Japanese>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleAnimationViewer">
+            <English>Show In Animation Viewer</English>
+        </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_Buildings">
             <English>Buildings</English>
