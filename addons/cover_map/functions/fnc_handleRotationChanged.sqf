@@ -20,7 +20,7 @@
 params ["_ctrlSlider", "", "_angle"];
 
 private _display = ctrlParent _ctrlSlider;
-private _ctrlMap = _display displayCtrl IDC_MAP;
+private _ctrlMap = _display displayCtrl IDC_CM_MAP;
 
 // Update the current area's angle if it exists
 private _area = _ctrlMap getVariable QGVAR(area);

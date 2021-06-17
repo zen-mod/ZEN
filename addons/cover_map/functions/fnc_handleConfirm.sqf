@@ -18,7 +18,7 @@
 params ["_ctrlButtonOK"];
 
 private _display = ctrlParent _ctrlButtonOK;
-private _ctrlMap = _display displayCtrl IDC_MAP;
+private _ctrlMap = _display displayCtrl IDC_CM_MAP;
 private _area = _ctrlMap getVariable QGVAR(area);
 
 if (isNil "_area") then {

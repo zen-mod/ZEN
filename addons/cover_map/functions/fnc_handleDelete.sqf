@@ -18,5 +18,5 @@
 params ["_ctrlDelete"];
 
 private _display = ctrlParent _ctrlDelete;
-private _ctrlMap = _display displayCtrl IDC_MAP;
+private _ctrlMap = _display displayCtrl IDC_CM_MAP;
 _ctrlMap setVariable [QGVAR(area), nil];

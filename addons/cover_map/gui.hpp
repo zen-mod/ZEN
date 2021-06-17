@@ -8,7 +8,7 @@ class RscMapControl {
 };
 
 class GVAR(RscMap): RscMapControl {
-    idc = IDC_MAP;
+    idc = IDC_CM_MAP;
 
     // Prevent map textures from being faded
     alphaFadeStartScale = 100;
@@ -67,14 +67,14 @@ class GVAR(display): EGVAR(modules,RscDisplay) {
                     text = "$STR_3DEN_Object_Attribute_Rotation_displayName";
                 };
                 class RotationSlider: ctrlXSliderH {
-                    idc = IDC_ROTATION_SLIDER;
+                    idc = IDC_CM_ROTATION_SLIDER;
                     x = POS_W(10.1);
                     y = 0;
                     w = POS_W(13.5);
                     h = POS_H(1);
                 };
                 class RotationEdit: EGVAR(common,RscEdit) {
-                    idc = IDC_ROTATION_EDIT;
+                    idc = IDC_CM_ROTATION_EDIT;
                     x = POS_W(23.7);
                     w = POS_W(2.3);
                 };
