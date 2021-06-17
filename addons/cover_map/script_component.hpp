@@ -24,7 +24,7 @@
 #define POS_W(N) ((N) * GUI_GRID_W)
 #define POS_H(N) ((N) * GUI_GRID_H)
 
-#define IDC_MAP 100
-#define IDC_DELETE 200
-#define IDC_ROTATION_SLIDER 300
-#define IDC_ROTATION_EDIT 400
+#define IDC_CM_MAP 100
+#define IDC_CM_DELETE 200
+#define IDC_CM_ROTATION_SLIDER 300
+#define IDC_CM_ROTATION_EDIT 400

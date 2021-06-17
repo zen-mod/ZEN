@@ -26,7 +26,7 @@ if (_button == 0) then {
     // Update the area's angle to reflect the current rotation
     // Needed to apply rotation to newly created area
     private _display = ctrlParent _ctrlMap;
-    private _ctrlSlider = _display displayCtrl IDC_ROTATION_SLIDER;
+    private _ctrlSlider = _display displayCtrl IDC_CM_ROTATION_SLIDER;
 
     private _area = _ctrlMap getVariable QGVAR(area);
     _area set [2, sliderPosition _ctrlSlider];

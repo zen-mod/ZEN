@@ -30,5 +30,5 @@ if (_areaExists) then {
 
 // Enable the delete button if an area exists
 private _display = ctrlParent _ctrlMap;
-private _ctrlDelete = _display displayCtrl IDC_DELETE;
+private _ctrlDelete = _display displayCtrl IDC_CM_DELETE;
 _ctrlDelete ctrlEnable _areaExists;

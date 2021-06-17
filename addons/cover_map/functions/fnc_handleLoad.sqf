@@ -36,7 +36,7 @@ _ctrlLabel ctrlSetPosition [_contentX, _contentY, _contentW, POS_H(1)];
 _ctrlLabel ctrlCommit 0;
 
 // Create the delete area button
-private _ctrlDelete = _display ctrlCreate ["ctrlButtonPicture", IDC_DELETE];
+private _ctrlDelete = _display ctrlCreate ["ctrlButtonPicture", IDC_CM_DELETE];
 _ctrlDelete ctrlSetText "\a3\3den\data\cfg3den\history\deleteitems_ca.paa";
 _ctrlDelete ctrlSetPosition [_contentX + _contentW - POS_W(1), _contentY, POS_W(1), POS_H(1)];
 _ctrlDelete ctrlCommit 0;
@@ -44,7 +44,7 @@ _ctrlDelete ctrlCommit 0;
 _ctrlDelete ctrlAddEventHandler ["ButtonClick", {call FUNC(handleDelete)}];
 
 // Create the map
-private _ctrlMap = _display ctrlCreate [QGVAR(RscMap), IDC_MAP];
+private _ctrlMap = _display ctrlCreate [QGVAR(RscMap), IDC_CM_MAP];
 _ctrlMap ctrlSetPosition [_contentX, _contentY + POS_H(1), _contentW, POS_H(20)];
 _ctrlMap ctrlCommit 0;
 
@@ -62,8 +62,8 @@ if (markerShape QGVAR(border) != "") then {
 };
 
 // Initialize the rotation slider and edit box
-private _ctrlSlider = _display displayCtrl IDC_ROTATION_SLIDER;
-private _ctrlEdit = _display displayCtrl IDC_ROTATION_EDIT;
+private _ctrlSlider = _display displayCtrl IDC_CM_ROTATION_SLIDER;
+private _ctrlEdit = _display displayCtrl IDC_CM_ROTATION_EDIT;
 [_ctrlSlider, _ctrlEdit, 0, 360, _angle, 15, EFUNC(common,formatDegrees), false, FUNC(handleRotationChanged)] call EFUNC(common,initSliderEdit);
 
 // Confirm changes when the OK button is clicked
