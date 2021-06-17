@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Cover_Map">
+        <Key ID="STR_ZEN_Cover_Map_Area_Tooltip">
+            <English>Left-click to interact with the cover map area (shaded red).\nClicking inside the area will move it and clicking outside it will create a new area.</English>
+        </Key>
+    </Package>
+</Project>
