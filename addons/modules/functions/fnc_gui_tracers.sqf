@@ -44,6 +44,13 @@ private _cfgWeapons = configFile >> "CfgWeapons";
     _ctrlWeapon lnbSetTooltip [[_index, 0], format ["%1\n%2", _name, _x]];
     _ctrlWeapon lnbSetPicture [[_index, 0], _icon];
     _ctrlWeapon lnbSetData [[_index, 0], _x];
+
+    private _mod = [_config] call EFUNC(common,getDLC);
+
+    if (_mod != "") then {
+        private _logo = modParams [_mod, ["logo"]] param [0, ""];
+        _ctrlWeapon lnbSetPicture [[_index, 2], _logo];
+    };
 } forEach keys (uiNamespace getVariable QGVAR(tracersCache));
 
 _ctrlWeapon lnbSort [1];
@@ -69,6 +76,13 @@ _ctrlWeapon ctrlAddEventHandler ["LBSelChanged", {
         _ctrlMagazine lnbSetTooltip [[_index, 0], format ["%1\n%2", _name, _x]];
         _ctrlMagazine lnbSetPicture [[_index, 0], _icon];
         _ctrlMagazine lnbSetData [[_index, 0], _x];
+
+        private _mod = [_config] call EFUNC(common,getDLC);
+
+        if (_mod != "") then {
+            private _logo = modParams [_mod, ["logo"]] param [0, ""];
+            _ctrlMagazine lnbSetPicture [[_index, 2], _logo];
+        };
     } forEach (uiNamespace getVariable QGVAR(tracersCache) get _weapon);
 
     _ctrlMagazine lnbSort [1];
