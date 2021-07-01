@@ -34,12 +34,12 @@ if (isServer && {_useHC} && {!isNull _hc}) exitWith {
 _centerPos set [2, 0];
 
 private _objects = [];
-private _groups = [] call CBA_fnc_hashCreate;
+private _groups = createHashMap;
 
 private _fnc_deserializeGroup = {
     params ["_index"];
 
-    private _group = [_groups, _index] call CBA_fnc_hashGet;
+    private _group = _groups get _index;
 
     if (isNil "_group") then {
         (_groupData select _index) params ["_side", "_formation", "_behaviour", "_combatMode", "_speedMode", "_waypoints", "_currentWaypoint"];
@@ -80,7 +80,7 @@ private _fnc_deserializeGroup = {
             _group setCurrentWaypoint [_group, _currentWaypoint];
         }, [_centerPos, _group, _formation, _behaviour, _combatMode, _speedMode, _waypoints, _currentWaypoint]] call CBA_fnc_execNextFrame;
 
-        [_groups, _index, _group] call CBA_fnc_hashSet;
+        _groups set [_index, _group];
     };
 
     _group
@@ -217,7 +217,7 @@ private _fnc_deserializeVehicle = {
         _vehicle setVehicleCargo (_x call _fnc_deserializeObject);
     } forEach _vehicleCargo;
 
-    if !(_slingLoadedObject isEqualTo []) then {
+    if (_slingLoadedObject isNotEqualTo []) then {
         _vehicle setSlingLoad (_slingLoadedObject call _fnc_deserializeObject);
     };
 

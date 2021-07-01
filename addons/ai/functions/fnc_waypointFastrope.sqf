@@ -118,8 +118,8 @@ waitUntil {
 [_vehicle, false, false] call ace_fastroping_fnc_deployAI;
 
 // Wait for all units to finish fastroping
-waitUntil {!(_vehicle getVariable ["ace_fastroping_deployedRopes", []] isEqualTo [])};
-waitUntil {  _vehicle getVariable ["ace_fastroping_deployedRopes", []] isEqualTo []};
+waitUntil {_vehicle getVariable ["ace_fastroping_deployedRopes", []] isNotEqualTo []};
+waitUntil {_vehicle getVariable ["ace_fastroping_deployedRopes", []] isEqualTo []};
 
 // Stow the helicopter's fastrope system
 _vehicle call ace_fastroping_fnc_stowFRIES;

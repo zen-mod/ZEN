@@ -27,4 +27,4 @@ for "_i" from 0 to (lbSize _ctrlListTextures - 1) do {
 _ctrlListTextures lbSetPicture [_selectedIndex, ICON_CHECKED];
 
 // Update vehicle textures
-[GVAR(center), [_ctrlListTextures lbData _selectedIndex, 1]] call BIS_fnc_initVehicle;
+[QEGVAR(common,initVehicle), [GVAR(center), [_ctrlListTextures lbData _selectedIndex, 1]], GVAR(center)] call CBA_fnc_targetEvent;

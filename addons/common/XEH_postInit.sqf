@@ -283,6 +283,8 @@
     _vehicle setVehicleReportOwnPosition _mode;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(initVehicle), BIS_fnc_initVehicle] call CBA_fnc_addEventHandler;
+
 [QGVAR(addWeaponItem), {
     params ["_unit", "_weapon", "_item"];
     _unit addweaponItem [_weapon, _item];

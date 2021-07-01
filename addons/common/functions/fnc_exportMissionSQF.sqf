@@ -271,13 +271,11 @@ private _fnc_processVehicle = {
         _outputObjects pushBack ["{%1 addMagazineTurret _x} forEach %2;", _varName, _turretMagazines];
 
         {
-            private _pylonIndex = _forEachIndex + 1;
-            private _turretPath = [_vehicle, _forEachIndex] call FUNC(getPylonTurret);
-            private _ammoCount = _vehicle ammoOnPylon _pylonIndex;
+            _x params ["_pylonIndex", "", "_turretPath", "_magazine", "_ammoCount"];
 
-            _outputObjects pushBack ["%1 setPylonLoadOut [%2, %3, false, %4];", _varName, _pylonIndex, str _x, _turretPath];
+            _outputObjects pushBack ["%1 setPylonLoadOut [%2, %3, false, %4];", _varName, _pylonIndex, str _magazine, _turretPath];
             _outputObjects pushBack ["%1 setAmmoOnPylon [%2, %3];", _varName, _pylonIndex, _ammoCount];
-        } forEach _pylonMagazines;
+        } forEach getAllPylonsInfo _vehicle;
 
         {
             _x params ["_unit", "_role", "_cargoIndex", "_turretPath"];
@@ -427,7 +425,7 @@ private _output = "";
 
 {
 
-    if !(_x isEqualTo []) then {
+    if (_x isNotEqualTo []) then {
         _x = _x apply {if (_x isEqualType []) then {format _x} else {_x}};
         _output = _output + (_x joinString NEWLINE) + NEWLINE + NEWLINE;
     };

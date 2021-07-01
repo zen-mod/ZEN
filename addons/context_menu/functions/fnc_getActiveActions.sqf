@@ -26,7 +26,7 @@ private _activeActions = [];
     _action params ["", "", "", "", "_statement", "_condition", "_args", "_insertChildren", "_modifierFunction"];
 
     // Check if the action should modified first
-    if !(_modifierFunction isEqualTo {}) then {
+    if (_modifierFunction isNotEqualTo {}) then {
         _action = +_action; // Make a copy of the action for the function to modify
         [_action, ACTION_PARAMS] call _modifierFunction;
     };
@@ -37,7 +37,7 @@ private _activeActions = [];
         private _activeChildren = [_children] call FUNC(getActiveActions);
 
         // Check if the action has code to insert children dynamically
-        if !(_insertChildren isEqualTo {}) then {
+        if (_insertChildren isNotEqualTo {}) then {
             private _dynamicChildren = ACTION_PARAMS call _insertChildren;
             [_dynamicChildren, 2, false] call CBA_fnc_sortNestedArray;
 
@@ -45,7 +45,7 @@ private _activeActions = [];
         };
 
         // Only add the action to active actions if its statement is not empty or it has active children
-        if !(_statement isEqualTo {} && {_activeChildren isEqualTo []}) then {
+        if (_statement isNotEqualTo {} || {_activeChildren isNotEqualTo []}) then {
             _activeActions pushBack [_action, _activeChildren, _priority];
         };
     };
