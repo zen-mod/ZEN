@@ -20,7 +20,7 @@ params ["_display", "_logic"];
 
 private _selections = GVAR(saved) getVariable [QGVAR(cas), [0, 0, 0, 0]];
 
-private _casType = getNumber (configFile >> "CfgVehicles" >> typeOf _logic >> QGVAR(casType));
+private _casType = getNumber (configOf _logic >> QGVAR(casType));
 _display setVariable [QGVAR(params), [_logic, _casType]];
 
 private _cfgVehicles = configFile >> "CfgVehicles";

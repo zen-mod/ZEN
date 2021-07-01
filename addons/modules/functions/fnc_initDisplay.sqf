@@ -18,7 +18,7 @@
 params ["_display"];
 
 private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-private _displayName = getText (configFile >> "CfgVehicles" >> typeOf _logic >> "displayName");
+private _displayName = getText (configOf _logic >> "displayName");
 private _config = _display getVariable QEGVAR(common,config);
 
 // Set the display's title to the module name

@@ -48,6 +48,11 @@ private _contentPosY = 0;
     _ctrlLabel ctrlSetText _displayName;
     _ctrlLabel ctrlSetTooltip _tooltip;
 
+    // Get dynamic value info for the control if needed
+    if (_valueInfo isEqualType {}) then {
+        _valueInfo = _entity call _valueInfo;
+    };
+
     // Execute attribute control specific init function
     private _function = getText (configFile >> _control >> "function");
     [_controlsGroup, _entity call _defaultValue, _valueInfo, _entity] call (missionNamespace getVariable _function);
@@ -116,7 +121,7 @@ private _index = 0;
 // Determine the entity specific description text
 private _entityText = switch (true) do {
     case (_entity isEqualType objNull): {
-        getText (configFile >> "CfgVehicles" >> typeOf _entity >> "displayName");
+        getText (configOf _entity >> "displayName");
     };
     case (_entity isEqualType grpNull): {
         groupId _entity;

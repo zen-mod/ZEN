@@ -9,6 +9,17 @@ MAINPREFIX = "x"
 PREFIX = "zen_"
 ##########################
 
+def tryHemttBuild(projectpath):
+    hemttExe = os.path.join(projectpath, "hemtt.exe")
+    if os.path.isfile(hemttExe):
+        os.chdir(projectpath)
+        ret = subprocess.call([hemttExe, "pack"], stderr=subprocess.STDOUT)
+        print("Using HEMTT: {}".format(ret));
+        return True
+    else:
+        print("HEMTT is not available");
+    return False
+
 def mod_time(path):
     if not os.path.isdir(path):
         return os.path.getmtime(path)
@@ -39,6 +50,8 @@ def main():
     scriptpath = os.path.realpath(__file__)
     projectpath = os.path.dirname(os.path.dirname(scriptpath))
     addonspath = os.path.join(projectpath, "addons")
+
+    if (tryHemttBuild(projectpath)): return
 
     os.chdir(addonspath)
 

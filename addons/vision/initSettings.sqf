@@ -5,7 +5,7 @@
     [ELSTRING(main,DisplayName), LSTRING(DisplayName)],
     true,
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(enableWhiteHot),
@@ -14,7 +14,7 @@
     [ELSTRING(main,DisplayName), LSTRING(DisplayName)],
     true,
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(enableBlackHot),
@@ -23,7 +23,7 @@
     [ELSTRING(main,DisplayName), LSTRING(DisplayName)],
     false,
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(enableGreenHotCold),
@@ -32,7 +32,7 @@
     [ELSTRING(main,DisplayName), LSTRING(DisplayName)],
     false,
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(enableBlackHotGreenCold),
@@ -41,7 +41,7 @@
     [ELSTRING(main,DisplayName), LSTRING(DisplayName)],
     false,
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(enableRedHotCold),
@@ -50,7 +50,7 @@
     [ELSTRING(main,DisplayName), LSTRING(DisplayName)],
     false,
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(enableBlackHotRedCold),
@@ -59,7 +59,7 @@
     [ELSTRING(main,DisplayName), LSTRING(DisplayName)],
     false,
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(enableWhiteHotRedCold),
@@ -68,7 +68,7 @@
     [ELSTRING(main,DisplayName), LSTRING(DisplayName)],
     false,
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(enableRedGreenThermal),
@@ -77,4 +77,4 @@
     [ELSTRING(main,DisplayName), LSTRING(DisplayName)],
     false,
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;

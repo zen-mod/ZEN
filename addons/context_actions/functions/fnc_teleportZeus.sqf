@@ -23,5 +23,5 @@ if (_hoveredEntity isEqualType objNull && {_hoveredEntity isKindOf "AllVehicles"
     };
 
     player setVelocity [0, 0, 0];
-    player setVehiclePosition [ASLToATL _position, [], 0, "NONE"];
+    player setPosASL _position;
 };

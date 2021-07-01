@@ -48,7 +48,7 @@ if (curatorCamera distance _building > DISTANCE_CANCEL) exitWith {
         _control ctrlShow true;
 
         private _state = [_building, _forEachIndex + 1] call FUNC(getState);
-        private _icon  = [ICON_CLOSED, ICON_LOCKED, ICON_OPENED] select _state;
+        private _icon  = [ICON3D_CLOSED, ICON3D_LOCKED, ICON3D_OPENED] select _state;
         private _color = [COLOR_CLOSED, COLOR_LOCKED, COLOR_OPENED] select _state;
 
         _control ctrlSetText _icon;

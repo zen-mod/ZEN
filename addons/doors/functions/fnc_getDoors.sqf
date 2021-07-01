@@ -24,6 +24,6 @@ private _doors = [];
         private _position = getText (_x >> "position");
         _doors pushBack (_building selectionPosition _position);
     };
-} forEach configProperties [configFile >> "CfgVehicles" >> typeOf _building >> "UserActions", "isClass _x"];
+} forEach configProperties [configOf _building >> "UserActions", "isClass _x"];
 
 _doors

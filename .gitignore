@@ -1,4 +1,6 @@
+releases/*
 release/*
+keys/*
 tools/temp
 *.cache
 *.pbo
@@ -12,5 +14,7 @@ CHANGELOG.md
 *.bisign
 *.tar.gz
 *.zip
+hemtt*
+!hemtt.toml
 @zen
 tools/armake.exe

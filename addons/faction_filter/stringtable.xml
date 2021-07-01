@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Faction_Filter">
+        <Key ID="STR_ZEN_Faction_Filter_DisplayName">
+            <English>Zeus Enhanced - Faction Filter</English>
+            <French>Zeus Enhanced - Filtre des Fractions</French>
+            <German>Zeus Enhanced - Fraktionsfilter</German>
+            <Japanese>Zeus Enhanced - 陣営フィルタ</Japanese>
+        </Key>
+    </Package>
+</Project>

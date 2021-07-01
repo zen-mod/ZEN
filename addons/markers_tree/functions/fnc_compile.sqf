@@ -18,7 +18,7 @@
 // Exit if markers tree has already been compiled
 if (!isNil {uiNamespace getVariable QGVAR(cache)}) exitWith {};
 
-private _cache = [];
+private _cache = createHashMap;
 private _cfgMarkerClasses = configFile >> "CfgMarkerClasses";
 
 {
@@ -34,14 +34,8 @@ private _cfgMarkerClasses = configFile >> "CfgMarkerClasses";
             _color = [1, 1, 1, 1];
         };
 
-        private _index = _cache findIf {_x select 0 == _category};
-        private _data  = [_class, _name, _icon, _color];
-
-        if (_index == -1) then {
-            _cache pushBack [_category, [_data]];
-        } else {
-            (_cache select _index select 1) pushBack _data;
-        };
+        private _list = _cache getOrDefault [_category, [], true];
+        _list pushBack [_class, _name, _icon, _color];
     };
 } forEach configProperties [configFile >> "CfgMarkers", "isClass _x"];
 

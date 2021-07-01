@@ -68,17 +68,22 @@ params ["_logic"];
 private _object = attachedTo _logic;
 
 private _intelParams = _object getVariable [QGVAR(intelParams), []];
-_intelParams params [["_share", 0], ["_delete", true], ["_actionText", localize LSTRING(ModuleCreateIntel_PickUpIntel)], ["_actionSounds", []], ["_duration", 1], ["_title", ""], ["_text", ""]];
+_intelParams params [["_share", 0], ["_delete", true], ["_actionType", 0], ["_actionText", localize LSTRING(ModuleCreateIntel_PickUpIntel)], ["_actionSounds", []], ["_duration", 1], ["_title", ""], ["_text", ""]];
 
 private _options = [
     ["TOOLBOX", LSTRING(ModuleCreateIntel_ShareWith), [_share, 1, 3, ["str_eval_typeside", "str_word_allgroup", "str_disp_intel_none_friendly"]]],
     ["TOOLBOX:YESNO", LSTRING(ModuleCreateIntel_DeleteOnCompletion), _delete],
+    ["TOOLBOX", LSTRING(ModuleCreateIntel_ActionType), [_actionType, 1, 2, [LSTRING(ModuleCreateIntel_HoldAction), LSTRING(ModuleCreateIntel_InteractionMenu)]]],
     ["EDIT", LSTRING(ModuleCreateIntel_ActionText), _actionText],
     ["COMBO", LSTRING(ModuleCreateIntel_ActionSound), [SOUND_CLASSES, SOUND_NAMES, SOUND_CLASSES find _actionSounds]],
     ["SLIDER", LSTRING(ModuleCreateIntel_ActionDuration), [0, 60, _duration, 0]],
     ["EDIT", LSTRING(ModuleCreateIntel_IntelTitle), _title],
     ["EDIT:MULTI", LSTRING(ModuleCreateIntel_IntelText), _text]
 ];
+
+if (!isClass (configFile >> "CfgPatches" >> "ace_interact_menu")) then {
+    _options deleteAt 2;
+};
 
 if (isNull _object) then {
     private _names = INTEL_CLASSES apply {getText (configFile >> "CfgVehicles" >> _x >> "displayName")};
@@ -103,12 +108,19 @@ if (isNull _object) then {
         [QEGVAR(common,addObjects), [[_object]]] call CBA_fnc_serverEvent;
     };
 
-    _object setVariable [QGVAR(intelParams), _values, true];
+    // Handle no action type option when ACE is not loaded
+    private _actionType = if (count _values > 7) then {
+        _values deleteAt 2
+    } else {
+        0 // Default to hold action
+    };
 
     _values params ["_share", "_delete", "_actionText", "_actionSounds", "_duration", "_title", "_text"];
+
+    _object setVariable [QGVAR(intelParams), [_share, _delete, _actionType, _actionText, _actionSounds, _duration, _title, _text], true];
     _text = _text splitString endl joinString "<br />";
 
-    private _jipID = [QGVAR(addIntelAction), [_object, _share, _delete, _actionText, _actionSounds, _duration, _title, _text]] call CBA_fnc_globalEventJIP;
+    private _jipID = [QGVAR(addIntelAction), [_object, _share, _delete, _actionType, _actionText, _actionSounds, _duration, _title, _text]] call CBA_fnc_globalEventJIP;
     [_jipID, _object] call CBA_fnc_removeGlobalEventJIP;
 }, {}, _object] call EFUNC(dialog,create);
 

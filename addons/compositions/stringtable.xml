@@ -5,51 +5,61 @@
             <English>ZEN Composition Helper</English>
             <Polish>Pomocnik Kompozycji ZEN</Polish>
             <Korean>ZEN 구성 도우미</Korean>
+            <Japanese>ZEN コンポジション ヘルパー</Japanese>
         </Key>
         <Key ID="STR_ZEN_Compositions_CreateCustomComposition">
             <English>CREATE CUSTOM COMPOSITION</English>
             <Polish>STWÓRZ SWOJĄ KOMPOZYCJE</Polish>
             <Korean>커스텀 구성 제작</Korean>
+            <Japanese>カスタム コンポジション作成</Japanese>
         </Key>
         <Key ID="STR_ZEN_Compositions_EditCustomComposition">
             <English>EDIT CUSTOM COMPOSITION</English>
             <Polish>EDYTUJ SWOJĄ KOMPOZYCJE</Polish>
             <Korean>커스텀 구성 편집</Korean>
+            <Japanese>カスタム コンポジション編集</Japanese>
         </Key>
         <Key ID="STR_ZEN_Compositions_CategoryCannotBeEmpty">
             <English>Category cannot be empty.</English>
             <Polish>Pole kategorii nie może być puste.</Polish>
             <Korean>카테고리는 비어있으면 안됩니다.</Korean>
+            <Japanese>カテゴリーは空にできません。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Compositions_NameCannotBeEmpty">
             <English>Name cannot be empty.</English>
             <Polish>Pole nazwy nie może być puste.</Polish>
             <Korean>이름은 비어있으면 안됩니다.</Korean>
+            <Japanese>名前は空にできません。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Compositions_CompositionAlreadyExists">
             <English>A composition with this name and category already exists.</English>
             <Polish>Kompozycja z tą nazwą i kategorią już istnieje.</Polish>
             <Korean>해당 이름과 카테고리를 가진 구성이 이미 존재합니다.</Korean>
+            <Japanese>この名前とカテゴリは既に存在しています。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Compositions_DeleteConfirmation">
             <English>Are you sure you want to delete this composition?</English>
             <Polish>Jesteś pewnien usunięcia tej kompozycji?</Polish>
             <Korean>이 구성을 삭제하시겠습니까?</Korean>
+            <Japanese>このコンポジションを本当に削除しますか？</Japanese>
         </Key>
         <Key ID="STR_ZEN_Compositions_NoObjectsSelected">
             <English>Select objects to create composition from</English>
             <Polish>Wybierz obiekty do stworzenia kompozycji</Polish>
             <Korean>구성을 제작할 아이템 선택</Korean>
+            <Japanese>次の選択したオブジェクトでコンポジションを作成</Japanese>
         </Key>
         <Key ID="STR_ZEN_Compositions_RandomizationOff">
             <English>Randomization disabled.</English>
             <Polish>Wybór losowy wyłączony.</Polish>
             <Korean>랜덤 기능 비활성화</Korean>
+            <Japanese>ランダム化を無効にしました。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Compositions_RandomizationOn">
             <English>Randomization enabled.</English>
             <Polish>Wybór losowy włączony.</Polish>
             <Korean>랜덤 기능 활성화</Korean>
+            <Japanese>ランダム化を有効にしました。</Japanese>
         </Key>
     </Package>
 </Project>

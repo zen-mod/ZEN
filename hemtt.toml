@@ -1,0 +1,26 @@
+name = "Zeus Enhanced"
+prefix = "zen"
+author = "ZEN Team"
+mainprefix = "x"
+files = [
+    "mod.cpp",
+    "logo_zen_ca.paa",
+    "logo_zen_small_ca.paa",
+    "LICENSE",
+    "AUTHORS.txt",
+    "README.md",
+    "meta.cpp"
+]
+include = ["./include"]
+
+key_name = "{{prefix}}_{{version}}"
+authority = "{{prefix}}_{{version}}-{{git \"id 8\"}}"
+
+optionals = ["compat_ace"]
+
+releasebuild = [
+    "@zip @zen_{{version}}"
+]
+
+[header_exts]
+version = "{{git \"id 8\"}}"

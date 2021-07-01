@@ -36,7 +36,7 @@ private _vehicle = vehicle leader _group;
 // Exit if the helicopter has no passengers that can be deployed by fastrope
 if (crew _vehicle findIf {assignedVehicleRole _x select 0 == "cargo"} == -1) exitWith {true};
 
-private _enabled = getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "ace_fastroping_enabled");
+private _enabled = getNumber (configOf _vehicle >> "ace_fastroping_enabled");
 
 // Exit if fastroping is not enabled for the helicopter
 if (_enabled == 0) exitWith {true};
@@ -118,8 +118,8 @@ waitUntil {
 [_vehicle, false, false] call ace_fastroping_fnc_deployAI;
 
 // Wait for all units to finish fastroping
-waitUntil {!(_vehicle getVariable ["ace_fastroping_deployedRopes", []] isEqualTo [])};
-waitUntil {  _vehicle getVariable ["ace_fastroping_deployedRopes", []] isEqualTo []};
+waitUntil {_vehicle getVariable ["ace_fastroping_deployedRopes", []] isNotEqualTo []};
+waitUntil {_vehicle getVariable ["ace_fastroping_deployedRopes", []] isEqualTo []};
 
 // Stow the helicopter's fastrope system
 _vehicle call ace_fastroping_fnc_stowFRIES;
