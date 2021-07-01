@@ -34,11 +34,11 @@ private _pylonLoadout = [];
     _x params ["_ctrlCombo", "_ctrlTurret"];
 
     private _magazine = _ctrlCombo lbData lbCurSel _ctrlCombo;
-    private _turretPath = _ctrlTurret getVariable [QGVAR(turretPath), []];
+    private _turretPath = _ctrlTurret getVariable [QGVAR(turretPath), [-1]];
 
     private _pylonWeapon = configName (_cfgWeapons >> getText (_cfgMagazines >> _magazine >> "pylonWeapon"));
 
-    if (_turretPath isEqualTo []) then {
+    if (_turretPath isEqualTo [-1]) then {
         _driverWeapons pushBackUnique _pylonWeapon;
     } else {
         _gunnerWeapons pushBackUnique _pylonWeapon;
@@ -73,7 +73,7 @@ _pylonWeapons = _pylonWeapons arrayIntersect _pylonWeapons;
         !(_x in _weaponsToKeep) && {_x in _pylonWeapons}
     };
 
-    if !(_weaponsToRemove isEqualTo []) then {
+    if (_weaponsToRemove isNotEqualTo []) then {
         [QGVAR(removeWeapons), [_aircraft, _turretPath, _weaponsToRemove], _aircraft, _turretPath] call CBA_fnc_turretEvent;
     };
 } forEach [

@@ -54,6 +54,11 @@ private _controls = [];
     private _mirroredIndex = getNumber (_x >> "mirroredMissilePos") - 1;
     private _defaultTurretPath = getArray (_x >> "turret");
 
+    // Pylon config can use [] as the driver turret path
+    if (_defaultTurretPath isEqualTo []) then {
+        _defaultTurretPath = [-1];
+    };
+
     private _ctrlCombo = _display ctrlCreate ["ctrlCombo", -1];
     _ctrlCombo ctrlSetPosition [_posX, _posY, GRID_W(82/3), GRID_H(5)];
     _ctrlCombo ctrlCommit 0;

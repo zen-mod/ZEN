@@ -17,8 +17,11 @@
 
 params ["_logic"];
 
+private _position = ASLToAGL getPosASL _logic;
+deleteVehicle _logic;
+
 [LSTRING(ModuleEarthquake), [
-    ["SLIDER", LSTRING(ModuleEarthquake_Radius), [0, 5000, 200, 0]],
+    ["SLIDER:RADIUS", LSTRING(ModuleEarthquake_Radius), [0, 5000, 200, 0, _position , [1, 0, 0, 0.7]]],
     ["TOOLBOX", LSTRING(ModuleEarthquake_Intensity), [0, 1, 4, [ELSTRING(common,VeryWeak), ELSTRING(common,Weak), ELSTRING(common,Medium), ELSTRING(common,Strong)]]],
     ["TOOLBOX:YESNO", LSTRING(ModuleEarthquake_Buildings), false]
 ], {
@@ -42,6 +45,4 @@ params ["_logic"];
             [{_this setDamage 1}, _building, random 10] call CBA_fnc_waitAndExecute;
         };
     };
-}, {}, ASLtoAGL getPosASL _logic] call EFUNC(dialog,create);
-
-deleteVehicle _logic;
+}, {}, _position] call EFUNC(dialog,create);

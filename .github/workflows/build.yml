@@ -10,26 +10,31 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout the source code
-      uses: actions/checkout@v2
-    - name: Validate SQF
-      run: python3 tools/sqf_validator.py
-    - name: Validate Config
-      run: python3 tools/config_style_checker.py
-    - name: Validate Stringtables
-      run: python3 tools/stringtable_validator.py
-    - name: Validate Return Types
-      run: python3 tools/return_checker.py
-    - name: Check for BOM
-      uses: arma-actions/bom-check@master
+      - name: Checkout the source code
+        uses: actions/checkout@v2
+      - name: Validate SQF
+        run: python3 tools/sqf_validator.py
+      - name: Validate Config
+        run: python3 tools/config_style_checker.py
+      - name: Validate Stringtables
+        run: python3 tools/stringtable_validator.py
+      - name: Validate Return Types
+        run: python3 tools/return_checker.py
+      - name: Check for BOM
+        uses: arma-actions/bom-check@master
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the source code
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 1
       - name: Build with HEMTT
         uses: arma-actions/hemtt@master
         with:
           command: build --release --ci
+      - name: Set short commit hash
+        run: echo "SHA_SHORT=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: zen-${{ env.SHA_SHORT }}-nobin
+          path: releases/*/*  # Upload folder to avoid double-zip artifacts

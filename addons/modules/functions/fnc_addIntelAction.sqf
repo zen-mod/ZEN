@@ -79,7 +79,7 @@ if (_actionType == 1 && {isClass (configFile >> "CfgPatches" >> "ace_interact_me
             params ["_object", "_unit", "_args"];
             _args params ["_title", "_text", "_share", "_delete", "_actionText", "_actionSounds", "_duration", "_fnc_addIntel"];
 
-            if !(_actionSounds isEqualTo []) then {
+            if (_actionSounds isNotEqualTo []) then {
                 _object setVariable [QGVAR(nextTimeForSound), CBA_missionTime];
             };
 
@@ -140,7 +140,7 @@ if (_actionType == 1 && {isClass (configFile >> "CfgPatches" >> "ace_interact_me
             params ["_object", "", "", "_args"];
             _args params ["", "", "_actionSounds"];
 
-            if !(_actionSounds isEqualTo []) then {
+            if (_actionSounds isNotEqualTo []) then {
                 _object setVariable [QGVAR(nextTickForSound), 1];
             };
         },

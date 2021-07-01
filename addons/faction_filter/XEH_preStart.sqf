@@ -9,7 +9,8 @@ private _cfgEditorCategories = configFile >> "CfgEditorCategories";
 {
     {
         // Classes that do not inherit from AllVehicles have thier side ignored and are considered props (Zeus also ignores animals)
-        if (_x isKindOf "AllVehicles" && {!(_x isKindOf "Animal")}) then {
+        // The isEqualType check is here because some mods are incorrectly configured and have numbers in the CfgPatches units array
+        if (_x isEqualType "" && {_x isKindOf "AllVehicles"} && {!(_x isKindOf "Animal")}) then {
             private _config = _cfgVehicles >> _x;
 
             // scopeCurator always has priority over scope, scope is only used if scopeCurator is not defined

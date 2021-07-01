@@ -22,9 +22,9 @@ deleteVehicle _logic;
 
 [LSTRING(AtomicBomb), [
     [
-        "EDIT",
+        "SLIDER:RADIUS",
         LSTRING(DestructionRadius),
-        "500"
+        [0, 5000, 200, 0, ASLtoAGL _position, [1, 0, 0, 0.7]]
     ],
     [
         "EDIT",
@@ -47,7 +47,7 @@ deleteVehicle _logic;
             [QGVAR(moduleNuke), _this] call CBA_fnc_globalEvent;
         },
         {},
-        [_position, parseNumber _destructionRadius, parseNumber _destructionRate, _colorCorrections],
+        [_position, _destructionRadius, parseNumber _destructionRate, _colorCorrections],
         QPATHTOF(ui\nuke_ca.paa)
     ] call EFUNC(common,messageBox);
 }, {}, _position] call EFUNC(dialog,create);
