@@ -22,6 +22,10 @@ class CfgVehicles {
         scopeCurator = 1;
     };
 
+    class ModuleTracers_F: Module_F {
+        scopeCurator = 1;
+    };
+
     class ModuleCAS_F;
     class ModuleCASGun_F: ModuleCAS_F {
         scopeCurator = 1;
@@ -53,6 +57,12 @@ class CfgVehicles {
         displayName = CSTRING(ModuleAmbientFlyby);
         curatorInfoType = QGVAR(RscAmbientFlyby);
         icon = QPATHTOF(ui\heli_ca.paa);
+    };
+    class GVAR(moduleAnimationViewer): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(DevTools);
+        displayName = CSTRING(ModuleAnimationViewer);
+        function = QFUNC(moduleAnimationViewer);
     };
     class GVAR(moduleArsenal): GVAR(moduleBase) {
         curatorCanAttach = 1;
@@ -287,6 +297,12 @@ class CfgVehicles {
         function = QFUNC(moduleHeal);
         icon = QPATHTOF(ui\heal_ca.paa);
     };
+    class GVAR(moduleHideTerrainObjects): GVAR(moduleBase) {
+        category = "Environment";
+        displayName = "$STR_a3_to_hideTerrainObjects1";
+        function = QFUNC(moduleHideTerrainObjects);
+        icon = "\a3\modules_f\data\hideterrainobjects\icon32_ca.paa";
+    };
     class GVAR(moduleHideZeus): GVAR(moduleBase) {
         category = "Curator";
         displayName = CSTRING(ModuleHideZeus);
@@ -355,7 +371,7 @@ class CfgVehicles {
     class GVAR(moduleSearchBuilding): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(AI);
-        displayName = CSTRING(SearchBuilding);
+        displayName = ECSTRING(ai,SearchBuilding);
         function = QFUNC(moduleSearchBuilding);
     };
     class GVAR(moduleSetDate): GVAR(moduleBase) {
@@ -442,6 +458,13 @@ class CfgVehicles {
         displayName = CSTRING(ToggleLamps);
         function = QFUNC(moduleToggleLamps);
         icon = QPATHTOF(ui\street_lamp_ca.paa);
+    };
+    class GVAR(moduleTracers): GVAR(moduleBase) {
+        category = "Effects";
+        displayName = "$STR_a3_cfgvehicles_moduletracers_f_0";
+        curatorInfoType = QGVAR(RscTracers);
+        icon = "\a3\modules_f_curator\Data\iconTracers_ca.paa";
+        portrait = "\a3\modules_f_curator\Data\portraitTracers_ca.paa";
     };
     class GVAR(moduleTurretOptics): GVAR(moduleBase) {
         curatorCanAttach = 1;

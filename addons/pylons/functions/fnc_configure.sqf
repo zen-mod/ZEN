@@ -21,7 +21,7 @@ if (!createDialog QGVAR(display)) exitWith {};
 
 private _display = uiNamespace getVariable QGVAR(display);
 
-private _config = configFile >> "CfgVehicles" >> typeOf _aircraft;
+private _config = configOf _aircraft;
 private _pylonsConfig = _config >> "Components" >> "TransportPylonsComponent";
 
 // Set the display's title to the aircraft name
@@ -54,6 +54,11 @@ private _controls = [];
     private _mirroredIndex = getNumber (_x >> "mirroredMissilePos") - 1;
     private _defaultTurretPath = getArray (_x >> "turret");
 
+    // Pylon config can use [] as the driver turret path
+    if (_defaultTurretPath isEqualTo []) then {
+        _defaultTurretPath = [-1];
+    };
+
     private _ctrlCombo = _display ctrlCreate ["ctrlCombo", -1];
     _ctrlCombo ctrlSetPosition [_posX, _posY, GRID_W(82/3), GRID_H(5)];
     _ctrlCombo ctrlCommit 0;
@@ -64,22 +69,28 @@ private _controls = [];
     _ctrlCombo lbAdd localize LSTRING(Empty);
     _ctrlCombo lbSetCurSel 0;
 
-    // Add compatible magazines to the combo box
+    // Get compatible magazines and sort them alphabetically by name
+    private _magazines = _aircraft getCompatiblePylonMagazines configName _x apply {
+        private _config = _cfgMagazines >> _x;
+        [getText (_config >> "displayName"), getText (_config >> "descriptionShort"), _x]
+    };
+
+    _magazines sort true;
+
+    // Add compatible magazines to the combo box and select the current one
     private _currentMagazine = _currentMagazines select _forEachIndex;
 
     {
-        private _config = _cfgMagazines >> _x;
-        private _name = getText (_config >> "displayName");
-        private _tooltip = getText (_config >> "descriptionShort");
+        _x params ["_name", "_tooltip", "_magazine"];
 
         private _index = _ctrlCombo lbAdd _name;
         _ctrlCombo lbSetTooltip [_index, _tooltip];
-        _ctrlCombo lbSetData [_index, _x];
+        _ctrlCombo lbSetData [_index, _magazine];
 
-        if (_x == _currentMagazine) then {
+        if (_magazine == _currentMagazine) then {
             _ctrlCombo lbSetCurSel _index;
         };
-    } forEach (_aircraft getCompatiblePylonMagazines configName _x);
+    } forEach _magazines;
 
     // Create turret button if aircraft has a gunner position
     private _ctrlTurret = controlNull;

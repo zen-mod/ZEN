@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Zeus module function to hide or unhide Zeus.
+ * Zeus module function to hide or show Zeus.
  *
  * Arguments:
  * 0: Logic <OBJECT>

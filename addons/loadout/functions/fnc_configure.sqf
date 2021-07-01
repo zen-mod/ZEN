@@ -20,7 +20,7 @@ params ["_vehicle"];
 if (!createDialog QGVAR(display)) exitWith {};
 
 private _weaponList = _vehicle call FUNC(getWeaponList);
-private _displayName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
+private _displayName = getText (configOf _vehicle >> "displayName");
 
 private _display = uiNamespace getVariable QEGVAR(common,display);
 _display setVariable [QGVAR(weaponList), _weaponList];
