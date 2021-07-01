@@ -50,7 +50,7 @@ private _fnc_sideChanged = {
     private _ctrlFaction = _display displayCtrl IDC_SPAWNREINFORCEMENTS_FACTION;
     lbClear _ctrlFaction;
 
-    private _vehicleFactions = [_vehiclesCache select _sideIndex] call CBA_fnc_hashKeys;
+    private _vehicleFactions = keys (_vehiclesCache select _sideIndex);
 
     {
         private _config = _cfgFactionClasses >> _x;
@@ -69,11 +69,11 @@ private _fnc_sideChanged = {
     private _ctrlTreeGroups = _display displayCtrl IDC_SPAWNREINFORCEMENTS_TREE_GROUPS;
     tvClear _ctrlTreeGroups;
 
-    [_groupsCache select _sideIndex, {
-        private _factionIndex = _ctrlTreeGroups tvAdd [[], _key];
+    {
+        private _factionIndex = _ctrlTreeGroups tvAdd [[], _x];
 
-        [_value, {
-            private _categoryIndex = _ctrlTreeGroups tvAdd [[_factionIndex], _key];
+        {
+            private _categoryIndex = _ctrlTreeGroups tvAdd [[_factionIndex], _x];
 
             {
                 _x params ["_name", "_icon", "_units"];
@@ -87,13 +87,13 @@ private _fnc_sideChanged = {
 
                 _ctrlTreeGroups tvSetData [_groupPath, str _groupPath];
                 _ctrlTreeGroups setVariable [str _groupPath, _units];
-            } forEach _value;
+            } forEach _y;
 
             _ctrlTreeGroups tvSort [[_factionIndex, _categoryIndex], false];
-        }] call CBA_fnc_hashEachPair;
+        } forEach _y;
 
         _ctrlTreeGroups tvSort [[_factionIndex], false];
-    }] call CBA_fnc_hashEachPair;
+    } forEach (_groupsCache select _sideIndex);
 
     _ctrlTreeGroups tvSort [[], false];
 
@@ -101,12 +101,12 @@ private _fnc_sideChanged = {
     private _ctrlTreeUnits = _display displayCtrl IDC_SPAWNREINFORCEMENTS_TREE_UNITS;
     tvClear _ctrlTreeUnits;
 
-    [_infantryCache select _sideIndex, {
-        private _faction = getText (_cfgFactionClasses >> _key >> "displayName");
+    {
+        private _faction = getText (_cfgFactionClasses >> _x >> "displayName");
         private _factionIndex = _ctrlTreeUnits tvAdd [[], _faction];
 
-        [_value, {
-            private _category = getText (_cfgEditorSubcategories >> _key >> "displayName");
+        {
+            private _category = getText (_cfgEditorSubcategories >> _x >> "displayName");
             private _categoryIndex = _ctrlTreeUnits tvAdd [[_factionIndex], _category];
 
             {
@@ -120,13 +120,13 @@ private _fnc_sideChanged = {
                 _ctrlTreeUnits tvSetPicture [_unitPath, _icon];
                 _ctrlTreeUnits tvSetPictureColor [_unitPath, _sideColor];
                 _ctrlTreeUnits tvSetData [_unitPath, _x];
-            } forEach _value;
+            } forEach _y;
 
             _ctrlTreeUnits tvSort [[_factionIndex, _categoryIndex], false];
-        }] call CBA_fnc_hashEachPair;
+        } forEach _y;
 
         _ctrlTreeUnits tvSort [[_factionIndex], false];
-    }] call CBA_fnc_hashEachPair;
+    } forEach (_infantryCache select _sideIndex);
 
     _ctrlTreeUnits tvSort [[], false];
 
@@ -150,13 +150,13 @@ private _fnc_factionChanged = {
 
     private _ctrlSide = _display displayCtrl IDC_SPAWNREINFORCEMENTS_SIDE;
     private _sideHash = _vehiclesCache select lbCurSel _ctrlSide;
-    private _factionHash = [_sideHash, _ctrlFaction lbData _factionIndex] call CBA_fnc_hashGet;
+    private _factionHash = _sideHash get (_ctrlFaction lbData _factionIndex);
 
     // Add vehicle categories of the selected side and faction
     private _ctrlCategory = _display displayCtrl IDC_SPAWNREINFORCEMENTS_CATEGORY;
     lbClear _ctrlCategory;
 
-    private _vehicleCategories = [_factionHash] call CBA_fnc_hashKeys;
+    private _vehicleCategories = keys _factionHash;
 
     {
         private _index = _ctrlCategory lbAdd getText (_cfgEditorSubcategories >> _x >> "displayName");
@@ -183,13 +183,13 @@ private _fnc_categoryChanged = {
     private _sideHash = _vehiclesCache select lbCurSel _ctrlSide;
 
     private _ctrlFaction = _display displayCtrl IDC_SPAWNREINFORCEMENTS_FACTION;
-    private _factionHash = [_sideHash, _ctrlFaction lbData lbCurSel _ctrlFaction] call CBA_fnc_hashGet;
+    private _factionHash = _sideHash get (_ctrlFaction lbData lbCurSel _ctrlFaction);
 
     // Add vehicles of the selected side, faction, and category
     private _ctrlVehicle = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE;
     lbClear _ctrlVehicle;
 
-    private _vehicles = [_factionHash, _ctrlCategory lbData _categoryIndex] call CBA_fnc_hashGet;
+    private _vehicles = _factionHash get (_ctrlCategory lbData _categoryIndex);
 
     {
         private _config = _cfgVehicles >> _x;

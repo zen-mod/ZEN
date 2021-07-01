@@ -37,7 +37,7 @@ if (isPlayer _unit) exitWith {
 };
 
 [LSTRING(ModuleGarrison), [
-    ["SLIDER", ELSTRING(common,Radius), [5, 5000, 100, 0]],
+    ["SLIDER:RADIUS", ELSTRING(common,Radius), [5, 5000, 100, 0, _unit]],
     ["TOOLBOX", LSTRING(ModuleGarrison_FillMode), [0, 1, 3, [LSTRING(ModuleGarrison_Even), LSTRING(ModuleGarrison_ByBuilding), LSTRING(ModuleGarrison_Random)]]],
     ["TOOLBOX:YESNO", LSTRING(ModuleGarrison_TopDown), false]
 ], {

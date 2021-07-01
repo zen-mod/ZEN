@@ -129,15 +129,16 @@ class GVAR(display): EGVAR(common,RscDisplay) {
                     y = POS_H(13/3);
                     w = POS_W(26);
                     h = POS_H(1);
+                    sizeEx = POS_H(0.85);
                     disableOverflow = 1;
                     columns[] = {0, 0.8};
                     class Items {
                         class Name {
-                            text = "Name";
+                            text = "$STR_A3_RscAttributeName_Title";
                             value = 1;
                         };
                         class Amount {
-                            text = "Amount";
+                            text = ECSTRING(common,Amount);
                             data = "value";
                         };
                     };

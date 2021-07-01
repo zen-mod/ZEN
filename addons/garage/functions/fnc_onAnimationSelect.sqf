@@ -31,4 +31,4 @@ for "_i" from 0 to (lbSize _ctrlListAnimations - 1) do {
 };
 
 // Update vehicle animations
-[GVAR(center), nil, _animations, true] call BIS_fnc_initVehicle;
+[QEGVAR(common,initVehicle), [GVAR(center), nil, _animations, true], GVAR(center)] call CBA_fnc_targetEvent;

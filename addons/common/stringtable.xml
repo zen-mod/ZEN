@@ -68,12 +68,14 @@
             <German>Hinzufügen</German>
             <Korean>추가</Korean>
             <Polish>Dodaj</Polish>
+            <Japanese>追加</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Remove">
             <English>Remove</English>
             <German>Entfernen</German>
             <Korean>제거</Korean>
             <Polish>Usuń</Polish>
+            <Japanese>削除</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_On">
             <English>On</English>
@@ -105,6 +107,7 @@
             <German>Vorgefertigt</German>
             <Polish>Predefiniowane</Polish>
             <Korean>팀 결성 완료</Korean>
+            <Japanese>事前作製</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_VeryLow">
             <English>Very Low</English>
@@ -246,11 +249,15 @@
             <Japanese>目標</Japanese>
             <Korean>목표</Korean>
         </Key>
+        <Key ID="STR_ZEN_Common_Cursor">
+            <English>Cursor</English>
+        </Key>
         <Key ID="STR_ZEN_Common_SelectedUnit">
             <English>Selected Unit</English>
             <German>Ausgewählte Einheit</German>
             <Korean>유닛 선택</Korean>
             <Polish>Wybrane Jednostki</Polish>
+            <Japanese>選択されたユニット</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_SelectedGroup">
             <English>Selected Group</English>
@@ -274,6 +281,7 @@
             <Czech>Frakce</Czech>
             <Italian>Fazione</Italian>
             <Korean>팩션</Korean>
+            <Japanese>陣営</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Aircraft">
             <English>Aircraft</English>
@@ -284,6 +292,7 @@
             <Czech>Letadlo</Czech>
             <Italian>Aerei</Italian>
             <Korean>항공기</Korean>
+            <Japanese>航空機</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Filter">
             <English>Filter</English>
@@ -312,6 +321,7 @@
             <German>Fahrzeug</German>
             <Korean>차량</Korean>
             <Polish>Pojazd</Polish>
+            <Japanese>車両</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Vehicles">
             <English>Vehicles</English>
@@ -335,6 +345,12 @@
             <Japanese>固定式</Japanese>
             <Korean>고정</Korean>
         </Key>
+        <Key ID="STR_ZEN_Common_Weapon">
+            <English>Weapon</English>
+        </Key>
+        <Key ID="STR_ZEN_Common_Magazine">
+            <English>Magazine</English>
+        </Key>
         <Key ID="STR_ZEN_Common_Nearest">
             <English>Nearest</English>
             <French>Le plus proche</French>
@@ -351,6 +367,7 @@
             <German>Weiteste</German>
             <Korean>가장 먼</Korean>
             <Polish>Najdalsze</Polish>
+            <Japanese>最高速</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Relaxed">
             <English>Relaxed</English>
@@ -363,6 +380,7 @@
         <Key ID="STR_ZEN_Common_Careless">
             <English>Careless</English>
             <Polish>Beztroskie</Polish>
+            <Japanese>ケアレス</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Cautious">
             <English>Cautious</English>
@@ -438,6 +456,9 @@
             <Japanese>高さ (m)</Japanese>
             <Korean>고도 (m)</Korean>
         </Key>
+        <Key ID="STR_ZEN_Common_Amount">
+            <English>Amount</English>
+        </Key>
         <Key ID="STR_ZEN_Common_Teleport">
             <English>Teleport</English>
             <French>Téléportation</French>
@@ -458,34 +479,41 @@
         <Key ID="STR_ZEN_Common_Pitch">
             <English>Pitch</English>
             <Korean>피치</Korean>
+            <Japanese>ピッチ</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Roll">
             <English>Roll</English>
             <Korean>롤</Korean>
+            <Japanese>ロール</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Yaw">
             <English>Yaw</English>
             <Korean>요</Korean>
+            <Japanese>ヨー</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_UncheckAll">
             <English>Uncheck All</English>
             <Polish>Odznacz wszystkie</Polish>
             <Korean>전체 선택 해제</Korean>
+            <Japanese>全てアンチェック</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_CheckAll">
             <English>Check All</English>
             <Polish>Zaznacz wszystkie</Polish>
             <Korean>전체 선택</Korean>
+            <Japanese>全てチェック</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_NoGroupsFound">
             <English>No groups found.</English>
             <Polish>Nie znaleziono grup</Polish>
             <Korean>그룹을 찾을 수 없습니다.</Korean>
+            <Japanese>グループがありません。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_NoPlayersFound">
             <English>No players found.</English>
             <Polish>Nie znaleziono graczy</Polish>
             <Korean>플레이어를 찾을 수 없습니다.</Korean>
+            <Japanese>プレイヤーが見つかりません。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_NotEnoughSpaceInVehicle">
             <English>Not enough space in target vehicle: %1 needed - %2 available</English>
@@ -499,6 +527,7 @@
             <English>Copy to Clipboard</English>
             <Polish>Kopiuj do schowka</Polish>
             <Korean>복사됨</Korean>
+            <Japanese>クリップボードにコピー</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects">
             <English>Add Objects to Curators</English>
@@ -594,21 +623,25 @@
         <Key ID="STR_ZEN_Common_AscensionMessages">
             <English>Ascension Messages</English>
             <Polish>Powiadomienia o wyznaczeniu Zeusa</Polish>
+            <Japanese>Zeus 通知</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_AscensionMessages_Description">
             <English>Controls whether global popup messages are displayed when a player is assigned as Zeus.</English>
             <Polish>Kontroluje czy po wyznaczeniu nowego gracza na Zeusa zostaje wyświetlona wiadomość globalna.</Polish>
             <Korean>새로운 플레이어가 Zeus로 지정될 때 전체 메시지의 표시 여부를 제어합니다.</Korean>
+            <Japanese>プレイヤーが Zeus へ指定された場合に、全体へポップアップ メッセージを表示するかを設定できます。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_CameraBird">
             <English>Camera Eagle</English>
             <Polish>Orzeł przy kamerze</Polish>
             <Korean>독수리 카메라</Korean>
+            <Japanese>イーグル有無</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_CameraBird_Description">
             <English>Controls whether an eagle that follows the Zeus camera is created.</English>
             <Polish>Kontroluje czy orzeł podążający za kamerą Zeusa jest aktywowany.</Polish>
             <Korean>Zeus 카메라를 따라다니는 독수리의 생성 여부를 제어합니다</Korean>
+            <Japanese>Zeus カメラ生成時に、イーグルがカメラを追随するかどうかを設定します。</Japanese>
         </Key>
     </Package>
 </Project>

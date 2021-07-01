@@ -210,6 +210,10 @@ Sets the attached object's pitch, roll, and yaw.
 
 Sets the current date (and time of day) in the mission.
 
+## Show In Animation Viewer
+
+Opens the animation viewer on the attached unit.
+
 ## Show In Config Viewer
 
 Opens the config viewer. If placed on an object, the config viewer will be opened to that object's config entry.
@@ -270,6 +274,10 @@ Toggles the simulation of the attached object.
 ## Toggle Visibility
 
 Toggles the visibility of the attached object.
+
+## Tracers
+
+Creates an invisible unit that shoots customizable tracer bursts at a specified target when no players are within 100 m of the module.
 
 ## Un-Garrison Group
 

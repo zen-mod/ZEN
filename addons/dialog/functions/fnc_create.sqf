@@ -179,13 +179,15 @@ private _fnc_verifyListEntries = {
             _controlType = QGVAR(Row_Sides);
         };
         case "SLIDER": {
-            _valueInfo params [["_min", 0, [0]], ["_max", 1, [0]], ["_default", 0, [0]], ["_formatting", 2, [0, {}]]];
+            _valueInfo params [["_min", 0, [0]], ["_max", 1, [0]], ["_default", 0, [0]], ["_formatting", 2, [0, {}]], ["_radiusCenter", objNull, [objNull, []], 3], ["_radiusColor", [1, 1, 1, 0.7], [[]], 4]];
 
             _defaultValue = _default;
             _controlType = QGVAR(Row_Slider);
 
             private _isPercentage = _subType == "PERCENT";
-            _settings append [_min, _max, _formatting, _isPercentage];
+            private _drawRadius = _subType == "RADIUS" && {_radiusCenter isNotEqualTo objNull};
+
+            _settings append [_min, _max, _formatting, _isPercentage, _drawRadius, _radiusCenter, _radiusColor];
         };
         case "TOOLBOX": {
             // Backwards compatibility for old value info format

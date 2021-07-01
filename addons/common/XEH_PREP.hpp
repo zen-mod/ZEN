@@ -14,6 +14,7 @@ PREP(exportText);
 PREP(fireArtillery);
 PREP(fireVLS);
 PREP(forceFire);
+PREP(formatDegrees);
 PREP(getActiveTree);
 PREP(getAllTurrets);
 PREP(getArtilleryETA);

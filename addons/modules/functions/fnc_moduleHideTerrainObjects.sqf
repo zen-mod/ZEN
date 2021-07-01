@@ -26,7 +26,7 @@ deleteVehicle _logic;
         "str_3den_garbagecollection_attribute_mode_displayname",
         [true, 1, 2, ["STR_Disp_Show", "STR_Disp_Hide"]]
     ],
-    ["SLIDER", ELSTRING(common,Radius_Units), [1, 1000, 10, 0]],
+    ["SLIDER:RADIUS", ELSTRING(common,Radius_Units), [1, 1000, 10, 0, _position]],
     ["CHECKBOX", "STR_a3_to_hideTerrainObjects6", true], // Buildings
     ["CHECKBOX", "STR_a3_to_hideTerrainObjects7", true], // Walls & Fences
     ["CHECKBOX", "STR_a3_to_hideTerrainObjects8", true], // Vegetation

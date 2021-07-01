@@ -15,4 +15,4 @@
  * Public: No
  */
 
-_this findIf {!(getVehicleCargo _x isEqualTo []) || {!isNull isVehicleCargo _x}} != -1
+_this findIf {getVehicleCargo _x isNotEqualTo [] || {!isNull isVehicleCargo _x}} != -1

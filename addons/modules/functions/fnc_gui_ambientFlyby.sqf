@@ -31,7 +31,7 @@ private _fnc_sideChanged = {
     private _cfgFactionClasses = configFile >> "CfgFactionClasses";
 
     private _cache = uiNamespace getVariable QGVAR(aircraftCache);
-    private _factions = [_cache select _index] call CBA_fnc_hashKeys;
+    private _factions = keys (_cache select _index);
 
     private _ctrlFaction = _display displayCtrl IDC_AMBIENTFLYBY_FACTION;
     lbClear _ctrlFaction;
@@ -64,7 +64,7 @@ private _fnc_factionChanged = {
     private _faction = _ctrlFaction lbData _index;
 
     private _cache = uiNamespace getVariable QGVAR(aircraftCache);
-    private _aircraft = [_cache select lbCurSel _ctrlSide, _faction] call CBA_fnc_hashGet;
+    private _aircraft = (_cache select lbCurSel _ctrlSide) get _faction;
 
     private _ctrlAircraft = _display displayCtrl IDC_AMBIENTFLYBY_AIRCRAFT;
     lbClear _ctrlAircraft;

@@ -4,6 +4,7 @@
         <Key ID="STR_ZEN_Damage_ComponentsDamage">
             <English>Components Damage (%1)</English>
             <German>Komponentenschaden (%1)</German>
+            <Japanese>各部品ダメージ (%1)</Japanese>
         </Key>
         <Key ID="STR_ZEN_Damage_HitBody">
             <English>Body</English>
@@ -589,60 +590,70 @@
             <German>Reaktivpanzerung vorne</German>
             <Polish>ERA Przód</Polish>
             <Korean>폭발반응장갑차 앞</Korean>
+            <Japanese>ERA 前部</Japanese>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitera_back">
             <English>ERA Back</English>
             <German>Reaktivpanzerung hinten</German>
             <Polish>ERA tył</Polish>
             <Korean>폭발반응장갑차 뒤</Korean>
+            <Japanese>ERA 後部</Japanese>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitera_left">
             <English>ERA Left</English>
             <German>Reaktivpanzerung links</German>
             <Polish>ERA lewa strona</Polish>
             <Korean>폭발반응장갑차 왼쪽</Korean>
+            <Japanese>ERA 左側部</Japanese>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitera_right">
             <English>ERA Right</English>
             <German>Reaktivpanzerung rechts</German>
             <Polish>ERA prawa strona</Polish>
             <Korean>폭발반응장갑차 오른쪽</Korean>
+            <Japanese>ERA 右側部</Japanese>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitera_top">
             <English>ERA Top</English>
             <German>Reaktivpanzerung oben</German>
             <Polish>ERA góra</Polish>
             <Korean>폭발반응장갑차 위</Korean>
+            <Japanese>ERA 上部</Japanese>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitslat">
             <English>Slat</English>
             <German>Käfig</German>
             <Polish>Klapa</Polish>
             <Korean>슬랫</Korean>
+            <Japanese>スラット</Japanese>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitslat_left">
             <English>Slat Left</English>
             <German>Käfig links</German>
             <Polish>Klapa lewa</Polish>
             <Korean>슬랫 왼쪽</Korean>
+            <Japanese>スラット 左側部</Japanese>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitslat_right">
             <English>Slat Right</English>
             <German>Käfig rechts</German>
             <Polish>Klapa prawa</Polish>
             <Korean>슬랫 오른쪽</Korean>
+            <Japanese>スラット 右側部</Japanese>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitslat_front">
             <English>Slat Front</English>
             <German>Käfig vorne</German>
             <Polish>Klapa przód</Polish>
             <Korean>슬랫 앞</Korean>
+            <Japanese>スラット 前部</Japanese>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitslat_back">
             <English>Slat Back</English>
             <German>Käfig hinten</German>
             <Polish>Klapa tył</Polish>
             <Korean>슬랫 뒤</Korean>
+            <Japanese>スラット 後部</Japanese>
         </Key>
     </Package>
 </Project>
