@@ -76,6 +76,8 @@ private _cameraPos = _cameraDir vectorMultiply ((_unit distance curatorCamera) m
             private _handle = player getVariable [QGVAR(handle), -1];
             player removeEventHandler ["HandleRating", _handle];
 
+            ["zen_remoteControlStopped", _unit] call CBA_fnc_localEvent;
+
             {openCuratorInterface} call CBA_fnc_execNextFrame;
         }, _this] call CBA_fnc_waitUntilAndExecute;
     }, [_unit, _vehicle, _vehicleRole, _cameraPos]] call CBA_fnc_execNextFrame;
