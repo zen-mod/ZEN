@@ -46,7 +46,7 @@
             <Portuguese>Incapaz de guarnecer todas as unidades - não há posições o suficiente</Portuguese>
             <Japanese>全てのユニットを歩哨にできません - 空きスペース無し</Japanese>
             <Korean>모든 유닛 배치 불가 - 공간이 충분하지 않음</Korean>
-            <Spanish>No se pueden guarnecer todas las unidades: no hay suficientes posiciones</Spanish>
+            <Spanish>No se pueden guarnecer todas las unidades - no hay suficientes posiciones</Spanish>
         </Key>
         <Key ID="STR_ZEN_AI_AimingAccuracy">
             <English>Aiming Accuracy</English>
@@ -97,7 +97,7 @@
             <Portuguese>Comandante</Portuguese>
             <Japanese>指揮能力</Japanese>
             <Korean>지휘</Korean>
-            <Spanish>Dominante</Spanish>
+            <Spanish>Comandante</Spanish>
         </Key>
         <Key ID="STR_ZEN_AI_Courage">
             <English>Courage</English>
