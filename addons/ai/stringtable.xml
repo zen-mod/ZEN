@@ -59,7 +59,7 @@
             <Portuguese>Precisão da Mira</Portuguese>
             <Japanese>照準精度</Japanese>
             <Korean>조준 정확도</Korean>
-            <Spanish>Precisión al apuntar</spanish>
+            <Spanish>Precisión al apuntar</Spanish>
         </Key>
         <Key ID="STR_ZEN_AI_AimingSpeed">
             <English>Aiming Speed</English>
@@ -84,7 +84,7 @@
             <Portuguese>Balanço da Mira</Portuguese>
             <Japanese>照準安定性</Japanese>
             <Korean>조준 반동</Korean>
-            <Spanish>Movimiento al apuntar</spanish>
+            <Spanish>Movimiento al apuntar</Spanish>
         </Key>
         <Key ID="STR_ZEN_AI_Commanding">
             <English>Commanding</English>
@@ -176,7 +176,7 @@
             <Korean>자동 전투</Korean>
             <Polish>Automatyczna walka</Polish>
             <Japanese>自動戦闘</Japanese>
-            <Spanish>Combate automático</spanish>
+            <Spanish>Combate automático</Spanish>
         </Key>
         <Key ID="STR_ZEN_AI_AutoTarget">
             <English>Auto Target</English>
@@ -197,7 +197,7 @@
             <Polish>Osłona</Polish>
             <Korean>은신하기</Korean>
             <Japanese>遮蔽</Japanese>
-            <Spanish>Cubrir</spanish>
+            <Spanish>Cubrir</Spanish>
         </Key>
         <Key ID="STR_ZEN_AI_FSM">
             <English>FSM</English>
@@ -238,7 +238,7 @@
             <Polish>Ścieżka</Polish>
             <Korean>경로</Korean>
             <Japanese>経路</Japanese>
-            <Spanish>Caminar</spanish>
+            <Spanish>Caminar</Spanish>
         </Key>
         <Key ID="STR_ZEN_AI_RadioProtocol">
             <English>Radio Protocol</English>
