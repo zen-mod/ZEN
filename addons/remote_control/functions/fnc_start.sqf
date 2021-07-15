@@ -97,6 +97,8 @@ private _cameraDir = _unit vectorWorldToModel vectorDir curatorCamera;
             private _handle = player getVariable [QGVAR(handle), -1];
             player removeEventHandler ["HandleRating", _handle];
 
+            ["zen_remoteControlStopped", _unit] call CBA_fnc_localEvent;
+
             {openCuratorInterface} call CBA_fnc_execNextFrame;
         }, _this] call CBA_fnc_waitUntilAndExecute;
     }, [_unit, _vehicle, _vehicleRole, _cameraPos, _cameraDir]] call CBA_fnc_execNextFrame;
