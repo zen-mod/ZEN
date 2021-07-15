@@ -122,7 +122,7 @@
             <Japanese>探知距離</Japanese>
             <Korean>색적 거리</Korean>
             <Polish>Odległość Spottingu</Polish>
-            <Spanish>Distancia de localización</Spanish
+            <Spanish>Distancia de localización</Spanish>
         </Key>
         <Key ID="STR_ZEN_AI_SpotTime">
             <English>Spotting Speed</English>
@@ -168,7 +168,7 @@
             <English>Anim Change</English>
             <Polish>Zmiana animacji</Polish>
             <Japanese>アニメーション変更</Japanese>
-            <Spanish>Cambio de animación</spanish>
+            <Spanish>Cambio de animación</Spanish>
         </Key>
         <Key ID="STR_ZEN_AI_AutoCombat">
             <English>Auto Combat</English>
