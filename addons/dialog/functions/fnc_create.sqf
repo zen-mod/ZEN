@@ -245,10 +245,17 @@ private _fnc_verifyListEntries = {
     _content set [_forEachIndex, [_controlType, _label, _tooltip, _defaultValue, _settings]];
 } forEach _content;
 
-// Exit if dialog creation fails
-if (!createDialog QEGVAR(common,RscDisplayScrollbars)) exitWith {false};
+// Use createDisplay when in 3DEN to prevent interacting with the editor's display
+private _display = if (is3DEN) then {
+    private _display3DEN = uiNamespace getVariable "Display3DEN";
+    _display3DEN createDisplay QEGVAR(common,RscDisplayScrollbars)
+} else {
+    if (!createDialog QEGVAR(common,RscDisplayScrollbars)) exitWith {displayNull};
+    uiNamespace getVariable [QEGVAR(common,display), displayNull]
+};
 
-private _display = uiNamespace getVariable QEGVAR(common,display);
+// Exit if dialog creation fails
+if (isNull _display) exitWith {false};
 
 // Set the dialog's title
 private _ctrlTitle = _display displayCtrl IDC_TITLE;
