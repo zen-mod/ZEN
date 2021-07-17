@@ -173,6 +173,11 @@
     _vehicle engineOn _state;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(selectWeapon), {
+    params ["_unit", "_muzzle"];
+    _unit selectWeapon _muzzle;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(setPilotLight), {
     params ["_vehicle", "_lights"];
     _vehicle setPilotLight _lights;

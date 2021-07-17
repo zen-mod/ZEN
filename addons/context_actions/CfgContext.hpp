@@ -244,6 +244,34 @@ class EGVAR(context_menu,actions) {
             statement = QUOTE(_hoveredEntity setUnitLoadout configOf _hoveredEntity);
             icon = "\a3\3den\Data\Displays\Display3DEN\ToolBar\undo_ca.paa";
         };
+        class SwitchWeapon {
+            displayName = "$STR_A3_Switch1";
+            condition = QUOTE(_hoveredEntity call FUNC(canSwitchWeapon));
+            statement = "";
+            icon = "\a3\ui_f\data\IGUI\Cfg\Actions\reammo_ca.paa";
+            class Primary {
+                displayName = "$STR_A3_RSCDisplayArsenal_Tab_PrimaryWeapon";
+                condition = QUOTE(_hoveredEntity call FUNC(canSwitchWeaponPrimary));
+                statement = QUOTE([ARR_3('zen_common_selectWeapon', [ARR_2(_hoveredEntity, primaryWeapon _hoveredEntity)], _hoveredEntity)] call CBA_fnc_targetEvent);
+                icon = "\a3\ui_f\data\GUI\Rsc\RscDisplayArsenal\primaryWeapon_ca.paa";
+                args = 0;
+                modifierFunction = QUOTE(call FUNC(switchWeaponModifier));
+            };
+            class Handgun: Primary {
+                displayName = "$STR_A3_RSCDisplayArsenal_Tab_Handgun";
+                condition = QUOTE(_hoveredEntity call FUNC(canSwitchWeaponHandgun));
+                statement = QUOTE([ARR_3('zen_common_selectWeapon', [ARR_2(_hoveredEntity, handgunWeapon _hoveredEntity)], _hoveredEntity)] call CBA_fnc_targetEvent);
+                icon = "\a3\ui_f\data\GUI\Rsc\RscDisplayArsenal\handgun_ca.paa";
+                args = 1;
+            };
+            class Binoculars: Primary {
+                displayName = "$STR_A3_RSCDisplayArsenal_Tab_Binoculars";
+                condition = QUOTE(_hoveredEntity call FUNC(canSwitchWeaponBinocular));
+                statement = QUOTE([ARR_3('zen_common_selectWeapon', [ARR_2(_hoveredEntity, binocular _hoveredEntity)], _hoveredEntity)] call CBA_fnc_targetEvent);
+                icon = "\a3\ui_f\data\GUI\Rsc\RscDisplayArsenal\binoculars_ca.paa";
+                args = 2;
+            };
+        };
     };
     class Inventory {
         displayName = "$STR_A3_Gear1";
