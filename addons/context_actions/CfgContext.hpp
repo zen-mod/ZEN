@@ -5,6 +5,12 @@ class EGVAR(context_menu,actions) {
         insertChildren = QUOTE(_objects call FUNC(getArtilleryActions));
         priority = 70;
     };
+    class ThrowGrenade {
+        displayName = CSTRING(ThrowGrenade);
+        icon = QPATHTOF(ui\grenade_ca.paa);
+        priority = -50;
+        insertChildren = QUOTE([_selectedObjects] call FUNC(getGrenadeActions));
+    };
     class Formation {
         displayName = "$STR_3DEN_Group_Attribute_Formation_displayName";
         condition = QUOTE(_groups findIf {units _x findIf {!isPlayer _x} != -1} != -1);

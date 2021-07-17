@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Context_Actions">
+        <Key ID="STR_ZEN_Context_Actions_ThrowGrenade">
+            <English>Throw Grenade</English>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_ThrowX">
+            <English>Throw %1</English>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_PositionTooFar">
+            <English>%1 units were too far away from the position</English>
+        </Key>
         <Key ID="STR_ZEN_Context_Actions_EditInventory">
             <English>Edit Inventory</English>
             <French>Modifier l'inventaire</French>
