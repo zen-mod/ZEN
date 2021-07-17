@@ -28,6 +28,5 @@ if (!GVAR(iconsVisible)) then {
 RscDisplayCurator_sections params ["_mode"];
 
 if (!GVAR(includeCrew) && {_mode == 0 || {_mode == 4 && {isClass (configFile >> "CfgVehicles" >> GVAR(recentTreeData))}}}) then {
-    TRACE_2("Deleting crew",_object,crew _object);
-    {_object deleteVehicleCrew _x} forEach crew _object;
+    deleteVehicleCrew _object;
 };
