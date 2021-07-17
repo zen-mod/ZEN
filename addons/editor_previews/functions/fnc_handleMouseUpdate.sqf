@@ -34,11 +34,18 @@ if (_type isEqualTo "") then {
         _ctrlGroup ctrlShow false;
     };
 
+    getTextureInfo _image params ["_width", "_height"];
+    private _ratio = _width / _height;
+
     private _ctrlImage = _display displayCtrl IDC_PREVIEW_IMAGE;
+    _ctrlImage ctrlSetPositionW POS_W(IMAGE_HEIGHT * _ratio);
     _ctrlImage ctrlSetText _image;
+    _ctrlImage ctrlCommit 0;
 
     _ctrlGroup ctrlShow true;
-    _ctrlGroup ctrlSetPositionY (getMousePosition select 1) min (safeZoneY + safeZoneH - POS_H(5.6));
+    _ctrlGroup ctrlSetPositionX (safeZoneX + safeZoneW - POS_W(POS_EDGE(12.5,11) + IMAGE_HEIGHT * _ratio + 3 * BORDER_SIZE));
+    _ctrlGroup ctrlSetPositionY (getMousePosition select 1) min (safeZoneY + safeZoneH - POS_H(IMAGE_HEIGHT + 3 * BORDER_SIZE));
+    _ctrlGroup ctrlSetPositionW POS_W(IMAGE_HEIGHT * _ratio + 2 * BORDER_SIZE);
     _ctrlGroup ctrlCommit 0;
 };
 

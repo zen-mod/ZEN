@@ -19,8 +19,13 @@ if (!GVAR(enabled)) exitWith {};
 
 params ["_display"];
 
+// Disable pixel rounding to fix inconsistent border size for images with different aspect ratios
 private _ctrlGroup = _display ctrlCreate [QGVAR(control), IDC_PREVIEW_GROUP];
+_ctrlGroup ctrlSetPixelPrecision 2;
 _ctrlGroup ctrlShow false;
+
+private _ctrlImage = _display displayCtrl IDC_PREVIEW_IMAGE;
+_ctrlImage ctrlSetPixelPrecision 2;
 
 {
     private _ctrlTree = _display displayCtrl _x;
