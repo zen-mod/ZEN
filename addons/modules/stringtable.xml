@@ -1008,6 +1008,18 @@
             <Polish>Zmieni zachowanie, prędkość i formację grupy.</Polish>
             <Japanese>グループの移動速度や陣形といった挙動を変更できます。</Japanese>
         </Key>
+        <Key ID="STR_ZEN_Modules_Projectiles">
+            <English>Projectiles</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleThrowSelect">
+            <English>Throw Select</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleFireGL">
+            <English>Fire GL</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleFireLauncher">
+            <English>Fire Launcher</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleSideRelations">
             <English>Side Relations</English>
             <Russian>Отношения сторон</Russian>
