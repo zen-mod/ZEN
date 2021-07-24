@@ -116,10 +116,7 @@ private _ctrlButtonOK = _display displayCtrl IDC_OK;
 
     if (_mode isEqualTo "edit") then {
         // Remove the old composition from the tree if it already existed
-        [false] call FUNC(removeFromTree);
-
-        // Delete the old composition from the hash
-        _compositions get (_composition select 0) deleteAt (_composition select 1);
+        [true] call FUNC(removeFromTree);
     };
 
     SET_COMPOSITIONS(_compositions);
