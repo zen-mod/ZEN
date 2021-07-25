@@ -24,7 +24,15 @@ params ["_controlsGroup", "_defaultValue", "_settings"];
 _settings params ["_fnc_sanitizeValue", "_isMulti", "_height"];
 
 private _ctrlEdit = _controlsGroup controlsGroupCtrl IDC_ROW_EDIT;
-_ctrlEdit ctrlSetText _defaultValue;
+
+// Adjust the height of multi-line edit boxes
+if (_isMulti) then {
+    _controlsGroup ctrlSetPositionH POS_H(_height + 1);
+    _controlsGroup ctrlCommit 0;
+
+    _ctrlEdit ctrlSetPositionH POS_H(_height);
+    _ctrlEdit ctrlCommit 0;
+};
 
 // Format text using sanitizing function whenever it is changed
 private _fnc_textChanged = {
@@ -38,15 +46,7 @@ private _fnc_textChanged = {
 _ctrlEdit ctrlAddEventHandler ["KeyDown", _fnc_textChanged];
 _ctrlEdit ctrlAddEventHandler ["KeyUp", _fnc_textChanged];
 _ctrlEdit setVariable [QGVAR(params), _fnc_sanitizeValue];
-
-// Adjust the height of multi-line edit boxes
-if (_isMulti) then {
-    _controlsGroup ctrlSetPositionH POS_H(_height + 1);
-    _controlsGroup ctrlCommit 0;
-
-    _ctrlEdit ctrlSetPositionH POS_H(_height);
-    _ctrlEdit ctrlCommit 0;
-};
+_ctrlEdit ctrlSetText _defaultValue;
 
 _controlsGroup setVariable [QFUNC(value), {
     params ["_controlsGroup"];
