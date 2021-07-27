@@ -19,6 +19,9 @@
 
 params ["", "_object"];
 
+//--- Flag to ignore placement script, used by Zeus composition to prevent attach and attributes popup
+if (missionNamespace getVariable ['BIS_fnc_curatorObjectPlaced_ignore', false]) exitWith {};
+
 _object call BIS_fnc_curatorAttachObject;
 BIS_fnc_curatorObjectPlaced_mouseOver = curatorMouseOver;
 
