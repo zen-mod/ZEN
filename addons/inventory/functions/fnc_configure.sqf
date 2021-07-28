@@ -23,7 +23,7 @@ private _config = configOf _object;
 private _displayName = getText (_config >> "displayName");
 private _maximumLoad = getNumber (_config >> "maximumLoad");
 
-// Get the object's current inventory and calculate its load
+// Get the object's current cargo and calculate its load
 private _cargo = [getItemCargo _object, getWeaponCargo _object, getMagazineCargo _object, getBackpackCargo _object];
 private _currentLoad = [_cargo] call FUNC(calculateLoad);
 
@@ -33,12 +33,12 @@ _display setVariable [QGVAR(maximumLoad), _maximumLoad];
 _display setVariable [QGVAR(object), _object];
 _display setVariable [QGVAR(cargo), _cargo];
 
+// Adjust display element positions based on the content height
+[_display] call EFUNC(common,initDisplayPositioning);
+
 // Set the display's title to the object name
 private _ctrlTitle = _display displayCtrl IDC_TITLE;
 _ctrlTitle ctrlSetText toUpper format [localize LSTRING(EditInventory), _displayName];
-
-// Adjust display element positions based on the content height
-[_display] call EFUNC(common,initDisplayPositioning);
 
 // Refresh the items list when category is changed
 private _ctrlCategory = _display displayCtrl IDC_CATEGORY;
@@ -46,7 +46,7 @@ _ctrlCategory ctrlAddEventHandler ["ToolBoxSelChanged", {
     params ["_ctrlCategory"];
 
     private _display = ctrlParent _ctrlCategory;
-    [_display] call FUNC(refreshList);
+    [_display] call FUNC(refresh);
 }];
 
 // Refresh the items list when the search field changes
@@ -55,7 +55,7 @@ _ctrlSearchBar ctrlAddEventHandler ["KeyUp", {
     params ["_ctrlSearchBar"];
 
     private _display = ctrlParent _ctrlSearchBar;
-    [_display] call FUNC(refreshList);
+    [_display] call FUNC(refresh);
 }];
 
 // Clear search when the search bar is right clicked
@@ -68,7 +68,7 @@ _ctrlSearchBar ctrlAddEventHandler ["MouseButtonClick", {
     ctrlSetFocus _ctrlSearchBar;
 
     private _display = ctrlParent _ctrlSearchBar;
-    [_display] call FUNC(refreshList);
+    [_display] call FUNC(refresh);
 }];
 
 // Clear search when the search button is clicked
@@ -81,7 +81,7 @@ _ctrlButtonSearch ctrlAddEventHandler ["ButtonClick", {
     _ctrlSearchBar ctrlSetText "";
     ctrlSetFocus _ctrlSearchBar;
 
-    [_display] call FUNC(refreshList);
+    [_display] call FUNC(refresh);
 }];
 
 // Handle adding/removing items using the list buttons
@@ -124,23 +124,68 @@ _ctrlList ctrlAddEventHandler ["LBSelChanged", {
     params ["_ctrlList"];
 
     private _display = ctrlParent _ctrlList;
-    [_display] call FUNC(updateButtons);
+    [_display, true] call FUNC(update);
+}];
+
+// Refresh the items list when the weapon specific category is changed
+private _ctrlWeaponCategory = _display displayCtrl IDC_WEAPON_CATEGORY;
+_ctrlWeaponCategory ctrlAddEventHandler ["ToolBoxSelChanged", {
+    params ["_ctrlWeaponCategory"];
+
+    private _display = ctrlParent _ctrlWeaponCategory;
+    [_display] call FUNC(refresh);
+}];
+
+// Exit weapon specific mode when the weapon group's close button is clicked
+private _ctrlWeaponClose = _display displayCtrl IDC_WEAPON_CLOSE;
+_ctrlWeaponClose ctrlAddEventHandler ["ButtonClick", {
+    params ["_ctrlWeaponClose"];
+
+    private _display = ctrlParent _ctrlWeaponClose;
+    [_display, false] call FUNC(switchMode);
+}];
+
+// Switch to weapon specific mode when a the weapon specific items button is clicked or a list item is double clicked
+private _ctrlButtonWeapon = _display displayCtrl IDC_BTN_WEAPON;
+_ctrlButtonWeapon ctrlAddEventHandler ["ButtonClick", {
+    params ["_ctrlButtonWeapon"];
+
+    private _display = ctrlParent _ctrlButtonWeapon;
+    [_display, true] call FUNC(switchMode);
+}];
+
+_ctrlList ctrlAddEventHandler ["LBDblClick", {
+    params ["_ctrlList"];
+
+    private _display = ctrlParent _ctrlList;
+    [_display, true] call FUNC(switchMode)
 }];
 
 // Reset to the default inventory when the reset button is clicked
 private _ctrlButtonReset = _display displayCtrl IDC_BTN_RESET;
-_ctrlButtonReset ctrlAddEventHandler ["ButtonClick", {call FUNC(reset)}];
+_ctrlButtonReset ctrlAddEventHandler ["ButtonClick", {
+    params ["_ctrlButtonReset"];
+
+    private _display = ctrlParent _ctrlButtonReset;
+    [_display] call FUNC(reset);
+}];
 
 // Clear items from the current category when the clear button is clicked
 private _ctrlButtonClear = _display displayCtrl IDC_BTN_CLEAR;
-_ctrlButtonClear ctrlAddEventHandler ["ButtonClick", {call FUNC(clear)}];
+_ctrlButtonClear ctrlAddEventHandler ["ButtonClick", {
+    params ["_ctrlButtonClear"];
+
+    private _display = ctrlParent _ctrlButtonClear;
+    [_display] call FUNC(clear);
+}];
 
 // Confirm changes to the inventory when the OK button is clicked
 private _ctrlButtonOK = _display displayCtrl IDC_OK;
 _ctrlButtonOK ctrlAddEventHandler ["ButtonClick", {call FUNC(confirm)}];
 
-// Update the load bar for the current load
-[_display] call FUNC(updateLoadBar);
+// Initialize the list sorting modes
+private _ctrlSorting = _display displayCtrl IDC_SORTING;
+[_ctrlSorting, _ctrlList, [1, 2]] call EFUNC(common,initListNBoxSorting);
 
 // Initially populate the list with items
-[_display] call FUNC(refreshList);
+[_display] call FUNC(refresh);

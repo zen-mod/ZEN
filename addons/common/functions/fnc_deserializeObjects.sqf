@@ -27,12 +27,12 @@ _serializedData params [["_objectData", [], [[]]], ["_groupData", [], [[]]]];
 _centerPos set [2, 0];
 
 private _objects = [];
-private _groups = [] call CBA_fnc_hashCreate;
+private _groups = createHashMap;
 
 private _fnc_deserializeGroup = {
     params ["_index"];
 
-    private _group = [_groups, _index] call CBA_fnc_hashGet;
+    private _group = _groups get _index;
 
     if (isNil "_group") then {
         (_groupData select _index) params ["_side", "_formation", "_behaviour", "_combatMode", "_speedMode", "_waypoints", "_currentWaypoint"];
@@ -73,7 +73,7 @@ private _fnc_deserializeGroup = {
             _group setCurrentWaypoint [_group, _currentWaypoint];
         }, [_centerPos, _group, _formation, _behaviour, _combatMode, _speedMode, _waypoints, _currentWaypoint]] call CBA_fnc_execNextFrame;
 
-        [_groups, _index, _group] call CBA_fnc_hashSet;
+        _groups set [_index, _group];
     };
 
     _group
@@ -106,6 +106,7 @@ private _fnc_deserializeUnit = {
         params ["_unit", "_loadout"];
 
         _unit setUnitLoadout _loadout;
+        [_unit] call BIN_fnc_CBRNHoseInit;
     }, [_unit, _loadout]] call CBA_fnc_execNextFrame;
 
     if (!_enableRandomization) then {
@@ -135,7 +136,11 @@ private _fnc_deserializeVehicle = {
     private _placement = ["CAN_COLLIDE", "FLY"] select (_type isKindOf "Air" && {_position select 2 > 5});
 
     private _vehicle = createVehicle [_type, _position, [], 0, _placement];
-    _vehicle setDir _direction;
+    if (_direction isEqualType 0) then {
+        _vehicle setDir _direction;
+    } else {
+        _vehicle setVectorDirAndUp _direction;
+    };
 
     // FLY placement always places aircraft at the same height relative to the ground
     if (_placement == "FLY") then {
@@ -205,7 +210,7 @@ private _fnc_deserializeVehicle = {
         _vehicle setVehicleCargo (_x call _fnc_deserializeObject);
     } forEach _vehicleCargo;
 
-    if !(_slingLoadedObject isEqualTo []) then {
+    if (_slingLoadedObject isNotEqualTo []) then {
         _vehicle setSlingLoad (_slingLoadedObject call _fnc_deserializeObject);
     };
 
@@ -223,7 +228,11 @@ private _fnc_deserializeStatic = {
 
     private _object = createVehicle [_type, [0, 0, 0], [], 0, "CAN_COLLIDE"];
     _object setPos _position;
-    _object setDir _direction;
+    if (_direction isEqualType 0) then {
+        _object setDir _direction;
+    } else {
+        _object setVectorDirAndUp _direction;
+    };
 
     // Composition placement aligns objects to the surface normal if they are close to the ground
     // This also helps in preventing objects from being destroyed by cliping into the ground

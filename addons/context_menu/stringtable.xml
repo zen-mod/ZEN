@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Context_Menu">
+        <Key ID="STR_ZEN_Context_Menu_DisplayName">
+            <English>Context Menu</English>
+        </Key>
         <Key ID="STR_ZEN_Context_Menu_Enabled">
             <English>Enable Context Menu</English>
             <French>Activer le menu contextuel</French>
@@ -36,6 +39,12 @@
             <Polish>Skrót klawiaturowy i mysz</Polish>
             <Japanese>割り当てキーとマウス</Japanese>
             <Korean>마우스 우클릭만 사용 가능</Korean>
+        </Key>
+        <Key ID="STR_ZEN_Context_Menu_OverrideWaypoints">
+            <English>Override Waypoint Placement</English>
+        </Key>
+        <Key ID="STR_ZEN_Context_Menu_OverrideWaypoints_Description">
+            <English>Allows for the context menu to be opened by right clicking when waypoint placement would normally occur.\nRequires holding the SHIFT key in order to place waypoints.</English>
         </Key>
         <Key ID="STR_ZEN_Context_Menu_OpenContextMenu">
             <English>Open Context Menu</English>

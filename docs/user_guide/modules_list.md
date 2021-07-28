@@ -174,7 +174,11 @@ Heals the attached unit. Works with BI's scripted revive system and ACE medical.
 
 ## Hide Zeus
 
-Hides or unhides the Zeus player and bird.
+Hides or shows the Zeus player and bird.
+
+## Hide Terrain Objects
+
+Hides or shows terrain objects of the selected types within the specified radius of the module.
 
 ## Light Source
 
@@ -205,6 +209,10 @@ Sets the attached object's pitch, roll, and yaw.
 ## Set Date
 
 Sets the current date (and time of day) in the mission.
+
+## Show In Animation Viewer
+
+Opens the animation viewer on the attached unit.
 
 ## Show In Config Viewer
 
@@ -266,6 +274,10 @@ Toggles the simulation of the attached object.
 ## Toggle Visibility
 
 Toggles the visibility of the attached object.
+
+## Tracers
+
+Creates an invisible unit that shoots customizable tracer bursts at a specified target when no players are within 100 m of the module.
 
 ## Un-Garrison Group
 

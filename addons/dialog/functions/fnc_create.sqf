@@ -179,13 +179,15 @@ private _fnc_verifyListEntries = {
             _controlType = QGVAR(Row_Sides);
         };
         case "SLIDER": {
-            _valueInfo params [["_min", 0, [0]], ["_max", 1, [0]], ["_default", 0, [0]], ["_formatting", 2, [0, {}]]];
+            _valueInfo params [["_min", 0, [0]], ["_max", 1, [0]], ["_default", 0, [0]], ["_formatting", 2, [0, {}]], ["_radiusCenter", objNull, [objNull, []], 3], ["_radiusColor", [1, 1, 1, 0.7], [[]], 4]];
 
             _defaultValue = _default;
             _controlType = QGVAR(Row_Slider);
 
             private _isPercentage = _subType == "PERCENT";
-            _settings append [_min, _max, _formatting, _isPercentage];
+            private _drawRadius = _subType == "RADIUS" && {_radiusCenter isNotEqualTo objNull};
+
+            _settings append [_min, _max, _formatting, _isPercentage, _drawRadius, _radiusCenter, _radiusColor];
         };
         case "TOOLBOX": {
             // Backwards compatibility for old value info format
@@ -243,10 +245,17 @@ private _fnc_verifyListEntries = {
     _content set [_forEachIndex, [_controlType, _label, _tooltip, _defaultValue, _settings]];
 } forEach _content;
 
-// Exit if dialog creation fails
-if (!createDialog QEGVAR(common,RscDisplayScrollbars)) exitWith {false};
+// Use createDisplay when in 3DEN to prevent interacting with the editor's display
+private _display = if (is3DEN) then {
+    private _display3DEN = uiNamespace getVariable "Display3DEN";
+    _display3DEN createDisplay QEGVAR(common,RscDisplayScrollbars)
+} else {
+    if (!createDialog QEGVAR(common,RscDisplayScrollbars)) exitWith {displayNull};
+    uiNamespace getVariable [QEGVAR(common,display), displayNull]
+};
 
-private _display = uiNamespace getVariable QEGVAR(common,display);
+// Exit if dialog creation fails
+if (isNull _display) exitWith {false};
 
 // Set the dialog's title
 private _ctrlTitle = _display displayCtrl IDC_TITLE;

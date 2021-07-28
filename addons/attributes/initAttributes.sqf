@@ -189,12 +189,12 @@
     "Object",
     LSTRING(PlateNumber),
     QGVAR(edit),
-    {_this select [0, MAX_PLATE_CHARACTERS]},
+    [{_this select [0, MAX_PLATE_CHARACTERS]}],
     {
         [QEGVAR(common,setPlateNumber), [_entity, _value], _entity] call CBA_fnc_targetEvent;
     },
     {getPlateNumber _entity},
-    {alive _entity && {isClass (configOf _entity >> "PlateInfos")}}
+    {alive _entity && {getText (configOf _entity >> "PlateInfos" >> "name") in selectionNames _entity}}
 ] call FUNC(addAttribute);
 
 [

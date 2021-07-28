@@ -3,12 +3,15 @@
     <Package name="Pylons">
         <Key ID="STR_ZEN_Pylons_DisplayName">
             <English>Pylons</English>
+            <Japanese>パイロン</Japanese>
         </Key>
         <Key ID="STR_ZEN_Pylons_Title">
             <English>Configure Pylons (%1)</English>
+            <Japanese>パイロンを設定 (%1)</Japanese>
         </Key>
         <Key ID="STR_ZEN_Pylons_Empty">
             <English>&lt;Empty&gt;</English>
+            <Japanese>&lt;空&gt;</Japanese>
         </Key>
     </Package>
 </Project>

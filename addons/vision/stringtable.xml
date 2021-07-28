@@ -44,7 +44,7 @@
             <German>Nachtsicht</German>
             <Polish>Noktowizja</Polish>
             <Portuguese>Visão Noturna</Portuguese>
-            <Japanese>ナイトビジョン</Japanese>
+            <Japanese>暗視</Japanese>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableWhiteHot">
             <English>Thermal - White Hot</English>
@@ -53,6 +53,7 @@
             <German>Thermal - Weiß Heiß</German>
             <Polish>Termowizja - Biały ciepły</Polish>
             <Portuguese>Térmica - Branco Quente</Portuguese>
+            <Japanese>サーマル - ホワイト ホット</Japanese>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableBlackHot">
             <English>Thermal - Black Hot</English>
@@ -61,6 +62,7 @@
             <German>Thermal - Schwarz Heiß</German>
             <Polish>Termowizja - Czarny ciepły</Polish>
             <Portuguese>Térmica - Preto Quente</Portuguese>
+            <Japanese>サーマル - ブラック ホット</Japanese>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableGreenHotCold">
             <English>Thermal - Light Green Hot / Dark Green Cold</English>
@@ -69,7 +71,7 @@
             <German>Thermal - Hellgrün Heiß / Dunkelgrün Kalt</German>
             <Polish>Termowizja - Jasnozielony ciepły / Ciemnozielony zimny</Polish>
             <Portuguese>Térmica - Verde Claro Quente / Verde Escuro Frio</Portuguese>
-            <Japanese>サーマル - 黄緑のホット/深緑のコールド</Japanese>
+            <Japanese>サーマル - 黄緑 ホット/深緑 コールド</Japanese>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableBlackHotGreenCold">
             <English>Thermal - Black Hot / Green Cold</English>
@@ -78,7 +80,7 @@
             <German>Thermal - Schwarz Heiß / Grün Kalt</German>
             <Polish>Termowizja - Czarny ciepły / Zielony zimny</Polish>
             <Portuguese>Térmica - Preto Quente / Verde Frio</Portuguese>
-            <Japanese>サーマル - ブラックのホット/グリーンのコールド</Japanese>
+            <Japanese>サーマル - ブラック ホット/グリーン コールド</Japanese>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableRedHotCold">
             <English>Thermal - Light Red Hot / Dark Red Cold</English>
@@ -87,7 +89,7 @@
             <German>Thermal - Hellrot Heiß / Dunkelrot Kalt</German>
             <Polish>Termowizja - Jasnoczerwony ciepły / Ciemnoczerwony zimny</Polish>
             <Portuguese>Térmica - Vermelho Claro Quente / Vermelho Escuro Frio</Portuguese>
-            <Japanese>サーマル - 桃色のホット/深赤のコールド</Japanese>
+            <Japanese>サーマル - 桃色 ホット/深赤 コールド</Japanese>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableBlackHotRedCold">
             <English>Thermal - Black Hot / Red Cold</English>
@@ -96,7 +98,7 @@
             <German>Thermal - Schwarz Heiß / Rot Kalt</German>
             <Polish>Termowizja - Czarny ciepły / Czerwony zimny</Polish>
             <Portuguese>Térmica - Preto Quente / Vermelho Frio</Portuguese>
-            <Japanese>サーマル - ブラックのホット/赤のコールド</Japanese>
+            <Japanese>サーマル - ブラック ホット/レッド コールド</Japanese>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableWhiteHotRedCold">
             <English>Thermal - White Hot / Red Cold</English>
@@ -105,7 +107,7 @@
             <German>Thermal - Weiß Heiß / Rot Kalt</German>
             <Polish>Termowizja - Biały ciepły / Czerwony zimny</Polish>
             <Portuguese>Térmica - Branco Quente / Vermelho Frio</Portuguese>
-            <Japanese>サーマル - ホワイトのホット/レッドのコールド</Japanese>
+            <Japanese>サーマル - ホワイト ホット/レッド コールド</Japanese>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableRedGreenThermal">
             <English>Thermal - Red / Green (White Bodies)</English>
@@ -114,7 +116,7 @@
             <German>Thermal - Rot / Grün (weiße Körper)</German>
             <Polish>Termowizja - Czerwono / Zielona (białe ciała)</Polish>
             <Portuguese>Térmica - Vermelho / Verde (Corpos Brancos)</Portuguese>
-            <Japanese>サーマル - レッドのホット/グリーン (身体が白く)</Japanese>
+            <Japanese>サーマル - レッド/グリーン (身体が白く)</Japanese>
         </Key>
     </Package>
 </Project>

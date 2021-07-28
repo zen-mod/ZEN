@@ -63,4 +63,9 @@ class ZEN_WaypointTypes {
         type = "SCRIPTED";
         script = QPATHTOEF(ai,functions\fnc_waypointFastrope.sqf);
     };
+    class SearchBuilding {
+        displayName = ECSTRING(ai,SearchBuilding);
+        type = "SCRIPTED";
+        script = QPATHTOEF(ai,functions\fnc_waypointSearchBuilding.sqf);
+    };
 };

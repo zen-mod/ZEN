@@ -80,7 +80,7 @@ private _contextRows = [];
 
         // Create child context group if action has children
         private _children = _ctrlContextRow getVariable QGVAR(children);
-        if !(_children isEqualTo []) then {
+        if (_children isNotEqualTo []) then {
             [_children, _contextLevel + 1, _ctrlContextRow] call FUNC(createContextGroup);
         };
     }];

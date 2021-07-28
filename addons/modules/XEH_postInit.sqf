@@ -6,11 +6,20 @@ if (isServer) then {
     [QGVAR(moduleCAS), LINKFUNC(moduleCAS)] call CBA_fnc_addEventHandler;
     [QGVAR(moduleEditableObjects), LINKFUNC(moduleEditableObjects)] call CBA_fnc_addEventHandler;
     [QGVAR(moduleSpawnReinforcements), LINKFUNC(moduleSpawnReinforcements)] call CBA_fnc_addEventHandler;
+    [QGVAR(moduleTracers), LINKFUNC(moduleTracers)] call CBA_fnc_addEventHandler;
 
     // Public variable to track created teleporter objects
     missionNamespace setVariable [QGVAR(teleporters), [], true];
 
     [QGVAR(moduleCreateTeleporter), LINKFUNC(moduleCreateTeleporterServer)] call CBA_fnc_addEventHandler;
+
+    [QGVAR(hideTerrainObjects), {
+        params ["_position", "_objectTypes", "_radius", "_hide"];
+
+        {
+            _x hideObjectGlobal _hide;
+        } forEach nearestTerrainObjects [_position, _objectTypes, _radius];
+    }] call CBA_fnc_addEventHandler;
 };
 
 [QGVAR(addIntelAction), LINKFUNC(addIntelAction)] call CBA_fnc_addEventHandler;

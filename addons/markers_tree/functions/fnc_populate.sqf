@@ -17,12 +17,8 @@
 
 params ["_ctrlTree"];
 
-private _markersCache = uiNamespace getVariable QGVAR(cache);
-
 {
-    _x params ["_category", "_markers"];
-
-    private _categoryIndex = _ctrlTree tvAdd [[], _category];
+    private _categoryIndex = _ctrlTree tvAdd [[], _x];
 
     {
         _x params ["_class", "_name", "_icon", "_color"];
@@ -35,11 +31,7 @@ private _markersCache = uiNamespace getVariable QGVAR(cache);
         _ctrlTree tvSetPicture [_path, _icon];
         _ctrlTree tvSetPictureColor [_path, _color];
         _ctrlTree tvSetPictureColorSelected [_path, _color];
-    } forEach _markers;
-} forEach _markersCache;
+    } forEach _y;
+} forEach (uiNamespace getVariable QGVAR(cache));
 
-_ctrlTree tvSort [[], false];
-
-for "_i" from 0 to ((_ctrlTree tvCount []) - 1) do {
-    _ctrlTree tvSort [[_i], false];
-};
+_ctrlTree tvSortAll [[], false];

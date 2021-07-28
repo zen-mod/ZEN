@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Remote_Control">
+        <Key ID="STR_ZEN_Remote_Control_CameraExitPosition">
+            <English>Camera Exit Position</English>
+        </Key>
+        <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_Description">
+            <English>Controls where the camera is positioned after exiting remote control.\nIf the unit is deleted while remote controlling, the camera's position is unchanged.</English>
+        </Key>
+        <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_Unchanged_Description">
+            <English>The camera's position is unchanged and restored as it was when remote control started.</English>
+        </Key>
+        <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_Relative">
+            <English>Relative</English>
+        </Key>
+        <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_Relative_Description">
+            <English>The camera is positioned based on where it was relative to the unit when remote control started.</English>
+        </Key>
+        <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_RelativeLimited">
+            <English>Relative (Limited)</English>
+        </Key>
+        <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_RelativeLimited_Description">
+            <English>The camera is positioned based on where it was relative to the unit when remote control started but limited to a maximum distance of 50 meters from the unit.</English>
+        </Key>
+        <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_AboveUnit">
+            <English>Above Unit</English>
+        </Key>
+        <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_AboveUnit_Description">
+            <English>The camera is positioned 10 meters directly above the unit and facing the same direction as the unit.</English>
+        </Key>
+        <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_BehindUnit">
+            <English>Behind Unit</English>
+        </Key>
+        <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_BehindUnit_Description">
+            <English>The camera is positioned 10 meters behind and 10 meters above the unit and looking at the unit.</English>
+        </Key>
+    </Package>
+</Project>

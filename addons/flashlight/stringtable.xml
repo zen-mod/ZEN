@@ -4,10 +4,12 @@
         <Key ID="STR_ZEN_Flashlight_Toggle">
             <English>Toggle Flashlight</English>
             <Polish>Przełącz latarke</Polish>
+            <Japanese>フラッシュライト切り替え</Japanese>
         </Key>
         <Key ID="STR_ZEN_Flashlight_Toggle_Description">
             <English>Toggles the state of the Zeus camera flashlight.</English>
             <Polish>Włącza/Wyłącza latarke Zeusa.</Polish>
+            <Japanese>Zeus カメラのフラッシュライトを切り替えします。</Japanese>
         </Key>
     </Package>
 </Project>

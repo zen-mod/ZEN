@@ -29,16 +29,6 @@ markerSize _marker params ["_sizeA", "_sizeB"];
 
     private _ctrl = _ctrlConfigure controlsGroupCtrl _idc;
     _ctrl ctrlSetText str _value;
-
-    _ctrl ctrlAddEventHandler ["KeyDown", {
-        params ["_ctrl"];
-
-        private _value  = ctrlText _ctrl;
-        private _filter = toArray ".-0123456789";
-        _value = toString (toArray _value select {_x in _filter});
-
-        _ctrl ctrlSetText _value;
-    }];
 } forEach [
     [IDC_CONFIGURE_SIZE_A, _sizeA],
     [IDC_CONFIGURE_SIZE_B, _sizeB]
@@ -46,7 +36,7 @@ markerSize _marker params ["_sizeA", "_sizeB"];
 
 private _ctrlRotationSlider = _ctrlConfigure controlsGroupCtrl IDC_CONFIGURE_ROTATION_SLIDER;
 private _ctrlRotationEdit   = _ctrlConfigure controlsGroupCtrl IDC_CONFIGURE_ROTATION_EDIT;
-[_ctrlRotationSlider, _ctrlRotationEdit, 0, 360, markerDir _marker, 15, {format ["%1%2", round _this, toString [ASCII_DEGREE]]}] call EFUNC(common,initSliderEdit);
+[_ctrlRotationSlider, _ctrlRotationEdit, 0, 360, markerDir _marker, 15, EFUNC(common,formatDegrees)] call EFUNC(common,initSliderEdit);
 
 private _ctrlShape = _ctrlConfigure controlsGroupCtrl IDC_CONFIGURE_SHAPE;
 _ctrlShape lbSetCurSel (["RECTANGLE", "ELLIPSE"] find markerShape _marker);
@@ -123,51 +113,42 @@ _ctrlButtonOK ctrlAddEventHandler ["ButtonClick", {
 
 // Special handling for keyboard input when edit boxes have focus
 // Needed to prevent interaction with Zeus display but still allow keyboard use with edit boxes
-{
-    private _ctrl = _ctrlConfigure controlsGroupCtrl _x;
-
-    _ctrl ctrlAddEventHandler ["SetFocus", {
-        params ["_ctrl"];
-
-        private _ctrlConfigure = ctrlParent _ctrl displayCtrl IDC_CONFIGURE_GROUP;
-        _ctrlConfigure setVariable [QGVAR(focus), _ctrl];
-    }];
-
-    _ctrl ctrlAddEventHandler ["SetFocus", {
-        params ["_ctrl"];
-
-        private _ctrlConfigure = ctrlParent _ctrl displayCtrl IDC_CONFIGURE_GROUP;
-        _ctrlConfigure setVariable [QGVAR(focus), nil];
-    }];
-} forEach [
-    IDC_CONFIGURE_SIZE_A,
-    IDC_CONFIGURE_SIZE_B,
-    IDC_CONFIGURE_ROTATION_EDIT,
-    IDC_CONFIGURE_ALPHA_EDIT
-];
-
 private _keyDownEH = _display displayAddEventHandler ["KeyDown", {
     call {
-        params ["_display", "_keyCode"];
+        params ["_display", "_keyCode", "", "_ctrl"];
 
         if (_keyCode in [DIK_UP, DIK_DOWN, DIK_LEFT, DIK_RIGHT]) exitWith {false};
 
         if (_keyCode in [DIK_BACKSPACE, DIK_DELETE]) then {
-            private _ctrlConfigure = _display displayCtrl IDC_CONFIGURE_GROUP;
-            private _ctrlEdit = _ctrlConfigure getVariable QGVAR(focus);
-            if (isNil "_ctrlEdit") exitWith {};
+            private _ctrlEdit = focusedCtrl _display;
 
-            private _text = ctrlText _ctrlEdit;
+            if (ctrlIDC _ctrlEdit in IDCS_CONFIGURE_EDIT_BOXES) then {
+                ctrlTextSelection _ctrlEdit params ["_start", "_length"];
 
-            if (_keyCode == DIK_BACKSPACE) then {
-                _text = _text select [0, count _text - 1];
+                // Update length based on key to delete individual characters without selecting them
+                if (_length == 0) then {
+                    _length = [1, -1] select (_keyCode == DIK_BACKSPACE);
+                };
+
+                // Get the selection start position from the left-hand side when the selection is made from right to left
+                if (_length < 0) then {
+                    _start = _start + _length;
+                };
+
+                // Delete the selected characters and update the edit box's text and selection
+                private _characters = toArray ctrlText _ctrlEdit;
+                _characters deleteRange [_start, abs _length];
+                _ctrlEdit ctrlSetText toString _characters;
+                _ctrlEdit ctrlSetTextSelection [_start, 0];
             };
+        };
 
-            if (_keyCode == DIK_DELETE) then {
-                _text = _text select [1, count _text - 1];
+        if (_keyCode == DIK_A && {_ctrl}) then {
+            private _ctrlEdit = focusedCtrl _display;
+
+            if (ctrlIDC _ctrlEdit in IDCS_CONFIGURE_EDIT_BOXES) then {
+                _ctrlEdit ctrlSetTextSelection [0, count toArray ctrlText _ctrlEdit];
             };
-
-            _ctrlEdit ctrlSetText _text;
         };
 
         if (_keyCode in [DIK_ESCAPE, DIK_RETURN]) then {
