@@ -345,6 +345,11 @@ if (isServer) then {
         _waypoint setWaypointSpeed _speedMode;
     }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setObjectScale), {
+    params ["_object", "_scale"];
+    _object setObjectScale _scale;
+}] call CBA_fnc_addEventHandler;
+
     [QGVAR(addObjects), {
         params ["_objects", ["_curator", objNull]];
 

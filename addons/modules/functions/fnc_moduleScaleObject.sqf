@@ -29,10 +29,10 @@ if (isNull attachedTo _object) exitWith {
 };
 
 [LSTRING(ScaleObject), [
-    ["EDIT", [ELSTRING(common,Scale), LSTRING(ScaleObject_Tooltip)], "1"]
+    ["EDIT", [ELSTRING(common,Scale), LSTRING(ScaleObject_Tooltip)], str (getObjectScale _object)]
 ], {
     params ["_values", "_object"];
     _values params ["_scale"];
 
-    [QGVAR(setObjectScale), [_object,  parseNumber _scale], _object] call CBA_fnc_targetEvent;
+    [QEGVAR(common,setObjectScale), [_object,  parseNumber _scale], _object] call CBA_fnc_targetEvent;
 }, {}, _object] call EFUNC(dialog,create);

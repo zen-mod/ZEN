@@ -99,9 +99,3 @@ if (isServer) then {
     _unit assignAsGunner _vehicle;
     [_unit] orderGetIn true;
 }] call CBA_fnc_addEventHandler;
-
-[QGVAR(setObjectScale), {
-    params ["_object", "_scale"];
-
-    _object setObjectScale _scale;
-}] call CBA_fnc_addEventHandler;
