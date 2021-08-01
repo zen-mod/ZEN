@@ -4,6 +4,7 @@ POSITIONS_2 = [];
 
 
 ZEN_common_fnc_estimateBezierArcLength = {
+    // Reference: https://stackoverflow.com/a/37862545/15141722
     params ["_p0", "_p1", "_p2", "_p3"];
     private _chord = _p0 vectorDistance _p3;
     private _cont_net = (_p0 vectorDistance _p1) + (_p1 vectorDistance _p2) + (_p2 vectorDistance _p3);
@@ -13,6 +14,7 @@ ZEN_common_fnc_estimateBezierArcLength = {
 
 
 ZEN_common_fnc_getLineIntersection = {
+    // Reference: https://stackoverflow.com/a/2316923/15141722
     params ["_p0", "_v0", "_p1", "_v1"];
     private _vecNormLen = vectorMagnitude (_v0 vectorCrossProduct _v1);
     if (_vecNormLen == 0) exitWith {};
