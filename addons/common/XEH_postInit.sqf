@@ -263,6 +263,11 @@
     _unit doArtilleryFire [_position, _magazine, _rounds];
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setObjectScale), {
+    params ["_object", "_scale"];
+    _object setObjectScale _scale;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(setVehicleRadar), {
     params ["_vehicle", "_mode"];
     _vehicle setVehicleRadar _mode;
@@ -344,11 +349,6 @@ if (isServer) then {
         params ["_waypoint", "_speedMode"];
         _waypoint setWaypointSpeed _speedMode;
     }] call CBA_fnc_addEventHandler;
-
-[QGVAR(setObjectScale), {
-    params ["_object", "_scale"];
-    _object setObjectScale _scale;
-}] call CBA_fnc_addEventHandler;
 
     [QGVAR(addObjects), {
         params ["_objects", ["_curator", objNull]];
