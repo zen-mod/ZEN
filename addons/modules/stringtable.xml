@@ -2340,6 +2340,11 @@
             <French>Seulement pour des objets attachés</French>
             <German>Nur für angehängte Objekte</German>
         </Key>
+        <Key ID="STR_ZEN_Modules_ValueOutOfRange">
+            <English>Only values between %1 and %2 are valid</English>
+            <French>Seulement des valeurs entre %1 et %2 sont permises</French>
+            <German>Nur Werte zwischen %1 und %2 sind erlaubt</German>
+        </Key>
         <Key ID="STR_ZEN_Modules_OnlyAlive">
             <English>Unit must be alive</English>
             <French>Utiliser uniquement sur une unité vivante</French>
