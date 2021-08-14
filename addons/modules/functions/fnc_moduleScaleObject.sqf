@@ -29,7 +29,7 @@ if (isNull attachedTo _object) exitWith {
 };
 
 [LSTRING(ScaleObject), [
-    ["EDIT", [ELSTRING(common,Scale), LSTRING(ScaleObject_Tooltip)], getObjectScale _object]
+    ["EDIT", [ELSTRING(common,Scale), LSTRING(ScaleObject_Tooltip)], str getObjectScale _object]
 ], {
     params ["_values", "_object"];
 
