@@ -3,6 +3,8 @@
     <Package name="Editor">
         <Key ID="STR_ZEN_Editor_DisplayName">
             <English>Editor</English>
+            <French>Éditeur</French>
+            <German>Editor</German>
             <Korean>편집기</Korean>
             <Japanese>エディタ</Japanese>
         </Key>
@@ -93,12 +95,14 @@
         </Key>
         <Key ID="STR_ZEN_Editor_RandomizeCopyPaste">
             <English>Randomize Deep Copy/Paste</English>
+            <German>Zufallsgenerator für komplette Kopien</German>
             <Polish>Losowe kopiowanie/Wklejanie (Głębokie)</Polish>
             <Korean>전체 복사/붙여 넣기 랜덤</Korean>
             <Japanese>深コピー/ペーストのランダム化</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_RandomizeCopyPaste_Description">
             <English>Controls whether deep copy/paste will randomize unit identities and vehicle customization (instead of making identical copies).</English>
+            <German>Steuert, ob die Identität und Fahrzeugausstattung von kompletten Kopien zufällig generiert werden.</German>
             <Polish>Kontoluje czy głębokie kopiowanie/wklejanie będzie losowo zmieniało ustawienia jednostek (zamiast tworzenia identycznych kopii)</Polish>
             <Korean>(동일한 복사본을 만드는 대신) 전체 복사/붙여 넣기의 유닛 설정 랜덤 여부를 제어합니다.</Korean>
             <Japanese>深コピー時にユニットのアイデンティティと車両カスタマイズをランダム化するかどうかを設定します。</Japanese>
@@ -168,6 +172,7 @@
         </Key>
         <Key ID="STR_ZEN_Editor_UnloadViV_Description">
             <English>Unloads all selected vehicle-in-vehicle cargo and carriers. A vehicle that is both cargo and carrying cargo will only be unloaded from its carrier.</English>
+            <German>Entladet alle ausgewählte Fahrzeug-in-Fahrzeug Fracht und Transporter. Fahrzeuge, die sowohl Fracht als auch Transporter sind, werden nur als Fracht entladen.</German>
             <Japanese>選択した ViV 内の車両とカーゴを全て降ろします。ViV 内に両方が存在する場合は、カーゴのみ降ろします。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_DeployCountermeasures">
@@ -222,6 +227,7 @@
         </Key>
         <Key ID="STR_ZEN_Editor_OrientTerrainNormal_Description">
             <English>Orients all selected objects to match the terrain slope at their position.</English>
+            <German>Orientiert alle ausgewählten Objekte der Steigung an ihrer Position.</German>
             <Polish>Orientuje wszystkie wybrane obiekty aby ustawiły się względem terenu na swojej pozycji.</Polish>
             <Japanese>選択した全てのオブジェクトを地形に合わせます。</Japanese>
         </Key>
@@ -239,10 +245,12 @@
         </Key>
         <Key ID="STR_ZEN_Editor_ReloadDisplay">
             <English>Reload Display</English>
+            <German>Zeusansicht neu laden</German>
             <Japanese>再描画</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_ReloadDisplay_Description">
             <English>Reloads the Zeus interface. Can be used to fix lockup issues.</English>
+            <German>Ladet die Zeusansicht neu. Kann benutzt werden, wenn die Zeusansicht einfriert.</German>
             <Japanese>Zeus インターフェースを再描画します。不具合の修正に使用可能です。</Japanese>
         </Key>
     </Package>

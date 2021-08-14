@@ -114,18 +114,21 @@
         </Key>
         <Key ID="STR_ZEN_Context_Actions_FireArtillery">
             <English>Fire Artillery</English>
+            <German>Artillerie feueren</German>
             <Korean>포병 발사</Korean>
             <Polish>Ogień Artyleryjski</Polish>
             <Japanese>砲撃</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_UnableToFire">
             <English>Unable To Fire</English>
+            <German>Kann nicht feueren</German>
             <Korean>사격 불가</Korean>
             <Polish>Otworzenie ognia niemożliwe</Polish>
             <Japanese>発砲付加</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_NotAllVehiclesInRange">
             <English>Not all vehicles are in range to fire</English>
+            <German>Nicht alle Fahrzeuge sind in der Reichweite zum Feuern</German>
             <Korean>차량이 사격할 수 있는 범위 내에 없습니다.</Korean>
             <Polish>Nie wszystkie pojazdy są w zasięgu do otwarcia ognia.</Polish>
             <Japanese>全車両が射程内に無い</Japanese>

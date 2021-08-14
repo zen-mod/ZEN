@@ -12,6 +12,8 @@
         </Key>
         <Key ID="STR_ZEN_Doors_DoorState">
             <English>Door State</English>
+            <French>L'état de la port</French>
+            <German>Zustand der Tür</German>
             <Japanese>ドア状態</Japanese>
         </Key>
         <Key ID="STR_ZEN_Doors_NoBuilding">
