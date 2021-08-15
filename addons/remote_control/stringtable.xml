@@ -3,36 +3,47 @@
     <Package name="Remote_Control">
         <Key ID="STR_ZEN_Remote_Control_CameraExitPosition">
             <English>Camera Exit Position</English>
+            <German>Position nach dem Verlassen der Kamera</German>
         </Key>
         <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_Description">
             <English>Controls where the camera is positioned after exiting remote control.\nIf the unit is deleted while remote controlling, the camera's position is unchanged.</English>
+            <German>Steuert wo die Kamera positioniert wird nach dem Verlassen der Fernsteuerung.\nDie Position der Kamera bleibt unverändert, falls die Einheit gelöscht wurde während der Fernsteuerung.</German>
         </Key>
         <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_Unchanged_Description">
             <English>The camera's position is unchanged and restored as it was when remote control started.</English>
+            <German>Die Position der Kamera bleibt unverändert und wird zur Position bevor der Fernsteuerung zurückgesetzt.</German>
         </Key>
         <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_Relative">
             <English>Relative</English>
+            <German>Relativ</German>
         </Key>
         <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_Relative_Description">
             <English>The camera is positioned based on where it was relative to the unit when remote control started.</English>
+            <German>Die Kamera wird positioniert basierend auf der relativen Position zur Einheit, wenn die Fernsteuerung gestartet wurde.</German>
         </Key>
         <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_RelativeLimited">
             <English>Relative (Limited)</English>
+            <German>Relativ (Limitiert)</German>
         </Key>
         <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_RelativeLimited_Description">
             <English>The camera is positioned based on where it was relative to the unit when remote control started but limited to a maximum distance of 50 meters from the unit.</English>
+            <German>Die Kamera wird positioniert basierend auf der relativen Position zur Einheit, wenn die Fernsteuerung gestartet wurde, aber die Distanz ist auf maximal 50 Meter von der Einheit limitiert.</German>
         </Key>
         <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_AboveUnit">
             <English>Above Unit</English>
+            <German>Über der Einheit</German>
         </Key>
         <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_AboveUnit_Description">
             <English>The camera is positioned 10 meters directly above the unit and facing the same direction as the unit.</English>
+            <German>Die Kamera wird 10 Meter direkt über der Einheit platziert und schaut in dieselbe Richtung wie die Einheit.</German>
         </Key>
         <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_BehindUnit">
             <English>Behind Unit</English>
+            <German>Hinter der Einheit</German>
         </Key>
         <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_BehindUnit_Description">
             <English>The camera is positioned 10 meters behind and 10 meters above the unit and looking at the unit.</English>
+            <German>Die Kamera wird 10 Meter hinter und 10 Meter über der Einheit platziert und schaut in dieselbe Richtung wie die Einheit.</German>
         </Key>
     </Package>
 </Project>

@@ -27,6 +27,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_LockedForPlayers">
             <English>Locked For Players</English>
+            <French>Fermé aux joueurs</French>
             <German>Für Spieler verschlossen</German>
             <Korean>플레이어에게 잠겨짐</Korean>
             <Polish>Zamknięte dla graczy</Polish>
@@ -46,6 +47,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_RespawnPosition">
             <English>Respawn Position</English>
+            <French>Position de réapparition</French>
             <German>Wiedereinstiegspunkt</German>
             <Korean>부활 위치</Korean>
             <Polish>Pozycja odrodzenia</Polish>
@@ -53,6 +55,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_RespawnPosition_Tooltip">
             <English>Selects the side that is able to respawn on this object.</English>
+            <French>Sélecter le camp pour la réapparition à cet objet.</French>
             <German>Wähle eine Seite, welche an diesem Objekt wiedereinsteigen kann.</German>
             <Korean>이 아이템으로 부활할 수 있는 진영을 고르시오</Korean>
             <Polish>Ustawia strone która może się odrodzić na tym obiekcie.</Polish>
@@ -60,14 +63,19 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_RespawnVehicle">
             <English>Respawn Vehicle</English>
+            <French>Réapparition de véhicule</French>
+            <German>Wiedereinstieg für Fahrzeug</German>
             <Japanese>リスポーン車両</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_RespawnVehicle_Tooltip">
             <English>Selects where the vehicle will respawn when it is destroyed.</English>
+            <French>Sélecter la position de réapparition pour le véhicule après son destruction.</French>
+            <German>Wähle den Wiedereinstiegspunkt für das Fahrzeug nach dessen Zerstörung.</German>
             <Japanese>リスポーンされる車両を選択します。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_States">
             <English>States</English>
+            <French>États</French>
             <German>Zustände</German>
             <Korean>상태</Korean>
             <Polish>Stany</Polish>
@@ -75,22 +83,27 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_LocalExec">
             <English>Local Exec. This code will be executed in the unscheduled environment on this machine only.</English>
+            <German>Lokale Ausführung. Dieser Code wird in der unscheduled Environment für nur die lokale Maschine ausgeführt.</German>
             <Japanese>ローカル実行。このコードはこのマシンでのみ、非スケジュール環境で実行されます。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_TargetExec">
             <English>Target Exec. This code will be executed in the unscheduled environment on the machine where this entity is local.</English>
+            <German>Gezielte Ausführung. Dieser Code wird in der unscheduled Environment für nur die Maschine ausgeführt, wo das Objekt lokal ist.</German>
             <Japanese>ターゲット実行。このコードはエンティティがローカルにあるマシンの非スケジュール環境で実行されます。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_GlobalExec">
             <English>Global Exec. This code will be executed in the unscheduled environment on all machines (server and clients).</English>
+            <German>Golbale Ausführung. Dieser Code wird in der unscheduled Environment für alle Maschinen (Server und Klienten) ausgeführt.</German>
             <Japanese>グローバル実行。このコードは全マシンの非スケジュール環境で実行されます (サーバとクライアント)</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_ExecObject_Tooltip">
             <English>The variable "_this" refers to this object.</English>
+            <German>Die Variable "_this" verweist auf das Objekt.</German>
             <Japanese>変数 "_this" はこのオブジェクトを指します。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_ExecGroup_Tooltip">
             <English>The variable "_this" refers to this group.</English>
+            <German>Die Variable "_this" verweist auf die Gruppe.</German>
             <Japanese>変数 "_this" はこのグループを指します。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Timeout">
@@ -250,22 +263,35 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeAbilities">
             <English>Change Abilities</English>
+            <Russian>Изменить способности</Russian>
+            <French>Modifier talent</French>
+            <German>Fähigkeiten ändern</German>
             <Polish>Zmień zdolności</Polish>
             <Korean>능력 변경</Korean>
             <Japanese>属性変更</Japanese>
+            <Chinesesimp>更改能力</Chinesesimp>
+            <Chinese>更改能力</Chinese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Abilities">
             <English>Abilities</English>
+            <Russian>Способности</Russian>
+            <French>Talent</French>
+            <German>Fähigkeiten</German>
             <Polish>Zdolności</Polish>
             <Korean>능력</Korean>
             <Japanese>属性</Japanese>
+            <Chinesesimp>能力</Chinesesimp>
+            <Chinese>能力</Chinese>
         </Key>
         <Key ID="STR_ZEN_Attributes_OpenAttributesDisplay">
             <English>Open Attributes Display</English>
+            <French>Ouvrir dialogue des propriétés</French>
+            <German>Eigenschaftsfenster öffnen</German>
             <Japanese>属性パネルを表示</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_OpenAttributesDisplay_Description">
             <English>Opens the Zeus attributes display for the selected entity.\nWhen multiple entities are selected (i.e. due to selecting a group), the hovered entity will be used.</English>
+            <German>Öffnet das Eigenschaftsfenster für das ausgewählte Objekt.\nFalls mehrere Objekte ausgewählt wurden (d.h. durch Auswahl einer Gruppe), dann wird das Objekt, auf das mit der Maus gezeigt wurde, stattdessen verwendet.</German>
             <Japanese>選択したエンティティのZeus属性パネルを開きます\n複数のエンティティが選択されている場合は、ホバー選択しているエンティティの属性を使用します。</Japanese>
         </Key>
     </Package>

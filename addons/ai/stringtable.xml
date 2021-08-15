@@ -3,6 +3,7 @@
     <Package name="AI">
         <Key ID="STR_ZEN_AI_Land">
             <English>Land</English>
+            <French>Atterrissage</French>
             <German>Landen</German>
             <Korean>착륙</Korean>
             <Japanese>着陸</Japanese>
@@ -10,16 +11,21 @@
         </Key>
         <Key ID="STR_ZEN_AI_Fastrope">
             <English>Fastrope</English>
-            <German>Abseilen</German>
+            <Russian>СПУСК ПО ТРОСУ</Russian>
+            <French>Corde lisse</French>
+            <German>Schnelles Abseilen</German>
             <Polish>Zjazd na linach</Polish>
             <Portuguese>Cabo rápido</Portuguese>
             <Japanese>ファストロープ</Japanese>
             <Korean>패스트로프</Korean>
             <Spanish>Rapel Rapido</Spanish>
+            <Chinesesimp>快速索降</Chinesesimp>
+            <Chinese>快速索降</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_Paradrop">
             <English>Paradrop</English>
             <Russian>Десант</Russian>
+            <French>Parachutage</French>
             <German>Fallschirmsprung</German>
             <Czech>Seskok padákem</Czech>
             <Polish>Desant ze spadochronem</Polish>
@@ -27,13 +33,19 @@
             <Japanese>空挺降下</Japanese>
             <Korean>공수</Korean>
             <Spanish>Paracaidismo</Spanish>
+            <Chinesesimp>空投</Chinesesimp>
+            <Chinese>空投</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_SearchBuilding">
             <English>Search Building</English>
+            <Russian>Зачистка здания</Russian>
+            <French>Perquisitionner le bâtiment</French>
             <German>Gebäude durchsuchen</German>
             <Polish>Przeszukaj budynek</Polish>
             <Japanese>建物捜索</Japanese>
             <Spanish>Busqueda en edificio</Spanish>
+            <Chinesesimp>搜索建筑</Chinesesimp>
+            <Chinese>搜索建築</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_CouldNotGarrisonAll">
             <English>Unable to garrison all units - not enough positions</English>
@@ -151,6 +163,7 @@
         </Key>
         <Key ID="STR_ZEN_AI_SeekCover">
             <English>Seek Cover</English>
+            <French>Chercher couverture</French>
             <German>Deckung suchen</German>
             <Korean>엄폐물 수색</Korean>
             <Polish>Szukaj Osłony</Polish>
@@ -159,54 +172,85 @@
         </Key>
         <Key ID="STR_ZEN_AI_AimingError">
             <English>Aiming Error</English>
+            <Russian>Ошибка прицеливания</Russian>
+            <French>Erreur de visée</French>
+            <German>Zielfehler</German>
             <Polish>Błąd w celowaniu</Polish>
             <Korean>조준 오류</Korean>
             <Japanese>照準エラー</Japanese>
             <Spanish>Error al apuntar</Spanish>
+            <Chinese>瞄準失誤</Chinese>
+            <Chinesesimp>瞄准失误</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_AI_AnimChange">
             <English>Anim Change</English>
+            <French>Changement d'animation</French>
+            <German>Animationsänderung</German>
             <Polish>Zmiana animacji</Polish>
             <Japanese>アニメーション変更</Japanese>
             <Spanish>Cambio de animación</Spanish>
         </Key>
         <Key ID="STR_ZEN_AI_AutoCombat">
             <English>Auto Combat</English>
+            <Russian>Автоматическое начало боя</Russian>
+            <French>Combat Auto</French>
             <German>Automatischer Kampf</German>
             <Korean>자동 전투</Korean>
             <Polish>Automatyczna walka</Polish>
             <Japanese>自動戦闘</Japanese>
             <Spanish>Combate automático</Spanish>
+            <Chinesesimp>自动战斗</Chinesesimp>
+            <Chinese>自動戰鬥</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_AutoTarget">
             <English>Auto Target</English>
+            <Russian>Обнаружение/выбор цели</Russian>
+            <French>Cible Auto</French>
+            <German>Automatisches Zielen</German>
             <Polish>Automatyczne namierzanie</Polish>
             <Korean>자동 조준</Korean>
             <Japanese>自動捕捉</Japanese>
             <Spanish>Objetivo automático</Spanish>
+            <Chinesesimp>目标搜寻</Chinesesimp>
+            <Chinese>目標搜尋</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_CheckVisible">
             <English>Check Visible</English>
+            <Russian>Проверять на обнаружение себя</Russian>
+            <French>Vérification de visibilité</French>
+            <German>Automatisches Zielen</German>
             <Polish>Sprawdź Widoczne</Polish>
             <Korean>표시 확인</Korean>
             <Japanese>射線権威</Japanese>
             <Spanish>Verificar visible</Spanish>
+            <Chinesesimp>检查瞄准线</Chinesesimp>
+            <Chinese>檢查瞄準線</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_Cover">
             <English>Cover</English>
+            <Russian>Использовать укрытия</Russian>
+            <French>Couverture</French>
+            <German>Deckung</German>
             <Polish>Osłona</Polish>
             <Korean>은신하기</Korean>
             <Japanese>遮蔽</Japanese>
             <Spanish>Cubrir</Spanish>
+            <Chinesesimp>掩护</Chinesesimp>
+            <Chinese>掩護</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_FSM">
             <English>FSM</English>
+            <Russian>Выполнять программу действий</Russian>
+            <French>FSM</French>
+            <German>FSM</German>
             <Korean>유한 상태 기계</Korean>
             <Japanese>FSM</Japanese>
             <Spanish>FSM</Spanish>
         </Key>
         <Key ID="STR_ZEN_AI_LightsVehicle">
             <English>Lights (Vehicle)</English>
+            <French>Éclairage (Véhicule)</French>
+            <German>Licht (Fahrzeug)</German>
             <Polish>Światła (Pojazd)</Polish>
             <Korean>조명 (차량)</Korean>
             <Japanese>ライト (車両)</Japanese>
@@ -214,20 +258,32 @@
         </Key>
         <Key ID="STR_ZEN_AI_MineDetection">
             <English>Mine Detection</English>
+            <Russian>Обнаруживать мины</Russian>
+            <French>Détection Mine</French>
+            <German>Minen Detektieren</German>
             <Polish>Wykrywanie Min</Polish>
             <Korean>광산 탐지</Korean>
             <Japanese>地雷探知</Japanese>
             <Spanish>Detector de minas</Spanish>
+            <Chinesesimp>排查地雷</Chinesesimp>
+            <Chinese>排查地雷</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_Move">
             <English>Move</English>
+            <Russian>Разрешить двигаться</Russian>
+            <French>Mouvement</French>
+            <German>Bewegung</German>
             <Polish>Rusz</Polish>
             <Korean>이동</Korean>
             <Japanese>移動</Japanese>
             <Spanish>Moverse</Spanish>
+            <Chinesesimp>移动</Chinesesimp>
+            <Chinese>移動</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_Nightvision">
             <English>Nightvision</English>
+            <French>Vision nocturne</French>
+            <German>Nachtsicht</German>
             <Polish>Noktowizja</Polish>
             <Korean>야간 투시</Korean>
             <Japanese>暗視装置</Japanese>
@@ -235,13 +291,19 @@
         </Key>
         <Key ID="STR_ZEN_AI_Path">
             <English>Path</English>
+            <French>Chemin</French>
+            <German>Pfad</German>
             <Polish>Ścieżka</Polish>
             <Korean>경로</Korean>
             <Japanese>経路</Japanese>
             <Spanish>Caminar</Spanish>
+            <Chinesesimp>路径</Chinesesimp>
+            <Chinese>路徑</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_RadioProtocol">
             <English>Radio Protocol</English>
+            <French>Protocole Radio</French>
+            <German>Funkprotokoll</German>
             <Polish>Protokół radiowy</Polish>
             <Korean>무선 프로토콜</Korean>
             <Japanese>無線プロトコル</Japanese>
@@ -249,21 +311,32 @@
         </Key>
         <Key ID="STR_ZEN_AI_Suppression">
             <English>Suppression</English>
+            <Russian>Реагировать на обстрел</Russian>
+            <French>Suppression</French>
             <German>Unterdrückung</German>
             <Korean>제압</Korean>
             <Polish>Przygwożdżenie</Polish>
             <Japanese>制圧射撃</Japanese>
             <Spanish>Supresión</Spanish>
+            <Chinesesimp>压制</Chinesesimp>
+            <Chinese>壓制</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_Target">
             <English>Target</English>
+            <Russian>Отслеживать выбранную цель</Russian>
+            <French>Cible</French>
+            <German>Ziel</German>
             <Polish>Cel</Polish>
             <Korean>목표물</Korean>
             <Japanese>目標</Japanese>
             <Spanish>Objetivo</Spanish>
+            <Chinesesimp>目标</Chinesesimp>
+            <Chinese>目標</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_TeamSwitch">
             <English>Team Switch</English>
+            <French>Changement d'équipe</French>
+            <German>Team wechseln</German>
             <Polish>Zmiana drużyny</Polish>
             <Korean>팀 변경</Korean>
             <Japanese>チーム切り替え</Japanese>
@@ -271,6 +344,8 @@
         </Key>
         <Key ID="STR_ZEN_AI_WeaponAim">
             <English>Weapon Aim</English>
+            <French>Visée d'arme</French>
+            <German>Zielen mit der Waffe</German>
             <Polish>Celowanie Bronią</Polish>
             <Korean>무기 조준</Korean>
             <Japanese>武器照準</Japanese>

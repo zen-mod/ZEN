@@ -3,6 +3,8 @@
     <Package name="Context_Menu">
         <Key ID="STR_ZEN_Context_Menu_DisplayName">
             <English>Context Menu</English>
+            <French>Menu contextuel</French>
+            <German>Kontextmenu</German>
         </Key>
         <Key ID="STR_ZEN_Context_Menu_Enabled">
             <English>Enable Context Menu</English>
@@ -42,9 +44,11 @@
         </Key>
         <Key ID="STR_ZEN_Context_Menu_OverrideWaypoints">
             <English>Override Waypoint Placement</English>
+            <German>Überschreibe Platzierung von Wegpunkten</German>
         </Key>
         <Key ID="STR_ZEN_Context_Menu_OverrideWaypoints_Description">
             <English>Allows for the context menu to be opened by right clicking when waypoint placement would normally occur.\nRequires holding the SHIFT key in order to place waypoints.</English>
+            <German>Erlaubt es das Kontextmenu über Rechtsklick zu öffnen, wenn normalerweise ein Wegpunkt platziert wird.\nPlatzierung von Wegpunkten benötigt stattdessen zusätzlich die Umschalttaste.</German>
         </Key>
         <Key ID="STR_ZEN_Context_Menu_OpenContextMenu">
             <English>Open Context Menu</English>

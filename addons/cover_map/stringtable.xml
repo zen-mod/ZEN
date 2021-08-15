@@ -3,6 +3,7 @@
     <Package name="Cover_Map">
         <Key ID="STR_ZEN_Cover_Map_Area_Tooltip">
             <English>Left-click to interact with the cover map area (shaded red).\nClicking inside the area will move it and clicking outside it will create a new area.</English>
+            <German>Benutze Linksklick um mit dem Kartenausschnitt zu interagieren (rote Fläche).\nEin Klick innerhalb der Fläche verschiebt den Ausschnitt und ein Klick außerhalb generiert einen neuen Ausschnitt.</German>
         </Key>
     </Package>
 </Project>
