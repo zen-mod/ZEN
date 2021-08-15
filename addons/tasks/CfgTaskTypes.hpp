@@ -6,22 +6,22 @@ class CfgTaskTypes {
         displayName = CSTRING(Airdrop);
     };
     class armor {
-        displayName = CSTRING(Armor);
+        displayName = "$str_a3_cfggroups_west_blu_f_armored0";
     };
     class attack {
-        displayName = CSTRING(Attack);
+        displayName = "$STR_A3_Role_Assault";
     };
     class backpack {
-        displayName = CSTRING(Backpack);
+        displayName = "$str_a3_requiredgear_listitem_backpack";
     };
     class boat {
-        displayName = CSTRING(Boat);
+        displayName = "$str_a3_cfgvehicles_abandonedboats_base_f0";
     };
     class box {
         displayName = CSTRING(Box);
     };
     class car {
-        displayName = CSTRING(Car);
+        displayName = "$str_dn_car";
     };
     class container {
         displayName = CSTRING(Container);
@@ -30,136 +30,136 @@ class CfgTaskTypes {
         displayName = CSTRING(Danger);
     };
     class defend {
-        displayName = CSTRING(Defend);
+        displayName = "$str_a3_modulemptypedefense";
     };
     class destroy {
-        displayName = CSTRING(Destroy);
+        displayName = "$str_cfg_markers_destroy";
     };
     class documents {
-        displayName = CSTRING(Documents);
+        displayName = "$str_a3_cfgvehicles_intel_file1_f";
     };
     class download {
-        displayName = CSTRING(Download);
+        displayName = "$str_a3_endgame_misc_download";
     };
     class exit {
         displayName = CSTRING(Exit);
     };
     class getin {
-        displayName = CSTRING(Getin);
+        displayName = "$STR_rscMenu.hppRscGroupRootMenu_Items_GetIn1";
     };
     class getout {
-        displayName = CSTRING(Getout);
+        displayName = "$str_action_getout";
     };
     class heal {
-        displayName = CSTRING(Heal);
+        displayName = "$str_state_healsoldier";
     };
     class heli {
-        displayName = CSTRING(Heli);
+        displayName = "$str_dn_helicopter";
     };
     class help {
-        displayName = CSTRING(Help);
+        displayName = "$str_3den_display3den_menubar_help_text";
     };
     class intel {
-        displayName = CSTRING(Intel);
+        displayName = "$str_a3_cfgvehicleclasses_intel0";
     };
     class interact {
-        displayName = CSTRING(Interact);
+        displayName = "$str_rscmenu.hpprscgrouprootmenu_items_empty1";
     };
     class kill {
         displayName = CSTRING(Kill);
     };
     class land {
-        displayName = CSTRING(Land);
+        displayName = "$str_a3_showcase_jets_bis_tskland_title";
     };
     class listen {
         displayName = CSTRING(Listen);
     };
     class map {
-        displayName = CSTRING(Map);
+        displayName = "$str_a3_cfghints_curator_map_displayname";
     };
     class meet {
         displayName = CSTRING(Meet);
     };
     class mine {
-        displayName = CSTRING(Mine);
+        displayName = "$STR_A3_MP_GS_SC_03_Sector_Mine";
     };
     class move {
-        displayName = CSTRING(Move);
+        displayName = "$str_a3_cfgvehicles_moduleobjectivemove_f";
     };
     class move1 {
-        displayName = CSTRING(Move1);
+        displayName = "$str_a3_cfgvehicles_moduleobjectivemove_f";
     };
     class move2 {
-        displayName = CSTRING(Move2);
+        displayName = "$str_a3_cfgvehicles_moduleobjectivemove_f";
     };
     class move3 {
-        displayName = CSTRING(Move3);
+        displayName = "$str_a3_cfgvehicles_moduleobjectivemove_f";
     };
     class move4 {
-        displayName = CSTRING(Move4);
+        displayName = "$str_a3_cfgvehicles_moduleobjectivemove_f";
     };
     class move5 {
-        displayName = CSTRING(Move5);
+        displayName = "$str_a3_cfgvehicles_moduleobjectivemove_f";
     };
     class navigate {
         displayName = CSTRING(Navigate);
     };
     class plane {
-        displayName = CSTRING(Plane);
+        displayName = "$str_dn_plane";
     };
     class radio {
-        displayName = CSTRING(Radio);
+        displayName = "$str_radio";
     };
     class rearm {
-        displayName = CSTRING(Rearm);
+        displayName = "$str_rearm");
     };
     class refuel {
-        displayName = CSTRING(Refuel);
+        displayName = "$str_refuel";
     };
     class repair {
-        displayName = CSTRING(Repair);
+        displayName = "$str_repair";
     };
     class rifle {
-        displayName = CSTRING(Rifle);
+        displayName = "$str_dn_rifle";
     };
     class run {
         displayName = CSTRING(Run);
     };
     class scout {
-        displayName = CSTRING(Scout);
+        displayName = "$STR_A3_Role_Recon";
     };
     class search {
         displayName = CSTRING(Search);
     };
     class takeoff {
-        displayName = CSTRING(Takeoff);
+        displayName = "$str_a3_showcase_jets_bis_tsktakeoff_title";
     };
     class talk {
         displayName = CSTRING(Talk);
     };
     class talk1 {
-        displayName = CSTRING(Talk1);
+        displayName = CSTRING(Talk);
     };
     class talk2 {
-        displayName = CSTRING(Talk2);
+        displayName = CSTRING(Talk);
     };
     class talk3 {
-        displayName = CSTRING(Talk3);
+        displayName = CSTRING(Talk);
     };
     class talk4 {
-        displayName = CSTRING(Talk4);
+        displayName = CSTRING(Talk);
     };
     class talk5 {
-        displayName = CSTRING(Talk5);
+        displayName = CSTRING(Talk);
     };
     class target {
-        displayName = CSTRING(Target);
+        displayName = "$str_dn_target";
     };
     class truck {
-        displayName = CSTRING(Truck);
+        displayName = "$str_dn_truck";
     };
     class unknown {
-        displayName = CSTRING(Unknown);
+        displayName = "$str_dn_unknowns";
     };
     class upload {
         displayName = CSTRING(Upload);
@@ -168,10 +168,10 @@ class CfgTaskTypes {
         displayName = CSTRING(Use);
     };
     class wait {
-        displayName = CSTRING(Wait);
+        displayName = "$str_state_expect";
     };
     class walk {
-        displayName = CSTRING(Walk);
+        displayName = "$str_usract_walk";
     };
     class whiteboard {
         displayName = CSTRING(Whiteboard);

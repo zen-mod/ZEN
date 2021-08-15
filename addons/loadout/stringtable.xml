@@ -3,16 +3,21 @@
     <Package name="Loadout">
         <Key ID="STR_ZEN_Loadout_AmmoRounds">
             <English>%1 Rounds</English>
+            <French>%1 Cartouches</French>
+            <German>%1 Patronen</German>
             <Polish>%1 Naboi</Polish>
             <Japanese>%1 発</Japanese>
         </Key>
         <Key ID="STR_ZEN_Loadout_AmmoTooltip">
             <English>%1\n%2 Rounds\n%3</English>
+            <French>%1\n%2 Cartouches\n%3</French>
+            <German>%1\n%2 Patronen\n%3</German>
             <Polish>%1\n%2 Naboi\n%3</Polish>
             <Japanese>%1\n%2 発\n%3</Japanese>
         </Key>
         <Key ID="STR_ZEN_Loadout_EditLoadout">
             <English>Edit Loadout (%1)</English>
+            <German>Ausrüstung bearbeiten (%1)</German>
             <Polish>Edytuj wyposażenie</Polish>
             <Japanese>装備を編集 (%1)</Japanese>
         </Key>
