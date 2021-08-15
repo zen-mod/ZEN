@@ -11,7 +11,7 @@
         </Key>
         <Key ID="STR_ZEN_AI_Fastrope">
             <English>Fastrope</English>
-            <Russian>СПУСК ПО ТРОСУ</Russian>
+            <Russian>Спуск по тросу</Russian>
             <French>Corde lisse</French>
             <German>Schnelles Abseilen</German>
             <Polish>Zjazd na linach</Polish>
@@ -240,7 +240,7 @@
         </Key>
         <Key ID="STR_ZEN_AI_FSM">
             <English>FSM</English>
-            <Russian>Выполнять программу действий</Russian>
+            <Russian>FSM</Russian>
             <French>FSM</French>
             <German>FSM</German>
             <Korean>유한 상태 기계</Korean>
