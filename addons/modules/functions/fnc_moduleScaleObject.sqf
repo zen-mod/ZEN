@@ -32,8 +32,8 @@ if (isNull attachedTo _object) exitWith {
     ["EDIT", [ELSTRING(common,Scale), LSTRING(ScaleObject_Tooltip)], str getObjectScale _object]
 ], {
     params ["_values", "_object"];
-
     _values params ["_scale"];
+
     _scale = parseNumber _scale;
 
     if (_scale < OBJECT_SCALE_MIN || {_scale > OBJECT_SCALE_MAX}) exitWith {
