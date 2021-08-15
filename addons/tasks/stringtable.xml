@@ -43,12 +43,6 @@
             <German>Fallschirmabwurf</German>
             <Japanese>空中投下</Japanese>
         </Key>
-        <Key ID="STR_ZEN_Tasks_Attack">
-            <English>Attack</English>
-            <French>Attaquer</French>
-            <German>Angreifen</German>
-            <Japanese>攻撃</Japanese>
-        </Key>
         <Key ID="STR_ZEN_Tasks_Box">
             <English>Box</English>
             <French>Caisse</French>
