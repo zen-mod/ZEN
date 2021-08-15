@@ -111,7 +111,7 @@ class CfgTaskTypes {
         displayName = "$str_radio";
     };
     class rearm {
-        displayName = "$str_rearm");
+        displayName = "$str_rearm";
     };
     class refuel {
         displayName = "$str_refuel";
