@@ -199,6 +199,8 @@
         </Key>
         <Key ID="STR_ZEN_Tasks_Scout">
             <English>Scout</English>
+            <French>Reconnaitre</French>
+            <German>Auskundschaften</German>
             <Japanese>偵察</Japanese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Search">
