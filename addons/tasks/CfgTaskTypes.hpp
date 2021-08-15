@@ -9,7 +9,7 @@ class CfgTaskTypes {
         displayName = "$STR_A3_cfggroups_west_blu_f_armored0";
     };
     class attack {
-        displayName = "$STR_A3_om_system_restui_tasktooltip";
+        displayName = CSTRING(Attack);
     };
     class backpack {
         displayName = "$STR_A3_requiredgear_listitem_backpack";
