@@ -105,6 +105,86 @@
             <Japanese>接触</Japanese>
             <Turkish>Buluş</Turkish>
         </Key>
+        <Key ID="STR_ZEN_Tasks_Move1">
+            <English>Move 1</English>
+            <Russian>Идти 1</Russian>
+            <French>Avancer 1</French>
+            <German>Bewegen 1</German>
+            <Chinese>移動 1</Chinese>
+            <Spanish>Mover 1</Spanish>
+            <Italian>Spostati 1</Italian>
+            <Polish>Udaj się do 1</Polish>
+            <Czech>Přesuňte se 1</Czech>
+            <Portuguese>Mover-se 1</Portuguese>
+            <Korean>이동 1</Korean>
+            <Chinesesimp>移动 1</Chinesesimp>
+            <Japanese>移動 1</Japanese>
+            <Turkish>Taşı 1</Turkish>
+        </Key>
+        <Key ID="STR_ZEN_Tasks_Move2">
+            <English>Move 2</English>
+            <Russian>Идти 2</Russian>
+            <French>Avancer 2</French>
+            <German>Bewegen 2</German>
+            <Chinese>移動 2</Chinese>
+            <Spanish>Mover 2</Spanish>
+            <Italian>Spostati 2</Italian>
+            <Polish>Udaj się do 2</Polish>
+            <Czech>Přesuňte se 2</Czech>
+            <Portuguese>Mover-se 2</Portuguese>
+            <Korean>이동 2</Korean>
+            <Chinesesimp>移动 2</Chinesesimp>
+            <Japanese>移動 2</Japanese>
+            <Turkish>Taşı 2</Turkish>
+        </Key>
+        <Key ID="STR_ZEN_Tasks_Move3">
+            <English>Move 3</English>
+            <Russian>Идти 3</Russian>
+            <French>Avancer 3</French>
+            <German>Bewegen 3</German>
+            <Chinese>移動 3</Chinese>
+            <Spanish>Mover 3</Spanish>
+            <Italian>Spostati 3</Italian>
+            <Polish>Udaj się do 3</Polish>
+            <Czech>Přesuňte se 3</Czech>
+            <Portuguese>Mover-se 3</Portuguese>
+            <Korean>이동 3</Korean>
+            <Chinesesimp>移动 3</Chinesesimp>
+            <Japanese>移動 3</Japanese>
+            <Turkish>Taşı 3</Turkish>
+        </Key>
+        <Key ID="STR_ZEN_Tasks_Move4">
+            <English>Move 4</English>
+            <Russian>Идти 4</Russian>
+            <French>Avancer 4</French>
+            <German>Bewegen 4</German>
+            <Chinese>移動 4</Chinese>
+            <Spanish>Mover 4</Spanish>
+            <Italian>Spostati 4</Italian>
+            <Polish>Udaj się do 4</Polish>
+            <Czech>Přesuňte se 4</Czech>
+            <Portuguese>Mover-se 4</Portuguese>
+            <Korean>이동 4</Korean>
+            <Chinesesimp>移动 4</Chinesesimp>
+            <Japanese>移動 4</Japanese>
+            <Turkish>Taşı 4</Turkish>
+        </Key>
+        <Key ID="STR_ZEN_Tasks_Move5">
+            <English>Move 5</English>
+            <Russian>Идти 5</Russian>
+            <French>Avancer 5</French>
+            <German>Bewegen 5</German>
+            <Chinese>移動 5</Chinese>
+            <Spanish>Mover 5</Spanish>
+            <Italian>Spostati 5</Italian>
+            <Polish>Udaj się do 5</Polish>
+            <Czech>Přesuňte se 5</Czech>
+            <Portuguese>Mover-se 5</Portuguese>
+            <Korean>이동 5</Korean>
+            <Chinesesimp>移动 5</Chinesesimp>
+            <Japanese>移動 5</Japanese>
+            <Turkish>Taşı 5</Turkish>
+        </Key>
         <Key ID="STR_ZEN_Tasks_Navigate">
             <English>Navigate</English>
             <French>Naviguer</French>
@@ -126,7 +206,7 @@
         <Key ID="STR_ZEN_Tasks_Talk">
             <English>Talk</English>
             <Russian>Поговорить</Russian>
-            <French>Rendez-vous</French>
+            <French>Parler</French>
             <German>Reden</German>
             <Chinese>談話</Chinese>
             <Spanish>Hablar</Spanish>
@@ -138,6 +218,86 @@
             <Chinesesimp>谈话</Chinesesimp>
             <Japanese>会話</Japanese>
             <Turkish>Konuş</Turkish>
+        </Key>
+        <Key ID="STR_ZEN_Tasks_Talk1">
+            <English>Talk 1</English>
+            <Russian>Поговорить 1</Russian>
+            <French>Parler 1</French>
+            <German>Reden 1</German>
+            <Chinese>談話 1</Chinese>
+            <Spanish>Hablar 1</Spanish>
+            <Italian>Parla 1</Italian>
+            <Polish>Rozmawiaj 1</Polish>
+            <Czech>Rozhovor 1</Czech>
+            <Portuguese>Conversar 1</Portuguese>
+            <Korean>대화 1</Korean>
+            <Chinesesimp>谈话 1</Chinesesimp>
+            <Japanese>会話 1</Japanese>
+            <Turkish>Konuş 1</Turkish>
+        </Key>
+        <Key ID="STR_ZEN_Tasks_Talk2">
+            <English>Talk 2</English>
+            <Russian>Поговорить 2</Russian>
+            <French>Parler 2</French>
+            <German>Reden 2</German>
+            <Chinese>談話 2</Chinese>
+            <Spanish>Hablar 2</Spanish>
+            <Italian>Parla 2</Italian>
+            <Polish>Rozmawiaj 2</Polish>
+            <Czech>Rozhovor 2</Czech>
+            <Portuguese>Conversar 2</Portuguese>
+            <Korean>대화 2</Korean>
+            <Chinesesimp>谈话 2</Chinesesimp>
+            <Japanese>会話 2</Japanese>
+            <Turkish>Konuş 2</Turkish>
+        </Key>
+        <Key ID="STR_ZEN_Tasks_Talk3">
+            <English>Talk 3</English>
+            <Russian>Поговорить 3</Russian>
+            <French>Parler 3</French>
+            <German>Reden 3</German>
+            <Chinese>談話 3</Chinese>
+            <Spanish>Hablar 3</Spanish>
+            <Italian>Parla 3</Italian>
+            <Polish>Rozmawiaj 3</Polish>
+            <Czech>Rozhovor 3</Czech>
+            <Portuguese>Conversar 3</Portuguese>
+            <Korean>대화 3</Korean>
+            <Chinesesimp>谈话 3</Chinesesimp>
+            <Japanese>会話 3</Japanese>
+            <Turkish>Konuş 3</Turkish>
+        </Key>
+        <Key ID="STR_ZEN_Tasks_Talk4">
+            <English>Talk 4</English>
+            <Russian>Поговорить 4</Russian>
+            <French>Parler 4</French>
+            <German>Reden 4</German>
+            <Chinese>談話 4</Chinese>
+            <Spanish>Hablar 4</Spanish>
+            <Italian>Parla 4</Italian>
+            <Polish>Rozmawiaj 4</Polish>
+            <Czech>Rozhovor 4</Czech>
+            <Portuguese>Conversar 4</Portuguese>
+            <Korean>대화 4</Korean>
+            <Chinesesimp>谈话 4</Chinesesimp>
+            <Japanese>会話 4</Japanese>
+            <Turkish>Konuş 4</Turkish>
+        </Key>
+        <Key ID="STR_ZEN_Tasks_Talk5">
+            <English>Talk 5</English>
+            <Russian>Поговорить 5</Russian>
+            <French>Parler 5</French>
+            <German>Reden 5</German>
+            <Chinese>談話 5</Chinese>
+            <Spanish>Hablar 5</Spanish>
+            <Italian>Parla 5</Italian>
+            <Polish>Rozmawiaj 5</Polish>
+            <Czech>Rozhovor 5</Czech>
+            <Portuguese>Conversar 5</Portuguese>
+            <Korean>대화 5</Korean>
+            <Chinesesimp>谈话 5</Chinesesimp>
+            <Japanese>会話 5</Japanese>
+            <Turkish>Konuş 5</Turkish>
         </Key>
         <Key ID="STR_ZEN_Tasks_Upload">
             <English>Upload</English>

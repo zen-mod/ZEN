@@ -1757,7 +1757,7 @@
         </Key>
         <Key ID="STR_ZEN_Modules_RemoveNVG">
             <English>Remove NVGs</English>
-            <German>Entferne Nachtsichtgeräte.</German>
+            <German>Entferne Nachtsichtgeräte</German>
             <Japanese>暗視装置を削除</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_RemoveNVG_Tooltip">
