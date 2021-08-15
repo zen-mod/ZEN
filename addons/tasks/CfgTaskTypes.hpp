@@ -126,7 +126,7 @@ class CfgTaskTypes {
         displayName = CSTRING(Run);
     };
     class scout {
-        displayName = "$STR_A3_b_ctrg_soldier_tna_f0";
+        displayName = CSTRING(Scout);
     };
     class search {
         displayName = CSTRING(Search);

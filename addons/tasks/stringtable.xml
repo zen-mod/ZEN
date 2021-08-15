@@ -197,6 +197,10 @@
             <German>Rennen</German>
             <Japanese>走る</Japanese>
         </Key>
+        <Key ID="STR_ZEN_Tasks_Scout">
+            <English>Scout</English>
+            <Japanese>偵察</Japanese>
+        </Key>
         <Key ID="STR_ZEN_Tasks_Search">
             <English>Search</English>
             <French>Chercher</French>
