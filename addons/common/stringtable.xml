@@ -536,6 +536,11 @@
             <Korean>요</Korean>
             <Japanese>ヨー</Japanese>
         </Key>
+        <Key ID="STR_ZEN_Common_Scale">
+            <English>Scale</English>
+            <French>Redimensionnement</French>
+            <German>Skalierung</German>
+        </Key>
         <Key ID="STR_ZEN_Common_UncheckAll">
             <English>Uncheck All</English>
             <French>Décocher toutes</French>

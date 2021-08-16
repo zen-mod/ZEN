@@ -870,6 +870,16 @@
             <Japanese>オブジェクトの高さをこの値で変更します (負の値も可能).</Japanese>
             <Korean>이 값에 따라 물체의 고도를 변경합니다. (음수도 가능)</Korean>
         </Key>
+        <Key ID="STR_ZEN_Modules_ScaleObject">
+            <English>Scale Object</English>
+            <French>Redimensionner Objet</French>
+            <German>Objekt skalieren</German>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ScaleObject_Tooltip">
+            <English>Scale the object by this factor relative to the original model.</English>
+            <French>Redimensionner l'objet par ce facteur en relation du modèle original.</French>
+            <German>Skaliere das Objekt um diesen Faktor relativ zum originalen Modell.</German>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleChatter">
             <English>Chatter</English>
             <Russian>Разговор</Russian>
@@ -2366,6 +2376,16 @@
             <Japanese>オブジェクトの上に設置</Japanese>
             <Korean>물체에 배치하기</Korean>
             <Polish>Postaw na obiekcie</Polish>
+        </Key>
+        <Key ID="STR_ZEN_Modules_NotAttachedTo">
+            <English>Only for attached objects</English>
+            <French>Seulement pour des objets attachés</French>
+            <German>Nur für angehängte Objekte</German>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ValueOutOfRange">
+            <English>Only values between %1 and %2 are valid</English>
+            <French>Seulement des valeurs entre %1 et %2 sont permises</French>
+            <German>Nur Werte zwischen %1 und %2 sind erlaubt</German>
         </Key>
         <Key ID="STR_ZEN_Modules_OnlyAlive">
             <English>Unit must be alive</English>

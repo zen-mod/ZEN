@@ -70,6 +70,7 @@ PREP(moduleNukeLocal);
 PREP(modulePatrolArea);
 PREP(moduleRemoveArsenal);
 PREP(moduleRotateObject);
+PREP(moduleScaleObject);
 PREP(moduleSearchBuilding);
 PREP(moduleShowInConfig);
 PREP(moduleSideRelations);
