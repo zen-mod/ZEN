@@ -8,6 +8,8 @@
             <Polish>Animacje</Polish>
             <Japanese>雰囲気アニメーション</Japanese>
             <Korean>정적 애니메이션</Korean>
+            <Chinesesimp>环境动画</Chinesesimp>
+            <Chinese>環境動畫</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Type">
             <English>Animation Type</English>
@@ -16,6 +18,8 @@
             <Polish>Typ animacji</Polish>
             <Japanese>アニメーション種類</Japanese>
             <Korean>에니메이션 종류</Korean>
+            <Chinesesimp>动画类型</Chinesesimp>
+            <Chinese>動畫類型</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_StopAnimation">
             <English>Stop Animation</English>
@@ -24,6 +28,8 @@
             <Polish>Przerwij animację</Polish>
             <Japanese>アニメーション停止</Japanese>
             <Korean>애니메이션 중단</Korean>
+            <Chinesesimp>停滞动画</Chinesesimp>
+            <Chinese>停滯動畫</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_SitOnFloor">
             <English>Sit On Floor</English>
@@ -32,24 +38,32 @@
             <Polish>Siedzenie na ziemi</Polish>
             <Japanese>床に座る</Japanese>
             <Korean>땅에 앉기</Korean>
+            <Chinesesimp>坐在地上</Chinesesimp>
+            <Chinese>坐在地上</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_SitArmed">
             <English>Sit On Floor (Armed)</English>
             <German>Auf dem Boden sitzen (Bewaffnet)</German>
             <Polish>Siedzenie na ziemi (Z Bronią)</Polish>
             <Japanese>床に座る (武装)</Japanese>
+            <Chinesesimp>坐在地上(武装)</Chinesesimp>
+            <Chinese>坐在地上(武裝)</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Squat">
             <English>Squat</English>
             <German>Hocke</German>
             <Polish>Przysiad</Polish>
             <Japanese>しゃがみ</Japanese>
+            <Chinesesimp>蹲下</Chinesesimp>
+            <Chinese>蹲下</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_SquatArmed">
             <English>Squat (Armed)</English>
             <German>Hocke (Bewaffnet)</German>
             <Polish>Przysiad (Z Bronią)</Polish>
             <Japanese>しゃがみ (武装)</Japanese>
+            <Chinesesimp>蹲下(武装)</Chinesesimp>
+            <Chinese>蹲下(武裝)</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_LeanOnWall">
             <English>Lean On Wall</English>
@@ -58,6 +72,8 @@
             <Polish>Opieranie się o ścianę</Polish>
             <Japanese>壁によりかかる</Japanese>
             <Korean>벽에 기대기</Korean>
+            <Chinesesimp>倚墙而立</Chinesesimp>
+            <Chinese>倚牆而立</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Watch">
             <English>Watch</English>
@@ -66,6 +82,8 @@
             <Polish>Stanie na straży</Polish>
             <Japanese>監視</Japanese>
             <Korean>지켜보기</Korean>
+            <Chinesesimp>观察</Chinesesimp>
+            <Chinese>觀察</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_StandIdle">
             <English>Stand Idle</English>
@@ -74,6 +92,8 @@
             <Polish>Bezczynne stanie</Polish>
             <Japanese>立ち姿勢のアイドル</Japanese>
             <Korean>가만히 서있기</Korean>
+            <Chinesesimp>懒散站立</Chinesesimp>
+            <Chinese>懶散站立</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_StandIdleNoWeapon">
             <English>Stand Idle (No Weapon)</English>
@@ -82,11 +102,15 @@
             <Polish>Bezczynne stanie (bez broni)</Polish>
             <Japanese>立ち姿勢のアイドル (武器なし)</Japanese>
             <Korean>가만히 서있기 (무기 없이)</Korean>
+            <Chinesesimp>懒散站立（无武装）</Chinesesimp>
+            <Chinese>懶散站立（無武裝）</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_StandWithPistol">
             <English>Stand Idle (Pistol)</English>
             <German>Herumstehen (Pistole)</German>
             <Japanese>立ち姿勢のアイドル (拳銃)</Japanese>
+            <Chinesesimp>懒散站立（手枪）</Chinesesimp>
+            <Chinese>懶散站立（手槍）</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_AtEase">
             <English>At Ease</English>
@@ -95,12 +119,16 @@
             <Polish>Swobodnie</Polish>
             <Japanese>安めの姿勢</Japanese>
             <Korean>열중 셧</Korean>
+            <Chinesesimp>安逸</Chinesesimp>
+            <Chinese>安逸</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_GuardKneeled">
             <English>Guard (Kneel)</English>
             <German>Bewachen (Knien)</German>
             <Polish>Straż (Klęknięcie)</Polish>
             <Japanese>警戒 (屈み)</Japanese>
+            <Chinesesimp>警卫（跪姿）</Chinesesimp>
+            <Chinese>警衛（跪姿）</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ListenToBriefing">
             <English>Listen To Briefing</English>
@@ -109,6 +137,8 @@
             <Polish>Słuchanie briefingu</Polish>
             <Japanese>ブリーフィングを聞く姿</Japanese>
             <Korean>설명 듣기</Korean>
+            <Chinesesimp>听取简报</Chinesesimp>
+            <Chinese>聽取簡報</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Briefing">
             <English>Briefing</English>
@@ -117,6 +147,8 @@
             <Polish>Briefing</Polish>
             <Japanese>ブリーフィング</Japanese>
             <Korean>설명</Korean>
+            <Chinesesimp>简报</Chinesesimp>
+            <Chinese>簡報</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_BriefingInteractive">
             <English>Briefing (Interactive)</English>
@@ -125,6 +157,8 @@
             <Polish>Briefing (Interaktywny)</Polish>
             <Japanese>ブリーフィング (インタラクティブ)</Japanese>
             <Korean>능동적인 설명</Korean>
+            <Chinesesimp>简报(互动)</Chinesesimp>
+            <Chinese>簡報(互動)</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ListeningCivilian">
             <English>Listening Civilian</English>
@@ -133,6 +167,8 @@
             <Polish>Słuchający cywil</Polish>
             <Japanese>話を聞く市民</Japanese>
             <Korean>듣는 시민</Korean>
+            <Chinesesimp>倾听民声</Chinesesimp>
+            <Chinese>傾聽民聲</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_TalkingCivilian">
             <English>Talking Civilian</English>
@@ -141,6 +177,8 @@
             <Polish>Mówiący cywil</Polish>
             <Japanese>話をする市民</Japanese>
             <Korean>이야기하는 시민</Korean>
+            <Chinesesimp>可交谈平民</Chinesesimp>
+            <Chinese>可交談平民</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ListenToRadio">
             <English>Listen To Radio</English>
@@ -149,6 +187,8 @@
             <Polish>Słuchanie radia</Polish>
             <Japanese>無線を聞く</Japanese>
             <Korean>무전 청취</Korean>
+            <Chinesesimp>收听无线电</Chinesesimp>
+            <Chinese>收聽無線電</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ShieldFromSun">
             <English>Shield From Sun</English>
@@ -157,6 +197,8 @@
             <Polish>Osłanianie przed słońcem</Polish>
             <Japanese>太陽を手で隠す</Japanese>
             <Korean>햇빛으로 부터 보호</Korean>
+            <Chinesesimp>遮挡阳光</Chinesesimp>
+            <Chinese>遮擋陽光</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_NavigateAircraft">
             <English>Navigate Aircraft</English>
@@ -165,6 +207,8 @@
             <Polish>Naprowadzanie helikoptera</Polish>
             <Japanese>航空機を誘導</Japanese>
             <Korean>항공기 유도</Korean>
+            <Chinesesimp>导航机</Chinesesimp>
+            <Chinese>導航機</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ShowVehicleTheWay">
             <English>Showing A Vehicle The Way</English>
@@ -173,6 +217,8 @@
             <Polish>Wskazywanie drogi pojazdom</Polish>
             <Japanese>車両を誘導</Japanese>
             <Korean>차량에게 길 보여주기</Korean>
+            <Chinesesimp>为车辆导航</Chinesesimp>
+            <Chinese>為車輛指路</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_TreatWounded">
             <English>Treat Wounded</English>
@@ -181,6 +227,8 @@
             <Polish>Leczenie rannego</Polish>
             <Japanese>怪我を治療</Japanese>
             <Korean>부상자 치료</Korean>
+            <Chinesesimp>治疗伤员</Chinesesimp>
+            <Chinese>治療傷員</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_CombatWounded">
             <English>Combat Wounded</English>
@@ -189,6 +237,8 @@
             <Polish>Ranny w boju</Polish>
             <Japanese>戦闘中に負傷</Japanese>
             <Korean>전투 부상</Korean>
+            <Chinesesimp>战斗伤员</Chinesesimp>
+            <Chinese>戰鬥傷員</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedGeneral">
             <English>Wounded (General)</English>
@@ -197,12 +247,16 @@
             <Polish>Ranny (Ogólnie)</Polish>
             <Japanese>怪我 (全般)</Japanese>
             <Korean>부상 (공통)</Korean>
+            <Chinesesimp>受伤(一般)</Chinesesimp>
+            <Chinese>受傷(一般)</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedLeaning">
             <English>Wounded (Leaning)</English>
             <German>Verletzt (Lehnend)</German>
             <Polish>Ranny (Opierając)</Polish>
             <Japanese>怪我 (上半身だけ壁にもたれている)</Japanese>
+            <Chinesesimp>受伤(倚靠)</Chinesesimp>
+            <Chinese>受傷(倚靠)</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedHead">
             <English>Wounded (Head)</English>
@@ -211,6 +265,8 @@
             <Polish>Ranny (W głowę)</Polish>
             <Japanese>怪我 (頭部)</Japanese>
             <Korean>부상 (머리)</Korean>
+            <Chinesesimp>受伤(头部)</Chinesesimp>
+            <Chinese>受傷(頭部)</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedChest">
             <English>Wounded (Chest)</English>
@@ -219,6 +275,8 @@
             <Polish>Ranny (W brzuch)</Polish>
             <Japanese>怪我 (胸部)</Japanese>
             <Korean>부상 (몸통)</Korean>
+            <Chinesesimp>受伤(胸部)</Chinesesimp>
+            <Chinese>受傷(胸部)</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedArm">
             <English>Wounded (Arm)</English>
@@ -227,6 +285,8 @@
             <Polish>Ranny (W rękę)</Polish>
             <Japanese>怪我 (腕)</Japanese>
             <Korean>부상 (팔)</Korean>
+            <Chinesesimp>受伤(手臂)</Chinesesimp>
+            <Chinese>受傷(手臂)</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedLeg">
             <English>Wounded (Leg)</English>
@@ -235,6 +295,8 @@
             <Polish>Ranny (W nogę)</Polish>
             <Japanese>怪我 (足)</Japanese>
             <Korean>부상 (다리)</Korean>
+            <Chinesesimp>受伤(腿部)</Chinesesimp>
+            <Chinese>受傷(腿部)</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ShockedCivilian">
             <English>Shocked Civilian</English>
@@ -243,6 +305,8 @@
             <Polish>Przerażony cywil</Polish>
             <Japanese>恐怖状態の市民</Japanese>
             <Korean>충격받은 시민</Korean>
+            <Chinesesimp>震惊的平民</Chinesesimp>
+            <Chinese>震驚的平民</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_HidingCivilian">
             <English>Hiding Civilian</English>
@@ -251,11 +315,15 @@
             <Polish>Ukrywający się cywil</Polish>
             <Japanese>隠れる市民</Japanese>
             <Korean>숨는 시민</Korean>
+            <Chinesesimp>隐藏的平民</Chinesesimp>
+            <Chinese>隱藏的平民</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Surrender">
             <English>Surrender</English>
             <German>Ergeben</German>
             <Japanese>投降</Japanese>
+            <Chinesesimp>投降</Chinesesimp>
+            <Chinese>投降</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_SitCaptured">
             <English>Sit Captured</English>
@@ -264,6 +332,8 @@
             <Polish>Siedź pojmany</Polish>
             <Japanese>座っている捕虜</Japanese>
             <Korean>체포된 상태로 착석</Korean>
+            <Chinesesimp>坐着的囚犯</Chinesesimp>
+            <Chinese>坐著的囚犯</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_RepairStand">
             <English>Repair Vehicle (Stand)</English>
@@ -272,6 +342,8 @@
             <Polish>Naprawianie pojazdu (Na stojąco)</Polish>
             <Japanese>車両の修理 (立ち姿勢)</Japanese>
             <Korean>차량 수리 (선 상태로)</Korean>
+            <Chinesesimp>维修车辆（直立）</Chinesesimp>
+            <Chinese>維修車輛（直立）</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_RepairKneel">
             <English>Repair Vehicle (Kneel)</English>
@@ -280,6 +352,8 @@
             <Polish>Naprawianie pojazdu (Kucając)</Polish>
             <Japanese>車両の修理 (膝付き姿勢)</Japanese>
             <Korean>차량 수리 (무릎꿇은 상태로)</Korean>
+            <Chinesesimp>维修车辆（跪姿）</Chinesesimp>
+            <Chinese>維修車輛（跪姿）</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_RepairProne">
             <English>Repair Vehicle (Prone)</English>
@@ -288,42 +362,56 @@
             <Polish>Naprawianie pojazdu (Na leżąco)</Polish>
             <Japanese>車両の修理 (寝転がり)</Japanese>
             <Korean>차량 수리 (움직임)</Korean>
+            <Chinesesimp>维修车辆（俯卧）</Chinesesimp>
+            <Chinese>維修車輛（俯臥）</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Dead">
             <English>Dead</English>
             <German>Tot</German>
             <Polish>Martwy</Polish>
             <Japanese>死亡</Japanese>
+            <Chinesesimp>死亡</Chinesesimp>
+            <Chinese>死亡</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_DeadLeaning">
             <English>Dead (Leaning)</English>
             <German>Tot (Lehnend)</German>
             <Polish>Martwy (Opierający)</Polish>
             <Japanese>死亡 (上半身だけ壁にもたれている)</Japanese>
+            <Chinesesimp>死亡（倚靠）</Chinesesimp>
+            <Chinese>死亡（倚靠）</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_DeadSit">
             <English>Dead (Sitting)</English>
             <German>Tot (Sitzend)</German>
             <Polish>Martwy (Siedzący)</Polish>
             <Japanese>死亡 (うずくまっている)</Japanese>
+            <Chinesesimp>死亡（坐姿）</Chinesesimp>
+            <Chinese>死亡（坐姿）</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_LeanOnTable">
             <English>Lean On Table</English>
             <German>Auf Tisch lehnen</German>
             <Polish>Oparty o stół</Polish>
             <Japanese>机に両手をつく</Japanese>
+            <Chinesesimp>靠在桌上</Chinesesimp>
+            <Chinese>靠在桌上</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Binoculars">
             <English>Look Through Binoculars</English>
             <German>Durch Feldstecher schauen</German>
             <Polish>Patrzący przez lornetke</Polish>
             <Japanese>双眼鏡を覗く</Japanese>
+            <Chinesesimp>透过望远镜看</Chinesesimp>
+            <Chinese>透過望遠鏡看</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Salute">
             <English>Salute</English>
             <German>Gruß</German>
             <Polish>Salutujący</Polish>
             <Japanese>敬礼</Japanese>
+            <Chinesesimp>敬礼</Chinesesimp>
+            <Chinese>敬禮</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Combat">
             <English>Combat Ready</English>
@@ -332,6 +420,8 @@
             <Polish>Gotowość bojowa</Polish>
             <Japanese>戦闘準備</Japanese>
             <Korean>전투 대기</Korean>
+            <Chinesesimp>战斗准备</Chinesesimp>
+            <Chinese>戰鬥準備</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby">
             <English>Ambient Flyby</English>
@@ -339,6 +429,8 @@
             <German>Atmosphärischer Vorbeiflug</German>
             <Polish>Przelot samolotu</Polish>
             <Japanese>雰囲気フライバイ</Japanese>
+            <Chinesesimp>环境飞越</Chinesesimp>
+            <Chinese>環境飛越</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_AircraftSelect">
             <English>Aircraft Selection</English>
@@ -347,6 +439,8 @@
             <Polish>Wybór samolotu</Polish>
             <Japanese>航空機を選択</Japanese>
             <Korean>항공기 선택</Korean>
+            <Chinesesimp>选择飞机</Chinesesimp>
+            <Chinese>選擇飛機</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_FlyTowards">
             <English>Fly Towards</English>
@@ -354,6 +448,8 @@
             <German>Flugrichtung</German>
             <Polish>Lot w kierunku</Polish>
             <Japanese>飛行方向</Japanese>
+            <Chinesesimp>飞往</Chinesesimp>
+            <Chinese>飛往</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_FlyTowards_Tooltip">
             <English>Aircraft will fly towards this direction from the opposite direction.</English>
@@ -361,6 +457,8 @@
             <German>Luftfahrzeuge werden aus der entgegengesetzten Richtung in diese Richtung fliegen.</German>
             <Polish>Samolot będzie leciał w tym kierunku, nadlatując z przeciwnego kierunku.</Polish>
             <Japanese>航空機はこの方向に向かって、反対側から飛び始めます。</Japanese>
+            <Chinesesimp>飞机会从相反的方向飞向该方向。</Chinesesimp>
+            <Chinese>飛機會從相反的方向飛向該方向。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Tooltip">
             <English>Sets the height that the aircraft will fly at, in meters.</English>
@@ -369,6 +467,8 @@
             <Polish>Ustala na jakiej wysokości będzie leciał samolot, w metrach.</Polish>
             <Japanese>航空機の飛行高度をメートルで設定できます。</Japanese>
             <Korean>항공기가 날라갈 고도를 설정합니다. (미터)</Korean>
+            <Chinesesimp>设置飞机的飞行高度（米）</Chinesesimp>
+            <Chinese>設置飛機的飛行高度（米）</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Mode_AGL">
             <English>Follow Terrain</English>
@@ -376,12 +476,16 @@
             <Polish>Śledz Teren</Polish>
             <Japanese>地形追随</Japanese>
             <Korean>지형 추적</Korean>
+            <Chinesesimp>地形跟踪</Chinesesimp>
+            <Chinese>地形跟踪</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Mode_ASL">
             <English>Fixed Altitude</English>
             <German>Feste Höhe</German>
             <Polish>Stała wysokość</Polish>
             <Japanese>高度固定</Japanese>
+            <Chinesesimp>固定高度</Chinesesimp>
+            <Chinese>固定高度</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Mode_AGL_Tooltip">
             <English>The aircraft will follow the terrain, staying at the same height relative to the ground. Based on AGL.</English>
@@ -389,12 +493,16 @@
             <Japanese>航空機は地形に沿って飛ぶようになり、高度が地形によって変化します。AGL をベースとします。</Japanese>
             <Korean>항공기는 지형을 따르고, 같은 고도에 위치하게 될것입니다. AGL에 기반합니다. </Korean>
             <Polish>Statek powietrzny będzie podążał wzdłuż terenu, pozostając na tym samym pułapie względem wysokości terenu (AGL).</Polish>
+            <Chinesesimp>飞机将跟随地形，保持在相对于地面的相同高度。以海拔高度为基础。</Chinesesimp>
+            <Chinese>飛機將跟隨地形，保持在相對於地面的相同高度。以海拔高度為基礎。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Mode_ASL_Tooltip">
             <English>The aircraft will fly at a constant altitude, only following the terrain if less than 10 meters from the ground. Based on ASL, final altitude is the elevation of the module plus the height given.</English>
             <German>Das Flugzeug fliegt auf der angegebenen Höhe, außer es ist weniger als 10m über dem Boden, basierend auf der Meereshöhe (ASL).</German>
             <Japanese>航空機は常に一定の高度を飛ぶようになりますが、飛行高度が 10m 未満では地形追随します。ASL をベースとし、高度は海面からの高さになります。</Japanese>
             <Polish>Statek Powietrzny będzie podążał na tej samej wysokości, podążając za terenem jedynie w przypadku gdy znajdzie się mniej niż 10 metrów od powierzchni, bazując na wysokości nad poziomem morza (ASL).</Polish>
+             <Chinesesimp>飞机将在一个恒定的高度飞行，只有在距离地面不到10米的情况下才会跟随地形飞行。以海拔高度为基础，最终高度是模块的海拔高度加上给定的高度。</Chinesesimp>
+            <Chinese>飛機將在一個恆定的高度飛行，只有在距離地面不到10米的情況下才會跟隨地形飛行。以海拔高度為基礎，最終高度是模塊的海拔高度加上給定的高度。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Distance">
             <English>Distance</English>
@@ -403,6 +511,8 @@
             <Polish>Odległość</Polish>
             <Japanese>距離</Japanese>
             <Korean>거리</Korean>
+            <Chinesesimp>距离</Chinesesimp>
+            <Chinese>距離</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Distance_Tooltip">
             <English>Sets the distance that the aircraft will start out from, in meters.</English>
@@ -410,6 +520,8 @@
             <German>Legt die Entfernung fest, aus der das Luftfahrzeug starten soll, in Metern.</German>
             <Polish>Ustala odległość w jakiej samolot rozpocznie lot, w metrach.</Polish>
             <Japanese>航空機がどの地点から飛び始めるかをメートルで指定します。</Japanese>
+            <Chinesesimp>设置开始距离（米）。</Chinesesimp>
+            <Chinese>設置開始距離（米）。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Speed_Tooltip">
             <English>Sets how fast the aircraft will fly.</English>
@@ -418,6 +530,8 @@
             <Polish>Ustala z jaką prędkością będzie leciał samolot.</Polish>
             <Japanese>航空機の飛行速度を決定します。</Japanese>
             <Korean>얼마나 빨리 항공기가 비행할지 정합니다.</Korean>
+            <Chinesesimp>设置飞行速度。</Chinesesimp>
+            <Chinese>設置飛行速度。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Amount">
             <English>Amount</English>
@@ -425,6 +539,8 @@
             <Polish>Ilość</Polish>
             <Japanese>数</Japanese>
             <Korean>양</Korean>
+            <Chinesesimp>数量</Chinesesimp>
+            <Chinese>數量</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Amount_Tooltip">
             <English>Sets the amount of aircraft that will be spawned.</English>
@@ -432,6 +548,8 @@
             <Polish>Ilość samolotów które zostaną stworzone.</Polish>
             <Japanese>生成する航空機の数を決定します。</Japanese>
             <Korean>소환될 항공기의 양을 정합니다.</Korean>
+            <Chinesesimp>设置生成的飞机数量。</Chinesesimp>
+            <Chinese>設置生成的飛機數量。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAssignZeus">
             <English>Promote To Zeus</English>
@@ -440,6 +558,8 @@
             <Polish>Przydziel Zeusa</Polish>
             <Japanese>Zeus に昇格</Japanese>
             <Korean>제우스 권한 부여</Korean>
+            <Chinesesimp>提升为宙斯</Chinesesimp>
+            <Chinese>提升為宙斯</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAssignZeus_AlreadyZeus">
             <English>Unit is already a curator</English>
@@ -448,6 +568,8 @@
             <Polish>Jednostka jest już Zeusem</Polish>
             <Japanese>ユニットは既にキュレーターです</Japanese>
             <Korean>유닛은 이미 큐레이터입니다.</Korean>
+            <Chinesesimp>单位已经是宙斯了</Chinesesimp>
+            <Chinese>單位已經是宙斯了</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAssignZeus_Promoted">
             <English>You have been promoted to Zeus.</English>
@@ -456,6 +578,8 @@
             <Polish>Przydzielono Ci Zeusa.</Polish>
             <Japanese>あなたは Zeus になりました。</Japanese>
             <Korean>제우스 권한이 부여되었습니다.</Korean>
+            <Chinesesimp>你已被提升为宙斯。</Chinesesimp>
+            <Chinese>你已被提升為宙斯。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAttachTo">
             <English>Attach To</English>
@@ -464,6 +588,8 @@
             <Polish>Przyczep do</Polish>
             <Japanese>次に取り付け</Japanese>
             <Korean>부착</Korean>
+            <Chinesesimp>附加到</Chinesesimp>
+            <Chinese>附加到</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ObjectAttached">
             <English>Object Attached</English>
@@ -472,6 +598,8 @@
             <Polish>Obiekt przyczepiony</Polish>
             <Japanese>オブジェクトが取り付けされた</Japanese>
             <Korean>물건이 부착되었습니다.</Korean>
+            <Chinesesimp>物体已附加</Chinesesimp>
+            <Chinese>物體已附加</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ObjectDetached">
             <English>Object Detached</English>
@@ -480,6 +608,8 @@
             <Polish>Obiekt odczepiony</Polish>
             <Japanese>オブジェクトが外された</Japanese>
             <Korean>물건이 탈착되었습니다.</Korean>
+            <Chinesesimp>物体已分离</Chinesesimp>
+            <Chinese>物體已分離</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_CannotAttachToSelf">
             <English>Cannot attach object to itself</English>
@@ -488,6 +618,8 @@
             <Polish>Nie można przyczepić obiektu do niego samego</Polish>
             <Japanese>オブジェクトを取り付けできません</Japanese>
             <Korean>이것에 물건을 부착할 수 없습니다.</Korean>
+            <Chinesesimp>无法将物体附加到物体自己身上</Chinesesimp>
+            <Chinese>無法將物體附加到物體自己身上</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAttachFlag">
             <English>Attach Flag</English>
@@ -496,6 +628,8 @@
             <Polish>Przyczep flagę</Polish>
             <Japanese>旗を取り付け</Japanese>
             <Korean>깃발 부착</Korean>
+            <Chinesesimp>附加旗帜</Chinesesimp>
+            <Chinese>附加旗幟</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAttachFlag_Type">
             <English>Flag Type</English>
@@ -504,6 +638,8 @@
             <Polish>Rodzaj flagi</Polish>
             <Japanese>旗の種類</Japanese>
             <Korean>깃발 형태</Korean>
+            <Chinesesimp>旗帜类型</Chinesesimp>
+            <Chinese>旗幟類型</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_CreateIED">
             <English>Create IED</English>
@@ -512,6 +648,8 @@
             <Polish>Stwórz IED</Polish>
             <Japanese>IED を生成</Japanese>
             <Korean>IED 생성</Korean>
+            <Chinesesimp>生成IED</Chinesesimp>
+            <Chinese>生成IED</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_AlreadyAnIED">
             <English>Object is already an IED</English>
@@ -520,6 +658,8 @@
             <Polish>Obiekt jest już IEDem</Polish>
             <Japanese>オブジェクトは既に IED です</Japanese>
             <Korean>오브젝트는 이미 IED입니다.</Korean>
+            <Chinesesimp>物体已经有一个简易爆炸装置（IED）了</Chinesesimp>
+            <Chinese>物體已經有一個簡易爆炸裝置（IED）了</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ActivationSide">
             <English>Activation Side</English>
@@ -528,6 +668,8 @@
             <Polish>Strona aktywująca</Polish>
             <Japanese>対象陣営</Japanese>
             <Korean>활성화 진영</Korean>
+            <Chinesesimp>激活阵营</Chinesesimp>
+            <Chinese>激活陣營</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ActivationRadius">
             <English>Activation Radius</English>
@@ -536,6 +678,8 @@
             <Polish>Promień aktywacji</Polish>
             <Japanese>起動範囲</Japanese>
             <Korean>활성화 범위</Korean>
+            <Chinesesimp>激活半径</Chinesesimp>
+            <Chinese>激活半徑</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ExplosionSize">
             <English>Explosion Size</English>
@@ -544,6 +688,8 @@
             <Polish>Siła eksplozji</Polish>
             <Japanese>威力</Japanese>
             <Korean>폭발 크기</Korean>
+            <Chinesesimp>爆炸威力</Chinesesimp>
+            <Chinese>爆炸威力</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_IsJammable">
             <English>Is Jammable</English>
@@ -552,6 +698,8 @@
             <Polish>Da się zagłuszyć?</Polish>
             <Japanese>妨害可否</Japanese>
             <Korean>해체할 수 있는가</Korean>
+            <Chinesesimp>是否可被干扰</Chinesesimp>
+            <Chinese>是否可被干擾</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleConvoyParameters">
             <English>Convoy Parameters</English>
@@ -560,6 +708,8 @@
             <Polish>Parametry konwoju</Polish>
             <Japanese>車両パラメータ</Japanese>
             <Korean>수송 함수</Korean>
+            <Chinesesimp>车队参数</Chinesesimp>
+            <Chinese>車隊參數</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_Separation">
             <English>Convoy Separation</English>
@@ -568,6 +718,8 @@
             <Polish>Odstępy w konwoju</Polish>
             <Japanese>車両感覚</Japanese>
             <Korean>수송 분리</Korean>
+            <Chinesesimp>车队分离</Chinesesimp>
+            <Chinese>車隊分離</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_Separation_Tooltip">
             <English>Sets the distance that the vehicle will keep to the vehicle in front of it, in meters.\nSmall values should only be used for slow moving convoys.\nFor best results, vehicles should be in the same group with a column formation.</English>
@@ -575,6 +727,8 @@
             <German>Legt den Abstand fest, den das Fahrzeug zum vorausfahrenden Fahrzeug in Metern einhalten soll.\nKleine Werte sollten nur für langsam fahrende Konvois verwendet werden.\nFür beste Ergebnisse sollten Fahrzeuge in der gleichen Gruppe mit einer Säulen Formation sein.</German>
             <Polish>Ustala odległość jaką pojazd będzie utrzymywał od poprzedzającego go pojazdu, w metrach.\nNiewielkie wartości powinny być używane tylko przy wolno jadących konwojach.\nDla najlepszych rezultatów pojazdy powinny być w tej samej grupie z ustaloną formacją kolumny.</Polish>
             <Japanese>車列内の車間距離を決定します。\n小さい値はゆっくりと移動する車列に限定するべきです。\n上手く動かすには車両全てを同じグループにして縦列隊形にします。</Japanese>
+            <Chinesesimp>设置车辆与车辆间保持的距离（米）。\n为了获得最佳效果，车辆应在同一小组中以纵队的形式排列。</Chinesesimp>
+            <Chinese>設置車輛與車輛間保持的距離（米）。 \n為了獲得最佳效果，車輛應在同一小組中以縱隊的形式排列。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_Speed">
             <English>Speed Limit</English>
@@ -583,6 +737,8 @@
             <Polish>Limit prędkości</Polish>
             <Japanese>速度制限</Japanese>
             <Korean>속도 제한</Korean>
+            <Chinesesimp>限速</Chinesesimp>
+            <Chinese>限速</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_Speed_Tooltip">
             <English>Limits the speed of the vehicle to the given value, in kilometers per hour.</English>
@@ -591,6 +747,8 @@
             <Polish>Ustala limit prędkości pojazdu, w km/h.</Polish>
             <Japanese>車両の速度を制限できます。単位は km/h です。</Japanese>
             <Korean>주어진 값에 따라 차량의 속도를 제한합니다. (km/h)</Korean>
+            <Chinesesimp>将车辆的速度限制在一个给定值，单位是公里/小时。</Chinesesimp>
+            <Chinese>將車輛的速度限制在一個給定值，單位是公里/小時。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_ForceRoad">
             <English>Stay On Road</English>
@@ -599,6 +757,8 @@
             <Polish>Trzymaj się drogi</Polish>
             <Japanese>道路上を維持</Japanese>
             <Korean>도로 따르기</Korean>
+            <Chinesesimp>保持行驶在道路上</Chinesesimp>
+            <Chinese>保持行駛在道路上</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_ForceRoad_Tooltip">
             <English>Forces the vehicle to stay on the road.</English>
@@ -607,6 +767,8 @@
             <Polish>Wymusza na pojazdach ruch po drodze.</Polish>
             <Japanese>車両が道路上に留まり続けるよう矯正します。</Japanese>
             <Korean>차량들에게 도로를 따르도록 강제합니다.</Korean>
+            <Chinesesimp>迫使车辆保持在道路上。</Chinesesimp>
+            <Chinese>迫使車輛保持在道路上。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCAS_Bomb">
             <English>CAS - Bomb Strike</English>
@@ -615,6 +777,8 @@
             <Polish>CAS - Nalot bombowy</Polish>
             <Japanese>CAS - 爆撃</Japanese>
             <Korean>CAS - 폭탄 투하</Korean>
+            <Chinesesimp>CAS - 航弹空袭</Chinesesimp>
+            <Chinese>CAS - 航彈空襲</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_BindVariable">
             <English>Bind Variable To Object</English>
@@ -622,6 +786,8 @@
             <German>Variable an das Objekt binden</German>
             <Polish>Przypisz zmienną do obiektu</Polish>
             <Japanese>オブジェクトに変数を割り当て</Japanese>
+            <Chinesesimp>绑定变量至物体上</Chinesesimp>
+            <Chinese>綁定變量至物體上</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_VariableName">
             <English>Variable Name</English>
@@ -629,12 +795,16 @@
             <German>Variablenname</German>
             <Polish>Nazwa zmiennej</Polish>
             <Japanese>変数名</Japanese>
+            <Chinesesimp>变量名</Chinesesimp>
+            <Chinese>變量名</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_BroadcastVariable">
             <English>Public (Broadcast)</English>
             <German>Öffentlich (Übertragung)</German>
             <Polish>Zmienna publiczna</Polish>
             <Japanese>パブリック (配信)</Japanese>
+            <Chinesesimp>公共（广播）</Chinesesimp>
+            <Chinese>公共（廣播）</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ShowInConfig">
             <English>Show In Config Viewer</English>
@@ -642,6 +812,8 @@
             <German>Im Config Viewer anzeigen</German>
             <Polish>Pokaż w przeglądarce configu</Polish>
             <Japanese>コンフィグ ビューワで見る</Japanese>
+            <Chinesesimp>在配置查看器中显示</Chinesesimp>
+            <Chinese>在配置查看器中顯示</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleDamageBuildings">
             <English>Damage Buildings</English>
@@ -649,6 +821,8 @@
             <German>Gebäude beschädigen</German>
             <Polish>Uszkodź budynki</Polish>
             <Japanese>建物ダメージ</Japanese>
+            <Chinesesimp>建筑物损坏</Chinesesimp>
+            <Chinese>建築物損壞</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_BuildingSelection">
             <English>Building Selection</English>
@@ -656,6 +830,8 @@
             <German>Gebäudeauswahl</German>
             <Polish>Wybierz budynek</Polish>
             <Japanese>建物選択</Japanese>
+            <Chinesesimp>建筑物选择</Chinesesimp>
+            <Chinese>建築物選擇</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_DamageState">
             <English>Damage State</English>
@@ -663,12 +839,16 @@
             <German>Schadenszustand</German>
             <Polish>Stopień zniszczenia</Polish>
             <Japanese>ダメージ状態</Japanese>
+            <Chinesesimp>损坏状态</Chinesesimp>
+            <Chinese>損壞狀態</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_DamageState_Tooltip">
             <English>Selects the damage state to apply.\nIn nearest mode, only damage states that the nearest building supports are selectable.\nIn radius mode, the selected damage state will be applied only to buildings that support it.</English>
             <German>Wählt den anzuwendenden Schadenszustand aus. Im "Nächsten" Modus wird nur das nächstgelegene Gebäude ausgewählt. Im "Radius" Modus wird der Schadenszustand nur auf Häuser, die diesen unterstützen angewendet.</German>
             <Polish>Wybiera tryb obrażeń do zastosowania.\nTryb najbliższy, obsługuje jedynie typy obrażeń możliwe dla najbliższego budynku.\Tryb "Promienny", wybrany typ obrażen zostanie zadany tylko budynkom które obsługują taki typ. </Polish>
             <Japanese>適用するダメージを設定します。\n近傍モードでは、選択可能で対応している最も近い建物のみに適用されます。\n範囲モードでは、範囲内にある対応している建物のみに適用されます。</Japanese>
+            <Chinesesimp>选择要应用的损坏状态。\n在最新模式中，只有最近的建筑支持的损坏状态可以选择。\n在半径模式下，选择的损坏状态将只应用于支持它的建筑。</Chinesesimp>
+            <Chinese>選擇要應用的損壞狀態。 \n在最新模式中，只有最近的建築支持的損壞狀態可以選擇。 \n在半徑模式下，選擇的損壞狀態將只應用於支持它的建築。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_DestructionEffects">
             <English>Destruction Effects</English>
@@ -676,6 +856,8 @@
             <German>Zerstörungseffekte</German>
             <Polish>Efekty zniszczenia</Polish>
             <Japanese>破壊エフェクト</Japanese>
+            <Chinesesimp>损坏效果</Chinesesimp>
+            <Chinese>損壞效果</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_DestructionEffects_Tooltip">
             <English>WARNING: Enabling destruction effects when using the module on a large amount of buildings can create a lot of lag.</English>
@@ -683,6 +865,8 @@
             <German>WARNUNG: Das Aktivieren von Zerstörungseffekten für eine größere Anzahl von Gebäuden kann zu erheblichem Ruckeln führen.</German>
             <Polish>OSTRZEŻENIE: Włączenie efektów zniszczenia na wielu budynkach jednocześnie może spowodować bardzo duży lag.</Polish>
             <Japanese>警告: 大量の建物上で破壊エフェクトを適用すると、大幅なパフォーマンスの低減が起こります。</Japanese>
+            <Chinesesimp>警告：在大量建筑物上使用该模块时，启用损坏效果会产生大量的滞后卡顿。</Chinesesimp>
+            <Chinese>警告：在大量建築物上使用該模塊時，啟用損壞效果會產生大量的滯後卡頓。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEarthquake">
             <English>Earthquake</English>
@@ -691,6 +875,8 @@
             <Polish>Trzęsienie ziemi</Polish>
             <Japanese>地震</Japanese>
             <Korean>지진</Korean>
+            <Chinesesimp>地震</Chinesesimp>
+            <Chinese>地震</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEarthquake_Radius">
             <English>Radius (m)</English>
@@ -699,6 +885,8 @@
             <Polish>Promień (m)</Polish>
             <Japanese>範囲 (m)</Japanese>
             <Korean>범위 (m)</Korean>
+            <Chinesesimp>半径（米）</Chinesesimp>
+            <Chinese>半徑（米）</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEarthquake_Intensity">
             <English>Intensity</English>
@@ -707,6 +895,8 @@
             <Polish>Intensywność</Polish>
             <Japanese>強さ</Japanese>
             <Korean>강도</Korean>
+            <Chinesesimp>强度</Chinesesimp>
+            <Chinese>強度</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEarthquake_Buildings">
             <English>Destroy Buildings</English>
@@ -715,6 +905,8 @@
             <Polish>Zniszcz budynki</Polish>
             <Japanese>建物を破壊</Japanese>
             <Korean>건물 파괴</Korean>
+            <Chinesesimp>摧毁建筑物</Chinesesimp>
+            <Chinese>摧毀建築物</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects">
             <English>Update Editable Objects</English>
@@ -723,6 +915,8 @@
             <Polish>Zaktualizuje edytowalne obiekty</Polish>
             <Japanese>編集可オブジェクトを更新</Japanese>
             <Korean>수정가능한 물체 업데이트</Korean>
+            <Chinesesimp>更新可编辑物体</Chinesesimp>
+            <Chinese>更新可編輯物體</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects_EditingMode">
             <English>Editing Mode</English>
@@ -731,6 +925,8 @@
             <Polish>Tryb edycji</Polish>
             <Japanese>編集モード</Japanese>
             <Korean>편집 모드</Korean>
+            <Chinesesimp>编辑模式</Chinesesimp>
+            <Chinese>編輯模式</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects_EditingMode_Tooltip">
             <English>Add or remove editable objects from Zeus.</English>
@@ -739,6 +935,8 @@
             <Polish>Dodaj lub usuń edytowalne obiekty z Zeusa.</Polish>
             <Japanese>Zeus から編集可オブジェクトの追加と削除を行います。</Japanese>
             <Korean>제우스에 수정가능한 물체를 추가하거나 제거합니다.</Korean>
+            <Chinesesimp>从Zeus中添加或删除可编辑物体。</Chinesesimp>
+            <Chinese>從Zeus中添加或刪除可編輯物體。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects_AddObjects">
             <English>Add Objects</English>
@@ -747,6 +945,8 @@
             <Polish>Dodaj obiekty</Polish>
             <Japanese>オブジェクト追加</Japanese>
             <Korean>물체 추가</Korean>
+            <Chinesesimp>添加物体</Chinesesimp>
+            <Chinese>添加物體</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects_RemoveObjects">
             <English>Remove Objects</English>
@@ -755,6 +955,8 @@
             <Polish>Usuń obiekty</Polish>
             <Japanese>オブジェクト削除</Japanese>
             <Korean>물체 제거</Korean>
+            <Chinesesimp>移除物体</Chinesesimp>
+            <Chinese>移除物體</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects_AllCurators">
             <English>All Curators</English>
@@ -763,6 +965,8 @@
             <Polish>Wszyscy Zeusi</Polish>
             <Japanese>全キュレーター</Japanese>
             <Korean>모든 큐레이터</Korean>
+            <Chinesesimp>所有宙斯</Chinesesimp>
+            <Chinese>所有宙斯</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects_AllCurators_Tooltip">
             <English>Controls whether changes are applied to all curators or just locally.</English>
@@ -770,6 +974,8 @@
             <German>Steuert, ob Änderungen auf alle Kuratoren oder nur lokal angewendet werden.</German>
             <Polish>Ustala czy zmiany będą dotyczyć wszystkich Zeusów czy tylko lokalnego.</Polish>
             <Japanese>全キュレーターかローカルに変更を適用します。</Japanese>
+            <Chinesesimp>控制更改是否应用于所有宙斯或仅本地。</Chinesesimp>
+            <Chinese>控制更改是否應用於所有宙斯或僅本地。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects_AllMissionObjects">
             <English>All Mission Objects</English>
@@ -777,6 +983,8 @@
             <German>Alle Missionsobjekte</German>
             <Polish>Wszystkie obiekty w misji</Polish>
             <Japanese>全ミッション目標</Japanese>
+            <Chinesesimp>所有任务目标</Chinesesimp>
+            <Chinese>所有任務目標</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleHeal">
             <English>Heal</English>
@@ -785,18 +993,24 @@
             <Polish>Ulecz</Polish>
             <Japanese>治療</Japanese>
             <Korean>회복</Korean>
+            <Chinesesimp>治愈</Chinesesimp>
+            <Chinese>治愈</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSpawnCarrier">
             <English>USS Freedom</English>
             <German>USS Freedom</German>
             <Polish>USS Freedom</Polish>
             <Japanese>USS フリーダム</Japanese>
+            <Chinesesimp>USS Freedom濒海战斗舰</Chinesesimp>
+            <Chinese>USS Freedom瀕海戰鬥艦</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSpawnDestroyer">
             <English>USS Liberty</English>
             <German>USS Liberty</German>
             <Polish>USS Liberty</Polish>
             <Japanese>USS リバティー</Japanese>
+            <Chinesesimp>USS Liberty航母</Chinesesimp>
+            <Chinese>USS Liberty航母</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_AttachEffect">
             <English>Attach/Detach Effect</English>
@@ -805,6 +1019,8 @@
             <Polish>Przyczep/Odczep efekt</Polish>
             <Japanese>取り付け/外しエフェクト</Japanese>
             <Korean>효과 탈/부착</Korean>
+            <Chinesesimp>附加/删除效果</Chinesesimp>
+            <Chinese>附加/刪除效果</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSetDate">
             <English>Set Date</English>
@@ -813,6 +1029,8 @@
             <Polish>Ustaw datę</Polish>
             <Japanese>日付設定</Japanese>
             <Korean>날짜 설정</Korean>
+            <Chinesesimp>设置时间</Chinesesimp>
+            <Chinese>設置時間</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleMakeInvincible">
             <English>Make Invincible</English>
@@ -821,6 +1039,8 @@
             <Polish>Zrób nieśmiertelnym</Polish>
             <Japanese>無敵に</Japanese>
             <Korean>무적으로 만들기</Korean>
+            <Chinesesimp>无敌</Chinesesimp>
+            <Chinese>無敵</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleMakeInvincible_Invincible">
             <English>Invincible</English>
@@ -829,6 +1049,8 @@
             <Polish>Nieśmiertelny</Polish>
             <Japanese>無敵</Japanese>
             <Korean>무적</Korean>
+            <Chinesesimp>无敌</Chinesesimp>
+            <Chinese>無敵</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleMakeInvincible_IncludeCrew">
             <English>Include Crew</English>
@@ -837,6 +1059,8 @@
             <Polish>Dołącz załogę</Polish>
             <Japanese>乗員を含める</Japanese>
             <Korean>승무원 포함</Korean>
+            <Chinesesimp>包含乘员</Chinesesimp>
+            <Chinese>包含乘員</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSimulation">
             <English>Toggle Simulation</English>
@@ -845,6 +1069,8 @@
             <Polish>Przełącz symulację</Polish>
             <Japanese>シミュレーション切り替え</Japanese>
             <Korean>시뮬레이션 토글</Korean>
+            <Chinesesimp>切换模拟</Chinesesimp>
+            <Chinese>切換模擬</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleVisibility">
             <English>Toggle Visibility</English>
@@ -853,6 +1079,8 @@
             <Polish>Przełącz widoczność</Polish>
             <Japanese>視認性切り替え</Japanese>
             <Korean>시야 토글</Korean>
+            <Chinesesimp>切换可见性</Chinesesimp>
+            <Chinese>切換可見性</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ChangeHeight">
             <English>Change Height</English>
@@ -861,6 +1089,8 @@
             <Polish>Zmień wysokość</Polish>
             <Japanese>高度変更</Japanese>
             <Korean>고도 변경</Korean>
+            <Chinesesimp>更改高度</Chinesesimp>
+            <Chinese>更改高度</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ChangeHeight_Tooltip">
             <English>Change the height of the object by this value (can be negative).</English>
@@ -869,16 +1099,22 @@
             <Polish>Zmień wysokość na której jest obiekt (może być ujemne).</Polish>
             <Japanese>オブジェクトの高さをこの値で変更します (負の値も可能).</Japanese>
             <Korean>이 값에 따라 물체의 고도를 변경합니다. (음수도 가능)</Korean>
+            <Chinesesimp>用这个值改变物体的高度（可以是负值）。</Chinesesimp>
+            <Chinese>用這個值改變物體的高度（可以是負值）。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ScaleObject">
             <English>Scale Object</English>
             <French>Redimensionner Objet</French>
             <German>Objekt skalieren</German>
+	    <Chinesesimp>缩放物体</Chinesesimp>
+            <Chinese>縮放物體</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ScaleObject_Tooltip">
             <English>Scale the object by this factor relative to the original model.</English>
             <French>Redimensionner l'objet par ce facteur en relation du modèle original.</French>
             <German>Skaliere das Objekt um diesen Faktor relativ zum originalen Modell.</German>
+	    <Chinesesimp>相对于原始模型，用此功能缩放物体。</Chinesesimp>
+            <Chinese>相對於原始模型，用此功能縮放物體。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleChatter">
             <English>Chatter</English>
@@ -887,6 +1123,8 @@
             <Polish>Rozmowa</Polish>
             <Japanese>無線</Japanese>
             <Korean>소통</Korean>
+            <Chinesesimp>聊天</Chinesesimp>
+            <Chinese>聊天</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleChatter_Message">
             <English>Message</English>
@@ -895,6 +1133,8 @@
             <Polish>Wiadomość</Polish>
             <Japanese>内容</Japanese>
             <Korean>메세지</Korean>
+            <Chinesesimp>信息</Chinesesimp>
+            <Chinese>信息</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleChatter_Channel">
             <English>Channel</English>
@@ -903,6 +1143,8 @@
             <Polish>Kanał</Polish>
             <Japanese>チャンネル</Japanese>
             <Korean>채널</Korean>
+            <Chinesesimp>频道</Chinesesimp>
+            <Chinese>頻道</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSitOnChair">
             <English>Sit On Chair</English>
@@ -911,6 +1153,8 @@
             <Polish>Siedź na krześle</Polish>
             <Japanese>椅子に座る</Japanese>
             <Korean>의자에 앉기</Korean>
+            <Chinesesimp>坐在椅子上</Chinesesimp>
+            <Chinese>坐在椅子上</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSitOnChair_ChairObject">
             <English>Chair Object</English>
@@ -919,6 +1163,8 @@
             <Polish>Krzesło</Polish>
             <Japanese>椅子オブジェクト</Japanese>
             <Korean>의자 물체</Korean>
+            <Chinesesimp>椅子上的物体</Chinesesimp>
+            <Chinese>椅子上的物體</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateMinefield">
             <English>Create Minefield</English>
@@ -927,6 +1173,8 @@
             <Polish>Utwórz pole minowe</Polish>
             <Japanese>地雷原を作成</Japanese>
             <Korean>지뢰밭 만들기</Korean>
+            <Chinesesimp>创建雷区</Chinesesimp>
+            <Chinese>創建雷區</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateMinefield_MineArea">
             <English>Minefield Area</English>
@@ -935,6 +1183,8 @@
             <Polish>Obszar pola minowego</Polish>
             <Japanese>地雷原の範囲</Japanese>
             <Korean>지뢰밭 구역</Korean>
+            <Chinesesimp>雷区面积</Chinesesimp>
+            <Chinese>雷區面積</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateMinefield_MineType">
             <English>Mine Type</English>
@@ -943,6 +1193,8 @@
             <Polish>Rodzaj min</Polish>
             <Japanese>地雷の種類</Japanese>
             <Korean>지뢰 유형</Korean>
+            <Chinesesimp>地雷类型</Chinesesimp>
+            <Chinese>地雷類型</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateMinefield_MineDensity">
             <English>Mine Density</English>
@@ -951,17 +1203,23 @@
             <Polish>Gęstość min</Polish>
             <Japanese>地雷の密度</Japanese>
             <Korean>지뢰 감도</Korean>
+            <Chinesesimp>地雷密度</Chinesesimp>
+            <Chinese>地雷密度</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateMinefield_RandomPlacement">
             <English>Random Placement</English>
             <German>Zufällige Platzierung</German>
             <Japanese>ランダム設置</Japanese>
+            <Chinesesimp>随机分布</Chinesesimp>
+            <Chinese>隨機分佈</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateMinefield_RandomPlacement_Tooltip">
             <English>Controls whether mines will be placed uniformly or randomly within the area.</English>
             <German>Kontrolliert, ob die Minen einheitlich oder zufällig innerhalb des Bereichs platziert werden.</German>
             <Japanese>地雷が範囲内で規則的に設置されるかランダムで設置されるかを決定します。</Japanese>
             <Polish>Kontroluje rozmieszczenie min na terenie, równomiernie albo losowo.</Polish>
+            <Chinesesimp>控制地雷是均匀地还是随机地分布在区域内。</Chinesesimp>
+            <Chinese>控制地雷是均勻地還是隨機地分佈在區域內。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGlobalHint">
             <English>Global Hint</English>
@@ -970,6 +1228,8 @@
             <Polish>Globalny Hint</Polish>
             <Japanese>全体ヒント</Japanese>
             <Korean>광역 힌트</Korean>
+            <Chinesesimp>全局提示</Chinesesimp>
+            <Chinese>全局提示</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleHideZeus">
             <English>Hide Zeus</English>
@@ -978,6 +1238,8 @@
             <Polish>Ukryj Zeusa</Polish>
             <Japanese>Zeus を隠す</Japanese>
             <Korean>제우스 숨기기</Korean>
+            <Chinesesimp>隐藏宙斯</Chinesesimp>
+            <Chinese>隱藏宙斯</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ZeusIsNowHidden">
             <English>Zeus is now hidden</English>
@@ -986,6 +1248,8 @@
             <Polish>Zeus jest teraz ukryty</Polish>
             <Japanese>Zeus が非表示になりました</Japanese>
             <Korean>제우스가 이제 숨겨집니다.</Korean>
+            <Chinesesimp>宙斯现在被隐藏了</Chinesesimp>
+            <Chinese>宙斯現在被隱藏了</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ZeusIsNowVisible">
             <English>Zeus is now visible</English>
@@ -994,6 +1258,8 @@
             <Polish>Zeus jest teraz widoczny</Polish>
             <Japanese>Zesu が見えるようになりました</Japanese>
             <Korean>제우스가 이제 보여집니다.</Korean>
+            <Chinesesimp>宙斯现在可见</Chinesesimp>
+            <Chinese>宙斯現在可見</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModulePatrolArea">
             <English>Patrol Area</English>
@@ -1015,6 +1281,8 @@
             <Polish>Promień patrolu (m)</Polish>
             <Japanese>哨戒範囲 (m)</Japanese>
             <Korean>정찰 범위 (m)</Korean>
+            <Chinesesimp>巡逻半径（米）</Chinesesimp>
+            <Chinese>巡邏半徑（米）</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModulePatrolArea_Radius_Tooltip">
             <English>The radius that will be patrolled by the group.</English>
@@ -1023,6 +1291,8 @@
             <Polish>Promień w jakim grupa będzie patrolować.</Polish>
             <Japanese>グループによって紹介される範囲になります。</Japanese>
             <Korean>분대에 의해 정찰될 범위입니다.</Korean>
+            <Chinesesimp>小队将巡逻的半径。</Chinesesimp>
+            <Chinese>小隊將巡邏的半徑。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModulePatrolArea_Behaviour_Tooltip">
             <English>Will modify the behavior, speed mode, and formation of the group.</English>
@@ -1030,6 +1300,8 @@
             <German>Ändert das Verhalten, den Geschwindigkeitsmodus und die Formation der Gruppe.</German>
             <Polish>Zmieni zachowanie, prędkość i formację grupy.</Polish>
             <Japanese>グループの移動速度や陣形といった挙動を変更できます。</Japanese>
+            <Chinesesimp>将修改小体的行为、速度模式和队形。</Chinesesimp>
+            <Chinese>將修改小體的行為、速度模式和隊形。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSideRelations">
             <English>Side Relations</English>
@@ -1038,6 +1310,8 @@
             <Polish>Stosunki stron</Polish>
             <Japanese>陣営関係</Japanese>
             <Korean>진영 관계도</Korean>
+            <Chinesesimp>阵营关系</Chinesesimp>
+            <Chinese>陣營關係</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_RelationToChange">
             <English>Relation to Change</English>
@@ -1046,6 +1320,8 @@
             <Polish>Stosunek do zmiany</Polish>
             <Japanese>関係の変化</Japanese>
             <Korean>바꿔질 관계</Korean>
+            <Chinesesimp>关系变动</Chinesesimp>
+            <Chinese>關係變動</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_HostileTo">
             <English>Hostile to</English>
@@ -1054,6 +1330,8 @@
             <Polish>Wrogi do</Polish>
             <Japanese>次と敵対</Japanese>
             <Korean>적대적인</Korean>
+            <Chinesesimp>敌对</Chinesesimp>
+            <Chinese>敵對</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_FriendlyTo">
             <English>Friendly to</English>
@@ -1062,6 +1340,8 @@
             <Polish>Przyjazny do</Polish>
             <Japanese>次と友好</Japanese>
             <Korean>친밀한</Korean>
+            <Chinesesimp>友好</Chinesesimp>
+            <Chinese>友好</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_PlayRadioMessage">
             <English>Play Radio Message</English>
@@ -1070,6 +1350,8 @@
             <Polish>Odtwórz wiadomość radiową</Polish>
             <Japanese>無線メッセージを再生</Japanese>
             <Korean>무전 메세지 재생</Korean>
+            <Chinesesimp>播放无线电信息</Chinesesimp>
+            <Chinese>播放無線電信息</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTeleportPlayers">
             <English>Teleport Players</English>
@@ -1078,6 +1360,8 @@
             <Polish>Teleportuj graczy</Polish>
             <Japanese>プレイヤーのテレポート</Japanese>
             <Korean>플레이어 순간이동</Korean>
+            <Chinesesimp>传送玩家</Chinesesimp>
+            <Chinese>傳送玩家</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTeleportPlayers_IncludeVehicles">
             <English>Include Vehicles</English>
@@ -1085,12 +1369,16 @@
             <Polish>Razem z pojazdami</Polish>
             <Japanese>車両を含む</Japanese>
             <Korean>차량 포함</Korean>
+            <Chinesesimp>包含载具</Chinesesimp>
+            <Chinese>包含載具</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTeleportPlayers_IncludeVehicles_Tooltip">
             <English>Teleports vehicles of players instead of the players themselves.\nIf the module was attached to a vehicle, this is ignored and players will be moved into the attached vehicle.</English>
             <German>Teleportiert Fahrzeuge von Spielern anstelle der Spieler selbst.\nWenn das Modul auf einem Fahrzeug platziert war, wird dies ignoriert und die Spieler werden in das angehängte Fahrzeug bewegt.</German>
             <Japanese>プレイヤー車両もテレポートさせます。\nもしモジュールが車両に取り付けされていても、無視してプレイヤーは取り付けされた車両に移動されます。</Japanese>
             <Polish>Teleportuje jedynie pojazdy graczy zamiast graczy.\nJeżeli moduł był przyczepiony do pojazdu wtedy będzie zignorowany a gracze zostaną przeniesieni do przyczepionego pojazdu.</Polish>
+            <Chinesesimp>传送玩家的载具而不是玩家本身。\n如果模块被附加到载具上，这将被忽略，玩家将被移动到所附加的载具上。</Chinesesimp>
+            <Chinese>傳送玩家的載具而不是玩家本身。 \n如果模塊被附加到載具上，這將被忽略，玩家將被移動到所附加的載具上。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSmokePillar">
             <English>Smoke Pillar</English>
@@ -1099,6 +1387,8 @@
             <Polish>Kłąb dymu</Polish>
             <Japanese>煙柱</Japanese>
             <Korean>연막 기둥</Korean>
+            <Chinesesimp>烟柱</Chinesesimp>
+            <Chinese>煙柱</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_SmokePillarType">
             <English>Smoke Pillar Type</English>
@@ -1107,6 +1397,8 @@
             <Polish>Rodzaj kłębu dymu</Polish>
             <Japanese>煙柱の種類</Japanese>
             <Korean>연막 기둥 형태</Korean>
+            <Chinesesimp>烟柱类型</Chinesesimp>
+            <Chinese>煙柱類型</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_VehicleFire">
             <English>Vehicle Fire</English>
@@ -1115,6 +1407,8 @@
             <Polish>Pożar pojazdu</Polish>
             <Japanese>車両火災</Japanese>
             <Korean>차량 화재</Korean>
+            <Chinesesimp>车辆起火</Chinesesimp>
+            <Chinese>車輛起火</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_SmallOilySmoke">
             <English>Small Oily Smoke</English>
@@ -1123,6 +1417,8 @@
             <Polish>Mały oleisty dym</Polish>
             <Japanese>小さな油煙</Japanese>
             <Korean>작은 기름진 연막</Korean>
+            <Chinesesimp>小型燃油烟雾</Chinesesimp>
+            <Chinese>小型燃油煙霧</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_MediumOilySmoke">
             <English>Medium Oily Smoke</English>
@@ -1131,6 +1427,8 @@
             <Polish>Średni oleisty dym</Polish>
             <Japanese>中くらいの油煙</Japanese>
             <Korean>중간 기름진 연막</Korean>
+            <Chinesesimp>中等燃油烟雾</Chinesesimp>
+            <Chinese>中等燃油煙霧</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_LargeOilySmoke">
             <English>Large Oily Smoke</English>
@@ -1139,6 +1437,8 @@
             <Polish>Duży oleisty dym</Polish>
             <Japanese>大きな油煙</Japanese>
             <Korean>큰 기름진 연막</Korean>
+            <Chinesesimp>大量燃油烟雾</Chinesesimp>
+            <Chinese>大量燃油煙霧</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_SmallWoodSmoke">
             <English>Small Wood Smoke</English>
@@ -1147,6 +1447,8 @@
             <Polish>Mały drewniany dym</Polish>
             <Japanese>小さな木の煙</Japanese>
             <Korean>작은 나무 연기</Korean>
+            <Chinesesimp>小型木材烟雾</Chinesesimp>
+            <Chinese>小型木材煙霧</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_MediumWoodSmoke">
             <English>Medium Wood Smoke</English>
@@ -1155,6 +1457,8 @@
             <Polish>Średni drewniany dym</Polish>
             <Japanese>中くらいの木の煙</Japanese>
             <Korean>중간 나무 연기</Korean>
+            <Chinesesimp>中等木材烟雾</Chinesesimp>
+            <Chinese>中等木材煙霧</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_LargeWoodSmoke">
             <English>Large Wood Smoke</English>
@@ -1163,6 +1467,8 @@
             <Polish>Duży drewniany dym</Polish>
             <Japanese>大きな木の煙</Japanese>
             <Korean>큰 나무 연기</Korean>
+            <Chinesesimp>大量木材烟雾</Chinesesimp>
+            <Chinese>大量木材煙霧</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_SmallMixedSmoke">
             <English>Small Mixed Smoke</English>
@@ -1171,6 +1477,8 @@
             <Polish>Mały mieszany dym</Polish>
             <Japanese>小さな混合した煙</Japanese>
             <Korean>작은 섞여진 연기</Korean>
+            <Chinesesimp>小型混合烟雾</Chinesesimp>
+            <Chinese>小型混合菸霧</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_MediumMixedSmoke">
             <English>Medium Mixed Smoke</English>
@@ -1179,6 +1487,8 @@
             <Polish>Średni mieszany dym</Polish>
             <Japanese>中くらいの混合した煙</Japanese>
             <Korean>중간 섞여진 연기</Korean>
+            <Chinesesimp>中等混合烟雾</Chinesesimp>
+            <Chinese>中等混合菸霧</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_LargeMixedSmoke">
             <English>Large Mixed Smoke</English>
@@ -1187,6 +1497,8 @@
             <Polish>Duży mieszany dym</Polish>
             <Japanese>大きな混合した煙</Japanese>
             <Korean>큰 섞여진 연기</Korean>
+            <Chinesesimp>大量混合烟雾</Chinesesimp>
+            <Chinese>大量混合菸霧</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleLightSource">
             <English>Light Source</English>
@@ -1195,6 +1507,8 @@
             <Polish>Źródło światła</Polish>
             <Japanese>光源</Japanese>
             <Korean>빛 소스</Korean>
+            <Chinesesimp>光源</Chinesesimp>
+            <Chinese>光源</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleLightSource_Color">
             <English>Light Color</English>
@@ -1203,6 +1517,8 @@
             <Polish>Kolor światła</Polish>
             <Japanese>光の色</Japanese>
             <Korean>빛 색깔</Korean>
+            <Chinesesimp>光线颜色</Chinesesimp>
+            <Chinese>光線顏色</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleLightSource_Range">
             <English>Range (m)</English>
@@ -1211,6 +1527,8 @@
             <Polish>Zasięg (m)</Polish>
             <Japanese>範囲 (m)</Japanese>
             <Korean>거리 (m)</Korean>
+            <Chinesesimp>范围（米）</Chinesesimp>
+            <Chinese>範圍（米）</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleLightSource_Constant">
             <English>Constant Attenuation</English>
@@ -1218,6 +1536,8 @@
             <German>Konstante Dämpfung</German>
             <Polish>Stałe tłumienie</Polish>
             <Japanese>一定減衰</Japanese>
+            <Chinesesimp>持续衰减</Chinesesimp>
+            <Chinese>持續衰減</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleLightSource_Linear">
             <English>Linear Attenuation</English>
@@ -1225,6 +1545,8 @@
             <German>Lineare Dämpfung</German>
             <Polish>Liniowe tłumienie</Polish>
             <Japanese>線形減衰</Japanese>
+            <Chinesesimp>线性衰减</Chinesesimp>
+            <Chinese>線性衰減</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleLightSource_Quadratic">
             <English>Quadratic Attenuation</English>
@@ -1232,6 +1554,8 @@
             <German>Quadratische Dämpfung</German>
             <Polish>Kwadratowe tłumienie</Polish>
             <Japanese>二次減衰</Japanese>
+            <Chinesesimp>二次衰减</Chinesesimp>
+            <Chinese>二次衰減</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEquipWithECM">
             <English>Equip With ECM</English>
@@ -1239,6 +1563,8 @@
             <German>Mit Störer ausstatten</German>
             <Polish>Wyposaż w ECM</Polish>
             <Japanese>ECM 付きで装備</Japanese>
+            <Chinesesimp>配备电子干扰/对抗</Chinesesimp>
+            <Chinese>配備電子乾擾/對抗</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEquipWithECM_HasECM">
             <English>Has ECM</English>
@@ -1246,6 +1572,8 @@
             <German>Hat Störer</German>
             <Polish>Posiada ECM</Polish>
             <Japanese>ECM を所持</Japanese>
+            <Chinesesimp>拥有电子干扰/对抗</Chinesesimp>
+            <Chinese>擁有電子乾擾/對抗</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFlyHeight">
             <English>Fly Height</English>
@@ -1253,6 +1581,8 @@
             <German>Flughöhe</German>
             <Polish>Wysokość lotu</Polish>
             <Japanese>飛行高度</Japanese>
+            <Chinesesimp>飞行高度</Chinesesimp>
+            <Chinese>飛行高度</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFlyHeight_Tooltip">
             <English>Sets the flying altitude for the aircraft relative to the ground.</English>
@@ -1260,6 +1590,8 @@
             <German>Legt die Flughöhe für das Flugzeug, in Bezug zum Boden fest.</German>
             <Polish>Ustala wysokość lotu w stosunku do ziemi.</Polish>
             <Japanese>地面に並行して飛行する航空機の高度を決定します。</Japanese>
+            <Chinesesimp>设置飞机相对于地面的飞行高度。</Chinesesimp>
+            <Chinese>設置飛機相對於地面的飛行高度。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTurretOptics">
             <English>Vehicle Turret Optics</English>
@@ -1268,6 +1600,8 @@
             <Polish>Optyka pojazdu</Polish>
             <Japanese>車両照準器の設定</Japanese>
             <Korean>차량 포탑 옵션</Korean>
+            <Chinesesimp>车载炮塔光学系统</Chinesesimp>
+            <Chinese>車載砲塔光學系統</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTurretOptics_NVG">
             <English>NVG Equipment</English>
@@ -1276,6 +1610,8 @@
             <Polish>Noktowizja</Polish>
             <Japanese>暗視装置</Japanese>
             <Korean>야간투시경</Korean>
+            <Chinesesimp>夜视装备</Chinesesimp>
+            <Chinese>夜視裝備</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTurretOptics_TI">
             <English>TI Equipment</English>
@@ -1283,12 +1619,16 @@
             <German>Thermische Infrarotgeräte</German>
             <Polish>Termowizja</Polish>
             <Japanese>熱源画像装置</Japanese>
+            <Chinesesimp>热成像装备</Chinesesimp>
+            <Chinese>熱成像裝備</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGarrison">
             <English>Garrison Group</English>
             <German>Gebäude besetzen</German>
             <Polish>Garnizonuj grupę</Polish>
             <Japanese>歩哨グループ</Japanese>
+            <Chinesesimp>驻防小队</Chinesesimp>
+            <Chinese>駐防小隊</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGarrison_FillMode">
             <English>Filling Mode</English>
@@ -1296,6 +1636,8 @@
             <German>Füllmodus</German>
             <Polish>Tryb wypełniania</Polish>
             <Japanese>占領モード</Japanese>
+            <Chinesesimp>占领模式</Chinesesimp>
+            <Chinese>佔領模式</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGarrison_Even">
             <English>Even Filling</English>
@@ -1303,6 +1645,8 @@
             <German>Gleichmäßig befüllen</German>
             <Polish>Wypełnianie równomierne</Polish>
             <Japanese>全て埋める</Japanese>
+            <Chinesesimp>均匀分布</Chinesesimp>
+            <Chinese>均勻分佈</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGarrison_ByBuilding">
             <English>Building By Building</English>
@@ -1310,6 +1654,8 @@
             <German>Gebäude für Gebäude</German>
             <Polish>Wypełnianie budynek po budynku</Polish>
             <Japanese>建物ごと</Japanese>
+            <Chinesesimp>逐个建筑</Chinesesimp>
+            <Chinese>逐個建築</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGarrison_Random">
             <English>Random</English>
@@ -1317,6 +1663,8 @@
             <German>Zufällig</German>
             <Polish>Losowo</Polish>
             <Japanese>ランダム</Japanese>
+            <Chinesesimp>随机</Chinesesimp>
+            <Chinese>隨機</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGarrison_TopDown">
             <English>Fill From Top Down</English>
@@ -1324,12 +1672,16 @@
             <German>Von oben nach unten füllen</German>
             <Polish>Wypełniaj od góry do dołu</Polish>
             <Japanese>上から埋める</Japanese>
+            <Chinesesimp>自上而下分布</Chinesesimp>
+            <Chinese>自上而下分佈</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleUnGarrison">
             <English>Un-Garrison Group</English>
             <German>Besetzung aufheben</German>
             <Polish>Odgarnizonuj grupę</Polish>
             <Japanese>非歩哨グループ</Japanese>
+            <Chinesesimp>非驻军小队</Chinesesimp>
+            <Chinese>非駐軍小隊</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_GroupSide">
             <English>Group Side</English>
@@ -1338,6 +1690,8 @@
             <Polish>Strona grupy</Polish>
             <Japanese>グループの陣営</Japanese>
             <Korean>그룹 진영</Korean>
+            <Chinesesimp>小队阵营</Chinesesimp>
+            <Chinese>小隊陣營</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSuicideBomber">
             <English>Suicide Bomber</English>
@@ -1424,42 +1778,56 @@
             <German>Code ausführen</German>
             <Polish>Wykonaj kod</Polish>
             <Japanese>実行コード</Japanese>
+            <Chinesesimp>执行代码</Chinesesimp>
+            <Chinese>執行代碼</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleExecuteCode_Args_Tooltip">
             <English>This code will be passed the following arguments:\n0: Module Position ASL\n1: Attached Object (objNull if none)</English>
             <German>Dieser Code wird mit folgenden Argumenten übergeben:\n0: Modulposition ASL\n1: Angehängtes Objekt (objNull wenn keins)</German>
             <Polish>Ten kod będzie miał dostępne następujące parametry:\n0: Pozycja modułu ASL\n1: Przyczepiony obiekt (objNull jeśli żaden)</Polish>
             <Japanese>このコードは引数に渡されます\n0: モジュールの位置は ASL です\n:1: 取り付けされたオブジェクト (無ければ objNull)</Japanese>
+            <Chinesesimp>这段代码将被传递给以下参数：\n0：模块位置（平均海拔高度）\n1：附加对象（如果没有，objNull）。</Chinesesimp>
+            <Chinese>這段代碼將被傳遞給以下參數：\n0：模塊位置（平均海拔高度）\n1：附加對象（如果沒有，objNull）。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleExecuteCode_Disabled">
             <English>Code execution by Zeus is disabled in this mission</English>
             <German>Die Codeausführung durch Zeus ist in dieser Mission deaktiviert</German>
             <Polish>Wykonywanie kodu przez Zeusa jest niedostępne w tej misji</Polish>
             <Japanese>このミッションでは Zeus によるコード実行を無効化します。</Japanese>
+            <Chinesesimp>在这个任务中，禁止执行Zeus代码。</Chinesesimp>
+            <Chinese>在這個任務中，禁止執行Zeus代碼。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleExecuteCode_Local">
             <English>Local</English>
             <German>Lokal</German>
             <Polish>Lokalnie</Polish>
             <Japanese>ローカル</Japanese>
+            <Chinesesimp>本地</Chinesesimp>
+            <Chinese>本地</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleExecuteCode_Server">
             <English>Server</English>
             <German>Server</German>
             <Polish>Serwer</Polish>
             <Japanese>サーバー</Japanese>
+            <Chinesesimp>服务器</Chinesesimp>
+            <Chinese>伺服器</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleExecuteCode_Global">
             <English>Global</English>
             <German>Global</German>
             <Polish>Globalnie</Polish>
             <Japanese>グローバル</Japanese>
+            <Chinesesimp>全局</Chinesesimp>
+            <Chinese>全局</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleExecuteCode_GlobalAndJIP">
             <English>Global and JIP</English>
             <German>Global und JIP</German>
             <Polish>Globalnie i JIP</Polish>
             <Japanese>グローバルと JIP</Japanese>
+            <Chinesesimp>全局和JIP</Chinesesimp>
+            <Chinese>全局和JIP</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission">
             <English>Artillery Fire Mission</English>
@@ -1467,6 +1835,8 @@
             <Polish>Artyleryjska misja ogniowa</Polish>
             <Japanese>砲撃ミッション</Japanese>
             <Korean>포병 사격 임무</Korean>
+            <Chinesesimp>炮击任务</Chinesesimp>
+            <Chinese>砲擊任務</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_NotArtillery">
             <English>Unit is not an artillery vehicle</English>
@@ -1474,6 +1844,8 @@
             <Polish>Jednostka nie jest jednostką artyleryjską</Polish>
             <Japanese>ユニットは砲撃車両ではありません</Japanese>
             <Korean>유닛은 포병 차량이 아닙니다</Korean>
+            <Chinesesimp>单位不是火炮车</Chinesesimp>
+            <Chinese>單位不是火砲車</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_NoGunners">
             <English>Artillery vehicles have no gunners</English>
@@ -1481,6 +1853,8 @@
             <Polish>Pojazd artyleryjski nie ma strzelca</Polish>
             <Japanese>砲撃車両に射手がいません</Japanese>
             <Korean>포병 차량에 포수가 없습니다.</Korean>
+            <Chinesesimp>车辆没有炮手</Chinesesimp>
+            <Chinese>車輛沒有砲手</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_ArtilleryETA">
             <English>Artillery ETA: %1 seconds</English>
@@ -1488,6 +1862,8 @@
             <Polish>Przewidywany czas dotarcia pocisków: %1 sekund</Polish>
             <Japanese>着弾まで: %1 秒</Japanese>
             <Korean>탄착 ETA: %1 초</Korean>
+            <Chinesesimp>炮击预计落弹时间：%1秒</Chinesesimp>
+            <Chinese>砲擊預計落彈時間：%1秒</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Targetting">
             <English>Targeting</English>
@@ -1495,6 +1871,8 @@
             <Polish>Celowanie</Polish>
             <Japanese>照準</Japanese>
             <Korean>목표</Korean>
+            <Chinesesimp>目标</Chinesesimp>
+            <Chinese>目標</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Mode">
             <English>Mode</English>
@@ -1502,6 +1880,8 @@
             <Polish>Tryb</Polish>
             <Japanese>モード</Japanese>
             <Korean>모드</Korean>
+            <Chinesesimp>模式</Chinesesimp>
+            <Chinese>模式</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_MapGrid">
             <English>Map Grid</English>
@@ -1509,6 +1889,8 @@
             <Polish>Koordynaty na mapie</Polish>
             <Japanese>座標</Japanese>
             <Korean>격자 지도</Korean>
+            <Chinesesimp>坐标</Chinesesimp>
+            <Chinese>坐標</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_TargetModule">
             <English>Target Module</English>
@@ -1516,6 +1898,8 @@
             <Polish>Moduł celu</Polish>
             <Japanese>目標モジュール</Japanese>
             <Korean>목표 모듈</Korean>
+            <Chinesesimp>目标模块</Chinesesimp>
+            <Chinese>目標模塊</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Spread">
             <English>Spread</English>
@@ -1523,6 +1907,8 @@
             <Polish>Rozrzut</Polish>
             <Japanese>精度</Japanese>
             <Korean>산탄</Korean>
+            <Chinesesimp>精度</Chinesesimp>
+            <Chinese>精度</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Spread_Tooltip">
             <English>Controls the spread of fired artillery, in meters.</English>
@@ -1530,6 +1916,8 @@
             <Polish>Kontroluje rozrzut ostrzału artyleryjskiego, w metrach.</Polish>
             <Japanese>砲撃精度をメートルで決定します。</Japanese>
             <Korean>발사된 포가 얼마나 분산될지 정합니다. (m)</Korean>
+            <Chinesesimp>炮击精度（米）</Chinesesimp>
+            <Chinese>砲擊精度（米）</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_FireParameters">
             <English>Fire Parameters</English>
@@ -1537,6 +1925,8 @@
             <Polish>Parametry ostrzału</Polish>
             <Japanese>射撃パラメータ</Japanese>
             <Korean>사격 함수</Korean>
+            <Chinesesimp>炮击参数</Chinesesimp>
+            <Chinese>砲擊參數</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Units">
             <English>Units</English>
@@ -1544,6 +1934,8 @@
             <Polish>Jednostki</Polish>
             <Japanese>ユニット数</Japanese>
             <Korean>유닛들</Korean>
+            <Chinesesimp>单位</Chinesesimp>
+            <Chinese>單位</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_">
             <English>Number of units involved in the fire mission.</English>
@@ -1551,6 +1943,8 @@
             <Polish>Liczba jednostek wykonujących misję ogniową</Polish>
             <Japanese>砲撃ミッションをするユニット数を決定します。</Japanese>
             <Korean>포사격 임무에 포함된 유닛의 숫자입니다.</Korean>
+            <Chinesesimp>参与炮击任务的单位数量。</Chinesesimp>
+            <Chinese>參與砲擊任務的單位數量。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Ammo">
             <English>Ammo</English>
@@ -1558,6 +1952,8 @@
             <Polish>Amunicja</Polish>
             <Japanese>弾種</Japanese>
             <Korean>탄 종류</Korean>
+            <Chinesesimp>弹种</Chinesesimp>
+            <Chinese>彈種</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Rounds">
             <English>Rounds</English>
@@ -1565,6 +1961,8 @@
             <Polish>Pociski</Polish>
             <Japanese>弾数</Japanese>
             <Korean>탄 갯수</Korean>
+            <Chinesesimp>轮次</Chinesesimp>
+            <Chinese>輪次</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Rounds_Tooltip">
             <English>Number of rounds that should be fired by each unit.</English>
@@ -1572,6 +1970,8 @@
             <Polish>Liczba pocisków do wystrzelenia przez każdą jednostkę.</Polish>
             <Japanese>各ユニットが発射する弾数を決定します。</Japanese>
             <Korean>각 유닛에 의해 발사될 탄의 갯수입니다.</Korean>
+            <Chinesesimp>每个单位应该发射的炮弹数量。</Chinesesimp>
+            <Chinese>每個單位應該砲擊的砲彈數量。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather">
             <English>Change Weather</English>
@@ -1579,16 +1979,22 @@
             <Polish>Zmień pogodę</Polish>
             <Japanese>天候変更</Japanese>
             <Korean>날씨 변경</Korean>
+            <Chinesesimp>改变天气</Chinesesimp>
+            <Chinese>改變天氣</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Forced">
             <English>Force Changes</English>
             <German>Änderung erzwingen</German>
             <Japanese>強制変更</Japanese>
+            <Chinesesimp>强制改变</Chinesesimp>
+            <Chinese>強制改變</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Forced_Tooltip">
             <English>Forces the following weather conditions instantaneously instead of allowing the engine to simulate a transition from the current weather.\nNOTE: Weather in Arma can desync and differ between the server and clients. For consistent weather, it is best to force the changes.</English>
             <German>Erzwingt die Änderung der Wetterbedingungen sofort, anstatt einen Übergang vom momentanen Wetter zu simulieren.\nHinweis: Wetter in Arma kann unterschiedlich sein zwischen Server und Klient. Für konsistentes Wetter sind sofort erzwungene Änderungen besser.</German>
             <Japanese>エンジンが天候の変化をスムーズに移行させるかわりに、強制変更します。\n注意: サーバーとクライアントの間で天候が非同期状態になるため、強制変更が最適です。</Japanese>
+            <Chinesesimp>强制改变以下天气，而不是让引擎模拟过渡当前天气。\n注意：Arma中的天气可以不同步，并且在服务器和客户端之间有所不同。为了获得一致的天气，最好是强制改变。</Chinesesimp>
+            <Chinese>強制改變以下天氣，而不是讓引擎模擬過渡當前天氣。 \n注意：Arma中的天氣可以不同步，並且在服務器和客戶端之間有所不同。為了獲得一致的天氣，最好是強制改變。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Overcast">
             <English>Overcast</English>
@@ -1596,12 +2002,16 @@
             <Polish>Pochmurność</Polish>
             <Japanese>雲の量</Japanese>
             <Korean>흐림</Korean>
+            <Chinesesimp>云量</Chinesesimp>
+            <Chinese>雲量</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Overcast_Tooltip">
             <English>Sets the amount of cloud cover, higher values result in a greater likelihood of rain/storms and faster wind speeds.</English>
             <German>Legt die Bedeckung der Wolken fest, höhere Werte führen zu einer höheren Wahrscheinlichkeit von Regen/Stürmen und schnelleren Windgeschwindigkeiten.</German>
             <Polish>Ustala pochmurność, wysoka wartość powoduje większe prawdopodobieństwo deszczu/burzy i szybszego wiatru.</Polish>
             <Japanese>雲が覆う量を決定します。高い値では大雨/嵐のようになり、強い風が吹きます。</Japanese>
+            <Chinesesimp>设定云量，数值越高，下雨/风暴的可能性越大，风速越快。</Chinesesimp>
+            <Chinese>設定雲量，數值越高，下雨/風暴的可能性越大，風速越快。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Rain">
             <English>Rain</English>
@@ -1609,12 +2019,16 @@
             <Polish>Deszcz</Polish>
             <Japanese>雨</Japanese>
             <Korean>비</Korean>
+            <Chinesesimp>雨</Chinesesimp>
+            <Chinese>雨</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Rain_Tooltip">
             <English>Sets the rain strength, requires overcast to be greater than 70%.</English>
             <German>Legt die Regenstärke fest, erfordert, dass die Bewölkung größer als 70% ist.</German>
             <Japanese>雨の強さを決定できますが、雲の量が 70% 以上でなければ動作しません。</Japanese>
             <Polish>Ustaw intensywność deszczu, wymaga aby pochmurność była większa niż 70%.</Polish>
+            <Chinesesimp>设置降雨强度，要求云量大于70%。</Chinesesimp>
+            <Chinese>設置降雨強度，要求雲量大於70%。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Lightning">
             <English>Lightning</English>
@@ -1622,12 +2036,16 @@
             <Polish>Piorun</Polish>
             <Japanese>雷</Japanese>
             <Korean>번개</Korean>
+            <Chinesesimp>打雷</Chinesesimp>
+            <Chinese>打雷</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Lightning_Tooltip">
             <English>Sets the frequency of lightning strikes, requires overcast to be near 100%.</English>
             <German>Legt die Häufigkeit der Blitzeinschläge fest, erfordert eine Bewölkung von nahezu 100%.</German>
             <Polish>Ustala częstotliwość piorunów, pochmurność musi być bliska 100%.</Polish>
             <Japanese>落雷の間隔を決定できます。雲の量がほぼ 100% でなければ動作しません。</Japanese>
+            <Chinesesimp>设置雷电频率，要求云量接近100%。</Chinesesimp>
+            <Chinese>設置雷電頻率，要求雲量接近100%。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Rainbow">
             <English>Rainbow</English>
@@ -1635,12 +2053,16 @@
             <Polish>Tęcza</Polish>
             <Japanese>虹</Japanese>
             <Korean>무지개</Korean>
+            <Chinesesimp>彩虹</Chinesesimp>
+            <Chinese>彩虹</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Rainbow_Tooltip">
             <English>Sets the intensity of rainbows.</English>
             <German>Legt die Intensität der Regenbögen fest.</German>
             <Polish>Intensywność tęczy</Polish>
             <Japanese>虹の強度を決定します。</Japanese>
+            <Chinesesimp>设置彩虹亮度。</Chinesesimp>
+            <Chinese>設置彩虹亮度。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Waves">
             <English>Waves</English>
@@ -1648,12 +2070,16 @@
             <Polish>Fale</Polish>
             <Japanese>波</Japanese>
             <Korean>파도</Korean>
+            <Chinesesimp>海浪</Chinesesimp>
+            <Chinese>海浪</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Waves_Tooltip">
             <English>Sets the size of waves (higher values equal taller waves), applied independently of cloud cover settings.</English>
             <German>Legt die Größe der Wellen fest (höhere Werte entsprechen höheren Wellen), unabhängig von den Einstellungen der Bewölkung.</German>
             <Japanese>波の強さを決定します。高い値であるほど高い波が発生します。雲の量設定とは分離されています。</Japanese>
             <Polish>Ustawia wysokość fal (większa wartość oznacza wyższe fale), stosowane osobno do ustawień zachmurzenia.</Polish>
+            <Chinesesimp>设定波浪的大小（数值越大，波浪越高），独立于云量设置而应用。</Chinesesimp>
+            <Chinese>設定波浪的大小（數值越大，波浪越高），獨立於雲量設置而應用。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_WindSpeed">
             <English>Wind Speed</English>
@@ -1661,11 +2087,15 @@
             <Polish>Prędkość wiatru</Polish>
             <Japanese>風速</Japanese>
             <Korean>풍속</Korean>
+            <Chinesesimp>风速</Chinesesimp>
+            <Chinese>風速</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_WindSpeed_Tooltip">
             <English>Sets the wind speed in kilometers per hour.</English>
             <German>Legt die Windgeschwindigkeit in km/h fest.</German>
             <Japanese>風速を km/h で決定します。</Japanese>
+            <Chinesesimp>设置风速（千米/小时）。</Chinesesimp>
+            <Chinese>設置風速（千米/小時）。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_WindDirection">
             <English>Wind Direction</English>
@@ -1673,12 +2103,16 @@
             <Polish>Kierunek wiatru</Polish>
             <Japanese>風向</Japanese>
             <Korean>풍향</Korean>
+            <Chinesesimp>风向</Chinesesimp>
+            <Chinese>風向</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_WindDirection_Tooltip">
             <English>Sets the wind direction.</English>
             <German>Legt die Windrichtung fest.</German>
             <Japanese>風向を決定します。</Japanese>
             <Polish>Ustawia kierunek wiatru.</Polish>
+            <Chinesesimp>设置风向</Chinesesimp>
+            <Chinese>設置風向</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Gusts">
             <English>Gusts</English>
@@ -1686,12 +2120,16 @@
             <Polish>Powiewy wiatru</Polish>
             <Japanese>突風</Japanese>
             <Korean>돌풍</Korean>
+            <Chinesesimp>阵风</Chinesesimp>
+            <Chinese>陣風</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Gusts_Tooltip">
             <English>Sets the strength of gusts, random changes in wind direction.\nThese changes become stronger and more frequent with worse cloud cover.</English>
             <German>Legt die Stärke von Windböen, zufällige Änderungen in der Windrichtung fest. Diese Änderungen werden mit zunehmender Bewölkung stärker und häufiger.</German>
             <Japanese>突風の強さやランダムで変わる風向を決定します。\nこの変更は</Japanese>
             <Polish>Ustawia siłe podmuchów wiatru, losowe zmiany w kierunku wiatru.\nTe zmiany są częstrze i silniejsze przy większym zachmurzeniu.</Polish>
+            <Chinesesimp>设置阵风强度，风向随机变化。\n这些变化随着云量的增加而变得更加强烈和频繁。</Chinesesimp>
+            <Chinese>設置陣風強度，風向隨機變化。 \n這些變化隨著雲量的增加而變得更加強烈和頻繁。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogDensity">
             <English>Fog Density</English>
@@ -1699,12 +2137,16 @@
             <Polish>Gęstość mgły</Polish>
             <Japanese>霧の濃さ</Japanese>
             <Korean>안개 밀도</Korean>
+            <Chinesesimp>雾气浓度</Chinesesimp>
+            <Chinese>霧氣濃度</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogDensity_Tooltip">
             <English>Sets the fog density at the base fog altitude.</English>
             <German>Stellt die Nebeldichte auf die Basisnebelhöhe ein.</German>
             <Polish>Ustala gęstość mgły na podstawowej wysokości mgły.</Polish>
             <Japanese>標高に基づき霧の濃さを決定します。</Japanese>
+            <Chinesesimp>设置基础雾气高度。</Chinesesimp>
+            <Chinese>設置基礎霧氣高度。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogDecay">
             <English>Fog Decay</English>
@@ -1712,12 +2154,16 @@
             <Polish>Zanik mgły</Polish>
             <Japanese>霧の減衰</Japanese>
             <Korean>안개 부패도</Korean>
+            <Chinesesimp>雾霾衰减</Chinesesimp>
+            <Chinese>霧霾衰減</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogDecay_Tooltip">
             <English>Sets how much the fog density decays with altitude. Larger values result in a sharper fog ceiling (more defined fog start).\nSmaller values lead to a more smooth transition from no fog to full fog, and as a result, the fog will cross the base altitude line more.\nWhen this is a positive value, the fog will be generated below the base altitude (valley fog); if negative, above the base altitude (mountain fog).</English>
             <German>Legt fest, wie stark die Nebeldichte mit der Höhe abnimmt. Größere Werte führen zu einer schärferen Nebeldecke (definierterer Nebelbeginn). \nKleinere Werte führen zu einem sanfteren Übergang von keinem Nebel zu vollem Nebel, so dass der Nebel die Basishöhenlinie mehr überschreitet. \nWenn dies ein positiver Wert ist, wird der Nebel unterhalb der Basishöhe (Talnebel) erzeugt, wenn negativ, oberhalb der Basishöhe (Bergnebel).</German>
             <Japanese>標高によりどのくらい霧が減衰するかを決定できます。大きな値では霧の天辺がよりシャープになります。\n小さな値ではよりスムーズに霧が濃くなり、よりもっと標高と混じります。\n正の値では霧が基礎標高より下から生成され、負の値では基礎標高より上から生成されます。</Japanese>
             <Polish>Ustawia zanikanie mgły wraz z wzrostem wysokości. Wyższe wartości tego pola oznaczają ostrzejszy próg zamglenia.\nNiższe wartości oznaczają gładsze przejscie pomiędzy brakiem mgły a pełną mgłą.\nPozytywne wartości na tym polu oznaczją ze mgła będzie generowana poniżej bazowej wysokości (w dolinach itp), negatywne wartości oznaczją że będzie generowana powyżej bazowej wysokości (na górach itp.) </Polish>
+            <Chinesesimp>设置雾气密度随海拔高度衰减的程度。较大的值会导致更突变的雾气变化（更明确的雾开始）。\n较小的值会导致的过渡就越平滑，因此，雾会更多地穿过基准高度线。\n如果正值，雾将产生于基准高度以下(谷雾) ; 如果负值，雾将产生于基准高度以上(峰雾)。</Chinesesimp>
+            <Chinese>設置霧氣密度隨海拔高度衰減的程度。較大的值會導致更突變的霧氣變化（更明確的霧開始）。 \n較小的值會導致的過渡就越平滑，因此，霧會更多地穿過基準高度線。 \n如果正值，霧將產生於基準高度以下(谷霧) ; 如果負值，霧將產生於基準高度以上(峰霧)。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogAltitude">
             <English>Fog Altitude</English>
@@ -1725,12 +2171,16 @@
             <Polish>Wysokość mgły</Polish>
             <Japanese>霧の高度</Japanese>
             <Korean>안개 고도</Korean>
+            <Chinesesimp>雾气高度</Chinesesimp>
+            <Chinese>霧氣高度</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogAltitude_Tooltip">
             <English>Sets the base altitude of the fog layer, in meters above/below sea level.</English>
             <German>Legt die Basishöhe der Nebelschicht in Metern über/unter dem Meeresspiegel fest.</German>
             <Japanese>霧レイヤーを基礎標高で決定します。単位はメートルで海抜を元にしています。</Japanese>
             <Polish>Ustawia bazową wysokośc pokrycia mgły, w metrach nad/poniżej poziomu morza.</Polish>
+            <Chinesesimp>设置雾气的基准高度（米，海平面以上/以下）。</Chinesesimp>
+            <Chinese>設置霧氣的基準高度（米，海平面以上/以下）。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateTeleporter">
             <English>Create Teleporter</English>
@@ -1738,6 +2188,8 @@
             <Polish>Stwórz teleporter</Polish>
             <Japanese>テレポーターを作成</Japanese>
             <Korean>순간이동기 생성</Korean>
+            <Chinesesimp>创建传送点</Chinesesimp>
+            <Chinese>創建傳送點</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ToggleTarget">
             <English>Toggle Target</English>
@@ -1745,12 +2197,16 @@
             <Polish>Przełacz cel</Polish>
             <Japanese>目標切り替え</Japanese>
             <Korean>타겟 토글</Korean>
+            <Chinesesimp>切换目标</Chinesesimp>
+            <Chinese>切換目標</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ToggleTarget_Tooltip">
             <English>Units affected by the toggle.</English>
             <German>Einheiten, die vom Umschalten betroffen sind.</German>
             <Japanese>ユニットは切り替えによる効果を受けます</Japanese>
             <Korean>유닛은 토글에 의해 영향받습니다.</Korean>
+            <Chinesesimp>受切换影响的单位。</Chinesesimp>
+            <Chinese>受切換影響的單位。</Chinese>
             <Polish>Jednostki zaznaczone do przełączenia celu.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_AddGear">
@@ -1759,8 +2215,8 @@
             <French>Ajouter équipement</French>
             <Italian>Aggiungi equipaggiamento</Italian>
             <Japanese>装備を追加</Japanese>
-            <Chinese>增加裝備</Chinese>
-            <Chinesesimp>增加装备</Chinesesimp>
+            <Chinese>添加裝備</Chinese>
+            <Chinesesimp>添加装备</Chinesesimp>
             <Korean>장비 추가</Korean>
             <Polish>Dodaj wyposażenie</Polish>
             <Russian>Добавить снаряжение</Russian>
@@ -1769,11 +2225,15 @@
             <English>Remove NVGs</English>
             <German>Entferne Nachtsichtgeräte</German>
             <Japanese>暗視装置を削除</Japanese>
+            <Chinesesimp>移除夜视仪</Chinesesimp>
+            <Chinese>移除夜視儀</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_RemoveNVG_Tooltip">
             <English>Remove any currently equipped Night Vision Goggles.</English>
             <German>Entferne jegliche ausgerüstete Nachtsichtgeräte.</German>
             <Japanese>装着している全ての暗視装置を削除します。</Japanese>
+            <Chinesesimp>移除当前装备的任何夜视仪。</Chinesesimp>
+            <Chinese>移除當前裝備的任何夜視儀。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleToggleFlashlights">
             <English>Toggle Flashlights</English>
@@ -1804,6 +2264,8 @@
             <German>IR-Laser umschalten</German>
             <Japanese>IR レーザー切り替え</Japanese>
             <Korean>IR 레이저 토글</Korean>
+            <Chinesesimp>切换红外镭射</Chinesesimp>
+            <Chinese>切換紅外鐳射</Chinese>
             <Polish>Przełącz lasery IR</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleToggleIRLasers_IRLasers">
@@ -1811,6 +2273,8 @@
             <German>IR-Laser</German>
             <Japanese>IR レーザー</Japanese>
             <Korean>IR 레이저</Korean>
+            <Chinesesimp>红外镭射</Chinesesimp>
+            <Chinese>紅外鐳射</Chinese>
             <Polish>Laser IR (podczerwony)</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAddFullArsenal">
@@ -1841,6 +2305,8 @@
             <Polish>Utwórz cel</Polish>
             <Japanese>目標を生成</Japanese>
             <Korean>목표 생성</Korean>
+            <Chinesesimp>创建目标</Chinesesimp>
+            <Chinese>創建目標</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateTarget_Name">
             <English>Target Name</English>
@@ -1848,6 +2314,8 @@
             <Polish>Nazwa celu</Polish>
             <Japanese>目標名</Japanese>
             <Korean>목표 이름</Korean>
+            <Chinesesimp>目标名称</Chinesesimp>
+            <Chinese>目標名稱</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateTarget_Format">
             <English>Target %1</English>
@@ -1855,17 +2323,23 @@
             <Polish>Cel %1</Polish>
             <Japanese>目標 %1</Japanese>
             <Korean>목표 %1</Korean>
+            <Chinesesimp>目标 %1</Chinesesimp>
+            <Chinese>目標 %1</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateTarget_AttachLaser">
             <English>Attach Laser Target For</English>
             <German>Laser-Target anbringen für</German>
             <Polish>Przyczep cel laserowy dla</Polish>
             <Japanese>レーザ目標を次に取り付け</Japanese>
+            <Chinesesimp>附加激光靶，用于</Chinesesimp>
+            <Chinese>附加激光靶，用於</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateLZ">
             <English>Create LZ</English>
             <German>Erstelle LZ</German>
             <Korean>LZ 생성</Korean>
+            <Chinesesimp>创建着陆点(LZ)</Chinesesimp>
+            <Chinese>創建著陸點(LZ)</Chinese>
             <Polish>Stwórz LZ (Strefa lądowania)</Polish>
             <Japanese>LZ を生成</Japanese>
         </Key>
@@ -1873,6 +2347,8 @@
             <English>LZ Name</English>
             <German>LZ-Name</German>
             <Korean>LZ 이름</Korean>
+            <Chinesesimp>LZ名称</Chinesesimp>
+            <Chinese>LZ名稱</Chinese>
             <Polish>Nazwa LZ</Polish>
             <Japanese>LZ 名</Japanese>
         </Key>
@@ -1880,6 +2356,8 @@
             <English>LZ %1</English>
             <German>LZ %1</German>
             <Korean>LZ %1</Korean>
+            <Chinesesimp>LZ %1</Chinesesimp>
+            <Chinese>LZ %1</Chinese>
             <Polish>LZ %1</Polish>
             <Japanese>LZ %1</Japanese>
         </Key>
@@ -1887,6 +2365,8 @@
             <English>Create RP</English>
             <German>Erstelle RP</German>
             <Korean>RP 생성</Korean>
+            <Chinesesimp>创建会合点</Chinesesimp>
+            <Chinese>創建會合點</Chinese>
             <Polish>Stwórz RP (Punkt spotkania)</Polish>
             <Japanese>RP 生成</Japanese>
         </Key>
@@ -1894,6 +2374,8 @@
             <English>RP Name</English>
             <German>RP-Name</German>
             <Korean>RP 이름</Korean>
+            <Chinesesimp>会合点名称</Chinesesimp>
+            <Chinese>會合點名稱</Chinese>
             <Polish>Nazwa RP</Polish>
             <Japanese>RP 名</Japanese>
         </Key>
@@ -1901,6 +2383,8 @@
             <English>RP %1</English>
             <German>RP %1</German>
             <Korean>RP %1</Korean>
+            <Chinesesimp>会合点 %1</Chinesesimp>
+            <Chinese>會合點 %1</Chinese>
             <Polish>RP %1</Polish>
             <Japanese>RP %1</Japanese>
         </Key>
@@ -1908,6 +2392,8 @@
             <English>Spawn Reinforcements</English>
             <German>Erstelle Verstärkung</German>
             <Korean>증원군 소환</Korean>
+            <Chinesesimp>生成增援</Chinesesimp>
+            <Chinese>生成增援</Chinese>
             <Polish>Spawnuj Wzmocnienia (posiłki)</Polish>
             <Japanese>増援生成</Japanese>
         </Key>
@@ -1915,6 +2401,8 @@
             <English>Vehicle Select</English>
             <German>Fahrzeugauswahl</German>
             <Korean>차량 선택</Korean>
+            <Chinesesimp>车辆选择</Chinesesimp>
+            <Chinese>車輛選擇</Chinese>
             <Polish>Wybór pojazdu</Polish>
             <Japanese>車両選択</Japanese>
         </Key>
@@ -1922,6 +2410,8 @@
             <English>Category</English>
             <German>Kategorie</German>
             <Korean>분류</Korean>
+            <Chinesesimp>类别</Chinesesimp>
+            <Chinese>類別</Chinese>
             <Polish>Kategorie</Polish>
             <Japanese>カテゴリ</Japanese>
         </Key>
@@ -1929,6 +2419,8 @@
             <English>Group Select</English>
             <German>Gruppenauswahl</German>
             <Korean>분대 선택</Korean>
+            <Chinesesimp>小队选择</Chinesesimp>
+            <Chinese>小隊選擇</Chinese>
             <Polish>Wybór grupy</Polish>
             <Japanese>グループ選択</Japanese>
         </Key>
@@ -1936,6 +2428,8 @@
             <English>Current Group</English>
             <German>Derzeitige Gruppe</German>
             <Korean>현재 분대</Korean>
+            <Chinesesimp>当前小队</Chinesesimp>
+            <Chinese>當前小隊</Chinese>
             <Polish>Obecnie wybrana Grupa</Polish>
             <Japanese>現在のグループ</Japanese>
         </Key>
@@ -1943,6 +2437,8 @@
             <English>Vehicle LZ/DZ</English>
             <German>Fahrzeug LZ/DZ</German>
             <Korean>차량 LZ/DZ</Korean>
+            <Chinesesimp>载具着陆/DZ点</Chinesesimp>
+            <Chinese>載具著陸/DZ點</Chinese>
             <Polish>Punkt LZ/DZ pojazdu</Polish>
             <Japanese>車両 LZ/DZ</Japanese>
         </Key>
@@ -1950,6 +2446,8 @@
             <English>Vehicle Behaviour</English>
             <German>Fahrzeugverhalten</German>
             <Korean>차량 행동</Korean>
+            <Chinesesimp>载具行为</Chinesesimp>
+            <Chinese>載具行為</Chinese>
             <Polish>Zachowanie pojazdu</Polish>
             <Japanese>車両の挙動</Japanese>
         </Key>
@@ -1957,6 +2455,8 @@
             <English>Stay at LZ</English>
             <German>Bei LZ verbleiben</German>
             <Korean>LZ에 머물르기</Korean>
+            <Chinesesimp>留在LZ</Chinesesimp>
+            <Chinese>留在LZ</Chinese>
             <Polish>Pozostań na LZ</Polish>
             <Japanese>LZ で待機</Japanese>
         </Key>
@@ -1964,6 +2464,8 @@
             <English>RTB and Despawn</English>
             <German>Zurück und Löschen</German>
             <Korean>귀환 후 삭제</Korean>
+            <Chinesesimp>返回并删除</Chinesesimp>
+            <Chinese>返回並刪除</Chinese>
             <Polish>Wróc do bazy i despawnuj</Polish>
             <Japanese>RTB と削除</Japanese>
         </Key>
@@ -1972,11 +2474,15 @@
             <German>Absetzmethode</German>
             <Polish>Sposób wprowadzenia</Polish>
             <Japanese>侵入方法</Japanese>
+            <Chinesesimp>插入方式</Chinesesimp>
+            <Chinese>插入方式</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_UnitRP">
             <English>Unit RP</English>
             <German>Einheiten-RP</German>
             <Korean>유닛 RP</Korean>
+            <Chinesesimp>单位会合</Chinesesimp>
+            <Chinese>單位會合</Chinese>
             <Polish>RP Jednostki</Polish>
             <Japanese>ユニット RP</Japanese>
         </Key>
@@ -1984,6 +2490,8 @@
             <English>Unit Behaviour</English>
             <German>Einheitenverhalten</German>
             <Korean>유닛 행동</Korean>
+            <Chinesesimp>单位行为</Chinesesimp>
+            <Chinese>單位行為</Chinese>
             <Polish>Zachowanie jednostki</Polish>
             <Japanese>ユニットの挙動</Japanese>
         </Key>
@@ -1993,6 +2501,8 @@
             <Polish>Stwórz/Edytuj dane wywiadowcze</Polish>
             <Japanese>インテル作成/編集</Japanese>
             <Korean>정보 생성/편집</Korean>
+            <Chinesesimp>创建/编辑情报</Chinesesimp>
+            <Chinese>創建/編輯情報</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ObjectType">
             <English>Object Type</English>
@@ -2000,6 +2510,8 @@
             <Polish>Typ Obiektu</Polish>
             <Japanese>オブジェクト種類</Japanese>
             <Korean>물건 형태</Korean>
+            <Chinesesimp>物体类型</Chinesesimp>
+            <Chinese>物體類型</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ShareWith">
             <English>Share With</English>
@@ -2007,6 +2519,8 @@
             <Polish>Współdziel z</Polish>
             <Japanese>次と共有</Japanese>
             <Korean>~와 공유</Korean>
+            <Chinesesimp>分享给</Chinesesimp>
+            <Chinese>分享給</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_DeleteOnCompletion">
             <English>Delete On Completion</English>
@@ -2014,21 +2528,29 @@
             <Polish>Usuń po zakończeniu</Polish>
             <Japanese>完了時に削除</Japanese>
             <Korean>획득 후 제거</Korean>
+            <Chinesesimp>完成后删除</Chinesesimp>
+            <Chinese>完成後刪除</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ActionType">
             <English>Action Type</English>
             <German>Aktionstyp</German>
             <Japanese>アクション種類</Japanese>
+            <Chinesesimp>动作类型</Chinesesimp>
+            <Chinese>動作類型</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_HoldAction">
             <English>Hold Action</English>
             <German>Halte-Aktion</German>
             <Japanese>ホールド アクション</Japanese>
+            <Chinesesimp>保持动作</Chinesesimp>
+            <Chinese>保持動作</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_InteractionMenu">
             <English>ACE Interaction Menu</English>
             <German>ACE Interaktionsmenü</German>
             <Japanese>ACE インタラクション メニュー</Japanese>
+            <Chinesesimp>ACE互动菜单</Chinesesimp>
+            <Chinese>ACE互動菜單</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ActionText">
             <English>Action Text</English>
@@ -2036,36 +2558,48 @@
             <Polish>Tekst akcji</Polish>
             <Japanese>アクション文章</Japanese>
             <Korean>동작 텍스트</Korean>
+            <Chinesesimp>行动文本</Chinesesimp>
+            <Chinese>行動文本</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ActionSound">
             <English>Action Sound</English>
             <German>Aktionsgeräusch</German>
             <Polish>Dzwięk akcji</Polish>
             <Japanese>アクション音</Japanese>
+            <Chinesesimp>行动声音</Chinesesimp>
+            <Chinese>行動聲音</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_LaptopKeyboard">
             <English>Laptop Keyboard</English>
             <German>Laptop Tastatur</German>
             <Polish>Klawiatura laptopa</Polish>
             <Japanese>ラップトップのキーボード</Japanese>
+            <Chinesesimp>笔记本键盘</Chinesesimp>
+            <Chinese>筆記本鍵盤</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_PCKeyboard">
             <English>PC Keyboard</English>
             <German>PC Tastatur</German>
             <Polish>Klawiatura Komputera</Polish>
             <Japanese>PC のキーボード</Japanese>
+            <Chinesesimp>电脑键盘</Chinesesimp>
+            <Chinese>電腦鍵盤</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_SearchBody">
             <English>Search Body</English>
             <German>Leiche Durchsuchen</German>
             <Polish>Przeszukaj ciało</Polish>
             <Japanese>身体を検索</Japanese>
+            <Chinesesimp>搜查尸体</Chinesesimp>
+            <Chinese>搜查屍體</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ActionDuration">
             <English>Action Duration</English>
             <German>Aktionsdauer</German>
             <Japanese>アクション持続時間</Japanese>
             <Korean>동작 지속기간</Korean>
+            <Chinesesimp>动作持续时间</Chinesesimp>
+            <Chinese>動作持續時間</Chinese>
             <Polish>Długość Akcji</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_IntelTitle">
@@ -2074,6 +2608,8 @@
             <Polish>Tytuł danych wywiadowczych</Polish>
             <Japanese>インテルのタイトル</Japanese>
             <Korean>정보 주제</Korean>
+            <Chinesesimp>情报标题</Chinesesimp>
+            <Chinese>情報標題</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_IntelText">
             <English>Intel Text</English>
@@ -2081,6 +2617,8 @@
             <Polish>Treść danych wywiadowczych</Polish>
             <Japanese>インテルの文章</Japanese>
             <Korean>정보 원문</Korean>
+            <Chinesesimp>情报文本</Chinesesimp>
+            <Chinese>情報文本</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_PickUpIntel">
             <English>Pick Up Intel</English>
@@ -2088,6 +2626,8 @@
             <Polish>Podnieś dane wywiadowcze</Polish>
             <Japanese>インテルを拾う</Japanese>
             <Korean>인텔 줍기</Korean>
+            <Chinesesimp>拾取情报</Chinesesimp>
+            <Chinese>拾取情報</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_IntelFound">
             <English>Intel Found</English>
@@ -2095,6 +2635,8 @@
             <Polish>Znaleziono dane wywiadowcze</Polish>
             <Japanese>インテルを発見</Japanese>
             <Korean>인텔 찾아짐</Korean>
+            <Chinesesimp>情报发现</Chinesesimp>
+            <Chinese>情報發現</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_PlayerFoundIntel">
             <English>%1 found intel: "%2"</English>
@@ -2102,17 +2644,23 @@
             <Polish>%1 znalazł dane wywiadowcze: "%2"</Polish>
             <Japanese>%1 がインテルを発見: "%2"</Japanese>
             <Korean>%1이 인텔 취득: "%2"</Korean>
+            <Chinesesimp>%1 发现情报: "%2"</Chinesesimp>
+            <Chinese>%1 發現情報: "%2"</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCrewToGunner">
             <English>Crew To Gunner</English>
             <German>Besetze als Schütze</German>
             <Japanese>乗員を砲手に</Japanese>
+            <Chinesesimp>乘员进入炮手</Chinesesimp>
+            <Chinese>乘員進入砲手</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ToggleLamps">
             <English>Toggle Lamps</English>
             <German>Lampen umschalten</German>
             <Japanese>ランプを切り替え</Japanese>
             <Korean>전등 토글</Korean>
+            <Chinesesimp>切换灯光</Chinesesimp>
+            <Chinese>切換燈光</Chinese>
             <Polish>Przełącz lampy</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_ToggleLamps_Repair_Tooltip">
@@ -2120,44 +2668,64 @@
             <German>Lampen beim Umschalten reparieren</German>
             <Japanese>ランプを点灯した際に壊れたライトを修理します。</Japanese>
             <Korean>전등이 켜질때 부러진 것들을 수리합니다.</Korean>
+            <Chinesesimp>开灯时修理破损的灯。</Chinesesimp>
+            <Chinese>開燈時修理破損的燈。</Chinese>
             <Polish>Napraw zepsute lampy przed włączeniem.</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_BurstDelay">
             <English>Burst Delay</English>
-            <German>Verzögerung zwischen Feuerstößen</German>
+	    <German>Verzögerung zwischen Feuerstößen</German>
+            <Chinesesimp>火灾爆炸间的延时</Chinesesimp>
+            <Chinese>火災爆炸間的延時</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_BurstDelay_Tooltip">
             <English>The delay, in seconds, between bursts of tracers.\nSelected randomly in a range from min to max, gravitating towards mid.</English>
-            <German>Verzögerung zwischen Feuerstößen in Sekunden.\nWird zufällig aus einer Verteilung gewählt mit dem spezifizierten Minimalwert, Maximalwert und Mittelwert.</German>
+	    <German>Verzögerung zwischen Feuerstößen in Sekunden.\nWird zufällig aus einer Verteilung gewählt mit dem spezifizierten Minimalwert, Maximalwert und Mittelwert.</German>
+            <Chinesesimp>曳光弹发射间隔的延时，以秒为单位。\n从最小到最大的范围内随机选择，倾向于中间得值。</Chinesesimp>
+            <Chinese>曳光彈發射間隔的延時，以秒為單位。 \n從最小到最大的範圍內隨機選擇，傾向於中間得值。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_Dispersion">
             <English>Dispersion</English>
-            <German>Zerstreuung</German>
+	    <German>Zerstreuung</German>
+            <Chinesesimp>散布</Chinesesimp>
+            <Chinese>散佈</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_Dispersion_Tooltip">
             <English>The dispersion of the fired tracer rounds.</English>
             <German>Zerstreuung der abgefeuerten Leuchtspurmunition.</German>
+            <Chinesesimp>发射的曳光弹的散布情况。</Chinesesimp>
+            <Chinese>發射的曳光彈的散佈情況。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_Random_Tooltip">
             <English>Tracers are fired randomly in the air.</English>
             <German>Leuchtspurmunition wird zufällig in die Luft gefeuert.</German>
+            <Chinesesimp>曳光弹在空中随机发射。</Chinesesimp>
+            <Chinese>曳光彈在空中隨機發射。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_Camera_Tooltip">
             <English>Tracers are fired at the current camera position.</English>
             <German>Leuchtspurmunition wird gegen die momentane Position der Kamera gefeuert.</German>
+            <Chinesesimp>曳光弹从当前摄像机位置发射。</Chinesesimp>
+            <Chinese>曳光彈從當前攝像機位置發射。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_Cursor_Tooltip">
             <English>Tracers target is selected using the cursor after closing the dialog.</English>
             <German>Das Ziel der Leuchtspurmunition wird basierend auf der Position des Mauszeigers nach dem Schließen des Fensters gewählt.</German>
+            <Chinesesimp>关闭对话框后，使用光标选择曳光弹目标。</Chinesesimp>
+            <Chinese>關閉對話框後，使用光標選擇曳光彈目標。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_TracersTarget">
             <English>Tracers Target</English>
             <German>Ziel der Leuchtspurmunition</German>
+            <Chinesesimp>曳光弹目标</Chinesesimp>
+            <Chinese>曳光彈目標</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire">
             <English>Custom Fire</English>
             <German>Benutzerdefiniertes Feuer</German>
             <Korean>커스텀 화염</Korean>
+            <Chinesesimp>自定义火灾</Chinesesimp>
+            <Chinese>自定義火災</Chinese>
             <Polish>Ustawienie Ognia</Polish>
             <Japanese>火を作成</Japanese>
         </Key>
@@ -2165,6 +2733,8 @@
             <English>Effect Size</English>
             <German>Effektgröße</German>
             <Korean>효과 크기</Korean>
+            <Chinesesimp>效果规模</Chinesesimp>
+            <Chinese>效果規模</Chinese>
             <Polish>Rozmiar efektu</Polish>
             <Japanese>エフェクトの大きさ</Japanese>
         </Key>
@@ -2172,6 +2742,8 @@
             <English>Particle Density</English>
             <German>Patrikeldichte</German>
             <Korean>입자 밀도</Korean>
+            <Chinesesimp>颗粒密度</Chinesesimp>
+            <Chinese>顆粒密度</Chinese>
             <Polish>Gęstość cząstek</Polish>
             <Japanese>パーティクル密度</Japanese>
         </Key>
@@ -2179,12 +2751,16 @@
             <English>Particle Lifetime</English>
             <German>Partikellebenszeit</German>
             <Korean>입자 기간</Korean>
+            <Chinesesimp>颗粒存在时间</Chinesesimp>
+            <Chinese>顆粒存在時間</Chinese>
             <Japanese>パーティクル存在時間</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire_ParticleSpeed">
             <English>Particle Speed</English>
             <German>Partikelgeschwindigkeit</German>
             <Korean>입자 속도</Korean>
+            <Chinesesimp>颗粒速度</Chinesesimp>
+            <Chinese>顆粒速度</Chinese>
             <Polish>Prędkość cząstek</Polish>
             <Japanese>パーティクル速度</Japanese>
         </Key>
@@ -2192,6 +2768,8 @@
             <English>Particle Size</English>
             <German>Partikelgröße</German>
             <Korean>입자 크기</Korean>
+            <Chinesesimp>颗粒大小</Chinesesimp>
+            <Chinese>顆粒大小</Chinese>
             <Polish>Rozmiar cząstek</Polish>
             <Japanese>パーティクルの大きさ</Japanese>
         </Key>
@@ -2199,6 +2777,8 @@
             <English>Particle Orientation</English>
             <German>Partikelrichtung</German>
             <Korean>입자 방향</Korean>
+            <Chinesesimp>颗粒方向</Chinesesimp>
+            <Chinese>顆粒方向</Chinese>
             <Polish>Orientacja cząstek</Polish>
             <Japanese>パーティクル方位</Japanese>
         </Key>
@@ -2206,6 +2786,8 @@
             <English>Global AI Skill</English>
             <German>Globale KI-Fähigkeit</German>
             <Korean>광역 AI 숙련도</Korean>
+            <Chinesesimp>全局AI技能</Chinesesimp>
+            <Chinese>全局AI技能</Chinese>
             <Polish>Globalne ustawienie wyszkolenia AI</Polish>
             <Japanese>AI 全体スキル</Japanese>
         </Key>
@@ -2213,6 +2795,8 @@
             <English>Global Skill</English>
             <German>Globale Fähigkeit</German>
             <Korean>광역 숙련도</Korean>
+            <Chinesesimp>全局技能</Chinesesimp>
+            <Chinese>全局技能</Chinese>
             <Polish>Globalne wyszkolenie</Polish>
             <Japanese>全体スキル</Japanese>
         </Key>
@@ -2221,82 +2805,110 @@
             <German>Wendet die Fähigkeitseinstellung auf alle neuen und bestehenden Einheiten an.</German>
             <Polish>Ustawia wybrane wyszkolenie dla wszystkich obecnych i nowo stworzonych jednostek AI.</Polish>
             <Japanese>次のスキル値を存在する全てと生成された AI ユニットに適用します。</Japanese>
+            <Chinesesimp>启用对所有当前和新创建的AI单位应用以下技能值。</Chinesesimp>
+            <Chinese>啟用對所有當前和新創建的AI單位應用以下技能值。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ExportMissionSQF">
             <English>Export Mission SQF</English>
             <German>Mission SQF exportieren</German>
             <Polish>Exportuj SQF misji</Polish>
             <Japanese>ミッション SQF 出力</Japanese>
+            <Chinesesimp>导出任务SQF</Chinesesimp>
+            <Chinese>導出任務SQF</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_EntireMission">
             <English>Entire Mission</English>
             <German>Gesamte Mission</German>
             <Polish>Cała misja</Polish>
             <Japanese>ミッション全体</Japanese>
+            <Chinesesimp>整个任务</Chinesesimp>
+            <Chinese>整個任務</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_IncludeMarkers">
             <English>Include Markers</English>
             <German>Kartenmarkierung einschließen</German>
             <Polish>Załącz markery</Polish>
             <Japanese>マーカーを含む</Japanese>
+            <Chinesesimp>包含标记</Chinesesimp>
+            <Chinese>包含標記</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_EditableObjectsOnly">
             <English>Editable Objects Only</English>
             <German>Nur bearbeitbare Objekte</German>
             <Polish>Tylko obiekty z możliwością edytowania</Polish>
             <Japanese>編集可オブジェクトのみ</Japanese>
+            <Chinesesimp>仅限可编辑对象</Chinesesimp>
+            <Chinese>僅限可編輯對象</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_EditableObjectsOnly_Tooltip">
             <English>Only objects that are currently editable by the local curator will be exported.</English>
             <German>Objekt rotieren</German>
             <Polish>Tylko obiekty które mogą być edytowane przez lokalnego kuratora zostaną eksportowane.</Polish>
             <Japanese>ローカル キュレーターが、現在編集可能なオブジェクトのみ出力します。</Japanese>
+            <Chinesesimp>只有当前可由本地宙斯编辑的对象才会被导出。</Chinesesimp>
+            <Chinese>只有當前可由本地宙斯編輯的對象才會被導出。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_RotateObject">
             <English>Rotate Object</English>
             <German>Objekt rotierens</German>
             <Polish>Obróć obiekt</Polish>
             <Japanese>オブジェクト回転</Japanese>
+            <Chinesesimp>旋转物体</Chinesesimp>
+            <Chinese>旋轉物體</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_AtomicBomb">
             <English>Atomic Bomb</English>
             <German>Atombombe</German>
             <Polish>Bomba atomowa</Polish>
             <Japanese>核爆弾</Japanese>
+            <Chinesesimp>核弹</Chinesesimp>
+            <Chinese>核彈</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_DestructionRadius">
             <English>Destruction Radius (m)</English>
             <German>Radius der Zerstörung (m)</German>
             <Polish>Zasięg zniszczeń (m)</Polish>
             <Japanese>破壊半径 (m)</Japanese>
+            <Chinesesimp>毁灭半径（米）</Chinesesimp>
+            <Chinese>毀滅半徑（米）</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_DestructionRate">
             <English>Destruction Rate</English>
             <German>Zerstörungsrate</German>
             <Polish>Częstotliwość destrukcji</Polish>
             <Japanese>破壊レート</Japanese>
+            <Chinesesimp>破坏率</Chinesesimp>
+            <Chinese>破壞率</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_DestructionRate_Tooltip">
             <English>The maximum number of objects destroyed per second.</English>
             <German>Maximale Anzahl an Objekte, die zerstört werden pro Sekunde.</German>
             <Polish>Maksymalna liczba obiektów które zostaną zniszczone co sekunde.</Polish>
             <Japanese>1 秒ごとに破壊されるオブジェクト数を設定します。</Japanese>
+            <Chinesesimp>每秒钟摧毁的最大物体数量。</Chinesesimp>
+            <Chinese>每秒鐘摧毀的最大物體數量。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ColorCorrections">
             <English>Color Corrections</English>
             <German>Farbkorrektur</German>
             <Polish>Dostosowanie koloru</Polish>
             <Japanese>色補正</Japanese>
+            <Chinesesimp>色彩校正</Chinesesimp>
+            <Chinese>色彩校正</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ConfirmDetonation">
             <English>Are you sure you want to detonate an atomic bomb?</English>
             <German>Möchten sie wirklich eine Atombombe zünden?</German>
             <Polish>Jesteś pewien że chcesz detonować bombe atomową?</Polish>
             <Japanese>本当に核爆弾を起爆しますか？</Japanese>
+            <Chinesesimp>你确定要引爆核弹吗？</Chinesesimp>
+            <Chinese>你確定要引爆原子彈嗎？</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAnimationViewer">
             <English>Show In Animation Viewer</English>
             <German>In Animationbetrachter zeigen</German>
+            <Chinesesimp>在动画浏览器中显示</Chinesesimp>
+            <Chinese>在動畫瀏覽器中顯示</Chinese>
         </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_Buildings">
@@ -2306,6 +2918,8 @@
             <Polish>Budynki</Polish>
             <Japanese>建物</Japanese>
             <Korean>빌딩</Korean>
+            <Chinesesimp>建筑物</Chinesesimp>
+            <Chinese>建築物</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_DevTools">
             <English>Development Tools</English>
@@ -2313,6 +2927,8 @@
             <German>Entwicklungswerkzeuge</German>
             <Polish>Narzędzia deweloperskie</Polish>
             <Japanese>開発ツール</Japanese>
+            <Chinesesimp>开发工具</Chinesesimp>
+            <Chinese>開發工具</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_Equipment">
             <English>Equipment</English>
@@ -2321,6 +2937,8 @@
             <Polish>Ekwipunek</Polish>
             <Japanese>装備</Japanese>
             <Korean>장비</Korean>
+            <Chinesesimp>装备</Chinesesimp>
+            <Chinese>裝備</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_Objects">
             <English>Objects</English>
@@ -2329,6 +2947,8 @@
             <Polish>Obiekty</Polish>
             <Japanese>オブジェクト</Japanese>
             <Korean>물체</Korean>
+            <Chinesesimp>物体</Chinesesimp>
+            <Chinese>物體</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_Players">
             <English>Players</English>
@@ -2337,11 +2957,15 @@
             <Polish>Gracze</Polish>
             <Japanese>プレイヤー</Japanese>
             <Korean>플레이어</Korean>
+            <Chinesesimp>玩家</Chinesesimp>
+            <Chinese>玩家</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_Reinforcements">
             <English>Reinforcements</English>
             <German>Verstärkung</German>
             <Korean>증원군</Korean>
+            <Chinesesimp>增援</Chinesesimp>
+            <Chinese>增援</Chinese>
             <Polish>Wzmocnienia/Posiłki</Polish>
             <Japanese>増援</Japanese>
         </Key>
@@ -2352,6 +2976,8 @@
             <Polish>Spawn</Polish>
             <Japanese>生成</Japanese>
             <Korean>소환</Korean>
+            <Chinesesimp>生成</Chinesesimp>
+            <Chinese>生成</Chinese>
         </Key>
         <!-- Feedback Messages -->
         <Key ID="STR_ZEN_Modules_NoUnitSelected">
@@ -2375,17 +3001,23 @@
             <German>Auf einem Objekt platzieren</German>
             <Japanese>オブジェクトの上に設置</Japanese>
             <Korean>물체에 배치하기</Korean>
+            <Chinesesimp>放置在一个物体上</Chinesesimp>
+            <Chinese>放置在一個物體上</Chinese>
             <Polish>Postaw na obiekcie</Polish>
         </Key>
         <Key ID="STR_ZEN_Modules_NotAttachedTo">
             <English>Only for attached objects</English>
             <French>Seulement pour des objets attachés</French>
             <German>Nur für angehängte Objekte</German>
+            <Chinesesimp>仅适用于附加对象</Chinesesimp>
+            <Chinese>僅適用於附加對象</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ValueOutOfRange">
             <English>Only values between %1 and %2 are valid</English>
             <French>Seulement des valeurs entre %1 et %2 sont permises</French>
             <German>Nur Werte zwischen %1 und %2 sind erlaubt</German>
+            <Chinesesimp>只有在 %1 和 %2 之间的值才有效</Chinesesimp>
+            <Chinese>只有在 %1 和 %2 之間的值才有效</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_OnlyAlive">
             <English>Unit must be alive</English>
@@ -2426,6 +3058,8 @@
             <Polish>Jednostka nie może być piechurem</Polish>
             <Japanese>ユニットは歩兵以外である必要があります</Japanese>
             <Korean>대상이 반드시 보병이 아니어야 합니다</Korean>
+            <Chinesesimp>单位不得是步兵</Chinesesimp>
+            <Chinese>單位不得是步兵</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_OnlyPlayers">
             <English>Unit must be a player</English>
@@ -2434,6 +3068,8 @@
             <Polish>Jednostka musi być graczem</Polish>
             <Japanese>ユニットはプレイヤーである必要があります</Japanese>
             <Korean>대상은 플레이어가 아니어야만 합니다</Korean>
+            <Chinesesimp>单位必须是玩家</Chinesesimp>
+            <Chinese>單位必須是玩家</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_OnlyVehicles">
             <English>Unit must be a vehicle</English>
@@ -2457,6 +3093,8 @@
             <Polish>Jednostka musi być pojazdem latającym</Polish>
             <Japanese>ユニットは航空機である必要があります</Japanese>
             <Korean>대상은 항공기가 아니어야 합니다</Korean>
+            <Chinesesimp>单位必须是飞机</Chinesesimp>
+            <Chinese>單位必須是飛機</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_BuildingTooFar">
             <English>Nearest building is too far away</English>
@@ -2476,23 +3114,31 @@
             <German>Kein Gebäude zum Durchsuchen in der Nähe</German>
             <Polish>Nie znaleziono budynku do przeszukania</Polish>
             <Japanese>捜索する建物が見つかりません</Japanese>
+            <Chinesesimp>无法找到可供搜索的建筑物</Chinesesimp>
+            <Chinese>無法找到可供搜索的建築物</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_NoTargetModules">
             <English>No target modules exist, place one first.</English>
             <German>Es gibt keine Zielmodule, platzieren Sie zuerst ein Zielmodul.</German>
             <Polish>Brak modułów celu, najpierw ustaw moduł celu.</Polish>
             <Japanese>モジュールの目標が無い為、何か設置して下さい。</Japanese>
+            <Chinesesimp>没有目标模块，请先放置一个。</Chinesesimp>
+            <Chinese>沒有目標模塊，請先放置一個。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_NotInRangeOfArtillery">
             <English>Target position is not in range for all vehicles</English>
             <German>Die Zielposition ist nicht in Reichweite für alle Fahrzeuge</German>
             <Polish>Pozycja celu nie jest w zasięgu wszystkich pojazdów</Polish>
             <Japanese>目標の位置は全車両から射程内にありません</Japanese>
+            <Chinesesimp>目标位置不在所有车辆范围内</Chinesesimp>
+            <Chinese>目標位置不在所有車輛範圍內</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_PlaceAnLZ">
             <English>Place an LZ</English>
             <German>Platziere eine LZ</German>
             <Korean>LZ에 배치</Korean>
+            <Chinesesimp>放置一个着陆点</Chinesesimp>
+            <Chinese>放置一個著陸點</Chinese>
             <Polish>Postaw LZ</Polish>
             <Japanese>LZ を設置</Japanese>
         </Key>
@@ -2501,16 +3147,22 @@
             <German>Kein valide Position zum Teleporieren des Fahrzeugs gefunden.</German>
             <Polish>Nie znaleziono stosownej pozycji do teleportacji pojazdu.</Polish>
             <Japanese>車両をテレポートさせる為に最適な位置が見つかりませんでした。</Japanese>
+            <Chinesesimp>无法找到合适的位置传送车辆。</Chinesesimp>
+            <Chinese>無法找到合適的位置傳送車輛。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_MustHaveGunner">
             <English>Vehicle must have a primary gunner seat</English>
             <German>Fahrzeug muss einen primären Schützen haben</German>
             <Japanese>車両には主砲手席がありません</Japanese>
+            <Chinesesimp>车辆必须有一个主炮手座位</Chinesesimp>
+            <Chinese>車輛必須有一個主砲手座位</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_NoCrewAvailable">
             <English>Vehicle must have other crew available</English>
             <German>Fahrzeug muss eine andere Besatzung haben</German>
             <Japanese>車両には空いている乗員席がありません</Japanese>
+            <Chinesesimp>车辆必须有其他乘员位可用</Chinesesimp>
+            <Chinese>車輛必須有其他乘員位可用</Chinese>
         </Key>
     </Package>
 </Project>
