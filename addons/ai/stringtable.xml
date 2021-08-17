@@ -7,7 +7,9 @@
             <German>Landen</German>
             <Korean>착륙</Korean>
             <Japanese>着陸</Japanese>
-            <Spanish>Aterrizar</Spanish>
+	    <Spanish>Aterrizar</Spanish>
+            <Chinesesimp>降落</Chinesesimp>
+            <Chinese>降落</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_Fastrope">
             <English>Fastrope</English>
@@ -33,8 +35,8 @@
             <Japanese>空挺降下</Japanese>
             <Korean>공수</Korean>
             <Spanish>Paracaidismo</Spanish>
-            <Chinesesimp>空投</Chinesesimp>
-            <Chinese>空投</Chinese>
+            <Chinesesimp>伞降</Chinesesimp>
+            <Chinese>傘降</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_SearchBuilding">
             <English>Search Building</English>
@@ -59,6 +61,8 @@
             <Japanese>全てのユニットを歩哨にできません - 空きスペース無し</Japanese>
             <Korean>모든 유닛 배치 불가 - 공간이 충분하지 않음</Korean>
             <Spanish>No se pueden guarnecer todas las unidades - no hay suficientes posiciones</Spanish>
+            <Chinesesimp>无法驻扎所有单位--没有足够的位置</Chinesesimp>
+            <Chinese>無法駐紮所有單位 - 沒有足夠的位置</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_AimingAccuracy">
             <English>Aiming Accuracy</English>
@@ -72,6 +76,8 @@
             <Japanese>照準精度</Japanese>
             <Korean>조준 정확도</Korean>
             <Spanish>Precisión al apuntar</Spanish>
+            <Chinesesimp>瞄准精度</Chinesesimp>
+            <Chinese>瞄準精度</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_AimingSpeed">
             <English>Aiming Speed</English>
@@ -85,6 +91,8 @@
             <Japanese>照準速度</Japanese>
             <Korean>조준 속도</Korean>
             <Spanish>Velocidad Apuntado</Spanish>
+            <Chinesesimp>瞄准速度</Chinesesimp>
+            <Chinese>瞄準速度</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_AimingShake">
             <English>Aiming Shake</English>
@@ -96,7 +104,9 @@
             <Portuguese>Balanço da Mira</Portuguese>
             <Japanese>照準安定性</Japanese>
             <Korean>조준 반동</Korean>
-            <Spanish>Movimiento al apuntar</Spanish>
+	    <Spanish>Movimiento al apuntar</Spanish>
+            <Chinesesimp>瞄准晃动</Chinesesimp>
+            <Chinese>瞄準晃動</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_Commanding">
             <English>Commanding</English>
@@ -109,7 +119,9 @@
             <Portuguese>Comandante</Portuguese>
             <Japanese>指揮能力</Japanese>
             <Korean>지휘</Korean>
-            <Spanish>Comandante</Spanish>
+	    <Spanish>Comandante</Spanish>
+            <Chinesesimp>指挥能力</Chinesesimp>
+            <Chinese>指揮能力</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_Courage">
             <English>Courage</English>
@@ -122,7 +134,9 @@
             <Portuguese>Coragem</Portuguese>
             <Japanese>度胸</Japanese>
             <Korean>용기</Korean>
-            <Spanish>Coraje</Spanish>
+	    <Spanish>Coraje</Spanish>
+            <Chinesesimp>勇气</Chinesesimp>
+            <Chinese>勇氣</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_SpotDistance">
             <English>Spotting Distance</English>
@@ -134,7 +148,9 @@
             <Japanese>探知距離</Japanese>
             <Korean>색적 거리</Korean>
             <Polish>Odległość Spottingu</Polish>
-            <Spanish>Distancia de localización</Spanish>
+	    <Spanish>Distancia de localización</Spanish>
+            <Chinesesimp>发现距离</Chinesesimp>
+            <Chinese>發現距離</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_SpotTime">
             <English>Spotting Speed</English>
@@ -146,7 +162,9 @@
             <Japanese>探知速度</Japanese>
             <Korean>탐지 속도</Korean>
             <Polish>Prędkość spottingu</Polish>
-            <Spanish>Velocidad de detección</Spanish>
+	    <Spanish>Velocidad de detección</Spanish>
+            <Chinesesimp>发现速度</Chinesesimp>
+            <Chinese>發現速度</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_ReloadSpeed">
             <English>Reload Speed</English>
@@ -159,7 +177,9 @@
             <Portuguese>Velocidade de Recarga</Portuguese>
             <Japanese>リロード速度</Japanese>
             <Korean>재장전 속도</Korean>
-            <Spanish>Velocidad de recarga</Spanish>
+	    <Spanish>Velocidad de recarga</Spanish>
+            <Chinesesimp>换弹速度</Chinesesimp>
+            <Chinese>換彈速度</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_SeekCover">
             <English>Seek Cover</English>
@@ -169,6 +189,8 @@
             <Polish>Szukaj Osłony</Polish>
             <Japanese>遮蔽検索</Japanese>
             <Spanish>Buscar cobertura</Spanish>
+            <Chinesesimp>寻找掩护</Chinesesimp>
+            <Chinese>尋找掩護</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_AimingError">
             <English>Aiming Error</English>
@@ -178,9 +200,9 @@
             <Polish>Błąd w celowaniu</Polish>
             <Korean>조준 오류</Korean>
             <Japanese>照準エラー</Japanese>
-            <Spanish>Error al apuntar</Spanish>
-            <Chinese>瞄準失誤</Chinese>
-            <Chinesesimp>瞄准失误</Chinesesimp>
+	    <Spanish>Error al apuntar</Spanish>
+            <Chinesesimp>瞄准误差</Chinesesimp>
+            <Chinese>瞄準誤差</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_AnimChange">
             <English>Anim Change</English>
@@ -188,7 +210,9 @@
             <German>Animationsänderung</German>
             <Polish>Zmiana animacji</Polish>
             <Japanese>アニメーション変更</Japanese>
-            <Spanish>Cambio de animación</Spanish>
+	    <Spanish>Cambio de animación</Spanish>
+            <Chinesesimp>动画变化</Chinesesimp>
+            <Chinese></Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_AutoCombat">
             <English>Auto Combat</English>
@@ -198,9 +222,9 @@
             <Korean>자동 전투</Korean>
             <Polish>Automatyczna walka</Polish>
             <Japanese>自動戦闘</Japanese>
-            <Spanish>Combate automático</Spanish>
-            <Chinesesimp>自动战斗</Chinesesimp>
-            <Chinese>自動戰鬥</Chinese>
+	    <Spanish>Combate automático</Spanish>
+            <Chinesesimp>自动作战</Chinesesimp>
+            <Chinese>自動作戰</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_AutoTarget">
             <English>Auto Target</English>
@@ -210,9 +234,9 @@
             <Polish>Automatyczne namierzanie</Polish>
             <Korean>자동 조준</Korean>
             <Japanese>自動捕捉</Japanese>
-            <Spanish>Objetivo automático</Spanish>
-            <Chinesesimp>目标搜寻</Chinesesimp>
-            <Chinese>目標搜尋</Chinese>
+	    <Spanish>Objetivo automático</Spanish>
+            <Chinesesimp>自动寻找目标</Chinesesimp>
+            <Chinese>自動尋找目標</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_CheckVisible">
             <English>Check Visible</English>
@@ -222,9 +246,9 @@
             <Polish>Sprawdź Widoczne</Polish>
             <Korean>표시 확인</Korean>
             <Japanese>射線権威</Japanese>
-            <Spanish>Verificar visible</Spanish>
-            <Chinesesimp>检查瞄准线</Chinesesimp>
-            <Chinese>檢查瞄準線</Chinese>
+	    <Spanish>Verificar visible</Spanish>
+            <Chinesesimp>检查可见性</Chinesesimp>
+            <Chinese>檢查可見性</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_Cover">
             <English>Cover</English>
@@ -245,7 +269,9 @@
             <German>FSM</German>
             <Korean>유한 상태 기계</Korean>
             <Japanese>FSM</Japanese>
-            <Spanish>FSM</Spanish>
+	    <Spanish>FSM</Spanish>
+            <Chinesesimp>FSM</Chinesesimp>
+            <Chinese>FSM</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_LightsVehicle">
             <English>Lights (Vehicle)</English>
@@ -254,7 +280,9 @@
             <Polish>Światła (Pojazd)</Polish>
             <Korean>조명 (차량)</Korean>
             <Japanese>ライト (車両)</Japanese>
-            <Spanish>Luces (Vehículo)</Spanish>
+	    <Spanish>Luces (Vehículo)</Spanish>
+            <Chinesesimp>灯光（车辆）</Chinesesimp>
+            <Chinese>燈光（車輛）</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_MineDetection">
             <English>Mine Detection</English>
@@ -264,9 +292,9 @@
             <Polish>Wykrywanie Min</Polish>
             <Korean>광산 탐지</Korean>
             <Japanese>地雷探知</Japanese>
-            <Spanish>Detector de minas</Spanish>
-            <Chinesesimp>排查地雷</Chinesesimp>
-            <Chinese>排查地雷</Chinese>
+	    <Spanish>Detector de minas</Spanish>
+            <Chinesesimp>探测地雷</Chinesesimp>
+            <Chinese>探測地雷</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_Move">
             <English>Move</English>
@@ -276,7 +304,7 @@
             <Polish>Rusz</Polish>
             <Korean>이동</Korean>
             <Japanese>移動</Japanese>
-            <Spanish>Moverse</Spanish>
+	    <Spanish>Moverse</Spanish>
             <Chinesesimp>移动</Chinesesimp>
             <Chinese>移動</Chinese>
         </Key>
@@ -287,7 +315,9 @@
             <Polish>Noktowizja</Polish>
             <Korean>야간 투시</Korean>
             <Japanese>暗視装置</Japanese>
-            <Spanish>Vision nocturna</Spanish>
+	    <Spanish>Vision nocturna</Spanish>
+            <Chinesesimp>夜视仪</Chinesesimp>
+            <Chinese>夜視儀</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_Path">
             <English>Path</English>
@@ -307,7 +337,9 @@
             <Polish>Protokół radiowy</Polish>
             <Korean>무선 프로토콜</Korean>
             <Japanese>無線プロトコル</Japanese>
-            <Spanish>Protocolo de radio</Spanish>
+	    <Spanish>Protocolo de radio</Spanish>
+            <Chinesesimp>无线电通讯协议</Chinesesimp>
+            <Chinese>無線電通訊協議</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_Suppression">
             <English>Suppression</English>
@@ -317,9 +349,9 @@
             <Korean>제압</Korean>
             <Polish>Przygwożdżenie</Polish>
             <Japanese>制圧射撃</Japanese>
-            <Spanish>Supresión</Spanish>
-            <Chinesesimp>压制</Chinesesimp>
-            <Chinese>壓制</Chinese>
+	    <Spanish>Supresión</Spanish>
+            <Chinesesimp>射击压制</Chinesesimp>
+            <Chinese>射擊壓制</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_Target">
             <English>Target</English>
@@ -340,7 +372,9 @@
             <Polish>Zmiana drużyny</Polish>
             <Korean>팀 변경</Korean>
             <Japanese>チーム切り替え</Japanese>
-            <Spanish>Cambio de equipo</Spanish>
+	    <Spanish>Cambio de equipo</Spanish>
+            <Chinesesimp>小队切换</Chinesesimp>
+            <Chinese>小隊切換</Chinese>
         </Key>
         <Key ID="STR_ZEN_AI_WeaponAim">
             <English>Weapon Aim</English>
@@ -349,7 +383,9 @@
             <Polish>Celowanie Bronią</Polish>
             <Korean>무기 조준</Korean>
             <Japanese>武器照準</Japanese>
-            <Spanish>Punteria del arma</Spanish>
+	    <Spanish>Punteria del arma</Spanish>
+            <Chinesesimp>武器瞄准</Chinesesimp>
+            <Chinese>武器瞄準</Chinese>
         </Key>
     </Package>
 </Project>
