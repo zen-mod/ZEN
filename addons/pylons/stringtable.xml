@@ -4,14 +4,20 @@
         <Key ID="STR_ZEN_Pylons_DisplayName">
             <English>Pylons</English>
             <Japanese>パイロン</Japanese>
+            <Chinesesimp>挂架</Chinesesimp>
+            <Chinese>掛架</Chinese>
         </Key>
         <Key ID="STR_ZEN_Pylons_Title">
             <English>Configure Pylons (%1)</English>
             <Japanese>パイロンを設定 (%1)</Japanese>
+            <Chinesesimp>设置挂架 (%1)</Chinesesimp>
+            <Chinese>設置掛架 (%1)</Chinese>
         </Key>
         <Key ID="STR_ZEN_Pylons_Empty">
             <English>&lt;Empty&gt;</English>
             <Japanese>&lt;空&gt;</Japanese>
+            <Chinesesimp>&lt;空&gt;</Chinesesimp>
+            <Chinese>&lt;空&gt;</Chinese>
         </Key>
     </Package>
 </Project>
