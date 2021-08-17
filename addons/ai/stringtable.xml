@@ -7,7 +7,7 @@
             <German>Landen</German>
             <Korean>착륙</Korean>
             <Japanese>着陸</Japanese>
-	    <Spanish>Aterrizar</Spanish>
+	        <Spanish>Aterrizar</Spanish>
             <Chinesesimp>降落</Chinesesimp>
             <Chinese>降落</Chinese>
         </Key>
@@ -104,7 +104,7 @@
             <Portuguese>Balanço da Mira</Portuguese>
             <Japanese>照準安定性</Japanese>
             <Korean>조준 반동</Korean>
-	    <Spanish>Movimiento al apuntar</Spanish>
+	        <Spanish>Movimiento al apuntar</Spanish>
             <Chinesesimp>瞄准晃动</Chinesesimp>
             <Chinese>瞄準晃動</Chinese>
         </Key>
@@ -119,7 +119,7 @@
             <Portuguese>Comandante</Portuguese>
             <Japanese>指揮能力</Japanese>
             <Korean>지휘</Korean>
-	    <Spanish>Comandante</Spanish>
+	        <Spanish>Comandante</Spanish>
             <Chinesesimp>指挥能力</Chinesesimp>
             <Chinese>指揮能力</Chinese>
         </Key>
@@ -134,7 +134,7 @@
             <Portuguese>Coragem</Portuguese>
             <Japanese>度胸</Japanese>
             <Korean>용기</Korean>
-	    <Spanish>Coraje</Spanish>
+	        <Spanish>Coraje</Spanish>
             <Chinesesimp>勇气</Chinesesimp>
             <Chinese>勇氣</Chinese>
         </Key>
@@ -148,7 +148,7 @@
             <Japanese>探知距離</Japanese>
             <Korean>색적 거리</Korean>
             <Polish>Odległość Spottingu</Polish>
-	    <Spanish>Distancia de localización</Spanish>
+	        <Spanish>Distancia de localización</Spanish>
             <Chinesesimp>发现距离</Chinesesimp>
             <Chinese>發現距離</Chinese>
         </Key>
@@ -162,7 +162,7 @@
             <Japanese>探知速度</Japanese>
             <Korean>탐지 속도</Korean>
             <Polish>Prędkość spottingu</Polish>
-	    <Spanish>Velocidad de detección</Spanish>
+	        <Spanish>Velocidad de detección</Spanish>
             <Chinesesimp>发现速度</Chinesesimp>
             <Chinese>發現速度</Chinese>
         </Key>
@@ -177,7 +177,7 @@
             <Portuguese>Velocidade de Recarga</Portuguese>
             <Japanese>リロード速度</Japanese>
             <Korean>재장전 속도</Korean>
-	    <Spanish>Velocidad de recarga</Spanish>
+	        <Spanish>Velocidad de recarga</Spanish>
             <Chinesesimp>换弹速度</Chinesesimp>
             <Chinese>換彈速度</Chinese>
         </Key>
@@ -200,7 +200,7 @@
             <Polish>Błąd w celowaniu</Polish>
             <Korean>조준 오류</Korean>
             <Japanese>照準エラー</Japanese>
-	    <Spanish>Error al apuntar</Spanish>
+	        <Spanish>Error al apuntar</Spanish>
             <Chinesesimp>瞄准误差</Chinesesimp>
             <Chinese>瞄準誤差</Chinese>
         </Key>
@@ -210,7 +210,7 @@
             <German>Animationsänderung</German>
             <Polish>Zmiana animacji</Polish>
             <Japanese>アニメーション変更</Japanese>
-	    <Spanish>Cambio de animación</Spanish>
+	        <Spanish>Cambio de animación</Spanish>
             <Chinesesimp>动画变化</Chinesesimp>
             <Chinese></Chinese>
         </Key>
@@ -222,7 +222,7 @@
             <Korean>자동 전투</Korean>
             <Polish>Automatyczna walka</Polish>
             <Japanese>自動戦闘</Japanese>
-	    <Spanish>Combate automático</Spanish>
+	        <Spanish>Combate automático</Spanish>
             <Chinesesimp>自动作战</Chinesesimp>
             <Chinese>自動作戰</Chinese>
         </Key>
@@ -234,7 +234,7 @@
             <Polish>Automatyczne namierzanie</Polish>
             <Korean>자동 조준</Korean>
             <Japanese>自動捕捉</Japanese>
-	    <Spanish>Objetivo automático</Spanish>
+	        <Spanish>Objetivo automático</Spanish>
             <Chinesesimp>自动寻找目标</Chinesesimp>
             <Chinese>自動尋找目標</Chinese>
         </Key>
@@ -246,7 +246,7 @@
             <Polish>Sprawdź Widoczne</Polish>
             <Korean>표시 확인</Korean>
             <Japanese>射線権威</Japanese>
-	    <Spanish>Verificar visible</Spanish>
+	        <Spanish>Verificar visible</Spanish>
             <Chinesesimp>检查可见性</Chinesesimp>
             <Chinese>檢查可見性</Chinese>
         </Key>
@@ -269,7 +269,7 @@
             <German>FSM</German>
             <Korean>유한 상태 기계</Korean>
             <Japanese>FSM</Japanese>
-	    <Spanish>FSM</Spanish>
+	        <Spanish>FSM</Spanish>
             <Chinesesimp>FSM</Chinesesimp>
             <Chinese>FSM</Chinese>
         </Key>
@@ -280,7 +280,7 @@
             <Polish>Światła (Pojazd)</Polish>
             <Korean>조명 (차량)</Korean>
             <Japanese>ライト (車両)</Japanese>
-	    <Spanish>Luces (Vehículo)</Spanish>
+	        <Spanish>Luces (Vehículo)</Spanish>
             <Chinesesimp>灯光（车辆）</Chinesesimp>
             <Chinese>燈光（車輛）</Chinese>
         </Key>
@@ -292,7 +292,7 @@
             <Polish>Wykrywanie Min</Polish>
             <Korean>광산 탐지</Korean>
             <Japanese>地雷探知</Japanese>
-	    <Spanish>Detector de minas</Spanish>
+	        <Spanish>Detector de minas</Spanish>
             <Chinesesimp>探测地雷</Chinesesimp>
             <Chinese>探測地雷</Chinese>
         </Key>
@@ -304,7 +304,7 @@
             <Polish>Rusz</Polish>
             <Korean>이동</Korean>
             <Japanese>移動</Japanese>
-	    <Spanish>Moverse</Spanish>
+	        <Spanish>Moverse</Spanish>
             <Chinesesimp>移动</Chinesesimp>
             <Chinese>移動</Chinese>
         </Key>
@@ -315,7 +315,7 @@
             <Polish>Noktowizja</Polish>
             <Korean>야간 투시</Korean>
             <Japanese>暗視装置</Japanese>
-	    <Spanish>Vision nocturna</Spanish>
+	        <Spanish>Vision nocturna</Spanish>
             <Chinesesimp>夜视仪</Chinesesimp>
             <Chinese>夜視儀</Chinese>
         </Key>
@@ -337,7 +337,7 @@
             <Polish>Protokół radiowy</Polish>
             <Korean>무선 프로토콜</Korean>
             <Japanese>無線プロトコル</Japanese>
-	    <Spanish>Protocolo de radio</Spanish>
+	        <Spanish>Protocolo de radio</Spanish>
             <Chinesesimp>无线电通讯协议</Chinesesimp>
             <Chinese>無線電通訊協議</Chinese>
         </Key>
@@ -349,7 +349,7 @@
             <Korean>제압</Korean>
             <Polish>Przygwożdżenie</Polish>
             <Japanese>制圧射撃</Japanese>
-	    <Spanish>Supresión</Spanish>
+	        <Spanish>Supresión</Spanish>
             <Chinesesimp>射击压制</Chinesesimp>
             <Chinese>射擊壓制</Chinese>
         </Key>
@@ -372,7 +372,7 @@
             <Polish>Zmiana drużyny</Polish>
             <Korean>팀 변경</Korean>
             <Japanese>チーム切り替え</Japanese>
-	    <Spanish>Cambio de equipo</Spanish>
+	        <Spanish>Cambio de equipo</Spanish>
             <Chinesesimp>小队切换</Chinesesimp>
             <Chinese>小隊切換</Chinese>
         </Key>
@@ -383,7 +383,7 @@
             <Polish>Celowanie Bronią</Polish>
             <Korean>무기 조준</Korean>
             <Japanese>武器照準</Japanese>
-	    <Spanish>Punteria del arma</Spanish>
+	        <Spanish>Punteria del arma</Spanish>
             <Chinesesimp>武器瞄准</Chinesesimp>
             <Chinese>武器瞄準</Chinese>
         </Key>
