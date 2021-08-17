@@ -1106,14 +1106,14 @@
             <English>Scale Object</English>
             <French>Redimensionner Objet</French>
             <German>Objekt skalieren</German>
-	        <Chinesesimp>缩放物体</Chinesesimp>
+	    <Chinesesimp>缩放物体</Chinesesimp>
             <Chinese>縮放物體</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ScaleObject_Tooltip">
             <English>Scale the object by this factor relative to the original model.</English>
             <French>Redimensionner l'objet par ce facteur en relation du modèle original.</French>
             <German>Skaliere das Objekt um diesen Faktor relativ zum originalen Modell.</German>
-	        <Chinesesimp>相对于原始模型，用此功能缩放物体。</Chinesesimp>
+	    <Chinesesimp>相对于原始模型，用此功能缩放物体。</Chinesesimp>
             <Chinese>相對於原始模型，用此功能縮放物體。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleChatter">
@@ -2674,19 +2674,19 @@
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_BurstDelay">
             <English>Burst Delay</English>
-	        <German>Verzögerung zwischen Feuerstößen</German>
+            <German>Verzögerung zwischen Feuerstößen</German>
             <Chinesesimp>火灾爆炸间的延时</Chinesesimp>
             <Chinese>火災爆炸間的延時</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_BurstDelay_Tooltip">
             <English>The delay, in seconds, between bursts of tracers.\nSelected randomly in a range from min to max, gravitating towards mid.</English>
-	        <German>Verzögerung zwischen Feuerstößen in Sekunden.\nWird zufällig aus einer Verteilung gewählt mit dem spezifizierten Minimalwert, Maximalwert und Mittelwert.</German>
+            <German>Verzögerung zwischen Feuerstößen in Sekunden.\nWird zufällig aus einer Verteilung gewählt mit dem spezifizierten Minimalwert, Maximalwert und Mittelwert.</German>
             <Chinesesimp>曳光弹发射间隔的延时，以秒为单位。\n从最小到最大的范围内随机选择，倾向于中间得值。</Chinesesimp>
             <Chinese>曳光彈發射間隔的延時，以秒為單位。 \n從最小到最大的範圍內隨機選擇，傾向於中間得值。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_Dispersion">
             <English>Dispersion</English>
-	        <German>Zerstreuung</German>
+            <German>Zerstreuung</German>
             <Chinesesimp>散布</Chinesesimp>
             <Chinese>散佈</Chinese>
         </Key>
