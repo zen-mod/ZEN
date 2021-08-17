@@ -5,16 +5,22 @@
             <English>%1 Rounds</English>
             <Polish>%1 Naboi</Polish>
             <Japanese>%1 発</Japanese>
+            <Chinesesimp>%1 发</Chinesesimp>
+            <Chinese>%1 發</Chinese>
         </Key>
         <Key ID="STR_ZEN_Loadout_AmmoTooltip">
             <English>%1\n%2 Rounds\n%3</English>
             <Polish>%1\n%2 Naboi\n%3</Polish>
             <Japanese>%1\n%2 発\n%3</Japanese>
+            <Chinesesimp>%1\n%2 发\n%3</Chinesesimp>
+            <Chinese>%1\n%2 發\n%3</Chinese>
         </Key>
         <Key ID="STR_ZEN_Loadout_EditLoadout">
             <English>Edit Loadout (%1)</English>
             <Polish>Edytuj wyposażenie</Polish>
             <Japanese>装備を編集 (%1)</Japanese>
+            <Chinesesimp>编辑装备 (%1)</Chinesesimp>
+            <Chinese>編輯裝備 (%1)</Chinese>
         </Key>
     </Package>
 </Project>
