@@ -139,8 +139,8 @@
             <Korean>사격 &amp; 자유 사격 개시</Korean>
             <Polish>Ogien i samowolona inicjacja</Polish>
             <Japanese>随意射、命令時射撃</Japanese>
-            <Chinesesimp>随意开火 &amp; 随意反击</Chinesesimp>
-            <Chinese>隨意開火 &amp; 隨意反擊</Chinese>
+            <Chinesesimp>随意开火，随意反击</Chinesesimp>
+            <Chinese>隨意開火 ， 隨意反擊</Chinese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_FireArtillery">
             <English>Fire Artillery</English>
