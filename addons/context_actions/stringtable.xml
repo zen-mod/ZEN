@@ -10,6 +10,8 @@
             <Italian>Modifica Inventario</Italian>
             <Japanese>インベントリ編集</Japanese>
             <Korean>인벤토리 수정</Korean>
+            <Chinesesimp>编辑库存</Chinesesimp>
+            <Chinese>編輯庫存</Chinese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_TeleportPlayers">
             <English>Teleport Players</English>
@@ -20,6 +22,8 @@
             <Italian>Teletrasporta giocatore</Italian>
             <Japanese>プレイヤーのテレポート</Japanese>
             <Korean>플레이어 순간이동</Korean>
+            <Chinesesimp>传送玩家</Chinesesimp>
+            <Chinese>傳送玩家</Chinese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_TeleportZeus">
             <English>Teleport Zeus</English>
@@ -29,6 +33,8 @@
             <Italian>Teletrasporta Zeus</Italian>
             <Japanese>Zeus のテレポート</Japanese>
             <Korean>제우스 순간이동</Korean>
+            <Chinesesimp>传送宙斯</Chinesesimp>
+            <Chinese>傳送宙斯</Chinese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_VehicleLogistics">
             <English>Vehicle Logistics</English>
@@ -38,6 +44,8 @@
             <Italian>Logistica dei veicoli</Italian>
             <Japanese>車両ロジスティクス</Japanese>
             <Korean>차량 화물</Korean>
+            <Chinesesimp>车辆后勤</Chinesesimp>
+            <Chinese>車輛後勤</Chinese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_VehicleAppearance">
             <English>Vehicle Appearance</English>
@@ -45,6 +53,8 @@
             <Korean>차량 외견</Korean>
             <Polish>Wygląd pojazdu</Polish>
             <Japanese>車両外観</Japanese>
+            <Chinesesimp>车辆外观</Chinesesimp>
+            <Chinese>車輛外觀</Chinese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_EditableObjects">
             <English>Editable Objects</English>
@@ -52,30 +62,40 @@
             <Korean>수정 가능한 아이템</Korean>
             <Polish>Obiekty z możliwością edytowania</Polish>
             <Japanese>編集可能オブジェクト</Japanese>
+            <Chinesesimp>可编辑对象</Chinesesimp>
+            <Chinese>可編輯對象</Chinese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_10m">
             <English>10 m</English>
             <German>10 m</German>
             <Korean>10 m</Korean>
             <Japanese>10 m</Japanese>
+            <Chinesesimp>10米</Chinesesimp>
+            <Chinese>10米</Chinese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_50m">
             <English>50 m</English>
             <German>50 m</German>
             <Korean>50 m</Korean>
             <Japanese>50 m</Japanese>
+            <Chinesesimp>50米</Chinesesimp>
+            <Chinese>50米</Chinese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_100m">
             <English>100 m</English>
             <German>100 m</German>
             <Korean>100 m</Korean>
             <Japanese>100 m</Japanese>
+            <Chinesesimp>100米</Chinesesimp>
+            <Chinese>100米</Chinese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_250m">
             <English>250 m</English>
             <German>250 m</German>
             <Korean>250 m</Korean>
             <Japanese>250 m</Japanese>
+            <Chinesesimp>250米</Chinesesimp>
+            <Chinese>250米</Chinese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_HoldFire">
             <English>Hold Fire</English>
@@ -83,6 +103,8 @@
             <Korean>사격 중지</Korean>
             <Polish>Wstrzymaj Ogień</Polish>
             <Japanese>発砲禁止</Japanese>
+            <Chinesesimp>停火</Chinesesimp>
+            <Chinese>停火</Chinese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_HoldFireDefend">
             <English>Hold Fire, Defend Only</English>
@@ -90,6 +112,8 @@
             <Korean>사격 중지, 방어만 하십시오</Korean>
             <Polish>Wstrzymaj ogień, tylko obraniaj</Polish>
             <Japanese>発砲禁止、自衛のみ</Japanese>
+            <Chinesesimp>停火，仅防御</Chinesesimp>
+            <Chinese>停火，僅防禦</Chinese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_HoldFireEngage">
             <English>Hold Fire, Engage At Will</English>
@@ -97,6 +121,8 @@
             <Korean>사격 중지, 자유 사격 개시</Korean>
             <Polish>Wstrzymaj ogień, Inicjuj samowolnie</Polish>
             <Japanese>発砲禁止、命令時射撃</Japanese>
+            <Chinesesimp>停火，随意反击</Chinesesimp>
+            <Chinese>停火，隨意反擊</Chinese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_FireAtWill">
             <English>Fire At Will</English>
@@ -104,6 +130,8 @@
             <Korean>자유 사격 개시</Korean>
             <Polish>Otwórz ogień samowolnie</Polish>
             <Japanese>随意射</Japanese>
+            <Chinesesimp>随意开火</Chinesesimp>
+            <Chinese>隨意開火</Chinese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_FireAtWillEngage">
             <English>Fire &amp; Engage At Will</English>
@@ -111,24 +139,32 @@
             <Korean>사격 &amp; 자유 사격 개시</Korean>
             <Polish>Ogien i samowolona inicjacja</Polish>
             <Japanese>随意射、命令時射撃</Japanese>
+            <Chinesesimp>随意开火 &amp; 随意反击</Chinesesimp>
+            <Chinese>隨意開火 &amp; 隨意反擊</Chinese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_FireArtillery">
             <English>Fire Artillery</English>
             <Korean>포병 발사</Korean>
             <Polish>Ogień Artyleryjski</Polish>
             <Japanese>砲撃</Japanese>
+            <Chinesesimp>炮击</Chinesesimp>
+            <Chinese>砲擊</Chinese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_UnableToFire">
             <English>Unable To Fire</English>
             <Korean>사격 불가</Korean>
             <Polish>Otworzenie ognia niemożliwe</Polish>
             <Japanese>発砲付加</Japanese>
+            <Chinesesimp>无法开火</Chinesesimp>
+            <Chinese>無法開火</Chinese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_NotAllVehiclesInRange">
             <English>Not all vehicles are in range to fire</English>
             <Korean>차량이 사격할 수 있는 범위 내에 없습니다.</Korean>
             <Polish>Nie wszystkie pojazdy są w zasięgu do otwarcia ognia.</Polish>
             <Japanese>全車両が射程内に無い</Japanese>
+            <Chinesesimp>并非所有的车辆都在射程之内，无法开火</Chinesesimp>
+            <Chinese>並非所有的車輛都在射程之內，無法開火</Chinese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_Captives">
             <English>Captives</English>
