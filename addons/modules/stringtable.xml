@@ -1106,14 +1106,14 @@
             <English>Scale Object</English>
             <French>Redimensionner Objet</French>
             <German>Objekt skalieren</German>
-	    <Chinesesimp>缩放物体</Chinesesimp>
+	        <Chinesesimp>缩放物体</Chinesesimp>
             <Chinese>縮放物體</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ScaleObject_Tooltip">
             <English>Scale the object by this factor relative to the original model.</English>
             <French>Redimensionner l'objet par ce facteur en relation du modèle original.</French>
             <German>Skaliere das Objekt um diesen Faktor relativ zum originalen Modell.</German>
-	    <Chinesesimp>相对于原始模型，用此功能缩放物体。</Chinesesimp>
+	        <Chinesesimp>相对于原始模型，用此功能缩放物体。</Chinesesimp>
             <Chinese>相對於原始模型，用此功能縮放物體。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleChatter">
