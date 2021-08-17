@@ -4,262 +4,392 @@
         <Key ID="STR_ZEN_Tasks_ModulePosition">
             <English>Module Position</English>
             <Japanese>モジュール位置</Japanese>
+            <Chinesesimp>模块位置</Chinesesimp>
+            <Chinese>模塊位置</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_ModulePosition_Tooltip">
             <English>The task's position will be synchronized with the position of the module.</English>
             <Japanese>タスク位置は同期されたモジュールの位置に設定されます。</Japanese>
+            <Chinesesimp>该任务的位置将与模块的位置同步。</Chinesesimp>
+            <Chinese>該任務的位置將與模塊的位置同步。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_DestinationDisabled_Tooltip">
             <English>The task will not have position associated with it.</English>
             <Japanese>タスク位置はモジュールの位置に設定されません。</Japanese>
+            <Chinesesimp>该任务将不会有与之相关的位置。</Chinesesimp>
+            <Chinese>該任務將不會有與之相關的位置。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Type_Tooltip">
             <English>Sets the task's icon.</English>
             <Japanese>タスクアイコンを設定します。</Japanese>
+            <Chinesesimp>设置任务图标</Chinesesimp>
+            <Chinese>設置任務圖標</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_TitleDescription">
             <English>Title &amp; Description</English>
             <Japanese>タイトル &amp; 概要</Japanese>
+            <Chinesesimp>标题&amp;描述</Chinesesimp>
+            <Chinese>標題&amp;描述</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_TitleDescription_Tooltip">
             <English>The task's title and description. Task description can use tags supported by diary records.</English>
             <Japanese>タスクのタイトルと概要を設定できます。概要はダイアリーに表示されます。</Japanese>
+            <Chinesesimp>任务的标题和描述。任务描述可以使用日志记录所支持的标签。</Chinesesimp>
+            <Chinese>任務的標題和描述。任務描述可以使用日誌記錄所支持的標籤。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Default">
             <English>Default</English>
             <Japanese>標準</Japanese>
+            <Chinesesimp>默认</Chinesesimp>
+            <Chinese>默認</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Airdrop">
             <English>Airdrop</English>
             <Japanese>空中投下</Japanese>
+            <Chinesesimp>空降</Chinesesimp>
+            <Chinese>空降</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Armor">
             <English>Armor</English>
             <Japanese>機甲</Japanese>
+            <Chinesesimp>装甲</Chinesesimp>
+            <Chinese>裝甲</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Attack">
             <English>Attack</English>
             <Japanese>攻撃</Japanese>
+            <Chinesesimp>攻击</Chinesesimp>
+            <Chinese>攻擊</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Backpack">
             <English>Backpack</English>
             <Japanese>バックパック</Japanese>
+            <Chinesesimp>背包</Chinesesimp>
+            <Chinese>背包</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Boat">
             <English>Boat</English>
             <Japanese>ボート</Japanese>
+            <Chinesesimp>船只</Chinesesimp>
+            <Chinese>船隻</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Box">
             <English>Box</English>
             <Japanese>箱</Japanese>
+            <Chinesesimp>箱子</Chinesesimp>
+            <Chinese>箱子</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Car">
             <English>Car</English>
             <Japanese>車</Japanese>
+            <Chinesesimp>汽车</Chinesesimp>
+            <Chinese>汽車</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Container">
             <English>Container</English>
             <Japanese>コンテナ</Japanese>
+            <Chinesesimp>集装箱</Chinesesimp>
+            <Chinese>集裝箱</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Danger">
             <English>Danger</English>
             <Japanese>危険</Japanese>
+            <Chinesesimp>危险</Chinesesimp>
+            <Chinese>危險</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Defend">
             <English>Defend</English>
             <Japanese>防衛</Japanese>
+            <Chinesesimp>防御</Chinesesimp>
+            <Chinese>防禦</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Destroy">
             <English>Destroy</English>
             <Japanese>破壊</Japanese>
+            <Chinesesimp>摧毁</Chinesesimp>
+            <Chinese>摧毀</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Documents">
             <English>Documents</English>
             <Japanese>文章</Japanese>
+            <Chinesesimp>文件</Chinesesimp>
+            <Chinese>文件</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Download">
             <English>Download</English>
             <Japanese>ダウンロード</Japanese>
+            <Chinesesimp>下载</Chinesesimp>
+            <Chinese>下載</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Exit">
             <English>Exit</English>
             <Japanese>脱出</Japanese>
+            <Chinesesimp>退出</Chinesesimp>
+            <Chinese>退出</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Getin">
             <English>Get In</English>
             <Japanese>乗せる</Japanese>
+            <Chinesesimp>乘坐</Chinesesimp>
+            <Chinese>乘坐</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Getout">
             <English>Get Out</English>
             <Japanese>降ろす</Japanese>
+            <Chinesesimp>下车</Chinesesimp>
+            <Chinese>下車</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Heal">
             <English>Heal</English>
             <Japanese>治療</Japanese>
+            <Chinesesimp>治疗</Chinesesimp>
+            <Chinese>治療</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Heli">
             <English>Heli</English>
             <Japanese>ヘリ</Japanese>
+            <Chinesesimp>直升机</Chinesesimp>
+            <Chinese>直升機</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Help">
             <English>Help</English>
             <Japanese>ヘルプ</Japanese>
+            <Chinesesimp>帮助</Chinesesimp>
+            <Chinese>幫助</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Intel">
             <English>Intel</English>
             <Japanese>情報</Japanese>
+            <Chinesesimp>情报</Chinesesimp>
+            <Chinese>情報</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Interact">
             <English>Interact</English>
             <Japanese>会話</Japanese>
+            <Chinesesimp>互动</Chinesesimp>
+            <Chinese>互動</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Kill">
             <English>Kill</English>
             <Japanese>殺害</Japanese>
+            <Chinesesimp>杀死</Chinesesimp>
+            <Chinese>殺死</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Land">
             <English>Land</English>
             <Japanese>着陸</Japanese>
+            <Chinesesimp>着陆</Chinesesimp>
+            <Chinese>著陸</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Listen">
             <English>Listen</English>
             <Japanese>聴取</Japanese>
+            <Chinesesimp>听取</Chinesesimp>
+            <Chinese>聽取</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Map">
             <English>Map</English>
             <Japanese>地図</Japanese>
+            <Chinesesimp>地图</Chinesesimp>
+            <Chinese>地圖</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Meet">
             <English>Meet</English>
             <Japanese>合う</Japanese>
+            <Chinesesimp>会合</Chinesesimp>
+            <Chinese>會合</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Mine">
             <English>Mine</English>
             <Japanese>地雷</Japanese>
+            <Chinesesimp>地雷</Chinesesimp>
+            <Chinese>地雷</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Move">
             <English>Move</English>
             <Japanese>移動</Japanese>
+            <Chinesesimp>移动</Chinesesimp>
+            <Chinese>移動</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Move1">
             <English>Move 1</English>
             <Japanese>移動 1</Japanese>
+            <Chinesesimp>移动 1</Chinesesimp>
+            <Chinese>移動 1</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Move2">
             <English>Move 2</English>
             <Japanese>移動 2</Japanese>
+            <Chinesesimp>移动 2</Chinesesimp>
+            <Chinese>移動 2</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Move3">
             <English>Move 3</English>
             <Japanese>移動 3</Japanese>
+            <Chinesesimp>移动 3</Chinesesimp>
+            <Chinese>移動 3</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Move4">
             <English>Move 4</English>
             <Japanese>移動 4</Japanese>
+            <Chinesesimp>移动 4</Chinesesimp>
+            <Chinese>移動 4</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Move5">
             <English>Move 5</English>
             <Japanese>移動 5</Japanese>
+            <Chinesesimp>移动 5</Chinesesimp>
+            <Chinese>移動 5</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Navigate">
             <English>Navigate</English>
             <Japanese>案内</Japanese>
+            <Chinesesimp>导航</Chinesesimp>
+            <Chinese>導航</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Plane">
             <English>Plane</English>
             <Japanese>航空機</Japanese>
+            <Chinesesimp>飞机</Chinesesimp>
+            <Chinese>飛機</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Radio">
             <English>Radio</English>
             <Japanese>無線</Japanese>
+            <Chinesesimp>无线电</Chinesesimp>
+            <Chinese>無線電</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Rearm">
             <English>Rearm</English>
             <Japanese>再武装</Japanese>
+            <Chinesesimp>补充弹药</Chinesesimp>
+            <Chinese>補充彈藥</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Refuel">
             <English>Refuel</English>
             <Japanese>給油</Japanese>
+            <Chinesesimp>加油</Chinesesimp>
+            <Chinese>加油</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Repair">
             <English>Repair</English>
             <Japanese>修理</Japanese>
+            <Chinesesimp>维修</Chinesesimp>
+            <Chinese>維修</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Rifle">
             <English>Rifle</English>
             <Japanese>ライフル</Japanese>
+            <Chinesesimp>步枪</Chinesesimp>
+            <Chinese>步槍</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Run">
             <English>Run</English>
             <Japanese>走る</Japanese>
+            <Chinesesimp>跑</Chinesesimp>
+            <Chinese>跑</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Scout">
             <English>Scout</English>
             <Japanese>偵察</Japanese>
+            <Chinesesimp>侦查</Chinesesimp>
+            <Chinese>偵察</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Search">
             <English>Search</English>
             <Japanese>捜索</Japanese>
+            <Chinesesimp>搜索</Chinesesimp>
+            <Chinese>捜索</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Takeoff">
             <English>Takeoff</English>
             <Japanese>離陸</Japanese>
+            <Chinesesimp>起飞</Chinesesimp>
+            <Chinese>起飛</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Talk">
             <English>Talk</English>
             <Japanese>話す</Japanese>
+            <Chinesesimp>交谈</Chinesesimp>
+            <Chinese>交談</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Talk1">
             <English>Talk 1</English>
             <Japanese>話す 1</Japanese>
+            <Chinesesimp>交谈 1</Chinesesimp>
+            <Chinese>交談 1</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Talk2">
             <English>Talk 2</English>
             <Japanese>話す 2</Japanese>
+            <Chinesesimp>交谈 2</Chinesesimp>
+            <Chinese>交談 2</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Talk3">
             <English>Talk 3</English>
             <Japanese>話す 3</Japanese>
+            <Chinesesimp>交谈 3</Chinesesimp>
+            <Chinese>交談 3</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Talk4">
             <English>Talk 4</English>
             <Japanese>話す 4</Japanese>
+            <Chinesesimp>交谈 4</Chinesesimp>
+            <Chinese>交談 4</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Talk5">
             <English>Talk 5</English>
             <Japanese>話す 5</Japanese>
+            <Chinesesimp>交谈 5</Chinesesimp>
+            <Chinese>交談 5</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Target">
             <English>Target</English>
             <Japanese>目標</Japanese>
+            <Chinesesimp>目标</Chinesesimp>
+            <Chinese>目標</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Truck">
             <English>Truck</English>
             <Japanese>トラック</Japanese>
+            <Chinesesimp>卡车</Chinesesimp>
+            <Chinese>卡车</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Unknown">
             <English>Unknown</English>
             <Japanese>不明</Japanese>
+            <Chinesesimp>未知</Chinesesimp>
+            <Chinese>未知</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Upload">
             <English>Upload</English>
             <Japanese>アップロード</Japanese>
+            <Chinesesimp>上传</Chinesesimp>
+            <Chinese>上傳</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Use">
             <English>Use</English>
             <Japanese>使用</Japanese>
+            <Chinesesimp>使用</Chinesesimp>
+            <Chinese>使用</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Wait">
             <English>Wait</English>
             <Japanese>待機</Japanese>
+            <Chinesesimp>等待</Chinesesimp>
+            <Chinese>等待</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Walk">
             <English>Walk</English>
             <Japanese>歩く</Japanese>
+            <Chinesesimp>徒步</Chinesesimp>
+            <Chinese>徒步</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Whiteboard">
             <English>Whiteboard</English>
             <Japanese>ホワイトボード</Japanese>
+            <Chinesesimp>白板</Chinesesimp>
+            <Chinese>白板</Chinese>
         </Key>
     </Package>
 </Project>
