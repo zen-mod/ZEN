@@ -501,7 +501,7 @@
             <German>Das Flugzeug fliegt auf der angegebenen Höhe, außer es ist weniger als 10m über dem Boden, basierend auf der Meereshöhe (ASL).</German>
             <Japanese>航空機は常に一定の高度を飛ぶようになりますが、飛行高度が 10m 未満では地形追随します。ASL をベースとし、高度は海面からの高さになります。</Japanese>
             <Polish>Statek Powietrzny będzie podążał na tej samej wysokości, podążając za terenem jedynie w przypadku gdy znajdzie się mniej niż 10 metrów od powierzchni, bazując na wysokości nad poziomem morza (ASL).</Polish>
-             <Chinesesimp>飞机将在一个恒定的高度飞行，只有在距离地面不到10米的情况下才会跟随地形飞行。以海拔高度为基础，最终高度是模块的海拔高度加上给定的高度。</Chinesesimp>
+            <Chinesesimp>飞机将在一个恒定的高度飞行，只有在距离地面不到10米的情况下才会跟随地形飞行。以海拔高度为基础，最终高度是模块的海拔高度加上给定的高度。</Chinesesimp>
             <Chinese>飛機將在一個恆定的高度飛行，只有在距離地面不到10米的情況下才會跟隨地形飛行。以海拔高度為基礎，最終高度是模塊的海拔高度加上給定的高度。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Distance">
@@ -1106,14 +1106,14 @@
             <English>Scale Object</English>
             <French>Redimensionner Objet</French>
             <German>Objekt skalieren</German>
-	    <Chinesesimp>缩放物体</Chinesesimp>
+	        <Chinesesimp>缩放物体</Chinesesimp>
             <Chinese>縮放物體</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ScaleObject_Tooltip">
             <English>Scale the object by this factor relative to the original model.</English>
             <French>Redimensionner l'objet par ce facteur en relation du modèle original.</French>
             <German>Skaliere das Objekt um diesen Faktor relativ zum originalen Modell.</German>
-	    <Chinesesimp>相对于原始模型，用此功能缩放物体。</Chinesesimp>
+	        <Chinesesimp>相对于原始模型，用此功能缩放物体。</Chinesesimp>
             <Chinese>相對於原始模型，用此功能縮放物體。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleChatter">
@@ -2674,19 +2674,19 @@
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_BurstDelay">
             <English>Burst Delay</English>
-	    <German>Verzögerung zwischen Feuerstößen</German>
+	        <German>Verzögerung zwischen Feuerstößen</German>
             <Chinesesimp>火灾爆炸间的延时</Chinesesimp>
             <Chinese>火災爆炸間的延時</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_BurstDelay_Tooltip">
             <English>The delay, in seconds, between bursts of tracers.\nSelected randomly in a range from min to max, gravitating towards mid.</English>
-	    <German>Verzögerung zwischen Feuerstößen in Sekunden.\nWird zufällig aus einer Verteilung gewählt mit dem spezifizierten Minimalwert, Maximalwert und Mittelwert.</German>
+	        <German>Verzögerung zwischen Feuerstößen in Sekunden.\nWird zufällig aus einer Verteilung gewählt mit dem spezifizierten Minimalwert, Maximalwert und Mittelwert.</German>
             <Chinesesimp>曳光弹发射间隔的延时，以秒为单位。\n从最小到最大的范围内随机选择，倾向于中间得值。</Chinesesimp>
             <Chinese>曳光彈發射間隔的延時，以秒為單位。 \n從最小到最大的範圍內隨機選擇，傾向於中間得值。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_Dispersion">
             <English>Dispersion</English>
-	    <German>Zerstreuung</German>
+	        <German>Zerstreuung</German>
             <Chinesesimp>散布</Chinesesimp>
             <Chinese>散佈</Chinese>
         </Key>
