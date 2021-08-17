@@ -34,7 +34,7 @@
             <German>Titel &amp; Beschreibung</German>
             <Japanese>タイトル &amp; 概要</Japanese>
             <Chinesesimp>标题与描述</Chinesesimp>
-            <Chinese>標題与描述</Chinese>
+            <Chinese>標題與描述</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_TitleDescription_Tooltip">
             <English>The task's title and description. Task description supports XML-like tags (see structured text syntax for SQF).</English>
