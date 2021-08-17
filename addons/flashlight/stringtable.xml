@@ -5,11 +5,15 @@
             <English>Toggle Flashlight</English>
             <Polish>Przełącz latarke</Polish>
             <Japanese>フラッシュライト切り替え</Japanese>
+            <Chinesesimp>切换手电筒</Chinesesimp>
+            <Chinese>切換手電筒</Chinese>
         </Key>
         <Key ID="STR_ZEN_Flashlight_Toggle_Description">
             <English>Toggles the state of the Zeus camera flashlight.</English>
             <Polish>Włącza/Wyłącza latarke Zeusa.</Polish>
             <Japanese>Zeus カメラのフラッシュライトを切り替えします。</Japanese>
+            <Chinesesimp>切换Zeus摄像机手电筒。</Chinesesimp>
+            <Chinese>切換Zeus攝像機手電筒。</Chinese>
         </Key>
     </Package>
 </Project>
