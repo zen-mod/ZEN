@@ -290,7 +290,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_Cursor">
             <English>Cursor</English>
-	        <French>Curseur</French>
+            <French>Curseur</French>
             <German>Cursor</German>
             <Chinesesimp>鼠标</Chinesesimp>
             <Chinese>鼠標</Chinese>
@@ -561,7 +561,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_Amount">
             <English>Amount</English>
-	        <French>Quantité</French>
+            <French>Quantité</French>
             <German>Menge</German>
             <Chinesesimp>合计</Chinesesimp>
             <Chinese>合計</Chinese>
@@ -619,8 +619,8 @@
             <English>Scale</English>
             <French>Redimensionnement</French>
             <German>Skalierung</German>
-	        <Chinesesimp>缩放</Chinesesimp>
-	        <Chinese>縮放</Chinese>
+            <Chinesesimp>缩放</Chinesesimp>
+            <Chinese>缩放</Chinese>
         </Key>
         <Key ID="STR_ZEN_Common_UncheckAll">
             <English>Uncheck All</English>
