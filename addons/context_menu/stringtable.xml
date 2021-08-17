@@ -54,13 +54,13 @@
         </Key>
         <Key ID="STR_ZEN_Context_Menu_OverrideWaypoints">
             <English>Override Waypoint Placement</English>
-	        <German>Überschreibe Platzierung von Wegpunkten</German>
+            <German>Überschreibe Platzierung von Wegpunkten</German>
             <Chinesesimp>覆盖路径点位置</Chinesesimp>
             <Chinese>覆蓋路徑點位置</Chinese>
         </Key>
         <Key ID="STR_ZEN_Context_Menu_OverrideWaypoints_Description">
             <English>Allows for the context menu to be opened by right clicking when waypoint placement would normally occur.\nRequires holding the SHIFT key in order to place waypoints.</English>
-	        <German>Erlaubt es das Kontextmenu über Rechtsklick zu öffnen, wenn normalerweise ein Wegpunkt platziert wird.\nPlatzierung von Wegpunkten benötigt stattdessen zusätzlich die Umschalttaste.</German>
+            <German>Erlaubt es das Kontextmenu über Rechtsklick zu öffnen, wenn normalerweise ein Wegpunkt platziert wird.\nPlatzierung von Wegpunkten benötigt stattdessen zusätzlich die Umschalttaste.</German>
             <Chinesesimp>允许在通常情况下，在放置路径点时通过右键打开滚轮菜单。\n需要按住SHIFT键来放置路径点。</Chinesesimp>
             <Chinese>允許在通常情況下，在放置路徑點時通過右鍵打開滾輪菜單。 \n需要按住SHIFT鍵來放置路徑點。</Chinese>
         </Key>
