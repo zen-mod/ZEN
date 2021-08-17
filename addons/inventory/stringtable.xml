@@ -6,27 +6,39 @@
             <German>Inventar bearbeiten (%1)</German>
             <Polish>Edytuj Wyposażenie (%1)</Polish>
             <Japanese>インベントリ編集 (%1)</Japanese>
+            <Chinesesimp>编辑库存(%1)</Chinesesimp>
+            <Chinese>編輯庫存(%1)</Chinese>
         </Key>
         <Key ID="STR_ZEN_Inventory_Search_Tooltip">
             <English>Search the items list. Use 'class ' prefix to search by class name (e.g. 'class FirstAidKit').</English>
             <Japanese>アイテム一覧から検索します。'class ' を使用し、クラスネームで検索できます。(例: 'class FirstAidKit')</Japanese>
+            <Chinesesimp>搜索项目列表。使用'class'前缀按类名搜索（例如，'class FirstAidKit'）。</Chinesesimp>
+            <Chinese>搜索項目列表。 使用“class”前綴按類名搜索（例如'class FirstAidKit'）。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Inventory_Reset_Tooltip">
             <English>Reset to default inventory.</English>
             <Polish>Resetuj do domyślnego wyposażenia.</Polish>
             <Japanese>標準インベントリへ初期化します。</Japanese>
+            <Chinesesimp>重置为默认库存。</Chinesesimp>
+            <Chinese>重置為默認庫存。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Inventory_Clear_Tooltip">
             <English>Clear items from current category.</English>
             <Japanese>現在のカテゴリからアイテムを削除します。</Japanese>
+            <Chinesesimp>清除当前类名中的项目。</Chinesesimp>
+            <Chinese>清除當前類名中的項目。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Inventory_Weapon_Tooltip">
             <English>View weapon specific items.</English>
             <Japanese>武器固有のアイテムを見ます。</Japanese>
+            <Chinesesimp>查看武器的特定项目。</Chinesesimp>
+            <Chinese>查看武器的特定項目。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Inventory_Close_Tooltip">
             <English>Close weapon specific items.</English>
             <Japanese>武器固有アイテムを閉じます。</Japanese>
+            <Chinesesimp>关闭武器的特定项目。</Chinesesimp>
+            <Chinese>關閉武器的特定項目。</Chinese>
         </Key>
     </Package>
 </Project>
