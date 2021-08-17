@@ -5,11 +5,15 @@
             <English>Pylons</English>
             <German>Pylonen</German>
             <Japanese>パイロン</Japanese>
+            <Chinesesimp>挂架</Chinesesimp>
+            <Chinese>掛架</Chinese>
         </Key>
         <Key ID="STR_ZEN_Pylons_Title">
             <English>Configure Pylons (%1)</English>
             <German>Bearbeite Pylonen (%1)</German>
             <Japanese>パイロンを設定 (%1)</Japanese>
+            <Chinesesimp>设置挂架 (%1)</Chinesesimp>
+            <Chinese>設置掛架 (%1)</Chinese>
         </Key>
     </Package>
 </Project>
