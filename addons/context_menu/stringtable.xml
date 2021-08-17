@@ -54,7 +54,7 @@
         </Key>
         <Key ID="STR_ZEN_Context_Menu_OverrideWaypoints">
             <English>Override Waypoint Placement</English>
-	    <German>Überschreibe Platzierung von Wegpunkten</German>
+	        <German>Überschreibe Platzierung von Wegpunkten</German>
             <Chinesesimp>覆盖路径点位置</Chinesesimp>
             <Chinese>覆蓋路徑點位置</Chinese>
         </Key>
