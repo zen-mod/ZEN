@@ -10,7 +10,7 @@
         <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_Description">
             <English>Controls where the camera is positioned after exiting remote control.\nIf the unit is deleted while remote controlling, the camera's position is unchanged.</English>
             <German>Steuert wo die Kamera positioniert wird nach dem Verlassen der Fernsteuerung.\nDie Position der Kamera bleibt unverändert, falls die Einheit gelöscht wurde während der Fernsteuerung.</German>
-	    <Chinesesimp>控制退出远程控制后摄像机的位置。\n如果在远程控制时删除该单位，摄像机的位置将保持不变。</Chinesesimp>
+	        <Chinesesimp>控制退出远程控制后摄像机的位置。\n如果在远程控制时删除该单位，摄像机的位置将保持不变。</Chinesesimp>
             <Chinese>控制退出遠程控制後攝像機的位置。\n如果在遠程控制時刪除該單位，攝像機的位置將保持不變。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_Unchanged_Description">
