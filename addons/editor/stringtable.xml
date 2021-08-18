@@ -287,6 +287,7 @@
         </Key>
         <Key ID="STR_ZEN_Editor_OrientTerrainNormal_Description">
             <English>Orients all selected objects to match the terrain slope at their position.</English>
+            <German>Orientiert alle ausgewählten Objekte der Steigung an ihrer Position.</German>
             <Polish>Orientuje wszystkie wybrane obiekty aby ustawiły się względem terenu na swojej pozycji.</Polish>
             <Japanese>選択した全てのオブジェクトを地形に合わせます。</Japanese>
             <Chinesesimp>调整所有被选中的物体的方向，使之与它们位置上的地形坡度一致。</Chinesesimp>
