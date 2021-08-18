@@ -33,8 +33,8 @@
             <English>Title &amp; Description</English>
             <German>Titel &amp; Beschreibung</German>
             <Japanese>タイトル &amp; 概要</Japanese>
-            <Chinesesimp>标题与描述</Chinesesimp>
-            <Chinese>標題與描述</Chinese>
+            <Chinesesimp>标题&amp;描述</Chinesesimp>
+            <Chinese>標題&amp;描述</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_TitleDescription_Tooltip">
             <English>The task's title and description. Task description supports XML-like tags (see structured text syntax for SQF).</English>
@@ -249,7 +249,7 @@
             <French>Parler</French>
             <German>Reden</German>
             <Chinese>談話</Chinese>
-	        <Chinesesimp>交谈</Chinesesimp>
+            <Chinesesimp>交谈</Chinesesimp>
             <Spanish>Hablar</Spanish>
             <Italian>Parla</Italian>
             <Polish>Rozmawiaj</Polish>
