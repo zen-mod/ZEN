@@ -5,55 +5,75 @@
             <English>Module Position</English>
             <German>Modulposition</German>
             <Japanese>モジュール位置</Japanese>
+            <Chinesesimp>模块位置</Chinesesimp>
+            <Chinese>模塊位置</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_ModulePosition_Tooltip">
             <English>The task's position will be synchronized with the position of the module.</English>
             <German>Die Position der Aufgabe wird mit der Position des Moduls synchronisiert.</German>
             <Japanese>タスク位置は同期されたモジュールの位置に設定されます。</Japanese>
+            <Chinesesimp>该任务的位置将与模块的位置同步。</Chinesesimp>
+            <Chinese>該任務的位置將與模塊的位置同步。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_DestinationDisabled_Tooltip">
             <English>The task will not have position associated with it.</English>
             <German>Die Aufgabe wird nicht mit einer Position assoziiert sein.</German>
             <Japanese>タスク位置はモジュールの位置に設定されません。</Japanese>
+            <Chinesesimp>该任务将不会有与之相关的位置。</Chinesesimp>
+            <Chinese>該任務將不會有與之相關的位置。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Type_Tooltip">
             <English>Sets the task's icon.</English>
             <German>Legt das Icon für die Aufgabe fest.</German>
             <Japanese>タスクアイコンを設定します。</Japanese>
+            <Chinesesimp>设置任务图标</Chinesesimp>
+            <Chinese>設置任務圖標</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_TitleDescription">
             <English>Title &amp; Description</English>
             <German>Titel &amp; Beschreibung</German>
             <Japanese>タイトル &amp; 概要</Japanese>
+            <Chinesesimp>标题与描述</Chinesesimp>
+            <Chinese>標題與描述</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_TitleDescription_Tooltip">
             <English>The task's title and description. Task description supports XML-like tags (see structured text syntax for SQF).</English>
             <German>Der Titel und die Beschreibung der Aufgabe. Die Beschreibung unterstützt XML-ähnliche Tags (siehe "structured text" Syntax für SQF).</German>
             <Japanese>タスクのタイトルと概要を設定できます。概要はダイアリーに表示されます。</Japanese>
+            <Chinesesimp>任务的标题和描述。任务描述可以使用日志记录所支持的标签。</Chinesesimp>
+            <Chinese>任務的標題和描述。任務描述可以使用日誌記錄所支持的標籤。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Default">
             <English>Default</English>
             <French>Défaut</French>
             <German>Standard</German>
             <Japanese>標準</Japanese>
+            <Chinesesimp>默认</Chinesesimp>
+            <Chinese>默認</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Airdrop">
             <English>Airdrop</English>
             <French>Largage aérien</French>
             <German>Fallschirmabwurf</German>
             <Japanese>空中投下</Japanese>
+            <Chinesesimp>空降</Chinesesimp>
+            <Chinese>空降</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Box">
             <English>Box</English>
             <French>Caisse</French>
             <German>Kiste</German>
             <Japanese>箱</Japanese>
+            <Chinesesimp>箱子</Chinesesimp>
+            <Chinese>箱子</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Container">
             <English>Container</English>
             <French>Conteneur</French>
             <German>Container</German>
             <Japanese>コンテナ</Japanese>
+            <Chinesesimp>集装箱</Chinesesimp>
+            <Chinese>集裝箱</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Danger">
             <English>Danger</English>
@@ -76,18 +96,24 @@
             <French>Sortir</French>
             <German>Verlassen</German>
             <Japanese>脱出</Japanese>
+            <Chinesesimp>退出</Chinesesimp>
+            <Chinese>退出</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Kill">
             <English>Kill</English>
             <French>Tuer</French>
             <German>Töten</German>
             <Japanese>殺害</Japanese>
+            <Chinesesimp>杀死</Chinesesimp>
+            <Chinese>殺死</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Listen">
             <English>Listen</English>
             <French>Écouter</French>
             <German>Zuhören</German>
             <Japanese>聴取</Japanese>
+            <Chinesesimp>听取</Chinesesimp>
+            <Chinese>聽取</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Meet">
             <English>Meet</English>
@@ -101,7 +127,7 @@
             <Czech>Setkání</Czech>
             <Portuguese>Encontrar</Portuguese>
             <Korean>만나기</Korean>
-            <Chinesesimp>会面</Chinesesimp>
+            <Chinesesimp>会合</Chinesesimp>
             <Japanese>接触</Japanese>
             <Turkish>Buluş</Turkish>
         </Key>
@@ -190,24 +216,32 @@
             <French>Naviguer</French>
             <German>Navigieren</German>
             <Japanese>案内</Japanese>
+            <Chinesesimp>导航</Chinesesimp>
+            <Chinese>導航</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Run">
             <English>Run</English>
             <French>Courir</French>
             <German>Rennen</German>
             <Japanese>走る</Japanese>
+            <Chinesesimp>跑</Chinesesimp>
+            <Chinese>跑</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Scout">
             <English>Scout</English>
             <French>Reconnaitre</French>
             <German>Auskundschaften</German>
             <Japanese>偵察</Japanese>
+            <Chinesesimp>侦查</Chinesesimp>
+            <Chinese>偵察</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Search">
             <English>Search</English>
             <French>Chercher</French>
             <German>Suchen</German>
             <Japanese>捜索</Japanese>
+            <Chinesesimp>搜索</Chinesesimp>
+            <Chinese>捜索</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Talk">
             <English>Talk</English>
@@ -215,13 +249,13 @@
             <French>Parler</French>
             <German>Reden</German>
             <Chinese>談話</Chinese>
+            <Chinesesimp>交谈</Chinesesimp>
             <Spanish>Hablar</Spanish>
             <Italian>Parla</Italian>
             <Polish>Rozmawiaj</Polish>
             <Czech>Rozhovor</Czech>
             <Portuguese>Conversar</Portuguese>
             <Korean>대화</Korean>
-            <Chinesesimp>谈话</Chinesesimp>
             <Japanese>会話</Japanese>
             <Turkish>Konuş</Turkish>
         </Key>
@@ -237,9 +271,9 @@
             <Czech>Rozhovor 1</Czech>
             <Portuguese>Conversar 1</Portuguese>
             <Korean>대화 1</Korean>
-            <Chinesesimp>谈话 1</Chinesesimp>
             <Japanese>会話 1</Japanese>
             <Turkish>Konuş 1</Turkish>
+            <Chinesesimp>交谈 1</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Tasks_Talk2">
             <English>Talk 2</English>
@@ -253,7 +287,7 @@
             <Czech>Rozhovor 2</Czech>
             <Portuguese>Conversar 2</Portuguese>
             <Korean>대화 2</Korean>
-            <Chinesesimp>谈话 2</Chinesesimp>
+            <Chinesesimp>交谈 2</Chinesesimp>
             <Japanese>会話 2</Japanese>
             <Turkish>Konuş 2</Turkish>
         </Key>
@@ -269,7 +303,7 @@
             <Czech>Rozhovor 3</Czech>
             <Portuguese>Conversar 3</Portuguese>
             <Korean>대화 3</Korean>
-            <Chinesesimp>谈话 3</Chinesesimp>
+            <Chinesesimp>交谈 3</Chinesesimp>
             <Japanese>会話 3</Japanese>
             <Turkish>Konuş 3</Turkish>
         </Key>
@@ -285,7 +319,7 @@
             <Czech>Rozhovor 4</Czech>
             <Portuguese>Conversar 4</Portuguese>
             <Korean>대화 4</Korean>
-            <Chinesesimp>谈话 4</Chinesesimp>
+            <Chinesesimp>交谈 4</Chinesesimp>
             <Japanese>会話 4</Japanese>
             <Turkish>Konuş 4</Turkish>
         </Key>
@@ -301,7 +335,7 @@
             <Czech>Rozhovor 5</Czech>
             <Portuguese>Conversar 5</Portuguese>
             <Korean>대화 5</Korean>
-            <Chinesesimp>谈话 5</Chinesesimp>
+            <Chinesesimp>交谈 5</Chinesesimp>
             <Japanese>会話 5</Japanese>
             <Turkish>Konuş 5</Turkish>
         </Key>
@@ -326,12 +360,16 @@
             <French>Utiliser</French>
             <German>Benutzen</German>
             <Japanese>使用</Japanese>
+            <Chinesesimp>使用</Chinesesimp>
+            <Chinese>使用</Chinese>
         </Key>
         <Key ID="STR_ZEN_Tasks_Whiteboard">
             <English>Whiteboard</English>
             <French>Tableau blanc</French>
             <German>Schreibtafel</German>
             <Japanese>ホワイトボード</Japanese>
+            <Chinesesimp>白板</Chinesesimp>
+            <Chinese>白板</Chinese>
         </Key>
     </Package>
 </Project>
