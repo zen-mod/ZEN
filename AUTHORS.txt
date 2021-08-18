@@ -8,7 +8,7 @@
 # CORE TEAM
 mharis001 <mhariszakar@gmail.com>
 CreepPork <github@garkaklis.com>
-oOKexOo <rc_mapper@yahoo.com>
+Kexanone <kexanone@gmail.com>
 NeilZar
 Ampersand
 
@@ -16,22 +16,39 @@ Ampersand
 3Mydlo3
 654wak654
 Alganthe
+astralkr
 BaerMitUmlaut
 Beaumont
-Brett
+bovine3dom
+BrettMayson
 bux
+CesarStef
+classicarma
 commy2
-Dedmen
+dedmen
+DeliciousJaffa
+diaverso
 diwako
 Dystopian
 Eclipser
+ffredyk
 GitHawk
 Glowbal
-Goleedev
+goleedev
+hercegtomas
+HubertStefanski
 Jonpas
 KoffeinFlummi
+lincolncosta
+Maciox55
+MattNot
+mihuan-0
 Moerderhoschi
 PabstMirror
+Ryan180602
+shukari
 SilentSpike
+Toinane
 Tuupertunut
 veteran29
+vivngh
