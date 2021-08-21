@@ -1303,6 +1303,18 @@
             <Chinesesimp>将修改小体的行为、速度模式和队形。</Chinesesimp>
             <Chinese>將修改小體的行為、速度模式和隊形。</Chinese>
         </Key>
+        <Key ID="STR_ZEN_Modules_Projectiles">
+            <English>Projectiles</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleThrowSelect">
+            <English>Throw Select</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleFireGL">
+            <English>Fire GL</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleFireLauncher">
+            <English>Fire Launcher</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleSideRelations">
             <English>Side Relations</English>
             <Russian>Отношения сторон</Russian>

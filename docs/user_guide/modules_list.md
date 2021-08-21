@@ -147,6 +147,14 @@ When used in JIP mode, the module can be deleted to stop execution on new JIP cl
 
 Outputs SQF code that can be executed to restore the current mission.
 
+## Fire GL
+
+Orders AI with UGL to fire the currently loaded round at the target position.
+
+## Fire Launcher
+
+Orders AI with launcher to fire the currently loaded round at the target position.
+
 ## Fly Height
 
 Sets the flying altitude of the attached aircraft relative to the ground.
@@ -252,6 +260,10 @@ The range of Auto Seek is based on the unit's spot distance skill with a minimum
 
 Teleports players from the selected side, group(s), or individual player(s) to the module's position.
 If the module is placed on a vehicle, players will be teleported into the vehicle.
+
+## Throw Select
+
+Orders AI to throw the selected throwable from its inventory at the target position.
 
 ## Toggle Flashlights
 
