@@ -8,8 +8,8 @@ class EGVAR(context_menu,actions) {
     class ThrowGrenade {
         displayName = CSTRING(ThrowGrenade);
         icon = QPATHTOF(ui\grenade_ca.paa);
-        priority = -50;
-        insertChildren = QUOTE([_selectedObjects] call FUNC(getGrenadeActions));
+        insertChildren = QUOTE(_objects call FUNC(getGrenadeActions));
+        priority = 70;
     };
     class Formation {
         displayName = "$STR_3DEN_Group_Attribute_Formation_displayName";

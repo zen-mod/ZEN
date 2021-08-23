@@ -8,6 +8,4 @@ PREP_RECOMPILE_END;
 
 GVAR(appearances) = [] call CBA_fnc_createNamespace;
 
-call FUNC(compileGrenades);
-
 ADDON = true;

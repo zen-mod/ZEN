@@ -1,4 +1,5 @@
 PREP(applySkills);
+PREP(canThrowGrenade);
 PREP(garrison);
 PREP(handleObjectEdited);
 PREP(handleSkillsChange);

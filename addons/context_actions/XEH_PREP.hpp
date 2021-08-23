@@ -10,7 +10,6 @@ PREP(canToggleSurrender);
 PREP(canUnloadViV);
 PREP(copyVehicleAppearance);
 PREP(compileGrenades);
-PREP(editableObjects);
 PREP(getArtilleryActions);
 PREP(getGrenadeActions);
 PREP(healUnits);

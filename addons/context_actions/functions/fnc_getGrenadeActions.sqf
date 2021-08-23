@@ -1,46 +1,51 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Returns children actions based on grenades in selected AI's inventories.
+ * Returns children actions for grenades in unit inventories.
  *
  * Arguments:
- * 0: Selected Objects <ARRAY>
+ * N: Objects <OBJECT>
  *
  * Return Value:
  * Actions <ARRAY>
  *
  * Example:
- * [[_unit1, _unit2]] call zen_context_actions_fnc_getGrenadeActions
+ * [_object] call zen_context_actions_fnc_getGrenadeActions
  *
  * Public: No
  */
 
-params ["_objects"];
+// Get all magazines in the inventories of units that can throw grenades
+private _magazines = flatten (_this select {
+    _x call EFUNC(ai,canThrowGrenade)
+} apply {
+    magazines _x
+});
 
-// Get all magazines in the inventories of on foot AI
-private _magazines = [];
-{
-    if (!isPlayer _x && {vehicle _x == _x}) then {
-        _magazines append magazines _x;
-    };
-} forEach _objects;
+// Filter out non-grenade magazines and sort them alphabetically by name
+private _cache = uiNamespace getVariable QGVAR(grenades);
+private _grenades = _magazines arrayIntersect keys _cache apply {
+    (_cache get _x) params ["_name", "_icon"];
+    [_name, _icon, _x]
+};
 
-// Filter out non-grenade magazines, sort alphabetically by display name
-private _grenades = _magazines arrayIntersect GVAR(grenadesList) apply {GVAR(grenades) getVariable _x};
 _grenades sort true;
 
+// Create actions for every grenade type
 private _actions = [];
 
 {
-    _x params ["_displayName", "_picture", "_magazine", "_muzzle"];
+    _x params ["_name", "_icon", "_magazine"];
 
     private _action = [
-        format [QGVAR(%1), _forEachIndex],
-        _displayName,
-        _picture,
-        {[_selectedObjects, _args] call FUNC(selectThrowPos)},
+        _magazine,
+        _name,
+        _icon,
+        {
+            [_objects, _args] call FUNC(selectThrowPos);
+        },
         {true},
-        [_magazine, _muzzle]
+        _magazine
     ] call EFUNC(context_menu,createAction);
 
     _actions pushBack [_action, [], 0];
