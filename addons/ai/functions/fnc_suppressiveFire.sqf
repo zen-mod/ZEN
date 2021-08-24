@@ -20,8 +20,8 @@
  * Public: No
  */
 
-#define DISABLED_ABILITIES ["AIMINGERROR", "AUTOTARGET", "FSM", "PATH", "SUPPRESSION", "TARGET"]
 #define TARGETING_DELAY 3
+#define DISABLED_ABILITIES ["AIMINGERROR", "AUTOTARGET", "FSM", "PATH", "SUPPRESSION", "TARGET"]
 
 params [
     ["_unit", objNull, [objNull, grpNull]],
@@ -41,7 +41,7 @@ if (_unit isEqualType grpNull) exitWith {
 };
 
 // If a vehicle is given directly, use its gunner as the unit
-if !(_unit call CBA_fnc_isPerson) then {
+if !(_unit isKindOf "CAManBase") then {
     _unit = gunner _unit;
 };
 
@@ -49,6 +49,7 @@ if (
     !alive _unit
     || {isPlayer _unit}
     || {!(lifeState _unit in ["HEALTHY", "INJURED"])}
+    || {_unit getVariable [QGVAR(isSuppressing), false]}
     || {
         private _vehicle = vehicle _unit;
 
@@ -59,6 +60,9 @@ if (
         };
     }
 ) exitWith {};
+
+// Prevent the unit from performing other suppressive fire tasks while this one is active
+_unit setVariable [QGVAR(isSuppressing), true, true];
 
 // Disable AI abilities to make units more responsive to commands
 private _abilities = DISABLED_ABILITIES apply {_unit checkAIFeature _x};
@@ -93,8 +97,8 @@ if (_isTempTarget) then {
 
 // Make the unit aim and track the target
 _unit reveal [_target, 4];
-_unit doWatch _target;
 _unit lookAt _target;
+_unit doWatch _target;
 _unit doTarget _target;
 
 // Force the unit to fire their weapon for the specified duration. Works better than using the doSuppressiveFire
@@ -128,6 +132,7 @@ private _endTime = CBA_missionTime + _duration + TARGETING_DELAY;
                 _unit setSkill [AI_SUB_SKILLS select _forEachIndex, _x];
             } forEach _skills;
 
+            _unit setVariable [QGVAR(isSuppressing), nil, true];
             _unit setCombatBehaviour _behaviour;
             _unit setUnitCombatMode _combatMode;
             _unit setUnitPos _unitPos;
