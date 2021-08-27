@@ -335,7 +335,7 @@
         };
     },
     {""},
-    {IS_ADMIN || {!GETMVAR(ZEN_disableCodeExecution,false)}}
+    {IS_ADMIN_LOGGED || {!GETMVAR(ZEN_disableCodeExecution,false)}}
 ] call FUNC(addAttribute);
 
 // - Group --------------------------------------------------------------------
@@ -487,7 +487,7 @@
         };
     },
     {""},
-    {IS_ADMIN || {!GETMVAR(ZEN_disableCodeExecution,false)}}
+    {IS_ADMIN_LOGGED || {!GETMVAR(ZEN_disableCodeExecution,false)}}
 ] call FUNC(addAttribute);
 
 // - Waypoint -----------------------------------------------------------------

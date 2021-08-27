@@ -347,6 +347,12 @@ class CfgVehicles {
         function = QFUNC(moduleRotateObject);
         icon = QPATHTOF(ui\rotate_ca.paa);
     };
+    class GVAR(moduleScaleObject): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Objects);
+        displayName = CSTRING(ScaleObject);
+        function = QFUNC(moduleScaleObject);
+    };
     class GVAR(moduleSearchBuilding): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(AI);

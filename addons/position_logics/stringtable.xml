@@ -6,6 +6,8 @@
             <German>(%1 km)</German>
             <Polish>(%1 km)</Polish>
             <Japanese>(%1 km)</Japanese>
+            <Chinesesimp>(%1 千米)</Chinesesimp>
+            <Chinese>(%1 km)</Chinese>
         </Key>
     </Package>
 </Project>
