@@ -9,6 +9,8 @@
             <Polish>Wyjdź z garażu (Escape)</Polish>
             <Portuguese>Sair da Garagem (ESC)</Portuguese>
             <Japanese>ガレージを出ます (ESC)</Japanese>
+            <Chinesesimp>退出车库（ESC）</Chinesesimp>
+            <Chinese>退出車庫（ESC）</Chinese>
         </Key>
         <Key ID="STR_ZEN_Garage_Hide_Tooltip">
             <English>Hide Interface (Backspace)</English>
@@ -17,6 +19,8 @@
             <Polish>Ukryj interfejs (Backspace)</Polish>
             <Portuguese>Esconder Interface (Escape)</Portuguese>
             <Japanese>インターフェイスを隠します (Backspace)</Japanese>
+            <Chinesesimp>隐藏界面（Backspace键）。</Chinesesimp>
+            <Chinese>隱藏界面（Backspace鍵）</Chinese>
         </Key>
         <Key ID="STR_ZEN_Garage_ApplyToAll">
             <English>Apply To All</English>
@@ -24,6 +28,8 @@
             <Polish>Zastosuj do Wszystkich</Polish>
             <Portuguese>Aplicar Para Todos</Portuguese>
             <Japanese>全てに適用</Japanese>
+            <Chinesesimp>全部应用</Chinesesimp>
+            <Chinese>全部應用</Chinese>
         </Key>
         <Key ID="STR_ZEN_Garage_ApplyToAll_Tooltip">
             <English>Apply the current vehicle's customization to all selected vehicles of this type.</English>
@@ -31,6 +37,8 @@
             <Polish>Zastosuj Właściwości wybranego pojazdu do wszystkich pojazdów tego typu.</Polish>
             <Portuguese>Aplicar a customização atual para todos os veículos selecionados deste tipo.</Portuguese>
             <Japanese>現在の車両カスタマイズを選択した同じ種類の全車両にも適用します。</Japanese>
+            <Chinesesimp>将当前车辆的自定义应用于该类型的所有选定车辆上。</Chinesesimp>
+            <Chinese>將當前車輛的自定義應用到此類型的所有選定車輛。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Garage_CannotApplyToAll">
             <English>No other vehicles of the same type selected.</English>
@@ -38,6 +46,8 @@
             <Portuguese>Nenhum outro veículo do mesmo tipo selecionado.</Portuguese>
             <Japanese>他に同じ種類の車両がありません。</Japanese>
             <Polish>Nie wybrano żadnych innych pojazdów tego typu.</Polish>
+            <Chinesesimp>没有其他同类型的车辆被选择。</Chinesesimp>
+            <Chinese>沒有其他同類型的車輛被選擇。</Chinese>
         </Key>
     </Package>
 </Project>

@@ -58,6 +58,12 @@ class CfgVehicles {
         curatorInfoType = QGVAR(RscAmbientFlyby);
         icon = QPATHTOF(ui\heli_ca.paa);
     };
+    class GVAR(moduleAnimationViewer): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(DevTools);
+        displayName = CSTRING(ModuleAnimationViewer);
+        function = QFUNC(moduleAnimationViewer);
+    };
     class GVAR(moduleArsenal): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = "Curator";
@@ -340,6 +346,12 @@ class CfgVehicles {
         displayName = CSTRING(RotateObject);
         function = QFUNC(moduleRotateObject);
         icon = QPATHTOF(ui\rotate_ca.paa);
+    };
+    class GVAR(moduleScaleObject): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Objects);
+        displayName = CSTRING(ScaleObject);
+        function = QFUNC(moduleScaleObject);
     };
     class GVAR(moduleSearchBuilding): GVAR(moduleBase) {
         curatorCanAttach = 1;

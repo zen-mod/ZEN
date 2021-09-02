@@ -174,3 +174,6 @@
 
 #define MS_TO_KMH(value) ((value) * 3.6)
 #define KMH_TO_MS(value) ((value) / 3.6)
+
+#define OBJECT_SCALE_MIN 0.0001
+#define OBJECT_SCALE_MAX 65504

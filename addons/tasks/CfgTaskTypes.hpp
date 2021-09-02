@@ -6,22 +6,22 @@ class CfgTaskTypes {
         displayName = CSTRING(Airdrop);
     };
     class armor {
-        displayName = CSTRING(Armor);
+        displayName = "$STR_A3_cfggroups_west_blu_f_armored0";
     };
     class attack {
-        displayName = CSTRING(Attack);
+        displayName = "$STR_A3_om_system_restui_tasktooltip";
     };
     class backpack {
-        displayName = CSTRING(Backpack);
+        displayName = "$STR_A3_requiredgear_listitem_backpack";
     };
     class boat {
-        displayName = CSTRING(Boat);
+        displayName = "$STR_A3_cfgvehicles_abandonedboats_base_f0";
     };
     class box {
         displayName = CSTRING(Box);
     };
     class car {
-        displayName = CSTRING(Car);
+        displayName = "$STR_DN_car";
     };
     class container {
         displayName = CSTRING(Container);
@@ -30,61 +30,61 @@ class CfgTaskTypes {
         displayName = CSTRING(Danger);
     };
     class defend {
-        displayName = CSTRING(Defend);
+        displayName = "$STR_A3_modulemptypedefense";
     };
     class destroy {
-        displayName = CSTRING(Destroy);
+        displayName = "$STR_cfg_markers_destroy";
     };
     class documents {
-        displayName = CSTRING(Documents);
+        displayName = "$STR_A3_cfgvehicles_intel_file1_f";
     };
     class download {
-        displayName = CSTRING(Download);
+        displayName = "$STR_A3_endgame_misc_download";
     };
     class exit {
         displayName = CSTRING(Exit);
     };
     class getin {
-        displayName = CSTRING(Getin);
+        displayName = "$STR_rscMenu.hppRscGroupRootMenu_Items_GetIn1";
     };
     class getout {
-        displayName = CSTRING(Getout);
+        displayName = "$STR_action_getout";
     };
     class heal {
-        displayName = CSTRING(Heal);
+        displayName = "$STR_state_healsoldier";
     };
     class heli {
-        displayName = CSTRING(Heli);
+        displayName = "$STR_DN_helicopter";
     };
     class help {
-        displayName = CSTRING(Help);
+        displayName = "$STR_3den_display3den_menubar_help_text";
     };
     class intel {
-        displayName = CSTRING(Intel);
+        displayName = "$STR_A3_cfgvehicleclasses_intel0";
     };
     class interact {
-        displayName = CSTRING(Interact);
+        displayName = "$STR_rscmenu.hpprscgrouprootmenu_items_empty1";
     };
     class kill {
         displayName = CSTRING(Kill);
     };
     class land {
-        displayName = CSTRING(Land);
+        displayName = "$STR_A3_showcase_jets_bis_tskland_title";
     };
     class listen {
         displayName = CSTRING(Listen);
     };
     class map {
-        displayName = CSTRING(Map);
+        displayName = "$STR_A3_cfghints_curator_map_displayname";
     };
     class meet {
         displayName = CSTRING(Meet);
     };
     class mine {
-        displayName = CSTRING(Mine);
+        displayName = "$STR_A3_MP_GS_SC_03_Sector_Mine";
     };
     class move {
-        displayName = CSTRING(Move);
+        displayName = "$STR_A3_cfgvehicles_moduleobjectivemove_f";
     };
     class move1 {
         displayName = CSTRING(Move1);
@@ -105,22 +105,22 @@ class CfgTaskTypes {
         displayName = CSTRING(Navigate);
     };
     class plane {
-        displayName = CSTRING(Plane);
+        displayName = "$STR_DN_plane";
     };
     class radio {
-        displayName = CSTRING(Radio);
+        displayName = "$STR_radio";
     };
     class rearm {
-        displayName = CSTRING(Rearm);
+        displayName = "$STR_rearm";
     };
     class refuel {
-        displayName = CSTRING(Refuel);
+        displayName = "$STR_refuel";
     };
     class repair {
-        displayName = CSTRING(Repair);
+        displayName = "$STR_repair";
     };
     class rifle {
-        displayName = CSTRING(Rifle);
+        displayName = "$STR_DN_rifle";
     };
     class run {
         displayName = CSTRING(Run);
@@ -132,7 +132,7 @@ class CfgTaskTypes {
         displayName = CSTRING(Search);
     };
     class takeoff {
-        displayName = CSTRING(Takeoff);
+        displayName = "$STR_A3_showcase_jets_bis_tsktakeoff_title";
     };
     class talk {
         displayName = CSTRING(Talk);
@@ -153,13 +153,13 @@ class CfgTaskTypes {
         displayName = CSTRING(Talk5);
     };
     class target {
-        displayName = CSTRING(Target);
+        displayName = "$STR_DN_target";
     };
     class truck {
-        displayName = CSTRING(Truck);
+        displayName = "$STR_DN_truck";
     };
     class unknown {
-        displayName = CSTRING(Unknown);
+        displayName = "$STR_DN_unknowns";
     };
     class upload {
         displayName = CSTRING(Upload);
@@ -168,10 +168,10 @@ class CfgTaskTypes {
         displayName = CSTRING(Use);
     };
     class wait {
-        displayName = CSTRING(Wait);
+        displayName = "$STR_state_expect";
     };
     class walk {
-        displayName = CSTRING(Walk);
+        displayName = "$STR_usract_walk";
     };
     class whiteboard {
         displayName = CSTRING(Whiteboard);

@@ -34,6 +34,16 @@ Executed **locally** when Zeus starts remote controlling a unit.
 
 ---
 
+#### zen_remoteControlStopped
+
+Executed **locally** when Zeus stops remote controlling a unit.
+
+**Parameters:**
+
+- 0: Unit &lt;OBJECT&gt;
+
+---
+
 #### zen_editor_modeChanged
 
 Executed **locally** when the Zeus display's create trees mode is changed.

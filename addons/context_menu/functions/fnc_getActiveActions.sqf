@@ -23,13 +23,17 @@ private _activeActions = [];
 
 {
     _x params ["_action", "_children", "_priority"];
-    _action params ["", "", "", "", "_statement", "_condition", "_args", "_insertChildren", "_modifierFunction"];
 
     // Check if the action should modified first
+    private _modifierFunction = _action select 8;
+
     if (_modifierFunction isNotEqualTo {}) then {
         _action = +_action; // Make a copy of the action for the function to modify
+        private _args = _action select 6; // Needed for ACTION_PARAMS
         [_action, ACTION_PARAMS] call _modifierFunction;
     };
+
+    _action params ["", "", "", "", "_statement", "_condition", "_args", "_insertChildren"];
 
     // Check if the action itself is active
     if (ACTION_PARAMS call _condition) then {
