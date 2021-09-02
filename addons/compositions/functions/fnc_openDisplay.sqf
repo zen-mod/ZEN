@@ -98,7 +98,7 @@ private _ctrlButtonOK = _display displayCtrl IDC_OK;
 
 [_ctrlButtonOK, "ButtonClick", {
     params ["_ctrlButtonOK"];
-    _thisArgs params ["_mode", "_composition"];
+    _thisArgs params ["_mode", "_data"];
 
     private _display = ctrlParent _ctrlButtonOK;
     private _ctrlCategory = _display displayCtrl IDC_DISPLAY_CATEGORY;
@@ -107,23 +107,22 @@ private _ctrlButtonOK = _display displayCtrl IDC_OK;
     // Set the new composition category and name
     private _category = ctrlText _ctrlCategory;
     private _name = ctrlText _ctrlName;
-    private _compositionData = _composition select 2;
 
     // Add the composition to saved data
     private _compositions = GET_COMPOSITIONS;
     private _categoryHash = _compositions getOrDefault [_category, createHashMap, true];
-    _categoryHash set [_name, _compositionData];
+    _categoryHash set [_name, _data];
 
-    if (_mode isEqualTo "edit") then {
-        // Remove the old composition from the tree if it already existed
+    if (_mode == "edit") then {
+        // In edit mode, remove the old composition from the tree
         [true] call FUNC(removeFromTree);
     };
 
     SET_COMPOSITIONS(_compositions);
 
     // Add the new/updated composition to the tree
-    GVAR(treeAdditions) pushBack [_category, _name, +_compositionData];
+    GVAR(treeAdditions) pushBack [_category, _name, +_data];
     [findDisplay IDD_RSCDISPLAYCURATOR] call FUNC(processTreeAdditions);
 
     saveProfileNamespace;
-}, _this] call CBA_fnc_addBISEventHandler;
+}, [_mode, _composition select 2]] call CBA_fnc_addBISEventHandler;

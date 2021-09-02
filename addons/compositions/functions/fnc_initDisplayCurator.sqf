@@ -65,12 +65,14 @@
 
     // Initially add all compositions to the tree
     GVAR(treeAdditions) = [];
+
     {
         private _category = _x;
         {
             GVAR(treeAdditions) pushBack [_category, _x, _y];
         } forEach _y;
     } forEach GET_COMPOSITIONS;
+
     [_display] call FUNC(processTreeAdditions);
 
     _ctrlTree ctrlAddEventHandler ["TreeSelChanged", {call FUNC(handleTreeSelect)}];
