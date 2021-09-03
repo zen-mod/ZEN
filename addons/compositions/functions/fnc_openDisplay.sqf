@@ -87,7 +87,7 @@ private _ctrlTitle = _display displayCtrl IDC_DISPLAY_TITLE;
 _ctrlTitle ctrlSetText localize _title;
 
 // Set the current composition category and name
-_composition params ["_category", "_name"];
+_composition params ["_category", "_name", "_data"];
 _ctrlCategory ctrlSetText _category;
 _ctrlName ctrlSetText _name;
 
@@ -125,4 +125,4 @@ private _ctrlButtonOK = _display displayCtrl IDC_OK;
     [findDisplay IDD_RSCDISPLAYCURATOR] call FUNC(processTreeAdditions);
 
     saveProfileNamespace;
-}, [_mode, _composition select 2]] call CBA_fnc_addBISEventHandler;
+}, [_mode, _data]] call CBA_fnc_addBISEventHandler;
