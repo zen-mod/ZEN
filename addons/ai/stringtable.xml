@@ -49,6 +49,9 @@
             <Chinesesimp>搜索建筑</Chinesesimp>
             <Chinese>搜索建築</Chinese>
         </Key>
+        <Key ID="STR_ZEN_AI_SuppressiveFire">
+            <English>Suppressive Fire</English>
+        </Key>
         <Key ID="STR_ZEN_AI_CouldNotGarrisonAll">
             <English>Unable to garrison all units - not enough positions</English>
             <Russian>Невозможно разместить всех солдат - недостаточно позиций</Russian>

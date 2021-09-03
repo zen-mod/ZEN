@@ -2910,6 +2910,18 @@
             <Chinesesimp>在动画浏览器中显示</Chinesesimp>
             <Chinese>在動畫瀏覽器中顯示</Chinese>
         </Key>
+        <Key ID="STR_ZEN_Modules_SuppressiveFire_Duration_Tooltip">
+            <English>Controls the amount of time, in seconds, the units will suppress for.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_SuppressiveFire_Stance_Tooltip">
+            <English>Controls the stance units on foot will employ while suppressing.</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_SuppressiveFire_EntireGroup">
+            <English>Entire Group</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_SuppressiveFire_EntireGroup_Tooltip">
+            <English>Controls whether the entire group will perform the suppressive fire.</English>
+        </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_Buildings">
             <English>Buildings</English>
@@ -3095,6 +3107,21 @@
             <Korean>대상은 항공기가 아니어야 합니다</Korean>
             <Chinesesimp>单位必须是飞机</Chinesesimp>
             <Chinese>單位必須是飛機</Chinese>
+        </Key>
+        <Key ID="STR_ZEN_Modules_OnlySpecificSide">
+            <English>Unit must belong to an appropriate side</English>
+            <French>L'unité doit appartenir à un camp approprié.</French>
+            <Russian>Юнит должен принадлежать соответствующей стороне</Russian>
+            <Czech>Jednotka musí patřit k příslušné straně</Czech>
+            <Japanese>ユニットを適切な陣営にします</Japanese>
+            <Polish>Jednostka musi należeć do odpowiedniej strony</Polish>
+            <German>Einheit muss einer passenden Seite angehören</German>
+            <Korean>대상이 적절한 진영에 속해야만합니다</Korean>
+            <Italian>L'unità deve appartenere ad una fazione coerente</Italian>
+            <Chinesesimp>单位必须属于一个合适的一边</Chinesesimp>
+            <Chinese>單位必須屬於一個合適的一邊</Chinese>
+            <Portuguese>Unidade deve pertencer á um lado apropriado</Portuguese>
+            <Spanish>La unidad debe pertenecer al bando apropiado</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_BuildingTooFar">
             <English>Nearest building is too far away</English>

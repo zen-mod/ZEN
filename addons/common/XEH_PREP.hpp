@@ -43,6 +43,7 @@ PREP(isInScreenshotMode);
 PREP(isPlacementActive);
 PREP(isRemoteControlled);
 PREP(isSwimming);
+PREP(isUnitFFV);
 PREP(isVLS);
 PREP(isWeapon);
 PREP(loadMagazineInstantly);

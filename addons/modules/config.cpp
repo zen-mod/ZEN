@@ -64,6 +64,7 @@ class CfgPatches {
             QGVAR(moduleSpawnDestroyer),
             QGVAR(moduleSpawnReinforcements),
             QGVAR(moduleSuicideBomber),
+            QGVAR(moduleSuppressiveFire),
             QGVAR(moduleTeleportPlayers),
             QGVAR(moduleToggleFlashlights),
             QGVAR(moduleToggleIRLasers),

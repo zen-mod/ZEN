@@ -559,6 +559,9 @@
             <Chinesesimp>高度（米）</Chinesesimp>
             <Chinese>高度（米）</Chinese>
         </Key>
+        <Key ID="STR_ZEN_Common_Duration_Units">
+            <English>Duration (s)</English>
+        </Key>
         <Key ID="STR_ZEN_Common_Amount">
             <English>Amount</English>
             <French>Quantité</French>
