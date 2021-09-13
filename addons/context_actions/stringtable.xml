@@ -169,6 +169,15 @@
             <Chinesesimp>并非所有的车辆都在射程之内，无法开火</Chinesesimp>
             <Chinese>並非所有的車輛都在射程之內，無法開火</Chinese>
         </Key>
+        <Key ID="STR_ZEN_Context_Actions_ThrowGrenade">
+            <English>Throw Grenade</English>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_ThrowX">
+            <English>Throw %1</English>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_PositionTooFar">
+            <English>%1 unit(s) were too far away from the position</English>
+        </Key>
         <Key ID="STR_ZEN_Context_Actions_Captives">
             <English>Captives</English>
             <German>Gefangene</German>
