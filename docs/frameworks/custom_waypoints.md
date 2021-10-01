@@ -11,6 +11,7 @@ Waypoints are added as subclasses to the `ZEN_WaypointTypes` root config class.
 Name | Type | Description
 ---- | ---- | -----------
 `displayName` | STRING | Displayed name of the waypoint
+`tooltip` | STRING | Tooltip displayed when hovered
 `type` | STRING | Waypoint type, [reference](https://community.bistudio.com/wiki/Waypoint_types)
 `script` | STRING | Path to waypoint script file, used when type is "SCRIPTED"
 
@@ -20,6 +21,7 @@ Name | Type | Description
 class ZEN_WaypointTypes {
     class Paradrop {
         displayName = "Paradrop";
+        tooltip = "Paradrops units at the position.";
         type = "SCRIPTED";
         script = "\x\zen\addons\ai\functions\fnc_waypointParadrop.sqf";
     };

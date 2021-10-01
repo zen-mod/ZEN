@@ -34,9 +34,10 @@ private _waypointScript = waypointScript _entity;
 private _waypointTypes  = uiNamespace getVariable QGVAR(waypointTypes);
 
 {
-    _x params ["_name", "_type", "_script"];
+    _x params ["_name", "_tooltip", "_type", "_script"];
 
     private _index = _ctrlToolbox lbAdd _name;
+    _ctrlToolbox lbSetTooltip [_index, _tooltip];
     _ctrlToolbox setVariable [str _index, [_type, _script]];
 
     if (_type == _waypointType && {_type != "SCRIPTED" || {_script == _waypointScript}}) then {

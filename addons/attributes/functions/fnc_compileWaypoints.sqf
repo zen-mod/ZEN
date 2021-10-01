@@ -16,5 +16,5 @@
  */
 
 uiNamespace setVariable [QGVAR(waypointTypes), configProperties [configFile >> "ZEN_WaypointTypes", "isClass _x"] apply {
-    [toUpper getText (_x >> "displayName"), getText (_x >> "type"), getText (_x >> "script")]
+    [toUpper getText (_x >> "displayName"), getText (_x >> "tooltip"), getText (_x >> "type"), getText (_x >> "script")]
 }];

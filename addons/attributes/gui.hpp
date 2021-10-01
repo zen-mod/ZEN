@@ -9,19 +9,6 @@ class EGVAR(common,RscBackground);
 class EGVAR(common,RscEdit);
 class EGVAR(common,RscCombo);
 
-class GVAR(RscToolbox): ctrlToolbox {
-    idc = -1;
-    x = POS_W(10.1);
-    y = 0;
-    w = POS_W(15.9);
-    h = POS_H(1);
-    tooltipColorBox[] = {0, 0, 0, 0};
-    tooltipColorText[] = {0, 0, 0, 0};
-    tooltipColorShade[] = {0, 0, 0, 0};
-    rows = QGVAR(rows);
-    columns = QGVAR(columns);
-};
-
 class GVAR(base): RscControlsGroupNoScrollbars {
     idc = IDC_ATTRIBUTE_GROUP;
     function = "";
@@ -168,9 +155,6 @@ class GVAR(waypoint): GVAR(base) {
             w = POS_W(26);
             h = POS_H(WAYPOINT_ROWS);
             colorBackground[] = {0, 0, 0, 0};
-            tooltipColorBox[] = {0, 0, 0, 0};
-            tooltipColorText[] = {0, 0, 0, 0};
-            tooltipColorShade[] = {0, 0, 0, 0};
             rows = WAYPOINT_ROWS;
             columns = 3;
         };
