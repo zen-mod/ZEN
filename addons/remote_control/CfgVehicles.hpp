@@ -1,11 +1,10 @@
 class CfgVehicles {
     class Module_F;
-    class EGVAR(modules,moduleBase);
-
     class ModuleRemoteControl_F: Module_F {
         scopeCurator = 1;
     };
 
+    class EGVAR(modules,moduleBase);
     class GVAR(module): EGVAR(modules,moduleBase) {
         curatorCanAttach = 1;
         category = "Curator";

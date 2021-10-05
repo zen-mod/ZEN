@@ -22,7 +22,7 @@
 
 params ["_display", "_logic"];
 
-if (!IS_ADMIN && {missionNamespace getVariable ["ZEN_disableCodeExecution", false]}) exitWith {
+if (!IS_ADMIN_LOGGED && {missionNamespace getVariable ["ZEN_disableCodeExecution", false]}) exitWith {
     [LSTRING(ModuleExecuteCode_Disabled)] call EFUNC(common,showMessage);
     deleteVehicle _logic;
 };
