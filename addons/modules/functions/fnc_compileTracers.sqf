@@ -23,11 +23,11 @@ private _cfgMagazineWells = configFile >> "CfgMagazineWells";
     if (
         getNumber (_x >> "scope") == 2
         && {getNumber (_x >> "type") == TYPE_WEAPON_PRIMARY}
-        && {count getArray (_x >> "muzzles") == 1}
+        && {{_x != "SAFE"} count getArray (_x >> "muzzles") == 1}
     ) then {
         private _weapon = configName _x;
 
-        if (getText (_x >> "baseWeapon") == _weapon) then {
+        if (_weapon call BIS_fnc_baseWeapon == _weapon) then {
             private _magazines = getArray (_x >> "magazines");
 
             {

@@ -1,7 +1,10 @@
 PREP(applySkills);
+PREP(canThrowGrenade);
 PREP(garrison);
 PREP(handleObjectEdited);
 PREP(handleSkillsChange);
 PREP(initMan);
 PREP(searchBuilding);
+PREP(suppressiveFire);
+PREP(throwGrenade);
 PREP(unGarrison);

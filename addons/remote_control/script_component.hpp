@@ -21,4 +21,10 @@
 #define VAR_UNIT  "bis_fnc_moduleRemoteControl_unit"
 #define VAR_OWNER "bis_fnc_moduleRemoteControl_owner"
 
-#define MAX_CAMERA_DISTANCE 50
+#define CAMERA_EXIT_UNCHANGED 0
+#define CAMERA_EXIT_RELATIVE 1
+#define CAMERA_EXIT_RELATIVE_LIMITED 2
+#define CAMERA_EXIT_ABOVE_UNIT 3
+#define CAMERA_EXIT_BEHIND_UNIT 4
+
+#define LIMITED_CAMERA_DISTANCE 50

@@ -48,12 +48,10 @@
 #define COMPOSITION_STR QUOTE(COMPOSITION)
 
 #define VAR_COMPOSITIONS QGVAR(data)
-#define GET_COMPOSITIONS (profileNamespace getVariable [VAR_COMPOSITIONS, []])
+#define GET_COMPOSITIONS (profileNamespace getVariable [VAR_COMPOSITIONS, createHashMap])
 #define SET_COMPOSITIONS(value) (profileNamespace setVariable [VAR_COMPOSITIONS, value])
 
-#define CATEGORY_EXISTS(category) (GET_COMPOSITIONS findIf {category isEqualTo (_x select 0)} != -1)
-
-#define FIND_COMPOSITION(category,name) (GET_COMPOSITIONS findIf {category isEqualTo (_x select 0) && {name isEqualTo (_x select 1)}})
+#define GET_COMPOSITION(category,name) (GET_COMPOSITIONS get category get name)
 
 #define OBJECT_DATA_VAR(category,name) format [QGVAR(%1:%2), category, name]
 
