@@ -1,3 +1,5 @@
+#if __has_include("\z\ace\addons\zeus\script_component.hpp")
+
 #include "script_component.hpp"
 
 class CfgPatches {
@@ -19,3 +21,5 @@ PRELOAD_ADDONS;
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "ACE_ZeusActions.hpp"
+
+#endif
