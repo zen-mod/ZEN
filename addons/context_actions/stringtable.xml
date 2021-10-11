@@ -156,7 +156,7 @@
             <German>Kann nicht feueren</German>
             <Korean>사격 불가</Korean>
             <Polish>Otworzenie ognia niemożliwe</Polish>
-            <Japanese>発砲付加</Japanese>
+            <Japanese>発砲不可</Japanese>
             <Chinesesimp>无法开火</Chinesesimp>
             <Chinese>無法開火</Chinese>
         </Key>
@@ -171,12 +171,15 @@
         </Key>
         <Key ID="STR_ZEN_Context_Actions_ThrowGrenade">
             <English>Throw Grenade</English>
+            <Japanese>手りゅう弾使用</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_ThrowX">
             <English>Throw %1</English>
+            <Japanese>%1 を使用</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_PositionTooFar">
             <English>%1 unit(s) were too far away from the position</English>
+            <Japanese>ユニット %1 は位置から遠すぎます</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_Captives">
             <English>Captives</English>
@@ -205,7 +208,7 @@
             <Hungarian>Elfogott állapot váltása</Hungarian>
             <Russian>Пленный (вкл./выкл.)</Russian>
             <Italian>Attivatore Prigioniero</Italian>
-            <Japanese>捕虜に切り替え</Japanese>
+            <Japanese>捕虜の切り替え</Japanese>
             <Korean>포로 전환</Korean>
             <Chinesesimp>切换俘虏</Chinesesimp>
             <Chinese>切換俘虜</Chinese>
@@ -221,7 +224,7 @@
             <Hungarian>Kapituláló állapot váltása</Hungarian>
             <Russian>Сдавшийся (вкл./выкл.)</Russian>
             <Italian>Attivatore Resa</Italian>
-            <Japanese>投降として切り替え</Japanese>
+            <Japanese>降伏の切り替え</Japanese>
             <Korean>항복 전환</Korean>
             <Chinesesimp>切换投降</Chinesesimp>
             <Chinese>切換投降</Chinese>
