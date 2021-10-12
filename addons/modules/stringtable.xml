@@ -1108,6 +1108,7 @@
             <German>Objekt skalieren</German>
             <Chinesesimp>缩放物体</Chinesesimp>
             <Chinese>縮放物體</Chinese>
+            <Japanese>オブジェクト大きさ</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ScaleObject_Tooltip">
             <English>Scale the object by this factor relative to the original model.</English>
@@ -1115,6 +1116,7 @@
             <German>Skaliere das Objekt um diesen Faktor relativ zum originalen Modell.</German>
             <Chinesesimp>相对于原始模型，用此功能缩放物体。</Chinesesimp>
             <Chinese>相對於原始模型，用此功能縮放物體。</Chinese>
+            <Japanese>オブジェクトの大きさをこの係数で変更します</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleChatter">
             <English>Chatter</English>
@@ -2677,48 +2679,56 @@
             <German>Verzögerung zwischen Feuerstößen</German>
             <Chinesesimp>火灾爆炸间的延时</Chinesesimp>
             <Chinese>火災爆炸間的延時</Chinese>
+            <Japanese>射撃間隔</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_BurstDelay_Tooltip">
             <English>The delay, in seconds, between bursts of tracers.\nSelected randomly in a range from min to max, gravitating towards mid.</English>
             <German>Verzögerung zwischen Feuerstößen in Sekunden.\nWird zufällig aus einer Verteilung gewählt mit dem spezifizierten Minimalwert, Maximalwert und Mittelwert.</German>
             <Chinesesimp>曳光弹发射间隔的延时，以秒为单位。\n从最小到最大的范围内随机选择，倾向于中间得值。</Chinesesimp>
             <Chinese>曳光彈發射間隔的延時，以秒為單位。 \n從最小到最大的範圍內隨機選擇，傾向於中間得值。</Chinese>
+            <Japanese>曳光弾の射撃間隔を秒で設定します。\nランダム値の場合は、最小値から最大値までの中央値付近で選択されます。。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_Dispersion">
             <English>Dispersion</English>
             <German>Zerstreuung</German>
             <Chinesesimp>散布</Chinesesimp>
             <Chinese>散佈</Chinese>
+            <Japanese>精度</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_Dispersion_Tooltip">
             <English>The dispersion of the fired tracer rounds.</English>
             <German>Zerstreuung der abgefeuerten Leuchtspurmunition.</German>
             <Chinesesimp>发射的曳光弹的散布情况。</Chinesesimp>
             <Chinese>發射的曳光彈的散佈情況。</Chinese>
+            <Japanese>射撃される曳光弾の精度を設定します。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_Random_Tooltip">
             <English>Tracers are fired randomly in the air.</English>
             <German>Leuchtspurmunition wird zufällig in die Luft gefeuert.</German>
             <Chinesesimp>曳光弹在空中随机发射。</Chinesesimp>
             <Chinese>曳光彈在空中隨機發射。</Chinese>
+            <Japanese>曳光弾が空中に向かって射撃されます。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_Camera_Tooltip">
             <English>Tracers are fired at the current camera position.</English>
             <German>Leuchtspurmunition wird gegen die momentane Position der Kamera gefeuert.</German>
             <Chinesesimp>曳光弹从当前摄像机位置发射。</Chinesesimp>
             <Chinese>曳光彈從當前攝像機位置發射。</Chinese>
+            <Japanese>曳光弾は現在のカメラ位置から射撃されます。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_Cursor_Tooltip">
             <English>Tracers target is selected using the cursor after closing the dialog.</English>
             <German>Das Ziel der Leuchtspurmunition wird basierend auf der Position des Mauszeigers nach dem Schließen des Fensters gewählt.</German>
             <Chinesesimp>关闭对话框后，使用光标选择曳光弹目标。</Chinesesimp>
             <Chinese>關閉對話框後，使用光標選擇曳光彈目標。</Chinese>
+            <Japanese>曳光弾はダイアログを閉じた後に、カーソル位置に向かって射撃されます。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_TracersTarget">
             <English>Tracers Target</English>
             <German>Ziel der Leuchtspurmunition</German>
             <Chinesesimp>曳光弹目标</Chinesesimp>
             <Chinese>曳光彈目標</Chinese>
+            <Japanese>曳光弾の目標</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire">
             <English>Custom Fire</English>
@@ -2909,18 +2919,23 @@
             <German>In Animationbetrachter zeigen</German>
             <Chinesesimp>在动画浏览器中显示</Chinesesimp>
             <Chinese>在動畫瀏覽器中顯示</Chinese>
+            <Japanese>アニメーション ビューワで表示</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_Duration_Tooltip">
             <English>Controls the amount of time, in seconds, the units will suppress for.</English>
+            <Japanese>ユニットは指定された時間 (秒) の間、制圧射撃を行います。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_Stance_Tooltip">
             <English>Controls the stance units on foot will employ while suppressing.</English>
+            <Japanese>ユニットは指定された体勢で、制圧射撃を行います。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_EntireGroup">
             <English>Entire Group</English>
+            <Japanese>グループ全体</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_EntireGroup_Tooltip">
             <English>Controls whether the entire group will perform the suppressive fire.</English>
+            <Japanese>グループ全体で制圧射撃を行うかどうかを制御します。</Japanese>
         </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_Buildings">
@@ -3023,6 +3038,7 @@
             <German>Nur für angehängte Objekte</German>
             <Chinesesimp>仅适用于附加对象</Chinesesimp>
             <Chinese>僅適用於附加對象</Chinese>
+            <Japanese>取り付けられたオブジェクトのみ</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_ValueOutOfRange">
             <English>Only values between %1 and %2 are valid</English>
@@ -3030,6 +3046,7 @@
             <German>Nur Werte zwischen %1 und %2 sind erlaubt</German>
             <Chinesesimp>只有在 %1 和 %2 之间的值才有效</Chinesesimp>
             <Chinese>只有在 %1 和 %2 之間的值才有效</Chinese>
+            <Japanese>値は %1 と %2 の間の値のみが有効です。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Modules_OnlyAlive">
             <English>Unit must be alive</English>

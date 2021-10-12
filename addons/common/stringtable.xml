@@ -233,7 +233,7 @@
             <Polish>Ekstremalny</Polish>
             <Czech>Extrémní</Czech>
             <Italian>Estremo</Italian>
-            <Japanese>強力</Japanese>
+            <Japanese>超強力</Japanese>
             <Korean>극한</Korean>
             <Chinesesimp>极强</Chinesesimp>
             <Chinese>極強</Chinese>
@@ -294,6 +294,7 @@
             <German>Cursor</German>
             <Chinesesimp>鼠标</Chinesesimp>
             <Chinese>鼠標</Chinese>
+            <Japanese>カーソル</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_SelectedUnit">
             <English>Selected Unit</English>
@@ -414,6 +415,7 @@
             <German>Waffe</German>
             <Chinesesimp>武器</Chinesesimp>
             <Chinese>武器</Chinese>
+            <Japanese>武器</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Magazine">
             <English>Magazine</English>
@@ -421,6 +423,7 @@
             <German>Magazin</German>
             <Chinesesimp>弹夹</Chinesesimp>
             <Chinese>彈夾</Chinese>
+            <Japanese>弾倉</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Nearest">
             <English>Nearest</English>
@@ -465,7 +468,7 @@
             <French>Inattentif</French>
             <German>Unachtsam</German>
             <Polish>Beztroskie</Polish>
-            <Japanese>ケアレス</Japanese>
+            <Japanese>不注意</Japanese>
             <Spanish>Despreocupado</Spanish>
             <Chinesesimp>漫不经心</Chinesesimp>
             <Chinese>漫不經心</Chinese>
@@ -561,6 +564,7 @@
         </Key>
         <Key ID="STR_ZEN_Common_Duration_Units">
             <English>Duration (s)</English>
+            <Japanese>持続時間 (s)</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Amount">
             <English>Amount</English>
@@ -568,6 +572,7 @@
             <German>Menge</German>
             <Chinesesimp>合计</Chinesesimp>
             <Chinese>合計</Chinese>
+            <Japanese>合計</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_Teleport">
             <English>Teleport</English>
@@ -624,6 +629,7 @@
             <German>Skalierung</German>
             <Chinesesimp>缩放</Chinesesimp>
             <Chinese>缩放</Chinese>
+            <Japanese>縮尺</Japanese>
         </Key>
         <Key ID="STR_ZEN_Common_UncheckAll">
             <English>Uncheck All</English>

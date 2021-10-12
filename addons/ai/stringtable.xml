@@ -51,6 +51,7 @@
         </Key>
         <Key ID="STR_ZEN_AI_SuppressiveFire">
             <English>Suppressive Fire</English>
+            <Japanese>制圧射撃</Japanese>
         </Key>
         <Key ID="STR_ZEN_AI_CouldNotGarrisonAll">
             <English>Unable to garrison all units - not enough positions</English>
