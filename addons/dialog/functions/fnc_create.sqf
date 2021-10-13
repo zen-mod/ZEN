@@ -208,7 +208,19 @@ private _fnc_verifyListEntries = {
                 };
             };
 
-            _strings = _strings select [0, _rows * _columns] apply {if (isLocalized _x) then {localize _x} else {_x}};
+            _strings = _strings select [0, _rows * _columns] apply {
+                _x params [["_text", "", [""]], ["_tooltip", "", [""]]];
+
+                if (isLocalized _text) then {
+                    _text = localize _text;
+                };
+
+                if (isLocalized _tooltip) then {
+                    _tooltip = localize _tooltip;
+                };
+
+                [_text, _tooltip]
+            };
 
             // Return bool if there are only two options and default is a bool
             private _returnBool = count _strings == 2 && {_default isEqualType false};
@@ -245,10 +257,17 @@ private _fnc_verifyListEntries = {
     _content set [_forEachIndex, [_controlType, _label, _tooltip, _defaultValue, _settings]];
 } forEach _content;
 
-// Exit if dialog creation fails
-if (!createDialog QEGVAR(common,RscDisplayScrollbars)) exitWith {false};
+// Use createDisplay when in 3DEN to prevent interacting with the editor's display
+private _display = if (is3DEN) then {
+    private _display3DEN = uiNamespace getVariable "Display3DEN";
+    _display3DEN createDisplay QEGVAR(common,RscDisplayScrollbars)
+} else {
+    if (!createDialog QEGVAR(common,RscDisplayScrollbars)) exitWith {displayNull};
+    uiNamespace getVariable [QEGVAR(common,display), displayNull]
+};
 
-private _display = uiNamespace getVariable QEGVAR(common,display);
+// Exit if dialog creation fails
+if (isNull _display) exitWith {false};
 
 // Set the dialog's title
 private _ctrlTitle = _display displayCtrl IDC_TITLE;

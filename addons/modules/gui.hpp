@@ -1219,7 +1219,7 @@ class GVAR(RscTracers): GVAR(RscDisplay) {
                     w = POS_W(26);
                     h = POS_H(5);
                     rowHeight = POS_H(1.2);
-                    columns[] = {0.05, 0.15};
+                    columns[] = {0.05, 0.15, 0.9};
                     tooltipPerColumn = 0;
                 };
                 class MagazineLabel: WeaponLabel {

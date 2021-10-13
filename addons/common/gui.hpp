@@ -105,9 +105,6 @@ class GVAR(RscToolbox): ctrlToolbox {
     y = 0;
     w = POS_W(15.9);
     h = POS_H(1);
-    tooltipColorBox[] = {0, 0, 0, 0};
-    tooltipColorText[] = {0, 0, 0, 0};
-    tooltipColorShade[] = {0, 0, 0, 0};
     // Allows number of rows and columns to be set dynamically using parsingNamespace
     rows = QGVAR(rows);
     columns = QGVAR(columns);

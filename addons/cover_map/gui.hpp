@@ -15,7 +15,7 @@ class GVAR(RscMap): RscMapControl {
     alphaFadeEndScale = 100;
 
     // Allow map to be zoomed in and out more
-    scaleMin = 0.0001
+    scaleMin = 0.0001;
     scaleMax = 3;
     scaleDefault = 1;
 

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Remote_Control">
+        <Key ID="STR_ZEN_Remote_Control_CameraExitPosition">
+            <English>Camera Exit Position</English>
+            <German>Position nach dem Verlassen der Kamera</German>
+            <Chinesesimp>摄像机退出位置</Chinesesimp>
+            <Chinese>攝像機退出位置</Chinese>
+            <Japanese>カメラの終了位置</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_Description">
+            <English>Controls where the camera is positioned after exiting remote control.\nIf the unit is deleted while remote controlling, the camera's position is unchanged.</English>
+            <German>Steuert wo die Kamera positioniert wird nach dem Verlassen der Fernsteuerung.\nDie Position der Kamera bleibt unverändert, falls die Einheit gelöscht wurde während der Fernsteuerung.</German>
+            <Chinesesimp>控制退出远程控制后摄像机的位置。\n如果在远程控制时删除该单位，摄像机的位置将保持不变。</Chinesesimp>
+            <Chinese>控制退出遠程控制後攝像機的位置。\n如果在遠程控制時刪除該單位，攝像機的位置將保持不變。</Chinese>
+            <Japanese>遠隔操作を終了時のカメラ位置を設定します。\n遠隔操作中にユニットが削除された場合は、カメラ位置は変わりません。</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_Unchanged_Description">
+            <English>The camera's position is unchanged and restored as it was when remote control started.</English>
+            <German>Die Position der Kamera bleibt unverändert und wird zur Position bevor der Fernsteuerung zurückgesetzt.</German>
+            <Chinesesimp>摄像机的位置没有变化，恢复到远程遥控开始时的状态。</Chinesesimp>
+            <Chinese>攝像機的位置沒有變化，恢復到遠程遙控開始時的狀態。</Chinese>
+            <Japanese>カメラ位置は、遠隔操作が開始されても変更されずまた元の位置へ戻りません。</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_Relative">
+            <English>Relative</English>
+            <German>Relativ</German>
+            <Chinesesimp>相对</Chinesesimp>
+            <Chinese>相對</Chinese>
+            <Japanese>相対的</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_Relative_Description">
+            <English>The camera is positioned based on where it was relative to the unit when remote control started.</English>
+            <German>Die Kamera wird positioniert basierend auf der relativen Position zur Einheit, wenn die Fernsteuerung gestartet wurde.</German>
+            <Chinesesimp>摄像机的位置是基于远程控制开始时它相对于单位的位置。</Chinesesimp>
+            <Chinese>攝像機的位置是基於遠程控制開始時它相對於單位的位置。</Chinese>
+            <Japanese>カメラ位置は、遠隔操作を開始時に遠隔操作ユニットの相対位置へ移動します。</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_RelativeLimited">
+            <English>Relative (Limited)</English>
+            <German>Relativ (Limitiert)</German>
+            <Chinesesimp>相对(限制)</Chinesesimp>
+            <Chinese>相對(限制)</Chinese>
+            <Japanese>相対的 (限定的)</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_RelativeLimited_Description">
+            <English>The camera is positioned based on where it was relative to the unit when remote control started but limited to a maximum distance of 50 meters from the unit.</English>
+            <German>Die Kamera wird positioniert basierend auf der relativen Position zur Einheit, wenn die Fernsteuerung gestartet wurde, aber die Distanz ist auf maximal 50 Meter von der Einheit limitiert.</German>
+            <Chinesesimp>摄像机的位置是基于远程控制开始时它相对于单位的位置，但与单位的最大距离限制为50米。</Chinesesimp>
+            <Chinese>攝像機的位置是基於遠程控制開始時它相對於單位的位置，但與單位的最大距離限制為50米。</Chinese>
+            <Japanese>カメラ位置は、遠隔操作を開始時に遠隔操作ユニットの相対位置へ移動しますが、最大 50m までの範囲内に移動します。</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_AboveUnit">
+            <English>Above Unit</English>
+            <German>Über der Einheit</German>
+            <Chinesesimp>单位上方</Chinesesimp>
+            <Chinese>單位上方</Chinese>
+            <Japanese>ユニットの上</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_AboveUnit_Description">
+            <English>The camera is positioned 10 meters directly above the unit and facing the same direction as the unit.</English>
+            <German>Die Kamera wird 10 Meter direkt über der Einheit platziert und schaut in dieselbe Richtung wie die Einheit.</German>
+            <Chinesesimp>摄像机位于单位正上方10米处，与单位面朝的方向相同。</Chinesesimp>
+            <Chinese>攝像機位於單位正上方10米處，與單位面朝的方向相同。</Chinese>
+            <Japanese>カメラ位置はユニットの 10m 上空へ移動され、ユニットと同じ方向を向きます。</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_BehindUnit">
+            <English>Behind Unit</English>
+            <German>Hinter der Einheit</German>
+            <Chinesesimp>单位后方</Chinesesimp>
+            <Chinese>單位後方</Chinese>
+            <Japanese>ユニットの後ろ</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_BehindUnit_Description">
+            <English>The camera is positioned 10 meters behind and 10 meters above the unit and looking at the unit.</English>
+            <German>Die Kamera wird 10 Meter hinter und 10 Meter über der Einheit platziert und schaut in dieselbe Richtung wie die Einheit.</German>
+            <Chinesesimp>摄像机位于单位后面10米处和上面10米处，看着单位。</Chinesesimp>
+            <Chinese>攝像機位於單位後面10米處和上面10米處，看著單位。</Chinese>
+            <Japanese>カメラ位置はユニットの 10m 後方かつ 10m 上空へ移動され、ユニットを向くよう移動します。</Japanese>
+        </Key>
+    </Package>
+</Project>
