@@ -2924,18 +2924,26 @@
         <Key ID="STR_ZEN_Modules_SuppressiveFire_Duration_Tooltip">
             <English>Controls the amount of time, in seconds, the units will suppress for.</English>
             <Japanese>ユニットは指定された時間 (秒) の間、制圧射撃を行います。</Japanese>
+            <Chinesesimp>控制单位压制的时间(秒)。</Chinesesimp>
+            <Chinese>控制單位壓制的時間(秒)。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_Stance_Tooltip">
             <English>Controls the stance units on foot will employ while suppressing.</English>
             <Japanese>ユニットは指定された体勢で、制圧射撃を行います。</Japanese>
+            <Chinesesimp>控制步行单位在压制时的姿态。</Chinesesimp>
+            <Chinese>控制步行單位在壓制時的姿態。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_EntireGroup">
             <English>Entire Group</English>
             <Japanese>グループ全体</Japanese>
+            <Chinesesimp>整个小队</Chinesesimp>
+            <Chinese>整個小隊</Chinese>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_EntireGroup_Tooltip">
             <English>Controls whether the entire group will perform the suppressive fire.</English>
             <Japanese>グループ全体で制圧射撃を行うかどうかを制御します。</Japanese>
+            <Chinesesimp>控制整个小队是否会进行压制射击。</Chinesesimp>
+            <Chinese>控制整個小隊是否執行壓制火力。</Chinese>
         </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_Buildings">
