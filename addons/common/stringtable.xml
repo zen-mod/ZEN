@@ -565,6 +565,8 @@
         <Key ID="STR_ZEN_Common_Duration_Units">
             <English>Duration (s)</English>
             <Japanese>持続時間 (s)</Japanese>
+            <Chinese>持續時間 (秒)</Chinese>
+            <Chinesesimp>持续时间 (秒)</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Common_Amount">
             <English>Amount</English>
