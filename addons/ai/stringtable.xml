@@ -10,6 +10,7 @@
             <Spanish>Aterrizar</Spanish>
             <Chinesesimp>降落</Chinesesimp>
             <Chinese>降落</Chinese>
+            <Italian>Atterrare</Italian>
         </Key>
         <Key ID="STR_ZEN_AI_Fastrope">
             <English>Fastrope</English>
@@ -23,6 +24,7 @@
             <Spanish>Rapel Rapido</Spanish>
             <Chinesesimp>快速索降</Chinesesimp>
             <Chinese>快速索降</Chinese>
+            <Italian>Discesa veloce</Italian>
         </Key>
         <Key ID="STR_ZEN_AI_Paradrop">
             <English>Paradrop</English>
@@ -37,6 +39,7 @@
             <Spanish>Paracaidismo</Spanish>
             <Chinesesimp>空降</Chinesesimp>
             <Chinese>空降</Chinese>
+            <Italian>Paracadute</Italian>
         </Key>
         <Key ID="STR_ZEN_AI_SearchBuilding">
             <English>Search Building</English>
@@ -48,12 +51,15 @@
             <Spanish>Busqueda en edificio</Spanish>
             <Chinesesimp>搜索建筑</Chinesesimp>
             <Chinese>搜索建築</Chinese>
+            <Italian>Cerca edifici</Italian>
         </Key>
         <Key ID="STR_ZEN_AI_SuppressiveFire">
             <English>Suppressive Fire</English>
             <Japanese>制圧射撃</Japanese>
             <Chinesesimp>射击压制</Chinesesimp>
             <Chinese>射擊壓制</Chinese>
+            <German>Unterdrückungsfeuer</German>
+            <Italian>Fuoco di Soppressione</Italian>
         </Key>
         <Key ID="STR_ZEN_AI_CouldNotGarrisonAll">
             <English>Unable to garrison all units - not enough positions</English>
@@ -113,6 +119,7 @@
             <Spanish>Movimiento al apuntar</Spanish>
             <Chinesesimp>瞄准晃动</Chinesesimp>
             <Chinese>瞄準晃動</Chinese>
+            <Italian>Agitare la mira</Italian>
         </Key>
         <Key ID="STR_ZEN_AI_Commanding">
             <English>Commanding</English>
@@ -197,6 +204,7 @@
             <Spanish>Buscar cobertura</Spanish>
             <Chinesesimp>寻找掩护</Chinesesimp>
             <Chinese>尋找掩護</Chinese>
+            <Italian>Cerca copertura</Italian>
         </Key>
         <Key ID="STR_ZEN_AI_AimingError">
             <English>Aiming Error</English>
@@ -209,6 +217,7 @@
             <Spanish>Error al apuntar</Spanish>
             <Chinese>瞄準失誤</Chinese>
             <Chinesesimp>瞄准误差</Chinesesimp>
+            <Italian>Errore di mira</Italian>
         </Key>
         <Key ID="STR_ZEN_AI_AnimChange">
             <English>Anim Change</English>
@@ -219,6 +228,7 @@
             <Spanish>Cambio de animación</Spanish>
             <Chinesesimp>动画变化</Chinesesimp>
             <Chinese>動畫變化</Chinese>
+            <Italian>Cambio di animazione</Italian>
         </Key>
         <Key ID="STR_ZEN_AI_AutoCombat">
             <English>Auto Combat</English>
@@ -231,6 +241,7 @@
             <Spanish>Combate automático</Spanish>
             <Chinesesimp>自动战斗</Chinesesimp>
             <Chinese>自動戰鬥</Chinese>
+            <Italian>Lotta automatica</Italian>
         </Key>
         <Key ID="STR_ZEN_AI_AutoTarget">
             <English>Auto Target</English>
@@ -243,18 +254,20 @@
             <Spanish>Objetivo automático</Spanish>
             <Chinesesimp>自动搜寻目标</Chinesesimp>
             <Chinese>目標搜尋</Chinese>
+            <Italian>Puntamento automatico</Italian>
         </Key>
         <Key ID="STR_ZEN_AI_CheckVisible">
             <English>Check Visible</English>
             <Russian>Проверять на обнаружение себя</Russian>
             <French>Vérification de visibilité</French>
-            <German>Automatisches Zielen</German>
+            <German>Sichtbarkeit prüfen</German>
             <Polish>Sprawdź Widoczne</Polish>
             <Korean>표시 확인</Korean>
             <Japanese>射線権威</Japanese>
             <Spanish>Verificar visible</Spanish>
             <Chinesesimp>检查瞄准线</Chinesesimp>
             <Chinese>檢查瞄準線</Chinese>
+            <Italian>Controlla la visibilità</Italian>
         </Key>
         <Key ID="STR_ZEN_AI_Cover">
             <English>Cover</English>
@@ -267,6 +280,7 @@
             <Spanish>Cubrir</Spanish>
             <Chinesesimp>掩护</Chinesesimp>
             <Chinese>掩護</Chinese>
+            <Italian>Coperchio</Italian>
         </Key>
         <Key ID="STR_ZEN_AI_FSM">
             <English>FSM</English>
@@ -278,6 +292,7 @@
             <Spanish>FSM</Spanish>
             <Chinesesimp>FSM</Chinesesimp>
             <Chinese>FSM</Chinese>
+            <Italian>FSM</Italian>
         </Key>
         <Key ID="STR_ZEN_AI_LightsVehicle">
             <English>Lights (Vehicle)</English>
@@ -289,6 +304,7 @@
             <Spanish>Luces (Vehículo)</Spanish>
             <Chinesesimp>灯光（车辆）</Chinesesimp>
             <Chinese>燈光（車輛）</Chinese>
+            <Italian>Luce (veicolo)</Italian>
         </Key>
         <Key ID="STR_ZEN_AI_MineDetection">
             <English>Mine Detection</English>
@@ -301,6 +317,7 @@
             <Spanish>Detector de minas</Spanish>
             <Chinesesimp>探测地雷</Chinesesimp>
             <Chinese>探測地雷</Chinese>
+            <Italian>Rilevamento mine</Italian>
         </Key>
         <Key ID="STR_ZEN_AI_Move">
             <English>Move</English>
@@ -313,6 +330,7 @@
             <Spanish>Moverse</Spanish>
             <Chinesesimp>移动</Chinesesimp>
             <Chinese>移動</Chinese>
+            <Italian>Spostare</Italian>
         </Key>
         <Key ID="STR_ZEN_AI_Nightvision">
             <English>Nightvision</English>
@@ -324,6 +342,7 @@
             <Spanish>Vision nocturna</Spanish>
             <Chinesesimp>夜视仪</Chinesesimp>
             <Chinese>夜視儀</Chinese>
+            <Italian>Visione notturna</Italian>
         </Key>
         <Key ID="STR_ZEN_AI_Path">
             <English>Path</English>
@@ -335,6 +354,7 @@
             <Spanish>Caminar</Spanish>
             <Chinesesimp>路径</Chinesesimp>
             <Chinese>路徑</Chinese>
+            <Italian>Percorso</Italian>
         </Key>
         <Key ID="STR_ZEN_AI_RadioProtocol">
             <English>Radio Protocol</English>
@@ -346,6 +366,7 @@
             <Spanish>Protocolo de radio</Spanish>
             <Chinesesimp>无线电通讯协议</Chinesesimp>
             <Chinese>無線電通訊協議</Chinese>
+            <Italian>Protocollo radio</Italian>
         </Key>
         <Key ID="STR_ZEN_AI_Suppression">
             <English>Suppression</English>
@@ -358,6 +379,7 @@
             <Spanish>Supresión</Spanish>
             <Chinesesimp>射击压制</Chinesesimp>
             <Chinese>射擊壓制</Chinese>
+            <Italian>Oppressione</Italian>
         </Key>
         <Key ID="STR_ZEN_AI_Target">
             <English>Target</English>
@@ -370,6 +392,7 @@
             <Spanish>Objetivo</Spanish>
             <Chinesesimp>目标</Chinesesimp>
             <Chinese>目標</Chinese>
+            <Italian>Destinazione</Italian>
         </Key>
         <Key ID="STR_ZEN_AI_TeamSwitch">
             <English>Team Switch</English>
@@ -381,6 +404,7 @@
             <Spanish>Cambio de equipo</Spanish>
             <Chinesesimp>小队切换</Chinesesimp>
             <Chinese>小隊切換</Chinese>
+            <Italian>Cambio di squadra</Italian>
         </Key>
         <Key ID="STR_ZEN_AI_WeaponAim">
             <English>Weapon Aim</English>
@@ -392,6 +416,7 @@
             <Spanish>Punteria del arma</Spanish>
             <Chinesesimp>武器瞄准</Chinesesimp>
             <Chinese>武器瞄準</Chinese>
+            <Italian>Obiettivo dell'arma</Italian>
         </Key>
     </Package>
 </Project>
