@@ -8,6 +8,7 @@
             <Chinesesimp>滚轮菜单</Chinesesimp>
             <Chinese>滾輪菜單</Chinese>
             <Japanese>コンテキスト メニュー</Japanese>
+            <Italian>Menù contestuale</Italian>
         </Key>
         <Key ID="STR_ZEN_Context_Menu_Enabled">
             <English>Enable Context Menu</English>
@@ -19,6 +20,7 @@
             <Korean>맞춤형 메뉴 활성화</Korean>
             <Chinesesimp>启用滚轮菜单</Chinesesimp>
             <Chinese>啟用滾輪菜單</Chinese>
+            <Italian>Attiva menu contestuale</Italian>
         </Key>
         <Key ID="STR_ZEN_Context_Menu_Enabled_Description">
             <English>Enables opening of context menu using the keybind or right clicking.</English>
@@ -30,6 +32,7 @@
             <Korean>키 바인드 또는 마우스 우클릭을 사용해 맞춤형 메뉴를 열 수 있습니다.</Korean>
             <Chinesesimp>启用使用绑定按键或右键单击打开滚轮菜单。</Chinesesimp>
             <Chinese>啟用使用綁定按鍵或右鍵單擊打開滾輪菜單。</Chinese>
+            <Italian>Consente l'apertura del menu contestuale utilizzando la combinazione di tasti o facendo clic con il pulsante destro del mouse.</Italian>
         </Key>
         <Key ID="STR_ZEN_Context_Menu_KeybindOnly">
             <English>Keybind Only</English>
@@ -41,6 +44,7 @@
             <Korean>키 바인드만 사용 가능</Korean>
             <Chinesesimp>仅限绑定按键</Chinesesimp>
             <Chinese>僅限綁定按鍵</Chinese>
+            <Italian>Solo combinazione di tasti</Italian>
         </Key>
         <Key ID="STR_ZEN_Context_Menu_KeybindAndMouse">
             <English>Keybind and Mouse</English>
@@ -52,6 +56,7 @@
             <Korean>마우스 우클릭만 사용 가능</Korean>
             <Chinesesimp>绑定按键和鼠标</Chinesesimp>
             <Chinese>綁定按鍵和鼠標</Chinese>
+            <Italian>Combinazione di tasti e mouse</Italian>
         </Key>
         <Key ID="STR_ZEN_Context_Menu_OverrideWaypoints">
             <English>Override Waypoint Placement</English>
@@ -59,6 +64,7 @@
             <Chinesesimp>覆盖路径点位置</Chinesesimp>
             <Chinese>覆蓋路徑點位置</Chinese>
             <Japanese>ウェイポイント配置上書き</Japanese>
+            <Italian>Oltrepassare posizionamento waypoint</Italian>
         </Key>
         <Key ID="STR_ZEN_Context_Menu_OverrideWaypoints_Description">
             <English>Allows for the context menu to be opened by right clicking when waypoint placement would normally occur.\nRequires holding the SHIFT key in order to place waypoints.</English>
@@ -66,6 +72,7 @@
             <Chinesesimp>允许在通常情况下，在放置路径点时通过右键打开滚轮菜单。\n需要按住SHIFT键来放置路径点。</Chinesesimp>
             <Chinese>允許在通常情況下，在放置路徑點時通過右鍵打開滾輪菜單。 \n需要按住SHIFT鍵來放置路徑點。</Chinese>
             <Japanese>ウェイポイント配置時に右クリックでコンテキスト メニューを使えるようにします。\nウェイポイントの配置にはシフトキーを長押しする必要があります。</Japanese>
+            <Italian>Consente l'apertura del menu contestuale facendo clic con il pulsante destro del mouse quando normalmente si verifica il posizionamento del waypoint.\nRichiede la pressione del tasto SHIFT per posizionare i waypoint.</Italian>
         </Key>
         <Key ID="STR_ZEN_Context_Menu_OpenContextMenu">
             <English>Open Context Menu</English>
@@ -77,6 +84,7 @@
             <Korean>맞춤형 메뉴 열기</Korean>
             <Chinesesimp>打开滚轮菜单</Chinesesimp>
             <Chinese>打開滾輪菜單</Chinese>
+            <Italian>Apri il menu contestuale</Italian>
         </Key>
     </Package>
 </Project>
