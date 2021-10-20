@@ -9,6 +9,7 @@
             <Japanese>可視性インジケータ</Japanese>
             <Chinesesimp>能见度指标</Chinesesimp>
             <Chinese>能见度指标</Chinese>
+            <Italian>Indicatore di visibilità</Italian>
         </Key>
         <Key ID="STR_ZEN_Visibility_Enabled_Description">
             <English>Indicates when a player can see the Zeus' cursor.</English>
@@ -18,6 +19,7 @@
             <Japanese>プレイヤーが Zeus のカーソルが見えているかどうかのインジケータです。</Japanese>
             <Chinesesimp>显示玩家何时能看到宙斯的光标。</Chinesesimp>
             <Chinese>顯示玩家何時能看到宙斯的光標。</Chinese>
+            <Italian>Indica quando un giocatore può vedere il cursore 'Zeus'</Italian>
         </Key>
         <Key ID="STR_ZEN_Visibility_Visible">
             <English>VISIBLE</English>
@@ -28,6 +30,7 @@
             <Japanese>可視性</Japanese>
             <Chinesesimp>可见性</Chinesesimp>
             <Chinese>可見性</Chinese>
+            <Italian>VISIBILE</Italian>
         </Key>
     </Package>
 </Project>
