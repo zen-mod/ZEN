@@ -12,6 +12,8 @@
             <Portuguese>Criar marcador de área</Portuguese>
             <Japanese>範囲マーカーを作成</Japanese>
             <Korean>영역 표시기 생성</Korean>
+            <Chinesesimp>创建区域标记</Chinesesimp>
+            <Chinese>創建區域標記</Chinese>
         </Key>
         <Key ID="STR_ZEN_Area_Markers_EditAreaMarker">
             <English>EDIT AREA MARKER</English>
@@ -24,6 +26,8 @@
             <Portuguese>Editar marcador de área</Portuguese>
             <Japanese>範囲マーカーを編集</Japanese>
             <Korean>영역 표시기 편집</Korean>
+            <Chinesesimp>编辑区域标记</Chinesesimp>
+            <Chinese>編輯區域標記</Chinese>
         </Key>
         <Key ID="STR_ZEN_Area_Markers_PlaceOnMap">
             <English>Place On Map</English>
@@ -36,6 +40,8 @@
             <Portuguese>Coloque no mapa</Portuguese>
             <Japanese>マップ上に設置</Japanese>
             <Korean>지도에 배치</Korean>
+            <Chinesesimp>标记在地图上</Chinesesimp>
+            <Chinese>標記在地圖上</Chinese>
         </Key>
     </Package>
 </Project>

@@ -86,9 +86,9 @@ _display displayAddEventHandler ["KeyDown", {call FUNC(handleKeyDown)}];
     _ctrl ctrlAddEventHandler ["MouseButtonDown", {
         if (RscDisplayCurator_sections select 0 == 1) then {
             private _ctrlTree = call EFUNC(common,getActiveTree);
-            private _pathLength = count tvCurSel _ctrlTree;
+            private _path = tvCurSel _ctrlTree;
 
-            if (_pathLength > 0 && {_pathLength < 4}) then {
+            if (_path isNotEqualTo [] && {_ctrlTree tvCount _path > 0}) then {
                 _ctrlTree tvSetCurSel [-1];
             };
         };

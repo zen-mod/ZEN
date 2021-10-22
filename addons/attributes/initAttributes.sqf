@@ -194,7 +194,7 @@
         [QEGVAR(common,setPlateNumber), [_entity, _value], _entity] call CBA_fnc_targetEvent;
     },
     {getPlateNumber _entity},
-    {alive _entity && {isClass (configOf _entity >> "PlateInfos")}}
+    {alive _entity && {getText (configOf _entity >> "PlateInfos" >> "name") in selectionNames _entity}}
 ] call FUNC(addAttribute);
 
 [
@@ -335,7 +335,7 @@
         };
     },
     {""},
-    {IS_ADMIN || {!GETMVAR(ZEN_disableCodeExecution,false)}}
+    {IS_ADMIN_LOGGED || {!GETMVAR(ZEN_disableCodeExecution,false)}}
 ] call FUNC(addAttribute);
 
 // - Group --------------------------------------------------------------------
@@ -487,7 +487,7 @@
         };
     },
     {""},
-    {IS_ADMIN || {!GETMVAR(ZEN_disableCodeExecution,false)}}
+    {IS_ADMIN_LOGGED || {!GETMVAR(ZEN_disableCodeExecution,false)}}
 ] call FUNC(addAttribute);
 
 // - Waypoint -----------------------------------------------------------------
