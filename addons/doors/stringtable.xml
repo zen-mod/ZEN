@@ -11,6 +11,7 @@
             <Korean>문 설정</Korean>
             <Chinesesimp>门设置</Chinesesimp>
             <Chinese>門設置</Chinese>
+            <Italian>Configura le porte</Italian>
         </Key>
         <Key ID="STR_ZEN_Doors_DoorState">
             <English>Door State</English>
@@ -19,6 +20,7 @@
             <Japanese>ドア状態</Japanese>
             <Chinesesimp>门状态</Chinesesimp>
             <Chinese>門狀態</Chinese>
+            <Italian>Stato della porta</Italian>
         </Key>
         <Key ID="STR_ZEN_Doors_NoBuilding">
             <English>Place on a building</English>
@@ -30,6 +32,7 @@
             <Korean>건물에 설치</Korean>
             <Chinesesimp>置于建筑物上</Chinesesimp>
             <Chinese>置於建築物上</Chinese>
+            <Italian>Posto su un edificio</Italian>
         </Key>
         <Key ID="STR_ZEN_Doors_NoDoors">
             <English>Building has no doors</English>
@@ -41,6 +44,7 @@
             <Korean>건물에 문이 없습니다</Korean>
             <Chinesesimp>建筑物无门</Chinesesimp>
             <Chinese>建築物無門</Chinese>
+            <Italian>L'edificio non ha porte</Italian>
         </Key>
     </Package>
 </Project>

@@ -38,6 +38,7 @@
             <Japanese>プレイヤー ロック</Japanese>
             <Chinesesimp>对玩家锁定</Chinesesimp>
             <Chinese>對玩家鎖定</Chinese>
+            <Italian>Bloccato per i giocatori</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_PlateNumber">
             <English>Plate Number</English>
@@ -46,7 +47,7 @@
             <German>Kennzeichen</German>
             <Polish>Tablica rejestracyjna</Polish>
             <Czech>Číslo vozu</Czech>
-            <Italian>Numero di targa</Italian>
+            <Italian>Targa</Italian>
             <Portuguese>Número da Placa</Portuguese>
             <Japanese>ナンバー プレート</Japanese>
             <Korean>번호판 숫자</Korean>
@@ -62,6 +63,7 @@
             <Japanese>リスポーン位置</Japanese>
             <Chinesesimp>重生位置</Chinesesimp>
             <Chinese>重生位置</Chinese>
+            <Italian>Posizione di rigenerazione</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_RespawnPosition_Tooltip">
             <English>Selects the side that is able to respawn on this object.</English>
@@ -72,6 +74,7 @@
             <Japanese>リスポーン位置になるオブジェクトを選択します。</Japanese>
             <Chinesesimp>选择能够在此物体上重生的一方。</Chinesesimp>
             <Chinese>選擇能夠在此物體上重生的一方。</Chinese>
+            <Italian>Seleziona il lato che è in grado di rigenerarsi su questo oggetto.</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_RespawnVehicle">
             <English>Respawn Vehicle</English>
@@ -80,6 +83,7 @@
             <Japanese>リスポーン車両</Japanese>
             <Chinesesimp>重生载具</Chinesesimp>
             <Chinese>重生載具</Chinese>
+            <Italian>Rigenera il veicolo</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_RespawnVehicle_Tooltip">
             <English>Selects where the vehicle will respawn when it is destroyed.</English>
@@ -88,6 +92,7 @@
             <Japanese>リスポーンされる車両を選択します。</Japanese>
             <Chinesesimp>选择车辆被摧毁后的重生位置。</Chinesesimp>
             <Chinese>選擇車輛被摧毀後的重生位置。</Chinese>
+            <Italian>Seleziona dove si rigenera il veicolo quando viene distrutto.</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_States">
             <English>States</English>
@@ -98,6 +103,7 @@
             <Japanese>状態</Japanese>
             <Chinesesimp>状态</Chinesesimp>
             <Chinese>狀態</Chinese>
+            <Italian>Stati</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_LocalExec">
             <English>Local Exec. This code will be executed in the unscheduled environment on this machine only.</English>
@@ -105,6 +111,7 @@
             <Japanese>ローカル実行。このコードはこのマシンでのみ、非スケジュール環境で実行されます。</Japanese>
             <Chinesesimp>本地执行。这段代码将只在本机的非计划环境中执行。</Chinesesimp>
             <Chinese>本地執行。這段代碼將只在本機的非計劃環境中執行。</Chinese>
+            <Italian>Esecutivo locale Questo codice verrà eseguito solo nell'ambiente non pianificato su questa macchina.</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_TargetExec">
             <English>Target Exec. This code will be executed in the unscheduled environment on the machine where this entity is local.</English>
@@ -112,6 +119,7 @@
             <Japanese>ターゲット実行。このコードはエンティティがローカルにあるマシンの非スケジュール環境で実行されます。</Japanese>
             <Chinesesimp>目标执行。这段代码将在这个实体所在的机器上的非计划环境中执行。</Chinesesimp>
             <Chinese>目標執行。這段代碼將在這個實體所在的機器上的非計劃環境中執行。</Chinese>
+            <Italian>Esecutivo Target Questo codice verrà eseguito nell'ambiente non pianificato sulla macchina in cui questa entità è locale.</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_GlobalExec">
             <English>Global Exec. This code will be executed in the unscheduled environment on all machines (server and clients).</English>
@@ -119,6 +127,7 @@
             <Japanese>グローバル実行。このコードは全マシンの非スケジュール環境で実行されます (サーバとクライアント)</Japanese>
             <Chinesesimp>全局执行。这段代码将在所有机器（服务器和客户端）的非计划环境中执行。</Chinesesimp>
             <Chinese>全局執行。這段代碼將在所有機器（服務器和客戶端）的非計劃環境中執行。</Chinese>
+            <Italian>Esecutivo globale Questo codice verrà eseguito nell'ambiente non pianificato su tutte le macchine (server e client).</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_ExecObject_Tooltip">
             <English>The variable "_this" refers to this object.</English>
@@ -126,6 +135,7 @@
             <Japanese>変数 "_this" はこのオブジェクトを指します。</Japanese>
             <Chinesesimp>变量"_this"指的是这个对象。</Chinesesimp>
             <Chinese>變量"_this"指的是這個對象。</Chinese>
+            <Italian>La variabile "_this" fa riferimento a questo oggetto.</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_ExecGroup_Tooltip">
             <English>The variable "_this" refers to this group.</English>
@@ -133,6 +143,7 @@
             <Japanese>変数 "_this" はこのグループを指します。</Japanese>
             <Chinesesimp>变量"_this"指的是这个小组。</Chinesesimp>
             <Chinese>變量"_this"指的是這個小組。</Chinese>
+            <Italian>La variabile "_this" si riferisce a questo gruppo.</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_Timeout">
             <English>Timeout (s)</English>
@@ -142,7 +153,7 @@
             <Polish>Limit czasu (s)</Polish>
             <Czech>Časový limit(s)</Czech>
             <Portuguese>Tempo Esgotado (s)</Portuguese>
-            <Italian>Tempo limite (s)</Italian>
+            <Italian>Fuori tempo (s)</Italian>
             <Japanese>タイムアウト (秒)</Japanese>
             <Korean>시간 초과 (초)</Korean>
             <Chinesesimp>超时(秒)</Chinesesimp>
@@ -314,6 +325,7 @@
             <Korean>폭발물 처리반</Korean>
             <Chinesesimp>爆破专家</Chinesesimp>
             <Chinese>爆破專家</Chinese>
+            <Italian>Artificiere</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeAbilities">
             <English>Change Abilities</English>
@@ -325,6 +337,7 @@
             <Japanese>属性変更</Japanese>
             <Chinesesimp>更改属性</Chinesesimp>
             <Chinese>更改屬性</Chinese>
+            <Italian>Cambia abilità</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_Abilities">
             <English>Abilities</English>
@@ -336,6 +349,7 @@
             <Japanese>属性</Japanese>
             <Chinesesimp>属性</Chinesesimp>
             <Chinese>屬性</Chinese>
+            <Italian>Abilità</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_OpenAttributesDisplay">
             <English>Open Attributes Display</English>
@@ -344,6 +358,7 @@
             <Japanese>属性パネルを表示</Japanese>
             <Chinesesimp>打开属性显示</Chinesesimp>
             <Chinese>打開屬性顯示</Chinese>
+            <Italian>Apri la visualizzazione degli attributi</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_OpenAttributesDisplay_Description">
             <English>Opens the Zeus attributes display for the selected entity.\nWhen multiple entities are selected (i.e. due to selecting a group), the hovered entity will be used.</English>
@@ -351,6 +366,7 @@
             <Japanese>選択したエンティティのZeus属性パネルを開きます\n複数のエンティティが選択されている場合は、ホバー選択しているエンティティの属性を使用します。</Japanese>
             <Chinesesimp>打开所选实体的Zeus属性显示。当选择多个实体时（即由于选择了一个小组），将使用悬停的实体。</Chinesesimp>
             <Chinese>打開所選實體的Zeus屬性顯示。當選擇多個實體時（即由於選擇了一個小組），將使用懸停的實體。</Chinese>
+            <Italian>Apre la visualizzazione degli attributi di Zeus per l'entità selezionata.\nQuando vengono selezionate più entità (ad es. a causa della selezione di un gruppo), verrà utilizzata l'entità al passaggio del mouse.</Italian>
         </Key>
     </Package>
 </Project>
