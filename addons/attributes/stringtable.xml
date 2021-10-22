@@ -105,6 +105,9 @@
             <Chinese>狀態</Chinese>
             <Italian>Stati</Italian>
         </Key>
+        <Key ID="STR_ZEN_Attributes_SpeedLimit">
+            <English>Speed Limit</English>
+        </Key>
         <Key ID="STR_ZEN_Attributes_LocalExec">
             <English>Local Exec. This code will be executed in the unscheduled environment on this machine only.</English>
             <German>Lokale Ausführung. Dieser Code wird in der unscheduled Environment für nur die lokale Maschine ausgeführt.</German>

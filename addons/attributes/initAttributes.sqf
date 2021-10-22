@@ -85,6 +85,21 @@
 
 [
     "Object",
+    LSTRING(SpeedLimit),
+    QGVAR(slider),
+    [0, 300, 5, false, 0],
+    {
+        {
+            [QEGVAR(common,limitSpeed), [_entity, _value], _entity] call CBA_fnc_targetEvent;
+            _entity setVariable [QGVAR(SpeedLimit), _value, true];
+        } forEach call EFUNC(common,getSelectedVehicles);
+    },
+    {_entity getVariable [QGVAR(SpeedLimit), 0]},
+    {alive _entity}
+] call FUNC(addAttribute);
+
+[
+    "Object",
     "STR_3DEN_Object_Attribute_Rank_displayName",
     QGVAR(icons),
     [[
