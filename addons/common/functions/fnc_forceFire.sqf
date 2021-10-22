@@ -66,8 +66,16 @@ GVAR(forceFireCurators) pushBackUnique _curatorClientID;
                 (fullCrew _vehicle select {_x select 0 == _shooter} select 0) params ["", "", "_cargoIndex", "_turretPath", "_isFFV"];
                 // FFV
                 if (_isFFV) exitWith {
-                    weaponState _shooter params ["", "_muzzle", "_firemode"];
-                    _shooter forceWeaponFire [_muzzle, _firemode];
+                    // Copied from zen_ai_fnc_suppressiveFire
+                    private _weapon = currentWeapon _shooter;
+                    private _compatibleMagazines = _weapon call CBA_fnc_compatibleMagazines;
+                    private _index = magazines _shooter findIf {_x in _compatibleMagazines};
+                    if (_index == -1) exitWith {};
+
+                    private _magazine = magazinesDetail _shooter select _index;
+                    _magazine call EFUNC(common,parseMagazineDetail) params ["_id", "_owner"];
+
+                    CBA_logic action ["UseMagazine", _shooter, _shooter, _owner, _id];
                 };
                 // Vehicle crew
                 if (driver _vehicle == _shooter) then {
