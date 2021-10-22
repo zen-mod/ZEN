@@ -176,7 +176,7 @@
         private _enabled = 0;
 
         {
-            if (_x == driver vehicle _x && {!isPlayer _x}) then {
+            if (!isPlayer _x && {_x == vehicle _x || {_x == driver vehicle _x}}) then {
                 private _isAIEnabledPATH = _x checkAIFeature "PATH";
                 private _AIEvent = [QEGVAR(common,enableAI), QEGVAR(common,disableAI)] select _isAIEnabledPATH;
                 [_AIEvent, [_x, "PATH"], _x] call CBA_fnc_globalEvent;
