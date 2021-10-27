@@ -236,7 +236,7 @@ class EGVAR(context_menu,actions) {
         };
         class Copy {
             displayName = "$STR_3DEN_Display3DEN_MenuBar_EntityCopy_text";
-            statement = QUOTE(GVAR(loadout) = getUnitLoadout _hoveredEntity);
+            statement = QUOTE(if !(GVAR(hasACRE)) then {GVAR(loadout) = getUnitLoadout _hoveredEntity;} else {GVAR(loadout) = [getUnitLoadout _hoveredEntity] call acre_api_fnc_filterUnitLoadout;});
             icon = QPATHTOF(ui\copy_ca.paa);
         };
         class Paste {
