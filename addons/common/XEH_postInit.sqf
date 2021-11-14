@@ -399,9 +399,3 @@ if (isServer) then {
     [QGVAR(createZeus), LINKFUNC(createZeus)] call CBA_fnc_addEventHandler;
     [QGVAR(deserializeObjects), LINKFUNC(deserializeObjects)] call CBA_fnc_addEventHandler;
 };
-
-// Check for installed mods
-GVAR(hasACRE) = false;
-if (isClass(configFile >> "CfgPatches" >> "acre_main")) then {
-    GVAR(hasACRE) = true;
-};

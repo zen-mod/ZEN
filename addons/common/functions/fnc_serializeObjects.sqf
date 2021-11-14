@@ -100,13 +100,7 @@ private _fnc_serializeUnit = {
     private _skill = skill _unit;
     private _stance = unitPos _unit;
 
-    private _loadout = getUnitLoadout _unit;
-
-    // Check for ACRE, if so replace radio IDs with base radios
-    if (GVAR(hasACRE)) then {
-        _loadout = [_loadout] call acre_api_fnc_filterUnitLoadout;
-    };
-
+    private _loadout = [_unit] call FUNC(getUnitLoadoutSafe);
     private _identity = [name _unit, face _unit, speaker _unit, pitch _unit, nameSound _unit, _unit call BIS_fnc_getUnitInsignia];
     private _flagTexture = getForcedFlagTexture _unit;
 

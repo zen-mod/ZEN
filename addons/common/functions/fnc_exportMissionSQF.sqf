@@ -115,11 +115,7 @@ private _fnc_processInventory = {
         _outputObjects pushBack ["['%1', 'onEachFrame', {", _nextFrameHandle];
         _outputObjects pushBack "    params [""_unit""];";
         if !(_object call FUNC(hasDefaultInventory)) then {
-            // Check for ACRE, if so replace radio IDs with base radios
-            private _loadout = getUnitLoadout _object;
-            if (GVAR(hasACRE)) then {
-                _loadout = [_loadout] call acre_api_fnc_filterUnitLoadout;
-            };
+            private _loadout = [_object] call FUNC(getUnitLoadoutSafe);
             _outputObjects pushBack ["    _unit setUnitLoadout %1;", _loadout];
         };
         _outputObjects pushBack "    _unit call BIN_fnc_CBRNHoseInit;";

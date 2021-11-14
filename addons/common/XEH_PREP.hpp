@@ -28,6 +28,7 @@ PREP(getPylonTurret);
 PREP(getSelectedUnits);
 PREP(getSelectedVehicles);
 PREP(getSideIcon);
+PREP(getUnitLoadoutSafe);
 PREP(getVehicleAmmo);
 PREP(getVehicleIcon);
 PREP(getWeaponReloadTime);
