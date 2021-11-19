@@ -95,7 +95,7 @@
         } forEach call EFUNC(common,getSelectedVehicles);
     },
     {_entity getVariable [QGVAR(SpeedLimit), 0]},
-    {alive _entity}
+    {alive _entity && {!isPlayer driver _entity} && {_entity isKindOf "CAManBase" || {_entity isKindOf "LandVehicle"} || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}}
 ] call FUNC(addAttribute);
 
 [
