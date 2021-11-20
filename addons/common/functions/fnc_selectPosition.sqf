@@ -67,7 +67,7 @@ params [
 
 // Exit with failure if an instance is already active
 if (GVAR(selectPositionActive)) exitWith {
-    [false, _objects, [0, 0, 0], _args, false, false, false] call _code;
+    [false, _objects, [0, 0, 0], _args, false, false, false] call _function;
 };
 
 GVAR(selectPositionActive) = true;
