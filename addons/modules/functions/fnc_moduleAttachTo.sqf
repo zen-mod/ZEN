@@ -44,10 +44,11 @@ if (!isNull attachedTo _object) exitWith {
         [LSTRING(CannotAttachToSelf)] call EFUNC(common,showMessage);
     };
 
-    private _direction = getDir _object - getDir _entity;
+    private _dirAndUp = [_entity vectorWorldToModel vectorDir _object, _entity vectorWorldToModel vectorUp _object];
 
     _object attachTo [_entity];
-    [QEGVAR(common,setDir), [_object, _direction], _object] call CBA_fnc_targetEvent;
+
+    [QEGVAR(common,setVectorDirAndUp), [_object, _dirAndUp], _object] call CBA_fnc_targetEvent;
 
     [LSTRING(ObjectAttached)] call EFUNC(common,showMessage);
 }, [], LSTRING(ModuleAttachTo)] call EFUNC(common,selectPosition);
