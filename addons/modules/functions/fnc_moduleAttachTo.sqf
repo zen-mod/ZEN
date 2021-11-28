@@ -47,7 +47,6 @@ if (!isNull attachedTo _object) exitWith {
     private _dirAndUp = [_entity vectorWorldToModel vectorDir _object, _entity vectorWorldToModel vectorUp _object];
 
     _object attachTo [_entity];
-
     [QEGVAR(common,setVectorDirAndUp), [_object, _dirAndUp], _object] call CBA_fnc_targetEvent;
 
     [LSTRING(ObjectAttached)] call EFUNC(common,showMessage);
