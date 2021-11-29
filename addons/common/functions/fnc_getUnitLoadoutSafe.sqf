@@ -24,4 +24,4 @@ if (isClass(configFile >> "CfgPatches" >> "acre_main")) then {
     _loadout = [_loadout] call acre_api_fnc_filterUnitLoadout;
 }
 
-return _loadout;
+_loadout // Return value
