@@ -219,8 +219,8 @@
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(setVectorDirAndUp), {
-    params ["_object", "_vectorDirAndUp"];
-    _object setVectorDirAndUp _vectorDirAndUp;
+    params ["_object", "_dirAndUp"];
+    _object setVectorDirAndUp _dirAndUp;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(setVelocity), {
