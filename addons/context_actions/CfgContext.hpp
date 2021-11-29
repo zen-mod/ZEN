@@ -236,7 +236,7 @@ class EGVAR(context_menu,actions) {
         };
         class Copy {
             displayName = "$STR_3DEN_Display3DEN_MenuBar_EntityCopy_text";
-            statement = QUOTE(GVAR(loadout) = [ARR_1(_hoveredEntity)] call EFUNC(common,getUnitLoadoutSafe););
+            statement = QUOTE(GVAR(loadout) = _hoveredEntity call EFUNC(common,getUnitLoadoutSafe););
             icon = QPATHTOF(ui\copy_ca.paa);
         };
         class Paste {
