@@ -22,6 +22,6 @@ private _loadout = getUnitLoadout _unit;
 // ACRE Sanitization
 if (isClass(configFile >> "CfgPatches" >> "acre_main")) then {
     _loadout = [_loadout] call acre_api_fnc_filterUnitLoadout;
-}
+};
 
 _loadout // Return value
