@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mjc4wilton
- * Returns the unit loadout array (sanitized)
+ * Returns the given unit's loadout. Handles filtering items with unique radio IDs.
  *
  * Arguments:
  * 0: Unit <OBJECT>
