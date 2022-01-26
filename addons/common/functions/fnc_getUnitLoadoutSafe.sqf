@@ -10,7 +10,7 @@
  * Unit Loadout Array <ARRAY>
  *
  * Example:
- * [player] call zen_common_fnc_getUnitLoadoutSafe
+ * [_unit] call zen_common_fnc_getUnitLoadout
  *
  * Public: No
  */
