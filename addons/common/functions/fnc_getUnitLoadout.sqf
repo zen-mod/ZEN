@@ -19,7 +19,7 @@ params ["_unit"];
 
 private _loadout = getUnitLoadout _unit;
 
-// ACRE Sanitization
+// ACRE radios
 if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
     _loadout = [_loadout] call acre_api_fnc_filterUnitLoadout;
 };
