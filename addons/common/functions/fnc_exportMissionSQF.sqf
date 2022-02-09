@@ -115,7 +115,8 @@ private _fnc_processInventory = {
         _outputObjects pushBack ["['%1', 'onEachFrame', {", _nextFrameHandle];
         _outputObjects pushBack "    params [""_unit""];";
         if !(_object call FUNC(hasDefaultInventory)) then {
-            _outputObjects pushBack ["    _unit setUnitLoadout %1;", getUnitLoadout _object];
+            private _loadout = [_object] call FUNC(getUnitLoadout);
+            _outputObjects pushBack ["    _unit setUnitLoadout %1;", _loadout];
         };
         _outputObjects pushBack "    _unit call BIN_fnc_CBRNHoseInit;";
         _outputObjects pushBack ["    ['%1', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;", _nextFrameHandle];
