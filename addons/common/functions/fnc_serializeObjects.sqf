@@ -197,7 +197,7 @@ private _fnc_serializeAttachedObjects = {
             private _data = _x call _fnc_serializeObject;
             if (isNil "_data") exitWith {};
 
-            private _offset = _object worldToModel ASLtoAGL getPosASL _x;
+            private _offset = _object WorldToModel ASLToAGL getPosWorld _x;
             private _dirAndUp = [_object vectorWorldToModel vectorDir _x, _object vectorWorldToModel vectorUp _x];
 
             _attachedObjects pushBack [_data, _offset, _dirAndUp];
