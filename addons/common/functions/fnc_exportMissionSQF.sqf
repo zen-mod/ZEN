@@ -170,7 +170,7 @@ private _fnc_processAttachedObjects = {
             if (isNil "_index") exitWith {};
 
             private _varName = FORMAT_OBJ_VAR(_index);
-            private _offset = _object worldToModel ASLtoAGL getPosASL _x;
+            private _offset = _object worldToModel ASLtoAGL getPosWorld _x;
             private _dirAndUp = [_object vectorWorldToModel vectorDir _x, _object vectorWorldToModel vectorUp _x];
 
             _outputAttach pushBack ["%1 attachTo [%2, %3];", _varName, _parentVarName, _offset];
