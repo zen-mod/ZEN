@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mjc4wilton
- * Returns the given unit's loadout. Handles filtering items with unique radio IDs.
+ * Returns the given unit's loadout, uses CBA Extended Loadouts
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -17,11 +17,4 @@
 
 params ["_unit"];
 
-private _loadout = getUnitLoadout _unit;
-
-// ACRE radios
-if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
-    _loadout = [_loadout] call acre_api_fnc_filterUnitLoadout;
-};
-
-_loadout
+[_unit] call CBA_fnc_getLoadout

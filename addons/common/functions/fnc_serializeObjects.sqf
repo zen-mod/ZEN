@@ -100,13 +100,13 @@ private _fnc_serializeUnit = {
     private _skill = skill _unit;
     private _stance = unitPos _unit;
 
-    private _loadout = [_unit] call FUNC(getUnitLoadout);
+    private _extendedLoadout = [_unit] call FUNC(getUnitLoadout);
     private _identity = [name _unit, face _unit, speaker _unit, pitch _unit, nameSound _unit, _unit call BIS_fnc_getUnitInsignia];
     private _flagTexture = getForcedFlagTexture _unit;
 
     private _attachedObjects = _unit call _fnc_serializeAttachedObjects;
 
-    [_type, _position, _direction, _group, _isLeader, _rank, _skill, _stance, _loadout, _identity, _flagTexture, _attachedObjects]
+    [_type, _position, _direction, _group, _isLeader, _rank, _skill, _stance, _extendedLoadout, _identity, _flagTexture, _attachedObjects]
 };
 
 private _fnc_serializeVehicle = {

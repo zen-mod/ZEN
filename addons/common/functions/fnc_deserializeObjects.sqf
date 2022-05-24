@@ -80,7 +80,7 @@ private _fnc_deserializeGroup = {
 };
 
 private _fnc_deserializeUnit = {
-    params ["_type", "_position", "_direction", "_group", "_isLeader", "_rank", "_skill", "_stance", "_loadout", "_identity", "_flagTexture", "_attachedObjects"];
+    params ["_type", "_position", "_direction", "_group", "_isLeader", "_rank", "_skill", "_stance", "_extendedLoadout", "_identity", "_flagTexture", "_attachedObjects"];
 
     _position = _position vectorAdd _centerPos;
     _group = _group call _fnc_deserializeGroup;
@@ -103,11 +103,11 @@ private _fnc_deserializeUnit = {
     };
 
     [{
-        params ["_unit", "_loadout"];
+        params ["_unit", "_extendedLoadout"];
 
-        _unit setUnitLoadout _loadout;
+        [_unit, _extendedLoadout] call CBA_fnc_setLoadout;
         [_unit] call BIN_fnc_CBRNHoseInit;
-    }, [_unit, _loadout]] call CBA_fnc_execNextFrame;
+    }, [_unit, _extendedLoadout]] call CBA_fnc_execNextFrame;
 
     if (!_enableRandomization) then {
         [{
