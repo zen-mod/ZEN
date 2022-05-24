@@ -100,7 +100,7 @@ private _fnc_serializeUnit = {
     private _skill = skill _unit;
     private _stance = unitPos _unit;
 
-    private _extendedLoadout = [_unit] call FUNC(getUnitLoadout);
+    private _extendedLoadout = [_unit] call CBA_fnc_getLoadout;
     private _identity = [name _unit, face _unit, speaker _unit, pitch _unit, nameSound _unit, _unit call BIS_fnc_getUnitInsignia];
     private _flagTexture = getForcedFlagTexture _unit;
 

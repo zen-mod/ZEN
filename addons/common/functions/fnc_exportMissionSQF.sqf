@@ -115,7 +115,7 @@ private _fnc_processInventory = {
         _outputObjects pushBack ["['%1', 'onEachFrame', {", _nextFrameHandle];
         _outputObjects pushBack "    params [""_unit""];";
         if !(_object call FUNC(hasDefaultInventory)) then {
-            private _loadout = [_object] call FUNC(getUnitLoadout);
+            private _loadout = [_object] call CBA_fnc_getLoadout;
             _outputObjects pushBack ["    [_unit, %1] call CBA_fnc_setLoadout;", _loadout];
         };
         _outputObjects pushBack "    _unit call BIN_fnc_CBRNHoseInit;";
