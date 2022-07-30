@@ -14,7 +14,7 @@ PREP_RECOMPILE_END;
         [_entity] call FUNC(configure);
     },
     {
-        alive _entity && {getNumber (configOf _entity >> "maximumLoad") > 0}
+        alive _entity && {maxLoad _entity > 0}
     }
 ] call EFUNC(attributes,addButton);
 
