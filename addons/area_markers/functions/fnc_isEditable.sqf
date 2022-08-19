@@ -7,7 +7,7 @@
  * 0: Marker <STRING>
  *
  * Return Value:
- * None
+ * Is Editable <BOOL>
  *
  * Example:
  * ["marker_0"] call zen_area_markers_fnc_isEditable
