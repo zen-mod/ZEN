@@ -3239,24 +3239,31 @@
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_FireMode">
             <English>Fire Mode</English>
+            <German>Feuermodus</German>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_FireMode_SingleShotsSlow">
             <English>Single Shots (Slow)</English>
+            <German>Einzelfeuer (Langsam)</German>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_FireMode_SingleShotsFast">
             <English>Single Shots (Fast)</English>
+            <German>Einzelfeuer (Schnell)</German>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_FireMode_ThreeRoundBurstsSlow">
             <English>Three Round Bursts (Slow)</English>
+            <German>Feuerstoß (Langsam)</German>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_FireMode_ThreeRoundBurstsFast">
             <English>Three Round Bursts (Fast)</English>
+            <German>Feuerstoß (Schnell)</German>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_FireMode_FullyAutomaticWithPauses">
             <English>Fully Automatic (With Pauses)</English>
+            <German>Dauerfeuer (Mit Pausen)</German>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_FireMode_FullyAutomaticUninterrupted">
             <English>Fully Automatic (Uninterrupted)</English>
+            <German>Dauerfeuer (Ununterbrochen)</German>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_Stance_Tooltip">
             <English>Controls the stance units on foot will employ while suppressing.</English>
