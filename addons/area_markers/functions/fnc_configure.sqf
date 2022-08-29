@@ -162,6 +162,10 @@ private _keyDownEH = _display displayAddEventHandler ["KeyDown", {
             _display displayRemoveEventHandler ["KeyDown", _keyDownEH];
 
             ctrlDelete _ctrlConfigure;
+
+            // Despite returning true to override default handling, pressing ESCAPE
+            // appears to be hard coded to close the map
+            call FUNC(onMapToggled);
         };
 
         true // handled
