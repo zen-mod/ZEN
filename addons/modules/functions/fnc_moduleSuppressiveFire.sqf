@@ -44,6 +44,22 @@ if !(side group _unit in [west, east, independent, civilian]) exitWith {
     ],
     [
         "COMBO",
+        LSTRING(SuppressiveFire_FireMode_SingleShotSlow),
+        [
+            [],
+            [
+                LSTRING(SuppressiveFire_FireMode_SingleShotsSlow),
+                LSTRING(SuppressiveFire_FireMode_SingleShotsFast),
+                LSTRING(SuppressiveFire_FireMode_ThreeRoundBurstsSlow),
+                LSTRING(SuppressiveFire_FireMode_ThreeRoundBurstsFast),
+                LSTRING(SuppressiveFire_FireMode_FullyAutomaticWithPauses),
+                LSTRING(SuppressiveFire_FireMode_FullyAutomaticUninterrupted)
+            ],
+            4
+        ]
+    ],
+    [
+        "COMBO",
         ["STR_A3_RscAttributeUnitPos_Title", LSTRING(SuppressiveFire_Stance_Tooltip)],
         [
             [
@@ -66,7 +82,7 @@ if !(side group _unit in [west, east, independent, civilian]) exitWith {
     ]
 ], {
     params ["_values", "_unit"];
-    _values params ["_duration", "_stance", "_entireGroup"];
+    _values params ["_duration", "_fireMode", "_stance", "_entireGroup"];
 
     private _units = if (_entireGroup) then {units _unit} else {[_unit]};
     _units = _units apply {vehicle _x};
@@ -74,15 +90,15 @@ if !(side group _unit in [west, east, independent, civilian]) exitWith {
 
     [_units, {
         params ["_successful", "_units", "_position", "_args"];
-        _args params ["_duration", "_stance"];
+        _args params ["_duration", "_fireMode", "_stance"];
 
         if (_successful) then {
             curatorMouseOver params ["_type", "_entity"];
 
             private _target = [ASLtoATL _position, _entity] select (_type == "OBJECT");
             {
-                [_x, _target, _duration, _stance] call EFUNC(ai,suppressiveFire);
+                [_x, _target, _duration, _fireMode, _stance] call EFUNC(ai,suppressiveFire);
             } forEach _units;
         };
-    }, [_duration, _stance], ELSTRING(ai,SuppressiveFire)] call EFUNC(common,selectPosition);
+    }, [_duration, _fireMode, _stance], ELSTRING(ai,SuppressiveFire)] call EFUNC(common,selectPosition);
 }, {}, _unit] call EFUNC(dialog,create);

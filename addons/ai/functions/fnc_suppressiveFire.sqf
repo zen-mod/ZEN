@@ -9,7 +9,16 @@
  * 1: Target <OBJECT|ARRAY>
  *   - Position must be in ATL format.
  * 2: Duration <NUMBER> (default: 20)
- * 3: Stance <STRING> (default: "AUTO")
+ * 3: Fire Mode <NUMBER> (default: 4)
+ *   - 0: Single shots (slow).
+ *   - 1: Single shots (fast).
+ *   - 2: Three round bursts (slow).
+ *   - 3: Three round bursts (fast).
+ *   - 4: Fully automatic (with pauses).
+ *   - 5: Fully automatic (uninterrupted).
+ *   - May not apply to weapons limited by long ammo reloading times.
+ * 4: Stance <STRING> (default: "AUTO")
+ *   - Must be one of the modes used by the setUnitPos command.
  *
  * Return Value:
  * None
@@ -27,6 +36,7 @@ params [
     ["_unit", objNull, [objNull, grpNull]],
     ["_target", [0, 0, 0], [[], objNull], 3],
     ["_duration", 20, [0]],
+    ["_fireMode", 4, [0]],
     ["_stance", "AUTO", [""]]
 ];
 
@@ -36,7 +46,7 @@ if (!local _unit) exitWith {
 
 if (_unit isEqualType grpNull) exitWith {
     {
-        [_x, _target, _duration, _stance] call FUNC(suppressiveFire);
+        [_x, _target, _duration, _fireMode, _stance] call FUNC(suppressiveFire);
     } forEach units _unit;
 };
 
@@ -101,6 +111,16 @@ _unit lookAt _target;
 _unit doWatch _target;
 _unit doTarget _target;
 
+// Get the rounds per burst and time between bursts based on the given fire mode
+[
+    [1, [2, 3, 4]],
+    [1, [1, 1.5, 2]],
+    [3, [2, 3, 4]],
+    [3, [1, 1.5, 2]],
+    [10, [1.25, 1.5, 1.75]],
+    [10, [0, 0, 0]]
+] select (0 max _fireMode min 5) params ["_roundsPerBurst", "_burstDelay"];
+
 // Force the unit to fire their weapon for the specified duration. Works better than using the doSuppressiveFire
 // command which does not make units realiably fire at the target, especially at longer distances. Small initial
 // delay to give units time to aim at the target. We ignore reloading and give units infinite ammo to create a
@@ -109,7 +129,21 @@ private _endTime = CBA_missionTime + _duration + TARGETING_DELAY;
 
 [{
     [{
-        params ["_unit", "_target", "_isTempTarget", "_abilities", "_skills", "_behaviour", "_combatMode", "_unitPos", "_shotTime", "_endTime"];
+        params [
+            "_unit",
+            "_target",
+            "_isTempTarget",
+            "_abilities",
+            "_skills",
+            "_behaviour",
+            "_combatMode",
+            "_unitPos",
+            "_roundsPerBurst",
+            "_burstDelay",
+            "_currentBurstRounds",
+            "_shotTime",
+            "_endTime"
+        ];
 
         if (
             !alive _unit
@@ -144,63 +178,79 @@ private _endTime = CBA_missionTime + _duration + TARGETING_DELAY;
 
         if (CBA_missionTime >= _shotTime) then {
             private _vehicle = vehicle _unit;
-
-            if (_vehicle == _unit) exitWith {
-                weaponState _unit params ["_weapon", "_muzzle", "_fireMode"];
-
-                _unit setAmmo [_weapon, 1e6];
-                _unit forceWeaponFire [_muzzle, _fireMode];
-                _this set [8, CBA_missionTime + 0.1];
-            };
-
-            if (_unit call EFUNC(common,isUnitFFV)) exitWith {
-                // Using UseMagazine action since forceWeaponFire command does not work for FFV units
-                // UseMagazine action doesn't seem to work with currently loaded magazine (currentMagazineDetail)
-                // Therefore, this relies on the unit having an extra magazine in their inventory
-                // but should be fine in most situations
-                private _weapon = currentWeapon _unit;
-                private _compatibleMagazines = _weapon call CBA_fnc_compatibleMagazines;
-                private _index = magazines _unit findIf {_x in _compatibleMagazines};
-                if (_index == -1) exitWith {};
-
-                private _magazine = magazinesDetail _unit select _index;
-                _magazine call EFUNC(common,parseMagazineDetail) params ["_id", "_owner"];
-
-                _unit setAmmo [_weapon, 1e6];
-                CBA_logic action ["UseMagazine", _unit, _unit, _owner, _id];
-                _this set [8, CBA_missionTime + 0.1];
-            };
-
             private _turretPath = _vehicle unitTurret _unit;
-            private _muzzle = weaponState [_vehicle, _turretPath] select 1;
-            _unit setAmmo [_muzzle, 1e6];
 
-            // Get the reload time for the current weapon state
-            weaponState [_vehicle, _turretPath] params ["_weapon", "_muzzle", "_fireMode", "_magazine", "_ammo"];
+            switch (true) do {
+                // On foot
+                case (_vehicle == _unit): {
+                    weaponState _unit params ["_weapon", "_muzzle", "_fireMode"];
 
-            private _config = configFile >> "CfgWeapons" >> _weapon;
-
-            if (_muzzle != _weapon) then {
-                _config = _config >> _muzzle;
-            };
-
-            if (_muzzle != _fireMode) then {
-                _config = _config >> _fireMode;
-            };
-
-            private _reloadTime = getNumber (_config >> "reloadTime");
-
-            // Find the correct magazine id and owner and force the weapon to fire
-            {
-                _x params ["_xMagazine", "_xTurretPath", "_xAmmo", "_id", "_owner"];
-
-                if (_xTurretPath isEqualTo _turretPath && {_xMagazine == _magazine && {_xAmmo == _ammo && {_xAmmo != 0}}}) exitWith {
-                    _vehicle action ["UseMagazine", _vehicle, _unit, _owner, _id];
-                    _this set [8, CBA_missionTime + _reloadTime];
+                    _unit setAmmo [_weapon, 1e6];
+                    _unit forceWeaponFire [_muzzle, _fireMode];
                 };
-            } forEach magazinesAllTurrets _vehicle;
+
+                // FFV
+                case (_unit call EFUNC(common,isUnitFFV)): {
+                    // Using UseMagazine action since forceWeaponFire command does not work for FFV units
+                    // UseMagazine action doesn't seem to work with currently loaded magazine (currentMagazineDetail)
+                    // Therefore, this relies on the unit having an extra magazine in their inventory
+                    // but should be fine in most situations
+                    private _weapon = currentWeapon _unit;
+                    private _compatibleMagazines = _weapon call CBA_fnc_compatibleMagazines;
+                    private _index = magazines _unit findAny _compatibleMagazines;
+                    if (_index == -1) exitWith {};
+
+                    private _magazine = magazinesDetail _unit select _index;
+                    _magazine call EFUNC(common,parseMagazineDetail) params ["_id", "_owner"];
+
+                    _unit setAmmo [_weapon, 1e6];
+                    CBA_logic action ["UseMagazine", _unit, _unit, _owner, _id];
+                };
+
+                // Vehicle gunner
+                default {
+                    private _muzzle = weaponState [_vehicle, _turretPath] select 1;
+                    _unit setAmmo [_muzzle, 1e6];
+
+                    private _magazine = _vehicle currentMagazineDetailTurret _turretPath;
+                    _magazine call EFUNC(common,parseMagazineDetail) params ["_id", "_owner"];
+                    _vehicle action ["UseMagazine", _vehicle, _unit, _owner, _id];
+                };
+            };
+
+            // Set time until the next shot based on the weapon's ammo reloading time and whether the current burst is finished
+            private _reloadTime = [_vehicle, _turretPath] call EFUNC(common,getWeaponReloadTime);
+            _currentBurstRounds = _currentBurstRounds + 1;
+
+            if (_currentBurstRounds >= _roundsPerBurst) then {
+                _currentBurstRounds = 0;
+
+                // Calculate the delay until the next burst
+                // Use ammo reloading time if it is longer to prevent firing before the weapon is ready
+                private _nextBurstDelay = random _burstDelay max _reloadTime;
+                _shotTime = CBA_missionTime + _nextBurstDelay;
+            } else {
+                _shotTime = CBA_missionTime + _reloadTime;
+            };
+
+            _this set [10, _currentBurstRounds];
+            _this set [11, _shotTime];
         };
 
         false // Continue
     }, {}, _this] call CBA_fnc_waitUntilAndExecute;
-}, [_unit, _target, _isTempTarget, _abilities, _skills, _behaviour, _combatMode, _unitPos, 0, _endTime], TARGETING_DELAY] call CBA_fnc_waitAndExecute;
+}, [
+    _unit,
+    _target,
+    _isTempTarget,
+    _abilities,
+    _skills,
+    _behaviour,
+    _combatMode,
+    _unitPos,
+    _roundsPerBurst,
+    _burstDelay,
+    0, // _currentBurstRounds
+    0, // _shotTime
+    _endTime
+], TARGETING_DELAY] call CBA_fnc_waitAndExecute;
