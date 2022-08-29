@@ -17,6 +17,4 @@
 
 params ["_entity"];
 
-_entity isEqualType objNull
-&& {alive _entity}
-&& {getNumber (configOf _entity >> "maximumLoad") > 0}
+_entity isEqualType objNull && {alive _entity} && {maxLoad _entity > 0}

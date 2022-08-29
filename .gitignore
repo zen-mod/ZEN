@@ -18,3 +18,5 @@ hemtt*
 !hemtt.toml
 @zen
 tools/armake.exe
+ArmaScriptCompiler.exe
+*.sqfc
