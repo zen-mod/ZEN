@@ -36,6 +36,12 @@ params ["_logic"];
         true
     ],
     [
+        "TOOLBOX",
+        [LSTRING(ModuleWeather_Precipitation), LSTRING(ModuleWeather_Precipitation_Tooltip)],
+        [parseNumber (rainParams select 15), 1, 2, [LSTRING(ModuleWeather_Rain), LSTRING(ModuleWeather_Snow)]],
+        true
+    ],
+    [
         "SLIDER:PERCENT",
         [LSTRING(ModuleWeather_Lightning), LSTRING(ModuleWeather_Lightning_Tooltip)],
         [0, 1, lightnings],
@@ -96,6 +102,7 @@ params ["_logic"];
         "_forced",
         "_overcast",
         "_rain",
+        "_precipitation",
         "_lightning",
         "_rainbow",
         "_waves",
@@ -110,7 +117,7 @@ params ["_logic"];
     private _wind = [KMH_TO_MS(_windSpeed) * sin _windDirection, KMH_TO_MS(_windSpeed) * cos _windDirection, true];
     private _fog = [_fogDensity, _fogDecay, _fogAltitude];
 
-    [QGVAR(applyWeather), [_forced, _overcast, _rain, _lightning, _rainbow, _waves, _wind, _gusts, _fog]] call CBA_fnc_globalEvent;
+    [QGVAR(applyWeather), [_forced, _overcast, _rain, _lightning, _rainbow, _waves, _wind, _gusts, _fog, _precipitation]] call CBA_fnc_globalEvent;
 }, {}, [], QGVAR(moduleWeather)] call EFUNC(dialog,create);
 
 deleteVehicle _logic;

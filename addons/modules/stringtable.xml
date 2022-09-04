@@ -2239,6 +2239,21 @@
             <Chinese>設置降雨強度，要求雲量大於70%。</Chinese>
             <Italian>Imposta l'intensità della pioggia, richiede un cielo coperto superiore al 70%.</Italian>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleWeather_Precipitation">
+            <English>Precipitation</English>
+            <German>Niederschlag</German>
+            <French>Précipitation</French>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleWeather_Precipitation_Tooltip">
+            <English>Sets the type of precipitation.</English>
+            <German>Legt den Niederschlagstyp fest.</German>
+            <French>Défini le type de précipitation.</French>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleWeather_Snow">
+            <English>Snow</English>
+            <German>Schnee</German>
+            <French>Neige</French>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Lightning">
             <English>Lightning</English>
             <German>Blitzschlag</German>
