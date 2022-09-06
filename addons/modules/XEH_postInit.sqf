@@ -44,34 +44,6 @@ if (isServer) then {
     _unit allowFleeing 0;
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(applyWeatherSnow), {
-    params ["_turnOnSnow"];
-
-    if (_turnOnSnow) then {
-        setRain [
-            "a3\data_f\snowflake4_ca.paa", // rainDropTexture
-            4, // texDropCount
-            0.01, // minRainDensity
-            25, // effectRadius
-            0.05, // windCoef
-            2.5, // dropSpeed
-            0.5, // rndSpeed
-            0.5, // rndDir
-            0.07, // dropWidth
-            0.07, // dropHeight
-            [1, 1, 1, 0.5], // dropColor
-            0.0, // lumSunFront
-            0.2, // lumSunBack
-            0.5, // refractCoef
-            0.5, // refractSaturation
-            true, // snow
-            false // dropColorStrong
-        ]
-    } else {
-        setRain [];
-    };
-}] call CBA_fnc_addEventHandler;
-
 [QGVAR(applyWeather), {
     params ["_forced", "_overcast", "_rain", "_lightning", "_rainbow", "_waves", "_wind", "_gusts", "_fog", ["_precipitation", -1]];
 
@@ -81,22 +53,38 @@ if (isServer) then {
     0 setWaves _waves;
     0 setGusts _gusts;
 
-    if (_precipitation == 0) then {
-        // Set rain particles to default
-        [QGVAR(applyWeatherSnow), false] call CBA_fnc_localEvent;
-    };
-
     if (isServer) then {
         0 setRain _rain;
         0 setFog _fog;
         setWind _wind;
 
-        if (_precipitation == 1) then {
-            // Broadcast globally and make JIP compatible
-            [QGVAR(applyWeatherSnow), true, QGVAR(applyWeatherSnowJIPID)] call CBA_fnc_globalEventJIP;
-        } else {
-            // Remove Event from JIP queue
-            QGVAR(applyWeatherSnowJIPID) call CBA_fnc_removeGlobalEventJIP;
+        switch (_precipitation) do {
+            // Reset to default
+            case 0: {
+                [] call BIS_fnc_setRain;
+            };
+            // Set to snow
+            case 1: {
+                [
+                    "a3\data_f\snowflake4_ca.paa", // rainDropTexture
+                    4, // texDropCount
+                    0.01, // minRainDensity
+                    25, // effectRadius
+                    0.05, // windCoef
+                    2.5, // dropSpeed
+                    0.5, // rndSpeed
+                    0.5, // rndDir
+                    0.07, // dropWidth
+                    0.07, // dropHeight
+                    [1, 1, 1, 0.5], // dropColor
+                    0.0, // lumSunFront
+                    0.2, // lumSunBack
+                    0.5, // refractCoef
+                    0.5, // refractSaturation
+                    true, // snow
+                    false // dropColorStrong
+                ] call BIS_fnc_setRain;
+            };
         };
 
         if (_forced) then {

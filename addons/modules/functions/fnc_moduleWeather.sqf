@@ -31,13 +31,13 @@ params ["_logic"];
     ],
     [
         "SLIDER:PERCENT",
-        [LSTRING(ModuleWeather_Rain), LSTRING(ModuleWeather_Rain_Tooltip)],
+        [LSTRING(ModuleWeather_Precipitation), LSTRING(ModuleWeather_Precipitation_Tooltip)],
         [0, 1, rain],
         true
     ],
     [
         "TOOLBOX",
-        [LSTRING(ModuleWeather_Precipitation), LSTRING(ModuleWeather_Precipitation_Tooltip)],
+        [LSTRING(ModuleWeather_PrecipitationType), LSTRING(ModuleWeather_PrecipitationType_Tooltip)],
         [parseNumber (rainParams select 15), 1, 2, [LSTRING(ModuleWeather_Rain), LSTRING(ModuleWeather_Snow)]],
         true
     ],
