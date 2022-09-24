@@ -45,7 +45,7 @@ if (isServer) then {
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(applyWeather), {
-    params ["_forced", "_overcast", "_rain", "_lightning", "_rainbow", "_waves", "_wind", "_gusts", "_fog", ["_precipitation", -1]];
+    params ["_forced", "_overcast", "_rain", "_precipitationType", "_lightning", "_rainbow", "_waves", "_wind", "_gusts", "_fog"];
 
     0 setOvercast _overcast;
     0 setLightnings _lightning;
@@ -58,7 +58,7 @@ if (isServer) then {
         0 setFog _fog;
         setWind _wind;
 
-        switch (_precipitation) do {
+        switch (_precipitationType) do {
             // Reset to default
             case 0: {
                 [] call BIS_fnc_setRain;
