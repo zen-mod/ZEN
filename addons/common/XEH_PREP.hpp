@@ -51,6 +51,7 @@ PREP(loadMagazineInstantly);
 PREP(messageBox);
 PREP(openArsenal);
 PREP(parseMagazineDetail);
+PREP(reloadDisplay);
 PREP(runAfterSettingsInit);
 PREP(selectPosition);
 PREP(serializeInventory);
