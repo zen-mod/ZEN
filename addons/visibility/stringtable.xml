@@ -13,6 +13,7 @@
         </Key>
         <Key ID="STR_ZEN_Visibility_Enabled">
             <English>Enable Visibility Indicator</English>
+            <German>Aktiviere den Sichtbarkeitsindikator</German>
         </Key>
         <Key ID="STR_ZEN_Visibility_Enabled_Description">
             <English>Enables showing an indicator when a player can see the Zeus cursor position.</English>
@@ -26,15 +27,19 @@
         </Key>
         <Key ID="STR_ZEN_Visibility_DuringPlacementOnly">
             <English>During Placement Only</English>
+            <German>Nur während dem Platzieren</German>
         </Key>
         <Key ID="STR_ZEN_Visibility_DuringPlacementOnly_Description">
             <English>Only show the indicator while placing objects.</English>
+            <German>Zeigt den Indikator nur an während dem Platzieren</German>
         </Key>
         <Key ID="STR_ZEN_Visibility_MaxDistance">
             <English>Max Check Distance</English>
+            <German>Maximale Distanz</German>
         </Key>
         <Key ID="STR_ZEN_Visibility_MaxDistance_Description">
             <English>Controls the maximum distance from the cursor's position that players are considered for visibility checks.</English>
+            <German>Die Maximale Distanz zwischen dem Mauszeiger and den Spielern, bei der die Sichtbarkeit überprüft wird.</German>
         </Key>
         <Key ID="STR_ZEN_Visibility_Visible">
             <English>VISIBLE</English>
