@@ -128,9 +128,11 @@
         </Key>
         <Key ID="STR_ZEN_Editor_AddModIcons">
             <English>Add Mod Icons</English>
+            <German>Modsymbole anzeigen</German>
         </Key>
         <Key ID="STR_ZEN_Editor_AddModIcons_Description">
             <English>Adds mod icons to the create unit trees. WARNING: Can significantly increase display load times.</English>
+            <German>Zeigt Modsymbole im Einheitenbaum an. WARNUNG: Kann die Ladezeit des Baums deutlich erhöhen.</German>
         </Key>
         <Key ID="STR_ZEN_Editor_RandomizeCopyPaste">
             <English>Randomize Deep Copy/Paste</English>
