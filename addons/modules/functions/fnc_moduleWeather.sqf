@@ -102,7 +102,7 @@ params ["_logic"];
         "_forced",
         "_overcast",
         "_rain",
-        "_precipitation",
+        "_precipitationType",
         "_lightning",
         "_rainbow",
         "_waves",
