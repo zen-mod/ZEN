@@ -32,8 +32,8 @@ private _visible = false;
 {
     // Check if the cursor's position is in the player's view (filter the local player and virtual units)
     if (
-        //_x != player
-        side _x != sideLogic
+        _x != player
+        && {side _x != sideLogic}
         && {_x distance _posAGL <= GVAR(maxDistance)}
         && {
             private _dir = _x getRelDir _pos;
