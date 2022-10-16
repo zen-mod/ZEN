@@ -5,7 +5,7 @@
 
     // Reload the Zeus display when a faction filter setting is changed
     // Allows for changing faction filter settings mid-mission while the interface is forced
-    if (QUOTE(ADDON) in _name && {!isNull findDisplay IDD_RSCDISPLAYCURATOR} && {isNil QGVAR(displayReload)}) then {
+    if (QUOTE(ADDON) in _name) then {
         [] call EFUNC(common,reloadDisplay);
     };
 }] call CBA_fnc_addEventHandler;
