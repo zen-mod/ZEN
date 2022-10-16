@@ -236,13 +236,13 @@ class EGVAR(context_menu,actions) {
         };
         class Copy {
             displayName = "$STR_3DEN_Display3DEN_MenuBar_EntityCopy_text";
-            statement = QUOTE(GVAR(loadout) = _hoveredEntity call EFUNC(common,getUnitLoadout));
+            statement = QUOTE(GVAR(loadout) = _hoveredEntity call CBA_fnc_getLoadout);
             icon = QPATHTOF(ui\copy_ca.paa);
         };
         class Paste {
             displayName = "$STR_3DEN_Display3DEN_MenuBar_EntityPaste_text";
             condition = QUOTE(!isNil QQGVAR(loadout));
-            statement = QUOTE(_hoveredEntity setUnitLoadout GVAR(loadout));
+            statement = QUOTE([ARR_2(_hoveredEntity,GVAR(loadout))] call CBA_fnc_setLoadout);
             icon = QPATHTOF(ui\paste_ca.paa);
         };
         class Reset {

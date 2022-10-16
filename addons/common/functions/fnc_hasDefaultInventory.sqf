@@ -20,7 +20,7 @@ params ["_object"];
 
 // Compare current loadout to config defined loadout if an infantry unit is given
 if (_object isKindOf "CAManBase") exitWith {
-    private _current = [_object] call FUNC(getUnitLoadout);
+    private _current = [_object] call CBA_fnc_getLoadout select 0;
     private _default = getUnitLoadout typeOf _object;
 
     // Always match facewear because it is influenced by identity, not config inventory
