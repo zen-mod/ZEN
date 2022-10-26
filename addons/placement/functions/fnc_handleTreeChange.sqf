@@ -6,26 +6,31 @@
  * Arguments:
  * 0: Display <DISPLAY>
  * 1: Mode <NUMBER>
- * 2: Side <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [DISPLAY, 0, 0] call zen_placement_fnc_handleTreeChange
+ * [DISPLAY, 0] call zen_placement_fnc_handleTreeChange
  *
  * Public: No
  */
 
 if (!GVAR(enabled)) exitWith {};
 
-params ["_display", "_mode", "_side"];
+params ["_display", "_mode"];
 
 // Setup the preview with if object placement is active
 // Otherwise delete the current preview
-private _objectType = if (_mode == 0 && {call EFUNC(common,isPlacementActive)}) then {
+private _objectType = if (_mode in [0, 4] && {call EFUNC(common,isPlacementActive)}) then {
     private _ctrlTree = call EFUNC(common,getActiveTree);
-    _ctrlTree tvData tvCurSel _ctrlTree
+    private _data = _ctrlTree tvData tvCurSel _ctrlTree;
+
+    if (_mode == 4 && {!isClass (configFile >> "CfgVehicles" >> _data)}) then {
+        _data = "";
+    };
+
+    _data
 } else {
     ""
 };
