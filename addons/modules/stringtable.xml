@@ -2224,7 +2224,7 @@
             <German>Legt die Niederschlagsintensität fest, erfordert, dass die Bewölkung größer als 70% ist.</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_PrecipitationType">
-            <English>Precipitation type</English>
+            <English>Precipitation Type</English>
             <German>Niederschlagstyp</German>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_PrecipitationType_Tooltip">
