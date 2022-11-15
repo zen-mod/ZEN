@@ -32,7 +32,6 @@ PREP(moduleArsenal);
 PREP(moduleAssignZeus);
 PREP(moduleAttachEffect);
 PREP(moduleAttachFlag);
-PREP(moduleAttachTo);
 PREP(moduleBindVariable);
 PREP(moduleCAS);
 PREP(moduleChangeHeight);

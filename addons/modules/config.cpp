@@ -12,7 +12,6 @@ class CfgPatches {
             QGVAR(moduleAssignZeus),
             QGVAR(moduleAttachEffect),
             QGVAR(moduleAttachFlag),
-            QGVAR(moduleAttachTo),
             QGVAR(moduleBindVariable),
             QGVAR(moduleCASGun),
             QGVAR(moduleCASMissile),

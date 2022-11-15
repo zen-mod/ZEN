@@ -643,50 +643,6 @@
             <Chinese>你已被提升為宙斯。</Chinese>
             <Italian>Sei stato promosso a Zeus.</Italian>
         </Key>
-        <Key ID="STR_ZEN_Modules_ModuleAttachTo">
-            <English>Attach To</English>
-            <Russian>Прикрепить к</Russian>
-            <German>Anhängen an</German>
-            <Polish>Przyczep do</Polish>
-            <Japanese>次に取り付け</Japanese>
-            <Korean>부착</Korean>
-            <Chinesesimp>附加到</Chinesesimp>
-            <Chinese>附加到</Chinese>
-            <Italian>Allegare a</Italian>
-        </Key>
-        <Key ID="STR_ZEN_Modules_ObjectAttached">
-            <English>Object Attached</English>
-            <Russian>Объект прикреплён</Russian>
-            <German>Objekt angehängt</German>
-            <Polish>Obiekt przyczepiony</Polish>
-            <Japanese>オブジェクトが取り付けされた</Japanese>
-            <Korean>물건이 부착되었습니다.</Korean>
-            <Chinesesimp>物体已附加</Chinesesimp>
-            <Chinese>物體已附加</Chinese>
-            <Italian>Oggetto allegato</Italian>
-        </Key>
-        <Key ID="STR_ZEN_Modules_ObjectDetached">
-            <English>Object Detached</English>
-            <Russian>Объект откреплён</Russian>
-            <German>Objekt abgetrennt</German>
-            <Polish>Obiekt odczepiony</Polish>
-            <Japanese>オブジェクトが外された</Japanese>
-            <Korean>물건이 탈착되었습니다.</Korean>
-            <Chinesesimp>物体已分离</Chinesesimp>
-            <Chinese>物體已分離</Chinese>
-            <Italian>Oggetto staccato</Italian>
-        </Key>
-        <Key ID="STR_ZEN_Modules_CannotAttachToSelf">
-            <English>Cannot attach object to itself</English>
-            <Russian>Нельзя приклеить объект к самому себе</Russian>
-            <German>Das Objekt kann nicht an sich selbst angehängt werden</German>
-            <Polish>Nie można przyczepić obiektu do niego samego</Polish>
-            <Japanese>オブジェクトを取り付けできません</Japanese>
-            <Korean>이것에 물건을 부착할 수 없습니다.</Korean>
-            <Chinesesimp>无法将物体附加到物体自己身上</Chinesesimp>
-            <Chinese>無法將物體附加到物體自己身上</Chinese>
-            <Italian>Impossibile collegare l'oggetto a se stesso</Italian>
-        </Key>
         <Key ID="STR_ZEN_Modules_ModuleAttachFlag">
             <English>Attach Flag</English>
             <Russian>Прикрепить флаг</Russian>
