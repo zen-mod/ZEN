@@ -50,7 +50,7 @@ private _cfgVehicles = configFile >> "CfgVehicles";
                         // perform significantly better (from testing, ~20 times faster) when the file path starts
                         // with a backslash. We can't take advantage of this difference when the mod icon is in the
                         // root directory of the mod, instead of a PBO. In this situation, the file path is an
-                        // absolute path (i.e. with a driver letter on windows). From testing, base game and popular
+                        // absolute path (i.e. with a drive letter on Windows). From testing, base game and popular
                         // asset mods specify the mod's logo as an image inside of one of its PBOs. This optimization
                         // combined with the icons cache allows us to add mod icons without significantly increasing
                         // load times after the initial load (base game: ~28 ms, with RHS and CUP: ~67 ms) when
