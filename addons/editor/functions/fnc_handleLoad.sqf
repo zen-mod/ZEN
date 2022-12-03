@@ -148,8 +148,11 @@ GVAR(iconsVisible) = true;
 
         [QGVAR(treesLoaded), _display] call CBA_fnc_localEvent;
 
-        [_display] call FUNC(addGroupIcons);
+        // Decluttering empty tree first since this will potentially reduce the number
+        // of entries that need to be processed by the subsequent functions
         [_display] call FUNC(declutterEmptyTree);
+        [_display] call FUNC(addGroupIcons);
+        [_display] call FUNC(addModIcons);
 
         // Initially fix side buttons (can be hidden if a tree has no entries)
         [FUNC(fixSideButtons), _display] call CBA_fnc_execNextFrame;
