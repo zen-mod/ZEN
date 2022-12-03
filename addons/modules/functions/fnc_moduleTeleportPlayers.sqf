@@ -40,7 +40,6 @@ params ["_logic"];
         private _offset = _gridSize * floor (_nGrid / 2);
         private _startPos = _position vectorDiff [_offset, _offset, 0];
         private _positions = [];
-        hint str [_gridSize, _nGrid];
         for "_i" from 0 to (_nGrid - 1) do {
             for "_j" from 0 to (_nGrid - 1) do {
                 _positions pushBack (_startPos vectorAdd [_i * _gridSize, _j * _gridSize, 0]);
