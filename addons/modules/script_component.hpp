@@ -177,3 +177,5 @@
 
 #define OBJECT_SCALE_MIN 0.0001
 #define OBJECT_SCALE_MAX 65504
+
+#define TELEPORT_SPACING 5 // Meters
