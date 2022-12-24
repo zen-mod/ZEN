@@ -20,3 +20,4 @@ hemtt*
 tools/armake.exe
 ArmaScriptCompiler.exe
 *.sqfc
+.vscode/*
