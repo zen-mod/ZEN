@@ -91,7 +91,12 @@ if (!isNull _transportVehicle) then {
 };
 
 // Create a parachute for the object if it was moved high enough
-if (alive _object && {simulationEnabled _object} && {getPos _object select 2 > PARACHUTE_HEIGHT}) then {
+if (
+    alive _object
+    && {simulationEnabled _object}
+    && {isNull attachedTo _object}
+    && {getPos _object select 2 > PARACHUTE_HEIGHT}
+) then {
     private _fnc_createParachute = {
         params ["_object", "_parachuteType", "_attachPos"];
 
