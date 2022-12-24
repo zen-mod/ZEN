@@ -49,6 +49,7 @@ params ["_logic"];
 
         {
             private _position = _positions select _forEachIndex;
+
             // Special handling for aircraft that are flying
             // Without "FLY" they will be teleported to the ground and explode
             // Manually set their velocity to prevent them from falling out of the sky
