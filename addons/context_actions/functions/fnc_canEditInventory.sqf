@@ -17,4 +17,7 @@
 
 params ["_entity"];
 
-_entity isEqualType objNull && {alive _entity} && {maxLoad _entity > 0}
+_entity isEqualType objNull
+&& {alive _entity}
+&& {maxLoad _entity > 0}
+&& {!(_entity isKindOf "CAManBase")}
