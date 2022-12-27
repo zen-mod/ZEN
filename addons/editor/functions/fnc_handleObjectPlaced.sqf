@@ -34,4 +34,4 @@ if (!GVAR(includeCrew) && {_mode == 0 || {_mode == 4 && {isClass (configFile >> 
 private _group = group _object;
 if (!isNull _group && {!isGroupDeletedWhenEmpty _group}) then {
     _group deleteGroupWhenEmpty true;
-}
+};
