@@ -253,7 +253,6 @@ class EGVAR(context_menu,actions) {
         class SwitchWeapon {
             displayName = "$STR_A3_Switch1";
             condition = QUOTE(_hoveredEntity call FUNC(canSwitchWeapon));
-            statement = "";
             icon = "\a3\ui_f\data\IGUI\Cfg\Actions\reammo_ca.paa";
             class Primary {
                 displayName = "$STR_A3_RSCDisplayArsenal_Tab_PrimaryWeapon";
