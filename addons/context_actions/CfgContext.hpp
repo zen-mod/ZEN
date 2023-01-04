@@ -252,11 +252,10 @@ class EGVAR(context_menu,actions) {
         };
         class SwitchWeapon {
             displayName = "$STR_A3_Switch1";
-            condition = QUOTE(_hoveredEntity call FUNC(canSwitchWeapon));
             icon = "\a3\ui_f\data\IGUI\Cfg\Actions\reammo_ca.paa";
             class Primary {
                 displayName = "$STR_A3_RSCDisplayArsenal_Tab_PrimaryWeapon";
-                condition = QUOTE(_hoveredEntity call FUNC(canSwitchWeaponPrimary));
+                condition = QUOTE([ARR_2(_hoveredEntity,0)] call FUNC(canSwitchWeapon));
                 statement = QUOTE([ARR_3('zen_common_selectWeapon', [ARR_2(_hoveredEntity, primaryWeapon _hoveredEntity)], _hoveredEntity)] call CBA_fnc_targetEvent);
                 icon = "\a3\ui_f\data\GUI\Rsc\RscDisplayArsenal\primaryWeapon_ca.paa";
                 args = 0;
@@ -264,14 +263,16 @@ class EGVAR(context_menu,actions) {
             };
             class Handgun: Primary {
                 displayName = "$STR_A3_RSCDisplayArsenal_Tab_Handgun";
-                condition = QUOTE(_hoveredEntity call FUNC(canSwitchWeaponHandgun));
+                condition = QUOTE([ARR_2(_hoveredEntity,1)] call FUNC(canSwitchWeapon));
+                //condition = QUOTE(_hoveredEntity call FUNC(canSwitchWeaponHandgun));
                 statement = QUOTE([ARR_3('zen_common_selectWeapon', [ARR_2(_hoveredEntity, handgunWeapon _hoveredEntity)], _hoveredEntity)] call CBA_fnc_targetEvent);
                 icon = "\a3\ui_f\data\GUI\Rsc\RscDisplayArsenal\handgun_ca.paa";
                 args = 1;
             };
             class Binoculars: Primary {
                 displayName = "$STR_A3_RSCDisplayArsenal_Tab_Binoculars";
-                condition = QUOTE(_hoveredEntity call FUNC(canSwitchWeaponBinocular));
+                condition = QUOTE([ARR_2(_hoveredEntity,2)] call FUNC(canSwitchWeapon));
+                //condition = QUOTE(_hoveredEntity call FUNC(canSwitchWeaponBinocular));
                 statement = QUOTE([ARR_3('zen_common_selectWeapon', [ARR_2(_hoveredEntity, binocular _hoveredEntity)], _hoveredEntity)] call CBA_fnc_targetEvent);
                 icon = "\a3\ui_f\data\GUI\Rsc\RscDisplayArsenal\binoculars_ca.paa";
                 args = 2;

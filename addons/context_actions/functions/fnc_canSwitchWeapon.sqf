@@ -10,14 +10,17 @@
  * Can Switch Weapon <BOOL>
  *
  * Example:
- * [_entity] call zen_context_actions_fnc_canSwitchWeapon
+ * [_entity, 0] call zen_context_actions_fnc_canSwitchWeapon
  *
  * Public: No
  */
 
-params ["_entity"];
+params ["_entity", "_weaponIndex"];
+
+private _weapon = [primaryWeapon _entity, handgunWeapon _entity, binocular _entity] select _weaponIndex;
 
 _entity isEqualType objNull
 && {alive _entity}
 && {!isPlayer _entity}
-&& {{_x != ""} count [primaryWeapon _hoveredEntity, handgunWeapon _hoveredEntity, binocular _hoveredEntity] >= 2}
+&& {_weapon != ''}
+&& {_weapon != currentWeapon _entity}
