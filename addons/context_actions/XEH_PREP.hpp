@@ -27,6 +27,7 @@ PREP(setFormation);
 PREP(setSpeedMode);
 PREP(setStance);
 PREP(switchWeaponModifier);
+PREP(switchWeapon);
 PREP(teleportPlayers);
 PREP(teleportZeus);
 PREP(toggleCaptive);
