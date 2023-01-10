@@ -85,6 +85,21 @@
 
 [
     "Object",
+    [LSTRING(SpeedLimit), LSTRING(SpeedLimit_Tooltip)],
+    QGVAR(slider),
+    [-50, 500, 5, false, 0],
+    {
+        {
+            [QEGVAR(common,limitSpeed), [_entity, _value], _entity] call CBA_fnc_targetEvent;
+            _entity setVariable [QGVAR(SpeedLimit), _value, true];
+        } forEach call EFUNC(common,getSelectedVehicles);
+    },
+    {_entity getVariable [QGVAR(SpeedLimit), 0]},
+    {GVAR(enableSpeedLimit) && {alive _entity} && {!isPlayer driver _entity} && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}}
+] call FUNC(addAttribute);
+
+[
+    "Object",
     "STR_3DEN_Object_Attribute_Rank_displayName",
     QGVAR(icons),
     [[
