@@ -85,7 +85,7 @@
 
 [
     "Object",
-    LSTRING(SpeedLimit),
+    [LSTRING(SpeedLimit), LSTRING(SpeedLimit_Tooltip)],
     QGVAR(slider),
     [-50, 500, 5, false, 0],
     {
