@@ -22,5 +22,5 @@ private _weapon = [primaryWeapon _entity, handgunWeapon _entity, binocular _enti
 _entity isEqualType objNull
 && {alive _entity}
 && {!isPlayer _entity}
-&& {_weapon != ''}
+&& {_weapon != ""}
 && {_weapon != currentWeapon _entity}
