@@ -87,7 +87,7 @@
     "Object",
     LSTRING(SpeedLimit),
     QGVAR(slider),
-    [0, 300, 5, false, 0],
+    [-50, 500, 5, false, 0],
     {
         {
             [QEGVAR(common,limitSpeed), [_entity, _value], _entity] call CBA_fnc_targetEvent;
