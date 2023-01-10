@@ -264,7 +264,6 @@ class EGVAR(context_menu,actions) {
             class Handgun: Primary {
                 displayName = "$STR_A3_RSCDisplayArsenal_Tab_Handgun";
                 condition = QUOTE([ARR_2(_hoveredEntity,1)] call FUNC(canSwitchWeapon));
-                //condition = QUOTE(_hoveredEntity call FUNC(canSwitchWeaponHandgun));
                 statement = QUOTE([ARR_3('zen_common_selectWeapon', [ARR_2(_hoveredEntity, handgunWeapon _hoveredEntity)], _hoveredEntity)] call CBA_fnc_targetEvent);
                 icon = "\a3\ui_f\data\GUI\Rsc\RscDisplayArsenal\handgun_ca.paa";
                 args = 1;
@@ -272,7 +271,6 @@ class EGVAR(context_menu,actions) {
             class Binoculars: Primary {
                 displayName = "$STR_A3_RSCDisplayArsenal_Tab_Binoculars";
                 condition = QUOTE([ARR_2(_hoveredEntity,2)] call FUNC(canSwitchWeapon));
-                //condition = QUOTE(_hoveredEntity call FUNC(canSwitchWeaponBinocular));
                 statement = QUOTE([ARR_3('zen_common_selectWeapon', [ARR_2(_hoveredEntity, binocular _hoveredEntity)], _hoveredEntity)] call CBA_fnc_targetEvent);
                 icon = "\a3\ui_f\data\GUI\Rsc\RscDisplayArsenal\binoculars_ca.paa";
                 args = 2;
