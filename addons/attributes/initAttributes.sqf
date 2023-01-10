@@ -300,7 +300,7 @@
 
         _respawnID
     },
-    {GVAR(enableRespawn) && {_entity isKindOf "LandVehicle"} || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}
+    {GVAR(enableRespawn) && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}}
 ] call FUNC(addAttribute);
 
 [
