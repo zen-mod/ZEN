@@ -4,23 +4,24 @@
  * Checks if the given unit has multiple weapons to switch between.
  *
  * Arguments:
- * 0: Entity <ANY>
+ * 0: UNIT <OBJECT>
+ * 1: WEAPON INDEX <NUMBER>
  *
  * Return Value:
  * Can Switch Weapon <BOOL>
  *
  * Example:
- * [_entity, 0] call zen_context_actions_fnc_canSwitchWeapon
+ * [_unit, 0] call zen_context_actions_fnc_canSwitchWeapon
  *
  * Public: No
  */
 
-params ["_entity", "_weaponIndex"];
+params ["_unit", "_weaponIndex"];
 
-private _weapon = [primaryWeapon _entity, handgunWeapon _entity, binocular _entity] select _weaponIndex;
+private _weapon = [primaryWeapon _unit, handgunWeapon _unit, binocular _unit] select _weaponIndex;
 
-_entity isEqualType objNull
-&& {alive _entity}
-&& {!isPlayer _entity}
+_unit isEqualType objNull
+&& {alive _unit}
+&& {!isPlayer _unit}
 && {_weapon != ""}
-&& {_weapon != currentWeapon _entity}
+&& {_weapon != currentWeapon _unit}
