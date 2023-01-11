@@ -135,9 +135,9 @@
                     [_watchTarget, objNull] select (_x isEqualTo _watchTarget) // Cancel if target is self
                 ], _x] call CBA_fnc_targetEvent;
                 [[_x, _watchTarget, []]] call EFUNC(common,hintAddElement);
-                [["\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\scout_ca.paa", [], _watchTarget, 1, 1, 0]] call EFUNC(common,hintAddElement);
             };
         } forEach SELECTED_OBJECTS;
+        [["\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\scout_ca.paa", [], _watchTarget, 1, 1, 0]] call EFUNC(common,hintAddElement);
 
         true // handled
     };
