@@ -20,7 +20,7 @@
  * Public: No
  */
 
-params [[], objNull, "", "", "", "_vehicle"];
+params ["", "", "", "", "", "_vehicle"];
 
 private _cfgAmmo = configFile >> "CfgAmmo";
 private _cfgMagazines = configFile >> "CfgMagazines";
