@@ -59,7 +59,7 @@
 [ELSTRING(main,DisplayName), QGVAR(deepPaste), [LSTRING(DeepPaste), LSTRING(DeepPaste_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
         private _position = [nil, false] call EFUNC(common,getPosFromScreen);
-        [QEGVAR(common,deserializeObjects), [GVAR(clipboard), _position, true, GVAR(randomizeCopyPaste)]] call CBA_fnc_serverEvent;
+        [QEGVAR(common,deserializeObjects), [GVAR(clipboard), _position, true, GVAR(randomizeCopyPaste), EGVAR(editor,deepPasteHC)]] call CBA_fnc_serverEvent;
 
         playSound ["RscDisplayCurator_error01", true];
 

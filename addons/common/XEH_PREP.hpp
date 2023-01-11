@@ -20,6 +20,7 @@ PREP(getArtilleryETA);
 PREP(getCargoPositionsCount);
 PREP(getDefaultInventory);
 PREP(getDLC);
+PREP(getFewestGroupsHC);
 PREP(getLightingSelections);
 PREP(getPhoneticName);
 PREP(getPlayers);

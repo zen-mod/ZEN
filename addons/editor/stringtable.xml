@@ -305,6 +305,12 @@
             <Chinese>粘貼當前深層複製的對像數據。</Chinese>
             <Italian>Incolla i dati dell'oggetto correntemente copiati in profondità.</Italian>
         </Key>
+        <Key ID="STR_ZEN_Editor_DeepPasteHC">
+            <English>Deep Paste On Headless Client</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_DeepPasteHC_Description">
+            <English>Deep-copied entities will be sent to headless client(s) if available, avoiding subsequent transfer.</English>
+        </Key>
         <Key ID="STR_ZEN_Editor_FocusSearchBar">
             <English>Focus Search Bar</English>
             <German>Suchfeld fokussieren</German>
