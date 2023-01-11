@@ -376,25 +376,25 @@
             <English>Watch Cursor</English>
         </Key>
         <Key ID="STR_ZEN_Editor_WatchCursor_Description">
-            <English>Makes all selected units watch the cursor location. Pressing this command with the cursor over a selected unit will cancel the watch target.</English>
+            <English>Makes selected AI watch the cursor location. Order an AI to watch itself to cancel the watch target.</English>
         </Key>
         <Key ID="STR_ZEN_Editor_ForceFire">
             <English>Force Fire</English>
         </Key>
         <Key ID="STR_ZEN_Editor_ForceFire_Description">
-            <English>Hold to force all selected units to fire their current weapon.</English>
+            <English>Hold to force all selected AIs to fire their current weapon. Vehicles will fire the primary turret.</English>
         </Key>
         <Key ID="STR_ZEN_Editor_MoveToCursor">
             <English>Move To Cursor</English>
         </Key>
         <Key ID="STR_ZEN_Editor_MoveToCursor_Description">
-            <English>Makes all selected units move to the cursor location. Units will return to formation and waypoint afterward.</English>
+            <English>Makes selected AIs move to the cursor location. AIs will return to formation and waypoint afterward.</English>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleAIPATH">
             <English>Toggle AI PATH</English>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleAIPATH_Description">
-            <English>Makes all selected units start or stop moving. Does not affect aiming or shooting.</English>
+            <English>Makes selected AIs stop or start moving. Does not affect aiming or shooting. Similar to "Hold Position" in RTS games.</English>
         </Key>
     </Package>
 </Project>
