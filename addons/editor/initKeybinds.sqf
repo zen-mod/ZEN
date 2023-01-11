@@ -131,7 +131,7 @@
         private _cursorPosASL = [] call EFUNC(common,getPosFromScreen);
         {
             if (!isNull group _x && {!isPlayer _x}) then {
-                [QEGVAR(common,doWatch), [_x, [ASLToAGL _cursorPosASL, objNull] select _isCancelling], _x] call CBA_fnc_targetEvent;
+                [QEGVAR(common,doWatch), [[_x, gunner _x], [ASLToAGL _cursorPosASL, objNull] select _isCancelling], _x] call CBA_fnc_targetEvent;
                 [2, [_x, ASLToAGL _cursorPosASL, []]] call EFUNC(common,hintAddElement);
                 [2, ["\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\scout_ca.paa", [], ASLToAGL _cursorPosASL, 1, 1, 0]] call EFUNC(common,hintAddElement);
             };
