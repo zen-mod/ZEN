@@ -47,6 +47,7 @@ private _dynamicChildren = [];
     if (_turretPath isEqualTo _primaryTurret && {_count > 0}) then { // Primary turret
         private _ammo = getText (_cfgMagazines >> _magazine >> "ammo");
         private _ammoSimulation = getText (_cfgAmmo >> _ammo >> "simulation");
+
         if !(_ammoSimulation in AMMO_SIMULATION_BLACKLIST) then { // Switchable ammo
             { // Loop weapons in primary turret
                 private _weapon = _x;
