@@ -72,6 +72,7 @@ private _dynamicChildren = [];
                                     [format ["%1 ", _muzzle], ""] select (_muzzle == "this"),
                                     getText(_cfgMagazines >> _magazine >> "displayName")
                                 ];
+
                                 private _icon = switch (_ammoSimulation) do {
                                     case ("shotBullet"): {
                                         "\a3\ui_f_jets\Data\GUI\Cfg\Hints\WeaponsGuns_ca.paa"
