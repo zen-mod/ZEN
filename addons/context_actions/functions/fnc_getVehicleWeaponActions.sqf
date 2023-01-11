@@ -22,12 +22,8 @@
 
 params ["", "", "", "", "", "_vehicle"];
 
-private _cfgAmmo = configFile >> "CfgAmmo";
-private _cfgMagazines = configFile >> "CfgMagazines";
-private _cfgWeapons = configFile >> "CfgWeapons";
-
-private _currentWeapon = currentWeapon _vehicle;
-private _currentMagazine = currentMagazine _vehicle;
+if !(_vehicle isEqualType objNull) exitWith {[]};
+if !(alive _vehicle) exitWith {[]};
 
 private _primaryGunner = gunner _vehicle;
 private _primaryTurret = [0];
@@ -37,7 +33,14 @@ if (isNull _primaryGunner) then {
     _primaryTurret = [-1];
 };
 
-if (isNull _primaryGunner) exitWith {};
+if (isNull _primaryGunner || {!alive _primaryGunner}) exitWith {[]};
+
+private _cfgAmmo = configFile >> "CfgAmmo";
+private _cfgMagazines = configFile >> "CfgMagazines";
+private _cfgWeapons = configFile >> "CfgWeapons";
+
+private _currentWeapon = currentWeapon _vehicle;
+private _currentMagazine = currentMagazine _vehicle;
 
 private _currentMuzzle = currentMuzzle _primaryGunner;
 
