@@ -1,28 +1,26 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Updates the angle and color of the given area marker's icon control.
+ * Updates the given area marker's icon control.
  *
  * Arguments:
  * 0: Marker <STRING>
- * 1: Angle <NUMBER>
- * 2: Color <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * ["marker_0", 45, "ColorRed"] call zen_area_markers_fnc_updateIcon
+ * ["marker_0"] call zen_area_markers_fnc_updateIcon
  *
  * Public: No
  */
 
-params ["_marker", "_angle", "_color"];
+params ["_marker"];
 
-private _ctrlIcon = GVAR(icons) getVariable _marker;
-if (isNil "_ctrlIcon" || {isNull _ctrlIcon}) exitWith {};
+private _ctrlIcon = GVAR(icons) getOrDefault [_marker, controlNull];
+if (isNull _ctrlIcon) exitWith {};
 
-_ctrlIcon ctrlSetAngle [_angle, 0.5, 0.5];
+_ctrlIcon ctrlSetAngle [markerDir _marker, 0.5, 0.5];
 
 private _ctrlImage = _ctrlIcon controlsGroupCtrl IDC_ICON_IMAGE;
-_ctrlImage ctrlSetTextColor (GVAR(colors) getVariable [_color, [0, 0, 0, 1]]);
+_ctrlImage ctrlSetTextColor (GVAR(colors) get markerColor _marker);

@@ -3,13 +3,21 @@
     <Package name="Flashlight">
         <Key ID="STR_ZEN_Flashlight_Toggle">
             <English>Toggle Flashlight</English>
+            <German>Taschenlampe ein/aus</German>
             <Polish>Przełącz latarke</Polish>
             <Japanese>フラッシュライト切り替え</Japanese>
+            <Chinesesimp>切换手电筒</Chinesesimp>
+            <Chinese>切換手電筒</Chinese>
+            <Italian>Cambia lo stato della torcia</Italian>
         </Key>
         <Key ID="STR_ZEN_Flashlight_Toggle_Description">
             <English>Toggles the state of the Zeus camera flashlight.</English>
+            <German>Schaltet die Taschenlampe der Zeuskamera ein/aus.</German>
             <Polish>Włącza/Wyłącza latarke Zeusa.</Polish>
             <Japanese>Zeus カメラのフラッシュライトを切り替えします。</Japanese>
+            <Chinesesimp>切换Zeus摄像机手电筒。</Chinesesimp>
+            <Chinese>切換Zeus攝像機手電筒。</Chinese>
+            <Italian>Commuta lo stato della torcia della telecamera Zeus.</Italian>
         </Key>
     </Package>
 </Project>

@@ -44,6 +44,15 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(addModIcons),
+    "CHECKBOX",
+    [LSTRING(AddModIcons), LSTRING(AddModIcons_Description)],
+    [ELSTRING(main,DisplayName), LSTRING(DisplayName)],
+    false,
+    false
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(randomizeCopyPaste),
     "CHECKBOX",
     [LSTRING(RandomizeCopyPaste), LSTRING(RandomizeCopyPaste_Description)],

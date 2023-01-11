@@ -8,6 +8,9 @@
             <Polish>Moduł niestandardowy</Polish>
             <Japanese>カスタム モジュール</Japanese>
             <Korean>맞춤형 모듈</Korean>
+            <Chinesesimp>自定义MOD</Chinesesimp>
+            <Chinese>自定義MOD</Chinese>
+            <Italian>Modulo personalizzato</Italian>
         </Key>
     </Package>
 </Project>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Attached_Objects">
+        <Key ID="STR_ZEN_Attached_Objects_DisplayName">
+            <English>Attached Objects</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Attach">
+            <English>Attach Objects</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Attach_Description">
+            <English>Attaches all selected objects to the specified parent object.</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Detach">
+            <English>Detach Objects</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Detach_Description">
+            <English>Detaches all selected objects from their parent object.</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_AttachTo">
+            <English>Attach To</English>
+            <Russian>Прикрепить к</Russian>
+            <German>Anhängen an</German>
+            <Polish>Przyczep do</Polish>
+            <Japanese>次に取り付け</Japanese>
+            <Korean>부착</Korean>
+            <Chinesesimp>附加到</Chinesesimp>
+            <Chinese>附加到</Chinese>
+            <Italian>Allegare a</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_ObjectsAttached">
+            <English>Objects Attached: %1</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_ObjectsDetached">
+            <English>Objects Detached: %1</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_PlaceOnObject">
+            <English>Place on an object to attach or detach</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_CannotAttachToSelf">
+            <English>Cannot attach object to itself</English>
+            <Russian>Нельзя приклеить объект к самому себе</Russian>
+            <German>Das Objekt kann nicht an sich selbst angehängt werden</German>
+            <Polish>Nie można przyczepić obiektu do niego samego</Polish>
+            <Japanese>オブジェクトを取り付けできません</Japanese>
+            <Korean>이것에 물건을 부착할 수 없습니다.</Korean>
+            <Chinesesimp>无法将物体附加到物体自己身上</Chinesesimp>
+            <Chinese>無法將物體附加到物體自己身上</Chinese>
+            <Italian>Impossibile collegare l'oggetto a se stesso</Italian>
+        </Key>
+    </Package>
+</Project>

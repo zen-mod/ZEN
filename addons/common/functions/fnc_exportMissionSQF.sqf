@@ -115,7 +115,8 @@ private _fnc_processInventory = {
         _outputObjects pushBack ["['%1', 'onEachFrame', {", _nextFrameHandle];
         _outputObjects pushBack "    params [""_unit""];";
         if !(_object call FUNC(hasDefaultInventory)) then {
-            _outputObjects pushBack ["    _unit setUnitLoadout %1;", getUnitLoadout _object];
+            private _loadout = [_object] call CBA_fnc_getLoadout;
+            _outputObjects pushBack ["    [_unit, %1] call CBA_fnc_setLoadout;", _loadout];
         };
         _outputObjects pushBack "    _unit call BIN_fnc_CBRNHoseInit;";
         _outputObjects pushBack ["    ['%1', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;", _nextFrameHandle];
@@ -169,7 +170,7 @@ private _fnc_processAttachedObjects = {
             if (isNil "_index") exitWith {};
 
             private _varName = FORMAT_OBJ_VAR(_index);
-            private _offset = _object worldToModel ASLtoAGL getPosASL _x;
+            private _offset = _object worldToModel ASLtoAGL getPosWorld _x;
             private _dirAndUp = [_object vectorWorldToModel vectorDir _x, _object vectorWorldToModel vectorUp _x];
 
             _outputAttach pushBack ["%1 attachTo [%2, %3];", _varName, _parentVarName, _offset];

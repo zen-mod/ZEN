@@ -228,6 +228,11 @@
     _object setVectorUp _vectorUp;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setVectorDirAndUp), {
+    params ["_object", "_dirAndUp"];
+    _object setVectorDirAndUp _dirAndUp;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(setVelocity), {
     params ["_object", "_velocity"];
     _object setVelocity _velocity;
@@ -271,6 +276,11 @@
 [QGVAR(doArtilleryFire), {
     params ["_unit", "_position", "_magazine", "_rounds"];
     _unit doArtilleryFire [_position, _magazine, _rounds];
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setObjectScale), {
+    params ["_object", "_scale"];
+    _object setObjectScale _scale;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(setVehicleRadar), {

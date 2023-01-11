@@ -67,7 +67,7 @@ params [
 
 // Exit with failure if an instance is already active
 if (GVAR(selectPositionActive)) exitWith {
-    [false, _objects, [0, 0, 0], _args, false, false, false] call _code;
+    [false, _objects, [0, 0, 0], _args, false, false, false] call _function;
 };
 
 GVAR(selectPositionActive) = true;
@@ -81,7 +81,7 @@ private _mouseEH = [_display, "MouseButtonDown", {
 
     if (_button != 0) exitWith {};
 
-    private _position = [] call FUNC(getPosFromScreen);
+    private _position = [nil, 2] call FUNC(getPosFromScreen);
     _thisArgs params ["_objects", "_function", "_args"];
 
     [true, _objects, _position, _args, _shift, _ctrl, _alt] call _function;
@@ -94,7 +94,7 @@ private _keyboardEH = [_display, "KeyDown", {
 
     if (_key != DIK_ESCAPE) exitWith {false};
 
-    private _position = [] call FUNC(getPosFromScreen);
+    private _position = [nil, 2] call FUNC(getPosFromScreen);
     _thisArgs params ["_objects", "_function", "_args"];
 
     [false, _objects, _position, _args, _shift, _ctrl, _alt] call _function;
@@ -108,7 +108,7 @@ private _drawEH = [_ctrlMap, "Draw", {
     params ["_ctrlMap"];
     _thisArgs params ["_objects", "_args", "_visuals", "_modifierFunction"];
 
-    private _position = [] call FUNC(getPosFromScreen);
+    private _position = [nil, 2] call FUNC(getPosFromScreen);
     [_objects, _position, _args, _visuals] call _modifierFunction;
     _visuals params ["_text", "_icon", "_angle", "_color"];
 
@@ -155,7 +155,7 @@ private _drawEH = [_ctrlMap, "Draw", {
     // No 3D drawing needed if the map is visible
     if (visibleMap) exitWith {};
 
-    private _position = [] call FUNC(getPosFromScreen);
+    private _position = [nil, 2] call FUNC(getPosFromScreen);
     [_objects, _position, _args, _visuals] call _modifierFunction;
     _visuals params ["_text", "_icon", "_angle", "_color"];
 

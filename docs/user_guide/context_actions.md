@@ -56,7 +56,8 @@ The main action acts as a shortcut for the "Edit" sub-action.
 ## Loadout
 
 Opens the preferred arsenal type (specified in CBA settings) on the hovered unit.
-Sub-actions allow for copying and pasting the hovered unit's loadout onto another and resetting the unit's loadout to the config defined one. Furthermore, the unit's current weapon can be switched between the rifle, the handgun and the binoculars.
+Sub-actions allow for copying and pasting the hovered unit's loadout onto another and resetting the unit's loadout to the config defined one.
+Furthermore, the unit's current weapon can be switched between their rifle, handgun, or binoculars.
 The main action acts as a shortcut for the "Edit" sub-action.
 
 ## Remote Control

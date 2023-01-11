@@ -6,36 +6,42 @@
             <Russian>Создать Маркер Области</Russian>
             <French>Créer un marqueur de zone</French>
             <German>Bereichsmarkierungen erstellen</German>
-            <Italian>Crea un marker</Italian>
+            <Italian>Crea marcatori di area</Italian>
             <Czech>Vytvořit značku oblasti</Czech>
             <Polish>Stwórz Marker Obszarowy</Polish>
             <Portuguese>Criar marcador de área</Portuguese>
             <Japanese>範囲マーカーを作成</Japanese>
             <Korean>영역 표시기 생성</Korean>
+            <Chinesesimp>创建区域标记</Chinesesimp>
+            <Chinese>創建區域標記</Chinese>
         </Key>
         <Key ID="STR_ZEN_Area_Markers_EditAreaMarker">
             <English>EDIT AREA MARKER</English>
             <Russian>ИЗМЕНИТЬ МАРКЕР ОБЛАСТИ</Russian>
             <French>EDITER LE MARQUEUR DE ZONE</French>
             <German>BEREICHSMARKIERUNG BEARBEITEN</German>
-            <Italian>Modifica un marker</Italian>
+            <Italian>MODIFICA MARCATORI AREA</Italian>
             <Czech>ÚPRAVA ZNAČKY OBLASTI</Czech>
             <Polish>EDYTUJ MARKER OBSZAROWY</Polish>
             <Portuguese>Editar marcador de área</Portuguese>
             <Japanese>範囲マーカーを編集</Japanese>
             <Korean>영역 표시기 편집</Korean>
+            <Chinesesimp>编辑区域标记</Chinesesimp>
+            <Chinese>編輯區域標記</Chinese>
         </Key>
         <Key ID="STR_ZEN_Area_Markers_PlaceOnMap">
             <English>Place On Map</English>
             <Russian>Разместить На Карте</Russian>
             <French>Placer sur la carte</French>
             <German>Auf Karte platzieren</German>
-            <Italian>Aggiungi sulla mappa</Italian>
+            <Italian>Posiziona sulla mappa</Italian>
             <Czech>Umístit na mapu</Czech>
             <Polish>Zaznacz Na Mapie</Polish>
             <Portuguese>Coloque no mapa</Portuguese>
             <Japanese>マップ上に設置</Japanese>
             <Korean>지도에 배치</Korean>
+            <Chinesesimp>标记在地图上</Chinesesimp>
+            <Chinese>標記在地圖上</Chinese>
         </Key>
     </Package>
 </Project>

@@ -24,6 +24,7 @@ class CfgVehicles {
     HIDE_MODULE(modulePatrolArea);
     HIDE_MODULE(moduleSimulation);
     HIDE_MODULE(moduleSuicideBomber);
+    HIDE_MODULE(moduleSuppressiveFire);
     HIDE_MODULE(moduleTeleportPlayers);
     HIDE_MODULE(moduleToggleFlashlight);
     HIDE_MODULE(AddFullArsenal);

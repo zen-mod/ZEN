@@ -30,19 +30,25 @@ if (_returnBool) then {
 };
 
 private _display = ctrlParent _controlsGroup;
+parsingNamespace setVariable [QEGVAR(common,rows), _rows max 1];
+parsingNamespace setVariable [QEGVAR(common,columns), _columns max 1];
 
-parsingNamespace setVariable [QGVAR(rows), _rows max 1];
-parsingNamespace setVariable [QGVAR(columns), _columns max 1];
-
-private _ctrlToolbox = _display ctrlCreate [QGVAR(RscToolbox), -1, _controlsGroup];
+private _ctrlToolbox = _display ctrlCreate [QEGVAR(common,RscToolbox), -1, _controlsGroup];
 _ctrlToolbox setVariable [QGVAR(params), [_returnBool]];
 
 {
-    if (isLocalized _x) then {
-        _x = localize _x;
+    _x params [["_text", "", [""]], ["_tooltip", "", [""]]];
+
+    if (isLocalized _text) then {
+        _text = localize _text;
     };
 
-    _ctrlToolbox lbAdd _x;
+    if (isLocalized _tooltip) then {
+        _tooltip = localize _tooltip;
+    };
+
+    private _index = _ctrlToolbox lbAdd _text;
+    _ctrlToolbox lbSetTooltip [_index, _tooltip];
 } forEach _strings;
 
 _ctrlToolbox lbSetCurSel _defaultValue;

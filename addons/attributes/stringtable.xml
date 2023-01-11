@@ -12,6 +12,8 @@
             <Portuguese>Motor</Portuguese>
             <Japanese>エンジン</Japanese>
             <Korean>엔진</Korean>
+            <Chinesesimp>引擎</Chinesesimp>
+            <Chinese>引擎</Chinese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Lights">
             <English>Lights</English>
@@ -24,13 +26,19 @@
             <Portuguese>Luzes</Portuguese>
             <Japanese>ライト</Japanese>
             <Korean>조명</Korean>
+            <Chinesesimp>灯光</Chinesesimp>
+            <Chinese>燈光</Chinese>
         </Key>
         <Key ID="STR_ZEN_Attributes_LockedForPlayers">
             <English>Locked For Players</English>
+            <French>Fermé aux joueurs</French>
             <German>Für Spieler verschlossen</German>
             <Korean>플레이어에게 잠겨짐</Korean>
             <Polish>Zamknięte dla graczy</Polish>
             <Japanese>プレイヤー ロック</Japanese>
+            <Chinesesimp>对玩家锁定</Chinesesimp>
+            <Chinese>對玩家鎖定</Chinese>
+            <Italian>Bloccato per i giocatori</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_PlateNumber">
             <English>Plate Number</English>
@@ -39,59 +47,103 @@
             <German>Kennzeichen</German>
             <Polish>Tablica rejestracyjna</Polish>
             <Czech>Číslo vozu</Czech>
-            <Italian>Numero di targa</Italian>
+            <Italian>Targa</Italian>
             <Portuguese>Número da Placa</Portuguese>
             <Japanese>ナンバー プレート</Japanese>
             <Korean>번호판 숫자</Korean>
+            <Chinesesimp>车牌号</Chinesesimp>
+            <Chinese>車牌號</Chinese>
         </Key>
         <Key ID="STR_ZEN_Attributes_RespawnPosition">
             <English>Respawn Position</English>
+            <French>Position de réapparition</French>
             <German>Wiedereinstiegspunkt</German>
             <Korean>부활 위치</Korean>
             <Polish>Pozycja odrodzenia</Polish>
             <Japanese>リスポーン位置</Japanese>
+            <Chinesesimp>重生位置</Chinesesimp>
+            <Chinese>重生位置</Chinese>
+            <Italian>Posizione di rigenerazione</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_RespawnPosition_Tooltip">
             <English>Selects the side that is able to respawn on this object.</English>
+            <French>Sélecter le camp pour la réapparition à cet objet.</French>
             <German>Wähle eine Seite, welche an diesem Objekt wiedereinsteigen kann.</German>
             <Korean>이 아이템으로 부활할 수 있는 진영을 고르시오</Korean>
             <Polish>Ustawia strone która może się odrodzić na tym obiekcie.</Polish>
             <Japanese>リスポーン位置になるオブジェクトを選択します。</Japanese>
+            <Chinesesimp>选择能够在此物体上重生的一方。</Chinesesimp>
+            <Chinese>選擇能夠在此物體上重生的一方。</Chinese>
+            <Italian>Seleziona il lato che è in grado di rigenerarsi su questo oggetto.</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_RespawnVehicle">
             <English>Respawn Vehicle</English>
+            <French>Réapparition de véhicule</French>
+            <German>Wiedereinstieg für Fahrzeug</German>
             <Japanese>リスポーン車両</Japanese>
+            <Chinesesimp>重生载具</Chinesesimp>
+            <Chinese>重生載具</Chinese>
+            <Italian>Rigenera il veicolo</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_RespawnVehicle_Tooltip">
             <English>Selects where the vehicle will respawn when it is destroyed.</English>
+            <French>Sélecter la position de réapparition pour le véhicule après son destruction.</French>
+            <German>Wähle den Wiedereinstiegspunkt für das Fahrzeug nach dessen Zerstörung.</German>
             <Japanese>リスポーンされる車両を選択します。</Japanese>
+            <Chinesesimp>选择车辆被摧毁后的重生位置。</Chinesesimp>
+            <Chinese>選擇車輛被摧毀後的重生位置。</Chinese>
+            <Italian>Seleziona dove si rigenera il veicolo quando viene distrutto.</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_States">
             <English>States</English>
+            <French>États</French>
             <German>Zustände</German>
             <Korean>상태</Korean>
             <Polish>Stany</Polish>
             <Japanese>状態</Japanese>
+            <Chinesesimp>状态</Chinesesimp>
+            <Chinese>狀態</Chinese>
+            <Italian>Stati</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_LocalExec">
             <English>Local Exec. This code will be executed in the unscheduled environment on this machine only.</English>
+            <German>Lokale Ausführung. Dieser Code wird in der unscheduled Environment für nur die lokale Maschine ausgeführt.</German>
             <Japanese>ローカル実行。このコードはこのマシンでのみ、非スケジュール環境で実行されます。</Japanese>
+            <Chinesesimp>本地执行。这段代码将只在本机的非计划环境中执行。</Chinesesimp>
+            <Chinese>本地執行。這段代碼將只在本機的非計劃環境中執行。</Chinese>
+            <Italian>Esecutivo locale Questo codice verrà eseguito solo nell'ambiente non pianificato su questa macchina.</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_TargetExec">
             <English>Target Exec. This code will be executed in the unscheduled environment on the machine where this entity is local.</English>
+            <German>Gezielte Ausführung. Dieser Code wird in der unscheduled Environment für nur die Maschine ausgeführt, wo das Objekt lokal ist.</German>
             <Japanese>ターゲット実行。このコードはエンティティがローカルにあるマシンの非スケジュール環境で実行されます。</Japanese>
+            <Chinesesimp>目标执行。这段代码将在这个实体所在的机器上的非计划环境中执行。</Chinesesimp>
+            <Chinese>目標執行。這段代碼將在這個實體所在的機器上的非計劃環境中執行。</Chinese>
+            <Italian>Esecutivo Target Questo codice verrà eseguito nell'ambiente non pianificato sulla macchina in cui questa entità è locale.</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_GlobalExec">
             <English>Global Exec. This code will be executed in the unscheduled environment on all machines (server and clients).</English>
+            <German>Golbale Ausführung. Dieser Code wird in der unscheduled Environment für alle Maschinen (Server und Klienten) ausgeführt.</German>
             <Japanese>グローバル実行。このコードは全マシンの非スケジュール環境で実行されます (サーバとクライアント)</Japanese>
+            <Chinesesimp>全局执行。这段代码将在所有机器（服务器和客户端）的非计划环境中执行。</Chinesesimp>
+            <Chinese>全局執行。這段代碼將在所有機器（服務器和客戶端）的非計劃環境中執行。</Chinese>
+            <Italian>Esecutivo globale Questo codice verrà eseguito nell'ambiente non pianificato su tutte le macchine (server e client).</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_ExecObject_Tooltip">
             <English>The variable "_this" refers to this object.</English>
+            <German>Die Variable "_this" verweist auf das Objekt.</German>
             <Japanese>変数 "_this" はこのオブジェクトを指します。</Japanese>
+            <Chinesesimp>变量"_this"指的是这个对象。</Chinesesimp>
+            <Chinese>變量"_this"指的是這個對象。</Chinese>
+            <Italian>La variabile "_this" fa riferimento a questo oggetto.</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_ExecGroup_Tooltip">
             <English>The variable "_this" refers to this group.</English>
+            <German>Die Variable "_this" verweist auf die Gruppe.</German>
             <Japanese>変数 "_this" はこのグループを指します。</Japanese>
+            <Chinesesimp>变量"_this"指的是这个小组。</Chinesesimp>
+            <Chinese>變量"_this"指的是這個小組。</Chinese>
+            <Italian>La variabile "_this" si riferisce a questo gruppo.</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_Timeout">
             <English>Timeout (s)</English>
@@ -101,9 +153,11 @@
             <Polish>Limit czasu (s)</Polish>
             <Czech>Časový limit(s)</Czech>
             <Portuguese>Tempo Esgotado (s)</Portuguese>
-            <Italian>Tempo limite (s)</Italian>
+            <Italian>Fuori tempo (s)</Italian>
             <Japanese>タイムアウト (秒)</Japanese>
             <Korean>시간 초과 (초)</Korean>
+            <Chinesesimp>超时(秒)</Chinesesimp>
+            <Chinese>超時(秒)</Chinese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Timeout_Tooltip">
             <English>The time (in seconds) between waypoint condition satisfaction and waypoint completion.</English>
@@ -116,6 +170,8 @@
             <Italian>Il tempo (in secondi) che passa tra il soddisfacimento della condizione dell'obiettivo e il suo completamento </Italian>
             <Japanese>タイムアウト (秒) はウェイポイントの条件達成とウェイポイント完了の間に適用されます。</Japanese>
             <Korean>웨이포인트 조건 만족 및 웨이포인트 완료 사이의 시간 (초)</Korean>
+            <Chinesesimp>满足路径点条件与路径点完成之间的时间（以秒为单位）。</Chinesesimp>
+            <Chinese>滿足路徑點條件與路徑點完成之間的時間（以秒為單位）。</Chinese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Sensors">
             <English>Sensors</English>
@@ -128,6 +184,8 @@
             <Portuguese>Sensores</Portuguese>
             <Japanese>センサー</Japanese>
             <Korean>센서</Korean>
+            <Chinesesimp>传感器</Chinesesimp>
+            <Chinese>傳感器</Chinese>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeSide">
             <English>Change Side</English>
@@ -140,6 +198,8 @@
             <Portuguese>Alterar Lado</Portuguese>
             <Japanese>陣営変更</Japanese>
             <Korean>진영 변경</Korean>
+            <Chinesesimp>更改阵营</Chinesesimp>
+            <Chinese>更改陣營</Chinese>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeSkills">
             <English>Change Skills</English>
@@ -152,18 +212,22 @@
             <Portuguese>Alterar Habilidades</Portuguese>
             <Japanese>スキル変更</Japanese>
             <Korean>기술 변경</Korean>
+            <Chinesesimp>更改技能</Chinesesimp>
+            <Chinese>更改技能</Chinese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Skills">
             <English>Skills</English>
             <Russian>Навыки</Russian>
             <French>Compétences</French>
-            <German>Fähigkeiten</German>
+            <German>Fertigkeiten</German>
             <Czech>Dovednosti</Czech>
             <Italian>Abilità</Italian>
             <Polish>Umiejętności</Polish>
             <Portuguese>Habilidades</Portuguese>
             <Japanese>スキル</Japanese>
             <Korean>기술</Korean>
+            <Chinesesimp>技能</Chinesesimp>
+            <Chinese>技能</Chinese>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeTraits">
             <English>Change Traits</English>
@@ -176,6 +240,8 @@
             <Portuguese>Alterar Propriedades</Portuguese>
             <Japanese>特性変更</Japanese>
             <Korean>특성 변경</Korean>
+            <Chinesesimp>更改角色</Chinesesimp>
+            <Chinese>更改角色</Chinese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Traits">
             <English>Traits</English>
@@ -188,6 +254,8 @@
             <Portuguese>Propriedades</Portuguese>
             <Japanese>特性</Japanese>
             <Korean>특성</Korean>
+            <Chinesesimp>角色</Chinesesimp>
+            <Chinese>角色</Chinese>
         </Key>
         <Key ID="STR_ZEN_Attributes_MedicalTraining">
             <English>Medical Training</English>
@@ -200,6 +268,8 @@
             <Portuguese>Treinamento Médico</Portuguese>
             <Japanese>衛生スキル</Japanese>
             <Korean>의료 훈련</Korean>
+            <Chinesesimp>医疗培训</Chinesesimp>
+            <Chinese>醫療培訓</Chinese>
         </Key>
         <Key ID="STR_ZEN_Attributes_EngineeringSkill">
             <English>Engineering Skill</English>
@@ -212,6 +282,8 @@
             <Portuguese>Habilidade de Engenharia</Portuguese>
             <Japanese>工兵スキル</Japanese>
             <Korean>공업 기술</Korean>
+            <Chinesesimp>工兵技能</Chinesesimp>
+            <Chinese>工兵技能</Chinese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Doctor">
             <English>Doctor</English>
@@ -224,6 +296,8 @@
             <Portuguese>Doutor</Portuguese>
             <Japanese>医師</Japanese>
             <Korean>의사</Korean>
+            <Chinesesimp>军医</Chinesesimp>
+            <Chinese>軍醫</Chinese>
         </Key>
         <Key ID="STR_ZEN_Attributes_AdvEngineer">
             <English>Adv. Engineer</English>
@@ -236,6 +310,8 @@
             <Portuguese>Engenheiros Experientes</Portuguese>
             <Japanese>上級工兵</Japanese>
             <Korean>고급 엔지니어</Korean>
+            <Chinesesimp>高级工兵</Chinesesimp>
+            <Chinese>高級工兵</Chinese>
         </Key>
         <Key ID="STR_ZEN_Attributes_EOD">
             <English>EOD</English>
@@ -247,26 +323,50 @@
             <Portuguese>Eliminação Explosiva de Ordenamento</Portuguese>
             <Japanese>爆発物専門家</Japanese>
             <Korean>폭발물 처리반</Korean>
+            <Chinesesimp>爆破专家</Chinesesimp>
+            <Chinese>爆破專家</Chinese>
+            <Italian>Artificiere</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_ChangeAbilities">
             <English>Change Abilities</English>
+            <Russian>Изменить способности</Russian>
+            <French>Modifier talent</French>
+            <German>Fähigkeiten ändern</German>
             <Polish>Zmień zdolności</Polish>
             <Korean>능력 변경</Korean>
             <Japanese>属性変更</Japanese>
+            <Chinesesimp>更改属性</Chinesesimp>
+            <Chinese>更改屬性</Chinese>
+            <Italian>Cambia abilità</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_Abilities">
             <English>Abilities</English>
+            <Russian>Способности</Russian>
+            <French>Talent</French>
+            <German>Fähigkeiten</German>
             <Polish>Zdolności</Polish>
             <Korean>능력</Korean>
             <Japanese>属性</Japanese>
+            <Chinesesimp>属性</Chinesesimp>
+            <Chinese>屬性</Chinese>
+            <Italian>Abilità</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_OpenAttributesDisplay">
             <English>Open Attributes Display</English>
+            <French>Ouvrir dialogue des propriétés</French>
+            <German>Eigenschaftsfenster öffnen</German>
             <Japanese>属性パネルを表示</Japanese>
+            <Chinesesimp>打开属性显示</Chinesesimp>
+            <Chinese>打開屬性顯示</Chinese>
+            <Italian>Apri la visualizzazione degli attributi</Italian>
         </Key>
         <Key ID="STR_ZEN_Attributes_OpenAttributesDisplay_Description">
             <English>Opens the Zeus attributes display for the selected entity.\nWhen multiple entities are selected (i.e. due to selecting a group), the hovered entity will be used.</English>
+            <German>Öffnet das Eigenschaftsfenster für das ausgewählte Objekt.\nFalls mehrere Objekte ausgewählt wurden (d.h. durch Auswahl einer Gruppe), dann wird das Objekt, auf das mit der Maus gezeigt wurde, stattdessen verwendet.</German>
             <Japanese>選択したエンティティのZeus属性パネルを開きます\n複数のエンティティが選択されている場合は、ホバー選択しているエンティティの属性を使用します。</Japanese>
+            <Chinesesimp>打开所选实体的Zeus属性显示。当选择多个实体时（即由于选择了一个小组），将使用悬停的实体。</Chinesesimp>
+            <Chinese>打開所選實體的Zeus屬性顯示。當選擇多個實體時（即由於選擇了一個小組），將使用懸停的實體。</Chinese>
+            <Italian>Apre la visualizzazione degli attributi di Zeus per l'entità selezionata.\nQuando vengono selezionate più entità (ad es. a causa della selezione di un gruppo), verrà utilizzata l'entità al passaggio del mouse.</Italian>
         </Key>
     </Package>
 </Project>

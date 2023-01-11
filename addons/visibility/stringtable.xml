@@ -1,19 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Visibility">
-        <Key ID="STR_ZEN_Visibility_Enabled">
+        <Key ID="STR_ZEN_Visibility_DisplayName">
             <English>Visibility Indicator</English>
             <French>Indicateur de visibilité</French>
             <German>Sichtbarkeitsindikator</German>
             <Polish>Wskażnik widoczności</Polish>
             <Japanese>可視性インジケータ</Japanese>
+            <Chinesesimp>能见度指标</Chinesesimp>
+            <Chinese>能见度指标</Chinese>
+            <Italian>Indicatore di visibilità</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Visibility_Enabled">
+            <English>Enable Visibility Indicator</English>
+            <German>Aktiviere den Sichtbarkeitsindikator</German>
         </Key>
         <Key ID="STR_ZEN_Visibility_Enabled_Description">
-            <English>Indicates when a player can see the Zeus' cursor.</English>
+            <English>Enables showing an indicator when a player can see the Zeus cursor position.</English>
             <French>Indique quand un joueur peut voir le curseur de Zeus.</French>
             <German>Zeigt an, wann ein Spieler den Zeuszeiger sehen könnte.</German>
             <Polish>Wskazuje czy kursor Zeusa jest widoczny dla gracza.</Polish>
             <Japanese>プレイヤーが Zeus のカーソルが見えているかどうかのインジケータです。</Japanese>
+            <Chinesesimp>显示玩家何时能看到宙斯的光标。</Chinesesimp>
+            <Chinese>顯示玩家何時能看到宙斯的光標。</Chinese>
+            <Italian>Indica quando un giocatore può vedere il cursore 'Zeus'</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Visibility_DuringPlacementOnly">
+            <English>During Placement Only</English>
+            <German>Nur während dem Platzieren</German>
+        </Key>
+        <Key ID="STR_ZEN_Visibility_DuringPlacementOnly_Description">
+            <English>Only show the indicator while placing objects.</English>
+            <German>Zeigt den Indikator nur an während dem Platzieren</German>
+        </Key>
+        <Key ID="STR_ZEN_Visibility_MaxDistance">
+            <English>Max Check Distance</English>
+            <German>Maximale Distanz</German>
+        </Key>
+        <Key ID="STR_ZEN_Visibility_MaxDistance_Description">
+            <English>Controls the maximum distance from the cursor's position that players are considered for visibility checks.</English>
+            <German>Die Maximale Distanz zwischen dem Mauszeiger and den Spielern, bei der die Sichtbarkeit überprüft wird.</German>
         </Key>
         <Key ID="STR_ZEN_Visibility_Visible">
             <English>VISIBLE</English>
@@ -22,6 +48,8 @@
             <Italian>VISIBILE</Italian>
             <Polish>WIDOCZNY</Polish>
             <Japanese>可視性</Japanese>
+            <Chinesesimp>可见性</Chinesesimp>
+            <Chinese>可見性</Chinese>
         </Key>
     </Package>
 </Project>

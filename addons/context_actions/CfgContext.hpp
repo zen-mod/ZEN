@@ -5,6 +5,12 @@ class EGVAR(context_menu,actions) {
         insertChildren = QUOTE(_objects call FUNC(getArtilleryActions));
         priority = 70;
     };
+    class ThrowGrenade {
+        displayName = CSTRING(ThrowGrenade);
+        icon = QPATHTOF(ui\grenade_ca.paa);
+        insertChildren = QUOTE(_objects call FUNC(getGrenadeActions));
+        priority = 70;
+    };
     class Formation {
         displayName = "$STR_3DEN_Group_Attribute_Formation_displayName";
         condition = QUOTE(_groups findIf {units _x findIf {!isPlayer _x} != -1} != -1);
@@ -230,19 +236,41 @@ class EGVAR(context_menu,actions) {
         };
         class Copy {
             displayName = "$STR_3DEN_Display3DEN_MenuBar_EntityCopy_text";
-            statement = QUOTE(GVAR(loadout) = getUnitLoadout _hoveredEntity);
+            statement = QUOTE(GVAR(loadout) = _hoveredEntity call CBA_fnc_getLoadout);
             icon = QPATHTOF(ui\copy_ca.paa);
         };
         class Paste {
             displayName = "$STR_3DEN_Display3DEN_MenuBar_EntityPaste_text";
             condition = QUOTE(!isNil QQGVAR(loadout));
-            statement = QUOTE(_hoveredEntity setUnitLoadout GVAR(loadout));
+            statement = QUOTE([ARR_2(_hoveredEntity,GVAR(loadout))] call CBA_fnc_setLoadout);
             icon = QPATHTOF(ui\paste_ca.paa);
         };
         class Reset {
             displayName = "$STR_A3_RscDisplayCampaignLobby_Reset";
             statement = QUOTE(_hoveredEntity setUnitLoadout configOf _hoveredEntity);
             icon = "\a3\3den\Data\Displays\Display3DEN\ToolBar\undo_ca.paa";
+        };
+        class SwitchWeapon {
+            displayName = "$STR_A3_Switch1";
+            icon = "\a3\ui_f\data\IGUI\Cfg\Actions\reammo_ca.paa";
+            class Primary {
+                displayName = "$STR_A3_RSCDisplayArsenal_Tab_PrimaryWeapon";
+                condition = QUOTE([ARR_2(_hoveredEntity,_args)] call FUNC(canSwitchWeapon));
+                statement = QUOTE([ARR_2(_hoveredEntity,_args)] call FUNC(switchWeapon));
+                modifierFunction = QUOTE(call FUNC(switchWeaponModifier));
+                icon = "\a3\ui_f\data\GUI\Rsc\RscDisplayArsenal\primaryWeapon_ca.paa";
+                args = 0;
+            };
+            class Handgun: Primary {
+                displayName = "$STR_A3_RSCDisplayArsenal_Tab_Handgun";
+                icon = "\a3\ui_f\data\GUI\Rsc\RscDisplayArsenal\handgun_ca.paa";
+                args = 1;
+            };
+            class Binoculars: Primary {
+                displayName = "$STR_A3_RSCDisplayArsenal_Tab_Binoculars";
+                icon = "\a3\ui_f\data\GUI\Rsc\RscDisplayArsenal\binoculars_ca.paa";
+                args = 2;
+            };
         };
     };
     class Inventory {

@@ -86,9 +86,9 @@ _display displayAddEventHandler ["KeyDown", {call FUNC(handleKeyDown)}];
     _ctrl ctrlAddEventHandler ["MouseButtonDown", {
         if (RscDisplayCurator_sections select 0 == 1) then {
             private _ctrlTree = call EFUNC(common,getActiveTree);
-            private _pathLength = count tvCurSel _ctrlTree;
+            private _path = tvCurSel _ctrlTree;
 
-            if (_pathLength > 0 && {_pathLength < 4}) then {
+            if (_path isNotEqualTo [] && {_ctrlTree tvCount _path > 0}) then {
                 _ctrlTree tvSetCurSel [-1];
             };
         };
@@ -109,6 +109,18 @@ _ctrlTreeRecent ctrlAddEventHandler ["TreeSelChanged", {
         GVAR(recentTreeData) = _ctrlTreeRecent tvData _selectedPath;
     };
 }];
+
+// Track mouse position from mouse area control to handle the mouse being over other UI elements
+// RscDisplayCurator_mousePos from base game attempts to do this but for some reason also updates when
+// the mouse is over the mission controls group
+private _fnc_updateMousePos = {
+    params ["", "_posX", "_posY"];
+    GVAR(mousePos) = [_posX, _posY];
+};
+
+private _ctrlMouseArea = _display displayCtrl IDC_RSCDISPLAYCURATOR_MOUSEAREA;
+_ctrlMouseArea ctrlAddEventHandler ["MouseMoving", _fnc_updateMousePos];
+_ctrlMouseArea ctrlAddEventHandler ["MouseHolding", _fnc_updateMousePos];
 
 // Initially open the map fully zoomed out and centered
 if (isNil QGVAR(previousMapState)) then {
@@ -148,8 +160,11 @@ GVAR(iconsVisible) = true;
 
         [QGVAR(treesLoaded), _display] call CBA_fnc_localEvent;
 
-        [_display] call FUNC(addGroupIcons);
+        // Decluttering empty tree first since this will potentially reduce the number
+        // of entries that need to be processed by the subsequent functions
         [_display] call FUNC(declutterEmptyTree);
+        [_display] call FUNC(addGroupIcons);
+        [_display] call FUNC(addModIcons);
 
         // Initially fix side buttons (can be hidden if a tree has no entries)
         [FUNC(fixSideButtons), _display] call CBA_fnc_execNextFrame;
