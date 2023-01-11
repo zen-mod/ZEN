@@ -11,6 +11,7 @@
             <Japanese>ガレージを出ます (ESC)</Japanese>
             <Chinesesimp>退出车库（ESC）</Chinesesimp>
             <Chinese>退出車庫（ESC）</Chinese>
+            <Italian>Esci dal garage (ESC)</Italian>
         </Key>
         <Key ID="STR_ZEN_Garage_Hide_Tooltip">
             <English>Hide Interface (Backspace)</English>
@@ -21,6 +22,7 @@
             <Japanese>インターフェイスを隠します (Backspace)</Japanese>
             <Chinesesimp>隐藏界面（Backspace键）。</Chinesesimp>
             <Chinese>隱藏界面（Backspace鍵）</Chinese>
+            <Italian>Nascondi interfaccia (Backspace)</Italian>
         </Key>
         <Key ID="STR_ZEN_Garage_ApplyToAll">
             <English>Apply To All</English>
@@ -30,6 +32,7 @@
             <Japanese>全てに適用</Japanese>
             <Chinesesimp>全部应用</Chinesesimp>
             <Chinese>全部應用</Chinese>
+            <Italian>Applicare a tutto</Italian>
         </Key>
         <Key ID="STR_ZEN_Garage_ApplyToAll_Tooltip">
             <English>Apply the current vehicle's customization to all selected vehicles of this type.</English>
@@ -39,6 +42,7 @@
             <Japanese>現在の車両カスタマイズを選択した同じ種類の全車両にも適用します。</Japanese>
             <Chinesesimp>将当前车辆的自定义应用于该类型的所有选定车辆上。</Chinesesimp>
             <Chinese>將當前車輛的自定義應用到此類型的所有選定車輛。</Chinese>
+            <Italian>Applica la personalizzazione del veicolo corrente a tutti i veicoli selezionati di questo tipo.</Italian>
         </Key>
         <Key ID="STR_ZEN_Garage_CannotApplyToAll">
             <English>No other vehicles of the same type selected.</English>
@@ -48,6 +52,7 @@
             <Polish>Nie wybrano żadnych innych pojazdów tego typu.</Polish>
             <Chinesesimp>没有其他同类型的车辆被选择。</Chinesesimp>
             <Chinese>沒有其他同類型的車輛被選擇。</Chinese>
+            <Italian>Nessun altro veicolo dello stesso tipo selezionato.</Italian>
         </Key>
     </Package>
 </Project>

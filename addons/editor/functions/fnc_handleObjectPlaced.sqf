@@ -30,3 +30,9 @@ RscDisplayCurator_sections params ["_mode"];
 if (!GVAR(includeCrew) && {_mode == 0 || {_mode == 4 && {isClass (configFile >> "CfgVehicles" >> GVAR(recentTreeData))}}}) then {
     deleteVehicleCrew _object;
 };
+
+private _group = group _object;
+
+if (!isNull _group && {!isGroupDeletedWhenEmpty _group}) then {
+    _group deleteGroupWhenEmpty true;
+};

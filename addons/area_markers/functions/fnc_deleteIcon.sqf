@@ -17,9 +17,7 @@
 
 params ["_marker"];
 
-private _ctrlIcon = GVAR(icons) getVariable _marker;
-if (isNil "_ctrlIcon" || {isNull _ctrlIcon}) exitWith {};
-
-GVAR(icons) setVariable [_marker, nil];
-
-ctrlDelete _ctrlIcon;
+if (_marker in GVAR(icons)) then {
+    ctrlDelete (GVAR(icons) get _marker);
+    GVAR(icons) deleteAt _marker;
+};

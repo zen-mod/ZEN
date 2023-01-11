@@ -18,4 +18,4 @@
 
 #include "\x\zen\addons\common\defineResinclDesign.inc"
 
-#define DEFAULT_ICON "\a3\modules_f\data\portraitmodule_ca.paa"
+#define ICON_DEFAULT "\a3\modules_f\data\portraitmodule_ca.paa"

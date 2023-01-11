@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 ["zen_curatorDisplayLoaded", {
-    if (GVAR(enabled)) then {
+    if (GVAR(enabled) != INDICATOR_DISABLED) then {
         call FUNC(start);
     };
 }] call CBA_fnc_addEventHandler;

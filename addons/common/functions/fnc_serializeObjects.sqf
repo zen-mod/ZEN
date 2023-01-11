@@ -100,7 +100,7 @@ private _fnc_serializeUnit = {
     private _skill = skill _unit;
     private _stance = unitPos _unit;
 
-    private _loadout = getUnitLoadout _unit;
+    private _loadout = [_unit] call CBA_fnc_getLoadout;
     private _identity = [name _unit, face _unit, speaker _unit, pitch _unit, nameSound _unit, _unit call BIS_fnc_getUnitInsignia];
     private _flagTexture = getForcedFlagTexture _unit;
 
@@ -197,7 +197,7 @@ private _fnc_serializeAttachedObjects = {
             private _data = _x call _fnc_serializeObject;
             if (isNil "_data") exitWith {};
 
-            private _offset = _object worldToModel ASLtoAGL getPosASL _x;
+            private _offset = _object worldToModel ASLToAGL getPosWorld _x;
             private _dirAndUp = [_object vectorWorldToModel vectorDir _x, _object vectorWorldToModel vectorUp _x];
 
             _attachedObjects pushBack [_data, _offset, _dirAndUp];

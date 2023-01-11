@@ -10,6 +10,7 @@
             <Japanese>ZEN コンポジション ヘルパー</Japanese>
             <Chinesesimp>ZEN组合辅助</Chinesesimp>
             <Chinese>ZEN組合輔助</Chinese>
+            <Italian>Assistente per la composizione ZEN</Italian>
         </Key>
         <Key ID="STR_ZEN_Compositions_CreateCustomComposition">
             <English>CREATE CUSTOM COMPOSITION</English>
@@ -20,6 +21,7 @@
             <Japanese>カスタム コンポジション作成</Japanese>
             <Chinesesimp>创建自定义组合</Chinesesimp>
             <Chinese>創建自定義組合</Chinese>
+            <Italian>CREA COMPOSIZIONE PERSONALIZZATA</Italian>
         </Key>
         <Key ID="STR_ZEN_Compositions_EditCustomComposition">
             <English>EDIT CUSTOM COMPOSITION</English>
@@ -30,6 +32,7 @@
             <Japanese>カスタム コンポジション編集</Japanese>
             <Chinesesimp>编辑自定义组合</Chinesesimp>
             <Chinese>編輯自定義組合</Chinese>
+            <Italian>MODIFICA COMPOSIZIONE PERSONALIZZATA</Italian>
         </Key>
         <Key ID="STR_ZEN_Compositions_CategoryCannotBeEmpty">
             <English>Category cannot be empty.</English>
@@ -40,6 +43,7 @@
             <Japanese>カテゴリーは空にできません。</Japanese>
             <Chinesesimp>类别不能为空。</Chinesesimp>
             <Chinese>類別不能為空。</Chinese>
+            <Italian>La categoria non può essere vuota.</Italian>
         </Key>
         <Key ID="STR_ZEN_Compositions_NameCannotBeEmpty">
             <English>Name cannot be empty.</English>
@@ -50,6 +54,7 @@
             <Japanese>名前は空にできません。</Japanese>
             <Chinesesimp>名称不能为空。</Chinesesimp>
             <Chinese>名稱不能為空。</Chinese>
+            <Italian>Il nome non può essere vuoto.</Italian>
         </Key>
         <Key ID="STR_ZEN_Compositions_CompositionAlreadyExists">
             <English>A composition with this name and category already exists.</English>
@@ -60,6 +65,7 @@
             <Japanese>この名前とカテゴリは既に存在しています。</Japanese>
             <Chinesesimp>已经存在一个具有此名称和类别的组合。</Chinesesimp>
             <Chinese>已經存在一個具有此名稱和類別的組合。</Chinese>
+            <Italian>Esiste già una composizione con questo nome e questa categoria.</Italian>
         </Key>
         <Key ID="STR_ZEN_Compositions_DeleteConfirmation">
             <English>Are you sure you want to delete this composition?</English>
@@ -70,6 +76,7 @@
             <Japanese>このコンポジションを本当に削除しますか？</Japanese>
             <Chinesesimp>你确定要删除这个组合吗？</Chinesesimp>
             <Chinese>你確定要刪除這個組合嗎？</Chinese>
+            <Italian>Sei sicuro di voler eliminare questa composizione?</Italian>
         </Key>
         <Key ID="STR_ZEN_Compositions_NoObjectsSelected">
             <English>Select objects to create composition from</English>
@@ -80,6 +87,7 @@
             <Japanese>次の選択したオブジェクトでコンポジションを作成</Japanese>
             <Chinesesimp>选择对象以创建组合</Chinesesimp>
             <Chinese>選擇對像以創建組合</Chinese>
+            <Italian>Seleziona gli oggetti da cui creare la composizione</Italian>
         </Key>
         <Key ID="STR_ZEN_Compositions_RandomizationOff">
             <English>Randomization disabled.</English>
@@ -90,6 +98,7 @@
             <Japanese>ランダム化を無効にしました。</Japanese>
             <Chinesesimp>禁用随机选择</Chinesesimp>
             <Chinese>禁用隨機選擇</Chinese>
+            <Italian>Randomizzazione disabilitata.</Italian>
         </Key>
         <Key ID="STR_ZEN_Compositions_RandomizationOn">
             <English>Randomization enabled.</English>
@@ -100,6 +109,7 @@
             <Japanese>ランダム化を有効にしました。</Japanese>
             <Chinesesimp>启用随机选择</Chinesesimp>
             <Chinese>啟用隨機選擇</Chinese>
+            <Italian>Randomizzazione abilitata.</Italian>
         </Key>
     </Package>
 </Project>

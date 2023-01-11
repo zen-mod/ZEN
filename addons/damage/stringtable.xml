@@ -7,6 +7,7 @@
             <Japanese>各部品ダメージ (%1)</Japanese>
             <Chinesesimp>部件损坏 (%1)</Chinesesimp>
             <Chinese>部件損壞 (%1)</Chinese>
+            <Italian>Danni ai componenti (%1)</Italian>
         </Key>
         <Key ID="STR_ZEN_Damage_HitBody">
             <English>Body</English>
@@ -576,7 +577,7 @@
             <English>ERA</English>
             <Czech>ERA</Czech>
             <Polish>ERA</Polish>
-            <Italian>ERA</Italian>
+            <Italian>Corazza reattiva</Italian>
             <German>Reaktivpanzerung</German>
             <Spanish>ERA</Spanish>
             <French>ERA</French>
@@ -595,6 +596,7 @@
             <Japanese>ERA 前部</Japanese>
             <Chinesesimp>前侧反应装甲</Chinesesimp>
             <Chinese>前側反應裝甲</Chinese>
+            <Italian>Corazza reattiva davanti</Italian>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitera_back">
             <English>ERA Back</English>
@@ -604,6 +606,7 @@
             <Japanese>ERA 後部</Japanese>
             <Chinesesimp>后侧反应装甲</Chinesesimp>
             <Chinese>後側反應裝甲</Chinese>
+            <Italian>Corazza reattiva posteriore</Italian>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitera_left">
             <English>ERA Left</English>
@@ -613,6 +616,7 @@
             <Japanese>ERA 左側部</Japanese>
             <Chinesesimp>左侧反应装甲</Chinesesimp>
             <Chinese>左側反應裝甲</Chinese>
+            <Italian>Corazza reattiva sinistra</Italian>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitera_right">
             <English>ERA Right</English>
@@ -622,6 +626,7 @@
             <Japanese>ERA 右側部</Japanese>
             <Chinesesimp>右侧反应装甲</Chinesesimp>
             <Chinese>右側反應裝甲</Chinese>
+            <Italian>Corazza reattiva destra</Italian>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitera_top">
             <English>ERA Top</English>
@@ -631,6 +636,7 @@
             <Japanese>ERA 上部</Japanese>
             <Chinesesimp>顶部反应装甲</Chinesesimp>
             <Chinese>頂部反應裝甲</Chinese>
+            <Italian>Corazza reattiva sopra</Italian>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitslat">
             <English>Slat</English>
@@ -640,6 +646,7 @@
             <Japanese>スラット</Japanese>
             <Chinesesimp>防弹格栅</Chinesesimp>
             <Chinese>防彈格柵</Chinese>
+            <Italian>Slat</Italian>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitslat_left">
             <English>Slat Left</English>
@@ -649,6 +656,7 @@
             <Japanese>スラット 左側部</Japanese>
             <Chinesesimp>左侧防弹格栅</Chinesesimp>
             <Chinese>左側防彈格柵</Chinese>
+            <Italian>Slat Left</Italian>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitslat_right">
             <English>Slat Right</English>
@@ -658,6 +666,7 @@
             <Japanese>スラット 右側部</Japanese>
             <Chinesesimp>右侧防弹格栅</Chinesesimp>
             <Chinese>右側防彈格柵</Chinese>
+            <Italian>Slat Right</Italian>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitslat_front">
             <English>Slat Front</English>
@@ -667,6 +676,7 @@
             <Japanese>スラット 前部</Japanese>
             <Chinesesimp>前侧防弹格栅</Chinesesimp>
             <Chinese>前側防彈格柵</Chinese>
+            <Italian>Slat Front</Italian>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitslat_back">
             <English>Slat Back</English>
@@ -676,6 +686,7 @@
             <Japanese>スラット 後部</Japanese>
             <Chinesesimp>后侧防弹格栅</Chinesesimp>
             <Chinese>後側防彈格柵</Chinese>
+            <Italian>Slat Back</Italian>
         </Key>
     </Package>
 </Project>

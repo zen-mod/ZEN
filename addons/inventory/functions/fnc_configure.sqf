@@ -19,17 +19,13 @@ params ["_object"];
 
 if (!createDialog QGVAR(display)) exitWith {};
 
-private _config = configOf _object;
-private _displayName = getText (_config >> "displayName");
-private _maximumLoad = getNumber (_config >> "maximumLoad");
-
 // Get the object's current cargo and calculate its load
 private _cargo = [getItemCargo _object, getWeaponCargo _object, getMagazineCargo _object, getBackpackCargo _object];
 private _currentLoad = [_cargo] call FUNC(calculateLoad);
 
 private _display = uiNamespace getVariable QEGVAR(common,display);
 _display setVariable [QGVAR(currentLoad), _currentLoad];
-_display setVariable [QGVAR(maximumLoad), _maximumLoad];
+_display setVariable [QGVAR(maximumLoad), maxLoad _object];
 _display setVariable [QGVAR(object), _object];
 _display setVariable [QGVAR(cargo), _cargo];
 
@@ -38,7 +34,7 @@ _display setVariable [QGVAR(cargo), _cargo];
 
 // Set the display's title to the object name
 private _ctrlTitle = _display displayCtrl IDC_TITLE;
-_ctrlTitle ctrlSetText toUpper format [localize LSTRING(EditInventory), _displayName];
+_ctrlTitle ctrlSetText toUpper format [LLSTRING(EditInventory), getText (configOf _object >> "displayName")];
 
 // Refresh the items list when category is changed
 private _ctrlCategory = _display displayCtrl IDC_CATEGORY;

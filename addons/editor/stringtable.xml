@@ -9,6 +9,7 @@
             <Japanese>エディタ</Japanese>
             <Chinesesimp>编辑</Chinesesimp>
             <Chinese>編輯</Chinese>
+            <Italian>Editor</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_MoveDisplayToEdge">
             <English>Move Display to Edge</English>
@@ -20,6 +21,7 @@
             <Korean>모서리로 화면 이동</Korean>
             <Chinesesimp>将显示移至边缘</Chinesesimp>
             <Chinese>將顯示移至邊緣</Chinese>
+            <Italian>Sposta il display sul bordo</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_MoveDisplayToEdge_Description">
             <English>Moves the Zeus Editor Display to the edge of the screen.</English>
@@ -31,6 +33,7 @@
             <Korean>제우스 에디터 화면을 화면의 모서리로 이동합니다.</Korean>
             <Chinesesimp>将 Zeus 编辑器显示移动到屏幕边缘。</Chinesesimp>
             <Chinese>將 Zeus 編輯器顯示移動到屏幕邊緣。</Chinese>
+            <Italian>Sposta il display di Zeus Editor sul bordo dello schermo.</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_RemoveWatermark">
             <English>Remove Watermark</English>
@@ -42,6 +45,7 @@
             <Korean>워터마크 제거</Korean>
             <Chinesesimp>消除水印</Chinesesimp>
             <Chinese>消除水印</Chinese>
+            <Italian>Nascondi filigrana</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_RemoveWatermark_Description">
             <English>Removes the watermark shown when hiding the display.</English>
@@ -53,6 +57,7 @@
             <Korean>디스플레이를 가릴때 나타나는 워터마크를 제거합니다.</Korean>
             <Chinesesimp>移除隐藏显示时显示的水印。</Chinesesimp>
             <Chinese>移除隱藏顯示時顯示的水印。</Chinese>
+            <Italian>Nasconde la filigrana mostrata quando la superficie è nascosta.</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_DisableLiveSearch">
             <English>Disable Live Search</English>
@@ -64,6 +69,7 @@
             <Korean>실시간 검색 비활성화</Korean>
             <Chinesesimp>禁用即时搜索</Chinesesimp>
             <Chinese>禁用即時搜索</Chinese>
+            <Italian>Disattiva la ricerca in tempo reale</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_DisableLiveSearch_Description">
             <English>Requires pressing Enter or clicking the search button to confirm a search.\nHelps reduce lag when searching through a lot of items.</English>
@@ -75,6 +81,7 @@
             <Korean>검색을 완료하기 위해 엔터키를 누르거나 검색 버튼을 눌러야 합니다. \n많은 아이템을 검색함으로써 생기는 렉이 줄어드는데 도움이 됩니다.</Korean>
             <Chinesesimp>需要按回车键或点击搜索按钮来确认搜索。\n有助于减少在搜索大量项目时的滞后。</Chinesesimp>
             <Chinese>需要按回車鍵或點擊搜索按鈕來確認搜索。 \n有助於減少在搜索大量項目時的滯後。</Chinese>
+            <Italian>È necessario premere Invio o fare clic sul pulsante di ricerca per confermare una ricerca.\nAiuta a ridurre il ritardo durante la ricerca tra molti elementi.</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_DeclutterEmptyTree">
             <English>Declutter Empty Tree</English>
@@ -86,6 +93,7 @@
             <Korean> 범주 정리하기</Korean>
             <Chinesesimp>清理空树</Chinesesimp>
             <Chinese>清理空樹</Chinese>
+            <Italian>Declutter albero vuoto</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_DeclutterEmptyTree_Description">
             <English>Declutters the empty tree by removing empty vehicles as those are available in the side specific trees.</English>
@@ -96,6 +104,7 @@
             <Korean>특정 진영에 한정된 범주에서만 사용 가능한 비어있는 차량을 제거하여 비어있는 범주 정리하기</Korean>
             <Chinesesimp>通过移除空车来清理空树，因为那些是可用在侧面特定的树木。</Chinesesimp>
             <Chinese>通過移除空車來清理空樹，因為那些是可用在側面特定的樹木。</Chinese>
+            <Italian>Pulisci la categoria "Vuoto". I veicoli vuoti sono nascosti perché sono disponibili nelle categorie specifiche della pagina.</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_AddGroupIcons">
             <English>Add Group Icons</English>
@@ -105,6 +114,7 @@
             <Japanese>グループ アイコン追加</Japanese>
             <Chinesesimp>添加小队图标</Chinesesimp>
             <Chinese>添加小隊圖標</Chinese>
+            <Italian>Mostra simboli di gruppo</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_AddGroupIcons_Description">
             <English>Adds group icons to the create group trees.</English>
@@ -114,6 +124,15 @@
             <Japanese>グループ ツリーを作成するためにグループ アイコンを追加します。</Japanese>
             <Chinesesimp>将小队图标添加到创建一组树。</Chinesesimp>
             <Chinese>將小隊圖標添加到創建一組樹。</Chinese>
+            <Italian>Visualizza i simboli di gruppo nell'albero dei gruppi.</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Editor_AddModIcons">
+            <English>Add Mod Icons</English>
+            <German>Modsymbole anzeigen</German>
+        </Key>
+        <Key ID="STR_ZEN_Editor_AddModIcons_Description">
+            <English>Adds mod icons to the create unit trees. WARNING: Can significantly increase display load times.</English>
+            <German>Zeigt Modsymbole im Einheitenbaum an. WARNUNG: Kann die Ladezeit des Baums deutlich erhöhen.</German>
         </Key>
         <Key ID="STR_ZEN_Editor_RandomizeCopyPaste">
             <English>Randomize Deep Copy/Paste</English>
@@ -123,6 +142,7 @@
             <Japanese>深コピー/ペーストのランダム化</Japanese>
             <Chinesesimp>随机化深层复制/粘贴</Chinesesimp>
             <Chinese>隨機化深層複製/粘貼</Chinese>
+            <Italian>Copia/incolla profonda casualmente</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_RandomizeCopyPaste_Description">
             <English>Controls whether deep copy/paste will randomize unit identities and vehicle customization (instead of making identical copies).</English>
@@ -132,6 +152,7 @@
             <Japanese>深コピー時にユニットのアイデンティティと車両カスタマイズをランダム化するかどうかを設定します。</Japanese>
             <Chinesesimp>控制深层复制/粘贴是否会随机化单位身份和车辆自定义（而不是生成相同的副本）。</Chinesesimp>
             <Chinese>控制深層複製/粘貼是否會隨機化單位身份和車輛自定義（而不是生成相同的副本）。</Chinese>
+            <Italian>Controlla se il copia/incolla completo renderà casuali le identità delle unità e la personalizzazione dei veicoli (invece di creare copie identiche).</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages">
             <English>Unit Radio Messages</English>
@@ -143,6 +164,7 @@
             <Korean>유닛 무전</Korean>
             <Chinesesimp>单位无线电信息</Chinesesimp>
             <Chinese>單位無線電信息</Chinese>
+            <Italian>Messaggi Unità Radio</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages_Description">
             <English>Controls whether unit radio messages are played on placement and waypoint orders, waypoints only, or disabled.</English>
@@ -154,6 +176,7 @@
             <Korean>유닛 무전이 배치, 웨이포인트 명령, 혹은 웨이포인트에서만 재생되는지 또는 비활성화되는지 여부를 제어합니다.</Korean>
             <Chinesesimp>控制单位无线电信息是否播放就位和路径点命令，仅路径点，或禁用。</Chinesesimp>
             <Chinese>控制單位無線電信息是否播放就位和路徑點命令，僅路徑點，或禁用。</Chinese>
+            <Italian>Controlla se i messaggi radio dell'unità vengono riprodotti in base agli ordini di posizionamento e waypoint, solo waypoint o disabilitati.</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_ParachuteSounds">
             <English>Parachute Sounds</English>
@@ -163,6 +186,7 @@
             <Japanese>パラシュート音</Japanese>
             <Chinesesimp>降落伞声音</Chinesesimp>
             <Chinese>降落傘聲音</Chinese>
+            <Italian>Rumori di paracadute</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_ParachuteSounds_Description">
             <English>Controls whether jet flyby sounds are played when an object is paradropped via the Raise Entity keybind.</English>
@@ -171,6 +195,7 @@
             <Japanese>オブジェクト エンティティを上に持ち上げ空中投下させているときにジェット音を再生するかどうかを設定します。</Japanese>
             <Chinesesimp>控制当物体在空中抬起和掉落时，是否会播放飞机声音。</Chinesesimp>
             <Chinese>控制當物體在空中抬起和掉落時，是否會播放飛機聲音。</Chinese>
+            <Italian>Controlla se i suoni flyby del jet vengono riprodotti quando un oggetto viene paracadutato tramite la combinazione di tasti Raise Entity.</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_UnitRadioMessages_WaypointsOnly">
             <English>Waypoints Only</English>
@@ -182,6 +207,7 @@
             <Korean>웨이포인트 한정</Korean>
             <Chinesesimp>仅路径点</Chinesesimp>
             <Chinese>僅路徑點</Chinese>
+            <Italian>Solo waypoint</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleIncludeCrew">
             <English>Toggle Include Crew</English>
@@ -192,6 +218,7 @@
             <Korean>승무원 포함 토글</Korean>
             <Chinesesimp>切换包含乘员</Chinesesimp>
             <Chinese>切換包含乘員</Chinese>
+            <Italian>Toggle Includi equipaggio</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_EjectPassengers">
             <English>Eject Passengers</English>
@@ -202,6 +229,7 @@
             <Korean>승객 탈출</Korean>
             <Chinesesimp>弹出乘客</Chinesesimp>
             <Chinese>彈出乘客</Chinese>
+            <Italian>Espellere i passeggeri</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_EjectPassengers_Description">
             <English>Ejects the passengers of all selected vehicles. If the vehicle is currently flying, the units will be given parachutes.\nUnlike vanilla eject, units will disembark one after another (not immediately, with a short delay in-between).</English>
@@ -211,6 +239,7 @@
             <Japanese>選択された全車両から後部座席のユニットを脱出させます。もし車両が飛行中の場合はパラシュートが与えられます。\nなお脱出は一人づつ降りるようになっています (即時ではなく数秒づつ)。</Japanese>
             <Chinesesimp>弹出所有选定载具的乘客。如果载具正在飞行，这些单位将获得降落伞。与原版弹射不同的是，单位将一个接一个地离开（而不是立即离开，中间会有短暂间隙）。</Chinesesimp>
             <Chinese>彈出所有選定載具的乘客。如果載具正在飛行，這些單位將獲得降落傘。與原版彈射不同的是，單位將一個接一個地離開（而不是立即離開，中間會有短暫間隙）。</Chinese>
+            <Italian>Espelle i passeggeri di tutti i veicoli selezionati. Se il veicolo è attualmente in volo, alle unità verranno forniti paracadute.\nA differenza dell'espulsione vaniglia, le unità sbarcheranno una dopo l'altra (non immediatamente, con un breve ritardo nel mezzo).</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_UnloadViV_Description">
             <English>Unloads all selected vehicle-in-vehicle cargo and carriers. A vehicle that is both cargo and carrying cargo will only be unloaded from its carrier.</English>
@@ -218,6 +247,7 @@
             <Japanese>選択した ViV 内の車両とカーゴを全て降ろします。ViV 内に両方が存在する場合は、カーゴのみ降ろします。</Japanese>
             <Chinesesimp>卸下所有选定的载具中的货物和车辆。既有货物又有运载车辆的载具将只卸下货物。</Chinesesimp>
             <Chinese>卸下所有選定的載具中的貨物和車輛。既有貨物又有運載車輛的載具將只卸下貨物。</Chinese>
+            <Italian>Scarica tutte le merci e i vettori selezionati veicolo-in-veicolo. Un veicolo che è sia un carico che un carico verrà scaricato solo dal suo vettore.</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_DeployCountermeasures">
             <English>Deploy Countermeasures</English>
@@ -227,6 +257,7 @@
             <Polish>Odpal środki przeciw namierzające</Polish>
             <Chinesesimp>发射反制措施</Chinesesimp>
             <Chinese>發射反制措施</Chinese>
+            <Italian>Implementare contromisure</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_DeployCountermeasures_Description">
             <English>Makes all selected vehicles deploy countermeasures such as smokes and flares.</English>
@@ -236,6 +267,7 @@
             <Polish>Powoduje że wszystkie wybrane pojazdy odpalają środki przeciw namierzające, czyli flary, dymy itp.</Polish>
             <Chinesesimp>使所有选定的车辆发射反制措施，如烟雾和诱饵弹。</Chinesesimp>
             <Chinese>使所有選定的車輛發射反制措施，如煙霧和誘餌彈。</Chinese>
+            <Italian>Fa in modo che tutti i veicoli selezionati utilizzino contromisure come fumogeni e razzi.</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_DeepCopy">
             <English>Deep Copy</English>
@@ -244,6 +276,7 @@
             <Japanese>深コピー</Japanese>
             <Chinesesimp>深层复制</Chinesesimp>
             <Chinese>深層複製</Chinese>
+            <Italian>Copia profonda</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_DeepCopy_Description">
             <English>Performs a "deep copy" of selected objects - copying an extended set of object properties such as unit loadouts, vehicle inventories and customization.</English>
@@ -252,6 +285,7 @@
             <Japanese>"深コピー" は選択したオブジェクトに対して使用できます。ユニットの装備や車両インベントリとカスタマイズといった、プロパティを含めてコピーできます。</Japanese>
             <Chinesesimp>对选定的对象执行"深层复制"--复制一组扩展的对象属性，如单位装备、车辆库存和自定义。</Chinesesimp>
             <Chinese>對選定的對象執行"深層複製"--複製一組擴展的對象屬性，如單位裝備、車輛庫存和自定義。</Chinese>
+            <Italian>Esegue una "copia profonda" degli oggetti selezionati, copiando un insieme esteso di proprietà dell'oggetto come l'equipaggiamento delle unità, gli inventari dei veicoli e la personalizzazione.</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_DeepPaste">
             <English>Deep Paste</English>
@@ -260,6 +294,7 @@
             <Japanese>深ペースト</Japanese>
             <Chinesesimp>深层粘贴</Chinesesimp>
             <Chinese>深層粘貼</Chinese>
+            <Italian>Pasta profonda</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_DeepPaste_Description">
             <English>Pastes the current deep copied object data.</English>
@@ -268,6 +303,7 @@
             <Japanese>深コピーによってコピーしたオブジェクト データを貼り付けできます。</Japanese>
             <Chinesesimp>粘贴当前深层复制的对象数据。</Chinesesimp>
             <Chinese>粘貼當前深層複製的對像數據。</Chinese>
+            <Italian>Incolla i dati dell'oggetto correntemente copiati in profondità.</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_FocusSearchBar">
             <English>Focus Search Bar</English>
@@ -276,6 +312,7 @@
             <Japanese>検索バーにフォーカス</Japanese>
             <Chinesesimp>定位搜索栏</Chinesesimp>
             <Chinese>定位搜索欄</Chinese>
+            <Italian>Barra di ricerca messa a fuoco</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_FocusSearchBar_Description">
             <English>Sets focus to the search bar.</English>
@@ -284,6 +321,7 @@
             <Japanese>検索バーにフォーカスします。</Japanese>
             <Chinesesimp>指向搜索栏</Chinesesimp>
             <Chinese>指向搜索欄</Chinese>
+            <Italian>Imposta il focus sul campo di ricerca.</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_OrientTerrainNormal_Description">
             <English>Orients all selected objects to match the terrain slope at their position.</English>
@@ -292,6 +330,7 @@
             <Japanese>選択した全てのオブジェクトを地形に合わせます。</Japanese>
             <Chinesesimp>调整所有被选中的物体的方向，使之与它们位置上的地形坡度一致。</Chinesesimp>
             <Chinese>調整所有被選中的物體的方向，使之與它們位置上的地形坡度一致。</Chinese>
+            <Italian>Orienta tutti gli oggetti selezionati in modo che corrispondano alla pendenza del terreno nella loro posizione.</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleIcons">
             <English>Toggle Editable Icons</English>
@@ -300,6 +339,7 @@
             <Polish>Przełącz Ikony z możliwością edytowania</Polish>
             <Chinesesimp>切换可编辑图标</Chinesesimp>
             <Chinese>切換可編輯圖標</Chinese>
+            <Italian>Attiva/disattiva icone modificabili</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleIcons_Description">
             <English>Toggles the visibility of all editable icons. Useful for temporarily reducing lag or onscreen clutter when there are a lot of icons.</English>
@@ -308,6 +348,7 @@
             <Polish>Przełącza widoczność wszsytkich ustawionych ikon, przydatne by tymczasowo zmniejszyć lag, bądź niepotrzebne zaśmiecenie ekranu gdy znajduje się na nim dużo ikon.</Polish>
             <Chinesesimp>切换所有可编辑图标的可见性。当有很多图标时，对于暂时减少滞后或屏幕上的混乱很有用。</Chinesesimp>
             <Chinese>切換所有可編輯圖標的可見性。當有很多圖標時，對於暫時減少滯後或屏幕上的混亂很有用。</Chinese>
+            <Italian>Alterna la visibilità di tutte le icone modificabili. Utile per ridurre temporaneamente il ritardo o il disordine sullo schermo quando ci sono molte icone.</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_ReloadDisplay">
             <English>Reload Display</English>
@@ -315,6 +356,7 @@
             <Japanese>再描画</Japanese>
             <Chinesesimp>重新加载介绍</Chinesesimp>
             <Chinese>重新加載介紹</Chinese>
+            <Italian>Ricarica display</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_ReloadDisplay_Description">
             <English>Reloads the Zeus interface. Can be used to fix lockup issues.</English>
@@ -322,6 +364,7 @@
             <Japanese>Zeus インターフェースを再描画します。不具合の修正に使用可能です。</Japanese>
             <Chinesesimp>重新加载Zeus界面。可用于修复锁定问题。</Chinesesimp>
             <Chinese>重新加載Zeus界面。可用於修復鎖定問題。</Chinese>
+            <Italian>Ricarica l'interfaccia di Zeus. Può essere utilizzato per risolvere i problemi di blocco.</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_WatchCuratorCamera">
             <English>Watch Curator Camera</English>

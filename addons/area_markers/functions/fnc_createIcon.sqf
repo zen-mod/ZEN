@@ -24,6 +24,6 @@ private _ctrlIcon = _display ctrlCreate [QGVAR(icon), IDC_ICON_GROUP];
 _ctrlIcon setVariable [QGVAR(marker), _marker];
 _ctrlIcon ctrlShow visibleMap;
 
-GVAR(icons) setVariable [_marker, _ctrlIcon];
+GVAR(icons) set [_marker, _ctrlIcon];
 
-[_marker, markerDir _marker, markerColor _marker] call FUNC(updateIcon);
+_marker call FUNC(updateIcon);

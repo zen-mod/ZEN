@@ -17,11 +17,8 @@
 
 BEGIN_COUNTER(updatePreview);
 
-// Using mouse position from mouse area control to not update when mouse is over other UI elements
-private _mousePos = uiNamespace getVariable ["RscDisplayCurator_mousePos", [0, 0]];
-
 // Get terrain position and normal
-private _position = AGLtoASL screenToWorld _mousePos;
+private _position = AGLtoASL screenToWorld EGVAR(editor,mousePos);
 private _vectorUp = surfaceNormal _position;
 
 // Check if a surface other than the terrain exists
