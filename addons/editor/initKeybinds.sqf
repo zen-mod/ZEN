@@ -7,7 +7,7 @@
     };
 }, {}, [DIK_B, [false, false, false]]] call CBA_fnc_addKeybind; // Default: B
 
-[ELSTRING(main,DisplayName), QGVAR(deployCountermeasures), [LSTRING(DeployCountermeasures), LSTRING(DeployCountermeasures_Description)], {
+[[ELSTRING(main,DisplayName), LSTRING(AIControl)], QGVAR(deployCountermeasures), [LSTRING(DeployCountermeasures), LSTRING(DeployCountermeasures_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
         {
             [_x] call EFUNC(common,deployCountermeasures);
@@ -109,7 +109,7 @@
     };
 }, {}, [DIK_R, [true, true, false]]] call CBA_fnc_addKeybind; // Default: CTRL + SHIFT + R
 
-[ELSTRING(main,DisplayName), QGVAR(watchCuratorCamera), [LSTRING(WatchCuratorCamera), LSTRING(WatchCuratorCamera_Description)], {
+[[ELSTRING(main,DisplayName), LSTRING(AIControl)], QGVAR(watchCuratorCamera), [LSTRING(WatchCuratorCamera), LSTRING(WatchCuratorCamera_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false) && {count SELECTED_OBJECTS > 0}}) then {
         private _pos = getPos curatorCamera;
         {
@@ -124,7 +124,7 @@
     };
 }, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
 
-[ELSTRING(main,DisplayName), QGVAR(watchCursor), [LSTRING(WatchCursor), LSTRING(WatchCursor_Description)], {
+[[ELSTRING(main,DisplayName), LSTRING(AIControl)], QGVAR(watchCursor), [LSTRING(WatchCursor), LSTRING(WatchCursor_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false) && {count SELECTED_OBJECTS > 0}}) then {
         curatorMouseOver params ["_type", "_entity"];
         private _isCancelling = _type == "OBJECT" && {_entity in SELECTED_OBJECTS};
@@ -141,7 +141,7 @@
     };
 }, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
 
-[ELSTRING(main,DisplayName), QGVAR(forceFire), [LSTRING(ForceFire), LSTRING(ForceFire_Description)], {
+[[ELSTRING(main,DisplayName), LSTRING(AIControl)], QGVAR(forceFire), [LSTRING(ForceFire), LSTRING(ForceFire_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false) && {count SELECTED_OBJECTS > 0}}) then {
         private _shooters = SELECTED_OBJECTS select {!isNull group _x && {!isPlayer _x}};
         [QEGVAR(common,ForceFire), [clientOwner, _shooters], _shooters] call CBA_fnc_targetEvent;
@@ -152,7 +152,7 @@
     [QEGVAR(common,ForceFire), [clientOwner, []]] call CBA_fnc_globalEvent;
 }, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
 
-[ELSTRING(main,DisplayName), QGVAR(moveToCursor), [LSTRING(MoveToCursor), LSTRING(MoveToCursor_Description)], {
+[[ELSTRING(main,DisplayName), LSTRING(AIControl)], QGVAR(moveToCursor), [LSTRING(MoveToCursor), LSTRING(MoveToCursor_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
         private _cursorPosASL = [] call EFUNC(common,getPosFromScreen);
 
@@ -168,7 +168,7 @@
     };
 }, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
 
-[ELSTRING(main,DisplayName), QGVAR(toggleAIPATH), [LSTRING(ToggleAIPATH), LSTRING(ToggleAIPATH_Description)], {
+[[ELSTRING(main,DisplayName), LSTRING(AIControl)], QGVAR(toggleAIPATH), [LSTRING(ToggleAIPATH), LSTRING(ToggleAIPATH_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false) && {SELECTED_OBJECTS isNotEqualTo []}}) then {
         private _disabled = 0;
         private _enabled = 0;
