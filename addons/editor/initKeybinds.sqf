@@ -115,8 +115,8 @@
         {
             if (!isNull group _x && {!isPlayer _x}) then {
                 [QEGVAR(common,doWatch), [_x, _pos], _x] call CBA_fnc_targetEvent;
-                [2, [_x, _pos, []]] call EFUNC(common,hintAddElement);
-                [2, ["\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\scout_ca.paa", [], _pos, 1, 1, 0]] call EFUNC(common,hintAddElement);
+                [[_x, _pos, []]] call EFUNC(common,hintAddElement);
+                [["\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\scout_ca.paa", [], _pos, 1, 1, 0]] call EFUNC(common,hintAddElement);
             };
         } forEach SELECTED_OBJECTS;
 
@@ -126,14 +126,16 @@
 
 [[ELSTRING(main,DisplayName), LSTRING(AIControl)], QGVAR(watchCursor), [LSTRING(WatchCursor), LSTRING(WatchCursor_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false) && {count SELECTED_OBJECTS > 0}}) then {
-        curatorMouseOver params ["_type", "_entity"];
-        private _isCancelling = _type == "OBJECT" && {_entity in SELECTED_OBJECTS};
-        private _cursorPosASL = [] call EFUNC(common,getPosFromScreen);
+        curatorMouseOver params [["_type", ""], ["_watchTarget", ASLToAGL ([] call EFUNC(common,getPosFromScreen))]];
+
         {
             if (!isNull group _x && {!isPlayer _x}) then {
-                [QEGVAR(common,doWatch), [[_x, gunner _x], [ASLToAGL _cursorPosASL, objNull] select _isCancelling], _x] call CBA_fnc_targetEvent;
-                [2, [_x, ASLToAGL _cursorPosASL, []]] call EFUNC(common,hintAddElement);
-                [2, ["\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\scout_ca.paa", [], ASLToAGL _cursorPosASL, 1, 1, 0]] call EFUNC(common,hintAddElement);
+                [QEGVAR(common,doWatch), [
+                    [_x, gunner _x],
+                    [_watchTarget, objNull] select (_x isEqualTo _watchTarget) // Cancel if target is self
+                ], _x] call CBA_fnc_targetEvent;
+                [[_x, _watchTarget, []]] call EFUNC(common,hintAddElement);
+                [["\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\scout_ca.paa", [], _watchTarget, 1, 1, 0]] call EFUNC(common,hintAddElement);
             };
         } forEach SELECTED_OBJECTS;
 
@@ -159,8 +161,8 @@
         {
             if (!isNull driver _x && {!isPlayer _x}) then {
                 [QEGVAR(common,doMove), [_x, ASLToAGL _cursorPosASL], _x] call CBA_fnc_targetEvent;
-                [2, [_x, ASLToAGL _cursorPosASL, []]] call EFUNC(common,hintAddElement);
-                [2, ["\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\walk_ca.paa", [], ASLToAGL _cursorPosASL, 1, 1, 0]] call EFUNC(common,hintAddElement);
+                [[_x, ASLToAGL _cursorPosASL, []]] call EFUNC(common,hintAddElement);
+                [["\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\walk_ca.paa", [], ASLToAGL _cursorPosASL, 1, 1, 0]] call EFUNC(common,hintAddElement);
             };
         } forEach SELECTED_OBJECTS;
 
