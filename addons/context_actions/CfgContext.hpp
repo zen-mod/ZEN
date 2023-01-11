@@ -257,9 +257,9 @@ class EGVAR(context_menu,actions) {
                 displayName = "$STR_A3_RSCDisplayArsenal_Tab_PrimaryWeapon";
                 condition = QUOTE([ARR_2(_hoveredEntity,_args)] call FUNC(canSwitchWeapon));
                 statement = QUOTE([ARR_2(_hoveredEntity,_args)] call FUNC(switchWeapon));
+                modifierFunction = QUOTE(call FUNC(switchWeaponModifier));
                 icon = "\a3\ui_f\data\GUI\Rsc\RscDisplayArsenal\primaryWeapon_ca.paa";
                 args = 0;
-                modifierFunction = QUOTE(call FUNC(switchWeaponModifier));
             };
             class Handgun: Primary {
                 displayName = "$STR_A3_RSCDisplayArsenal_Tab_Handgun";

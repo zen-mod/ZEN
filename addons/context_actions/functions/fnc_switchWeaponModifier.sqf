@@ -1,11 +1,11 @@
 #include "script_component.hpp"
 /*
  * Author: Ampersand
- * Updates switch weapon actions.
+ * Modifies the switch weapon action based on the hovered entity.
  *
  * Arguments:
  * 0: Action <ARRAY>
- * 1: Action Params <ARRAY>
+ * 1: Action Parameters <ARRAY>
  *
  * Return Value:
  * None
@@ -17,7 +17,6 @@
  */
 
 params ["_action", "_actionParams"];
-
 _action params ["", "", "", "", "", "", "_args"];
 _actionParams params ["", "", "", "", "", "_hoveredEntity"];
 
@@ -27,14 +26,16 @@ private _weapon = [
     binocular _hoveredEntity
 ] select _args;
 
-private _cfgWeapon = configFile >> "CfgWeapons" >> _weapon;
+private _cfgWeapons = configFile >> "CfgWeapons" >> _weapon;
 
-private _displayName = getText (_cfgWeapon >> "displayName");
+private _displayName = getText (_cfgWeapons >> "displayName");
+
 if (_displayName != "") then {
     _action set [1, _displayName];
 };
 
-private _picture = getText (_cfgWeapon >> "picture");
+private _picture = getText (_cfgWeapons >> "picture");
+
 if (_picture != "") then {
     _action set [2, _picture];
 };

@@ -1,11 +1,11 @@
 #include "script_component.hpp"
 /*
  * Author: Ampersand
- * Updates switch weapon actions.
+ * Switches the given unit's weapon to the selected one.
  *
  * Arguments:
- * 0: UNIT <OBJECT>
- * 1: WEAPON INDEX <NUMBER>
+ * 0: Unit <OBJECT>
+ * 1: Weapon Index <NUMBER>
  *
  * Return Value:
  * None
@@ -19,4 +19,4 @@
 params ["_unit", "_weaponIndex"];
 
 private _weapon = [primaryWeapon _unit, handgunWeapon _unit, binocular _unit] select _weaponIndex;
-['zen_common_selectWeapon', [_unit, _weapon], _unit] call CBA_fnc_targetEvent;
+[QEGVAR(common,selectWeapon), [_unit, _weapon], _unit] call CBA_fnc_targetEvent;
