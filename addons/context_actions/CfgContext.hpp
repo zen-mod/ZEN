@@ -345,8 +345,6 @@ class EGVAR(context_menu,actions) {
         };
         class SwitchWeapon {
             displayName = "$STR_A3_Switch1";
-            condition = QUOTE(_hoveredEntity call FUNC(canSelectVehicleWeapon));
-            statement = QUOTE(_hoveredEntity call FUNC(selectVehicleWeaponDialog));
             icon = "\a3\ui_f\data\GUI\Cfg\Hints\VehicleAmmo_CA.paa";
             insertChildren = QUOTE(call FUNC(getVehicleWeaponActions));
         };

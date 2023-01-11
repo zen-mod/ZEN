@@ -23,7 +23,6 @@ PREP(refuelVehicles);
 PREP(repairVehicles);
 PREP(selectArtilleryPos);
 PREP(selectVehicleWeapon);
-PREP(selectVehicleWeaponDialog);
 PREP(selectThrowPos);
 PREP(setBehaviour);
 PREP(setCombatMode);
