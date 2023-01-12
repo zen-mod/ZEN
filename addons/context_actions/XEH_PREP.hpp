@@ -6,7 +6,6 @@ PREP(canPasteVehicleAppearance);
 PREP(canRearmVehicles);
 PREP(canRefuelVehicles);
 PREP(canRepairVehicles);
-PREP(canSelectVehicleWeapon);
 PREP(canSwitchWeapon);
 PREP(canToggleSurrender);
 PREP(canUnloadViV);
