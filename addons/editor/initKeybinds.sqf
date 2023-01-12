@@ -127,6 +127,9 @@
 [[ELSTRING(main,DisplayName), LSTRING(AIControl)], QGVAR(watchCursor), [LSTRING(WatchCursor), LSTRING(WatchCursor_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false) && {count SELECTED_OBJECTS > 0}}) then {
         curatorMouseOver params [["_type", ""], ["_watchTarget", ASLToAGL ([] call EFUNC(common,getPosFromScreen))]];
+        if (_type != "OBJECT") then {
+            _watchTarget = ASLToAGL ([] call EFUNC(common,getPosFromScreen));
+        };
 
         {
             if (!isNull group _x && {!isPlayer _x}) then {
