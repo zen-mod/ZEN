@@ -43,8 +43,7 @@ _driver setSkill 1;
 private _behaviour = behaviour _vehicle;
 _group setBehaviour "CARELESS";
 
-private _rappelPos = [_waypointPosition, ATLToASL _waypointPosition] select (surfaceIsWater _waypointPosition);
-[_vehicle, FASTROPE_HEIGHT, _rappelPos] call AR_Rappel_All_Cargo;
+[_vehicle, FASTROPE_HEIGHT, AGLToASL _waypointPosition] call AR_Rappel_All_Cargo;
 
 _driver setSkill _skill;
 _group setBehaviour _behaviour;
