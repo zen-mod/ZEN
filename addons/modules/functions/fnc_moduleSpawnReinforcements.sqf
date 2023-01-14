@@ -94,8 +94,8 @@ private _waypoint = _vehicleGroup addWaypoint [_positionLZ, WAYPOINT_RADIUS];
 
 if (_isAir && {_insertionMethod > 0}) then {
     private _script = [
-        QPATHTOEF(ai,functions\fnc_waypointParadrop.sqf),
-        QPATHTOEF(ai,functions\fnc_waypointFastrope.sqf)
+        getText (configFile >> "ZEN_WaypointTypes" >> "Paradrop" >> "script"),
+        getText (configFile >> "ZEN_WaypointTypes" >> "Fastrope" >> "script")
     ] select (_insertionMethod == 2);
 
     _waypoint setWaypointType "SCRIPTED";
