@@ -84,7 +84,7 @@ private _infantryGroup = createGroup [_side, true];
 } forEach _infantryTypes;
 
 // Use normal transport unload if fastroping is not available
-if (_insertionMethod == 2 && {!isClass (configFile >> "CfgPatches" >> "ace_fastroping") || {getNumber (_vehicleConfig >> "ace_fastroping_enabled") == 0}}) then {
+if (_insertionMethod == 2 && {!([_vehicle] call EFUNC(common,hasFastroping))}) then {
     _insertionMethod = 0;
 };
 

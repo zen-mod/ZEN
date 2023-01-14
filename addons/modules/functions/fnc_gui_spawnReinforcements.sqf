@@ -234,10 +234,7 @@ private _fnc_vehicleChanged = {
     private _ctrlFlyHeight = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_HEIGHT;
     _ctrlFlyHeight ctrlEnable _isAir;
 
-    if (
-        isClass (configFile >> "CfgPatches" >> "ace_fastroping")
-        && {getNumber (configFile >> "CfgVehicles" >> _vehicle >> "ace_fastroping_enabled") > 0}
-    ) then {
+    if ([_vehicle] call EFUNC(common,hasFastroping)) then {
         if (lbSize _ctrlInsertion < 3) then {
             _ctrlInsertion lbAdd localize ELSTRING(ai,Fastrope);
         };

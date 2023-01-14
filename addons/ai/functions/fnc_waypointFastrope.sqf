@@ -28,21 +28,19 @@ params ["_group", "_waypointPosition"];
 private _waypoint = [_group, currentWaypoint _group];
 _waypoint setWaypointDescription localize LSTRING(Fastrope);
 
-// Exit if ace_fastroping is not loaded
-if (!isClass (configFile >> "CfgPatches" >> "ace_fastroping")) exitWith {true};
-
 private _vehicle = vehicle leader _group;
 
 // Exit if the helicopter has no passengers that can be deployed by fastrope
 if (crew _vehicle findIf {assignedVehicleRole _x select 0 == "cargo"} == -1) exitWith {true};
 
-private _enabled = getNumber (configOf _vehicle >> "ace_fastroping_enabled");
-
 // Exit if fastroping is not enabled for the helicopter
-if (_enabled == 0) exitWith {true};
+if !([_vehicle] call EFUNC(common,hasFastroping)) exitWith {true};
 
 // Equip the helicopter with FRIES if necessary
-if (_enabled == 2 && {isNull (_vehicle getVariable ["ace_fastroping_FRIES", objNull])}) then {
+if (
+    getNumber (configOf _vehicle >> "ace_fastroping_enabled") == 2
+    && {isNull (_vehicle getVariable ["ace_fastroping_FRIES", objNull])}
+) then {
     _vehicle call ace_fastroping_fnc_equipFRIES;
 };
 
