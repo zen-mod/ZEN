@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"zen_ai", "zen_attributes"};
+        requiredAddons[] = {"zen_ai", "zen_attributes", "zen_common"};
         author = ECSTRING(main,Author);
         authors[] = {"Kex"};
         url = ECSTRING(main,URL);
@@ -16,4 +16,5 @@ class CfgPatches {
 
 PRELOAD_ADDONS;
 
+#include "CfgEventHandlers.hpp"
 #include "CfgWaypointTypes.hpp"

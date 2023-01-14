@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Kex
+ * Author: mharis001, Kex
  * Scripted waypoint that makes a group fastrope at the waypoint's position.
  * Requires Duda's Advanced Rappelling to be loaded.
  *
@@ -24,13 +24,13 @@ params ["_group", "_waypointPosition"];
 private _waypoint = [_group, currentWaypoint _group];
 _waypoint setWaypointDescription localize ELSTRING(ai,fastrope);
 
-// Exit if Duda's Advanced Rappelling is not loaded
-if !(AR_RAPPELLING_INIT) exitWith {true};
-
 private _vehicle = vehicle leader _group;
 
 // Exit if the helicopter has no passengers that can be deployed by fastrope
 if (crew _vehicle findIf {assignedVehicleRole _x select 0 == "cargo"} == -1) exitWith {true};
+
+// Exit if fastroping is not enabled for the helicopter
+if !([_vehicle] call EFUNC(common,hasFastroping)) exitWith {true};
 
 // Increase the skill of the pilot for better flying
 private _driver = driver _vehicle;
