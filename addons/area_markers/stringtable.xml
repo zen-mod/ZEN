@@ -6,7 +6,7 @@
             <Russian>Создать Маркер Области</Russian>
             <French>Créer un marqueur de zone</French>
             <German>Bereichsmarkierungen erstellen</German>
-            <Italian>Crea un marker</Italian>
+            <Italian>Crea marcatori di area</Italian>
             <Czech>Vytvořit značku oblasti</Czech>
             <Polish>Stwórz Marker Obszarowy</Polish>
             <Portuguese>Criar marcador de área</Portuguese>
@@ -20,7 +20,7 @@
             <Russian>ИЗМЕНИТЬ МАРКЕР ОБЛАСТИ</Russian>
             <French>EDITER LE MARQUEUR DE ZONE</French>
             <German>BEREICHSMARKIERUNG BEARBEITEN</German>
-            <Italian>Modifica un marker</Italian>
+            <Italian>MODIFICA MARCATORI AREA</Italian>
             <Czech>ÚPRAVA ZNAČKY OBLASTI</Czech>
             <Polish>EDYTUJ MARKER OBSZAROWY</Polish>
             <Portuguese>Editar marcador de área</Portuguese>
@@ -34,7 +34,7 @@
             <Russian>Разместить На Карте</Russian>
             <French>Placer sur la carte</French>
             <German>Auf Karte platzieren</German>
-            <Italian>Aggiungi sulla mappa</Italian>
+            <Italian>Posiziona sulla mappa</Italian>
             <Czech>Umístit na mapu</Czech>
             <Polish>Zaznacz Na Mapie</Polish>
             <Portuguese>Coloque no mapa</Portuguese>

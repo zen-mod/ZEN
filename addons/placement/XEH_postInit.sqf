@@ -15,6 +15,20 @@
         IDC_RSCDISPLAYCURATOR_CREATE_UNITS_CIV,
         IDC_RSCDISPLAYCURATOR_CREATE_UNITS_EMPTY
     ];
+
+    // Need special handling for recent tree since items in the tree are not always objects
+    private _ctrlTreeRecent = _display displayCtrl IDC_RSCDISPLAYCURATOR_CREATE_RECENT;
+    _ctrlTreeRecent ctrlAddEventHandler ["TreeSelChanged", {
+        params ["_ctrlTreeRecent", "_selectedPath"];
+
+        private _objectType = _ctrlTreeRecent tvData _selectedPath;
+
+        if (!isClass (configFile >> "CfgVehicles" >> _objectType)) then {
+            _objectType = "";
+        };
+
+        [_objectType] call FUNC(setupPreview);
+    }];
 }] call CBA_fnc_addEventHandler;
 
 ["zen_curatorDisplayUnloaded", {

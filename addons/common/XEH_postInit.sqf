@@ -173,6 +173,11 @@
     _vehicle engineOn _state;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(selectWeapon), {
+    params ["_unit", "_muzzle"];
+    _unit selectWeapon _muzzle;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(setPilotLight), {
     params ["_vehicle", "_lights"];
     _vehicle setPilotLight _lights;
@@ -216,6 +221,11 @@
 [QGVAR(setVectorUp), {
     params ["_object", "_vectorUp"];
     _object setVectorUp _vectorUp;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setVectorDirAndUp), {
+    params ["_object", "_dirAndUp"];
+    _object setVectorDirAndUp _dirAndUp;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(setVelocity), {

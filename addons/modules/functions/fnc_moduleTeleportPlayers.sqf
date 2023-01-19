@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: mharis001
+ * Author: mharis001, Kex
  * Zeus module function to teleport players.
  *
  * Arguments:
@@ -34,7 +34,22 @@ params ["_logic"];
             _players = _players arrayIntersect _players;
         };
 
+        // Ensure proper spacing among units
+        private _gridSize = TELEPORT_SPACING + 0.5 * selectMax (_players apply {sizeOf typeOf _x});
+        private _nGrid = ceil sqrt count _players;
+        private _offset = _gridSize * floor (_nGrid / 2);
+        private _startPos = _position vectorDiff [_offset, _offset, 0];
+        private _positions = [];
+
+        for "_i" from 0 to (_nGrid - 1) do {
+            for "_j" from 0 to (_nGrid - 1) do {
+                _positions pushBack (_startPos vectorAdd [_i * _gridSize, _j * _gridSize, 0]);
+            };
+        };
+
         {
+            private _position = _positions select _forEachIndex;
+
             // Special handling for aircraft that are flying
             // Without "FLY" they will be teleported to the ground and explode
             // Manually set their velocity to prevent them from falling out of the sky

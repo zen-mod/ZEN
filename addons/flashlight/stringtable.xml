@@ -8,6 +8,7 @@
             <Japanese>フラッシュライト切り替え</Japanese>
             <Chinesesimp>切换手电筒</Chinesesimp>
             <Chinese>切換手電筒</Chinese>
+            <Italian>Cambia lo stato della torcia</Italian>
         </Key>
         <Key ID="STR_ZEN_Flashlight_Toggle_Description">
             <English>Toggles the state of the Zeus camera flashlight.</English>
@@ -16,6 +17,7 @@
             <Japanese>Zeus カメラのフラッシュライトを切り替えします。</Japanese>
             <Chinesesimp>切换Zeus摄像机手电筒。</Chinesesimp>
             <Chinese>切換Zeus攝像機手電筒。</Chinese>
+            <Italian>Commuta lo stato della torcia della telecamera Zeus.</Italian>
         </Key>
     </Package>
 </Project>

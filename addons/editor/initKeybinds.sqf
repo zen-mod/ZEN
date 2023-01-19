@@ -103,9 +103,7 @@
 
 [ELSTRING(main,DisplayName), QGVAR(reloadDisplay), [LSTRING(ReloadDisplay), LSTRING(ReloadDisplay_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
-        findDisplay IDD_RSCDISPLAYCURATOR closeDisplay IDC_CANCEL;
-
-        {openCuratorInterface} call CBA_fnc_execNextFrame;
+        [] call EFUNC(common,reloadDisplay);
 
         true // handled
     };

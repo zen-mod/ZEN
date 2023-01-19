@@ -72,6 +72,7 @@
             <Japanese>追加</Japanese>
             <Chinesesimp>添加</Chinesesimp>
             <Chinese>添加</Chinese>
+            <Italian>Aggiungere</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Remove">
             <English>Remove</English>
@@ -82,6 +83,7 @@
             <Japanese>削除</Japanese>
             <Chinesesimp>移除</Chinesesimp>
             <Chinese>移除</Chinese>
+            <Italian>Rimuovi</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_On">
             <English>On</English>
@@ -92,6 +94,7 @@
             <Polish>Włączone</Polish>
             <Chinesesimp>开</Chinesesimp>
             <Chinese>開</Chinese>
+            <Italian>Accendi</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Off">
             <English>Off</English>
@@ -102,6 +105,7 @@
             <Polish>Wyłączone</Polish>
             <Chinesesimp>关</Chinesesimp>
             <Chinese>關</Chinese>
+            <Italian>Spegni</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Unchanged">
             <English>Unchanged</English>
@@ -125,6 +129,7 @@
             <Japanese>事前作製</Japanese>
             <Chinesesimp>预制</Chinesesimp>
             <Chinese>預製</Chinese>
+            <Italian>Prefabbricato</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_VeryLow">
             <English>Very Low</English>
@@ -233,7 +238,7 @@
             <Polish>Ekstremalny</Polish>
             <Czech>Extrémní</Czech>
             <Italian>Estremo</Italian>
-            <Japanese>強力</Japanese>
+            <Japanese>超強力</Japanese>
             <Korean>극한</Korean>
             <Chinesesimp>极强</Chinesesimp>
             <Chinese>極強</Chinese>
@@ -287,6 +292,7 @@
             <Korean>목표</Korean>
             <Chinesesimp>目标</Chinesesimp>
             <Chinese>目標</Chinese>
+            <Italian>Obbiettivo</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Cursor">
             <English>Cursor</English>
@@ -294,6 +300,8 @@
             <German>Cursor</German>
             <Chinesesimp>鼠标</Chinesesimp>
             <Chinese>鼠標</Chinese>
+            <Japanese>カーソル</Japanese>
+            <Italian>Cursore</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_SelectedUnit">
             <English>Selected Unit</English>
@@ -304,6 +312,7 @@
             <Japanese>選択されたユニット</Japanese>
             <Chinesesimp>选择单位</Chinesesimp>
             <Chinese>選擇單位</Chinese>
+            <Italian>Unità selezionata</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_SelectedGroup">
             <English>Selected Group</English>
@@ -351,7 +360,7 @@
             <German>Filter</German>
             <Polish>Filtr</Polish>
             <Czech>Filtr</Czech>
-            <Italian>Filtri</Italian>
+            <Italian>Filtro</Italian>
             <Japanese>フィルタ</Japanese>
             <Korean>필터</Korean>
             <Chinesesimp>筛选</Chinesesimp>
@@ -381,6 +390,7 @@
             <Spanish>Vehículo</Spanish>
             <Chinesesimp>载具</Chinesesimp>
             <Chinese>載具</Chinese>
+            <Italian>Veicolo</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Vehicles">
             <English>Vehicles</English>
@@ -414,6 +424,8 @@
             <German>Waffe</German>
             <Chinesesimp>武器</Chinesesimp>
             <Chinese>武器</Chinese>
+            <Japanese>武器</Japanese>
+            <Italian>Arma</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Magazine">
             <English>Magazine</English>
@@ -421,6 +433,8 @@
             <German>Magazin</German>
             <Chinesesimp>弹夹</Chinesesimp>
             <Chinese>彈夾</Chinese>
+            <Japanese>弾倉</Japanese>
+            <Italian>Rivista</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Nearest">
             <English>Nearest</English>
@@ -447,6 +461,7 @@
             <Spanish>Más lejano</Spanish>
             <Chinesesimp>最远</Chinesesimp>
             <Chinese>最遠</Chinese>
+            <Italian>Il più lontano</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Relaxed">
             <English>Relaxed</English>
@@ -458,6 +473,7 @@
             <Korean>차분한</Korean>
             <Chinesesimp>轻松愉快</Chinesesimp>
             <Chinese>輕鬆愉快</Chinese>
+            <Italian>Rilassato</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Careless">
             <English>Careless</English>
@@ -465,10 +481,11 @@
             <French>Inattentif</French>
             <German>Unachtsam</German>
             <Polish>Beztroskie</Polish>
-            <Japanese>ケアレス</Japanese>
+            <Japanese>不注意</Japanese>
             <Spanish>Despreocupado</Spanish>
             <Chinesesimp>漫不经心</Chinesesimp>
             <Chinese>漫不經心</Chinese>
+            <Italian>Incurante</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Cautious">
             <English>Cautious</English>
@@ -480,6 +497,7 @@
             <Korean>주의 깊은</Korean>
             <Chinesesimp>谨慎行事</Chinesesimp>
             <Chinese>謹慎行事</Chinese>
+            <Italian>Cauta</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Speed">
             <English>Speed</English>
@@ -561,6 +579,11 @@
         </Key>
         <Key ID="STR_ZEN_Common_Duration_Units">
             <English>Duration (s)</English>
+            <Japanese>持続時間 (s)</Japanese>
+            <Chinese>持續時間 (秒)</Chinese>
+            <Chinesesimp>持续时间 (秒)</Chinesesimp>
+            <German>Dauer (s)</German>
+            <Italian>Durata (s)</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Amount">
             <English>Amount</English>
@@ -568,6 +591,8 @@
             <German>Menge</German>
             <Chinesesimp>合计</Chinesesimp>
             <Chinese>合計</Chinese>
+            <Japanese>合計</Japanese>
+            <Italian>Quantità</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Teleport">
             <English>Teleport</English>
@@ -590,6 +615,7 @@
             <Korean>효과</Korean>
             <Chinesesimp>效果</Chinesesimp>
             <Chinese>效果</Chinese>
+            <Italian>Effetto</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Pitch">
             <English>Pitch</English>
@@ -599,6 +625,7 @@
             <Japanese>ピッチ</Japanese>
             <Chinesesimp>沥青</Chinesesimp>
             <Chinese>瀝青</Chinese>
+            <Italian>Inclinazione</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Roll">
             <English>Roll</English>
@@ -608,6 +635,7 @@
             <Japanese>ロール</Japanese>
             <Chinesesimp>滚动</Chinesesimp>
             <Chinese>滾動</Chinese>
+            <Italian>Rollio</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Yaw">
             <English>Yaw</English>
@@ -617,6 +645,7 @@
             <Japanese>ヨー</Japanese>
             <Chinesesimp>偏航</Chinesesimp>
             <Chinese>偏航</Chinese>
+            <Italian>Imbardata</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Scale">
             <English>Scale</English>
@@ -624,6 +653,8 @@
             <German>Skalierung</German>
             <Chinesesimp>缩放</Chinesesimp>
             <Chinese>缩放</Chinese>
+            <Japanese>縮尺</Japanese>
+            <Italian>Ridimensionamento</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_UncheckAll">
             <English>Uncheck All</English>
@@ -634,6 +665,7 @@
             <Japanese>全てアンチェック</Japanese>
             <Chinesesimp>取消所有</Chinesesimp>
             <Chinese>取消所有</Chinese>
+            <Italian>Deseleziona tutto</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_CheckAll">
             <English>Check All</English>
@@ -644,6 +676,7 @@
             <Japanese>全てチェック</Japanese>
             <Chinesesimp>勾选所有</Chinesesimp>
             <Chinese>勾選所有</Chinese>
+            <Italian>Seleziona tutto</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_NoGroupsFound">
             <English>No groups found.</English>
@@ -654,6 +687,7 @@
             <Japanese>グループがありません。</Japanese>
             <Chinesesimp>未发现任何小队。</Chinesesimp>
             <Chinese>未發現任何小隊。</Chinese>
+            <Italian>Nessun gruppo trovato.</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_NoPlayersFound">
             <English>No players found.</English>
@@ -664,6 +698,7 @@
             <Japanese>プレイヤーが見つかりません。</Japanese>
             <Chinesesimp>未发现任何玩家。</Chinesesimp>
             <Chinese>未發現任何玩家。</Chinese>
+            <Italian>Nessun giocatore trovato.</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_NotEnoughSpaceInVehicle">
             <English>Not enough space in target vehicle: %1 needed - %2 available</English>
@@ -674,6 +709,7 @@
             <Korean>목표 차량에 충분한 자리가 없습니다: %1 요구됨 - %2 가능</Korean>
             <Chinesesimp>目标车辆中没有足够的空间：需要 %1 - 可用 %2</Chinesesimp>
             <Chinese>目標車輛中沒有足夠的空間：需要 %1 - 可用 %2</Chinese>
+            <Italian>Spazio insufficiente nel veicolo di destinazione: %1 necessario - %2 disponibile</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_CopyToClipboard">
             <English>Copy to Clipboard</English>
@@ -684,6 +720,7 @@
             <Japanese>クリップボードにコピー</Japanese>
             <Chinesesimp>复制到剪贴板</Chinesesimp>
             <Chinese>複製到剪貼板</Chinese>
+            <Italian>Copia negli appunti</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects">
             <English>Add Objects to Curators</English>
@@ -695,6 +732,7 @@
             <Korean>큐레이터에 아이템 추가</Korean>
             <Chinesesimp>添加对象至宙斯</Chinesesimp>
             <Chinese>添加對象至宙斯</Chinese>
+            <Italian>Aggiungi oggetti al curatore</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects_Description">
             <English>Automatically adds spawned objects to all curators.</English>
@@ -706,6 +744,7 @@
             <Korean>소환된 모든 물체를 자동적으로 모든 큐레이터에 추가합니다.</Korean>
             <Chinesesimp>自动将生成的对象添加到所有宙斯。</Chinesesimp>
             <Chinese>自動將生成的對象添加到所有宙斯。</Chinese>
+            <Italian>Aggiunge automaticamente gli oggetti generati a tutti i curatori.</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_DisableGearAnim">
             <English>Disable Gear Animation</English>
@@ -717,6 +756,7 @@
             <Korean>장비 애니메이션 해제</Korean>
             <Chinesesimp>禁用装备动画</Chinesesimp>
             <Chinese>禁用裝備動畫</Chinese>
+            <Italian>Disabilita l'animazione dell'ingranaggio</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_DisableGearAnim_Description">
             <English>Disables the "Gear" animation from playing when entering Zeus.</English>
@@ -728,6 +768,7 @@
             <Korean>제우스에 입장했을때 "장비" 애니메이션을 해제합니다.</Korean>
             <Chinesesimp>禁止在进入宙斯时播放"装备"动画。</Chinesesimp>
             <Chinese>禁止在進入宙斯時播放"裝備"動畫。</Chinese>
+            <Italian>Disabilita la riproduzione dell'animazione "Gear" quando si entra in Zeus.</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_DarkMode">
             <English>Dark Mode</English>
@@ -751,6 +792,7 @@
             <Korean>사용자 인터페이스 구성요소를 다크 모드로 변환합니다.</Korean>
             <Chinesesimp>将各种用户界面元素的外观改为暗色主题。</Chinesesimp>
             <Chinese>將各種用戶界面元素的外觀改為暗色主題。</Chinese>
+            <Italian>Modifica l'aspetto di vari elementi dell'interfaccia utente in un tema di colore più scuro.</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_PreferredArsenal">
             <English>Preferred Arsenal</English>
@@ -762,6 +804,7 @@
             <Korean>선호하는 무기 창고</Korean>
             <Chinesesimp>首选武器库</Chinesesimp>
             <Chinese>首選武器庫</Chinese>
+            <Italian>Arsenale preferito</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_PreferredArsenal_Description">
             <English>Selects the preferred arsenal used by Zeus Enhanced.\nIf ACE Arsenal is not installed, will fall back to BI Virtual Arsenal.</English>
@@ -773,6 +816,7 @@
             <Korean>Zeus Enhanced 에서 쓰일 무기 창고를 선택합니다. \n만약 ACE 무기 창고가 설치되어있지 않다면, BI 무기 창고로 변경됩니다.</Korean>
             <Chinesesimp>选择Zeus Enhanced使用的首选武器库。如果没有安装ACE武器库，将退回到BI原版虚拟武器库。</Chinesesimp>
             <Chinese>選擇Zeus Enhanced使用的首選武器庫。如果沒有安裝ACE武器庫，將退回到BI原版虛擬武器庫。</Chinese>
+            <Italian>Seleziona l'arsenale preferito utilizzato da Zeus Enhanced.\nSe ACE Arsenal non è installato, tornerà a BI Virtual Arsenal.</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_BIVirtualArsenal">
             <English>BI Virtual Arsenal</English>
@@ -784,6 +828,7 @@
             <Korean>BI 가상 무기고</Korean>
             <Chinesesimp>原版虚拟武器库</Chinesesimp>
             <Chinese>原版虛擬武器庫</Chinese>
+            <Italian>Arsenale Virtuale BI</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_AceArsenal">
             <English>ACE Arsenal</English>
@@ -795,6 +840,7 @@
             <Korean>ACE 무기 창고</Korean>
             <Chinesesimp>ACE武器库</Chinesesimp>
             <Chinese>ACE武器庫</Chinese>
+            <Italian>ACE Arsenal</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_AscensionMessages">
             <English>Ascension Messages</English>
@@ -804,6 +850,7 @@
             <Japanese>Zeus 通知</Japanese>
             <Chinesesimp>Zeus提升通知</Chinesesimp>
             <Chinese>Zeus提升通知</Chinese>
+            <Italian>Messaggi dell'Ascensione</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_AscensionMessages_Description">
             <English>Controls whether global popup messages are displayed when a player is assigned as Zeus.</English>
@@ -813,6 +860,7 @@
             <Japanese>プレイヤーが Zeus へ指定された場合に、全体へポップアップ メッセージを表示するかを設定できます。</Japanese>
             <Chinesesimp>控制当玩家被提升为Zeus时是否弹出全局通知。</Chinesesimp>
             <Chinese>控制當玩家被提升為Zeus時是否彈出全局通知。</Chinese>
+            <Italian>Controlla se i messaggi popup globali vengono visualizzati quando un giocatore viene assegnato come Zeus.</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_CameraBird">
             <English>Camera Eagle</English>
@@ -823,6 +871,7 @@
             <Japanese>イーグル有無</Japanese>
             <Chinesesimp>鹰式摄影机</Chinesesimp>
             <Chinese>鷹式攝影機</Chinese>
+            <Italian>Telecamera aquila</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_CameraBird_Description">
             <English>Controls whether an eagle that follows the Zeus camera is created.</English>
@@ -832,6 +881,7 @@
             <Japanese>Zeus カメラ生成時に、イーグルがカメラを追随するかどうかを設定します。</Japanese>
             <Chinesesimp>控制是否创建一只跟随宙斯摄像机的鹰。</Chinesesimp>
             <Chinese>控制是否創建一隻跟隨宙斯攝像機的鷹。</Chinese>
+            <Italian>Controlla se viene creata un'aquila che segue la telecamera Zeus.</Italian>
         </Key>
     </Package>
 </Project>

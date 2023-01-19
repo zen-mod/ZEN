@@ -208,7 +208,19 @@ private _fnc_verifyListEntries = {
                 };
             };
 
-            _strings = _strings select [0, _rows * _columns] apply {if (isLocalized _x) then {localize _x} else {_x}};
+            _strings = _strings select [0, _rows * _columns] apply {
+                _x params [["_text", "", [""]], ["_tooltip", "", [""]]];
+
+                if (isLocalized _text) then {
+                    _text = localize _text;
+                };
+
+                if (isLocalized _tooltip) then {
+                    _tooltip = localize _tooltip;
+                };
+
+                [_text, _tooltip]
+            };
 
             // Return bool if there are only two options and default is a bool
             private _returnBool = count _strings == 2 && {_default isEqualType false};

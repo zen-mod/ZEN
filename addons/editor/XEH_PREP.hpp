@@ -1,4 +1,5 @@
 PREP(addGroupIcons);
+PREP(addModIcons);
 PREP(declutterEmptyTree);
 PREP(fixSideButtons);
 PREP(handleKeyDown);

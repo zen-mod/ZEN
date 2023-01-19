@@ -2,7 +2,7 @@
 
 The ZEN custom modules framework allows addon and mission makers to add their own modules to the Zeus interface through script.
 
-!> A maximum of **100** custom modules can be added.
+!> A maximum of **200** custom modules can be added.
 
 ## Registering A Module
 
@@ -30,7 +30,7 @@ Modules are added locally and as a result the function must be executed on each 
 
 ## Module Function
 
-The module function is executed in the **unscheduled** environment on the client that placed the module.
+The module function is executed in an **unscheduled** environment on the machine where the module is placed.
 
 **Passed Parameters:**
 
