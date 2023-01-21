@@ -21,6 +21,13 @@ BEGIN_COUNTER(updatePreview);
 private _position = AGLtoASL screenToWorld EGVAR(editor,mousePos);
 private _vectorUp = surfaceNormal _position;
 
+// Rotation mode
+if (inputAction "curatorRotateMod" > 0) exitWith {
+    GVAR(helper) setDir (GVAR(helper) getDir _position);
+
+    END_COUNTER(updatePreview);
+};
+
 // Check if a surface other than the terrain exists
 {
     _x params ["_intersectPos", "_surfaceNormal"];
