@@ -32,10 +32,10 @@ _object allowDamage false;
 // Apply the preview object's position to the placed object after a frame
 // Helps in preventing the object from being destroyed by being moved
 [{
-    params ["_object", "_position", "_vectorDirAndUp"];
+    params ["_object", "_position", "_dirAndUp"];
 
     _object setPosASL _position;
-    _object setVectorDirAndUp  _vectorDirAndUp;
+    _object setVectorDirAndUp _dirAndUp;
     _object setVelocity [0, 0, 0];
 
     [{_this allowDamage true}, _object] call CBA_fnc_execNextFrame;
