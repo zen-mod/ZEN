@@ -38,7 +38,6 @@ if (!isNull _group && {!isGroupDeletedWhenEmpty _group}) then {
 };
 
 // If crewed aircraft is placed using the map at a position that is over water or outside of the map, spawn it flying
-#define SAFESPEED 100
 if (visibleMap && {GVAR(includeCrew) && {_object isKindOf "Air" && {
     surfaceIsWater position _object || {
     position _object params ["_x", "_y"];
@@ -49,6 +48,6 @@ if (visibleMap && {GVAR(includeCrew) && {_object isKindOf "Air" && {
 }}}) then {
     _object setVehiclePosition [_object, [], 0, "FLY"];
     if (_object isKindOf "Plane") then {
-        _object setVelocityModelSpace [0, SAFESPEED, 0];
+        _object setVelocityModelSpace [0, 100, 0];
     };
 };
