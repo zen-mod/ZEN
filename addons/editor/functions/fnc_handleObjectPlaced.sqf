@@ -36,3 +36,26 @@ private _group = group _object;
 if (!isNull _group && {!isGroupDeletedWhenEmpty _group}) then {
     _group deleteGroupWhenEmpty true;
 };
+
+// If crewed aircraft is placed using the map at a position that is over water or outside of the map, spawn it flying
+if (
+    visibleMap
+    && {GVAR(includeCrew)}
+    && {_object isKindOf "Air"}
+    && {
+        private _position = position _object;
+        _position params ["_x", "_y"];
+
+        surfaceIsWater _position
+        || {_x < 0}
+        || {_x > worldSize}
+        || {_y < 0}
+        || {_y > worldSize}
+    }
+) then {
+    _object setVehiclePosition [_object, [], 0, "FLY"];
+
+    if (_object isKindOf "Plane") then {
+        _object setVelocityModelSpace [0, 100, 0];
+    };
+};
