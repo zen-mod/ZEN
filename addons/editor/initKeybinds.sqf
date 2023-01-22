@@ -119,8 +119,6 @@
                 [["\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\scout_ca.paa", [], _pos, 1, 1, 0]] call EFUNC(common,hintAddElement);
             };
         } forEach SELECTED_OBJECTS;
-
-        true // handled
     };
 }, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
 
@@ -141,8 +139,6 @@
             };
         } forEach SELECTED_OBJECTS;
         [["\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\scout_ca.paa", [], _watchTarget, 1, 1, 0]] call EFUNC(common,hintAddElement);
-
-        true // handled
     };
 }, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
 
@@ -150,8 +146,6 @@
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false) && {count SELECTED_OBJECTS > 0}}) then {
         private _shooters = SELECTED_OBJECTS select {!isNull group _x && {!isPlayer _x}};
         [QEGVAR(common,ForceFire), [clientOwner, _shooters], _shooters] call CBA_fnc_targetEvent;
-
-        true // handled
     };
 }, {
     [QEGVAR(common,ForceFire), [clientOwner, []]] call CBA_fnc_globalEvent;
@@ -168,8 +162,6 @@
                 [["\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\walk_ca.paa", [], ASLToAGL _cursorPosASL, 1, 1, 0]] call EFUNC(common,hintAddElement);
             };
         } forEach SELECTED_OBJECTS;
-
-        true // handled
     };
 }, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
 
@@ -205,7 +197,5 @@
                 ""
             }
         ] call EFUNC(common,showMessage);
-
-        true // handled
     };
 }, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
