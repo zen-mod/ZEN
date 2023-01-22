@@ -16,27 +16,10 @@
  * Public: No
  */
 
-params ["", "_object"];
-
-// If crewed aircraft is placed using the map at a position that is over water or outside of the map, spawn it flying
-#define FLYINGALTITUDE 100
-#define SAFESPEED 100
-if (visibleMap && {EGVAR(editor,includeCrew) && {_object isKindOf "Air" && {
-    surfaceIsWater position _object || {
-    position _object params ["_x", "_y"];
-    _x < 0 || {
-    _x > worldSize || {
-    _y < 0 || {
-    _y > worldSize}}}}
-}}}) exitWith {
-    _object setPosASL (getPosASL _object vectorAdd [0, 0, FLYINGALTITUDE]);
-    if (_object isKindOf "Plane") then {
-        _object setVelocityModelSpace [0, SAFESPEED, 0];
-    };
-};
-
 // Exit if placement preview is disabled or objects were placed using the map
 if (!GVAR(enabled) || {visibleMap}) exitWith {};
+
+params ["", "_object"];
 
 // Ensure the placed object is the same type as the preview
 // Prevents issues when placing modules
