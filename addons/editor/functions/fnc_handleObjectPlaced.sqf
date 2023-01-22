@@ -47,6 +47,7 @@ if (visibleMap && {GVAR(includeCrew) && {_object isKindOf "Air" && {
     _y > worldSize}}}}
 }}}) then {
     _object setVehiclePosition [_object, [], 0, "FLY"];
+
     if (_object isKindOf "Plane") then {
         _object setVelocityModelSpace [0, 100, 0];
     };
