@@ -60,7 +60,7 @@ if (isNil QGVAR(drawHintMap)) then {
     GVAR(drawHintMap) = createHashMap;
 };
 
-// Use an object's hash value as it hint ID
+// Use an object's hash value as its hint ID
 if (_id isEqualType objNull) then {
     _id = hashValue _id;
 };
