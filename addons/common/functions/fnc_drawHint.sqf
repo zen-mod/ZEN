@@ -60,14 +60,6 @@ if (isNil QGVAR(drawHintMap)) then {
     GVAR(drawHintMap) = createHashMap;
 };
 
-// Remove an existing hint with the same ID
-if (_id in GVAR(drawHintMap)) then {
-    GVAR(drawHintMap) deleteAt _id params ["_id2D", "_id3D"];
-
-    _ctrlMap ctrlRemoveEventHandler ["Draw", _id2D];
-    removeMissionEventHandler ["Draw3D", _id3D];
-};
-
 // Use an object's hash value as it hint ID
 if (_id isEqualType objNull) then {
     _id = hashValue _id;
@@ -82,6 +74,14 @@ if (_id isEqualTo "") then {
     GVAR(drawHintCounter) = GVAR(drawHintCounter) + 1;
 
     _id = [CBA_clientID, GVAR(drawHintCounter)] joinString ":";
+};
+
+// Remove an existing hint with the same ID
+if (_id in GVAR(drawHintMap)) then {
+    GVAR(drawHintMap) deleteAt _id params ["_id2D", "_id3D"];
+
+    _ctrlMap ctrlRemoveEventHandler ["Draw", _id2D];
+    removeMissionEventHandler ["Draw3D", _id3D];
 };
 
 // Validate the given hint elements and separate them by type

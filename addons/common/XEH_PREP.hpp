@@ -36,8 +36,6 @@ PREP(getWeaponReloadTime);
 PREP(hasDefaultInventory);
 PREP(hasPylons);
 PREP(healUnit);
-PREP(hintAddElement);
-PREP(hintDrawElements);
 PREP(initDisplayPositioning);
 PREP(initListNBoxSorting);
 PREP(initOwnersControl);

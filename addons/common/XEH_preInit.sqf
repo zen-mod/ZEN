@@ -12,10 +12,6 @@ GVAR(aceMedicalTreatment) = isClass (configFile >> "CfgPatches" >> "ace_medical_
 GVAR(forceFireCurators) = [];
 GVAR(selectPositionActive) = false;
 
-GVAR(colorActiveElements) = ["IGUI", "TEXT_RGB"] call BIS_fnc_displayColorGet;
-GVAR(hintEHID) = -1;
-GVAR(hintElements) = [];
-
 // Handling for running code after settings are initialized
 GVAR(settingsInitialized) = false;
 GVAR(runAfterSettingsInit) = [];
