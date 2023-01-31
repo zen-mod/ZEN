@@ -196,7 +196,7 @@
     {
         [QEGVAR(common,setbuildingMarker), [SELECTED_OBJECTS select {_x isKindOf "Building"}, _value]] call CBA_fnc_serverEvent;
     },
-    {"" isNotEqualTo (_entity getVariable [QGVAR(buildingMarker), ""])},
+    {"" isNotEqualTo (_entity getVariable [QEGVAR(common,buildingMarker), ""])},
     {_entity isKindOf "Building"}
 ] call FUNC(addAttribute);
 
