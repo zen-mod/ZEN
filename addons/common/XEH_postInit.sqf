@@ -330,18 +330,6 @@ if (isServer) then {
         _object hideObjectGlobal _hide;
     }] call CBA_fnc_addEventHandler;
 
-    [QGVAR(setbuildingMarker), {
-        params ["_objects", "_setMarker"];
-
-        if !(_objects isEqualType []) then {
-            _objects = [_objects];
-        };
-
-        {
-            [_x, _setMarker] call FUNC(setbuildingMarker);
-        } forEach _objects;
-    }] call CBA_fnc_addEventHandler;
-
     [QGVAR(enableSimulationGlobal), {
         params ["_object", "_enable"];
         _object enableSimulationGlobal _enable;

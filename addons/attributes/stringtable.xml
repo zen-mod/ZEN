@@ -54,12 +54,6 @@
             <Chinesesimp>车牌号</Chinesesimp>
             <Chinese>車牌號</Chinese>
         </Key>
-        <Key ID="STR_ZEN_Attributes_BuildingMarker">
-            <English>Building Marker</English>
-        </Key>
-        <Key ID="STR_ZEN_Attributes_BuildingMarker_Tooltip">
-            <English>Adds a grey rectangle area marker to placed building(s), similar to terrain buildings.</English>
-        </Key>
         <Key ID="STR_ZEN_Attributes_RespawnPosition">
             <English>Respawn Position</English>
             <French>Position de réapparition</French>

@@ -187,16 +187,13 @@
 
 [
     "Object",
-    [LSTRING(BuildingMarker), LSTRING(BuildingMarker_Tooltip)],
-    QGVAR(icons),
-    [[
-        [false, "\a3\Ui_F_Curator\Data\default_ca.paa", "STR_sensoractiv_none", 14.5, 0.25, 2],
-        [true, "\a3\3den\Data\Displays\Display3DEN\PanelRight\submode_marker_area_ca.paa", LSTRING(BuildingMarker),  19.5, 0.25, 2]
-    ]],
+    [ELSTRING(building_markers,BuildingMarker), ELSTRING(building_markers,BuildingMarker_Tooltip)],
+    QGVAR(toolbox),
+    [1, 2, [ELSTRING(common,Disabled), ELSTRING(common,Enabled)]],
     {
-        [QEGVAR(common,setbuildingMarker), [SELECTED_OBJECTS select {_x isKindOf "Building"}, _value]] call CBA_fnc_serverEvent;
+        [QEGVAR(building_markers,setbuildingMarker), [SELECTED_OBJECTS select {_x isKindOf "Building"}, _value]] call CBA_fnc_serverEvent;
     },
-    {"" isNotEqualTo (_entity getVariable [QEGVAR(common,buildingMarker), ""])},
+    {(_entity getVariable [QEGVAR(building_markers,buildingMarker), ""]) != ""},
     {_entity isKindOf "Building"}
 ] call FUNC(addAttribute);
 
