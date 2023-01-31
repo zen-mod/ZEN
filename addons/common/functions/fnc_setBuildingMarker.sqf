@@ -36,7 +36,7 @@ if (_setMarker) then {
     // Tracking
     _object setVariable [QGVAR(buildingMarker), _marker, true];
     private _id = _object addEventHandler ["Deleted", {
-    	params ["_entity"];
+        params ["_entity"];
         private _marker = _entity getVariable [QGVAR(buildingMarker), ""];
         deleteMarker _marker;
     }];
