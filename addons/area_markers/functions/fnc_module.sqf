@@ -17,12 +17,7 @@
 
 params ["_logic"];
 
-private _object = attachedTo _logic;
 deleteVehicle _logic;
-
-if (!isNull _object && {_object isKindOf "Building"}) exitWith {
-    [_object] call FUNC(toggleBoundingMarker);
-};
 
 if (!visibleMap) exitWith {
     [LSTRING(PlaceOnMap)] call EFUNC(common,showMessage);

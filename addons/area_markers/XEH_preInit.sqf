@@ -23,7 +23,7 @@ if (hasInterface) then {
 
     // List of marker names that are blacklisted from being edited through Zeus
     // A marker is blacklisted if its name contains any of strings in this list
-    GVAR(blacklist) = ["BoundingMarker"];
+    GVAR(blacklist) = [];
 
     // Map of marker names and their corresponding icon controls
     GVAR(icons) = createHashMap;

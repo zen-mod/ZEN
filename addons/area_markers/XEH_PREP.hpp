@@ -16,5 +16,4 @@ PREP(onMouseButtonDown);
 PREP(onMouseButtonUp);
 PREP(onMouseDblClick);
 PREP(onMouseMoving);
-PREP(toggleBoundingMarker);
 PREP(updateIcon);
