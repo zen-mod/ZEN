@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Building_Markers">
+        <Key ID="STR_ZEN_Building_Markers_BuildingMarker">
+            <English>Building Marker</English>
+        </Key>
+        <Key ID="STR_ZEN_Building_Markers_BuildingMarker_Tooltip">
+            <English>Adds a grey rectangle area marker to placed building(s), similar to terrain buildings.</English>
+        </Key>
+    </Package>
+</Project>
