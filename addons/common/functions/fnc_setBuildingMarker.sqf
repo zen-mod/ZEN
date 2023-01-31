@@ -24,8 +24,15 @@ private _marker = _object getVariable [QGVAR(buildingMarker), ""];
 private _hasMarker = _marker isNotEqualTo "";
 
 if (_setMarker) then {
-    if (_hasMarker) exitWith {_marker};
-    // Marker
+    // Update marker
+    if (_hasMarker) exitWith {
+        _marker setMarkerPosLocal getPos _object;
+        _marker setMarkerDir getDir _object;
+
+        _marker
+    };
+
+    // Create marker
     _marker = createMarker [format ["%1_%2", QGVAR(buildingMarker), _object call bis_fnc_netId], _object];
     _marker setMarkerShapeLocal "RECTANGLE";
     _marker setMarkerSizeLocal ((0 boundingBoxReal _object) select 1);
