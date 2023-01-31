@@ -6,6 +6,7 @@ PREP(handleKeyDown);
 PREP(handleLoad);
 PREP(handleModeButtons);
 PREP(handleObjectPlaced);
+PREP(handleObjectEdited);
 PREP(handleSearchButton);
 PREP(handleSearchClick);
 PREP(handleSearchKeyDown);
