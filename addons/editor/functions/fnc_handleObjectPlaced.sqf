@@ -59,3 +59,8 @@ if (
         _object setVelocityModelSpace [0, 100, 0];
     };
 };
+
+// Building marker
+if (GVAR(buildingMarker) && {_object isKindOf "Building"}) then {
+    [QEGVAR(common,setbuildingMarker), [_object, true]] call CBA_fnc_serverEvent;
+};

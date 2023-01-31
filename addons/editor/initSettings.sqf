@@ -35,6 +35,15 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(buildingMarker),
+    "CHECKBOX",
+    [ELSTRING(attributes,BuildingMarker), ELSTRING(attributes,BuildingMarker_Tooltip)],
+    [ELSTRING(main,DisplayName), LSTRING(DisplayName)],
+    false,
+    false
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(addGroupIcons),
     "CHECKBOX",
     [LSTRING(AddGroupIcons), LSTRING(AddGroupIcons_Description)],
