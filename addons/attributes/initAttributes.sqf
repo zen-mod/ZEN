@@ -187,6 +187,21 @@
 
 [
     "Object",
+    [LSTRING(BuildingMarker), LSTRING(BuildingMarker_Tooltip)],
+    QGVAR(icons),
+    [[
+        [false, "\a3\Ui_F_Curator\Data\default_ca.paa", "STR_sensoractiv_none", 14.5, 0.25, 2],
+        [true, "\a3\3den\Data\Displays\Display3DEN\PanelRight\submode_marker_area_ca.paa", LSTRING(BuildingMarker),  19.5, 0.25, 2]
+    ]],
+    {
+        [QEGVAR(common,setbuildingMarker), [SELECTED_OBJECTS select {_x isKindOf "Building"}, _value]] call CBA_fnc_serverEvent;
+    },
+    {"" isNotEqualTo (_entity getVariable [QGVAR(buildingMarker), ""])},
+    {_entity isKindOf "Building"}
+] call FUNC(addAttribute);
+
+[
+    "Object",
     LSTRING(PlateNumber),
     QGVAR(edit),
     [{_this select [0, MAX_PLATE_CHARACTERS]}],
