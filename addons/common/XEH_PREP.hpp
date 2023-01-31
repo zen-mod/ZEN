@@ -55,6 +55,7 @@ PREP(runAfterSettingsInit);
 PREP(selectPosition);
 PREP(serializeInventory);
 PREP(serializeObjects);
+PREP(setbuildingMarker);
 PREP(setLampState);
 PREP(setMagazineAmmo);
 PREP(setTurretAmmo);
