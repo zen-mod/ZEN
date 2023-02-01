@@ -1,5 +1,5 @@
 #define COMPONENT building_markers
-#define COMPONENT_BEAUTIFIED Building_Markers
+#define COMPONENT_BEAUTIFIED Building Markers
 #include "\x\zen\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
