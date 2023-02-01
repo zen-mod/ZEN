@@ -193,7 +193,7 @@
     {
         [QEGVAR(building_markers,setBuildingMarker), [SELECTED_OBJECTS select {_x isKindOf "Building"}, _value]] call CBA_fnc_serverEvent;
     },
-    {(_entity getVariable [QEGVAR(building_markers,buildingMarker), ""]) != ""},
+    {_entity getVariable [QEGVAR(building_markers,marker), ""] != ""},
     {_entity isKindOf "Building"}
 ] call FUNC(addAttribute);
 
