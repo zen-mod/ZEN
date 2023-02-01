@@ -19,7 +19,7 @@
 params ["", "_object"];
 
 // Update building marker
-private _marker = _object getVariable [QGVAR(buildingMarker), ""];
+private _marker = _object getVariable [QGVAR(marker), ""];
 if (_marker != "") then {
     [QGVAR(setBuildingMarker), [_object, true]] call CBA_fnc_serverEvent;
 };

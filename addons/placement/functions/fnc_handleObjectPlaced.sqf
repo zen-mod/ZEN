@@ -37,9 +37,11 @@ _object allowDamage false;
     _object setPosASL _position;
     _object setVectorDirAndUp _dirAndUp;
     _object setVelocity [0, 0, 0];
-    ["", _object] call EFUNC(building_markers,handleObjectPlaced);
 
-    [{_this allowDamage true}, _object] call CBA_fnc_execNextFrame;
+    [{
+        _this allowDamage true;
+        [QGVAR(done), _this] call CBA_fnc_localEvent;
+    }, _object] call CBA_fnc_execNextFrame;
 }, [_object, getPosASL GVAR(helper), [vectorDir GVAR(helper), vectorUp GVAR(helper)]]] call CBA_fnc_execNextFrame;
 
 // Do not cancel the preview if the control key is held
