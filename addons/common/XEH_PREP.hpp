@@ -39,6 +39,7 @@ PREP(initListNBoxSorting);
 PREP(initOwnersControl);
 PREP(initSidesControl);
 PREP(initSliderEdit);
+PREP(isCursorOnMouseArea);
 PREP(isInScreenshotMode);
 PREP(isPlacementActive);
 PREP(isRemoteControlled);

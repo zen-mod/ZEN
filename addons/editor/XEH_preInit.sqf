@@ -9,7 +9,6 @@ PREP_RECOMPILE_END;
 #include "initSettings.sqf"
 #include "initKeybinds.sqf"
 
-GVAR(mousePos) = [0, 0];
 GVAR(clipboard) = [];
 GVAR(includeCrew) = true;
 
