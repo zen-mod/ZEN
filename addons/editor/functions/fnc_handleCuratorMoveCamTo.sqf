@@ -24,8 +24,8 @@ if (isNil QGVAR(curatorMovedCamTo) || {_selectedObject != GVAR(curatorMovedCamTo
 };
 
 // Second activation of curatorMoveCamTo on same object
-(0 boundingBoxReal GVAR(curatorMovedCamTo)) params ["_p1", "_p2"];
 // Move camera to top-rear of object bounding box for CQB view
+(0 boundingBoxReal GVAR(curatorMovedCamTo)) params ["_p1", "_p2"];
 curatorCamera setPosASL (GVAR(curatorMovedCamTo) modelToWorldVisualWorld [0, _p1 select 1, _p2 select 2]);
 curatorCamera setDir getDir GVAR(curatorMovedCamTo);
 GVAR(curatorMovedCamTo) = nil;
