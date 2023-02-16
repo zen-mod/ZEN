@@ -15,7 +15,7 @@
  * Public: No
  */
 
-private _selectedObjects = curatorSelected select 0;
+private _selectedObjects = SELECTED_OBJECTS;
 if (count _selectedObjects == 0) exitWith {};
 
 private _selectedObject = _selectedObjects select 0;
