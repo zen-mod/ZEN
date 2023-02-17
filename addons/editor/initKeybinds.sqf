@@ -75,12 +75,6 @@
     };
 }, {}, [DIK_F, [false, true, true]]] call CBA_fnc_addKeybind; // Default: CTRL + ALT + F
 
-[ELSTRING(main,DisplayName), QGVAR(curatorMoveCamTo), ["str_usract_curator_move_cam", "str_controls_tooltips_curator_move_cam"], {
-    if (!isNull curatorCamera) then {
-        [] call FUNC(handleCuratorMoveCamTo)
-    };
-}, {}, [DIK_F, [false, false, false]]] call CBA_fnc_addKeybind; // Default: F
-
 [ELSTRING(main,DisplayName), QGVAR(orientTerrainNormal), ["str_3den_display3den_entitymenu_setatl_text", LSTRING(OrientTerrainNormal_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
         {

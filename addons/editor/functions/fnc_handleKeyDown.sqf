@@ -18,6 +18,12 @@
 
 params ["_display", "_keyCode"];
 
+if (GVAR(moveCamToSelection) > 0 && {_keyCode in actionKeys "curatorMoveCamTo" && {count SELECTED_OBJECTS > 0}}) exitWith {
+    [] call FUNC(moveCamToSelection);
+
+    true
+};
+
 // One frame later so RscDisplayCurator_sections is updated
 [{
     params ["_display", "_keyCode", "_oldMode"];
