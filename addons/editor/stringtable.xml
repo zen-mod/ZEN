@@ -366,5 +366,20 @@
             <Chinese>重新加載Zeus界面。可用於修復鎖定問題。</Chinese>
             <Italian>Ricarica l'interfaccia di Zeus. Può essere utilizzato per risolvere i problemi di blocco.</Italian>
         </Key>
+        <Key ID="STR_ZEN_Editor_MoveCamToSelection">
+            <English>Focus Object Mode</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_MoveCamToSelection_Description">
+            <English>Behaviour for "Move camera to selected entity" with an object selected.\nDefault: Base game behaviour.\nAlternate: 20 m above and behind object.\nCQB: Top-rear of object bounding box, useful for units inside buildings.\nAlternate + CQB: Switch between views on subsequent activations.</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_MoveCamToSelection_Alternate">
+            <English>Alternate</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_MoveCamToSelection_CQB">
+            <English>CQB</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_MoveCamToSelection_AlternateCQB">
+            <English>Alternate + CQB</English>
+        </Key>
     </Package>
 </Project>
