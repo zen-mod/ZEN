@@ -14,6 +14,7 @@ PREP(exportMissionSQF);
 PREP(exportText);
 PREP(fireArtillery);
 PREP(fireVLS);
+PREP(firstTurretUnit);
 PREP(forceFire);
 PREP(formatDegrees);
 PREP(getActiveTree);
