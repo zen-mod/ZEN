@@ -2,6 +2,7 @@ PREP(addGroupIcons);
 PREP(addModIcons);
 PREP(declutterEmptyTree);
 PREP(fixSideButtons);
+PREP(forceFireCurator);
 PREP(handleKeyDown);
 PREP(handleLoad);
 PREP(handleModeButtons);

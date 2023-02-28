@@ -9,7 +9,6 @@ PREP_RECOMPILE_END;
 GVAR(aceMedical) = isClass (configFile >> "CfgPatches" >> "ace_medical");
 GVAR(aceMedicalTreatment) = isClass (configFile >> "CfgPatches" >> "ace_medical_treatment");
 
-GVAR(forceFireCurators) = [];
 GVAR(selectPositionActive) = false;
 
 // Handling for running code after settings are initialized

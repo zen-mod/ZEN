@@ -11,6 +11,7 @@ PREP_RECOMPILE_END;
 
 GVAR(mousePos) = [0, 0];
 GVAR(clipboard) = [];
+GVAR(forceFiringCurators) = [];
 GVAR(includeCrew) = true;
 
 ["ModuleCurator_F", "Init", {
