@@ -1,3 +1,4 @@
+PREP(canFire);
 PREP(changeGroupSide);
 PREP(collapseTree);
 PREP(createZeus);
