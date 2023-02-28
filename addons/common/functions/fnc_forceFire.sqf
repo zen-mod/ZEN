@@ -1,101 +1,71 @@
 #include "script_component.hpp"
 /*
- * Author: Ampersand
- * Makes the given artillery unit fire on the given position.
+ * Author: mharis001, Ampersand
+ * Makes the given unit fire their [vehicle turret's] weapon.
  *
  * Arguments:
- * 0: Artillery Unit <OBJECT>
- * 1: Position <ARRAY|OBJECT|STRING>
- *   - in AGL format, or a Map Grid when STRING
- * 2: Spread <NUMBER>
- * 3: Magazine <STRING>
- * 4: Number of Rounds <NUMBER>
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [_unit, _position, 0, _magazine, 1] call zen_common_fnc_forceFire
+ * [_unit] call zen_common_fnc_forceFire
  *
  * Public: No
  */
 
-params ["_curatorClientID", "_shooters"];
-_shooters = _shooters select {
-    local _x
-    && {alive _x}
-    && {!isNull _x}
-    // Is vehicle, on foot, or in a turret
-    && {_x == vehicle _x || {_x call cba_fnc_turretPath isNotEqualTo []}}
+params ["_unit", ["_ignoreAmmo", false]];
+
+// If a vehicle is given directly, use the first turret that can fire
+if !(_unit isKindOf "CAManBase") exitWith {
+    [[_unit] call FUNC(firstTurretUnit)] call FUNC(forceFire);
 };
 
-if (_shooters isEqualTo []) exitWith {
-    GVAR(forceFireCurators) = GVAR(forceFireCurators) - [_curatorClientID];
-};
+private _vehicle = vehicle _unit;
 
-// Track which curators are forcing fire on local machine
-GVAR(forceFireCurators) pushBackUnique _curatorClientID;
+switch (true) do {
+    // On foot
+    case (_vehicle == _unit): {
+        weaponState _unit params ["_weapon", "_muzzle", "_fireMode"];
 
-// Repeating fire for local shooters
-[{
-    params ["_args", "_pfhID"];
-    _args params ["_curatorClientID", "_shooters", "_endTime"];
-
-    if (!(_curatorClientID in GVAR(forceFireCurators)) || {CBA_missionTime > _endTime}) exitWith {
-        [_pfhID] call CBA_fnc_removePerFrameHandler;
+        if (_ignoreAmmo) then {_unit setAmmo [_weapon, 1e6];};
+        _unit forceWeaponFire [_muzzle, _fireMode];
     };
 
-    {
-        private _shooter = _x;
-        private _vehicle = vehicle _shooter;
+    // FFV
+    case (_unit call EFUNC(common,isUnitFFV)): {
+        // Using UseMagazine action since forceWeaponFire command does not work for FFV units
+        // UseMagazine action doesn't seem to work with currently loaded magazine (currentMagazineDetail)
+        // Therefore, this relies on the unit having an extra magazine in their inventory
+        // but should be fine in most situations
+        private _weapon = currentWeapon _unit;
+        private _compatibleMagazines = _weapon call CBA_fnc_compatibleMagazines;
+        private _index = magazines _unit findAny _compatibleMagazines;
+        if (_index == -1) exitWith {};
 
-        // Find shooter unit in vehicle
-        if !(_shooter isKindOf "CAManBase") then {
-            _shooter = [gunner _vehicle, driver _vehicle] select (isNull gunner _vehicle);
-        };
+        private _magazine = magazinesDetail _unit select _index;
+        _magazine call EFUNC(common,parseMagazineDetail) params ["_id", "_owner"];
 
-        if (
-            !isNull _shooter
-            && {CBA_missionTime > (_shooter getVariable [QGVAR(nextForceFireTime), 0])}
-        ) then {
-            if (_vehicle == _shooter) then {
-                // On foot
-                weaponState _shooter params ["", "_muzzle", "_firemode"];
-                _shooter forceWeaponFire [_muzzle, _firemode];
-            } else {
-                (fullCrew _vehicle select {_x select 0 == _shooter} select 0) params ["", "", "_cargoIndex", "_turretPath", "_isFFV"];
-                // FFV
-                if (_isFFV) exitWith {
-                    // Copied from zen_ai_fnc_suppressiveFire
-                    private _weapon = currentWeapon _shooter;
-                    private _compatibleMagazines = _weapon call CBA_fnc_compatibleMagazines;
-                    private _index = magazines _shooter findIf {_x in _compatibleMagazines};
-                    if (_index == -1) exitWith {};
+        if (_ignoreAmmo) then {_unit setAmmo [_weapon, 1e6];};
+        CBA_logic action ["UseMagazine", _unit, _unit, _owner, _id];
+    };
 
-                    private _magazine = magazinesDetail _shooter select _index;
-                    _magazine call EFUNC(common,parseMagazineDetail) params ["_id", "_owner"];
+    // Vehicle driver horn
+    case (driver _vehicle == _unit): {
+        weaponState [_vehicle, [-1]] params ["_weapon", "_muzzle", "_firemode"];
+        if (_ignoreAmmo) then {_unit setAmmo [_muzzle, 1e6];};
+        _unit forceWeaponFire [_muzzle, _firemode];
+    };
 
-                    CBA_logic action ["UseMagazine", _shooter, _shooter, _owner, _id];
-                };
-                // Vehicle crew
-                if (driver _vehicle == _shooter) then {
-                    // Horn
-                    weaponState [_vehicle, [-1]] params ["_weapon", "_muzzle", "_firemode"];
-                    _shooter forceWeaponFire [_muzzle, _firemode];
-                } else {
-                    private _turretPath = _shooter call CBA_fnc_turretPath;
-                    weaponState [_vehicle, _turretPath] params ["_weapon", "", "", "_magazine", "_ammo"];
-                    private _reloadTime = getNumber (configFile >> "CfgWeapons" >> _weapon >> "reloadTime");
-                    if (_reloadTime < 0.5) then {_reloadTime = 0};
-                    {
-                        _x params ["_xMagazine", "_xTurret", "_xAmmo", "_id", "_owner"];
-                        if (_xTurret isEqualTo _turretPath && {_xMagazine == _magazine && {_xAmmo == _ammo && {_xAmmo != 0}}}) exitWith {
-                            _vehicle action ["UseMagazine", _vehicle, _shooter, _owner, _id];
-                            _shooter setVariable [QGVAR(nextForceFireTime), CBA_missionTime + _reloadTime];
-                        };
-                    } forEach magazinesAllTurrets _vehicle;
-                };
-            };
-        };
-    } forEach _shooters;
-}, 0.1, [_curatorClientID, _shooters, CBA_missionTime + 10]] call CBA_fnc_addPerFrameHandler;
+    // Vehicle gunner
+    default {
+        private _turretPath = _vehicle unitTurret _unit;
+        private _muzzle = weaponState [_vehicle, _turretPath] select 1;
+        if (_ignoreAmmo) then {_unit setAmmo [_muzzle, 1e6];};
+
+        private _magazine = _vehicle currentMagazineDetailTurret _turretPath;
+        _magazine call EFUNC(common,parseMagazineDetail) params ["_id", "_owner"];
+        _vehicle action ["UseMagazine", _vehicle, _unit, _owner, _id];
+    };
+};
