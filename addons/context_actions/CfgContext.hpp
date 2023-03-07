@@ -346,7 +346,7 @@ class EGVAR(context_menu,actions) {
         class SwitchWeapon {
             displayName = "$STR_A3_Switch1";
             icon = "\a3\ui_f\data\GUI\Cfg\Hints\VehicleAmmo_CA.paa";
-            insertChildren = QUOTE(call FUNC(getVehicleWeaponActions));
+            insertChildren = QUOTE(_hoveredEntity call FUNC(getVehicleWeaponActions));
         };
         class UnloadViV {
             displayName = "$STR_A3_ModuleDepot_Unload";
