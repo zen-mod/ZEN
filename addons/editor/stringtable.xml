@@ -385,7 +385,7 @@
             <English>Force Fire</English>
         </Key>
         <Key ID="STR_ZEN_Editor_ForceFire_Description">
-            <English>Makes selected AI units fire their current weapon while the key is held down. Vehicles will fire their primary turret.</English>
+            <English>Makes selected AI units fire their current weapon while the key is held down. Vehicles will fire their first available turret with a weapon.</English>
         </Key>
         <Key ID="STR_ZEN_Editor_MoveToCursor">
             <English>Move To Cursor</English>
