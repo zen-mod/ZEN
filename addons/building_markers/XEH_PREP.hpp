@@ -1,3 +1,3 @@
 PREP(handleObjectEdited);
 PREP(handleObjectPlaced);
-PREP(setBuildingMarker);
+PREP(set);

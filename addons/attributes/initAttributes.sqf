@@ -191,7 +191,8 @@
     QGVAR(toolbox),
     [1, 2, [ELSTRING(common,Disabled), ELSTRING(common,Enabled)]],
     {
-        [QEGVAR(building_markers,setBuildingMarker), [SELECTED_OBJECTS select {_x isKindOf "Building"}, _value]] call CBA_fnc_serverEvent;
+        private _buildings = SELECTED_OBJECTS select {_x isKindOf "Building"};
+        [_buildings, _value] call EFUNC(building_markers,set);
     },
     {_entity getVariable [QEGVAR(building_markers,marker), ""] != ""},
     {_entity isKindOf "Building"}

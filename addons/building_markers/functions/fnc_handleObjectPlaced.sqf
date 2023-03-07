@@ -18,7 +18,6 @@
 
 params ["", "_object"];
 
-// Building marker
 if (GVAR(enabled) && {_object isKindOf "Building"}) then {
-    [QGVAR(setBuildingMarker), [_object, true]] call CBA_fnc_serverEvent;
+    [QGVAR(set), [_object, true]] call CBA_fnc_serverEvent;
 };
