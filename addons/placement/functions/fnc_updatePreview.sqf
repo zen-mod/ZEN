@@ -26,19 +26,19 @@ if (inputAction "curatorRotateMod" > 0) then {
     // Otherwise, fall back to using the mouse's world positon, which can behave weirdly at certain
     // camera angles but should not be the case with the object offscreen
     private _direction = if (_screenPos isNotEqualTo []) then {
-        private _vector = _screenPos vectorDiff EGVAR(editor,mousePos);
+        private _vector = _screenPos vectorDiff EGVAR(common,mousePos);
         _vector params ["_vectorX", "_vectorY"];
 
         // Translate to north as 0 degrees and account for camera view direction
         _vectorY atan2 _vectorX - 90 + getDir curatorCamera
     } else {
-        GVAR(helper) getDir screenToWorld EGVAR(editor,mousePos)
+        GVAR(helper) getDir screenToWorld EGVAR(common,mousePos)
     };
 
     GVAR(helper) setDir _direction;
 } else {
     // Get terrain position and normal
-    private _position = AGLToASL screenToWorld EGVAR(editor,mousePos);
+    private _position = AGLToASL screenToWorld EGVAR(common,mousePos);
     private _vectorUp = surfaceNormal _position;
 
     // Check if a surface other than the terrain exists

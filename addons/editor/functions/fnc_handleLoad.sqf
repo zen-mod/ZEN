@@ -110,18 +110,6 @@ _ctrlTreeRecent ctrlAddEventHandler ["TreeSelChanged", {
     };
 }];
 
-// Track mouse position from mouse area control to handle the mouse being over other UI elements
-// RscDisplayCurator_mousePos from base game attempts to do this but for some reason also updates when
-// the mouse is over the mission controls group
-private _fnc_updateMousePos = {
-    params ["", "_posX", "_posY"];
-    GVAR(mousePos) = [_posX, _posY];
-};
-
-private _ctrlMouseArea = _display displayCtrl IDC_RSCDISPLAYCURATOR_MOUSEAREA;
-_ctrlMouseArea ctrlAddEventHandler ["MouseMoving", _fnc_updateMousePos];
-_ctrlMouseArea ctrlAddEventHandler ["MouseHolding", _fnc_updateMousePos];
-
 // Initially open the map fully zoomed out and centered
 if (isNil QGVAR(previousMapState)) then {
     GVAR(previousMapState) = [1, [worldSize / 2, worldSize / 2]];
