@@ -2,5 +2,4 @@
 
 ["zen_curatorDisplayLoaded", LINKFUNC(handleLoad)] call CBA_fnc_addEventHandler;
 ["zen_curatorDisplayUnloaded", LINKFUNC(handleUnload)] call CBA_fnc_addEventHandler;
-[QGVAR(forceFireCurator), LINKFUNC(forceFireCurator)] call CBA_fnc_addEventHandler;
 [QGVAR(modeChanged), LINKFUNC(fixSideButtons)] call CBA_fnc_addEventHandler;

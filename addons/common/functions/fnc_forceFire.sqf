@@ -1,71 +1,55 @@
 #include "script_component.hpp"
 /*
- * Author: mharis001, Ampersand
- * Makes the given unit fire their [vehicle turret's] weapon.
+ * Author: Ampersand
+ * Makes the given units or vehicles fire their current weapons.
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * 0: Units <ARRAY>
+ * 1: ID <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [_unit] call zen_common_fnc_forceFire
+ * [_units, 0] call zen_common_fnc_forceFire
  *
  * Public: No
  */
 
-params ["_unit", ["_ignoreAmmo", false]];
+#define FORCE_FIRE_TIMEOUT 10
 
-// If a vehicle is given directly, use the first turret that can fire
-if !(_unit isKindOf "CAManBase") exitWith {
-    [[_unit] call FUNC(firstTurretUnit)] call FUNC(forceFire);
+params ["_units", "_id"];
+
+if (isNil QGVAR(forceFiringCurators)) then {
+    GVAR(forceFiringCurators) = [];
 };
 
-private _vehicle = vehicle _unit;
-
-switch (true) do {
-    // On foot
-    case (_vehicle == _unit): {
-        weaponState _unit params ["_weapon", "_muzzle", "_fireMode"];
-
-        if (_ignoreAmmo) then {_unit setAmmo [_weapon, 1e6];};
-        _unit forceWeaponFire [_muzzle, _fireMode];
-    };
-
-    // FFV
-    case (_unit call EFUNC(common,isUnitFFV)): {
-        // Using UseMagazine action since forceWeaponFire command does not work for FFV units
-        // UseMagazine action doesn't seem to work with currently loaded magazine (currentMagazineDetail)
-        // Therefore, this relies on the unit having an extra magazine in their inventory
-        // but should be fine in most situations
-        private _weapon = currentWeapon _unit;
-        private _compatibleMagazines = _weapon call CBA_fnc_compatibleMagazines;
-        private _index = magazines _unit findAny _compatibleMagazines;
-        if (_index == -1) exitWith {};
-
-        private _magazine = magazinesDetail _unit select _index;
-        _magazine call EFUNC(common,parseMagazineDetail) params ["_id", "_owner"];
-
-        if (_ignoreAmmo) then {_unit setAmmo [_weapon, 1e6];};
-        CBA_logic action ["UseMagazine", _unit, _unit, _owner, _id];
-    };
-
-    // Vehicle driver horn
-    case (driver _vehicle == _unit): {
-        weaponState [_vehicle, [-1]] params ["_weapon", "_muzzle", "_firemode"];
-        if (_ignoreAmmo) then {_unit setAmmo [_muzzle, 1e6];};
-        _unit forceWeaponFire [_muzzle, _firemode];
-    };
-
-    // Vehicle gunner
-    default {
-        private _turretPath = _vehicle unitTurret _unit;
-        private _muzzle = weaponState [_vehicle, _turretPath] select 1;
-        if (_ignoreAmmo) then {_unit setAmmo [_muzzle, 1e6];};
-
-        private _magazine = _vehicle currentMagazineDetailTurret _turretPath;
-        _magazine call EFUNC(common,parseMagazineDetail) params ["_id", "_owner"];
-        _vehicle action ["UseMagazine", _vehicle, _unit, _owner, _id];
-    };
+// If no units are given, then stop firing
+if (_units isEqualTo []) exitWith {
+    GVAR(forceFiringCurators) deleteAt (GVAR(forceFiringCurators) find _id);
 };
+
+// Track which curators are forcing fire on local machine
+GVAR(forceFiringCurators) pushBackUnique _id;
+
+// Repeatedly fire weapons of local units
+private _units = _units apply {
+    _x call EFUNC(common,getEffectiveGunner)
+} select {
+    local _x
+};
+
+[{
+    params ["_args", "_pfhID"];
+    _args params ["_units", "_id", "_endTime"];
+
+    if (CBA_missionTime >= _endTime || {!(_id in GVAR(forceFiringCurators))}) exitWith {
+        [_pfhID] call CBA_fnc_removePerFrameHandler;
+    };
+
+    {
+        if (_x call EFUNC(common,canFire)) then {
+            _x call EFUNC(common,fireWeapon);
+        };
+    } forEach _units;
+}, 0.05, [_units, _id, CBA_missionTime + FORCE_FIRE_TIMEOUT]] call CBA_fnc_addPerFrameHandler;

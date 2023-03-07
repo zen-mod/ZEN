@@ -157,14 +157,13 @@
 
 [[ELSTRING(main,DisplayName), LSTRING(AIControl)], QGVAR(forceFire), [LSTRING(ForceFire), LSTRING(ForceFire_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
-        private _units = SELECTED_OBJECTS select {[_x] call EFUNC(common,canFire)};
-        if (_units isEqualTo []) exitWith {};
-        [QGVAR(forceFireCurator), [_units, clientOwner], _units] call CBA_fnc_targetEvent;
+        private _units = SELECTED_OBJECTS select {!isPlayer _x && {!isNull group _x}};
+        [QEGVAR(common,forceFire), [_units, CBA_clientID]] call CBA_fnc_globalEvent;
 
         true // handled
     };
 }, {
-    [QGVAR(forceFireCurator), [[], clientOwner]] call CBA_fnc_globalEvent;
+    [QEGVAR(common,forceFire), [[], CBA_clientID]] call CBA_fnc_globalEvent;
 }, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
 
 [[ELSTRING(main,DisplayName), LSTRING(AIControl)], QGVAR(moveToCursor), [LSTRING(MoveToCursor), LSTRING(MoveToCursor_Description)], {

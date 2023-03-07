@@ -51,12 +51,10 @@ if (_unit isEqualType grpNull) exitWith {
 };
 
 // If a vehicle is given directly, use its gunner as the unit
-if !(_unit isKindOf "CAManBase") then {
-    _unit = gunner _unit;
-};
+private _unit = _unit call EFUNC(common,getEffectiveGunner);
 
-if !([_unit, true] call EFUNC(common,canFire)) exitWith {};
-if (_unit getVariable [QGVAR(isSuppressing), false]) exitWith {};
+// Exit if the unit cannot fire or is already suppressing
+if (!([_unit, true, true] call EFUNC(common,canFire)) || {_unit getVariable [QGVAR(isSuppressing), false]}) exitWith {};
 
 // Prevent the unit from performing other suppressive fire tasks while this one is active
 _unit setVariable [QGVAR(isSuppressing), true, true];
@@ -164,7 +162,7 @@ private _endTime = CBA_missionTime + _duration + TARGETING_DELAY;
         };
 
         if (CBA_missionTime >= _shotTime) then {
-            [_unit, true] call EFUNC(common,forceFire);
+            [_unit, true] call EFUNC(common,fireWeapon);
 
             private _vehicle = vehicle _unit;
             private _turretPath = _vehicle unitTurret _unit;
