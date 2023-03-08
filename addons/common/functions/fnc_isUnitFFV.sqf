@@ -18,3 +18,4 @@
 params [["_unit", objNull, [objNull]]];
 
 fullCrew vehicle _unit select {_x select 0 == _unit} param [0, []] param [4, false]
+&& {_unit call CBA_fnc_isTurnedOut} // Tank commander is only FFV when turned out
