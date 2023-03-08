@@ -178,6 +178,11 @@
     _unit selectWeapon _muzzle;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(selectWeaponTurret), {
+    params ["_vehicle", "_weapon", "_turretPath", ["_muzzle", ""], ["_fireMode", ""]];
+    _vehicle selectWeaponTurret [_weapon, _turretPath, _muzzle, _fireMode];
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(setPilotLight), {
     params ["_vehicle", "_lights"];
     _vehicle setPilotLight _lights;
@@ -321,6 +326,7 @@
 [QGVAR(fireArtillery), LINKFUNC(fireArtillery)] call CBA_fnc_addEventHandler;
 [QGVAR(fireWeapon), LINKFUNC(fireWeapon)] call CBA_fnc_addEventHandler;
 [QGVAR(forceFire), LINKFUNC(forceFire)] call CBA_fnc_addEventHandler;
+[QGVAR(loadMagazineInstantly), LINKFUNC(loadMagazineInstantly)] call CBA_fnc_addEventHandler;
 [QGVAR(setLampState), LINKFUNC(setLampState)] call CBA_fnc_addEventHandler;
 [QGVAR(setMagazineAmmo), LINKFUNC(setMagazineAmmo)] call CBA_fnc_addEventHandler;
 [QGVAR(setTurretAmmo), LINKFUNC(setTurretAmmo)] call CBA_fnc_addEventHandler;

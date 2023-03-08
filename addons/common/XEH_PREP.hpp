@@ -25,6 +25,7 @@ PREP(getCargoPositionsCount);
 PREP(getDefaultInventory);
 PREP(getDLC);
 PREP(getEffectiveGunner);
+PREP(getGunnerName);
 PREP(getLightingSelections);
 PREP(getPhoneticName);
 PREP(getPlayers);
