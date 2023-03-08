@@ -139,7 +139,7 @@ private _displayNames = _configNames apply {getText (_cfgVehicles >> _x >> "disp
     [QEGVAR(common,setDir), [_unit, _sitDirection], _unit] call CBA_fnc_targetEvent;
 
     // Add chair to editable objects so it can be moved around
-    [QEGVAR(common,addObjects), [[_chair]]] call CBA_fnc_serverEvent;
+    [_chair] call EFUNC(common,updateEditableObjects);
 
     // Flag unit as sitting so module will make it stand up next time
     _unit setVariable [QGVAR(isSitting), true, true];

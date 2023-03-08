@@ -63,3 +63,4 @@ PREP(setVehicleAmmo);
 PREP(showMessage);
 PREP(spawnLargeObject);
 PREP(teleportIntoVehicle);
+PREP(updateEditableObjects);

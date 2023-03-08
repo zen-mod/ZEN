@@ -28,7 +28,7 @@ _color params ["_colorRed", "_colorGreen", "_colorBlue"];
 
 if (isServer) then {
     // Add logic object to all curators for QOL
-    [QEGVAR(common,addObjects), [[_logic]]] call CBA_fnc_localEvent;
+    [_logic] call EFUNC(common,updateEditableObjects);
 
     // Create global fire sound effect if not created yet
     private _sound = _logic getVariable QGVAR(fireSound);

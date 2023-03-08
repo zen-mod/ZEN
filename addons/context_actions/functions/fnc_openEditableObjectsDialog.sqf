@@ -19,5 +19,4 @@ params ["_position"];
 
 private _logic = QEGVAR(modules,moduleEditableObjects) createVehicleLocal [0, 0, 0];
 _logic setPosASL _position;
-
 _logic call BIS_fnc_showCuratorAttributes;

@@ -79,7 +79,7 @@ _minesCache params ["_configNames", "_displayNames"];
     };
 
     // Add created mines to editable objects
-    [QEGVAR(common,addObjects), [_mines]] call CBA_fnc_serverEvent;
+    [_mines] call EFUNC(common,updateEditableObjects);
 }, {}, ASLtoAGL getPosASL _logic] call EFUNC(dialog,create);
 
 deleteVehicle _logic;

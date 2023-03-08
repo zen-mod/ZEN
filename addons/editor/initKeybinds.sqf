@@ -87,6 +87,30 @@
     };
 }, {}, [DIK_X, [false, true, false]]] call CBA_fnc_addKeybind; // Default: CTRL + X
 
+[ELSTRING(main,DisplayName), QGVAR(toggleEditability), [LSTRING(ToggleEditability), LSTRING(ToggleEditability_Description)], {
+    if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
+        curatorMouseOver params ["_type", "_entity"];
+
+        private _object = if (_type != "OBJECT") then {
+            if (!call EFUNC(common,isCursorOnMouseArea)) exitWith {objNull};
+
+            private _begPos = getPosASL curatorCamera;
+            private _endPos = AGLToASL screenToWorld getMousePosition;
+            lineIntersectsSurfaces [_begPos, _endPos, curatorCamera] param [0, []] param [2, objNull]
+        } else {
+            _entity
+        };
+
+        if (!isNull _object) then {
+            private _curator = getAssignedCuratorLogic player;
+            private _isEditable = _object in curatorEditableObjects _curator;
+            [_object, !_isEditable, _curator] call EFUNC(common,updateEditableObjects);
+        };
+
+        true // handled
+    };
+}, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
+
 [ELSTRING(main,DisplayName), QGVAR(toggleIcons), [LSTRING(ToggleIcons), LSTRING(ToggleIcons_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
         GVAR(iconsVisible) = !GVAR(iconsVisible);

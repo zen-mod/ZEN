@@ -360,30 +360,6 @@ if (isServer) then {
         _waypoint setWaypointSpeed _speedMode;
     }] call CBA_fnc_addEventHandler;
 
-    [QGVAR(addObjects), {
-        params ["_objects", ["_curator", objNull]];
-
-        if (!isNull _curator) exitWith {
-            _curator addCuratorEditableObjects [_objects, true];
-        };
-
-        {
-            _x addCuratorEditableObjects [_objects, true];
-        } forEach allCurators;
-    }] call CBA_fnc_addEventHandler;
-
-    [QGVAR(removeObjects), {
-        params ["_objects", ["_curator", objNull]];
-
-        if (!isNull _curator) exitWith {
-            _curator removeCuratorEditableObjects [_objects, true];
-        };
-
-        {
-            _x removeCuratorEditableObjects [_objects, true];
-        } forEach allCurators;
-    }] call CBA_fnc_addEventHandler;
-
     {
         ["AllVehicles", "InitPost", {
             params ["_object"];
@@ -408,4 +384,5 @@ if (isServer) then {
 
     [QGVAR(createZeus), LINKFUNC(createZeus)] call CBA_fnc_addEventHandler;
     [QGVAR(deserializeObjects), LINKFUNC(deserializeObjects)] call CBA_fnc_addEventHandler;
+    [QGVAR(updateEditableObjects), LINKFUNC(updateEditableObjects)] call CBA_fnc_addEventHandler;
 };

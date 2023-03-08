@@ -285,7 +285,7 @@ private _fnc_deserializeObject = {
 } forEach _objectData;
 
 if (_makeEditable) then {
-    [QGVAR(addObjects), [_objects]] call CBA_fnc_serverEvent;
+    [_objects] call FUNC(updateEditableObjects);
 };
 
 _objects
