@@ -28,6 +28,8 @@ private _cfgWeapons = configFile >> "CfgWeapons";
 
 {
     private _turretPath = _x;
+    private _turretMagazines = _vehicle magazinesTurret _turretPath;
+
     weaponState [_vehicle, _turretPath] params ["_currentWeapon", "_currentMuzzle", "", "_currentMagazine"];
 
     {
@@ -45,7 +47,7 @@ private _cfgWeapons = configFile >> "CfgWeapons";
             };
 
             private _compatibleMagazines = [_muzzleConfig] call CBA_fnc_compatibleMagazines;
-            private _magazines = _vehicle magazinesTurret _turretPath arrayIntersect _compatibleMagazines;
+            private _magazines = _turretMagazines arrayIntersect _compatibleMagazines;
 
             {
                 private _magazine = _x;
