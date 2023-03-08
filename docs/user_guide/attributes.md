@@ -48,3 +48,6 @@ _* Only for vehicles that are currently occupied._
 ### Markers
 - Text
 - Color
+
+### Others
+- Building Marker
