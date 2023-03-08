@@ -324,6 +324,8 @@
 
 [QGVAR(earthquake), LINKFUNC(earthquake)] call CBA_fnc_addEventHandler;
 [QGVAR(fireArtillery), LINKFUNC(fireArtillery)] call CBA_fnc_addEventHandler;
+[QGVAR(fireWeapon), LINKFUNC(fireWeapon)] call CBA_fnc_addEventHandler;
+[QGVAR(forceFire), LINKFUNC(forceFire)] call CBA_fnc_addEventHandler;
 [QGVAR(loadMagazineInstantly), LINKFUNC(loadMagazineInstantly)] call CBA_fnc_addEventHandler;
 [QGVAR(setLampState), LINKFUNC(setLampState)] call CBA_fnc_addEventHandler;
 [QGVAR(setMagazineAmmo), LINKFUNC(setMagazineAmmo)] call CBA_fnc_addEventHandler;
