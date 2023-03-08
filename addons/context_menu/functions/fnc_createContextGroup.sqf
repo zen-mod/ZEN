@@ -138,8 +138,8 @@ private _posH = POS_H(count _actions);
     _ctrlName ctrlCommit 0;
 
     private _ctrlMouse = _ctrlContextRow controlsGroupCtrl IDC_CONTEXT_MOUSE;
-    _ctrlHighlight ctrlSetPositionW _posW;
-    _ctrlHighlight ctrlCommit 0;
+    _ctrlMouse ctrlSetPositionW _posW;
+    _ctrlMouse ctrlCommit 0;
 
     private _ctrlExpandable = _ctrlContextRow controlsGroupCtrl IDC_CONTEXT_EXPANDABLE;
     _ctrlExpandable ctrlSetPositionX (_posW - POS_W(1));
