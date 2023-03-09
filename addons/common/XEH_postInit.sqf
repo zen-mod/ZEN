@@ -178,6 +178,11 @@
     _unit selectWeapon _muzzle;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(selectWeaponTurret), {
+    params ["_vehicle", "_weapon", "_turretPath", ["_muzzle", ""], ["_fireMode", ""]];
+    _vehicle selectWeaponTurret [_weapon, _turretPath, _muzzle, _fireMode];
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(setPilotLight), {
     params ["_vehicle", "_lights"];
     _vehicle setPilotLight _lights;
@@ -319,6 +324,9 @@
 
 [QGVAR(earthquake), LINKFUNC(earthquake)] call CBA_fnc_addEventHandler;
 [QGVAR(fireArtillery), LINKFUNC(fireArtillery)] call CBA_fnc_addEventHandler;
+[QGVAR(fireWeapon), LINKFUNC(fireWeapon)] call CBA_fnc_addEventHandler;
+[QGVAR(forceFire), LINKFUNC(forceFire)] call CBA_fnc_addEventHandler;
+[QGVAR(loadMagazineInstantly), LINKFUNC(loadMagazineInstantly)] call CBA_fnc_addEventHandler;
 [QGVAR(setLampState), LINKFUNC(setLampState)] call CBA_fnc_addEventHandler;
 [QGVAR(setMagazineAmmo), LINKFUNC(setMagazineAmmo)] call CBA_fnc_addEventHandler;
 [QGVAR(setTurretAmmo), LINKFUNC(setTurretAmmo)] call CBA_fnc_addEventHandler;
@@ -360,30 +368,6 @@ if (isServer) then {
         _waypoint setWaypointSpeed _speedMode;
     }] call CBA_fnc_addEventHandler;
 
-    [QGVAR(addObjects), {
-        params ["_objects", ["_curator", objNull]];
-
-        if (!isNull _curator) exitWith {
-            _curator addCuratorEditableObjects [_objects, true];
-        };
-
-        {
-            _x addCuratorEditableObjects [_objects, true];
-        } forEach allCurators;
-    }] call CBA_fnc_addEventHandler;
-
-    [QGVAR(removeObjects), {
-        params ["_objects", ["_curator", objNull]];
-
-        if (!isNull _curator) exitWith {
-            _curator removeCuratorEditableObjects [_objects, true];
-        };
-
-        {
-            _x removeCuratorEditableObjects [_objects, true];
-        } forEach allCurators;
-    }] call CBA_fnc_addEventHandler;
-
     {
         ["AllVehicles", "InitPost", {
             params ["_object"];
@@ -408,4 +392,5 @@ if (isServer) then {
 
     [QGVAR(createZeus), LINKFUNC(createZeus)] call CBA_fnc_addEventHandler;
     [QGVAR(deserializeObjects), LINKFUNC(deserializeObjects)] call CBA_fnc_addEventHandler;
+    [QGVAR(updateEditableObjects), LINKFUNC(updateEditableObjects)] call CBA_fnc_addEventHandler;
 };

@@ -187,6 +187,19 @@
 
 [
     "Object",
+    [ELSTRING(building_markers,BuildingMarker), ELSTRING(building_markers,BuildingMarker_Tooltip)],
+    QGVAR(toolbox),
+    [1, 2, [ELSTRING(common,Disabled), ELSTRING(common,Enabled)]],
+    {
+        private _buildings = SELECTED_OBJECTS select {_x isKindOf "Building"};
+        [_buildings, _value] call EFUNC(building_markers,set);
+    },
+    {_entity getVariable [QEGVAR(building_markers,marker), ""] != ""},
+    {_entity isKindOf "Building"}
+] call FUNC(addAttribute);
+
+[
+    "Object",
     LSTRING(PlateNumber),
     QGVAR(edit),
     [{_this select [0, MAX_PLATE_CHARACTERS]}],
