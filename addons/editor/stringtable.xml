@@ -291,6 +291,12 @@
             <Chinese>調整所有被選中的物體的方向，使之與它們位置上的地形坡度一致。</Chinese>
             <Italian>Orienta tutti gli oggetti selezionati in modo che corrispondano alla pendenza del terreno nella loro posizione.</Italian>
         </Key>
+        <Key ID="STR_ZEN_Editor_ToggleEditability">
+            <English>Toggle Object Editability</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_ToggleEditability_Description">
+            <English>Toggles the editability (i.e., whether an object is editable through Zeus) of the object currently under the cursor.</English>
+        </Key>
         <Key ID="STR_ZEN_Editor_ToggleIcons">
             <English>Toggle Editable Icons</English>
             <German>Bearbeitbare Symbole umschalten</German>
