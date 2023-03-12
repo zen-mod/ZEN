@@ -1,8 +1,8 @@
-name = "Zeus Enhanced 1.12.2";
+name = "Zeus Enhanced 1.13.0";
 picture = "logo_zen_ca.paa";
 actionName = "GitHub";
 action = "https://github.com/zen-mod/ZEN";
-description = "Zeus Enhanced - Version 1.12.2";
+description = "Zeus Enhanced - Version 1.13.0";
 logo = "logo_zen_small_ca.paa";
 logoOver = "logo_zen_small_ca.paa";
 tooltip = "Zeus Enhanced";
