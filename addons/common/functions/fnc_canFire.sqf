@@ -24,6 +24,7 @@ private _unit = _unit call FUNC(getEffectiveGunner);
 alive _unit
 && {!isPlayer _unit}
 && {lifeState _unit in ["HEALTHY", "INJURED"]}
+&& {CBA_missionTime >= _unit getVariable [QGVAR(nextFireTime), 0]}
 && {
     private _vehicle = vehicle _unit;
 
@@ -39,6 +40,5 @@ alive _unit
         && {!("fake" in toLower _weapon)}
         && {_ignoreAmmo || {_ammoCount > 0} || {_weapon isKindOf ["CarHorn", configFile >> "CfgWeapons"]}}
         && {_ignoreReload || {!([_vehicle, _turretPath] call FUNC(isReloading))}}
-        && {CBA_missionTime >= _unit getVariable [QGVAR(nextFireTime), 0]}
     };
 }

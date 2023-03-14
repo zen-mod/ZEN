@@ -16,6 +16,8 @@
  * Public: No
  */
 
+#define LASER_WEAPON_TIMEOUT 1
+
 params [["_unit", objNull, [objNull]], ["_infiniteAmmo", false, [false]]];
 
 if (!local _unit) exitWith {
@@ -61,10 +63,18 @@ switch (true) do {
     // Vehicle gunner
     default {
         private _turretPath = _vehicle unitTurret _unit;
-        weaponState [_vehicle, _turretPath] params ["_weapon", "_muzzle", "_fireMode"];
+        weaponState [_vehicle, _turretPath] params ["_weapon", "_muzzle", "_fireMode", "_magazine"];
 
         if (_weapon isKindOf ["CarHorn", configFile >> "CfgWeapons"]) exitWith {
             _unit forceWeaponFire [_muzzle, _fireMode];
+        };
+
+        // Prevent laser weapons from firing too quickly to allow for reliably switching to the desired state
+        private _ammo = getText (configFile >> "CfgMagazines" >> _magazine >> "ammo");
+        private _ammoSimulation = getText (configFile >> "CfgAmmo" >> _ammo >> "simulation");
+
+        if (_ammoSimulation == "laserDesignate") then {
+            _unit setVariable [QGVAR(nextFireTime), CBA_missionTime + LASER_WEAPON_TIMEOUT];
         };
 
         if (_infiniteAmmo) then {
@@ -74,12 +84,5 @@ switch (true) do {
         private _magazine = _vehicle currentMagazineDetailTurret _turretPath;
         _magazine call EFUNC(common,parseMagazineDetail) params ["_id", "_owner"];
         _vehicle action ["UseMagazine", _vehicle, _unit, _owner, _id];
-
-        if (
-            _weapon isKindOf ["Laserdesignator_mounted", configFile >> "CfgWeapons"]
-            || {_magazine isKindOf ["Laserbatteries", configFile >> "CfgMagazines"]}
-        ) then {
-             _unit setVariable [QGVAR(nextFireTime), CBA_missionTime + 1];
-        };
     };
 };
