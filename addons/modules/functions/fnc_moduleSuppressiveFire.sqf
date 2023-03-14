@@ -44,7 +44,7 @@ if !(side group _unit in [west, east, independent, civilian]) exitWith {
     ],
     [
         "COMBO",
-        LSTRING(SuppressiveFire_FireMode_SingleShotSlow),
+        LSTRING(SuppressiveFire_FireMode),
         [
             [],
             [
