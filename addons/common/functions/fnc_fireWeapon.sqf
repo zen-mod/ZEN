@@ -71,6 +71,10 @@ switch (true) do {
             _unit setAmmo [_muzzle, 1e6];
         };
 
+        if (_weapon isKindOf ["Laserdesignator_mounted", configFile >> "CfgWeapons"]) then {
+             _unit setVariable [QGVAR(nextFireTime), CBA_missionTime + 1];
+        };
+
         private _magazine = _vehicle currentMagazineDetailTurret _turretPath;
         _magazine call EFUNC(common,parseMagazineDetail) params ["_id", "_owner"];
         _vehicle action ["UseMagazine", _vehicle, _unit, _owner, _id];
