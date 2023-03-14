@@ -23,7 +23,7 @@ private _parentObject = attachedTo _object;
 
 if (!isNull _parentObject && {isVehicleCargo _object != _parentObject}) then {
     private _offset = _parentObject worldToModel ASLtoAGL getPosWorld _object;
-    private _dirAndUp = [vectorDir _object, vectorUp _object] apply {_parentObject vectorModelToWorld _x};
+    private _dirAndUp = [vectorDir _object, vectorUp _object] apply {_parentObject vectorWorldToModel _x};
 
     // setVectorDirAndUp requires local argument but applying the rotation on a remote object
     // makes editing smoother for Zeus before the target event is processed by the remote machine
