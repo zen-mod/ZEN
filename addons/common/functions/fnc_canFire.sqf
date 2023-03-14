@@ -38,7 +38,7 @@ alive _unit
         _weapon != ""
         && {!("fake" in toLower _weapon)}
         && {_ignoreAmmo || {_ammoCount > 0} || {_weapon isKindOf ["CarHorn", configFile >> "CfgWeapons"]}}
-        && {!(_weapon isKindOf ["Laserdesignator_mounted", configFile >> "CfgWeapons"] && {CBA_missionTime < _unit getVariable [QGVAR(nextFireTime), 0]})}
+        && {CBA_missionTime >= _unit getVariable [QGVAR(nextFireTime), 0]}
         && {_ignoreReload || {!([_vehicle, _turretPath] call FUNC(isReloading))}}
     };
 }
