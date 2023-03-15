@@ -3,7 +3,7 @@ class EGVAR(context_menu,actions) {
         displayName = CSTRING(CreateAreaMarker);
         icon = ICON_MARKERS;
         condition = QUOTE(visibleMap);
-        statement = QUOTE([ARR_2(QQGVAR(create),[_position])] call CBA_fnc_serverEvent);
+        statement = QUOTE([ARR_2(QQGVAR(createMarker),[_position])] call CBA_fnc_serverEvent);
         priority = 100;
     };
 };
