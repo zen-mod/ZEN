@@ -368,5 +368,8 @@
             <Chinese>打開所選實體的Zeus屬性顯示。當選擇多個實體時（即由於選擇了一個小組），將使用懸停的實體。</Chinese>
             <Italian>Apre la visualizzazione degli attributi di Zeus per l'entità selezionata.\nQuando vengono selezionate più entità (ad es. a causa della selezione di un gruppo), verrà utilizzata l'entità al passaggio del mouse.</Italian>
         </Key>
+        <Key ID="STR_ZEN_Attributes_EnableAttribute_Description">
+            <English>Enables the related attribute(s) in the Zeus attributes display</English>
+        </Key>
     </Package>
 </Project>

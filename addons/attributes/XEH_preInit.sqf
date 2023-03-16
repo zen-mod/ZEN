@@ -23,5 +23,6 @@ GVAR(previousMarkerColors) = [] call CBA_fnc_createNamespace;
 
 // Initialize the core/default attributes
 #include "initAttributes.sqf"
+#include "initSettings.sqf"
 
 ADDON = true;

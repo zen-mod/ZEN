@@ -102,7 +102,7 @@
         } forEach call EFUNC(common,getSelectedUnits);
     },
     {rank _entity},
-    {alive _entity && {_entity isKindOf "CAManBase"}}
+    {GVAR(enableRank) && {alive _entity && {_entity isKindOf "CAManBase"}}}
 ] call FUNC(addAttribute);
 
 [
@@ -140,7 +140,7 @@
         } forEach call EFUNC(common,getSelectedVehicles);
     },
     {locked _entity},
-    {alive _entity && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}}
+    {GVAR(enableVehicleLock) && {alive _entity} && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}}
 ] call FUNC(addAttribute);
 
 [
@@ -249,7 +249,7 @@
     {
         _entity getVariable [QGVAR(respawnPos), []] param [0, sideEmpty]
     },
-    {alive _entity && {canMove _entity} && {_entity isKindOf "AllVehicles"} && {!(_entity isKindOf "Animal")}}
+    {GVAR(enableRespawn) && {alive _entity} && {canMove _entity} && {_entity isKindOf "AllVehicles"} && {!(_entity isKindOf "Animal")}}
 ] call FUNC(addAttribute);
 
 [
@@ -298,7 +298,7 @@
 
         _respawnID
     },
-    {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}
+    {GVAR(enableRespawn) && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}}
 ] call FUNC(addAttribute);
 
 [
