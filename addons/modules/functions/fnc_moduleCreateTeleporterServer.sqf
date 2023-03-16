@@ -22,7 +22,7 @@ params ["_object", "_position", "_name"];
 // Create a flag pole object if an object wasn't given
 if (isNull _object) then {
     _object = createVehicle ["FlagPole_F", _position, [], 0, "NONE"];
-    [QEGVAR(common,addObjects), [[_object]]] call CBA_fnc_localEvent;
+    _object call EFUNC(common,updateEditableObjects);
 };
 
 // Add teleport action to new teleporter object

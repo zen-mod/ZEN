@@ -31,7 +31,7 @@ params ["_logic"];
         private _jipID = [QGVAR(carrierInit), _carrier] call CBA_fnc_globalEventJIP;
         [_jipID, _carrier] call CBA_fnc_removeGlobalEventJIP;
 
-        [QEGVAR(common,addObjects), [[_carrier]]] call CBA_fnc_serverEvent;
+        [_carrier] call EFUNC(common,updateEditableObjects);
 
         {
             deleteVehicle _x;
