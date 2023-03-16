@@ -374,23 +374,5 @@
             <Chinese>打開所選實體的Zeus屬性顯示。當選擇多個實體時（即由於選擇了一個小組），將使用懸停的實體。</Chinese>
             <Italian>Apre la visualizzazione degli attributi di Zeus per l'entità selezionata.\nQuando vengono selezionate più entità (ad es. a causa della selezione di un gruppo), verrà utilizzata l'entità al passaggio del mouse.</Italian>
         </Key>
-        <Key ID="STR_ZEN_Attributes_EnableRespawn">
-            <English>Respawn</English>
-        </Key>
-        <Key ID="STR_ZEN_Attributes_EnableRespawn_Description">
-            <English>Enables the RespawnVehicle and RespawnPosition attributes in the Zeus attributes display</English>
-        </Key>
-        <Key ID="STR_ZEN_Attributes_EnableSpeedLimit">
-            <English>Vehicle Speed Limit</English>
-        </Key>
-        <Key ID="STR_ZEN_Attributes_EnableSpeedLimit_Description">
-            <English>Enables the Vehicle Speed Limit attribute in the Zeus attributes display</English>
-        </Key>
-        <Key ID="STR_ZEN_Attributes_EnableVehicleLock">
-            <English>Vehicle Lock</English>
-        </Key>
-        <Key ID="STR_ZEN_Attributes_EnableVehicleLock_Description">
-            <English>Enables the Vehicle Lock attribute in the Zeus attributes display</English>
-        </Key>
     </Package>
 </Project>

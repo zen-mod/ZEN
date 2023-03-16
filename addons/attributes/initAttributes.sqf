@@ -155,7 +155,7 @@
         } forEach call EFUNC(common,getSelectedVehicles);
     },
     {locked _entity},
-    {GVAR(enableVehicleLock) && {alive _entity} && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}}
+    {alive _entity} && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}
 ] call FUNC(addAttribute);
 
 [
@@ -264,7 +264,7 @@
     {
         _entity getVariable [QGVAR(respawnPos), []] param [0, sideEmpty]
     },
-    {GVAR(enableRespawn) && {alive _entity} && {canMove _entity} && {_entity isKindOf "AllVehicles"} && {!(_entity isKindOf "Animal")}}
+    {alive _entity} && {canMove _entity} && {_entity isKindOf "AllVehicles"} && {!(_entity isKindOf "Animal")}
 ] call FUNC(addAttribute);
 
 [
@@ -313,7 +313,7 @@
 
         _respawnID
     },
-    {GVAR(enableRespawn) && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}}
+    {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}
 ] call FUNC(addAttribute);
 
 [
