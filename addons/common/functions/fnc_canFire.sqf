@@ -24,6 +24,7 @@ private _unit = _unit call FUNC(getEffectiveGunner);
 alive _unit
 && {!isPlayer _unit}
 && {lifeState _unit in ["HEALTHY", "INJURED"]}
+&& {CBA_missionTime >= _unit getVariable [QGVAR(nextFireTime), 0]}
 && {
     private _vehicle = vehicle _unit;
 
