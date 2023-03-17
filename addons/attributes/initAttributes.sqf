@@ -83,19 +83,53 @@
     {alive _entity && {_entity call EFUNC(common,getVehicleAmmo) != -1}}
 ] call FUNC(addAttribute);
 
-[
+[ // Helicopter
     "Object",
-    [LSTRING(SpeedLimit), LSTRING(SpeedLimit_Tooltip)],
+    [ELSTRING(Modules,ModuleConvoyParameters_Speed), ELSTRING(Modules,ModuleConvoyParameters_Speed_Tooltip)],
     QGVAR(slider),
-    [-50, 500, 5, false, 0],
+    [-50, 200, 5, false, 0],
     {
-        {
-            [QEGVAR(common,limitSpeed), [_entity, _value], _entity] call CBA_fnc_targetEvent;
-            _entity setVariable [QGVAR(SpeedLimit), _value, true];
-        } forEach call EFUNC(common,getSelectedVehicles);
+        private _vehicles = [] call EFUNC(common,getSelectedVehicles) select {
+            alive _x && {!isPlayer driver _x} && {_x isKindOf "Helicopter"}
+        };
+        { _x setVariable [QGVAR(setSpeed), _value, true]; } forEach _vehicles;
+        [QEGVAR(common,setSpeed), [_vehicles, _value], _vehicles] call CBA_fnc_targetEvent;
     },
-    {_entity getVariable [QGVAR(SpeedLimit), 0]},
-    {GVAR(enableSpeedLimit) && {alive _entity} && {!isPlayer driver _entity} && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}}
+    {_entity getVariable [QGVAR(setSpeed), 0]},
+    {GVAR(enableSetSpeed) && {alive _entity} && {!isPlayer driver _entity} && {_entity isKindOf "Helicopter"}}
+] call FUNC(addAttribute);
+
+[ // LandVehicle and Ship
+    "Object",
+    [ELSTRING(Modules,ModuleConvoyParameters_Speed), ELSTRING(Modules,ModuleConvoyParameters_Speed_Tooltip)],
+    QGVAR(slider),
+    [0, 100, 5, false, 0],
+    {
+        private _vehicles = [] call EFUNC(common,getSelectedVehicles) select {
+            alive _x && {!isPlayer driver _x} && {_x isKindOf "LandVehicle" || {_x isKindOf "Ship"}}
+        };
+        { _x setVariable [QGVAR(setSpeed), _value, true]; } forEach _vehicles;
+        [QEGVAR(common,setSpeed), [_vehicles, _value], _vehicles] call CBA_fnc_targetEvent;
+    },
+    {_entity getVariable [QGVAR(setSpeed), 0]},
+    {GVAR(enableSetSpeed) && {alive _entity} && {!isPlayer driver _entity} && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Ship"}}}
+    //{GVAR(enableSetSpeed) && {alive _entity} && {!isPlayer driver _entity} && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Ship"}}}
+] call FUNC(addAttribute);
+
+[ // Plane
+    "Object",
+    [ELSTRING(Modules,ModuleConvoyParameters_Speed), ELSTRING(Modules,ModuleConvoyParameters_Speed_Tooltip)],
+    QGVAR(slider),
+    [0, 1000, 5, false, 0],
+    {
+        private _vehicles = [] call EFUNC(common,getSelectedVehicles) select {
+            alive _x && {!isPlayer driver _x} && {_x isKindOf "Plane"}
+        };
+        { _x setVariable [QGVAR(setSpeed), _value, true]; } forEach _vehicles;
+        [QEGVAR(common,setSpeed), [_vehicles, _value], _vehicles] call CBA_fnc_targetEvent;
+    },
+    {_entity getVariable [QGVAR(setSpeed), 0]},
+    {GVAR(enableSetSpeed) && {alive _entity} && {!isPlayer driver _entity} && {_entity isKindOf "Plane"}}
 ] call FUNC(addAttribute);
 
 [
@@ -155,7 +189,7 @@
         } forEach call EFUNC(common,getSelectedVehicles);
     },
     {locked _entity},
-    {alive _entity} && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}
+    {alive _entity && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}}
 ] call FUNC(addAttribute);
 
 [
@@ -264,7 +298,7 @@
     {
         _entity getVariable [QGVAR(respawnPos), []] param [0, sideEmpty]
     },
-    {alive _entity} && {canMove _entity} && {_entity isKindOf "AllVehicles"} && {!(_entity isKindOf "Animal")}
+    {alive _entity && {canMove _entity} && {_entity isKindOf "AllVehicles"} && {!(_entity isKindOf "Animal")}}
 ] call FUNC(addAttribute);
 
 [

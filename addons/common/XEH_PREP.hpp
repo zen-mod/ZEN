@@ -65,6 +65,7 @@ PREP(serializeInventory);
 PREP(serializeObjects);
 PREP(setLampState);
 PREP(setMagazineAmmo);
+PREP(setSpeed);
 PREP(setTurretAmmo);
 PREP(setVehicleAmmo);
 PREP(showMessage);

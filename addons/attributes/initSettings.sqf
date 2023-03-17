@@ -1,7 +1,7 @@
 [
-    QGVAR(enableSpeedLimit),
+    QGVAR(enableSetSpeed),
     "CHECKBOX",
-    [LSTRING(SpeedLimit), LSTRING(EnableAttribute_Description)],
+    [LSTRING(SetSpeed), LSTRING(EnableAttribute_Description)],
     [ELSTRING(main,DisplayName), "str_3den_display3den_menubar_attributes_text"],
     true,
     false
