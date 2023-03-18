@@ -261,15 +261,20 @@ class EGVAR(context_menu,actions) {
                 icon = "\a3\ui_f\data\GUI\Rsc\RscDisplayArsenal\primaryWeapon_ca.paa";
                 args = 0;
             };
+            class Launcher: Primary {
+                displayName = "$STR_A3_RSCDisplayArsenal_Tab_SecondaryWeapon";
+                icon = "\a3\ui_f\data\GUI\Rsc\RscDisplayArsenal\secondaryWeapon_ca.paa";
+                args = 1;
+            };
             class Handgun: Primary {
                 displayName = "$STR_A3_RSCDisplayArsenal_Tab_Handgun";
                 icon = "\a3\ui_f\data\GUI\Rsc\RscDisplayArsenal\handgun_ca.paa";
-                args = 1;
+                args = 2;
             };
             class Binoculars: Primary {
                 displayName = "$STR_A3_RSCDisplayArsenal_Tab_Binoculars";
                 icon = "\a3\ui_f\data\GUI\Rsc\RscDisplayArsenal\binoculars_ca.paa";
-                args = 2;
+                args = 3;
             };
         };
     };
