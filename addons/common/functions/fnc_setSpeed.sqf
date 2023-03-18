@@ -29,12 +29,6 @@
  * Public: No
  */
 
-#define SPEED_RESET 0
-#define SPEED_FAST 1
-#define SPEED_NORMAL 2
-#define SPEED_SLOW 3
-#define SPEED_BACK 4
-
 params ["_vehicle", "_speed"];
 
 if (_vehicle isEqualType []) exitWith {
