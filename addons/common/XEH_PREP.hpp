@@ -17,6 +17,7 @@ PREP(fireArtillery);
 PREP(fireVLS);
 PREP(fireWeapon);
 PREP(forceFire);
+PREP(forceWatch);
 PREP(formatDegrees);
 PREP(getActiveTree);
 PREP(getAllTurrets);
