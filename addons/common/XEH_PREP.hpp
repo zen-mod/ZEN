@@ -68,6 +68,7 @@ PREP(setLampState);
 PREP(setMagazineAmmo);
 PREP(setTurretAmmo);
 PREP(setVehicleAmmo);
+PREP(setVehicleLaserState);
 PREP(showMessage);
 PREP(spawnLargeObject);
 PREP(teleportIntoVehicle);

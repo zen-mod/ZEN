@@ -393,6 +393,12 @@
         <Key ID="STR_ZEN_Editor_ForceFire_Description">
             <English>Makes selected AI units fire their current weapon while the key is held down. Vehicles will fire their first available turret with a weapon.</English>
         </Key>
+        <Key ID="STR_ZEN_Editor_ToggleLaser">
+            <English>Toggle Laser</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_ToggleLaser_Description">
+            <English>Makes selected AI units (vehicles) toggle their turret laser weapons on or off.</English>
+        </Key>
         <Key ID="STR_ZEN_Editor_MoveToCursor">
             <English>Move To Cursor</English>
         </Key>
