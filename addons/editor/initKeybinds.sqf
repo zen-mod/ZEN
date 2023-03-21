@@ -146,7 +146,7 @@
                 // Cancel if target is self
                 private _isSelf = _x isEqualTo _target;
                 private _target = [_target, objNull] select _isSelf;
-                [QEGVAR(common,doWatch), [[_x, gunner _x], _target], _x] call CBA_fnc_targetEvent;
+                [_x, _target] call EFUNC(common,forceWatch);
                 if (_isSelf) then {continue};
 
                 [[
@@ -166,7 +166,7 @@
 
         {
             if (!isNull group _x && {!isPlayer _x}) then {
-                [QEGVAR(common,doWatch), [_x, _position], _x] call CBA_fnc_targetEvent;
+                [_x, _position] call EFUNC(common,forceWatch);
 
                 [[
                     ["ICON", [_position, "\a3\ui_f\data\igui\cfg\simpletasks\types\scout_ca.paa"]],
