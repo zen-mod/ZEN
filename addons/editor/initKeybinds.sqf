@@ -190,6 +190,18 @@
     [QEGVAR(common,forceFire), [[], CBA_clientID]] call CBA_fnc_globalEvent;
 }, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
 
+[[ELSTRING(main,DisplayName), LSTRING(AIControl)], QGVAR(toggleLaser), [LSTRING(ToggleLaser), LSTRING(ToggleLaser_Description)], {
+    if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
+        {
+            if (!isNull group _x && {!isPlayer _x}) then {
+                [_x] call EFUNC(common,setVehicleLaserState);
+            };
+        } forEach SELECTED_OBJECTS;
+
+        true // handled
+    };
+}, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
+
 [[ELSTRING(main,DisplayName), LSTRING(AIControl)], QGVAR(moveToCursor), [LSTRING(MoveToCursor), LSTRING(MoveToCursor_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
         private _position = ASLToAGL ([] call EFUNC(common,getPosFromScreen));
