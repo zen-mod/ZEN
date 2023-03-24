@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Area_Markers">
-        <Key ID="STR_ZEN_Area_Markers_CreateAreaMarker">
-            <English>Create Area Marker</English>
-            <Russian>Создать Маркер Области</Russian>
-            <French>Créer un marqueur de zone</French>
-            <German>Bereichsmarkierungen erstellen</German>
-            <Italian>Crea marcatori di area</Italian>
-            <Czech>Vytvořit značku oblasti</Czech>
-            <Polish>Stwórz Marker Obszarowy</Polish>
-            <Portuguese>Criar marcador de área</Portuguese>
-            <Japanese>範囲マーカーを作成</Japanese>
-            <Korean>영역 표시기 생성</Korean>
-            <Chinesesimp>创建区域标记</Chinesesimp>
-            <Chinese>創建區域標記</Chinese>
-        </Key>
         <Key ID="STR_ZEN_Area_Markers_EditAreaMarker">
             <English>EDIT AREA MARKER</English>
             <Russian>ИЗМЕНИТЬ МАРКЕР ОБЛАСТИ</Russian>
@@ -28,20 +14,6 @@
             <Korean>영역 표시기 편집</Korean>
             <Chinesesimp>编辑区域标记</Chinesesimp>
             <Chinese>編輯區域標記</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Area_Markers_PlaceOnMap">
-            <English>Place On Map</English>
-            <Russian>Разместить На Карте</Russian>
-            <French>Placer sur la carte</French>
-            <German>Auf Karte platzieren</German>
-            <Italian>Posiziona sulla mappa</Italian>
-            <Czech>Umístit na mapu</Czech>
-            <Polish>Zaznacz Na Mapie</Polish>
-            <Portuguese>Coloque no mapa</Portuguese>
-            <Japanese>マップ上に設置</Japanese>
-            <Korean>지도에 배치</Korean>
-            <Chinesesimp>标记在地图上</Chinesesimp>
-            <Chinese>標記在地圖上</Chinese>
         </Key>
     </Package>
 </Project>

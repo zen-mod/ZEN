@@ -110,6 +110,18 @@ _ctrlTreeRecent ctrlAddEventHandler ["TreeSelChanged", {
     };
 }];
 
+// Trigger events when the tree collapse and expand all buttons are clicked
+{
+    private _ctrlTreeButton = _display displayCtrl _x;
+    _ctrlTreeButton ctrlAddEventHandler ["ButtonClick", {
+        params ["_ctrlTreeButton"];
+
+        private _display = ctrlParent _ctrlTreeButton;
+        private _expand = ctrlIDC _ctrlTreeButton == IDC_EXPAND_ALL;
+        [QGVAR(treeButtonClicked), [_display, _expand]] call CBA_fnc_localEvent;
+    }];
+} forEach [IDC_COLLAPSE_ALL, IDC_EXPAND_ALL];
+
 // Initially open the map fully zoomed out and centered
 if (isNil QGVAR(previousMapState)) then {
     GVAR(previousMapState) = [1, [worldSize / 2, worldSize / 2]];

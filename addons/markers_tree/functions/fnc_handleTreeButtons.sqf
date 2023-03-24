@@ -4,26 +4,27 @@
  * Handles clicking the tree collapse and expand all buttons.
  *
  * Arguments:
- * 0: Expand <BOOL>
+ * 0: Display <DISPLAY>
+ * 1: Expand <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [false] call zen_markers_tree_fnc_handleTreeButtons
+ * [DISPLAY, false] call zen_markers_tree_fnc_handleTreeButtons
  *
  * Public: No
  */
 
-params ["_expand"];
+params ["_display", "_expand"];
 
-// Only handle the custom markers tree, rest are handled by editor component
-if (RscDisplayCurator_sections select 0 != 3) exitWith {};
+// Only handle the custom icon markers tree, rest are handled by editor component
+if (RscDisplayCurator_sections select 0 != 3 || {GVAR(mode) != 0}) exitWith {};
 
-private _ctrlTree = findDisplay IDD_RSCDISPLAYCURATOR displayCtrl IDC_MARKERS_TREE;
+private _ctrlTreeIcons = _display displayCtrl IDC_MARKERS_TREE_ICONS;
 
 if (_expand) then {
-    tvExpandAll _ctrlTree;
+    tvExpandAll _ctrlTreeIcons;
 } else {
-    _ctrlTree call EFUNC(common,collapseTree);
+    _ctrlTreeIcons call EFUNC(common,collapseTree);
 };
