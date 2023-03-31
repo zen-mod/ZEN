@@ -223,19 +223,17 @@
 
 [[ELSTRING(main,DisplayName), LSTRING(AIControl)], QGVAR(toggleAIPATH), [LSTRING(ToggleAIPATH), LSTRING(ToggleAIPATH_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
-        private _enabled = 0;
-        private _disabled = 0;
-
         {
             if (!isPlayer _x && {_x == vehicle _x || {_x == driver vehicle _x}}) then {
                 private _isPathEnabled = _x checkAIFeature "PATH";
+                private _eventName = [QEGVAR(common,enableAI), QEGVAR(common,disableAI)] select _isPathEnabled;
+                [_eventName, [_x, "PATH"], _x] call CBA_fnc_globalEvent;
 
-                [
-                    [QEGVAR(common,enableAI), "\a3\3den\Data\Displays\Display3DEN\PanelRight\modeWaypoints_ca.paa"],
-                    [QEGVAR(common,disableAI), "\a3\3den\Data\CfgWaypoints\hold_ca.paa"]
-                ] select _isPathEnabled params ["_eventName", "_icon"];
+                private _icon = [
+                    "\a3\3den\Data\Displays\Display3DEN\PanelRight\modeWaypoints_ca.paa",
+                    "\a3\3den\Data\CfgWaypoints\hold_ca.paa"
+                ] select _isPathEnabled;
 
-                [_eventName, [_x, "PATH"]] call CBA_fnc_globalEvent;
                 [[
                     ["ICON", [_x, _icon]]
                 ], 3, _x] call EFUNC(common,drawHint);

@@ -411,8 +411,5 @@
         <Key ID="STR_ZEN_Editor_ToggleAIPath_Description">
             <English>Makes selected AI units start or stop moving. Does not affect aiming or shooting. Similar to "Hold Position" in RTS games.</English>
         </Key>
-        <Key ID="STR_ZEN_Editor_AIPathToggled">
-            <English>AI Pathing Toggled</English>
-        </Key>
     </Package>
 </Project>
