@@ -143,6 +143,27 @@
     _unit doWatch _target;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(doTarget), {
+    params ["_unit", "_target", ["_reveal", true]];
+
+    if (_reveal) then {
+        if (_unit isEqualType objNull) then {
+            _unit = [_unit];
+        };
+
+        {
+            _x reveal [_target, 4];
+        } forEach _unit;
+    };
+
+    _unit doTarget _target;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(lockCameraTo), {
+    params ["_vehicle", "_target", "_turretPath", "_temporary"];
+    _vehicle lockCameraTo [_target, _turretPath, _temporary];
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(enableGunLights), {
     params ["_unit", "_mode"];
     _unit enableGunLights _mode;
@@ -334,8 +355,9 @@
 [QGVAR(loadMagazineInstantly), LINKFUNC(loadMagazineInstantly)] call CBA_fnc_addEventHandler;
 [QGVAR(setLampState), LINKFUNC(setLampState)] call CBA_fnc_addEventHandler;
 [QGVAR(setMagazineAmmo), LINKFUNC(setMagazineAmmo)] call CBA_fnc_addEventHandler;
-[QGVAR(setTurretAmmo), LINKFUNC(setTurretAmmo)] call CBA_fnc_addEventHandler;
 [QGVAR(setSpeed), LINKFUNC(setSpeed)] call CBA_fnc_addEventHandler;
+[QGVAR(setTurretAmmo), LINKFUNC(setTurretAmmo)] call CBA_fnc_addEventHandler;
+[QGVAR(setVehicleLaserState), LINKFUNC(setVehicleLaserState)] call CBA_fnc_addEventHandler;
 [QGVAR(showMessage), LINKFUNC(showMessage)] call CBA_fnc_addEventHandler;
 
 if (isServer) then {

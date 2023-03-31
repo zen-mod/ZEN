@@ -62,6 +62,7 @@ class ZEN_WaypointTypes {
         displayName = ECSTRING(ai,Fastrope);
         type = "SCRIPTED";
         script = QPATHTOEF(ai,functions\fnc_waypointFastrope.sqf);
+        condition = QUOTE(isClass (configFile >> 'CfgPatches' >> 'ace_fastroping'));
     };
     class SearchBuilding {
         displayName = ECSTRING(ai,SearchBuilding);
