@@ -346,6 +346,7 @@ class CfgVehicles {
         category = QGVAR(Objects);
         displayName = CSTRING(ScaleObject);
         function = QFUNC(moduleScaleObject);
+        icon = "\a3\3den\Data\Cfg3DEN\History\scaleItems_ca.paa";
     };
     class GVAR(moduleSearchBuilding): GVAR(moduleBase) {
         curatorCanAttach = 1;
