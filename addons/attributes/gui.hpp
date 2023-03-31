@@ -132,11 +132,8 @@ class GVAR(toolbox): GVAR(base) {
     };
 };
 
-#define WAYPOINT_ROWS (ceil (count (uiNamespace getVariable QGVAR(waypointTypes)) / 3))
-
 class GVAR(waypoint): GVAR(base) {
     function = QFUNC(gui_waypoint);
-    h = POS_H(WAYPOINT_ROWS + 1);
     class controls: controls {
         class Label: Label {
             w = POS_W(26);
@@ -146,18 +143,8 @@ class GVAR(waypoint): GVAR(base) {
             x = 0;
             y = POS_H(1);
             w = POS_W(26);
-            h = POS_H(WAYPOINT_ROWS);
         };
-        class Toolbox: ctrlToolbox {
-            idc = IDC_ATTRIBUTE_TOOLBOX;
-            x = 0;
-            y = POS_H(1);
-            w = POS_W(26);
-            h = POS_H(WAYPOINT_ROWS);
-            colorBackground[] = {0, 0, 0, 0};
-            rows = WAYPOINT_ROWS;
-            columns = 3;
-        };
+        // Toolbox created through script based on available waypoints
     };
 };
 
