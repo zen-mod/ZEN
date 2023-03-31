@@ -229,25 +229,18 @@
         {
             if (!isPlayer _x && {_x == vehicle _x || {_x == driver vehicle _x}}) then {
                 private _isPathEnabled = _x checkAIFeature "PATH";
-                private _eventName = [QEGVAR(common,enableAI), QEGVAR(common,disableAI)] select _isPathEnabled;
-                [_eventName, [_x, "PATH"], _x] call CBA_fnc_globalEvent;
 
-                if (_isPathEnabled) then {
-                    _disabled = _disabled + 1;
-                } else {
-                    _enabled = _enabled + 1;
-                };
+                [
+                    [QEGVAR(common,enableAI), "\a3\3den\Data\Displays\Display3DEN\PanelRight\modeWaypoints_ca.paa"],
+                    [QEGVAR(common,disableAI), "\a3\3den\Data\CfgWaypoints\hold_ca.paa"]
+                ] select _isPathEnabled params ["_eventName", "_icon"];
+
+                [_eventName, [_x, "PATH"]] call CBA_fnc_globalEvent;
+                [[
+                    ["ICON", [_x, _icon]]
+                ], 3, _x] call EFUNC(common,drawHint);
             };
         } forEach SELECTED_OBJECTS;
-
-        [
-            "%1 - %2: %3 - %4: %5",
-            LLSTRING(AIPathToggled),
-            LELSTRING(common,Enabled),
-            _enabled,
-            LELSTRING(common,Disabled),
-            _disabled
-        ] call EFUNC(common,showMessage);
 
         true // handled
     };
