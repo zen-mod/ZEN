@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Building_Markers">
+        <Key ID="STR_ZEN_Building_Markers_DisplayName">
+            <English>Building Markers</English>
+        </Key>
+        <Key ID="STR_ZEN_Building_Markers_Enabled">
+            <English>Enable Automatic Building Markers</English>
+        </Key>
+        <Key ID="STR_ZEN_Building_Markers_Enabled_Description">
+            <English>Enables automatically creating grey rectangle area markers (similarly to terrain structures) for buildings placed through Zeus.</English>
+        </Key>
+        <Key ID="STR_ZEN_Building_Markers_BuildingMarker">
+            <English>Building Marker</English>
+        </Key>
+        <Key ID="STR_ZEN_Building_Markers_BuildingMarker_Tooltip">
+            <English>Adds a grey rectangle area marker for the building, similarly to terrain structures.</English>
+        </Key>
+    </Package>
+</Project>

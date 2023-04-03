@@ -220,27 +220,6 @@
             <Chinese>切換包含乘員</Chinese>
             <Italian>Toggle Includi equipaggio</Italian>
         </Key>
-        <Key ID="STR_ZEN_Editor_EjectPassengers">
-            <English>Eject Passengers</English>
-            <French>Ejecter les passagers</French>
-            <German>Passagiere rauswerfen</German>
-            <Polish>Wysadź pasażerów</Polish>
-            <Japanese>後部座席を脱出</Japanese>
-            <Korean>승객 탈출</Korean>
-            <Chinesesimp>弹出乘客</Chinesesimp>
-            <Chinese>彈出乘客</Chinese>
-            <Italian>Espellere i passeggeri</Italian>
-        </Key>
-        <Key ID="STR_ZEN_Editor_EjectPassengers_Description">
-            <English>Ejects the passengers of all selected vehicles. If the vehicle is currently flying, the units will be given parachutes.\nUnlike vanilla eject, units will disembark one after another (not immediately, with a short delay in-between).</English>
-            <French>Éjecte les passagers de tous les véhicules sélectionnés. Si le véhicule est actuellement en vol, les unités recevront des parachutes. Contrairement à l'éjection standard, les unités débarqueront les unes après les autres (pas immédiatement, avec un court délai entre les deux).</French>
-            <German>Wirft die Fahrgäste aller ausgewählten Fahrzeuge raus. Wenn das Fahrzeug gerade fliegt, erhalten die Einheiten Fallschirme.\nIm Gegensatz zu "Vanilla" sitzen die Einheiten nacheinander ab (nicht alle sofort, sondern mit einer kurzen Verzögerung dazwischen).</German>
-            <Polish>Wysadza pasażerów ze wszystkich wybranych pojazdów. Jeżeli pojazd jest w powietrzu, pasażerowie dostaną spadochron.\nJednostki zostaną wysadzone jedna po drugiej (nie wszystkie na raz).</Polish>
-            <Japanese>選択された全車両から後部座席のユニットを脱出させます。もし車両が飛行中の場合はパラシュートが与えられます。\nなお脱出は一人づつ降りるようになっています (即時ではなく数秒づつ)。</Japanese>
-            <Chinesesimp>弹出所有选定载具的乘客。如果载具正在飞行，这些单位将获得降落伞。与原版弹射不同的是，单位将一个接一个地离开（而不是立即离开，中间会有短暂间隙）。</Chinesesimp>
-            <Chinese>彈出所有選定載具的乘客。如果載具正在飛行，這些單位將獲得降落傘。與原版彈射不同的是，單位將一個接一個地離開（而不是立即離開，中間會有短暫間隙）。</Chinese>
-            <Italian>Espelle i passeggeri di tutti i veicoli selezionati. Se il veicolo è attualmente in volo, alle unità verranno forniti paracadute.\nA differenza dell'espulsione vaniglia, le unità sbarcheranno una dopo l'altra (non immediatamente, con un breve ritardo nel mezzo).</Italian>
-        </Key>
         <Key ID="STR_ZEN_Editor_UnloadViV_Description">
             <English>Unloads all selected vehicle-in-vehicle cargo and carriers. A vehicle that is both cargo and carrying cargo will only be unloaded from its carrier.</English>
             <German>Entladet alle ausgewählte Fahrzeug-in-Fahrzeug Fracht und Transporter. Fahrzeuge, die sowohl Fracht als auch Transporter sind, werden nur als Fracht entladen.</German>
@@ -248,26 +227,6 @@
             <Chinesesimp>卸下所有选定的载具中的货物和车辆。既有货物又有运载车辆的载具将只卸下货物。</Chinesesimp>
             <Chinese>卸下所有選定的載具中的貨物和車輛。既有貨物又有運載車輛的載具將只卸下貨物。</Chinese>
             <Italian>Scarica tutte le merci e i vettori selezionati veicolo-in-veicolo. Un veicolo che è sia un carico che un carico verrà scaricato solo dal suo vettore.</Italian>
-        </Key>
-        <Key ID="STR_ZEN_Editor_DeployCountermeasures">
-            <English>Deploy Countermeasures</English>
-            <French>Déployer des contre-mesures</French>
-            <German>Gegenmaßnahmen einleiten</German>
-            <Japanese>欺瞞装置作動</Japanese>
-            <Polish>Odpal środki przeciw namierzające</Polish>
-            <Chinesesimp>发射反制措施</Chinesesimp>
-            <Chinese>發射反制措施</Chinese>
-            <Italian>Implementare contromisure</Italian>
-        </Key>
-        <Key ID="STR_ZEN_Editor_DeployCountermeasures_Description">
-            <English>Makes all selected vehicles deploy countermeasures such as smokes and flares.</English>
-            <French>Tous les véhicules sélectionnés déploient des contre-mesures telles que des fumées et des fusées éclairantes.</French>
-            <German>Alle ausgewählten Fahrzeuge setzen Gegenmaßnahmen wie Rauch und Leuchtfackeln ein.</German>
-            <Japanese>選択された全車両から煙幕やフレアといった欺瞞装置を作動させます。</Japanese>
-            <Polish>Powoduje że wszystkie wybrane pojazdy odpalają środki przeciw namierzające, czyli flary, dymy itp.</Polish>
-            <Chinesesimp>使所有选定的车辆发射反制措施，如烟雾和诱饵弹。</Chinesesimp>
-            <Chinese>使所有選定的車輛發射反制措施，如煙霧和誘餌彈。</Chinese>
-            <Italian>Fa in modo che tutti i veicoli selezionati utilizzino contromisure come fumogeni e razzi.</Italian>
         </Key>
         <Key ID="STR_ZEN_Editor_DeepCopy">
             <English>Deep Copy</English>
@@ -332,6 +291,12 @@
             <Chinese>調整所有被選中的物體的方向，使之與它們位置上的地形坡度一致。</Chinese>
             <Italian>Orienta tutti gli oggetti selezionati in modo che corrispondano alla pendenza del terreno nella loro posizione.</Italian>
         </Key>
+        <Key ID="STR_ZEN_Editor_ToggleEditability">
+            <English>Toggle Object Editability</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_ToggleEditability_Description">
+            <English>Toggles the editability (i.e., whether an object is editable through Zeus) of the object currently under the cursor.</English>
+        </Key>
         <Key ID="STR_ZEN_Editor_ToggleIcons">
             <English>Toggle Editable Icons</English>
             <German>Bearbeitbare Symbole umschalten</German>
@@ -365,6 +330,86 @@
             <Chinesesimp>重新加载Zeus界面。可用于修复锁定问题。</Chinesesimp>
             <Chinese>重新加載Zeus界面。可用於修復鎖定問題。</Chinese>
             <Italian>Ricarica l'interfaccia di Zeus. Può essere utilizzato per risolvere i problemi di blocco.</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Editor_AIControl">
+            <English>AI Control</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_EjectPassengers">
+            <English>Eject Passengers</English>
+            <French>Ejecter les passagers</French>
+            <German>Passagiere rauswerfen</German>
+            <Polish>Wysadź pasażerów</Polish>
+            <Japanese>後部座席を脱出</Japanese>
+            <Korean>승객 탈출</Korean>
+            <Chinesesimp>弹出乘客</Chinesesimp>
+            <Chinese>彈出乘客</Chinese>
+            <Italian>Espellere i passeggeri</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Editor_EjectPassengers_Description">
+            <English>Ejects the passengers of all selected vehicles. If the vehicle is currently flying, the units will be given parachutes.\nUnlike vanilla eject, units will disembark one after another (not immediately, with a short delay in-between).</English>
+            <French>Éjecte les passagers de tous les véhicules sélectionnés. Si le véhicule est actuellement en vol, les unités recevront des parachutes. Contrairement à l'éjection standard, les unités débarqueront les unes après les autres (pas immédiatement, avec un court délai entre les deux).</French>
+            <German>Wirft die Fahrgäste aller ausgewählten Fahrzeuge raus. Wenn das Fahrzeug gerade fliegt, erhalten die Einheiten Fallschirme.\nIm Gegensatz zu "Vanilla" sitzen die Einheiten nacheinander ab (nicht alle sofort, sondern mit einer kurzen Verzögerung dazwischen).</German>
+            <Polish>Wysadza pasażerów ze wszystkich wybranych pojazdów. Jeżeli pojazd jest w powietrzu, pasażerowie dostaną spadochron.\nJednostki zostaną wysadzone jedna po drugiej (nie wszystkie na raz).</Polish>
+            <Japanese>選択された全車両から後部座席のユニットを脱出させます。もし車両が飛行中の場合はパラシュートが与えられます。\nなお脱出は一人づつ降りるようになっています (即時ではなく数秒づつ)。</Japanese>
+            <Chinesesimp>弹出所有选定载具的乘客。如果载具正在飞行，这些单位将获得降落伞。与原版弹射不同的是，单位将一个接一个地离开（而不是立即离开，中间会有短暂间隙）。</Chinesesimp>
+            <Chinese>彈出所有選定載具的乘客。如果載具正在飛行，這些單位將獲得降落傘。與原版彈射不同的是，單位將一個接一個地離開（而不是立即離開，中間會有短暫間隙）。</Chinese>
+            <Italian>Espelle i passeggeri di tutti i veicoli selezionati. Se il veicolo è attualmente in volo, alle unità verranno forniti paracadute.\nA differenza dell'espulsione vaniglia, le unità sbarcheranno una dopo l'altra (non immediatamente, con un breve ritardo nel mezzo).</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Editor_DeployCountermeasures">
+            <English>Deploy Countermeasures</English>
+            <French>Déployer des contre-mesures</French>
+            <German>Gegenmaßnahmen einleiten</German>
+            <Japanese>欺瞞装置作動</Japanese>
+            <Polish>Odpal środki przeciw namierzające</Polish>
+            <Chinesesimp>发射反制措施</Chinesesimp>
+            <Chinese>發射反制措施</Chinese>
+            <Italian>Implementare contromisure</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Editor_DeployCountermeasures_Description">
+            <English>Makes all selected vehicles deploy countermeasures such as smokes and flares.</English>
+            <French>Tous les véhicules sélectionnés déploient des contre-mesures telles que des fumées et des fusées éclairantes.</French>
+            <German>Alle ausgewählten Fahrzeuge setzen Gegenmaßnahmen wie Rauch und Leuchtfackeln ein.</German>
+            <Japanese>選択された全車両から煙幕やフレアといった欺瞞装置を作動させます。</Japanese>
+            <Polish>Powoduje że wszystkie wybrane pojazdy odpalają środki przeciw namierzające, czyli flary, dymy itp.</Polish>
+            <Chinesesimp>使所有选定的车辆发射反制措施，如烟雾和诱饵弹。</Chinesesimp>
+            <Chinese>使所有選定的車輛發射反制措施，如煙霧和誘餌彈。</Chinese>
+            <Italian>Fa in modo che tutti i veicoli selezionati utilizzino contromisure come fumogeni e razzi.</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Editor_WatchCursor">
+            <English>Watch Cursor</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_WatchCursor_Description">
+            <English>Makes selected AI units watch the cursor's position. Order a unit to watch itself (i.e., with the cursor hovering over the unit) to cancel the watch target.</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_WatchCuratorCamera">
+            <English>Watch Curator Camera</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_WatchCuratorCamera_Description">
+            <English>Makes selected AI units watch the Zeus camera's position.</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_ForceFire">
+            <English>Force Fire</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_ForceFire_Description">
+            <English>Makes selected AI units fire their current weapon while the key is held down. Vehicles will fire their first available turret with a weapon.</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_ToggleLaser">
+            <English>Toggle Laser</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_ToggleLaser_Description">
+            <English>Makes selected AI units in vehicles toggle their turret laser weapons on or off.</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_MoveToCursor">
+            <English>Move To Cursor</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_MoveToCursor_Description">
+            <English>Makes selected AI units move to the cursor's position. Afterwards, AI units will return to formation and resume waypoints.</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_ToggleAIPath">
+            <English>Toggle AI Pathing</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_ToggleAIPath_Description">
+            <English>Makes selected AI units start or stop moving. Does not affect aiming or shooting. Similar to "Hold Position" in RTS games.</English>
         </Key>
     </Package>
 </Project>

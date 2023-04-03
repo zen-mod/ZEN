@@ -343,6 +343,11 @@ class EGVAR(context_menu,actions) {
             statement = QUOTE(_objects call FUNC(refuelVehicles));
             icon = "\a3\ui_f\data\igui\cfg\simpleTasks\types\refuel_ca.paa";
         };
+        class SwitchWeapon {
+            displayName = "$STR_A3_Switch1";
+            icon = "\a3\ui_f\data\GUI\Cfg\Hints\VehicleAmmo_CA.paa";
+            insertChildren = QUOTE(_hoveredEntity call FUNC(getVehicleWeaponActions));
+        };
         class UnloadViV {
             displayName = "$STR_A3_ModuleDepot_Unload";
             condition = QUOTE(_objects call FUNC(canUnloadViV));

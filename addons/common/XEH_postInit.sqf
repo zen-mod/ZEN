@@ -143,6 +143,27 @@
     _unit doWatch _target;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(doTarget), {
+    params ["_unit", "_target", ["_reveal", true]];
+
+    if (_reveal) then {
+        if (_unit isEqualType objNull) then {
+            _unit = [_unit];
+        };
+
+        {
+            _x reveal [_target, 4];
+        } forEach _unit;
+    };
+
+    _unit doTarget _target;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(lockCameraTo), {
+    params ["_vehicle", "_target", "_turretPath", "_temporary"];
+    _vehicle lockCameraTo [_target, _turretPath, _temporary];
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(enableGunLights), {
     params ["_unit", "_mode"];
     _unit enableGunLights _mode;
@@ -176,6 +197,11 @@
 [QGVAR(selectWeapon), {
     params ["_unit", "_muzzle"];
     _unit selectWeapon _muzzle;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(selectWeaponTurret), {
+    params ["_vehicle", "_weapon", "_turretPath", ["_muzzle", ""], ["_fireMode", ""]];
+    _vehicle selectWeaponTurret [_weapon, _turretPath, _muzzle, _fireMode];
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(setPilotLight), {
@@ -319,9 +345,13 @@
 
 [QGVAR(earthquake), LINKFUNC(earthquake)] call CBA_fnc_addEventHandler;
 [QGVAR(fireArtillery), LINKFUNC(fireArtillery)] call CBA_fnc_addEventHandler;
+[QGVAR(fireWeapon), LINKFUNC(fireWeapon)] call CBA_fnc_addEventHandler;
+[QGVAR(forceFire), LINKFUNC(forceFire)] call CBA_fnc_addEventHandler;
+[QGVAR(loadMagazineInstantly), LINKFUNC(loadMagazineInstantly)] call CBA_fnc_addEventHandler;
 [QGVAR(setLampState), LINKFUNC(setLampState)] call CBA_fnc_addEventHandler;
 [QGVAR(setMagazineAmmo), LINKFUNC(setMagazineAmmo)] call CBA_fnc_addEventHandler;
 [QGVAR(setTurretAmmo), LINKFUNC(setTurretAmmo)] call CBA_fnc_addEventHandler;
+[QGVAR(setVehicleLaserState), LINKFUNC(setVehicleLaserState)] call CBA_fnc_addEventHandler;
 [QGVAR(showMessage), LINKFUNC(showMessage)] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
@@ -360,30 +390,6 @@ if (isServer) then {
         _waypoint setWaypointSpeed _speedMode;
     }] call CBA_fnc_addEventHandler;
 
-    [QGVAR(addObjects), {
-        params ["_objects", ["_curator", objNull]];
-
-        if (!isNull _curator) exitWith {
-            _curator addCuratorEditableObjects [_objects, true];
-        };
-
-        {
-            _x addCuratorEditableObjects [_objects, true];
-        } forEach allCurators;
-    }] call CBA_fnc_addEventHandler;
-
-    [QGVAR(removeObjects), {
-        params ["_objects", ["_curator", objNull]];
-
-        if (!isNull _curator) exitWith {
-            _curator removeCuratorEditableObjects [_objects, true];
-        };
-
-        {
-            _x removeCuratorEditableObjects [_objects, true];
-        } forEach allCurators;
-    }] call CBA_fnc_addEventHandler;
-
     {
         ["AllVehicles", "InitPost", {
             params ["_object"];
@@ -408,4 +414,5 @@ if (isServer) then {
 
     [QGVAR(createZeus), LINKFUNC(createZeus)] call CBA_fnc_addEventHandler;
     [QGVAR(deserializeObjects), LINKFUNC(deserializeObjects)] call CBA_fnc_addEventHandler;
+    [QGVAR(updateEditableObjects), LINKFUNC(updateEditableObjects)] call CBA_fnc_addEventHandler;
 };

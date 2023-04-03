@@ -47,7 +47,7 @@ _display closeDisplay IDC_CANCEL; // Close helper display
             _logic setVariable [QGVAR(lightpoint), _lightpoint, true];
 
             // Add logic object to all curators once it has lightpoint for QOL
-            [QEGVAR(common,addObjects), [[_logic]]] call CBA_fnc_serverEvent;
+            [_logic] call EFUNC(common,updateEditableObjects);
 
             // Add event handler to delete lightpoint if logic is deleted
             [QEGVAR(common,execute), [{

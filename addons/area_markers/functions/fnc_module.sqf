@@ -25,5 +25,4 @@ if (!visibleMap) exitWith {
 
 private _ctrlMap = findDisplay IDD_RSCDISPLAYCURATOR displayCtrl IDC_RSCDISPLAYCURATOR_MAINMAP;
 private _position = _ctrlMap ctrlMapScreenToWorld getMousePosition;
-
-[QGVAR(create), [_position]] call CBA_fnc_serverEvent;
+[QGVAR(createMarker), [_position]] call CBA_fnc_serverEvent;

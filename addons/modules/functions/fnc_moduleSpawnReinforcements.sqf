@@ -139,4 +139,4 @@ private _objects = [_vehicle];
 _objects append units _vehicleGroup;
 _objects append units _infantryGroup;
 
-[QEGVAR(common,addObjects), [_objects]] call CBA_fnc_serverEvent;
+[_objects] call EFUNC(common,updateEditableObjects);

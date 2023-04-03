@@ -51,25 +51,10 @@ if (_unit isEqualType grpNull) exitWith {
 };
 
 // If a vehicle is given directly, use its gunner as the unit
-if !(_unit isKindOf "CAManBase") then {
-    _unit = gunner _unit;
-};
+private _unit = _unit call EFUNC(common,getEffectiveGunner);
 
-if (
-    !alive _unit
-    || {isPlayer _unit}
-    || {!(lifeState _unit in ["HEALTHY", "INJURED"])}
-    || {_unit getVariable [QGVAR(isSuppressing), false]}
-    || {
-        private _vehicle = vehicle _unit;
-
-        if (_vehicle == _unit || {_unit call EFUNC(common,isUnitFFV)}) then {
-            currentWeapon _unit == ""
-        } else {
-            _vehicle weaponsTurret (_vehicle unitTurret _unit) isEqualTo []
-        };
-    }
-) exitWith {};
+// Exit if the unit cannot fire or is already suppressing
+if (!([_unit, true, true] call EFUNC(common,canFire)) || {_unit getVariable [QGVAR(isSuppressing), false]}) exitWith {};
 
 // Prevent the unit from performing other suppressive fire tasks while this one is active
 _unit setVariable [QGVAR(isSuppressing), true, true];
@@ -177,46 +162,10 @@ private _endTime = CBA_missionTime + _duration + TARGETING_DELAY;
         };
 
         if (CBA_missionTime >= _shotTime) then {
+            [_unit, true] call EFUNC(common,fireWeapon);
+
             private _vehicle = vehicle _unit;
             private _turretPath = _vehicle unitTurret _unit;
-
-            switch (true) do {
-                // On foot
-                case (_vehicle == _unit): {
-                    weaponState _unit params ["_weapon", "_muzzle", "_fireMode"];
-
-                    _unit setAmmo [_weapon, 1e6];
-                    _unit forceWeaponFire [_muzzle, _fireMode];
-                };
-
-                // FFV
-                case (_unit call EFUNC(common,isUnitFFV)): {
-                    // Using UseMagazine action since forceWeaponFire command does not work for FFV units
-                    // UseMagazine action doesn't seem to work with currently loaded magazine (currentMagazineDetail)
-                    // Therefore, this relies on the unit having an extra magazine in their inventory
-                    // but should be fine in most situations
-                    private _weapon = currentWeapon _unit;
-                    private _compatibleMagazines = _weapon call CBA_fnc_compatibleMagazines;
-                    private _index = magazines _unit findAny _compatibleMagazines;
-                    if (_index == -1) exitWith {};
-
-                    private _magazine = magazinesDetail _unit select _index;
-                    _magazine call EFUNC(common,parseMagazineDetail) params ["_id", "_owner"];
-
-                    _unit setAmmo [_weapon, 1e6];
-                    CBA_logic action ["UseMagazine", _unit, _unit, _owner, _id];
-                };
-
-                // Vehicle gunner
-                default {
-                    private _muzzle = weaponState [_vehicle, _turretPath] select 1;
-                    _unit setAmmo [_muzzle, 1e6];
-
-                    private _magazine = _vehicle currentMagazineDetailTurret _turretPath;
-                    _magazine call EFUNC(common,parseMagazineDetail) params ["_id", "_owner"];
-                    _vehicle action ["UseMagazine", _vehicle, _unit, _owner, _id];
-                };
-            };
 
             // Set time until the next shot based on the weapon's ammo reloading time and whether the current burst is finished
             private _reloadTime = [_vehicle, _turretPath] call EFUNC(common,getWeaponReloadTime);

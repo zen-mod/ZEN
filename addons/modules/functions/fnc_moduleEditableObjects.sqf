@@ -62,5 +62,4 @@ if (_range == -1) then {
     _objects = nearestObjects [_position, _types, _range, true];
 };
 
-private _eventName = [QEGVAR(common,removeObjects), QEGVAR(common,addObjects)] select _editingMode;
-[_eventName, [_objects, _curator]] call CBA_fnc_serverEvent;
+[_objects, _editingMode, _curator] call EFUNC(common,updateEditableObjects);

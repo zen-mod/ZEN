@@ -157,7 +157,7 @@
         } forEach call EFUNC(common,getSelectedVehicles);
     },
     {isEngineOn _entity},
-    {alive _entity && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}}
+    {alive _entity && {getNumber (configOf _entity >> "fuelCapacity") > 0} && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}}
 ] call FUNC(addAttribute);
 
 [
@@ -182,7 +182,20 @@
         } forEach call EFUNC(common,getSelectedVehicles);
     },
     {isLightOn _entity},
-    {alive _entity && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}}
+    {alive _entity && {"true" configClasses (configOf _entity >> "Reflectors") isNotEqualTo []} && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}}
+] call FUNC(addAttribute);
+
+[
+    "Object",
+    [ELSTRING(building_markers,BuildingMarker), ELSTRING(building_markers,BuildingMarker_Tooltip)],
+    QGVAR(toolbox),
+    [1, 2, [ELSTRING(common,Disabled), ELSTRING(common,Enabled)]],
+    {
+        private _buildings = SELECTED_OBJECTS select {_x isKindOf "Building"};
+        [_buildings, _value] call EFUNC(building_markers,set);
+    },
+    {_entity getVariable [QEGVAR(building_markers,marker), ""] != ""},
+    {_entity isKindOf "Building"}
 ] call FUNC(addAttribute);
 
 [
