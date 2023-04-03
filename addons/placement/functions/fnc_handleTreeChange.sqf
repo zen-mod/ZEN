@@ -26,7 +26,7 @@ private _objectType = if (_mode in [0, 4] && {call EFUNC(common,isPlacementActiv
     private _ctrlTree = call EFUNC(common,getActiveTree);
     private _data = _ctrlTree tvData tvCurSel _ctrlTree;
 
-    if (_mode == 4 && {!isClass (configFile >> "CfgVehicles" >> _data)}) then {
+    if (_mode == 4 && {!isClass (configFile >> "CfgVehicles" >> _data) || {_data isKindOf "Logic"}}) then {
         _data = "";
     };
 
