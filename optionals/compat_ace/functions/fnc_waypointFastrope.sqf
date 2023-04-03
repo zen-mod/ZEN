@@ -2,7 +2,7 @@
 /*
  * Author: mharis001
  * Scripted waypoint that makes a group fastrope at the waypoint's position.
- * Requires ace_fastroping to be loaded.
+ * Requires ACE Fastroping to be loaded.
  *
  * Arguments:
  * 0: Group <GROUP>
@@ -12,7 +12,7 @@
  * Waypoint Finished <BOOL>
  *
  * Example:
- * _waypoint setWaypointScript "\x\zen\addons\ai\functions\fnc_waypointFastrope.sqf"
+ * _waypoint setWaypointScript "\x\zen\addons\compat_ace\functions\fnc_waypointFastrope.sqf"
  *
  * Public: No
  */
@@ -28,20 +28,20 @@ params ["_group", "_waypointPosition"];
 private _waypoint = [_group, currentWaypoint _group];
 _waypoint setWaypointDescription localize LSTRING(Fastrope);
 
+// Exit if ACE Fastroping is not loaded
+if (!isClass (configFile >> "CfgPatches" >> "ace_fastroping")) exitWith {true};
+
 private _vehicle = vehicle leader _group;
 
 // Exit if the helicopter has no passengers that can be deployed by fastrope
 if (crew _vehicle findIf {assignedVehicleRole _x select 0 == "cargo"} == -1) exitWith {true};
 
 // Exit if fastroping is not enabled for the helicopter
-if !([_vehicle] call EFUNC(common,hasFastroping)) exitWith {true};
+if !(_vehicle call FUNC(canFastrope)) exitWith {true};
 
 // Equip the helicopter with FRIES if necessary
-if (
-    getNumber (configOf _vehicle >> "ace_fastroping_enabled") == 2
-    && {isNull (_vehicle getVariable ["ace_fastroping_FRIES", objNull])}
-) then {
-    _vehicle call ace_fastroping_fnc_equipFRIES;
+if (isNull (_vehicle getVariable [QACEGVAR(fastroping,FRIES), objNull])) then {
+    _vehicle call ACEFUNC(fastroping,equipFRIES);
 };
 
 // Increase the skill of the pilot for better flying
@@ -113,14 +113,14 @@ waitUntil {
 };
 
 // Make units fastrope once the helicopter is in position
-[_vehicle, false, false] call ace_fastroping_fnc_deployAI;
+[_vehicle, false, false] call ACEFUNC(fastroping,deployAI);
 
 // Wait for all units to finish fastroping
-waitUntil {_vehicle getVariable ["ace_fastroping_deployedRopes", []] isNotEqualTo []};
-waitUntil {_vehicle getVariable ["ace_fastroping_deployedRopes", []] isEqualTo []};
+waitUntil {_vehicle getVariable [QACEGVAR(fastroping,deployedRopes), []] isNotEqualTo []};
+waitUntil {_vehicle getVariable [QACEGVAR(fastroping,deployedRopes), []] isEqualTo []};
 
 // Stow the helicopter's fastrope system
-_vehicle call ace_fastroping_fnc_stowFRIES;
+_vehicle call ACEFUNC(fastroping,stowFRIES);
 
 _vehicle flyInHeight 100;
 _driver setSkill _skill;

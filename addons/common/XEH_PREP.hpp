@@ -39,7 +39,6 @@ PREP(getVehicleAmmo);
 PREP(getVehicleIcon);
 PREP(getWeaponReloadTime);
 PREP(hasDefaultInventory);
-PREP(hasFastroping);
 PREP(hasPylons);
 PREP(healUnit);
 PREP(initDisplayPositioning);

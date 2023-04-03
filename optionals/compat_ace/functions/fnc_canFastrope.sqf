@@ -1,16 +1,16 @@
 #include "script_component.hpp"
 /*
- * Author: mharis001, Kex
- * Checks if the given vehicle has fastroping.
+ * Author: Kex
+ * Checks if the given vehicle can be used for fastroping.
  *
  * Arguments:
  * 0: Vehicle <OBJECT|STRING>
  *
  * Return Value:
- * Has fastroping <BOOL>
+ * Can Fastrope <BOOL>
  *
  * Example:
- * [_vehicle] call zen_common_fnc_hasFastroping
+ * [_vehicle] call zen_compat_ace_fnc_canFastrope
  *
  * Public: No
  */
@@ -22,4 +22,4 @@ if (_vehicle isEqualType objNull) then {
 };
 
 isClass (configFile >> "CfgPatches" >> "ace_fastroping")
-&& {getNumber (configFile >> "CfgVehicles" >> _vehicle >> "ace_fastroping_enabled") > 0}
+&& {getNumber (configFile >> "CfgVehicles" >> _vehicle >> QACEGVAR(fastroping,enabled)) > 0}

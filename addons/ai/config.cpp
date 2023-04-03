@@ -17,3 +17,4 @@ class CfgPatches {
 PRELOAD_ADDONS;
 
 #include "CfgEventHandlers.hpp"
+#include "CfgWaypointTypes.hpp"

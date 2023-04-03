@@ -22,7 +22,7 @@
 params ["_display", "_logic"];
 
 private _selections = GVAR(saved) getVariable [QGVAR(spawnReinforcements), [0, 0, 0, 0, 0, [], -3, 1, 0, 100, -3, 0]];
-_selections params ["_side", "_faction", "_category", "_vehicle", "_treeMode", "_unitList", "_vehicleLZ", "_vehicleBehaviour", "_insertionMethod", "_flyHeight", "_unitRP", "_unitBehaviour"];
+_selections params ["_side", "_faction", "_category", "_vehicle", "_treeMode", "_unitList", "_vehicleLZ", "_vehicleBehaviour", "_insertionMethodIndex", "_flyHeight", "_unitRP", "_unitBehaviour"];
 
 private _position = ASLtoAGL getPosASL _logic;
 _display setVariable [QGVAR(position), _position];
@@ -234,21 +234,35 @@ private _fnc_vehicleChanged = {
     private _ctrlFlyHeight = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_HEIGHT;
     _ctrlFlyHeight ctrlEnable _isAir;
 
-    if ([_vehicle] call EFUNC(common,hasFastroping)) then {
-        if (lbSize _ctrlInsertion < 3) then {
-            _ctrlInsertion lbAdd localize ELSTRING(ai,Fastrope);
-        };
-    } else {
-        private _index = lbCurSel _ctrlInsertion;
+    private _previousMethod = _ctrlInsertion lbData lbCurSel _ctrlInsertion;
+    _ctrlInsertion lbSetCurSel 0;
+    lbClear _ctrlInsertion;
 
-        // Switch to land if fastroping is not available
-        if (_index == 2) then {
-            _index = 0;
-        };
+    {
+        _x params ["_waypointClass", "_condition"];
 
-        _ctrlInsertion lbDelete 2;
-        _ctrlInsertion lbSetCurSel _index;
-    };
+        private _waypointConfig = configFile >> "ZEN_WaypointTypes" >> _waypointClass;
+
+        if (isClass _waypointConfig && {_vehicle call _condition}) then {
+            private _index = _ctrlInsertion lbAdd getText (_waypointConfig >> "displayName");
+            _ctrlInsertion lbSetTooltip [_index, getText (_waypointConfig >> "tooltip")];
+            _ctrlInsertion lbSetData [_index, _waypointClass];
+
+            // Special handling for "Land" method (to display a different name)
+            if (_waypointClass == "TransportUnload") then {
+                _ctrlInsertion lbSetText [_index, LELSTRING(ai,Land)];
+            };
+
+            if (_waypointClass == _previousMethod) then {
+                _ctrlInsertion lbSetCurSel _index;
+            };
+        };
+    } forEach [
+        ["TransportUnload", {true}],
+        ["Paradrop", {true}],
+        ["Fastrope", EFUNC(compat_ace,canFastrope)],
+        ["AdvancedRappel", EFUNC(compat_advanced_rappelling,canRappel)]
+    ];
 };
 
 private _ctrlVehicle = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE;
@@ -403,7 +417,7 @@ private _ctrlVehicleBehaviour = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEH
 _ctrlVehicleBehaviour lbSetCurSel _vehicleBehaviour;
 
 private _ctrlInsertion = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_INSERTION;
-_ctrlInsertion lbSetCurSel _insertionMethod;
+_ctrlInsertion lbSetCurSel _insertionMethodIndex;
 
 private _ctrlFlyHeight = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_HEIGHT;
 _ctrlFlyHeight ctrlSetText str _flyHeight;
@@ -434,8 +448,11 @@ private _fnc_onConfirm = {
     };
 
     private _vehicleBehaviour = lbCurSel (_display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_BEHAVIOUR);
-    private _insertionMethod  = lbCurSel (_display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_INSERTION);
     private _unitBehaviour    = lbCurSel (_display displayCtrl IDC_SPAWNREINFORCEMENTS_UNIT_BEHAVIOUR);
+
+    private _ctrlInsertion = _display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_INSERTION;
+    private _insertionMethodIndex = lbCurSel _ctrlInsertion;
+    private _insertionMethod = _ctrlInsertion lbData _insertionMethodIndex;
 
     private _flyHeight = parseNumber ctrlText (_display displayCtrl IDC_SPAWNREINFORCEMENTS_VEHICLE_HEIGHT) max 50;
 
@@ -445,7 +462,7 @@ private _fnc_onConfirm = {
     private _ctrlUnitRP = _display displayCtrl IDC_SPAWNREINFORCEMENTS_UNIT_RP;
     private _unitRP = _ctrlUnitRP lbValue lbCurSel _ctrlUnitRP;
 
-    private _selections = [_side, _faction, _category, _vehicle, _treeMode, _unitList, _vehicleLZ, _vehicleBehaviour, _insertionMethod, _flyHeight, _unitRP, _unitBehaviour];
+    private _selections = [_side, _faction, _category, _vehicle, _treeMode, _unitList, _vehicleLZ, _vehicleBehaviour, _insertionMethodIndex, _flyHeight, _unitRP, _unitBehaviour];
     GVAR(saved) setVariable [QGVAR(spawnReinforcements), _selections];
 
     // Convert vehicle index to type
