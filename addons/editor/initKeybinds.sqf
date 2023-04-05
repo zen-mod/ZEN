@@ -113,6 +113,17 @@
     };
 }, {}, [DIK_R, [true, true, false]]] call CBA_fnc_addKeybind; // Default: CTRL + SHIFT + R
 
+[ELSTRING(main,DisplayName), QGVAR(pingCurators), [LSTRING(pingCurators), LSTRING(pingCurators_Description)], {
+    if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
+        private _thisCurator = getAssignedCuratorLogic player;
+        private _object = (SELECTED_OBJECTS + [_thisCurator]) select 0;
+        if (_object == _thisCurator) then {_thisCurator setPosASL ([] call EFUNC(common,getPosFromScreen))};
+        [QGVAR(pingCurator), [_object], allCurators - [_thisCurator]] call CBA_fnc_targetEvent;
+
+        true // handled
+    };
+}, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
+
 [[ELSTRING(main,DisplayName), LSTRING(AIControl)], QGVAR(ejectPassengers), [LSTRING(EjectPassengers), LSTRING(EjectPassengers_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
         {

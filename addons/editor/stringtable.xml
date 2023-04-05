@@ -411,5 +411,11 @@
         <Key ID="STR_ZEN_Editor_ToggleAIPath_Description">
             <English>Makes selected AI units start or stop moving. Does not affect aiming or shooting. Similar to "Hold Position" in RTS games.</English>
         </Key>
+        <Key ID="STR_ZEN_Editor_pingCurators">
+            <English>Ping Curators</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_pingCurators_Description">
+            <English>Ping other Curators on the selected object or mouse position.</English>
+        </Key>
     </Package>
 </Project>
