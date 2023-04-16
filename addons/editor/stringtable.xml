@@ -412,10 +412,12 @@
             <English>Makes selected AI units start or stop moving. Does not affect aiming or shooting. Similar to "Hold Position" in RTS games.</English>
         </Key>
         <Key ID="STR_ZEN_Editor_pingCurators">
-            <English>Ping Curators</English>
+            <English>Ping Zeus</English>
+            <German>Zeus anpingen</German>
         </Key>
         <Key ID="STR_ZEN_Editor_pingCurators_Description">
-            <English>Ping other Curators on the selected object or mouse position.</English>
+            <English>Ping other Zeus on the selected object or mouse position.</English>
+            <German>Pingt andere Zeus auf ausgewählte Objekte oder Mausposition an.</German>
         </Key>
     </Package>
 </Project>
