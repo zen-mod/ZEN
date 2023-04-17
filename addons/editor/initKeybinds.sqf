@@ -118,7 +118,7 @@
         private _thisCurator = getAssignedCuratorLogic player;
         private _object = (SELECTED_OBJECTS + [_thisCurator]) select 0;
         if (_object == _thisCurator) then {_thisCurator setPosASL ([] call EFUNC(common,getPosFromScreen))};
-        [QGVAR(pingCurator), [_object], allCurators - [_thisCurator]] call CBA_fnc_targetEvent;
+        [QGVAR(pingCurator), [_object], allCurators] call CBA_fnc_targetEvent;
 
         true // handled
     };
