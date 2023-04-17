@@ -370,6 +370,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_EnableAttribute_Description">
             <English>Enables the related attribute(s) in the Zeus attributes display</English>
+            <German>Zeigt die entsprechende Eigentschaft(en) im Eigenschaftsfenster an.</German>
         </Key>
     </Package>
 </Project>
