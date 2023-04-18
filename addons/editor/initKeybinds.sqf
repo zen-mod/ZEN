@@ -122,7 +122,7 @@
 
         true // handled
     };
-}, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
+}, {}, [DIK_U, [false, false, false]]] call CBA_fnc_addKeybind; // Default: U
 
 [[ELSTRING(main,DisplayName), LSTRING(AIControl)], QGVAR(ejectPassengers), [LSTRING(EjectPassengers), LSTRING(EjectPassengers_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
