@@ -116,7 +116,11 @@
 [ELSTRING(main,DisplayName), QGVAR(pingCurators), [LSTRING(pingCurators), LSTRING(pingCurators_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
         private _thisCurator = getAssignedCuratorLogic player;
-        private _object = (SELECTED_OBJECTS + [_thisCurator]) select 0;
+        private _object = if (SELECTED_OBJECTS isEqualTo []) then {
+            curatorMouseOver param [1, _thisCurator]
+        } else {
+            SELECTED_OBJECTS select 0
+        };
         if (_object == _thisCurator) then {_thisCurator setPosASL ([] call EFUNC(common,getPosFromScreen))};
         [QGVAR(pingCurator), [_object], allCurators] call CBA_fnc_targetEvent;
 
