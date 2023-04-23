@@ -385,10 +385,14 @@ class EGVAR(context_menu,actions) {
         class Remove {
             displayName = ECSTRING(common,Remove);
             icon = QPATHTOF(ui\remove_ca.paa);
-            class 10m {
+            class Selected {
+                displayName = CSTRING(Selected);
+                statement = QUOTE([ARR_3(SELECTED_OBJECTS,false,getAssignedCuratorLogic player)] call EFUNC(common,updateEditableObjects));
+                icon = QPATHTOF(ui\remove_ca.paa);
+            };
+            class 10m: Selected {
                 displayName = CSTRING(10m);
                 statement = QUOTE([ARR_3(false,_position,_args)] call FUNC(updateEditableObjects));
-                icon = QPATHTOF(ui\remove_ca.paa);
                 args = 10;
             };
             class 50m: 10m {

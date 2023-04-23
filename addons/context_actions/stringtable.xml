@@ -67,6 +67,9 @@
             <Chinese>可編輯對象</Chinese>
             <Italian>Oggetti modificabili</Italian>
         </Key>
+        <Key ID="STR_ZEN_Context_Actions_Selected">
+            <English>Selected</English>
+        </Key>
         <Key ID="STR_ZEN_Context_Actions_10m">
             <English>10 m</English>
             <German>10 m</German>
