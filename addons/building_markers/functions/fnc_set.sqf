@@ -61,6 +61,8 @@ if (_set) then {
     _marker setMarkerDir getDir _object;
     _object setVariable [QGVAR(marker), _marker, true];
 
+    [QEGVAR(common,setMarkerDrawPriority), [_marker, -1]] call CBA_fnc_globalEvent;
+
     // Delete marker when the object is deleted
     private _eventID = _object addEventHandler ["Deleted", {
         params ["_object"];
