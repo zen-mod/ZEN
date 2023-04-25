@@ -69,6 +69,7 @@
         </Key>
         <Key ID="STR_ZEN_Context_Actions_Selected">
             <English>Selected</English>
+            <German>Auswahl</German>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_10m">
             <English>10 m</English>
