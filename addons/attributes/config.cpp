@@ -19,5 +19,4 @@ PRELOAD_ADDONS;
 #include "CfgEventHandlers.hpp"
 #include "CfgFunctions.hpp"
 #include "CfgVehicles.hpp"
-#include "CfgWaypointTypes.hpp"
 #include "gui.hpp"

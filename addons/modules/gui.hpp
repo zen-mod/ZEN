@@ -1139,15 +1139,6 @@ class GVAR(RscSpawnReinforcements): GVAR(RscDisplay) {
                         class Insertion: VehicleLZ {
                             idc = IDC_SPAWNREINFORCEMENTS_VEHICLE_INSERTION;
                             y = POS_H(3.3);
-                            class Items {
-                                class Land {
-                                    text = ECSTRING(ai,Land);
-                                    default = 1;
-                                };
-                                class Paradrop {
-                                    text = ECSTRING(ai,Paradrop);
-                                };
-                            };
                         };
                         class FlyHeightLabel: VehicleLZLabel {
                             text = CSTRING(ModuleFlyHeight);
