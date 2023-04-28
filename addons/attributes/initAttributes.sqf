@@ -195,7 +195,7 @@
         [_buildings, _value] call EFUNC(building_markers,set);
     },
     {_entity getVariable [QEGVAR(building_markers,marker), ""] != ""},
-    {GVAR(enableBuildingMarker) && _entity isKindOf "Building"}
+    {GVAR(enableBuildingMarker) && {_entity isKindOf "Building"}}
 ] call FUNC(addAttribute);
 
 [
@@ -349,7 +349,7 @@
         };
     },
     {""},
-    {GVAR(enableDebugConsole) && {IS_ADMIN_LOGGED || {!GETMVAR(ZEN_disableCodeExecution,false)}}}
+    {GVAR(enableExecute) && {IS_ADMIN_LOGGED || {!GETMVAR(ZEN_disableCodeExecution,false)}}}
 ] call FUNC(addAttribute);
 
 // - Group --------------------------------------------------------------------
@@ -508,7 +508,7 @@
         };
     },
     {""},
-    {GVAR(enableDebugConsole) && {IS_ADMIN_LOGGED || {!GETMVAR(ZEN_disableCodeExecution,false)}}}
+    {GVAR(enableExecute) && {IS_ADMIN_LOGGED || {!GETMVAR(ZEN_disableCodeExecution,false)}}}
 ] call FUNC(addAttribute);
 
 // - Waypoint -----------------------------------------------------------------

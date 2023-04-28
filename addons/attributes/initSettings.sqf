@@ -1,6 +1,6 @@
 
 [
-    QGVAR(enableDebugConsole),
+    QGVAR(enableExecute),
     "CHECKBOX",
     ["STR_a3_rscdebugconsole_expressiontext", LSTRING(EnableAttribute_Description)],
     LSTRING(DisplayName),
