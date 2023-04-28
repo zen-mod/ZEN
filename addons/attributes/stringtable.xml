@@ -2,7 +2,6 @@
 <Project name="ZEN">
     <Package name="Attributes">
         <Key ID="STR_ZEN_Attributes_DisplayName">
-          <Original>Zeus Enhanced - Attributes</Original>
           <English>Zeus Enhanced - Attributes</English>
           <Czech>Zeus Enhanced - Atributy</Czech>
           <German>Zeus Enhanced - Attribute</German>
