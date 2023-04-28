@@ -6,7 +6,7 @@
     "Object",
     "STR_A3_Arsenal",
     {_entity call EFUNC(common,openArsenal)},
-    {alive _entity && {_entity isKindOf "CAManBase"}},
+    {GVAR(enableArsenal) && {alive _entity} && {_entity isKindOf "CAManBase"}},
     true
 ] call FUNC(addButton);
 
@@ -23,7 +23,7 @@
         };
     },
     {name _entity},
-    {alive _entity && {_entity isKindOf "CAManBase"}}
+    {GVAR(enableName) && {alive _entity} && {_entity isKindOf "CAManBase"}}
 ] call FUNC(addAttribute);
 
 [
@@ -37,7 +37,7 @@
         } forEach call EFUNC(common,getSelectedUnits);
     },
     {skill _entity},
-    {alive _entity && {!isNull group _entity && {side _entity != sideLogic}}}
+    {GVAR(enableSkill) && {alive _entity} && {!isNull group _entity && {side _entity != sideLogic}}}
 ] call FUNC(addAttribute);
 
 [
@@ -52,7 +52,7 @@
         } forEach SELECTED_OBJECTS;
     },
     {1 - damage _entity},
-    {alive _entity}
+    {GVAR(enableHealth) && {alive _entity}}
 ] call FUNC(addAttribute);
 
 [
@@ -66,7 +66,7 @@
         } forEach call EFUNC(common,getSelectedVehicles);
     },
     {fuel _entity},
-    {alive _entity && {getNumber (configOf _entity >> "fuelCapacity") > 0}}
+    {GVAR(enableFuel) && {alive _entity} && {getNumber (configOf _entity >> "fuelCapacity") > 0}}
 ] call FUNC(addAttribute);
 
 [
@@ -80,7 +80,7 @@
         } forEach call EFUNC(common,getSelectedVehicles);
     },
     {_entity call EFUNC(common,getVehicleAmmo)},
-    {alive _entity && {_entity call EFUNC(common,getVehicleAmmo) != -1}}
+    {GVAR(enableAmmo) && {alive _entity} && {_entity call EFUNC(common,getVehicleAmmo) != -1}}
 ] call FUNC(addAttribute);
 
 [
@@ -121,7 +121,7 @@
         } forEach call EFUNC(common,getSelectedUnits);
     },
     {toUpper unitPos _entity},
-    {alive _entity && {_entity isKindOf "CAManBase"}}
+    {GVAR(enableStance) && {alive _entity} && {_entity isKindOf "CAManBase"}}
 ] call FUNC(addAttribute);
 
 [
@@ -157,7 +157,7 @@
         } forEach call EFUNC(common,getSelectedVehicles);
     },
     {isEngineOn _entity},
-    {alive _entity && {getNumber (configOf _entity >> "fuelCapacity") > 0} && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}}
+    {GVAR(enableEngine) && {alive _entity} && {getNumber (configOf _entity >> "fuelCapacity") > 0} && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}}
 ] call FUNC(addAttribute);
 
 [
@@ -182,7 +182,7 @@
         } forEach call EFUNC(common,getSelectedVehicles);
     },
     {isLightOn _entity},
-    {alive _entity && {"true" configClasses (configOf _entity >> "Reflectors") isNotEqualTo []} && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}}
+    {GVAR(enableLights) && {alive _entity} && {"true" configClasses (configOf _entity >> "Reflectors") isNotEqualTo []} && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}}
 ] call FUNC(addAttribute);
 
 [
@@ -195,7 +195,7 @@
         [_buildings, _value] call EFUNC(building_markers,set);
     },
     {_entity getVariable [QEGVAR(building_markers,marker), ""] != ""},
-    {_entity isKindOf "Building"}
+    {GVAR(enableBuildingMarker) && _entity isKindOf "Building"}
 ] call FUNC(addAttribute);
 
 [
@@ -207,7 +207,7 @@
         [QEGVAR(common,setPlateNumber), [_entity, _value], _entity] call CBA_fnc_targetEvent;
     },
     {getPlateNumber _entity},
-    {alive _entity && {getText (configOf _entity >> "PlateInfos" >> "name") in selectionNames _entity}}
+    {GVAR(enablePlateNumber) && {alive _entity} && {getText (configOf _entity >> "PlateInfos" >> "name") in selectionNames _entity}}
 ] call FUNC(addAttribute);
 
 [
@@ -322,7 +322,8 @@
     },
     {
         [isDamageAllowed _entity, simulationEnabled _entity, !isObjectHidden _entity]
-    }
+    },
+    {GVAR(enableStates)}
 ] call FUNC(addAttribute);
 
 [
@@ -348,7 +349,7 @@
         };
     },
     {""},
-    {IS_ADMIN_LOGGED || {!GETMVAR(ZEN_disableCodeExecution,false)}}
+    {GVAR(enableDebugConsole) && {IS_ADMIN_LOGGED || {!GETMVAR(ZEN_disableCodeExecution,false)}}}
 ] call FUNC(addAttribute);
 
 // - Group --------------------------------------------------------------------
@@ -361,7 +362,8 @@
     QGVAR(edit),
     nil,
     {_entity setGroupIdGlobal [_value]},
-    {groupID _entity}
+    {groupID _entity},
+    {GVAR(enableGroupID)}
 ] call FUNC(addAttribute);
 
 [
@@ -376,7 +378,8 @@
             } forEach units _x;
         } forEach SELECTED_GROUPS;
     },
-    {skill leader _entity}
+    {skill leader _entity},
+    {GVAR(enableGroupSkill)}
 ] call FUNC(addAttribute);
 
 [
@@ -399,7 +402,8 @@
             [QEGVAR(common,setFormation), [_x, _value], _x] call CBA_fnc_targetEvent;
         } forEach SELECTED_GROUPS;
     },
-    {formation _entity}
+    {formation _entity},
+    {GVAR(enableGroupFormation)}
 ] call FUNC(addAttribute);
 
 [
@@ -418,7 +422,8 @@
             [QEGVAR(common,setBehaviour), [_x, _value], _x] call CBA_fnc_targetEvent;
         } forEach SELECTED_GROUPS;
     },
-    {behaviour leader _entity}
+    {behaviour leader _entity},
+    {GVAR(enableGroupBehaviour)}
 ] call FUNC(addAttribute);
 
 [
@@ -437,7 +442,8 @@
             [QEGVAR(common,setCombatMode), [_x, _value], _x] call CBA_fnc_targetEvent;
         } forEach SELECTED_GROUPS;
     },
-    {combatMode _entity}
+    {combatMode _entity},
+    {GVAR(enableGroupCombatMode)}
 ] call FUNC(addAttribute);
 
 [
@@ -454,7 +460,8 @@
             [QEGVAR(common,setSpeedMode), [_x, _value], _x] call CBA_fnc_targetEvent;
         } forEach SELECTED_GROUPS;
     },
-    {speedMode _entity}
+    {speedMode _entity},
+    {GVAR(enableGroupSpeed)}
 ] call FUNC(addAttribute);
 
 [
@@ -474,7 +481,8 @@
             } forEach units _x;
         } forEach SELECTED_GROUPS;
     },
-    {toUpper unitPos leader _entity}
+    {toUpper unitPos leader _entity},
+    {GVAR(enableGroupStance)}
 ] call FUNC(addAttribute);
 
 [
@@ -500,7 +508,7 @@
         };
     },
     {""},
-    {IS_ADMIN_LOGGED || {!GETMVAR(ZEN_disableCodeExecution,false)}}
+    {GVAR(enableDebugConsole) && {IS_ADMIN_LOGGED || {!GETMVAR(ZEN_disableCodeExecution,false)}}}
 ] call FUNC(addAttribute);
 
 // - Waypoint -----------------------------------------------------------------
@@ -518,7 +526,8 @@
             _x setWaypointType _type;
             if (_type == "SCRIPTED") then {_x setWaypointScript _script};
         } forEach SELECTED_WAYPOINTS;
-    }
+    },
+    {GVAR(enableWpName)}
 ] call FUNC(addAttribute);
 
 [
