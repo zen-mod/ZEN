@@ -526,8 +526,7 @@
             _x setWaypointType _type;
             if (_type == "SCRIPTED") then {_x setWaypointScript _script};
         } forEach SELECTED_WAYPOINTS;
-    },
-    {GVAR(enableWpName)}
+    }
 ] call FUNC(addAttribute);
 
 [
