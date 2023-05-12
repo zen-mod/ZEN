@@ -113,16 +113,22 @@
     };
 }, {}, [DIK_R, [true, true, false]]] call CBA_fnc_addKeybind; // Default: CTRL + SHIFT + R
 
-[ELSTRING(main,DisplayName), QGVAR(pingCurators), [LSTRING(pingCurators), LSTRING(pingCurators_Description)], {
+[ELSTRING(main,DisplayName), QGVAR(pingCurators), [LSTRING(PingCurators), LSTRING(PingCurators_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
-        private _thisCurator = getAssignedCuratorLogic player;
-        private _object = if (SELECTED_OBJECTS isEqualTo []) then {
-            curatorMouseOver param [1, _thisCurator]
-        } else {
-            SELECTED_OBJECTS select 0
+        private _target = SELECTED_OBJECTS param [0, objNull];
+
+        if (isNull _target) then {
+            curatorMouseOver params ["_type", "_entity"];
+
+            if (_type == "OBJECT") then {
+                _target = _entity;
+            } else {
+                _target = ASLToAGL ([] call EFUNC(common,getPosFromScreen));
+            };
         };
-        if (_object == _thisCurator) then {_thisCurator setPosASL ([] call EFUNC(common,getPosFromScreen))};
-        [QGVAR(pingCurator), [_object], allCurators] call CBA_fnc_targetEvent;
+
+        private _curator = getAssignedCuratorLogic player;
+        [QGVAR(pingCurators), [_curator, _target], allCurators] call CBA_fnc_targetEvent;
 
         true // handled
     };

@@ -16,6 +16,7 @@ GVAR(includeCrew) = true;
     params ["_logic"];
 
     _logic addEventHandler ["CuratorObjectPlaced", {call FUNC(handleObjectPlaced)}];
+    _logic addEventHandler ["CuratorPinged", {call FUNC(handleCuratorPinged)}];
 }, true, [], true] call CBA_fnc_addClassEventHandler;
 
 ADDON = true;

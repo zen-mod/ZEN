@@ -331,6 +331,14 @@
             <Chinese>重新加載Zeus界面。可用於修復鎖定問題。</Chinese>
             <Italian>Ricarica l'interfaccia di Zeus. Può essere utilizzato per risolvere i problemi di blocco.</Italian>
         </Key>
+        <Key ID="STR_ZEN_Editor_PingCurators">
+            <English>Ping Zeus</English>
+            <German>Zeus anpingen</German>
+        </Key>
+        <Key ID="STR_ZEN_Editor_PingCurators_Description">
+            <English>Pings other Zeus curators on the selected/hovered object or cursor position.</English>
+            <German>Pingt andere Zeus auf ausgewählte Objekte oder Mausposition an.</German>
+        </Key>
         <Key ID="STR_ZEN_Editor_AIControl">
             <English>AI Control</English>
         </Key>
@@ -410,14 +418,6 @@
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleAIPath_Description">
             <English>Makes selected AI units start or stop moving. Does not affect aiming or shooting. Similar to "Hold Position" in RTS games.</English>
-        </Key>
-        <Key ID="STR_ZEN_Editor_pingCurators">
-            <English>Ping Curators</English>
-            <German>Zeus anpingen</German>
-        </Key>
-        <Key ID="STR_ZEN_Editor_pingCurators_Description">
-            <English>Ping other Curators on the selected/hovered object or cursor position.</English>
-            <German>Pingt andere Zeus auf ausgewählte Objekte oder Mausposition an.</German>
         </Key>
     </Package>
 </Project>
