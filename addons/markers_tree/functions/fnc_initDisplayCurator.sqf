@@ -62,12 +62,5 @@ missionNamespace getVariable ["RscDisplayCurator_sections", [0, 0]] params ["_mo
 // to properly hide the empty side control when initially in markers mode
 if (_mode == 3) then {
     private _ctrlSideEmpty = _display displayCtrl IDC_RSCDISPLAYCURATOR_SIDEEMPTY;
-
-    [{
-        [{
-            [{
-                _this ctrlShow false;
-            }, _this] call CBA_fnc_execNextFrame;
-        }, _this] call CBA_fnc_execNextFrame;
-    }, _ctrlSideEmpty] call CBA_fnc_execNextFrame;
+    [{_this ctrlShow false}, _ctrlSideEmpty, 3] call EFUNC(common,execAfterNFrames);
 };
