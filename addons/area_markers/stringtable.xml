@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Area_Markers">
+        <Key ID="STR_ZEN_Area_Markers_DisplayName">
+            <English>Area Markers</English>
+        </Key>
+        <Key ID="STR_ZEN_Area_Markers_EditableMarkers">
+            <English>Editable Markers</English>
+        </Key>
+        <Key ID="STR_ZEN_Area_Markers_EditableMarkers_Description">
+            <English>Controls which area markers are editable through Zeus.</English>
+        </Key>
+        <Key ID="STR_ZEN_Area_Markers_AllMarkers">
+            <English>All Markers</English>
+        </Key>
+        <Key ID="STR_ZEN_Area_Markers_AllMarkers_Description">
+            <English>All area markers (including those placed in 3DEN or created through script) are editable unless manually blacklisted.</English>
+        </Key>
+        <Key ID="STR_ZEN_Area_Markers_OnlyZeusCreated">
+            <English>Only Zeus Created</English>
+        </Key>
+        <Key ID="STR_ZEN_Area_Markers_OnlyZeusCreated_Description">
+            <English>Only area markers created through Zeus are editable.</English>
+        </Key>
         <Key ID="STR_ZEN_Area_Markers_CreateAreaMarker">
             <English>Create Area Marker</English>
             <Russian>Создать Маркер Области</Russian>
