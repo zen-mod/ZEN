@@ -17,3 +17,4 @@
  */
 
 GVAR(pingTarget) = nil;
+GVAR(pingViewed) = nil;
