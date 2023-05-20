@@ -20,9 +20,9 @@ params ["_ctrlTreeEngine", "_selectedPath"];
 
 if (_selectedPath isEqualTo []) then {
     private _display = ctrlParent _ctrlTreeEngine;
-    private _ctrlTreeCustom = _display displayCtrl IDC_MARKERS_TREE;
+    private _ctrlTreeIcons = _display displayCtrl IDC_MARKERS_TREE_ICONS;
 
-    if (count tvCurSel _ctrlTreeCustom == 2) then {
-        _ctrlTreeCustom tvSetCurSel [-1];
+    if (count tvCurSel _ctrlTreeIcons == 2) then {
+        _ctrlTreeIcons tvSetCurSel [-1];
     };
 };

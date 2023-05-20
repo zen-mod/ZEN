@@ -1,7 +1,6 @@
 PREP(addGroupIcons);
 PREP(addModIcons);
 PREP(declutterEmptyTree);
-PREP(fixSideButtons);
 PREP(handleCuratorPinged);
 PREP(handleKeyDown);
 PREP(handleKeyUp);

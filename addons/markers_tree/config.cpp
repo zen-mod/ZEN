@@ -6,7 +6,10 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"zen_editor"};
+        requiredAddons[] = {
+            "zen_area_markers",
+            "zen_editor"
+        };
         author = ECSTRING(main,Author);
         authors[] = {"mharis001"};
         url = ECSTRING(main,URL);
