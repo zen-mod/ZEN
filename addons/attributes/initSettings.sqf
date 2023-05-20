@@ -209,3 +209,59 @@
     true,
     false
 ] call CBA_fnc_addSetting;
+
+// - Waypoint -----------------------------------------------------------------
+
+[
+    QGVAR(enableWaypointType),
+    "CHECKBOX",
+    "STR_3DEN_Object_Attribute_Type_displayName",
+    [LSTRING(DisplayName), "STR_3DEN_Waypoint_textPlural"],
+    true,
+    false
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableWaypointTimeout),
+    "CHECKBOX",
+    LSTRING(Timeout),
+    [LSTRING(DisplayName), "STR_3DEN_Waypoint_textPlural"],
+    true,
+    false
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableWaypointFormation),
+    "CHECKBOX",
+    "STR_3DEN_Group_Attribute_Formation_displayName",
+    [LSTRING(DisplayName), "STR_3DEN_Waypoint_textPlural"],
+    true,
+    false
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableWaypointBehaviour),
+    "CHECKBOX",
+    "STR_3DEN_Group_Attribute_Behaviour_displayName",
+    [LSTRING(DisplayName), "STR_3DEN_Waypoint_textPlural"],
+    true,
+    false
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableWaypointCombatMode),
+    "CHECKBOX",
+    "STR_3DEN_Group_Attribute_CombatMode_displayName",
+    [LSTRING(DisplayName), "STR_3DEN_Waypoint_textPlural"],
+    true,
+    false
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableWaypointSpeed),
+    "CHECKBOX",
+    "STR_HC_Menu_Speed",
+    [LSTRING(DisplayName), "STR_3DEN_Waypoint_textPlural"],
+    true,
+    false
+] call CBA_fnc_addSetting;

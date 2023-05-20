@@ -526,7 +526,9 @@
             _x setWaypointType _type;
             if (_type == "SCRIPTED") then {_x setWaypointScript _script};
         } forEach SELECTED_WAYPOINTS;
-    }
+    },
+    nil,
+    {GVAR(enableWaypointType)}
 ] call FUNC(addAttribute);
 
 [
@@ -585,7 +587,8 @@
     QGVAR(slider),
     [0, 1800, 15, false, 0],
     {_entity setWaypointTimeout [_value, _value, _value]},
-    {random waypointTimeout _entity}
+    {random waypointTimeout _entity},
+    {GVAR(enableWaypointTimeout)}
 ] call FUNC(addAttribute);
 
 [
@@ -615,7 +618,8 @@
             [QEGVAR(common,setWaypointFormation), [_x, _value]] call CBA_fnc_serverEvent;
         } forEach SELECTED_WAYPOINTS;
     },
-    {waypointFormation _entity}
+    {waypointFormation _entity},
+    {GVAR(enableWaypointFormation)}
 ] call FUNC(addAttribute);
 
 [
@@ -641,7 +645,8 @@
             [QEGVAR(common,setWaypointBehaviour), [_x, _value]] call CBA_fnc_serverEvent;
         } forEach SELECTED_WAYPOINTS;
     },
-    {waypointBehaviour _entity}
+    {waypointBehaviour _entity},
+    {GVAR(enableWaypointBehaviour)}
 ] call FUNC(addAttribute);
 
 [
@@ -667,7 +672,8 @@
             [QEGVAR(common,setWaypointCombatMode), [_x, _value]] call CBA_fnc_serverEvent;
         } forEach SELECTED_WAYPOINTS;
     },
-    {waypointCombatMode _entity}
+    {waypointCombatMode _entity},
+    {GVAR(enableWaypointCombatMode)}
 ] call FUNC(addAttribute);
 
 [
@@ -691,7 +697,8 @@
             [QEGVAR(common,setWaypointSpeed), [_x, _value]] call CBA_fnc_serverEvent;
         } forEach SELECTED_WAYPOINTS;
     },
-    {waypointSpeed _entity}
+    {waypointSpeed _entity},
+    {GVAR(enableWaypointSpeed)}
 ] call FUNC(addAttribute);
 
 // - Marker -------------------------------------------------------------------
