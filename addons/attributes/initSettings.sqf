@@ -2,7 +2,7 @@
 [
     QGVAR(enableExecute),
     "CHECKBOX",
-    ["STR_a3_rscdebugconsole_expressiontext", LSTRING(EnableAttribute_Description)],
+    "STR_a3_rscdebugconsole_expressiontext",
     LSTRING(DisplayName),
     true,
     false
@@ -13,7 +13,7 @@
 [
     QGVAR(enableArsenal),
     "CHECKBOX",
-    ["STR_A3_Arsenal", LSTRING(EnableAttribute_Description)],
+    "STR_A3_Arsenal",
     [LSTRING(DisplayName), "STR_3DEN_Object_textPlural"],
     true,
     false
@@ -22,7 +22,7 @@
 [
     QGVAR(enableName),
     "CHECKBOX",
-    ["STR_3DEN_Object_Attribute_UnitName_displayName", LSTRING(EnableAttribute_Description)],
+    "STR_3DEN_Object_Attribute_UnitName_displayName",
     [LSTRING(DisplayName), "STR_3DEN_Object_textPlural"],
     true,
     false
@@ -31,7 +31,7 @@
 [
     QGVAR(enableSkill),
     "CHECKBOX",
-    ["STR_3DEN_Object_Attribute_Skill_displayName", LSTRING(EnableAttribute_Description)],
+    "STR_3DEN_Object_Attribute_Skill_displayName",
     [LSTRING(DisplayName), "STR_3DEN_Object_textPlural"],
     true,
     false
@@ -40,7 +40,7 @@
 [
     QGVAR(enableHealth),
     "CHECKBOX",
-    ["STR_3DEN_Object_Attribute_Health_displayName", LSTRING(EnableAttribute_Description)],
+    "STR_3DEN_Object_Attribute_Health_displayName",
     [LSTRING(DisplayName), "STR_3DEN_Object_textPlural"],
     true,
     false
@@ -49,7 +49,7 @@
 [
     QGVAR(enableFuel),
     "CHECKBOX",
-    ["STR_3DEN_Object_Attribute_Fuel_displayName", LSTRING(EnableAttribute_Description)],
+    "STR_3DEN_Object_Attribute_Fuel_displayName",
     [LSTRING(DisplayName), "STR_3DEN_Object_textPlural"],
     true,
     false
@@ -58,7 +58,7 @@
 [
     QGVAR(enableAmmo),
     "CHECKBOX",
-    ["STR_3DEN_Object_Attribute_Ammo_displayName", LSTRING(EnableAttribute_Description)],
+    "STR_3DEN_Object_Attribute_Ammo_displayName",
     [LSTRING(DisplayName), "STR_3DEN_Object_textPlural"],
     true,
     false
@@ -67,7 +67,7 @@
 [
     QGVAR(enableRank),
     "CHECKBOX",
-    ["STR_3DEN_Object_Attribute_Rank_displayName", LSTRING(EnableAttribute_Description)],
+    "STR_3DEN_Object_Attribute_Rank_displayName",
     [LSTRING(DisplayName), "STR_3DEN_Object_textPlural"],
     true,
     false
@@ -76,7 +76,7 @@
 [
     QGVAR(enableStance),
     "CHECKBOX",
-    ["STR_A3_RscAttributeUnitPos_Title", LSTRING(EnableAttribute_Description)],
+    "STR_A3_RscAttributeUnitPos_Title",
     [LSTRING(DisplayName), "STR_3DEN_Object_textPlural"],
     true,
     false
@@ -85,7 +85,7 @@
 [
     QGVAR(enableVehicleLock),
     "CHECKBOX",
-    ["str_3den_object_attribute_lock_displayname", LSTRING(EnableAttribute_Description)],
+    "STR_3den_object_attribute_lock_displayname",
     [LSTRING(DisplayName), "STR_3DEN_Object_textPlural"],
     true,
     false
@@ -94,7 +94,7 @@
 [
     QGVAR(enableEngine),
     "CHECKBOX",
-    [LSTRING(Engine), LSTRING(EnableAttribute_Description)],
+    LSTRING(Engine),
     [LSTRING(DisplayName), "STR_3DEN_Object_textPlural"],
     true,
     false
@@ -103,7 +103,7 @@
 [
     QGVAR(enableLights),
     "CHECKBOX",
-    [LSTRING(Lights), LSTRING(EnableAttribute_Description)],
+    LSTRING(Lights),
     [LSTRING(DisplayName), "STR_3DEN_Object_textPlural"],
     true,
     false
@@ -112,7 +112,7 @@
 [
     QGVAR(enableBuildingMarker),
     "CHECKBOX",
-    [ELSTRING(building_markers,BuildingMarker), LSTRING(EnableAttribute_Description)],
+    ELSTRING(building_markers,BuildingMarker),
     [LSTRING(DisplayName), "STR_3DEN_Object_textPlural"],
     true,
     false
@@ -121,7 +121,7 @@
 [
     QGVAR(enablePlateNumber),
     "CHECKBOX",
-    [LSTRING(PlateNumber), LSTRING(EnableAttribute_Description)],
+    LSTRING(PlateNumber),
     [LSTRING(DisplayName), "STR_3DEN_Object_textPlural"],
     true,
     false
@@ -130,7 +130,7 @@
 [
     QGVAR(enableRespawn),
     "CHECKBOX",
-    ["str_3den_multiplayer_attributecategory_respawn_displayname", LSTRING(EnableAttribute_Description)],
+    "STR_3den_multiplayer_attributecategory_respawn_displayname",
     [LSTRING(DisplayName), "STR_3DEN_Object_textPlural"],
     true,
     false
@@ -139,7 +139,7 @@
 [
     QGVAR(enableStates),
     "CHECKBOX",
-    [LSTRING(States), LSTRING(EnableAttribute_Description)],
+    LSTRING(States),
     [LSTRING(DisplayName), "STR_3DEN_Object_textPlural"],
     true,
     false
@@ -150,7 +150,7 @@
 [
     QGVAR(enableGroupID),
     "CHECKBOX",
-    ["STR_A3_RscAttributeGroupID_Title", LSTRING(EnableAttribute_Description)],
+    "STR_A3_RscAttributeGroupID_Title",
     [LSTRING(DisplayName), "str_a3_rscdisplaycurator_modegroups_tooltip"],
     true,
     false
@@ -159,7 +159,7 @@
 [
     QGVAR(enableGroupSkill),
     "CHECKBOX",
-    ["STR_3DEN_Object_Attribute_Skill_displayName", LSTRING(EnableAttribute_Description)],
+    "STR_3DEN_Object_Attribute_Skill_displayName",
     [LSTRING(DisplayName), "str_a3_rscdisplaycurator_modegroups_tooltip"],
     true,
     false
@@ -168,7 +168,7 @@
 [
     QGVAR(enableGroupFormation),
     "CHECKBOX",
-    ["STR_3DEN_Group_Attribute_Formation_displayName", LSTRING(EnableAttribute_Description)],
+    "STR_3DEN_Group_Attribute_Formation_displayName",
     [LSTRING(DisplayName), "str_a3_rscdisplaycurator_modegroups_tooltip"],
     true,
     false
@@ -177,7 +177,7 @@
 [
     QGVAR(enableGroupBehaviour),
     "CHECKBOX",
-    ["STR_3DEN_Group_Attribute_Behaviour_displayName", LSTRING(EnableAttribute_Description)],
+    "STR_3DEN_Group_Attribute_Behaviour_displayName",
     [LSTRING(DisplayName), "str_a3_rscdisplaycurator_modegroups_tooltip"],
     true,
     false
@@ -186,7 +186,7 @@
 [
     QGVAR(enableGroupCombatMode),
     "CHECKBOX",
-    ["STR_3DEN_Group_Attribute_CombatMode_displayName", LSTRING(EnableAttribute_Description)],
+    "STR_3DEN_Group_Attribute_CombatMode_displayName",
     [LSTRING(DisplayName), "str_a3_rscdisplaycurator_modegroups_tooltip"],
     true,
     false
@@ -195,7 +195,7 @@
 [
     QGVAR(enableGroupSpeed),
     "CHECKBOX",
-    ["STR_HC_Menu_Speed", LSTRING(EnableAttribute_Description)],
+    "STR_HC_Menu_Speed",
     [LSTRING(DisplayName), "str_a3_rscdisplaycurator_modegroups_tooltip"],
     true,
     false
@@ -204,7 +204,7 @@
 [
     QGVAR(enableGroupStance),
     "CHECKBOX",
-    ["STR_A3_RscAttributeUnitPos_Title", LSTRING(EnableAttribute_Description)],
+    "STR_A3_RscAttributeUnitPos_Title",
     [LSTRING(DisplayName), "str_a3_rscdisplaycurator_modegroups_tooltip"],
     true,
     false
