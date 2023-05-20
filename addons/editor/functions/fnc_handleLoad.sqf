@@ -56,6 +56,7 @@ if (GVAR(disableLiveSearch)) then {
 };
 
 _display displayAddEventHandler ["KeyDown", {call FUNC(handleKeyDown)}];
+_display displayAddEventHandler ["KeyUp", {call FUNC(handleKeyUp)}];
 
 {
     private _ctrl = _display displayCtrl _x;

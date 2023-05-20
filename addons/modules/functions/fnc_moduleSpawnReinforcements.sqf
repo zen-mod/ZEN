@@ -10,8 +10,7 @@
  * 3: LZ Position <ARRAY>
  * 4: RP Position <ARRAY>
  * 5: RTB and Despawn <BOOL>
- * 6: Insertion Method <NUMBER>
- *   - 0: Land, 1: Paradrop, 2: Fastrope
+ * 6: Insertion Method <STRING>
  * 7: Infantry Behaviour <NUMBER>
  *   - 0: Default, 1: Relaxed, 2: Cautious, 3: Combat
  * 8: Fly Height <NUMBER>
@@ -83,23 +82,14 @@ private _infantryGroup = createGroup [_side, true];
     _unit moveInCargo _vehicle;
 } forEach _infantryTypes;
 
-// Use normal transport unload if fastroping is not available
-if (_insertionMethod == 2 && {!isClass (configFile >> "CfgPatches" >> "ace_fastroping") || {getNumber (_vehicleConfig >> "ace_fastroping_enabled") == 0}}) then {
-    _insertionMethod = 0;
-};
-
 // Add waypoint to make vehicle drop units off at the LZ
 // Handle insertion method parameter for air vehicles
 private _waypoint = _vehicleGroup addWaypoint [_positionLZ, WAYPOINT_RADIUS];
 
-if (_isAir && {_insertionMethod > 0}) then {
-    private _script = [
-        QPATHTOEF(ai,functions\fnc_waypointParadrop.sqf),
-        QPATHTOEF(ai,functions\fnc_waypointFastrope.sqf)
-    ] select (_insertionMethod == 2);
-
-    _waypoint setWaypointType "SCRIPTED";
-    _waypoint setWaypointScript _script;
+if (_isAir) then {
+    private _waypointConfig = configFile >> "ZEN_WaypointTypes" >> _insertionMethod;
+    _waypoint setWaypointType getText (_waypointConfig >> "type");
+    _waypoint setWaypointScript getText (_waypointConfig >> "script");
 } else {
     _waypoint setWaypointType "TR UNLOAD";
 };

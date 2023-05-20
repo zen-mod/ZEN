@@ -33,7 +33,7 @@
             group _unit enableAttack true;
         };
 
-        _unit setVariable [QGVAR(garrisonned), false, true];
+        _unit setVariable [QGVAR(garrisoned), false, true];
         
         // End fix for rotating garrisoned units
         _unit doWatch objNull;

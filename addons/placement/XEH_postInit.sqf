@@ -23,7 +23,7 @@
 
         private _objectType = _ctrlTreeRecent tvData _selectedPath;
 
-        if (!isClass (configFile >> "CfgVehicles" >> _objectType)) then {
+        if (!isClass (configFile >> "CfgVehicles" >> _objectType) || {_objectType isKindOf "Logic"}) then {
             _objectType = "";
         };
 
