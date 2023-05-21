@@ -18,7 +18,7 @@ GVAR(camYaw) = -45;
     "Object",
     "STR_A3_Garage",
     {_entity call FUNC(openGarage)},
-    {GVAR(enableGarage) && {alive _entity} && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}},
+    {EGVAR(attributes,enableGarage) && {alive _entity} && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}},
     true
 ] call EFUNC(attributes,addButton);
 

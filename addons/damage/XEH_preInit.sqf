@@ -23,7 +23,7 @@ PREP_RECOMPILE_END;
         [_entity] call FUNC(configure);
     },
     {
-        GVAR(enableDamage) && {alive _entity} && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}
+        EGVAR(attributes,enableDamage) && {alive _entity} && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}
     }
 ] call EFUNC(attributes,addButton);
 

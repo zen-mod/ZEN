@@ -16,7 +16,7 @@ PREP_RECOMPILE_END;
         [_entity] call FUNC(configure);
     },
     {
-        GVAR(enableInventory) && {alive _entity} && {maxLoad _entity > 0} && {!(_entity isKindOf "CAManBase")}
+        EGVAR(attributes,enableInventory) && {alive _entity} && {maxLoad _entity > 0} && {!(_entity isKindOf "CAManBase")}
     }
 ] call EFUNC(attributes,addButton);
 
