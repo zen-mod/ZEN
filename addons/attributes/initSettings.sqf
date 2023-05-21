@@ -1,23 +1,4 @@
-
-[
-    QGVAR(enableExecute),
-    "CHECKBOX",
-    "STR_a3_rscdebugconsole_expressiontext",
-    LSTRING(DisplayName),
-    true,
-    false
-] call CBA_fnc_addSetting;
-
 // - Object -------------------------------------------------------------------
-
-[
-    QGVAR(enableArsenal),
-    "CHECKBOX",
-    "STR_A3_Arsenal",
-    [LSTRING(DisplayName), "STR_3DEN_Object_textPlural"],
-    true,
-    false
-] call CBA_fnc_addSetting;
 
 [
     QGVAR(enableName),
@@ -128,9 +109,18 @@
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(enableRespawn),
+    QGVAR(enableRespawnPosition),
     "CHECKBOX",
-    "STR_3den_multiplayer_attributecategory_respawn_displayname",
+    LSTRING(RespawnPosition),
+    [LSTRING(DisplayName), "STR_3DEN_Object_textPlural"],
+    true,
+    false
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableRespawnVehicle),
+    "CHECKBOX",
+    LSTRING(RespawnVehicle),
     [LSTRING(DisplayName), "STR_3DEN_Object_textPlural"],
     true,
     false
@@ -140,6 +130,60 @@
     QGVAR(enableStates),
     "CHECKBOX",
     LSTRING(States),
+    [LSTRING(DisplayName), "STR_3DEN_Object_textPlural"],
+    true,
+    false
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableExecute),
+    "CHECKBOX",
+    "STR_a3_rscdebugconsole_expressiontext",
+    [LSTRING(DisplayName), "STR_3DEN_Object_textPlural"],
+    true,
+    false
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableArsenal),
+    "CHECKBOX",
+    "STR_A3_Arsenal",
+    [LSTRING(DisplayName), "STR_3DEN_Object_textPlural"],
+    true,
+    false
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableSkills),
+    "CHECKBOX",
+    LSTRING(Skills),
+    [LSTRING(DisplayName), "STR_3DEN_Object_textPlural"],
+    true,
+    false
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableAbilities),
+    "CHECKBOX",
+    LSTRING(Abilities),
+    [LSTRING(DisplayName), "STR_3DEN_Object_textPlural"],
+    true,
+    false
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableTraits),
+    "CHECKBOX",
+    LSTRING(Traits),
+    [LSTRING(DisplayName), "STR_3DEN_Object_textPlural"],
+    true,
+    false
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableSensors),
+    "CHECKBOX",
+    LSTRING(Sensors),
     [LSTRING(DisplayName), "STR_3DEN_Object_textPlural"],
     true,
     false
@@ -210,12 +254,57 @@
     false
 ] call CBA_fnc_addSetting;
 
+[
+    QGVAR(enableGroupExecute),
+    "CHECKBOX",
+    "STR_a3_rscdebugconsole_expressiontext",
+    [LSTRING(DisplayName), "str_a3_rscdisplaycurator_modegroups_tooltip"],
+    true,
+    false
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableGroupSide),
+    "CHECKBOX",
+    "STR_Eval_TypeSide",
+    [LSTRING(DisplayName), "str_a3_rscdisplaycurator_modegroups_tooltip"],
+    true,
+    false
+] call CBA_fnc_addSetting;
+
 // - Waypoint -----------------------------------------------------------------
 
 [
     QGVAR(enableWaypointType),
     "CHECKBOX",
     "STR_3DEN_Object_Attribute_Type_displayName",
+    [LSTRING(DisplayName), "STR_3DEN_Waypoint_textPlural"],
+    true,
+    false
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableWaypointLoiterDirection),
+    "CHECKBOX",
+    "STR_3DEN_Waypoint_Attribute_LoiterDirection_displayname",
+    [LSTRING(DisplayName), "STR_3DEN_Waypoint_textPlural"],
+    true,
+    false
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableWaypointLoiterRadius),
+    "CHECKBOX",
+    "STR_3DEN_Waypoint_Attribute_LoiterRadius_displayname",
+    [LSTRING(DisplayName), "STR_3DEN_Waypoint_textPlural"],
+    true,
+    false
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableWaypointLoiterAltitude),
+    "CHECKBOX",
+    "STR_3DEN_Waypoint_Attribute_LoiterAltitude_displayname",
     [LSTRING(DisplayName), "STR_3DEN_Waypoint_textPlural"],
     true,
     false
@@ -262,6 +351,35 @@
     "CHECKBOX",
     "STR_HC_Menu_Speed",
     [LSTRING(DisplayName), "STR_3DEN_Waypoint_textPlural"],
+    true,
+    false
+] call CBA_fnc_addSetting;
+
+// - Marker -------------------------------------------------------------------
+
+[
+    QGVAR(enableMarkerText),
+    "CHECKBOX",
+    "STR_3DEN_Marker_Attribute_Text_displayName",
+    [LSTRING(DisplayName), "STR_3DEN_Marker_textPlural"],
+    true,
+    false
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableMarkerColor),
+    "CHECKBOX",
+    "STR_3DEN_Marker_Attribute_Color_displayName",
+    [LSTRING(DisplayName), "STR_3DEN_Marker_textPlural"],
+    true,
+    false
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableMarkerAlpha),
+    "CHECKBOX",
+    "STR_3DEN_Marker_Attribute_Alpha_displayName",
+    [LSTRING(DisplayName), "STR_3DEN_Marker_textPlural"],
     true,
     false
 ] call CBA_fnc_addSetting;

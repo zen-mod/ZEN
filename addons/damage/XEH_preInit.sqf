@@ -6,6 +6,8 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
+#include "initSettings.sqf"
+
 [QGVAR(setHitPointsDamage), {
     params ["_vehicle", "_damageValues"];
 
@@ -21,7 +23,7 @@ PREP_RECOMPILE_END;
         [_entity] call FUNC(configure);
     },
     {
-        alive _entity && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}
+        GVAR(enableDamage) && {alive _entity} && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}
     }
 ] call EFUNC(attributes,addButton);
 

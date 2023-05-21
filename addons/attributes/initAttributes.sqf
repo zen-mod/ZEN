@@ -249,7 +249,7 @@
     {
         _entity getVariable [QGVAR(respawnPos), []] param [0, sideEmpty]
     },
-    {GVAR(enableRespawn) && {alive _entity} && {canMove _entity} && {_entity isKindOf "AllVehicles"} && {!(_entity isKindOf "Animal")}}
+    {GVAR(enableRespawnPosition) && {alive _entity} && {canMove _entity} && {_entity isKindOf "AllVehicles"} && {!(_entity isKindOf "Animal")}}
 ] call FUNC(addAttribute);
 
 [
@@ -298,7 +298,7 @@
 
         _respawnID
     },
-    {GVAR(enableRespawn) && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}}
+    {GVAR(enableRespawnVehicle) && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}}
 ] call FUNC(addAttribute);
 
 [
@@ -508,7 +508,7 @@
         };
     },
     {""},
-    {GVAR(enableExecute) && {IS_ADMIN_LOGGED || {!GETMVAR(ZEN_disableCodeExecution,false)}}}
+    {GVAR(enableGroupExecute) && {IS_ADMIN_LOGGED || {!GETMVAR(ZEN_disableCodeExecution,false)}}}
 ] call FUNC(addAttribute);
 
 // - Waypoint -----------------------------------------------------------------
@@ -544,7 +544,7 @@
         } forEach SELECTED_WAYPOINTS;
     },
     {waypointLoiterType _entity},
-    {waypointType _entity == "LOITER"}
+    {GVAR(enableWaypointLoiterDirection) && {waypointType _entity == "LOITER"}}
 ] call FUNC(addAttribute);
 
 [
@@ -561,7 +561,7 @@
         } forEach SELECTED_WAYPOINTS;
     },
     {str waypointLoiterRadius _entity},
-    {waypointType _entity == "LOITER"}
+    {GVAR(enableWaypointLoiterRadius) && {waypointType _entity == "LOITER"}}
 ] call FUNC(addAttribute);
 
 [
@@ -578,7 +578,7 @@
         } forEach SELECTED_WAYPOINTS;
     },
     {str waypointLoiterAltitude _entity},
-    {waypointType _entity == "LOITER"}
+    {GVAR(enableWaypointLoiterAltitude) && {waypointType _entity == "LOITER"}}
 ] call FUNC(addAttribute);
 
 [
@@ -711,7 +711,8 @@
     QGVAR(edit),
     nil,
     {_entity setMarkerText _value},
-    {markerText _entity}
+    {markerText _entity},
+    {GVAR(enableMarkerText)}
 ] call FUNC(addAttribute);
 
 [
@@ -729,7 +730,8 @@
         // Set this color to be applied to new markers of this type
         GVAR(previousMarkerColors) setVariable [markerType _entity, _value];
     },
-    {markerColor _entity}
+    {markerColor _entity},
+    {GVAR(enableMarkerColor)}
 ] call FUNC(addAttribute);
 
 [
@@ -738,7 +740,8 @@
     QGVAR(slider),
     [0, 1, 0.1, true],
     {_entity setMarkerAlpha _value},
-    {markerAlpha _entity}
+    {markerAlpha _entity},
+    {GVAR(enableMarkerAlpha)}
 ] call FUNC(addAttribute);
 
 // - Skills -------------------------------------------------------------------
@@ -749,7 +752,7 @@
     "Object",
     LSTRING(Skills),
     {[_entity, "Skills"] call FUNC(open)},
-    {alive _entity && {_entity isKindOf "CAManBase"}}
+    {GVAR(enableSkills) && {alive _entity} && {_entity isKindOf "CAManBase"}}
 ] call FUNC(addButton);
 
 [
@@ -877,7 +880,7 @@
     "Object",
     LSTRING(Abilities),
     {[_entity, "Abilities"] call FUNC(open)},
-    {alive _entity && {_entity isKindOf "CAManBase"}}
+    {GVAR(enableAbilities) && {alive _entity} && {_entity isKindOf "CAManBase"}}
 ] call FUNC(addButton);
 
 [
@@ -919,7 +922,7 @@
     "Object",
     LSTRING(Traits),
     {[_entity, "Traits"] call FUNC(open)},
-    {alive _entity && {_entity isKindOf "CAManBase"}}
+    {GVAR(enableTraits) && {alive _entity} && {_entity isKindOf "CAManBase"}}
 ] call FUNC(addButton);
 
 if (isClass (configFile >> "CfgPatches" >> "ace_medical")) then {
@@ -1014,7 +1017,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_explosives")) then {
     "Object",
     LSTRING(Sensors),
     {[_entity, "Sensors"] call FUNC(open)},
-    {alive _entity && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}}
+    {GVAR(enableSensors) && {alive _entity} && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}}
 ] call FUNC(addButton);
 
 [
@@ -1080,7 +1083,8 @@ if (isClass (configFile >> "CfgPatches" >> "ace_explosives")) then {
 [
     "Group",
     "STR_Eval_TypeSide",
-    {[_entity, "Side"] call FUNC(open)}
+    {[_entity, "Side"] call FUNC(open)},
+    {GVAR(enableGroupSide)}
 ] call FUNC(addButton);
 
 [
