@@ -7,6 +7,7 @@
  * 0: Curator <OBJECT>
  * 1: Ping Target <OBJECT|ARRAY>
  *   - Positions must be in AGL format.
+ * 2: Curator's Name <STRING> (default: "")
  *
  * Return Value:
  * None
@@ -32,7 +33,7 @@
 
 if (isNull curatorCamera) exitWith {};
 
-params ["_curator", "_target"];
+params ["_curator", "_target", ["_name", ""]];
 
 GVAR(pingTarget) = _target;
 
@@ -41,9 +42,7 @@ if (isNil QGVAR(pingDrawMap)) then {
     GVAR(pingDrawMap) = createHashMap;
 };
 
-private _hash = hashValue _curator;
-private _name = name getAssignedCuratorUnit _curator;
-GVAR(pingDrawMap) set [_hash, [_target, _name, CBA_missionTime]];
+GVAR(pingDrawMap) set [hashValue _curator, [_target, _name, CBA_missionTime]];
 
 if (isNil QGVAR(pingDraw3D)) then {
     GVAR(pingDraw3D) = addMissionEventHandler ["Draw3D", {

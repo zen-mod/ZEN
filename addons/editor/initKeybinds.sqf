@@ -128,7 +128,7 @@
         };
 
         private _curator = getAssignedCuratorLogic player;
-        [QGVAR(pingCurators), [_curator, _target], allCurators] call CBA_fnc_targetEvent;
+        [QGVAR(pingCurators), [_curator, _target, profileName], allCurators] call CBA_fnc_targetEvent;
 
         true // handled
     };
