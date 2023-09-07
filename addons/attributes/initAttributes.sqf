@@ -953,7 +953,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_medical")) then {
     ] call FUNC(addAttribute);
 };
 
-if (isClass (configFile >> "CfgPatches" >> "ace_repair")) then {
+if (isClass (configFile >> "CfgPatches" >> "ace_repair") && {missionNamespace getVariable ["ace_repair_enabled", false]}) then {
     [
         "Traits",
         LSTRING(EngineeringSkill),
