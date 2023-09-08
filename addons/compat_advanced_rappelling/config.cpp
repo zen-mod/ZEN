@@ -6,7 +6,8 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"zen_ai"};
+        requiredAddons[] = {"zen_ai", "AR_AdvancedRappelling"};
+        skipWhenMissingDependencies = 1;
         author = ECSTRING(main,Author);
         authors[] = {"Kex"};
         url = ECSTRING(main,URL);
