@@ -1,5 +1,6 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/zen-mod/ZEN/master/extras/assets/logo/logo_zen_black.png" width="500">
+    <img src="https://github.com/zen-mod/ZEN/raw/master/extras/assets/logo/black/ZEN-Logo.png#gh-light-mode-only" width="512">
+    <img src="https://github.com/zen-mod/ZEN/raw/master/extras/assets/logo/white/ZEN-Logo.png#gh-dark-mode-only" width="512">
 </p>
 
 <p align="center">
