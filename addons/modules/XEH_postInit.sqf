@@ -18,7 +18,7 @@ if (isServer) then {
 
         {
             _x hideObjectGlobal _hide;
-        } forEach nearestTerrainObjects [_position, _objectTypes, _radius];
+        } forEach nearestTerrainObjects [_position, _objectTypes, _radius, false, true]; // Sort false, 2Dmode true for tall objects
     }] call CBA_fnc_addEventHandler;
 };
 
