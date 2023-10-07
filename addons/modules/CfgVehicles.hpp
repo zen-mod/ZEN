@@ -309,6 +309,14 @@ class CfgVehicles {
         icon = QPATHTOF(ui\light_ca.paa);
         portrait = QPATHTOF(ui\light_ca.paa);
     };
+    class GVAR(moduleLocation): GVAR(moduleBase) {
+        curatorCanAttach = 0;
+        category = "Environment";
+        displayName = "$STR_3DEN_Display3DEN_Locations";
+        icon = "\a3\3den\Data\Displays\Display3DEN\PanelLeft\entityList_location_ca.paa";
+        portrait = "\a3\3den\Data\Displays\Display3DEN\PanelLeft\entityList_location_ca.paa";
+        function = QFUNC(moduleLocation);
+    };
     class GVAR(moduleMakeInvincible): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Objects);

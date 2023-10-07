@@ -63,6 +63,7 @@ PREP(moduleHeal);
 PREP(moduleHideTerrainObjects);
 PREP(moduleHideZeus);
 PREP(moduleLightSource);
+PREP(moduleLocation);
 PREP(moduleMakeInvincible);
 PREP(moduleNuke);
 PREP(moduleNukeLocal);
