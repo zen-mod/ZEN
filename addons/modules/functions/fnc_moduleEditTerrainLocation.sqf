@@ -56,7 +56,8 @@ private _attributes = [
     [
         "TOOLBOX",
         LSTRING(ModuleEditTerrainLocation_AreaShape),
-        [parseNumber _isRectangular, 1, 2, ["str_3den_attributes_shapetrigger_ellipse", "str_3den_attributes_shapetrigger_rectangle"]]
+        [_isRectangular, 1, 2, ["str_3den_attributes_shapetrigger_ellipse", "str_3den_attributes_shapetrigger_rectangle"]],
+        true
     ],
     [
         "VECTOR",
@@ -97,7 +98,7 @@ private _attributes = [
     _location setType _type;
     _location setText _text;
     _location setDirection _direction;
-    _location setRectangular ([false, true] select _isRectangular);
+    _location setRectangular _isRectangular;
     _location setSize _size;
     _location setName _name;
     _location setSide _side;
