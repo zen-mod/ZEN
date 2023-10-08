@@ -37,7 +37,7 @@ private _sides = [
     sideUnknown
 ];
 
-private _attributes = [
+[LSTRING(ModuleEditTerrainLocation), [
     [
         "COMBO",
         "str_3den_trigger_attribute_type_displayname",
@@ -79,9 +79,7 @@ private _attributes = [
         LSTRING(ModuleEditTerrainLocation_Importance),
         _importance
     ]
-];
-
-[LSTRING(ModuleEditTerrainLocation), _attributes, {
+], {
     params ["_values", "_location"];
     _values params [
         "_type",
