@@ -41,7 +41,7 @@ private _sides = [
     [
         "COMBO",
         "str_3den_trigger_attribute_type_displayname",
-        [_types,_types, _types find _type]
+        [_types, _types, _types find _type]
     ],
     [
         "EDIT",
