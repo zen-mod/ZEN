@@ -56,8 +56,8 @@ private _attributes = [
 ];
 
 ["STR_3DEN_Display3DEN_Locations", _attributes, {
-    params ["_dialogValues", "_location"];
-    _dialogValues params [
+    params ["_values", "_location"];
+    _values params [
         "_type",
         "_text",
         "_direction",
