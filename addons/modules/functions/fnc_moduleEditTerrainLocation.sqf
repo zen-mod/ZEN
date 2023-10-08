@@ -63,16 +63,9 @@ private _attributes = [
         true
     ],
     [
-        "EDIT",
-        format ["%1 %2", localize "str_3den_trigger_attribute_size_displayname",localize "str_3den_axis_x"],
-        _size select 0,
-        true
-    ],
-    [
-        "EDIT",
-        format ["%1 %2", localize "str_3den_trigger_attribute_size_displayname",localize "str_3den_axis_y"],
-        _size select 1,
-        true
+        "VECTOR",
+        "str_3den_trigger_attribute_size_displayname",
+        _size
     ],
     [
         "EDIT",
