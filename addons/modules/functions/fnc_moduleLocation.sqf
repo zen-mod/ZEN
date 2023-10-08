@@ -70,7 +70,6 @@ private _attributes = [
     ];
 
     private _location = createLocation [_location];
-
     _location setType _type;
     _location setText _text;
     _location setDirection _direction;
