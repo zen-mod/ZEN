@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [LOGIC] call zen_modules_fnc_moduleLocation
+ * [LOGIC] call zen_modules_fnc_moduleEditTerrainLocation
  *
  * Public: No
  */
@@ -58,7 +58,7 @@ private _attributes = [
     ],
     [
         "TOOLBOX",
-        LSTRING(ModuleLocation_AreaShape),
+        LSTRING(ModuleEditTerrainLocation_AreaShape),
         [parseNumber _isRectangular, 1, 2, ["str_3den_attributes_shapetrigger_ellipse", "str_3den_attributes_shapetrigger_rectangle"]],
         true
     ],
@@ -88,13 +88,13 @@ private _attributes = [
     ],
     [
         "EDIT",
-        LSTRING(ModuleLocation_Importance),
+        LSTRING(ModuleEditTerrainLocation_Importance),
         _importance,
         true
     ]
 ];
 
-["STR_3DEN_Display3DEN_Locations", _attributes, {
+[LSTRING(ModuleEditTerrainLocation), _attributes, {
     params ["_values", "_location"];
     _values params [
         "_type",
