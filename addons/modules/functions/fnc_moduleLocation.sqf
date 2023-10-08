@@ -17,7 +17,7 @@
 
 params ["_logic"];
 
-private _location = nearestLocation [getPosASL _logic, ""];
+private _location = nearestLocation [_logic, ""];
 
 private _type = type _location;
 private _text = text _location;
