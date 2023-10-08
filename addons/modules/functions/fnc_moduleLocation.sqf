@@ -38,21 +38,60 @@ private _sides = [
 ];
 
 private _attributes = [
-    ["COMBO", "str_3den_trigger_attribute_type_displayname", [_types,_types, _types find _type]],
-    ["EDIT", "str_a3_cfgvehicles_modulecuratoraddicon_f_arguments_text", _text, true],
-    ["SLIDER", "STR_3DEN_Display3DEN_ControlsHint_Rotate", [0, 360, _direction, EFUNC(common,formatDegrees)], true],
-    ["TOOLBOX", LSTRING(ModuleLocation_AreaShape), [parseNumber _isRectangular, 1, 2, ["str_3den_attributes_shapetrigger_ellipse", "str_3den_attributes_shapetrigger_rectangle"]]],
-    ["EDIT", format ["%1 %2", localize "str_3den_trigger_attribute_size_displayname",localize "str_3den_axis_x"], _size select 0, true],
-    ["EDIT", format ["%1 %2", localize "str_3den_trigger_attribute_size_displayname",localize "str_3den_axis_y"], _size select 1, true],
-    ["EDIT", "STR_3DEN_Display3DENSave_Filter_Name_text", _name, true],
-    ["COMBO", "str_a3_rscdisplaydynamicgroups_side", [_sides, [
-        "OPFOR",
-        "BLUFOR",
-        "Independent",
-        "Civilian",
-        "Unknown"
-    ], _sides find _side]],
-    ["EDIT", LSTRING(ModuleLocation_Importance), _importance, true]
+    [
+        "COMBO",
+        "str_3den_trigger_attribute_type_displayname",
+        [_types,_types, _types find _type],
+        true
+    ],
+    [
+        "EDIT",
+        "str_a3_cfgvehicles_modulecuratoraddicon_f_arguments_text",
+        _text,
+        true
+    ],
+    [
+        "SLIDER",
+        "STR_3DEN_Display3DEN_ControlsHint_Rotate",
+        [0, 360, _direction, EFUNC(common,formatDegrees)],
+        true
+    ],
+    [
+        "TOOLBOX",
+        LSTRING(ModuleLocation_AreaShape),
+        [parseNumber _isRectangular, 1, 2, ["str_3den_attributes_shapetrigger_ellipse", "str_3den_attributes_shapetrigger_rectangle"]],
+        true
+    ],
+    [
+        "EDIT",
+        format ["%1 %2", localize "str_3den_trigger_attribute_size_displayname",localize "str_3den_axis_x"],
+        _size select 0,
+        true
+    ],
+    [
+        "EDIT",
+        format ["%1 %2", localize "str_3den_trigger_attribute_size_displayname",localize "str_3den_axis_y"],
+        _size select 1,
+        true
+    ],
+    [
+        "EDIT",
+        "STR_3DEN_Display3DENSave_Filter_Name_text",
+        _name,
+        true
+    ],
+    [
+        "COMBO",
+        "str_a3_rscdisplaydynamicgroups_side",
+        [_sides, _sides apply {[_x] call BIS_fnc_sideName}, _sides find _side],
+        true
+    ],
+    [
+        "EDIT",
+        LSTRING(ModuleLocation_Importance),
+        _importance,
+        true
+    ]
 ];
 
 ["STR_3DEN_Display3DEN_Locations", _attributes, {
