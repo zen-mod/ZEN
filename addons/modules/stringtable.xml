@@ -1111,6 +1111,9 @@
         <Key ID="STR_ZEN_Modules_ModuleLocation_Importance">
             <English>Importance</English>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleLocation_AreaShape">
+            <English>Area Shape</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleMakeInvincible_Invincible">
             <English>Invincible</English>
             <Russian>Неуязвимость</Russian>
