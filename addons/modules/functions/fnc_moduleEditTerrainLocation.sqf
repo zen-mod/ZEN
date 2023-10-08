@@ -41,26 +41,22 @@ private _attributes = [
     [
         "COMBO",
         "str_3den_trigger_attribute_type_displayname",
-        [_types,_types, _types find _type],
-        true
+        [_types,_types, _types find _type]
     ],
     [
         "EDIT",
         "str_a3_cfgvehicles_modulecuratoraddicon_f_arguments_text",
-        _text,
-        true
+        _text
     ],
     [
         "SLIDER",
         "STR_3DEN_Display3DEN_ControlsHint_Rotate",
-        [0, 360, _direction, EFUNC(common,formatDegrees)],
-        true
+        [0, 360, _direction, EFUNC(common,formatDegrees)]
     ],
     [
         "TOOLBOX",
         LSTRING(ModuleEditTerrainLocation_AreaShape),
-        [parseNumber _isRectangular, 1, 2, ["str_3den_attributes_shapetrigger_ellipse", "str_3den_attributes_shapetrigger_rectangle"]],
-        true
+        [parseNumber _isRectangular, 1, 2, ["str_3den_attributes_shapetrigger_ellipse", "str_3den_attributes_shapetrigger_rectangle"]]
     ],
     [
         "VECTOR",
@@ -70,20 +66,17 @@ private _attributes = [
     [
         "EDIT",
         "STR_3DEN_Display3DENSave_Filter_Name_text",
-        _name,
-        true
+        _name
     ],
     [
         "COMBO",
         "str_a3_rscdisplaydynamicgroups_side",
-        [_sides, _sides apply {[_x] call BIS_fnc_sideName}, _sides find _side],
-        true
+        [_sides, _sides apply {[_x] call BIS_fnc_sideName}, _sides find _side]
     ],
     [
         "EDIT",
         LSTRING(ModuleEditTerrainLocation_Importance),
-        _importance,
-        true
+        _importance
     ]
 ];
 
@@ -94,8 +87,7 @@ private _attributes = [
         "_text",
         "_direction",
         "_isRectangular",
-        "_sizeX",
-        "_sizeY",
+        "_size",
         "_name",
         "_side",
         "_importance"
@@ -106,7 +98,7 @@ private _attributes = [
     _location setText _text;
     _location setDirection _direction;
     _location setRectangular ([false, true] select _isRectangular);
-    _location setSize [parseNumber _sizeX, parseNumber _sizeY];
+    _location setSize _size;
     _location setName _name;
     _location setSide _side;
     _location setImportance parseNumber _importance;
