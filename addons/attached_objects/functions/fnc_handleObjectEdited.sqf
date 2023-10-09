@@ -21,7 +21,11 @@ params ["", "_object"];
 // Update the position of attached objects relative to their parent object
 private _parentObject = attachedTo _object;
 
-if (!isNull _parentObject && {isVehicleCargo _object != _parentObject}) then {
+if (isNull _parentObject || {isVehicleCargo _object == _parentObject}) exitWith {};
+
+private _selection = _object getVariable [QGVAR(attachedToSelection), ""];
+
+if (_selection == "") then {
     private _offset = _parentObject worldToModel ASLtoAGL getPosWorld _object;
     private _dirAndUp = [vectorDir _object, vectorUp _object] apply {_parentObject vectorWorldToModel _x};
 
@@ -31,4 +35,6 @@ if (!isNull _parentObject && {isVehicleCargo _object != _parentObject}) then {
     _object attachTo [_parentObject, _offset];
 
     [QEGVAR(common,setVectorDirAndUp), [_object, _dirAndUp], _object] call CBA_fnc_targetEvent;
+} else {
+    [_object, _parentObject, _selection, true] call FUNC(attachToSelection);
 };
