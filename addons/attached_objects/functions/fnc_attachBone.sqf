@@ -60,23 +60,25 @@
         _values params ["_selection", "_isRelative"];
         _args params ["_objects", "_entity"];
 
-        {
-            if (_selection == "") then {
+        if (_selection isEqualTo "") then {
+            {
                 private _dirAndUp = [_entity vectorWorldToModel vectorDir _x, _entity vectorWorldToModel vectorUp _x];
                 _x attachTo [_entity];
                 [QEGVAR(common,setVectorDirAndUp), [_x, _dirAndUp], _x] call CBA_fnc_targetEvent;
-            } else {
+            } forEach _objects;
+        } else {
+            {
                 [_x, _entity, _selection, _isRelative] call FUNC(attachToSelection);
-            };
-        } forEach _objects;
+            } forEach _objects;
 
-        private _hintPos = _entity modelToWorldVisual (_entity selectionPosition [_selection, LOD_MEMORY]);
-        _entity selectionVectorDirAndUp [_selection, LOD_MEMORY] params ["_selectionY", "_selectionZ"];
-        [[
-            ["ICON", [_hintPos, "\a3\ui_f\data\IGUI\Cfg\Targeting\LaserTarget_ca.paa"]],
-            ["LINE", [_hintPos, _entity vectorModelToWorldVisual _selectionY vectorMultiply 2 vectorAdd _hintPos, [0, 1, 0, 1]]],
-            ["LINE", [_hintPos, _entity vectorModelToWorldVisual _selectionZ vectorAdd _hintPos, [0, 0, 1, 1]]]
-        ], 3, _entity] call EFUNC(common,drawHint);
+            private _hintPos = _entity modelToWorldVisual (_entity selectionPosition [_selection, LOD_MEMORY]);
+            _entity selectionVectorDirAndUp [_selection, LOD_MEMORY] params ["_selectionY", "_selectionZ"];
+            [[
+                ["ICON", [_hintPos, "\a3\ui_f\data\IGUI\Cfg\Targeting\LaserTarget_ca.paa"]],
+                ["LINE", [_hintPos, _entity vectorModelToWorldVisual _selectionY vectorMultiply 2 vectorAdd _hintPos, [0, 1, 0, 1]]],
+                ["LINE", [_hintPos, _entity vectorModelToWorldVisual _selectionZ vectorAdd _hintPos, [0, 0, 1, 1]]]
+            ], 3, _entity] call EFUNC(common,drawHint);
+        };
 
         [LSTRING(ObjectsAttached), count _objects] call EFUNC(common,showMessage);
     }, {}, [_objects, _entity]] call EFUNC(dialog,create);
