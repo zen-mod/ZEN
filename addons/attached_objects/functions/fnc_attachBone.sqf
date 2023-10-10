@@ -68,9 +68,10 @@
             } else {
                 [_x, _entity, _selection, _isRelative] call FUNC(attachToSelection);
             };
-        } forEach _objects params ["_selectionPos", "_selectionY", "_selectionZ"];
+        } forEach _objects;
 
-        private _hintPos = _entity modelToWorldVisual _selectionPos;
+        private _hintPos = _entity modelToWorldVisual (_entity selectionPosition [_selection, LOD_MEMORY]);
+        _entity selectionVectorDirAndUp [_selection, LOD_MEMORY] params ["_selectionY", "_selectionZ"];
         [[
             ["ICON", [_hintPos, "\a3\ui_f\data\IGUI\Cfg\Targeting\LaserTarget_ca.paa"]],
             ["LINE", [_hintPos, _entity vectorModelToWorldVisual _selectionY vectorMultiply 2 vectorAdd _hintPos, [0, 1, 0, 1]]],
