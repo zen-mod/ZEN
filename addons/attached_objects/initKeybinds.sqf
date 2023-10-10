@@ -10,7 +10,7 @@
         SELECTED_OBJECTS call FUNC(attachBone);
         true // handled
     };
-}, {}, [DIK_A, [true, false, true]]] call CBA_fnc_addKeybind; // Default: ALT + SHIFT + A
+}, {}, []] call CBA_fnc_addKeybind; // Default: Unbound
 
 [[ELSTRING(main,DisplayName), LSTRING(DisplayName)], QGVAR(detach), [LSTRING(Detach), LSTRING(Detach_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
