@@ -68,7 +68,14 @@
             } else {
                 [_x, _entity, _selection, _isRelative] call FUNC(attachToSelection);
             };
-        } forEach _objects;
+        } forEach _objects params ["_selectionPos", "_selectionY", "_selectionZ"];
+
+        private _hintPos = _entity modelToWorldVisual _selectionPos;
+        [[
+            ["ICON", [_hintPos, "\a3\ui_f\data\IGUI\Cfg\Targeting\LaserTarget_ca.paa"]],
+            ["LINE", [_hintPos, _entity vectorModelToWorldVisual _selectionY vectorMultiply 2 vectorAdd _hintPos, [0, 1, 0, 1]]],
+            ["LINE", [_hintPos, _entity vectorModelToWorldVisual _selectionZ vectorAdd _hintPos, [0, 0, 1, 1]]]
+        ], 3, _entity] call EFUNC(common,drawHint);
 
         [LSTRING(ObjectsAttached), count _objects] call EFUNC(common,showMessage);
     }, {}, [_objects, _entity]] call EFUNC(dialog,create);

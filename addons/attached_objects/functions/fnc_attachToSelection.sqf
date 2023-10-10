@@ -10,7 +10,7 @@
  * 3: Relative <BOOLEAN> True to maintain current relative orientation, false to match selection orientation
  *
  * Return Value:
- * None
+ * 0: Selection Position and Orientation <ARRAY> For drawing hints
  *
  * Example:
  * [_child] call zen_attached_objects_fnc_attachToSelection
@@ -43,3 +43,5 @@ if (_isRelative) then {
     _child setVectorDirAndUp [_vY, _vZ];
     [QEGVAR(common,setVectorDirAndUp), [_child, [_vY, _vZ]], _child] call CBA_fnc_targetEvent;
 };
+
+[_selectionPos, _selectionY, _selectionZ]
