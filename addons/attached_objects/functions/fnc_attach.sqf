@@ -32,44 +32,12 @@
 
     _objects deleteAt _index;
 
-    if (isNil QGVAR(modelSelections)) then {
-        GVAR(modelSelections) = createHashMap;
-    };
+    {
+        _x attachTo [_entity];
 
-    private _selections = GVAR(modelSelections) getOrDefaultCall [getText (configOf _entity >> "model"), {
-            [""] + (_entity selectionNames LOD_MEMORY select {
-                _entity selectionVectorDirAndUp [_x, LOD_MEMORY] isNotEqualTo [[0,0,0], [0,0,0]]
-            })
-    }, true];
+        private _dirAndUp = [_entity vectorWorldToModel vectorDir _x, _entity vectorWorldToModel vectorUp _x];
+        [QEGVAR(common,setVectorDirAndUp), [_x, _dirAndUp], _x] call CBA_fnc_targetEvent;
+    } forEach _objects;
 
-    [LSTRING(AttachTo), [
-        [
-            "COMBO",
-            "Selection",
-            [_selections, _selections, _selections find _selection]
-        ],
-        [
-            "TOOLBOX",
-            ["Orientation", "Selection: match selection orientation (i.e. along gun barrel). Relative: maintain current orientation relative to selection."],
-            [true, 1, 2, ["Selection", "Relative"]],
-            true
-        ]
-    ], {
-        params ["_values", "_args"];
-        _values params ["_selection", "_isRelative"];
-        _args params ["_objects", "_entity"];
-
-        {
-            if (_selection == "") then {
-                private _dirAndUp = [_entity vectorWorldToModel vectorDir _x, _entity vectorWorldToModel vectorUp _x];
-                _x attachTo [_entity];
-                [QEGVAR(common,setVectorDirAndUp), [_x, _dirAndUp], _x] call CBA_fnc_targetEvent;
-            } else {
-                [_x, _entity, _selection, _isRelative] call FUNC(attachToSelection);
-            };
-        } forEach _objects;
-
-        [LSTRING(ObjectsAttached), count _objects] call EFUNC(common,showMessage);
-    }, {}, [_objects, _entity]] call EFUNC(dialog,create);
-
+    [LSTRING(ObjectsAttached), count _objects] call EFUNC(common,showMessage);
 }, [], LSTRING(AttachTo)] call EFUNC(common,selectPosition);
