@@ -39,7 +39,7 @@ _child attachTo [_parent, _pos, _selection, true];
 _child setVariable [QGVAR(attachedToSelection), _selection, true];
 
 if (_isRelative) then {
-    _m matrixMultiply [_childX, _childY, _childZ] params ["", "_vY", "_vZ"];
-    _object setVectorDirAndUp _dirAndUp;
+    [_childX, _childY, _childZ] matrixMultiply _m params ["", "_vY", "_vZ"];
+    _child setVectorDirAndUp [_vY, _vZ];
     [QEGVAR(common,setVectorDirAndUp), [_child, [_vY, _vZ]], _child] call CBA_fnc_targetEvent;
 };
