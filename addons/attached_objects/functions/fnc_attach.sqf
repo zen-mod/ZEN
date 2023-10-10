@@ -65,7 +65,6 @@
                 _x attachTo [_entity];
                 [QEGVAR(common,setVectorDirAndUp), [_x, _dirAndUp], _x] call CBA_fnc_targetEvent;
             } else {
-                systemChat str [_x, _entity, _selection, _isRelative];
                 [_x, _entity, _selection, _isRelative] call FUNC(attachToSelection);
             };
         } forEach _objects;
