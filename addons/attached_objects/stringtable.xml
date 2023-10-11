@@ -10,11 +10,23 @@
         <Key ID="STR_ZEN_Attached_Objects_Attach_Description">
             <English>Attaches all selected objects to the specified parent object.</English>
         </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Bone">
+            <English>Bone</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Relative">
+            <English>Relative</English>
+        </Key>
         <Key ID="STR_ZEN_Attached_Objects_AttachBone">
             <English>Attach Objects to Bone</English>
         </Key>
         <Key ID="STR_ZEN_Attached_Objects_AttachBone_Description">
             <English>Attaches all selected objects to a bone on the specified parent object.</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Orientation">
+            <English>Orientation</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Orientation_Description">
+            <English>Bone: match bone orientation (i.e. along gun barrel). Relative: maintain current orientation relative to bone.</English>
         </Key>
         <Key ID="STR_ZEN_Attached_Objects_Detach">
             <English>Detach Objects</English>

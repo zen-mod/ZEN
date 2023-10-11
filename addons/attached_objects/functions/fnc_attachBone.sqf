@@ -46,13 +46,13 @@
     [LSTRING(AttachTo), [
         [
             "COMBO",
-            "Selection",
+            LSTRING(Bone),
             [_selections, _selections, _selections find _selection]
         ],
         [
             "TOOLBOX",
-            ["Orientation", "Selection: match selection orientation (i.e. along gun barrel). Relative: maintain current orientation relative to selection."],
-            [true, 1, 2, ["Selection", "Relative"]],
+            [LSTRING(Orientation), LSTRING(Orientation_Description)],
+            [true, 1, 2, [LSTRING(Bone), LSTRING(Relative)]],
             true
         ]
     ], {
