@@ -85,6 +85,48 @@
 
 [
     "Object",
+    [LSTRING(AmmoCargo), LSTRING(SupportCargo_Tooltip)],
+    QGVAR(slider),
+    [0, 1, 0.1, true],
+    {
+        {
+            [QEGVAR(common,setAmmoCargo), [_x, _value], _x] call CBA_fnc_targetEvent;
+        } forEach call EFUNC(common,getSelectedVehicles);
+    },
+    {getAmmoCargo _entity},
+    {getAmmoCargo _entity >= 0}
+] call FUNC(addAttribute);
+
+[
+    "Object",
+    [LSTRING(FuelCargo), LSTRING(SupportCargo_Tooltip)],
+    QGVAR(slider),
+    [0, 1, 0.1, true],
+    {
+        {
+            [QEGVAR(common,setFuelCargo), [_x, _value], _x] call CBA_fnc_targetEvent;
+        } forEach call EFUNC(common,getSelectedVehicles);
+    },
+    {getFuelCargo _entity},
+    {getFuelCargo _entity >= 0}
+] call FUNC(addAttribute);
+
+[
+    "Object",
+    [LSTRING(RepairCargo), LSTRING(SupportCargo_Tooltip)],
+    QGVAR(slider),
+    [0, 1, 0.1, true],
+    {
+        {
+            [QEGVAR(common,setRepairCargo), [_x, _value], _x] call CBA_fnc_targetEvent;
+        } forEach call EFUNC(common,getSelectedVehicles);
+    },
+    {getRepairCargo _entity},
+    {getRepairCargo _entity >= 0}
+] call FUNC(addAttribute);
+
+[
+    "Object",
     "STR_3DEN_Object_Attribute_Rank_displayName",
     QGVAR(icons),
     [[
