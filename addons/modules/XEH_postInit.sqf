@@ -115,12 +115,7 @@ if (isServer) then {
     }, _this] call CBA_fnc_execNextFrame;
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(setRotation), {
-    params ["_object", "_pitch", "_roll", "_yaw"];
-
-    _object setDir _yaw;
-    [_object, _pitch, _roll] call BIS_fnc_setPitchBank;
-}] call CBA_fnc_addEventHandler;
+[QGVAR(setRotation), BIS_fnc_setObjectRotation] call CBA_fnc_addEventHandler;
 
 [QGVAR(moveToGunner), {
     params ["_unit", "_vehicle"];
