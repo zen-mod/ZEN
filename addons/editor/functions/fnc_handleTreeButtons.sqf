@@ -4,18 +4,19 @@
  * Handles clicking the tree collapse and expand all buttons.
  *
  * Arguments:
- * 0: Expand <BOOL>
+ * 0: Display (not used) <DISPLAY>
+ * 1: Expand <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [false] call zen_editor_fnc_handleTreeButtons
+ * [DISPLAY, false] call zen_editor_fnc_handleTreeButtons
  *
  * Public: No
  */
 
-params ["_expand"];
+params ["", "_expand"];
 
 RscDisplayCurator_sections params ["_mode"];
 

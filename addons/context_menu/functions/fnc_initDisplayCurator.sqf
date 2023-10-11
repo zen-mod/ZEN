@@ -82,17 +82,13 @@ if (GVAR(enabled) == 1) exitWith {
                     // Clear selected entities if waypoint placement can occur and restore next frame
                     // Using entities tree as an alternative to the lack of a command to set curator selected entities
                     if (_canPlaceWaypoints) then {
-                        private _ctrlEntities = findDisplay IDD_RSCDISPLAYCURATOR displayCtrl IDC_RSCDISPLAYCURATOR_ENTITIES;
-                        private _selection = tvSelection _ctrlEntities;
-                        _ctrlEntities tvSetCurSel [-1];
-
                         [{
-                            params ["_ctrlEntities", "_selection"];
+                            params ["_objects", "_groups", "_waypoints", "_markers"];
 
-                            {
-                                _ctrlEntities tvSetSelected [_x, true];
-                            } forEach _selection;
-                        }, [_ctrlEntities, _selection]] call CBA_fnc_execNextFrame;
+                            setCuratorSelected (_objects + _groups + _waypoints + _markers);
+                        }, curatorSelected] call CBA_fnc_execNextFrame;
+
+                        setCuratorSelected [];
                     };
                 };
             };

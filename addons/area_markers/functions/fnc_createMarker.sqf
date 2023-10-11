@@ -6,20 +6,22 @@
  *
  * Arguments:
  * 0: Position <ARRAY>
+ * 1: Shape <STRING> (default: "RECTANGLE")
+ *   - Should be either "ELLIPSE" or "RECTANGLE".
  *
  * Return Value:
  * None
  *
  * Example:
- * [[0, 0, 0]] call zen_area_markers_fnc_createMarker
+ * [[0, 0, 0], "RECTANGLE"] call zen_area_markers_fnc_createMarker
  *
  * Public: No
  */
 
-params ["_position"];
+params ["_position", ["_shape", "RECTANGLE"]];
 
 private _marker = createMarker [format [QGVAR(%1), GVAR(nextID)], _position];
-_marker setMarkerShape "RECTANGLE";
+_marker setMarkerShape _shape;
 _marker setMarkerSize [50, 50];
 
 GVAR(nextID) = GVAR(nextID) + 1;

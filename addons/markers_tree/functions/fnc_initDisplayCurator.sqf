@@ -20,16 +20,47 @@ params ["_display"];
 private _ctrlTreeEngine = _display displayCtrl IDC_RSCDISPLAYCURATOR_CREATE_MARKERS;
 _ctrlTreeEngine ctrlAddEventHandler ["TreeSelChanged", {call FUNC(handleEngineSelect)}];
 
-private _ctrlTreeCustom = _display displayCtrl IDC_MARKERS_TREE;
-_ctrlTreeCustom ctrlAddEventHandler ["TreeSelChanged", {call FUNC(handleCustomSelect)}];
-_ctrlTreeCustom call FUNC(populate);
+private _ctrlTreeIcons = _display displayCtrl IDC_MARKERS_TREE_ICONS;
+_ctrlTreeIcons ctrlAddEventHandler ["TreeSelChanged", {call FUNC(handleIconsSelect)}];
+_ctrlTreeIcons call FUNC(populate);
 
-// Handle initially hiding/showing the custom markers tree
-private _sections = missionNamespace getVariable ["RscDisplayCurator_sections", [0, 0]];
-_ctrlTreeCustom ctrlShow (_sections select 0 == 3);
+private _ctrlTreeAreas = _display displayCtrl IDC_MARKERS_TREE_AREAS;
+_ctrlTreeAreas ctrlAddEventHandler ["TreeSelChanged", {call FUNC(handleAreasSelect)}];
 
-private _ctrlCollapseAll = _display displayCtrl IDC_COLLAPSE_ALL;
-_ctrlCollapseAll ctrlAddEventHandler ["ButtonClick", {false call FUNC(handleTreeButtons)}];
+{
+    _x params ["_text", "_icon", "_data"];
 
-private _ctrlExpandAll = _display displayCtrl IDC_EXPAND_ALL;
-_ctrlExpandAll ctrlAddEventHandler ["ButtonClick", {true call FUNC(handleTreeButtons)}];
+    private _index = _ctrlTreeAreas tvAdd [[], localize _text];
+    _ctrlTreeAreas tvSetPicture [[_index], _icon];
+    _ctrlTreeAreas tvSetData [[_index], _data];
+} forEach [
+    ["str_3den_attributes_shapetrigger_ellipse", "a3\3den\data\cfg3den\marker\iconellipse_ca.paa", "ELLIPSE"],
+    ["str_3den_attributes_shapetrigger_rectangle", "a3\3den\data\cfg3den\marker\iconrectangle_ca.paa", "RECTANGLE"]
+];
+
+private _ctrlMap = _display displayCtrl IDC_RSCDISPLAYCURATOR_MAINMAP;
+_ctrlMap ctrlAddEventHandler ["MouseButtonDown", {call FUNC(handleMouseButtonDown)}];
+_ctrlMap ctrlAddEventHandler ["MouseButtonUp", {call FUNC(handleMouseButtonUp)}];
+_ctrlMap ctrlAddEventHandler ["MouseMoving", {call FUNC(handleMouseMoving)}];
+_ctrlMap ctrlAddEventHandler ["Draw", {call FUNC(handleDraw)}];
+
+{
+    private _ctrlMode = _display displayCtrl _x;
+    _ctrlMode ctrlAddEventHandler ["ButtonClick", {call FUNC(handleSubModeClicked)}];
+
+    // Handle initially applying the current sub-mode
+    if (GVAR(mode) == _forEachIndex) then {
+        _ctrlMode call FUNC(handleSubModeClicked);
+    };
+} forEach [IDC_MARKERS_MODE_ICONS, IDC_MARKERS_MODE_AREAS];
+
+// Handle initially hiding/showing the custom marker trees
+missionNamespace getVariable ["RscDisplayCurator_sections", [0, 0]] params ["_mode"];
+[_display, _mode] call FUNC(handleTreeChange);
+
+// Need frame delay workaround for usage of ctrlActivate by RscDisplayCurator.sqf
+// to properly hide the empty side control when initially in markers mode
+if (_mode == 3) then {
+    private _ctrlSideEmpty = _display displayCtrl IDC_RSCDISPLAYCURATOR_SIDEEMPTY;
+    [{_this ctrlShow false}, _ctrlSideEmpty, 3] call EFUNC(common,execAfterNFrames);
+};
