@@ -22,7 +22,7 @@
     if (!_successful) exitWith {};
 
     curatorMouseOver params ["_type", "_entity"];
-    if (_type isEqualTo "OBJECT") exitWith {};
+    if (_type isNotEqualTo "OBJECT") exitWith {};
 
     // Prevent attaching object to itself
     private _index = _objects find _entity;
