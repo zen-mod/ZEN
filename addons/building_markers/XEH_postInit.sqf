@@ -2,6 +2,14 @@
 
 if (isServer) then {
     [QGVAR(set), LINKFUNC(set)] call CBA_fnc_addEventHandler;
+
+    addMissionEventHandler ["MarkerDeleted", {
+        params ["_marker"];
+
+        [_marker] call CBA_fnc_removeGlobalEventJIP;
+        [missionNamespace getVariable [_marker, objNull], false] call zen_building_markers_fnc_set;
+        missionNamespace setVariable [_marker, nil];
+    }];
 };
 
 if (hasInterface) then {

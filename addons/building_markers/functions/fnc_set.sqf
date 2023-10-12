@@ -60,6 +60,7 @@ if (_set) then {
     _marker setMarkerSizeLocal _size;
     _marker setMarkerDir getDir _object;
     _object setVariable [QGVAR(marker), _marker, true];
+    missionNamespace setVariable [_marker, _object];
 
     [QEGVAR(common,setMarkerDrawPriority), [_marker, -1], _marker] call CBA_fnc_globalEventJIP;
 
@@ -68,7 +69,6 @@ if (_set) then {
         params ["_object"];
 
         private _marker = _object getVariable [QGVAR(marker), ""];
-        [_marker] call CBA_fnc_removeGlobalEventJIP;
         deleteMarker _marker;
     }];
 
@@ -80,5 +80,4 @@ if (_set) then {
     _object removeEventHandler ["Deleted", _eventID];
     _object setVariable [QGVAR(marker), nil, true];
     deleteMarker _marker;
-    [_marker] call CBA_fnc_removeGlobalEventJIP;
 };
