@@ -7,7 +7,7 @@ if (isServer) then {
         params ["_marker"];
 
         [_marker] call CBA_fnc_removeGlobalEventJIP;
-        [missionNamespace getVariable [_marker, objNull], false] call zen_building_markers_fnc_set;
+        [missionNamespace getVariable [_marker, objNull], false] call FUNC(set);
         missionNamespace setVariable [_marker, nil];
     }];
 };
