@@ -182,8 +182,8 @@ class GVAR(configure): RscControlsGroupNoScrollbars {
                             rows = 1;
                             columns = 2;
                             strings[] = {
-                                "\a3\3DEN\Data\Attributes\Shape\rectangle_ca.paa",
-                                "\a3\3DEN\Data\Attributes\Shape\ellipse_ca.paa"
+                                ICON_RECTANGLE,
+                                ICON_ELLIPSE
                             };
                             tooltips[] = {
                                 "$STR_3den_attributes_shapetrigger_rectangle",

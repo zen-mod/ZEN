@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Handles changing the selection in the custom markers tree.
+ * Handles changing the selection in the custom icon markers tree.
  *
  * Arguments:
  * 0: Markers Tree <CONTROL>
@@ -11,14 +11,14 @@
  * None
  *
  * Example:
- * [CONTROL] call zen_markers_tree_fnc_handleCustomSelect
+ * [CONTROL] call zen_markers_tree_fnc_handleIconsSelect
  *
  * Public: No
  */
 
-params ["_ctrlTreeCustom", "_selectedPath"];
+params ["_ctrlTreeIcons", "_selectedPath"];
 
-private _display = ctrlParent _ctrlTreeCustom;
+private _display = ctrlParent _ctrlTreeIcons;
 private _ctrlTreeEngine = _display displayCtrl IDC_RSCDISPLAYCURATOR_CREATE_MARKERS;
 
 // Fix keyboard input changing tree selection
@@ -29,7 +29,7 @@ if (count _selectedPath != 2) exitWith {
     _ctrlTreeEngine tvSetCurSel [-1];
 };
 
-private _class = _ctrlTreeCustom tvData _selectedPath;
+private _class = _ctrlTreeIcons tvData _selectedPath;
 
 for "_i" from 0 to ((_ctrlTreeEngine tvCount []) - 1) do {
     if (_ctrlTreeEngine tvData [_i] == _class) exitWith {
