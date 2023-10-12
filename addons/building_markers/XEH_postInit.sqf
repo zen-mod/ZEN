@@ -7,8 +7,7 @@ if (isServer) then {
         params ["_marker"];
 
         [_marker] call CBA_fnc_removeGlobalEventJIP;
-        [missionNamespace getVariable [_marker, objNull], false] call FUNC(set);
-        missionNamespace setVariable [_marker, nil];
+        [(_marker splitString "_" select -1) call BIS_fnc_objectFromNetId, false] call FUNC(set);
     }];
 };
 

@@ -60,7 +60,6 @@ if (_set) then {
     _marker setMarkerSizeLocal _size;
     _marker setMarkerDir getDir _object;
     _object setVariable [QGVAR(marker), _marker, true];
-    missionNamespace setVariable [_marker, _object];
 
     [QEGVAR(common,setMarkerDrawPriority), [_marker, -1], _marker] call CBA_fnc_globalEventJIP;
 
