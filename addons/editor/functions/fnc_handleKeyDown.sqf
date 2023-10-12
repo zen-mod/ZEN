@@ -18,7 +18,12 @@
 
 params ["_display", "_keyCode"];
 
-if (GVAR(moveCamToSelection) > 0 && {_keyCode in actionKeys "curatorMoveCamTo" && {count SELECTED_OBJECTS > 0}}) exitWith {
+if (
+    GVAR(moveCamToSelection) > 0
+    && {inputAction "curatorLockCameraTo" == 0}
+    && {_keyCode in actionKeys "curatorMoveCamTo"}
+    && {count SELECTED_OBJECTS > 0}
+) exitWith {
     [] call FUNC(moveCamToSelection);
 
     true
