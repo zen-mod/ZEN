@@ -17,9 +17,6 @@
             <Chinesesimp>Zeus Enhanced - 属性</Chinesesimp>
             <Turkish>Zeus Enhanced - Özellikler</Turkish>
         </Key>
-        <Key ID="STR_ZEN_Attributes_AmmoCargo2">
-            <English>Ammo Cargo</English>
-        </Key>
         <Key ID="STR_ZEN_Attributes_AmmoCargo">
             <English>Ammo Cargo</English>
         </Key>
