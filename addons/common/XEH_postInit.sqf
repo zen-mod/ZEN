@@ -141,6 +141,11 @@
 [QGVAR(doWatch), {
     params ["_unit", "_target"];
     _unit doWatch _target;
+    {
+        if (!(_x checkAIFeature "ANIM")) then {
+            _x setDir (_x getDir _target);
+        };
+    } forEach flatten [_unit];
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(doTarget), {
