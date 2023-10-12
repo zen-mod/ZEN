@@ -62,13 +62,14 @@ if (_set) then {
     _object setVariable [QGVAR(marker), _marker, true];
 
     [QEGVAR(common,setMarkerDrawPriority), [_marker, -1], _marker] call CBA_fnc_globalEventJIP;
-    [_marker, _object] call CBA_fnc_removeGlobalEventJIP;
 
     // Delete marker when the object is deleted
     private _eventID = _object addEventHandler ["Deleted", {
         params ["_object"];
 
-        deleteMarker (_object getVariable [QGVAR(marker), ""]);
+        private _marker = _object getVariable [QGVAR(marker), ""];
+        [_marker] call CBA_fnc_removeGlobalEventJIP;
+        deleteMarker _marker;
     }];
 
     _object setVariable [QGVAR(eventID), _eventID];
