@@ -5,7 +5,6 @@ PREP(createMarker);
 PREP(deleteIcon);
 PREP(initDisplayCurator);
 PREP(isEditable);
-PREP(module);
 PREP(onDraw);
 PREP(onKeyDown);
 PREP(onMapToggled);

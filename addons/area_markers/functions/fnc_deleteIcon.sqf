@@ -18,6 +18,5 @@
 params ["_marker"];
 
 if (_marker in GVAR(icons)) then {
-    ctrlDelete (GVAR(icons) get _marker);
-    GVAR(icons) deleteAt _marker;
+    ctrlDelete (GVAR(icons) deleteAt _marker);
 };
