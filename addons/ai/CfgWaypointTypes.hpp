@@ -34,7 +34,7 @@ class ZEN_WaypointTypes {
     class Land {
         displayName = "$STR_A3_CfgWaypoints_Land";
         type = "SCRIPTED";
-        script = QPATHTOEF(ai,functions\fnc_waypointLand.sqf);
+        script = QPATHTOF(functions\fnc_waypointLand.sqf);
     };
     class Hook {
         displayName = "$STR_ac_hook";
@@ -54,19 +54,13 @@ class ZEN_WaypointTypes {
         script = "\a3\functions_f_orange\waypoints\fn_wpDemine.sqf";
     };
     class Paradrop {
-        displayName = ECSTRING(ai,Paradrop);
+        displayName = CSTRING(Paradrop);
         type = "SCRIPTED";
-        script = QPATHTOEF(ai,functions\fnc_waypointParadrop.sqf);
-    };
-    class Fastrope {
-        displayName = ECSTRING(ai,Fastrope);
-        type = "SCRIPTED";
-        script = QPATHTOEF(ai,functions\fnc_waypointFastrope.sqf);
-        condition = QUOTE(isClass (configFile >> 'CfgPatches' >> 'ace_fastroping'));
+        script = QPATHTOF(functions\fnc_waypointParadrop.sqf);
     };
     class SearchBuilding {
-        displayName = ECSTRING(ai,SearchBuilding);
+        displayName = CSTRING(SearchBuilding);
         type = "SCRIPTED";
-        script = QPATHTOEF(ai,functions\fnc_waypointSearchBuilding.sqf);
+        script = QPATHTOF(functions\fnc_waypointSearchBuilding.sqf);
     };
 };

@@ -12,20 +12,6 @@
             <Chinese>降落</Chinese>
             <Italian>Atterrare</Italian>
         </Key>
-        <Key ID="STR_ZEN_AI_Fastrope">
-            <English>Fastrope</English>
-            <Russian>Спуск по тросу</Russian>
-            <French>Corde lisse</French>
-            <German>Schnelles Abseilen</German>
-            <Polish>Zjazd na linach</Polish>
-            <Portuguese>Cabo rápido</Portuguese>
-            <Japanese>ファストロープ</Japanese>
-            <Korean>패스트로프</Korean>
-            <Spanish>Rapel Rapido</Spanish>
-            <Chinesesimp>快速索降</Chinesesimp>
-            <Chinese>快速索降</Chinese>
-            <Italian>Discesa veloce</Italian>
-        </Key>
         <Key ID="STR_ZEN_AI_Paradrop">
             <English>Paradrop</English>
             <Russian>Десант</Russian>

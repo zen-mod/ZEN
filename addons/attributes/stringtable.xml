@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Attributes">
+        <Key ID="STR_ZEN_Attributes_DisplayName">
+            <English>Zeus Enhanced - Attributes</English>
+            <Czech>Zeus Enhanced - Atributy</Czech>
+            <German>Zeus Enhanced - Attribute</German>
+            <Russian>Zeus Enhanced - Атрибуты</Russian>
+            <Polish>Zeus Enhanced - Atrybuty</Polish>
+            <Italian>Zeus Enhanced - Attributi</Italian>
+            <Spanish>Zeus Enhanced - Atributos</Spanish>
+            <French>Zeus Enhanced - Attributs</French>
+            <Chinese>Zeus Enhanced - 屬性</Chinese>
+            <Japanese>Zeus Enhanced - 属性</Japanese>
+            <Korean>Zeus Enhanced - 속성</Korean>
+            <Portuguese>Zeus Enhanced - Atributos</Portuguese>
+            <Chinesesimp>Zeus Enhanced - 属性</Chinesesimp>
+            <Turkish>Zeus Enhanced - Özellikler</Turkish>
+        </Key>
         <Key ID="STR_ZEN_Attributes_Engine">
             <English>Engine</English>
             <French>Moteur</French>

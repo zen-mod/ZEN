@@ -16,9 +16,4 @@ if (hasInterface) then {
     addMissionEventHandler ["MarkerCreated", {call FUNC(onMarkerCreated)}];
     addMissionEventHandler ["MarkerDeleted", {call FUNC(onMarkerDeleted)}];
     addMissionEventHandler ["MarkerUpdated", {call FUNC(onMarkerUpdated)}];
-
-    // Manually trigger event for 3DEN placed and already existent (JIP) markers
-    {
-        _x call FUNC(onMarkerCreated);
-    } forEach allMapMarkers;
 };

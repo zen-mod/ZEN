@@ -17,4 +17,6 @@
 
 params ["_marker"];
 
-markerShape _marker in ["RECTANGLE", "ELLIPSE"] && {GVAR(blacklist) findIf {_x in _marker} == -1}
+markerShape _marker in ["RECTANGLE", "ELLIPSE"]
+&& {GVAR(blacklist) findIf {_x in _marker} == -1}
+&& {GVAR(editableMarkers) == EDITABLE_MARKERS_ALL || {QUOTE(ADDON) in _marker}}
