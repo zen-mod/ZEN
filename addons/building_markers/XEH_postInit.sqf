@@ -6,6 +6,9 @@ if (isServer) then {
     addMissionEventHandler ["MarkerDeleted", {
         params ["_marker"];
 
+    // Filter all non-ZEN markers
+    if !(QUOTE(ADDON) in _marker) exitWith {};
+
         [_marker] call CBA_fnc_removeGlobalEventJIP;
         [(_marker splitString "_" select -1) call BIS_fnc_objectFromNetId, false] call FUNC(set);
     }];
