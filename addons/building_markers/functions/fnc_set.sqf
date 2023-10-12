@@ -68,8 +68,7 @@ if (_set) then {
     private _eventID = _object addEventHandler ["Deleted", {
         params ["_object"];
 
-        private _marker = _object getVariable [QGVAR(marker), ""];
-        deleteMarker _marker;
+        deleteMarker (_object getVariable [QGVAR(marker), ""]);
     }];
 
     _object setVariable [QGVAR(eventID), _eventID];
