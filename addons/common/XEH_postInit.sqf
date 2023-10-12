@@ -197,6 +197,11 @@
 [QGVAR(selectWeapon), {
     params ["_unit", "_muzzle"];
     _unit selectWeapon _muzzle;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(switchWeapon), {
+    params ["_unit", "_muzzle"];
+    _unit selectWeapon _muzzle;
     if (_muzzle == secondaryWeapon _unit) then {
         _unit playMove "amovpercmstpsraswlnrdnon";
         _unit disableAI "ANIM";

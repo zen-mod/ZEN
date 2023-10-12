@@ -19,4 +19,5 @@
 params ["_unit", "_weaponIndex"];
 
 private _weapon = [primaryWeapon _unit, secondaryWeapon _unit, handgunWeapon _unit, binocular _unit] select _weaponIndex;
-[QEGVAR(common,selectWeapon), [_unit, _weapon], _unit] call CBA_fnc_targetEvent;
+
+[QEGVAR(common,switchWeapon), [_unit, _weapon], _unit] call CBA_fnc_targetEvent;
