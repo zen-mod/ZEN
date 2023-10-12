@@ -121,11 +121,11 @@
             <Chinese>狀態</Chinese>
             <Italian>Stati</Italian>
         </Key>
-        <Key ID="STR_ZEN_Attributes_SpeedLimit">
-            <English>Speed Limit</English>
-        </Key>
         <Key ID="STR_ZEN_Attributes_SpeedLimit_Tooltip">
-            <English>Limit the maximum speed of the vehicle in km/h</English>
+            <English>Limit the maximum speed of the vehicle in km/h. Set to 0 to remove limit.</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_SpeedLimit_Tooltip_Helicopter">
+            <English>Limit the maximum speed of the vehicle in km/h. Set to 0 to remove limit. AI helicopters will fly in reverse.</English>
         </Key>
         <Key ID="STR_ZEN_Attributes_LocalExec">
             <English>Local Exec. This code will be executed in the unscheduled environment on this machine only.</English>
