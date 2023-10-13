@@ -229,6 +229,11 @@
     _vehicle limitSpeed _speed;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(forceSpeed), {
+    params ["_vehicle", "_speed"];
+    _vehicle forceSpeed _speed;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(forceFollowRoad), {
     params ["_vehicle", "_mode"];
     _vehicle forceFollowRoad _mode;
@@ -350,6 +355,7 @@
 [QGVAR(loadMagazineInstantly), LINKFUNC(loadMagazineInstantly)] call CBA_fnc_addEventHandler;
 [QGVAR(setLampState), LINKFUNC(setLampState)] call CBA_fnc_addEventHandler;
 [QGVAR(setMagazineAmmo), LINKFUNC(setMagazineAmmo)] call CBA_fnc_addEventHandler;
+[QGVAR(setSpeedLimit), LINKFUNC(setSpeedLimit)] call CBA_fnc_addEventHandler;
 [QGVAR(setTurretAmmo), LINKFUNC(setTurretAmmo)] call CBA_fnc_addEventHandler;
 [QGVAR(setVehicleLaserState), LINKFUNC(setVehicleLaserState)] call CBA_fnc_addEventHandler;
 [QGVAR(showMessage), LINKFUNC(showMessage)] call CBA_fnc_addEventHandler;

@@ -83,6 +83,54 @@
     {GVAR(enableAmmo) && {alive _entity} && {_entity call EFUNC(common,getVehicleAmmo) != -1}}
 ] call FUNC(addAttribute);
 
+[ // Helicopter
+    "Object",
+    [ELSTRING(Modules,ModuleConvoyParameters_Speed), LSTRING(SpeedLimit_Tooltip_Helicopter)],
+    QGVAR(slider),
+    [-50, 300, 5, false, 0],
+    {
+        private _vehicles = [] call EFUNC(common,getSelectedVehicles) select {
+            alive _x && {!isPlayer driver _x} && {_x isKindOf "Helicopter"}
+        };
+        { _x setVariable [QGVAR(speedLimit), _value, true]; } forEach _vehicles;
+        [QEGVAR(common,setSpeedLimit), [_vehicles, _value], _vehicles] call CBA_fnc_targetEvent;
+    },
+    {_entity getVariable [QGVAR(speedLimit), 0]},
+    {GVAR(enableSpeedLimit) && {alive _entity} && {!isPlayer driver _entity} && {_entity isKindOf "Helicopter"}}
+] call FUNC(addAttribute);
+
+[ // LandVehicle and Ship
+    "Object",
+    [ELSTRING(Modules,ModuleConvoyParameters_Speed), LSTRING(SpeedLimit_Tooltip)],
+    QGVAR(slider),
+    [0, 100, 5, false, 0],
+    {
+        private _vehicles = [] call EFUNC(common,getSelectedVehicles) select {
+            alive _x && {!isPlayer driver _x} && {_x isKindOf "LandVehicle" || {_x isKindOf "Ship"}}
+        };
+        { _x setVariable [QGVAR(speedLimit), _value, true]; } forEach _vehicles;
+        [QEGVAR(common,setSpeedLimit), [_vehicles, _value], _vehicles] call CBA_fnc_targetEvent;
+    },
+    {_entity getVariable [QGVAR(speedLimit), 0]},
+    {GVAR(enableSpeedLimit) && {alive _entity} && {!isPlayer driver _entity} && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Ship"}}}
+] call FUNC(addAttribute);
+
+[ // Plane
+    "Object",
+    [ELSTRING(Modules,ModuleConvoyParameters_Speed), LSTRING(SpeedLimit_Tooltip)],
+    QGVAR(slider),
+    [0, 1000, 5, false, 0],
+    {
+        private _vehicles = [] call EFUNC(common,getSelectedVehicles) select {
+            alive _x && {!isPlayer driver _x} && {_x isKindOf "Plane"}
+        };
+        { _x setVariable [QGVAR(speedLimit), _value, true]; } forEach _vehicles;
+        [QEGVAR(common,setSpeedLimit), [_vehicles, _value], _vehicles] call CBA_fnc_targetEvent;
+    },
+    {_entity getVariable [QGVAR(speedLimit), 0]},
+    {GVAR(enableSpeedLimit) && {alive _entity} && {!isPlayer driver _entity} && {_entity isKindOf "Plane"}}
+] call FUNC(addAttribute);
+
 [
     "Object",
     "STR_3DEN_Object_Attribute_Rank_displayName",
