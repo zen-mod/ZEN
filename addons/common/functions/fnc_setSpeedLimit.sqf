@@ -24,7 +24,7 @@
  * None
  *
  * Example:
- * [_vehicle, 1] call zen_common_fnc_setSpeed
+ * [_vehicle, 1] call zen_common_fnc_setSpeedLimit
  *
  * Public: No
  */
@@ -33,7 +33,7 @@ params ["_vehicle", "_speed"];
 
 if (_vehicle isEqualType []) exitWith {
     {
-        [_x, _speed] call FUNC(setSpeed);
+        [_x, _speed] call FUNC(setSpeedLimit);
     } forEach _vehicle;
 };
 

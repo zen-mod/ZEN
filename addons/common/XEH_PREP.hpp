@@ -67,7 +67,7 @@ PREP(serializeInventory);
 PREP(serializeObjects);
 PREP(setLampState);
 PREP(setMagazineAmmo);
-PREP(setSpeed);
+PREP(setSpeedLimit);
 PREP(setTurretAmmo);
 PREP(setVehicleAmmo);
 PREP(setVehicleLaserState);
