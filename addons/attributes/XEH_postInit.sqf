@@ -28,14 +28,3 @@ if (isServer) then {
         _unit enableAIFeature [_x, _abilities select _forEachIndex];
     } forEach AI_ABILITIES;
 }] call CBA_fnc_addEventHandler;
-
-["CAManBase", "Local", { // If locality changes, forceSpeed must be reapplied.
-    params ["_entity", "_isLocal"];
-    if (!_isLocal || {!alive _entity} || {!(_entity isKindOf "CAManBase")}) exitWith {};
-
-    private _setSpeed = _entity getVariable [QGVAR(setSpeed), 0];
-
-    if (_setSpeed != 0) then {
-        [_entity, _setSpeed] call FUNC(setSpeed);
-    };
-}, true, [], true] call CBA_fnc_addClassEventHandler;
