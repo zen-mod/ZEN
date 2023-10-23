@@ -94,7 +94,7 @@
         } forEach call EFUNC(common,getSelectedVehicles);
     },
     {getAmmoCargo _entity},
-    {getAmmoCargo _entity >= 0}
+    {GVAR(enableAmmoCargo) && {getAmmoCargo _entity >= 0}}
 ] call FUNC(addAttribute);
 
 [
@@ -108,7 +108,7 @@
         } forEach call EFUNC(common,getSelectedVehicles);
     },
     {getFuelCargo _entity},
-    {getFuelCargo _entity >= 0}
+    {GVAR(enableFuelCargo) && {getFuelCargo _entity >= 0}}
 ] call FUNC(addAttribute);
 
 [
@@ -122,7 +122,7 @@
         } forEach call EFUNC(common,getSelectedVehicles);
     },
     {getRepairCargo _entity},
-    {getRepairCargo _entity >= 0}
+    {GVAR(enableRepairCargo) && {getRepairCargo _entity >= 0}}
 ] call FUNC(addAttribute);
 
 [
