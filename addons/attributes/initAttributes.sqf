@@ -85,7 +85,7 @@
 
 [
     "Object",
-    [LSTRING(AmmoCargo), LSTRING(SupportCargo_Tooltip)],
+    LSTRING(AmmoCargo),
     QGVAR(slider),
     [0, 1, 0.1, true],
     {
@@ -99,7 +99,7 @@
 
 [
     "Object",
-    [LSTRING(FuelCargo), LSTRING(SupportCargo_Tooltip)],
+    LSTRING(FuelCargo),
     QGVAR(slider),
     [0, 1, 0.1, true],
     {
@@ -113,7 +113,7 @@
 
 [
     "Object",
-    [LSTRING(RepairCargo), LSTRING(SupportCargo_Tooltip)],
+    LSTRING(RepairCargo),
     QGVAR(slider),
     [0, 1, 0.1, true],
     {

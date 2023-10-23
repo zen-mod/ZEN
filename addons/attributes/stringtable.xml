@@ -26,9 +26,6 @@
         <Key ID="STR_ZEN_Attributes_RepairCargo">
             <English>Repair Cargo</English>
         </Key>
-        <Key ID="STR_ZEN_Attributes_SupportCargo_Tooltip">
-            <English>Cargo to supply to other vehicles.</English>
-        </Key>
         <Key ID="STR_ZEN_Attributes_Engine">
             <English>Engine</English>
             <French>Moteur</French>
