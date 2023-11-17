@@ -26,7 +26,7 @@ if (isNull _object) exitWith {
 
 // Start attaching if not already attached, otherwise detach
 if (isNull attachedTo _object) then {
-    [_object] call FUNC(attach);
+    [_object] call FUNC(attachBone);
 } else {
     [_object] call FUNC(detach);
 };
