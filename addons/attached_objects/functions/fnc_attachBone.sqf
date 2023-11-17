@@ -37,17 +37,22 @@
         GVAR(modelSelections) = createHashMap;
     };
 
-    private _selections = GVAR(modelSelections) getOrDefaultCall [getText (configOf _entity >> "model"), {
-            [""] + (_entity selectionNames LOD_MEMORY select {
-                _entity selectionVectorDirAndUp [_x, LOD_MEMORY] isNotEqualTo [[0,0,0], [0,0,0]]
-            })
+    private _entries = GVAR(modelSelections) getOrDefaultCall [getText (configOf _entity >> "model"), {
+        private _turretsCfg = allTurrets _entity apply {[_entity, _x] call CBA_fnc_getTurret};
+        private _selections = _entity selectionNames LOD_MEMORY select {
+            _entity selectionVectorDirAndUp [_x, LOD_MEMORY] isNotEqualTo [[0,0,0], [0,0,0]]
+        };
+        [
+            [""] + (_turretsCfg apply {getText (_x >> "memoryPointGunnerOptics")}) + _selections,
+            [""] + (_turretsCfg apply {configName _x}) + _selections apply {[_x] call FUNC(parseSelectionName)}
+        ]
     }, true];
 
     [LSTRING(AttachTo), [
         [
             "COMBO",
             LSTRING(Bone),
-            [_selections, _selections, _selections find _selection]
+            _entries
         ],
         [
             "TOOLBOX",
