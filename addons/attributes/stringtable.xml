@@ -17,6 +17,15 @@
             <Chinesesimp>Zeus Enhanced - 属性</Chinesesimp>
             <Turkish>Zeus Enhanced - Özellikler</Turkish>
         </Key>
+        <Key ID="STR_ZEN_Attributes_AmmoCargo">
+            <English>Ammo Cargo</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_FuelCargo">
+            <English>Fuel Cargo</English>
+        </Key>
+        <Key ID="STR_ZEN_Attributes_RepairCargo">
+            <English>Repair Cargo</English>
+        </Key>
         <Key ID="STR_ZEN_Attributes_Engine">
             <English>Engine</English>
             <French>Moteur</French>
