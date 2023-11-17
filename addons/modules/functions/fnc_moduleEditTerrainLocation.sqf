@@ -18,7 +18,6 @@
 params ["_logic"];
 
 private _location = nearestLocation [_logic, ""];
-
 private _type = type _location;
 private _text = text _location;
 private _direction = direction _location;
@@ -29,12 +28,9 @@ private _side = side _location;
 private _importance = importance _location;
 
 if (isNil QGVAR(locationTypes)) then {
-    GVAR(locationTypes) = [];
-    {
-        private _type = configName _x;
-        GVAR(locationTypes) pushBack _type;
-    } forEach ("true" configClasses (configFile >> "CfgLocationTypes"));
+    GVAR(locationTypes) = "true" configClasses (configFile >> "CfgLocationTypes") apply {configName _x};
 };
+
 private _sides = [
     east,
     west,

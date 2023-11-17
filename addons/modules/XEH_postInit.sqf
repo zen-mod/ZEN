@@ -105,16 +105,7 @@ if (isServer) then {
 
 [QGVAR(editTerrainLocation), {
     params ["_values", "_location"];
-    _values params [
-        "_type",
-        "_text",
-        "_direction",
-        "_isRectangular",
-        "_size",
-        "_name",
-        "_side",
-        "_importance"
-    ];
+    _values params ["_type", "_text", "_direction", "_isRectangular", "_size", "_name", "_side", "_importance"];
 
     private _location = createLocation [_location];
     _location setType _type;
@@ -125,7 +116,6 @@ if (isServer) then {
     _location setName _name;
     _location setSide _side;
     _location setImportance parseNumber _importance;
-
     deleteLocation _location;
 }] call CBA_fnc_addEventHandler;
 
