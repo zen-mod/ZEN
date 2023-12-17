@@ -83,6 +83,8 @@ private _fnc_onConfirm = {
 
     profileNamespace setVariable [VAR_HISTORY, _history];
 
+    [QGVAR(guiExecCode), [_code, _mode, _entity]] call CBA_fnc_serverEvent;
+
     _code = compile _code;
 
     switch (_mode) do {

@@ -375,6 +375,7 @@
     [QGVAR(objectExecHistory), QGVAR(objectExecMode), LSTRING(ExecObject_Tooltip), 20, 1000],
     {
         _value params ["_code", "_mode"];
+        [QGVAR(objectExecCode), [_code, _mode, _entity]] call CBA_fnc_serverEvent;
 
         _code = compile _code;
 
@@ -534,6 +535,7 @@
     [QGVAR(groupExecHistory), QGVAR(groupExecMode), LSTRING(ExecGroup_Tooltip), 20, 1000],
     {
         _value params ["_code", "_mode"];
+        [QGVAR(groupExecCode), [_code, _mode, _entity]] call CBA_fnc_serverEvent;
 
         _code = compile _code;
 
