@@ -26,7 +26,7 @@ class RscDisplayCurator {
                     w = safeZoneW - POS_EDGE(25,22) * GUI_GRID_W;
                 };
                 class PointsPreview: RscText {
-                    x = POS_EDGE(7,8) * GUI_GRID_W;
+                    x = QUOTE(POS_EDGE(7,8) * GUI_GRID_W);
                 };
                 class PointsFrame: RscFrame {
                     w = safeZoneW - POS_EDGE(25,22) * GUI_GRID_W;

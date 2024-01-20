@@ -42,7 +42,7 @@ class GVAR(display) {
             x = safeZoneX + POS_W(0.5);
             y = safeZoneY + safezoneH - POS_H(1.5);
             w = safeZoneW - POS_W(1);
-            h = POS_H(1);
+            h = QUOTE(POS_H(1));
             class controls {
                 class ButtonClose: RscButtonMenu {
                     onButtonClick = QUOTE(_this call FUNC(closeGarage));
@@ -51,7 +51,7 @@ class GVAR(display) {
                     x = 0;
                     y = 0;
                     w = (safeZoneW - POS_W(1)) / 5;
-                    h = POS_H(1);
+                    h = QUOTE(POS_H(1));
                 };
                 class ButtonHide: ButtonClose {
                     onButtonClick = QUOTE(_this call FUNC(toggleInterface));
@@ -73,48 +73,48 @@ class GVAR(display) {
             idc = IDC_INFO_GROUP;
             x = safeZoneX + safeZoneW - POS_W(20.1);
             y = safeZoneY + safeZoneH - POS_H(4.5);
-            w = POS_W(17.6);
-            h = POS_H(3);
+            w = QUOTE(POS_W(17.6));
+            h = QUOTE(POS_H(3));
             class controls {
                 class Background: RscText {
                     idc = -1;
-                    x = POS_W(2.6);
+                    x = QUOTE(POS_W(2.6));
                     y = 0;
-                    w = POS_W(15);
-                    h = POS_H(2.5);
+                    w = QUOTE(POS_W(15));
+                    h = QUOTE(POS_H(2.5));
                     colorBackground[] = {0, 0, 0, 0.8};
                 };
                 class InfoName: RscText {
                     idc = IDC_INFO_NAME;
-                    x = POS_W(2.6);
-                    y = POS_H(0);
-                    w = POS_W(15);
-                    h = POS_H(1.5);
-                    sizeEx = POS_H(1.5);
+                    x = QUOTE(POS_W(2.6));
+                    y = QUOTE(POS_H(0));
+                    w = QUOTE(POS_W(15));
+                    h = QUOTE(POS_H(1.5));
+                    sizeEx = QUOTE(POS_H(1.5));
                 };
                 class InfoAuthor: RscText {
                     idc = IDC_INFO_AUTHOR;
-                    x = POS_W(2.6);
-                    y = POS_H(1);
-                    w = POS_W(15);
-                    h = POS_H(1.5);
-                    sizeEx = POS_H(0.8);
+                    x = QUOTE(POS_W(2.6));
+                    y = QUOTE(POS_H(1));
+                    w = QUOTE(POS_W(15));
+                    h = QUOTE(POS_H(1.5));
+                    sizeEx = QUOTE(POS_H(0.8));
                     colorText[] = {1, 1, 1, 0.5};
                 };
                 class DLCBackground: RscText {
                     idc = IDC_DLC_BACKGROUND;
                     x = 0;
                     y = 0;
-                    w = POS_W(2.5);
-                    h = POS_H(2.5);
+                    w = QUOTE(POS_W(2.5));
+                    h = QUOTE(POS_H(2.5));
                     colorBackground[] = {0, 0, 0, 0.5};
                 };
                 class DLCIcon: RscActivePicture {
                     idc = IDC_DLC_ICON;
                     x = 0;
                     y = 0;
-                    w = POS_W(2.5);
-                    h = POS_H(2.5);
+                    w = QUOTE(POS_W(2.5));
+                    h = QUOTE(POS_H(2.5));
                     color[] = {1, 1, 1, 1};
                     colorActive[] = {1, 1, 1, 1};
                 };
@@ -124,8 +124,8 @@ class GVAR(display) {
             idc = IDC_BACKGROUND_ANIMATIONS;
             x = safeZoneX;
             y = safeZoneY + POS_H(0.5);
-            w = POS_W(3.5);
-            h = POS_H(2);
+            w = QUOTE(POS_W(3.5));
+            h = QUOTE(POS_H(2));
             colorBackground[] = {0, 0, 0, 1};
         };
         class ButtonAnimations: RscButtonArsenal {
@@ -135,8 +135,8 @@ class GVAR(display) {
             tooltip = "$STR_A3_RscDisplayGarage_tab_AnimationSources";
             x = safeZoneX + POS_W(0.5);
             y = safeZoneY + POS_H(0.5);
-            w = POS_W(2);
-            h = POS_H(2);
+            w = QUOTE(POS_W(2));
+            h = QUOTE(POS_H(2));
             colorBackground[] = {0, 0, 0, 0.5};
         };
         class BackgroundTextures: BackgroundAnimations {
@@ -154,7 +154,7 @@ class GVAR(display) {
             idc = IDC_LIST_BACKGROUND;
             x = safeZoneX + POS_W(3.5);
             y = safeZoneY + POS_H(0.5);
-            w = POS_W(13);
+            w = QUOTE(POS_W(13));
             h = safeZoneH - POS_H(2.5);
             colorBackground[] = {0, 0, 0, 0.5};
         };
@@ -162,7 +162,7 @@ class GVAR(display) {
             idc = IDC_LIST_FRAME;
             x = safeZoneX + POS_W(3.5);
             y = safeZoneY + POS_H(0.5);
-            w = POS_W(13);
+            w = QUOTE(POS_W(13));
             h = safeZoneH - POS_H(2.5);
             colorText[] = {0, 0, 0, 1};
         };
@@ -171,9 +171,9 @@ class GVAR(display) {
             onLBSelChanged = QUOTE(_this call FUNC(onAnimationSelect));
             x = safeZoneX + POS_W(3.5);
             y = safeZoneY + POS_H(0.5);
-            w = POS_W(13);
+            w = QUOTE(POS_W(13));
             h = safeZoneH - POS_H(2.5);
-            sizeEx = POS_H(1.2);
+            sizeEx = QUOTE(POS_H(1.2));
             colorSelect[] = {1, 1, 1, 1};
             colorSelect2[] = {1, 1, 1, 1};
             colorBackground[] = {0, 0, 0, 0};
@@ -192,9 +192,9 @@ class GVAR(display) {
             text = "$STR_lib_info_na";
             x = safeZoneX + POS_W(3.5);
             y = safeZoneY + POS_H(0.5);
-            w = POS_W(13);
+            w = QUOTE(POS_W(13));
             h = safeZoneH - POS_H(2.5);
-            sizeEx = POS_H(2);
+            sizeEx = QUOTE(POS_H(2));
             colorText[] = {1, 1, 1, 0.15};
             shadow = 0;
         };
