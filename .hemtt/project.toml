@@ -20,13 +20,3 @@ exclude = [
     ".inc.sqf",
     "/dev/"
 ]
-
-key_name = "{{prefix}}_{{version}}"
-authority = "{{prefix}}_{{version}}-{{git \"id 8\"}}"
-
-releasebuild = [
-    "@zip @zen_{{version}}"
-]
-
-[header_exts]
-version = "{{git \"id 8\"}}"
