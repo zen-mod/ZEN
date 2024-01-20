@@ -78,7 +78,7 @@ class GVAR(RscCombo): RscCombo {
 class GVAR(RscEdit): RscEdit {
     idc = -1;
     x = QUOTE(POS_W(10.1));
-    y = pixelH;
+    y = QUOTE(pixelH);
     w = QUOTE(POS_W(15.9));
     h = QUOTE(POS_H(1) - pixelH);
     colorText[] = {1, 1, 1, 1};

@@ -100,7 +100,7 @@ class RscDisplayCurator {
                         };
                         class Line: RscLine {
                             x = 0;
-                            y = pixelH;
+                            y = QUOTE(pixelH);
                             w = 11 * GUI_GRID_W;
                             h = 0;
                             colorText[] = {0, 0, 0, 1};

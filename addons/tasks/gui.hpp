@@ -103,14 +103,14 @@ class GVAR(RscTasks): EGVAR(modules,RscDisplay) {
                 };
                 class Title: EGVAR(common,RscEdit) {
                     idc = IDC_TASK_TITLE;
-                    x = pixelW;
+                    x = QUOTE(pixelW);
                     y = QUOTE(POS_H(16.5));
                     w = QUOTE(POS_W(26) - pixelW);
                 };
                 class Description: EGVAR(common,RscEdit) {
                     idc = IDC_TASK_DESCRIPTION;
                     style = ST_MULTI;
-                    x = pixelW;
+                    x = QUOTE(pixelW);
                     y = QUOTE(POS_H(17.6));
                     w = QUOTE(POS_W(26) - pixelW);
                     h = QUOTE(POS_H(7.2));

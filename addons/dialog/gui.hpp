@@ -140,7 +140,7 @@ class GVAR(Row_EditMulti): GVAR(Row_Edit) {
         };
         class Edit: Edit {
             style = ST_MULTI;
-            x = pixelW;
+            x = QUOTE(pixelW);
             y = QUOTE(POS_H(1));
             w = QUOTE(POS_W(26) - pixelW);
         };

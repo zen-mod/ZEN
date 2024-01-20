@@ -61,7 +61,7 @@ class GVAR(code): GVAR(base) {
             idc = IDC_ATTRIBUTE_EDIT;
             style = ST_MULTI;
             font = "EtelkaMonospacePro";
-            x = pixelW;
+            x = QUOTE(pixelW);
             y = QUOTE(POS_H(1) + pixelH);
             w = QUOTE(POS_W(26) - pixelW);
             h = QUOTE(POS_H(4) - pixelH);

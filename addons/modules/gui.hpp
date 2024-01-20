@@ -497,7 +497,7 @@ class GVAR(RscExecuteCode): GVAR(RscDisplay) {
                     style = ST_MULTI;
                     font = "EtelkaMonospacePro";
                     tooltip = CSTRING(ModuleExecuteCode_Args_Tooltip);
-                    x = pixelW;
+                    x = QUOTE(pixelW);
                     y = QUOTE(POS_H(1.1));
                     w = QUOTE(POS_W(26) - pixelW);
                     h = QUOTE(POS_H(13));
@@ -649,8 +649,8 @@ class GVAR(RscGlobalHint): GVAR(RscDisplay) {
             class controls {
                 class Edit: RscEditMulti {
                     idc = IDC_GLOBALHINT_EDIT;
-                    x = pixelW;
-                    y = pixelH;
+                    x = QUOTE(pixelW);
+                    y = QUOTE(pixelH);
                     w = QUOTE(POS_W(13.2) - pixelW);
                     h = QUOTE(POS_H(10) - pixelH);
                     colorBackground[] = {0.25, 0.25, 0.25, 0.1};
