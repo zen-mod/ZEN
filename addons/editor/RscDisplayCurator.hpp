@@ -32,7 +32,7 @@ class RscDisplayCurator {
                     w = QUOTE(safeZoneW - POS_EDGE(25,22) * GUI_GRID_W);
                 };
                 class Logo: RscPicture {
-                    x = (safeZoneW - POS_EDGE(25,22) * GUI_GRID_W) / 2 - 0.5 * GUI_GRID_W;
+                    x = QUOTE((safeZoneW - POS_EDGE(25,22) * GUI_GRID_W) / 2 - 0.5 * GUI_GRID_W);
                 };
                 class FeedbackMessage: RscText {
                     w = QUOTE(safeZoneW - POS_EDGE(25,22) * GUI_GRID_W);
