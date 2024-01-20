@@ -15,47 +15,47 @@ class EGVAR(common,RscCheckbox);
 class RscDisplayCurator {
     class Controls {
         class Main: RscControlsGroupNoScrollbars {
-            x = QUOTE(safeZoneX + POS_EDGE_CFG(12.5,11) * GUI_GRID_W);
-            y = QUOTE(safeZoneY + POS_EDGE_CFG(0.5,0) * GUI_GRID_H);
-            w = QUOTE(safeZoneW - POS_EDGE_CFG(25,22) * GUI_GRID_W);
+            x = QUOTE(safeZoneX + POS_EDGE(12.5,11) * GUI_GRID_W);
+            y = QUOTE(safeZoneY + POS_EDGE(0.5,0) * GUI_GRID_H);
+            w = QUOTE(safeZoneW - POS_EDGE(25,22) * GUI_GRID_W);
             class controls {
                 class PointsBackground: RscText {
-                    w = QUOTE(safeZoneW - POS_EDGE_CFG(25,22) * GUI_GRID_W);
+                    w = QUOTE(safeZoneW - POS_EDGE(25,22) * GUI_GRID_W);
                 };
                 class Points: RscText {
-                    w = QUOTE(safeZoneW - POS_EDGE_CFG(25,22) * GUI_GRID_W);
+                    w = QUOTE(safeZoneW - POS_EDGE(25,22) * GUI_GRID_W);
                 };
                 class PointsPreview: RscText {
-                    x = QUOTE(POS_EDGE_CFG(7,8) * GUI_GRID_W);
+                    x = QUOTE(POS_EDGE(7,8) * GUI_GRID_W);
                 };
                 class PointsFrame: RscFrame {
-                    w = QUOTE(safeZoneW - POS_EDGE_CFG(25,22) * GUI_GRID_W);
+                    w = QUOTE(safeZoneW - POS_EDGE(25,22) * GUI_GRID_W);
                 };
                 class Logo: RscPicture {
-                    x = QUOTE((safeZoneW - POS_EDGE_CFG(25,22) * GUI_GRID_W) / 2 - 0.5 * GUI_GRID_W);
+                    x = QUOTE((safeZoneW - POS_EDGE(25,22) * GUI_GRID_W) / 2 - 0.5 * GUI_GRID_W);
                 };
                 class FeedbackMessage: RscText {
-                    w = QUOTE(safeZoneW - POS_EDGE_CFG(25,22) * GUI_GRID_W);
+                    w = QUOTE(safeZoneW - POS_EDGE(25,22) * GUI_GRID_W);
                 };
             };
         };
         class AddBar: RscControlsGroupNoScrollbars {
-            x = QUOTE(safeZoneX + safeZoneW - POS_EDGE_CFG(12.5,11) * GUI_GRID_W);
-            y = QUOTE(safeZoneY + POS_EDGE_CFG(0.5,0) * GUI_GRID_H);
+            x = QUOTE(safeZoneX + safeZoneW - POS_EDGE(12.5,11) * GUI_GRID_W);
+            y = QUOTE(safeZoneY + POS_EDGE(0.5,0) * GUI_GRID_H);
         };
         class Add: RscControlsGroupNoScrollbars {
-            x = QUOTE(safeZoneX + safeZoneW - POS_EDGE_CFG(12.5,11) * GUI_GRID_W);
-            y = QUOTE(safeZoneY + POS_EDGE_CFG(1.5,1) * GUI_GRID_H);
-            h = QUOTE(safeZoneH - POS_EDGE_CFG(2,1) * GUI_GRID_H);
+            x = QUOTE(safeZoneX + safeZoneW - POS_EDGE(12.5,11) * GUI_GRID_W);
+            y = QUOTE(safeZoneY + POS_EDGE(1.5,1) * GUI_GRID_H);
+            h = QUOTE(safeZoneH - POS_EDGE(2,1) * GUI_GRID_H);
             class controls {
                 class CreateBackground: RscText {
-                    h = QUOTE(safeZoneH - POS_EDGE_CFG(2,1) * GUI_GRID_H);
+                    h = QUOTE(safeZoneH - POS_EDGE(2,1) * GUI_GRID_H);
                 };
                 class CreateClassesBackground: RscText {
-                    h = QUOTE(safeZoneH - POS_EDGE_CFG(6,5) * GUI_GRID_H);
+                    h = QUOTE(safeZoneH - POS_EDGE(6,5) * GUI_GRID_H);
                 };
                 class CreateFrame: RscFrame {
-                    h = QUOTE(safeZoneH - POS_EDGE_CFG(6,5) * GUI_GRID_H);
+                    h = QUOTE(safeZoneH - POS_EDGE(6,5) * GUI_GRID_H);
                 };
                 class CreateSearch: RscEdit {
                     x = QUOTE(0.15 *  GUI_GRID_W);
@@ -77,7 +77,7 @@ class RscDisplayCurator {
                     x = QUOTE(9.9 *  GUI_GRID_W);
                 };
                 class CreateUnitsWest: RscTree {
-                    h = QUOTE(safeZoneH - POS_EDGE_CFG(8.1,7.1) * GUI_GRID_H);
+                    h = QUOTE(safeZoneH - POS_EDGE(8.1,7.1) * GUI_GRID_H);
                     class ScrollBar: ScrollBar {
                         thumb = "\a3\3DEN\Data\Controls\ctrlDefault\thumb_ca.paa";
                         border = "\a3\3DEN\Data\Controls\ctrlDefault\border_ca.paa";
@@ -87,7 +87,7 @@ class RscDisplayCurator {
                 };
                 class VehicleCrew: RscControlsGroupNoScrollbars {
                     x = 0;
-                    y = QUOTE(safeZoneH - POS_EDGE_CFG(3,2) * GUI_GRID_H);
+                    y = QUOTE(safeZoneH - POS_EDGE(3,2) * GUI_GRID_H);
                     w = QUOTE(11 *  GUI_GRID_W);
                     h = QUOTE(GUI_GRID_H);
                     class controls {
@@ -128,22 +128,22 @@ class RscDisplayCurator {
             };
         };
         class MissionBar: RscControlsGroupNoScrollbars {
-            x = QUOTE(safeZoneX + POS_EDGE_CFG(1.5,0) * GUI_GRID_W);
-            y = QUOTE(safeZoneY + POS_EDGE_CFG(0.5,0) * GUI_GRID_H);
+            x = QUOTE(safeZoneX + POS_EDGE(1.5,0) * GUI_GRID_W);
+            y = QUOTE(safeZoneY + POS_EDGE(0.5,0) * GUI_GRID_H);
         };
         class Mission: RscControlsGroupNoScrollbars {
-            x = QUOTE(safeZoneX + POS_EDGE_CFG(1.5,0) * GUI_GRID_W);
-            y = QUOTE(safeZoneY + POS_EDGE_CFG(1.5,1) * GUI_GRID_H);
-            h = QUOTE(safeZoneH - POS_EDGE_CFG(2,1) * GUI_GRID_H);
+            x = QUOTE(safeZoneX + POS_EDGE(1.5,0) * GUI_GRID_W);
+            y = QUOTE(safeZoneY + POS_EDGE(1.5,1) * GUI_GRID_H);
+            h = QUOTE(safeZoneH - POS_EDGE(2,1) * GUI_GRID_H);
             class controls {
                 class EntitiesBackground: RscText {
-                    h = QUOTE(safeZoneH - POS_EDGE_CFG(2,1) * GUI_GRID_H);
+                    h = QUOTE(safeZoneH - POS_EDGE(2,1) * GUI_GRID_H);
                 };
                 class EntitiesFrame: RscFrame {
-                    h = QUOTE(safeZoneH - POS_EDGE_CFG(2,1) * GUI_GRID_H);
+                    h = QUOTE(safeZoneH - POS_EDGE(2,1) * GUI_GRID_H);
                 };
                 class Entities: RscTree {
-                    h = QUOTE(safeZoneH - POS_EDGE_CFG(2,1) * GUI_GRID_H);
+                    h = QUOTE(safeZoneH - POS_EDGE(2,1) * GUI_GRID_H);
                     class ScrollBar: ScrollBar {
                         thumb = "\a3\3DEN\Data\Controls\ctrlDefault\thumb_ca.paa";
                         border = "\a3\3DEN\Data\Controls\ctrlDefault\border_ca.paa";

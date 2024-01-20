@@ -100,9 +100,8 @@
 
 #define COLOR_BACKGROUND_SETTING COLOR_SETTING(EGVAR(common,darkMode),1,1,1,0.1,0,0,0,0.2)
 
-#define POS_EDGE(DEFAULT,MOVED) ([ARR_2(DEFAULT,MOVED)] select GETMVAR(EGVAR(editor,moveDisplayToEdge),false))
-
-#define POS_EDGE_CFG(DEFAULT,MOVED) ([ARR_2(DEFAULT,MOVED)] select (missionNamespace getVariable [ARR_2(QQEGVAR(editor,moveDisplayToEdge),false)]))
+#define POS_EDGE(DEFAULT,MOVED) ([ARR_2(DEFAULT,MOVED)] select (missionNamespace getVariable [ARR_2(QQEGVAR(editor,moveDisplayToEdge),false)]))
+#define POS_EDGE_SQF(DEFAULT,MOVED) ([ARR_2(DEFAULT,MOVED)] select GETMVAR(EGVAR(editor,moveDisplayToEdge),false))
 
 #define ASCII_NEWLINE 10
 #define ASCII_PERIOD 46
