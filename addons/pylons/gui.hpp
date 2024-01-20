@@ -18,7 +18,7 @@ class GVAR(display) {
             x = CENTER_X - (PICTURE_W + GRID_W(5)) / 2;
             y = CENTER_Y - (PICTURE_H + GRID_H(22)) / 2;
             w = PICTURE_W + GRID_W(5);
-            h = GRID_H(5);
+            h = QUOTE(GRID_H(5));
             colorBackground[] = GUI_THEME_COLOR;
             moving = 1;
         };
@@ -49,7 +49,7 @@ class GVAR(display) {
             x = CENTER_X - PICTURE_W / 2;
             y = CENTER_Y + (PICTURE_H + GRID_H(6)) / 2 - GRID_H(5);
             w = PICTURE_W / 3;
-            h = GRID_H(5);
+            h = QUOTE(GRID_H(5));
         };
         class MirrorLabel: ctrlStatic {
             style = ST_RIGHT;
@@ -57,27 +57,27 @@ class GVAR(display) {
             tooltip = "$STR_3DEN_Object_Attribute_PylonsMirror_tooltip";
             x = CENTER_X + PICTURE_W / 2 - GRID_W(35);
             y = CENTER_Y + (PICTURE_H + GRID_H(6)) / 2 - GRID_H(5);
-            w = GRID_W(30);
-            h = GRID_H(5);
+            w = QUOTE(GRID_W(30));
+            h = QUOTE(GRID_H(5));
         };
         class Mirror: ctrlCheckbox {
             idc = IDC_MIRROR;
             x = CENTER_X + PICTURE_W / 2 - GRID_W(5);
             y = CENTER_Y + (PICTURE_H + GRID_H(6)) / 2 - GRID_H(5);
-            w = GRID_W(5);
-            h = GRID_H(5);
+            w = QUOTE(GRID_W(5));
+            h = QUOTE(GRID_H(5));
         };
         class ButtonOK: RscButtonMenuOK {
             x = CENTER_X + (PICTURE_W + GRID_W(5)) / 2 - GRID_W(25);
             y = CENTER_Y + (PICTURE_H + GRID_H(22)) / 2 - GRID_H(5);
-            w = GRID_W(25);
-            h = GRID_H(5);
+            w = QUOTE(GRID_W(25));
+            h = QUOTE(GRID_H(5));
         };
         class ButtonCancel: RscButtonMenuCancel {
             x = CENTER_X - (PICTURE_W + GRID_W(5)) / 2;
             y = CENTER_Y + (PICTURE_H + GRID_H(22)) / 2 - GRID_H(5);
-            w = GRID_W(25);
-            h = GRID_H(5);
+            w = QUOTE(GRID_W(25));
+            h = QUOTE(GRID_H(5));
         };
     };
 };
