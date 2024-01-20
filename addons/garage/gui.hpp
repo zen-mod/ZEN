@@ -14,14 +14,14 @@ class GVAR(display) {
     class controlsBackground {
         class BlackLeft: RscText {
             idc = -1;
-            x = safeZoneXAbs;
-            y = safeZoneY;
-            w = safeZoneXAbs - safeZoneX;
-            h = safeZoneH;
+            x = QUOTE(safeZoneXAbs);
+            y = QUOTE(safeZoneY);
+            w = QUOTE(safeZoneXAbs - safeZoneX);
+            h = QUOTE(safeZoneH);
             colorBackground[] = {0, 0, 0, 1};
         };
         class BlackRight: BlackLeft {
-            x = safeZoneX + safeZoneW;
+            x = QUOTE(safeZoneX + safeZoneW);
         };
         class MouseArea: RscText {
             idc = IDC_MOUSEAREA;
@@ -30,18 +30,18 @@ class GVAR(display) {
             onMouseZChanged = QUOTE(_this call FUNC(onMouseZChanged));
             onMouseButtonClick = QUOTE(_this call FUNC(onMouseButtonClick));
             style = ST_MULTI;
-            x = safeZoneX;
-            y = safeZoneY;
-            w = safeZoneW;
-            h = safeZoneH;
+            x = QUOTE(safeZoneX);
+            y = QUOTE(safeZoneY);
+            w = QUOTE(safeZoneW);
+            h = QUOTE(safeZoneH);
         };
     };
     class controls {
         class MenuBar: RscControlsGroupNoScrollbars {
             idc = IDC_MENU_BAR;
-            x = safeZoneX + POS_W(0.5);
-            y = safeZoneY + safezoneH - POS_H(1.5);
-            w = safeZoneW - POS_W(1);
+            x = QUOTE(safeZoneX + POS_W(0.5));
+            y = QUOTE(safeZoneY + safezoneH - POS_H(1.5));
+            w = QUOTE(safeZoneW - POS_W(1));
             h = QUOTE(POS_H(1));
             class controls {
                 class ButtonClose: RscButtonMenu {
@@ -71,8 +71,8 @@ class GVAR(display) {
         };
         class InfoGroup: RscControlsGroupNoScrollbars {
             idc = IDC_INFO_GROUP;
-            x = safeZoneX + safeZoneW - POS_W(20.1);
-            y = safeZoneY + safeZoneH - POS_H(4.5);
+            x = QUOTE(safeZoneX + safeZoneW - POS_W(20.1));
+            y = QUOTE(safeZoneY + safeZoneH - POS_H(4.5));
             w = QUOTE(POS_W(17.6));
             h = QUOTE(POS_H(3));
             class controls {
@@ -122,8 +122,8 @@ class GVAR(display) {
         };
         class BackgroundAnimations: RscText {
             idc = IDC_BACKGROUND_ANIMATIONS;
-            x = safeZoneX;
-            y = safeZoneY + POS_H(0.5);
+            x = QUOTE(safeZoneX);
+            y = QUOTE(safeZoneY + POS_H(0.5));
             w = QUOTE(POS_W(3.5));
             h = QUOTE(POS_H(2));
             colorBackground[] = {0, 0, 0, 1};
@@ -133,46 +133,46 @@ class GVAR(display) {
             onButtonClick = QUOTE(0 call FUNC(onTabSelect));
             text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGarage\AnimationSources_ca.paa";
             tooltip = "$STR_A3_RscDisplayGarage_tab_AnimationSources";
-            x = safeZoneX + POS_W(0.5);
-            y = safeZoneY + POS_H(0.5);
+            x = QUOTE(safeZoneX + POS_W(0.5));
+            y = QUOTE(safeZoneY + POS_H(0.5));
             w = QUOTE(POS_W(2));
             h = QUOTE(POS_H(2));
             colorBackground[] = {0, 0, 0, 0.5};
         };
         class BackgroundTextures: BackgroundAnimations {
             idc = IDC_BACKGROUND_TEXTURES;
-            y = safeZoneY + POS_H(2.8);
+            y = QUOTE(safeZoneY + POS_H(2.8));
         };
         class ButtonTextures: ButtonAnimations {
             idc = IDC_BUTTON_TEXTURES;
             onButtonClick = QUOTE(1 call FUNC(onTabSelect));
             text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGarage\TextureSources_ca.paa";
             tooltip = "$STR_A3_RscDisplayGarage_tab_TextureSources";
-            y = safeZoneY + POS_H(2.8);
+            y = QUOTE(safeZoneY + POS_H(2.8));
         };
         class ListBackground: RscText {
             idc = IDC_LIST_BACKGROUND;
-            x = safeZoneX + POS_W(3.5);
-            y = safeZoneY + POS_H(0.5);
+            x = QUOTE(safeZoneX + POS_W(3.5));
+            y = QUOTE(safeZoneY + POS_H(0.5));
             w = QUOTE(POS_W(13));
-            h = safeZoneH - POS_H(2.5);
+            h = QUOTE(safeZoneH - POS_H(2.5));
             colorBackground[] = {0, 0, 0, 0.5};
         };
         class ListFrame: RscFrame {
             idc = IDC_LIST_FRAME;
-            x = safeZoneX + POS_W(3.5);
-            y = safeZoneY + POS_H(0.5);
+            x = QUOTE(safeZoneX + POS_W(3.5));
+            y = QUOTE(safeZoneY + POS_H(0.5));
             w = QUOTE(POS_W(13));
-            h = safeZoneH - POS_H(2.5);
+            h = QUOTE(safeZoneH - POS_H(2.5));
             colorText[] = {0, 0, 0, 1};
         };
         class ListAnimations: RscListBox {
             idc = IDC_LIST_ANIMATIONS;
             onLBSelChanged = QUOTE(_this call FUNC(onAnimationSelect));
-            x = safeZoneX + POS_W(3.5);
-            y = safeZoneY + POS_H(0.5);
+            x = QUOTE(safeZoneX + POS_W(3.5));
+            y = QUOTE(safeZoneY + POS_H(0.5));
             w = QUOTE(POS_W(13));
-            h = safeZoneH - POS_H(2.5);
+            h = QUOTE(safeZoneH - POS_H(2.5));
             sizeEx = QUOTE(POS_H(1.2));
             colorSelect[] = {1, 1, 1, 1};
             colorSelect2[] = {1, 1, 1, 1};
@@ -190,10 +190,10 @@ class GVAR(display) {
             idc = IDC_LIST_EMPTY;
             style = ST_CENTER;
             text = "$STR_lib_info_na";
-            x = safeZoneX + POS_W(3.5);
-            y = safeZoneY + POS_H(0.5);
+            x = QUOTE(safeZoneX + POS_W(3.5));
+            y = QUOTE(safeZoneY + POS_H(0.5));
             w = QUOTE(POS_W(13));
-            h = safeZoneH - POS_H(2.5);
+            h = QUOTE(safeZoneH - POS_H(2.5));
             sizeEx = QUOTE(POS_H(2));
             colorText[] = {1, 1, 1, 0.15};
             shadow = 0;

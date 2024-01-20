@@ -43,15 +43,15 @@ class GVAR(icon): RscControlsGroupNoScrollbars {
 
 class GVAR(configure): RscControlsGroupNoScrollbars {
     idc = IDC_CONFIGURE_GROUP;
-    x = safeZoneXAbs;
-    y = safeZoneY;
-    w = safeZoneWAbs;
-    h = safeZoneH;
+    x = QUOTE(safeZoneXAbs);
+    y = QUOTE(safeZoneY);
+    w = QUOTE(safeZoneWAbs);
+    h = QUOTE(safeZoneH);
     class controls {
         class Container: RscControlsGroupNoScrollbars {
             idc = -1;
-            x = safeZoneWAbs / 2 - POS_W(13.5);
-            y = safeZoneH / 2 - POS_H(6.5);
+            x = QUOTE(safeZoneWAbs / 2 - POS_W(13.5));
+            y = QUOTE(safeZoneH / 2 - POS_H(6.5));
             w = QUOTE(POS_W(27));
             h = QUOTE(POS_H(13));
             class controls {

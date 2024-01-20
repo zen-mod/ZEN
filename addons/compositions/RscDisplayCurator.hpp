@@ -4,12 +4,12 @@ class RscDisplayCurator {
             class controls {
                 class CreateUnitsWest;
                 class CreateGroupsEmpty: CreateUnitsWest {
-                    h = safeZoneH - POS_EDGE(9.3,8.3) * GUI_GRID_H;
+                    h = QUOTE(safeZoneH - POS_EDGE(9.3,8.3) * GUI_GRID_H);
                 };
                 class GVAR(panel): RscControlsGroupNoScrollbars {
                     idc = IDC_PANEL_GROUP;
                     x = 0;
-                    y = safeZoneH - POS_EDGE(4.2,3.2) * GUI_GRID_H;
+                    y = QUOTE(safeZoneH - POS_EDGE(4.2,3.2) * GUI_GRID_H);
                     w = QUOTE(POS_W(11));
                     h = QUOTE(POS_H(1.2));
                     class controls {
