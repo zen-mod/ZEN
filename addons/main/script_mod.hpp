@@ -10,8 +10,8 @@
 #define VERSION_AR  MAJOR,MINOR,PATCHLVL,BUILD
 
 // MINIMAL required version for the Mod. Components can specify others..
-#define REQUIRED_VERSION 2.12
-#define REQUIRED_CBA_VERSION {3,15,8}
+#define REQUIRED_VERSION 2.14
+#define REQUIRED_CBA_VERSION {3,16,0}
 
 #ifdef COMPONENT_BEAUTIFIED
     #define COMPONENT_NAME QUOTE(ZEN - COMPONENT_BEAUTIFIED)
