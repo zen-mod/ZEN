@@ -6,9 +6,9 @@
         "P:/"
     ],
     "excludeList": [
-        "initsettings.sqf",
-        "initkeybinds.sqf",
-        "initattributes.sqf",
+        "initsettings.inc.sqf",
+        "initkeybinds.inc.sqf",
+        "initattributes.inc.sqf",
         "\\dev\\"
     ],
     "outputDir": "P:/",

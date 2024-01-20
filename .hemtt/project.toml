@@ -14,6 +14,13 @@ include = [
     "meta.cpp"
 ]
 
+[asc]
+enabled = true
+exclude = [
+    ".inc.sqf",
+    "/dev/"
+]
+
 key_name = "{{prefix}}_{{version}}"
 authority = "{{prefix}}_{{version}}-{{git \"id 8\"}}"
 

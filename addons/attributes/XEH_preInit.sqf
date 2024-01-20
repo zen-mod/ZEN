@@ -6,7 +6,7 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-#include "initKeybinds.sqf"
+#include "initKeybinds.inc.sqf"
 
 // Namespace thats stores data of all attribute displays
 GVAR(displays) = [] call CBA_fnc_createNamespace;
@@ -22,7 +22,7 @@ GVAR(previousMarkerColors) = [] call CBA_fnc_createNamespace;
 }, true, [], true] call CBA_fnc_addClassEventHandler;
 
 // Initialize the core/default attributes
-#include "initAttributes.sqf"
-#include "initSettings.sqf"
+#include "initAttributes.inc.sqf"
+#include "initSettings.inc.sqf"
 
 ADDON = true;
