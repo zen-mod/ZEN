@@ -102,6 +102,8 @@
 
 #define POS_EDGE(DEFAULT,MOVED) ([ARR_2(DEFAULT,MOVED)] select GETMVAR(EGVAR(editor,moveDisplayToEdge),false))
 
+#define POS_EDGE_CFG(DEFAULT,MOVED) ([ARR_2(DEFAULT,MOVED)] select (missionNamespace getVariable [ARR_2(QQEGVAR(editor,moveDisplayToEdge),false)]))
+
 #define ASCII_NEWLINE 10
 #define ASCII_PERIOD 46
 #define ASCII_DEGREE 176
