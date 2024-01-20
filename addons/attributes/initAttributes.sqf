@@ -995,6 +995,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_medical")) then {
     ] call FUNC(addAttribute);
 };
 
+private _hasAceRepair = isClass (configFile >> "CfgPatches" >> "ace_repair");
 [
     "Traits",
     "str_b_engineer_f0",
@@ -1006,10 +1007,10 @@ if (isClass (configFile >> "CfgPatches" >> "ace_medical")) then {
         } forEach call EFUNC(common,getSelectedUnits);
     },
     {_entity getUnitTrait "engineer"},
-    {!(missionNamespace getVariable ["ace_repair_enabled", false])}
+    [{true}, {!(missionNamespace getVariable ["ace_repair_enabled", false])}] select _hasAceRepair
 ] call FUNC(addAttribute);
 
-if (isClass (configFile >> "CfgPatches" >> "ace_repair")) then {
+if (_hasAceRepair) then {
     [
         "Traits",
         LSTRING(EngineeringSkill),
