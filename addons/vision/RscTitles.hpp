@@ -12,7 +12,7 @@ class RscTitles {
                 style = ST_CENTER;
                 x = 0;
                 y = QUOTE(safeZoneY + POS_H(3.3));
-                w = WIDTH_SINGLE;
+                w = QUOTE(WIDTH_SINGLE);
                 h = QUOTE(POS_H(0.9));
                 sizeEx = QUOTE(POS_H(0.8));
                 shadow = 0;

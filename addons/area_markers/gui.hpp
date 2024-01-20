@@ -15,16 +15,16 @@ class GVAR(icon): RscControlsGroupNoScrollbars {
     idc = IDC_ICON_GROUP;
     x = 0;
     y = 0;
-    w = ICON_WIDTH;
-    h = ICON_HEIGHT;
+    w = QUOTE(ICON_WIDTH);
+    h = QUOTE(ICON_HEIGHT);
     class controls {
         class Icon: RscPicture {
             idc = IDC_ICON_IMAGE;
             text = ICON_CENTER;
             x = 0;
             y = 0;
-            w = ICON_WIDTH;
-            h = ICON_HEIGHT;
+            w = QUOTE(ICON_WIDTH);
+            h = QUOTE(ICON_HEIGHT);
         };
         class Mouse: RscText {
             idc = IDC_ICON_MOUSE;
@@ -35,8 +35,8 @@ class GVAR(icon): RscControlsGroupNoScrollbars {
             onMouseMoving = QUOTE(call FUNC(onMouseMoving));
             x = 0;
             y = 0;
-            w = ICON_WIDTH;
-            h = ICON_HEIGHT;
+            w = QUOTE(ICON_WIDTH);
+            h = QUOTE(ICON_HEIGHT);
         };
     };
 };

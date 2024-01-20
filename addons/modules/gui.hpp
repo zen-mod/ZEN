@@ -1036,7 +1036,7 @@ class GVAR(RscSpawnReinforcements): GVAR(RscDisplay) {
                             y = QUOTE(POS_H(2.1) - pixelH);
                             w = QUOTE(POS_W(13));
                             h = QUOTE(POS_H(12));
-                            sizeEx = 3.96 * (1 / (getResolution select 3)) * pixelGrid * 0.5;
+                            sizeEx = QUOTE(3.96 * (1 / (getResolution select 3)) * pixelGrid * 0.5);
                             colorBackground[] = {0, 0, 0, 0.3};
                             colorBorder[] = {0, 0, 0, 0};
                             disableKeyboardSearch = 1;
