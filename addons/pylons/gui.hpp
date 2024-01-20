@@ -17,7 +17,7 @@ class GVAR(display) {
             idc = IDC_TITLE;
             x = QUOTE(CENTER_X - (PICTURE_W + GRID_W(5)) / 2);
             y = QUOTE(CENTER_Y - (PICTURE_H + GRID_H(22)) / 2);
-            w = PICTURE_W + GRID_W(5);
+            w = QUOTE(PICTURE_W + GRID_W(5));
             h = QUOTE(GRID_H(5));
             colorBackground[] = GUI_THEME_COLOR;
             moving = 1;
@@ -26,29 +26,29 @@ class GVAR(display) {
             idc = -1;
             x = QUOTE(CENTER_X - (PICTURE_W + GRID_W(5)) / 2);
             y = QUOTE(CENTER_Y - (PICTURE_H + GRID_H(11)) / 2);
-            w = PICTURE_W + GRID_W(5);
-            h = PICTURE_H + GRID_H(11);
+            w = QUOTE(PICTURE_W + GRID_W(5));
+            h = QUOTE(PICTURE_H + GRID_H(11));
             colorBackground[] = {0, 0, 0, 0.7};
         };
         class PictureBackground: ctrlStaticBackground {
             idc = -1;
             x = QUOTE(CENTER_X - PICTURE_W / 2);
             y = QUOTE(CENTER_Y - (PICTURE_H + GRID_H(6)) / 2);
-            w = PICTURE_W;
-            h = PICTURE_H;
+            w = QUOTE(PICTURE_W);
+            h = QUOTE(PICTURE_H);
         };
         class Picture: ctrlStaticPictureKeepAspect {
             idc = IDC_PICTURE;
             x = QUOTE(CENTER_X - PICTURE_W / 2);
             y = QUOTE(CENTER_Y - (PICTURE_H + GRID_H(6)) / 2);
-            w = PICTURE_W;
-            h = PICTURE_H;
+            w = QUOTE(PICTURE_W);
+            h = QUOTE(PICTURE_H);
         };
         class Presets: ctrlCombo {
             idc = IDC_PRESETS;
             x = QUOTE(CENTER_X - PICTURE_W / 2);
             y = QUOTE(CENTER_Y + (PICTURE_H + GRID_H(6)) / 2 - GRID_H(5));
-            w = PICTURE_W / 3;
+            w = QUOTE(PICTURE_W / 3);
             h = QUOTE(GRID_H(5));
         };
         class MirrorLabel: ctrlStatic {
