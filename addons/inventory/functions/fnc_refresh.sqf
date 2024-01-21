@@ -21,11 +21,18 @@ private _ctrlList = _display displayCtrl IDC_LIST;
 lnbClear _ctrlList;
 
 // Allow for items to be searched using class names by adding the 'class ' prefix
-private _filter = toLower ctrlText (_display displayCtrl IDC_SEARCH_BAR);
+private _filter = ctrlText (_display displayCtrl IDC_SEARCH_BAR);
 private _filterByClass = _filter select [0, 6] == "class ";
 
 if (_filterByClass) then {
     _filter = _filter select [6];
+};
+
+if (_filter != "") then {
+    _filter = _filter regexReplace ["[.?*+^$[\]\\(){}|-]/gio", "\\$&"]; // escape regex characters, TODO: switch to CBA function when that's a thing
+    _filter = ".*?" + (_filter splitString " " joinString ".*?") + ".*?/io";
+} else {
+    _filter = ".*?/io"
 };
 
 // Function that populates the list with the specified items using the amounts from the given cargo array
@@ -45,7 +52,7 @@ private _fnc_populate = {
         // Handle searching items by display name or class name
         private _text = [_name, _x] select _filterByClass;
 
-        if (_filter in toLower _text) then {
+        if (_text regexMatch _filter) then {
             private _picture = getText (_config >> "picture");
             private _tooltip = format ["%1\n%2", _name, _x];
             private _count = _counts param [_types find _x, 0];
