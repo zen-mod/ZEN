@@ -29,7 +29,8 @@ if (_filterByClass) then {
 };
 
 if (_filter != "") then {
-    _filter = _filter regexReplace ["[.?*+^$[\]\\(){}|-]/gio", "\\$&"]; // escape regex characters, TODO: switch to CBA function when that's a thing
+    // Escape regex characters, TODO: switch to CBA function when that's a thing
+    _filter = _filter regexReplace ["[.?*+^$[\]\\(){}|-]/gio", "\\$&"];
     _filter = ".*?" + (_filter splitString " " joinString ".*?") + ".*?/io";
 } else {
     _filter = ".*?/io"
