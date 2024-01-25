@@ -996,6 +996,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_medical")) then {
 };
 
 private _hasAceRepair = isClass (configFile >> "CfgPatches" >> "ace_repair");
+
 [
     "Traits",
     "str_b_engineer_f0",
