@@ -324,11 +324,12 @@ class GVAR(RscDisplay) {
         class Title: RscText {
             idc = IDC_TITLE;
             // Store the display's config, onLoad event for displays is not passed the config
-            onLoad = QUOTE( \
-                params [ARR_2('_control','_config')]; \
-                private _display = ctrlParent _control; \
-                _config = configHierarchy _config select 1; \
-                _display setVariable [ARR_2(QQGVAR(config),_config)]; \
+            #pragma hemtt suppress pw3_padded_arg
+            onLoad = QUOTE(\
+                params [ARR_2('_control','_config')];\
+                private _display = ctrlParent _control;\
+                _config = configHierarchy _config select 1;\
+                _display setVariable [ARR_2(QQGVAR(config),_config)];\
             );
             x = QUOTE(POS_X(6.5));
             w = QUOTE(POS_W(27));
