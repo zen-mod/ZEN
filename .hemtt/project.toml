@@ -21,6 +21,7 @@ git_hash = 0
 workshop = [
     "450814997", # CBA_A3
 ]
+mission = "test.VR"
 
 [hemtt.launch.ace]
 workshop = [
