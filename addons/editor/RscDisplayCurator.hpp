@@ -58,23 +58,23 @@ class RscDisplayCurator {
                     h = QUOTE(safeZoneH - POS_EDGE(6,5) * GUI_GRID_H);
                 };
                 class CreateSearch: RscEdit {
-                    x = QUOTE(0.15 *  GUI_GRID_W);
-                    w = QUOTE(7.7 *  GUI_GRID_W);
+                    x = QUOTE(0.15 * GUI_GRID_W);
+                    w = QUOTE(7.7 * GUI_GRID_W);
                 };
                 class CreateSearchButton: RscButtonSearch {
-                    x = QUOTE(7.9 *  GUI_GRID_W);
+                    x = QUOTE(7.9 * GUI_GRID_W);
                 };
                 class CollapseAll: CreateSearchButton {
                     idc = IDC_COLLAPSE_ALL;
                     text = "\a3\3DEN\Data\Displays\Display3DEN\tree_collapse_ca.paa";
                     tooltip = "$STR_3DEN_ctrlButtonCollapseAll_text";
-                    x = QUOTE(8.9 *  GUI_GRID_W);
+                    x = QUOTE(8.9 * GUI_GRID_W);
                 };
                 class ExpandAll: CollapseAll {
                     idc = IDC_EXPAND_ALL;
                     text = QPATHTOF(ui\tree_expand_ca.paa);
                     tooltip = "$STR_3DEN_ctrlButtonExpandAll_text";
-                    x = QUOTE(9.9 *  GUI_GRID_W);
+                    x = QUOTE(9.9 * GUI_GRID_W);
                 };
                 class CreateUnitsWest: RscTree {
                     h = QUOTE(safeZoneH - POS_EDGE(8.1,7.1) * GUI_GRID_H);
@@ -88,20 +88,20 @@ class RscDisplayCurator {
                 class VehicleCrew: RscControlsGroupNoScrollbars {
                     x = 0;
                     y = QUOTE(safeZoneH - POS_EDGE(3,2) * GUI_GRID_H);
-                    w = QUOTE(11 *  GUI_GRID_W);
+                    w = QUOTE(11 * GUI_GRID_W);
                     h = QUOTE(GUI_GRID_H);
                     class controls {
                         class Background: RscText {
                             x = 0;
                             y = 0;
-                            w = QUOTE(11 *  GUI_GRID_W);
+                            w = QUOTE(11 * GUI_GRID_W);
                             h = QUOTE(GUI_GRID_H);
                             colorBackground[] = {0, 0, 0, 0.2};
                         };
                         class Line: RscLine {
                             x = 0;
                             y = QUOTE(pixelH);
-                            w = QUOTE(11 *  GUI_GRID_W);
+                            w = QUOTE(11 * GUI_GRID_W);
                             h = 0;
                             colorText[] = {0, 0, 0, 1};
                         };
@@ -109,16 +109,16 @@ class RscDisplayCurator {
                             text = "$STR_3DEN_Display3DEN_VehiclePanel_TextEmpty_text";
                             x = QUOTE(GUI_GRID_W);
                             y = 0;
-                            w = QUOTE(10 *  GUI_GRID_W);
+                            w = QUOTE(10 * GUI_GRID_W);
                             h = QUOTE(GUI_GRID_H);
-                            sizeEx = QUOTE(0.9 *  GUI_GRID_H);
+                            sizeEx = QUOTE(0.9 * GUI_GRID_H);
                             shadow = 0;
                         };
                         class Toggle: EGVAR(common,RscCheckbox) {
                             idc = IDC_INCLUDE_CREW;
                             onLoad = QUOTE((_this select 0) cbSetChecked GVAR(includeCrew));
                             onCheckedChanged = QUOTE(GVAR(includeCrew) = !GVAR(includeCrew));
-                            x = QUOTE(0.1 *  GUI_GRID_W);
+                            x = QUOTE(0.1 * GUI_GRID_W);
                             y = 0;
                             w = QUOTE(GUI_GRID_W);
                             h = QUOTE(GUI_GRID_H);
