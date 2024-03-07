@@ -36,6 +36,7 @@ PREP(moduleBindVariable);
 PREP(moduleCAS);
 PREP(moduleChangeHeight);
 PREP(moduleChatter);
+PREP(moduleChatterUnit);
 PREP(moduleConvoyParameters);
 PREP(moduleCreateIED);
 PREP(moduleCreateIntel);

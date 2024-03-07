@@ -105,6 +105,16 @@
     };
 }, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
 
+[ELSTRING(main,DisplayName), QGVAR(ModuleChatter), ELSTRING(modules,ModuleChatter), {
+    if (isRemoteControlling player) exitWith {
+        [remoteControlled player] call EFUNC(modules,moduleChatterUnit);
+    };
+
+    if (isNull curatorCamera) exitWith {};
+
+    [effectiveCommander (SELECTED_OBJECTS param [0, objNull])] call EFUNC(modules,moduleChatterUnit);
+}, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
+
 [ELSTRING(main,DisplayName), QGVAR(reloadDisplay), [LSTRING(ReloadDisplay), LSTRING(ReloadDisplay_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
         [] call EFUNC(common,reloadDisplay);
