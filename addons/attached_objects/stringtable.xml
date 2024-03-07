@@ -10,6 +10,24 @@
         <Key ID="STR_ZEN_Attached_Objects_Attach_Description">
             <English>Attaches all selected objects to the specified parent object.</English>
         </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Bone">
+            <English>Bone</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Relative">
+            <English>Relative</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_AttachBone">
+            <English>Attach Objects to Bone</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_AttachBone_Description">
+            <English>Attaches all selected objects to a bone on the specified parent object.</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Orientation">
+            <English>Orientation</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Orientation_Description">
+            <English>Bone: match bone orientation (i.e. along gun barrel). Relative: maintain current orientation relative to bone.</English>
+        </Key>
         <Key ID="STR_ZEN_Attached_Objects_Detach">
             <English>Detach Objects</English>
         </Key>
@@ -46,6 +64,96 @@
             <Chinesesimp>无法将物体附加到物体自己身上</Chinesesimp>
             <Chinese>無法將物體附加到物體自己身上</Chinese>
             <Italian>Impossibile collegare l'oggetto a se stesso</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_CzechHlavne">
+            <English>Barrel</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_CzechHlaven">
+            <English>Barrel</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Czechkola">
+            <English>Wheel</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Czechkonec">
+            <English>End</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Czechleveho">
+            <English>Left</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Czechleve">
+            <English>Left</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Czechnabojnice">
+            <English>Cartridge Case</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Czechoptika">
+            <English>Optics</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Czechosa">
+            <English>Axis</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Czechotoc">
+            <English>Turn</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Czechpoklop">
+            <English>Hatch</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Czechprave">
+            <English>Right</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Czechpraveho">
+            <English>Right</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Czechpredniho">
+            <English>Nose</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Czechslapek">
+            <English>Pedals</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Czechslapky">
+            <English>Pedal</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Czechsmerovky">
+            <English>Rudder</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Czechspice">
+            <English>Spike</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Czechstopa">
+            <English>Mark</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Czechsvetlo">
+            <English>Light</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Czechvejskovky">
+            <English>Elevator</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_CzechVelitele">
+            <English>Commander</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_CzechVelka">
+            <English>Main</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_CzechVez">
+            <English>Turret</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_CzechVeze">
+            <English>Turret</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Czechraketa">
+            <English>Rocket</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Czechvrtule">
+            <English>Rotor</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Czechusti">
+            <English>Muzzle</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Czechzamerny">
+            <English>Aim Point</English>
+        </Key>
+        <Key ID="STR_ZEN_Attached_Objects_Czechzbytek">
+            <English>Rest</English>
         </Key>
     </Package>
 </Project>
