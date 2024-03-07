@@ -419,5 +419,20 @@
         <Key ID="STR_ZEN_Editor_ToggleAIPath_Description">
             <English>Makes selected AI units start or stop moving. Does not affect aiming or shooting. Similar to "Hold Position" in RTS games.</English>
         </Key>
+        <Key ID="STR_ZEN_Editor_MoveCamToSelection">
+            <English>Focus Object Mode</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_MoveCamToSelection_Description">
+            <English>Behaviour for "Move camera to selected entity" with an object selected.\nDefault: Base game behaviour.\nAlternate: 20 m above and behind object.\nCQB: Top-rear of object bounding box, useful for units inside buildings.\nAlternate + CQB: Switch between views on subsequent activations.</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_MoveCamToSelection_Alternate">
+            <English>Alternate</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_MoveCamToSelection_CQB">
+            <English>CQB</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_MoveCamToSelection_AlternateCQB">
+            <English>Alternate + CQB</English>
+        </Key>
     </Package>
 </Project>
