@@ -43,7 +43,7 @@ if (_type isEqualTo "") then {
     _ctrlImage ctrlCommit 0;
 
     _ctrlGroup ctrlShow true;
-    _ctrlGroup ctrlSetPositionX (safeZoneX + safeZoneW - POS_W(POS_EDGE(12.5,11) + IMAGE_HEIGHT * _ratio + 3 * BORDER_SIZE));
+    _ctrlGroup ctrlSetPositionX (safeZoneX + safeZoneW - POS_W(POS_EDGE_SQF(12.5,11) + IMAGE_HEIGHT * _ratio + 3 * BORDER_SIZE));
     _ctrlGroup ctrlSetPositionY (getMousePosition select 1) min (safeZoneY + safeZoneH - POS_H(IMAGE_HEIGHT + 3 * BORDER_SIZE));
     _ctrlGroup ctrlSetPositionW POS_W(IMAGE_HEIGHT * _ratio + 2 * BORDER_SIZE);
     _ctrlGroup ctrlCommit 0;

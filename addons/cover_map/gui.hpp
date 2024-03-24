@@ -61,22 +61,22 @@ class GVAR(display): EGVAR(modules,RscDisplay) {
         class Content: Content {
             // Map is created through script since map controls cannot be inside controls groups
             // Extra height is used here so other display elements are positioned correctly
-            h = POS_H(22.1);
+            h = QUOTE(POS_H(22.1));
             class controls {
                 class RotationLabel: EGVAR(common,RscLabel) {
                     text = "$STR_3DEN_Object_Attribute_Rotation_displayName";
                 };
                 class RotationSlider: ctrlXSliderH {
                     idc = IDC_CM_ROTATION_SLIDER;
-                    x = POS_W(10.1);
+                    x = QUOTE(POS_W(10.1));
                     y = 0;
-                    w = POS_W(13.5);
-                    h = POS_H(1);
+                    w = QUOTE(POS_W(13.5));
+                    h = QUOTE(POS_H(1));
                 };
                 class RotationEdit: EGVAR(common,RscEdit) {
                     idc = IDC_CM_ROTATION_EDIT;
-                    x = POS_W(23.7);
-                    w = POS_W(2.3);
+                    x = QUOTE(POS_W(23.7));
+                    w = QUOTE(POS_W(2.3));
                 };
             };
         };
