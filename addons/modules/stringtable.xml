@@ -3441,6 +3441,9 @@
             <Chinese>單位必須是載具</Chinese>
             <Japanese>ユニットは車両である必要があります</Japanese>
         </Key>
+        <Key ID="STR_ZEN_Modules_OnlyVehiclesOrFlags">
+            <English>Unit must be a vehicle or flag</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_OnlyAircraft">
             <English>The unit must be an aircraft</English>
             <Russian>Применимо только к воздушной технике</Russian>
