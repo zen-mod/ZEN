@@ -85,6 +85,48 @@
 
 [
     "Object",
+    LSTRING(AmmoCargo),
+    QGVAR(slider),
+    [0, 1, 0.1, true],
+    {
+        {
+            [QEGVAR(common,setAmmoCargo), [_x, _value], _x] call CBA_fnc_targetEvent;
+        } forEach call EFUNC(common,getSelectedVehicles);
+    },
+    {getAmmoCargo _entity},
+    {GVAR(enableAmmoCargo) && {getAmmoCargo _entity >= 0}}
+] call FUNC(addAttribute);
+
+[
+    "Object",
+    LSTRING(FuelCargo),
+    QGVAR(slider),
+    [0, 1, 0.1, true],
+    {
+        {
+            [QEGVAR(common,setFuelCargo), [_x, _value], _x] call CBA_fnc_targetEvent;
+        } forEach call EFUNC(common,getSelectedVehicles);
+    },
+    {getFuelCargo _entity},
+    {GVAR(enableFuelCargo) && {getFuelCargo _entity >= 0}}
+] call FUNC(addAttribute);
+
+[
+    "Object",
+    LSTRING(RepairCargo),
+    QGVAR(slider),
+    [0, 1, 0.1, true],
+    {
+        {
+            [QEGVAR(common,setRepairCargo), [_x, _value], _x] call CBA_fnc_targetEvent;
+        } forEach call EFUNC(common,getSelectedVehicles);
+    },
+    {getRepairCargo _entity},
+    {GVAR(enableRepairCargo) && {getRepairCargo _entity >= 0}}
+] call FUNC(addAttribute);
+
+[
+    "Object",
     "STR_3DEN_Object_Attribute_Rank_displayName",
     QGVAR(icons),
     [[
@@ -953,7 +995,23 @@ if (isClass (configFile >> "CfgPatches" >> "ace_medical")) then {
     ] call FUNC(addAttribute);
 };
 
-if (isClass (configFile >> "CfgPatches" >> "ace_repair")) then {
+private _hasAceRepair = isClass (configFile >> "CfgPatches" >> "ace_repair");
+
+[
+    "Traits",
+    "str_b_engineer_f0",
+    QGVAR(toolbox),
+    [1, 2, [ELSTRING(common,No), ELSTRING(common,Yes)]],
+    {
+        {
+            [QEGVAR(common,setUnitTrait), [_x, "engineer", _value], _x] call CBA_fnc_targetEvent;
+        } forEach call EFUNC(common,getSelectedUnits);
+    },
+    {_entity getUnitTrait "engineer"},
+    [{true}, {!(missionNamespace getVariable ["ace_repair_enabled", false])}] select _hasAceRepair
+] call FUNC(addAttribute);
+
+if (_hasAceRepair) then {
     [
         "Traits",
         LSTRING(EngineeringSkill),
@@ -964,20 +1022,8 @@ if (isClass (configFile >> "CfgPatches" >> "ace_repair")) then {
                 _x setVariable ["ACE_isEngineer", _value, true];
             } forEach call EFUNC(common,getSelectedUnits);
         },
-        {[0, 1, 2] select (_entity getVariable ["ACE_isEngineer", _entity getUnitTrait "engineer"])}
-    ] call FUNC(addAttribute);
-} else {
-    [
-        "Traits",
-        "str_b_engineer_f0",
-        QGVAR(toolbox),
-        [1, 2, [ELSTRING(common,No), ELSTRING(common,Yes)]],
-        {
-            {
-                [QEGVAR(common,setUnitTrait), [_x, "engineer", _value], _x] call CBA_fnc_targetEvent;
-            } forEach call EFUNC(common,getSelectedUnits);
-        },
-        {_entity getUnitTrait "engineer"}
+        {[0, 1, 2] select (_entity getVariable ["ACE_isEngineer", _entity getUnitTrait "engineer"])},
+        {missionNamespace getVariable ["ace_repair_enabled", false]}
     ] call FUNC(addAttribute);
 };
 

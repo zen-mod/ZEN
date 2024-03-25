@@ -46,6 +46,33 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(enableAmmoCargo),
+    "CHECKBOX",
+    LSTRING(AmmoCargo),
+    [LSTRING(DisplayName), "STR_3DEN_Object_textPlural"],
+    true,
+    false
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableFuelCargo),
+    "CHECKBOX",
+    LSTRING(FuelCargo),
+    [LSTRING(DisplayName), "STR_3DEN_Object_textPlural"],
+    true,
+    false
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableRepairCargo),
+    "CHECKBOX",
+    LSTRING(RepairCargo),
+    [LSTRING(DisplayName), "STR_3DEN_Object_textPlural"],
+    true,
+    false
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(enableRank),
     "CHECKBOX",
     "STR_3DEN_Object_Attribute_Rank_displayName",
