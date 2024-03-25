@@ -28,6 +28,10 @@ if !(alive _object) exitWith {
     [LSTRING(OnlyAlive)] call EFUNC(common,showMessage);
 };
 
+if !(_object isKindOf "AllVehicles" || {_object isKindOf "FlagCarrier"}) exitWith {
+    [LSTRING(OnlyVehiclesOrFlags)] call EFUNC(common,showMessage);
+};
+
 private _flagsCache = +(uiNamespace getVariable QGVAR(flagsCache));
 _flagsCache params ["_flagTextures", "_displayNames"];
 
