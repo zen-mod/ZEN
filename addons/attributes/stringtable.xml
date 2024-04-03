@@ -19,12 +19,15 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_AmmoCargo">
             <English>Ammo Cargo</English>
+            <Japanese>弾薬カーゴ</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_FuelCargo">
             <English>Fuel Cargo</English>
+            <Japanese>燃料カーゴ</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_RepairCargo">
             <English>Repair Cargo</English>
+            <Japanese>修理カーゴ</Japanese>
         </Key>
         <Key ID="STR_ZEN_Attributes_Engine">
             <English>Engine</English>

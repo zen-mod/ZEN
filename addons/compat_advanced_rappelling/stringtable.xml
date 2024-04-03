@@ -4,6 +4,7 @@
         <Key ID="STR_ZEN_Compat_Advanced_Rappelling_Rappel">
             <English>Rappel</English>
             <German>Abseilen</German>
+            <Japanese>ラぺリング</Japanese>
         </Key>
     </Package>
 </Project>
