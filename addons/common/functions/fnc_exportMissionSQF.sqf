@@ -408,15 +408,15 @@ if (_radius > 0) then {
 if (_includeMarkers) then {
     {
         if (markerShape _x != "POLYLINE") then {
-            _outputMarkers pushBack ["_marker = createMarker [%1, %2];", str _x, markerPos [_x, true]];
-            _outputMarkers pushBack ["_marker setMarkerDir %1;", markerDir _x];
-            _outputMarkers pushBack ["_marker setMarkerType %1;", str markerType _x];
-            _outputMarkers pushBack ["_marker setMarkerShape %1;", str markerShape _x];
-            _outputMarkers pushBack ["_marker setMarkerSize %1;", markerSize _x];
-            _outputMarkers pushBack ["_marker setMarkerText %1;", str markerText _x];
-            _outputMarkers pushBack ["_marker setMarkerBrush %1;", str markerBrush _x];
-            _outputMarkers pushBack ["_marker setMarkerColor %1;", str markerColor _x];
-            _outputMarkers pushBack ["_marker setMarkerAlpha %1;", markerAlpha _x];
+            _outputMarkers pushBack ["_marker = createMarkerLocal [%1, %2];", str _x, markerPos [_x, true]];
+            _outputMarkers pushBack ["_marker setMarkerTypeLocal %1;", str markerType _x];
+            _outputMarkers pushBack ["_marker setMarkerShapeLocal %1;", str markerShape _x];
+            _outputMarkers pushBack ["_marker setMarkerDirLocal %1;", markerDir _x];
+            _outputMarkers pushBack ["_marker setMarkerSizeLocal %1;", markerSize _x];
+            _outputMarkers pushBack ["_marker setMarkerTextLocal %1;", str markerText _x];
+            _outputMarkers pushBack ["_marker setMarkerBrushLocal %1;", str markerBrush _x];
+            _outputMarkers pushBack ["_marker setMarkerColorLocal %1;", str markerColor _x];
+            _outputMarkers pushBack ["_marker setMarkerAlpha %1;", markerAlpha _x]; // broadcast marker globally
             _outputMarkers pushBack "";
         };
     } forEach allMapMarkers;
