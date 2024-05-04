@@ -416,7 +416,7 @@ if (_includeMarkers) then {
             _outputMarkers pushBack ["_marker setMarkerTextLocal %1;", str markerText _x];
             _outputMarkers pushBack ["_marker setMarkerBrushLocal %1;", str markerBrush _x];
             _outputMarkers pushBack ["_marker setMarkerColorLocal %1;", str markerColor _x];
-            _outputMarkers pushBack ["_marker setMarkerAlpha %1;", markerAlpha _x]; // broadcast marker globally
+            _outputMarkers pushBack ["_marker setMarkerAlpha %1;", markerAlpha _x]; // Broadcast marker globally
             _outputMarkers pushBack "";
         };
     } forEach allMapMarkers;
