@@ -533,7 +533,7 @@
             <Polish>Promień</Polish>
             <Czech>Rádius</Czech>
             <Italian>Raggio</Italian>
-            <Japanese>範囲</Japanese>
+            <Japanese>範囲半径</Japanese>
             <Korean>반경</Korean>
             <Chinesesimp>半径</Chinesesimp>
             <Chinese>半徑</Chinese>
@@ -546,7 +546,7 @@
             <Polish>Promień (m)</Polish>
             <Czech>Rádius (m)</Czech>
             <Italian>Raggio (m)</Italian>
-            <Japanese>範囲 (m)</Japanese>
+            <Japanese>範囲半径 (m)</Japanese>
             <Korean>반경 (m)</Korean>
             <Chinesesimp>半径（米）</Chinesesimp>
             <Chinese>半徑（米）</Chinese>
@@ -824,7 +824,7 @@
             <Russian>Виртуальный Арсенал</Russian>
             <German>BI Virtuelle Arsenal</German>
             <Polish>Wirtualny arsenał BI</Polish>
-            <Japanese>バーチャル武器庫</Japanese>
+            <Japanese>BI バーチャル武器庫</Japanese>
             <Korean>BI 가상 무기고</Korean>
             <Chinesesimp>原版虚拟武器库</Chinesesimp>
             <Chinese>原版虛擬武器庫</Chinese>
@@ -868,7 +868,7 @@
             <French>Aigle de caméra</French>
             <Polish>Orzeł przy kamerze</Polish>
             <Korean>독수리 카메라</Korean>
-            <Japanese>イーグル有無</Japanese>
+            <Japanese>カメライーグルの有無</Japanese>
             <Chinesesimp>鹰式摄影机</Chinesesimp>
             <Chinese>鷹式攝影機</Chinese>
             <Italian>Telecamera aquila</Italian>

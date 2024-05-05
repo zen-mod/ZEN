@@ -70,6 +70,7 @@
         <Key ID="STR_ZEN_Context_Actions_Selected">
             <English>Selected</English>
             <German>Auswahl</German>
+            <Japanese>選択中</Japanese>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_10m">
             <English>10 m</English>
@@ -189,7 +190,7 @@
         </Key>
         <Key ID="STR_ZEN_Context_Actions_ThrowGrenade">
             <English>Throw Grenade</English>
-            <Japanese>手りゅう弾使用</Japanese>
+            <Japanese>手りゅう弾投てき</Japanese>
             <Chinesesimp>投掷手榴弹</Chinesesimp>
             <Chinese>投擲手榴彈</Chinese>
             <German>Granate werfen</German>

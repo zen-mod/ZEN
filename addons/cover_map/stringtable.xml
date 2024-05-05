@@ -6,7 +6,7 @@
             <German>Benutze Linksklick um mit dem Kartenausschnitt zu interagieren (rote Fläche).\nEin Klick innerhalb der Fläche verschiebt den Ausschnitt und ein Klick außerhalb generiert einen neuen Ausschnitt.</German>
             <Chinesesimp>左键单击可与地图覆盖区域（红色阴影）进行互动。\n点击内部区域将移动它，点击外部将创建一个新的区域。</Chinesesimp>
             <Chinese>左鍵單擊可與地圖覆蓋區域（紅色陰影）進行互動。 \n點擊內部區域將移動它，點擊外部將創建一個新的區域。</Chinese>
-            <Japanese>右クリックで地図の一部分を影付きの赤で囲います。\n囲われた部分をクリックすると移動でき、外側をクリックすると新しい範囲を作ります。</Japanese>
+            <Japanese>右クリックで地図の一部分を影付きの赤で囲います。\n囲われた部分をクリックすると移動でき、外側をクリックすると新しいエリアを作ります。</Japanese>
             <Italian>Fare clic con il pulsante sinistro del mouse per interagire con l'area della mappa di copertura (ombreggiata in rosso).\nFare clic all'interno dell'area la sposterà e facendo clic all'esterno creerà una nuova area.</Italian>
         </Key>
     </Package>

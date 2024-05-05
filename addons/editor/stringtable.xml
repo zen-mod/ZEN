@@ -129,17 +129,19 @@
         <Key ID="STR_ZEN_Editor_AddModIcons">
             <English>Add Mod Icons</English>
             <German>Modsymbole anzeigen</German>
+            <Japanese>MODアイコンを追加</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_AddModIcons_Description">
             <English>Adds mod icons to the create unit trees. WARNING: Can significantly increase display load times.</English>
             <German>Zeigt Modsymbole im Einheitenbaum an. WARNUNG: Kann die Ladezeit des Baums deutlich erhöhen.</German>
+            <Japanese>作成ユニットツリーにMODアイコンを追加します。 警告: 表示の読み込み時間が大幅に長くなる可能性があります。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_RandomizeCopyPaste">
             <English>Randomize Deep Copy/Paste</English>
             <German>Zufallsgenerator für komplette Kopien</German>
             <Polish>Losowe kopiowanie/Wklejanie (Głębokie)</Polish>
             <Korean>전체 복사/붙여 넣기 랜덤</Korean>
-            <Japanese>深コピー/ペーストのランダム化</Japanese>
+            <Japanese>ディープコピー/ペーストのランダム化</Japanese>
             <Chinesesimp>随机化深层复制/粘贴</Chinesesimp>
             <Chinese>隨機化深層複製/粘貼</Chinese>
             <Italian>Copia/incolla profonda casualmente</Italian>
@@ -149,7 +151,7 @@
             <German>Steuert, ob die Identität und Fahrzeugausstattung von kompletten Kopien zufällig generiert werden.</German>
             <Polish>Kontoluje czy głębokie kopiowanie/wklejanie będzie losowo zmieniało ustawienia jednostek (zamiast tworzenia identycznych kopii)</Polish>
             <Korean>(동일한 복사본을 만드는 대신) 전체 복사/붙여 넣기의 유닛 설정 랜덤 여부를 제어합니다.</Korean>
-            <Japanese>深コピー時にユニットのアイデンティティと車両カスタマイズをランダム化するかどうかを設定します。</Japanese>
+            <Japanese>ディープコピー時にユニットのアイデンティティと車両カスタマイズをランダム化するかどうかを設定します。</Japanese>
             <Chinesesimp>控制深层复制/粘贴是否会随机化单位身份和车辆自定义（而不是生成相同的副本）。</Chinesesimp>
             <Chinese>控制深層複製/粘貼是否會隨機化單位身份和車輛自定義（而不是生成相同的副本）。</Chinese>
             <Italian>Controlla se il copia/incolla completo renderà casuali le identità delle unità e la personalizzazione dei veicoli (invece di creare copie identiche).</Italian>
@@ -232,7 +234,7 @@
             <English>Deep Copy</English>
             <German>Komplette Kopie</German>
             <Polish>Głęboka Kopia</Polish>
-            <Japanese>深コピー</Japanese>
+            <Japanese>ディープコピー</Japanese>
             <Chinesesimp>深层复制</Chinesesimp>
             <Chinese>深層複製</Chinese>
             <Italian>Copia profonda</Italian>
@@ -241,7 +243,7 @@
             <English>Performs a "deep copy" of selected objects - copying an extended set of object properties such as unit loadouts, vehicle inventories and customization.</English>
             <German>Legt eine komplette Kopie von Objekten an, welches die Einheiten- und Fahrzeugausrüstung, sowie benutzerdefinierte Anpassungen speichert.</German>
             <Polish>Powoduje "Głębokie" kopiowanie wybranych przedmiotów, oznacza to że ustawienia, wartości, przedmioty i inwentarz jednostki także zostanie skopiowany.</Polish>
-            <Japanese>"深コピー" は選択したオブジェクトに対して使用できます。ユニットの装備や車両インベントリとカスタマイズといった、プロパティを含めてコピーできます。</Japanese>
+            <Japanese>"ディープコピー" は選択したオブジェクトに対して使用できます。ユニットの装備や車両インベントリとカスタマイズといった、プロパティを含めてコピーできます。</Japanese>
             <Chinesesimp>对选定的对象执行"深层复制"--复制一组扩展的对象属性，如单位装备、车辆库存和自定义。</Chinesesimp>
             <Chinese>對選定的對象執行"深層複製"--複製一組擴展的對象屬性，如單位裝備、車輛庫存和自定義。</Chinese>
             <Italian>Esegue una "copia profonda" degli oggetti selezionati, copiando un insieme esteso di proprietà dell'oggetto come l'equipaggiamento delle unità, gli inventari dei veicoli e la personalizzazione.</Italian>
@@ -250,7 +252,7 @@
             <English>Deep Paste</English>
             <German>Komplettes Einfügen</German>
             <Polish>Głębokie wklejanie</Polish>
-            <Japanese>深ペースト</Japanese>
+            <Japanese>ディープペースト</Japanese>
             <Chinesesimp>深层粘贴</Chinesesimp>
             <Chinese>深層粘貼</Chinese>
             <Italian>Pasta profonda</Italian>
@@ -259,7 +261,7 @@
             <English>Pastes the current deep copied object data.</English>
             <German>Fügt die derzeitig gespeicherte komplette Kopie ein.</German>
             <Polish>Wkleja z schowka obiekty które zostały głęboko skopiowane.</Polish>
-            <Japanese>深コピーによってコピーしたオブジェクト データを貼り付けできます。</Japanese>
+            <Japanese>ディープコピーによってコピーしたオブジェクト データを貼り付けできます。</Japanese>
             <Chinesesimp>粘贴当前深层复制的对象数据。</Chinesesimp>
             <Chinese>粘貼當前深層複製的對像數據。</Chinese>
             <Italian>Incolla i dati dell'oggetto correntemente copiati in profondità.</Italian>
@@ -293,9 +295,11 @@
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleEditability">
             <English>Toggle Object Editability</English>
+            <Japanese>オブジェクトの編集機能の切り替え</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleEditability_Description">
             <English>Toggles the editability (i.e., whether an object is editable through Zeus) of the object currently under the cursor.</English>
+            <Japanese>現在カーソルの下にあるオブジェクトの編集可能性 (つまり、オブジェクトが Zeus を通じて編集可能かどうか) を切り替えます。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleIcons">
             <English>Toggle Editable Icons</English>
@@ -334,13 +338,16 @@
         <Key ID="STR_ZEN_Editor_PingCurators">
             <English>Ping Zeus</English>
             <German>Zeus anpingen</German>
+            <Japanese>ZeusにPing</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_PingCurators_Description">
             <English>Pings other Zeus curators on the selected/hovered object or cursor position.</English>
             <German>Pingt andere Zeus auf ausgewählte Objekte oder Mausposition an.</German>
+            <Japanese>選択/ホバーされたオブジェクトまたはカーソル位置で他の Zeus キュレーターに ping を送信します。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_AIControl">
             <English>AI Control</English>
+            <Japanese>AI操作</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_EjectPassengers">
             <English>Eject Passengers</English>
@@ -385,39 +392,51 @@
         </Key>
         <Key ID="STR_ZEN_Editor_WatchCursor">
             <English>Watch Cursor</English>
+            <Japanese>カーソル位置を監視</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_WatchCursor_Description">
             <English>Makes selected AI units watch the cursor's position. Order a unit to watch itself (i.e., with the cursor hovering over the unit) to cancel the watch target.</English>
+            <Japanese>選択した AI ユニットにカーソルの位置を監視させます。 監視ターゲットをキャンセルするには、ユニットにユニット自身を監視するように命令します (つまり、カーソルをユニット上に移動させます)。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_WatchCuratorCamera">
             <English>Watch Curator Camera</English>
+            <Japanese>カメラ位置を監視</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_WatchCuratorCamera_Description">
             <English>Makes selected AI units watch the Zeus camera's position.</English>
+            <Japanese>選択した AI ユニットに Zeus カメラの位置を監視させます。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_ForceFire">
             <English>Force Fire</English>
+            <Japanese>強制射撃</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_ForceFire_Description">
             <English>Makes selected AI units fire their current weapon while the key is held down. Vehicles will fire their first available turret with a weapon.</English>
+            <Japanese>キーを押している間、選択した AI ユニットが現在の武器を発射します。 車両は最初に利用可能な砲塔に武器を発射します。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleLaser">
             <English>Toggle Laser</English>
+            <Japanese>レーザー切り替え</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleLaser_Description">
             <English>Makes selected AI units in vehicles toggle their turret laser weapons on or off.</English>
+            <Japanese>車両内の選択した AI ユニットの砲塔レーザー兵器のオンとオフを切り替えます。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_MoveToCursor">
             <English>Move To Cursor</English>
+            <Japanese>カーソル位置へ移動</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_MoveToCursor_Description">
             <English>Makes selected AI units move to the cursor's position. Afterwards, AI units will return to formation and resume waypoints.</English>
+            <Japanese>選択した AI ユニットをカーソルの位置に移動します。 その後、AI ユニットは編隊に戻り、ウェイポイントを再開します。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleAIPath">
             <English>Toggle AI Pathing</English>
+            <Japanese>AI パスの切り替え</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleAIPath_Description">
             <English>Makes selected AI units start or stop moving. Does not affect aiming or shooting. Similar to "Hold Position" in RTS games.</English>
+            <Japanese>選択した AI ユニットの移動を開始または停止します。 照準や射撃には影響しません。 RTS ゲームの「ホールド ポジション」に似ています。</Japanese>
         </Key>
     </Package>
 </Project>

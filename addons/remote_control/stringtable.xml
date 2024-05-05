@@ -54,7 +54,7 @@
             <German>Die Kamera wird positioniert basierend auf der relativen Position zur Einheit, wenn die Fernsteuerung gestartet wurde, aber die Distanz ist auf maximal 50 Meter von der Einheit limitiert.</German>
             <Chinesesimp>摄像机的位置是基于远程控制开始时它相对于单位的位置，但与单位的最大距离限制为50米。</Chinesesimp>
             <Chinese>攝像機的位置是基於遠程控制開始時它相對於單位的位置，但與單位的最大距離限制為50米。</Chinese>
-            <Japanese>カメラ位置は、遠隔操作を開始時に遠隔操作ユニットの相対位置へ移動しますが、最大 50m までの範囲内に移動します。</Japanese>
+            <Japanese>カメラ位置は、遠隔操作を開始時に遠隔操作ユニットの相対位置へ移動しますが、最大 50m までの範囲距離内に移動します。</Japanese>
             <Italian>La telecamera è posizionata in base alla posizione relativa all'unità quando è stato avviato il telecomando, ma la distanza è limitata a un massimo di 50 metri dall'unità.</Italian>
         </Key>
         <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_AboveUnit">
