@@ -18,4 +18,4 @@
 visibleMap
 && {!dialog}
 && {!call EFUNC(common,isInScreenshotMode)}
-&& {RscDisplayCurator_sections select 0 == 3};
+&& {RscDisplayCurator_sections select 0 == 3}
