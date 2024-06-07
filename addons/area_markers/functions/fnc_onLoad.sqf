@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Initializes the Zeus display.
+ * Handles initializing the Zeus Display.
  *
  * Arguments:
  * 0: Display <DISPLAY>
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [DISPLAY] call zen_area_markers_fnc_initDisplayCurator
+ * [DISPLAY] call zen_area_markers_fnc_onLoad
  *
  * Public: No
  */
@@ -23,6 +23,9 @@ _ctrlMap ctrlAddEventHandler ["Draw", {call FUNC(onDraw)}];
 
 // Add EH to handle deleting area marker by pressing the DELETE key
 _display displayAddEventHandler ["KeyDown", {call FUNC(onKeyDown)}];
+
+// Add PFH to update visibility of area marker icons
+GVAR(visibilityPFH) = [LINKFUNC(onVisibilityPFH), 0, [false]] call CBA_fnc_addPerFrameHandler;
 
 // Create area marker icons for all area markers
 {
