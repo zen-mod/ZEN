@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [DISPLAY] call zen_area_markers_fnc_handleUnload
+ * [DISPLAY] call zen_area_markers_fnc_onUnload
  *
  * Public: No
  */
