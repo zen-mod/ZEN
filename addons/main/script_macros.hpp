@@ -78,11 +78,6 @@
 
 #define ZEN_isHC (!hasInterface && !isDedicated)
 
-#define SELECTED_OBJECTS   (curatorSelected select 0)
-#define SELECTED_GROUPS    (curatorSelected select 1)
-#define SELECTED_WAYPOINTS (curatorSelected select 2)
-#define SELECTED_MARKERS   (curatorSelected select 3)
-
 #define GUI_THEME_RGB_R "(profileNamespace getVariable ['GUI_BCG_RGB_R',0.13])"
 #define GUI_THEME_RGB_G "(profileNamespace getVariable ['GUI_BCG_RGB_G',0.54])"
 #define GUI_THEME_RGB_B "(profileNamespace getVariable ['GUI_BCG_RGB_B',0.21])"
@@ -115,4 +110,5 @@
     #define PREP(fncName) [QPATHTOF(functions\DOUBLES(fnc,fncName).sqf), QFUNC(fncName)] call CBA_fnc_compileFunction
 #endif
 
+#include "script_curator.hpp"
 #include "script_debug.hpp"
