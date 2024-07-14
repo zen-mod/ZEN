@@ -60,7 +60,7 @@ missionNamespace getVariable ["RscDisplayCurator_sections", [0, 0]] params ["_mo
 
 // Need frame delay workaround for usage of ctrlActivate by RscDisplayCurator.sqf
 // to properly hide the empty side control when initially in markers mode
-if (_mode == 3) then {
+if (_mode == CURATOR_MODE_MARKERS) then {
     private _ctrlSideEmpty = _display displayCtrl IDC_RSCDISPLAYCURATOR_SIDEEMPTY;
     [{_this ctrlShow false}, _ctrlSideEmpty, 3] call CBA_fnc_execAfterNFrames;
 };

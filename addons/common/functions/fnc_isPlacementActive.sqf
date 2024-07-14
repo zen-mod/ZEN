@@ -23,5 +23,4 @@ RscDisplayCurator_sections params ["_mode"];
 
 // Get the path length necessary for placement based on the current mode
 private _pathLength = [3, 4, 2, 1, 1] select _mode;
-
 count tvCurSel call FUNC(getActiveTree) == _pathLength

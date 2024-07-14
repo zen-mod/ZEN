@@ -18,7 +18,7 @@ class GVAR(icon): RscControlsGroupNoScrollbars {
     w = QUOTE(ICON_WIDTH);
     h = QUOTE(ICON_HEIGHT);
     class controls {
-        class Icon: RscPicture {
+        class Image: RscPicture {
             idc = IDC_ICON_IMAGE;
             text = ICON_CENTER;
             x = 0;
