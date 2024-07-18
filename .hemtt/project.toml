@@ -17,7 +17,7 @@ include = [
 [version]
 git_hash = 0
 
-[hemtt.launch]
+[hemtt.launch.default]
 workshop = [
     "450814997", # CBA_A3
 ]
