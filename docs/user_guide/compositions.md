@@ -11,15 +11,15 @@ Custom compositions can be created, edited, and deleted by pressing the respecti
 A new composition is created by selecting all of the objects that should be part of the composition and pressing the create button. A menu to input the composition's category and name will be shown. 
 Compositions are saved to the user's Arma 3 profile. File is *.vars.Arma3Profile (* username)
 
-*Location of arma profile file*
-Windows -> %localappdata%\Arma 3
+*Location of arma profile file*<br />
+Windows -> %localappdata%\Arma 3<br />
 Linux -> /home/X/.local/share/Arma 3/
 
 An existing composition's category and name can be edited by selecting it in the tree and pressing the edit button.
 
 Lastly, compositions can be deleted by selecting the composition to delete in the tree and pressing the delete button. This requires an additional step to confirm the deletion.
 
-## Managing in game
+### Managing in game
 
 Get debug / console
 ```hpp
