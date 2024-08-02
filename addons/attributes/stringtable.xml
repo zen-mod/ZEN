@@ -140,6 +140,7 @@
             <Chinesesimp>本地执行。这段代码将只在本机的非计划环境中执行。</Chinesesimp>
             <Chinese>本地執行。這段代碼將只在本機的非計劃環境中執行。</Chinese>
             <Italian>Esecutivo locale Questo codice verrà eseguito solo nell'ambiente non pianificato su questa macchina.</Italian>
+            <French>Exécution locale. Ce code est exécuté dans l'environnement non programmé pour la machine locale uniquement.</French>
         </Key>
         <Key ID="STR_ZEN_Attributes_TargetExec">
             <English>Target Exec. This code will be executed in the unscheduled environment on the machine where this entity is local.</English>
@@ -148,6 +149,7 @@
             <Chinesesimp>目标执行。这段代码将在这个实体所在的机器上的非计划环境中执行。</Chinesesimp>
             <Chinese>目標執行。這段代碼將在這個實體所在的機器上的非計劃環境中執行。</Chinese>
             <Italian>Esecutivo Target Questo codice verrà eseguito nell'ambiente non pianificato sulla macchina in cui questa entità è locale.</Italian>
+            <French>Exécution ciblée. Ce code est exécuté dans l'environnement non programmé pour la seule machine où l'objet est local.</French>
         </Key>
         <Key ID="STR_ZEN_Attributes_GlobalExec">
             <English>Global Exec. This code will be executed in the unscheduled environment on all machines (server and clients).</English>
@@ -156,6 +158,7 @@
             <Chinesesimp>全局执行。这段代码将在所有机器（服务器和客户端）的非计划环境中执行。</Chinesesimp>
             <Chinese>全局執行。這段代碼將在所有機器（服務器和客戶端）的非計劃環境中執行。</Chinese>
             <Italian>Esecutivo globale Questo codice verrà eseguito nell'ambiente non pianificato su tutte le macchine (server e client).</Italian>
+            <French>Exécution globale. Ce code sera exécuté dans l'environnement non programmé sur toutes les machines (serveur et clients).</French>
         </Key>
         <Key ID="STR_ZEN_Attributes_ExecObject_Tooltip">
             <English>The variable "_this" refers to this object.</English>
@@ -164,6 +167,7 @@
             <Chinesesimp>变量"_this"指的是这个对象。</Chinesesimp>
             <Chinese>變量"_this"指的是這個對象。</Chinese>
             <Italian>La variabile "_this" fa riferimento a questo oggetto.</Italian>
+            <French>La variable "_this" fait référence à l'objet.</French>
         </Key>
         <Key ID="STR_ZEN_Attributes_ExecGroup_Tooltip">
             <English>The variable "_this" refers to this group.</English>
@@ -172,6 +176,7 @@
             <Chinesesimp>变量"_this"指的是这个小组。</Chinesesimp>
             <Chinese>變量"_this"指的是這個小組。</Chinese>
             <Italian>La variabile "_this" si riferisce a questo gruppo.</Italian>
+            <French>La variable "_this" fait référence au groupe.</French>
         </Key>
         <Key ID="STR_ZEN_Attributes_Timeout">
             <English>Timeout (s)</English>
@@ -358,7 +363,7 @@
         <Key ID="STR_ZEN_Attributes_ChangeAbilities">
             <English>Change Abilities</English>
             <Russian>Изменить способности</Russian>
-            <French>Modifier talent</French>
+            <French>Modifier les compétences</French>
             <German>Fähigkeiten ändern</German>
             <Polish>Zmień zdolności</Polish>
             <Korean>능력 변경</Korean>
@@ -370,7 +375,7 @@
         <Key ID="STR_ZEN_Attributes_Abilities">
             <English>Abilities</English>
             <Russian>Способности</Russian>
-            <French>Talent</French>
+            <French>Compétences</French>
             <German>Fähigkeiten</German>
             <Polish>Zdolności</Polish>
             <Korean>능력</Korean>
@@ -381,7 +386,7 @@
         </Key>
         <Key ID="STR_ZEN_Attributes_OpenAttributesDisplay">
             <English>Open Attributes Display</English>
-            <French>Ouvrir dialogue des propriétés</French>
+            <French>Ouvrir la fenêtre de propriétés</French>
             <German>Eigenschaftsfenster öffnen</German>
             <Japanese>属性パネルを表示</Japanese>
             <Chinesesimp>打开属性显示</Chinesesimp>
@@ -395,6 +400,7 @@
             <Chinesesimp>打开所选实体的Zeus属性显示。当选择多个实体时（即由于选择了一个小组），将使用悬停的实体。</Chinesesimp>
             <Chinese>打開所選實體的Zeus屬性顯示。當選擇多個實體時（即由於選擇了一個小組），將使用懸停的實體。</Chinese>
             <Italian>Apre la visualizzazione degli attributi di Zeus per l'entità selezionata.\nQuando vengono selezionate più entità (ad es. a causa della selezione di un gruppo), verrà utilizzata l'entità al passaggio del mouse.</Italian>
+            <French>Ouvre l'affichage des attributs Zeus pour l'entité sélectionnée. Lorsque plusieurs entités sont sélectionnées (par exemple, en raison de la sélection d'un groupe), l'entité survolée sera utilisée.</French>
         </Key>
     </Package>
 </Project>

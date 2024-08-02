@@ -46,6 +46,7 @@
             <Chinese>射擊壓制</Chinese>
             <German>Unterstützungsfeuer</German>
             <Italian>Fuoco di Soppressione</Italian>
+            <French>Tir de suppression</French>
         </Key>
         <Key ID="STR_ZEN_AI_CouldNotGarrisonAll">
             <English>Unable to garrison all units - not enough positions</English>
