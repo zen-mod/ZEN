@@ -30,7 +30,7 @@ if (allGroups findIf {side _x isEqualTo _side && {groupId _x isEqualTo _groupId}
     _newGroup setGroupIdGlobal [_groupId];
 };
 
-private _units = units _unit;
+private _units = units _group;
 
 // Preserve assigned team for each unit
 // Teams need to be gotten before removing units from group
