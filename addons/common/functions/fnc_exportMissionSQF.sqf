@@ -71,6 +71,7 @@ private _fnc_processGroup = {
         _outputGroups2 pushBack ["%1 setBehaviour %2;", _varName, str behaviour leader _group];
         _outputGroups2 pushBack ["%1 setCombatMode %2;", _varName, str combatMode _group];
         _outputGroups2 pushBack ["%1 setSpeedMode %2;", _varName, str speedMode _group];
+        _outputGroups2 pushBack ["%1 setFormDir %2;", _varName, formationDirection leader _group];
 
         if (_includeWaypoints) then {
             _outputGroups2 pushBack "";
