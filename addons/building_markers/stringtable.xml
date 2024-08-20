@@ -4,22 +4,27 @@
         <Key ID="STR_ZEN_Building_Markers_DisplayName">
             <English>Building Markers</English>
             <Japanese>建物マーカー</Japanese>
+            <French>Marqueurs de bâtiments</French>
         </Key>
         <Key ID="STR_ZEN_Building_Markers_Enabled">
             <English>Enable Automatic Building Markers</English>
             <Japanese>建物マーカーの自動化を有効にする</Japanese>
+            <French>Activer le marquage automatique des bâtiments</French>
         </Key>
         <Key ID="STR_ZEN_Building_Markers_Enabled_Description">
             <English>Enables automatically creating grey rectangle area markers (similarly to terrain structures) for buildings placed through Zeus.</English>
             <Japanese>Zeus を通じて配置された建物に灰色で長方形のエリアマーカー (地形の構造物と同様) を自動的に作成できるようにします。</Japanese>
+            <French>Permet de créer automatiquement des marqueurs de zone en rectangle gris (comme pour les structures de terrain) pour les bâtiments placés par Zeus.</French>
         </Key>
         <Key ID="STR_ZEN_Building_Markers_BuildingMarker">
             <English>Building Marker</English>
             <Japanese>建物マーカー</Japanese>
+            <French>Marqueur de bâtiment</French>
         </Key>
         <Key ID="STR_ZEN_Building_Markers_BuildingMarker_Tooltip">
             <English>Adds a grey rectangle area marker for the building, similarly to terrain structures.</English>
             <Japanese>地形の構造物と同様の、灰色で長方形のエリアマーカーを建物に追加します。</Japanese>
+            <French>Ajoute un marqueur de zone rectangulaire gris pour le bâtiment, de la même manière que pour les structures de terrain.</French>
         </Key>
     </Package>
 </Project>

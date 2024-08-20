@@ -8,6 +8,7 @@
             <Chinesesimp>模块位置</Chinesesimp>
             <Chinese>模塊位置</Chinese>
             <Italian>Posizione del modulo</Italian>
+            <French>Position du module</French>
         </Key>
         <Key ID="STR_ZEN_Tasks_ModulePosition_Tooltip">
             <English>The task's position will be synchronized with the position of the module.</English>
@@ -16,6 +17,7 @@
             <Chinesesimp>该任务的位置将与模块的位置同步。</Chinesesimp>
             <Chinese>該任務的位置將與模塊的位置同步。</Chinese>
             <Italian>La posizione dell'attività sarà sincronizzata con la posizione del modulo.</Italian>
+            <French>La position de la tâche sera synchronisée avec la position du module.</French>
         </Key>
         <Key ID="STR_ZEN_Tasks_DestinationDisabled_Tooltip">
             <English>The task will not have position associated with it.</English>
@@ -24,6 +26,7 @@
             <Chinesesimp>该任务将不会有与之相关的位置。</Chinesesimp>
             <Chinese>該任務將不會有與之相關的位置。</Chinese>
             <Italian>L'attività non avrà una posizione ad essa associata.</Italian>
+            <French>La tâche n'est pas associée à une position.</French>
         </Key>
         <Key ID="STR_ZEN_Tasks_Type_Tooltip">
             <English>Sets the task's icon.</English>
@@ -32,6 +35,7 @@
             <Chinesesimp>设置任务图标</Chinesesimp>
             <Chinese>設置任務圖標</Chinese>
             <Italian>Imposta l'icona dell'attività.</Italian>
+            <French>Définit l'icône de la tâche.</French>
         </Key>
         <Key ID="STR_ZEN_Tasks_TitleDescription">
             <English>Title &amp; Description</English>
@@ -40,6 +44,7 @@
             <Chinesesimp>标题与描述</Chinesesimp>
             <Chinese>標題與描述</Chinese>
             <Italian>Titolo &amp; Descrizione</Italian>
+            <French>Titre et description</French>
         </Key>
         <Key ID="STR_ZEN_Tasks_TitleDescription_Tooltip">
             <English>The task's title and description. Task description supports XML-like tags (see structured text syntax for SQF).</English>
@@ -48,6 +53,7 @@
             <Chinesesimp>任务的标题和描述。任务描述可以使用日志记录所支持的标签。</Chinesesimp>
             <Chinese>任務的標題和描述。任務描述可以使用日誌記錄所支持的標籤。</Chinese>
             <Italian>Il titolo e la descrizione dell'attività. La descrizione dell'attività supporta tag di tipo XML (vedere la sintassi del testo strutturato per SQF).</Italian>
+            <French>Le titre et la description de la tâche. La description de la tâche prend en charge les balises de type XML (voir la syntaxe de texte structuré pour SQF).</French>
         </Key>
         <Key ID="STR_ZEN_Tasks_Default">
             <English>Default</English>
