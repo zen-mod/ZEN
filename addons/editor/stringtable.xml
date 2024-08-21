@@ -312,10 +312,12 @@
         <Key ID="STR_ZEN_Editor_ToggleEditability">
             <English>Toggle Object Editability</English>
             <Japanese>オブジェクトの編集機能の切り替え</Japanese>
+            <French>Modifier l'éditabilité des objets</French>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleEditability_Description">
             <English>Toggles the editability (i.e., whether an object is editable through Zeus) of the object currently under the cursor.</English>
             <Japanese>現在カーソルの下にあるオブジェクトの編集可能性 (つまり、オブジェクトが Zeus を通じて編集可能かどうか) を切り替えます。</Japanese>
+            <French>Bascule l'éditabilité de l'objet actuellement sous le curseur (c'est-à-dire si l'objet peut être édité via Zeus).</French>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleIcons">
             <English>Toggle Editable Icons</English>
@@ -335,6 +337,7 @@
             <Chinesesimp>切换所有可编辑图标的可见性。当有很多图标时，对于暂时减少滞后或屏幕上的混乱很有用。</Chinesesimp>
             <Chinese>切換所有可編輯圖標的可見性。當有很多圖標時，對於暫時減少滯後或屏幕上的混亂很有用。</Chinese>
             <Italian>Alterna la visibilità di tutte le icone modificabili. Utile per ridurre temporaneamente il ritardo o il disordine sullo schermo quando ci sono molte icone.</Italian>
+            <French>Bascule la visibilité de toutes les icônes modifiables. Utile pour réduire temporairement le décalage ou l'encombrement de l'écran lorsqu'il y a beaucoup d'icônes.</French>
         </Key>
         <Key ID="STR_ZEN_Editor_ReloadDisplay">
             <English>Reload Display</English>
@@ -358,15 +361,18 @@
             <English>Ping Zeus</English>
             <German>Zeus anpingen</German>
             <Japanese>ZeusにPing</Japanese>
+            <French>Ping Zeus</French>
         </Key>
         <Key ID="STR_ZEN_Editor_PingCurators_Description">
             <English>Pings other Zeus curators on the selected/hovered object or cursor position.</English>
             <German>Pingt andere Zeus auf ausgewählte Objekte oder Mausposition an.</German>
             <Japanese>選択/ホバーされたオブジェクトまたはカーソル位置で他の Zeus キュレーターに ping を送信します。</Japanese>
+            <French>Ping d'autres Zeus sur des objets sélectionnés ou sur la position de la souris.</French>
         </Key>
         <Key ID="STR_ZEN_Editor_AIControl">
             <English>AI Control</English>
             <Japanese>AI操作</Japanese>
+            <French>Contrôle de l'IA</French>
         </Key>
         <Key ID="STR_ZEN_Editor_EjectPassengers">
             <English>Eject Passengers</English>
@@ -412,10 +418,12 @@
         <Key ID="STR_ZEN_Editor_WatchCursor">
             <English>Watch Cursor</English>
             <Japanese>カーソル位置を監視</Japanese>
+            <French>Regarder le curseur</French>
         </Key>
         <Key ID="STR_ZEN_Editor_WatchCursor_Description">
             <English>Makes selected AI units watch the cursor's position. Order a unit to watch itself (i.e., with the cursor hovering over the unit) to cancel the watch target.</English>
             <Japanese>選択した AI ユニットにカーソルの位置を監視させます。 監視ターゲットをキャンセルするには、ユニットにユニット自身を監視するように命令します (つまり、カーソルをユニット上に移動させます)。</Japanese>
+            <French>Permet aux unités IA sélectionnées de surveiller la position du curseur. Ordonner à une unité de se surveiller elle-même (c'est-à-dire avec le curseur au-dessus de l'unité) pour annuler la cible de surveillance.</French>
         </Key>
         <Key ID="STR_ZEN_Editor_WatchCuratorCamera">
             <English>Watch Curator Camera</English>
@@ -444,6 +452,7 @@
         <Key ID="STR_ZEN_Editor_MoveToCursor">
             <English>Move To Cursor</English>
             <Japanese>カーソル位置へ移動</Japanese>
+            <French>Déplacer vers le curseur</French>
         </Key>
         <Key ID="STR_ZEN_Editor_MoveToCursor_Description">
             <English>Makes selected AI units move to the cursor's position. Afterwards, AI units will return to formation and resume waypoints.</English>
@@ -452,6 +461,7 @@
         <Key ID="STR_ZEN_Editor_ToggleAIPath">
             <English>Toggle AI Pathing</English>
             <Japanese>AI パスの切り替え</Japanese>
+            <French>Basculer la trajectoire de l'IA</French>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleAIPath_Description">
             <English>Makes selected AI units start or stop moving. Does not affect aiming or shooting. Similar to "Hold Position" in RTS games.</English>
