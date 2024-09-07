@@ -17,7 +17,7 @@
 
 params ["_logic"];
 
-private _position = ASLtoAGL getPosASL _logic;
+private _position = ASLToAGL getPosASL _logic;
 deleteVehicle _logic;
 
 [LSTRING(ToggleLamps), [

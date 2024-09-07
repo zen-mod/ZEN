@@ -44,5 +44,5 @@ if (isPlayer _unit) exitWith {
     params ["_dialogValues", "_unit"];
     _dialogValues params ["_radius", "_fillMode", "_topDown"];
 
-    [units _unit, ASLtoAGL getPosASL _unit, _radius, _fillMode, _topDown] call EFUNC(ai,garrison);
+    [units _unit, ASLToAGL getPosASL _unit, _radius, _fillMode, _topDown] call EFUNC(ai,garrison);
 }, {}, _unit] call EFUNC(dialog,create);

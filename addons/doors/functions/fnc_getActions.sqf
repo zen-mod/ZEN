@@ -20,7 +20,7 @@
 
 // Check if the cursor is hovering over a building's door by checking intersections from the camera
 private _begPos = getPosASL curatorCamera;
-private _endPos = AGLtoASL screenToWorld getMousePosition;
+private _endPos = AGLToASL screenToWorld getMousePosition;
 
 // Limit the intersection scan distance to prevent interaction with far away buildings
 // Also improves performance of intersection test which can be expensive at long distances
@@ -45,7 +45,7 @@ if (_doors isEqualTo []) exitWith {
 };
 
 // Calculate the distance from every door to the intersection position
-private _buildingPos = _building worldToModel ASLtoAGL _intersectPos;
+private _buildingPos = _building worldToModel ASLToAGL _intersectPos;
 private _distances = _doors apply {_x vectorDistance _buildingPos};
 
 // Exit if the closest door is too far away from the intersection position

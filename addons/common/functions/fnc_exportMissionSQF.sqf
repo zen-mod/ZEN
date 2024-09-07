@@ -82,7 +82,7 @@ private _fnc_processGroup = {
                     _outputGroups2 pushBack ["_waypoint = %1 addWaypoint [[0, 0, 0], -1];", _varName];
                 };
 
-                _outputGroups2 pushBack ["_waypoint setWaypointPosition [%1, -1];", AGLtoASL waypointPosition _x];
+                _outputGroups2 pushBack ["_waypoint setWaypointPosition [%1, -1];", AGLToASL waypointPosition _x];
                 _outputGroups2 pushBack ["_waypoint setWaypointType %1;", str waypointType _x];
                 _outputGroups2 pushBack ["_waypoint setWaypointName %1;", str waypointName _x];
                 _outputGroups2 pushBack ["_waypoint setWaypointDescription %1;", str waypointDescription _x];
@@ -170,7 +170,7 @@ private _fnc_processAttachedObjects = {
             if (isNil "_index") exitWith {};
 
             private _varName = FORMAT_OBJ_VAR(_index);
-            private _offset = _object worldToModel ASLtoAGL getPosWorld _x;
+            private _offset = _object worldToModel ASLToAGL getPosWorld _x;
             private _dirAndUp = [_object vectorWorldToModel vectorDir _x, _object vectorWorldToModel vectorUp _x];
 
             _outputAttach pushBack ["%1 attachTo [%2, %3];", _varName, _parentVarName, _offset];
