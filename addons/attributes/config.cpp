@@ -14,8 +14,9 @@ class CfgPatches {
     };
 };
 
+PRELOAD_ADDONS;
+
 #include "CfgEventHandlers.hpp"
 #include "CfgFunctions.hpp"
 #include "CfgVehicles.hpp"
-#include "RscAttributes.hpp"
-#include "CfgCurator.hpp"
+#include "gui.hpp"

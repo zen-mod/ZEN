@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Bohemia Interactive
  * Module function for spawning mines.
@@ -16,28 +17,27 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic", "_units", "_activated"];
 
 if (_activated) then {
-    private _explosive = getText (configFile >> "CfgVehicles" >> typeOf _logic >> "explosive");
+    private _explosive = getText (configOf _logic >> "explosive");
 
     if (_explosive != "") then {
         _explosive = createVehicle [_explosive, _logic, [], 0, "NONE"];
         _explosive attachTo [_logic];
 
         // Support ace_zeus settings to control if mines are revealed
-        private _aceSetting = missionNamespace getVariable ["ace_zeus_revealMines", 0];
+        private _revealMines = missionNamespace getVariable ["ace_zeus_revealMines", 0];
 
-        if (_aceSetting > 0) then {
+        if (_revealMines > 0) then {
             // Reveal the mine to curator's side
             {
                 _side = (getAssignedCuratorLogic _x) call BIS_fnc_objectSide;
                 _side revealMine _explosive;
             } forEach (objectCurators _logic);
 
-            if (_aceSetting > 1) then {
+            if (_revealMines > 1) then {
                 // Mark minefields in the map
                 [] spawn BIS_fnc_drawMinefields;
             };

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Compat_Advanced_Rappelling">
+        <Key ID="STR_ZEN_Compat_Advanced_Rappelling_Rappel">
+            <English>Rappel</English>
+            <German>Abseilen</German>
+            <Japanese>ラぺリング</Japanese>
+        </Key>
+    </Package>
+</Project>

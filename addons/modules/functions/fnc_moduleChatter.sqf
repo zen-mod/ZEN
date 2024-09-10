@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Zeus module function to send AI communication over chat.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic"];
 
@@ -46,7 +46,7 @@ if (isNull _unit) then {
         ["str_a3_cfgvehicles_moduleremotecontrol_f_errorPlayer"] call EFUNC(common,showMessage);
     };
 
-    [LSTRING(ModuleChatter), [
+    [format ["%1 (%2)", localize LSTRING(ModuleChatter), name _unit], [
         ["EDIT", LSTRING(ModuleChatter_Message)],
         ["COMBO", LSTRING(ModuleChatter_Channel), [[], [
             ["STR_channel_global",  "", "", [0.85, 0.85, 0.85, 1]],

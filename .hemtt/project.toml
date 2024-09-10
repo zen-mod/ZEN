@@ -1,0 +1,31 @@
+name = "Zeus Enhanced"
+prefix = "zen"
+author = "ZEN Team"
+mainprefix = "x"
+
+[files]
+include = [
+    "AUTHORS.txt",
+    "LICENSE",
+    "logo_zen_ca.paa",
+    "logo_zen_small_ca.paa",
+    "meta.cpp",
+    "mod.cpp",
+    "README.md",
+]
+
+[version]
+git_hash = 0
+
+[hemtt.launch.default]
+workshop = [
+    "450814997", # CBA_A3
+]
+mission = "test.VR"
+
+[hemtt.launch.ace]
+workshop = [
+    "450814997", # CBA_A3
+    "463939057", # ACE3
+]
+mission = "test.VR"

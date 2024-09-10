@@ -7,18 +7,49 @@
 
 # CORE TEAM
 mharis001 <mhariszakar@gmail.com>
+CreepPork <github@garkaklis.com>
+Kexanone <kexanone@gmail.com>
+neilzar
+ampersand38
 
 # CONTRIBUTORS
+3Mydlo3
 654wak654
 Alganthe
+astralkr
+BaerMitUmlaut
 Beaumont
-Brett
-Dedmen
+bovine3dom
+BrettMayson
+bux
+CesarStef
+classicarma
+commy2
+das attorney
+dedmen
+DeliciousJaffa
+diaverso
 diwako
 Dystopian
+Eclipser
+ffredyk
 GitHawk
 Glowbal
+goleedev
+hercegtomas
+HubertStefanski
 Jonpas
+KoffeinFlummi
+lincolncosta
+Maciox55
+MattNot
+mihuan-0
+Moerderhoschi
 PabstMirror
+Ryan180602
+shukari
 SilentSpike
+Toinane
 Tuupertunut
+veteran29
+vivngh

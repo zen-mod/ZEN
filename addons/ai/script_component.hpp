@@ -4,6 +4,7 @@
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
+// #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_AI
     #define DEBUG_MODE_FULL
@@ -14,3 +15,5 @@
 #endif
 
 #include "\x\zen\addons\main\script_macros.hpp"
+
+#define AI_SUB_SKILLS ["aimingAccuracy", "aimingShake", "aimingSpeed", "commanding", "courage", "endurance", "general", "reloadSpeed", "spotDistance", "spotTime"]

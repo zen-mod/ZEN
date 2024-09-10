@@ -1,59 +1,63 @@
+#include "script_component.hpp"
 /*
  * Author: Bohemia Interactive, mharis001
- * Show Zeus attributes window for an entity.
- * Edited to allow player editing and improve code.
+ * Shows the Zeus attribute display for an entity.
+ * Edited for compatibility with the ZEN attributes framework.
  *
  * Arguments:
  * 0: Entity <OBJECT|GROUP|ARRAY|STRING>
  *
  * Return Value:
- * Window opened <BOOL>
+ * Display Opened <BOOL>
  *
  * Example:
- * [unit] call BIS_fnc_showCuratorAttributes
+ * [_object] call BIS_fnc_showCuratorAttributes
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 // Prevent attributes from opening if remote controlling (cannot override double click EH)
-if (!isNull (missionNamespace getVariable ["bis_fnc_moduleRemoteControl_unit", objNull])) exitWith {};
+if (!isNull (missionNamespace getVariable ["bis_fnc_moduleRemoteControl_unit", objNull])) exitWith {false};
 
 // Need [_this] for passed waypoint arrays
 [_this] params [["_entity", objNull, [objNull, grpNull, [], ""]]];
 
-// Opening attributes disabled for object
-if (_entity isEqualType objNull && {_entity getVariable [QGVAR(disable), false]}) exitWith {};
+scopeName "Main";
 
-private _curator = getAssignedCuratorLogic player;
-private _curatorInfoType = switch (typeName _entity) do {
-    case (typeName objNull): {
-		private _infoTypeClass = if (isNull group _entity && {side _entity != sideLogic}) then {"curatorInfoTypeEmpty"} else {"curatorInfoType"};
-        getText (configfile >> "CfgVehicles" >> typeOf _entity >> _infoTypeClass);
+if (_entity isEqualType objNull) then {
+    // Exit if opening attributes is disabled for this object
+    if (_entity getVariable [QGVAR(disabled), false]) then {
+        false breakOut "Main";
     };
-	case (typeName grpNull): {
-        getText (configFile >> "CfgCurator" >> "groupInfoType");
-    };
-	case (typeName []): {
-        getText (configFile >> "CfgCurator" >> "waypointInfoType");
-	};
-	case (typeName ""): {
-        getText (configFile >> "CfgCurator" >> "markerInfoType");
-	};
-	default {""};
-};
 
-if (isClass (configFile >> _curatorInfoType)) then {
-    private _attributes = [_curator, _entity] call BIS_fnc_curatorAttributes;
-    if !(_attributes isEqualTo []) then {
+    private _infoTypeClass = ["curatorInfoType", "curatorInfoTypeEmpty"] select (isNull group _entity && {side _entity != sideLogic});
+    private _infoType = getText (configOf _entity >> _infoTypeClass);
+
+    // Use info type instead of ZEN attributes if it is defined
+    if (isClass (configFile >> _infoType)) then {
+        private _curator = getAssignedCuratorLogic player;
+        private _attributes = [_curator, _entity] call BIS_fnc_curatorAttributes;
+
+        if (_attributes isEqualTo []) then {
+            false breakOut "Main";
+        };
+
         BIS_fnc_initCuratorAttributes_target = _entity;
         BIS_fnc_initCuratorAttributes_attributes = _attributes;
-        createDialog _curatorInfoType;
-        true
+        (createDialog _infoType) breakOut "Main";
     };
-} else {
-    if (_curatorInfoType != "") then {
-        ["Display '%1' not found", _curatorInfoType] call BIS_fnc_error;
-    };
-    false
 };
+
+// Exit if opening attributes is disabled for this group or if it is a logic side group
+if (_entity isEqualType grpNull && {_entity getVariable [QGVAR(disabled), false] || {side _entity == sideLogic}}) exitWith {false};
+
+private _type = switch (true) do {
+    case (_entity isEqualType objNull): {"Object"};
+    case (_entity isEqualType grpNull): {"Group"};
+    case (_entity isEqualType []): {"Waypoint"};
+    case (_entity isEqualType ""): {"Marker"};
+};
+
+[_entity, _type] call FUNC(open);
+
+true

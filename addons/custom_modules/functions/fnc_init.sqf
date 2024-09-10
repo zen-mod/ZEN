@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Handles placement of a custom module by calling its associated function.
@@ -13,12 +14,11 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic"];
 
-private _index = getNumber (configFile >> "CfgVehicles" >> typeOf _logic >> QGVAR(index));
-private _function = GVAR(modulesList) param [_index, []] param [3, {}];
+private _index = getNumber (configOf _logic >> QGVAR(id)) - 1;
+private _function = GVAR(list) param [_index, []] param [3, {}];
 
 private _position = getPosASL _logic;
 deleteVehicle _logic;

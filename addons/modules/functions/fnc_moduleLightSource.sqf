@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Zeus module function to create a light source.
@@ -13,12 +14,11 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_display"];
 
 private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-_display closeDisplay 0; // Close helper display
+_display closeDisplay IDC_CANCEL; // Close helper display
 
 // Need to delay dialog creation by one frame to avoid weird input blocking bug
 [{
@@ -31,7 +31,7 @@ _display closeDisplay 0; // Close helper display
 
     [LSTRING(ModuleLightSource), [
         ["COLOR",  LSTRING(ModuleLightSource_Color), +_color, true],
-        ["SLIDER", LSTRING(ModuleLightSource_Range), [1, 1000, _range, 0], true],
+        ["SLIDER:RADIUS", LSTRING(ModuleLightSource_Range), [1, 1000, _range, 0, _logic], true],
         ["SLIDER", LSTRING(ModuleLightSource_Constant), [0, 100, _constant, 1], true],
         ["SLIDER", LSTRING(ModuleLightSource_Linear), [0, 100, _linear, 1], true],
         ["SLIDER", LSTRING(ModuleLightSource_Quadratic), [0, 100, _quadratic, 1], true]
@@ -47,7 +47,7 @@ _display closeDisplay 0; // Close helper display
             _logic setVariable [QGVAR(lightpoint), _lightpoint, true];
 
             // Add logic object to all curators once it has lightpoint for QOL
-            [QEGVAR(common,addObjects), [[_logic]]] call CBA_fnc_serverEvent;
+            [_logic] call EFUNC(common,updateEditableObjects);
 
             // Add event handler to delete lightpoint if logic is deleted
             [QEGVAR(common,execute), [{

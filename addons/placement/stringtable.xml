@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Placement">
+        <Key ID="STR_ZEN_Placement_Enabled">
+            <English>Placement Preview</English>
+            <German>Plazierungsvorschau</German>
+            <Polish>Podgląd ustawienia</Polish>
+            <Japanese>設置プレビュー</Japanese>
+            <Chinesesimp>安置预览</Chinesesimp>
+            <Chinese>安置預覽</Chinese>
+            <Italian>Anteprima posizionamento</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Placement_Enabled_Description">
+            <English>Enables the displaying of a preview object when placing an object.\nIf the placement is confirmed, the object will be placed at the preview's position.\nThis also enables placement of objects on surfaces other than the terrain.</English>
+            <German>Aktiviert die Plazierungsvorschau beim Setzen eines Objekts.\nWenn die Platzierung bestätigt wurde, wird das Objekt an dieser Stelle global erstellt.\nDies ermöglicht es Objekte auch auf Flugzeugträgern oder andere Sachen zu plazieren.</German>
+            <Polish>Aktywuje możliwość podglądu obiektu przy stawianiu.\nJeżeli ustawienie obiektu zostanie potwierdzone wtedy obiekt zostanie postawiony w miejscu podglądu.\Również udostępnia możliwość stawiania obiektów na innych powierzchniach niż ziemia.</Polish>
+            <Japanese>オブジェクト設置時にプレビューを有効化します。\n設置が確定後、オブジェクトはプレビュー位置へ設置されます。\nまた地面以外へオブジェクトを設置できるようにします。</Japanese>
+            <Chinesesimp>在放置物体时，启用显示预览对象。\n如果确认放置，物体将被放置在预览的位置上。</Chinesesimp>
+            <Chinese>在放置物體時，啟用顯示預覽對象。 \n如果確認放置，物體將被放置在預覽的位置上。</Chinese>
+            <Italian>Attiva l'anteprima del posizionamento quando si posiziona un oggetto. \nSe il posizionamento è stato confermato, l'oggetto verrà creato globalmente a questo punto. \nCiò consente di posizionare oggetti su portaerei o altro.</Italian>
+        </Key>
+    </Package>
+</Project>

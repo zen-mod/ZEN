@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Toggles the visibility of the user interface.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _display = findDisplay IDD_DISPLAY;
 private _visible = !GVAR(interfaceShown);

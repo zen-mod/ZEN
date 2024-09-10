@@ -1,15 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Garage">
-        <Key ID="STR_ZEN_Garage_ButtonClose_Tooltip">
+        <Key ID="STR_ZEN_Garage_Close_Tooltip">
             <English>Exit Garage (Escape)</English>
+            <French>Quitter le garage (Echap)</French>
+            <Russian>Покинуть гараж (Escape)</Russian>
             <German>Garage verlasen (Escape)</German>
             <Polish>Wyjdź z garażu (Escape)</Polish>
+            <Portuguese>Sair da Garagem (ESC)</Portuguese>
+            <Japanese>ガレージを出ます (ESC)</Japanese>
+            <Chinesesimp>退出车库（ESC）</Chinesesimp>
+            <Chinese>退出車庫（ESC）</Chinese>
+            <Italian>Esci dal garage (ESC)</Italian>
         </Key>
-        <Key ID="STR_ZEN_Garage_ButtonHide_Tooltip">
+        <Key ID="STR_ZEN_Garage_Hide_Tooltip">
             <English>Hide Interface (Backspace)</English>
+            <French>Cacher l'interface (Retour)</French>
             <German>Benutzeroberfläche verstecken (Rücktaste)</German>
             <Polish>Ukryj interfejs (Backspace)</Polish>
+            <Portuguese>Esconder Interface (Escape)</Portuguese>
+            <Japanese>インターフェイスを隠します (Backspace)</Japanese>
+            <Chinesesimp>隐藏界面（Backspace键）。</Chinesesimp>
+            <Chinese>隱藏界面（Backspace鍵）</Chinese>
+            <Italian>Nascondi interfaccia (Backspace)</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Garage_ApplyToAll">
+            <English>Apply To All</English>
+            <German>Auf alle anwenden</German>
+            <Polish>Zastosuj do Wszystkich</Polish>
+            <Portuguese>Aplicar Para Todos</Portuguese>
+            <Japanese>全てに適用</Japanese>
+            <Chinesesimp>全部应用</Chinesesimp>
+            <Chinese>全部應用</Chinese>
+            <Italian>Applicare a tutto</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Garage_ApplyToAll_Tooltip">
+            <English>Apply the current vehicle's customization to all selected vehicles of this type.</English>
+            <German>Wendet die derzeitige Fahrzeuganpassung auf alle Fahrzeuge dieses Typs an.</German>
+            <Polish>Zastosuj Właściwości wybranego pojazdu do wszystkich pojazdów tego typu.</Polish>
+            <Portuguese>Aplicar a customização atual para todos os veículos selecionados deste tipo.</Portuguese>
+            <Japanese>現在の車両カスタマイズを選択した同じ種類の全車両にも適用します。</Japanese>
+            <Chinesesimp>将当前车辆的自定义应用于该类型的所有选定车辆上。</Chinesesimp>
+            <Chinese>將當前車輛的自定義應用到此類型的所有選定車輛。</Chinese>
+            <Italian>Applica la personalizzazione del veicolo corrente a tutti i veicoli selezionati di questo tipo.</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Garage_CannotApplyToAll">
+            <English>No other vehicles of the same type selected.</English>
+            <German>Kein anderes Fahrzeug dieses Typs ausgewählt.</German>
+            <Portuguese>Nenhum outro veículo do mesmo tipo selecionado.</Portuguese>
+            <Japanese>他に同じ種類の車両がありません。</Japanese>
+            <Polish>Nie wybrano żadnych innych pojazdów tego typu.</Polish>
+            <Chinesesimp>没有其他同类型的车辆被选择。</Chinesesimp>
+            <Chinese>沒有其他同類型的車輛被選擇。</Chinese>
+            <Italian>Nessun altro veicolo dello stesso tipo selezionato.</Italian>
         </Key>
     </Package>
 </Project>

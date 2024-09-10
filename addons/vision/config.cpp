@@ -14,6 +14,8 @@ class CfgPatches {
     };
 };
 
+PRELOAD_ADDONS;
+
 #include "CfgEventHandlers.hpp"
 #include "CfgFunctions.hpp"
 #include "RscTitles.hpp"

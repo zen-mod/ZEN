@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Zeus module function to make a group patrol an area.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic"];
 
@@ -33,11 +33,12 @@ if !(alive _unit) exitWith {
 };
 
 [LSTRING(ModulePatrolArea), [
-    ["SLIDER", [LSTRING(ModulePatrolArea_Radius), LSTRING(ModulePatrolArea_Radius_Tooltip)], [0, 5000, 100, 0]],
-    ["TOOLBOX", ["STR_3DEN_Group_Attribute_Behaviour_displayName", LSTRING(ModulePatrolArea_Behaviour_Tooltip)], [0, [
+    ["SLIDER:RADIUS", [LSTRING(ModulePatrolArea_Radius), LSTRING(ModulePatrolArea_Radius_Tooltip)], [0, 5000, 100, 0, _unit]],
+    ["TOOLBOX", ["STR_3DEN_Group_Attribute_Behaviour_displayName", LSTRING(ModulePatrolArea_Behaviour_Tooltip)], [0, 1, 5, [
         "STR_3den_attributes_default_unchanged_text",
-        LSTRING(ModulePatrolArea_Relaxed),
-        LSTRING(ModulePatrolArea_Cautious),
+        ELSTRING(common,Careless),
+        ELSTRING(common,Relaxed),
+        ELSTRING(common,Cautious),
         "STR_combat"
     ]]]
 ], {
@@ -48,10 +49,10 @@ if !(alive _unit) exitWith {
     if (_behaviour > 0) then {
         [QEGVAR(common,setFormation), [_unit, "COLUMN"], _unit] call CBA_fnc_targetEvent;
 
-        private _speedMode = ["LIMITED", "NORMAL"] select (_behaviour > 1);
+        private _speedMode = ["LIMITED", "NORMAL"] select (_behaviour > 2);
         [QEGVAR(common,setSpeedMode), [_unit, _speedMode], _unit] call CBA_fnc_targetEvent;
 
-        private _behaviourMode = ["SAFE", "AWARE", "COMBAT"] select (_behaviour - 1);
+        private _behaviourMode = ["CARELESS", "SAFE", "AWARE", "COMBAT"] select (_behaviour - 1);
         [QEGVAR(common,setBehaviour), [_unit, _behaviourMode], _unit] call CBA_fnc_targetEvent;
     };
 

@@ -6,9 +6,20 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
+#include "initSettings.inc.sqf"
+
+GVAR(currentTab) = -1;
 GVAR(helperPos) = [0, 0, -1];
-GVAR(camDistance) = 10;
+GVAR(camDistance) = 100;
 GVAR(camPitch) = 15;
 GVAR(camYaw) = -45;
+
+[
+    "Object",
+    "STR_A3_Garage",
+    {_entity call FUNC(openGarage)},
+    {EGVAR(attributes,enableGarage) && {alive _entity} && {_entity isKindOf "LandVehicle" || {_entity isKindOf "Air"} || {_entity isKindOf "Ship"}}},
+    true
+] call EFUNC(attributes,addButton);
 
 ADDON = true;

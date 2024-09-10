@@ -1,4 +1,6 @@
+releases/*
 release/*
+keys/*
 tools/temp
 *.cache
 *.pbo
@@ -10,3 +12,13 @@ Thumbs.db
 CHANGELOG.md
 .hephaestus.json
 *.bisign
+*.tar.gz
+*.zip
+hemtt*
+.hemttout
+!hemtt.toml
+@zen
+tools/armake.exe
+ArmaScriptCompiler.exe
+*.sqfc
+.vscode/*

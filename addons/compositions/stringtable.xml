@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Compositions">
+        <Key ID="STR_ZEN_Compositions_Helper_DisplayName">
+            <English>ZEN Composition Helper</English>
+            <French>Aide de composition ZEN</French>
+            <German>ZEN Kompositionshelfer</German>
+            <Polish>Pomocnik Kompozycji ZEN</Polish>
+            <Korean>ZEN 구성 도우미</Korean>
+            <Japanese>ZEN コンポジション ヘルパー</Japanese>
+            <Chinesesimp>ZEN组合辅助</Chinesesimp>
+            <Chinese>ZEN組合輔助</Chinese>
+            <Italian>Assistente per la composizione ZEN</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Compositions_CreateCustomComposition">
+            <English>CREATE CUSTOM COMPOSITION</English>
+            <French>CRÉER PROPRE COMPOSITION</French>
+            <German>ERSCHAFFE EIGENE KOMPOSITION</German>
+            <Polish>STWÓRZ SWOJĄ KOMPOZYCJE</Polish>
+            <Korean>커스텀 구성 제작</Korean>
+            <Japanese>カスタム コンポジション作成</Japanese>
+            <Chinesesimp>创建自定义组合</Chinesesimp>
+            <Chinese>創建自定義組合</Chinese>
+            <Italian>CREA COMPOSIZIONE PERSONALIZZATA</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Compositions_EditCustomComposition">
+            <English>EDIT CUSTOM COMPOSITION</English>
+            <French>MODIFIER PROPRE COMPOSITION</French>
+            <German>BEARBEITE EIGENE KOMPOSITION</German>
+            <Polish>EDYTUJ SWOJĄ KOMPOZYCJE</Polish>
+            <Korean>커스텀 구성 편집</Korean>
+            <Japanese>カスタム コンポジション編集</Japanese>
+            <Chinesesimp>编辑自定义组合</Chinesesimp>
+            <Chinese>編輯自定義組合</Chinese>
+            <Italian>MODIFICA COMPOSIZIONE PERSONALIZZATA</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Compositions_CategoryCannotBeEmpty">
+            <English>Category cannot be empty.</English>
+            <French>La catégorie ne peut pas être vide.</French>
+            <German>Kategorie kann nicht leer sein.</German>
+            <Polish>Pole kategorii nie może być puste.</Polish>
+            <Korean>카테고리는 비어있으면 안됩니다.</Korean>
+            <Japanese>カテゴリーは空にできません。</Japanese>
+            <Chinesesimp>类别不能为空。</Chinesesimp>
+            <Chinese>類別不能為空。</Chinese>
+            <Italian>La categoria non può essere vuota.</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Compositions_NameCannotBeEmpty">
+            <English>Name cannot be empty.</English>
+            <French>Le nom ne peut pas être vide.</French>
+            <German>Name kann nicht leer sein.</German>
+            <Polish>Pole nazwy nie może być puste.</Polish>
+            <Korean>이름은 비어있으면 안됩니다.</Korean>
+            <Japanese>名前は空にできません。</Japanese>
+            <Chinesesimp>名称不能为空。</Chinesesimp>
+            <Chinese>名稱不能為空。</Chinese>
+            <Italian>Il nome non può essere vuoto.</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Compositions_CompositionAlreadyExists">
+            <English>A composition with this name and category already exists.</English>
+            <French>Il y a déjà une composition avec ce nom et catégorie.</French>
+            <German>Eine Komposition mit diesem Namen und Kategorie existiert bereits.</German>
+            <Polish>Kompozycja z tą nazwą i kategorią już istnieje.</Polish>
+            <Korean>해당 이름과 카테고리를 가진 구성이 이미 존재합니다.</Korean>
+            <Japanese>この名前とカテゴリは既に存在しています。</Japanese>
+            <Chinesesimp>已经存在一个具有此名称和类别的组合。</Chinesesimp>
+            <Chinese>已經存在一個具有此名稱和類別的組合。</Chinese>
+            <Italian>Esiste già una composizione con questo nome e questa categoria.</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Compositions_DeleteConfirmation">
+            <English>Are you sure you want to delete this composition?</English>
+            <French>Êtes-vous sûr de vouloir effacer cette composition?</French>
+            <German>Wollen sie diese Komposition wirklich löschen?</German>
+            <Polish>Jesteś pewnien usunięcia tej kompozycji?</Polish>
+            <Korean>이 구성을 삭제하시겠습니까?</Korean>
+            <Japanese>このコンポジションを本当に削除しますか？</Japanese>
+            <Chinesesimp>你确定要删除这个组合吗？</Chinesesimp>
+            <Chinese>你確定要刪除這個組合嗎？</Chinese>
+            <Italian>Sei sicuro di voler eliminare questa composizione?</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Compositions_NoObjectsSelected">
+            <English>Select objects to create composition from</English>
+            <French>Sélectionnez des objets pour la composition neuve</French>
+            <German>Wähle Objekte für die neue Komposition aus</German>
+            <Polish>Wybierz obiekty do stworzenia kompozycji</Polish>
+            <Korean>구성을 제작할 아이템 선택</Korean>
+            <Japanese>次の選択したオブジェクトでコンポジションを作成</Japanese>
+            <Chinesesimp>选择对象以创建组合</Chinesesimp>
+            <Chinese>選擇對像以創建組合</Chinese>
+            <Italian>Seleziona gli oggetti da cui creare la composizione</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Compositions_RandomizationOff">
+            <English>Randomization disabled.</English>
+            <French>Inactiver générateur aléatoire.</French>
+            <German>Zufallsgenerator deaktiviert.</German>
+            <Polish>Wybór losowy wyłączony.</Polish>
+            <Korean>랜덤 기능 비활성화</Korean>
+            <Japanese>ランダム化を無効にしました。</Japanese>
+            <Chinesesimp>禁用随机选择</Chinesesimp>
+            <Chinese>禁用隨機選擇</Chinese>
+            <Italian>Randomizzazione disabilitata.</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Compositions_RandomizationOn">
+            <English>Randomization enabled.</English>
+            <French>Activer générateur aléatoire.</French>
+            <German>Zufallsgenerator aktiviert.</German>
+            <Polish>Wybór losowy włączony.</Polish>
+            <Korean>랜덤 기능 활성화</Korean>
+            <Japanese>ランダム化を有効にしました。</Japanese>
+            <Chinesesimp>启用随机选择</Chinesesimp>
+            <Chinese>啟用隨機選擇</Chinese>
+            <Italian>Randomizzazione abilitata.</Italian>
+        </Key>
+    </Package>
+</Project>

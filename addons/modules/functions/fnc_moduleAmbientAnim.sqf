@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Zeus module function to make a unit play an ambient animation.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic"];
 
@@ -40,11 +40,16 @@ if (isPlayer _unit) exitWith {
     ["COMBO", LSTRING(ModuleAmbientAnim_Type), [[], [
         [LSTRING(ModuleAmbientAnim_StopAnimation), "", "", [0.8, 0, 0, 1]],
         LSTRING(ModuleAmbientAnim_SitOnFloor),
+        LSTRING(ModuleAmbientAnim_SitArmed),
+        LSTRING(ModuleAmbientAnim_Squat),
+        LSTRING(ModuleAmbientAnim_SquatArmed),
         LSTRING(ModuleAmbientAnim_LeanOnWall),
         LSTRING(ModuleAmbientAnim_Watch),
         LSTRING(ModuleAmbientAnim_StandIdle),
         LSTRING(ModuleAmbientAnim_StandIdleNoWeapon),
+        LSTRING(ModuleAmbientAnim_StandWithPistol),
         LSTRING(ModuleAmbientAnim_AtEase),
+        LSTRING(ModuleAmbientAnim_GuardKneeled),
         LSTRING(ModuleAmbientAnim_ListenToBriefing),
         LSTRING(ModuleAmbientAnim_Briefing),
         LSTRING(ModuleAmbientAnim_BriefingInteractive),
@@ -57,16 +62,24 @@ if (isPlayer _unit) exitWith {
         LSTRING(ModuleAmbientAnim_TreatWounded),
         LSTRING(ModuleAmbientAnim_CombatWounded),
         LSTRING(ModuleAmbientAnim_WoundedGeneral),
+        LSTRING(ModuleAmbientAnim_WoundedLeaning),
         LSTRING(ModuleAmbientAnim_WoundedHead),
         LSTRING(ModuleAmbientAnim_WoundedChest),
         LSTRING(ModuleAmbientAnim_WoundedArm),
         LSTRING(ModuleAmbientAnim_WoundedLeg),
         LSTRING(ModuleAmbientAnim_ShockedCivilian),
         LSTRING(ModuleAmbientAnim_HidingCivilian),
+        LSTRING(ModuleAmbientAnim_Surrender),
         LSTRING(ModuleAmbientAnim_SitCaptured),
         LSTRING(ModuleAmbientAnim_RepairStand),
         LSTRING(ModuleAmbientAnim_RepairKneel),
-        LSTRING(ModuleAmbientAnim_RepairProne)
+        LSTRING(ModuleAmbientAnim_RepairProne),
+        LSTRING(ModuleAmbientAnim_Dead),
+        LSTRING(ModuleAmbientAnim_DeadLeaning),
+        LSTRING(ModuleAmbientAnim_DeadSit),
+        LSTRING(ModuleAmbientAnim_LeanOnTable),
+        LSTRING(ModuleAmbientAnim_Binoculars),
+        LSTRING(ModuleAmbientAnim_Salute)
     ], 0]],
     ["TOOLBOX:YESNO", LSTRING(ModuleAmbientAnim_Combat), true]
 ], {

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Zeus module function to make a unit sit on a chair.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define CHAIR_CLASSES [ \
     "Land_CampingChair_V1_F", \
@@ -23,7 +23,10 @@
     "Land_OfficeChair_01_F", \
     "Land_WoodenLog_F", \
     "Land_RattanChair_01_F", \
-    "Land_ArmChair_01_F" \
+    "Land_ArmChair_01_F", \
+    "Land_DeskChair_01_black_F", \
+    "Land_DeskChair_01_olive_F", \
+    "Land_DeskChair_01_sand_F" \
 ]
 
 #define CHAIR_POSITIONS [ \
@@ -34,7 +37,10 @@
     [0, 0, -0.6], \
     [0, 0.05, -0.2], \
     [0, -0.1, -0.5], \
-    [0, 0, -0.5] \
+    [0, 0, -0.5], \
+    [0, 0, -0.25], \
+    [0, 0, -0.25], \
+    [0, 0, -0.25] \
 ]
 
 #define CHAIR_DIRECTIONS [ \
@@ -45,6 +51,9 @@
     180, \
     0, \
     180, \
+    0, \
+    0, \
+    0, \
     0 \
 ]
 
@@ -130,7 +139,7 @@ private _displayNames = _configNames apply {getText (_cfgVehicles >> _x >> "disp
     [QEGVAR(common,setDir), [_unit, _sitDirection], _unit] call CBA_fnc_targetEvent;
 
     // Add chair to editable objects so it can be moved around
-    [QEGVAR(common,addObjects), [[_chair]]] call CBA_fnc_serverEvent;
+    [_chair] call EFUNC(common,updateEditableObjects);
 
     // Flag unit as sitting so module will make it stand up next time
     _unit setVariable [QGVAR(isSitting), true, true];

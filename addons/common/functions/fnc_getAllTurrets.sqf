@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Tuupertunut
  * Returns all turret paths for a vehicle including the driver turret.
@@ -13,14 +14,13 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle"];
 
 private _turrets = if (_vehicle isEqualType objNull) then {
-    allTurrets _vehicle;
+    allTurrets _vehicle
 } else {
-    [_vehicle] call BIS_fnc_allTurrets;
+    [_vehicle] call BIS_fnc_allTurrets
 };
 
 // Add the driver turret

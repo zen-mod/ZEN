@@ -1,25 +1,25 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
- * Checks if the hovered entity can be remote controlled.
+ * Checks if the given entity can be remote controlled.
  *
  * Arguments:
- * 0: Hovered Entity <OBJECT|GROUP|ARRAY|STRING>
+ * 0: Entity <ANY>
  *
  * Return Value:
  * Can Remote Control <BOOL>
  *
  * Example:
- * [_hoveredEntity] call zen_remote_control_fnc_canControl
+ * [_unit] call zen_remote_control_fnc_canControl
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-params ["_hoveredEntity"];
+params ["_entity"];
 
-if !(_hoveredEntity isEqualType objNull) exitWith {false};
+if !(_entity isEqualType objNull) exitWith {false};
 
-private _unit = effectiveCommander _hoveredEntity;
+private _unit = effectiveCommander _entity;
 
 alive _unit
 && {!isPlayer _unit}

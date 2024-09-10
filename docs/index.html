@@ -7,41 +7,29 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <style type="text/css">
-        .app-sub-sidebar li:before {
-            display: none;
-        }
-
-        .app-sub-sidebar .section-link {
-            padding-left: 10px;
-        }
-
-        .markdown-section pre:after {
-            display: none;
-        }
-
-        .github-corner svg {
-            fill: #ddd;
-        }
-
-        .github-corner svg:hover {
-            fill: var(--theme-color, #42b983);
-        }
-    </style>
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-    <div id="app">Please Wait...</div>
+    <div id="app">Loading...</div>
     <script>
         window.$docsify = {
             name: "Zeus Enhanced",
-            repo: "mharis001/ZEN",
+            repo: "zen-mod/ZEN",
+            alias: {
+                "/.*/_sidebar.md": "/_sidebar.md"
+            },
             homepage: "home.md",
+            auto2top: true,
             loadSidebar: true,
             subMaxLevel: 2,
+            notFoundPage: true,
             themeColor: "#2684C1"
         }
     </script>
     <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
     <script src="//unpkg.com/prismjs/components/prism-clike.min.js"></script>
+    <script src="//unpkg.com/prismjs/components/prism-c.min.js"></script>
+    <script src="//unpkg.com/prismjs/components/prism-cpp.min.js"></script>
+    <script src="//unpkg.com/prismjs/components/prism-sqf.min.js"></script>
 </body>
 </html>

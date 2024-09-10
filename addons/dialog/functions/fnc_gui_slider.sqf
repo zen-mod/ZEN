@@ -1,90 +1,61 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Initializes the SLIDER content control.
  *
  * Arguments:
  * 0: Controls Group <CONTROL>
- * 1: Row Index <NUMBER>
- * 2: Current Value <NUMBER>
- * 3: Row Settings <ARRAY>
+ * 1: Default Value <NUMBER>
+ * 2: Settings <ARRAY>
+ *   0: Minimum Value <NUMBER>
+ *   1: Maximum Value <NUMBER>
+ *   2: Formatting <NUMBER|CODE>
+ *   3: Is Percentage <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL, 0, 5, [0, 10, 1]] call zen_dialog_fnc_gui_slider
+ * [CONTROL, 5, [0, 10, 1, false]] call zen_dialog_fnc_gui_slider
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-params ["_controlsGroup", "_rowIndex", "_currentValue", "_rowSettings"];
-_rowSettings params ["_min", "_max", "_decimals"];
+params ["_controlsGroup", "_defaultValue", "_settings"];
+_settings params ["_min", "_max", "_formatting", "_isPercentage", "_drawRadius", "_radiusCenter", "_radiusColor"];
 
 private _ctrlSlider = _controlsGroup controlsGroupCtrl IDC_ROW_SLIDER;
+private _ctrlEdit = _controlsGroup controlsGroupCtrl IDC_ROW_EDIT;
 
-_ctrlSlider sliderSetRange [_min, _max];
-_ctrlSlider sliderSetPosition _currentValue;
+if (_drawRadius) then {
+    [missionNamespace, "Draw3D", {
+        _thisArgs params ["_ctrlSlider", "_center", "_color"];
 
-private _range = _max - _min;
-_ctrlSlider sliderSetSpeed [0.05 * _range, 0.1 * _range];
+        if (isNull _ctrlSlider || {_center isEqualTo objNull}) exitWith {
+            removeMissionEventHandler [_thisType, _thisID];
+        };
 
-_ctrlSlider setVariable [QGVAR(params), [_rowIndex, _decimals]];
+        if (_center isEqualType objNull) then {
+            _center = ASLToAGL getPosASLVisual _center;
+        };
 
-_ctrlSlider ctrlAddEventHandler ["SliderPosChanged", {
-    params ["_ctrlSlider", "_value"];
-    (_ctrlSlider getVariable QGVAR(params)) params ["_rowIndex", "_decimals"];
+        private _radius = sliderPosition _ctrlSlider;
+        private _count = CIRCLE_DOTS_MIN max floor (2 * pi * _radius ^ 0.65 / CIRCLE_DOTS_SPACING);
+        private _factor = 360 / _count;
 
-    if (_decimals < 0) then {
-        _value = round _value;
-    };
+        for "_i" from 0 to (_count - 1) do {
+            private _phi = _i * _factor;
+            private _posVector = [_radius * cos _phi, _radius * sin _phi, 0];
 
-    private _controlsGroup = ctrlParentControlsGroup _ctrlSlider;
-    private _ctrlEdit = _controlsGroup controlsGroupCtrl IDC_ROW_SLIDER_EDIT;
-    _ctrlEdit ctrlSetText ([_value, 1, _decimals max 0] call CBA_fnc_formatNumber);
+            drawIcon3D ["\a3\ui_f\data\map\markers\military\dot_ca.paa", _color, _center vectorAdd _posVector, CIRCLE_DOTS_SCALE, CIRCLE_DOTS_SCALE, 0];
+        };
+    }, [_ctrlSlider, _radiusCenter, _radiusColor]] call CBA_fnc_addBISEventHandler;
+};
 
-    private _display = ctrlParent _ctrlSlider;
-    private _values = _display getVariable QGVAR(values);
-    _values set [_rowIndex, _value];
-}];
+[_ctrlSlider, _ctrlEdit, _min, _max, _defaultValue, -1, _formatting, _isPercentage] call EFUNC(common,initSliderEdit);
 
-private _ctrlEdit = _controlsGroup controlsGroupCtrl IDC_ROW_SLIDER_EDIT;
-_ctrlEdit ctrlSetText ([_currentValue, 1, _decimals max 0] call CBA_fnc_formatNumber);
-_ctrlEdit setVariable [QGVAR(params), [_rowIndex, _decimals]];
+_controlsGroup setVariable [QFUNC(value), {
+    params ["_controlsGroup"];
 
-_ctrlEdit ctrlAddEventHandler ["KeyUp", {
-    params ["_ctrlEdit"];
-    (_ctrlEdit getVariable QGVAR(params)) params ["_rowIndex", "_decimals"];
-
-    private _value = parseNumber ctrlText _ctrlEdit;
-
-    if (_decimals < 0) then {
-        _value = round _value;
-    };
-
-    private _controlsGroup = ctrlParentControlsGroup _ctrlEdit;
-    private _ctrlSlider = _controlsGroup controlsGroupCtrl IDC_ROW_SLIDER;
-
-    _ctrlSlider sliderSetPosition _value;
-    _value = sliderPosition _ctrlSlider;
-
-    private _display = ctrlParent _ctrlEdit;
-    private _values = _display getVariable QGVAR(values);
-    _values set [_rowIndex, _value];
-}];
-
-_ctrlEdit ctrlAddEventHandler ["KillFocus", {
-    params ["_ctrlEdit"];
-    (_ctrlEdit getVariable QGVAR(params)) params ["", "_decimals"];
-
-    private _controlsGroup = ctrlParentControlsGroup _ctrlEdit;
-    private _ctrlSlider = _controlsGroup controlsGroupCtrl IDC_ROW_SLIDER;
-
-    private _value = sliderPosition _ctrlSlider;
-
-    if (_decimals < 0) then {
-        _value = round _value;
-    };
-
-    _ctrlEdit ctrlSetText ([_value, 1, _decimals max 0] call CBA_fnc_formatNumber);
+    sliderPosition (_controlsGroup controlsGroupCtrl IDC_ROW_SLIDER)
 }];

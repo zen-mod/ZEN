@@ -9,7 +9,8 @@ class CfgPatches {
         requiredAddons[] = {
             "zen_context_menu",
             "zen_garage",
-            "zen_inventory"
+            "zen_inventory",
+            "zen_remote_control"
         };
         author = ECSTRING(main,Author);
         authors[] = {"mharis001"};
@@ -17,6 +18,8 @@ class CfgPatches {
         VERSION_CONFIG;
     };
 };
+
+PRELOAD_ADDONS;
 
 #include "CfgEventHandlers.hpp"
 #include "CfgContext.hpp"

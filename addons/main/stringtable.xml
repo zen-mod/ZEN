@@ -1,25 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Main">
+        <Key ID="STR_ZEN_Main_DisplayName">
+            <English>Zeus Enhanced</English>
+            <German>Zeus Enhanced</German>
+            <Polish>Zeus Enhanced</Polish>
+            <Portuguese>Zeus Enhanced</Portuguese>
+            <Russian>Zeus Enhanced</Russian>
+            <Czech>Zeus Enhanced</Czech>
+            <Spanish>Zeus Enhanced</Spanish>
+            <Italian>Zeus Enhanced</Italian>
+            <French>Zeus Enhanced</French>
+            <Korean>Zeus Enhanced</Korean>
+            <Japanese>Zeus Enhanced</Japanese>
+            <Chinese>Zeus Enhanced</Chinese>
+            <Chinesesimp>Zeus Enhanced</Chinesesimp>
+        </Key>
         <Key ID="STR_ZEN_Main_Author">
             <English>ZEN Team</English>
             <German>ZEN Team</German>
             <Polish>ZEN Team</Polish>
+            <Portuguese>ZEN Team</Portuguese>
+            <Russian>ZEN Team</Russian>
+            <Czech>ZEN Team</Czech>
+            <Spanish>ZEN Team</Spanish>
+            <Italian>ZEN Team</Italian>
+            <French>ZEN Team</French>
+            <Korean>ZEN Team</Korean>
+            <Japanese>ZEN Team</Japanese>
+            <Chinese>ZEN Team</Chinese>
+            <Chinesesimp>ZEN Team</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Main_URL">
-            <English>https://github.com/mharis001/ZEN</English>
-            <German>https://github.com/mharis001/ZEN</German>
-            <Polish>https://github.com/mharis001/ZEN</Polish>
-            <Portuguese>https://github.com/mharis001/ZEN</Portuguese>
-            <Russian>https://github.com/mharis001/ZEN</Russian>
-            <Czech>https://github.com/mharis001/ZEN</Czech>
-            <Spanish>https://github.com/mharis001/ZEN</Spanish>
-            <Italian>https://github.com/mharis001/ZEN</Italian>
-            <French>https://github.com/mharis001/ZEN</French>
-            <Korean>https://github.com/mharis001/ZEN</Korean>
-            <Japanese>https://github.com/mharis001/ZEN</Japanese>
-            <Chinese>https://github.com/mharis001/ZEN</Chinese>
-            <Chinesesimp>https://github.com/mharis001/ZEN</Chinesesimp>
+            <English>https://github.com/zen-mod/ZEN</English>
+            <German>https://github.com/zen-mod/ZEN</German>
+            <Polish>https://github.com/zen-mod/ZEN</Polish>
+            <Portuguese>https://github.com/zen-mod/ZEN</Portuguese>
+            <Russian>https://github.com/zen-mod/ZEN</Russian>
+            <Czech>https://github.com/zen-mod/ZEN</Czech>
+            <Spanish>https://github.com/zen-mod/ZEN</Spanish>
+            <Italian>https://github.com/zen-mod/ZEN</Italian>
+            <French>https://github.com/zen-mod/ZEN</French>
+            <Korean>https://github.com/zen-mod/ZEN</Korean>
+            <Japanese>https://github.com/zen-mod/ZEN</Japanese>
+            <Chinese>https://github.com/zen-mod/ZEN</Chinese>
+            <Chinesesimp>https://github.com/zen-mod/ZEN</Chinesesimp>
         </Key>
     </Package>
 </Project>

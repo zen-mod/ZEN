@@ -1,3 +1,9 @@
 #include "script_component.hpp"
 
-[QGVAR(unGarrison), FUNC(unGarrison)] call CBA_fnc_addEventHandler;
+QGVAR(skills) addPublicVariableEventHandler LINKFUNC(handleSkillsChange);
+
+["CAManBase", "InitPost", LINKFUNC(initMan), true, [], false] call CBA_fnc_addClassEventHandler;
+
+[QGVAR(suppressiveFire), LINKFUNC(suppressiveFire)] call CBA_fnc_addEventHandler;
+[QGVAR(throwGrenade), LINKFUNC(throwGrenade)] call CBA_fnc_addEventHandler;
+[QGVAR(unGarrison), LINKFUNC(unGarrison)] call CBA_fnc_addEventHandler;

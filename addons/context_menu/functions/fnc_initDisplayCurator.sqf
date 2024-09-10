@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Initializes the Zeus Display.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_display"];
 
@@ -24,7 +24,7 @@ if (GVAR(enabled) == 0) exitWith {};
 {
     private _ctrl = _display displayCtrl _x;
     _ctrl ctrlAddEventHandler ["MouseButtonDown", {
-        call FUNC(closeMenu);
+        call FUNC(close);
     }];
 } forEach [
     IDC_RSCDISPLAYCURATOR_ADD,
@@ -41,7 +41,7 @@ if (GVAR(enabled) == 1) exitWith {
     {
         private _ctrl = _display displayCtrl _x;
         _ctrl ctrlAddEventHandler ["MouseButtonDown", {
-            call FUNC(closeMenu);
+            call FUNC(close);
         }];
     } forEach [
         IDC_RSCDISPLAYCURATOR_MAINMAP,
@@ -59,27 +59,38 @@ if (GVAR(enabled) == 1) exitWith {
         if (_button isEqualTo 1) then {
             GVAR(holdingRMB) = true;
         } else {
-            call FUNC(closeMenu);
+            call FUNC(close);
         };
     }];
 
     _ctrl ctrlAddEventHandler ["MouseButtonUp", {
-        params ["", "_button"];
+        params ["", "_button", "", "", "_shift"];
 
         if (_button isEqualTo 1) then {
             GVAR(holdingRMB) = false;
 
-            // Right clicking with AI selected places waypoints
-            // Do not want to open context menu when this is the case
-            curatorSelected params ["_selectedObjects", "_selectedGroups", "_selectedWaypoints"];
-            if (
-                GVAR(canContext)
-                && {!call EFUNC(common,isPlacementActive)}
-                && {_selectedWaypoints isEqualTo []}
-                && {_selectedGroups findIf {!isPlayer leader _x} == -1}
-                && {_selectedObjects findIf {!isPlayer leader _x && {!isNull group _x}} == -1}
-            ) then {
-                call FUNC(openMenu);
+            if (GVAR(canContext) && {!EGVAR(common,selectPositionActive)} && {!call EFUNC(common,isPlacementActive)}) then {
+                // Right clicking with AI selected normally places waypoints
+                // Only open context menu when this is the case if overriding waypoints is enabled and the SHIFT key is held down
+                private _canPlaceWaypoints = SELECTED_WAYPOINTS isNotEqualTo []
+                    || {SELECTED_GROUPS findIf {!isPlayer leader _x && {side _x != sideLogic}} != -1}
+                    || {SELECTED_OBJECTS findIf {!isPlayer leader _x && {!isNull group _x} && {side group _x != sideLogic}} != -1};
+
+                if (!_canPlaceWaypoints || {GVAR(overrideWaypoints) && {!_shift}}) then {
+                    [] call FUNC(open);
+
+                    // Clear selected entities if waypoint placement can occur and restore next frame
+                    // Using entities tree as an alternative to the lack of a command to set curator selected entities
+                    if (_canPlaceWaypoints) then {
+                        [{
+                            params ["_objects", "_groups", "_waypoints", "_markers"];
+
+                            setCuratorSelected (_objects + _groups + _waypoints + _markers);
+                        }, curatorSelected] call CBA_fnc_execNextFrame;
+
+                        setCuratorSelected [];
+                    };
+                };
             };
         };
     }];

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * Garrisons given units in nearby buildings.
@@ -17,14 +18,13 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_units", "_position", "_radius", "_fillMode", "_topDown"];
 
 private _buildings = _position nearObjects ["Building", _radius] apply {
     _x buildingPos -1
 } select {
-    !(_x isEqualTo [])
+    _x isNotEqualTo []
 };
 
 if (_topDown) then {
@@ -67,7 +67,7 @@ private _fnc_moveUnit = {
 
 switch (_fillMode) do {
     case 0: { // Even filling
-        while {!(_units isEqualTo [])} do {
+        while {_units isNotEqualTo []} do {
             private _currentBuilding = _buildings select 0;
 
             if (_currentBuilding isEqualTo []) then {
@@ -87,7 +87,7 @@ switch (_fillMode) do {
         };
     };
     case 1: { // Building by building
-        while {!(_units isEqualTo [])} do {
+        while {_units isNotEqualTo []} do {
             private _currentBuilding = _buildings select 0;
 
             if (_currentBuilding isEqualTo []) then {
@@ -104,7 +104,7 @@ switch (_fillMode) do {
         };
     };
     case 2: { // Random
-        while {!(_units isEqualTo [])} do {
+        while {_units isNotEqualTo []} do {
             private _currentBuilding = selectRandom _buildings;
 
             if (_currentBuilding isEqualTo []) then {

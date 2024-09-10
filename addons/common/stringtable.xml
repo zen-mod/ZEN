@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Common">
-        <Key ID="STR_ZEN_Common_Category">
-            <English>Zeus Enhanced</English>
-            <German>Zeus Verbessert</German>
-            <Polish>Zeus Enhanced</Polish>
-        </Key>
         <Key ID="STR_ZEN_Common_Enabled">
             <English>Enabled</English>
             <Czech>Povoleno</Czech>
@@ -68,175 +63,825 @@
             <Chinese>否</Chinese>
             <Chinesesimp>否</Chinesesimp>
         </Key>
+        <Key ID="STR_ZEN_Common_Add">
+            <English>Add</English>
+            <French>Ajouter</French>
+            <German>Hinzufügen</German>
+            <Korean>추가</Korean>
+            <Polish>Dodaj</Polish>
+            <Japanese>追加</Japanese>
+            <Chinesesimp>添加</Chinesesimp>
+            <Chinese>添加</Chinese>
+            <Italian>Aggiungere</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Common_Remove">
+            <English>Remove</English>
+            <French>Supprimer</French>
+            <German>Entfernen</German>
+            <Korean>제거</Korean>
+            <Polish>Usuń</Polish>
+            <Japanese>削除</Japanese>
+            <Chinesesimp>移除</Chinesesimp>
+            <Chinese>移除</Chinese>
+            <Italian>Rimuovi</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Common_On">
+            <English>On</English>
+            <French>Marche</French>
+            <German>An</German>
+            <Japanese>オン</Japanese>
+            <Korean>켬</Korean>
+            <Polish>Włączone</Polish>
+            <Chinesesimp>开</Chinesesimp>
+            <Chinese>開</Chinese>
+            <Italian>Accendi</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Common_Off">
+            <English>Off</English>
+            <French>Arrêt</French>
+            <German>Aus</German>
+            <Japanese>オフ</Japanese>
+            <Korean>끔</Korean>
+            <Polish>Wyłączone</Polish>
+            <Chinesesimp>关</Chinesesimp>
+            <Chinese>關</Chinese>
+            <Italian>Spegni</Italian>
+        </Key>
         <Key ID="STR_ZEN_Common_Unchanged">
             <English>Unchanged</English>
+            <French>Inchangé</French>
+            <Russian>Не изменилось</Russian>
             <German>Unverändert</German>
             <Polish>Niezmieniony</Polish>
+            <Czech>Beze změny</Czech>
+            <Italian>Invariato</Italian>
+            <Japanese>変更無し</Japanese>
+            <Korean>변경되지 않음</Korean>
+            <Chinesesimp>未改变</Chinesesimp>
+            <Chinese>未改變</Chinese>
+        </Key>
+        <Key ID="STR_ZEN_Common_Premade">
+            <English>Premade</English>
+            <French>Préfabriqué</French>
+            <German>Vorgefertigt</German>
+            <Polish>Predefiniowane</Polish>
+            <Korean>팀 결성 완료</Korean>
+            <Japanese>事前作製</Japanese>
+            <Chinesesimp>预制</Chinesesimp>
+            <Chinese>預製</Chinese>
+            <Italian>Prefabbricato</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_VeryLow">
             <English>Very Low</English>
+            <French>Très faible</French>
+            <Russian>Оч. низкий</Russian>
             <German>Sehr niedrieg</German>
             <Polish>Bardzo niski</Polish>
+            <Czech>Velmi nízký</Czech>
+            <Italian>Molto Basso</Italian>
+            <Japanese>とても低い</Japanese>
+            <Korean>매우 낮음</Korean>
+            <Chinesesimp>极低</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Common_Low">
             <English>Low</English>
+            <French>Faible</French>
+            <Russian>Низкий</Russian>
             <German>Niedrig</German>
             <Polish>Niski</Polish>
+            <Czech>Nízký</Czech>
+            <Italian>Basso</Italian>
+            <Japanese>低い</Japanese>
+            <Korean>낮음</Korean>
+            <Chinesesimp>低</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Common_Medium">
             <English>Medium</English>
+            <French>Moyen</French>
+            <Russian>Средний</Russian>
             <German>Medium</German>
             <Polish>Średni</Polish>
+            <Czech>Střední</Czech>
+            <Italian>Medio</Italian>
+            <Japanese>普通</Japanese>
+            <Korean>중간</Korean>
+            <Chinesesimp>中等</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Common_High">
             <English>High</English>
+            <French>Élevé</French>
+            <Russian>Высокий</Russian>
             <German>Hoch</German>
             <Polish>Wysoki</Polish>
+            <Czech>Vysoký</Czech>
+            <Italian>Alto</Italian>
+            <Japanese>高い</Japanese>
+            <Korean>높음</Korean>
+            <Chinesesimp>高</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Common_VeryHigh">
             <English>Very High</English>
+            <French>Très élevé</French>
+            <Russian>Оч. высокий</Russian>
             <German>Sehr hoch</German>
             <Polish>Bardzo wysoki</Polish>
+            <Czech>Velmi vysoký</Czech>
+            <Italian>Molto Alto</Italian>
+            <Japanese>とても高い</Japanese>
+            <Korean>매우 높음</Korean>
+            <Chinesesimp>极高</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Common_VeryWeak">
             <English>Very Weak</English>
+            <French>Très fragile</French>
+            <Russian>Оч. слабый</Russian>
             <German>Sehr schwach</German>
             <Polish>Bardzo słaby</Polish>
+            <Czech>Velmi slabý</Czech>
+            <Italian>Molto Debole</Italian>
+            <Japanese>とても弱い</Japanese>
+            <Korean>매우 약함</Korean>
+            <Chinesesimp>极弱</Chinesesimp>
+            <Chinese>極弱</Chinese>
         </Key>
         <Key ID="STR_ZEN_Common_Weak">
             <English>Weak</English>
+            <French>Fragile</French>
+            <Russian>Слабый</Russian>
             <German>Schwach</German>
             <Polish>Słaby</Polish>
+            <Czech>Slabý</Czech>
+            <Italian>Debole</Italian>
+            <Japanese>弱い</Japanese>
+            <Korean>약함</Korean>
+            <Chinesesimp>弱</Chinesesimp>
+            <Chinese>弱</Chinese>
         </Key>
         <Key ID="STR_ZEN_Common_Strong">
             <English>Strong</English>
+            <French>Fort</French>
+            <Russian>Сильный</Russian>
             <German>Stark</German>
             <Polish>Silny</Polish>
+            <Czech>Silný</Czech>
+            <Italian>Forte</Italian>
+            <Japanese>強い</Japanese>
+            <Korean>강함</Korean>
+            <Chinesesimp>强</Chinesesimp>
+            <Chinese>強</Chinese>
         </Key>
         <Key ID="STR_ZEN_Common_Extreme">
             <English>Extreme</English>
+            <French>Extrême</French>
+            <Russian>Экстремальный</Russian>
             <German>Extrem</German>
             <Polish>Ekstremalny</Polish>
+            <Czech>Extrémní</Czech>
+            <Italian>Estremo</Italian>
+            <Japanese>超強力</Japanese>
+            <Korean>극한</Korean>
+            <Chinesesimp>极强</Chinesesimp>
+            <Chinese>極強</Chinese>
         </Key>
         <Key ID="STR_ZEN_Common_All">
             <English>All</English>
+            <French>Tout</French>
+            <Russian>Все</Russian>
             <German>Alle</German>
             <Polish>Wszystko</Polish>
+            <Czech>Všechno</Czech>
+            <Italian>Tutti</Italian>
+            <Japanese>全て</Japanese>
+            <Korean>전체</Korean>
+            <Chinesesimp>全部</Chinesesimp>
+            <Chinese>全部</Chinese>
         </Key>
         <Key ID="STR_ZEN_Common_Side">
             <English>Side</English>
+            <French>Camp</French>
+            <Russian>Сторона</Russian>
             <German>Seite</German>
             <Polish>Strona</Polish>
+            <Czech>Strana</Czech>
+            <Italian>Lato</Italian>
+            <Japanese>陣営</Japanese>
+            <Korean>진영</Korean>
+            <Chinesesimp>阵营</Chinesesimp>
+            <Chinese>陣營</Chinese>
+        </Key>
+        <Key ID="STR_ZEN_Common_Sides">
+            <English>Sides</English>
+            <French>Camps</French>
+            <Russian>Стороны</Russian>
+            <German>Seiten</German>
+            <Polish>Strony</Polish>
+            <Czech>Strany</Czech>
+            <Italian>Lati</Italian>
+            <Japanese>陣営</Japanese>
+            <Korean>진영들</Korean>
+            <Chinesesimp>阵营</Chinesesimp>
+            <Chinese>陣營</Chinese>
+        </Key>
+        <Key ID="STR_ZEN_Common_Target">
+            <English>Target</English>
+            <Russian>Цель</Russian>
+            <French>Cible</French>
+            <German>Ziel</German>
+            <Polish>Cel</Polish>
+            <Japanese>目標</Japanese>
+            <Korean>목표</Korean>
+            <Chinesesimp>目标</Chinesesimp>
+            <Chinese>目標</Chinese>
+            <Italian>Obbiettivo</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Common_Cursor">
+            <English>Cursor</English>
+            <French>Curseur</French>
+            <German>Cursor</German>
+            <Chinesesimp>鼠标</Chinesesimp>
+            <Chinese>鼠標</Chinese>
+            <Japanese>カーソル</Japanese>
+            <Italian>Cursore</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Common_SelectedUnit">
+            <English>Selected Unit</English>
+            <French>Unité selectionnée</French>
+            <German>Ausgewählte Einheit</German>
+            <Korean>유닛 선택</Korean>
+            <Polish>Wybrane Jednostki</Polish>
+            <Japanese>選択されたユニット</Japanese>
+            <Chinesesimp>选择单位</Chinesesimp>
+            <Chinese>選擇單位</Chinese>
+            <Italian>Unità selezionata</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Common_SelectedGroup">
+            <English>Selected Group</English>
+            <German>Ausgewählte Gruppe</German>
+            <French>Groupe sélectionné</French>
+            <Italian>Gruppo selezionato</Italian>
+            <Japanese>選択されたグループ</Japanese>
+            <Chinese>選擇小隊</Chinese>
+            <Chinesesimp>选择小队</Chinesesimp>
+            <Korean>그룹 선택</Korean>
+            <Polish>Wybrana grupa</Polish>
+            <Russian>Выбранная группа</Russian>
+            <Czech>Vybraná skupina</Czech>
         </Key>
         <Key ID="STR_ZEN_Common_Faction">
             <English>Faction</English>
+            <French>Faction</French>
+            <Russian>Фракция</Russian>
             <German>Fraktion</German>
             <Polish>Frakcja</Polish>
+            <Czech>Frakce</Czech>
+            <Italian>Fazione</Italian>
+            <Korean>팩션</Korean>
+            <Japanese>陣営</Japanese>
+            <Chinesesimp>阵营</Chinesesimp>
+            <Chinese>陣營</Chinese>
         </Key>
         <Key ID="STR_ZEN_Common_Aircraft">
             <English>Aircraft</English>
+            <French>Avion</French>
+            <Russian>Самолёт</Russian>
             <German>Fluggerät</German>
             <Polish>Pojazd latający</Polish>
+            <Czech>Letadlo</Czech>
+            <Italian>Aerei</Italian>
+            <Korean>항공기</Korean>
+            <Japanese>航空機</Japanese>
+            <Chinesesimp>飞机</Chinesesimp>
+            <Chinese>飛機</Chinese>
         </Key>
         <Key ID="STR_ZEN_Common_Filter">
             <English>Filter</English>
+            <French>Filtre</French>
+            <Russian>Фильтр</Russian>
             <German>Filter</German>
             <Polish>Filtr</Polish>
+            <Czech>Filtr</Czech>
+            <Italian>Filtro</Italian>
+            <Japanese>フィルタ</Japanese>
+            <Korean>필터</Korean>
+            <Chinesesimp>筛选</Chinesesimp>
+            <Chinese>篩選</Chinese>
         </Key>
         <Key ID="STR_ZEN_Common_Units">
             <English>Units</English>
+            <French>Unités</French>
+            <Russian>Солдаты</Russian>
             <German>Einheiten</German>
             <Polish>Jednostki</Polish>
+            <Czech>Jednotky</Czech>
+            <Italian>Unità</Italian>
+            <Japanese>ユニット</Japanese>
+            <Korean>유닛들</Korean>
+            <Chinesesimp>单位</Chinesesimp>
+            <Chinese>單位</Chinese>
+        </Key>
+        <Key ID="STR_ZEN_Common_Vehicle">
+            <English>Vehicle</English>
+            <Russian>Транспортное средство</Russian>
+            <French>Véhicule</French>
+            <German>Fahrzeug</German>
+            <Korean>차량</Korean>
+            <Polish>Pojazd</Polish>
+            <Japanese>車両</Japanese>
+            <Spanish>Vehículo</Spanish>
+            <Chinesesimp>载具</Chinesesimp>
+            <Chinese>載具</Chinese>
+            <Italian>Veicolo</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Vehicles">
             <English>Vehicles</English>
+            <French>Véhicules</French>
+            <Russian>Машины</Russian>
             <German>Fahrzeuge</German>
             <Polish>Pojazdy</Polish>
+            <Czech>Vozidla</Czech>
+            <Italian>Veicoli</Italian>
+            <Japanese>車両</Japanese>
+            <Korean>차량들</Korean>
+            <Chinesesimp>车辆</Chinesesimp>
+            <Chinese>車輛</Chinese>
         </Key>
         <Key ID="STR_ZEN_Common_Static">
             <English>Static</English>
+            <French>Statique</French>
+            <Russian>Турели</Russian>
             <German>Statische Waffen</German>
             <Polish>Obiekty statyczne</Polish>
+            <Czech>Statický</Czech>
+            <Italian>Statico</Italian>
+            <Japanese>固定式</Japanese>
+            <Korean>고정</Korean>
+            <Chinesesimp>固定武器</Chinesesimp>
+            <Chinese>固定武器</Chinese>
+        </Key>
+        <Key ID="STR_ZEN_Common_Weapon">
+            <English>Weapon</English>
+            <French>Arme</French>
+            <German>Waffe</German>
+            <Chinesesimp>武器</Chinesesimp>
+            <Chinese>武器</Chinese>
+            <Japanese>武器</Japanese>
+            <Italian>Arma</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Common_Magazine">
+            <English>Magazine</English>
+            <French>Magasin</French>
+            <German>Magazin</German>
+            <Chinesesimp>弹夹</Chinesesimp>
+            <Chinese>彈夾</Chinese>
+            <Japanese>弾倉</Japanese>
+            <Italian>Rivista</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Nearest">
             <English>Nearest</English>
+            <French>Le plus proche</French>
+            <Russian>Ближайший</Russian>
             <German>Am nächsten</German>
             <Polish>Najbliższe</Polish>
+            <Czech>Nejbližší</Czech>
+            <Italian>Più vicino</Italian>
+            <Japanese>直近</Japanese>
+            <Korean>가장 가까운</Korean>
+            <Spanish>Más cercano</Spanish>
+            <Chinesesimp>最近</Chinesesimp>
+            <Chinese>最近</Chinese>
+        </Key>
+        <Key ID="STR_ZEN_Common_Farthest">
+            <English>Farthest</English>
+            <Russian>Далеко</Russian>
+            <French>Le plus loin</French>
+            <German>Weiteste</German>
+            <Korean>가장 먼</Korean>
+            <Polish>Najdalsze</Polish>
+            <Japanese>最高速</Japanese>
+            <Spanish>Más lejano</Spanish>
+            <Chinesesimp>最远</Chinesesimp>
+            <Chinese>最遠</Chinese>
+            <Italian>Il più lontano</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Common_Relaxed">
+            <English>Relaxed</English>
+            <Russian>Расслабленный</Russian>
+            <French>Relax</French>
+            <German>Entspannt</German>
+            <Polish>Spokojni</Polish>
+            <Japanese>無警戒</Japanese>
+            <Korean>차분한</Korean>
+            <Chinesesimp>轻松愉快</Chinesesimp>
+            <Chinese>輕鬆愉快</Chinese>
+            <Italian>Rilassato</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Common_Careless">
+            <English>Careless</English>
+            <Russian>Невнимательный</Russian>
+            <French>Inattentif</French>
+            <German>Unachtsam</German>
+            <Polish>Beztroskie</Polish>
+            <Japanese>不注意</Japanese>
+            <Spanish>Despreocupado</Spanish>
+            <Chinesesimp>漫不经心</Chinesesimp>
+            <Chinese>漫不經心</Chinese>
+            <Italian>Incurante</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Common_Cautious">
+            <English>Cautious</English>
+            <Russian>Осторожный</Russian>
+            <French>Prudent</French>
+            <German>Vorsichtig</German>
+            <Polish>Ostrożni</Polish>
+            <Japanese>警戒</Japanese>
+            <Korean>주의 깊은</Korean>
+            <Chinesesimp>谨慎行事</Chinesesimp>
+            <Chinese>謹慎行事</Chinese>
+            <Italian>Cauta</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_Speed">
             <English>Speed</English>
+            <French>Vitesse</French>
+            <Russian>Скорость</Russian>
             <German>Geschwindigkeit</German>
             <Polish>Prędkość</Polish>
+            <Czech>Rychlost</Czech>
+            <Italian>Velocità</Italian>
+            <Japanese>速度</Japanese>
+            <Korean>속도</Korean>
+            <Chinesesimp>速度</Chinesesimp>
+            <Chinese>速度</Chinese>
         </Key>
         <Key ID="STR_ZEN_Common_Range">
             <English>Range</English>
+            <French>Portée</French>
+            <Russian>Дистанция</Russian>
             <German>Reichweite</German>
             <Polish>Zasięg</Polish>
+            <Czech>Dosah</Czech>
+            <Italian>Raggio</Italian>
+            <Japanese>距離</Japanese>
+            <Korean>거리</Korean>
+            <Chinesesimp>范围</Chinesesimp>
+            <Chinese>範圍</Chinese>
         </Key>
         <Key ID="STR_ZEN_Common_Radius">
             <English>Radius</English>
+            <French>Rayon</French>
+            <Russian>Радиус</Russian>
             <German>Radius</German>
             <Polish>Promień</Polish>
+            <Czech>Rádius</Czech>
+            <Italian>Raggio</Italian>
+            <Japanese>範囲半径</Japanese>
+            <Korean>반경</Korean>
+            <Chinesesimp>半径</Chinesesimp>
+            <Chinese>半徑</Chinese>
+        </Key>
+        <Key ID="STR_ZEN_Common_Radius_Units">
+            <English>Radius (m)</English>
+            <French>Rayon (m)</French>
+            <Russian>Радиус (m)</Russian>
+            <German>Radius (m)</German>
+            <Polish>Promień (m)</Polish>
+            <Czech>Rádius (m)</Czech>
+            <Italian>Raggio (m)</Italian>
+            <Japanese>範囲半径 (m)</Japanese>
+            <Korean>반경 (m)</Korean>
+            <Chinesesimp>半径（米）</Chinesesimp>
+            <Chinese>半徑（米）</Chinese>
         </Key>
         <Key ID="STR_ZEN_Common_Height">
             <English>Height</English>
+            <French>Hauteur</French>
+            <Russian>Высота</Russian>
             <German>Höhe</German>
             <Polish>Wysokość</Polish>
+            <Czech>Výška</Czech>
+            <Italian>Altezza</Italian>
+            <Japanese>高さ</Japanese>
+            <Korean>고도</Korean>
+            <Chinesesimp>高度</Chinesesimp>
+            <Chinese>高度</Chinese>
         </Key>
         <Key ID="STR_ZEN_Common_Height_Units">
             <English>Height (m)</English>
+            <French>Hauteur (m)</French>
+            <Russian>Высота (м)</Russian>
             <German>Höhe (m)</German>
             <Polish>Wysokość (m)</Polish>
+            <Czech>Výška (m)</Czech>
+            <Italian>Altezza (m)</Italian>
+            <Japanese>高さ (m)</Japanese>
+            <Korean>고도 (m)</Korean>
+            <Chinesesimp>高度（米）</Chinesesimp>
+            <Chinese>高度（米）</Chinese>
+        </Key>
+        <Key ID="STR_ZEN_Common_Duration_Units">
+            <English>Duration (s)</English>
+            <Japanese>持続時間 (s)</Japanese>
+            <Chinese>持續時間 (秒)</Chinese>
+            <Chinesesimp>持续时间 (秒)</Chinesesimp>
+            <German>Dauer (s)</German>
+            <Italian>Durata (s)</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Common_Amount">
+            <English>Amount</English>
+            <French>Quantité</French>
+            <German>Menge</German>
+            <Chinesesimp>合计</Chinesesimp>
+            <Chinese>合計</Chinese>
+            <Japanese>合計</Japanese>
+            <Italian>Quantità</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Common_Teleport">
+            <English>Teleport</English>
+            <French>Téléportation</French>
+            <German>Teleportieren</German>
+            <Italian>Teletrasporto</Italian>
+            <Japanese>テレポート</Japanese>
+            <Korean>순간이동</Korean>
+            <Polish>Teleport</Polish>
+            <Chinesesimp>传送</Chinesesimp>
+            <Chinese>傳送</Chinese>
+        </Key>
+        <Key ID="STR_ZEN_Common_Effect">
+            <English>Effect</English>
+            <Russian>Эффект</Russian>
+            <French>Effet</French>
+            <German>Effekt</German>
+            <Polish>Efekt</Polish>
+            <Japanese>エフェクト</Japanese>
+            <Korean>효과</Korean>
+            <Chinesesimp>效果</Chinesesimp>
+            <Chinese>效果</Chinese>
+            <Italian>Effetto</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Common_Pitch">
+            <English>Pitch</English>
+            <French>Tangage</French>
+            <German>Nick</German>
+            <Korean>피치</Korean>
+            <Japanese>ピッチ</Japanese>
+            <Chinesesimp>沥青</Chinesesimp>
+            <Chinese>瀝青</Chinese>
+            <Italian>Inclinazione</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Common_Roll">
+            <English>Roll</English>
+            <French>Roulis</French>
+            <German>Roll</German>
+            <Korean>롤</Korean>
+            <Japanese>ロール</Japanese>
+            <Chinesesimp>滚动</Chinesesimp>
+            <Chinese>滾動</Chinese>
+            <Italian>Rollio</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Common_Yaw">
+            <English>Yaw</English>
+            <French>Lacet</French>
+            <German>Gier</German>
+            <Korean>요</Korean>
+            <Japanese>ヨー</Japanese>
+            <Chinesesimp>偏航</Chinesesimp>
+            <Chinese>偏航</Chinese>
+            <Italian>Imbardata</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Common_Scale">
+            <English>Scale</English>
+            <French>Redimensionnement</French>
+            <German>Skalierung</German>
+            <Chinesesimp>缩放</Chinesesimp>
+            <Chinese>缩放</Chinese>
+            <Japanese>縮尺</Japanese>
+            <Italian>Ridimensionamento</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Common_UncheckAll">
+            <English>Uncheck All</English>
+            <French>Décocher toutes</French>
+            <German>Alle deaktivieren</German>
+            <Polish>Odznacz wszystkie</Polish>
+            <Korean>전체 선택 해제</Korean>
+            <Japanese>全てアンチェック</Japanese>
+            <Chinesesimp>取消所有</Chinesesimp>
+            <Chinese>取消所有</Chinese>
+            <Italian>Deseleziona tutto</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Common_CheckAll">
+            <English>Check All</English>
+            <French>Cocher toutes</French>
+            <German>Alle aktivieren</German>
+            <Polish>Zaznacz wszystkie</Polish>
+            <Korean>전체 선택</Korean>
+            <Japanese>全てチェック</Japanese>
+            <Chinesesimp>勾选所有</Chinesesimp>
+            <Chinese>勾選所有</Chinese>
+            <Italian>Seleziona tutto</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Common_NoGroupsFound">
+            <English>No groups found.</English>
+            <French>On n'est pas trouvé un groupe.</French>
+            <German>Keine Gruppen gefunden.</German>
+            <Polish>Nie znaleziono grup</Polish>
+            <Korean>그룹을 찾을 수 없습니다.</Korean>
+            <Japanese>グループがありません。</Japanese>
+            <Chinesesimp>未发现任何小队。</Chinesesimp>
+            <Chinese>未發現任何小隊。</Chinese>
+            <Italian>Nessun gruppo trovato.</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Common_NoPlayersFound">
+            <English>No players found.</English>
+            <French>On n'est pas trouvé un joueur.</French>
+            <German>Keine Spieler gefunden.</German>
+            <Polish>Nie znaleziono graczy</Polish>
+            <Korean>플레이어를 찾을 수 없습니다.</Korean>
+            <Japanese>プレイヤーが見つかりません。</Japanese>
+            <Chinesesimp>未发现任何玩家。</Chinesesimp>
+            <Chinese>未發現任何玩家。</Chinese>
+            <Italian>Nessun giocatore trovato.</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Common_NotEnoughSpaceInVehicle">
+            <English>Not enough space in target vehicle: %1 needed - %2 available</English>
+            <French>Pas assez d'espace dans le véhicule cible : %1 nécessaire - %2 disponible</French>
+            <Polish>Za mało miejsca w pojeździe docelowym: %1 potrzebne - %2 dostępne</Polish>
+            <German>Nicht genügend Platz im Zielfahrzeug: %1 benötigt - %2 verfügbar</German>
+            <Japanese>選択された車両に空きがありません: 必要量 %1 - 空き容量 %2</Japanese>
+            <Korean>목표 차량에 충분한 자리가 없습니다: %1 요구됨 - %2 가능</Korean>
+            <Chinesesimp>目标车辆中没有足够的空间：需要 %1 - 可用 %2</Chinesesimp>
+            <Chinese>目標車輛中沒有足夠的空間：需要 %1 - 可用 %2</Chinese>
+            <Italian>Spazio insufficiente nel veicolo di destinazione: %1 necessario - %2 disponibile</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Common_CopyToClipboard">
+            <English>Copy to Clipboard</English>
+            <French>Copier dans le presse-papiers</French>
+            <German>In die Zwischenablage kopieren</German>
+            <Polish>Kopiuj do schowka</Polish>
+            <Korean>복사됨</Korean>
+            <Japanese>クリップボードにコピー</Japanese>
+            <Chinesesimp>复制到剪贴板</Chinesesimp>
+            <Chinese>複製到剪貼板</Chinese>
+            <Italian>Copia negli appunti</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects">
             <English>Add Objects to Curators</English>
+            <French>Ajouter des objets aux curateurs</French>
+            <Russian>Сдалвть объекты редактируемыми</Russian>
             <German>Objekte zum Kurator hinzufügen</German>
             <Polish>Dodaj obiekty do Zeusa</Polish>
+            <Japanese>キュレーターにオブジェクト追加</Japanese>
+            <Korean>큐레이터에 아이템 추가</Korean>
+            <Chinesesimp>添加对象至宙斯</Chinesesimp>
+            <Chinese>添加對象至宙斯</Chinese>
+            <Italian>Aggiungi oggetti al curatore</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_AutoAddObjects_Description">
-            <English>Automatically adds spawned objects to all curators</English>
+            <English>Automatically adds spawned objects to all curators.</English>
+            <French>Ajouter automatiquement les objets générés à tous les curateurs.</French>
+            <Russian>Автоматически делает все добавленные объекты редактируемыми</Russian>
             <German>Fügt automatisch gespawnte Objekte zu allen Kuratoren hinzu.</German>
-            <Polish>Automatycznie dodaj zespawnowane obiekty do Zeusa</Polish>
+            <Polish>Automatycznie dodaj zespawnowane obiekty do Zeusa.</Polish>
+            <Japanese>自動的に生成されたオブジェクトをキュレーターへ追加します。</Japanese>
+            <Korean>소환된 모든 물체를 자동적으로 모든 큐레이터에 추가합니다.</Korean>
+            <Chinesesimp>自动将生成的对象添加到所有宙斯。</Chinesesimp>
+            <Chinese>自動將生成的對象添加到所有宙斯。</Chinese>
+            <Italian>Aggiunge automaticamente gli oggetti generati a tutti i curatori.</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_DisableGearAnim">
             <English>Disable Gear Animation</English>
+            <French>Désactiver l'animation de l'équipement</French>
+            <Russian>Отключить анимацию шестерёнки</Russian>
             <German>Inventar Animation deaktivieren</German>
             <Polish>Wyłącz animację grzebania w ekwipunku</Polish>
+            <Japanese>装備アニメーション無効化</Japanese>
+            <Korean>장비 애니메이션 해제</Korean>
+            <Chinesesimp>禁用装备动画</Chinesesimp>
+            <Chinese>禁用裝備動畫</Chinese>
+            <Italian>Disabilita l'animazione dell'ingranaggio</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_DisableGearAnim_Description">
-            <English>Disables the "Gear" animation from playing when entering Zeus</English>
-            <German>Deaktiviert die "Inventar" Animation der Spielerfigur wenn man in dem Zeusmodus geht</German>
-            <Polish>Wyłącza animację grzebania w ekwipunku po wejściu do Zeusa</Polish>
+            <English>Disables the "Gear" animation from playing when entering Zeus.</English>
+            <French>Désactiver l'animation "Gear" lors de l'entrée dans Zeus.</French>
+            <German>Deaktiviert die "Inventar"-Animation der Spielerfigur, wenn man in den Zeusmodus geht.</German>
+            <Polish>Wyłącza animację grzebania w ekwipunku po wejściu do Zeusa.</Polish>
+            <Russian>Отключает анимированную шестерёнку при входе в режим ГМ</Russian>
+            <Japanese>Zeus 中は "装備" アニメーションの再生を停止させます。</Japanese>
+            <Korean>제우스에 입장했을때 "장비" 애니메이션을 해제합니다.</Korean>
+            <Chinesesimp>禁止在进入宙斯时播放"装备"动画。</Chinesesimp>
+            <Chinese>禁止在進入宙斯時播放"裝備"動畫。</Chinese>
+            <Italian>Disabilita la riproduzione dell'animazione "Gear" quando si entra in Zeus.</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_DarkMode">
             <English>Dark Mode</English>
+            <French>Mode sombre</French>
+            <Russian>Тёмная тема</Russian>
             <German>Dunkler Modus</German>
             <Polish>Tryb ciemny</Polish>
+            <Italian>Modalità scura</Italian>
+            <Japanese>ダーク モード</Japanese>
+            <Korean>다크 모드</Korean>
+            <Chinesesimp>暗夜模式</Chinesesimp>
+            <Chinese>暗夜模式</Chinese>
         </Key>
         <Key ID="STR_ZEN_Common_DarkMode_Description">
-            <English>Changes the appearance of various user interface elements to a darker color theme</English>
-            <German>Ändert das Aussehen veschiedener Elemente der Benutzeroberfläche zu einem dunkleren Farbschema</German>
-            <Polish>Zmienia kolorystykę elementów interfejsu na ciemniejszą</Polish>
+            <English>Changes the appearance of various user interface elements to a darker color theme.</English>
+            <French>Change l'apparence des divers éléments de l'interface utilisateur en un thème de couleur plus foncée.</French>
+            <German>Ändert das Aussehen veschiedener Elemente der Benutzeroberfläche zu einem dunkleren Farbschema.</German>
+            <Polish>Zmienia kolorystykę elementów interfejsu na ciemniejszą.</Polish>
+            <Russian>Меняет вид интерфейса пользователя на более тёмные</Russian>
+            <Japanese>UI の様々な部分の見た目を暗色へ変更します。</Japanese>
+            <Korean>사용자 인터페이스 구성요소를 다크 모드로 변환합니다.</Korean>
+            <Chinesesimp>将各种用户界面元素的外观改为暗色主题。</Chinesesimp>
+            <Chinese>將各種用戶界面元素的外觀改為暗色主題。</Chinese>
+            <Italian>Modifica l'aspetto di vari elementi dell'interfaccia utente in un tema di colore più scuro.</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_PreferredArsenal">
             <English>Preferred Arsenal</English>
+            <French>Arsenal préféré</French>
+            <Russian>Предпочитаемый арсенал</Russian>
             <German>Bevorzugtes Arsenal</German>
             <Polish>Preferowany arsenał</Polish>
+            <Japanese>優先武器庫</Japanese>
+            <Korean>선호하는 무기 창고</Korean>
+            <Chinesesimp>首选武器库</Chinesesimp>
+            <Chinese>首選武器庫</Chinese>
+            <Italian>Arsenale preferito</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_PreferredArsenal_Description">
-            <English>Selects the preferred arsenal used by Zeus Enhanced\nIf ACE Arsenal is not installed, will fall back to BI Virtual Arsenal</English>
-            <German>Regelt welches Arsenal von Zeus Enhanced geöffnet wird. Wenn ACE Arsenal nicht installiert ist, wird auf das Vanilla BI Virtual Arsenal zurückgegriffen</German>
-            <Polish>Wybierz preferowany arsenał używany przez Zeus Enhanced\nJeśli arsenał ACE nie będzie dostępny to uruchomi się podstawowy wirtualny arsenał BI</Polish>
+            <English>Selects the preferred arsenal used by Zeus Enhanced.\nIf ACE Arsenal is not installed, will fall back to BI Virtual Arsenal.</English>
+            <French>Sélectionner l'arsenal préféré utilisé par Zeus Enhanced.\nSi ACE Arsenal n'est pas installé, il retournera à BI Virtual Arsenal.</French>
+            <German>Regelt, welches Arsenal von Zeus Enhanced geöffnet wird.\nWenn ACE Arsenal nicht installiert ist, wird auf das Vanilla BI Virtual Arsenal zurückgegriffen.</German>
+            <Polish>Wybierz preferowany arsenał używany przez Zeus Enhanced.\nJeśli arsenał ACE nie będzie dostępny to uruchomi się podstawowy wirtualny arsenał BI.</Polish>
+            <Russian>Выбор предпочитаемого Арсенала\nlfЕсли не установлен ACE, будет запущен стандартный Виртуальный Арсенал.</Russian>
+            <Japanese>Zeus Enhanced により優先された武器庫を選択します。\nACE3 武器庫が有効化されていない場合、ゲーム標準のバーチャル武器庫へ戻されます。</Japanese>
+            <Korean>Zeus Enhanced 에서 쓰일 무기 창고를 선택합니다. \n만약 ACE 무기 창고가 설치되어있지 않다면, BI 무기 창고로 변경됩니다.</Korean>
+            <Chinesesimp>选择Zeus Enhanced使用的首选武器库。如果没有安装ACE武器库，将退回到BI原版虚拟武器库。</Chinesesimp>
+            <Chinese>選擇Zeus Enhanced使用的首選武器庫。如果沒有安裝ACE武器庫，將退回到BI原版虛擬武器庫。</Chinese>
+            <Italian>Seleziona l'arsenale preferito utilizzato da Zeus Enhanced.\nSe ACE Arsenal non è installato, tornerà a BI Virtual Arsenal.</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_BIVirtualArsenal">
             <English>BI Virtual Arsenal</English>
+            <French>Arsenal BI Virtual</French>
+            <Russian>Виртуальный Арсенал</Russian>
             <German>BI Virtuelle Arsenal</German>
             <Polish>Wirtualny arsenał BI</Polish>
+            <Japanese>BI バーチャル武器庫</Japanese>
+            <Korean>BI 가상 무기고</Korean>
+            <Chinesesimp>原版虚拟武器库</Chinesesimp>
+            <Chinese>原版虛擬武器庫</Chinese>
+            <Italian>Arsenale Virtuale BI</Italian>
         </Key>
         <Key ID="STR_ZEN_Common_AceArsenal">
             <English>ACE Arsenal</English>
+            <French>ACE Arsenal</French>
+            <Russian>ACE Арсенал</Russian>
             <German>ACE Arsenal</German>
             <Polish>Arsenał ACE</Polish>
+            <Japanese>ACE 武器庫</Japanese>
+            <Korean>ACE 무기 창고</Korean>
+            <Chinesesimp>ACE武器库</Chinesesimp>
+            <Chinese>ACE武器庫</Chinese>
+            <Italian>ACE Arsenal</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Common_AscensionMessages">
+            <English>Ascension Messages</English>
+            <French>Message d'Ascension</French>
+            <German>Nachricht für Aufstieg</German>
+            <Polish>Powiadomienia o wyznaczeniu Zeusa</Polish>
+            <Japanese>Zeus 通知</Japanese>
+            <Chinesesimp>Zeus提升通知</Chinesesimp>
+            <Chinese>Zeus提升通知</Chinese>
+            <Italian>Messaggi dell'Ascensione</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Common_AscensionMessages_Description">
+            <English>Controls whether global popup messages are displayed when a player is assigned as Zeus.</English>
+            <German>Kontrolliert, ob eine globale Nachricht erscheinen soll, wenn ein Spieler zu Zeus wird.</German>
+            <Polish>Kontroluje czy po wyznaczeniu nowego gracza na Zeusa zostaje wyświetlona wiadomość globalna.</Polish>
+            <Korean>새로운 플레이어가 Zeus로 지정될 때 전체 메시지의 표시 여부를 제어합니다.</Korean>
+            <Japanese>プレイヤーが Zeus へ指定された場合に、全体へポップアップ メッセージを表示するかを設定できます。</Japanese>
+            <Chinesesimp>控制当玩家被提升为Zeus时是否弹出全局通知。</Chinesesimp>
+            <Chinese>控制當玩家被提升為Zeus時是否彈出全局通知。</Chinese>
+            <Italian>Controlla se i messaggi popup globali vengono visualizzati quando un giocatore viene assegnato come Zeus.</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Common_CameraBird">
+            <English>Camera Eagle</English>
+            <German>Kamera Adler</German>
+            <French>Aigle de caméra</French>
+            <Polish>Orzeł przy kamerze</Polish>
+            <Korean>독수리 카메라</Korean>
+            <Japanese>カメライーグルの有無</Japanese>
+            <Chinesesimp>鹰式摄影机</Chinesesimp>
+            <Chinese>鷹式攝影機</Chinese>
+            <Italian>Telecamera aquila</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Common_CameraBird_Description">
+            <English>Controls whether an eagle that follows the Zeus camera is created.</English>
+            <German>Kontrolliert, ob der Adler, der die Zeuskamera verfolgt, erscheint.</German>
+            <Polish>Kontroluje czy orzeł podążający za kamerą Zeusa jest aktywowany.</Polish>
+            <Korean>Zeus 카메라를 따라다니는 독수리의 생성 여부를 제어합니다</Korean>
+            <Japanese>Zeus カメラ生成時に、イーグルがカメラを追随するかどうかを設定します。</Japanese>
+            <Chinesesimp>控制是否创建一只跟随宙斯摄像机的鹰。</Chinesesimp>
+            <Chinese>控制是否創建一隻跟隨宙斯攝像機的鷹。</Chinese>
+            <Italian>Controlla se viene creata un'aquila che segue la telecamera Zeus.</Italian>
         </Key>
     </Package>
 </Project>

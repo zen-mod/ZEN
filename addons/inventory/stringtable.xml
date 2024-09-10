@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Inventory">
+        <Key ID="STR_ZEN_Inventory_EditInventory">
+            <English>Edit Inventory (%1)</English>
+            <German>Inventar bearbeiten (%1)</German>
+            <Polish>Edytuj Wyposażenie (%1)</Polish>
+            <Japanese>インベントリ編集 (%1)</Japanese>
+            <Chinesesimp>编辑库存(%1)</Chinesesimp>
+            <Chinese>編輯庫存(%1)</Chinese>
+            <Italian>Modifica inventario (%1)</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Inventory_Search_Tooltip">
+            <English>Search the items list. Use 'class ' prefix to search by class name (e.g. 'class FirstAidKit').</English>
+            <German>Durchsuche die Liste der Objekte. Benutze den Präfix 'class ' um nach Klassennamen zu suchen (z.B. 'class FirstAidKit').</German>
+            <Japanese>アイテム一覧から検索します。'class ' を使用し、クラスネームで検索できます。(例: 'class FirstAidKit')</Japanese>
+            <Chinesesimp>搜索项目列表。使用'class'前缀按类名搜索（例如，'class FirstAidKit'）。</Chinesesimp>
+            <Chinese>搜索項目列表。 使用“class”前綴按類名搜索（例如'class FirstAidKit'）。</Chinese>
+            <Italian>Cerca nell'elenco degli oggetti. Usa il prefisso 'class' per cercare i nomi delle classi (es. 'class FirstAidKit').</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Inventory_Reset_Tooltip">
+            <English>Reset to default inventory.</English>
+            <German>Zum Standardinventar zurücksetzen.</German>
+            <Polish>Resetuj do domyślnego wyposażenia.</Polish>
+            <Japanese>標準インベントリへ初期化します。</Japanese>
+            <Chinesesimp>重置为默认库存。</Chinesesimp>
+            <Chinese>重置為默認庫存。</Chinese>
+            <Italian>Ripristina l'inventario predefinito.</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Inventory_Clear_Tooltip">
+            <English>Clear items from current category.</English>
+            <German>Entferne Objekte aus der momentanen Kategorie.</German>
+            <Japanese>現在のカテゴリからアイテムを削除します。</Japanese>
+            <Chinesesimp>清除当前类名中的项目。</Chinesesimp>
+            <Chinese>清除當前類名中的項目。</Chinese>
+            <Italian>Rimuovi oggetti dalla categoria corrente.</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Inventory_Weapon_Tooltip">
+            <English>View weapon specific items.</English>
+            <German>Siehe waffenspezifisches Inventar.</German>
+            <Japanese>武器固有のアイテムを見ます。</Japanese>
+            <Chinesesimp>查看武器的特定项目。</Chinesesimp>
+            <Chinese>查看武器的特定項目。</Chinese>
+            <Italian>Visualizza gli oggetti specifici dell'arma.</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Inventory_Close_Tooltip">
+            <English>Close weapon specific items.</English>
+            <German>Schließe waffenspezifisches Inventar.</German>
+            <Japanese>武器固有アイテムを閉じます。</Japanese>
+            <Chinesesimp>关闭武器的特定项目。</Chinesesimp>
+            <Chinese>關閉武器的特定項目。</Chinese>
+            <Italian>Chiudi oggetti specifici per armi.</Italian>
+        </Key>
+    </Package>
+</Project>

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SilentSpike, Brett
  * Zeus module function to change the side of a group.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic"];
 
@@ -32,30 +32,29 @@ if !(alive _unit) exitWith {
     [LSTRING(OnlyAlive)] call EFUNC(common,showMessage);
 };
 
-[LSTRING(ModuleGroupSide), [
-    ["SIDES", ELSTRING(common,Side), side group _unit, true]
+[LSTRING(GroupSide), [
+    [
+        "TOOLBOX",
+        ELSTRING(common,Target),
+        [true, 1, 2, [ELSTRING(common,SelectedUnit), ELSTRING(common,SelectedGroup)]]
+    ],
+    [
+        "SIDES",
+        "STR_Eval_TypeSide",
+        side group _unit,
+        true
+    ]
 ], {
-    params ["_dialogValues", "_unit"];
-    _dialogValues params ["_newSide"];
+    params ["_values", "_unit"];
+    _values params ["_entireGroup", "_side"];
 
-    private _oldGroup = group _unit;
+    private _group = group _unit;
 
-    // Exit if same side selected
-    if (side _oldGroup == _newSide) exitWith {};
-
-    private _newGroup = createGroup _newSide;
-
-    // Preserve group id from the previous group if doesn't already exist
-    if (allGroups findIf {side _x isEqualTo _newSide && {groupId _oldGroup isEqualTo groupId _newGroup}} == -1) then {
-        _newGroup setGroupIdGlobal [groupId _oldGroup];
+    if (_entireGroup || {count units _group == 1}) exitWith {
+        [_group, _side] call EFUNC(common,changeGroupSide);
     };
 
-    // Preserve assigned team for each unit
-    {
-        private _team = assignedTeam _x;
-        [_x] joinSilent _newGroup;
-        _x assignTeam _team;
-    } forEach units _unit;
-
-    deleteGroup _oldGroup;
+    if (side _group != _side) then {
+        [_unit] joinSilent createGroup [_side, true];
+    };
 }, {}, _unit] call EFUNC(dialog,create);

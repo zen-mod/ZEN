@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Handles mouse button click event for custom search bar.
@@ -7,14 +8,13 @@
  * 1: Button <NUMBER>
  *
  * Return Value:
- * Return Name <TYPE>
+ * None
  *
  * Example:
  * [CONTROL, 1] call zen_editor_fnc_handleSearchClick
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_ctrlSearchCustom", "_button"];
 

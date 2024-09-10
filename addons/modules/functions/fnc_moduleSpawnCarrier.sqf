@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Zeus module function to spawn the USS Freedom aircraft carrier.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic"];
 
@@ -31,7 +31,7 @@ params ["_logic"];
         private _jipID = [QGVAR(carrierInit), _carrier] call CBA_fnc_globalEventJIP;
         [_jipID, _carrier] call CBA_fnc_removeGlobalEventJIP;
 
-        [QEGVAR(common,addObjects), [[_carrier]]] call CBA_fnc_serverEvent;
+        [_carrier] call EFUNC(common,updateEditableObjects);
 
         {
             deleteVehicle _x;

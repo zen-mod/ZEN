@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Position_Logics">
+        <Key ID="STR_ZEN_Position_Logics_DistanceKM">
+            <English>(%1 km)</English>
+            <German>(%1 km)</German>
+            <Polish>(%1 km)</Polish>
+            <Japanese>(%1 km)</Japanese>
+            <Chinesesimp>(%1 千米)</Chinesesimp>
+            <Chinese>(%1 km)</Chinese>
+            <Italian>(%1 km)</Italian>
+        </Key>
+    </Package>
+</Project>

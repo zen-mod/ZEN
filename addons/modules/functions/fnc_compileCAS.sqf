@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Compiles a list of all planes available for CAS.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _casCache = [[], [], [], []];
 
@@ -27,7 +27,7 @@ private _casCache = [[], [], [], []];
             private _types   = _x;
             private _weapons = _allWeapons select {toLower ((_x call BIS_fnc_itemType) select 1) in _types};
 
-            if !(_weapons isEqualTo []) then {
+            if (_weapons isNotEqualTo []) then {
                 _casCache select _forEachIndex pushBack [_configName, _weapons];
             };
         } forEach CAS_WEAPON_TYPES;

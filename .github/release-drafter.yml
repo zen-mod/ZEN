@@ -1,0 +1,51 @@
+branches:
+  - master
+
+name-template: 'Zeus Enhanced $RESOLVED_VERSION'
+tag-template: 'v$RESOLVED_VERSION'
+
+categories:
+  - title: '**ADDED:**'
+    labels:
+      - 'feature'
+  - title: '**IMPROVED:**'
+    labels:
+      - 'enhancement'
+      - 'optimization'
+  - title: '**CHANGED:**'
+    labels:
+      - 'cleanup'
+  - title: '**FIXED:**'
+    labels:
+      - 'bug fix'
+  - title: '**TRANSLATIONS:**'
+    labels:
+      - 'translation'
+
+exclude-labels:
+  - 'ignore changelog'
+
+change-template: '- $TITLE (#$NUMBER)'
+version-resolver:
+  minor:
+    labels:
+      - 'feature'
+  patch:
+    labels:
+      - 'enhancement'
+      - 'optimization'
+      - 'bug fix'
+  default: patch
+template: |
+  _Requires CBA Version 3.Y.Z or later and Arma 3 Version X.Y or later._
+
+  DESCRIPTION HERE
+
+  ## Change Log Summary
+
+  $CHANGES
+
+replacers:
+  # Category titles
+  - search: '/\#\# (\*\*(ADDED|IMPROVED|CHANGED|FIXED|TRANSLATIONS):\*\*)/g'
+    replace: '$1'

@@ -4,6 +4,7 @@
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
+// #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_CUSTOM_MODULES
     #define DEBUG_MODE_FULL
@@ -17,4 +18,4 @@
 
 #include "\x\zen\addons\common\defineResinclDesign.inc"
 
-#define DEFAULT_ICON "\a3\modules_f\data\portraitmodule_ca.paa"
+#define ICON_DEFAULT "\a3\modules_f\data\portraitmodule_ca.paa"

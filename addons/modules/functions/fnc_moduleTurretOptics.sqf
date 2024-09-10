@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Zeus module function to modify the turret optics of a vehicle.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic"];
 
@@ -33,8 +33,8 @@ if !(alive _vehicle) exitWith {
 };
 
 [LSTRING(ModuleTurretOptics), [
-    ["TOOLBOX", LSTRING(ModuleTurretOptics_NVG), [0, [ELSTRING(common,Unchanged), ELSTRING(common,Disabled), ELSTRING(common,Enabled)]], true],
-    ["TOOLBOX", LSTRING(ModuleTurretOptics_TI),  [0, [ELSTRING(common,Unchanged), ELSTRING(common,Disabled), ELSTRING(common,Enabled)]], true]
+    ["TOOLBOX", LSTRING(ModuleTurretOptics_NVG), [0, 1, 3, [ELSTRING(common,Unchanged), ELSTRING(common,Disabled), ELSTRING(common,Enabled)]], true],
+    ["TOOLBOX", LSTRING(ModuleTurretOptics_TI),  [0, 1, 3, [ELSTRING(common,Unchanged), ELSTRING(common,Disabled), ELSTRING(common,Enabled)]], true]
 ], {
     params ["_dialogValues", "_vehicle"];
     _dialogValues params ["_nvgEquipment", "_tiEquipment"];

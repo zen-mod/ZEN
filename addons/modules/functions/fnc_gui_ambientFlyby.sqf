@@ -1,123 +1,134 @@
+#include "script_component.hpp"
 /*
- * Author: mharis001
+ * Author: mharis001, NeilZar
  * Initializes the "Ambient Flyby" Zeus module display.
  *
  * Arguments:
  * 0: Display <DISPLAY>
+ * 1: Logic <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [DISPLAY] call zen_modules_fnc_gui_ambientFlyby
+ * [DISPLAY, LOGIC] call zen_modules_fnc_gui_ambientFlyby
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-params ["_display"];
+params ["_display", "_logic"];
 
-private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-private _ctrlButtonOK = _display displayCtrl IDC_OK;
+private _selections = GVAR(saved) getVariable [QGVAR(ambientFlyby), [0, 0, 0, 0, 0, 250, 5000, 1, 0]];
+_selections params ["_side", "_faction", "_aircraft", "_direction", "_useASL", "_height", "_distance", "_speed", "_amount"];
 
-private _ctrlSide    = _display displayCtrl IDC_AMBIENTFLYBY_SIDE;
-private _ctrlFaction = _display displayCtrl IDC_AMBIENTFLYBY_FACTION;
+_display setVariable [QGVAR(position), getPosASL _logic];
+deleteVehicle _logic;
 
 private _fnc_sideChanged = {
-    params ["_ctrlSide", "_sideIndex"];
+    params ["_ctrlSide", "_index"];
 
     private _display = ctrlParent _ctrlSide;
-    private _ctrlFaction = _display displayCtrl IDC_AMBIENTFLYBY_FACTION;
-
-    private _aircraftCache = uiNamespace getVariable QGVAR(aircraftCache);
-    private _sideArray     = _aircraftCache select _sideIndex;
-
     private _cfgFactionClasses = configFile >> "CfgFactionClasses";
+
+    private _cache = uiNamespace getVariable QGVAR(aircraftCache);
+    private _factions = keys (_cache select _index);
+
+    private _ctrlFaction = _display displayCtrl IDC_AMBIENTFLYBY_FACTION;
     lbClear _ctrlFaction;
 
     {
-        _x params ["_faction"];
-
-        private _config = _cfgFactionClasses >> _faction;
-        private _displayName = getText (_config >> "displayName");
+        private _config = _cfgFactionClasses >> _x;
+        private _name = getText (_config >> "displayName");
         private _icon = getText (_config >> "icon");
 
-        private _index = _ctrlFaction lbAdd _displayName;
+        private _index = _ctrlFaction lbAdd _name;
         _ctrlFaction lbSetPicture [_index, _icon];
-        _ctrlFaction lbSetData [_index, _faction];
-    } forEach _sideArray;
+        _ctrlFaction lbSetData [_index, _x];
+    } forEach _factions;
 
     lbSort _ctrlFaction;
     _ctrlFaction lbSetCurSel 0;
 };
 
-private _fnc_factionChanged = {
-    params ["_ctrlFaction", "_factionIndex"];
+private _ctrlSide = _display displayCtrl IDC_AMBIENTFLYBY_SIDE;
+_ctrlSide ctrlAddEventHandler ["LBSelChanged", _fnc_sideChanged];
+_ctrlSide lbSetCurSel _side;
 
-    private _faction = _ctrlFaction lbData _factionIndex;
+private _fnc_factionChanged = {
+    params ["_ctrlFaction", "_index"];
 
     private _display = ctrlParent _ctrlFaction;
-    private _ctrlSide     = _display displayCtrl IDC_AMBIENTFLYBY_SIDE;
-    private _ctrlAircraft = _display displayCtrl IDC_AMBIENTFLYBY_AIRCRAFT;
-
-    private _aircraftCache = uiNamespace getVariable QGVAR(aircraftCache);
-    private _sideArray     = _aircraftCache select lbCurSel _ctrlSide;
-    private _aircraftArray = _sideArray select (_sideArray findIf {_x select 0 == _faction}) select 1;
-
     private _cfgVehicles = configFile >> "CfgVehicles";
+
+    private _ctrlSide = _display displayCtrl IDC_AMBIENTFLYBY_SIDE;
+    private _faction = _ctrlFaction lbData _index;
+
+    private _cache = uiNamespace getVariable QGVAR(aircraftCache);
+    private _aircraft = (_cache select lbCurSel _ctrlSide) get _faction;
+
+    private _ctrlAircraft = _display displayCtrl IDC_AMBIENTFLYBY_AIRCRAFT;
     lbClear _ctrlAircraft;
 
     {
-        private _config = _cfgVehicles >> _x;
-        private _displayName = getText (_config >> "displayName");
-        private _icon = getText (_config >> "icon");
+        private _name = getText (_cfgVehicles >> _x >> "displayName");
+        private _icon = [_x] call EFUNC(common,getVehicleIcon);
 
-        private _index = _ctrlAircraft lbAdd _displayName;
+        private _index = _ctrlAircraft lbAdd _name;
         _ctrlAircraft lbSetPicture [_index, _icon];
         _ctrlAircraft lbSetData [_index, _x];
-    } forEach _aircraftArray;
+    } forEach _aircraft;
 
     lbSort _ctrlAircraft;
     _ctrlAircraft lbSetCurSel 0;
 };
 
-_ctrlSide    ctrlAddEventHandler ["LBSelChanged", _fnc_sideChanged];
+private _ctrlFaction = _display displayCtrl IDC_AMBIENTFLYBY_FACTION;
 _ctrlFaction ctrlAddEventHandler ["LBSelChanged", _fnc_factionChanged];
+_ctrlFaction lbSetCurSel _faction;
 
-_ctrlSide lbSetCurSel 0;
+private _ctrlAircraft = _display displayCtrl IDC_AMBIENTFLYBY_AIRCRAFT;
+_ctrlAircraft lbSetCurSel _aircraft;
+
+private _ctrlDirection = _display displayCtrl IDC_AMBIENTFLYBY_DIRECTION;
+_ctrlDirection lbSetCurSel _direction;
+
+private _ctrlHeightMode = _display displayCtrl IDC_AMBIENTFLYBY_HEIGHT_MODE;
+_ctrlHeightMode lbSetCurSel _useASL;
 
 private _ctrlHeightSlider = _display displayCtrl IDC_AMBIENTFLYBY_HEIGHT_SLIDER;
 private _ctrlHeightEdit   = _display displayCtrl IDC_AMBIENTFLYBY_HEIGHT_EDIT;
-[_ctrlHeightSlider, _ctrlHeightEdit, 10, 5000, 250, 50] call EFUNC(common,initSliderEdit);
+[_ctrlHeightSlider, _ctrlHeightEdit, 10, 5000, _height, 50] call EFUNC(common,initSliderEdit);
 
 private _ctrlDistanceSlider = _display displayCtrl IDC_AMBIENTFLYBY_DISTANCE_SLIDER;
 private _ctrlDistanceEdit   = _display displayCtrl IDC_AMBIENTFLYBY_DISTANCE_EDIT;
-[_ctrlDistanceSlider, _ctrlDistanceEdit, 1000, 10000, 3000, 100] call EFUNC(common,initSliderEdit);
+[_ctrlDistanceSlider, _ctrlDistanceEdit, 1000, 10000, _distance, 100] call EFUNC(common,initSliderEdit);
 
 private _ctrlSpeed = _display displayCtrl IDC_AMBIENTFLYBY_SPEED;
-_ctrlSpeed lbSetCurSel 1;
+_ctrlSpeed lbSetCurSel _speed;
 
-private _fnc_onUnload = {
-    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-    if (isNull _logic) exitWith {};
-
-    deleteVehicle _logic;
-};
+private _ctrlAmount = _display displayCtrl IDC_AMBIENTFLYBY_AMOUNT;
+_ctrlAmount lbSetCurSel _amount;
 
 private _fnc_onConfirm = {
     params ["_ctrlButtonOK"];
 
     private _display = ctrlParent _ctrlButtonOK;
-    if (isNull _display) exitWith {};
+    private _position = _display getVariable QGVAR(position);
 
-    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-    if (isNull _logic) exitWith {};
+    private _ctrlSide = _display displayCtrl IDC_AMBIENTFLYBY_SIDE;
+    private _side = lbCurSel _ctrlSide;
+
+    private _ctrlFaction = _display displayCtrl IDC_AMBIENTFLYBY_FACTION;
+    private _faction = lbCurSel _ctrlFaction;
 
     private _ctrlAircraft = _display displayCtrl IDC_AMBIENTFLYBY_AIRCRAFT;
-    private _aircraftType = _ctrlAircraft lbData lbCurSel _ctrlAircraft;
+    private _aircraft = lbCurSel _ctrlAircraft;
 
     private _ctrlDirection = _display displayCtrl IDC_AMBIENTFLYBY_DIRECTION;
     private _direction = lbCurSel _ctrlDirection;
+
+    private _ctrlHeightMode = _display displayCtrl IDC_AMBIENTFLYBY_HEIGHT_MODE;
+    private _useASL = lbCurSel _ctrlHeightMode;
 
     private _ctrlHeightSlider = _display displayCtrl IDC_AMBIENTFLYBY_HEIGHT_SLIDER;
     private _height = sliderPosition _ctrlHeightSlider;
@@ -128,8 +139,16 @@ private _fnc_onConfirm = {
     private _ctrlSpeed = _display displayCtrl IDC_AMBIENTFLYBY_SPEED;
     private _speed = lbCurSel _ctrlSpeed;
 
-    [QGVAR(moduleAmbientFlyby), [_aircraftType, ASLtoAGL getPosASL _logic, _height, _distance, _direction, _speed]] call CBA_fnc_serverEvent;
+    private _ctrlAmount = _display displayCtrl IDC_AMBIENTFLYBY_AMOUNT;
+    private _amount = lbCurSel _ctrlAmount;
+
+    private _selections = [_side, _faction, _aircraft, _direction, _useASL, _height, _distance, _speed, _amount];
+    GVAR(saved) setVariable [QGVAR(ambientFlyby), _selections];
+
+    private _aircraftType = _ctrlAircraft lbData _aircraft;
+
+    [QGVAR(moduleAmbientFlyby), [_aircraftType, _position, _useASL == 1, _height, _distance, _direction, _speed, _amount + 1]] call CBA_fnc_serverEvent;
 };
 
-_display displayAddEventHandler ["Unload", _fnc_onUnload];
+private _ctrlButtonOK = _display displayCtrl IDC_OK;
 _ctrlButtonOK ctrlAddEventHandler ["ButtonClick", _fnc_onConfirm];

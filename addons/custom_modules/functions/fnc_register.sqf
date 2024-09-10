@@ -1,8 +1,10 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Registers a custom module to be available in the Zeus modules tree.
- * Function is executed in unscheduled environment where module is placed.
- * Passed parameters:
+ * Function is executed in an unscheduled environment on the machine where the module is placed.
+ *
+ * Passed Parameters:
  *   0: Module Position ASL <ARRAY>
  *   1: Attached Object (objNull if not attached) <OBJECT>
  *
@@ -20,7 +22,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 if (canSuspend) exitWith {
     [FUNC(register), _this] call CBA_fnc_directCall;
@@ -28,16 +29,16 @@ if (canSuspend) exitWith {
 
 params [
     ["_category", "", [""]],
-    ["_displayName", "", [""]],
+    ["_name", "", [""]],
     ["_function", {}, [{}]],
     ["_icon", "", [""]]
 ];
 
-if (isNil QGVAR(modulesList)) then {
-    GVAR(modulesList) = [];
+if (isNil QGVAR(list)) then {
+    GVAR(list) = [];
 };
 
-if (count GVAR(modulesList) >= 100) exitWith {
+if (count GVAR(list) >= 200) exitWith {
     WARNING("Maximum amount of custom modules reached!");
     false
 };
@@ -46,14 +47,17 @@ if (isLocalized _category) then {
     _category = localize _category;
 };
 
-if (isLocalized _displayName) then {
-    _displayName = localize _displayName;
+if (isLocalized _name) then {
+    _name = localize _name;
 };
 
-if (_icon isEqualTo "") then {
-    _icon = DEFAULT_ICON;
+if (_icon == "") then {
+    _icon = ICON_DEFAULT;
 };
 
-GVAR(modulesList) pushBack [_category, _displayName, _icon, _function];
+GVAR(list) pushBack [_category, _name, _icon, _function];
+
+// Reload the display so the module is added to the tree
+[] call EFUNC(common,reloadDisplay);
 
 true

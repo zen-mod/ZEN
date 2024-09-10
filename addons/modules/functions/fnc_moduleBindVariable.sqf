@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Zeus module function to bind a variable to an object.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic"];
 
@@ -25,11 +25,11 @@ if (isNull _object) exitWith {
 };
 
 [LSTRING(BindVariable), [
-    ["EDIT", LSTRING(VariableName)],
-    ["TOOLBOX:YESNO", LSTRING(PublicVariable)]
+    ["EDIT", LSTRING(VariableName), ""],
+    ["TOOLBOX:YESNO", LSTRING(BroadcastVariable), false]
 ], {
-    params ["_dialogValues", "_object"];
-    _dialogValues params ["_variableName", "_isPublic"];
+    params ["_values", "_object"];
+    _values params ["_variableName", "_isPublic"];
 
     if (_variableName == "") exitWith {};
 

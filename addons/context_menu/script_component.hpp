@@ -4,6 +4,7 @@
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
+// #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_CONTEXT_MENU
     #define DEBUG_MODE_FULL
@@ -25,20 +26,23 @@
 #define POS_H(N) ((N) * GUI_GRID_H)
 
 #define IDC_CONTEXT_GROUP 185000
-#define IDC_CONTEXT_BACKGROUND 200
-#define IDC_CONTEXT_ROW 300
-#define IDC_CONTEXT_HIGHLIGHT 310
-#define IDC_CONTEXT_NAME 320
-#define IDC_CONTEXT_ICON 330
-#define IDC_CONTEXT_EXPANDABLE 340
-#define IDC_CONTEXT_MOUSE 350
+#define IDC_CONTEXT_BACKGROUND 185010
+#define IDC_CONTEXT_ROW 185020
+#define IDC_CONTEXT_HIGHLIGHT 185030
+#define IDC_CONTEXT_NAME 185040
+#define IDC_CONTEXT_ICON 185050
+#define IDC_CONTEXT_EXPANDABLE 185060
+#define IDC_CONTEXT_MOUSE 185070
 
 #define SPACING_W POS_W(0.2)
 #define SPACING_H POS_H(0.2)
 
+// _contextPosASL and _selectedObjects, _selectedGroups .., kept for BWC
 #define SETUP_ACTION_VARS \
-    private _contextPosASL = call FUNC(getContextPos);\
-    private _hoveredEntity = GVAR(hovered);\
+    private _position = [GVAR(mousePos), 2] call EFUNC(common,getPosFromScreen); \
+    private _hoveredEntity = GVAR(hovered); \
+    +GVAR(selected) params ["_objects", "_groups", "_waypoints", "_markers"]; \
+    private _contextPosASL =  _position; \
     +GVAR(selected) params ["_selectedObjects", "_selectedGroups", "_selectedWaypoints", "_selectedMarkers"]
 
-#define ACTION_PARAMS [_contextPosASL, _selectedObjects, _selectedGroups, _selectedWaypoints, _selectedMarkers, _hoveredEntity]
+#define ACTION_PARAMS [_position, _objects, _groups, _waypoints, _markers, _hoveredEntity, _args]

@@ -6,17 +6,23 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-GVAR(markerColors) = [] call CBA_fnc_createNamespace;
+#include "initKeybinds.inc.sqf"
+
+// Namespace thats stores data of all attribute displays
+GVAR(displays) = [] call CBA_fnc_createNamespace;
+
+// Namespace that tracks selected marker colors by marker type
+// Colors are applied to newly placed markers of the same type
+GVAR(previousMarkerColors) = [] call CBA_fnc_createNamespace;
 
 ["ModuleCurator_F", "Init", {
     params ["_logic"];
 
-    _logic addEventHandler ["CuratorMarkerPlaced", {
-        params ["", "_marker"];
-
-        private _color = GVAR(markerColors) getVariable [markerType _marker, "Default"];
-        _marker setMarkerColor _color;
-    }];
+    _logic addEventHandler ["CuratorMarkerPlaced", {call FUNC(handleMarkerPlaced)}];
 }, true, [], true] call CBA_fnc_addClassEventHandler;
+
+// Initialize the core/default attributes
+#include "initAttributes.inc.sqf"
+#include "initSettings.inc.sqf"
 
 ADDON = true;

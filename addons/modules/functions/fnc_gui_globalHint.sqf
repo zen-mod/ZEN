@@ -1,60 +1,47 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Initializes the "Global Hint" Zeus module display.
  *
  * Arguments:
  * 0: Display <DISPLAY>
+ * 1: Logic <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [DISPLAY] call zen_modules_fnc_gui_globalHint
+ * [DISPLAY, LOGIC] call zen_modules_fnc_gui_globalHint
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-params ["_display"];
+params ["_display", "_logic"];
 
-private _ctrlButtonOK = _display displayCtrl IDC_OK;
-private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
+deleteVehicle _logic;
 
-// Add EHs to update preview
-private _fnc_updatePreview = {
+// Update the preview when the input text changes
+private _fnc_update = {
     params ["_ctrlEdit"];
 
     private _display = ctrlParent _ctrlEdit;
     private _ctrlPreview = _display displayCtrl IDC_GLOBALHINT_PREVIEW;
-
     _ctrlPreview ctrlSetStructuredText parseText ctrlText _ctrlEdit;
+    _ctrlPreview ctrlSetPositionH (ctrlTextHeight _ctrlPreview max 1);
+    _ctrlPreview ctrlCommit 0;
 };
 
 private _ctrlEdit = _display displayCtrl IDC_GLOBALHINT_EDIT;
-_ctrlEdit ctrlAddEventHandler ["KeyDown", _fnc_updatePreview];
-_ctrlEdit ctrlAddEventHandler ["KeyUp", _fnc_updatePreview];
-
-private _fnc_onUnload = {
-    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-    if (isNull _logic) exitWith {};
-
-    deleteVehicle _logic;
-};
+_ctrlEdit ctrlAddEventHandler ["KeyDown", _fnc_update];
+_ctrlEdit ctrlAddEventHandler ["KeyUp", _fnc_update];
 
 private _fnc_onConfirm = {
     params ["_ctrlButtonOK"];
 
     private _display = ctrlParent _ctrlButtonOK;
-    if (isNull _display) exitWith {};
-
-    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-    if (isNull _logic) exitWith {};
-
     private _ctrlEdit = _display displayCtrl IDC_GLOBALHINT_EDIT;
-    private _message = parseText ctrlText _ctrlEdit;
-
-    [QEGVAR(common,hint), _message] call CBA_fnc_globalEvent;
+    [QEGVAR(common,hint), parseText ctrlText _ctrlEdit] call CBA_fnc_globalEvent;
 };
 
-_display displayAddEventHandler ["Unload", _fnc_onUnload];
+private _ctrlButtonOK = _display displayCtrl IDC_OK;
 _ctrlButtonOK ctrlAddEventHandler ["ButtonClick", _fnc_onConfirm];

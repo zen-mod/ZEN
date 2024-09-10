@@ -1,7 +1,8 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Initializes modules created by Zeus. Simplified to only execute function where local.
- * Function is executed one frame later in unscheduled scope.
+ * Function is executed one frame later in an unscheduled environment.
  *
  * Arguments:
  * 0: Logic <OBJECT>
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic"];
 
@@ -24,7 +24,7 @@ if (isServer) then {
     [{
         params ["_logic"];
 
-        private _category = getText (configFile >> "CfgVehicles" >> typeOf _logic >> "category");
+        private _category = getText (configOf _logic >> "category");
         private _logicMain = missionNamespace getVariable ["bis_functions_mainscope", objNull];
         private _group = missionNamespace getVariable [format ["bis_fnc_initModules_%1", _category], group _logicMain];
         [_logic] joinSilent _group;
@@ -33,7 +33,7 @@ if (isServer) then {
 
 if (!local _logic) exitWith {};
 
-private _function = getText (configFile >> "CfgVehicles" >> typeOf _logic >> "function");
+private _function = getText (configOf _logic >> "function");
 if (_function isEqualTo "") exitWith {};
 
 if (isNil _function) then {

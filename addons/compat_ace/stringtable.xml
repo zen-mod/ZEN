@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Compat_ACE">
+        <Key ID="STR_ZEN_Compat_ACE_DisplayName">
+            <English>ACE Compatibility</English>
+            <Korean>ACE 호환</Korean>
+            <Japanese>ACE 互換</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Compat_ACE_HideModules">
+            <English>Hide ACE Modules</English>
+            <Korean>ACE 모듈 숨기기</Korean>
+            <Japanese>ACE モジュール非表示</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Compat_ACE_HideModules_Description">
+            <English>Hides duplicate modules added by ACE Zeus. Requires display reload.</English>
+            <Korean>ACE 제우스에 의해 추가된 모듈을 숨깁니다. 디스플레이 재시작이 필요합니다.</Korean>
+            <Japanese>ACE Zeus と重複しているモジュールを非表示にします。これには再描画が必要です。</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Compat_ACE_Fastrope">
+            <English>Fastrope</English>
+            <Russian>Спуск по тросу</Russian>
+            <French>Corde lisse</French>
+            <German>Schnelles Abseilen</German>
+            <Polish>Zjazd na linach</Polish>
+            <Portuguese>Cabo rápido</Portuguese>
+            <Japanese>ファストロープ</Japanese>
+            <Korean>패스트로프</Korean>
+            <Spanish>Rapel Rapido</Spanish>
+            <Chinesesimp>快速索降</Chinesesimp>
+            <Chinese>快速索降</Chinese>
+            <Italian>Discesa veloce</Italian>
+        </Key>
+    </Package>
+</Project>

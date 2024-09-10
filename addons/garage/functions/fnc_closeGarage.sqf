@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Closes the garage display.
@@ -11,9 +12,8 @@
  * Example:
  * [] call zen_garage_fnc_closeGarage
  *
- * Public: None
+ * Public: No
  */
-#include "script_component.hpp"
 
 // Close the garage display
 private _display = findDisplay IDD_DISPLAY;
@@ -39,7 +39,13 @@ GVAR(camera) cameraEffect ["terminate", "back"];
 camDestroy GVAR(camera);
 
 if (!isNull curatorCamera) then {
+    GVAR(curatorCameraData) params ["_position", "_dirAndUp"];
+
     curatorCamera cameraEffect ["internal", "back"];
+    curatorCamera setPosASL _position;
+    curatorCamera setVectorDirAndUp _dirAndUp;
+
+    cameraEffectEnableHUD true;
 };
 
 GVAR(camera) = nil;

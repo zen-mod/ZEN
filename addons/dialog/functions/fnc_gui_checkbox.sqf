@@ -1,33 +1,28 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Initializes the CHECKBOX content control.
  *
  * Arguments:
  * 0: Controls Group <CONTROL>
- * 1: Row Index <NUMBER>
- * 2: Current Value <BOOL>
+ * 1: Default Value <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL, 0, true] call zen_dialog_fnc_gui_checkbox
+ * [CONTROL, true] call zen_dialog_fnc_gui_checkbox
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-params ["_controlsGroup", "_rowIndex", "_currentValue"];
+params ["_controlsGroup", "_defaultValue"];
 
 private _ctrlCheckbox = _controlsGroup controlsGroupCtrl IDC_ROW_CHECKBOX;
-_ctrlCheckbox cbSetChecked _currentValue;
+_ctrlCheckbox cbSetChecked _defaultValue;
 
-_ctrlCheckbox setVariable [QGVAR(params), [_rowIndex]];
-_ctrlCheckbox ctrlAddEventHandler ["CheckedChanged", {
-    params ["_ctrlCheckbox", "_state"];
-    (_ctrlCheckbox getVariable QGVAR(params)) params ["_rowIndex"];
+_controlsGroup setVariable [QFUNC(value), {
+    params ["_controlsGroup"];
 
-    private _display = ctrlParent _ctrlCheckbox;
-    private _values = _display getVariable QGVAR(values);
-    _values set [_rowIndex, _state == 1];
+    cbChecked (_controlsGroup controlsGroupCtrl IDC_ROW_CHECKBOX)
 }];

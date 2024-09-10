@@ -1,37 +1,33 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Initializes the "Execute Code" Zeus module display.
  *
  * Arguments:
  * 0: Display <DISPLAY>
+ * 1: Logic <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [DISPLAY] call zen_modules_fnc_gui_executeCode
+ * [DISPLAY, LOGIC] call zen_modules_fnc_gui_executeCode
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define VAR_HISTORY QGVAR(executeCodeHistory)
 #define MAX_STATEMENTS 20
 #define PREVIEW_LENGTH 50
 
-params ["_display"];
+params ["_display", "_logic"];
 
-private _ctrlButtonOK = _display displayCtrl IDC_OK;
-private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-
-if (_logic getVariable [QGVAR(executed), false]) exitWith {
-    _display closeDisplay 0;
-};
-
-if (!IS_ADMIN && {missionNamespace getVariable ["ZEN_disableCodeExecution", false]}) exitWith {
+if (!IS_ADMIN_LOGGED && {missionNamespace getVariable ["ZEN_disableCodeExecution", false]}) exitWith {
     [LSTRING(ModuleExecuteCode_Disabled)] call EFUNC(common,showMessage);
     deleteVehicle _logic;
 };
+
+_display setVariable [QGVAR(params), [_logic, [getPosASL _logic, attachedTo _logic]]];
 
 private _ctrlHistory = _display displayCtrl IDC_EXECUTECODE_HISTORY;
 _ctrlHistory ctrlAddEventHandler ["LBSelChanged", {
@@ -54,25 +50,22 @@ _ctrlHistory ctrlAddEventHandler ["LBSelChanged", {
 
 _ctrlHistory lbSetCurSel 0;
 
-_logic setVariable [QGVAR(args), [attachedTo _logic, getPosASL _logic]];
-
 private _fnc_onUnload = {
-    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-    if (isNull _logic) exitWith {};
+    params ["_display", "_exitCode"];
+    (_display getVariable QGVAR(params)) params ["_logic"];
 
-    if (_this select 1 == IDC_CANCEL) then {
+    if (_exitCode == IDC_CANCEL) then {
         deleteVehicle _logic;
     };
 };
+
+_display displayAddEventHandler ["Unload", _fnc_onUnload];
 
 private _fnc_onConfirm = {
     params ["_ctrlButtonOK"];
 
     private _display = ctrlParent _ctrlButtonOK;
-    if (isNull _display) exitWith {};
-
-    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-    if (isNull _logic) exitWith {};
+    (_display getVariable QGVAR(params)) params ["_logic", "_args"];
 
     private _code = ctrlText (_display displayCtrl IDC_EXECUTECODE_EDIT);
     private _mode = lbCurSel (_display displayCtrl IDC_EXECUTECODE_MODE);
@@ -90,8 +83,6 @@ private _fnc_onConfirm = {
 
     profileNamespace setVariable [VAR_HISTORY, _history];
 
-    private _args = _logic getVariable [QGVAR(args), []];
-    private _delete = true;
     _code = compile _code;
 
     switch (_mode) do {
@@ -105,18 +96,20 @@ private _fnc_onConfirm = {
             [QEGVAR(common,execute), [_code, _args]] call CBA_fnc_globalEvent;
         };
         case 3: {
-            private _jipID = [_args, _code] remoteExec ["call", 0, _logic];
-            _logic setName format ["JIP ID: %1", _jipID];
-            _delete = false;
+            private _jipID = [QEGVAR(common,execute), [_code, _args]] call CBA_fnc_globalEventJIP;
+            [_jipID, _logic] call CBA_fnc_removeGlobalEventJIP;
+
+            private _jipID = [QEGVAR(common,setName), [_logic, format ["JIP ID - %1", _jipID]]] call CBA_fnc_globalEventJIP;
+            [_jipID, _logic] call CBA_fnc_removeGlobalEventJIP;
         };
     };
 
-    if (_delete) then {
-        deleteVehicle _logic;
+    if (_mode == 3) then {
+        _logic setVariable [QEGVAR(attributes,disabled), true, true];
     } else {
-        _logic setVariable [QGVAR(executed), true, true];
+        deleteVehicle _logic;
     };
 };
 
-_display displayAddEventHandler ["Unload", _fnc_onUnload];
+private _ctrlButtonOK = _display displayCtrl IDC_OK;
 _ctrlButtonOK ctrlAddEventHandler ["ButtonClick", _fnc_onConfirm];

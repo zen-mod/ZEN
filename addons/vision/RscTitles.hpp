@@ -11,10 +11,10 @@ class RscTitles {
                 idc = IDC_MODE_0;
                 style = ST_CENTER;
                 x = 0;
-                y = safeZoneY + POS_H(2.2);
-                w = WIDTH_SINGLE;
-                h = POS_H(0.9);
-                sizeEx = POS_H(0.8);
+                y = QUOTE(safeZoneY + POS_H(3.3));
+                w = QUOTE(WIDTH_SINGLE);
+                h = QUOTE(POS_H(0.9));
+                sizeEx = QUOTE(POS_H(0.8));
                 shadow = 0;
             };
             class Mode_1: Mode_0 {

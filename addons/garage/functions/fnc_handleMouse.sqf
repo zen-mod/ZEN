@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Handles mouse movement for repositioning and rotating the camera.
@@ -15,13 +16,12 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["", "_mouseX", "_mouseY"];
 GVAR(mouseButtons) params ["_mouseLMB", "_mouseRMB"];
 
 // Reposition camera when LMB held down
-if !(_mouseLMB isEqualTo []) then {
+if (_mouseLMB isNotEqualTo []) then {
     _mouseLMB params ["_mouseLMBX", "_mouseLMBY"];
 
     private _deltaX = _mouseLMBX - _mouseX;
@@ -44,7 +44,7 @@ if !(_mouseLMB isEqualTo []) then {
 };
 
 // Rotate camera when RMB held down
-if !(_mouseRMB isEqualTo []) then {
+if (_mouseRMB isNotEqualTo []) then {
     _mouseRMB params ["_mouseRMBX", "_mouseRMBY"];
 
     private _deltaX = (_mouseRMBX - _mouseX) * 0.75;

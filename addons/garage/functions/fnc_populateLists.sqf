@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Populates animations and textures lists.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _display = findDisplay IDD_DISPLAY;
 
@@ -44,7 +44,7 @@ private _ctrlListAnimations = _display displayCtrl IDC_LIST_ANIMATIONS;
 
 // Add items to textures list
 private _ctrlListTextures = _display displayCtrl IDC_LIST_TEXTURES;
-private _sourcesConfig = configFile >> "CfgVehicles" >> typeOf GVAR(center) >> "textureSources";
+private _sourcesConfig = configOf GVAR(center) >> "textureSources";
 private _currentTextures = getObjectTextures GVAR(center) apply {toLower _x};
 {
     _x params ["_configName", "_displayName"];
@@ -52,7 +52,7 @@ private _currentTextures = getObjectTextures GVAR(center) apply {toLower _x};
     private _configTextures = getArray (_sourcesConfig >> _configName >> "textures");
     private _isChecked = true;
     if (count _configTextures == count _currentTextures) then {
-        {if (toLower _x find (_currentTextures select _forEachIndex) < 0) exitWith {_isChecked = false}} forEach _configTextures;
+        {if !((_currentTextures select _forEachIndex) in toLower _x) exitWith {_isChecked = false}} forEach _configTextures;
     } else {
         _isChecked = false;
     };
@@ -63,14 +63,4 @@ private _currentTextures = getObjectTextures GVAR(center) apply {toLower _x};
 // Set font height and hide both lists
 {
     _x ctrlSetFontHeight POS_H(0.8); // Todo: setting for font height?
-    _x ctrlEnable false;
-    _x ctrlSetFade 1;
-    _x ctrlCommit 0;
 } forEach [_ctrlListAnimations, _ctrlListTextures];
-
-// Hide list background, frame, and empty text
-{
-    private _ctrl = _display displayCtrl _x;
-    _ctrl ctrlSetFade 1;
-    _ctrl ctrlCommit 0;
-} forEach [IDC_LIST_BACKGROUND, IDC_LIST_FRAME, IDC_LIST_EMPTY];
