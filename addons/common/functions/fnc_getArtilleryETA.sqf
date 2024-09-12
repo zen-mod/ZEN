@@ -29,7 +29,7 @@
 params [["_vehicle", objNull, [objNull]], ["_position", [0, 0, 0], [[], objNull, ""], 3], ["_magazine", "", [""]]];
 
 if (_position isEqualType objNull) then {
-    _position = ASLtoAGL getPosASL _position;
+    _position = ASLToAGL getPosASL _position;
 };
 
 if (_position isEqualType "") then {
@@ -37,8 +37,8 @@ if (_position isEqualType "") then {
 };
 
 if (_vehicle call FUNC(isVLS)) then {
-    private _missileType = getText (configfile >> "CfgMagazines" >> _magazine >> "ammo");
-    private _maxSpeed = getNumber (configfile >> "CfgAmmo" >> _missileType >> "maxSpeed");
+    private _missileType = getText (configFile >> "CfgMagazines" >> _magazine >> "ammo");
+    private _maxSpeed = getNumber (configFile >> "CfgAmmo" >> _missileType >> "maxSpeed");
 
     ACCELERATION_TIME + (((_vehicle distance _position) - ACCELERATION_DISTANCE) max 0) / (SPEED_COEFFICIENT * _maxSpeed)
 } else {

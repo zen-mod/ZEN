@@ -78,7 +78,7 @@ if (!_isAttached) then {
                 };
 
                 // Exit if the unit's weapon has no compatible flashlight items
-                if (_flashlights isEqualTo []) exitwith {};
+                if (_flashlights isEqualTo []) exitWith {};
 
                 // Add a random flashlight to the unit's weapon
                 [QEGVAR(common,addWeaponItem), [_x, _weapon, selectRandom _flashlights], _x] call CBA_fnc_targetEvent;
