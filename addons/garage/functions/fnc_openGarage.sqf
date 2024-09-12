@@ -54,7 +54,7 @@ if (SELECTED_OBJECTS findIf {_x != _vehicle && {typeOf _x == _vehicleType}} == -
 GVAR(camHelper) = "Logic" createVehicleLocal [0, 0, 0];
 GVAR(camHelper) attachTo [_vehicle, GVAR(helperPos)];
 
-GVAR(camera) = "camera" camCreate ASLtoAGL getPosASL _vehicle;
+GVAR(camera) = "camera" camCreate ASLToAGL getPosASL _vehicle;
 GVAR(camera) cameraEffect ["internal", "back"];
 GVAR(camera) camPrepareFocus [-1, -1];
 GVAR(camera) camPrepareFov 0.35;
