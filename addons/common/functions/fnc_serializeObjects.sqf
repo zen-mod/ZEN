@@ -90,7 +90,7 @@ private _fnc_serializeUnit = {
     params ["_unit"];
 
     private _type = typeOf _unit;
-    private _position = ASLtoAGL getPosASL _unit vectorDiff _centerPos;
+    private _position = ASLToAGL getPosASL _unit vectorDiff _centerPos;
     private _direction = getDir _unit;
 
     private _group = _unit call _fnc_serializeGroup;
@@ -113,7 +113,7 @@ private _fnc_serializeVehicle = {
     params ["_vehicle"];
 
     private _type = typeOf _vehicle;
-    private _position = ASLtoAGL getPosASL _vehicle vectorDiff _centerPos;
+    private _position = ASLToAGL getPosASL _vehicle vectorDiff _centerPos;
     private _direction = [vectorDir _vehicle, vectorUp _vehicle];
 
     private _fuel = fuel _vehicle;
@@ -176,7 +176,7 @@ private _fnc_serializeStatic = {
     params ["_object"];
 
     private _type = typeOf _object;
-    private _position = ASLtoAGL getPosASL _object vectorDiff _centerPos;
+    private _position = ASLToAGL getPosASL _object vectorDiff _centerPos;
     private _direction = [vectorDir _object, vectorUp _object];
 
     private _simulationEnabled = simulationEnabled _object;

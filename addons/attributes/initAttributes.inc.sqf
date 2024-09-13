@@ -404,7 +404,7 @@
     QGVAR(edit),
     nil,
     {_entity setGroupIdGlobal [_value]},
-    {groupID _entity},
+    {groupId _entity},
     {GVAR(enableGroupID)}
 ] call FUNC(addAttribute);
 

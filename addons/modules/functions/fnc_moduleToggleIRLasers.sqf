@@ -77,7 +77,7 @@ if (!_isAttached) then {
                 };
 
                 // Exit if the unit's weapon has no compatible IR laser items
-                if (_irLasers isEqualTo []) exitwith {};
+                if (_irLasers isEqualTo []) exitWith {};
 
                 // Add a random IR laser to the unit's weapon
                 [QEGVAR(common,addWeaponItem), [_x, _weapon, selectRandom _irLasers], _x] call CBA_fnc_targetEvent;

@@ -54,7 +54,7 @@ private _fnc_moveUnit = {
     params ["_unit", "_position"];
 
     if (surfaceIsWater _position) then {
-        _unit setPosASL AGLtoASL _position;
+        _unit setPosASL AGLToASL _position;
     } else {
         _unit setPosATL _position;
     };

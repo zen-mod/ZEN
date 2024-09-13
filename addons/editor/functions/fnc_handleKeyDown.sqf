@@ -49,7 +49,7 @@ if (_keyCode in actionKeys "curatorPingView" && {!isNil QGVAR(pingTarget)} && {i
                 curatorCamera setPosASL getPosASL _this;
                 curatorCamera setVectorDirAndUp [vectorDir _this, vectorUp _this];
 
-                _this cameraeffect ["Terminate", "BACK"];
+                _this cameraEffect ["Terminate", "BACK"];
                 curatorCamera cameraEffect ["Internal", "BACK"];
                 cameraEffectEnableHUD true;
                 camDestroy _this;
