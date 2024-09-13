@@ -10,6 +10,8 @@ class CfgPatches {
             "zen_context_menu",
             "zen_garage",
             "zen_inventory",
+            "zen_loadout",
+            "zen_pylons",
             "zen_remote_control"
         };
         author = ECSTRING(main,Author);
