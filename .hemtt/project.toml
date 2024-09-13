@@ -16,16 +16,3 @@ include = [
 
 [version]
 git_hash = 0
-
-[hemtt.launch.default]
-workshop = [
-    "450814997", # CBA_A3
-]
-mission = "test.VR"
-
-[hemtt.launch.ace]
-workshop = [
-    "450814997", # CBA_A3
-    "463939057", # ACE3
-]
-mission = "test.VR"

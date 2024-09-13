@@ -343,7 +343,7 @@
 
 [QGVAR(addWeaponItem), {
     params ["_unit", "_weapon", "_item"];
-    _unit addweaponItem [_weapon, _item];
+    _unit addWeaponItem [_weapon, _item];
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(setDate), {setDate _this}] call CBA_fnc_addEventHandler;

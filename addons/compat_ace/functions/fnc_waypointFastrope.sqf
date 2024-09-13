@@ -87,7 +87,7 @@ private _endPos   = +_waypointPosition;
 // Using the waypointPosition command to get the height of the waypoint
 // since the position provided to the waypoint script always has a height of zero
 _endPos set [2, FASTROPE_HEIGHT + (waypointPosition _waypoint select 2)];
-_endPos = AGLtoASL _endPos;
+_endPos = AGLToASL _endPos;
 
 private _initialVelocity = velocity _vehicle;
 private _vectorDir = vectorDir _vehicle;

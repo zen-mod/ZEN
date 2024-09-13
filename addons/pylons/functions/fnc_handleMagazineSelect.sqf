@@ -23,7 +23,7 @@ _ctrlCombo setVariable [QGVAR(previousIndex), _selectedIndex];
 
 // Exit if event handler was triggered by lbSetCurSel command
 // Prevents issues with manually setting selection when loading a preset
-EXIT_LOCKED;
+LB_EXIT_LOCKED;
 
 private _display = ctrlParent _ctrlCombo;
 
