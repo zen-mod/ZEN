@@ -404,7 +404,7 @@
     QGVAR(edit),
     nil,
     {_entity setGroupIdGlobal [_value]},
-    {groupID _entity},
+    {groupId _entity},
     {GVAR(enableGroupID)}
 ] call FUNC(addAttribute);
 
@@ -946,7 +946,8 @@
         [6.5,  3, 6.5, ELSTRING(ai,Suppression)],
         [13,   3, 6.5, ELSTRING(ai,Target)],
         [19.5, 3, 6.5, ELSTRING(ai,TeamSwitch)],
-        [0,    4, 6.5, ELSTRING(ai,WeaponAim)]
+        [0,    4, 6.5, ELSTRING(ai,WeaponAim)],
+        [6.5,  4, 6.5, ELSTRING(ai,FireWeapon)]
     ], 5, true],
     {
         {

@@ -404,5 +404,17 @@
             <Chinese>武器瞄準</Chinese>
             <Italian>Obiettivo dell'arma</Italian>
         </Key>
+        <Key ID="STR_ZEN_AI_FireWeapon">
+            <English>Weapon Fire</English>
+            <French>Tir d'arme</French>
+            <German>Waffenfeuer</German>
+            <Polish>Ogień z broni</Polish>
+            <Korean>무기 발사</Korean>
+            <Japanese>武器発射</Japanese>
+            <Spanish>Disparo de arma</Spanish>
+            <Chinesesimp>武器开火</Chinesesimp>
+            <Chinese>武器開火</Chinese>
+            <Italian>Fuoco dell'arma</Italian>
+        </Key>
     </Package>
 </Project>
