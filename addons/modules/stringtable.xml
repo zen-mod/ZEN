@@ -3559,5 +3559,8 @@
             <Chinese>車輛必須有其他乘員位可用</Chinese>
             <Italian>Il veicolo deve avere altro equipaggio disponibile</Italian>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleInjure">
+            <English>Injure</English>
+        </Key>
     </Package>
 </Project>
