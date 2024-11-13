@@ -3,7 +3,8 @@
 #include "XEH_PREP.hpp"
 
 // Get faction names for west, east, independent, and civilian sides
-private _factionNames = configProperties [configFile >> "CfgFactionClasses", "isClass _x"] select {
+private _cfgFactionClasses = configFile >> "CfgFactionClasses";
+private _factionNames = configProperties [_cfgFactionClasses, "isClass _x"] select {
     getNumber (_x >> "side") in [0, 1, 2, 3]
 } apply {
     getText (_x >> "displayName")
@@ -13,7 +14,6 @@ private _factionNames = configProperties [configFile >> "CfgFactionClasses", "is
 // the empty tree and, if we delete the entire faction node, then there is no way to place them.
 private _forcedEmptyFactions = [];
 private _forcedEmptyObjects = createHashMap;
-private _cfgFactionClasses = configFile >> "CfgFactionClasses";
 
 {
     if (
