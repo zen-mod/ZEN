@@ -269,6 +269,12 @@
             <Chinese>掩護</Chinese>
             <Italian>Coperchio</Italian>
         </Key>
+        <Key ID="STR_ZEN_AI_FireWeapon">
+            <English>Fire Weapon</English>
+            <German>Waffe feuern</German>
+            <Chinesesimp>武器开火</Chinesesimp>
+            <Chinese>武器開火</Chinese>
+        </Key>
         <Key ID="STR_ZEN_AI_FSM">
             <English>FSM</English>
             <Russian>FSM</Russian>
