@@ -44,7 +44,7 @@ if (!GVAR(draw3DAdded)) then {
             _x params ["_id", "_name", "_description", "_posASL"];
 
             private _d = _posASL distance _camPosASL;
-            private _scale = linearConversion [300, 750, _d, 0.8, 0, true]; // 300m => 0.8, 750m => 0
+            private _scale = linearConversion [300, 750, _d, 0.65, 0, true]; // 300m => 0.65, 750m => 0
             private _posAGL = ASLToAGL _posASL;
 
             // Don't draw icon if it's too small or outside screen
@@ -67,7 +67,8 @@ if (!GVAR(draw3DAdded)) then {
 
             // Draw ground-icon connection line only for icons higher than 0.5 m
             if ((_posAGL select 2) > 0.5) then {
-                drawLine3D [_posAGL, [_posAGL select 0, _posAGL select 1, 0], _color];
+                // Hide line behind icon
+                drawLine3D [_posAGL vectorAdd [0, 0, -0.05], [_posAGL select 0, _posAGL select 1, 0], _color];
             };
         } count GVAR(3DENComments); // Use count for slightly better performance
     }];
