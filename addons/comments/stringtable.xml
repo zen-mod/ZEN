@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Comments">
+        <Key ID="STR_ZEN_Comments_DisplayName">
+            <English>Comments</English>
+            <German>Kommentare</German>
+        </Key>
+    </Package>
+    <Package name="3DENComments">
+        <Key ID="STR_ZEN_Comments_3DENComments">
+            <English>Show 3DEN comments in Zeus</English>
+            <German>Zeige 3DEN-Kommentare im Zeus</German>
+        </Key>
+        <Key ID="STR_ZEN_Comments_3DENComments_Description">
+            <English>Show 3DEN comments in Zeus.</English>
+            <German>Zeige 3DEN-Kommentare im Zeus an.</German>
+        </Key>
+        <Key ID="STR_ZEN_Comments_3DENCommentsColor">
+            <English>3DEN comments color</English>
+            <German>Farbe der 3DEN-Kommentare</German>
+        </Key>
+        <Key ID="STR_ZEN_Comments_3DENCommentsColor_Description">
+            <English>Color of 3DEN Kommentare in Zeus.</English>
+            <German>Farbe der 3DEN-Kommentare im Zeus.</German>
+        </Key>
+    </Package>
+</Project>

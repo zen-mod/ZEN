@@ -1,0 +1,44 @@
+#include "script_component.hpp"
+/*
+ * Author: Timi007
+ * Function called when 3DEN save event is triggered.
+ * Handles saving comments into scenario space for later use.
+ *
+ * Arguments:
+ * 0: Event that triggered this function (for debug purposes) <STRING>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call zen_comments_fnc_save3DENComments
+ *
+ * Public: No
+ */
+
+params [["_event", "", [""]]];
+
+if (!is3DEN) exitWith {};
+
+private _comments = [];
+{
+    private _id = _x;
+    // all3DENEntities includes always includes this id, ignore
+    if (_id isEqualTo -999) then {
+        continue;
+    };
+
+    private _name = (_id get3DENAttribute "name") select 0;
+    private _description = (_id get3DENAttribute "description") select 0;
+    private _positionASL = (_id get3DENAttribute "position") select 0;
+
+    // Ignore comments with special ignore directive in the description/tooltip
+    if (IGNORE_3DEN_COMMENT_STRING in _description) then {
+        continue;
+    };
+
+    _comments pushBack [_id, _name, _description, _positionASL];
+} forEach (all3DENEntities param [7, []]);
+
+set3DENMissionAttributes [["Scenario", QGVAR(3DENComments), _comments]];
+TRACE_2("Saved 3DEN comments",_event,_comments);
