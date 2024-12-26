@@ -23,7 +23,7 @@ if (!is3DEN) exitWith {};
 private _comments = [];
 {
     private _id = _x;
-    // all3DENEntities includes always includes this id, ignore
+    // all3DENEntities always includes this id, ignore it
     if (_id isEqualTo -999) then {
         continue;
     };
