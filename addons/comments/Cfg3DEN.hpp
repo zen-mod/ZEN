@@ -29,4 +29,12 @@ class Cfg3DEN {
             };
         };
     };
+
+    class EventHandlers {
+        class PREFIX {
+            // Arguments are for debugging
+            onMissionSave = QUOTE(['OnMissionSave'] call FUNC(save3DENComments));
+            onMissionAutoSave = QUOTE(['OnMissionAutosave'] call FUNC(save3DENComments));
+        };
+    };
 };

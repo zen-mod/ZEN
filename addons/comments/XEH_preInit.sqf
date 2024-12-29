@@ -10,11 +10,4 @@ GVAR(draw3DAdded) = false;
 
 #include "initSettings.inc.sqf"
 
-// For 3DEN comments in Zeus
-if (is3DEN) then {
-    // Arguments are for debugging
-    add3DENEventHandler ["OnMissionSave", {["OnMissionSave"] call FUNC(save3DENComments)}];
-    add3DENEventHandler ["OnMissionAutosave", {["OnMissionAutosave"] call FUNC(save3DENComments)}];
-};
-
 ADDON = true;
