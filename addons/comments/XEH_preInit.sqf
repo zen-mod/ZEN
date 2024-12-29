@@ -6,6 +6,8 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
+GVAR(draw3DAdded) = false;
+
 #include "initSettings.inc.sqf"
 
 // For 3DEN comments in Zeus

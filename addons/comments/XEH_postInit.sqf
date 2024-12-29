@@ -1,8 +1,7 @@
 #include "script_component.hpp"
 
-if (!hasInterface) exitWith {};
+if (!hasInterface || is3DEN) exitWith {};
 
-GVAR(draw3DAdded) = false;
 ["zen_curatorDisplayLoaded", LINKFUNC(addDrawEventHandler)] call CBA_fnc_addEventHandler;
 
 GVAR(3DENComments) = getMissionConfigValue [QGVAR(3DENComments), []];

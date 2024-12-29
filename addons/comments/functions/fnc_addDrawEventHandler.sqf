@@ -21,57 +21,41 @@ TRACE_1("Zeus display opened",_display);
 
 if (!GVAR(enable3DENComments)) exitWith {};
 
+GVAR(controls) = [];
+{
+    _x params ["_id", "_name", "_description", "_posASL"];
+
+    private _control = _display ctrlCreate [QGVAR(RscActiveCommentIcon), -1];
+    _control ctrlSetTooltip _description;
+
+    GVAR(controls) pushBack _control;
+} forEach GVAR(3DENComments);
+
 if (!GVAR(draw3DAdded)) then {
     LOG("Adding 3DENComments Draw3D.");
     addMissionEventHandler ["Draw3D", {
         if (!GVAR(enable3DENComments)) exitWith {
             removeMissionEventHandler [_thisEvent, _thisEventHandler];
+
+            {ctrlDelete _x} forEach GVAR(controls);
+
             GVAR(draw3DAdded) = false;
             LOG("Removed 3DENComments Draw3D.");
         };
 
-        // Not in Zeus, in pause menu or HUD is hidden
-        if (
-            isNull (findDisplay IDD_RSCDISPLAYCURATOR) ||
-            {!isNull (findDisplay IDD_INTERRUPT)} ||
-            {call EFUNC(common,isInScreenshotMode)}
-        ) exitWith {};
+        if (!(call FUNC(canDraw3DIcons))) exitWith {
+            {_x ctrlShow false} forEach GVAR(controls);
+        };
 
-        private _camPosASL = getPosASLVisual curatorCamera;
-        private _color = GVAR(3DENCommentsColor); // Copy global var for slightly better performance
-
-        {
-            _x params ["_id", "_name", "_description", "_posASL"];
-
-            private _d = _posASL distance _camPosASL;
-            private _scale = linearConversion [300, 750, _d, 0.65, 0, true]; // 300m => 0.65, 750m => 0
-            private _posAGL = ASLToAGL _posASL;
-
-            // Don't draw icon if it's too small or outside screen
-            if (_scale < 0.01 || {(curatorCamera worldToScreen _posAGL) isEqualTo []}) then {
-                continue;
-            };
-
-            drawIcon3D [
-                "a3\3den\Data\Cfg3DEN\Comment\texture_ca.paa",
-                _color,
-                _posAGL,
-                _scale,             // Width
-                _scale,             // Height
-                0,                  // Angle
-                _name,              // Text
-                1,                  // Shadow
-                -1,                 // Text Size
-                "RobotoCondensed"   // Font
-            ];
-
-            // Draw ground-icon connection line only for icons higher than 0.5 m
-            if ((_posAGL select 2) > 0.5) then {
-                // Hide line behind icon
-                drawLine3D [_posAGL vectorAdd [0, 0, -0.05], [_posAGL select 0, _posAGL select 1, 0], _color];
-            };
-        } count GVAR(3DENComments); // Use count for slightly better performance
+        [
+            GVAR(3DENComments),
+            GVAR(controls),
+            GVAR(3DENCommentsColor),
+            GVAR(3DENCommentsActiveColor)
+        ] call FUNC(drawComments);
     }];
+
+    GVAR(draw3DAdded) = true;
 };
 
 // MapDraw EH needs to be added every time the Zeus display is opened.
@@ -87,24 +71,11 @@ LOG("Adding 3DENComments map draw.");
     // Draw is only called when map is open
     if (call EFUNC(common,isInScreenshotMode)) exitWith {}; // HUD is hidden
 
-    private _color = GVAR(3DENCommentsColor); // Copy global var for slightly better performance
-
-    {
-        _x params ["_id", "_name", "_description", "_posASL"];
-
-        _mapCtrl drawIcon [
-            "a3\3den\Data\Cfg3DEN\Comment\texture_ca.paa",
-            _color,
-            _posASL,
-            24,                 // Width
-            24,                 // Height
-            0,                  // Angle
-            _name,              // Text
-            1,                  // Shadow
-            -1,                 // Text Size
-            "RobotoCondensed"   // Font
-        ];
-    } count GVAR(3DENComments); // Use count for slightly better performance
+    [
+        GVAR(3DENComments),
+        GVAR(controls),
+        GVAR(3DENCommentsColor),
+        GVAR(3DENCommentsActiveColor),
+        _mapCtrl
+    ] call FUNC(drawComments);
 }];
-
-GVAR(draw3DAdded) = true;
