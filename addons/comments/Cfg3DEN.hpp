@@ -9,7 +9,7 @@ class Cfg3DEN {
     class Mission {
         class Scenario {
             class AttributeCategories {
-                class PREFIX {
+                class ADDON {
                     collapsed = 1;
                     displayName = ECSTRING(main,DisplayName);
 
@@ -31,10 +31,11 @@ class Cfg3DEN {
     };
 
     class EventHandlers {
-        class PREFIX {
+        class ADDON {
             // Arguments are for debugging
-            onMissionSave = QUOTE(['OnMissionSave'] call FUNC(save3DENComments));
-            onMissionAutoSave = QUOTE(['OnMissionAutosave'] call FUNC(save3DENComments));
+            onMissionSave = QUOTE(['onMissionSave'] call FUNC(save3DENComments));
+            onMissionAutosave = QUOTE(['onMissionAutosave'] call FUNC(save3DENComments));
+            onBeforeMissionPreview = QUOTE(['onBeforeMissionPreview'] call FUNC(save3DENComments));
         };
     };
 };

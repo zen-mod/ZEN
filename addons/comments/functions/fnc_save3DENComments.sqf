@@ -40,5 +40,6 @@ private _comments = [];
     _comments pushBack [_id, _name, _description, _positionASL];
 } forEach (all3DENEntities param [7, []]);
 
+// This command does not work if the mission is not saved
 set3DENMissionAttributes [["Scenario", QGVAR(3DENComments), _comments]];
 TRACE_2("Saved 3DEN comments",_event,_comments);
