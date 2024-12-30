@@ -2774,6 +2774,7 @@
             <Chinesesimp>创建/编辑情报</Chinesesimp>
             <Chinese>創建/編輯情報</Chinese>
             <Italian>Crea/modifica nota</Italian>
+            <French>Créer/modifier une information</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ObjectType">
             <English>Object Type</English>
@@ -2884,6 +2885,7 @@
             <Chinese>動作持續時間</Chinese>
             <Polish>Długość Akcji</Polish>
             <Italian>Durata dell'azione</Italian>
+            <French>Durée de l'action</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_IntelTitle">
             <English>Intel Title</English>
@@ -2894,6 +2896,7 @@
             <Chinesesimp>情报标题</Chinesesimp>
             <Chinese>情報標題</Chinese>
             <Italian>Titolo avviso</Italian>
+            <French>Titre de l'information</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_IntelText">
             <English>Intel Text</English>
@@ -2904,6 +2907,7 @@
             <Chinesesimp>情报文本</Chinesesimp>
             <Chinese>情報文本</Chinese>
             <Italian>Nota testo</Italian>
+            <French>Texte d'information</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_PickUpIntel">
             <English>Pick Up Intel</English>
@@ -2914,6 +2918,7 @@
             <Chinesesimp>拾取情报</Chinesesimp>
             <Chinese>拾取情報</Chinese>
             <Italian>Per prendere nota</Italian>
+            <French>Ramasser l'information</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_IntelFound">
             <English>Intel Found</English>
@@ -2924,6 +2929,7 @@
             <Chinesesimp>情报发现</Chinesesimp>
             <Chinese>情報發現</Chinese>
             <Italian>Avviso trovato</Italian>
+            <French>Information trouvée</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_PlayerFoundIntel">
             <English>%1 found intel: "%2"</English>
@@ -2934,6 +2940,7 @@
             <Chinesesimp>%1 发现情报: "%2"</Chinesesimp>
             <Chinese>%1 發現情報: "%2"</Chinese>
             <Italian>% 1 ha trovato il suggerimento "% 2"</Italian>
+            <French>%1 a trouvé l'intel : "%2"</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCrewToGunner">
             <English>Crew To Gunner</English>
@@ -2952,6 +2959,7 @@
             <Chinese>切換燈光</Chinese>
             <Polish>Przełącz lampy</Polish>
             <Italian>Interruttore lampade</Italian>
+            <French>Allumage des feux</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ToggleLamps_Repair_Tooltip">
             <English>Repair broken lights when turning them on.</English>
@@ -2962,6 +2970,7 @@
             <Chinese>開燈時修理破損的燈。</Chinese>
             <Polish>Napraw zepsute lampy przed włączeniem.</Polish>
             <Italian>Riparare le lampade durante la commutazione</Italian>
+            <French>Réparez les lumières cassées lorsque vous les allumez.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_BurstDelay">
             <English>Burst Delay</English>
@@ -2970,6 +2979,7 @@
             <Chinese>火災爆炸間的延時</Chinese>
             <Japanese>射撃間隔</Japanese>
             <Italian>Ritardo tra le raffiche di fuoco</Italian>
+            <French>Retard entre les coups de feu</French>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_BurstDelay_Tooltip">
             <English>The delay, in seconds, between bursts of tracers.\nSelected randomly in a range from min to max, gravitating towards mid.</English>
@@ -2978,6 +2988,7 @@
             <Chinese>曳光彈發射間隔的延時，以秒為單位。 \n從最小到最大的範圍內隨機選擇，傾向於中間得值。</Chinese>
             <Japanese>曳光弾の射撃間隔を秒で設定します。\nランダム値の場合は、最小値から最大値までの中央値付近で選択されます。。</Japanese>
             <Italian>Il ritardo, in secondi, tra raffiche di traccianti.\nSelezionati casualmente in un intervallo da min a max, gravitando verso la metà.</Italian>
+            <French>Délai entre les tirs en secondes.\nIl est choisi au hasard dans une distribution avec la valeur minimale, la valeur maximale et la valeur moyenne spécifiées.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_Dispersion">
             <English>Dispersion</English>
@@ -2986,6 +2997,7 @@
             <Chinese>散佈</Chinese>
             <Japanese>精度</Japanese>
             <Italian>Dispersione</Italian>
+            <French>Dispersion</French>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_Dispersion_Tooltip">
             <English>The dispersion of the fired tracer rounds.</English>
@@ -2994,6 +3006,7 @@
             <Chinese>發射的曳光彈的散佈情況。</Chinese>
             <Japanese>射撃される曳光弾の精度を設定します。</Japanese>
             <Italian>La dispersione dei proiettili traccianti sparati.</Italian>
+            <French>Dispersion des munitions traçantes tirées.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_Random_Tooltip">
             <English>Tracers are fired randomly in the air.</English>
@@ -3002,6 +3015,7 @@
             <Chinese>曳光彈在空中隨機發射。</Chinese>
             <Japanese>曳光弾が空中に向かって射撃されます。</Japanese>
             <Italian>I traccianti vengono lanciati casualmente in aria.</Italian>
+            <French>Les munitions traçantes sont tirées en l'air de manière aléatoire.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_Camera_Tooltip">
             <English>Tracers are fired at the current camera position.</English>
@@ -3010,6 +3024,7 @@
             <Chinese>曳光彈從當前攝像機位置發射。</Chinese>
             <Japanese>曳光弾は現在のカメラ位置から射撃されます。</Japanese>
             <Italian>I traccianti vengono attivati nella posizione corrente della telecamera.</Italian>
+            <French>Les munitions traçantes sont tirées contre la position actuelle de la caméra.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_Cursor_Tooltip">
             <English>Tracers target is selected using the cursor after closing the dialog.</English>
@@ -3018,6 +3033,7 @@
             <Chinese>關閉對話框後，使用光標選擇曳光彈目標。</Chinese>
             <Japanese>曳光弾はダイアログを閉じた後に、カーソル位置に向かって射撃されます。</Japanese>
             <Italian>Il target dei tracer viene selezionato utilizzando il cursore dopo aver chiuso la finestra di dialogo.</Italian>
+            <French>La cible des munitions traçantes est choisie en fonction de la position du curseur de la souris après la fermeture de la fenêtre.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_TracersTarget">
             <English>Tracers Target</English>
@@ -3026,6 +3042,7 @@
             <Chinese>曳光彈目標</Chinese>
             <Japanese>曳光弾の目標</Japanese>
             <Italian>Obiettivo dei traccianti</Italian>
+            <French>Cible des munitions traçantes</French>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire">
             <English>Custom Fire</English>
@@ -3036,6 +3053,7 @@
             <Polish>Ustawienie Ognia</Polish>
             <Japanese>火を作成</Japanese>
             <Italian>Fuoco personalizzato</Italian>
+            <French>Incendie sur mesure</French>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire_EffectSize">
             <English>Effect Size</English>
@@ -3046,6 +3064,7 @@
             <Polish>Rozmiar efektu</Polish>
             <Japanese>エフェクトの大きさ</Japanese>
             <Italian>Dimensione dell'effetto</Italian>
+            <French>Taille de l'effet</French>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire_ParticleDensity">
             <English>Particle Density</English>
@@ -3056,6 +3075,7 @@
             <Polish>Gęstość cząstek</Polish>
             <Japanese>パーティクル密度</Japanese>
             <Italian>Densità delle particelle</Italian>
+            <French>Densité des particules</French>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire_ParticleLifetime">
             <English>Particle Lifetime</English>
@@ -3065,6 +3085,7 @@
             <Chinese>顆粒存在時間</Chinese>
             <Japanese>パーティクル存在時間</Japanese>
             <Italian>Durata delle particelle</Italian>
+            <French>Durée de vie des particules</French>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire_ParticleSpeed">
             <English>Particle Speed</English>
@@ -3075,6 +3096,7 @@
             <Polish>Prędkość cząstek</Polish>
             <Japanese>パーティクル速度</Japanese>
             <Italian>Velocità delle particelle</Italian>
+            <French>Vitesse des particules</French>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire_ParticleSize">
             <English>Particle Size</English>
@@ -3085,6 +3107,7 @@
             <Polish>Rozmiar cząstek</Polish>
             <Japanese>パーティクルの大きさ</Japanese>
             <Italian>Dimensione delle particelle</Italian>
+            <French>Taille des particules</French>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire_ParticleOrientation">
             <English>Particle Orientation</English>
@@ -3095,6 +3118,7 @@
             <Polish>Orientacja cząstek</Polish>
             <Japanese>パーティクル方位</Japanese>
             <Italian>Orientamento delle particelle</Italian>
+            <French>Orientation des particules</French>
         </Key>
         <Key ID="STR_ZEN_Modules_GlobalAISkill">
             <English>Global AI Skill</English>
@@ -3105,6 +3129,7 @@
             <Polish>Globalne ustawienie wyszkolenia AI</Polish>
             <Japanese>AI 全体スキル</Japanese>
             <Italian>Abilità IA globale</Italian>
+            <French>Compétences globales des IA</French>
         </Key>
         <Key ID="STR_ZEN_Modules_GlobalAISkill_Enabled">
             <English>Global Skill</English>
@@ -3115,6 +3140,7 @@
             <Polish>Globalne wyszkolenie</Polish>
             <Japanese>全体スキル</Japanese>
             <Italian>Abilità globale</Italian>
+            <French>Compétences globales</French>
         </Key>
         <Key ID="STR_ZEN_Modules_GlobalAISkill_Enabled_Description">
             <English>Enables applying the following skill values to all current and newly created AI units.</English>
@@ -3124,6 +3150,7 @@
             <Chinesesimp>启用对所有当前和新创建的AI单位应用以下技能值。</Chinesesimp>
             <Chinese>啟用對所有當前和新創建的AI單位應用以下技能值。</Chinese>
             <Italian>Consente di applicare i seguenti valori di abilità a tutte le unità AI attuali e appena create.</Italian>
+            <French>Applique le paramètre de capacité à toutes les unités nouvelles et existantes.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ExportMissionSQF">
             <English>Export Mission SQF</English>
@@ -3133,6 +3160,7 @@
             <Chinesesimp>导出任务SQF</Chinesesimp>
             <Chinese>導出任務SQF</Chinese>
             <Italian>Esporta missione SQF</Italian>
+            <French>Exporter la mission au format SQF</French>
         </Key>
         <Key ID="STR_ZEN_Modules_EntireMission">
             <English>Entire Mission</English>
@@ -3142,6 +3170,7 @@
             <Chinesesimp>整个任务</Chinesesimp>
             <Chinese>整個任務</Chinese>
             <Italian>Intera Missione</Italian>
+            <French>Mission complète</French>
         </Key>
         <Key ID="STR_ZEN_Modules_IncludeMarkers">
             <English>Include Markers</English>
@@ -3151,6 +3180,7 @@
             <Chinesesimp>包含标记</Chinesesimp>
             <Chinese>包含標記</Chinese>
             <Italian>Includi marcatori</Italian>
+            <French>Inclure les marqueurs</French>
         </Key>
         <Key ID="STR_ZEN_Modules_EditableObjectsOnly">
             <English>Editable Objects Only</English>
@@ -3160,6 +3190,7 @@
             <Chinesesimp>仅限可编辑对象</Chinesesimp>
             <Chinese>僅限可編輯對象</Chinese>
             <Italian>Solo oggetti modificabili</Italian>
+            <French>Objets éditables uniquement</French>
         </Key>
         <Key ID="STR_ZEN_Modules_EditableObjectsOnly_Tooltip">
             <English>Only objects that are currently editable by the local curator will be exported.</English>
@@ -3169,6 +3200,7 @@
             <Chinesesimp>只有当前可由本地宙斯编辑的对象才会被导出。</Chinesesimp>
             <Chinese>只有當前可由本地宙斯編輯的對象才會被導出。</Chinese>
             <Italian>Verranno esportati solo gli oggetti attualmente modificabili dal curatore locale.</Italian>
+            <French>Seuls les objets qui sont actuellement modifiables par le Zeus local sont exportés.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_RotateObject">
             <English>Rotate Object</English>
