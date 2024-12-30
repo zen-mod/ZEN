@@ -19,63 +19,19 @@
 params ["_display"];
 TRACE_1("Zeus display opened",_display);
 
-if (!GVAR(enable3DENComments)) exitWith {};
+if (!GVAR(enableComments) && !GVAR(enable3DENComments)) exitWith {};
 
-GVAR(controls) = [];
 {
-    _x params ["_id", "_name", "_description", "_posASL"];
-
-    private _control = _display ctrlCreate [QGVAR(RscActiveCommentIcon), -1];
-    _control ctrlSetTooltip _description;
-
-    GVAR(controls) pushBack _control;
-} forEach GVAR(3DENComments);
+    [_display, _x] call FUNC(createIcon);
+} forEach (GVAR(3DENComments) + GVAR(comments));
 
 if (!GVAR(draw3DAdded)) then {
-    LOG("Adding 3DENComments Draw3D.");
-    addMissionEventHandler ["Draw3D", {
-        if (!GVAR(enable3DENComments)) exitWith {
-            removeMissionEventHandler [_thisEvent, _thisEventHandler];
-
-            {ctrlDelete _x} forEach GVAR(controls);
-
-            GVAR(draw3DAdded) = false;
-            LOG("Removed 3DENComments Draw3D.");
-        };
-
-        if (!(call FUNC(canDraw3DIcons))) exitWith {
-            {_x ctrlShow false} forEach GVAR(controls);
-        };
-
-        [
-            GVAR(3DENComments),
-            GVAR(controls),
-            GVAR(3DENCommentsColor),
-            GVAR(3DENCommentsActiveColor)
-        ] call FUNC(drawComments);
-    }];
-
+    LOG("Adding Draw3D.");
+    addMissionEventHandler ["Draw3D", {call FUNC(onDraw3D)}];
     GVAR(draw3DAdded) = true;
 };
 
 // MapDraw EH needs to be added every time the Zeus display is opened.
-LOG("Adding 3DENComments map draw.");
-(_display displayCtrl IDC_RSCDISPLAYCURATOR_MAINMAP) ctrlAddEventHandler ["Draw", {
-    params ["_mapCtrl"];
-
-    if (!GVAR(enable3DENComments)) exitWith {
-        _mapCtrl ctrlRemoveEventHandler [_thisEvent, _thisEventHandler];
-        LOG("Removed 3DENComments map draw.");
-    };
-
-    // Draw is only called when map is open
-    if (call EFUNC(common,isInScreenshotMode)) exitWith {}; // HUD is hidden
-
-    [
-        GVAR(3DENComments),
-        GVAR(controls),
-        GVAR(3DENCommentsColor),
-        GVAR(3DENCommentsActiveColor),
-        _mapCtrl
-    ] call FUNC(drawComments);
-}];
+LOG("Adding map draw.");
+private _ctrlMap = _display displayCtrl IDC_RSCDISPLAYCURATOR_MAINMAP;
+_ctrlMap ctrlAddEventHandler ["Draw", {call FUNC(onDraw)}];

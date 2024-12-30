@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Comments <ARRAY>
- * 1: Comment controls <ARRAY>
+ * 1: Comment controls <HASHMAP>
  * 2: Comment color (RGBA) <ARRAY>
  * 2: Comment color when mouse is hovered over it (RGBA) <ARRAY>
  * 2: Map control <CONTROL> (Optional, default: Draw in 3D)
@@ -14,12 +14,12 @@
  * None
  *
  * Example:
- * [_comments, _controls, [1, 0, 0, 0.7], [1, 0, 0, 1]] call zen_comments_fnc_drawComments
+ * [_comments, _icons, [1, 0, 0, 0.7], [1, 0, 0, 1]] call zen_comments_fnc_drawComments
  *
  * Public: No
  */
 
-params ["_comments", "_controls", "_color", "_activeColor", ["_mapCtrl", controlNull, [controlNull]]];
+params ["_comments", "_icons", "_color", "_activeColor", ["_mapCtrl", controlNull, [controlNull]]];
 
 private _drawIn3D = isNull _mapCtrl;
 
@@ -28,7 +28,7 @@ private _scale = 0;
 private _screenPos = [];
 
 {
-    _x params ["_id", "_name", "_description", "_posASL"];
+    _x params ["_id", "_posASL", "_title", "_tooltip", ["_creator", ""]];
 
     private _posAGL = ASLToAGL _posASL;
 
@@ -43,26 +43,26 @@ private _screenPos = [];
         _screenPos = _mapCtrl ctrlMapWorldToScreen _posAGL;
     };
 
-    private _control = _controls select _forEachIndex;
+    private _ctrlIcon = _icons get _id;
 
     // Don't draw icon if it's too small or outside screen
     if (_scale < 0.01 || {_screenPos isEqualTo []}) then {
-        _control ctrlShow false;
+        _ctrlIcon ctrlShow false;
         continue;
     };
-    _control ctrlShow true;
+    _ctrlIcon ctrlShow true;
 
-    _control ctrlSetTextColor _color;
-    _control ctrlSetActiveColor _activeColor;
+    _ctrlIcon ctrlSetTextColor _color;
+    _ctrlIcon ctrlSetActiveColor _activeColor;
 
     _screenPos params ["_posX", "_posY"];
     private _posW = POS_W(_scale);
     private _posH = POS_H(_scale);
 
-    _control ctrlSetPosition [_posX - _posW / 2, _posY - _posH / 2, _posW, _posH];
-    _control ctrlCommit 0;
+    _ctrlIcon ctrlSetPosition [_posX - _posW / 2, _posY - _posH / 2, _posW, _posH];
+    _ctrlIcon ctrlCommit 0;
 
-    private _currentColor = [_color, _activeColor] select (_control getVariable [QGVAR(isActive), false]);
+    private _currentColor = [_color, _activeColor] select (_ctrlIcon getVariable [QGVAR(isActive), false]);
 
     if (_drawIn3D) then {
         // Draw comment name and connection line in 3D
@@ -77,7 +77,7 @@ private _screenPos = [];
             _scale,             // Width
             _scale,             // Height
             0,                  // Angle
-            _name,              // Text
+            _title,              // Text
             1,                  // Shadow
             -1,                 // Text Size
             "RobotoCondensed",  // Font
@@ -87,6 +87,21 @@ private _screenPos = [];
             _textOffsetY        // Offset Y
         ];
 
+        if (_creator isNotEqualTo "") then {
+            drawIcon3D [
+                "",
+                _currentColor,
+                _posAGL,
+                _scale,                 // Width
+                _scale,                 // Height
+                0,                      // Angle
+                _creator,               // Text
+                1,                      // Shadow
+                -1,                     // Text Size
+                "RobotoCondensedBold"   // Font
+            ];
+        };
+
         // Draw ground-icon connection line only for icons higher than X m
         if ((_posAGL select 2) > GROUND_ICON_CONNECTION_HEIGHT) then {
             // Hide line behind icon
@@ -94,6 +109,12 @@ private _screenPos = [];
         };
     } else {
         // Draw comment name on map
+        private _text = if (_creator isEqualTo "") then {
+            _title
+        } else {
+            format ["%1: %2", _creator, _title];
+        };
+
         _mapCtrl drawIcon [
             "#(argb,8,8,3)color(0,0,0,0)",
             _currentColor,
@@ -101,7 +122,7 @@ private _screenPos = [];
             MAP_TEXT_SCALE,     // Width
             MAP_TEXT_SCALE,     // Height
             0,                  // Angle
-            _name,              // Text
+            _text,              // Text
             1,                  // Shadow
             -1,                 // Text Size
             "RobotoCondensed"   // Font

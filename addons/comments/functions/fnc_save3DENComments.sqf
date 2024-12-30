@@ -28,16 +28,16 @@ private _comments = [];
         continue;
     };
 
-    private _name = (_id get3DENAttribute "name") select 0;
-    private _description = (_id get3DENAttribute "description") select 0;
-    private _positionASL = (_id get3DENAttribute "position") select 0;
+    private _posASL = (_id get3DENAttribute "position") select 0;
+    private _title = (_id get3DENAttribute "name") select 0;
+    private _tooltip = (_id get3DENAttribute "description") select 0;
 
     // Ignore comments with special ignore directive in the description/tooltip
-    if (IGNORE_3DEN_COMMENT_STRING in _description) then {
+    if (IGNORE_3DEN_COMMENT_STRING in _tooltip) then {
         continue;
     };
 
-    _comments pushBack [_id, _name, _description, _positionASL];
+    _comments pushBack [format ["3den:%1", _id], _posASL, _title, _tooltip];
 } forEach (all3DENEntities param [7, []]);
 
 // This command does not work if the mission is not saved

@@ -39,3 +39,5 @@
 #define MAX_RENDER_DISTANCE 750
 
 #define GROUND_ICON_CONNECTION_HEIGHT 0.5
+
+#define STR_CREATE_COMMENT "$STR_3den_display3den_entitymenu_createcomment_text"

@@ -3,7 +3,35 @@
     <Package name="Comments">
         <Key ID="STR_ZEN_Comments_DisplayName">
             <English>Comments</English>
+            <Czech>Poznámky</Czech>
             <German>Kommentare</German>
+            <Russian>Комментарии</Russian>
+            <Polish>Komentarze</Polish>
+            <Italian>Commenti</Italian>
+            <Spanish>Comentarios</Spanish>
+            <French>Commentaires</French>
+            <Chinese>評論</Chinese>
+            <Korean>댓글</Korean>
+            <Japanese>コメント</Japanese>
+            <Portuguese>Comentários</Portuguese>
+            <Chinesesimp>评论</Chinesesimp>
+            <Turkish>Yorumlar</Turkish>
+        </Key>
+        <Key ID="STR_ZEN_Comments_Comments">
+            <English>Show comments in Zeus</English>
+            <German>Zeige Kommentare im Zeus</German>
+        </Key>
+        <Key ID="STR_ZEN_Comments_Comments_Description">
+            <English>Show comments created in Zeus.</English>
+            <German>Zeige im Zeus erstelle Kommentare.</German>
+        </Key>
+        <Key ID="STR_ZEN_Comments_CommentColor">
+            <English>Comment color</English>
+            <German>Farbe der Kommentare</German>
+        </Key>
+        <Key ID="STR_ZEN_Comments_CommentColor_Description">
+            <English>Color of comments created in Zeus.</English>
+            <German>Farbe der im Zeus erstellen Kommentare.</German>
         </Key>
     </Package>
     <Package name="3DENComments">
@@ -15,12 +43,12 @@
             <English>Show 3DEN comments in Zeus.</English>
             <German>Zeige 3DEN-Kommentare im Zeus an.</German>
         </Key>
-        <Key ID="STR_ZEN_Comments_3DENCommentsColor">
-            <English>3DEN comments color</English>
+        <Key ID="STR_ZEN_Comments_3DENCommentColor">
+            <English>3DEN comment color</English>
             <German>Farbe der 3DEN-Kommentare</German>
         </Key>
-        <Key ID="STR_ZEN_Comments_3DENCommentsColor_Description">
-            <English>Color of 3DEN Kommentare in Zeus.</English>
+        <Key ID="STR_ZEN_Comments_3DENCommentColor_Description">
+            <English>Color of 3DEN comments in Zeus.</English>
             <German>Farbe der 3DEN-Kommentare im Zeus.</German>
         </Key>
     </Package>
