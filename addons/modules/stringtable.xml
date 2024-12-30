@@ -11,6 +11,7 @@
             <Chinesesimp>环境动画</Chinesesimp>
             <Chinese>環境動畫</Chinese>
             <Italian>Animazione ambientale</Italian>
+            <French>Animation d'ambiance</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Type">
             <English>Animation Type</English>
@@ -22,6 +23,7 @@
             <Chinesesimp>动画类型</Chinesesimp>
             <Chinese>動畫類型</Chinese>
             <Italian>Tipo di animazione</Italian>
+            <French>Type d'animation</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_StopAnimation">
             <English>Stop Animation</English>
@@ -33,6 +35,7 @@
             <Chinesesimp>停滞动画</Chinesesimp>
             <Chinese>停滯動畫</Chinese>
             <Italian>Interrompi animazione</Italian>
+            <French>Arrêt de l'animation</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_SitOnFloor">
             <English>Sit On Floor</English>
@@ -44,6 +47,7 @@
             <Chinesesimp>坐在地上</Chinesesimp>
             <Chinese>坐在地上</Chinese>
             <Italian>Siediti sul pavimento</Italian>
+            <French>S'asseoir par terre</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_SitArmed">
             <English>Sit On Floor (Armed)</English>
@@ -53,6 +57,7 @@
             <Chinesesimp>坐在地上(武装)</Chinesesimp>
             <Chinese>坐在地上(武裝)</Chinese>
             <Italian>Siediti sul pavimento (armato)</Italian>
+            <French>S'asseoir par terre (armé)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Squat">
             <English>Squat</English>
@@ -62,6 +67,7 @@
             <Chinesesimp>蹲下</Chinesesimp>
             <Chinese>蹲下</Chinese>
             <Italian>Accovacciarsi</Italian>
+            <French>Squat</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_SquatArmed">
             <English>Squat (Armed)</English>
@@ -71,6 +77,7 @@
             <Chinesesimp>蹲下(武装)</Chinesesimp>
             <Chinese>蹲下(武裝)</Chinese>
             <Italian>Accovacciarsi (armato)</Italian>
+            <French>Squat (armé)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_LeanOnWall">
             <English>Lean On Wall</English>
@@ -82,6 +89,7 @@
             <Chinesesimp>倚墙而立</Chinesesimp>
             <Chinese>倚牆而立</Chinese>
             <Italian>Appoggiarsi al muro</Italian>
+            <French>S'appuyer sur le mur</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Watch">
             <English>Watch</English>
@@ -93,6 +101,7 @@
             <Chinesesimp>观察</Chinesesimp>
             <Chinese>觀察</Chinese>
             <Italian>Osservare</Italian>
+            <French>Faire le guet</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_StandIdle">
             <English>Stand Idle</English>
@@ -104,6 +113,7 @@
             <Chinesesimp>懒散站立</Chinesesimp>
             <Chinese>懶散站立</Chinese>
             <Italian>Rimani inattivo</Italian>
+            <French>Rester debout</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_StandIdleNoWeapon">
             <English>Stand Idle (No Weapon)</English>
@@ -115,6 +125,7 @@
             <Chinesesimp>懒散站立（无武装）</Chinesesimp>
             <Chinese>懶散站立（無武裝）</Chinese>
             <Italian>Rimani inattivo (Nessuna arma)</Italian>
+            <French>Rester debout (pas d'arme)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_StandWithPistol">
             <English>Stand Idle (Pistol)</English>
@@ -123,6 +134,7 @@
             <Chinesesimp>懒散站立（手枪）</Chinesesimp>
             <Chinese>懶散站立（手槍）</Chinese>
             <Italian>Rimani inattivo (Pistola)</Italian>
+            <French>Rester debout (pistolet)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_AtEase">
             <English>At Ease</English>
@@ -134,6 +146,7 @@
             <Chinesesimp>安逸</Chinesesimp>
             <Chinese>安逸</Chinese>
             <Italian>A proprio agio</Italian>
+            <French>Se tenir debout de manière décontractée</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_GuardKneeled">
             <English>Guard (Kneel)</English>
@@ -143,6 +156,7 @@
             <Chinesesimp>警卫（跪姿）</Chinesesimp>
             <Chinese>警衛（跪姿）</Chinese>
             <Italian>Guardia (inginocchiarsi)</Italian>
+            <French>Surveiller (à genoux)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ListenToBriefing">
             <English>Listen To Briefing</English>
@@ -154,6 +168,7 @@
             <Chinesesimp>听取简报</Chinesesimp>
             <Chinese>聽取簡報</Chinese>
             <Italian>Ascolta il briefing</Italian>
+            <French>Écouter le briefing</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Briefing">
             <English>Briefing</English>
@@ -165,6 +180,7 @@
             <Chinesesimp>简报</Chinesesimp>
             <Chinese>簡報</Chinese>
             <Italian>Briefing</Italian>
+            <French>Briefing</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_BriefingInteractive">
             <English>Briefing (Interactive)</English>
@@ -176,6 +192,7 @@
             <Chinesesimp>简报(互动)</Chinesesimp>
             <Chinese>簡報(互動)</Chinese>
             <Italian>Briefing (Interattivo)</Italian>
+            <French>Briefing (Interactif)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ListeningCivilian">
             <English>Listening Civilian</English>
@@ -187,6 +204,7 @@
             <Chinesesimp>倾听民声</Chinesesimp>
             <Chinese>傾聽民聲</Chinese>
             <Italian>Ascolto civile</Italian>
+            <French>Civil à l'écoute</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_TalkingCivilian">
             <English>Talking Civilian</English>
@@ -198,6 +216,7 @@
             <Chinesesimp>可交谈平民</Chinesesimp>
             <Chinese>可交談平民</Chinese>
             <Italian>Parlando civile</Italian>
+            <French>Civil parlant</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ListenToRadio">
             <English>Listen To Radio</English>
@@ -209,6 +228,7 @@
             <Chinesesimp>收听无线电</Chinesesimp>
             <Chinese>收聽無線電</Chinese>
             <Italian>Ascoltare la radio</Italian>
+            <French>Écouter la radio</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ShieldFromSun">
             <English>Shield From Sun</English>
@@ -220,6 +240,7 @@
             <Chinesesimp>遮挡阳光</Chinesesimp>
             <Chinese>遮擋陽光</Chinese>
             <Italian>Scudo dal sole</Italian>
+            <French>Protéger de la lumière du soleil</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_NavigateAircraft">
             <English>Navigate Aircraft</English>
@@ -242,6 +263,7 @@
             <Chinesesimp>为车辆导航</Chinesesimp>
             <Chinese>為車輛指路</Chinese>
             <Italian>Mostrare la strada a un veicolo</Italian>
+            <French>Indiquer le chemin à un véhicule</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_TreatWounded">
             <English>Treat Wounded</English>
@@ -253,6 +275,7 @@
             <Chinesesimp>治疗伤员</Chinesesimp>
             <Chinese>治療傷員</Chinese>
             <Italian>Trattare i feriti</Italian>
+            <French>Soigner un blessé</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_CombatWounded">
             <English>Combat Wounded</English>
@@ -264,6 +287,7 @@
             <Chinesesimp>战斗伤员</Chinesesimp>
             <Chinese>戰鬥傷員</Chinese>
             <Italian>Ferito in combattimento</Italian>
+            <French>Blessure de combat</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedGeneral">
             <English>Wounded (General)</English>
@@ -275,6 +299,7 @@
             <Chinesesimp>受伤(一般)</Chinesesimp>
             <Chinese>受傷(一般)</Chinese>
             <Italian>Ferito (Generale)</Italian>
+            <French>Blessé (général)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedLeaning">
             <English>Wounded (Leaning)</English>
@@ -284,6 +309,7 @@
             <Chinesesimp>受伤(倚靠)</Chinesesimp>
             <Chinese>受傷(倚靠)</Chinese>
             <Italian>Ferito (Appoggiato)</Italian>
+            <French>Blessé (penché)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedHead">
             <English>Wounded (Head)</English>
@@ -295,6 +321,7 @@
             <Chinesesimp>受伤(头部)</Chinesesimp>
             <Chinese>受傷(頭部)</Chinese>
             <Italian>Ferito (testa)</Italian>
+            <French>Blessé (tête)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedChest">
             <English>Wounded (Chest)</English>
@@ -306,6 +333,7 @@
             <Chinesesimp>受伤(胸部)</Chinesesimp>
             <Chinese>受傷(胸部)</Chinese>
             <Italian>Ferito (petto)</Italian>
+            <French>Blessé (poitrine)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedArm">
             <English>Wounded (Arm)</English>
@@ -317,6 +345,7 @@
             <Chinesesimp>受伤(手臂)</Chinesesimp>
             <Chinese>受傷(手臂)</Chinese>
             <Italian>Ferito (braccio)</Italian>
+            <French>Blessé (bras)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedLeg">
             <English>Wounded (Leg)</English>
@@ -328,6 +357,7 @@
             <Chinesesimp>受伤(腿部)</Chinesesimp>
             <Chinese>受傷(腿部)</Chinese>
             <Italian>Ferito (Gamba)</Italian>
+            <French>Blessé (jambe)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ShockedCivilian">
             <English>Shocked Civilian</English>
@@ -339,6 +369,7 @@
             <Chinesesimp>震惊的平民</Chinesesimp>
             <Chinese>震驚的平民</Chinese>
             <Italian>Civile scioccato</Italian>
+            <French>Civil choqué</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_HidingCivilian">
             <English>Hiding Civilian</English>
@@ -350,6 +381,7 @@
             <Chinesesimp>隐藏的平民</Chinesesimp>
             <Chinese>隱藏的平民</Chinese>
             <Italian>Nascondere civile</Italian>
+            <French>Civil caché</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Surrender">
             <English>Surrender</English>
@@ -358,6 +390,7 @@
             <Chinesesimp>投降</Chinesesimp>
             <Chinese>投降</Chinese>
             <Italian>Capitolazione</Italian>
+            <French>Se rendre</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_SitCaptured">
             <English>Sit Captured</English>
@@ -369,6 +402,7 @@
             <Chinesesimp>坐着的囚犯</Chinesesimp>
             <Chinese>坐著的囚犯</Chinese>
             <Italian>Siedi catturato</Italian>
+            <French>Assoir un prisonnier</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_RepairStand">
             <English>Repair Vehicle (Stand)</English>
@@ -380,6 +414,7 @@
             <Chinesesimp>维修车辆（直立）</Chinesesimp>
             <Chinese>維修車輛（直立）</Chinese>
             <Italian>Riparazione veicolo (in piedi) </Italian>
+            <French>Réparer un véhicule (debout)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_RepairKneel">
             <English>Repair Vehicle (Kneel)</English>
@@ -391,6 +426,7 @@
             <Chinesesimp>维修车辆（跪姿）</Chinesesimp>
             <Chinese>維修車輛（跪姿）</Chinese>
             <Italian>Riparare il veicolo (inginocchiarsi)</Italian>
+            <French>Réparer un véhicule (à genoux)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_RepairProne">
             <English>Repair Vehicle (Prone)</English>
@@ -402,6 +438,7 @@
             <Chinesesimp>维修车辆（俯卧）</Chinesesimp>
             <Chinese>維修車輛（俯臥）</Chinese>
             <Italian>Riparazione veicolo (prono)</Italian>
+            <French>Réparer un véhicule (couché)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Dead">
             <English>Dead</English>
@@ -411,6 +448,7 @@
             <Chinesesimp>死亡</Chinesesimp>
             <Chinese>死亡</Chinese>
             <Italian>Morta</Italian>
+            <French>Mort</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_DeadLeaning">
             <English>Dead (Leaning)</English>
@@ -420,6 +458,7 @@
             <Chinesesimp>死亡（倚靠）</Chinesesimp>
             <Chinese>死亡（倚靠）</Chinese>
             <Italian>Morto (pendente)</Italian>
+            <French>Mort (pendant)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_DeadSit">
             <English>Dead (Sitting)</English>
@@ -429,6 +468,7 @@
             <Chinesesimp>死亡（坐姿）</Chinesesimp>
             <Chinese>死亡（坐姿）</Chinese>
             <Italian>morto (seduto)</Italian>
+            <French>Mort (assis)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_LeanOnTable">
             <English>Lean On Table</English>
@@ -438,6 +478,7 @@
             <Chinesesimp>靠在桌上</Chinesesimp>
             <Chinese>靠在桌上</Chinese>
             <Italian>Appoggiarsi al tavolo</Italian>
+            <French>S'appuyer sur la table</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Binoculars">
             <English>Look Through Binoculars</English>
@@ -447,6 +488,7 @@
             <Chinesesimp>透过望远镜看</Chinesesimp>
             <Chinese>透過望遠鏡看</Chinese>
             <Italian>Guarda attraverso il binocolo</Italian>
+            <French>Regarder dans les jumelles</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Salute">
             <English>Salute</English>
@@ -456,6 +498,7 @@
             <Chinesesimp>敬礼</Chinesesimp>
             <Chinese>敬禮</Chinese>
             <Italian>Saluto</Italian>
+            <French>Salutations</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Combat">
             <English>Combat Ready</English>
@@ -467,6 +510,7 @@
             <Chinesesimp>战斗准备</Chinesesimp>
             <Chinese>戰鬥準備</Chinese>
             <Italian>Combattimento pronto</Italian>
+            <French>Prêt au combat</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby">
             <English>Ambient Flyby</English>
