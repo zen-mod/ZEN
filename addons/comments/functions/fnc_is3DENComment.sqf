@@ -19,4 +19,4 @@ params ["_id"];
 
 (_id splitString ":") params ["_type"];
 
-_type isEqualTo "3den"
+_type isEqualTo COMMENT_TYPE_3DEN

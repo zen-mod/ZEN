@@ -27,11 +27,11 @@ if (!GVAR(enableComments) && !GVAR(enable3DENComments)) exitWith {};
 
 if (!GVAR(draw3DAdded)) then {
     LOG("Adding Draw3D.");
-    addMissionEventHandler ["Draw3D", {call FUNC(onDraw3D)}];
+    addMissionEventHandler ["Draw3D", FUNC(onDraw3D)];
     GVAR(draw3DAdded) = true;
 };
 
 // MapDraw EH needs to be added every time the Zeus display is opened.
 LOG("Adding map draw.");
 private _ctrlMap = _display displayCtrl IDC_RSCDISPLAYCURATOR_MAINMAP;
-_ctrlMap ctrlAddEventHandler ["Draw", {call FUNC(onDraw)}];
+_ctrlMap ctrlAddEventHandler ["Draw", FUNC(onDraw)];

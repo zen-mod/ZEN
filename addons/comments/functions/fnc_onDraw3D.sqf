@@ -4,7 +4,7 @@
  * Handles drawing the comments in Zeus 3D.
  *
  * Arguments:
- * None.
+ * None
  *
  * Return Value:
  * None

@@ -17,6 +17,8 @@
 
 params ["_id"];
 
+if (!isServer) exitWith {};
+
 if !(_id call FUNC(is3DENComment)) then {
     private _jipId = format [QGVAR(%1), _id];
     [_jipId] call CBA_fnc_removeGlobalEventJIP;

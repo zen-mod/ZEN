@@ -8,7 +8,7 @@
  * 1: Comment <ARRAY>
  *
  * Return Value:
- * None.
+ * Icon control for the comment <CONTROL>.
  *
  * Example:
  * [_display, _comment] call zen_comments_fnc_createIcon
@@ -37,3 +37,5 @@ _ctrlIcon ctrlAddEventHandler ["KeyDown", {
 }];
 
 GVAR(icons) set [_id, _ctrlIcon];
+
+_ctrlIcon

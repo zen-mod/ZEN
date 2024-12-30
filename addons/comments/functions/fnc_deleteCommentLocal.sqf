@@ -7,7 +7,7 @@
  * 0: Comment id <STRING>
  *
  * Return Value:
- * None
+ * Success <BOOLEAN>
  *
  * Example:
  * ["zeus:2"] call zen_comments_fnc_deleteCommentLocal
@@ -17,13 +17,15 @@
 
 params ["_id"];
 
-if (!hasInterface) exitWith {};
+if (!hasInterface) exitWith {false};
 
-private _namespace = [GVAR(comments), GVAR(3DENComments)] select (_id call FUNC(is3DENComment));
+private _collection = [GVAR(comments), GVAR(3DENComments)] select (_id call FUNC(is3DENComment));
 
-private _index = _namespace findIf {(_x select 0) isEqualTo _id};
-if (_index < 0) exitWith {};
+private _index = _collection findIf {(_x select 0) isEqualTo _id};
+if (_index < 0) exitWith {false};
 
-_namespace deleteAt _index;
+_collection deleteAt _index;
 
 [_id] call FUNC(deleteIcon);
+
+true

@@ -37,7 +37,7 @@ private _comments = [];
         continue;
     };
 
-    _comments pushBack [format ["3den:%1", _id], _posASL, _title, _tooltip];
+    _comments pushBack [format ["%1:%2", COMMENT_TYPE_3DEN, _id], _posASL, _title, _tooltip];
 } forEach (all3DENEntities param [7, []]);
 
 // This command does not work if the mission is not saved

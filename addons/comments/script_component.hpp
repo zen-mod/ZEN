@@ -41,3 +41,6 @@
 #define GROUND_ICON_CONNECTION_HEIGHT 0.5
 
 #define STR_CREATE_COMMENT "$STR_3den_display3den_entitymenu_createcomment_text"
+
+#define COMMENT_TYPE_3DEN "3den"
+#define COMMENT_TYPE_ZEUS "zeus"

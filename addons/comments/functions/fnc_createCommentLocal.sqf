@@ -11,7 +11,7 @@
  * 4: Name of the curator that created the comment <STRING>
  *
  * Return Value:
- * None.
+ * None
  *
  * Example:
  * ["zeus:1", [0,0,0], "My Comment", "This is a nice comment", "Joe"] call zen_comments_fnc_createCommentLocal
