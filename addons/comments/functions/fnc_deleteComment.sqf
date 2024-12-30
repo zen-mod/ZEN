@@ -10,14 +10,17 @@
  * None
  *
  * Example:
- * call zen_comments_fnc_deleteComment
+ * ["zeus:2"] call zen_comments_fnc_deleteComment
  *
  * Public: No
  */
 
 params ["_id"];
 
-private _jipId = format [QGVAR(%1), _id];
-[_jipId] call CBA_fnc_removeGlobalEventJIP;
+if !(_id call FUNC(is3DENComment)) then {
+    private _jipId = format [QGVAR(%1), _id];
+    [_jipId] call CBA_fnc_removeGlobalEventJIP;
+};
 
-[QGVAR(removeComment), [_id]] call CBA_fnc_globalEvent;
+TRACE_1("Delete comment",_id);
+[QGVAR(deleteCommentLocal), [_id]] call CBA_fnc_globalEvent;

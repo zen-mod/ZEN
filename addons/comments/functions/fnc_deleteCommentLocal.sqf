@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [_id] call zen_comments_fnc_deleteCommentLocal
+ * ["zeus:2"] call zen_comments_fnc_deleteCommentLocal
  *
  * Public: No
  */
@@ -19,9 +19,11 @@ params ["_id"];
 
 if (!hasInterface) exitWith {};
 
-private _index = GVAR(comments) findIf {(_x select 0) isEqualTo _id};
+private _namespace = [GVAR(comments), GVAR(3DENComments)] select (_id call FUNC(is3DENComment));
+
+private _index = _namespace findIf {(_x select 0) isEqualTo _id};
 if (_index < 0) exitWith {};
 
-GVAR(comments) deleteAt _index;
+_namespace deleteAt _index;
 
 [_id] call FUNC(deleteIcon);

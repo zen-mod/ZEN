@@ -59,3 +59,12 @@
         GVAR(3DENCommentsActiveColor) = [_r, _g, _b, 1];
     }
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(allowDeleting3DENComments),
+    "CHECKBOX",
+    [LLSTRING(AllowDeleting3DENComments), LLSTRING(AllowDeleting3DENComments_Description)],
+    [ELSTRING(main,DisplayName), LLSTRING(DisplayName)],
+    false,
+    0
+] call CBA_fnc_addSetting;

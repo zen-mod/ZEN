@@ -23,4 +23,17 @@ private _ctrlIcon = _display ctrlCreate [QGVAR(RscActiveCommentIcon), -1];
 _ctrlIcon setVariable [QGVAR(comment), _id];
 _ctrlIcon ctrlSetTooltip _tooltip;
 
+_ctrlIcon ctrlAddEventHandler ["KeyDown", {
+    params ["_ctrlIcon", "_key"];
+
+    if (_key isNotEqualTo DIK_DELETE) exitWith {};
+
+    private _id = _ctrlIcon getVariable [QGVAR(comment), ""];
+    if (_id isEqualTo "") exitWith {};
+
+    if (!GVAR(allowDeleting3DENComments) && {_id call FUNC(is3DENComment)}) exitWith {};
+
+    [QGVAR(deleteComment), [_id]] call CBA_fnc_serverEvent;
+}];
+
 GVAR(icons) set [_id, _ctrlIcon];

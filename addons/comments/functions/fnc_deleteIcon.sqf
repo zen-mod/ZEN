@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [_id] call zen_comments_fnc_deleteIcon
+ * ["zeus:2"] call zen_comments_fnc_deleteIcon
  *
  * Public: No
  */

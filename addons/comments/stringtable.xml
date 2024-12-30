@@ -51,5 +51,13 @@
             <English>Color of 3DEN comments in Zeus.</English>
             <German>Farbe der 3DEN-Kommentare im Zeus.</German>
         </Key>
+        <Key ID="STR_ZEN_Comments_AllowDeleting3DENComments">
+            <English>Allow deleting 3DEN comments</English>
+            <German>Erlaube Löschen von 3DEN-Kommentaren</German>
+        </Key>
+        <Key ID="STR_ZEN_Comments_AllowDeleting3DENComments_Description">
+            <English>Allow any Zeus to delete 3DEN comments.</English>
+            <German>Erlaube jedem Zeus das Löschen von 3DEN-Kommentaren.</German>
+        </Key>
     </Package>
 </Project>

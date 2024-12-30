@@ -27,5 +27,5 @@ GVAR(nextID) = GVAR(nextID) + 1;
 private _id = format ["zeus:%1", GVAR(nextID)];
 private _jipId = format [QGVAR(%1), _id];
 
-TRACE_6("",_id,_posASL,_title,_tooltip,_creator,_jipId);
+TRACE_6("Create comment",_id,_posASL,_title,_tooltip,_creator,_jipId);
 [QGVAR(createCommentLocal), [_id, _posASL, _title, _tooltip, _creator], _jipId] call CBA_fnc_globalEventJIP;
