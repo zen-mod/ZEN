@@ -33,8 +33,6 @@
             <English>Color of comments created in Zeus.</English>
             <German>Farbe der im Zeus erstellen Kommentare.</German>
         </Key>
-    </Package>
-    <Package name="3DENComments">
         <Key ID="STR_ZEN_Comments_3DENComments">
             <English>Show 3DEN comments in Zeus</English>
             <German>Zeige 3DEN-Kommentare im Zeus</German>
