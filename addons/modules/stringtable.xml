@@ -3178,6 +3178,7 @@
             <Chinesesimp>旋转物体</Chinesesimp>
             <Chinese>旋轉物體</Chinese>
             <Italian>Ruota oggetto</Italian>
+            <French>Rotation de l'objet</French>
         </Key>
         <Key ID="STR_ZEN_Modules_AtomicBomb">
             <English>Atomic Bomb</English>
@@ -3187,6 +3188,7 @@
             <Chinesesimp>核弹</Chinesesimp>
             <Chinese>核彈</Chinese>
             <Italian>Bomba atomica</Italian>
+            <French>Bombe atomique</French>
         </Key>
         <Key ID="STR_ZEN_Modules_DestructionRadius">
             <English>Destruction Radius (m)</English>
@@ -3196,6 +3198,7 @@
             <Chinesesimp>毁灭半径（米）</Chinesesimp>
             <Chinese>毀滅半徑（米）</Chinese>
             <Italian>Raggio di distruzione (m)</Italian>
+            <French>Rayon de destruction (m)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_DestructionRate">
             <English>Destruction Rate</English>
@@ -3205,6 +3208,7 @@
             <Chinesesimp>破坏率</Chinesesimp>
             <Chinese>破壞率</Chinese>
             <Italian>Tasso di distruzione</Italian>
+            <French>Taux de destruction</French>
         </Key>
         <Key ID="STR_ZEN_Modules_DestructionRate_Tooltip">
             <English>The maximum number of objects destroyed per second.</English>
@@ -3214,6 +3218,7 @@
             <Chinesesimp>每秒钟摧毁的最大物体数量。</Chinesesimp>
             <Chinese>每秒鐘摧毀的最大物體數量。</Chinese>
             <Italian>Il numero massimo di oggetti distrutti al secondo.</Italian>
+            <French>Nombre maximum d'objets détruits par seconde.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ColorCorrections">
             <English>Color Corrections</English>
@@ -3223,6 +3228,7 @@
             <Chinesesimp>色彩校正</Chinesesimp>
             <Chinese>色彩校正</Chinese>
             <Italian>Correzioni del colore</Italian>
+            <French>Corrections de couleurs</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ConfirmDetonation">
             <English>Are you sure you want to detonate an atomic bomb?</English>
@@ -3232,6 +3238,7 @@
             <Chinesesimp>你确定要引爆核弹吗？</Chinesesimp>
             <Chinese>你確定要引爆原子彈嗎？</Chinese>
             <Italian>Sei sicuro di voler far esplodere una bomba atomica?</Italian>
+            <French>Êtes-vous sûr de vouloir faire exploser une bombe atomique ?</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAnimationViewer">
             <English>Show In Animation Viewer</English>
@@ -3240,6 +3247,7 @@
             <Chinese>在動畫瀏覽器中顯示</Chinese>
             <Japanese>アニメーション ビューワで表示</Japanese>
             <Italian>Mostra nel visualizzatore di animazioni</Italian>
+            <French>Affiché dans le visualiseur d'animation</French>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_Duration_Tooltip">
             <English>Controls the amount of time, in seconds, the units will suppress for.</English>
@@ -3248,41 +3256,49 @@
             <Chinese>控制單位壓制的時間(秒)。</Chinese>
             <German>Kontrolliert die Zeit in Sekunden, in der die Einheit unterdrückt.</German>
             <Italian>Controlla la quantità di tempo, in secondi, per la quale le unità sopprimeranno.</Italian>
+            <French>Contrôle le temps, en secondes, pendant lequel l'unité est supprimée.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_FireMode">
             <English>Fire Mode</English>
             <German>Feuermodus</German>
             <Japanese>射撃モード</Japanese>
+            <French>Mode de tir</French>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_FireMode_SingleShotsSlow">
             <English>Single Shots (Slow)</English>
             <German>Einzelfeuer (Langsam)</German>
             <Japanese>単発 (遅い)</Japanese>
+            <French>Tir unique (Lent)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_FireMode_SingleShotsFast">
             <English>Single Shots (Fast)</English>
             <German>Einzelfeuer (Schnell)</German>
             <Japanese>単発 (速い)</Japanese>
+            <French>Tir unique (rapide)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_FireMode_ThreeRoundBurstsSlow">
             <English>Three Round Bursts (Slow)</English>
             <German>Feuerstoß (Langsam)</German>
             <Japanese>三連射 (遅い)</Japanese>
+            <French>Coup de feu (Lent)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_FireMode_ThreeRoundBurstsFast">
             <English>Three Round Bursts (Fast)</English>
             <German>Feuerstoß (Schnell)</German>
             <Japanese>三連射 (早い)</Japanese>
+            <French>Coup de feu (Rapide)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_FireMode_FullyAutomaticWithPauses">
             <English>Fully Automatic (With Pauses)</English>
             <German>Dauerfeuer (Mit Pausen)</German>
             <Japanese>全連射 (止めあり)</Japanese>
+            <French>Tir continu (avec pauses)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_FireMode_FullyAutomaticUninterrupted">
             <English>Fully Automatic (Uninterrupted)</English>
             <German>Dauerfeuer (Ununterbrochen)</German>
             <Japanese>全連射 (休みなく)</Japanese>
+            <French>Tir continu (ininterrompu)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_Stance_Tooltip">
             <English>Controls the stance units on foot will employ while suppressing.</English>
@@ -3291,6 +3307,7 @@
             <Chinese>控制步行單位在壓制時的姿態。</Chinese>
             <German>Kontrolliert die Haltung, die Infateristen annehmen beim unterdrücken.</German>
             <Italian>Controlla le unità di posizione a piedi che utilizzeranno durante la soppressione.</Italian>
+            <French>Contrôle l'attitude que les unités à pied adopteront lors de la suppression.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_EntireGroup">
             <English>Entire Group</English>
@@ -3299,6 +3316,7 @@
             <Chinese>整個小隊</Chinese>
             <German>Gesammte Gruppe</German>
             <Italian>Intero Gruppo</Italian>
+            <French>Groupe entier</French>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_EntireGroup_Tooltip">
             <English>Controls whether the entire group will perform the suppressive fire.</English>
@@ -3307,6 +3325,7 @@
             <Chinese>控制整個小隊是否執行壓制火力。</Chinese>
             <German>Kontrolliert, ob die gesammte Gruppe Unterdrückungsfeuer Leistet.</German>
             <Italian>Controlla se l'intero gruppo eseguirà il fuoco di soppressione.</Italian>
+            <French>Contrôle si l'ensemble du groupe effectue un tir de suppression.</French>
         </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_Buildings">
@@ -3319,6 +3338,7 @@
             <Chinesesimp>建筑物</Chinesesimp>
             <Chinese>建築物</Chinese>
             <Italian>Edifici</Italian>
+            <French>Bâtiments</French>
         </Key>
         <Key ID="STR_ZEN_Modules_DevTools">
             <English>Development Tools</English>
@@ -3329,6 +3349,7 @@
             <Chinesesimp>开发工具</Chinesesimp>
             <Chinese>開發工具</Chinese>
             <Italian>Strumenti di sviluppo</Italian>
+            <French>Outils de développement</French>
         </Key>
         <Key ID="STR_ZEN_Modules_Equipment">
             <English>Equipment</English>
@@ -3340,6 +3361,7 @@
             <Chinesesimp>装备</Chinesesimp>
             <Chinese>裝備</Chinese>
             <Italian>Attrezzatura</Italian>
+            <French>Equipement</French>
         </Key>
         <Key ID="STR_ZEN_Modules_Objects">
             <English>Objects</English>
@@ -3351,6 +3373,7 @@
             <Chinesesimp>物体</Chinesesimp>
             <Chinese>物體</Chinese>
             <Italian>Oggetti</Italian>
+            <French>Objets</French>
         </Key>
         <Key ID="STR_ZEN_Modules_Players">
             <English>Players</English>
@@ -3362,6 +3385,7 @@
             <Chinesesimp>玩家</Chinesesimp>
             <Chinese>玩家</Chinese>
             <Italian>Giocatori</Italian>
+            <French>Joueurs</French>
         </Key>
         <Key ID="STR_ZEN_Modules_Reinforcements">
             <English>Reinforcements</English>
@@ -3372,6 +3396,7 @@
             <Polish>Wzmocnienia/Posiłki</Polish>
             <Japanese>増援</Japanese>
             <Italian>Rinforzi</Italian>
+            <French>Renforts</French>
         </Key>
         <Key ID="STR_ZEN_Modules_Spawn">
             <English>Spawn</English>
@@ -3383,6 +3408,7 @@
             <Chinesesimp>生成</Chinesesimp>
             <Chinese>生成</Chinese>
             <Italian>Spawn</Italian>
+            <French>Spawn</French>
         </Key>
         <!-- Feedback Messages -->
         <Key ID="STR_ZEN_Modules_NoUnitSelected">
@@ -3410,6 +3436,7 @@
             <Chinese>放置在一個物體上</Chinese>
             <Polish>Postaw na obiekcie</Polish>
             <Italian>Posiziona su un oggetto</Italian>
+            <French>Placer sur un objet</French>
         </Key>
         <Key ID="STR_ZEN_Modules_NotAttachedTo">
             <English>Only for attached objects</English>
@@ -3471,6 +3498,7 @@
             <Chinesesimp>单位不得是步兵</Chinesesimp>
             <Chinese>單位不得是步兵</Chinese>
             <Italian>L'unità non deve essere di fanteria</Italian>
+            <French>L'unité ne doit pas être de l'infanterie</French>
         </Key>
         <Key ID="STR_ZEN_Modules_OnlyPlayers">
             <English>Unit must be a player</English>
@@ -3482,6 +3510,7 @@
             <Chinesesimp>单位必须是玩家</Chinesesimp>
             <Chinese>單位必須是玩家</Chinese>
             <Italian>L'unità deve essere un giocatore</Italian>
+            <French>L'unité doit être un joueur</French>
         </Key>
         <Key ID="STR_ZEN_Modules_OnlyVehicles">
             <English>Unit must be a vehicle</English>
@@ -3501,6 +3530,7 @@
         <Key ID="STR_ZEN_Modules_OnlyVehiclesOrFlags">
             <English>Unit must be a vehicle or flag</English>
             <Japanese>ユニットは車両か旗である必要があります</Japanese>
+            <French>L'unité doit être un véhicule ou un drapeau</French>
         </Key>
         <Key ID="STR_ZEN_Modules_OnlyAircraft">
             <English>The unit must be an aircraft</English>
@@ -3512,6 +3542,7 @@
             <Chinesesimp>单位必须是飞机</Chinesesimp>
             <Chinese>單位必須是飛機</Chinese>
             <Italian>L'unità deve essere un aeromobile</Italian>
+            <French>L'unité doit être un aéronef</French>
         </Key>
         <Key ID="STR_ZEN_Modules_OnlySpecificSide">
             <English>Unit must belong to an appropriate side</English>
@@ -3549,6 +3580,7 @@
             <Chinesesimp>无法找到可供搜索的建筑物</Chinesesimp>
             <Chinese>無法找到可供搜索的建築物</Chinese>
             <Italian>Impossibile trovare un edificio da cercare</Italian>
+            <French>Pas de bâtiment à fouiller à proximité</French>
         </Key>
         <Key ID="STR_ZEN_Modules_NoTargetModules">
             <English>No target modules exist, place one first.</English>
@@ -3558,6 +3590,7 @@
             <Chinesesimp>没有目标模块，请先放置一个。</Chinesesimp>
             <Chinese>沒有目標模塊，請先放置一個。</Chinese>
             <Italian>Non esistono moduli di destinazione, posizionane uno per primo.</Italian>
+            <French>Si aucun module cible n'existe, il faut en placer un en premier.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_NotInRangeOfArtillery">
             <English>Target position is not in range for all vehicles</English>
@@ -3567,6 +3600,7 @@
             <Chinesesimp>目标位置不在所有车辆范围内</Chinesesimp>
             <Chinese>目標位置不在所有車輛範圍內</Chinese>
             <Italian>La posizione target non è nel raggio d'azione per tutti i veicoli</Italian>
+            <French>La position cible n'est pas à portée de tous les véhicules</French>
         </Key>
         <Key ID="STR_ZEN_Modules_PlaceAnLZ">
             <English>Place an LZ</English>
@@ -3577,6 +3611,7 @@
             <Polish>Postaw LZ</Polish>
             <Japanese>LZ を設置</Japanese>
             <Italian>Posiziona un LZ</Italian>
+            <French>Placer une LZ</French>
         </Key>
         <Key ID="STR_ZEN_Modules_NoTeleportPosition">
             <English>Unable to find suitable position to teleport vehicle to.</English>
@@ -3586,6 +3621,7 @@
             <Chinesesimp>无法找到合适的位置传送车辆。</Chinesesimp>
             <Chinese>無法找到合適的位置傳送車輛。</Chinese>
             <Italian>Impossibile trovare una posizione adatta per il teletrasporto del veicolo.</Italian>
+            <French>Impossible de trouver une position adéquate pour téléporter le véhicule.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_MustHaveGunner">
             <English>Vehicle must have a primary gunner seat</English>
@@ -3594,6 +3630,7 @@
             <Chinesesimp>车辆必须有一个主炮手座位</Chinesesimp>
             <Chinese>車輛必須有一個主砲手座位</Chinese>
             <Italian>Il veicolo deve avere un posto di mitragliere principale</Italian>
+            <French>Le véhicule doit être équipé d'un siège pour le tireur principal</French>
         </Key>
         <Key ID="STR_ZEN_Modules_NoCrewAvailable">
             <English>Vehicle must have other crew available</English>
@@ -3602,6 +3639,7 @@
             <Chinesesimp>车辆必须有其他乘员位可用</Chinesesimp>
             <Chinese>車輛必須有其他乘員位可用</Chinese>
             <Italian>Il veicolo deve avere altro equipaggio disponibile</Italian>
+            <French>Le véhicule doit disposer d'un autre équipage</French>
         </Key>
     </Package>
 </Project>
