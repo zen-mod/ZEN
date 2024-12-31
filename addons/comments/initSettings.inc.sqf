@@ -1,10 +1,10 @@
 [
-    QGVAR(enableComments),
+    QGVAR(enabled),
     "CHECKBOX",
-    [LLSTRING(Comments), LLSTRING(Comments_Description)],
-    [ELSTRING(main,DisplayName), LLSTRING(DisplayName)],
+    [LSTRING(Enabled), LSTRING(Enabled_Description)],
+    [ELSTRING(main,DisplayName), LSTRING(DisplayName)],
     true,
-    0,
+    true,
     {
         TRACE_1("Enable comments setting changed",_this);
 
@@ -15,18 +15,21 @@
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(commentColor),
+    QGVAR(color),
     "COLOR",
-    [LLSTRING(CommentColor), LLSTRING(CommentColor_Description)],
-    [ELSTRING(main,DisplayName), LLSTRING(DisplayName)],
-    [1, 1, 0, 0.7],
-    0,
-    {
-        TRACE_1("Comment color setting changed",_this);
-        params ["_r", "_g", "_b", "_a"];
+    [LSTRING(Color), LSTRING(Color_Description)],
+    [ELSTRING(main,DisplayName), LSTRING(DisplayName)],
+    [1, 1, 0],
+    false
+] call CBA_fnc_addSetting;
 
-        GVAR(commentsActiveColor) = [_r, _g, _b, 1];
-    }
+[
+    QGVAR(color3DEN),
+    "COLOR",
+    [LSTRING(Color3DEN), LSTRING(Color3DEN_Description)],
+    [ELSTRING(main,DisplayName), LSTRING(DisplayName)],
+    [0, 1, 0.75],
+    false
 ] call CBA_fnc_addSetting;
 
 [
@@ -42,21 +45,6 @@
         private _display = findDisplay IDD_RSCDISPLAYCURATOR;
         if (!_this || GVAR(enableComments) || isNull _display || GVAR(draw3DAdded)) exitWith {};
         [_display] call FUNC(addDrawEventHandler);
-    }
-] call CBA_fnc_addSetting;
-
-[
-    QGVAR(3DENCommentColor),
-    "COLOR",
-    [LLSTRING(3DENCommentColor), LLSTRING(3DENCommentColor_Description)],
-    [ELSTRING(main,DisplayName), LLSTRING(DisplayName)],
-    [0, 1, 0.75, 0.7],
-    0,
-    {
-        TRACE_1("3DEN comment color setting changed",_this);
-        params ["_r", "_g", "_b", "_a"];
-
-        GVAR(3DENCommentsActiveColor) = [_r, _g, _b, 1];
     }
 ] call CBA_fnc_addSetting;
 

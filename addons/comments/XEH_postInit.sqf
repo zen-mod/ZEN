@@ -1,19 +1,22 @@
 #include "script_component.hpp"
 
-if (is3DEN) exitWith {};
-
 if (isServer) then {
-    GVAR(nextId) = 0;
     [QGVAR(createComment), LINKFUNC(createComment)] call CBA_fnc_addEventHandler;
     [QGVAR(deleteComment), LINKFUNC(deleteComment)] call CBA_fnc_addEventHandler;
+    [QGVAR(updateComment), LINKFUNC(updateComment)] call CBA_fnc_addEventHandler;
 };
 
 if (hasInterface) then {
-    [QGVAR(createCommentLocal), LINKFUNC(createCommentLocal)] call CBA_fnc_addEventHandler;
-    [QGVAR(deleteCommentLocal), LINKFUNC(deleteCommentLocal)] call CBA_fnc_addEventHandler;
+    {
+        _x params ["_id", "_position", "_title", "_tooltip"];
 
-    ["zen_curatorDisplayLoaded", LINKFUNC(addDrawEventHandler)] call CBA_fnc_addEventHandler;
+        // Comments from 3DEN do not have the creator's name
+        GVAR(comments) set [_id, [_position, _title, _tooltip, ""]];
+    } forEach getMissionConfigValue [QGVAR(3DENComments), []];
 
-    GVAR(3DENComments) = getMissionConfigValue [QGVAR(3DENComments), []];
-    TRACE_1("Loaded 3DEN Comments from mission",GVAR(3DENComments));
+    [QGVAR(commentCreated), LINKFUNC(onCommentCreated)] call CBA_fnc_addEventHandler;
+    [QGVAR(commentDeleted), LINKFUNC(onCommentDeleted)] call CBA_fnc_addEventHandler;
+    [QGVAR(commentUpdated), LINKFUNC(onCommentUpdated)] call CBA_fnc_addEventHandler;
+
+    // ["zen_curatorDisplayLoaded", LINKFUNC(addDrawEventHandler)] call CBA_fnc_addEventHandler;
 };

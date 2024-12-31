@@ -1,7 +1,7 @@
 class Cfg3DEN {
     class Attributes {
         class Default;
-        class GVAR(HiddenAttribute): Default {
+        class GVAR(hiddenAttribute): Default {
             onLoad = QUOTE((ctrlParentControlsGroup ctrlParentControlsGroup (_this select 0)) ctrlShow false);
         };
     };
@@ -10,15 +10,13 @@ class Cfg3DEN {
         class Scenario {
             class AttributeCategories {
                 class ADDON {
+                    displayName = CSTRING(DisplayName);
                     collapsed = 1;
-                    displayName = ECSTRING(main,DisplayName);
-
                     class Attributes {
                         class GVAR(3DENComments) {
-                            property = QGVAR(3DENComments);
-                            value = 0;
-                            control = QGVAR(HiddenAttribute);
                             displayName = CSTRING(DisplayName);
+                            property = QGVAR(3DENComments);
+                            control = QGVAR(hiddenAttribute);
                             tooltip = "";
                             defaultValue = "[]";
                             expression = "";

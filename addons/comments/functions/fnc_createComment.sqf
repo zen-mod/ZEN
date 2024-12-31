@@ -1,31 +1,38 @@
 #include "script_component.hpp"
 /*
  * Author: Timi007
- * Creates a comment in Zeus. Must be called on server.
+ * Creates a new comment in Zeus.
  *
  * Arguments:
- * 0: Comment position ASL <ARRAY>
- * 1: Comment title <STRING>
- * 2: Comment tooltip <STRING>
- * 3: Name of the curator that created the comment <STRING>
+ * 0: Position ASL <ARRAY>
+ * 1: Title <STRING>
+ * 2: Tooltip <STRING> (default: "")
+ * 3: Creator <STRING> (default: "")
  *
  * Return Value:
- * None.
+ * None
  *
  * Example:
- * [[0,0,0], "My Comment", "This is a nice comment", "Joe"] call zen_comments_fnc_createComment
+ * [[0, 0, 0], "My Comment", "This is a nice comment", "Joe"] call zen_comments_fnc_createComment
  *
  * Public: No
  */
 
-params ["_posASL", "_title", ["_tooltip", "", [""]], ["_creator", "", [""]]];
+if (!isServer) exitWith {
+    [QGVAR(createComment), _this] call CBA_fnc_serverEvent;
+};
 
-if (!isServer) exitWith {};
-
-GVAR(nextID) = GVAR(nextID) + 1;
+params [
+    ["_position", [0, 0, 0], [[]], 3],
+    ["_title", "", [""]],
+    ["_tooltip", "", [""]],
+    ["_creator", "", [""]]
+];
 
 private _id = format ["zeus:%1", GVAR(nextID)];
-private _jipId = format [QGVAR(%1), _id];
+private _data = [_position, _title, _tooltip, _creator];
+GVAR(nextID) = GVAR(nextID) + 1;
 
-TRACE_6("Create comment",_id,_posASL,_title,_tooltip,_creator,_jipId);
-[QGVAR(createCommentLocal), [_id, _posASL, _title, _tooltip, _creator], _jipId] call CBA_fnc_globalEventJIP;
+private _jipID = format [QGVAR(%1), _id];
+[QGVAR(commentCreated), [_id, _data], _jipID] call CBA_fnc_globalEventJIP;
+TRACE_2("Comment created",_id,_data);

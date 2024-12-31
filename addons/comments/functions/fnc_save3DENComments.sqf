@@ -1,11 +1,11 @@
 #include "script_component.hpp"
 /*
  * Author: Timi007
- * Function called when 3DEN save event is triggered.
- * Handles saving comments into scenario space for later use.
+ * Saves comments from 3DEN into the mission attributes for later use.
  *
  * Arguments:
- * 0: Event that triggered this function (for debug purposes) <STRING>
+ * 0: Event <STRING> (default: "")
+ *   - The event that triggered this save, for debug purposes.
  *
  * Return Value:
  * None
@@ -16,30 +16,27 @@
  * Public: No
  */
 
-params [["_event", "", [""]]];
-
 if (!is3DEN) exitWith {};
 
+params [["_event", "", [""]]];
+
 private _comments = [];
+
 {
-    private _id = _x;
     // all3DENEntities always includes this id, ignore it
-    if (_id isEqualTo -999) then {
-        continue;
-    };
+    if (_x isEqualTo -999) then {continue};
 
-    private _posASL = (_id get3DENAttribute "position") select 0;
-    private _title = (_id get3DENAttribute "name") select 0;
-    private _tooltip = (_id get3DENAttribute "description") select 0;
+    private _position = (_x get3DENAttribute "position") select 0;
+    private _title = (_x get3DENAttribute "name") select 0;
+    private _tooltip = (_x get3DENAttribute "description") select 0;
 
-    // Ignore comments with special ignore directive in the description/tooltip
-    if (IGNORE_3DEN_COMMENT_STRING in _tooltip) then {
-        continue;
-    };
+    // Ignore comments with special ignore directive in the tooltip
+    if (IGNORE_3DEN_COMMENT_STRING in _tooltip) then {continue};
 
-    _comments pushBack [format ["3den:%1", _id], _posASL, _title, _tooltip];
-} forEach (all3DENEntities param [7, []]);
+    _comments pushBack [format ["3den:%1", _x], _position, _title, _tooltip];
+} forEach (all3DENEntities select 7);
 
 // This command does not work if the mission is not saved
 set3DENMissionAttributes [["Scenario", QGVAR(3DENComments), _comments]];
+
 TRACE_2("Saved 3DEN comments",_event,_comments);

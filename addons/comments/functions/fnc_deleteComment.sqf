@@ -1,26 +1,30 @@
 #include "script_component.hpp"
 /*
  * Author: Timi007
- * Deletes a comment created in Zeus. Must be called on server.
+ * Deletes a comment created in Zeus.
  *
  * Arguments:
- * 0: Comment id <STRING>
+ * 0: Comment ID <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * ["zeus:2"] call zen_comments_fnc_deleteComment
+ * ["zeus:0"] call zen_comments_fnc_deleteComment
  *
  * Public: No
  */
 
-params ["_id"];
-
-if !(_id call FUNC(is3DENComment)) then {
-    private _jipId = format [QGVAR(%1), _id];
-    [_jipId] call CBA_fnc_removeGlobalEventJIP;
+if (!isServer) exitWith {
+    [QGVAR(deleteComment), _this] call CBA_fnc_serverEvent;
 };
 
-TRACE_1("Delete comment",_id);
-[QGVAR(deleteCommentLocal), [_id]] call CBA_fnc_globalEvent;
+params ["_id"];
+
+// JIP event IDs are globally unique. For 3DEN comments, there won't be a created
+// event but for Zeus ones the created JIP event will be overwritten with this
+// deleted event that shares the same JIP ID, meaning that we don't have to remove
+// the created JIP event.
+private _jipID = format [QGVAR(%1), _id];
+[QGVAR(commentDeleted), _id, _jipID] call CBA_fnc_globalEventJIP;
+TRACE_1("Comment deleted",_id);
