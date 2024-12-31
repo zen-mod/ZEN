@@ -28,16 +28,17 @@ private _comments = [];
         continue;
     };
 
-    private _posASL = (_id get3DENAttribute "position") select 0;
-    private _title = (_id get3DENAttribute "name") select 0;
-    private _tooltip = (_id get3DENAttribute "description") select 0;
-
     // Ignore comments with special ignore directive in the description/tooltip
+    private _tooltip = (_id get3DENAttribute "description") select 0;
     if (IGNORE_3DEN_COMMENT_STRING in _tooltip) then {
         continue;
     };
 
-    _comments pushBack [format ["%1:%2", COMMENT_TYPE_3DEN, _id], _posASL, _title, _tooltip];
+    private _posASL = (_id get3DENAttribute "position") select 0;
+    private _title = (_id get3DENAttribute "name") select 0;
+
+    // Save in hashmap format with id as key
+    _comments pushBack [format ["%1:%2", COMMENT_TYPE_3DEN, _id], [_posASL, _title, _tooltip]];
 } forEach (all3DENEntities param [7, []]);
 
 // This command does not work if the mission is not saved

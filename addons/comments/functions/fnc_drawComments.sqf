@@ -1,25 +1,25 @@
 #include "script_component.hpp"
 /*
  * Author: Timi007
- * Draw comments on screen. Needs to be called every frame.
+ * Draws comments on screen. Needs to be called every frame.
  *
  * Arguments:
- * 0: Comments <ARRAY>
+ * 0: Comments <HASHMAP>
  * 1: Comment controls <HASHMAP>
- * 2: Comment color (RGBA) <ARRAY>
- * 2: Comment color when mouse is hovered over it (RGBA) <ARRAY>
- * 2: Map control <CONTROL> (Optional, default: Draw in 3D)
+ * 2: Draw Zeus comments <BOOLEAN> (Optional, default: true)
+ * 3: Draw 3DEN comments <BOOLEAN> (Optional, default: true)
+ * 4: Map control <CONTROL> (Optional, default: Draw in 3D)
  *
  * Return Value:
  * None
  *
  * Example:
- * [_comments, _icons, [1, 0, 0, 0.7], [1, 0, 0, 1]] call zen_comments_fnc_drawComments
+ * [_comments, _icons] call zen_comments_fnc_drawComments
  *
  * Public: No
  */
 
-params ["_comments", "_icons", "_color", "_activeColor", ["_mapCtrl", controlNull, [controlNull]]];
+params ["_comments", "_icons", ["_drawZeus", true, [true]], ["_draw3DEN", true, [true]], ["_mapCtrl", controlNull, [controlNull]]];
 
 private _drawIn3D = isNull _mapCtrl;
 
@@ -28,7 +28,19 @@ private _scale = 0;
 private _screenPos = [];
 
 {
-    _x params ["_id", "_posASL", "_title", "_tooltip", ["_creator", ""]];
+    private _id = _x;
+    _y params ["_posASL", "_title", "_tooltip", ["_color", []], ["_creator", ""]];
+
+    private _ctrlIcon = _icons getOrDefault [_id, controlNull];
+    if (isNull _ctrlIcon) then {
+        continue;
+    };
+
+    private _is3DENComment = _creator isEqualTo ""; // Faster then calling FUNC(is3DENComment)
+    if ((!_is3DENComment && !_drawZeus) || (_is3DENComment && !_draw3DEN)) then {
+        _ctrlIcon ctrlShow false;
+        continue;
+    };
 
     private _posAGL = ASLToAGL _posASL;
 
@@ -43,14 +55,21 @@ private _screenPos = [];
         _screenPos = _mapCtrl ctrlMapWorldToScreen _posAGL;
     };
 
-    private _ctrlIcon = _icons get _id;
-
     // Don't draw icon if it's too small or outside screen
     if (_scale < 0.01 || {_screenPos isEqualTo []}) then {
         _ctrlIcon ctrlShow false;
         continue;
     };
     _ctrlIcon ctrlShow true;
+
+    if (_color isEqualTo []) then {
+        if (_is3DENComment) then {
+            _color = GVAR(3DENColor);
+        } else {
+            _color = DEFAULT_COLOR;
+        };
+    };
+    private _activeColor = [_color select 0, _color select 1, _color select 2, 1];
 
     _ctrlIcon ctrlSetTextColor _color;
     _ctrlIcon ctrlSetActiveColor _activeColor;

@@ -19,7 +19,7 @@ BEGIN_COUNTER(onDraw);
 
 params ["_mapCtrl"];
 
-if (!GVAR(enableComments) && !GVAR(enable3DENComments)) exitWith {
+if (!GVAR(enabled) && !GVAR(enabled3DEN)) exitWith {
     _mapCtrl ctrlRemoveEventHandler [_thisEvent, _thisEventHandler];
     LOG("Removed 3DENComments map draw.");
 };
@@ -27,16 +27,6 @@ if (!GVAR(enableComments) && !GVAR(enable3DENComments)) exitWith {
 // Draw is only called when map is open
 if (call EFUNC(common,isInScreenshotMode)) exitWith {}; // HUD is hidden
 
-{
-    _x params ["_draw", "_comments", "_color", "_activeColor"];
-
-    if (_draw && _comments isNotEqualTo []) then {
-        [_comments, GVAR(icons), _color, _activeColor, _mapCtrl] call FUNC(drawComments);
-    };
-    // Icons are hidden in 3D first, so we don't need to hide them here again
-} forEach [
-    [GVAR(enableComments), GVAR(comments), GVAR(commentColor), GVAR(commentsActiveColor)],
-    [GVAR(enable3DENComments), GVAR(3DENComments), GVAR(3DENCommentColor), GVAR(3DENCommentsActiveColor)]
-];
+[GVAR(comments), GVAR(icons), GVAR(enabled), GVAR(enabled3DEN), _mapCtrl] call FUNC(drawComments);
 
 END_COUNTER(onDraw);

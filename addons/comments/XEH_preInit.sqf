@@ -7,8 +7,8 @@ PREP_RECOMPILE_START;
 PREP_RECOMPILE_END;
 
 GVAR(icons) = createHashMap;
+GVAR(comments) = createHashMap;
 GVAR(draw3DAdded) = false;
-GVAR(comments) = [];
 
 #include "initSettings.inc.sqf"
 

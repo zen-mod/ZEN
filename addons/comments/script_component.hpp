@@ -16,6 +16,7 @@
 
 #include "\x\zen\addons\main\script_macros.hpp"
 
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 #include "\a3\ui_f\hpp\defineCommonGrids.inc"
 #include "\x\zen\addons\common\defineResinclDesign.inc"
 
@@ -44,3 +45,5 @@
 
 #define COMMENT_TYPE_3DEN "3den"
 #define COMMENT_TYPE_ZEUS "zeus"
+
+#define DEFAULT_COLOR [1, 1, 0, 0.7]

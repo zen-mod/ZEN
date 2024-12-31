@@ -17,7 +17,7 @@
 
 BEGIN_COUNTER(onDraw3D);
 
-if (!GVAR(enableComments) && !GVAR(enable3DENComments)) exitWith {
+if (!GVAR(enabled) && !GVAR(enabled3DEN)) exitWith {
     removeMissionEventHandler [_thisEvent, _thisEventHandler];
 
     {ctrlDelete _y} forEach GVAR(icons);
@@ -30,22 +30,12 @@ if (!GVAR(enableComments) && !GVAR(enable3DENComments)) exitWith {
 if (
     isNull (findDisplay IDD_RSCDISPLAYCURATOR) ||   // We are in not Zeus
     {!isNull (findDisplay IDD_INTERRUPT)} ||        // Pause menu is opened
+    {dialog} ||                                     // We have a dialog open
     {call EFUNC(common,isInScreenshotMode)}         // HUD is hidden
 ) exitWith {
     {_y ctrlShow false} forEach GVAR(icons);
 };
 
-{
-    _x params ["_draw", "_comments", "_color", "_activeColor"];
-
-    if (_draw && _comments isNotEqualTo []) then {
-        [_comments, GVAR(icons), _color, _activeColor] call FUNC(drawComments);
-    } else {
-        [_comments, GVAR(icons), false] call FUNC(showIcons);
-    };
-} forEach [
-    [GVAR(enableComments), GVAR(comments), GVAR(commentColor), GVAR(commentsActiveColor)],
-    [GVAR(enable3DENComments), GVAR(3DENComments), GVAR(3DENCommentColor), GVAR(3DENCommentsActiveColor)]
-];
+[GVAR(comments), GVAR(icons), GVAR(enabled), GVAR(enabled3DEN)] call FUNC(drawComments);
 
 END_COUNTER(onDraw3D);

@@ -21,13 +21,14 @@ params ["_posASL"];
     localize STR_CREATE_COMMENT,
     [
         ["EDIT", localize "str_3den_comment_attribute_name_displayname", [""], true],
-        ["EDIT:MULTI", localize "str_3den_comment_attribute_name_tooltip", [""], true]
+        ["EDIT:MULTI", localize "str_3den_comment_attribute_name_tooltip", [""], true],
+        ["COLOR", localize "str_3den_marker_attribute_color_displayname", DEFAULT_COLOR]
     ],
     {
         params ["_values", "_posASL"];
-        _values params ["_title", "_tooltip"];
+        _values params ["_title", "_tooltip", "_color"];
 
-        [QGVAR(createComment), [_posASL, _title, _tooltip, profileName]] call CBA_fnc_serverEvent;
+        [QGVAR(createComment), [_posASL, _title, _tooltip, _color, profileName]] call CBA_fnc_serverEvent;
     },
     {},
     _posASL
