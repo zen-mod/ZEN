@@ -8,7 +8,6 @@ PREP(deleteCommentLocal);
 PREP(deleteIcon);
 PREP(drawComments);
 PREP(is3DENComment);
-PREP(module);
 PREP(onDraw);
 PREP(onDraw3D);
 PREP(save3DENComments);

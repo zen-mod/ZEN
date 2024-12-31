@@ -20,6 +20,5 @@ PRELOAD_ADDONS;
 
 #include "CfgEventHandlers.hpp"
 #include "Cfg3DEN.hpp"
-#include "CfgVehicles.hpp"
 #include "CfgContext.hpp"
 #include "gui.hpp"
