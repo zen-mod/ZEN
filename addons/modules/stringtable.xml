@@ -1362,6 +1362,7 @@
             <Chinesesimp>椅子上的物体</Chinesesimp>
             <Chinese>椅子上的物體</Chinese>
             <Italian>Oggetto Sedia</Italian>
+            <French>Objet sur la chaise</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateMinefield">
             <English>Create Minefield</English>
@@ -1919,6 +1920,7 @@
             <Chinesesimp>驻防小队</Chinesesimp>
             <Chinese>駐防小隊</Chinese>
             <Italian>Occupare edifici</Italian>
+            <French>Garrisonner le groupe</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGarrison_FillMode">
             <English>Filling Mode</English>
@@ -1929,6 +1931,7 @@
             <Chinesesimp>占领模式</Chinesesimp>
             <Chinese>佔領模式</Chinese>
             <Italian>Modalità di riempimento</Italian>
+            <French>Mode de remplissage</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGarrison_Even">
             <English>Even Filling</English>
@@ -1939,6 +1942,7 @@
             <Chinesesimp>均匀分布</Chinesesimp>
             <Chinese>均勻分佈</Chinese>
             <Italian>Riempi uniformemente</Italian>
+            <French>Remplissage uniforme</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGarrison_ByBuilding">
             <English>Building By Building</English>
@@ -1971,6 +1975,7 @@
             <Chinesesimp>自上而下分布</Chinesesimp>
             <Chinese>自上而下分佈</Chinese>
             <Italian>Riempi dall'alto verso il basso</Italian>
+            <French>Remplir de haut en bas</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleUnGarrison">
             <English>Un-Garrison Group</English>
@@ -1980,6 +1985,7 @@
             <Chinesesimp>非驻军小队</Chinesesimp>
             <Chinese>非駐軍小隊</Chinese>
             <Italian>Annulla l'occupazione</Italian>
+            <French>Groupe sans garnison</French>
         </Key>
         <Key ID="STR_ZEN_Modules_GroupSide">
             <English>Group Side</English>
@@ -1991,6 +1997,7 @@
             <Chinesesimp>小队阵营</Chinesesimp>
             <Chinese>小隊陣營</Chinese>
             <Italian>Lato gruppo</Italian>
+            <French>Côté groupe</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSuicideBomber">
             <English>Suicide Bomber</English>
@@ -2151,6 +2158,7 @@
             <Chinesesimp>炮击任务</Chinesesimp>
             <Chinese>砲擊任務</Chinese>
             <Italian>Missione di fuoco di artiglieria</Italian>
+            <French>Mission de tir d'artillerie</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_NotArtillery">
             <English>Unit is not an artillery vehicle</English>
@@ -2161,6 +2169,7 @@
             <Chinesesimp>单位不是火炮车</Chinesesimp>
             <Chinese>單位不是火砲車</Chinese>
             <Italian>L'unità non è un veicolo di artiglieria</Italian>
+            <French>L'unité n'est pas un véhicule d'artillerie</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_NoGunners">
             <English>Artillery vehicles have no gunners</English>
@@ -2171,6 +2180,7 @@
             <Chinesesimp>车辆没有炮手</Chinesesimp>
             <Chinese>車輛沒有砲手</Chinese>
             <Italian>I veicoli di artiglieria non hanno artiglieri</Italian>
+            <French>Les véhicules d'artillerie n'ont pas de tireurs</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_ArtilleryETA">
             <English>Artillery ETA: %1 seconds</English>
@@ -2181,6 +2191,7 @@
             <Chinesesimp>炮击预计落弹时间：%1秒</Chinesesimp>
             <Chinese>砲擊預計落彈時間：%1秒</Chinese>
             <Italian>ETA dell'artiglieria: %1 secondi</Italian>
+            <French>ETA de l'artillerie : %1 secondes</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Targetting">
             <English>Targeting</English>
@@ -2191,6 +2202,7 @@
             <Chinesesimp>目标</Chinesesimp>
             <Chinese>目標</Chinese>
             <Italian>Obiettivo</Italian>
+            <French>Ciblage</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Mode">
             <English>Mode</English>
@@ -2201,6 +2213,7 @@
             <Chinesesimp>模式</Chinesesimp>
             <Chinese>模式</Chinese>
             <Italian>Modalità</Italian>
+            <French>Mode</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_MapGrid">
             <English>Map Grid</English>
@@ -2211,6 +2224,7 @@
             <Chinesesimp>坐标</Chinesesimp>
             <Chinese>坐標</Chinese>
             <Italian>Griglia mappa</Italian>
+            <French>Coordonnées sur la carte</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_TargetModule">
             <English>Target Module</English>
@@ -2221,6 +2235,7 @@
             <Chinesesimp>目标模块</Chinesesimp>
             <Chinese>目標模塊</Chinese>
             <Italian>Modulo di destinazione</Italian>
+            <French>Module cible</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Spread">
             <English>Spread</English>
@@ -2231,6 +2246,7 @@
             <Chinesesimp>精度</Chinesesimp>
             <Chinese>精度</Chinese>
             <Italian>Propagazione</Italian>
+            <French>Dispersion</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Spread_Tooltip">
             <English>Controls the spread of fired artillery, in meters.</English>
@@ -2241,6 +2257,7 @@
             <Chinesesimp>炮击精度（米）</Chinesesimp>
             <Chinese>砲擊精度（米）</Chinese>
             <Italian>Controlla la diffusione dell'artiglieria sparata, in metri.</Italian>
+            <French>Contrôle la propagation des tirs d'artillerie, en mètres.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_FireParameters">
             <English>Fire Parameters</English>
@@ -2251,6 +2268,7 @@
             <Chinesesimp>炮击参数</Chinesesimp>
             <Chinese>砲擊參數</Chinese>
             <Italian>Parametri di fuoco</Italian>
+            <French>Paramètres de tir</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Units">
             <English>Units</English>
@@ -2261,6 +2279,7 @@
             <Chinesesimp>单位</Chinesesimp>
             <Chinese>單位</Chinese>
             <Italian>Unità</Italian>
+            <French>Unités</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_">
             <English>Number of units involved in the fire mission.</English>
@@ -2271,6 +2290,7 @@
             <Chinesesimp>参与炮击任务的单位数量。</Chinesesimp>
             <Chinese>參與砲擊任務的單位數量。</Chinese>
             <Italian>Numero di unità coinvolte nella missione di fuoco.</Italian>
+            <French>Nombre d'unités impliquées dans la mission de tir.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Ammo">
             <English>Ammo</English>
@@ -2281,6 +2301,7 @@
             <Chinesesimp>弹种</Chinesesimp>
             <Chinese>彈種</Chinese>
             <Italian>Munizioni</Italian>
+            <French>Munitions</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Rounds">
             <English>Rounds</English>
@@ -2291,6 +2312,7 @@
             <Chinesesimp>轮次</Chinesesimp>
             <Chinese>輪次</Chinese>
             <Italian>Scatti</Italian>
+            <French>Cartouches</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Rounds_Tooltip">
             <English>Number of rounds that should be fired by each unit.</English>
@@ -2301,6 +2323,7 @@
             <Chinesesimp>每个单位应该发射的炮弹数量。</Chinesesimp>
             <Chinese>每個單位應該砲擊的砲彈數量。</Chinese>
             <Italian>Numero di colpi che dovrebbero essere sparati da ciascuna unità.</Italian>
+            <French>Nombre de cartouches devant être tirées par chaque unité.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather">
             <English>Change Weather</English>
@@ -2311,6 +2334,7 @@
             <Chinesesimp>改变天气</Chinesesimp>
             <Chinese>改變天氣</Chinese>
             <Italian>CambiaTempo metereologico</Italian>
+            <French>Changer la météo</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Forced">
             <English>Force Changes</English>
@@ -2319,6 +2343,7 @@
             <Chinesesimp>强制改变</Chinesesimp>
             <Chinese>強制改變</Chinese>
             <Italian>Cambiamenti di forza</Italian>
+            <French>Changement forcé</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Forced_Tooltip">
             <English>Forces the following weather conditions instantaneously instead of allowing the engine to simulate a transition from the current weather.\nNOTE: Weather in Arma can desync and differ between the server and clients. For consistent weather, it is best to force the changes.</English>
@@ -2327,6 +2352,7 @@
             <Chinesesimp>强制改变以下天气，而不是让引擎模拟过渡当前天气。\n注意：Arma中的天气可以不同步，并且在服务器和客户端之间有所不同。为了获得一致的天气，最好是强制改变。</Chinesesimp>
             <Chinese>強制改變以下天氣，而不是讓引擎模擬過渡當前天氣。 \n注意：Arma中的天氣可以不同步，並且在服務器和客戶端之間有所不同。為了獲得一致的天氣，最好是強制改變。</Chinese>
             <Italian>Forza le seguenti condizioni meteorologiche istantaneamente invece di consentire al motore di simulare una transizione dal tempo attuale.\nNOTA: il tempo in Arma può desincronizzarsi e differire tra il server e i client. Per condizioni meteorologiche costanti, è meglio forzare i cambiamenti.</Italian>
+            <French>Force les conditions météorologiques suivantes instantanément au lieu de permettre au moteur de simuler une transition à partir de la météo actuelle.\nREMARQUE : La météo dans Arma peut se désynchroniser et différer entre le serveur et les clients. Pour obtenir des conditions météorologiques constantes, il est préférable de forcer les changements.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Overcast">
             <English>Overcast</English>
@@ -2337,31 +2363,37 @@
             <Chinesesimp>云量</Chinesesimp>
             <Chinese>雲量</Chinese>
             <Italian>Coperto</Italian>
+            <French>Couvert</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Overcast_Tooltip">
             <English>Sets the amount of cloud cover, higher values result in a greater likelihood of precipitations/storms and faster wind speeds.</English>
             <German>Legt die Bedeckung der Wolken fest, höhere Werte führen zu einer höheren Wahrscheinlichkeit von Niederschlägen/Stürmen und schnelleren Windgeschwindigkeiten.</German>
             <Japanese>雲の量を設定します。値が大きいほど、降水/嵐の可能性が高くなり、風速が速くなります。</Japanese>
+            <French>Définit l'importance de la couverture nuageuse, des valeurs élevées entraînant une plus grande probabilité de précipitations/tempêtes et des vitesses de vent plus élevées.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Precipitation">
             <English>Precipitation</English>
             <German>Niederschlag</German>
             <Japanese>降水量</Japanese>
+            <French>Précipitations</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Precipitation_Tooltip">
             <English>Sets the precipitation strength, requires overcast to be greater than 70%.</English>
             <German>Legt die Niederschlagsintensität fest, erfordert, dass die Bewölkung größer als 70% ist.</German>
             <Japanese>降水の強さを設定します。曇りが 70% を超える必要があります。</Japanese>
+            <French>Définit la force des précipitations, exige que le couvert soit supérieur à 70 %.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_PrecipitationType">
             <English>Precipitation Type</English>
             <German>Niederschlagstyp</German>
             <Japanese>降水タイプ</Japanese>
+            <French>Type de précipitations</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_PrecipitationType_Tooltip">
             <English>Sets the type of precipitation.</English>
             <German>Legt den Niederschlagstyp fest.</German>
             <Japanese>降水の種類を設定します。</Japanese>
+            <French>Définit le type de précipitations.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Rain">
             <English>Rain</English>
@@ -2372,11 +2404,13 @@
             <Chinesesimp>雨</Chinesesimp>
             <Chinese>雨</Chinese>
             <Italian>Piovere</Italian>
+            <French>Pluie</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Snow">
             <English>Snow</English>
             <German>Schnee</German>
             <Japanese>雪</Japanese>
+            <French>Neige</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Lightning">
             <English>Lightning</English>
@@ -2387,6 +2421,7 @@
             <Chinesesimp>打雷</Chinesesimp>
             <Chinese>打雷</Chinese>
             <Italian>Fulmine</Italian>
+            <French>Foudre</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Lightning_Tooltip">
             <English>Sets the frequency of lightning strikes, requires overcast to be near 100%.</English>
@@ -2396,6 +2431,7 @@
             <Chinesesimp>设置雷电频率，要求云量接近100%。</Chinesesimp>
             <Chinese>設置雷電頻率，要求雲量接近100%。</Chinese>
             <Italian>Imposta la frequenza dei fulmini, richiede che il cielo sia prossimo al 100%.</Italian>
+            <French>Définit la fréquence des coups de foudre, nécessite un couvert proche de 100 %.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Rainbow">
             <English>Rainbow</English>
@@ -2406,6 +2442,7 @@
             <Chinesesimp>彩虹</Chinesesimp>
             <Chinese>彩虹</Chinese>
             <Italian>Arcobaleno</Italian>
+            <French>Arc-en-ciel</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Rainbow_Tooltip">
             <English>Sets the intensity of rainbows.</English>
@@ -2415,6 +2452,7 @@
             <Chinesesimp>设置彩虹亮度。</Chinesesimp>
             <Chinese>設置彩虹亮度。</Chinese>
             <Italian>Imposta l'intensità degli arcobaleni.</Italian>
+            <French>Définit l'intensité des arcs-en-ciel.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Waves">
             <English>Waves</English>
@@ -2425,6 +2463,7 @@
             <Chinesesimp>海浪</Chinesesimp>
             <Chinese>海浪</Chinese>
             <Italian>Onde</Italian>
+            <French>Vagues</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Waves_Tooltip">
             <English>Sets the size of waves (higher values equal taller waves), applied independently of cloud cover settings.</English>
@@ -2434,6 +2473,7 @@
             <Chinesesimp>设定波浪的大小（数值越大，波浪越高），独立于云量设置而应用。</Chinesesimp>
             <Chinese>設定波浪的大小（數值越大，波浪越高），獨立於雲量設置而應用。</Chinese>
             <Italian>Imposta la dimensione delle onde (valori più alti equivalgono a onde più alte), applicate indipendentemente dalle impostazioni della copertura nuvolosa.</Italian>
+            <French>Définit la taille des vagues (des valeurs plus élevées correspondent à des vagues plus hautes), indépendamment des paramètres de la couverture nuageuse.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_WindSpeed">
             <English>Wind Speed</English>
@@ -2444,6 +2484,7 @@
             <Chinesesimp>风速</Chinesesimp>
             <Chinese>風速</Chinese>
             <Italian>Velocità del vento</Italian>
+            <French>Vitesse du vent</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_WindSpeed_Tooltip">
             <English>Sets the wind speed in kilometers per hour.</English>
@@ -2452,6 +2493,7 @@
             <Chinesesimp>设置风速（千米/小时）。</Chinesesimp>
             <Chinese>設置風速（千米/小時）。</Chinese>
             <Italian>Imposta la velocità del vento in chilometri orari.</Italian>
+            <French>Définit la vitesse du vent en km/h.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_WindDirection">
             <English>Wind Direction</English>
@@ -2462,6 +2504,7 @@
             <Chinesesimp>风向</Chinesesimp>
             <Chinese>風向</Chinese>
             <Italian>La direzione del vento</Italian>
+            <French>Direction du vent</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_WindDirection_Tooltip">
             <English>Sets the wind direction.</English>
@@ -2471,6 +2514,7 @@
             <Chinesesimp>设置风向</Chinesesimp>
             <Chinese>設置風向</Chinese>
             <Italian>Imposta la direzione del vento.</Italian>
+            <French>Définit la direction du vent.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Gusts">
             <English>Gusts</English>
@@ -2481,6 +2525,7 @@
             <Chinesesimp>阵风</Chinesesimp>
             <Chinese>陣風</Chinese>
             <Italian>Raffiche</Italian>
+            <French>Rafales de vent</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Gusts_Tooltip">
             <English>Sets the strength of gusts, random changes in wind direction.\nThese changes become stronger and more frequent with worse cloud cover.</English>
@@ -2490,6 +2535,7 @@
             <Chinesesimp>设置阵风强度，风向随机变化。\n这些变化随着云量的增加而变得更加强烈和频繁。</Chinesesimp>
             <Chinese>設置陣風強度，風向隨機變化。 \n這些變化隨著雲量的增加而變得更加強烈和頻繁。</Chinese>
             <Italian>Imposta la forza delle raffiche, cambiamenti casuali nella direzione del vento.\nQuesti cambiamenti diventano più forti e più frequenti con una copertura nuvolosa peggiore.</Italian>
+            <French>Définit la force des rafales, des changements aléatoires dans la direction du vent.\nCes changements deviennent plus forts et plus fréquents lorsque la couverture nuageuse est plus importante.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogDensity">
             <English>Fog Density</English>
@@ -2531,6 +2577,7 @@
             <Chinesesimp>设置雾气密度随海拔高度衰减的程度。较大的值会导致更突变的雾气变化（更明确的雾开始）。\n较小的值会导致的过渡就越平滑，因此，雾会更多地穿过基准高度线。\n如果正值，雾将产生于基准高度以下(谷雾) ; 如果负值，雾将产生于基准高度以上(峰雾)。</Chinesesimp>
             <Chinese>設置霧氣密度隨海拔高度衰減的程度。較大的值會導致更突變的霧氣變化（更明確的霧開始）。 \n較小的值會導致的過渡就越平滑，因此，霧會更多地穿過基準高度線。 \n如果正值，霧將產生於基準高度以下(谷霧) ; 如果負值，霧將產生於基準高度以上(峰霧)。</Chinese>
             <Italian>Imposta quanto la densità della nebbia decade con l'altitudine. Valori più grandi producono un limite di nebbia più nitido (inizio nebbia più definito).\nValori più piccoli portano a una transizione più graduale da assenza di nebbia a nebbia piena e, di conseguenza, la nebbia attraverserà di più la linea dell'altitudine di base.\nQuando questo è un valore positivo, la nebbia verrà generata al di sotto della quota di base (nebbia di valle); se negativo, al di sopra della quota di base (nebbia di montagna).</Italian>
+            <French>Définit le degré de décroissance de la densité du brouillard en fonction de l'altitude. Des valeurs plus élevées entraînent un plafond de brouillard plus net (début de brouillard plus défini).\nDes valeurs plus petites entraînent une transition plus douce entre l'absence de brouillard et le brouillard complet et, par conséquent, le brouillard traversera davantage la ligne d'altitude de base.\nLorsque cette valeur est positive, le brouillard sera généré en dessous de l'altitude de base (brouillard de vallée) ; si elle est négative, au-dessus de l'altitude de base (brouillard de montagne).</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogAltitude">
             <English>Fog Altitude</English>
@@ -2573,6 +2620,7 @@
             <Chinesesimp>切换目标</Chinesesimp>
             <Chinese>切換目標</Chinese>
             <Italian>Cambia bersaglio</Italian>
+            <French>Changer de cible</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ToggleTarget_Tooltip">
             <English>Units affected by the toggle.</English>
@@ -2583,6 +2631,7 @@
             <Chinese>受切換影響的單位。</Chinese>
             <Polish>Jednostki zaznaczone do przełączenia celu.</Polish>
             <Italian>Unità interessate dall'interruttore.</Italian>
+            <French>Unités marquées pour le changement de cible.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_AddGear">
             <English>Add Gear</English>
@@ -2647,6 +2696,7 @@
             <Chinese>切換紅外鐳射</Chinese>
             <Polish>Przełącz lasery IR</Polish>
             <Italian>Cambia laser IR</Italian>
+            <French>Changer de laser IR</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleToggleIRLasers_IRLasers">
             <English>IR Lasers</English>
@@ -2657,6 +2707,7 @@
             <Chinese>紅外鐳射</Chinese>
             <Polish>Laser IR (podczerwony)</Polish>
             <Italian>IR Lasers</Italian>
+            <French>IR Lasers</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAddFullArsenal">
             <English>Add Full Arsenal</English>
