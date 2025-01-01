@@ -252,6 +252,7 @@
             <Chinesesimp>导航机</Chinesesimp>
             <Chinese>導航機</Chinese>
             <Italian>Naviga in aereo</Italian>
+            <French>Guidage des aéronefs</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ShowVehicleTheWay">
             <English>Showing A Vehicle The Way</English>
@@ -1427,6 +1428,7 @@
             <Chinesesimp>控制地雷是均匀地还是随机地分布在区域内。</Chinesesimp>
             <Chinese>控制地雷是均勻地還是隨機地分佈在區域內。</Chinese>
             <Italian>Controlla se le mine verranno posizionate in modo uniforme o casuale all'interno dell'area.</Italian>
+            <French>Permet de déterminer si les mines seront placées de manière uniforme ou aléatoire dans la zone.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGlobalHint">
             <English>Global Hint</English>
@@ -1438,6 +1440,7 @@
             <Chinesesimp>全局提示</Chinesesimp>
             <Chinese>全局提示</Chinese>
             <Italian>Suggerimento globale</Italian>
+            <French>Indice global</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleHideZeus">
             <English>Hide Zeus</English>
@@ -1533,6 +1536,7 @@
             <Chinesesimp>阵营关系</Chinesesimp>
             <Chinese>陣營關係</Chinese>
             <Italian>Lato Relazioni</Italian>
+            <French>Relations avec le camp</French>
         </Key>
         <Key ID="STR_ZEN_Modules_RelationToChange">
             <English>Relation to Change</English>
@@ -1544,6 +1548,7 @@
             <Chinesesimp>关系变动</Chinesesimp>
             <Chinese>關係變動</Chinese>
             <Italian>Relazione con il cambiamento</Italian>
+            <French>Changement de relation</French>
         </Key>
         <Key ID="STR_ZEN_Modules_HostileTo">
             <English>Hostile to</English>
@@ -1612,6 +1617,7 @@
             <Chinesesimp>传送玩家的载具而不是玩家本身。\n如果模块被附加到载具上，这将被忽略，玩家将被移动到所附加的载具上。</Chinesesimp>
             <Chinese>傳送玩家的載具而不是玩家本身。 \n如果模塊被附加到載具上，這將被忽略，玩家將被移動到所附加的載具上。</Chinese>
             <Italian>Teletrasporta i veicoli dei giocatori invece dei giocatori stessi.\nSe il modulo era attaccato a un veicolo, questo viene ignorato e i giocatori verranno spostati nel veicolo attaccato.</Italian>
+            <French>Téléporte les véhicules des joueurs au lieu des joueurs eux-mêmes.\nSi le module a été attaché à un véhicule, ceci est ignoré et les joueurs seront déplacés dans le véhicule attaché.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSmokePillar">
             <English>Smoke Pillar</English>
@@ -1623,6 +1629,7 @@
             <Chinesesimp>烟柱</Chinesesimp>
             <Chinese>煙柱</Chinese>
             <Italian>Colonna Fumo</Italian>
+            <French>Colonne de fumée</French>
         </Key>
         <Key ID="STR_ZEN_Modules_SmokePillarType">
             <English>Smoke Pillar Type</English>
@@ -1634,6 +1641,7 @@
             <Chinesesimp>烟柱类型</Chinesesimp>
             <Chinese>煙柱類型</Chinese>
             <Italian>Tipo di colonna di fumo</Italian>
+            <French>Type de colonne de fumée</French>
         </Key>
         <Key ID="STR_ZEN_Modules_VehicleFire">
             <English>Vehicle Fire</English>
@@ -1645,6 +1653,7 @@
             <Chinesesimp>车辆起火</Chinesesimp>
             <Chinese>車輛起火</Chinese>
             <Italian>Incendio del veicolo</Italian>
+            <French>Véhicule en feu</French>
         </Key>
         <Key ID="STR_ZEN_Modules_SmallOilySmoke">
             <English>Small Oily Smoke</English>
@@ -1656,6 +1665,7 @@
             <Chinesesimp>小型燃油烟雾</Chinesesimp>
             <Chinese>小型燃油煙霧</Chinese>
             <Italian>Piccolo fumo oleoso</Italian>
+            <French>Fumée légère (produits pétroliers)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_MediumOilySmoke">
             <English>Medium Oily Smoke</English>
@@ -1667,6 +1677,7 @@
             <Chinesesimp>中等燃油烟雾</Chinesesimp>
             <Chinese>中等燃油煙霧</Chinese>
             <Italian>Fumo medio oleoso</Italian>
+            <French>Fumée moyenne (produits pétroliers)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_LargeOilySmoke">
             <English>Large Oily Smoke</English>
@@ -1678,6 +1689,7 @@
             <Chinesesimp>大量燃油烟雾</Chinesesimp>
             <Chinese>大量燃油煙霧</Chinese>
             <Italian>Fumo oleoso grande</Italian>
+            <French>Fumée lourde (produits pétroliers)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_SmallWoodSmoke">
             <English>Small Wood Smoke</English>
@@ -1689,6 +1701,7 @@
             <Chinesesimp>小型木材烟雾</Chinesesimp>
             <Chinese>小型木材煙霧</Chinese>
             <Italian>Fumo di legna piccolo</Italian>
+            <French>Faible fumée (bois)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_MediumWoodSmoke">
             <English>Medium Wood Smoke</English>
@@ -1700,6 +1713,7 @@
             <Chinesesimp>中等木材烟雾</Chinesesimp>
             <Chinese>中等木材煙霧</Chinese>
             <Italian>Fumo medio di legno</Italian>
+            <French>Fumée moyenne (bois)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_LargeWoodSmoke">
             <English>Large Wood Smoke</English>
@@ -1711,6 +1725,7 @@
             <Chinesesimp>大量木材烟雾</Chinesesimp>
             <Chinese>大量木材煙霧</Chinese>
             <Italian>Fumo di legna grande</Italian>
+            <French>Fumée épaisse (bois)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_SmallMixedSmoke">
             <English>Small Mixed Smoke</English>
@@ -1722,6 +1737,7 @@
             <Chinesesimp>小型混合烟雾</Chinesesimp>
             <Chinese>小型混合菸霧</Chinese>
             <Italian>Fumo Misto Piccolo</Italian>
+            <French>Fumée légère (mixte)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_MediumMixedSmoke">
             <English>Medium Mixed Smoke</English>
@@ -1733,6 +1749,7 @@
             <Chinesesimp>中等混合烟雾</Chinesesimp>
             <Chinese>中等混合菸霧</Chinese>
             <Italian>Fumo Medio Misto</Italian>
+            <French>Fumée moyenne (mixte)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_LargeMixedSmoke">
             <English>Large Mixed Smoke</English>
@@ -1744,6 +1761,7 @@
             <Chinesesimp>大量混合烟雾</Chinesesimp>
             <Chinese>大量混合菸霧</Chinese>
             <Italian>Fumo misto grande</Italian>
+            <French>Fumée lourde (mixte)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleLightSource">
             <English>Light Source</English>
@@ -1755,6 +1773,7 @@
             <Chinesesimp>光源</Chinesesimp>
             <Chinese>光源</Chinese>
             <Italian>Fonte di luce</Italian>
+            <French>Source lumineuse</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleLightSource_Color">
             <English>Light Color</English>
@@ -1766,6 +1785,7 @@
             <Chinesesimp>光线颜色</Chinesesimp>
             <Chinese>光線顏色</Chinese>
             <Italian>Colore chiaro</Italian>
+            <French>Couleur de la lumière</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleLightSource_Range">
             <English>Range (m)</English>
@@ -1777,6 +1797,7 @@
             <Chinesesimp>范围（米）</Chinesesimp>
             <Chinese>範圍（米）</Chinese>
             <Italian>Gamma (m)</Italian>
+            <French>Portée (m)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleLightSource_Constant">
             <English>Constant Attenuation</English>
@@ -1787,6 +1808,7 @@
             <Chinesesimp>持续衰减</Chinesesimp>
             <Chinese>持續衰減</Chinese>
             <Italian>Smorzamento costante</Italian>
+            <French>Atténuation constante</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleLightSource_Linear">
             <English>Linear Attenuation</English>
@@ -1797,6 +1819,7 @@
             <Chinesesimp>线性衰减</Chinesesimp>
             <Chinese>線性衰減</Chinese>
             <Italian>Smorzamento lineare</Italian>
+            <French>Atténuation linéaire</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleLightSource_Quadratic">
             <English>Quadratic Attenuation</English>
@@ -1807,6 +1830,7 @@
             <Chinesesimp>二次衰减</Chinesesimp>
             <Chinese>二次衰減</Chinese>
             <Italian>Smorzamento quadratica</Italian>
+            <French>Atténuation quadratique</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEquipWithECM">
             <English>Equip With ECM</English>
@@ -1817,6 +1841,7 @@
             <Chinesesimp>配备电子干扰/对抗</Chinesesimp>
             <Chinese>配備電子乾擾/對抗</Chinese>
             <Italian>Equipaggiare con jammer</Italian>
+            <French>Équiper d'un brouilleur</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEquipWithECM_HasECM">
             <English>Has ECM</English>
@@ -1827,6 +1852,7 @@
             <Chinesesimp>拥有电子干扰/对抗</Chinesesimp>
             <Chinese>擁有電子乾擾/對抗</Chinese>
             <Italian>Dotato di jammer</Italian>
+            <French>Possession d'ECM</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFlyHeight">
             <English>Fly Height</English>
@@ -1837,6 +1863,7 @@
             <Chinesesimp>飞行高度</Chinesesimp>
             <Chinese>飛行高度</Chinese>
             <Italian>Altitudine</Italian>
+            <French>Altitude de vol</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFlyHeight_Tooltip">
             <English>Sets the flying altitude for the aircraft relative to the ground.</English>
@@ -1847,6 +1874,7 @@
             <Chinesesimp>设置飞机相对于地面的飞行高度。</Chinesesimp>
             <Chinese>設置飛機相對於地面的飛行高度。</Chinese>
             <Italian>Imposta l'altitudine di volo dell'aereo rispetto al suolo.</Italian>
+            <French>Définit l'altitude de vol de l'avion par rapport au sol.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTurretOptics">
             <English>Vehicle Turret Optics</English>
@@ -1858,6 +1886,7 @@
             <Chinesesimp>车载炮塔光学系统</Chinesesimp>
             <Chinese>車載砲塔光學系統</Chinese>
             <Italian>Ottica della torretta del veicolo</Italian>
+            <French>Optique de tourelle du véhicule</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTurretOptics_NVG">
             <English>NVG Equipment</English>
@@ -1869,6 +1898,7 @@
             <Chinesesimp>夜视装备</Chinesesimp>
             <Chinese>夜視裝備</Chinese>
             <Italian>Dispositivi per la visione notturna</Italian>
+            <French>Équipement NVG</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTurretOptics_TI">
             <English>TI Equipment</English>
@@ -1879,6 +1909,7 @@
             <Chinesesimp>热成像装备</Chinesesimp>
             <Chinese>熱成像裝備</Chinese>
             <Italian>Dispositivi a infrarossi termici</Italian>
+            <French>Équipement TI (Imagerie thermique)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGarrison">
             <English>Garrison Group</English>
@@ -1918,6 +1949,7 @@
             <Chinesesimp>逐个建筑</Chinesesimp>
             <Chinese>逐個建築</Chinese>
             <Italian>Costruire per edificio</Italian>
+            <French>Bâtiment par bâtiment</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGarrison_Random">
             <English>Random</English>
@@ -1928,6 +1960,7 @@
             <Chinesesimp>随机</Chinesesimp>
             <Chinese>隨機</Chinese>
             <Italian>Coincidentalmente</Italian>
+            <French>Au hasard</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGarrison_TopDown">
             <English>Fill From Top Down</English>
@@ -2047,6 +2080,7 @@
             <Chinesesimp>执行代码</Chinesesimp>
             <Chinese>執行代碼</Chinese>
             <Italian>Esegui codice</Italian>
+            <French>Exécuter le code</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleExecuteCode_Args_Tooltip">
             <English>This code will be passed the following arguments:\n0: Module Position ASL\n1: Attached Object (objNull if none)</English>
@@ -2056,6 +2090,7 @@
             <Chinesesimp>这段代码将被传递给以下参数：\n0：模块位置（平均海拔高度）\n1：附加对象（如果没有，objNull）。</Chinesesimp>
             <Chinese>這段代碼將被傳遞給以下參數：\n0：模塊位置（平均海拔高度）\n1：附加對象（如果沒有，objNull）。</Chinese>
             <Italian>A questo codice verranno passati i seguenti argomenti:\n0: Module Position ASL\n1: Attached Object (objNull se nessuno)</Italian>
+            <French>Les arguments suivants seront transmis à ce code:\n0 : Position du module ASL\n1 : Objet attaché (objNull s'il n'y en a pas)</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleExecuteCode_Disabled">
             <English>Code execution by Zeus is disabled in this mission</English>
@@ -2065,6 +2100,7 @@
             <Chinesesimp>在这个任务中，禁止执行Zeus代码。</Chinesesimp>
             <Chinese>在這個任務中，禁止執行Zeus代碼。</Chinese>
             <Italian>L'esecuzione del codice da parte di Zeus è disabilitata in questa missione</Italian>
+            <French>L'exécution du code par Zeus est désactivée dans cette mission.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleExecuteCode_Local">
             <English>Local</English>
@@ -2655,6 +2691,7 @@
             <Chinesesimp>创建目标</Chinesesimp>
             <Chinese>創建目標</Chinese>
             <Italian>Crea bersaglio</Italian>
+            <French>Créer une cible</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateTarget_Name">
             <English>Target Name</English>
@@ -2665,6 +2702,7 @@
             <Chinesesimp>目标名称</Chinesesimp>
             <Chinese>目標名稱</Chinese>
             <Italian>Nome dell'obiettivo</Italian>
+            <French>Nom de la cible</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateTarget_Format">
             <English>Target %1</English>
@@ -2675,6 +2713,7 @@
             <Chinesesimp>目标 %1</Chinesesimp>
             <Chinese>目標 %1</Chinese>
             <Italian>Obiettivo %1</Italian>
+            <French>Cible %1</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateTarget_AttachLaser">
             <English>Attach Laser Target For</English>
@@ -2684,6 +2723,7 @@
             <Chinesesimp>附加激光靶，用于</Chinesesimp>
             <Chinese>附加激光靶，用於</Chinese>
             <Italian>Attacca il bersaglio laser per</Italian>
+            <French>Fixer une cible laser pour</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateLZ">
             <English>Create LZ</English>
@@ -2694,6 +2734,7 @@
             <Polish>Stwórz LZ (Strefa lądowania)</Polish>
             <Japanese>LZ を生成</Japanese>
             <Italian>Crea LZ</Italian>
+            <French>Créer un LZ</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateLZ_Name">
             <English>LZ Name</English>
@@ -2704,6 +2745,7 @@
             <Polish>Nazwa LZ</Polish>
             <Japanese>LZ 名</Japanese>
             <Italian>Nome LZ</Italian>
+            <French>Nom de la LZ</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateLZ_Format">
             <English>LZ %1</English>
@@ -2714,6 +2756,7 @@
             <Polish>LZ %1</Polish>
             <Japanese>LZ %1</Japanese>
             <Italian>LZ %1</Italian>
+            <French>LZ %1</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateRP">
             <English>Create RP</English>
@@ -2724,6 +2767,7 @@
             <Polish>Stwórz RP (Punkt spotkania)</Polish>
             <Japanese>RP 生成</Japanese>
             <Italian>Crea RP</Italian>
+            <French>Créer un RP</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateRP_Name">
             <English>RP Name</English>
@@ -2734,6 +2778,7 @@
             <Polish>Nazwa RP</Polish>
             <Japanese>RP 名</Japanese>
             <Italian>Nome RP</Italian>
+            <French>Nom du RP</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateRP_Format">
             <English>RP %1</English>
@@ -2744,6 +2789,7 @@
             <Polish>RP %1</Polish>
             <Japanese>RP %1</Japanese>
             <Italian>RP %1</Italian>
+            <French>RP %1</French>
         </Key>
         <Key ID="STR_ZEN_Modules_SpawnReinforcements">
             <English>Spawn Reinforcements</English>
@@ -2754,6 +2800,7 @@
             <Polish>Spawnuj Wzmocnienia (posiłki)</Polish>
             <Japanese>増援生成</Japanese>
             <Italian>Genera rinforzi</Italian>
+            <French>Créer des renforts</French>
         </Key>
         <Key ID="STR_ZEN_Modules_VehicleSelect">
             <English>Vehicle Select</English>
@@ -2764,6 +2811,7 @@
             <Polish>Wybór pojazdu</Polish>
             <Japanese>車両選択</Japanese>
             <Italian>Selezione del veicolo</Italian>
+            <French>Sélection du véhicule</French>
         </Key>
         <Key ID="STR_ZEN_Modules_Category">
             <English>Category</English>
@@ -2774,6 +2822,7 @@
             <Polish>Kategorie</Polish>
             <Japanese>カテゴリ</Japanese>
             <Italian>Categoria</Italian>
+            <French>Catégorie</French>
         </Key>
         <Key ID="STR_ZEN_Modules_GroupSelect">
             <English>Group Select</English>
@@ -2784,6 +2833,7 @@
             <Polish>Wybór grupy</Polish>
             <Japanese>グループ選択</Japanese>
             <Italian>Seleziona gruppo</Italian>
+            <French>Sélection du groupe</French>
         </Key>
         <Key ID="STR_ZEN_Modules_CurrentGroup">
             <English>Current Group</English>
@@ -2794,6 +2844,7 @@
             <Polish>Obecnie wybrana Grupa</Polish>
             <Japanese>現在のグループ</Japanese>
             <Italian>Gruppo attuale</Italian>
+            <French>Groupe actuel</French>
         </Key>
         <Key ID="STR_ZEN_Modules_VehicleLZ">
             <English>Vehicle LZ/DZ</English>
@@ -2804,6 +2855,7 @@
             <Polish>Punkt LZ/DZ pojazdu</Polish>
             <Japanese>車両 LZ/DZ</Japanese>
             <Italian>Veicolo LZ/DZ</Italian>
+            <French>Véhicule LZ/DZ</French>
         </Key>
         <Key ID="STR_ZEN_Modules_VehicleBehaviour">
             <English>Vehicle Behaviour</English>
@@ -2814,6 +2866,7 @@
             <Polish>Zachowanie pojazdu</Polish>
             <Japanese>車両の挙動</Japanese>
             <Italian>Comportamento del veicolo</Italian>
+            <French>Comportement des véhicules</French>
         </Key>
         <Key ID="STR_ZEN_Modules_StayAtLZ">
             <English>Stay at LZ</English>
@@ -2824,6 +2877,7 @@
             <Polish>Pozostań na LZ</Polish>
             <Japanese>LZ で待機</Japanese>
             <Italian>Soggiorna a LZ</Italian>
+            <French>Rester sur la LZ</French>
         </Key>
         <Key ID="STR_ZEN_Modules_RTBAndDespawn">
             <English>RTB and Despawn</English>
@@ -2834,6 +2888,7 @@
             <Polish>Wróc do bazy i despawnuj</Polish>
             <Japanese>RTB と削除</Japanese>
             <Italian>Indietro ed elimina</Italian>
+            <French>RTB et Despawn</French>
         </Key>
         <Key ID="STR_ZEN_Modules_InsertionMethod">
             <English>Insertion Method</English>
@@ -2843,6 +2898,7 @@
             <Chinesesimp>插入方式</Chinesesimp>
             <Chinese>插入方式</Chinese>
             <Italian>Metodo di svezzamento</Italian>
+            <French>Méthode d'insertion</French>
         </Key>
         <Key ID="STR_ZEN_Modules_UnitRP">
             <English>Unit RP</English>
@@ -2853,6 +2909,7 @@
             <Polish>RP Jednostki</Polish>
             <Japanese>ユニット RP</Japanese>
             <Italian>Unità RP</Italian>
+            <French>RP de l'unité</French>
         </Key>
         <Key ID="STR_ZEN_Modules_UnitBehaviour">
             <English>Unit Behaviour</English>
@@ -2863,6 +2920,7 @@
             <Polish>Zachowanie jednostki</Polish>
             <Japanese>ユニットの挙動</Japanese>
             <Italian>Comportamento dell'unità</Italian>
+            <French>Comportement de l'unité</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel">
             <English>Create/Edit Intel</English>
@@ -2884,6 +2942,7 @@
             <Chinesesimp>物体类型</Chinesesimp>
             <Chinese>物體類型</Chinese>
             <Italian>Tipo di oggetto</Italian>
+            <French>Type d'objet</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ShareWith">
             <English>Share With</English>
@@ -2894,6 +2953,7 @@
             <Chinesesimp>分享给</Chinesesimp>
             <Chinese>分享給</Chinese>
             <Italian>Condividi con</Italian>
+            <French>Partager avec</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_DeleteOnCompletion">
             <English>Delete On Completion</English>
@@ -2904,6 +2964,7 @@
             <Chinesesimp>完成后删除</Chinesesimp>
             <Chinese>完成後刪除</Chinese>
             <Italian>Elimina al completamento</Italian>
+            <French>Supprimer après achèvement</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ActionType">
             <English>Action Type</English>
@@ -2912,6 +2973,7 @@
             <Chinesesimp>动作类型</Chinesesimp>
             <Chinese>動作類型</Chinese>
             <Italian>Tipo di azione</Italian>
+            <French>Type d'action</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_HoldAction">
             <English>Hold Action</English>
@@ -2920,6 +2982,7 @@
             <Chinesesimp>保持动作</Chinesesimp>
             <Chinese>保持動作</Chinese>
             <Italian>Presa azione</Italian>
+            <French>Maintenir l'action.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_InteractionMenu">
             <English>ACE Interaction Menu</English>
@@ -2928,6 +2991,7 @@
             <Chinesesimp>ACE互动菜单</Chinesesimp>
             <Chinese>ACE互動菜單</Chinese>
             <Italian>Menu interazione ACE</Italian>
+            <French>Menu Interaction ACE</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ActionText">
             <English>Action Text</English>
@@ -2938,6 +3002,7 @@
             <Chinesesimp>行动文本</Chinesesimp>
             <Chinese>行動文本</Chinese>
             <Italian>Testo azione</Italian>
+            <French>Texte d'action</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ActionSound">
             <English>Action Sound</English>
@@ -2947,6 +3012,7 @@
             <Chinesesimp>行动声音</Chinesesimp>
             <Chinese>行動聲音</Chinese>
             <Italian>Suono d'azione</Italian>
+            <French>Son d'action</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_LaptopKeyboard">
             <English>Laptop Keyboard</English>
@@ -2956,6 +3022,7 @@
             <Chinesesimp>笔记本键盘</Chinesesimp>
             <Chinese>筆記本鍵盤</Chinese>
             <Italian>Tastiera del computer portatile</Italian>
+            <French>Clavier d'ordinateur portable</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_PCKeyboard">
             <English>PC Keyboard</English>
@@ -2965,6 +3032,7 @@
             <Chinesesimp>电脑键盘</Chinesesimp>
             <Chinese>電腦鍵盤</Chinese>
             <Italian>Tastiera del PC</Italian>
+            <French>Clavier PC</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_SearchBody">
             <English>Search Body</English>
@@ -2974,6 +3042,7 @@
             <Chinesesimp>搜查尸体</Chinesesimp>
             <Chinese>搜查屍體</Chinese>
             <Italian>Cerca corpo</Italian>
+            <French>Fouiller le corps</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ActionDuration">
             <English>Action Duration</English>
@@ -3048,6 +3117,7 @@
             <Chinesesimp>乘员进入炮手</Chinesesimp>
             <Chinese>乘員進入砲手</Chinese>
             <Italian>L'equipaggio al cannoniere</Italian>
+            <French>L'équipage à l'artilleur.</French>
         </Key>
         <Key ID="STR_ZEN_Modules_ToggleLamps">
             <English>Toggle Lamps</English>
