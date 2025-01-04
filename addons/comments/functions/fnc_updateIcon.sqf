@@ -18,6 +18,8 @@
 params ["_id"];
 
 private _ctrlIcon = GVAR(icons) getOrDefault [_id, controlNull];
-if (isNull _ctrlIcon) exitWith {};
+if (isNull _ctrlIcon || !(_id in GVAR(comments))) exitWith {};
+
+(GVAR(comments) get _id) params ["", "", ["_tooltip", ""]];
 
 _ctrlIcon ctrlSetTooltip _tooltip;

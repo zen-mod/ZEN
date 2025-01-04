@@ -3,7 +3,7 @@ class EGVAR(context_menu,actions) {
         displayName = STR_CREATE_COMMENT;
         icon = COMMENT_ICON;
         condition = QGVAR(enabled);
-        statement = QUOTE([_position] call FUNC(createCommentDialog));
+        statement = QUOTE([_position] call FUNC(openDialog));
         priority = 35;
     };
 };

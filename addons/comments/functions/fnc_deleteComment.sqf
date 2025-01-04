@@ -15,16 +15,20 @@
  * Public: No
  */
 
+if (!isServer) exitWith {
+    [QGVAR(deleteComment), _this] call CBA_fnc_serverEvent;
+};
+
 params ["_id"];
 
-if (!isServer) exitWith {};
+// Remove the JIP ID for updated comments
+private _jipIdUpdates = format [QGVAR(update_%1), _id];
+[_jipIdUpdates] call CBA_fnc_removeGlobalEventJIP;
 
-TRACE_1("Delete comment",_id);
-if (_id call FUNC(is3DENComment)) then {
-    [QGVAR(deleteCommentLocal), [_id]] call CBA_fnc_globalEventJIP;
-} else {
-    private _jipId = format [QGVAR(%1), _id];
-    [_jipId] call CBA_fnc_removeGlobalEventJIP;
-
-    [QGVAR(deleteCommentLocal), [_id]] call CBA_fnc_globalEvent;
-};
+// JIP event IDs are globally unique. For 3DEN comments, there won't be a created
+// event but for Zeus ones the created JIP event will be overwritten with this
+// deleted event that shares the same JIP ID, meaning that we don't have to remove
+// the created JIP event.
+private _jipId = format [QGVAR(%1), _id];
+[QGVAR(commentDeleted), [_id]] call CBA_fnc_globalEventJIP;
+TRACE_1("Comment deleted",_id);

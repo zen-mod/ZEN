@@ -5,25 +5,22 @@
  *
  * Arguments:
  * 0: Unique comment id <STRING>
- * 1: Comment position ASL <ARRAY>
- * 2: Comment title <STRING>
- * 3: Comment tooltip <STRING>
- * 4: Comment color (RGBA) <ARRAY>
- * 5: Name of the curator that created the comment <STRING>
  *
  * Return Value:
  * Icon control for the comment <CONTROL>.
  *
  * Example:
- * ["zeus:1", [0,0,0], "My Comment", "This is a nice comment", [1,0,0,0.7], "Joe"] call zen_comments_fnc_createIcon
+ * ["zeus:0"] call zen_comments_fnc_createIcon
  *
  * Public: No
  */
 
-params ["_id", "", "", "_tooltip"];
+params ["_id"];
 
 private _display = findDisplay IDD_RSCDISPLAYCURATOR;
-if (isNull _display) exitWith {};
+if (isNull _display || !(_id in GVAR(comments))) exitWith {};
+
+(GVAR(comments) get _id) params ["", "", ["_tooltip", ""]];
 
 private _ctrlIcon = _display ctrlCreate [QGVAR(RscActiveCommentIcon), -1];
 _ctrlIcon setVariable [QGVAR(comment), _id];

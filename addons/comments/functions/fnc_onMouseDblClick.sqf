@@ -17,7 +17,6 @@
  */
 
 params ["_ctrlIcon", "_button"];
-TRACE_1("params",_this);
 
 if (_button != 0) exitWith {};
 
@@ -26,4 +25,4 @@ if (_id isEqualTo "" || {_id call FUNC(is3DENComment)}) exitWith {};
 
 TRACE_1("Edit comment",_id);
 
-[_id] call FUNC(updateCommentDialog);
+[_id] call FUNC(openDialog);

@@ -17,7 +17,6 @@
  */
 
 params ["_ctrlIcon", "_key"];
-TRACE_1("params",_this);
 
 if (_key != DIK_DELETE) exitWith {};
 

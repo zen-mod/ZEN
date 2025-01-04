@@ -22,7 +22,7 @@ TRACE_1("Zeus display opened",_display);
 if (!GVAR(enabled) && !GVAR(enabled3DEN)) exitWith {};
 
 [{
-    {([_x] + _y) call FUNC(createIcon)} forEach GVAR(comments);
+    {_x call FUNC(createIcon)} forEach GVAR(comments);
 }] call CBA_fnc_execNextFrame; // Run next frame so display is loaded in FUNC(createIcon)
 
 if (!GVAR(draw3DAdded)) then {
