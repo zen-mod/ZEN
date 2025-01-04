@@ -33,5 +33,13 @@
             <English>Allow any Zeus to delete 3DEN comments.</English>
             <German>Erlaube jedem Zeus das Löschen von 3DEN-Kommentaren.</German>
         </Key>
+        <Key ID="STR_ZEN_Comments_ShowCommentInZeus">
+            <English>Show comment in Zeus</English>
+            <German>Zeige Kommentar in Zeus</German>
+        </Key>
+        <Key ID="STR_ZEN_Comments_ShowCommentInZeus_Description">
+            <English>If selected, this comment will be shown in Zeus.</English>
+            <German>Wenn ausgewählt, wird dieser Kommentar in Zeus angezeigt.</German>
+        </Key>
     </Package>
 </Project>

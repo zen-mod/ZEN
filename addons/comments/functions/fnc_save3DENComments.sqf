@@ -25,15 +25,16 @@ private _comments = [];
     // all3DENEntities always includes this id, ignore it
     if (_x isEqualTo -999) then {continue};
 
-    // Ignore comments with special ignore directive in the description/tooltip
-    private _tooltip = (_x get3DENAttribute "description") select 0;
-    if (IGNORE_3DEN_COMMENT_STRING in _tooltip) then {continue};
+    private _show = (_x get3DENAttribute QGVAR(showComment)) select 0;
+    if (!_show) then {continue};
 
+    private _id = format ["%1:%2", COMMENT_TYPE_3DEN, _x];
     private _position = (_x get3DENAttribute "position") select 0;
     private _title = (_x get3DENAttribute "name") select 0;
+    private _tooltip = (_x get3DENAttribute "description") select 0;
 
     // Save in hashmap format with id as key
-    _comments pushBack [format ["%1:%2", COMMENT_TYPE_3DEN, _x], [_position, _title, _tooltip]];
+    _comments pushBack [_id, [_position, _title, _tooltip]];
 } forEach (all3DENEntities select 7);
 
 // This command does not work if the mission is not saved

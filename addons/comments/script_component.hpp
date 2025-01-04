@@ -25,9 +25,6 @@
 #define POS_W(N) ((N) * GUI_GRID_W)
 #define POS_H(N) ((N) * GUI_GRID_H)
 
-// Ignore comments that include following string in the description/tooltip
-#define IGNORE_3DEN_COMMENT_STRING "#ZEN_IGNORE#"
-
 #define COMMENT_ICON "a3\3den\Data\Cfg3DEN\Comment\texture_ca.paa"
 #define ICON_SCALE 1
 #define MAP_ICON_SCALE 1.2

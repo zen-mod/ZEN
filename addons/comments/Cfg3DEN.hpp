@@ -37,4 +37,25 @@ class Cfg3DEN {
             onBeforeMissionPreview = QUOTE(['onBeforeMissionPreview'] call FUNC(save3DENComments));
         };
     };
+
+    class Comment {
+        class AttributeCategories {
+            class ADDON {
+                displayName = ECSTRING(main,DisplayName);
+                collapsed = 0;
+
+                class Attributes {
+                    class GVAR(showComment) {
+                        displayName = CSTRING(ShowCommentInZeus);
+                        tooltip = CSTRING(ShowCommentInZeus_Description);
+                        property = QGVAR(showComment);
+                        control = "CheckboxState";
+                        defaultValue = "true";
+                        expression = "";
+                        wikiType = "[[Bool]]";
+                    };
+                };
+            };
+        };
+    };
 };
