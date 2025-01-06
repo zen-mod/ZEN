@@ -20,4 +20,4 @@ params ["_id", "_data"];
 
 GVAR(comments) set [_id, _data];
 
-[_id, _data] call FUNC(createIcon);
+[_id] call FUNC(createIcon);
