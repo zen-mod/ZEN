@@ -5,16 +5,17 @@
  *
  * Arguments:
  * 0: Unique comment id <STRING>
- * 1: Title <STRING>
- * 2: Tooltip <STRING>
- * 3: Comment color (RGBA) <ARRAY>
+ * 1: Position ASL <ARRAY>
+ * 2: Title <STRING>
+ * 3: Tooltip <STRING>
+ * 4: Comment color (RGBA) <ARRAY>
  * 4: Creator <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * ["zeus:2", "My updated Comment", "This is a nice comment", [1, 0, 0, 0.7], "Joe"] call zen_comments_fnc_updateComment
+ * ["zeus:2", [0, 0, 0], "My updated Comment", "This is a nice comment", [1, 0, 0, 0.7], "Joe"] call zen_comments_fnc_updateComment
  *
  * Public: No
  */

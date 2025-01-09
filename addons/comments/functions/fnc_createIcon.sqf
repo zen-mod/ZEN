@@ -26,9 +26,6 @@ private _ctrlIcon = _display ctrlCreate [QGVAR(RscActiveCommentIcon), -1];
 _ctrlIcon setVariable [QGVAR(comment), _id];
 _ctrlIcon ctrlSetTooltip _tooltip;
 
-_ctrlIcon ctrlAddEventHandler ["KeyDown", LINKFUNC(onKeyDown)];
-_ctrlIcon ctrlAddEventHandler ["MouseButtonDblClick", LINKFUNC(onMouseDblClick)];
-
 GVAR(icons) set [_id, _ctrlIcon];
 
 _ctrlIcon

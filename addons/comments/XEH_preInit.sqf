@@ -18,6 +18,8 @@ if (hasInterface) then {
     GVAR(icons) = createHashMap;
 
     GVAR(draw3DAdded) = false;
+
+    GVAR(movingComment) = [];
 };
 
 #include "initSettings.inc.sqf"

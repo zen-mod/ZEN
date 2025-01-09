@@ -15,4 +15,5 @@ if (hasInterface) then {
     [QGVAR(commentUpdated), LINKFUNC(onCommentUpdated)] call CBA_fnc_addEventHandler;
 
     ["zen_curatorDisplayLoaded", LINKFUNC(addDrawEventHandler)] call CBA_fnc_addEventHandler;
+    ["zen_curatorDisplayUnloaded", LINKFUNC(onUnload)] call CBA_fnc_addEventHandler;
 };
