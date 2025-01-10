@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Timi007
- * Deletes the comment. Must be called on server.
+ * Deletes the comment.
  *
  * Arguments:
  * 0: Comment id <STRING>

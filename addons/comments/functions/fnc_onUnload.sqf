@@ -15,7 +15,6 @@
  * Public: No
  */
 
-
 if (GVAR(movingComment) isNotEqualTo []) then {
     // Zeus displayed closed before moving stopped
     // Reset comment back to original position

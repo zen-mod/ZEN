@@ -128,10 +128,10 @@ private _screenPos = [];
         };
     } else {
         // Draw comment name on map
-        private _text = if (_creator isEqualTo "") then {
-            _title
-        } else {
-            format ["%1: %2", _creator, _title];
+        private _text = switch (true) do {
+            case (_creator isEqualTo ""): {_title};         // Case for 3DEN comment
+            case (_title isEqualTo ""): {_creator};         // Case for Zeus comment without title
+            default {format ["%1: %2", _creator, _title]};  // Case for Zeus comment with title
         };
 
         _mapCtrl drawIcon [

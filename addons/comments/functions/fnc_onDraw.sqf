@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Timi007
- * Handles drawing the comments on the Zeus map.
+ * Handles drawing the comments on the Zeus map. Is only called when map is open.
  *
  * Arguments:
  * 0: Zeus map <CONTROL>
@@ -24,8 +24,7 @@ if (!GVAR(enabled) && !GVAR(enabled3DEN)) exitWith {
     LOG("Removed 3DENComments map draw.");
 };
 
-// Draw is only called when map is open
-if (call EFUNC(common,isInScreenshotMode)) exitWith {}; // HUD is hidden
+if (dialog || {call EFUNC(common,isInScreenshotMode)}) exitWith {}; // Dialog is open or HUD is hidden
 
 [GVAR(comments), GVAR(icons), GVAR(enabled), GVAR(enabled3DEN), _mapCtrl] call FUNC(drawComments);
 
