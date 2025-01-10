@@ -11,9 +11,9 @@ The context menu action is only shown when comments are enabled in the CBA setti
 ### Editing
 
 The properties of comments can be changed by double clicking on the icon of the comment.
-This will open a menu which allows you to configure the comment's title, tooltip, and color.
+This will open a menu that allows you to configure the comment's title, tooltip, and color.
 
-Comments can be moved by left clicking an dragging on the icon.
+Comments can be moved by left clicking and dragging on the icon.
 Comments created in 3DEN cannot be moved.
 
 ### Deleting
@@ -26,4 +26,4 @@ By default, comments created in 3DEN cannot be deleted. This can be changed in t
 All comments created in 3DEN will be imported into Zeus by default.
 A comment can be excluded by unchecking the "Show comment in Zeus" option when creating/editing a comment in 3DEN.
 
-!> The mission must be saved, otherwise 3DEN comments will not be shown in Zeus! 
+!> The mission must be saved; otherwise, 3DEN comments will not be shown in Zeus! 
