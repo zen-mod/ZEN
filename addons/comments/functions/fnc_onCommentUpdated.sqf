@@ -18,6 +18,11 @@
 
 params ["_id", "_data"];
 
-GVAR(comments) set [_id, _data];
+if (_id in GVAR(comments)) then {
+    GVAR(comments) set [_id, _data];
 
-[_id] call FUNC(updateIcon);
+    [_id] call FUNC(updateIcon);
+} else {
+    // Comment does not exist (JIP case).
+    [QGVAR(commentCreated), _this] call CBA_fnc_localEvent;
+};

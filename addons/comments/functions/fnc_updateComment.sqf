@@ -33,7 +33,7 @@ params [
     ["_creator", "", [""]]
 ];
 
-private _jipId = format [QGVAR(update_%1), _id];
 private _data = [_position, _title, _tooltip, _color, _creator];
+private _jipId = format [QGVAR(%1), _id];
 [QGVAR(commentUpdated), [_id, _data], _jipId] call CBA_fnc_globalEventJIP;
 TRACE_2("Comment updated",_id,_data);
