@@ -3,12 +3,10 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        units[] = {
-            QGVAR(module)
-        };
+        units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"zen_modules", "zen_dialog"};
+        requiredAddons[] = {"zen_dialog"};
         author = ECSTRING(main,Author);
         authors[] = {"Timi007"};
         url = ECSTRING(main,URL);
