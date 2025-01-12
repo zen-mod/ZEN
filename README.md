@@ -49,6 +49,7 @@ Special thanks to the [ACE3 Team](http://ace3mod.com/team.html) for their open s
 - Settings to control Zeus camera properties such as speed and available vision modes.
 - Zeus camera flashlight for easier editing at night.
 - New waypoint types such as paradrop available through Zeus.
+- Ability to place comments and see comments created in 3DEN. 
 
 ## Contributing
 
