@@ -21,9 +21,10 @@ params ["_ctrlIcon", "_button"];
 if (_button != 0) exitWith {};
 
 private _id = _ctrlIcon getVariable [QGVAR(comment), ""];
-if (_id isEqualTo "") exitWith {ERROR("Moving invalid comment.")};
+if (_id isEqualTo "" || {_id call FUNC(is3DENComment)}) exitWith {};
 
-if (_id call FUNC(is3DENComment)) exitWith {};
+(GVAR(comments) get _id) params ["_position", "", "", "", "", "_lockPosition"];
 
-(GVAR(comments) get _id) params ["_position"];
+if (_lockPosition) exitWith {};
+
 GVAR(movingComment) = [_id, +_position];

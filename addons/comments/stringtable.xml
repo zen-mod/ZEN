@@ -41,5 +41,9 @@
             <English>If selected, this comment will be shown in Zeus.</English>
             <German>Wenn ausgewählt, wird dieser Kommentar in Zeus angezeigt.</German>
         </Key>
+        <Key ID="STR_ZEN_Comments_LockPosition">
+            <English>Lock position</English>
+            <German>Position sperren</German>
+        </Key>
     </Package>
 </Project>

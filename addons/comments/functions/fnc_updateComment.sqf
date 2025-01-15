@@ -9,13 +9,14 @@
  * 2: Title <STRING>
  * 3: Tooltip <STRING>
  * 4: Comment color (RGBA) <ARRAY>
- * 4: Creator <STRING>
+ * 5: Creator <STRING>
+ * 6: Lock position <BOOLEAN>
  *
  * Return Value:
  * None
  *
  * Example:
- * ["zeus:2", [0, 0, 0], "My updated Comment", "This is a nice comment", [1, 0, 0, 0.7], "Joe"] call zen_comments_fnc_updateComment
+ * ["zeus:2", [0, 0, 0], "My updated Comment", "This is a nice comment", [1, 0, 0, 0.7], "Joe", false] call zen_comments_fnc_updateComment
  *
  * Public: No
  */
@@ -30,10 +31,11 @@ params [
     ["_title", "", [""]],
     ["_tooltip", "", [""]],
     ["_color", DEFAULT_COLOR, [[]], 4],
-    ["_creator", "", [""]]
+    ["_creator", "", [""]],
+    ["_lockPosition", false, [false]]
 ];
 
-private _data = [_position, _title, _tooltip, _color, _creator];
+private _data = [_position, _title, _tooltip, _color, _creator, _lockPosition];
 private _jipId = format [QGVAR(%1), _id];
 [QGVAR(commentUpdated), [_id, _data], _jipId] call CBA_fnc_globalEventJIP;
 TRACE_2("Comment updated",_id,_data);
