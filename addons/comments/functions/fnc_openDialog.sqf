@@ -39,7 +39,7 @@ if (_positionOrId isEqualType [] && _position isEqualTo []) then {
     [
         ["EDIT", localize "str_3den_comment_attribute_name_displayname", [_title], true],
         ["EDIT:MULTI", localize "str_3den_comment_attribute_name_tooltip", [_tooltip], true],
-        ["CHECKBOX", LLSTRING(LockPosition), _lockPosition, _isEditingComment],
+        ["TOOLBOX:YESNO", LLSTRING(LockPosition), [_lockPosition], _isEditingComment],
         ["COLOR", localize "str_3den_marker_attribute_color_displayname", _color, _isEditingComment]
     ],
     {
