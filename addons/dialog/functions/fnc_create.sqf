@@ -238,7 +238,15 @@ private _fnc_verifyListEntries = {
         };
         case "VECTOR": {
             _defaultValue = [_valueInfo] param [0, [0, 0], [], [2, 3]];
-            _controlType = [QGVAR(Row_VectorXY), QGVAR(Row_VectorXYZ)] select (count _defaultValue > 2);
+
+            private _controlTypeStyle = [
+                [QGVAR(Row_VectorXY), QGVAR(Row_VectorXYZ)],
+                [QGVAR(Row_VectorAB), QGVAR(Row_VectorABC)]
+            ] select (_subType == "SIZE");
+            _controlType = _controlTypeStyle select (count _defaultValue > 2);
+
+            private _allowNegativeNumbers = _subType != "SIZE";
+            _settings append [_allowNegativeNumbers];
         };
     };
 
