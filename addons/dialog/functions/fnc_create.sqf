@@ -246,6 +246,12 @@ private _fnc_verifyListEntries = {
             _controlType = _controlTypeStyle select (count _defaultValue > 2);
 
             private _allowNegativeNumbers = _subType != "SIZE";
+
+            // Don't set values below zero if negative numbers are forbidden
+            if (!_allowNegativeNumbers) then {
+                _defaultValue = _defaultValue apply {_x max 0};
+            };
+
             _settings append [_allowNegativeNumbers];
         };
     };
