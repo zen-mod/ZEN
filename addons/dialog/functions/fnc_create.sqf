@@ -255,6 +255,11 @@ private _fnc_verifyListEntries = {
             ] select (_subType == "SIZE");
             _controlType = _controlTypeStyle select (count _default > 2);
 
+            if (_subType == "SIZE" && {_min isEqualTo []}) then {
+                // SIZE subtype should only allow for positive values and zero by default
+                _min = _default apply {0};
+            };
+
             // Clip default values between min and max
             _defaultValue = +_default;
             if (_min isNotEqualTo []) then {
