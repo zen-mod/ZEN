@@ -1,19 +1,21 @@
 #include "script_component.hpp"
 /*
- * Author: mharis001
+ * Author: mharis001, Timi007
  * Initializes the VECTOR content control.
  *
  * Arguments:
  * 0: Controls Group <CONTROL>
  * 1: Default Value <ARRAY>
  * 2: Settings <ARRAY>
- *     0: Allow entering negative numbers <BOOL>
+ *     0: Minimum values for each vector component <ARRAY>
+ *     1: Maximum values for each vector component <ARRAY>
+ *     2: Only allow integers <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL, [0, 0, 0]] call zen_dialog_fnc_gui_vector
+ * [CONTROL, [0, 0, 0], [[-1, 0, nil], [nil, nil, 50], false]] call zen_dialog_fnc_gui_vector
  *
  * Public: No
  */

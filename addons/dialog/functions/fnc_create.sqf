@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: mharis001
+ * Author: mharis001, Timi007
  * Creates a dialog with the given rows of content.
  *
  * Arguments:
