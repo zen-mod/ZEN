@@ -2,3 +2,15 @@
 options.ignore = [
     "addPublicVariableEventHandler", # Alt syntax is broken, we are using main syntax
 ]
+
+[sqf.var_all_caps]
+options.ignore = [
+    # Debug MACROS
+    "ZEN_RECOMPILES",
+    "ZEN_PREP_RECOMPILE",
+    "ZEN_PFH_COUNTER",
+    "ZEN_COUNTERS",
+
+    # External variables
+    "AR_SUPPORTED_VEHICLES"
+]
