@@ -21,23 +21,23 @@ private _marker = _ctrlConfigure getVariable [QGVAR(marker), ""];
 
 private _sizeA = parseNumber ctrlText (_ctrlConfigure controlsGroupCtrl IDC_CONFIGURE_SIZE_A);
 private _sizeB = parseNumber ctrlText (_ctrlConfigure controlsGroupCtrl IDC_CONFIGURE_SIZE_B);
-_marker setMarkerSize [_sizeA, _sizeB];
+_marker setMarkerSizeLocal [_sizeA, _sizeB];
 
 private _ctrlRotationSlider = _ctrlConfigure controlsGroupCtrl IDC_CONFIGURE_ROTATION_SLIDER;
 private _rotation = sliderPosition _ctrlRotationSlider;
-_marker setMarkerDir _rotation;
+_marker setMarkerDirLocal _rotation;
 
 private _ctrlShape = _ctrlConfigure controlsGroupCtrl IDC_CONFIGURE_SHAPE;
 private _shape = ["RECTANGLE", "ELLIPSE"] select lbCurSel _ctrlShape;
-_marker setMarkerShape _shape;
+_marker setMarkerShapeLocal _shape;
 
 private _ctrlBrush = _ctrlConfigure controlsGroupCtrl IDC_CONFIGURE_BRUSH;
 private _brush = _ctrlBrush lbData lbCurSel _ctrlBrush;
-_marker setMarkerBrush _brush;
+_marker setMarkerBrushLocal _brush;
 
 private _ctrlColor = _ctrlConfigure controlsGroupCtrl IDC_CONFIGURE_COLOR;
 private _color = _ctrlColor lbData lbCurSel _ctrlColor;
-_marker setMarkerColor _color;
+_marker setMarkerColorLocal _color;
 
 private _ctrlAlphaSlider = _ctrlConfigure controlsGroupCtrl IDC_CONFIGURE_ALPHA_SLIDER;
 private _alpha = sliderPosition _ctrlAlphaSlider;
