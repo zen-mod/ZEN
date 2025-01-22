@@ -7,9 +7,9 @@
  * 0: Controls Group <CONTROL>
  * 1: Default Value <ARRAY>
  * 2: Settings <ARRAY>
- *     0: Minimum values for each vector component <ARRAY>
- *     1: Maximum values for each vector component <ARRAY>
- *     2: Only allow integers <BOOL>
+ *   0: Minimum Values <ARRAY>
+ *   1: Maximum Values <ARRAY>
+ *   2: Only Allow Integers <BOOL>
  *
  * Return Value:
  * None
@@ -28,10 +28,13 @@ private _fnc_textChanged = {
     params ["_ctrlEdit"];
 
     private _filter = toArray "0123456789";
+    
     if !(_ctrlEdit getVariable [QGVAR(onlyIntegers), false]) then {
         _filter pushBack (toArray "." select 0);
     };
+    
     private _min = _ctrlEdit getVariable QGVAR(min);
+    
     if (isNil "_min" || {_min < 0}) then {
         _filter pushBack (toArray "-" select 0);
     };
@@ -68,10 +71,13 @@ _controlsGroup setVariable [QFUNC(value), {
         private _num = parseNumber ctrlText _x;
 
         private _min = _x getVariable QGVAR(min);
+        
         if (!isNil "_min") then {
             _num = _num max _min;
         };
+        
         private _max = _x getVariable QGVAR(max);
+        
         if (!isNil "_max") then {
             _num = _num min _max;
         };

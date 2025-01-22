@@ -238,7 +238,7 @@ private _fnc_verifyListEntries = {
         };
         case "VECTOR": {
             // Backwards compatibility for old format
-            if ((_valueInfo select 0) isEqualType 0) then {
+            if (_valueInfo select 0 isEqualType 0) then {
                 _valueInfo = [_valueInfo];
             };
 
@@ -253,6 +253,7 @@ private _fnc_verifyListEntries = {
                 [QGVAR(Row_VectorXY), QGVAR(Row_VectorXYZ)],
                 [QGVAR(Row_VectorAB), QGVAR(Row_VectorABC)]
             ] select (_subType == "SIZE");
+
             _controlType = _controlTypeStyle select (count _default > 2);
 
             if (_subType == "SIZE" && {_min isEqualTo []}) then {
@@ -262,6 +263,7 @@ private _fnc_verifyListEntries = {
 
             // Clip default values between min and max
             _defaultValue = +_default;
+
             if (_min isNotEqualTo []) then {
                 if (count _min isNotEqualTo count _default) then {
                     WARNING_2("Array for min vector values must have the same size as the default array or empty. Default: %1 / Min: %2",count _default,count _min);
@@ -270,6 +272,7 @@ private _fnc_verifyListEntries = {
 
                 {
                     private _iMin = _min select _forEachIndex;
+                    
                     if (!isNil "_iMin") then {
                         _defaultValue set [_forEachIndex, _x max _iMin];
                     };
@@ -284,6 +287,7 @@ private _fnc_verifyListEntries = {
 
                 {
                     private _iMax = _max select _forEachIndex;
+                    
                     if (!isNil "_iMax") then {
                         _defaultValue set [_forEachIndex, _x min _iMax];
                     };
