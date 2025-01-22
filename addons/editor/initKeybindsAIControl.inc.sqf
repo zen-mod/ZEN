@@ -1,4 +1,6 @@
-[[ELSTRING(main,DisplayName), LSTRING(AIControl)], QGVAR(ejectPassengers), [LSTRING(EjectPassengers), LSTRING(EjectPassengers_Description)], {
+private _category = [ELSTRING(main,DisplayName), LSTRING(AIControl)];
+
+[_category, QGVAR(ejectPassengers), [LSTRING(EjectPassengers), LSTRING(EjectPassengers_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
         {
             [_x] call EFUNC(common,ejectPassengers);
@@ -8,7 +10,7 @@
     };
 }, {}, [DIK_G, [false, true, false]]] call CBA_fnc_addKeybind; // Default: CTRL + G
 
-[[ELSTRING(main,DisplayName), LSTRING(AIControl)], QGVAR(deployCountermeasures), [LSTRING(DeployCountermeasures), LSTRING(DeployCountermeasures_Description)], {
+[_category, QGVAR(deployCountermeasures), [LSTRING(DeployCountermeasures), LSTRING(DeployCountermeasures_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
         {
             [_x] call EFUNC(common,deployCountermeasures);
@@ -18,7 +20,7 @@
     };
 }, {}, [DIK_C, [true, false, false]]] call CBA_fnc_addKeybind; // Default: SHIFT + C
 
-[[ELSTRING(main,DisplayName), LSTRING(AIControl)], QGVAR(watchCursor), [LSTRING(WatchCursor), LSTRING(WatchCursor_Description)], {
+[_category, QGVAR(watchCursor), [LSTRING(WatchCursor), LSTRING(WatchCursor_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
         curatorMouseOver params ["_type", "_target"];
 
@@ -45,7 +47,7 @@
     };
 }, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
 
-[[ELSTRING(main,DisplayName), LSTRING(AIControl)], QGVAR(watchCuratorCamera), [LSTRING(WatchCuratorCamera), LSTRING(WatchCuratorCamera_Description)], {
+[_category, QGVAR(watchCuratorCamera), [LSTRING(WatchCuratorCamera), LSTRING(WatchCuratorCamera_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
         private _position = ASLToAGL getPosASL curatorCamera;
 
@@ -64,7 +66,7 @@
     };
 }, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
 
-[[ELSTRING(main,DisplayName), LSTRING(AIControl)], QGVAR(forceFire), [LSTRING(ForceFire), LSTRING(ForceFire_Description)], {
+[_category, QGVAR(forceFire), [LSTRING(ForceFire), LSTRING(ForceFire_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
         private _units = SELECTED_OBJECTS select {!isPlayer _x && {!isNull group _x}};
         [QEGVAR(common,forceFire), [_units, CBA_clientID]] call CBA_fnc_globalEvent;
@@ -75,7 +77,7 @@
     [QEGVAR(common,forceFire), [[], CBA_clientID]] call CBA_fnc_globalEvent;
 }, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
 
-[[ELSTRING(main,DisplayName), LSTRING(AIControl)], QGVAR(toggleLaser), [LSTRING(ToggleLaser), LSTRING(ToggleLaser_Description)], {
+[_category, QGVAR(toggleLaser), [LSTRING(ToggleLaser), LSTRING(ToggleLaser_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
         {
             if (!isNull group _x && {!isPlayer _x}) then {
@@ -87,7 +89,7 @@
     };
 }, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
 
-[[ELSTRING(main,DisplayName), LSTRING(AIControl)], QGVAR(moveToCursor), [LSTRING(MoveToCursor), LSTRING(MoveToCursor_Description)], {
+[_category, QGVAR(moveToCursor), [LSTRING(MoveToCursor), LSTRING(MoveToCursor_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
         private _position = ASLToAGL ([] call EFUNC(common,getPosFromScreen));
 
@@ -106,7 +108,7 @@
     };
 }, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
 
-[[ELSTRING(main,DisplayName), LSTRING(AIControl)], QGVAR(toggleAIPATH), [LSTRING(ToggleAIPATH), LSTRING(ToggleAIPATH_Description)], {
+[_category, QGVAR(toggleAIPATH), [LSTRING(ToggleAIPATH), LSTRING(ToggleAIPATH_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
         {
             if (!isPlayer _x && {isNull objectParent _x || {_x == driver vehicle _x}}) then {
