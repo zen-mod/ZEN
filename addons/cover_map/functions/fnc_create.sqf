@@ -51,10 +51,10 @@ _size params [
     ];
 
     private _markerCover = createMarker [format [QGVAR(cover_%1), _x], _coverPos];
-    _markerCover setMarkerShape "RECTANGLE";
-    _markerCover setMarkerBrush "Solid";
-    _markerCover setMarkerColor "ColorBlack";
-    _markerCover setMarkerSize [_sizeMarker, SIZE_OUT - _sizeA];
+    _markerCover setMarkerShapeLocal "RECTANGLE";
+    _markerCover setMarkerBrushLocal "Solid";
+    _markerCover setMarkerColorLocal "ColorBlack";
+    _markerCover setMarkerSizeLocal [_sizeMarker, SIZE_OUT - _sizeA];
     _markerCover setMarkerDir _direction;
 
     private _dotPos = [
@@ -63,16 +63,16 @@ _size params [
     ];
 
     private _markerDot = createMarker [format [QGVAR(dot_%1), _x], _dotPos];
-    _markerDot setMarkerColor "ColorBlack";
-    _markerDot setMarkerType "mil_box_noShadow";
-    _markerDot setMarkerSize [0.75, 0.75];
+    _markerDot setMarkerColorLocal "ColorBlack";
+    _markerDot setMarkerTypeLocal "mil_box_noShadow";
+    _markerDot setMarkerSizeLocal [0.75, 0.75];
     _markerDot setMarkerDir _direction;
 } forEach [0, 90, 180, 270];
 
 // Create border marker
 private _markerBorder = createMarker [QGVAR(border), [_centerX, _centerY]];
-_markerBorder setMarkerShape "RECTANGLE";
-_markerBorder setMarkerBrush "Border";
-_markerBorder setMarkerColor "ColorBlack";
-_markerBorder setMarkerSize [_sizeX, _sizeY];
+_markerBorder setMarkerShapeLocal "RECTANGLE";
+_markerBorder setMarkerBrushLocal "Border";
+_markerBorder setMarkerColorLocal "ColorBlack";
+_markerBorder setMarkerSizeLocal [_sizeX, _sizeY];
 _markerBorder setMarkerDir _angle;

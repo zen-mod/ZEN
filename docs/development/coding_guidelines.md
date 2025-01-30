@@ -67,7 +67,7 @@ An addon template is available at the [extras/blank](https://github.com/zen-mod/
 All text that shall be displayed to a user shall be defined in a `stringtable.xml` file for multi-language support.
 
 - There shall be no empty stringtable language values.
-- All stringtables shall follow the format as specified by [Tabler](https://github.com/bux/tabler) and the [translation guidelines](http://ace3mod.com/wiki/development/how-to-translate-ace3.html) form.
+- All stringtables shall follow the format as specified by [Tabler](https://github.com/bux/tabler) and the [translation guidelines](https://ace3.acemod.org/wiki/development/how-to-translate-ace3) form.
 
 ## 2. Macro Usage
 

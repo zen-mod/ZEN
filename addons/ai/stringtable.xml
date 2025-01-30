@@ -274,6 +274,7 @@
             <German>Waffe feuern</German>
             <Chinesesimp>武器开火</Chinesesimp>
             <Chinese>武器開火</Chinese>
+            <French>Arme à feu</French>
         </Key>
         <Key ID="STR_ZEN_AI_FSM">
             <English>FSM</English>

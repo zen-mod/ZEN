@@ -245,7 +245,7 @@
 [[ELSTRING(main,DisplayName), LSTRING(AIControl)], QGVAR(toggleAIPATH), [LSTRING(ToggleAIPATH), LSTRING(ToggleAIPATH_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
         {
-            if (!isPlayer _x && {_x == vehicle _x || {_x == driver vehicle _x}}) then {
+            if (!isPlayer _x && {isNull objectParent _x || {_x == driver vehicle _x}}) then {
                 private _isPathEnabled = _x checkAIFeature "PATH";
                 private _eventName = [QEGVAR(common,enableAI), QEGVAR(common,disableAI)] select _isPathEnabled;
                 [_eventName, [_x, "PATH"], _x] call CBA_fnc_globalEvent;

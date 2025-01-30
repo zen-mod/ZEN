@@ -18,7 +18,7 @@
 if (_hoveredEntity isEqualType objNull && {_hoveredEntity isKindOf "AllVehicles"} && {!(_hoveredEntity isKindOf "CAManBase")}) then {
     [[player], _hoveredEntity] call EFUNC(common,teleportIntoVehicle);
 } else {
-    if (vehicle player != player) then {
+    if (!isNull objectParent player) then {
         moveOut player;
     };
 

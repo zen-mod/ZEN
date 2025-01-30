@@ -42,7 +42,7 @@ if (_topDown) then {
 };
 
 {
-    if (vehicle _x != _x) then {
+    if (!isNull objectParent _x) then {
         moveOut _x;
     };
 } forEach _units;
