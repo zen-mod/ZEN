@@ -65,6 +65,7 @@
             <Chinese>覆蓋路徑點位置</Chinese>
             <Japanese>ウェイポイント配置上書き</Japanese>
             <Italian>Oltrepassare posizionamento waypoint</Italian>
+            <French>Positionnement des points de passage</French>
         </Key>
         <Key ID="STR_ZEN_Context_Menu_OverrideWaypoints_Description">
             <English>Allows for the context menu to be opened by right clicking when waypoint placement would normally occur.\nRequires holding the SHIFT key in order to place waypoints.</English>
@@ -73,6 +74,7 @@
             <Chinese>允許在通常情況下，在放置路徑點時通過右鍵打開滾輪菜單。 \n需要按住SHIFT鍵來放置路徑點。</Chinese>
             <Japanese>ウェイポイント配置時に右クリックでコンテキスト メニューを使えるようにします。\nウェイポイントの配置にはシフトキーを長押しする必要があります。</Japanese>
             <Italian>Consente l'apertura del menu contestuale facendo clic con il pulsante destro del mouse quando normalmente si verifica il posizionamento del waypoint.\nRichiede la pressione del tasto SHIFT per posizionare i waypoint.</Italian>
+            <French>Permet d'ouvrir le menu contextuel en cliquant avec le bouton droit de la souris lors du contrôle normal du positionnement des points de passage.\nIl est nécessaire d'appuyer sur la touche SHIFT pour positionner les points de passage.</French>
         </Key>
         <Key ID="STR_ZEN_Context_Menu_OpenContextMenu">
             <English>Open Context Menu</English>
