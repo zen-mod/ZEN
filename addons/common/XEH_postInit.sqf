@@ -264,6 +264,21 @@
     _vehicle setFuel _fuel;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setAmmoCargo), {
+    params ["_vehicle", "_ammoCargo"];
+    _vehicle setAmmoCargo _ammoCargo;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setFuelCargo), {
+    params ["_vehicle", "_fuelCargo"];
+    _vehicle setFuelCargo _fuelCargo;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setRepairCargo), {
+    params ["_vehicle", "_repairCargo"];
+    _vehicle setRepairCargo _repairCargo;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(allowDamage), {
     params ["_object", "_allow"];
     _object allowDamage _allow;
@@ -328,7 +343,7 @@
 
 [QGVAR(addWeaponItem), {
     params ["_unit", "_weapon", "_item"];
-    _unit addweaponItem [_weapon, _item];
+    _unit addWeaponItem [_weapon, _item];
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(setDate), {setDate _this}] call CBA_fnc_addEventHandler;

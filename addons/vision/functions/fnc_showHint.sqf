@@ -31,7 +31,7 @@ private _modesCount = count _modes;
 private _posX = 0.5 - WIDTH_SINGLE * _modesCount / 2;
 
 // No grow effect if only one vision mode available
-private _commitTime = if (_modesCount > 1) then {0.2} else {0};
+private _commitTime = [0, 0.2] select (_modesCount > 1);
 
 {
     // Get name and color for vision mode

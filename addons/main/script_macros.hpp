@@ -78,11 +78,6 @@
 
 #define ZEN_isHC (!hasInterface && !isDedicated)
 
-#define SELECTED_OBJECTS   (curatorSelected select 0)
-#define SELECTED_GROUPS    (curatorSelected select 1)
-#define SELECTED_WAYPOINTS (curatorSelected select 2)
-#define SELECTED_MARKERS   (curatorSelected select 3)
-
 #define GUI_THEME_RGB_R "(profileNamespace getVariable ['GUI_BCG_RGB_R',0.13])"
 #define GUI_THEME_RGB_G "(profileNamespace getVariable ['GUI_BCG_RGB_G',0.54])"
 #define GUI_THEME_RGB_B "(profileNamespace getVariable ['GUI_BCG_RGB_B',0.21])"
@@ -100,7 +95,8 @@
 
 #define COLOR_BACKGROUND_SETTING COLOR_SETTING(EGVAR(common,darkMode),1,1,1,0.1,0,0,0,0.2)
 
-#define POS_EDGE(DEFAULT,MOVED) ([ARR_2(DEFAULT,MOVED)] select GETMVAR(EGVAR(editor,moveDisplayToEdge),false))
+#define POS_EDGE(DEFAULT,MOVED) ([ARR_2(DEFAULT,MOVED)] select (missionNamespace getVariable [ARR_2(QQEGVAR(editor,moveDisplayToEdge),false)]))
+#define POS_EDGE_SQF(DEFAULT,MOVED) ([ARR_2(DEFAULT,MOVED)] select GETMVAR(EGVAR(editor,moveDisplayToEdge),false))
 
 #define ASCII_NEWLINE 10
 #define ASCII_PERIOD 46
@@ -114,4 +110,5 @@
     #define PREP(fncName) [QPATHTOF(functions\DOUBLES(fnc,fncName).sqf), QFUNC(fncName)] call CBA_fnc_compileFunction
 #endif
 
+#include "script_curator.hpp"
 #include "script_debug.hpp"

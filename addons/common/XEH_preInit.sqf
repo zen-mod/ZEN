@@ -28,6 +28,6 @@ GVAR(runAfterSettingsInit) = [];
     GVAR(runAfterSettingsInit) = nil;
 }] call CBA_fnc_addEventHandler;
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 ADDON = true;

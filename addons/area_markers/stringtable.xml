@@ -3,24 +3,38 @@
     <Package name="Area_Markers">
         <Key ID="STR_ZEN_Area_Markers_DisplayName">
             <English>Area Markers</English>
+            <Japanese>エリアマーカー</Japanese>
+            <French>Marqueurs de zone</French>
         </Key>
         <Key ID="STR_ZEN_Area_Markers_EditableMarkers">
             <English>Editable Markers</English>
+            <Japanese>編集可能なマーカー</Japanese>
+            <French>Marqueurs éditables</French>
         </Key>
         <Key ID="STR_ZEN_Area_Markers_EditableMarkers_Description">
             <English>Controls which area markers are editable through Zeus.</English>
+            <Japanese>Zeus を通じてどのエリアマーカーを編集可能にするかを制御します。</Japanese>
+            <French>Contrôler les marqueurs de zone qui peuvent être édités par Zeus.</French>
         </Key>
         <Key ID="STR_ZEN_Area_Markers_AllMarkers">
             <English>All Markers</English>
+            <Japanese>すべてのマーカー</Japanese>
+            <French>Tous les marqueurs</French>
         </Key>
         <Key ID="STR_ZEN_Area_Markers_AllMarkers_Description">
             <English>All area markers (including those placed in 3DEN or created through script) are editable unless manually blacklisted.</English>
+            <Japanese>すべてのエリアマーカー (3DEN に配置されたもの、またはスクリプトによって作成されたものを含む) は、手動でブラックリストに登録されない限り編集可能です。</Japanese>
+            <French>Tous les marqueurs de zone (y compris ceux placés dans 3DEN ou créés par script) sont modifiables, sauf s'ils sont mis sur liste noire manuellement.</French>
         </Key>
         <Key ID="STR_ZEN_Area_Markers_OnlyZeusCreated">
             <English>Only Zeus Created</English>
+            <Japanese>Zeus作成のみ</Japanese>
+            <French>Seuls les Zeus créé</French>
         </Key>
         <Key ID="STR_ZEN_Area_Markers_OnlyZeusCreated_Description">
             <English>Only area markers created through Zeus are editable.</English>
+            <Japanese>Zeus を通じて作成されたエリアマーカーのみが編集可能です。</Japanese>
+            <French>Seuls les marqueurs de zone créés par Zeus sont modifiables.</French>
         </Key>
         <Key ID="STR_ZEN_Area_Markers_EditAreaMarker">
             <English>EDIT AREA MARKER</English>
@@ -31,7 +45,7 @@
             <Czech>ÚPRAVA ZNAČKY OBLASTI</Czech>
             <Polish>EDYTUJ MARKER OBSZAROWY</Polish>
             <Portuguese>Editar marcador de área</Portuguese>
-            <Japanese>範囲マーカーを編集</Japanese>
+            <Japanese>エリアマーカーを編集</Japanese>
             <Korean>영역 표시기 편집</Korean>
             <Chinesesimp>编辑区域标记</Chinesesimp>
             <Chinese>編輯區域標記</Chinese>

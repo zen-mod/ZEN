@@ -15,6 +15,7 @@ CHANGELOG.md
 *.tar.gz
 *.zip
 hemtt*
+.hemttout
 !hemtt.toml
 @zen
 tools/armake.exe

@@ -20,4 +20,9 @@ params ["_ctrlMouse", "_button"];
 
 if (_button == 0) then {
     _ctrlMouse setVariable [QGVAR(moving), true];
+
+    // Cancel currently active placement
+    if (call EFUNC(common,isPlacementActive)) then {
+        call EFUNC(common,getActiveTree) tvSetCurSel [-1];
+    };
 };

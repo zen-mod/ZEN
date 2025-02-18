@@ -41,7 +41,7 @@ class CfgVehicles {
 
     class GVAR(moduleAddFullArsenal): GVAR(moduleBase) {
         curatorCanAttach = 1;
-        category = GVAR(Inventory);
+        category = QGVAR(Inventory);
         displayName = CSTRING(ModuleAddFullArsenal);
         function = QFUNC(moduleAddFullArsenal);
         icon = "\a3\ui_f\data\logos\a_64_ca.paa";
@@ -336,14 +336,14 @@ class CfgVehicles {
     };
     class GVAR(moduleRemoveArsenal): GVAR(moduleBase) {
         curatorCanAttach = 1;
-        category = GVAR(Inventory);
+        category = QGVAR(Inventory);
         displayName = CSTRING(ModuleRemoveArsenal);
         function = QFUNC(moduleRemoveArsenal);
         icon = "\a3\ui_f\data\logos\a_64_ca.paa";
     };
     class GVAR(moduleRotateObject): GVAR(moduleBase) {
         curatorCanAttach = 1;
-        category = GVAR(Objects);
+        category = QGVAR(Objects);
         displayName = CSTRING(RotateObject);
         function = QFUNC(moduleRotateObject);
         icon = QPATHTOF(ui\rotate_ca.paa);

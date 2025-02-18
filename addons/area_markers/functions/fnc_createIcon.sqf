@@ -22,7 +22,7 @@ if (isNull _display) exitWith {};
 
 private _ctrlIcon = _display ctrlCreate [QGVAR(icon), IDC_ICON_GROUP];
 _ctrlIcon setVariable [QGVAR(marker), _marker];
-_ctrlIcon ctrlShow visibleMap;
+_ctrlIcon ctrlShow call FUNC(isInEditMode);
 
 GVAR(icons) set [_marker, _ctrlIcon];
 

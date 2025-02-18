@@ -173,7 +173,7 @@ private _fnc_deserializeVehicle = {
         _x params ["_magazine", "_turretPath", "_ammoCount"];
 
         private _pylonIndex = _forEachIndex + 1;
-        _vehicle setPylonLoadOut [_pylonIndex, _magazine, false, _turretPath];
+        _vehicle setPylonLoadout [_pylonIndex, _magazine, false, _turretPath];
         _vehicle setAmmoOnPylon [_pylonIndex, _ammoCount];
     } forEach _pylonMagazines;
 

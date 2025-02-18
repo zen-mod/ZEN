@@ -533,7 +533,7 @@
             <Polish>Promień</Polish>
             <Czech>Rádius</Czech>
             <Italian>Raggio</Italian>
-            <Japanese>範囲</Japanese>
+            <Japanese>範囲半径</Japanese>
             <Korean>반경</Korean>
             <Chinesesimp>半径</Chinesesimp>
             <Chinese>半徑</Chinese>
@@ -546,7 +546,7 @@
             <Polish>Promień (m)</Polish>
             <Czech>Rádius (m)</Czech>
             <Italian>Raggio (m)</Italian>
-            <Japanese>範囲 (m)</Japanese>
+            <Japanese>範囲半径 (m)</Japanese>
             <Korean>반경 (m)</Korean>
             <Chinesesimp>半径（米）</Chinesesimp>
             <Chinese>半徑（米）</Chinese>
@@ -584,6 +584,7 @@
             <Chinesesimp>持续时间 (秒)</Chinesesimp>
             <German>Dauer (s)</German>
             <Italian>Durata (s)</Italian>
+            <French>Durée (s)</French>
         </Key>
         <Key ID="STR_ZEN_Common_Amount">
             <English>Amount</English>
@@ -824,7 +825,7 @@
             <Russian>Виртуальный Арсенал</Russian>
             <German>BI Virtuelle Arsenal</German>
             <Polish>Wirtualny arsenał BI</Polish>
-            <Japanese>バーチャル武器庫</Japanese>
+            <Japanese>BI バーチャル武器庫</Japanese>
             <Korean>BI 가상 무기고</Korean>
             <Chinesesimp>原版虚拟武器库</Chinesesimp>
             <Chinese>原版虛擬武器庫</Chinese>
@@ -861,6 +862,7 @@
             <Chinesesimp>控制当玩家被提升为Zeus时是否弹出全局通知。</Chinesesimp>
             <Chinese>控制當玩家被提升為Zeus時是否彈出全局通知。</Chinese>
             <Italian>Controlla se i messaggi popup globali vengono visualizzati quando un giocatore viene assegnato come Zeus.</Italian>
+            <French>Contrôle l'affichage des messages globaux lorsqu'un joueur est assigné à Zeus.</French>
         </Key>
         <Key ID="STR_ZEN_Common_CameraBird">
             <English>Camera Eagle</English>
@@ -868,7 +870,7 @@
             <French>Aigle de caméra</French>
             <Polish>Orzeł przy kamerze</Polish>
             <Korean>독수리 카메라</Korean>
-            <Japanese>イーグル有無</Japanese>
+            <Japanese>カメライーグルの有無</Japanese>
             <Chinesesimp>鹰式摄影机</Chinesesimp>
             <Chinese>鷹式攝影機</Chinese>
             <Italian>Telecamera aquila</Italian>
@@ -882,6 +884,7 @@
             <Chinesesimp>控制是否创建一只跟随宙斯摄像机的鹰。</Chinesesimp>
             <Chinese>控制是否創建一隻跟隨宙斯攝像機的鷹。</Chinese>
             <Italian>Controlla se viene creata un'aquila che segue la telecamera Zeus.</Italian>
+            <French>Contrôle la création d'un aigle qui suit la caméra Zeus.</French>
         </Key>
     </Package>
 </Project>

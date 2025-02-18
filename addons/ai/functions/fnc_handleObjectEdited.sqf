@@ -20,6 +20,6 @@ params ["", "_object"];
 
 // Handle rotating garrisoned units
 if (_object getVariable [QGVAR(garrisoned), false]) then {
-    private _direction = (ASLtoAGL eyePos _object) vectorAdd (vectorDir _object);
+    private _direction = (ASLToAGL eyePos _object) vectorAdd (vectorDir _object);
     [QEGVAR(common,doWatch), [_object, _direction], _object] call CBA_fnc_targetEvent;
 };

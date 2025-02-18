@@ -29,7 +29,7 @@ if (_unit call EFUNC(common,isVLS)) exitWith {
 };
 
 if (_position isEqualType objNull) then {
-    _position = ASLtoAGL getPosASL _position;
+    _position = ASLToAGL getPosASL _position;
 };
 
 if (_position isEqualType "") then {

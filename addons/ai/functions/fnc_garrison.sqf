@@ -42,7 +42,7 @@ if (_topDown) then {
 };
 
 {
-    if (vehicle _x != _x) then {
+    if (!isNull objectParent _x) then {
         moveOut _x;
     };
 } forEach _units;
@@ -54,7 +54,7 @@ private _fnc_moveUnit = {
     params ["_unit", "_position"];
 
     if (surfaceIsWater _position) then {
-        _unit setPosASL AGLtoASL _position;
+        _unit setPosASL AGLToASL _position;
     } else {
         _unit setPosATL _position;
     };
