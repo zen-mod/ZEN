@@ -33,6 +33,7 @@
             <Chinesesimp>全部应用</Chinesesimp>
             <Chinese>全部應用</Chinese>
             <Italian>Applicare a tutto</Italian>
+            <French>Appliquer à tous</French>
         </Key>
         <Key ID="STR_ZEN_Garage_ApplyToAll_Tooltip">
             <English>Apply the current vehicle's customization to all selected vehicles of this type.</English>
@@ -43,6 +44,7 @@
             <Chinesesimp>将当前车辆的自定义应用于该类型的所有选定车辆上。</Chinesesimp>
             <Chinese>將當前車輛的自定義應用到此類型的所有選定車輛。</Chinese>
             <Italian>Applica la personalizzazione del veicolo corrente a tutti i veicoli selezionati di questo tipo.</Italian>
+            <French>Applique la personnalisation actuelle du véhicule à tous les véhicules de ce type.</French>
         </Key>
         <Key ID="STR_ZEN_Garage_CannotApplyToAll">
             <English>No other vehicles of the same type selected.</English>
@@ -53,6 +55,7 @@
             <Chinesesimp>没有其他同类型的车辆被选择。</Chinesesimp>
             <Chinese>沒有其他同類型的車輛被選擇。</Chinese>
             <Italian>Nessun altro veicolo dello stesso tipo selezionato.</Italian>
+            <French>Kein anderes Fahrzeug dieses Typs ausgewählt.</French>
         </Key>
     </Package>
 </Project>

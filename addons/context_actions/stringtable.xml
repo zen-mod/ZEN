@@ -56,6 +56,7 @@
             <Chinesesimp>车辆外观</Chinesesimp>
             <Chinese>車輛外觀</Chinese>
             <Italian>Aspetto del veicolo</Italian>
+            <French>Aspect du véhicule</French>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_EditableObjects">
             <English>Editable Objects</English>
@@ -66,11 +67,13 @@
             <Chinesesimp>可编辑对象</Chinesesimp>
             <Chinese>可編輯對象</Chinese>
             <Italian>Oggetti modificabili</Italian>
+            <French>Objets éditables</French>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_Selected">
             <English>Selected</English>
             <German>Auswahl</German>
             <Japanese>選択中</Japanese>
+            <French>Sélection</French>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_10m">
             <English>10 m</English>
@@ -80,6 +83,7 @@
             <Chinesesimp>10米</Chinesesimp>
             <Chinese>10米</Chinese>
             <Italian>10 m</Italian>
+            <French>10 m</French>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_50m">
             <English>50 m</English>
@@ -89,6 +93,7 @@
             <Chinesesimp>50米</Chinesesimp>
             <Chinese>50米</Chinese>
             <Italian>50 m</Italian>
+            <French>50 m</French>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_100m">
             <English>100 m</English>
@@ -98,6 +103,7 @@
             <Chinesesimp>100米</Chinesesimp>
             <Chinese>100米</Chinese>
             <Italian>100 m</Italian>
+            <French>100 m</French>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_250m">
             <English>250 m</English>
@@ -107,6 +113,7 @@
             <Chinesesimp>250米</Chinesesimp>
             <Chinese>250米</Chinese>
             <Italian>250 m</Italian>
+            <French>250 m</French>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_HoldFire">
             <English>Hold Fire</English>
@@ -117,6 +124,7 @@
             <Chinesesimp>停火</Chinesesimp>
             <Chinese>停火</Chinese>
             <Italian>Tieni premuto il fuoco</Italian>
+            <French>Ne tirez pas</French>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_HoldFireDefend">
             <English>Hold Fire, Defend Only</English>
@@ -127,6 +135,7 @@
             <Chinesesimp>停火，仅防御</Chinesesimp>
             <Chinese>停火，僅防禦</Chinese>
             <Italian>Tieni premuto il fuoco, difendi solo</Italian>
+            <French>Ne tirez pas, défendez seulement</French>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_HoldFireEngage">
             <English>Hold Fire, Engage At Will</English>
@@ -137,6 +146,7 @@
             <Chinesesimp>停火，随意反击</Chinesesimp>
             <Chinese>停火，隨意反擊</Chinese>
             <Italian>Mantieni il fuoco, impegnati a volontà</Italian>
+            <French>Ne tirez pas, engagez à volonté</French>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_FireAtWill">
             <English>Fire At Will</English>
@@ -147,6 +157,7 @@
             <Chinesesimp>随意开火</Chinesesimp>
             <Chinese>隨意開火</Chinese>
             <Italian>Fuoco a volontà</Italian>
+            <French>Feu à volonté</French>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_FireAtWillEngage">
             <English>Fire &amp; Engage At Will</English>
@@ -157,6 +168,7 @@
             <Chinesesimp>随意开火，随意反击</Chinesesimp>
             <Chinese>隨意開火 ， 隨意反擊</Chinese>
             <Italian>Fuoco e coinvolgimento a volontà</Italian>
+            <French>Feu et engagement à volonté</French>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_FireArtillery">
             <English>Fire Artillery</English>
@@ -167,6 +179,7 @@
             <Chinesesimp>炮击</Chinesesimp>
             <Chinese>砲擊</Chinese>
             <Italian>Artiglieria di fuoco</Italian>
+            <French>Tir d'artillerie</French>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_UnableToFire">
             <English>Unable To Fire</English>
@@ -177,6 +190,7 @@
             <Chinesesimp>无法开火</Chinesesimp>
             <Chinese>無法開火</Chinese>
             <Italian>Impossibile sparare</Italian>
+            <French>Impossible de tirer</French>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_NotAllVehiclesInRange">
             <English>Not all vehicles are in range to fire</English>
@@ -187,6 +201,7 @@
             <Chinesesimp>并非所有的车辆都在射程之内，无法开火</Chinesesimp>
             <Chinese>並非所有的車輛都在射程之內，無法開火</Chinese>
             <Italian>Non tutti i veicoli sono a portata di fuoco</Italian>
+            <French>Tous les véhicules ne sont pas à portée de tir</French>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_ThrowGrenade">
             <English>Throw Grenade</English>
@@ -195,6 +210,7 @@
             <Chinese>投擲手榴彈</Chinese>
             <German>Granate werfen</German>
             <Italian>Lancia una granata</Italian>
+            <French>Lancer une grenade</French>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_ThrowX">
             <English>Throw %1</English>
@@ -203,6 +219,7 @@
             <Chinese>投擲%1</Chinese>
             <German>Werfe %1</German>
             <Italian>Lancia %1</Italian>
+            <French>Lancer %1</French>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_PositionTooFar">
             <English>%1 unit(s) were too far away from the position</English>
@@ -211,6 +228,7 @@
             <Chinese>%1 個單位離位置太遠了</Chinese>
             <German>%1 Einheit(en) waren zu weit von der Position entfernt</German>
             <Italian>%1 unità erano troppo lontane dalla posizione</Italian>
+            <French>%1 unité(s) était trop éloignée(s) de la position</French>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_Captives">
             <English>Captives</English>

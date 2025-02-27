@@ -5,11 +5,11 @@ options.ignore = [
 
 [sqf.var_all_caps]
 options.ignore = [
-    # Debug MACROS
-    "ZEN_RECOMPILES",
-    "ZEN_PREP_RECOMPILE",
-    "ZEN_PFH_COUNTER",
+    # Debug macros
     "ZEN_COUNTERS",
+    "ZEN_PFH_COUNTER",
+    "ZEN_PREP_RECOMPILE",
+    "ZEN_RECOMPILES",
 
     # External variables
     "AR_SUPPORTED_VEHICLES"

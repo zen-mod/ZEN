@@ -9,6 +9,7 @@
             <Chinesesimp>安置预览</Chinesesimp>
             <Chinese>安置預覽</Chinese>
             <Italian>Anteprima posizionamento</Italian>
+            <French>Aperçu du placement</French>
         </Key>
         <Key ID="STR_ZEN_Placement_Enabled_Description">
             <English>Enables the displaying of a preview object when placing an object.\nIf the placement is confirmed, the object will be placed at the preview's position.\nThis also enables placement of objects on surfaces other than the terrain.</English>
@@ -18,6 +19,7 @@
             <Chinesesimp>在放置物体时，启用显示预览对象。\n如果确认放置，物体将被放置在预览的位置上。</Chinesesimp>
             <Chinese>在放置物體時，啟用顯示預覽對象。 \n如果確認放置，物體將被放置在預覽的位置上。</Chinese>
             <Italian>Attiva l'anteprima del posizionamento quando si posiziona un oggetto. \nSe il posizionamento è stato confermato, l'oggetto verrà creato globalmente a questo punto. \nCiò consente di posizionare oggetti su portaerei o altro.</Italian>
+            <French>Active l'aperçu du placement lors du placement d'un objet.\nLorsque le placement est confirmé, l'objet est créé globalement à cet endroit.\nCela permet également de placer des objets sur des porte-avions ou d'autres choses.</French>
         </Key>
     </Package>
 </Project>
