@@ -46,7 +46,9 @@ jobs:
     - name: Rename build folder
       run: mv .hemttout/build .hemttout/@zen
     - name: Upload Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: zen-${{ github.sha }}-nobin
         path: .hemttout/@*
+        include-hidden-files: true # Because .hemttout is a hidden directory
+        if-no-files-found: error
