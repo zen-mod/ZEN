@@ -15,3 +15,4 @@ PREP(handleSideButtons);
 PREP(handleTreeButtons);
 PREP(handleUnload);
 PREP(pingCurators);
+PREP(setUnitPos);

@@ -130,3 +130,43 @@ private _category = [ELSTRING(main,DisplayName), LSTRING(AIControl)];
         true // handled
     };
 }, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
+
+[_category, QGVAR(setUnitPosUp), [LSTRING(SetUnitPosUp), LSTRING(SetUnitPosUp_Description)], {
+    if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
+        {
+            [_x, "UP"] call FUNC(setUnitPos);
+        } forEach SELECTED_OBJECTS;
+
+        true // handled
+    };
+}, {}, [DIK_1, [false, false, false]]] call CBA_fnc_addKeybind; // Default: 1
+
+[_category, QGVAR(setUnitPosMiddle), [LSTRING(SetUnitPosMiddle), LSTRING(SetUnitPosMiddle_Description)], {
+    if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
+        {
+            [_x, "MIDDLE"] call FUNC(setUnitPos);
+        } forEach SELECTED_OBJECTS;
+
+        true // handled
+    };
+}, {}, [DIK_2, [false, false, false]]] call CBA_fnc_addKeybind; // Default: 2
+
+[_category, QGVAR(setUnitPosDown), [LSTRING(SetUnitPosDown), LSTRING(SetUnitPosDown_Description)], {
+    if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
+        {
+            [_x, "DOWN"] call FUNC(setUnitPos);
+        } forEach SELECTED_OBJECTS;
+
+        true // handled
+    };
+}, {}, [DIK_3, [false, false, false]]] call CBA_fnc_addKeybind; // Default: 3
+
+[_category, QGVAR(setUnitPosAuto), [LSTRING(SetUnitPosAuto), LSTRING(SetUnitPosAuto_Description)], {
+    if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
+        {
+            [_x, "AUTO"] call FUNC(setUnitPos);
+        } forEach SELECTED_OBJECTS;
+
+        true // handled
+    };
+}, {}, [DIK_4, [false, false, false]]] call CBA_fnc_addKeybind; // Default: 4

@@ -438,5 +438,37 @@
             <English>Makes selected AI units start or stop moving. Does not affect aiming or shooting. Similar to "Hold Position" in RTS games.</English>
             <Japanese>選択した AI ユニットの移動を開始または停止します。 照準や射撃には影響しません。 RTS ゲームの「ホールド ポジション」に似ています。</Japanese>
         </Key>
+        <Key ID="STR_ZEN_Editor_SetUnitPosUp">
+            <English>Switch stance to standing</English>
+            <German>Haltung auf aufrecht umschalten</German>
+        </Key>
+        <Key ID="STR_ZEN_Editor_SetUnitPosUp_Description">
+            <English>Switch the stance of all selected units to standing.</English>
+            <German>Haltung aller ausgewählten Einheiten auf aufrecht umschalten.</German>
+        </Key>
+        <Key ID="STR_ZEN_Editor_SetUnitPosMiddle">
+            <English>Switch stance to crouch</English>
+            <German>Haltung auf geduckt umschalten</German>
+        </Key>
+        <Key ID="STR_ZEN_Editor_SetUnitPosMiddle_Description">
+            <English>Switch the stance of all selected units to crouch.</English>
+            <German>Haltung aller ausgewählten Einheiten auf geduckt umschalten.</German>
+        </Key>
+        <Key ID="STR_ZEN_Editor_SetUnitPosDown">
+            <English>Switch stance to prone</English>
+            <German>Haltung auf liegend umschalten</German>
+        </Key>
+        <Key ID="STR_ZEN_Editor_SetUnitPosDown_Description">
+            <English>Switch the stance of all selected units to prone.</English>
+            <German>Haltung aller ausgewählten Einheiten auf liegend umschalten.</German>
+        </Key>
+        <Key ID="STR_ZEN_Editor_SetUnitPosAuto">
+            <English>Switch stance to automatic</English>
+            <German>Haltung auf automatisch umschalten</German>
+        </Key>
+        <Key ID="STR_ZEN_Editor_SetUnitPosAuto_Description">
+            <English>Switch the stance of all selected units to automatic.</English>
+            <German>Haltung aller ausgewählten Einheiten auf automatisch umschalten.</German>
+        </Key>
     </Package>
 </Project>
