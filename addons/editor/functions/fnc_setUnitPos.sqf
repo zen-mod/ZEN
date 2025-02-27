@@ -38,6 +38,6 @@ private _iconProperties = switch (_stance) do {
 
 [[
     ["ICON", _iconProperties]
-], 3, _unit] call EFUNC(common,drawHint);
+], 3, _unit, 1] call EFUNC(common,drawHint);
 
 true

@@ -35,6 +35,7 @@
  * 2: ID <STRING|OBJECT> (default: "")
  *   - an ID is generated when an empty string is given.
  *   - in the case of an OBJECT, the hash value is used.
+ * 3: Duration of fade out (in seconds). Fade out will occur within show duration <NUMBER> (default: 0)
  *
  * Return Value:
  * ID <STRING>
@@ -50,7 +51,8 @@
 params [
     ["_elements", [], [[]]],
     ["_duration", 0, [0]],
-    ["_id", "", ["", objNull]]
+    ["_id", "", ["", objNull]],
+    ["_fadeOut", 0, [0]]
 ];
 
 private _ctrlMap = findDisplay IDD_RSCDISPLAYCURATOR displayCtrl IDC_RSCDISPLAYCURATOR_MAINMAP;
@@ -126,14 +128,23 @@ private _lines = [];
 // Add event handlers to draw the hint elements
 private _fnc_draw2D = {
     params ["_ctrlMap"];
-    _thisArgs params ["_icons", "_lines"];
+    _thisArgs params ["_icons", "_lines", "_endTime", "_fadeOutTime"];
+
+    // No drawing if in screenshot mode
+    if (call EFUNC(common,isInScreenshotMode)) exitWith {};
+
+    private _time = CBA_missionTime;
 
     {
         _x params ["_position", "_icon", "_color", "_scale", "_angle", "_text", "_shadow", "_textSize", "_font", "_align"];
 
         if (_position isEqualTo objNull) then {continue};
 
-        _ctrlMap drawIcon [_icon, _color, _position, _scale * MAP_ICON_SIZE, _scale * MAP_ICON_SIZE, _angle, _text, _shadow, _textSize, _font, _align];
+        // Handle fade out
+        private _a = linearConversion [_fadeOutTime, _endTime, _time, _color select 3, 0, true];
+        private _newColor = (_color select [0, 3]) + [_a];
+
+        _ctrlMap drawIcon [_icon, _newColor, _position, _scale * MAP_ICON_SIZE, _scale * MAP_ICON_SIZE, _angle, _text, _shadow, _textSize, _font, _align];
     } forEach _icons;
 
     {
@@ -141,15 +152,20 @@ private _fnc_draw2D = {
 
         if (objNull in [_begPos, _endPos]) then {continue};
 
-        _ctrlMap drawLine [_begPos, _endPos, _color];
+        // Handle fade out
+        private _a = linearConversion [_fadeOutTime, _endTime, _time, _color select 3, 0, true];
+        private _newColor = (_color select [0, 3]) + [_a];
+
+        _ctrlMap drawLine [_begPos, _endPos, _newColor];
     } forEach _lines;
 };
 
 private _fnc_draw3D = {
-    _thisArgs params ["_icons", "_lines", "_endTime", "_id"];
+    _thisArgs params ["_icons", "_lines", "_endTime", "_fadeOutTime", "_id"];
 
     // Exit if the Zeus display is closed or hint duration is complete
-    if (isNull curatorCamera || {CBA_missionTime >= _endTime}) exitWith {
+    private _time = CBA_missionTime;
+    if (isNull curatorCamera || {_time >= _endTime}) exitWith {
         GVAR(drawHintMap) deleteAt _id params ["_id2D", "_id3D"];
 
         private _ctrlMap = findDisplay IDD_RSCDISPLAYCURATOR displayCtrl IDC_RSCDISPLAYCURATOR_MAINMAP;
@@ -169,7 +185,11 @@ private _fnc_draw3D = {
             _position = unitAimPositionVisual _position;
         };
 
-        drawIcon3D [_icon, _color, _position, _scale, _scale, _angle, _text, _shadow, _textSize, _font, _align];
+        // Handle fade out
+        private _a = linearConversion [_fadeOutTime, _endTime, _time, _color select 3, 0, true];
+        private _newColor = (_color select [0, 3]) + [_a];
+
+        drawIcon3D [_icon, _newColor, _position, _scale, _scale, _angle, _text, _shadow, _textSize, _font, _align];
     } forEach _icons;
 
     {
@@ -185,11 +205,19 @@ private _fnc_draw3D = {
             _endPos = unitAimPositionVisual _endPos;
         };
 
-        drawLine3D [_begPos, _endPos, _color];
+        // Handle fade out
+        private _a = linearConversion [_fadeOutTime, _endTime, _time, _color select 3, 0, true];
+        private _newColor = (_color select [0, 3]) + [_a];
+
+        drawLine3D [_begPos, _endPos, _newColor];
     } forEach _lines;
 };
 
-private _args = [_icons, _lines, CBA_missionTime + _duration, _id];
+private _endTime = CBA_missionTime + _duration;
+// Fade out will be performed within show duration; clip _fadeout value between 0 and duration.
+private _fadeOutTime = _endTime - ((_fadeOut min _duration) max 0);
+
+private _args = [_icons, _lines, _endTime, _fadeOutTime, _id];
 private _id2D = [_ctrlMap, "Draw", _fnc_draw2D, _args] call CBA_fnc_addBISEventHandler;
 private _id3D = [missionNamespace, "Draw3D", _fnc_draw3D, _args] call CBA_fnc_addBISEventHandler;
 GVAR(drawHintMap) set [_id, [_id2D, _id3D]];
