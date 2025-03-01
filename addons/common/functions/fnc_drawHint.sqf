@@ -131,7 +131,7 @@ private _fnc_draw2D = {
     _thisArgs params ["_icons", "_lines", "_endTime", "_fadeOutTime"];
 
     // No drawing if in screenshot mode
-    if (call EFUNC(common,isInScreenshotMode)) exitWith {};
+    if (call FUNC(isInScreenshotMode)) exitWith {};
 
     private _time = CBA_missionTime;
 
