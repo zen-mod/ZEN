@@ -133,12 +133,14 @@
             <German>Modsymbole anzeigen</German>
             <Japanese>MODアイコンを追加</Japanese>
             <French>Afficher les icônes des mods</French>
+            <Chinesesimp>添加模组图标</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Editor_AddModIcons_Description">
             <English>Adds mod icons to the create unit trees. WARNING: Can significantly increase display load times.</English>
             <German>Zeigt Modsymbole im Einheitenbaum an. WARNUNG: Kann die Ladezeit des Baums deutlich erhöhen.</German>
             <Japanese>作成ユニットツリーにMODアイコンを追加します。 警告: 表示の読み込み時間が大幅に長くなる可能性があります。</Japanese>
             <French>Ajoute des icônes de mod à l'arbre de création des unités. AVERTISSEMENT : Peut augmenter de manière significative les temps de chargement de l'écran.</French>
+            <Chinesesimp>在创建单位列表中添加所属的模组图标. 警告: 会显著增加加载时间</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Editor_RandomizeCopyPaste">
             <English>Randomize Deep Copy/Paste</English>
@@ -313,11 +315,13 @@
             <English>Toggle Object Editability</English>
             <Japanese>オブジェクトの編集機能の切り替え</Japanese>
             <French>Modifier l'éditabilité des objets</French>
+            <Chinesesimp>切换物体可编辑性</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleEditability_Description">
             <English>Toggles the editability (i.e., whether an object is editable through Zeus) of the object currently under the cursor.</English>
             <Japanese>現在カーソルの下にあるオブジェクトの編集可能性 (つまり、オブジェクトが Zeus を通じて編集可能かどうか) を切り替えます。</Japanese>
             <French>Bascule l'éditabilité de l'objet actuellement sous le curseur (c'est-à-dire si l'objet peut être édité via Zeus).</French>
+            <Chinesesimp>切换光标下物体的可编辑性(物体是否可以通过宙斯编辑)</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleIcons">
             <English>Toggle Editable Icons</English>
@@ -362,17 +366,20 @@
             <German>Zeus anpingen</German>
             <Japanese>ZeusにPing</Japanese>
             <French>Ping Zeus</French>
+            <Chinesesimp>提醒宙斯</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Editor_PingCurators_Description">
             <English>Pings other Zeus curators on the selected/hovered object or cursor position.</English>
             <German>Pingt andere Zeus auf ausgewählte Objekte oder Mausposition an.</German>
             <Japanese>選択/ホバーされたオブジェクトまたはカーソル位置で他の Zeus キュレーターに ping を送信します。</Japanese>
             <French>Ping d'autres Zeus sur des objets sélectionnés ou sur la position de la souris.</French>
+            <Chinesesimp>在已选择/悬停的物体上或光标位置提醒其他宙斯</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Editor_AIControl">
             <English>AI Control</English>
             <Japanese>AI操作</Japanese>
             <French>Contrôle de l'IA</French>
+            <Chinesesimp>AI控制</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Editor_EjectPassengers">
             <English>Eject Passengers</English>
@@ -419,61 +426,73 @@
             <English>Watch Cursor</English>
             <Japanese>カーソル位置を監視</Japanese>
             <French>Regarder le curseur</French>
+            <Chinesesimp>看向光标位置</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Editor_WatchCursor_Description">
             <English>Makes selected AI units watch the cursor's position. Order a unit to watch itself (i.e., with the cursor hovering over the unit) to cancel the watch target.</English>
             <Japanese>選択した AI ユニットにカーソルの位置を監視させます。 監視ターゲットをキャンセルするには、ユニットにユニット自身を監視するように命令します (つまり、カーソルをユニット上に移動させます)。</Japanese>
             <French>Permet aux unités IA sélectionnées de surveiller la position du curseur. Ordonner à une unité de se surveiller elle-même (c'est-à-dire avec le curseur au-dessus de l'unité) pour annuler la cible de surveillance.</French>
+            <Chinesesimp>让选定的AI单位看向光标位置. 命令一个单位看向自己(将光标悬停在该单位上)以取消指令</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Editor_WatchCuratorCamera">
             <English>Watch Curator Camera</English>
             <Japanese>カメラ位置を監視</Japanese>
             <French>Contrôler la position de la caméra.</French>
+            <Chinesesimp>看向宙斯镜头位置</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Editor_WatchCuratorCamera_Description">
             <English>Makes selected AI units watch the Zeus camera's position.</English>
             <Japanese>選択した AI ユニットに Zeus カメラの位置を監視させます。</Japanese>
             <French>Oblige les unités IA sélectionnées à surveiller la position de la caméra Zeus.</French>
+            <Chinesesimp>让选定的AI单位看向宙斯镜头所在位置</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Editor_ForceFire">
             <English>Force Fire</English>
             <Japanese>強制射撃</Japanese>
             <French>Tir forcé</French>
+            <Chinesesimp>强制开火</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Editor_ForceFire_Description">
             <English>Makes selected AI units fire their current weapon while the key is held down. Vehicles will fire their first available turret with a weapon.</English>
             <Japanese>キーを押している間、選択した AI ユニットが現在の武器を発射します。 車両は最初に利用可能な砲塔に武器を発射します。</Japanese>
             <French>Les unités IA sélectionnées tirent avec leur arme actuelle tant que la touche est maintenue enfoncée. Les véhicules tirent sur la première tourelle disponible dotée d'une arme.</French>
+            <Chinesesimp>当按住此键时强制让选定的AI单位开火. 载具将会使用第一个可用炮塔上的武器开火</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleLaser">
             <English>Toggle Laser</English>
             <Japanese>レーザー切り替え</Japanese>
             <French>Basculer le laser</French>
+            <Chinesesimp>切换激光</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleLaser_Description">
             <English>Makes selected AI units in vehicles toggle their turret laser weapons on or off.</English>
             <Japanese>車両内の選択した AI ユニットの砲塔レーザー兵器のオンとオフを切り替えます。</Japanese>
             <French>Permet aux unités IA sélectionnées dans les véhicules d'activer ou de désactiver les armes laser de leur tourelle.</French>
+            <Chinesesimp>让选定的载具中的AI单位切换打开或关闭激光</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Editor_MoveToCursor">
             <English>Move To Cursor</English>
             <Japanese>カーソル位置へ移動</Japanese>
             <French>Déplacer vers le curseur</French>
+            <Chinesesimp>移动至光标</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Editor_MoveToCursor_Description">
             <English>Makes selected AI units move to the cursor's position. Afterwards, AI units will return to formation and resume waypoints.</English>
             <Japanese>選択した AI ユニットをカーソルの位置に移動します。 その後、AI ユニットは編隊に戻り、ウェイポイントを再開します。</Japanese>
             <French>Permet aux unités IA sélectionnées de se déplacer jusqu'à la position du curseur. Ensuite, les unités IA retournent en formation et reprennent leurs points de passage.</French>
+            <Chinesesimp>让选定的AI单位移动到光标位置. 到达后, AI 单位将恢复队形并执行航路点</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleAIPath">
             <English>Toggle AI Pathing</English>
             <Japanese>AI パスの切り替え</Japanese>
             <French>Basculer la trajectoire de l'IA</French>
+            <Chinesesimp>切换AI寻路</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleAIPath_Description">
             <English>Makes selected AI units start or stop moving. Does not affect aiming or shooting. Similar to "Hold Position" in RTS games.</English>
             <Japanese>選択した AI ユニットの移動を開始または停止します。 照準や射撃には影響しません。 RTS ゲームの「ホールド ポジション」に似ています。</Japanese>
             <French>Permet aux unités IA sélectionnées de commencer ou d'arrêter de se déplacer. N'affecte pas la visée ou le tir. Semblable à la fonction « Maintenir la position » dans les jeux RTS.</French>
+            <Chinesesimp>让选中的AI单位开始或结束移动. 不影响瞄准或射击. 类似于RTS游戏中的"保持当前位置"</Chinesesimp>
         </Key>
     </Package>
 </Project>
