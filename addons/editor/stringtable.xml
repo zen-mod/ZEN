@@ -462,7 +462,7 @@
             <English>Toggle Laser</English>
             <Japanese>レーザー切り替え</Japanese>
             <French>Basculer le laser</French>
-            <Chinesesimp>切换镭射</Chinesesimp>
+            <Chinesesimp>切换激光</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Editor_ToggleLaser_Description">
             <English>Makes selected AI units in vehicles toggle their turret laser weapons on or off.</English>
