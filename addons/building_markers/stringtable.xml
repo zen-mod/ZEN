@@ -29,7 +29,7 @@
             <English>Adds a grey rectangle area marker for the building, similarly to terrain structures.</English>
             <Japanese>地形の構造物と同様の、灰色で長方形のエリアマーカーを建物に追加します。</Japanese>
             <French>Ajoute un marqueur de zone rectangulaire gris pour le bâtiment, de la même manière que pour les structures de terrain.</French>
-            <Chinesesimp>为建筑物添加秽色方形区域标记, 类似于地图自带的建筑物标记</Chinesesimp>
+            <Chinesesimp>为建筑物添加灰色方形区域标记, 类似于地图自带的建筑物标记</Chinesesimp>
         </Key>
     </Package>
 </Project>
