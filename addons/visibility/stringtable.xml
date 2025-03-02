@@ -54,7 +54,7 @@
             <German>Die Maximale Distanz zwischen dem Mauszeiger and den Spielern, bei der die Sichtbarkeit überprüft wird.</German>
             <Japanese>プレイヤーの視認性チェックの対象となる、カーソルの位置からの最大距離を制御します。</Japanese>
             <French>La distance maximale entre le curseur de la souris et les joueurs, à laquelle la visibilité est vérifiée.</French>
-            <Chinesesimp>控制玩家进行可见性检查时玩家距离光标位置的最大距离</Chinesesimp>
+            <Chinesesimp>控制玩家进行能见度检查时玩家距离光标位置的最大距离</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Visibility_Visible">
             <English>VISIBLE</English>
