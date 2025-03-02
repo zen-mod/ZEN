@@ -468,7 +468,7 @@
             <English>Makes selected AI units in vehicles toggle their turret laser weapons on or off.</English>
             <Japanese>車両内の選択した AI ユニットの砲塔レーザー兵器のオンとオフを切り替えます。</Japanese>
             <French>Permet aux unités IA sélectionnées dans les véhicules d'activer ou de désactiver les armes laser de leur tourelle.</French>
-            <Chinesesimp>让选定的车辆中的AI单位切换打开或关闭激光</Chinesesimp>
+            <Chinesesimp>让选定的载具中的AI单位切换打开或关闭激光</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Editor_MoveToCursor">
             <English>Move To Cursor</English>
