@@ -8,6 +8,7 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.inc.sqf"
 #include "initKeybinds.inc.sqf"
+#include "initKeybindsAIControl.inc.sqf"
 
 GVAR(clipboard) = [];
 GVAR(includeCrew) = true;
