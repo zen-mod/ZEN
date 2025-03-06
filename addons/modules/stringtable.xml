@@ -2370,30 +2370,35 @@
             <German>Legt die Bedeckung der Wolken fest, höhere Werte führen zu einer höheren Wahrscheinlichkeit von Niederschlägen/Stürmen und schnelleren Windgeschwindigkeiten.</German>
             <Japanese>雲の量を設定します。値が大きいほど、降水/嵐の可能性が高くなり、風速が速くなります。</Japanese>
             <French>Définit l'importance de la couverture nuageuse, des valeurs élevées entraînant une plus grande probabilité de précipitations/tempêtes et des vitesses de vent plus élevées.</French>
+            <Chinesesimp>设置云量, 值越高, 降水/风暴的可能性就越大, 风速越快</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Precipitation">
             <English>Precipitation</English>
             <German>Niederschlag</German>
             <Japanese>降水量</Japanese>
             <French>Précipitations</French>
+            <Chinesesimp>降水</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Precipitation_Tooltip">
             <English>Sets the precipitation strength, requires overcast to be greater than 70%.</English>
             <German>Legt die Niederschlagsintensität fest, erfordert, dass die Bewölkung größer als 70% ist.</German>
             <Japanese>降水の強さを設定します。曇りが 70% を超える必要があります。</Japanese>
             <French>Définit la force des précipitations, exige que le couvert soit supérieur à 70 %.</French>
+            <Chinesesimp>设置降水强度, 要求云量大于70%</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_PrecipitationType">
             <English>Precipitation Type</English>
             <German>Niederschlagstyp</German>
             <Japanese>降水タイプ</Japanese>
             <French>Type de précipitations</French>
+            <Chinesesimp>降水类型</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_PrecipitationType_Tooltip">
             <English>Sets the type of precipitation.</English>
             <German>Legt den Niederschlagstyp fest.</German>
             <Japanese>降水の種類を設定します。</Japanese>
             <French>Définit le type de précipitations.</French>
+            <Chinesesimp>设置降水类型</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Rain">
             <English>Rain</English>
@@ -2411,6 +2416,7 @@
             <German>Schnee</German>
             <Japanese>雪</Japanese>
             <French>Neige</French>
+            <Chinesesimp>雪</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Lightning">
             <English>Lightning</English>
@@ -3515,42 +3521,49 @@
             <German>Feuermodus</German>
             <Japanese>射撃モード</Japanese>
             <French>Mode de tir</French>
+            <Chinesesimp>开火模式</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_FireMode_SingleShotsSlow">
             <English>Single Shots (Slow)</English>
             <German>Einzelfeuer (Langsam)</German>
             <Japanese>単発 (遅い)</Japanese>
             <French>Tir unique (Lent)</French>
+            <Chinesesimp>单发点射(慢)</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_FireMode_SingleShotsFast">
             <English>Single Shots (Fast)</English>
             <German>Einzelfeuer (Schnell)</German>
             <Japanese>単発 (速い)</Japanese>
             <French>Tir unique (rapide)</French>
+            <Chinesesimp>单发点射(快)</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_FireMode_ThreeRoundBurstsSlow">
             <English>Three Round Bursts (Slow)</English>
             <German>Feuerstoß (Langsam)</German>
             <Japanese>三連射 (遅い)</Japanese>
             <French>Coup de feu (Lent)</French>
+            <Chinesesimp>三连发(慢)</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_FireMode_ThreeRoundBurstsFast">
             <English>Three Round Bursts (Fast)</English>
             <German>Feuerstoß (Schnell)</German>
             <Japanese>三連射 (早い)</Japanese>
             <French>Coup de feu (Rapide)</French>
+            <Chinesesimp>三连发(快)</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_FireMode_FullyAutomaticWithPauses">
             <English>Fully Automatic (With Pauses)</English>
             <German>Dauerfeuer (Mit Pausen)</German>
             <Japanese>全連射 (止めあり)</Japanese>
             <French>Tir continu (avec pauses)</French>
+            <Chinesesimp>全自动(有间隔)</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_FireMode_FullyAutomaticUninterrupted">
             <English>Fully Automatic (Uninterrupted)</English>
             <German>Dauerfeuer (Ununterbrochen)</German>
             <Japanese>全連射 (休みなく)</Japanese>
             <French>Tir continu (ininterrompu)</French>
+            <Chinesesimp>全自动(持续开火)</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_Stance_Tooltip">
             <English>Controls the stance units on foot will employ while suppressing.</English>
@@ -3783,6 +3796,7 @@
             <English>Unit must be a vehicle or flag</English>
             <Japanese>ユニットは車両か旗である必要があります</Japanese>
             <French>L'unité doit être un véhicule ou un drapeau</French>
+            <Chinesesimp>单位必须是载具或旗帜</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Modules_OnlyAircraft">
             <English>The unit must be an aircraft</English>

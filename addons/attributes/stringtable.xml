@@ -21,16 +21,19 @@
             <English>Ammo Cargo</English>
             <Japanese>弾薬カーゴ</Japanese>
             <French>Cargaison de munitions</French>
+            <Chinesesimp>货物弹药</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Attributes_FuelCargo">
             <English>Fuel Cargo</English>
             <Japanese>燃料カーゴ</Japanese>
             <French>Cargaison de carburant</French>
+            <Chinesesimp>货物燃油</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Attributes_RepairCargo">
             <English>Repair Cargo</English>
             <Japanese>修理カーゴ</Japanese>
             <French>Cargaison de réparation</French>
+            <Chinesesimp>货物维修</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Attributes_Engine">
             <English>Engine</English>
