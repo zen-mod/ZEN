@@ -9,6 +9,7 @@
             <Chinesesimp>切换手电筒</Chinesesimp>
             <Chinese>切換手電筒</Chinese>
             <Italian>Cambia lo stato della torcia</Italian>
+            <French>Lampe de poche on/off</French>
         </Key>
         <Key ID="STR_ZEN_Flashlight_Toggle_Description">
             <English>Toggles the state of the Zeus camera flashlight.</English>
@@ -18,6 +19,7 @@
             <Chinesesimp>切换Zeus摄像机手电筒。</Chinesesimp>
             <Chinese>切換Zeus攝像機手電筒。</Chinese>
             <Italian>Commuta lo stato della torcia della telecamera Zeus.</Italian>
+            <French>Allume/éteint la lampe de poche de la caméra Zeus.</French>
         </Key>
     </Package>
 </Project>

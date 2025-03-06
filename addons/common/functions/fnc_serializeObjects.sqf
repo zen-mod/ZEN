@@ -23,7 +23,7 @@ params [["_objects", [], [[]]], ["_centerPos", nil, [[]], [2, 3]], ["_includeWay
 
 // Filter destroyed objects and any objects that are attached to or "part of" another
 // The data for these objects will be included in the parent object's data
-_objects = _objects select {alive _x && {vehicle _x == _x} && {isNull attachedTo _x} && {isNull ropeAttachedTo _x}};
+_objects = _objects select {alive _x && {isNull objectParent _x} && {isNull attachedTo _x} && {isNull ropeAttachedTo _x}};
 _objects = _objects arrayIntersect _objects;
 
 // Find the center position of all objects if one is not given

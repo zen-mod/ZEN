@@ -9,6 +9,7 @@
             <Chinesesimp>(%1 千米)</Chinesesimp>
             <Chinese>(%1 km)</Chinese>
             <Italian>(%1 km)</Italian>
+            <French>(%1 km)</French>
         </Key>
     </Package>
 </Project>
