@@ -35,7 +35,8 @@
  * 2: ID <STRING|OBJECT> (default: "")
  *   - an ID is generated when an empty string is given.
  *   - in the case of an OBJECT, the hash value is used.
- * 3: Fade Out Duration (in seconds). Fade out will occur within show duration <NUMBER> (default: 0)
+ * 3: Fade Out Duration (in seconds) <NUMBER> (default: 0)
+ *   - will occur within show duration.
  *
  * Return Value:
  * ID <STRING>
