@@ -42,14 +42,19 @@ if (isNull _ctrlMap) then { // 3D
     drawLine3D [_centerAGL, _endPosAGL, _color, _lineWidth];
     drawIcon3D [_icon, _color, _endPosAGL, _scale, _scale, _angle, _text];
 
-    private _count = CIRCLE_DOTS_MIN max floor (2 * pi * _radius ^ 0.65 / CIRCLE_DOTS_SPACING);
+    private _count = CIRCLE_EDGES_MIN max floor (2 * pi * _radius ^ 0.65 / CIRCLE_RESOLUTION);
     private _factor = 360 / _count;
+    private _offsets = [];
 
     for "_i" from 0 to (_count - 1) do {
-        private _phi = _i * _factor;
-        private _offset = [_radius * cos _phi, _radius * sin _phi, 0];
+        private _phi = _i * _factor - _azimuth;
+        _offsets pushBack [_radius * cos _phi, _radius * sin _phi, 0];
+    };
 
-        drawIcon3D [_icon, _color, _centerAGL vectorAdd _offset, CIRCLE_DOTS_SCALE, CIRCLE_DOTS_SCALE, 0];
+    for "_i" from 0 to (_count - 1) do {
+        private _pos1 = _centerAGL vectorAdd (_offsets select _i);
+        private _pos2 = _centerAGL vectorAdd (_offsets select ((_i + 1) % _count));
+        drawLine3D [_pos1, _pos2, _color, _lineWidth];
     };
 } else { // Map
     _ctrlMap drawIcon [_icon, _color, _startPos, _scale, _scale, _angle];

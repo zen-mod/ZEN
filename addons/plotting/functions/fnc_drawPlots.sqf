@@ -24,10 +24,6 @@ private _drawIn3D = isNull _ctrlMap;
 private _d = 0;
 private _scale = 0;
 private _screenPos = [];
-private _color = GVAR(color);
-private _icon = "\a3\ui_f\data\map\markerbrushes\cross_ca.paa";
-private _angle = 0;
-private _lineWidth = 5;
 
 private _formatters = [
     (GVAR(distanceFormatters) select GVAR(currentDistanceFormatter)) select 2,
@@ -54,20 +50,18 @@ if (_activePlot isNotEqualTo []) then {
 {
     _x params ["_type", "_startPosOrObj", "_endPosOrObj"];
 
-    private _startPos = if (_startPosOrObj isEqualType objNull) then {
+    private _startPos = _startPosOrObj;
+    if (_startPosOrObj isEqualType objNull) then {
         if (isNull _startPosOrObj) then {continue};
 
-        getPosASLVisual _startPosOrObj
-    } else {
-        _startPosOrObj
+        _startPos = getPosASLVisual _startPosOrObj;
     };
 
-    private _endPos = if (_endPosOrObj isEqualType objNull) then {
+    private _endPos = _endPosOrObj;
+    if (_endPosOrObj isEqualType objNull) then {
         if (isNull _endPosOrObj) then {continue};
 
-        getPosASLVisual _endPosOrObj
-    } else {
-        _endPosOrObj
+        _endPos = getPosASLVisual _endPosOrObj;
     };
 
     if (_drawIn3D) then {
@@ -80,7 +74,7 @@ if (_activePlot isNotEqualTo []) then {
         continue;
     };
 
-    private _visualProperties = [_icon, _color, _scale, _angle, _lineWidth];
+    private _visualProperties = [ICON, GVAR(color), _scale, ICON_ANGLE, LINEWIDTH];
     private _drawArgs = [_startPos, _endPos, _visualProperties, _formatters, _ctrlMap];
     if (_type in GVAR(plotTypes)) then {
         _drawArgs call (GVAR(plotTypes) get _type);
