@@ -133,40 +133,32 @@ private _category = [ELSTRING(main,DisplayName), LSTRING(AIControl)];
 
 [_category, QGVAR(setUnitPosUp), [LSTRING(SetUnitPosUp), LSTRING(SetUnitPosUp_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
-        {
-            [_x, "UP"] call FUNC(setUnitPos);
-        } forEach SELECTED_OBJECTS;
+        [SELECTED_OBJECTS, "UP"] call FUNC(switchStance);
 
         true // handled
     };
-}, {}, [DIK_1, [false, false, false]]] call CBA_fnc_addKeybind; // Default: 1
+}, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
 
 [_category, QGVAR(setUnitPosMiddle), [LSTRING(SetUnitPosMiddle), LSTRING(SetUnitPosMiddle_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
-        {
-            [_x, "MIDDLE"] call FUNC(setUnitPos);
-        } forEach SELECTED_OBJECTS;
+        [SELECTED_OBJECTS, "MIDDLE"] call FUNC(switchStance);
 
         true // handled
     };
-}, {}, [DIK_2, [false, false, false]]] call CBA_fnc_addKeybind; // Default: 2
+}, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
 
 [_category, QGVAR(setUnitPosDown), [LSTRING(SetUnitPosDown), LSTRING(SetUnitPosDown_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
-        {
-            [_x, "DOWN"] call FUNC(setUnitPos);
-        } forEach SELECTED_OBJECTS;
+        [SELECTED_OBJECTS, "DOWN"] call FUNC(switchStance);
 
         true // handled
     };
-}, {}, [DIK_3, [false, false, false]]] call CBA_fnc_addKeybind; // Default: 3
+}, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound
 
 [_category, QGVAR(setUnitPosAuto), [LSTRING(SetUnitPosAuto), LSTRING(SetUnitPosAuto_Description)], {
     if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
-        {
-            [_x, "AUTO"] call FUNC(setUnitPos);
-        } forEach SELECTED_OBJECTS;
+        [SELECTED_OBJECTS, "AUTO"] call FUNC(switchStance);
 
         true // handled
     };
-}, {}, [DIK_4, [false, false, false]]] call CBA_fnc_addKeybind; // Default: 4
+}, {}, [0, [false, false, false]]] call CBA_fnc_addKeybind; // Default: Unbound

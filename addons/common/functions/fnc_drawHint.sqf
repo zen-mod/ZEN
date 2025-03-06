@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Ampersand, mharis001
+ * Author: Ampersand, mharis001, Timi007
  * Draws a hint that contains icon and line elements in 2D (Zeus display map)
  * and 3D (in world) for the given duration.
  *
@@ -35,7 +35,7 @@
  * 2: ID <STRING|OBJECT> (default: "")
  *   - an ID is generated when an empty string is given.
  *   - in the case of an OBJECT, the hash value is used.
- * 3: Duration of fade out (in seconds). Fade out will occur within show duration <NUMBER> (default: 0)
+ * 3: Fade Out Duration (in seconds). Fade out will occur within show duration <NUMBER> (default: 0)
  *
  * Return Value:
  * ID <STRING>
