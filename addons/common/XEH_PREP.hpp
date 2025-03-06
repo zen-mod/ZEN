@@ -1,4 +1,5 @@
 PREP(canFire);
+PREP(cartesianProduct);
 PREP(changeGroupSide);
 PREP(collapseTree);
 PREP(createZeus);
@@ -73,3 +74,4 @@ PREP(showMessage);
 PREP(spawnLargeObject);
 PREP(teleportIntoVehicle);
 PREP(updateEditableObjects);
+PREP(zip);
