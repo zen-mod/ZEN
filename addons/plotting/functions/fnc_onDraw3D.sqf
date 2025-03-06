@@ -18,10 +18,10 @@
 BEGIN_COUNTER(onDraw3D);
 
 if (
-    isNull (findDisplay IDD_RSCDISPLAYCURATOR) ||   // We are in not Zeus
-    {!isNull (findDisplay IDD_INTERRUPT)} ||        // Pause menu is opened
-    {dialog} ||                                     // We have a dialog open
-    {call EFUNC(common,isInScreenshotMode)}         // HUD is hidden
+    isNull (findDisplay IDD_RSCDISPLAYCURATOR)  // We are in not Zeus
+    || {!isNull (findDisplay IDD_INTERRUPT)}    // Pause menu is opened
+    || {dialog}                                 // We have a dialog open
+    || {call EFUNC(common,isInScreenshotMode)}  // HUD is hidden
 ) exitWith {};
 
 [GVAR(plots), GVAR(activePlot)] call FUNC(drawPlots);

@@ -23,11 +23,9 @@ TRACE_1("onMouseButtonDown",_this);
 
 if (call EFUNC(common,isCursorOnMouseArea)) then {
     curatorMouseOver params ["_type", "_object"];
-    curatorSelected params ["_objects"];
 
     private _endPosOrObj = switch (true) do {
         case (_type isEqualTo "OBJECT"): {_object};
-        case (count _objects isEqualTo 1): {_objects select 0};
         case (visibleMap): {
             private _ctrlMap = if (_displayOrControl isEqualType controlNull) then {
                 _displayOrControl
