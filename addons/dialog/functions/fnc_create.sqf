@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: mharis001
+ * Author: mharis001, Timi007
  * Creates a dialog with the given rows of content.
  *
  * Arguments:
@@ -237,8 +237,64 @@ private _fnc_verifyListEntries = {
             _settings append [_returnBool, _rows, _columns, _strings, _height, _isWide];
         };
         case "VECTOR": {
-            _defaultValue = [_valueInfo] param [0, [0, 0], [], [2, 3]];
-            _controlType = [QGVAR(Row_VectorXY), QGVAR(Row_VectorXYZ)] select (count _defaultValue > 2);
+            // Backwards compatibility for old format
+            if (_valueInfo select 0 isEqualType 0) then {
+                _valueInfo = [_valueInfo];
+            };
+
+            _valueInfo params [
+                ["_default", [0, 0], [], [2, 3]],
+                ["_min", [], [], [0, 2, 3]],
+                ["_max", [], [], [0, 2, 3]],
+                ["_onlyIntegers", false, [false]]
+            ];
+
+            private _controlTypeStyle = [
+                [QGVAR(Row_VectorXY), QGVAR(Row_VectorXYZ)],
+                [QGVAR(Row_VectorAB), QGVAR(Row_VectorABC)]
+            ] select (_subType == "SIZE");
+
+            _controlType = _controlTypeStyle select (count _default > 2);
+
+            if (_subType == "SIZE" && {_min isEqualTo []}) then {
+                // SIZE subtype should only allow for positive values and zero by default
+                _min = _default apply {0};
+            };
+
+            // Clip default values between min and max
+            _defaultValue = +_default;
+
+            if (_min isNotEqualTo []) then {
+                if (count _min isNotEqualTo count _default) then {
+                    WARNING_2("Array for min vector values must have the same size as the default array or empty. Default: %1 / Min: %2",count _default,count _min);
+                    false breakOut "Main";
+                };
+
+                {
+                    private _iMin = _min select _forEachIndex;
+                    
+                    if (!isNil "_iMin") then {
+                        _defaultValue set [_forEachIndex, _x max _iMin];
+                    };
+                } forEach _defaultValue;
+            };
+
+            if (_max isNotEqualTo []) then {
+                if (count _max isNotEqualTo count _default) then {
+                    WARNING_2("Array for max vector values must have the same size as the default array or empty. Default: %1 / Max: %2",count _default,count _max);
+                    false breakOut "Main";
+                };
+
+                {
+                    private _iMax = _max select _forEachIndex;
+                    
+                    if (!isNil "_iMax") then {
+                        _defaultValue set [_forEachIndex, _x min _iMax];
+                    };
+                } forEach _defaultValue;
+            };
+
+            _settings append [_min, _max, _onlyIntegers];
         };
     };
 

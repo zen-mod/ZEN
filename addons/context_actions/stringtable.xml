@@ -74,6 +74,7 @@
             <German>Auswahl</German>
             <Japanese>選択中</Japanese>
             <French>Sélection</French>
+            <Chinesesimp>选中的</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_10m">
             <English>10 m</English>
