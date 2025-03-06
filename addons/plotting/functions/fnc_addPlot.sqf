@@ -25,4 +25,4 @@ params [
 
 if !(_type in GVAR(plotTypes)) exitWith {-1};
 
-GVAR(plots) pushBack [_type, _startPos, _endPos];
+GVAR(plots) pushBack [_type, _startPos, _endPos]
