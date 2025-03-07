@@ -23,7 +23,6 @@ private _fnc_getFormatters = {
         private _entryConfig = _x;
 
         private _formatterName = configName _entryConfig;
-        private _displayName = getText (_entryConfig >> "displayName");
 
         private _formatterString = getText (_entryConfig >> "formatter");
         if (_formatterString isNotEqualTo "") then {
@@ -35,7 +34,6 @@ private _fnc_getFormatters = {
 
         private _formatterEntry = [
             _formatterName,
-            _displayName,
             _formatter,
             _priority
         ];

@@ -5,25 +5,17 @@
             <English>Plotting</English>
             <German>Plotten</German>
         </Key>
-        <Key ID="STR_ZEN_Plotting_FormatterName_Distance_Meter">
-            <English>Meter</English>
-            <German>Meter</German>
+        <Key ID="STR_ZEN_Plotting_MeasureDistance">
+            <English>Measure distance</English>
+            <German>Entfernung messen</German>
         </Key>
-        <Key ID="STR_ZEN_Plotting_FormatterName_Distance_Feet">
-            <English>Foot</English>
-            <German>Fuß</German>
+        <Key ID="STR_ZEN_Plotting_MeasureRadius">
+            <English>Measure radius</English>
+            <German>Radius messen</German>
         </Key>
-        <Key ID="STR_ZEN_Plotting_FormatterName_Distance_NauticalMile">
-            <English>Nautical mile</English>
-            <German>Nautische Meile</German>
-        </Key>
-        <Key ID="STR_ZEN_Plotting_FormatterName_Azimuth_Degree">
-            <English>Degree</English>
-            <German>Grad</German>
-        </Key>
-        <Key ID="STR_ZEN_Plotting_FormatterName_Azimuth_NATOMil">
-            <English>NATO mil</English>
-            <German>NATO Strich</German>
+        <Key ID="STR_ZEN_Plotting_MeasureOffset">
+            <English>Measure offset</English>
+            <German>Versatz messen</German>
         </Key>
         <Key ID="STR_ZEN_Plotting_ClearPlots">
             <English>Clear plots</English>

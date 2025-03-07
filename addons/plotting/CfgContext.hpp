@@ -1,26 +1,26 @@
 class EGVAR(context_menu,actions) {
     class Plots {
         displayName = CSTRING(DisplayName);
-        icon = "\a3\ui_f\data\IGUI\Cfg\Actions\autohover_ca.paa";
+        icon = QPATHTOF(ui\ruler.paa);
         statement = QUOTE(call FUNC(selectPosition));
         args = "LINE";
         priority = 15;
 
         class MeasureDistance {
-            displayName = "MeasureDistance";
-            icon = "\a3\ui_f\data\IGUI\Cfg\Actions\autohover_ca.paa";
+            displayName = CSTRING(MeasureDistance);
+            icon = QPATHTOF(ui\ruler.paa);
             statement = QUOTE(call FUNC(selectPosition));
             args = "LINE";
         };
-        class Radius {
-            displayName = "Radius";
-            icon = "\a3\ui_f\data\IGUI\Cfg\Actions\autohover_ca.paa";
+        class MeasureRadius {
+            displayName = CSTRING(MeasureRadius);
+            icon = QPATHTOF(ui\radius.paa);
             statement = QUOTE(call FUNC(selectPosition));
             args = "RADIUS";
         };
-        class Rectangle {
-            displayName = "Rectangle";
-            icon = "\a3\ui_f\data\IGUI\Cfg\Actions\autohover_ca.paa";
+        class MeasureOffset {
+            displayName = CSTRING(MeasureOffset);
+            icon = QPATHTOF(ui\cuboid.paa);
             statement = QUOTE(call FUNC(selectPosition));
             args = "RECTANGLE";
         };

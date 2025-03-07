@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Authors: Timi007
- * Draws all placed plots and currently active one in 3D or on the map.
+ * Draws all placed plots and currently active one in 3D or on the map. Must be called every frame.
  *
  * Arguments:
  * 0: Permanent plots in format [type, startPosASLOrObj, endPosASLOrObj] <ARRAY>
@@ -26,8 +26,8 @@ private _scale = 0;
 private _screenPos = [];
 
 private _formatters = [
-    (GVAR(distanceFormatters) select GVAR(currentDistanceFormatter)) select 2,
-    (GVAR(azimuthFormatters) select GVAR(currentAzimuthFormatter)) select 2
+    (GVAR(distanceFormatters) select GVAR(currentDistanceFormatter)) select 1,
+    (GVAR(azimuthFormatters) select GVAR(currentAzimuthFormatter)) select 1
 ];
 
 // Format active plot as permanent plot with mouse position as end position
