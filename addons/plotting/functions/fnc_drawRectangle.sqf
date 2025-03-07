@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Authors: Timi007
- * Draws a rectangle plot in 3D or on the map.
+ * Draws a rectangle plot in 3D or on the map. Must be called every frame.
  *
  * Arguments:
  * 0: Start position ASL <ARRAY>
@@ -40,15 +40,25 @@ if (isNull _ctrlMap) then { // 3D
     _startPos params ["_x1", "_y1", "_z1"];
     _endPos params ["_x2", "_y2", "_z2"];
 
-    private _edges = [
-        [[_x1, _y1, _z1], [_x2, _y1, _z1], [_x2, _y2, _z1], [_x1, _y2, _z1], [_x1, _y1, _z1]], // Rectangle same height as start pos
-        [[_x1, _y1, _z2], [_x2, _y1, _z2], [_x2, _y2, _z2], [_x1, _y2, _z2], [_x1, _y1, _z2]], // Rectangle same height as end pos
-        // Connections from start to end height
-        [[_x1, _y1, _z1], [_x1, _y1, _z2]],
-        [[_x2, _y1, _z1], [_x2, _y1, _z2]],
-        [[_x2, _y2, _z1], [_x2, _y2, _z2]],
-        [[_x1, _y2, _z1], [_x1, _y2, _z2]]
-    ];
+    private _height = abs (_z2 - _z1);
+
+    private _edges = [];
+    if (_height > CUBOID_HEIGHT_THRESHOLD) then {
+        _edges = [
+            [[_x1, _y1, _z1], [_x2, _y1, _z1], [_x2, _y2, _z1], [_x1, _y2, _z1], [_x1, _y1, _z1]], // Rectangle same height as start pos
+            [[_x1, _y1, _z2], [_x2, _y1, _z2], [_x2, _y2, _z2], [_x1, _y2, _z2], [_x1, _y1, _z2]], // Rectangle same height as end pos
+            // Connections from start to end height
+            [[_x1, _y1, _z1], [_x1, _y1, _z2]],
+            [[_x2, _y1, _z1], [_x2, _y1, _z2]],
+            [[_x2, _y2, _z1], [_x2, _y2, _z2]],
+            [[_x1, _y2, _z1], [_x1, _y2, _z2]]
+        ];
+    } else {
+        // Don't draw cuboid if height difference is small
+        _edges = [
+            [[_x1, _y1, _z1], [_x2, _y1, _z1], [_x2, _y2, _z1], [_x1, _y2, _z1], [_x1, _y1, _z1]]
+        ];
+    };
 
     {
         for "_i" from 0 to (count _x - 2) do {

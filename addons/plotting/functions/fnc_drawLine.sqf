@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Authors: Timi007
- * Draws a line plot in 3D or on the map.
+ * Draws a line plot in 3D or on the map. Must be called every frame.
  *
  * Arguments:
  * 0: Start position ASL <ARRAY>
@@ -44,6 +44,6 @@ if (isNull _mapCtrl) then { // 3D
     drawIcon3D [_icon, _color, ASLToAGL _endPos, _scale, _scale, _angle, _endText];
 } else { // Map
     _mapCtrl drawIcon [_icon, _color, _startPos, _scale, _scale, _angle, _startText];
-    _mapCtrl drawLine [_startPos, _endPos, _color, _lineWidth];
+    _mapCtrl drawLine [_startPos, _endPos, _color];
     _mapCtrl drawIcon [_icon, _color, _endPos, _scale, _scale, _angle, _endText];
 };

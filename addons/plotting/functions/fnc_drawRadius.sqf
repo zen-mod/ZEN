@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Authors: Timi007
- * Draws a radius circle plot in 3D or on the map.
+ * Draws a radius circle plot in 3D or on the map. Must be called every frame.
  *
  * Arguments:
  * 0: Start position ASL <ARRAY>
@@ -58,7 +58,7 @@ if (isNull _ctrlMap) then { // 3D
     };
 } else { // Map
     _ctrlMap drawIcon [_icon, _color, _startPos, _scale, _scale, _angle];
-    _ctrlMap drawLine [_startPos, _endPos, _color, _lineWidth];
+    _ctrlMap drawLine [_startPos, _endPos, _color];
     _ctrlMap drawEllipse [_startPos, _radius, _radius, 0, _color, ""];
     _ctrlMap drawIcon [_icon, _color, _endPos, _scale, _scale, _angle, _text];
 };
