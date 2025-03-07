@@ -1,0 +1,14 @@
+PREP(addPlot);
+PREP(clearPlots);
+PREP(compileFormatters);
+PREP(drawLine);
+PREP(drawPlots);
+PREP(drawRadius);
+PREP(drawRectangle);
+PREP(onDraw);
+PREP(onDraw3D);
+PREP(onKeyDown);
+PREP(onLoad);
+PREP(onMouseButtonDown);
+PREP(onUnload);
+PREP(selectPosition);
