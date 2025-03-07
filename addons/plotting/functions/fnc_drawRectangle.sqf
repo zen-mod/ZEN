@@ -35,19 +35,28 @@ _offset params ["_a", "_b", "_c"];
 private _text = format ["X: %1 - Y: %2 - Z: %3", _a call _fnc_distanceFormatter, _b call _fnc_distanceFormatter, _c call _fnc_distanceFormatter];
 
 if (isNull _ctrlMap) then { // 3D
-    private _startPosAGL = ASLToAGL _startPos;
-    private _endPosAGL = ASLToAGL _endPos;
+    drawIcon3D [_icon, _color, ASLToAGL _startPos, _scale, _scale, _angle];
 
-    drawIcon3D [_icon, _color, _startPosAGL, _scale, _scale, _angle];
+    _startPos params ["_x1", "_y1", "_z1"];
+    _endPos params ["_x2", "_y2", "_z2"];
 
-    private _corners = [[[_startPosAGL, _endPosAGL]] call EFUNC(common,zip)] call EFUNC(common,cartesianProduct);
-    private _count = count _corners;
+    private _edges = [
+        [[_x1, _y1, _z1], [_x2, _y1, _z1], [_x2, _y2, _z1], [_x1, _y2, _z1], [_x1, _y1, _z1]], // Rectangle same height as start pos
+        [[_x1, _y1, _z2], [_x2, _y1, _z2], [_x2, _y2, _z2], [_x1, _y2, _z2], [_x1, _y1, _z2]], // Rectangle same height as end pos
+        // Connections from start to end height
+        [[_x1, _y1, _z1], [_x1, _y1, _z2]],
+        [[_x2, _y1, _z1], [_x2, _y1, _z2]],
+        [[_x2, _y2, _z1], [_x2, _y2, _z2]],
+        [[_x1, _y2, _z1], [_x1, _y2, _z2]]
+    ];
 
-    for "_i" from 0 to (_count - 1) do {
-        drawLine3D [_corners select _i, _corners select ((_i + 1) % _count), _color, _lineWidth];
-    };
+    {
+        for "_i" from 0 to (count _x - 2) do {
+            drawLine3D [ASLToAGL (_x select _i), ASLToAGL (_x select (_i + 1)), _color, _lineWidth];
+        };
+    } forEach _edges;
 
-    drawIcon3D [_icon, _color, _endPosAGL, _scale, _scale, _angle, _text];
+    drawIcon3D [_icon, _color, ASLToAGL _endPos, _scale, _scale, _angle, _text];
 } else { // Map
     _ctrlMap drawIcon [_icon, _color, _startPos, _scale, _scale, _angle];
     private _center = (_startPos vectorAdd _endPos) vectorMultiply 0.5;
