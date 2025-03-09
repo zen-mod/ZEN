@@ -259,6 +259,20 @@ class GVAR(Row_VectorXY): GVAR(Row_Base) {
     };
 };
 
+class GVAR(Row_VectorAB): GVAR(Row_VectorXY) {
+    class controls: controls {
+        class Label: Label {};
+        class IconA: IconX {
+            text = "$STR_3DEN_Axis_A";
+        };
+        class EditX: EditX {};
+        class IconB: IconY {
+            text = "$STR_3DEN_Axis_B";
+        };
+        class EditY: EditY {};
+    };
+};
+
 class GVAR(Row_VectorXYZ): GVAR(Row_VectorXY) {
     class controls: controls {
         class Label: Label {};
@@ -283,5 +297,23 @@ class GVAR(Row_VectorXYZ): GVAR(Row_VectorXY) {
             x = QUOTE(POS_W(13.6 + 2 * 12.4/3));
             w = QUOTE(POS_W(12.4/3));
         };
+    };
+};
+
+class GVAR(Row_VectorABC): GVAR(Row_VectorXYZ) {
+    class controls: controls {
+        class Label: Label {};
+        class IconA: IconX {
+            text = "$STR_3DEN_Axis_A";
+        };
+        class EditA: EditX {};
+        class IconB: IconY {
+            text = "$STR_3DEN_Axis_B";
+        };
+        class EditB: EditY {};
+        class IconC: IconZ {
+            text = "C"; // Not localized in A3
+        };
+        class EditC: EditZ {};
     };
 };
