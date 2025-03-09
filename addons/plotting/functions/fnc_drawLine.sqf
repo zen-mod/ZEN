@@ -26,7 +26,7 @@
  * Public: No
  */
 
-params ["_startPos", "_endPos", "_visualProperties", "_formatters", ["_mapCtrl", controlNull, [controlNull]]];
+params ["_startPos", "_endPos", "_visualProperties", "_formatters", ["_ctrlMap", controlNull, [controlNull]]];
 _visualProperties params ["_icon", "_color", "_scale", "_angle", "_lineWidth"];
 _formatters params ["_fnc_distanceFormatter", "_fnc_azimuthFormatter"];
 
@@ -38,12 +38,12 @@ private _azimuthToEnd = _startPos getDir _endPos;
 private _startText = format ["%1 - %2", _distance call _fnc_distanceFormatter, _azimuthToStart call _fnc_azimuthFormatter];
 private _endText = format ["%1 - %2", _distance call _fnc_distanceFormatter, _azimuthToEnd call _fnc_azimuthFormatter];
 
-if (isNull _mapCtrl) then { // 3D
+if (isNull _ctrlMap) then { // 3D
     drawIcon3D [_icon, _color, ASLToAGL _startPos, _scale, _scale, _angle, _startText];
     drawLine3D [ASLToAGL _startPos, ASLToAGL _endPos, _color, _lineWidth];
     drawIcon3D [_icon, _color, ASLToAGL _endPos, _scale, _scale, _angle, _endText];
 } else { // Map
-    _mapCtrl drawIcon [_icon, _color, _startPos, _scale, _scale, _angle, _startText];
-    _mapCtrl drawLine [_startPos, _endPos, _color];
-    _mapCtrl drawIcon [_icon, _color, _endPos, _scale, _scale, _angle, _endText];
+    _ctrlMap drawIcon [_icon, _color, _startPos, _scale, _scale, _angle, _startText];
+    _ctrlMap drawLine [_startPos, _endPos, _color];
+    _ctrlMap drawIcon [_icon, _color, _endPos, _scale, _scale, _angle, _endText];
 };
