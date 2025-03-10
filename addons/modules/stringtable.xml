@@ -1987,6 +1987,24 @@
             <Italian>Annulla l'occupazione</Italian>
             <French>Groupe sans garnison</French>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleUnpackStaticWeapon">
+            <English>Unpack Static Weapon</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleUnpackStaticWeapon_Unit">
+            <English>Unit must carry a weapon bag</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleUnpackStaticWeapon_Group">
+            <English>Unit group must contain two compatible weapon bags</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleUnpackStaticWeapon_Distance">
+            <English>Assistant must be within 100 m of gunner</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleUnpackStaticWeapon_Player">
+            <English>Unit must not be in a player's group</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleUnpackStaticWeapon_Direction">
+            <English>Weapon Direction</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_GroupSide">
             <English>Group Side</English>
             <Russian>Сторона группы</Russian>
