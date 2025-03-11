@@ -13,3 +13,4 @@ PREP(onLoad);
 PREP(onMouseButtonDown);
 PREP(onUnload);
 PREP(selectPosition);
+PREP(setActivePlot);

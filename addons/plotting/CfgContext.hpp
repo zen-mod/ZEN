@@ -15,7 +15,7 @@ class EGVAR(context_menu,actions) {
         class MeasureDistanceFromCamera {
             displayName = CSTRING(MeasureDistanceFromCamera);
             icon = QPATHTOF(ui\ruler.paa);
-            statement = QUOTE(GVAR(activePlot) = [ARR_2(_args,curatorCamera)]);
+            statement = QUOTE([ARR_2(_args,curatorCamera)] call FUNC(setActivePlot));
             args = "LINE";
         };
         class MeasureRadius {

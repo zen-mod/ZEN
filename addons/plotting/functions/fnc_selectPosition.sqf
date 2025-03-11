@@ -31,4 +31,4 @@ private _posOrObj = switch (true) do {
 
 TRACE_1("start pos",_posOrObj);
 
-GVAR(activePlot) = [_type, _posOrObj];
+[_type, _posOrObj] call FUNC(setActivePlot);
