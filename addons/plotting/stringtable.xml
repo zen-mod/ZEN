@@ -9,6 +9,10 @@
             <English>Measure distance</English>
             <German>Entfernung messen</German>
         </Key>
+        <Key ID="STR_ZEN_Plotting_MeasureDistanceFromCamera">
+            <English>Measure distance from camera</English>
+            <German>Entfernung von Kamera messen</German>
+        </Key>
         <Key ID="STR_ZEN_Plotting_MeasureRadius">
             <English>Measure radius</English>
             <German>Radius messen</German>

@@ -12,6 +12,12 @@ class EGVAR(context_menu,actions) {
             statement = QUOTE(call FUNC(selectPosition));
             args = "LINE";
         };
+        class MeasureDistanceFromCamera {
+            displayName = CSTRING(MeasureDistanceFromCamera);
+            icon = QPATHTOF(ui\ruler.paa);
+            statement = QUOTE(GVAR(activePlot) = [ARR_2(_args,curatorCamera)]);
+            args = "LINE";
+        };
         class MeasureRadius {
             displayName = CSTRING(MeasureRadius);
             icon = QPATHTOF(ui\radius.paa);
