@@ -15,7 +15,8 @@
  * 3: Formatters <ARRAY>
  *      0: Distance formatter <CODE>
  *      1: Azimuth formatter <CODE>
- * 3: Map control <CONTROL> (default: Draw in 3D)
+ * 4: Camera position ASL <ARRAY> (default: Don't check render distance)
+ * 5: Map control <CONTROL> (default: Draw in 3D)
  *
  * Return Value:
  * None
@@ -28,22 +29,35 @@
 
 params ["_startPos", "_endPos", "_visualProperties", "_formatters", ["_ctrlMap", controlNull, [controlNull]]];
 _visualProperties params ["_icon", "_color", "_scale", "_angle", "_lineWidth"];
-_formatters params ["_fnc_distanceFormatter", "_fnc_azimuthFormatter"];
 
 private _distance = _startPos vectorDistance _endPos;
 
 private _azimuthToStart = _endPos getDir _startPos;
 private _azimuthToEnd = _startPos getDir _endPos;
 
-private _startText = format ["%1 - %2", _distance call _fnc_distanceFormatter, _azimuthToStart call _fnc_azimuthFormatter];
-private _endText = format ["%1 - %2", _distance call _fnc_distanceFormatter, _azimuthToEnd call _fnc_azimuthFormatter];
+private _fnc_format = {
+    params ["_distance", "_azimuth", "_formatters"];
+    _formatters params ["_fnc_distanceFormatter", "_fnc_azimuthFormatter"];
+
+    format ["%1 - %2", _distance call _fnc_distanceFormatter, _azimuth call _fnc_azimuthFormatter]
+};
 
 if (isNull _ctrlMap) then { // 3D
-    drawIcon3D [_icon, _color, ASLToAGL _startPos, _scale, _scale, _angle, _startText];
-    drawLine3D [ASLToAGL _startPos, ASLToAGL _endPos, _color, _lineWidth];
-    drawIcon3D [_icon, _color, ASLToAGL _endPos, _scale, _scale, _angle, _endText];
+    private _camPos = getPosASL curatorCamera;
+
+    if (CAN_RENDER_ICON(_camPos,_startPos)) then {
+        drawIcon3D [_icon, _color, ASLToAGL _startPos, _scale, _scale, _angle, [_distance, _azimuthToStart, _formatters] call _fnc_format];
+    };
+
+    if (CAN_RENDER_LINE(_camPos,_startPos,_endPos)) then {
+        drawLine3D [ASLToAGL _startPos, ASLToAGL _endPos, _color, _lineWidth];
+    };
+
+    if (CAN_RENDER_ICON(_camPos,_endPos)) then {
+        drawIcon3D [_icon, _color, ASLToAGL _endPos, _scale, _scale, _angle, [_distance, _azimuthToEnd, _formatters] call _fnc_format];
+    };
 } else { // Map
-    _ctrlMap drawIcon [_icon, _color, _startPos, _scale, _scale, _angle, _startText];
+    _ctrlMap drawIcon [_icon, _color, _startPos, _scale, _scale, _angle, [_distance, _azimuthToStart, _formatters] call _fnc_format];
     _ctrlMap drawLine [_startPos, _endPos, _color];
-    _ctrlMap drawIcon [_icon, _color, _endPos, _scale, _scale, _angle, _endText];
+    _ctrlMap drawIcon [_icon, _color, _endPos, _scale, _scale, _angle, [_distance, _azimuthToEnd, _formatters] call _fnc_format];
 };

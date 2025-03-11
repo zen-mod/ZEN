@@ -27,15 +27,24 @@
 
 params ["_startPos", "_endPos", "_visualProperties", "_formatters", ["_ctrlMap", controlNull, [controlNull]]];
 _visualProperties params ["_icon", "_color", "_scale", "_angle", "_lineWidth"];
-_formatters params ["_fnc_distanceFormatter"];
 
 private _offset = _endPos vectorDiff _startPos;
 _offset params ["_a", "_b", "_c"];
 
-private _text = format ["X: %1 - Y: %2 - Z: %3", _a call _fnc_distanceFormatter, _b call _fnc_distanceFormatter, _c call _fnc_distanceFormatter];
+private _fnc_format = {
+    params ["_offset", "_formatters"];
+    _offset params ["_a", "_b", "_c"];
+    _formatters params ["_fnc_distanceFormatter"];
+
+    format ["X: %1 - Y: %2 - Z: %3", _a call _fnc_distanceFormatter, _b call _fnc_distanceFormatter, _c call _fnc_distanceFormatter]
+};
 
 if (isNull _ctrlMap) then { // 3D
-    drawIcon3D [_icon, _color, ASLToAGL _startPos, _scale, _scale, _angle];
+    private _camPos = getPosASL curatorCamera;
+
+    if (CAN_RENDER_ICON(_camPos,_startPos)) then {
+        drawIcon3D [_icon, _color, ASLToAGL _startPos, _scale, _scale, _angle];
+    };
 
     _startPos params ["_x1", "_y1", "_z1"];
     _endPos params ["_x2", "_y2", "_z2"];
@@ -62,14 +71,21 @@ if (isNull _ctrlMap) then { // 3D
 
     {
         for "_i" from 0 to (count _x - 2) do {
-            drawLine3D [ASLToAGL (_x select _i), ASLToAGL (_x select (_i + 1)), _color, _lineWidth];
+            private _pos1 = _x select _i;
+            private _pos2 = _x select (_i + 1);
+
+            if (CAN_RENDER_LINE(_camPos,_pos1,_pos2)) then {
+                drawLine3D [ASLToAGL _pos1, ASLToAGL _pos2, _color, _lineWidth];
+            };
         };
     } forEach _edges;
 
-    drawIcon3D [_icon, _color, ASLToAGL _endPos, _scale, _scale, _angle, _text];
+    if (CAN_RENDER_ICON(_camPos,_endPos)) then {
+        drawIcon3D [_icon, _color, ASLToAGL _endPos, _scale, _scale, _angle, [_offset, _formatters] call _fnc_format];
+    };
 } else { // Map
     _ctrlMap drawIcon [_icon, _color, _startPos, _scale, _scale, _angle];
     private _center = (_startPos vectorAdd _endPos) vectorMultiply 0.5;
     _ctrlMap drawRectangle [_center, _a / 2, _b / 2, 0, _color, ""];
-    _ctrlMap drawIcon [_icon, _color, _endPos, _scale, _scale, _angle, _text];
+    _ctrlMap drawIcon [_icon, _color, _endPos, _scale, _scale, _angle, [_offset, _formatters] call _fnc_format];
 };

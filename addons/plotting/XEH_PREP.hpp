@@ -5,6 +5,7 @@ PREP(drawLine);
 PREP(drawPlots);
 PREP(drawRadius);
 PREP(drawRectangle);
+PREP(isPosInCylinder);
 PREP(onDraw);
 PREP(onDraw3D);
 PREP(onKeyDown);
