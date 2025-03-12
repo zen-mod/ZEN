@@ -4,8 +4,8 @@
  * Handles the mouse button event when user wants to add a plot in 3D or on the map.
  *
  * Arguments:
- * 0: Display or control the EH is attached to <DISPLAY or CONTROL>
- * 1: Mouse button pressen <NUMBER>
+ * 0: Zeus display <DISPLAY>
+ * 1: Mouse button pressed <NUMBER>
  *
  * Return Value:
  * None
@@ -16,7 +16,7 @@
  * Public: No
  */
 
-params ["_displayOrControl", "_button"];
+params ["_display", "_button"];
 
 if (_button != 0 || {GVAR(activePlot) isEqualTo []}) exitWith {};
 TRACE_1("onMouseButtonDown",_this);
@@ -27,11 +27,7 @@ if (call EFUNC(common,isCursorOnMouseArea)) then {
     private _endPosOrObj = switch (true) do {
         case (_mouseOverType isEqualTo "OBJECT"): {_object};
         case (visibleMap): {
-            private _ctrlMap = if (_displayOrControl isEqualType controlNull) then {
-                _displayOrControl
-            } else {
-                _displayOrControl displayCtrl IDC_RSCDISPLAYCURATOR_MAINMAP
-            };
+            private _ctrlMap = _display displayCtrl IDC_RSCDISPLAYCURATOR_MAINMAP;
 
             private _pos2D = _ctrlMap ctrlMapScreenToWorld getMousePosition;
             _pos2D set [2, getTerrainHeightASL _pos2D];

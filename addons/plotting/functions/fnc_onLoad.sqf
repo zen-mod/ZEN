@@ -27,16 +27,11 @@ if (!GVAR(draw3DAdded)) then {
     GVAR(draw3DAdded) = true;
 };
 
-if (!GVAR(inputHandlersAdded)) then {
-    LOG("Adding input handlers.");
-    _display displayAddEventHandler ["MouseButtonDown", {call FUNC(onMouseButtonDown)}];
-    _display displayAddEventHandler ["KeyDown", {call FUNC(onKeyDown)}];
-    GVAR(inputHandlersAdded) = true;
-};
+LOG("Adding input handlers.");
+_display displayAddEventHandler ["MouseButtonDown", {call FUNC(onMouseButtonDown)}];
+_display displayAddEventHandler ["KeyDown", {call FUNC(onKeyDown)}];
 
 // MapDraw EH needs to be added every time the Zeus display is opened.
 LOG("Adding map draw.");
 private _ctrlMap = _display displayCtrl IDC_RSCDISPLAYCURATOR_MAINMAP;
 _ctrlMap ctrlAddEventHandler ["Draw", {call FUNC(onDraw)}];
-_ctrlMap ctrlAddEventHandler ["MouseButtonDown", {call FUNC(onMouseButtonDown)}];
-_ctrlMap ctrlAddEventHandler ["KeyDown", {call FUNC(onKeyDown)}];

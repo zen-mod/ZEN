@@ -9,7 +9,6 @@ PREP_RECOMPILE_END;
 if (hasInterface) then {
     GVAR(activePlot) = [];
     GVAR(draw3DAdded) = false;
-    GVAR(inputHandlersAdded) = false;
 
     GVAR(plotTypes) = createHashMapFromArray [
         ["LINE", LINKFUNC(drawLine)],
