@@ -12,6 +12,10 @@ class GVAR(formatters) {
             formatter = QUOTE(format [ARR_2('%1 yd',(_value * 1.094) toFixed 1)]);
             priority = 80;
         };
+        class Mile {
+            formatter = QUOTE(format [ARR_2('%1 mi',(_value / 1609.344) toFixed 2)]);
+            priority = 70;
+        };
     };
     class Azimuth {
         class Degree {
