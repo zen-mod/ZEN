@@ -3907,5 +3907,8 @@
             <Italian>Il veicolo deve avere altro equipaggio disponibile</Italian>
             <French>Le véhicule doit disposer d'un autre équipage</French>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleInjure">
+            <English>Injure</English>
+        </Key>
     </Package>
 </Project>
