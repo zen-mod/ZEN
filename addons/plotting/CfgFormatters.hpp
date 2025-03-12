@@ -8,8 +8,8 @@ class GVAR(formatters) {
             formatter = QUOTE(format [ARR_2('%1 ft',(_value * 3.281) toFixed 1)]);
             priority = 90;
         };
-        class NauticalMile {
-            formatter = QUOTE(format [ARR_2('%1 NM',(_value / 1852) toFixed 2)]);
+        class Yards {
+            formatter = QUOTE(format [ARR_2('%1 yd',(_value * 1.094) toFixed 1)]);
             priority = 80;
         };
     };
