@@ -18,14 +18,14 @@
 
 params ["_displayOrControl", "_button"];
 
-if (GVAR(activePlot) isEqualTo [] || {_button != 0}) exitWith {};
+if (_button != 0 || {GVAR(activePlot) isEqualTo []}) exitWith {};
 TRACE_1("onMouseButtonDown",_this);
 
 if (call EFUNC(common,isCursorOnMouseArea)) then {
-    curatorMouseOver params ["_type", "_object"];
+    curatorMouseOver params ["_mouseOverType", "_object"];
 
     private _endPosOrObj = switch (true) do {
-        case (_type isEqualTo "OBJECT"): {_object};
+        case (_mouseOverType isEqualTo "OBJECT"): {_object};
         case (visibleMap): {
             private _ctrlMap = if (_displayOrControl isEqualType controlNull) then {
                 _displayOrControl
