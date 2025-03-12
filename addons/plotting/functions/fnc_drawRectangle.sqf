@@ -49,11 +49,8 @@ if (isNull _ctrlMap) then { // 3D
     _startPos params ["_x1", "_y1", "_z1"];
     _endPos params ["_x2", "_y2", "_z2"];
 
-    private _height = abs (_z2 - _z1);
-
-    private _edges = [];
-    if (_height > CUBOID_HEIGHT_THRESHOLD) then {
-        _edges = [
+    private _edges = if ((abs (_z2 - _z1)) > CUBOID_HEIGHT_THRESHOLD) then {
+        [
             [[_x1, _y1, _z1], [_x2, _y1, _z1], [_x2, _y2, _z1], [_x1, _y2, _z1], [_x1, _y1, _z1]], // Rectangle same height as start pos
             [[_x1, _y1, _z2], [_x2, _y1, _z2], [_x2, _y2, _z2], [_x1, _y2, _z2], [_x1, _y1, _z2]], // Rectangle same height as end pos
             // Connections from start to end height
@@ -61,12 +58,10 @@ if (isNull _ctrlMap) then { // 3D
             [[_x2, _y1, _z1], [_x2, _y1, _z2]],
             [[_x2, _y2, _z1], [_x2, _y2, _z2]],
             [[_x1, _y2, _z1], [_x1, _y2, _z2]]
-        ];
+        ]
     } else {
         // Don't draw cuboid if height difference is small
-        _edges = [
-            [[_x1, _y1, _z1], [_x2, _y1, _z1], [_x2, _y2, _z1], [_x1, _y2, _z1], [_x1, _y1, _z1]]
-        ];
+        [[[_x1, _y1, _z1], [_x2, _y1, _z1], [_x2, _y2, _z1], [_x1, _y2, _z1], [_x1, _y1, _z1]]]
     };
 
     {
