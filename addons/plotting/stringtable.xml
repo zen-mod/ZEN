@@ -25,5 +25,29 @@
             <English>Clear plots</English>
             <German>Plots entfernen</German>
         </Key>
+        <Key ID="STR_ZEN_Plotting_ToggleDistanceFormat">
+            <English>Switch Distance Unit</English>
+            <German>Distanzeinheit durchschalten</German>
+        </Key>
+        <Key ID="STR_ZEN_Plotting_ToggleDistanceFormat_Description">
+            <English>Switches to the next unit for distances.</English>
+            <German>Wechselt zur nächsten Einheit für Entfernungen.</German>
+        </Key>
+        <Key ID="STR_ZEN_Plotting_ToggleAzimuthFormat">
+            <English>Switch Azimuth Unit</English>
+            <German>Richtungseinheit durchschalten</German>
+        </Key>
+        <Key ID="STR_ZEN_Plotting_ToggleAzimuthFormat_Description">
+            <English>Switches to the next unit for directions.</English>
+            <German>Wechselt zur nächsten Einheit für Richtungen.</German>
+        </Key>
+        <Key ID="STR_ZEN_Plotting_DeleteLastPlot">
+            <English>Delete Last Plot</English>
+            <German>Letzten Plot entfernen</German>
+        </Key>
+        <Key ID="STR_ZEN_Plotting_DeleteLastPlot_Description">
+            <English>Deletes the last plot created.</English>
+            <German>Entfernt den zuletzt erstellten Plot.</German>
+        </Key>
     </Package>
 </Project>
