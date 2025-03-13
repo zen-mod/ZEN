@@ -23,13 +23,7 @@ private _fnc_getFormatters = {
         private _entryConfig = _x;
 
         private _formatterName = configName _entryConfig;
-
-        private _formatterString = getText (_entryConfig >> "formatter");
-        if (_formatterString isNotEqualTo "") then {
-            _formatterString = "params ['_value']; " + _formatterString;
-        };
-        private _formatter = compile _formatterString;
-
+        private _formatter = compile getText (_entryConfig >> "formatter");
         private _priority = getNumber (_entryConfig >> "priority");
 
         private _formatterEntry = [
