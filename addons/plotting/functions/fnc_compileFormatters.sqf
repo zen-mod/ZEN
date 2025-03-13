@@ -41,7 +41,7 @@ private _fnc_getFormatters = {
         _formatters pushBack _formatterEntry;
     } forEach configProperties [_cfgFormatters, "isClass _x", true];
 
-    [_formatters, 3, false] call CBA_fnc_sortNestedArray
+    [_formatters, 2, false] call CBA_fnc_sortNestedArray
 };
 
 private _cfgFormatters = configFile >> QGVAR(formatters);
