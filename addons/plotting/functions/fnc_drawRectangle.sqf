@@ -34,9 +34,9 @@ _offset params ["_a", "_b", "_c"];
 private _fnc_format = {
     params ["_offset", "_formatters"];
     _offset params ["_a", "_b", "_c"];
-    _formatters params ["_fnc_distanceFormatter"];
+    _formatters params ["_fnc_formatDistance"];
 
-    format ["X: %1 - Y: %2 - Z: %3", _a call _fnc_distanceFormatter, _b call _fnc_distanceFormatter, _c call _fnc_distanceFormatter]
+    format ["X: %1 - Y: %2 - Z: %3", _a call _fnc_formatDistance, _b call _fnc_formatDistance, _c call _fnc_formatDistance]
 };
 
 if (isNull _ctrlMap) then { // 3D

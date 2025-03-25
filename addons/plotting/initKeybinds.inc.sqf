@@ -13,7 +13,23 @@ private _category = [ELSTRING(main,DisplayName), LSTRING(DisplayName)];
         };
     },
     {},
-    [DIK_R, [false, false, false]] // Default: R
+    [DIK_R, [false, true, false]] // Default: CTRL + R
+] call CBA_fnc_addKeybind;
+
+[
+    _category,
+    QGVAR(toggleSpeedFormat),
+    [LSTRING(ToggleSpeedFormat), LSTRING(ToggleSpeedFormat_Description)],
+    {
+        if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
+            private _numFormatters = count GVAR(speedFormatters);
+            GVAR(currentSpeedFormatter) = (GVAR(currentSpeedFormatter) + 1) % _numFormatters;
+
+            true
+        };
+    },
+    {},
+    [DIK_R, [true, false, false]] // Default: SHIFT + R
 ] call CBA_fnc_addKeybind;
 
 [
@@ -29,7 +45,7 @@ private _category = [ELSTRING(main,DisplayName), LSTRING(DisplayName)];
         };
     },
     {},
-    [DIK_TAB, [false, false, false]] // Default: Tab
+    [DIK_T, [false, true, false]] // Default: CTRL + T
 ] call CBA_fnc_addKeybind;
 
 [

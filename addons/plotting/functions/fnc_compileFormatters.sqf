@@ -40,7 +40,9 @@ private _fnc_getFormatters = {
 
 private _cfgFormatters = configFile >> QGVAR(formatters);
 private _distanceFormatters = [_cfgFormatters >> "Distance"] call _fnc_getFormatters;
+private _speedFormatters = [_cfgFormatters >> "Speed"] call _fnc_getFormatters;
 private _azimuthFormatters = [_cfgFormatters >> "Azimuth"] call _fnc_getFormatters;
 
 missionNamespace setVariable [QGVAR(distanceFormatters), _distanceFormatters];
+missionNamespace setVariable [QGVAR(speedFormatters), _speedFormatters];
 missionNamespace setVariable [QGVAR(azimuthFormatters), _azimuthFormatters];

@@ -17,6 +17,7 @@ if (hasInterface) then {
     ];
 
     GVAR(currentDistanceFormatter) = 0;
+    GVAR(currentSpeedFormatter) = 0;
     GVAR(currentAzimuthFormatter) = 0;
 };
 

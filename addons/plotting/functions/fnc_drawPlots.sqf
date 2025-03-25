@@ -27,6 +27,7 @@ private _screenPos = [];
 
 private _formatters = [
     (GVAR(distanceFormatters) select GVAR(currentDistanceFormatter)) select 1,
+    (GVAR(speedFormatters) select GVAR(currentSpeedFormatter)) select 1,
     (GVAR(azimuthFormatters) select GVAR(currentAzimuthFormatter)) select 1
 ];
 

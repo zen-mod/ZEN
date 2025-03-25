@@ -34,9 +34,9 @@ private _azimuth = _centerPos getDir _endPos;
 
 private _fnc_format = {
     params ["_distance", "_azimuth", "_formatters"];
-    _formatters params ["_fnc_distanceFormatter", "_fnc_azimuthFormatter"];
+    _formatters params ["_fnc_formatDistance", "", "_fnc_formatAzimuth"];
 
-    format ["%1 - %2", _distance call _fnc_distanceFormatter, _azimuth call _fnc_azimuthFormatter]
+    format ["%1 - %2", _distance call _fnc_formatDistance, _azimuth call _fnc_formatAzimuth]
 };
 
 if (isNull _ctrlMap) then { // 3D
