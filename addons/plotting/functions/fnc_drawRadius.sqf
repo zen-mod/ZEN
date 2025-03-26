@@ -30,7 +30,7 @@
 
 params ["_centerPosOrObj", "_endPosOrObj", "_visualProperties", "_formatters", ["_args", [], [[]]], ["_ctrlMap", controlNull, [controlNull]]];
 _visualProperties params ["_icon", "_color", "_scale", "_angle", "_lineWidth"];
-_args params ["_speed"];
+_args params [["_speed", 0, [0]]];
 
 private _centerPos = _centerPosOrObj;
 if (_centerPosOrObj isEqualType objNull) then {

@@ -72,17 +72,21 @@ private _category = [ELSTRING(main,DisplayName), LSTRING(DisplayName)];
     [LSTRING(DeleteLastPlot), LSTRING(DeleteLastPlot_Description)],
     {
         if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
-            if (GVAR(plots) isNotEqualTo []) then {
-                private _lastPlot = GVAR(plots) deleteAt [-1];
-                TRACE_1("Removed last plot",_lastPlot);
+            if (GVAR(history) isNotEqualTo []) then {
+                private _lastPlotId = (GVAR(history) deleteAt [-1]) select 0;
+                private _lastPlot = GVAR(plots) deleteAt _lastPlotId;
+                [QGVAR(plotDeleted), [_lastPlotId] + _lastPlot] call CBA_fnc_localEvent;
+                TRACE_2("Removed last plot",_lastPlotId,_lastPlot);
 
                 // Automatically delete invalid plots (e.g. when attached object does not exist anymore)
-                while {GVAR(plots) isNotEqualTo []} do {
-                    (GVAR(plots) select -1) params ["", "_startPos", "_endPos"];
+                while {GVAR(history) isNotEqualTo []} do {
+                    _lastPlotId = GVAR(history) select -1;
 
-                    if ((_startPos isEqualTo objNull) || {_endPos isEqualTo objNull}) then {
-                        _lastPlot = GVAR(plots) deleteAt [-1];
-                        TRACE_1("Automatically removed next invalid plot",_lastPlot);
+                    if !([_lastPlotId] call FUNC(isValidPlot)) then {
+                        GVAR(history) deleteAt [-1];
+                        _lastPlot = GVAR(plots) deleteAt _lastPlotId;
+                        [QGVAR(plotDeleted), [_lastPlotId] + _lastPlot] call CBA_fnc_localEvent;
+                        TRACE_2("Automatically removed next invalid plot",_lastPlotId,_lastPlot);
                     };
                 };
             };

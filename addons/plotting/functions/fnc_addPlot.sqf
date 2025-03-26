@@ -9,7 +9,7 @@
  * 2: End position ASL or attached object <ARRAY or OBJECT>
  *
  * Return Value:
- * Index of new plot <NUMBER>
+ * ID of new plot or -1 on error <NUMBER>
  *
  * Example:
  * ["RADIUS", player, [100, 100, 10]] call zen_plotting_fnc_addPlot
@@ -23,6 +23,18 @@ params [
     ["_endPos", [0, 0, 0], [[], objNull], [3]]
 ];
 
-if !(_type in GVAR(plotTypes)) exitWith {-1};
+if (!(_type in GVAR(plotTypes)) || {_startPos isEqualTo objNull} || {_endPos isEqualTo objNull}) exitWith {-1};
 
-GVAR(plots) pushBack [_type, _startPos, _endPos]
+private _id = GVAR(nextID);
+GVAR(plots) set [_id, [_type, _startPos, _endPos]];
+GVAR(history) pushBack _id;
+
+GVAR(nextID) = GVAR(nextID) + 1;
+
+if (_endPos isEqualType objNull) then {
+    _endPos setVariable [QGVAR(attachedPlot), _id];
+};
+
+TRACE_4("Plot added",_id,_type,_startPos,_endPos);
+
+_id

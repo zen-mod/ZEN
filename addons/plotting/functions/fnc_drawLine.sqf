@@ -30,7 +30,7 @@
 
 params ["_startPosOrObj", "_endPosOrObj", "_visualProperties", "_formatters", ["_args", [], [[]]], ["_ctrlMap", controlNull, [controlNull]]];
 _visualProperties params ["_icon", "_color", "_scale", "_angle", "_lineWidth"];
-_args params ["_speed"];
+_args params [["_speed", 0, [0]]];
 
 // Don't draw start icon and line in 3D if Zeus camera is start pos
 // Also don't use speed of camera

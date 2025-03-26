@@ -36,11 +36,21 @@ if (call EFUNC(common,isCursorOnMouseArea)) then {
         default {[EGVAR(common,mousePos), 2] call EFUNC(common,getPosFromScreen)};
     };
 
-    GVAR(activePlot) params ["_type", "_startPosOrObj"];
+    // Check if end point already has a valid plot attached to it
+    private _attachedPlot = -1;
+    if (_endPosOrObj isEqualType objNull) then {
+        _attachedPlot = _endPosOrObj getVariable [QGVAR(attachedPlot), -1];
+    };
 
-    // Add current active plot to permanent ones
-    TRACE_4("Add plot",_type,_startPosOrObj,_endPosOrObj,_this);
-    [QGVAR(plotAdded), [_type, _startPosOrObj, _endPosOrObj]] call CBA_fnc_localEvent;
+    if (_attachedPlot isNotEqualTo -1 && {[_attachedPlot] call FUNC(isValidPlot)}) then {
+        [LSTRING(ErrorCannotAttachPlot)] call EFUNC(common,showMessage);
+    } else {
+        // Add current active plot to permanent ones
+        GVAR(activePlot) params ["_type", "_startPosOrObj"];
+
+        TRACE_4("Add plot",_type,_startPosOrObj,_endPosOrObj,_this);
+        [QGVAR(plotAdded), [_type, _startPosOrObj, _endPosOrObj]] call CBA_fnc_localEvent;
+    };
 };
 
 GVAR(activePlot) = [];

@@ -15,4 +15,5 @@
  * Public: No
  */
 
-GVAR(plots) = [];
+GVAR(plots) = createHashMap;
+GVAR(history) = [];

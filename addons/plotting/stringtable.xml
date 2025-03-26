@@ -65,5 +65,9 @@
             <English>Deletes the last plot created.</English>
             <German>Entfernt den zuletzt erstellten Plot.</German>
         </Key>
+        <Key ID="STR_ZEN_Plotting_ErrorCannotAttachPlot">
+            <English>Cannot attach more than one plot endpoint to a unit</English>
+            <German>Einer Einheit kann nicht mehr als ein Plot-Endpunkt angehängt werden</German>
+        </Key>
     </Package>
 </Project>

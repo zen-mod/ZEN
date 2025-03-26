@@ -7,7 +7,6 @@ PREP_RECOMPILE_START;
 PREP_RECOMPILE_END;
 
 if (hasInterface) then {
-    GVAR(activePlot) = [];
     GVAR(draw3DAdded) = false;
 
     GVAR(plotTypes) = createHashMapFromArray [
@@ -20,6 +19,15 @@ if (hasInterface) then {
     GVAR(currentSpeedFormatter) = 0;
     GVAR(currentSpeedIndex) = 0;
     GVAR(currentAzimuthFormatter) = 0;
+
+    // Unique ID for creating plots
+    GVAR(nextID) = 0;
+    // Currently active plot shown at cursor in format [type, start]
+    GVAR(activePlot) = [];
+    // All plots, keys are IDs, values [type, start, end]
+    GVAR(plots) = createHashMap;
+    // All plot IDs ordered by creation time, last is newest
+    GVAR(history) = [];
 };
 
 call FUNC(compileFormatters);

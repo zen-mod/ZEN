@@ -33,7 +33,7 @@ class EGVAR(context_menu,actions) {
         class ClearPlots {
             displayName = CSTRING(ClearPlots);
             icon = "A3\3den\Data\Displays\Display3DEN\PanelLeft\entityList_delete_ca.paa";
-            statement = QUOTE(call FUNC(clearPlots));
+            statement = QUOTE([QQGVAR(plotsCleared)] call CBA_fnc_localEvent);
         };
     };
 };

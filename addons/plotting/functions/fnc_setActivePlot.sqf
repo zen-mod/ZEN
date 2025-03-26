@@ -19,4 +19,4 @@
 params [["_type", "LINE", [""]], ["_startPos", [0, 0, 0], [[], objNull], [3]]];
 
 GVAR(activePlot) = [_type, _startPos];
-
+[QGVAR(selectingEndPos), [_type, _startPos]] call CBA_fnc_localEvent;

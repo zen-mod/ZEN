@@ -21,10 +21,6 @@ params ["_plots", ["_activePlot", [], [[]]], ["_ctrlMap", controlNull, [controlN
 
 private _drawIn3D = isNull _ctrlMap;
 
-private _d = 0;
-private _scale = 0;
-private _screenPos = [];
-
 (GVAR(speedFormatters) select GVAR(currentSpeedFormatter)) params ["", "_fnc_formatTime", "", "_speeds"];
 
 private _formatters = [
@@ -57,16 +53,13 @@ if (_activePlot isNotEqualTo []) then {
 {
     _x params ["_type", "_startPosOrObj", "_endPosOrObj"];
 
+    // Skip invalid plots
     if (_startPosOrObj isEqualTo objNull || {_endPosOrObj isEqualTo objNull}) then {continue};
 
-    if (_drawIn3D) then {
-        _scale = ICON_SCALE;
-    } else {
-        _scale = MAP_ICON_SCALE;
-    };
-
+    private _scale = [MAP_ICON_SCALE, ICON_SCALE] select _drawIn3D;
     private _visualProperties = [ICON, GVAR(color), _scale, ICON_ANGLE, LINEWIDTH];
     private _drawArgs = [_startPosOrObj, _endPosOrObj, _visualProperties, _formatters, _args, _ctrlMap];
+
     if (_type in GVAR(plotTypes)) then {
         _drawArgs call (GVAR(plotTypes) get _type);
     };

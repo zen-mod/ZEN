@@ -24,6 +24,6 @@ if (
     || {call EFUNC(common,isInScreenshotMode)}  // HUD is hidden
 ) exitWith {};
 
-[GVAR(plots), GVAR(activePlot)] call FUNC(drawPlots);
+[values GVAR(plots), GVAR(activePlot)] call FUNC(drawPlots);
 
 END_COUNTER(onDraw3D);

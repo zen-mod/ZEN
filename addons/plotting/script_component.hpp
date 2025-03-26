@@ -23,7 +23,7 @@
 #define ICON_ANGLE 0
 #define ICON_SCALE 1
 #define MAP_ICON_SCALE 24
-#define LINEWIDTH 10
+#define LINEWIDTH 5
 
 #define CIRCLE_EDGES_MIN 12
 #define CIRCLE_RESOLUTION 5

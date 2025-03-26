@@ -21,6 +21,6 @@ params ["_ctrlMap"];
 
 if (dialog || {call EFUNC(common,isInScreenshotMode)}) exitWith {}; // Dialog is open or HUD is hidden
 
-[GVAR(plots), GVAR(activePlot), _ctrlMap] call FUNC(drawPlots);
+[values GVAR(plots), GVAR(activePlot), _ctrlMap] call FUNC(drawPlots);
 
 END_COUNTER(onDraw);

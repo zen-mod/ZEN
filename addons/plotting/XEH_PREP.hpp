@@ -8,6 +8,7 @@ PREP(drawRectangle);
 PREP(formatSpeedKmh);
 PREP(formatTravelTime);
 PREP(isPosInCylinder);
+PREP(isValidPlot);
 PREP(onDraw);
 PREP(onDraw3D);
 PREP(onKeyDown);
