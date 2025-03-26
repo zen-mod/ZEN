@@ -35,7 +35,7 @@ _args params [["_speed", 0, [0]]];
 private _centerPos = _centerPosOrObj;
 if (_centerPosOrObj isEqualType objNull) then {
     _centerPos = getPosASLVisual _centerPosOrObj;
-    _speed = speed _centerPosOrObj;
+    _speed = velocityModelSpace _startPosOrObj select 1;
 };
 
 private _endPos = _endPosOrObj;
