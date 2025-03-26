@@ -2,6 +2,7 @@
 
 This feature helps you measure distances and directions with 3D and map plots. 
 You can set the starting and ending points to be either fixed locations or attached to an object, allowing the values to update dynamically.
+A unit can only have one end point connected to it at a time.
 
 You can cycle between different distance, speed, and azimuth formats using the <kbd>Ctrl</kbd>+<kbd>R</kbd>, <kbd>Alt</kbd>+<kbd>R</kbd>, and <kbd>Ctrl</kbd>+<kbd>T</kbd> keys, which can be customized in the CBA Keybinding settings. 
 You can also change the plot colors in the CBA settings.
