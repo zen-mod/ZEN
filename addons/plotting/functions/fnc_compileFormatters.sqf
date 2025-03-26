@@ -25,11 +25,13 @@ private _fnc_getFormatters = {
         private _formatterName = configName _entryConfig;
         private _formatter = compile getText (_entryConfig >> "formatter");
         private _priority = getNumber (_entryConfig >> "priority");
+        private _speeds = if (isArray (_entryConfig >> "speeds")) then {getArray (_entryConfig >> "speeds")} else {[]};
 
         private _formatterEntry = [
             _formatterName,
             _formatter,
-            _priority
+            _priority,
+            _speeds
         ];
 
         _formatters pushBack _formatterEntry;

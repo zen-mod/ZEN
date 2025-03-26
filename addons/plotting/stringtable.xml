@@ -33,13 +33,21 @@
             <English>Switches to the next unit for distances.</English>
             <German>Wechselt zur nächsten Einheit für Entfernungen.</German>
         </Key>
-        <Key ID="STR_ZEN_Plotting_ToggleSpeedFormat">
+        <Key ID="STR_ZEN_Plotting_ToggleSpeed">
             <English>Switch Speed for Travel Time</English>
             <German>Geschwindigkeit für Fahrzeit durchschalten</German>
         </Key>
-        <Key ID="STR_ZEN_Plotting_ToggleSpeedFormat_Description">
+        <Key ID="STR_ZEN_Plotting_ToggleSpeed_Description">
             <English>Switches to the next speed which determines travel time.</English>
             <German>Wechselt zur nächsten Geschwindigkeit, die die Fahrzeit bestimmt.</German>
+        </Key>
+        <Key ID="STR_ZEN_Plotting_ToggleSpeedFormat">
+            <English>Switch Speed Unit</English>
+            <German>Geschwindigkeitseinheit durchschalten</German>
+        </Key>
+        <Key ID="STR_ZEN_Plotting_ToggleSpeedFormat_Description">
+            <English>Switches to the next unit for speeds.</English>
+            <German>Wechselt zur nächsten Einheit für Geschwindigkeiten.</German>
         </Key>
         <Key ID="STR_ZEN_Plotting_ToggleAzimuthFormat">
             <English>Switch Azimuth Unit</English>

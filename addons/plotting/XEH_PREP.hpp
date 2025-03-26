@@ -5,6 +5,7 @@ PREP(drawLine);
 PREP(drawPlots);
 PREP(drawRadius);
 PREP(drawRectangle);
+PREP(formatSpeedKmh);
 PREP(formatTravelTime);
 PREP(isPosInCylinder);
 PREP(onDraw);

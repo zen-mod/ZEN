@@ -4,8 +4,8 @@
  * Draws a rectangle plot in 3D or on the map. Must be called every frame.
  *
  * Arguments:
- * 0: Start position ASL <ARRAY>
- * 1: End position ASL <ARRAY>
+ * 0: Start position ASL or attached object <ARRAY or OBJECT>
+ * 1: End position ASL or attached object <ARRAY or OBJECT>
  * 2: Visual properties <ARRAY>
  *      0: Icon <STRING>
  *      1: Color RGBA <ARRAY>
@@ -14,7 +14,8 @@
  *      4: Line width <NUMBER>
  * 3: Formatters <ARRAY>
  *      0: Distance formatter <CODE>
- * 3: Map control <CONTROL> (default: Draw in 3D)
+ * 4: Additional arguments <ARRAY> (default: [])
+ * 5: Map control <CONTROL> (default: Draw in 3D)
  *
  * Return Value:
  * None
@@ -25,8 +26,18 @@
  * Public: No
  */
 
-params ["_startPos", "_endPos", "_visualProperties", "_formatters", ["_ctrlMap", controlNull, [controlNull]]];
+params ["_startPosOrObj", "_endPosOrObj", "_visualProperties", "_formatters", ["_args", [], [[]]], ["_ctrlMap", controlNull, [controlNull]]];
 _visualProperties params ["_icon", "_color", "_scale", "_angle", "_lineWidth"];
+
+private _startPos = _startPosOrObj;
+if (_startPosOrObj isEqualType objNull) then {
+    _startPos = getPosASLVisual _startPosOrObj;
+};
+
+private _endPos = _endPosOrObj;
+if (_endPosOrObj isEqualType objNull) then {
+    _endPos = getPosASLVisual _endPosOrObj;
+};
 
 private _offset = _endPos vectorDiff _startPos;
 _offset params ["_a", "_b", "_c"];

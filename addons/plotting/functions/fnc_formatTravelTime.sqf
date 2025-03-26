@@ -11,7 +11,7 @@
  * Formatted travel time in format H:MM:SS or M:SS <STRING>
  *
  * Example:
- * [100, 0.3] call zen_plotting_fnc_formatTravelTime
+ * [100, 3.3] call zen_plotting_fnc_formatTravelTime
  *
  * Public: No
  */

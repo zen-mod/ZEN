@@ -25,10 +25,16 @@ private _d = 0;
 private _scale = 0;
 private _screenPos = [];
 
+(GVAR(speedFormatters) select GVAR(currentSpeedFormatter)) params ["", "_fnc_formatTime", "", "_speeds"];
+
 private _formatters = [
     (GVAR(distanceFormatters) select GVAR(currentDistanceFormatter)) select 1,
-    (GVAR(speedFormatters) select GVAR(currentSpeedFormatter)) select 1,
+    _fnc_formatTime,
     (GVAR(azimuthFormatters) select GVAR(currentAzimuthFormatter)) select 1
+];
+
+private _args = [
+    _speeds select GVAR(currentSpeedIndex)
 ];
 
 // Format active plot as permanent plot with mouse position as end position
@@ -51,19 +57,7 @@ if (_activePlot isNotEqualTo []) then {
 {
     _x params ["_type", "_startPosOrObj", "_endPosOrObj"];
 
-    private _startPos = _startPosOrObj;
-    if (_startPosOrObj isEqualType objNull) then {
-        if (isNull _startPosOrObj) then {continue};
-
-        _startPos = getPosASLVisual _startPosOrObj;
-    };
-
-    private _endPos = _endPosOrObj;
-    if (_endPosOrObj isEqualType objNull) then {
-        if (isNull _endPosOrObj) then {continue};
-
-        _endPos = getPosASLVisual _endPosOrObj;
-    };
+    if (_startPosOrObj isEqualTo objNull || {_endPosOrObj isEqualTo objNull}) then {continue};
 
     if (_drawIn3D) then {
         _scale = ICON_SCALE;
@@ -71,12 +65,8 @@ if (_activePlot isNotEqualTo []) then {
         _scale = MAP_ICON_SCALE;
     };
 
-    if (_scale < 0.01) then {
-        continue;
-    };
-
     private _visualProperties = [ICON, GVAR(color), _scale, ICON_ANGLE, LINEWIDTH];
-    private _drawArgs = [_startPos, _endPos, _visualProperties, _formatters, _ctrlMap];
+    private _drawArgs = [_startPosOrObj, _endPosOrObj, _visualProperties, _formatters, _args, _ctrlMap];
     if (_type in GVAR(plotTypes)) then {
         _drawArgs call (GVAR(plotTypes) get _type);
     };
