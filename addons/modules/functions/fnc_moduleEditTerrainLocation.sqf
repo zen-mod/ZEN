@@ -82,7 +82,8 @@ private _sides = [
         _importance
     ]
 ], {
-    [QGVAR(editTerrainLocation), _this] call CBA_fnc_globalEvent;
-}, {}, _location] call EFUNC(dialog,create);
+    params ["_values", "_locationPosition"];
+    [QGVAR(editTerrainLocation), _this, str _locationPosition] call CBA_fnc_globalEventJIP;
+}, {}, locationPosition _location] call EFUNC(dialog,create);
 
 deleteVehicle _logic;
