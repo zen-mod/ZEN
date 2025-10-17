@@ -4,17 +4,17 @@
  * Opens ace medical menu for an unit.
  *
  * Arguments:
- * 0: Hovered Entity <OBJECT, GROUP,ARRAY, or STRING>
+ * 0: Entity <ANY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [_hoveredEntity] call zen_compat_ace_fnc_openMedicalMenu
+ * [_entity] call zen_compat_ace_fnc_openMedicalMenu
  *
  * Public: No
  */
 
-params ["_hoveredEntity"];
+params ["_entity"];
 
-[_hoveredEntity] call ace_medical_gui_fnc_openMenu;
+[_entity] call ACEFUNC(ace_medical,openMenu);
