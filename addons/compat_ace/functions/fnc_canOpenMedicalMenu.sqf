@@ -18,19 +18,7 @@
 params ["_entity"];
 
 _entity isEqualType objNull
-&&
-{
-    !isNull _entity
-    &&
-    {
-        _entity isKindOf "CAManBase"
-        &&
-        {
-        ["ace_medical_gui"] call ACEFUNC(common,isModLoaded)
-        &&
-        {
-            [objNull, _entity] call ACEFUNC(medical_gui,canOpenMenu)
-        }
-        }
-    }
-}
+&& {!isNull _entity}
+&& {_entity isKindOf "CAManBase"}
+&& {["ace_medical_gui"] call ACEFUNC(common,isModLoaded)}
+&& {[objNull, _entity] call ACEFUNC(medical_gui,canOpenMenu)}
