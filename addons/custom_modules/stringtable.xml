@@ -4,13 +4,13 @@
         <Key ID="STR_ZEN_Custom_Modules_DisplayName">
             <English>Custom Module</English>
             <French>Module Personnalisé</French>
-            <German>Benutzerdefinierte Module</German>
-            <Polish>Moduł niestandardowy</Polish>
-            <Japanese>カスタム モジュール</Japanese>
-            <Korean>맞춤형 모듈</Korean>
-            <Chinesesimp>自定义MOD</Chinesesimp>
-            <Chinese>自定義MOD</Chinese>
             <Italian>Modulo personalizzato</Italian>
+            <Polish>Moduł niestandardowy</Polish>
+            <German>Benutzerdefinierte Module</German>
+            <Korean>맞춤형 모듈</Korean>
+            <Japanese>カスタム モジュール</Japanese>
+            <Chinese>自定義MOD</Chinese>
+            <Chinesesimp>自定义MOD</Chinesesimp>
         </Key>
     </Package>
 </Project>

@@ -3,21 +3,21 @@
     <Package name="Pylons">
         <Key ID="STR_ZEN_Pylons_DisplayName">
             <English>Pylons</English>
+            <French>Pylônes</French>
+            <Italian>Piloni</Italian>
             <German>Pylonen</German>
             <Japanese>パイロン</Japanese>
-            <Chinesesimp>挂架</Chinesesimp>
             <Chinese>掛架</Chinese>
-            <Italian>Piloni</Italian>
-            <French>Pylônes</French>
+            <Chinesesimp>挂架</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Pylons_Title">
             <English>Configure Pylons (%1)</English>
+            <French>Configurer les pylônes (%1)</French>
+            <Italian>Modifica piloni (% 1)</Italian>
             <German>Bearbeite Pylonen (%1)</German>
             <Japanese>パイロンを設定 (%1)</Japanese>
-            <Chinesesimp>设置挂架 (%1)</Chinesesimp>
             <Chinese>設置掛架 (%1)</Chinese>
-            <Italian>Modifica piloni (% 1)</Italian>
-            <French>Configurer les pylônes (%1)</French>
+            <Chinesesimp>设置挂架 (%1)</Chinesesimp>
         </Key>
     </Package>
 </Project>

@@ -18,6 +18,8 @@
 #define COLOR_IN_RANGE [0, 0.9, 0, 1]
 #define COLOR_OUT_OF_RANGE [0.9, 0, 0, 1]
 
+//IGNORE_PRIVATE_WARNING ["_objects", "_args"];
+
 private _vehicles = _objects select {
     !isNull gunner _x && {_args in getArtilleryAmmo [_x]}
 };

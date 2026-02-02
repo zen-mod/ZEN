@@ -3,13 +3,13 @@
     <Package name="Position_Logics">
         <Key ID="STR_ZEN_Position_Logics_DistanceKM">
             <English>(%1 km)</English>
-            <German>(%1 km)</German>
-            <Polish>(%1 km)</Polish>
-            <Japanese>(%1 km)</Japanese>
-            <Chinesesimp>(%1 千米)</Chinesesimp>
-            <Chinese>(%1 km)</Chinese>
-            <Italian>(%1 km)</Italian>
             <French>(%1 km)</French>
+            <Italian>(%1 km)</Italian>
+            <Polish>(%1 km)</Polish>
+            <German>(%1 km)</German>
+            <Japanese>(%1 km)</Japanese>
+            <Chinese>(%1 km)</Chinese>
+            <Chinesesimp>(%1 千米)</Chinesesimp>
         </Key>
     </Package>
 </Project>

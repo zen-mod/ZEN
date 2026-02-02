@@ -1,283 +1,283 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Context_Actions">
+        <Key ID="STR_ZEN_Context_Actions_100m">
+            <English>100 m</English>
+            <French>100 m</French>
+            <Italian>100 m</Italian>
+            <German>100 m</German>
+            <Korean>100 m</Korean>
+            <Japanese>100 m</Japanese>
+            <Chinese>100米</Chinese>
+            <Chinesesimp>100米</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_10m">
+            <English>10 m</English>
+            <French>10 m</French>
+            <Italian>10 m</Italian>
+            <German>10 m</German>
+            <Korean>10 m</Korean>
+            <Japanese>10 m</Japanese>
+            <Chinese>10米</Chinese>
+            <Chinesesimp>10米</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_250m">
+            <English>250 m</English>
+            <French>250 m</French>
+            <Italian>250 m</Italian>
+            <German>250 m</German>
+            <Korean>250 m</Korean>
+            <Japanese>250 m</Japanese>
+            <Chinese>250米</Chinese>
+            <Chinesesimp>250米</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_50m">
+            <English>50 m</English>
+            <French>50 m</French>
+            <Italian>50 m</Italian>
+            <German>50 m</German>
+            <Korean>50 m</Korean>
+            <Japanese>50 m</Japanese>
+            <Chinese>50米</Chinese>
+            <Chinesesimp>50米</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_Captives">
+            <English>Captives</English>
+            <Czech>Zajatci</Czech>
+            <French>Prisonniers</French>
+            <Spanish>Prisioneros</Spanish>
+            <Italian>Prigionieri</Italian>
+            <Polish>Jeńcy</Polish>
+            <Portuguese>Prisioneiros</Portuguese>
+            <Russian>Пленные</Russian>
+            <German>Gefangene</German>
+            <Korean>포로설정</Korean>
+            <Japanese>捕虜</Japanese>
+            <Chinese>俘虜</Chinese>
+            <Chinesesimp>俘虏</Chinesesimp>
+            <Turkish>Tutsaklar</Turkish>
+        </Key>
         <Key ID="STR_ZEN_Context_Actions_EditInventory">
             <English>Edit Inventory</English>
             <French>Modifier l'inventaire</French>
+            <Italian>Modifica Inventario</Italian>
+            <Polish>Edytuj wyposażenie</Polish>
             <Russian>Редактировать снаряжение</Russian>
             <German>Inventar bearbeiten</German>
-            <Polish>Edytuj wyposażenie</Polish>
-            <Italian>Modifica Inventario</Italian>
-            <Japanese>インベントリ編集</Japanese>
             <Korean>인벤토리 수정</Korean>
-            <Chinesesimp>编辑库存</Chinesesimp>
+            <Japanese>インベントリ編集</Japanese>
             <Chinese>編輯庫存</Chinese>
+            <Chinesesimp>编辑库存</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_EditableObjects">
+            <English>Editable Objects</English>
+            <French>Objets éditables</French>
+            <Italian>Oggetti modificabili</Italian>
+            <Polish>Obiekty z możliwością edytowania</Polish>
+            <German>Editierbare Objekte</German>
+            <Korean>수정 가능한 아이템</Korean>
+            <Japanese>編集可能オブジェクト</Japanese>
+            <Chinese>可編輯對象</Chinese>
+            <Chinesesimp>可编辑对象</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_FireArtillery">
+            <English>Fire Artillery</English>
+            <French>Tir d'artillerie</French>
+            <Italian>Artiglieria di fuoco</Italian>
+            <Polish>Ogień Artyleryjski</Polish>
+            <German>Artillerie feueren</German>
+            <Korean>포병 발사</Korean>
+            <Japanese>砲撃</Japanese>
+            <Chinese>砲擊</Chinese>
+            <Chinesesimp>炮击</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_FireAtWill">
+            <English>Fire At Will</English>
+            <French>Feu à volonté</French>
+            <Italian>Fuoco a volontà</Italian>
+            <Polish>Otwórz ogień samowolnie</Polish>
+            <German>Feuerfreigabe</German>
+            <Korean>자유 사격 개시</Korean>
+            <Japanese>随意射</Japanese>
+            <Chinese>隨意開火</Chinese>
+            <Chinesesimp>随意开火</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_FireAtWillEngage">
+            <English>Fire &amp; Engage At Will</English>
+            <French>Feu et engagement à volonté</French>
+            <Italian>Fuoco e coinvolgimento a volontà</Italian>
+            <Polish>Ogien i samowolona inicjacja</Polish>
+            <German>Feuerfreigabe und selbstständiger Angriff</German>
+            <Korean>사격 &amp; 자유 사격 개시</Korean>
+            <Japanese>随意射、命令時射撃</Japanese>
+            <Chinese>隨意開火 ， 隨意反擊</Chinese>
+            <Chinesesimp>随意开火，随意反击</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_HoldFire">
+            <English>Hold Fire</English>
+            <French>Ne tirez pas</French>
+            <Italian>Tieni premuto il fuoco</Italian>
+            <Polish>Wstrzymaj Ogień</Polish>
+            <German>Feuer halten</German>
+            <Korean>사격 중지</Korean>
+            <Japanese>発砲禁止</Japanese>
+            <Chinese>停火</Chinese>
+            <Chinesesimp>停火</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_HoldFireDefend">
+            <English>Hold Fire, Defend Only</English>
+            <French>Ne tirez pas, défendez seulement</French>
+            <Italian>Tieni premuto il fuoco, difendi solo</Italian>
+            <Polish>Wstrzymaj ogień, tylko obraniaj</Polish>
+            <German>Feuer halten, nur verteidigen</German>
+            <Korean>사격 중지, 방어만 하십시오</Korean>
+            <Japanese>発砲禁止、自衛のみ</Japanese>
+            <Chinese>停火，僅防禦</Chinese>
+            <Chinesesimp>停火，仅防御</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_HoldFireEngage">
+            <English>Hold Fire, Engage At Will</English>
+            <French>Ne tirez pas, engagez à volonté</French>
+            <Italian>Mantieni il fuoco, impegnati a volontà</Italian>
+            <Polish>Wstrzymaj ogień, Inicjuj samowolnie</Polish>
+            <German>Feuer halten, selbstständiger Angriff</German>
+            <Korean>사격 중지, 자유 사격 개시</Korean>
+            <Japanese>発砲禁止、命令時射撃</Japanese>
+            <Chinese>停火，隨意反擊</Chinese>
+            <Chinesesimp>停火，随意反击</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_NotAllVehiclesInRange">
+            <English>Not all vehicles are in range to fire</English>
+            <French>Tous les véhicules ne sont pas à portée de tir</French>
+            <Italian>Non tutti i veicoli sono a portata di fuoco</Italian>
+            <Polish>Nie wszystkie pojazdy są w zasięgu do otwarcia ognia.</Polish>
+            <German>Nicht alle Fahrzeuge sind in der Reichweite zum Feuern</German>
+            <Korean>차량이 사격할 수 있는 범위 내에 없습니다.</Korean>
+            <Japanese>全車両が射程内に無い</Japanese>
+            <Chinese>並非所有的車輛都在射程之內，無法開火</Chinese>
+            <Chinesesimp>并非所有的车辆都在射程之内，无法开火</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_PositionTooFar">
+            <English>%1 unit(s) were too far away from the position</English>
+            <French>%1 unité(s) était trop éloignée(s) de la position</French>
+            <Italian>%1 unità erano troppo lontane dalla posizione</Italian>
+            <German>%1 Einheit(en) waren zu weit von der Position entfernt</German>
+            <Japanese>ユニット %1 は位置から遠すぎます</Japanese>
+            <Chinese>%1 個單位離位置太遠了</Chinese>
+            <Chinesesimp>%1 个单位离位置太远了</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_Selected">
+            <English>Selected</English>
+            <French>Sélection</French>
+            <German>Auswahl</German>
+            <Japanese>選択中</Japanese>
+            <Chinesesimp>选中的</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_TeleportPlayers">
             <English>Teleport Players</English>
             <French>Téléporter les joueurs</French>
+            <Italian>Teletrasporta giocatore</Italian>
+            <Polish>Teleportuj graczy</Polish>
             <Russian>Телепортировать игроков</Russian>
             <German>Spieler teleportieren</German>
-            <Polish>Teleportuj graczy</Polish>
-            <Italian>Teletrasporta giocatore</Italian>
-            <Japanese>プレイヤーのテレポート</Japanese>
             <Korean>플레이어 순간이동</Korean>
-            <Chinesesimp>传送玩家</Chinesesimp>
+            <Japanese>プレイヤーのテレポート</Japanese>
             <Chinese>傳送玩家</Chinese>
+            <Chinesesimp>传送玩家</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_TeleportZeus">
             <English>Teleport Zeus</English>
             <French>Téléporter Zeus</French>
-            <German>Zeus teleportieren</German>
-            <Polish>Teleportuj Zeusa</Polish>
             <Italian>Teletrasporta Zeus</Italian>
-            <Japanese>Zeus のテレポート</Japanese>
+            <Polish>Teleportuj Zeusa</Polish>
+            <German>Zeus teleportieren</German>
             <Korean>제우스 순간이동</Korean>
-            <Chinesesimp>传送宙斯</Chinesesimp>
+            <Japanese>Zeus のテレポート</Japanese>
             <Chinese>傳送宙斯</Chinese>
+            <Chinesesimp>传送宙斯</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_ThrowGrenade">
+            <English>Throw Grenade</English>
+            <French>Lancer une grenade</French>
+            <Italian>Lancia una granata</Italian>
+            <German>Granate werfen</German>
+            <Japanese>手りゅう弾投てき</Japanese>
+            <Chinese>投擲手榴彈</Chinese>
+            <Chinesesimp>投掷手榴弹</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_ThrowX">
+            <English>Throw %1</English>
+            <French>Lancer %1</French>
+            <Italian>Lancia %1</Italian>
+            <German>Werfe %1</German>
+            <Japanese>%1 を使用</Japanese>
+            <Chinese>投擲%1</Chinese>
+            <Chinesesimp>投掷%1</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_ToggleCaptive">
+            <English>Toggle Captive</English>
+            <Czech>Přepnout - Vězeň</Czech>
+            <French>Commuter captivité</French>
+            <Spanish>Alternar cautivo</Spanish>
+            <Italian>Interruttore prigioniero</Italian>
+            <Polish>Przełącz więźnia</Polish>
+            <Portuguese>Alternar prisioneiro</Portuguese>
+            <Russian>Пленный (вкл./выкл.)</Russian>
+            <German>Gefangennahme umschalten</German>
+            <Korean>포로 전환</Korean>
+            <Japanese>捕虜の切り替え</Japanese>
+            <Chinese>切換俘虜</Chinese>
+            <Chinesesimp>切换俘虏</Chinesesimp>
+            <Hungarian>Elfogott állapot váltása</Hungarian>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_ToggleSurrender">
+            <English>Toggle Surrender</English>
+            <Czech>Přepnout - Vzdávání</Czech>
+            <French>Commuter capitulation</French>
+            <Spanish>Alternar rendición</Spanish>
+            <Italian>Interruttore di resa</Italian>
+            <Polish>Przełącz kapitulację</Polish>
+            <Portuguese>Alternar rendição</Portuguese>
+            <Russian>Сдавшийся (вкл./выкл.)</Russian>
+            <German>Aufgabe umschalten</German>
+            <Korean>항복 전환</Korean>
+            <Japanese>降伏の切り替え</Japanese>
+            <Chinese>切換投降</Chinese>
+            <Chinesesimp>切换投降</Chinesesimp>
+            <Hungarian>Kapituláló állapot váltása</Hungarian>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_UnableToFire">
+            <English>Unable To Fire</English>
+            <French>Impossible de tirer</French>
+            <Italian>Impossibile sparare</Italian>
+            <Polish>Otworzenie ognia niemożliwe</Polish>
+            <German>Kann nicht feueren</German>
+            <Korean>사격 불가</Korean>
+            <Japanese>発砲不可</Japanese>
+            <Chinese>無法開火</Chinese>
+            <Chinesesimp>无法开火</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Context_Actions_VehicleAppearance">
+            <English>Vehicle Appearance</English>
+            <French>Aspect du véhicule</French>
+            <Italian>Aspetto del veicolo</Italian>
+            <Polish>Wygląd pojazdu</Polish>
+            <German>Fahrzeugaussehen</German>
+            <Korean>차량 외견</Korean>
+            <Japanese>車両外観</Japanese>
+            <Chinese>車輛外觀</Chinese>
+            <Chinesesimp>车辆外观</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Context_Actions_VehicleLogistics">
             <English>Vehicle Logistics</English>
             <French>Logistique des véhicules</French>
+            <Italian>Logistica dei veicoli</Italian>
             <Polish>Logistyka pojazdów</Polish>
             <German>Fahrzeuglogistik</German>
-            <Italian>Logistica dei veicoli</Italian>
-            <Japanese>車両ロジスティクス</Japanese>
             <Korean>차량 화물</Korean>
-            <Chinesesimp>车辆后勤</Chinesesimp>
+            <Japanese>車両ロジスティクス</Japanese>
             <Chinese>車輛後勤</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Context_Actions_VehicleAppearance">
-            <English>Vehicle Appearance</English>
-            <German>Fahrzeugaussehen</German>
-            <Korean>차량 외견</Korean>
-            <Polish>Wygląd pojazdu</Polish>
-            <Japanese>車両外観</Japanese>
-            <Chinesesimp>车辆外观</Chinesesimp>
-            <Chinese>車輛外觀</Chinese>
-            <Italian>Aspetto del veicolo</Italian>
-            <French>Aspect du véhicule</French>
-        </Key>
-        <Key ID="STR_ZEN_Context_Actions_EditableObjects">
-            <English>Editable Objects</English>
-            <German>Editierbare Objekte</German>
-            <Korean>수정 가능한 아이템</Korean>
-            <Polish>Obiekty z możliwością edytowania</Polish>
-            <Japanese>編集可能オブジェクト</Japanese>
-            <Chinesesimp>可编辑对象</Chinesesimp>
-            <Chinese>可編輯對象</Chinese>
-            <Italian>Oggetti modificabili</Italian>
-            <French>Objets éditables</French>
-        </Key>
-        <Key ID="STR_ZEN_Context_Actions_Selected">
-            <English>Selected</English>
-            <German>Auswahl</German>
-            <Japanese>選択中</Japanese>
-            <French>Sélection</French>
-            <Chinesesimp>选中的</Chinesesimp>
-        </Key>
-        <Key ID="STR_ZEN_Context_Actions_10m">
-            <English>10 m</English>
-            <German>10 m</German>
-            <Korean>10 m</Korean>
-            <Japanese>10 m</Japanese>
-            <Chinesesimp>10米</Chinesesimp>
-            <Chinese>10米</Chinese>
-            <Italian>10 m</Italian>
-            <French>10 m</French>
-        </Key>
-        <Key ID="STR_ZEN_Context_Actions_50m">
-            <English>50 m</English>
-            <German>50 m</German>
-            <Korean>50 m</Korean>
-            <Japanese>50 m</Japanese>
-            <Chinesesimp>50米</Chinesesimp>
-            <Chinese>50米</Chinese>
-            <Italian>50 m</Italian>
-            <French>50 m</French>
-        </Key>
-        <Key ID="STR_ZEN_Context_Actions_100m">
-            <English>100 m</English>
-            <German>100 m</German>
-            <Korean>100 m</Korean>
-            <Japanese>100 m</Japanese>
-            <Chinesesimp>100米</Chinesesimp>
-            <Chinese>100米</Chinese>
-            <Italian>100 m</Italian>
-            <French>100 m</French>
-        </Key>
-        <Key ID="STR_ZEN_Context_Actions_250m">
-            <English>250 m</English>
-            <German>250 m</German>
-            <Korean>250 m</Korean>
-            <Japanese>250 m</Japanese>
-            <Chinesesimp>250米</Chinesesimp>
-            <Chinese>250米</Chinese>
-            <Italian>250 m</Italian>
-            <French>250 m</French>
-        </Key>
-        <Key ID="STR_ZEN_Context_Actions_HoldFire">
-            <English>Hold Fire</English>
-            <German>Feuer halten</German>
-            <Korean>사격 중지</Korean>
-            <Polish>Wstrzymaj Ogień</Polish>
-            <Japanese>発砲禁止</Japanese>
-            <Chinesesimp>停火</Chinesesimp>
-            <Chinese>停火</Chinese>
-            <Italian>Tieni premuto il fuoco</Italian>
-            <French>Ne tirez pas</French>
-        </Key>
-        <Key ID="STR_ZEN_Context_Actions_HoldFireDefend">
-            <English>Hold Fire, Defend Only</English>
-            <German>Feuer halten, nur verteidigen</German>
-            <Korean>사격 중지, 방어만 하십시오</Korean>
-            <Polish>Wstrzymaj ogień, tylko obraniaj</Polish>
-            <Japanese>発砲禁止、自衛のみ</Japanese>
-            <Chinesesimp>停火，仅防御</Chinesesimp>
-            <Chinese>停火，僅防禦</Chinese>
-            <Italian>Tieni premuto il fuoco, difendi solo</Italian>
-            <French>Ne tirez pas, défendez seulement</French>
-        </Key>
-        <Key ID="STR_ZEN_Context_Actions_HoldFireEngage">
-            <English>Hold Fire, Engage At Will</English>
-            <German>Feuer halten, selbstständiger Angriff</German>
-            <Korean>사격 중지, 자유 사격 개시</Korean>
-            <Polish>Wstrzymaj ogień, Inicjuj samowolnie</Polish>
-            <Japanese>発砲禁止、命令時射撃</Japanese>
-            <Chinesesimp>停火，随意反击</Chinesesimp>
-            <Chinese>停火，隨意反擊</Chinese>
-            <Italian>Mantieni il fuoco, impegnati a volontà</Italian>
-            <French>Ne tirez pas, engagez à volonté</French>
-        </Key>
-        <Key ID="STR_ZEN_Context_Actions_FireAtWill">
-            <English>Fire At Will</English>
-            <German>Feuerfreigabe</German>
-            <Korean>자유 사격 개시</Korean>
-            <Polish>Otwórz ogień samowolnie</Polish>
-            <Japanese>随意射</Japanese>
-            <Chinesesimp>随意开火</Chinesesimp>
-            <Chinese>隨意開火</Chinese>
-            <Italian>Fuoco a volontà</Italian>
-            <French>Feu à volonté</French>
-        </Key>
-        <Key ID="STR_ZEN_Context_Actions_FireAtWillEngage">
-            <English>Fire &amp; Engage At Will</English>
-            <German>Feuerfreigabe und selbstständiger Angriff</German>
-            <Korean>사격 &amp; 자유 사격 개시</Korean>
-            <Polish>Ogien i samowolona inicjacja</Polish>
-            <Japanese>随意射、命令時射撃</Japanese>
-            <Chinesesimp>随意开火，随意反击</Chinesesimp>
-            <Chinese>隨意開火 ， 隨意反擊</Chinese>
-            <Italian>Fuoco e coinvolgimento a volontà</Italian>
-            <French>Feu et engagement à volonté</French>
-        </Key>
-        <Key ID="STR_ZEN_Context_Actions_FireArtillery">
-            <English>Fire Artillery</English>
-            <German>Artillerie feueren</German>
-            <Korean>포병 발사</Korean>
-            <Polish>Ogień Artyleryjski</Polish>
-            <Japanese>砲撃</Japanese>
-            <Chinesesimp>炮击</Chinesesimp>
-            <Chinese>砲擊</Chinese>
-            <Italian>Artiglieria di fuoco</Italian>
-            <French>Tir d'artillerie</French>
-        </Key>
-        <Key ID="STR_ZEN_Context_Actions_UnableToFire">
-            <English>Unable To Fire</English>
-            <German>Kann nicht feueren</German>
-            <Korean>사격 불가</Korean>
-            <Polish>Otworzenie ognia niemożliwe</Polish>
-            <Japanese>発砲不可</Japanese>
-            <Chinesesimp>无法开火</Chinesesimp>
-            <Chinese>無法開火</Chinese>
-            <Italian>Impossibile sparare</Italian>
-            <French>Impossible de tirer</French>
-        </Key>
-        <Key ID="STR_ZEN_Context_Actions_NotAllVehiclesInRange">
-            <English>Not all vehicles are in range to fire</English>
-            <German>Nicht alle Fahrzeuge sind in der Reichweite zum Feuern</German>
-            <Korean>차량이 사격할 수 있는 범위 내에 없습니다.</Korean>
-            <Polish>Nie wszystkie pojazdy są w zasięgu do otwarcia ognia.</Polish>
-            <Japanese>全車両が射程内に無い</Japanese>
-            <Chinesesimp>并非所有的车辆都在射程之内，无法开火</Chinesesimp>
-            <Chinese>並非所有的車輛都在射程之內，無法開火</Chinese>
-            <Italian>Non tutti i veicoli sono a portata di fuoco</Italian>
-            <French>Tous les véhicules ne sont pas à portée de tir</French>
-        </Key>
-        <Key ID="STR_ZEN_Context_Actions_ThrowGrenade">
-            <English>Throw Grenade</English>
-            <Japanese>手りゅう弾投てき</Japanese>
-            <Chinesesimp>投掷手榴弹</Chinesesimp>
-            <Chinese>投擲手榴彈</Chinese>
-            <German>Granate werfen</German>
-            <Italian>Lancia una granata</Italian>
-            <French>Lancer une grenade</French>
-        </Key>
-        <Key ID="STR_ZEN_Context_Actions_ThrowX">
-            <English>Throw %1</English>
-            <Japanese>%1 を使用</Japanese>
-            <Chinesesimp>投掷%1</Chinesesimp>
-            <Chinese>投擲%1</Chinese>
-            <German>Werfe %1</German>
-            <Italian>Lancia %1</Italian>
-            <French>Lancer %1</French>
-        </Key>
-        <Key ID="STR_ZEN_Context_Actions_PositionTooFar">
-            <English>%1 unit(s) were too far away from the position</English>
-            <Japanese>ユニット %1 は位置から遠すぎます</Japanese>
-            <Chinesesimp>%1 个单位离位置太远了</Chinesesimp>
-            <Chinese>%1 個單位離位置太遠了</Chinese>
-            <German>%1 Einheit(en) waren zu weit von der Position entfernt</German>
-            <Italian>%1 unità erano troppo lontane dalla posizione</Italian>
-            <French>%1 unité(s) était trop éloignée(s) de la position</French>
-        </Key>
-        <Key ID="STR_ZEN_Context_Actions_Captives">
-            <English>Captives</English>
-            <German>Gefangene</German>
-            <Italian>Prigionieri</Italian>
-            <Chinese>俘虜</Chinese>
-            <Chinesesimp>俘虏</Chinesesimp>
-            <Japanese>捕虜</Japanese>
-            <Korean>포로설정</Korean>
-            <Polish>Jeńcy</Polish>
-            <Russian>Пленные</Russian>
-            <Portuguese>Prisioneiros</Portuguese>
-            <French>Prisonniers</French>
-            <Czech>Zajatci</Czech>
-            <Turkish>Tutsaklar</Turkish>
-            <Spanish>Prisioneros</Spanish>
-        </Key>
-        <Key ID="STR_ZEN_Context_Actions_ToggleCaptive">
-            <English>Toggle Captive</English>
-            <Polish>Przełącz więźnia</Polish>
-            <Spanish>Alternar cautivo</Spanish>
-            <Czech>Přepnout - Vězeň</Czech>
-            <German>Gefangennahme umschalten</German>
-            <Portuguese>Alternar prisioneiro</Portuguese>
-            <French>Commuter captivité</French>
-            <Hungarian>Elfogott állapot váltása</Hungarian>
-            <Russian>Пленный (вкл./выкл.)</Russian>
-            <Italian>Interruttore prigioniero</Italian>
-            <Japanese>捕虜の切り替え</Japanese>
-            <Korean>포로 전환</Korean>
-            <Chinesesimp>切换俘虏</Chinesesimp>
-            <Chinese>切換俘虜</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Context_Actions_ToggleSurrender">
-            <English>Toggle Surrender</English>
-            <Polish>Przełącz kapitulację</Polish>
-            <Spanish>Alternar rendición</Spanish>
-            <Czech>Přepnout - Vzdávání</Czech>
-            <German>Aufgabe umschalten</German>
-            <Portuguese>Alternar rendição</Portuguese>
-            <French>Commuter capitulation</French>
-            <Hungarian>Kapituláló állapot váltása</Hungarian>
-            <Russian>Сдавшийся (вкл./выкл.)</Russian>
-            <Italian>Interruttore di resa</Italian>
-            <Japanese>降伏の切り替え</Japanese>
-            <Korean>항복 전환</Korean>
-            <Chinesesimp>切换投降</Chinesesimp>
-            <Chinese>切換投降</Chinese>
+            <Chinesesimp>车辆后勤</Chinesesimp>
         </Key>
     </Package>
 </Project>

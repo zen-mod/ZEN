@@ -8,11 +8,14 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=3;
+		nextID=4;
 	};
 	class Camera
 	{
-		pos[]={0,15,-30};
+		pos[]={5.2207546,7.0662818,0.74138361};
+		dir[]={-0.95737171,-0.26174605,0.12218272};
+		up[]={-0.25964016,0.96513677,0.033136073};
+		aside[]={0.12659627,0,0.99195445};
 	};
 };
 binarizationWanted=0;

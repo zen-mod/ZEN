@@ -1,224 +1,224 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Music">
-        <Key ID="STR_ZEN_Music_ThisIsWarPartOne">
-            <English>This Is War - Part 1</English>
-            <French>This Is War - Partie 1</French>
-            <German>Das ist Krieg - Teil 1</German>
-            <Polish>To jest Wojna - Część 1</Polish>
-            <Japanese>This Is War - パート 1</Japanese>
-            <Italian>Questa è la guerra - parte 1</Italian>
-        </Key>
-        <Key ID="STR_ZEN_Music_ThisIsWarPartTwo">
-            <English>This Is War - Part 2</English>
-            <French>This Is War - Partie 2</French>
-            <German>Das ist Krieg - Teil 2</German>
-            <Polish>To jest Wojna - Część 2</Polish>
-            <Japanese>This Is War - パート 2</Japanese>
-            <Italian>Questa è la guerra - parte 2</Italian>
-        </Key>
-        <Key ID="STR_ZEN_Music_EagleWing_Defcon">
-            <English>A2 EW: Defcon</English>
-            <French>A2 EW: Defcon</French>
-            <German>A2 EW: Defcon</German>
-            <Japanese>A2 EW: Defcon</Japanese>
-            <Italian>A2 EW: Defcon</Italian>
-        </Key>
-        <Key ID="STR_ZEN_Music_EagleWing_Fallout">
-            <English>A2 EW: Fallout</English>
-            <French>A2 EW: Fallout</French>
-            <German>A2 EW: Fallout</German>
-            <Japanese>A2 EW: Fallout</Japanese>
-            <Italian>A2 EW: Fallout</Italian>
-        </Key>
-        <Key ID="STR_ZEN_Music_EagleWing_MAD">
-            <English>A2 EW: Mad</English>
-            <French>A2 EW: Mad</French>
-            <German>A2 EW: Mad</German>
-            <Japanese>A2 EW: Mad</Japanese>
-            <Italian>A2 EW: Mad</Italian>
-        </Key>
-        <Key ID="STR_ZEN_Music_EagleWing_SkyNet">
-            <English>A2 EW: Skynet</English>
-            <French>A2 EW: Skynet</French>
-            <German>A2 EW: Skynet</German>
-            <Japanese>A2 EW: Skynet</Japanese>
-            <Italian>A2 EW: Skynet</Italian>
-        </Key>
-        <Key ID="STR_ZEN_Music_EagleWing_Wasteland">
-            <English>A2 EW: Wasteland</English>
-            <French>A2 EW: Wasteland</French>
-            <German>A2 EW: Wasteland</German>
-            <Japanese>A2 EW: Wasteland</Japanese>
-            <Italian>A2 EW: Wasteland</Italian>
-        </Key>
-        <Key ID="STR_ZEN_Music_EagleWing_AllHellBreaksLoose">
-            <English>A2 EW: All Hell Breaks Loose</English>
-            <French>A2 EW: All Hell Breaks Loose</French>
-            <German>A2 EW: All Hell Breaks Loose</German>
-            <Japanese>A2 EW: All Hell Breaks Loose</Japanese>
-            <Italian>A2 EW: All Hell Breaks Loose</Italian>
-        </Key>
-        <Key ID="STR_ZEN_Music_A2PMC_NoMansLand">
-            <English>A2 PMC: No Man's Land</English>
-            <French>A2 PMC: No Man's Land</French>
-            <German>A2 PMC: No Man's Land</German>
-            <Japanese>A2 PMC: No Man's Land</Japanese>
-            <Italian>A2 PMC: No Man's Land</Italian>
-        </Key>
-        <Key ID="STR_ZEN_Music_A2OA_Nightlife">
-            <English>A2 OA: Nightlife</English>
-            <French>A2 OA: Nightlife</French>
-            <German>A2 OA: Nightlife</German>
-            <Japanese>A2 OA: Nightlife</Japanese>
-            <Italian>A2 OA: Nightlife</Italian>
-        </Key>
-        <Key ID="STR_ZEN_Music_A2OA_Arrowhead">
-            <English>A2 OA: Arrowhead</English>
-            <French>A2 OA: Arrowhead</French>
-            <German>A2 OA: Arrowhead</German>
-            <Japanese>A2 OA: Arrowhead</Japanese>
-            <Italian>A2 OA: Arrowhead</Italian>
-        </Key>
-        <Key ID="STR_ZEN_Music_A2OA_IronMountain">
-            <English>A2 OA: Iron Mountain</English>
-            <French>A2 OA: Iron Mountain</French>
-            <German>A2 OA: Iron Mountain</German>
-            <Japanese>A2 OA: Iron Mountain</Japanese>
-            <Italian>A2 OA: Iron Mountain</Italian>
-        </Key>
-        <Key ID="STR_ZEN_Music_A2OA_ConcreteCell">
-            <English>A2 OA: Concrete Cell</English>
-            <French>A2 OA: Concrete Cell</French>
-            <German>A2 OA: Concrete Cell</German>
-            <Japanese>A2 OA: Concrete Cell</Japanese>
-            <Italian>A2 OA: Concrete Cell</Italian>
-        </Key>
-        <Key ID="STR_ZEN_Music_A2OA_Arrival">
-            <English>A2 OA: Arrival</English>
-            <French>A2 OA: Arrival</French>
-            <German>A2 OA: Arrival</German>
-            <Japanese>A2 OA: Arrival</Japanese>
-            <Italian>A2 OA: Arrival</Italian>
-        </Key>
-        <Key ID="STR_ZEN_Music_A2OA_ZargabadMarket">
-            <English>A2 OA: Zargabad Market</English>
-            <French>A2 OA: Zargabad Market</French>
-            <German>A2 OA: Zargabad Market</German>
-            <Japanese>A2 OA: Zargabad Market</Japanese>
-            <Italian>A2 OA: Zargabad Market</Italian>
-        </Key>
-        <Key ID="STR_ZEN_Music_A2OA_RevolverJam">
-            <English>A2 OA: Revolver Jam</English>
-            <French>A2 OA: Revolver Jam</French>
-            <German>A2 OA: Revolver Jam</German>
-            <Japanese>A2 OA: Revolver Jam</Japanese>
-            <Italian>A2 OA: Revolver Jam</Italian>
-        </Key>
         <Key ID="STR_ZEN_Music_A2BAF_Jackals">
             <English>A2 BAF: Jackals</English>
             <French>A2 BAF: Jackals</French>
+            <Italian>A2 BAF: Jackals</Italian>
             <German>A2 BAF: Jackals</German>
             <Japanese>A2 BAF: Jackals</Japanese>
-            <Italian>A2 BAF: Jackals</Italian>
         </Key>
         <Key ID="STR_ZEN_Music_A2BAF_ThroughTheValley">
             <English>A2 BAF: Through the Valley</English>
             <French>A2 BAF: Through the Valley</French>
+            <Italian>A2 BAF: Through the Valley</Italian>
             <German>A2 BAF: Through the Valley</German>
             <Japanese>A2 BAF: Through the Valley</Japanese>
-            <Italian>A2 BAF: Through the Valley</Italian>
         </Key>
-        <Key ID="STR_ZEN_Music_A2_RiseOfTheFallen">
-            <English>A2: Rise of the Fallen</English>
-            <French>A2: Rise of the Fallen</French>
-            <German>A2: Rise of the Fallen</German>
-            <Japanese>A2: Rise of the Fallen</Japanese>
-            <Italian>A2: Rise of the Fallen</Italian>
+        <Key ID="STR_ZEN_Music_A2OA_Arrival">
+            <English>A2 OA: Arrival</English>
+            <French>A2 OA: Arrival</French>
+            <Italian>A2 OA: Arrival</Italian>
+            <German>A2 OA: Arrival</German>
+            <Japanese>A2 OA: Arrival</Japanese>
         </Key>
-        <Key ID="STR_ZEN_Music_A2_GhostWaltz">
-            <English>A2: Ghost Waltz</English>
-            <French>A2: Ghost Waltz</French>
-            <German>A2: Ghost Waltz</German>
-            <Japanese>A2: Ghost Waltz</Japanese>
-            <Italian>A2: Ghost Waltz</Italian>
+        <Key ID="STR_ZEN_Music_A2OA_Arrowhead">
+            <English>A2 OA: Arrowhead</English>
+            <French>A2 OA: Arrowhead</French>
+            <Italian>A2 OA: Arrowhead</Italian>
+            <German>A2 OA: Arrowhead</German>
+            <Japanese>A2 OA: Arrowhead</Japanese>
         </Key>
-        <Key ID="STR_ZEN_Music_A2_DefconThree">
-            <English>A2: Defcon Three</English>
-            <French>A2: Defcon Three</French>
-            <German>A2: Defcon Three</German>
-            <Japanese>A2: Defcon Three</Japanese>
-            <Italian>A2: Defcon Three</Italian>
+        <Key ID="STR_ZEN_Music_A2OA_ConcreteCell">
+            <English>A2 OA: Concrete Cell</English>
+            <French>A2 OA: Concrete Cell</French>
+            <Italian>A2 OA: Concrete Cell</Italian>
+            <German>A2 OA: Concrete Cell</German>
+            <Japanese>A2 OA: Concrete Cell</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Music_A2OA_IronMountain">
+            <English>A2 OA: Iron Mountain</English>
+            <French>A2 OA: Iron Mountain</French>
+            <Italian>A2 OA: Iron Mountain</Italian>
+            <German>A2 OA: Iron Mountain</German>
+            <Japanese>A2 OA: Iron Mountain</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Music_A2OA_Nightlife">
+            <English>A2 OA: Nightlife</English>
+            <French>A2 OA: Nightlife</French>
+            <Italian>A2 OA: Nightlife</Italian>
+            <German>A2 OA: Nightlife</German>
+            <Japanese>A2 OA: Nightlife</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Music_A2OA_RevolverJam">
+            <English>A2 OA: Revolver Jam</English>
+            <French>A2 OA: Revolver Jam</French>
+            <Italian>A2 OA: Revolver Jam</Italian>
+            <German>A2 OA: Revolver Jam</German>
+            <Japanese>A2 OA: Revolver Jam</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Music_A2OA_ZargabadMarket">
+            <English>A2 OA: Zargabad Market</English>
+            <French>A2 OA: Zargabad Market</French>
+            <Italian>A2 OA: Zargabad Market</Italian>
+            <German>A2 OA: Zargabad Market</German>
+            <Japanese>A2 OA: Zargabad Market</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Music_A2PMC_NoMansLand">
+            <English>A2 PMC: No Man's Land</English>
+            <French>A2 PMC: No Man's Land</French>
+            <Italian>A2 PMC: No Man's Land</Italian>
+            <German>A2 PMC: No Man's Land</German>
+            <Japanese>A2 PMC: No Man's Land</Japanese>
         </Key>
         <Key ID="STR_ZEN_Music_A2_Badlands">
             <English>A2: Badlands</English>
             <French>A2: Badlands</French>
+            <Italian>A2: Badlands</Italian>
             <German>A2: Badlands</German>
             <Japanese>A2: Badlands</Japanese>
-            <Italian>A2: Badlands</Italian>
-        </Key>
-        <Key ID="STR_ZEN_Music_A2_Reforger">
-            <English>A2: Reforger</English>
-            <French>A2: Reforger</French>
-            <German>A2: Reforger</German>
-            <Japanese>A2: Reforger</Japanese>
-            <Italian>A2: Reforger</Italian>
         </Key>
         <Key ID="STR_ZEN_Music_A2_CQC">
             <English>A2: Close Quarter Combat</English>
             <French>A2: Close Quarter Combat</French>
+            <Italian>A2: Close Quarter Combat</Italian>
             <German>A2: Close Quarter Combat</German>
             <Japanese>A2: Close Quarter Combat</Japanese>
-            <Italian>A2: Close Quarter Combat</Italian>
         </Key>
-        <Key ID="STR_ZEN_Music_A2_Manhattan">
-            <English>A2: Manhattan</English>
-            <French>A2: Manhattan</French>
-            <German>A2: Manhattan</German>
-            <Japanese>A2: Manhattan</Japanese>
-            <Italian>A2: Manhattan</Italian>
+        <Key ID="STR_ZEN_Music_A2_DefconThree">
+            <English>A2: Defcon Three</English>
+            <French>A2: Defcon Three</French>
+            <Italian>A2: Defcon Three</Italian>
+            <German>A2: Defcon Three</German>
+            <Japanese>A2: Defcon Three</Japanese>
         </Key>
-        <Key ID="STR_ZEN_Music_A2_Logistics">
-            <English>A2: Logistics</English>
-            <French>A2: Logistics</French>
-            <German>A2: Logistics</German>
-            <Japanese>A2: Logistics</Japanese>
-            <Italian>A2: Logistics</Italian>
-        </Key>
-        <Key ID="STR_ZEN_Music_A2_SharpingKnives">
-            <English>A2: Sharping Knives</English>
-            <French>A2: Sharping Knives</French>
-            <German>A2: Sharping Knives</German>
-            <Japanese>A2: Sharping Knives</Japanese>
-            <Italian>A2: Sharping Knives</Italian>
+        <Key ID="STR_ZEN_Music_A2_GhostWaltz">
+            <English>A2: Ghost Waltz</English>
+            <French>A2: Ghost Waltz</French>
+            <Italian>A2: Ghost Waltz</Italian>
+            <German>A2: Ghost Waltz</German>
+            <Japanese>A2: Ghost Waltz</Japanese>
         </Key>
         <Key ID="STR_ZEN_Music_A2_Insertion">
             <English>A2: Insertion</English>
             <French>A2: Insertion</French>
+            <Italian>A2: Insertion</Italian>
             <German>A2: Insertion</German>
             <Japanese>A2: Insertion</Japanese>
-            <Italian>A2: Insertion</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Music_A2_Logistics">
+            <English>A2: Logistics</English>
+            <French>A2: Logistics</French>
+            <Italian>A2: Logistics</Italian>
+            <German>A2: Logistics</German>
+            <Japanese>A2: Logistics</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Music_A2_Manhattan">
+            <English>A2: Manhattan</English>
+            <French>A2: Manhattan</French>
+            <Italian>A2: Manhattan</Italian>
+            <German>A2: Manhattan</German>
+            <Japanese>A2: Manhattan</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Music_A2_Reforger">
+            <English>A2: Reforger</English>
+            <French>A2: Reforger</French>
+            <Italian>A2: Reforger</Italian>
+            <German>A2: Reforger</German>
+            <Japanese>A2: Reforger</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Music_A2_RiseOfTheFallen">
+            <English>A2: Rise of the Fallen</English>
+            <French>A2: Rise of the Fallen</French>
+            <Italian>A2: Rise of the Fallen</Italian>
+            <German>A2: Rise of the Fallen</German>
+            <Japanese>A2: Rise of the Fallen</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Music_A2_SharpingKnives">
+            <English>A2: Sharping Knives</English>
+            <French>A2: Sharping Knives</French>
+            <Italian>A2: Sharping Knives</Italian>
+            <German>A2: Sharping Knives</German>
+            <Japanese>A2: Sharping Knives</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Music_EagleWing_AllHellBreaksLoose">
+            <English>A2 EW: All Hell Breaks Loose</English>
+            <French>A2 EW: All Hell Breaks Loose</French>
+            <Italian>A2 EW: All Hell Breaks Loose</Italian>
+            <German>A2 EW: All Hell Breaks Loose</German>
+            <Japanese>A2 EW: All Hell Breaks Loose</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Music_EagleWing_Defcon">
+            <English>A2 EW: Defcon</English>
+            <French>A2 EW: Defcon</French>
+            <Italian>A2 EW: Defcon</Italian>
+            <German>A2 EW: Defcon</German>
+            <Japanese>A2 EW: Defcon</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Music_EagleWing_Fallout">
+            <English>A2 EW: Fallout</English>
+            <French>A2 EW: Fallout</French>
+            <Italian>A2 EW: Fallout</Italian>
+            <German>A2 EW: Fallout</German>
+            <Japanese>A2 EW: Fallout</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Music_EagleWing_MAD">
+            <English>A2 EW: Mad</English>
+            <French>A2 EW: Mad</French>
+            <Italian>A2 EW: Mad</Italian>
+            <German>A2 EW: Mad</German>
+            <Japanese>A2 EW: Mad</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Music_EagleWing_SkyNet">
+            <English>A2 EW: Skynet</English>
+            <French>A2 EW: Skynet</French>
+            <Italian>A2 EW: Skynet</Italian>
+            <German>A2 EW: Skynet</German>
+            <Japanese>A2 EW: Skynet</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Music_EagleWing_Wasteland">
+            <English>A2 EW: Wasteland</English>
+            <French>A2 EW: Wasteland</French>
+            <Italian>A2 EW: Wasteland</Italian>
+            <German>A2 EW: Wasteland</German>
+            <Japanese>A2 EW: Wasteland</Japanese>
         </Key>
         <Key ID="STR_ZEN_Music_OFPCWC_Heroes">
             <English>OFP CWC: Heroes</English>
             <French>OFP CWC: Heroes</French>
+            <Italian>OFP CWC: Heroes</Italian>
             <German>OFP CWC: Heroes</German>
             <Japanese>OFP CWC: Heroes</Japanese>
-            <Italian>OFP CWC: Heroes</Italian>
         </Key>
         <Key ID="STR_ZEN_Music_OldMan_Stealth">
             <English>Old Man: Stealth</English>
             <French>Old Man: Stealth</French>
+            <Italian>Old Man: Stealth</Italian>
             <German>Old Man: Stealth</German>
             <Japanese>Old Man: Stealth</Japanese>
-            <Italian>Old Man: Stealth</Italian>
         </Key>
         <Key ID="STR_ZEN_Music_OldMan_ThisIsWar">
             <English>Old Man: This Is War</English>
             <French>Old Man: This Is War</French>
+            <Italian>Old Man: This is War</Italian>
             <German>Old Man: This Is War</German>
             <Japanese>Old Man: This Is War</Japanese>
-            <Italian>Old Man: This is War</Italian>
+        </Key>
+        <Key ID="STR_ZEN_Music_ThisIsWarPartOne">
+            <English>This Is War - Part 1</English>
+            <French>This Is War - Partie 1</French>
+            <Italian>Questa è la guerra - parte 1</Italian>
+            <Polish>To jest Wojna - Część 1</Polish>
+            <German>Das ist Krieg - Teil 1</German>
+            <Japanese>This Is War - パート 1</Japanese>
+        </Key>
+        <Key ID="STR_ZEN_Music_ThisIsWarPartTwo">
+            <English>This Is War - Part 2</English>
+            <French>This Is War - Partie 2</French>
+            <Italian>Questa è la guerra - parte 2</Italian>
+            <Polish>To jest Wojna - Część 2</Polish>
+            <German>Das ist Krieg - Teil 2</German>
+            <Japanese>This Is War - パート 2</Japanese>
         </Key>
     </Package>
 </Project>

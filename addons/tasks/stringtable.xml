@@ -1,400 +1,400 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZEN">
     <Package name="Tasks">
-        <Key ID="STR_ZEN_Tasks_ModulePosition">
-            <English>Module Position</English>
-            <German>Modulposition</German>
-            <Japanese>モジュール位置</Japanese>
-            <Chinesesimp>模块位置</Chinesesimp>
-            <Chinese>模塊位置</Chinese>
-            <Italian>Posizione del modulo</Italian>
-            <French>Position du module</French>
-        </Key>
-        <Key ID="STR_ZEN_Tasks_ModulePosition_Tooltip">
-            <English>The task's position will be synchronized with the position of the module.</English>
-            <German>Die Position der Aufgabe wird mit der Position des Moduls synchronisiert.</German>
-            <Japanese>タスク位置は同期されたモジュールの位置に設定されます。</Japanese>
-            <Chinesesimp>该任务的位置将与模块的位置同步。</Chinesesimp>
-            <Chinese>該任務的位置將與模塊的位置同步。</Chinese>
-            <Italian>La posizione dell'attività sarà sincronizzata con la posizione del modulo.</Italian>
-            <French>La position de la tâche sera synchronisée avec la position du module.</French>
-        </Key>
-        <Key ID="STR_ZEN_Tasks_DestinationDisabled_Tooltip">
-            <English>The task will not have position associated with it.</English>
-            <German>Die Aufgabe wird nicht mit einer Position assoziiert sein.</German>
-            <Japanese>タスク位置はモジュールの位置に設定されません。</Japanese>
-            <Chinesesimp>该任务将不会有与之相关的位置。</Chinesesimp>
-            <Chinese>該任務將不會有與之相關的位置。</Chinese>
-            <Italian>L'attività non avrà una posizione ad essa associata.</Italian>
-            <French>La tâche n'est pas associée à une position.</French>
-        </Key>
-        <Key ID="STR_ZEN_Tasks_Type_Tooltip">
-            <English>Sets the task's icon.</English>
-            <German>Legt das Icon für die Aufgabe fest.</German>
-            <Japanese>タスクアイコンを設定します。</Japanese>
-            <Chinesesimp>设置任务图标</Chinesesimp>
-            <Chinese>設置任務圖標</Chinese>
-            <Italian>Imposta l'icona dell'attività.</Italian>
-            <French>Définit l'icône de la tâche.</French>
-        </Key>
-        <Key ID="STR_ZEN_Tasks_TitleDescription">
-            <English>Title &amp; Description</English>
-            <German>Titel &amp; Beschreibung</German>
-            <Japanese>タイトル &amp; 概要</Japanese>
-            <Chinesesimp>标题与描述</Chinesesimp>
-            <Chinese>標題與描述</Chinese>
-            <Italian>Titolo &amp; Descrizione</Italian>
-            <French>Titre et description</French>
-        </Key>
-        <Key ID="STR_ZEN_Tasks_TitleDescription_Tooltip">
-            <English>The task's title and description. Task description supports XML-like tags (see structured text syntax for SQF).</English>
-            <German>Der Titel und die Beschreibung der Aufgabe. Die Beschreibung unterstützt XML-ähnliche Tags (siehe "structured text" Syntax für SQF).</German>
-            <Japanese>タスクのタイトルと概要を設定できます。概要はダイアリーに表示されます。</Japanese>
-            <Chinesesimp>任务的标题和描述。任务描述可以使用日志记录所支持的标签。</Chinesesimp>
-            <Chinese>任務的標題和描述。任務描述可以使用日誌記錄所支持的標籤。</Chinese>
-            <Italian>Il titolo e la descrizione dell'attività. La descrizione dell'attività supporta tag di tipo XML (vedere la sintassi del testo strutturato per SQF).</Italian>
-            <French>Le titre et la description de la tâche. La description de la tâche prend en charge les balises de type XML (voir la syntaxe de texte structuré pour SQF).</French>
-        </Key>
-        <Key ID="STR_ZEN_Tasks_Default">
-            <English>Default</English>
-            <French>Défaut</French>
-            <German>Standard</German>
-            <Japanese>標準</Japanese>
-            <Chinesesimp>默认</Chinesesimp>
-            <Chinese>默認</Chinese>
-            <Italian>Predefinito</Italian>
-        </Key>
         <Key ID="STR_ZEN_Tasks_Airdrop">
             <English>Airdrop</English>
             <French>Largage aérien</French>
+            <Italian>Lancio del paracadute</Italian>
             <German>Fallschirmabwurf</German>
             <Japanese>空中投下</Japanese>
-            <Chinesesimp>空降</Chinesesimp>
             <Chinese>空降</Chinese>
-            <Italian>Lancio del paracadute</Italian>
+            <Chinesesimp>空降</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Tasks_Box">
             <English>Box</English>
             <French>Caisse</French>
+            <Italian>Scatola</Italian>
             <German>Kiste</German>
             <Japanese>箱</Japanese>
-            <Chinesesimp>箱子</Chinesesimp>
             <Chinese>箱子</Chinese>
-            <Italian>Scatola</Italian>
+            <Chinesesimp>箱子</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Tasks_Container">
             <English>Container</English>
             <French>Conteneur</French>
+            <Italian>Contenitore</Italian>
             <German>Container</German>
             <Japanese>コンテナ</Japanese>
-            <Chinesesimp>集装箱</Chinesesimp>
             <Chinese>集裝箱</Chinese>
-            <Italian>Contenitore</Italian>
+            <Chinesesimp>集装箱</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Tasks_Danger">
             <English>Danger</English>
-            <Russian>Опасность</Russian>
+            <Czech>Nebezpečí</Czech>
             <French>Danger</French>
-            <German>Gefahr</German>
-            <Chinese>危險</Chinese>
             <Spanish>Peligro</Spanish>
             <Italian>Pericolo</Italian>
             <Polish>Niebezpieczeństwo</Polish>
-            <Czech>Nebezpečí</Czech>
             <Portuguese>Perigo</Portuguese>
+            <Russian>Опасность</Russian>
+            <German>Gefahr</German>
             <Korean>위험</Korean>
-            <Chinesesimp>危险</Chinesesimp>
             <Japanese>危険</Japanese>
+            <Chinese>危險</Chinese>
+            <Chinesesimp>危险</Chinesesimp>
             <Turkish>Tehlike</Turkish>
+        </Key>
+        <Key ID="STR_ZEN_Tasks_Default">
+            <English>Default</English>
+            <French>Défaut</French>
+            <Italian>Predefinito</Italian>
+            <German>Standard</German>
+            <Japanese>標準</Japanese>
+            <Chinese>默認</Chinese>
+            <Chinesesimp>默认</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Tasks_DestinationDisabled_Tooltip">
+            <English>The task will not have position associated with it.</English>
+            <French>La tâche n'est pas associée à une position.</French>
+            <Italian>L'attività non avrà una posizione ad essa associata.</Italian>
+            <German>Die Aufgabe wird nicht mit einer Position assoziiert sein.</German>
+            <Japanese>タスク位置はモジュールの位置に設定されません。</Japanese>
+            <Chinese>該任務將不會有與之相關的位置。</Chinese>
+            <Chinesesimp>该任务将不会有与之相关的位置。</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Tasks_Exit">
             <English>Exit</English>
             <French>Sortir</French>
+            <Italian>Uscita</Italian>
             <German>Verlassen</German>
             <Japanese>脱出</Japanese>
-            <Chinesesimp>退出</Chinesesimp>
             <Chinese>退出</Chinese>
-            <Italian>Uscita</Italian>
+            <Chinesesimp>退出</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Tasks_Kill">
             <English>Kill</English>
             <French>Tuer</French>
+            <Italian>Uccisione</Italian>
             <German>Töten</German>
             <Japanese>殺害</Japanese>
-            <Chinesesimp>杀死</Chinesesimp>
             <Chinese>殺死</Chinese>
-            <Italian>Uccisione</Italian>
+            <Chinesesimp>杀死</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Tasks_Listen">
             <English>Listen</English>
             <French>Écouter</French>
+            <Italian>Ascolta</Italian>
             <German>Zuhören</German>
             <Japanese>聴取</Japanese>
-            <Chinesesimp>听取</Chinesesimp>
             <Chinese>聽取</Chinese>
-            <Italian>Ascolta</Italian>
+            <Chinesesimp>听取</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Tasks_Meet">
             <English>Meet</English>
-            <Russian>Встретиться</Russian>
+            <Czech>Setkání</Czech>
             <French>Rendez-vous</French>
-            <German>Treffen</German>
-            <Chinese>見面</Chinese>
             <Spanish>Reunión</Spanish>
             <Italian>Incontrare</Italian>
             <Polish>Spotkaj się</Polish>
-            <Czech>Setkání</Czech>
             <Portuguese>Encontrar</Portuguese>
+            <Russian>Встретиться</Russian>
+            <German>Treffen</German>
             <Korean>만나기</Korean>
-            <Chinesesimp>会合</Chinesesimp>
             <Japanese>接触</Japanese>
+            <Chinese>見面</Chinese>
+            <Chinesesimp>会合</Chinesesimp>
             <Turkish>Buluş</Turkish>
+        </Key>
+        <Key ID="STR_ZEN_Tasks_ModulePosition">
+            <English>Module Position</English>
+            <French>Position du module</French>
+            <Italian>Posizione del modulo</Italian>
+            <German>Modulposition</German>
+            <Japanese>モジュール位置</Japanese>
+            <Chinese>模塊位置</Chinese>
+            <Chinesesimp>模块位置</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Tasks_ModulePosition_Tooltip">
+            <English>The task's position will be synchronized with the position of the module.</English>
+            <French>La position de la tâche sera synchronisée avec la position du module.</French>
+            <Italian>La posizione dell'attività sarà sincronizzata con la posizione del modulo.</Italian>
+            <German>Die Position der Aufgabe wird mit der Position des Moduls synchronisiert.</German>
+            <Japanese>タスク位置は同期されたモジュールの位置に設定されます。</Japanese>
+            <Chinese>該任務的位置將與模塊的位置同步。</Chinese>
+            <Chinesesimp>该任务的位置将与模块的位置同步。</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Tasks_Move1">
             <English>Move 1</English>
-            <Russian>Идти 1</Russian>
+            <Czech>Přesuňte se 1</Czech>
             <French>Avancer 1</French>
-            <German>Bewegen 1</German>
-            <Chinese>移動 1</Chinese>
             <Spanish>Mover 1</Spanish>
             <Italian>Sposta 1</Italian>
             <Polish>Udaj się do 1</Polish>
-            <Czech>Přesuňte se 1</Czech>
             <Portuguese>Mover-se 1</Portuguese>
+            <Russian>Идти 1</Russian>
+            <German>Bewegen 1</German>
             <Korean>이동 1</Korean>
-            <Chinesesimp>移动 1</Chinesesimp>
             <Japanese>移動 1</Japanese>
+            <Chinese>移動 1</Chinese>
+            <Chinesesimp>移动 1</Chinesesimp>
             <Turkish>Taşı 1</Turkish>
         </Key>
         <Key ID="STR_ZEN_Tasks_Move2">
             <English>Move 2</English>
-            <Russian>Идти 2</Russian>
+            <Czech>Přesuňte se 2</Czech>
             <French>Avancer 2</French>
-            <German>Bewegen 2</German>
-            <Chinese>移動 2</Chinese>
             <Spanish>Mover 2</Spanish>
             <Italian>Sposta 2</Italian>
             <Polish>Udaj się do 2</Polish>
-            <Czech>Přesuňte se 2</Czech>
             <Portuguese>Mover-se 2</Portuguese>
+            <Russian>Идти 2</Russian>
+            <German>Bewegen 2</German>
             <Korean>이동 2</Korean>
-            <Chinesesimp>移动 2</Chinesesimp>
             <Japanese>移動 2</Japanese>
+            <Chinese>移動 2</Chinese>
+            <Chinesesimp>移动 2</Chinesesimp>
             <Turkish>Taşı 2</Turkish>
         </Key>
         <Key ID="STR_ZEN_Tasks_Move3">
             <English>Move 3</English>
-            <Russian>Идти 3</Russian>
+            <Czech>Přesuňte se 3</Czech>
             <French>Avancer 3</French>
-            <German>Bewegen 3</German>
-            <Chinese>移動 3</Chinese>
             <Spanish>Mover 3</Spanish>
             <Italian>Sposta 3</Italian>
             <Polish>Udaj się do 3</Polish>
-            <Czech>Přesuňte se 3</Czech>
             <Portuguese>Mover-se 3</Portuguese>
+            <Russian>Идти 3</Russian>
+            <German>Bewegen 3</German>
             <Korean>이동 3</Korean>
-            <Chinesesimp>移动 3</Chinesesimp>
             <Japanese>移動 3</Japanese>
+            <Chinese>移動 3</Chinese>
+            <Chinesesimp>移动 3</Chinesesimp>
             <Turkish>Taşı 3</Turkish>
         </Key>
         <Key ID="STR_ZEN_Tasks_Move4">
             <English>Move 4</English>
-            <Russian>Идти 4</Russian>
+            <Czech>Přesuňte se 4</Czech>
             <French>Avancer 4</French>
-            <German>Bewegen 4</German>
-            <Chinese>移動 4</Chinese>
             <Spanish>Mover 4</Spanish>
             <Italian>Sposta 4</Italian>
             <Polish>Udaj się do 4</Polish>
-            <Czech>Přesuňte se 4</Czech>
             <Portuguese>Mover-se 4</Portuguese>
+            <Russian>Идти 4</Russian>
+            <German>Bewegen 4</German>
             <Korean>이동 4</Korean>
-            <Chinesesimp>移动 4</Chinesesimp>
             <Japanese>移動 4</Japanese>
+            <Chinese>移動 4</Chinese>
+            <Chinesesimp>移动 4</Chinesesimp>
             <Turkish>Taşı 4</Turkish>
         </Key>
         <Key ID="STR_ZEN_Tasks_Move5">
             <English>Move 5</English>
-            <Russian>Идти 5</Russian>
+            <Czech>Přesuňte se 5</Czech>
             <French>Avancer 5</French>
-            <German>Bewegen 5</German>
-            <Chinese>移動 5</Chinese>
             <Spanish>Mover 5</Spanish>
             <Italian>Sposta 5</Italian>
             <Polish>Udaj się do 5</Polish>
-            <Czech>Přesuňte se 5</Czech>
             <Portuguese>Mover-se 5</Portuguese>
+            <Russian>Идти 5</Russian>
+            <German>Bewegen 5</German>
             <Korean>이동 5</Korean>
-            <Chinesesimp>移动 5</Chinesesimp>
             <Japanese>移動 5</Japanese>
+            <Chinese>移動 5</Chinese>
+            <Chinesesimp>移动 5</Chinesesimp>
             <Turkish>Taşı 5</Turkish>
         </Key>
         <Key ID="STR_ZEN_Tasks_Navigate">
             <English>Navigate</English>
             <French>Naviguer</French>
+            <Italian>Navigare</Italian>
             <German>Navigieren</German>
             <Japanese>案内</Japanese>
-            <Chinesesimp>导航</Chinesesimp>
             <Chinese>導航</Chinese>
-            <Italian>Navigare</Italian>
+            <Chinesesimp>导航</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Tasks_Run">
             <English>Run</English>
             <French>Courir</French>
+            <Italian>Correre</Italian>
             <German>Rennen</German>
             <Japanese>走る</Japanese>
-            <Chinesesimp>跑</Chinesesimp>
             <Chinese>跑</Chinese>
-            <Italian>Correre</Italian>
+            <Chinesesimp>跑</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Tasks_Scout">
             <English>Scout</English>
             <French>Reconnaitre</French>
+            <Italian>Esploratore</Italian>
             <German>Auskundschaften</German>
             <Japanese>偵察</Japanese>
-            <Chinesesimp>侦查</Chinesesimp>
             <Chinese>偵察</Chinese>
-            <Italian>Esploratore</Italian>
+            <Chinesesimp>侦查</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Tasks_Search">
             <English>Search</English>
             <French>Chercher</French>
+            <Italian>Cerca</Italian>
             <German>Suchen</German>
             <Japanese>捜索</Japanese>
-            <Chinesesimp>搜索</Chinesesimp>
             <Chinese>捜索</Chinese>
-            <Italian>Cerca</Italian>
+            <Chinesesimp>搜索</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Tasks_Talk">
             <English>Talk</English>
-            <Russian>Поговорить</Russian>
+            <Czech>Rozhovor</Czech>
             <French>Parler</French>
-            <German>Reden</German>
-            <Chinese>談話</Chinese>
-            <Chinesesimp>交谈</Chinesesimp>
             <Spanish>Hablar</Spanish>
             <Italian>Parlare</Italian>
             <Polish>Rozmawiaj</Polish>
-            <Czech>Rozhovor</Czech>
             <Portuguese>Conversar</Portuguese>
+            <Russian>Поговорить</Russian>
+            <German>Reden</German>
             <Korean>대화</Korean>
             <Japanese>会話</Japanese>
+            <Chinese>談話</Chinese>
+            <Chinesesimp>交谈</Chinesesimp>
             <Turkish>Konuş</Turkish>
         </Key>
         <Key ID="STR_ZEN_Tasks_Talk1">
             <English>Talk 1</English>
-            <Russian>Поговорить 1</Russian>
+            <Czech>Rozhovor 1</Czech>
             <French>Parler 1</French>
-            <German>Reden 1</German>
-            <Chinese>談話 1</Chinese>
             <Spanish>Hablar 1</Spanish>
             <Italian>Parlare 1</Italian>
             <Polish>Rozmawiaj 1</Polish>
-            <Czech>Rozhovor 1</Czech>
             <Portuguese>Conversar 1</Portuguese>
+            <Russian>Поговорить 1</Russian>
+            <German>Reden 1</German>
             <Korean>대화 1</Korean>
             <Japanese>会話 1</Japanese>
-            <Turkish>Konuş 1</Turkish>
+            <Chinese>談話 1</Chinese>
             <Chinesesimp>交谈 1</Chinesesimp>
+            <Turkish>Konuş 1</Turkish>
         </Key>
         <Key ID="STR_ZEN_Tasks_Talk2">
             <English>Talk 2</English>
-            <Russian>Поговорить 2</Russian>
+            <Czech>Rozhovor 2</Czech>
             <French>Parler 2</French>
-            <German>Reden 2</German>
-            <Chinese>談話 2</Chinese>
             <Spanish>Hablar 2</Spanish>
             <Italian>Parlare 2</Italian>
             <Polish>Rozmawiaj 2</Polish>
-            <Czech>Rozhovor 2</Czech>
             <Portuguese>Conversar 2</Portuguese>
+            <Russian>Поговорить 2</Russian>
+            <German>Reden 2</German>
             <Korean>대화 2</Korean>
-            <Chinesesimp>交谈 2</Chinesesimp>
             <Japanese>会話 2</Japanese>
+            <Chinese>談話 2</Chinese>
+            <Chinesesimp>交谈 2</Chinesesimp>
             <Turkish>Konuş 2</Turkish>
         </Key>
         <Key ID="STR_ZEN_Tasks_Talk3">
             <English>Talk 3</English>
-            <Russian>Поговорить 3</Russian>
+            <Czech>Rozhovor 3</Czech>
             <French>Parler 3</French>
-            <German>Reden 3</German>
-            <Chinese>談話 3</Chinese>
             <Spanish>Hablar 3</Spanish>
             <Italian>Parlare 3</Italian>
             <Polish>Rozmawiaj 3</Polish>
-            <Czech>Rozhovor 3</Czech>
             <Portuguese>Conversar 3</Portuguese>
+            <Russian>Поговорить 3</Russian>
+            <German>Reden 3</German>
             <Korean>대화 3</Korean>
-            <Chinesesimp>交谈 3</Chinesesimp>
             <Japanese>会話 3</Japanese>
+            <Chinese>談話 3</Chinese>
+            <Chinesesimp>交谈 3</Chinesesimp>
             <Turkish>Konuş 3</Turkish>
         </Key>
         <Key ID="STR_ZEN_Tasks_Talk4">
             <English>Talk 4</English>
-            <Russian>Поговорить 4</Russian>
+            <Czech>Rozhovor 4</Czech>
             <French>Parler 4</French>
-            <German>Reden 4</German>
-            <Chinese>談話 4</Chinese>
             <Spanish>Hablar 4</Spanish>
             <Italian>Parlare 4</Italian>
             <Polish>Rozmawiaj 4</Polish>
-            <Czech>Rozhovor 4</Czech>
             <Portuguese>Conversar 4</Portuguese>
+            <Russian>Поговорить 4</Russian>
+            <German>Reden 4</German>
             <Korean>대화 4</Korean>
-            <Chinesesimp>交谈 4</Chinesesimp>
             <Japanese>会話 4</Japanese>
+            <Chinese>談話 4</Chinese>
+            <Chinesesimp>交谈 4</Chinesesimp>
             <Turkish>Konuş 4</Turkish>
         </Key>
         <Key ID="STR_ZEN_Tasks_Talk5">
             <English>Talk 5</English>
-            <Russian>Поговорить 5</Russian>
+            <Czech>Rozhovor 5</Czech>
             <French>Parler 5</French>
-            <German>Reden 5</German>
-            <Chinese>談話 5</Chinese>
             <Spanish>Hablar 5</Spanish>
             <Italian>Parlare 5</Italian>
             <Polish>Rozmawiaj 5</Polish>
-            <Czech>Rozhovor 5</Czech>
             <Portuguese>Conversar 5</Portuguese>
+            <Russian>Поговорить 5</Russian>
+            <German>Reden 5</German>
             <Korean>대화 5</Korean>
-            <Chinesesimp>交谈 5</Chinesesimp>
             <Japanese>会話 5</Japanese>
+            <Chinese>談話 5</Chinese>
+            <Chinesesimp>交谈 5</Chinesesimp>
             <Turkish>Konuş 5</Turkish>
+        </Key>
+        <Key ID="STR_ZEN_Tasks_TitleDescription">
+            <English>Title &amp; Description</English>
+            <French>Titre et description</French>
+            <Italian>Titolo &amp; Descrizione</Italian>
+            <German>Titel &amp; Beschreibung</German>
+            <Japanese>タイトル &amp; 概要</Japanese>
+            <Chinese>標題與描述</Chinese>
+            <Chinesesimp>标题与描述</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Tasks_TitleDescription_Tooltip">
+            <English>The task's title and description. Task description supports XML-like tags (see structured text syntax for SQF).</English>
+            <French>Le titre et la description de la tâche. La description de la tâche prend en charge les balises de type XML (voir la syntaxe de texte structuré pour SQF).</French>
+            <Italian>Il titolo e la descrizione dell'attività. La descrizione dell'attività supporta tag di tipo XML (vedere la sintassi del testo strutturato per SQF).</Italian>
+            <German>Der Titel und die Beschreibung der Aufgabe. Die Beschreibung unterstützt XML-ähnliche Tags (siehe "structured text" Syntax für SQF).</German>
+            <Japanese>タスクのタイトルと概要を設定できます。概要はダイアリーに表示されます。</Japanese>
+            <Chinese>任務的標題和描述。任務描述可以使用日誌記錄所支持的標籤。</Chinese>
+            <Chinesesimp>任务的标题和描述。任务描述可以使用日志记录所支持的标签。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Tasks_Type_Tooltip">
+            <English>Sets the task's icon.</English>
+            <French>Définit l'icône de la tâche.</French>
+            <Italian>Imposta l'icona dell'attività.</Italian>
+            <German>Legt das Icon für die Aufgabe fest.</German>
+            <Japanese>タスクアイコンを設定します。</Japanese>
+            <Chinese>設置任務圖標</Chinese>
+            <Chinesesimp>设置任务图标</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Tasks_Upload">
             <English>Upload</English>
-            <Russian>Загрузить</Russian>
+            <Czech>Nahrání</Czech>
             <French>Transfert</French>
-            <German>Hochladen</German>
-            <Chinese>上載</Chinese>
             <Spanish>Cargar</Spanish>
             <Italian>Caricare</Italian>
             <Polish>Załaduj</Polish>
-            <Czech>Nahrání</Czech>
             <Portuguese>Enviar</Portuguese>
+            <Russian>Загрузить</Russian>
+            <German>Hochladen</German>
             <Korean>업로드</Korean>
-            <Chinesesimp>上传</Chinesesimp>
             <Japanese>アップロード</Japanese>
+            <Chinese>上載</Chinese>
+            <Chinesesimp>上传</Chinesesimp>
             <Turkish>Yükle</Turkish>
         </Key>
         <Key ID="STR_ZEN_Tasks_Use">
             <English>Use</English>
             <French>Utiliser</French>
+            <Italian>Utilizzo</Italian>
             <German>Benutzen</German>
             <Japanese>使用</Japanese>
-            <Chinesesimp>使用</Chinesesimp>
             <Chinese>使用</Chinese>
-            <Italian>Utilizzo</Italian>
+            <Chinesesimp>使用</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Tasks_Whiteboard">
             <English>Whiteboard</English>
             <French>Tableau blanc</French>
+            <Italian>Lavagna</Italian>
             <German>Schreibtafel</German>
             <Japanese>ホワイトボード</Japanese>
-            <Chinesesimp>白板</Chinesesimp>
             <Chinese>白板</Chinese>
-            <Italian>Lavagna</Italian>
+            <Chinesesimp>白板</Chinesesimp>
         </Key>
     </Package>
 </Project>

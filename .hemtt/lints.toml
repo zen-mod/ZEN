@@ -1,3 +1,9 @@
+[stringtables.usage]
+options.ignore = [
+    "str_zen_damage_hit",
+]
+options.ignore_unused = true
+
 [sqf.banned_commands]
 options.ignore = [
     "addPublicVariableEventHandler", # Alt syntax is broken, we are using main syntax
@@ -14,3 +20,6 @@ options.ignore = [
     # External variables
     "AR_SUPPORTED_VEHICLES"
 ]
+
+[sqf.not_private]
+enabled = true

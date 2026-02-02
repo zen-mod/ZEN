@@ -214,15 +214,16 @@ private _fnc_serializeObject = {
         if (_object isKindOf "CAManBase") then {
             _object call _fnc_serializeUnit
         } else {
-            if (_object isKindOf "Animal") exitWith {};
+            if (_object isKindOf "Animal") exitWith { nil };
             _object call _fnc_serializeVehicle
         };
     } else {
         if (_object isKindOf "Static" || {_object isKindOf "Thing"}) then {
-            if (_object isKindOf "ThingEffect") exitWith {};
+            if (_object isKindOf "ThingEffect") exitWith { nil };
             _object call _fnc_serializeStatic
         };
     };
+    nil
 };
 
 private _objectData = [];
