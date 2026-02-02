@@ -20,6 +20,8 @@
 
 params ["_controlsGroup", "", "", "_entity"];
 
+//IGNORE_PRIVATE_WARNING ["_display"];
+
 // Exit and display message if waypoint is attached to a vehicle
 if (!isNull waypointAttachedVehicle _entity) exitWith {
     private _ctrlBackground = _display displayCtrl IDC_ATTRIBUTE_BACKGROUND;

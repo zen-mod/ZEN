@@ -4,47 +4,47 @@
         <Key ID="STR_ZEN_Doors_Configure">
             <English>Configure Doors</English>
             <French>Configurer les portes</French>
+            <Italian>Configura le porte</Italian>
+            <Polish>Konfiguruj drzwi</Polish>
             <Russian>Конфигурация дверей</Russian>
             <German>Türen konfigurieren</German>
-            <Polish>Konfiguruj drzwi</Polish>
-            <Japanese>ドア設定</Japanese>
             <Korean>문 설정</Korean>
-            <Chinesesimp>门设置</Chinesesimp>
+            <Japanese>ドア設定</Japanese>
             <Chinese>門設置</Chinese>
-            <Italian>Configura le porte</Italian>
+            <Chinesesimp>门设置</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Doors_DoorState">
             <English>Door State</English>
             <French>L'état de la port</French>
+            <Italian>Stato della porta</Italian>
             <German>Zustand der Tür</German>
             <Japanese>ドア状態</Japanese>
-            <Chinesesimp>门状态</Chinesesimp>
             <Chinese>門狀態</Chinese>
-            <Italian>Stato della porta</Italian>
+            <Chinesesimp>门状态</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Doors_NoBuilding">
             <English>Place on a building</English>
             <French>Placer sur un bâtiment</French>
+            <Italian>Posto su un edificio</Italian>
+            <Polish>Ustaw na budynku</Polish>
             <Russian>Поместите на здание</Russian>
             <German>Auf Gebäude platzieren</German>
-            <Polish>Ustaw na budynku</Polish>
-            <Japanese>建物に設置</Japanese>
             <Korean>건물에 설치</Korean>
-            <Chinesesimp>置于建筑物上</Chinesesimp>
+            <Japanese>建物に設置</Japanese>
             <Chinese>置於建築物上</Chinese>
-            <Italian>Posto su un edificio</Italian>
+            <Chinesesimp>置于建筑物上</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Doors_NoDoors">
             <English>Building has no doors</English>
             <French>Le bâtiment n'a pas de portes</French>
+            <Italian>L'edificio non ha porte</Italian>
+            <Polish>Budynek nie ma drzwi</Polish>
             <Russian>У этого здания нет дверей!</Russian>
             <German>Das Gebäude hat keine Türen</German>
-            <Polish>Budynek nie ma drzwi</Polish>
-            <Japanese>建物にドアはありません！</Japanese>
             <Korean>건물에 문이 없습니다</Korean>
-            <Chinesesimp>建筑物无门</Chinesesimp>
+            <Japanese>建物にドアはありません！</Japanese>
             <Chinese>建築物無門</Chinese>
-            <Italian>L'edificio non ha porte</Italian>
+            <Chinesesimp>建筑物无门</Chinesesimp>
         </Key>
     </Package>
 </Project>

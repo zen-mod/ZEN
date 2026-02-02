@@ -15,6 +15,8 @@
  * Public: No
  */
 
+//IGNORE_PRIVATE_WARNING ["_hoveredEntity", "_position"];
+
 if (_hoveredEntity isEqualType objNull && {_hoveredEntity isKindOf "AllVehicles"} && {!(_hoveredEntity isKindOf "CAManBase")}) then {
     [[player], _hoveredEntity] call EFUNC(common,teleportIntoVehicle);
 } else {

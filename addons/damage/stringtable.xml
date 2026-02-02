@@ -3,701 +3,701 @@
     <Package name="Damage">
         <Key ID="STR_ZEN_Damage_ComponentsDamage">
             <English>Components Damage (%1)</English>
+            <French>Dégâts des composants (%1)</French>
+            <Italian>Danni ai componenti (%1)</Italian>
             <German>Komponentenschaden (%1)</German>
             <Japanese>各部品ダメージ (%1)</Japanese>
-            <Chinesesimp>部件损坏 (%1)</Chinesesimp>
             <Chinese>部件損壞 (%1)</Chinese>
-            <Italian>Danni ai componenti (%1)</Italian>
-            <French>Dégâts des composants (%1)</French>
-        </Key>
-        <Key ID="STR_ZEN_Damage_HitBody">
-            <English>Body</English>
-            <German>Fahrgestell</German>
-            <Spanish>Carrocería</Spanish>
-            <French>Blindage</French>
-            <Polish>Karoseria</Polish>
-            <Czech>Karoserie</Czech>
-            <Portuguese>Carroceria</Portuguese>
-            <Italian>Carrozzeria</Italian>
-            <Hungarian>Test</Hungarian>
-            <Russian>Кузов</Russian>
-            <Japanese>車体</Japanese>
-            <Korean>몸체</Korean>
-            <Chinesesimp>车身</Chinesesimp>
-            <Chinese>車身</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Damage_HitHull">
-            <English>Hull</English>
-            <German>Wanne</German>
-            <Spanish>Casco</Spanish>
-            <French>Caisse</French>
-            <Polish>Kadłub</Polish>
-            <Czech>Trup</Czech>
-            <Portuguese>Chassi</Portuguese>
-            <Italian>Scafo</Italian>
-            <Hungarian>Test</Hungarian>
-            <Russian>Корпус</Russian>
-            <Japanese>機体</Japanese>
-            <Korean>선체</Korean>
-            <Chinesesimp>车壳</Chinesesimp>
-            <Chinese>車殼</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Damage_HitEngine">
-            <English>Engine</English>
-            <German>Motor</German>
-            <Spanish>Motor</Spanish>
-            <French>Moteur</French>
-            <Polish>Silnik</Polish>
-            <Czech>Motor</Czech>
-            <Portuguese>Motor</Portuguese>
-            <Italian>Motore</Italian>
-            <Hungarian>Motor</Hungarian>
-            <Russian>Двигатель</Russian>
-            <Japanese>エンジン</Japanese>
-            <Korean>엔진</Korean>
-            <Chinesesimp>引擎</Chinesesimp>
-            <Chinese>引擎</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Damage_HitHStabilizerL1">
-            <English>Left Horizontal Stabilizer</English>
-            <Polish>Lewy statecznik poziomy</Polish>
-            <Russian>Левый горизонтальный стабилизатор</Russian>
-            <Portuguese>Estabilizador Horizontal Esquerdo</Portuguese>
-            <Spanish>Estabilizador horizontal izquierdo</Spanish>
-            <Czech>Levý horizontální stabilizátor</Czech>
-            <Italian>Stabilizzatore Orizzontale Sinistro</Italian>
-            <French>Stabilisateur horizontal gauche</French>
-            <German>Linkes Höhenleitwerk</German>
-            <Japanese>左側の水平安定機</Japanese>
-            <Korean>왼쪽 수평 안정기</Korean>
-            <Chinesesimp>左侧悬挂稳定</Chinesesimp>
-            <Chinese>左側懸掛穩定</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Damage_HitHStabilizerR1">
-            <English>Right Horizontal Stabilizer</English>
-            <Polish>Prawy statecznik poziomy</Polish>
-            <Russian>Правый горизонтальный стабилизатор</Russian>
-            <Portuguese>Estabilizador Horizontal Direito</Portuguese>
-            <Spanish>Estabilizador horizontal derecho</Spanish>
-            <Czech>Pravý horizontální stabilizátor</Czech>
-            <Italian>Stabilizzatore Orizzontale Destro</Italian>
-            <French>Stabilisateur horizontal droit</French>
-            <German>Rechtes Höhenleitwerk</German>
-            <Japanese>右側の水平安定機</Japanese>
-            <Korean>오른쪽 수평 안정기</Korean>
-            <Chinesesimp>右侧悬挂稳定</Chinesesimp>
-            <Chinese>右側懸掛穩定</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Damage_HitVStabilizer1">
-            <English>Vertical Stabilizer</English>
-            <Czech>Vertikální Stabilizátor</Czech>
-            <Polish>Statecznik pionowy</Polish>
-            <Russian>Вертикальный стабилизатор</Russian>
-            <Portuguese>Estabilizador Vertical</Portuguese>
-            <Spanish>Estabilizador vertical</Spanish>
-            <Italian>Stabilizzatore Verticale</Italian>
-            <French>Stabilisateur vertical</French>
-            <German>Seitenleitwerk</German>
-            <Japanese>車両スタビライザ</Japanese>
-            <Korean>수직 안정기</Korean>
-            <Chinesesimp>垂直稳定</Chinesesimp>
-            <Chinese>垂直穩定</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Damage_HitFuel">
-            <English>Fuel Tank</English>
-            <German>Tank</German>
-            <Spanish>Depósito</Spanish>
-            <French>Réservoir</French>
-            <Polish>Zbiornik paliwa</Polish>
-            <Czech>Palivová nádrž</Czech>
-            <Portuguese>Tanque de Combustível</Portuguese>
-            <Italian>Serbatoio</Italian>
-            <Hungarian>Üzemanyagtank</Hungarian>
-            <Russian>Топливный бак</Russian>
-            <Japanese>燃料タンク</Japanese>
-            <Korean>연료 탱크</Korean>
-            <Chinesesimp>油箱</Chinesesimp>
-            <Chinese>油箱</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Damage_HitTransmission">
-            <English>Transmission</English>
-            <German>Getriebe</German>
-            <Czech>Převodovka</Czech>
-            <Polish>Skrzynia biegów</Polish>
-            <Russian>Трансмиссия</Russian>
-            <Portuguese>Transmissão</Portuguese>
-            <Spanish>Transmisión</Spanish>
-            <Italian>Trasmissione</Italian>
-            <French>Instruments</French>
-            <Japanese>変速機</Japanese>
-            <Korean>변속기</Korean>
-            <Chinesesimp>变速箱</Chinesesimp>
-            <Chinese>變速箱</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Damage_HitGear">
-            <English>Gear</English>
-            <German>Gang</German>
-            <Polish>Podwozie</Polish>
-            <Russian>Коробка передач</Russian>
-            <Portuguese>Engrenagem</Portuguese>
-            <Spanish>Rueda</Spanish>
-            <Czech>Podvozek</Czech>
-            <Italian>Motore</Italian>
-            <French>Trains d'attérissage</French>
-            <Japanese>ギア</Japanese>
-            <Korean>기어</Korean>
-            <Chinesesimp>齿轮</Chinesesimp>
-            <Chinese>齒輪</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Damage_HitStarter">
-            <English>Starter</English>
-            <German>Anlasser</German>
-            <Polish>Zapłon</Polish>
-            <Czech>Startér</Czech>
-            <Russian>Стартер</Russian>
-            <Portuguese>Arranque</Portuguese>
-            <Spanish>Motor de arranque</Spanish>
-            <Italian>Motore d'avviamento</Italian>
-            <French>Démarreur</French>
-            <Japanese>スターター</Japanese>
-            <Korean>점화기</Korean>
-            <Chinesesimp>发动机</Chinesesimp>
-            <Chinese>發動機</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Damage_HitTail">
-            <English>Tail</English>
-            <German>Leitwerk</German>
-            <Polish>Ogon</Polish>
-            <Czech>Ocas</Czech>
-            <Russian>Хвост</Russian>
-            <Spanish>Tail</Spanish>
-            <Portuguese>Cauda</Portuguese>
-            <Italian>Coda</Italian>
-            <French>Queue</French>
-            <Japanese>尾翼</Japanese>
-            <Korean>꼬리</Korean>
-            <Chinesesimp>尾翼</Chinesesimp>
-            <Chinese>尾翼</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Damage_HitPitotTube">
-            <English>Pitot Tube</English>
-            <German>Pitotrohr</German>
-            <Polish>Rurka Pitota</Polish>
-            <Czech>Pilotova Trubice</Czech>
-            <Russian>Кокпит</Russian>
-            <Portuguese>Tubo de Pitot </Portuguese>
-            <Spanish>Tubo del pitot </Spanish>
-            <Italian>Tubo di Pitot</Italian>
-            <French>Sonde pitot</French>
-            <Japanese>ピトー管</Japanese>
-            <Korean>동압관</Korean>
-            <Chinesesimp>空速管</Chinesesimp>
-            <Chinese>空速管</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Damage_HitStaticPort">
-            <English>Static Port</English>
-            <German>Statik Port</German>
-            <Polish>Port statyczny</Polish>
-            <Russian>Статический иллюминатор</Russian>
-            <Portuguese>Porta Estática</Portuguese>
-            <Spanish>Puerto estático</Spanish>
-            <Czech>Statický port</Czech>
-            <Italian>Porta Statica</Italian>
-            <French>Port statique</French>
-            <Japanese>スタティック ポート</Japanese>
-            <Korean>정압공</Korean>
-            <Chinesesimp>静压孔</Chinesesimp>
-            <Chinese>靜態端口</Chinese>
+            <Chinesesimp>部件损坏 (%1)</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Damage_HitAmmo">
             <English>Ammo</English>
             <Czech>Munice</Czech>
-            <German>Munition</German>
-            <Polish>Amunicja</Polish>
-            <Russian>Боеприпасы</Russian>
-            <Portuguese>Munição</Portuguese>
+            <French>Munitions</French>
             <Spanish>Munición</Spanish>
             <Italian>Munizioni</Italian>
-            <French>Munitions</French>
-            <Japanese>弾薬</Japanese>
+            <Polish>Amunicja</Polish>
+            <Portuguese>Munição</Portuguese>
+            <Russian>Боеприпасы</Russian>
+            <German>Munition</German>
             <Korean>탄약</Korean>
-            <Chinesesimp>弹药</Chinesesimp>
+            <Japanese>弾薬</Japanese>
             <Chinese>彈藥</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Damage_HitTurret">
-            <English>Turret</English>
-            <German>Turm</German>
-            <Spanish>Torreta</Spanish>
-            <French>Tourelle</French>
-            <Polish>Wieżyczka</Polish>
-            <Czech>Věž</Czech>
-            <Portuguese>Torre</Portuguese>
-            <Italian>Torretta</Italian>
-            <Hungarian>Lövegtorony</Hungarian>
-            <Russian>Башню</Russian>
-            <Japanese>砲塔</Japanese>
-            <Korean>포탑</Korean>
-            <Chinesesimp>炮塔</Chinesesimp>
-            <Chinese>砲塔</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Damage_HitGun">
-            <English>Gun</English>
-            <German>Kanone</German>
-            <Spanish>Cañón</Spanish>
-            <French>Canon</French>
-            <Polish>Działo</Polish>
-            <Czech>Kanón</Czech>
-            <Portuguese>Canhão</Portuguese>
-            <Italian>Cannone</Italian>
-            <Hungarian>Ágyú</Hungarian>
-            <Russian>Пушку</Russian>
-            <Japanese>砲</Japanese>
-            <Korean>총</Korean>
-            <Chinesesimp>机枪</Chinesesimp>
-            <Chinese>槍</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Damage_HitComTurret">
-            <English>Commander Turret</English>
-            <German>Kommandant Turm</German>
-            <Spanish>Comandante Torreta</Spanish>
-            <French>Commander Tourelle</French>
-            <Polish>Dowódca Wieżyczka</Polish>
-            <Czech>Velitel Věž</Czech>
-            <Portuguese>Comandante Torre</Portuguese>
-            <Italian>Comandante Torretta</Italian>
-            <Hungarian>Parancsnok Lövegtorony</Hungarian>
-            <Russian>Башня командира</Russian>
-            <Japanese>車長の砲塔</Japanese>
-            <Korean>사령관 포탑</Korean>
-            <Chinesesimp>指挥官 炮塔</Chinesesimp>
-            <Chinese>指揮官 砲塔</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Damage_HitComGun">
-            <English>Commander Gun</English>
-            <German>Kommandant Kanone</German>
-            <Spanish>Comandante Cañón</Spanish>
-            <French>Commander Canon</French>
-            <Polish>Dowódca Działo</Polish>
-            <Czech>Velitel Kanón</Czech>
-            <Portuguese>Comandante Canhão</Portuguese>
-            <Italian>Comandante Cannone</Italian>
-            <Hungarian>Parancsnok Ágyú</Hungarian>
-            <Russian>Пушка командира</Russian>
-            <Japanese>車長の砲</Japanese>
-            <Korean>사령관 총</Korean>
-            <Chinesesimp>指挥官 机枪</Chinesesimp>
-            <Chinese>指揮官 槍</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Damage_HitMissiles">
-            <English>Missiles</English>
-            <German>Rakete</German>
-            <Portuguese>Mísseis</Portuguese>
-            <Russian>Ракеты</Russian>
-            <Czech>Rakety</Czech>
-            <Polish>Rakiety</Polish>
-            <Spanish>Misiles</Spanish>
-            <Italian>Missili</Italian>
-            <French>Missiles</French>
-            <Japanese>ミサイル</Japanese>
-            <Korean>미사일</Korean>
-            <Chinesesimp>导弹</Chinesesimp>
-            <Chinese>導彈</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Damage_HitLTrack">
-            <English>Left Track</English>
-            <German>Linke Kette</German>
-            <Spanish>Oruga izquierda</Spanish>
-            <French>Chenille gauche</French>
-            <Polish>Lewa gąsienica</Polish>
-            <Czech>Levý Pás</Czech>
-            <Portuguese>Esteira Esquerda</Portuguese>
-            <Italian>Cingolo sinistro</Italian>
-            <Hungarian>Bal lánctalp</Hungarian>
-            <Russian>Левую гусеницу</Russian>
-            <Japanese>左の履帯</Japanese>
-            <Korean>왼쪽 궤도</Korean>
-            <Chinesesimp>左履带</Chinesesimp>
-            <Chinese>左履帶</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Damage_HitRTrack">
-            <English>Right Track</English>
-            <German>Rechte Kette</German>
-            <Spanish>Oruga derecha</Spanish>
-            <French>Chenille droite</French>
-            <Polish>Prawa gąsienica</Polish>
-            <Czech>Pravý Pás</Czech>
-            <Portuguese>Esteira Direita</Portuguese>
-            <Italian>Cingolo destro</Italian>
-            <Hungarian>Jobb lánctalp</Hungarian>
-            <Russian>Правую гусеницу</Russian>
-            <Japanese>右の履帯</Japanese>
-            <Korean>오른쪽 궤도</Korean>
-            <Chinesesimp>右履带</Chinesesimp>
-            <Chinese>右履帶</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Damage_HitLFWheel">
-            <English>Left Front Wheel</English>
-            <German>Linkes Vorderrad</German>
-            <Spanish>Rueda frontal izquierda</Spanish>
-            <French>Roue avant-gauche</French>
-            <Polish>Przednie lewe koło</Polish>
-            <Czech>Levé přední Kolo</Czech>
-            <Portuguese>Roda Dianteira Esquerda</Portuguese>
-            <Italian>Ruota frontale sinistra</Italian>
-            <Hungarian>Bal első kerék</Hungarian>
-            <Russian>Левое переднее колесо</Russian>
-            <Japanese>左の前輪</Japanese>
-            <Korean>왼쪽 앞바퀴</Korean>
-            <Chinesesimp>左前轮</Chinesesimp>
-            <Chinese>左前輪</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Damage_HitRFWheel">
-            <English>Right Front Wheel</English>
-            <German>Rechtes Vorderrad</German>
-            <Spanish>Rueda frontal derecha</Spanish>
-            <French>Roue avant-droite</French>
-            <Polish>Przednie prawe koło</Polish>
-            <Czech>Pravé přední Kolo</Czech>
-            <Portuguese>Roda Dianteira Direita</Portuguese>
-            <Italian>Ruota frontale destra</Italian>
-            <Hungarian>Jobb első kerék</Hungarian>
-            <Russian>Правое переднее колесо</Russian>
-            <Japanese>右の前輪</Japanese>
-            <Korean>오른쪽 앞바퀴</Korean>
-            <Chinesesimp>右前轮</Chinesesimp>
-            <Chinese>右前輪</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Damage_HitLF2Wheel">
-            <English>Second Left Front Wheel</English>
-            <German>Zweites linkes Vorderrad</German>
-            <Spanish>Segunda rueda frontal izquierda</Spanish>
-            <French>Deuxième roue avant-gauche</French>
-            <Polish>Drugie przednie lewe koło</Polish>
-            <Czech>Druhé Levé přední Kolo</Czech>
-            <Portuguese>Segunda Roda Dianteira Esquerda</Portuguese>
-            <Italian>Seconda ruota frontale sinistra</Italian>
-            <Hungarian>Második bal első kerék</Hungarian>
-            <Russian>Второе переднее левое колесо</Russian>
-            <Japanese>左の 2 つめの前輪</Japanese>
-            <Korean>왼쪽 두번째 바퀴</Korean>
-            <Chinesesimp>第二左前轮</Chinesesimp>
-            <Chinese>第二左前輪</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Damage_HitRF2Wheel">
-            <English>Second Right Front Wheel</English>
-            <German>Zweites rechtes Vorderrad</German>
-            <Spanish>Segunda rueda frontal derecha</Spanish>
-            <French>Deuxième roue avant-droite</French>
-            <Polish>Drugie przednie prawe koło</Polish>
-            <Czech>Druhé Pravé přední Kolo</Czech>
-            <Portuguese>Segunda Roda Dianteira Direita</Portuguese>
-            <Italian>Seconda ruota frontale destra</Italian>
-            <Hungarian>Második jobb hátsó kerék</Hungarian>
-            <Russian>Второе правое переднее колесо</Russian>
-            <Japanese>右の 2 つめの前輪</Japanese>
-            <Korean>오른쪽 두번째 바퀴</Korean>
-            <Chinesesimp>第二右前轮</Chinesesimp>
-            <Chinese>第二右前輪</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Damage_HitLMWheel">
-            <English>Left Middle Wheel</English>
-            <German>Linkes mittleres Rad</German>
-            <Spanish>Rueda central izquierda</Spanish>
-            <French>Roue centre-gauche</French>
-            <Polish>Środkowe lewe koło</Polish>
-            <Czech>Levé prostřední Kolo</Czech>
-            <Portuguese>Roda Intermediária Esquerda</Portuguese>
-            <Italian>Ruota centrale sinistra</Italian>
-            <Hungarian>Bal középső kerék</Hungarian>
-            <Russian>Левое среднее колесо</Russian>
-            <Japanese>左の中央の前輪</Japanese>
-            <Korean>왼쪽 가운데 바퀴</Korean>
-            <Chinesesimp>左中轮</Chinesesimp>
-            <Chinese>左中輪</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Damage_HitRMWheel">
-            <English>Right Middle Wheel</English>
-            <German>Rechtes mittleres Rad</German>
-            <Spanish>Rueda central derecha</Spanish>
-            <French>Roue centre-droite</French>
-            <Polish>Środkowe prawe koło</Polish>
-            <Czech>Pravé prostřední Kolo</Czech>
-            <Portuguese>Roda Intermediária Direita</Portuguese>
-            <Italian>Ruota centrale destra</Italian>
-            <Hungarian>Jobb középső kerék</Hungarian>
-            <Russian>Правое среднее колесо</Russian>
-            <Japanese>右の中央の前輪</Japanese>
-            <Korean>오른족 가운데 바퀴</Korean>
-            <Chinesesimp>右中轮</Chinesesimp>
-            <Chinese>右中輪</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Damage_HitLBWheel">
-            <English>Left Rear Wheel</English>
-            <German>Linkes Hinterrad</German>
-            <Spanish>Rueda trasera izquierda</Spanish>
-            <French>Roue arrière-gauche</French>
-            <Polish>Tylnie lewe koło</Polish>
-            <Czech>Levé zadní Kolo</Czech>
-            <Portuguese>Roda Traseira Esquerda</Portuguese>
-            <Italian>Ruota posteriore sinistra</Italian>
-            <Hungarian>Bal hátsó kerék</Hungarian>
-            <Russian>Левое заднее колесо</Russian>
-            <Japanese>左の後輪</Japanese>
-            <Korean>왼쪽 뒷바퀴</Korean>
-            <Chinesesimp>左后轮</Chinesesimp>
-            <Chinese>左後輪</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Damage_HitRBWheel">
-            <English>Right Rear Wheel</English>
-            <German>Rechtes Hinterrad</German>
-            <Spanish>Rueda trasera derecha</Spanish>
-            <French>Roue arrière-droite</French>
-            <Polish>Tylnie prawe koło</Polish>
-            <Czech>Pravé zadní Kolo</Czech>
-            <Portuguese>Roda Traseira Direita</Portuguese>
-            <Italian>Ruota posteriore destra</Italian>
-            <Hungarian>Jobb hátsó kerék</Hungarian>
-            <Russian>Правое заднее колесо</Russian>
-            <Japanese>右の後輪</Japanese>
-            <Korean>오른쪽 뒷바퀴</Korean>
-            <Chinesesimp>右后轮</Chinesesimp>
-            <Chinese>右後輪</Chinese>
+            <Chinesesimp>弹药</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Damage_HitAvionics">
             <English>Avionics</English>
-            <German>Avionik</German>
-            <Spanish>Aviónica</Spanish>
-            <French>Avionique</French>
-            <Polish>Awionika</Polish>
             <Czech>Elektronika</Czech>
-            <Portuguese>Aviônica</Portuguese>
+            <French>Avionique</French>
+            <Spanish>Aviónica</Spanish>
             <Italian>Avionica</Italian>
-            <Hungarian>Avionika</Hungarian>
+            <Polish>Awionika</Polish>
+            <Portuguese>Aviônica</Portuguese>
             <Russian>Авионику</Russian>
-            <Japanese>アビオニクス</Japanese>
+            <German>Avionik</German>
             <Korean>항공 전자</Korean>
-            <Chinesesimp>航电系统</Chinesesimp>
+            <Japanese>アビオニクス</Japanese>
             <Chinese>航電系統</Chinese>
+            <Chinesesimp>航电系统</Chinesesimp>
+            <Hungarian>Avionika</Hungarian>
         </Key>
-        <Key ID="STR_ZEN_Damage_HitHRotor">
-            <English>Main Rotor</English>
-            <German>Hauptrotor</German>
-            <Spanish>Rotor principal</Spanish>
-            <French>Rotor principal</French>
-            <Polish>Główny rotor</Polish>
-            <Czech>Hlavní Rotor</Czech>
-            <Portuguese>Rotor Principal</Portuguese>
-            <Italian>Rotore principale</Italian>
-            <Hungarian>Főrotor</Hungarian>
-            <Russian>Несущий винт</Russian>
-            <Japanese>主翼</Japanese>
-            <Korean>메인 로터</Korean>
-            <Chinesesimp>主旋翼</Chinesesimp>
-            <Chinese>主旋翼</Chinese>
+        <Key ID="STR_ZEN_Damage_HitBody">
+            <English>Body</English>
+            <Czech>Karoserie</Czech>
+            <French>Blindage</French>
+            <Spanish>Carrocería</Spanish>
+            <Italian>Carrozzeria</Italian>
+            <Polish>Karoseria</Polish>
+            <Portuguese>Carroceria</Portuguese>
+            <Russian>Кузов</Russian>
+            <German>Fahrgestell</German>
+            <Korean>몸체</Korean>
+            <Japanese>車体</Japanese>
+            <Chinese>車身</Chinese>
+            <Chinesesimp>车身</Chinesesimp>
+            <Hungarian>Test</Hungarian>
         </Key>
-        <Key ID="STR_ZEN_Damage_HitVRotor">
-            <English>Tail Rotor</English>
-            <German>Heckrotor</German>
-            <Spanish>Rotor de cola</Spanish>
-            <French>Rotor anticouple</French>
-            <Polish>Tylni rotor</Polish>
-            <Czech>Ocasní Rotor</Czech>
-            <Portuguese>Rotor de Cauda</Portuguese>
-            <Italian>Rotore di coda</Italian>
-            <Hungarian>Farokrotor</Hungarian>
-            <Russian>Рулевой винт</Russian>
-            <Japanese>テイル ローター</Japanese>
-            <Korean>테일 로터</Korean>
-            <Chinesesimp>尾桨</Chinesesimp>
-            <Chinese>尾槳</Chinese>
+        <Key ID="STR_ZEN_Damage_HitComGun">
+            <English>Commander Gun</English>
+            <Czech>Velitel Kanón</Czech>
+            <French>Commander Canon</French>
+            <Spanish>Comandante Cañón</Spanish>
+            <Italian>Comandante Cannone</Italian>
+            <Polish>Dowódca Działo</Polish>
+            <Portuguese>Comandante Canhão</Portuguese>
+            <Russian>Пушка командира</Russian>
+            <German>Kommandant Kanone</German>
+            <Korean>사령관 총</Korean>
+            <Japanese>車長の砲</Japanese>
+            <Chinese>指揮官 槍</Chinese>
+            <Chinesesimp>指挥官 机枪</Chinesesimp>
+            <Hungarian>Parancsnok Ágyú</Hungarian>
         </Key>
-        <Key ID="STR_ZEN_Damage_HitWinch">
-            <English>Winch</English>
-            <German>Seilwinde</German>
-            <Polish>Wyciągarka</Polish>
-            <Portuguese>Guincho</Portuguese>
-            <Russian>Лебедка</Russian>
-            <Spanish>Cabrestante</Spanish>
-            <Czech>Naviják</Czech>
-            <Italian>Gancio</Italian>
-            <French>Treuil</French>
-            <Japanese>ウィンチ</Japanese>
-            <Korean>윈치</Korean>
-            <Chinesesimp>绞盘</Chinesesimp>
-            <Chinese>絞盤</Chinese>
+        <Key ID="STR_ZEN_Damage_HitComTurret">
+            <English>Commander Turret</English>
+            <Czech>Velitel Věž</Czech>
+            <French>Commander Tourelle</French>
+            <Spanish>Comandante Torreta</Spanish>
+            <Italian>Comandante Torretta</Italian>
+            <Polish>Dowódca Wieżyczka</Polish>
+            <Portuguese>Comandante Torre</Portuguese>
+            <Russian>Башня командира</Russian>
+            <German>Kommandant Turm</German>
+            <Korean>사령관 포탑</Korean>
+            <Japanese>車長の砲塔</Japanese>
+            <Chinese>指揮官 砲塔</Chinese>
+            <Chinesesimp>指挥官 炮塔</Chinesesimp>
+            <Hungarian>Parancsnok Lövegtorony</Hungarian>
         </Key>
-        <Key ID="STR_ZEN_Damage_HitRGlass">
-            <English>Glass (right)</English>
-            <German>Scheibe (rechts)</German>
-            <Spanish>Ventana (derecha)</Spanish>
-            <French>Vitre (droite)</French>
-            <Polish>Szyba (prawa)</Polish>
-            <Czech>Sklo (pravé)</Czech>
-            <Portuguese>Vidro (à direita)</Portuguese>
-            <Italian>Vetro destro</Italian>
-            <Hungarian>Jobb szélvédő</Hungarian>
-            <Russian>Стекло (справа)</Russian>
-            <Japanese>ガラス (右)</Japanese>
-            <Korean>유리 (오른쪽)</Korean>
-            <Chinesesimp>玻璃 (右)</Chinesesimp>
-            <Chinese>玻璃 (右)</Chinese>
+        <Key ID="STR_ZEN_Damage_HitEngine">
+            <English>Engine</English>
+            <Czech>Motor</Czech>
+            <French>Moteur</French>
+            <Spanish>Motor</Spanish>
+            <Italian>Motore</Italian>
+            <Polish>Silnik</Polish>
+            <Portuguese>Motor</Portuguese>
+            <Russian>Двигатель</Russian>
+            <German>Motor</German>
+            <Korean>엔진</Korean>
+            <Japanese>エンジン</Japanese>
+            <Chinese>引擎</Chinese>
+            <Chinesesimp>引擎</Chinesesimp>
+            <Hungarian>Motor</Hungarian>
         </Key>
-        <Key ID="STR_ZEN_Damage_HitLGlass">
-            <English>Glass (left)</English>
-            <German>Scheibe (links)</German>
-            <Spanish>Ventana (izquierda)</Spanish>
-            <French>Vitre (gauche)</French>
-            <Polish>Szyba (lewa)</Polish>
-            <Czech>Sklo (pravé)</Czech>
-            <Portuguese>Vidro (à esquerda)</Portuguese>
-            <Italian>Vetro sinistro</Italian>
-            <Hungarian>Bal szélvédő</Hungarian>
-            <Russian>Стекло (слава)</Russian>
-            <Japanese>ガラス (左)</Japanese>
-            <Korean>유리 (왼쪽)</Korean>
-            <Chinesesimp>玻璃 (左)</Chinesesimp>
-            <Chinese>玻璃 (左)</Chinese>
+        <Key ID="STR_ZEN_Damage_HitFuel">
+            <English>Fuel Tank</English>
+            <Czech>Palivová nádrž</Czech>
+            <French>Réservoir</French>
+            <Spanish>Depósito</Spanish>
+            <Italian>Serbatoio</Italian>
+            <Polish>Zbiornik paliwa</Polish>
+            <Portuguese>Tanque de Combustível</Portuguese>
+            <Russian>Топливный бак</Russian>
+            <German>Tank</German>
+            <Korean>연료 탱크</Korean>
+            <Japanese>燃料タンク</Japanese>
+            <Chinese>油箱</Chinese>
+            <Chinesesimp>油箱</Chinesesimp>
+            <Hungarian>Üzemanyagtank</Hungarian>
+        </Key>
+        <Key ID="STR_ZEN_Damage_HitGear">
+            <English>Gear</English>
+            <Czech>Podvozek</Czech>
+            <French>Trains d'attérissage</French>
+            <Spanish>Rueda</Spanish>
+            <Italian>Motore</Italian>
+            <Polish>Podwozie</Polish>
+            <Portuguese>Engrenagem</Portuguese>
+            <Russian>Коробка передач</Russian>
+            <German>Gang</German>
+            <Korean>기어</Korean>
+            <Japanese>ギア</Japanese>
+            <Chinese>齒輪</Chinese>
+            <Chinesesimp>齿轮</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Damage_HitGlass">
             <English>Glass</English>
-            <German>Scheibe</German>
-            <Spanish>Ventana</Spanish>
-            <French>Vitre</French>
-            <Polish>Szyba</Polish>
             <Czech>Sklo</Czech>
-            <Portuguese>Vidro</Portuguese>
+            <French>Vitre</French>
+            <Spanish>Ventana</Spanish>
             <Italian>Vetro</Italian>
-            <Hungarian>Üveg</Hungarian>
+            <Polish>Szyba</Polish>
+            <Portuguese>Vidro</Portuguese>
             <Russian>Стекло</Russian>
-            <Japanese>ガラス</Japanese>
+            <German>Scheibe</German>
             <Korean>유리</Korean>
-            <Chinesesimp>玻璃</Chinesesimp>
+            <Japanese>ガラス</Japanese>
             <Chinese>玻璃</Chinese>
+            <Chinesesimp>玻璃</Chinesesimp>
+            <Hungarian>Üveg</Hungarian>
+        </Key>
+        <Key ID="STR_ZEN_Damage_HitGun">
+            <English>Gun</English>
+            <Czech>Kanón</Czech>
+            <French>Canon</French>
+            <Spanish>Cañón</Spanish>
+            <Italian>Cannone</Italian>
+            <Polish>Działo</Polish>
+            <Portuguese>Canhão</Portuguese>
+            <Russian>Пушку</Russian>
+            <German>Kanone</German>
+            <Korean>총</Korean>
+            <Japanese>砲</Japanese>
+            <Chinese>槍</Chinese>
+            <Chinesesimp>机枪</Chinesesimp>
+            <Hungarian>Ágyú</Hungarian>
+        </Key>
+        <Key ID="STR_ZEN_Damage_HitHRotor">
+            <English>Main Rotor</English>
+            <Czech>Hlavní Rotor</Czech>
+            <French>Rotor principal</French>
+            <Spanish>Rotor principal</Spanish>
+            <Italian>Rotore principale</Italian>
+            <Polish>Główny rotor</Polish>
+            <Portuguese>Rotor Principal</Portuguese>
+            <Russian>Несущий винт</Russian>
+            <German>Hauptrotor</German>
+            <Korean>메인 로터</Korean>
+            <Japanese>主翼</Japanese>
+            <Chinese>主旋翼</Chinese>
+            <Chinesesimp>主旋翼</Chinesesimp>
+            <Hungarian>Főrotor</Hungarian>
+        </Key>
+        <Key ID="STR_ZEN_Damage_HitHStabilizerL1">
+            <English>Left Horizontal Stabilizer</English>
+            <Czech>Levý horizontální stabilizátor</Czech>
+            <French>Stabilisateur horizontal gauche</French>
+            <Spanish>Estabilizador horizontal izquierdo</Spanish>
+            <Italian>Stabilizzatore Orizzontale Sinistro</Italian>
+            <Polish>Lewy statecznik poziomy</Polish>
+            <Portuguese>Estabilizador Horizontal Esquerdo</Portuguese>
+            <Russian>Левый горизонтальный стабилизатор</Russian>
+            <German>Linkes Höhenleitwerk</German>
+            <Korean>왼쪽 수평 안정기</Korean>
+            <Japanese>左側の水平安定機</Japanese>
+            <Chinese>左側懸掛穩定</Chinese>
+            <Chinesesimp>左侧悬挂稳定</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Damage_HitHStabilizerR1">
+            <English>Right Horizontal Stabilizer</English>
+            <Czech>Pravý horizontální stabilizátor</Czech>
+            <French>Stabilisateur horizontal droit</French>
+            <Spanish>Estabilizador horizontal derecho</Spanish>
+            <Italian>Stabilizzatore Orizzontale Destro</Italian>
+            <Polish>Prawy statecznik poziomy</Polish>
+            <Portuguese>Estabilizador Horizontal Direito</Portuguese>
+            <Russian>Правый горизонтальный стабилизатор</Russian>
+            <German>Rechtes Höhenleitwerk</German>
+            <Korean>오른쪽 수평 안정기</Korean>
+            <Japanese>右側の水平安定機</Japanese>
+            <Chinese>右側懸掛穩定</Chinese>
+            <Chinesesimp>右侧悬挂稳定</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Damage_HitHull">
+            <English>Hull</English>
+            <Czech>Trup</Czech>
+            <French>Caisse</French>
+            <Spanish>Casco</Spanish>
+            <Italian>Scafo</Italian>
+            <Polish>Kadłub</Polish>
+            <Portuguese>Chassi</Portuguese>
+            <Russian>Корпус</Russian>
+            <German>Wanne</German>
+            <Korean>선체</Korean>
+            <Japanese>機体</Japanese>
+            <Chinese>車殼</Chinese>
+            <Chinesesimp>车壳</Chinesesimp>
+            <Hungarian>Test</Hungarian>
+        </Key>
+        <Key ID="STR_ZEN_Damage_HitLBWheel">
+            <English>Left Rear Wheel</English>
+            <Czech>Levé zadní Kolo</Czech>
+            <French>Roue arrière-gauche</French>
+            <Spanish>Rueda trasera izquierda</Spanish>
+            <Italian>Ruota posteriore sinistra</Italian>
+            <Polish>Tylnie lewe koło</Polish>
+            <Portuguese>Roda Traseira Esquerda</Portuguese>
+            <Russian>Левое заднее колесо</Russian>
+            <German>Linkes Hinterrad</German>
+            <Korean>왼쪽 뒷바퀴</Korean>
+            <Japanese>左の後輪</Japanese>
+            <Chinese>左後輪</Chinese>
+            <Chinesesimp>左后轮</Chinesesimp>
+            <Hungarian>Bal hátsó kerék</Hungarian>
+        </Key>
+        <Key ID="STR_ZEN_Damage_HitLF2Wheel">
+            <English>Second Left Front Wheel</English>
+            <Czech>Druhé Levé přední Kolo</Czech>
+            <French>Deuxième roue avant-gauche</French>
+            <Spanish>Segunda rueda frontal izquierda</Spanish>
+            <Italian>Seconda ruota frontale sinistra</Italian>
+            <Polish>Drugie przednie lewe koło</Polish>
+            <Portuguese>Segunda Roda Dianteira Esquerda</Portuguese>
+            <Russian>Второе переднее левое колесо</Russian>
+            <German>Zweites linkes Vorderrad</German>
+            <Korean>왼쪽 두번째 바퀴</Korean>
+            <Japanese>左の 2 つめの前輪</Japanese>
+            <Chinese>第二左前輪</Chinese>
+            <Chinesesimp>第二左前轮</Chinesesimp>
+            <Hungarian>Második bal első kerék</Hungarian>
+        </Key>
+        <Key ID="STR_ZEN_Damage_HitLFWheel">
+            <English>Left Front Wheel</English>
+            <Czech>Levé přední Kolo</Czech>
+            <French>Roue avant-gauche</French>
+            <Spanish>Rueda frontal izquierda</Spanish>
+            <Italian>Ruota frontale sinistra</Italian>
+            <Polish>Przednie lewe koło</Polish>
+            <Portuguese>Roda Dianteira Esquerda</Portuguese>
+            <Russian>Левое переднее колесо</Russian>
+            <German>Linkes Vorderrad</German>
+            <Korean>왼쪽 앞바퀴</Korean>
+            <Japanese>左の前輪</Japanese>
+            <Chinese>左前輪</Chinese>
+            <Chinesesimp>左前轮</Chinesesimp>
+            <Hungarian>Bal első kerék</Hungarian>
+        </Key>
+        <Key ID="STR_ZEN_Damage_HitLGlass">
+            <English>Glass (left)</English>
+            <Czech>Sklo (pravé)</Czech>
+            <French>Vitre (gauche)</French>
+            <Spanish>Ventana (izquierda)</Spanish>
+            <Italian>Vetro sinistro</Italian>
+            <Polish>Szyba (lewa)</Polish>
+            <Portuguese>Vidro (à esquerda)</Portuguese>
+            <Russian>Стекло (слава)</Russian>
+            <German>Scheibe (links)</German>
+            <Korean>유리 (왼쪽)</Korean>
+            <Japanese>ガラス (左)</Japanese>
+            <Chinese>玻璃 (左)</Chinese>
+            <Chinesesimp>玻璃 (左)</Chinesesimp>
+            <Hungarian>Bal szélvédő</Hungarian>
+        </Key>
+        <Key ID="STR_ZEN_Damage_HitLMWheel">
+            <English>Left Middle Wheel</English>
+            <Czech>Levé prostřední Kolo</Czech>
+            <French>Roue centre-gauche</French>
+            <Spanish>Rueda central izquierda</Spanish>
+            <Italian>Ruota centrale sinistra</Italian>
+            <Polish>Środkowe lewe koło</Polish>
+            <Portuguese>Roda Intermediária Esquerda</Portuguese>
+            <Russian>Левое среднее колесо</Russian>
+            <German>Linkes mittleres Rad</German>
+            <Korean>왼쪽 가운데 바퀴</Korean>
+            <Japanese>左の中央の前輪</Japanese>
+            <Chinese>左中輪</Chinese>
+            <Chinesesimp>左中轮</Chinesesimp>
+            <Hungarian>Bal középső kerék</Hungarian>
+        </Key>
+        <Key ID="STR_ZEN_Damage_HitLTrack">
+            <English>Left Track</English>
+            <Czech>Levý Pás</Czech>
+            <French>Chenille gauche</French>
+            <Spanish>Oruga izquierda</Spanish>
+            <Italian>Cingolo sinistro</Italian>
+            <Polish>Lewa gąsienica</Polish>
+            <Portuguese>Esteira Esquerda</Portuguese>
+            <Russian>Левую гусеницу</Russian>
+            <German>Linke Kette</German>
+            <Korean>왼쪽 궤도</Korean>
+            <Japanese>左の履帯</Japanese>
+            <Chinese>左履帶</Chinese>
+            <Chinesesimp>左履带</Chinesesimp>
+            <Hungarian>Bal lánctalp</Hungarian>
+        </Key>
+        <Key ID="STR_ZEN_Damage_HitMissiles">
+            <English>Missiles</English>
+            <Czech>Rakety</Czech>
+            <French>Missiles</French>
+            <Spanish>Misiles</Spanish>
+            <Italian>Missili</Italian>
+            <Polish>Rakiety</Polish>
+            <Portuguese>Mísseis</Portuguese>
+            <Russian>Ракеты</Russian>
+            <German>Rakete</German>
+            <Korean>미사일</Korean>
+            <Japanese>ミサイル</Japanese>
+            <Chinese>導彈</Chinese>
+            <Chinesesimp>导弹</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Damage_HitPitotTube">
+            <English>Pitot Tube</English>
+            <Czech>Pilotova Trubice</Czech>
+            <French>Sonde pitot</French>
+            <Spanish>Tubo del pitot</Spanish>
+            <Italian>Tubo di Pitot</Italian>
+            <Polish>Rurka Pitota</Polish>
+            <Portuguese>Tubo de Pitot</Portuguese>
+            <Russian>Кокпит</Russian>
+            <German>Pitotrohr</German>
+            <Korean>동압관</Korean>
+            <Japanese>ピトー管</Japanese>
+            <Chinese>空速管</Chinese>
+            <Chinesesimp>空速管</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Damage_HitRBWheel">
+            <English>Right Rear Wheel</English>
+            <Czech>Pravé zadní Kolo</Czech>
+            <French>Roue arrière-droite</French>
+            <Spanish>Rueda trasera derecha</Spanish>
+            <Italian>Ruota posteriore destra</Italian>
+            <Polish>Tylnie prawe koło</Polish>
+            <Portuguese>Roda Traseira Direita</Portuguese>
+            <Russian>Правое заднее колесо</Russian>
+            <German>Rechtes Hinterrad</German>
+            <Korean>오른쪽 뒷바퀴</Korean>
+            <Japanese>右の後輪</Japanese>
+            <Chinese>右後輪</Chinese>
+            <Chinesesimp>右后轮</Chinesesimp>
+            <Hungarian>Jobb hátsó kerék</Hungarian>
+        </Key>
+        <Key ID="STR_ZEN_Damage_HitRF2Wheel">
+            <English>Second Right Front Wheel</English>
+            <Czech>Druhé Pravé přední Kolo</Czech>
+            <French>Deuxième roue avant-droite</French>
+            <Spanish>Segunda rueda frontal derecha</Spanish>
+            <Italian>Seconda ruota frontale destra</Italian>
+            <Polish>Drugie przednie prawe koło</Polish>
+            <Portuguese>Segunda Roda Dianteira Direita</Portuguese>
+            <Russian>Второе правое переднее колесо</Russian>
+            <German>Zweites rechtes Vorderrad</German>
+            <Korean>오른쪽 두번째 바퀴</Korean>
+            <Japanese>右の 2 つめの前輪</Japanese>
+            <Chinese>第二右前輪</Chinese>
+            <Chinesesimp>第二右前轮</Chinesesimp>
+            <Hungarian>Második jobb hátsó kerék</Hungarian>
+        </Key>
+        <Key ID="STR_ZEN_Damage_HitRFWheel">
+            <English>Right Front Wheel</English>
+            <Czech>Pravé přední Kolo</Czech>
+            <French>Roue avant-droite</French>
+            <Spanish>Rueda frontal derecha</Spanish>
+            <Italian>Ruota frontale destra</Italian>
+            <Polish>Przednie prawe koło</Polish>
+            <Portuguese>Roda Dianteira Direita</Portuguese>
+            <Russian>Правое переднее колесо</Russian>
+            <German>Rechtes Vorderrad</German>
+            <Korean>오른쪽 앞바퀴</Korean>
+            <Japanese>右の前輪</Japanese>
+            <Chinese>右前輪</Chinese>
+            <Chinesesimp>右前轮</Chinesesimp>
+            <Hungarian>Jobb első kerék</Hungarian>
+        </Key>
+        <Key ID="STR_ZEN_Damage_HitRGlass">
+            <English>Glass (right)</English>
+            <Czech>Sklo (pravé)</Czech>
+            <French>Vitre (droite)</French>
+            <Spanish>Ventana (derecha)</Spanish>
+            <Italian>Vetro destro</Italian>
+            <Polish>Szyba (prawa)</Polish>
+            <Portuguese>Vidro (à direita)</Portuguese>
+            <Russian>Стекло (справа)</Russian>
+            <German>Scheibe (rechts)</German>
+            <Korean>유리 (오른쪽)</Korean>
+            <Japanese>ガラス (右)</Japanese>
+            <Chinese>玻璃 (右)</Chinese>
+            <Chinesesimp>玻璃 (右)</Chinesesimp>
+            <Hungarian>Jobb szélvédő</Hungarian>
+        </Key>
+        <Key ID="STR_ZEN_Damage_HitRMWheel">
+            <English>Right Middle Wheel</English>
+            <Czech>Pravé prostřední Kolo</Czech>
+            <French>Roue centre-droite</French>
+            <Spanish>Rueda central derecha</Spanish>
+            <Italian>Ruota centrale destra</Italian>
+            <Polish>Środkowe prawe koło</Polish>
+            <Portuguese>Roda Intermediária Direita</Portuguese>
+            <Russian>Правое среднее колесо</Russian>
+            <German>Rechtes mittleres Rad</German>
+            <Korean>오른족 가운데 바퀴</Korean>
+            <Japanese>右の中央の前輪</Japanese>
+            <Chinese>右中輪</Chinese>
+            <Chinesesimp>右中轮</Chinesesimp>
+            <Hungarian>Jobb középső kerék</Hungarian>
+        </Key>
+        <Key ID="STR_ZEN_Damage_HitRTrack">
+            <English>Right Track</English>
+            <Czech>Pravý Pás</Czech>
+            <French>Chenille droite</French>
+            <Spanish>Oruga derecha</Spanish>
+            <Italian>Cingolo destro</Italian>
+            <Polish>Prawa gąsienica</Polish>
+            <Portuguese>Esteira Direita</Portuguese>
+            <Russian>Правую гусеницу</Russian>
+            <German>Rechte Kette</German>
+            <Korean>오른쪽 궤도</Korean>
+            <Japanese>右の履帯</Japanese>
+            <Chinese>右履帶</Chinese>
+            <Chinesesimp>右履带</Chinesesimp>
+            <Hungarian>Jobb lánctalp</Hungarian>
+        </Key>
+        <Key ID="STR_ZEN_Damage_HitStarter">
+            <English>Starter</English>
+            <Czech>Startér</Czech>
+            <French>Démarreur</French>
+            <Spanish>Motor de arranque</Spanish>
+            <Italian>Motore d'avviamento</Italian>
+            <Polish>Zapłon</Polish>
+            <Portuguese>Arranque</Portuguese>
+            <Russian>Стартер</Russian>
+            <German>Anlasser</German>
+            <Korean>점화기</Korean>
+            <Japanese>スターター</Japanese>
+            <Chinese>發動機</Chinese>
+            <Chinesesimp>发动机</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Damage_HitStaticPort">
+            <English>Static Port</English>
+            <Czech>Statický port</Czech>
+            <French>Port statique</French>
+            <Spanish>Puerto estático</Spanish>
+            <Italian>Porta Statica</Italian>
+            <Polish>Port statyczny</Polish>
+            <Portuguese>Porta Estática</Portuguese>
+            <Russian>Статический иллюминатор</Russian>
+            <German>Statik Port</German>
+            <Korean>정압공</Korean>
+            <Japanese>スタティック ポート</Japanese>
+            <Chinese>靜態端口</Chinese>
+            <Chinesesimp>静压孔</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Damage_HitTail">
+            <English>Tail</English>
+            <Czech>Ocas</Czech>
+            <French>Queue</French>
+            <Spanish>Tail</Spanish>
+            <Italian>Coda</Italian>
+            <Polish>Ogon</Polish>
+            <Portuguese>Cauda</Portuguese>
+            <Russian>Хвост</Russian>
+            <German>Leitwerk</German>
+            <Korean>꼬리</Korean>
+            <Japanese>尾翼</Japanese>
+            <Chinese>尾翼</Chinese>
+            <Chinesesimp>尾翼</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Damage_HitTransmission">
+            <English>Transmission</English>
+            <Czech>Převodovka</Czech>
+            <French>Instruments</French>
+            <Spanish>Transmisión</Spanish>
+            <Italian>Trasmissione</Italian>
+            <Polish>Skrzynia biegów</Polish>
+            <Portuguese>Transmissão</Portuguese>
+            <Russian>Трансмиссия</Russian>
+            <German>Getriebe</German>
+            <Korean>변속기</Korean>
+            <Japanese>変速機</Japanese>
+            <Chinese>變速箱</Chinese>
+            <Chinesesimp>变速箱</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Damage_HitTurret">
+            <English>Turret</English>
+            <Czech>Věž</Czech>
+            <French>Tourelle</French>
+            <Spanish>Torreta</Spanish>
+            <Italian>Torretta</Italian>
+            <Polish>Wieżyczka</Polish>
+            <Portuguese>Torre</Portuguese>
+            <Russian>Башню</Russian>
+            <German>Turm</German>
+            <Korean>포탑</Korean>
+            <Japanese>砲塔</Japanese>
+            <Chinese>砲塔</Chinese>
+            <Chinesesimp>炮塔</Chinesesimp>
+            <Hungarian>Lövegtorony</Hungarian>
+        </Key>
+        <Key ID="STR_ZEN_Damage_HitVRotor">
+            <English>Tail Rotor</English>
+            <Czech>Ocasní Rotor</Czech>
+            <French>Rotor anticouple</French>
+            <Spanish>Rotor de cola</Spanish>
+            <Italian>Rotore di coda</Italian>
+            <Polish>Tylni rotor</Polish>
+            <Portuguese>Rotor de Cauda</Portuguese>
+            <Russian>Рулевой винт</Russian>
+            <German>Heckrotor</German>
+            <Korean>테일 로터</Korean>
+            <Japanese>テイル ローター</Japanese>
+            <Chinese>尾槳</Chinese>
+            <Chinesesimp>尾桨</Chinesesimp>
+            <Hungarian>Farokrotor</Hungarian>
+        </Key>
+        <Key ID="STR_ZEN_Damage_HitVStabilizer1">
+            <English>Vertical Stabilizer</English>
+            <Czech>Vertikální Stabilizátor</Czech>
+            <French>Stabilisateur vertical</French>
+            <Spanish>Estabilizador vertical</Spanish>
+            <Italian>Stabilizzatore Verticale</Italian>
+            <Polish>Statecznik pionowy</Polish>
+            <Portuguese>Estabilizador Vertical</Portuguese>
+            <Russian>Вертикальный стабилизатор</Russian>
+            <German>Seitenleitwerk</German>
+            <Korean>수직 안정기</Korean>
+            <Japanese>車両スタビライザ</Japanese>
+            <Chinese>垂直穩定</Chinese>
+            <Chinesesimp>垂直稳定</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Damage_HitWinch">
+            <English>Winch</English>
+            <Czech>Naviják</Czech>
+            <French>Treuil</French>
+            <Spanish>Cabrestante</Spanish>
+            <Italian>Gancio</Italian>
+            <Polish>Wyciągarka</Polish>
+            <Portuguese>Guincho</Portuguese>
+            <Russian>Лебедка</Russian>
+            <German>Seilwinde</German>
+            <Korean>윈치</Korean>
+            <Japanese>ウィンチ</Japanese>
+            <Chinese>絞盤</Chinese>
+            <Chinesesimp>绞盘</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitera">
             <English>ERA</English>
             <Czech>ERA</Czech>
-            <Polish>ERA</Polish>
-            <Italian>Corazza reattiva</Italian>
-            <German>Reaktivpanzerung</German>
-            <Spanish>ERA</Spanish>
             <French>Blindage réactif</French>
+            <Spanish>ERA</Spanish>
+            <Italian>Corazza reattiva</Italian>
+            <Polish>ERA</Polish>
             <Portuguese>ERA</Portuguese>
             <Russian>ДЗ</Russian>
-            <Japanese>ERA</Japanese>
+            <German>Reaktivpanzerung</German>
             <Korean>폭발반응장갑차</Korean>
-            <Chinesesimp>爆炸式反应装甲</Chinesesimp>
+            <Japanese>ERA</Japanese>
             <Chinese>爆炸式反應裝甲</Chinese>
-        </Key>
-        <Key ID="STR_ZEN_Damage_Hitera_front">
-            <English>ERA Front</English>
-            <German>Reaktivpanzerung vorne</German>
-            <Polish>ERA Przód</Polish>
-            <Korean>폭발반응장갑차 앞</Korean>
-            <Japanese>ERA 前部</Japanese>
-            <Chinesesimp>前侧反应装甲</Chinesesimp>
-            <Chinese>前側反應裝甲</Chinese>
-            <Italian>Corazza reattiva davanti</Italian>
-            <French>Blindage réactif à l'avant</French>
+            <Chinesesimp>爆炸式反应装甲</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitera_back">
             <English>ERA Back</English>
-            <German>Reaktivpanzerung hinten</German>
+            <French>Blindage réactif à l'arrière</French>
+            <Italian>Corazza reattiva posteriore</Italian>
             <Polish>ERA tył</Polish>
+            <German>Reaktivpanzerung hinten</German>
             <Korean>폭발반응장갑차 뒤</Korean>
             <Japanese>ERA 後部</Japanese>
-            <Chinesesimp>后侧反应装甲</Chinesesimp>
             <Chinese>後側反應裝甲</Chinese>
-            <Italian>Corazza reattiva posteriore</Italian>
-            <French>Blindage réactif à l'arrière</French>
+            <Chinesesimp>后侧反应装甲</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Damage_Hitera_front">
+            <English>ERA Front</English>
+            <French>Blindage réactif à l'avant</French>
+            <Italian>Corazza reattiva davanti</Italian>
+            <Polish>ERA Przód</Polish>
+            <German>Reaktivpanzerung vorne</German>
+            <Korean>폭발반응장갑차 앞</Korean>
+            <Japanese>ERA 前部</Japanese>
+            <Chinese>前側反應裝甲</Chinese>
+            <Chinesesimp>前侧反应装甲</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitera_left">
             <English>ERA Left</English>
-            <German>Reaktivpanzerung links</German>
+            <French>Blindage réactif à gauche</French>
+            <Italian>Corazza reattiva sinistra</Italian>
             <Polish>ERA lewa strona</Polish>
+            <German>Reaktivpanzerung links</German>
             <Korean>폭발반응장갑차 왼쪽</Korean>
             <Japanese>ERA 左側部</Japanese>
-            <Chinesesimp>左侧反应装甲</Chinesesimp>
             <Chinese>左側反應裝甲</Chinese>
-            <Italian>Corazza reattiva sinistra</Italian>
-            <French>Blindage réactif à gauche</French>
+            <Chinesesimp>左侧反应装甲</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitera_right">
             <English>ERA Right</English>
-            <German>Reaktivpanzerung rechts</German>
+            <French>Blindage réactif à droite</French>
+            <Italian>Corazza reattiva destra</Italian>
             <Polish>ERA prawa strona</Polish>
+            <German>Reaktivpanzerung rechts</German>
             <Korean>폭발반응장갑차 오른쪽</Korean>
             <Japanese>ERA 右側部</Japanese>
-            <Chinesesimp>右侧反应装甲</Chinesesimp>
             <Chinese>右側反應裝甲</Chinese>
-            <Italian>Corazza reattiva destra</Italian>
-            <French>Blindage réactif à droite</French>
+            <Chinesesimp>右侧反应装甲</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitera_top">
             <English>ERA Top</English>
-            <German>Reaktivpanzerung oben</German>
+            <French>Blindage réactif en haut</French>
+            <Italian>Corazza reattiva sopra</Italian>
             <Polish>ERA góra</Polish>
+            <German>Reaktivpanzerung oben</German>
             <Korean>폭발반응장갑차 위</Korean>
             <Japanese>ERA 上部</Japanese>
-            <Chinesesimp>顶部反应装甲</Chinesesimp>
             <Chinese>頂部反應裝甲</Chinese>
-            <Italian>Corazza reattiva sopra</Italian>
-            <French>Blindage réactif en haut</French>
+            <Chinesesimp>顶部反应装甲</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitslat">
             <English>Slat</English>
-            <German>Käfig</German>
+            <French>Cage</French>
+            <Italian>Slat</Italian>
             <Polish>Klapa</Polish>
+            <German>Käfig</German>
             <Korean>슬랫</Korean>
             <Japanese>スラット</Japanese>
-            <Chinesesimp>防弹格栅</Chinesesimp>
             <Chinese>防彈格柵</Chinese>
-            <Italian>Slat</Italian>
-            <French>Cage</French>
-        </Key>
-        <Key ID="STR_ZEN_Damage_Hitslat_left">
-            <English>Slat Left</English>
-            <German>Käfig links</German>
-            <Polish>Klapa lewa</Polish>
-            <Korean>슬랫 왼쪽</Korean>
-            <Japanese>スラット 左側部</Japanese>
-            <Chinesesimp>左侧防弹格栅</Chinesesimp>
-            <Chinese>左側防彈格柵</Chinese>
-            <Italian>Slat Left</Italian>
-            <French>Cage à gauche</French>
-        </Key>
-        <Key ID="STR_ZEN_Damage_Hitslat_right">
-            <English>Slat Right</English>
-            <German>Käfig rechts</German>
-            <Polish>Klapa prawa</Polish>
-            <Korean>슬랫 오른쪽</Korean>
-            <Japanese>スラット 右側部</Japanese>
-            <Chinesesimp>右侧防弹格栅</Chinesesimp>
-            <Chinese>右側防彈格柵</Chinese>
-            <Italian>Slat Right</Italian>
-            <French>Cage à droite</French>
-        </Key>
-        <Key ID="STR_ZEN_Damage_Hitslat_front">
-            <English>Slat Front</English>
-            <German>Käfig vorne</German>
-            <Polish>Klapa przód</Polish>
-            <Korean>슬랫 앞</Korean>
-            <Japanese>スラット 前部</Japanese>
-            <Chinesesimp>前侧防弹格栅</Chinesesimp>
-            <Chinese>前側防彈格柵</Chinese>
-            <Italian>Slat Front</Italian>
-            <French>Cage à l'avant</French>
+            <Chinesesimp>防弹格栅</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitslat_back">
             <English>Slat Back</English>
-            <German>Käfig hinten</German>
+            <French>Cage arrière</French>
+            <Italian>Slat Back</Italian>
             <Polish>Klapa tył</Polish>
+            <German>Käfig hinten</German>
             <Korean>슬랫 뒤</Korean>
             <Japanese>スラット 後部</Japanese>
-            <Chinesesimp>后侧防弹格栅</Chinesesimp>
             <Chinese>後側防彈格柵</Chinese>
-            <Italian>Slat Back</Italian>
-            <French>Cage arrière</French>
+            <Chinesesimp>后侧防弹格栅</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Damage_Hitslat_front">
+            <English>Slat Front</English>
+            <French>Cage à l'avant</French>
+            <Italian>Slat Front</Italian>
+            <Polish>Klapa przód</Polish>
+            <German>Käfig vorne</German>
+            <Korean>슬랫 앞</Korean>
+            <Japanese>スラット 前部</Japanese>
+            <Chinese>前側防彈格柵</Chinese>
+            <Chinesesimp>前侧防弹格栅</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Damage_Hitslat_left">
+            <English>Slat Left</English>
+            <French>Cage à gauche</French>
+            <Italian>Slat Left</Italian>
+            <Polish>Klapa lewa</Polish>
+            <German>Käfig links</German>
+            <Korean>슬랫 왼쪽</Korean>
+            <Japanese>スラット 左側部</Japanese>
+            <Chinese>左側防彈格柵</Chinese>
+            <Chinesesimp>左侧防弹格栅</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Damage_Hitslat_right">
+            <English>Slat Right</English>
+            <French>Cage à droite</French>
+            <Italian>Slat Right</Italian>
+            <Polish>Klapa prawa</Polish>
+            <German>Käfig rechts</German>
+            <Korean>슬랫 오른쪽</Korean>
+            <Japanese>スラット 右側部</Japanese>
+            <Chinese>右側防彈格柵</Chinese>
+            <Chinesesimp>右侧防弹格栅</Chinesesimp>
         </Key>
     </Package>
 </Project>

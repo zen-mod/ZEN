@@ -28,7 +28,7 @@ if (_index < 0) then {
     _index = _index + _modesCount;
 };
 
-_mode = _modes select _index;
+private _mode = _modes select _index;
 _curator setVariable ["BIS_fnc_curatorVisionModes_current", _index];
 
 if (!isNull curatorCamera) then {

@@ -3,9 +3,9 @@
     <Package name="Compat_Advanced_Rappelling">
         <Key ID="STR_ZEN_Compat_Advanced_Rappelling_Rappel">
             <English>Rappel</English>
+            <French>Descente en rappel</French>
             <German>Abseilen</German>
             <Japanese>ラぺリング</Japanese>
-            <French>Descente en rappel</French>
             <Chinesesimp>索降</Chinesesimp>
         </Key>
     </Package>

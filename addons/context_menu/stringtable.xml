@@ -4,89 +4,89 @@
         <Key ID="STR_ZEN_Context_Menu_DisplayName">
             <English>Context Menu</English>
             <French>Menu contextuel</French>
-            <German>Kontextmenu</German>
-            <Chinesesimp>滚轮菜单</Chinesesimp>
-            <Chinese>滾輪菜單</Chinese>
-            <Japanese>コンテキスト メニュー</Japanese>
             <Italian>Menù contestuale</Italian>
+            <German>Kontextmenu</German>
+            <Japanese>コンテキスト メニュー</Japanese>
+            <Chinese>滾輪菜單</Chinese>
+            <Chinesesimp>滚轮菜单</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Context_Menu_Enabled">
             <English>Enable Context Menu</English>
             <French>Activer le menu contextuel</French>
+            <Italian>Attiva menu contestuale</Italian>
+            <Polish>Włącz menu kontekstowe</Polish>
             <Russian>Вкл. контекстное меню</Russian>
             <German>Kontextmenu aktivieren</German>
-            <Polish>Włącz menu kontekstowe</Polish>
-            <Japanese>コンテキスト メニュー有効化</Japanese>
             <Korean>맞춤형 메뉴 활성화</Korean>
-            <Chinesesimp>启用滚轮菜单</Chinesesimp>
+            <Japanese>コンテキスト メニュー有効化</Japanese>
             <Chinese>啟用滾輪菜單</Chinese>
-            <Italian>Attiva menu contestuale</Italian>
+            <Chinesesimp>启用滚轮菜单</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Context_Menu_Enabled_Description">
             <English>Enables opening of context menu using the keybind or right clicking.</English>
             <French>Permet d'ouvrir le menu contextuel à l'aide d'une touche ou d'un clic droit.</French>
-            <German>Ermöglicht das Öffnen des Kontextmenus mit einer Tastenkombination oder Rechtslick.</German>
+            <Italian>Consente l'apertura del menu contestuale utilizzando la combinazione di tasti o facendo clic con il pulsante destro del mouse.</Italian>
             <Polish>Pozwala otwierać menu kontekstowe używając skrótu klawiaturowego lub prawego przycisku myszy.</Polish>
             <Russian>Включает открытие контекстного меню по правой клавише мыши или сочетанию клавиш</Russian>
-            <Japanese>割り当てられたキーか右クリックによりコンテキスト メニューを使えるようにします。</Japanese>
+            <German>Ermöglicht das Öffnen des Kontextmenus mit einer Tastenkombination oder Rechtslick.</German>
             <Korean>키 바인드 또는 마우스 우클릭을 사용해 맞춤형 메뉴를 열 수 있습니다.</Korean>
-            <Chinesesimp>启用使用绑定按键或右键单击打开滚轮菜单。</Chinesesimp>
+            <Japanese>割り当てられたキーか右クリックによりコンテキスト メニューを使えるようにします。</Japanese>
             <Chinese>啟用使用綁定按鍵或右鍵單擊打開滾輪菜單。</Chinese>
-            <Italian>Consente l'apertura del menu contestuale utilizzando la combinazione di tasti o facendo clic con il pulsante destro del mouse.</Italian>
-        </Key>
-        <Key ID="STR_ZEN_Context_Menu_KeybindOnly">
-            <English>Keybind Only</English>
-            <French>Touche uniquement</French>
-            <Russian>Только сочетание клавиш</Russian>
-            <German>Nur Tastenkombination</German>
-            <Polish>Tylko skrót klawiaturowy</Polish>
-            <Japanese>割り当てキーからのみ</Japanese>
-            <Korean>키 바인드만 사용 가능</Korean>
-            <Chinesesimp>仅限绑定按键</Chinesesimp>
-            <Chinese>僅限綁定按鍵</Chinese>
-            <Italian>Solo combinazione di tasti</Italian>
+            <Chinesesimp>启用使用绑定按键或右键单击打开滚轮菜单。</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Context_Menu_KeybindAndMouse">
             <English>Keybind and Mouse</English>
             <French>Touche et souris</French>
+            <Italian>Combinazione di tasti e mouse</Italian>
+            <Polish>Skrót klawiaturowy i mysz</Polish>
             <Russian>Мышь и сочетание клавиш</Russian>
             <German>Tastenkombination und Rechtsklick</German>
-            <Polish>Skrót klawiaturowy i mysz</Polish>
-            <Japanese>割り当てキーとマウス</Japanese>
             <Korean>마우스 우클릭만 사용 가능</Korean>
-            <Chinesesimp>绑定按键和鼠标</Chinesesimp>
+            <Japanese>割り当てキーとマウス</Japanese>
             <Chinese>綁定按鍵和鼠標</Chinese>
-            <Italian>Combinazione di tasti e mouse</Italian>
+            <Chinesesimp>绑定按键和鼠标</Chinesesimp>
         </Key>
-        <Key ID="STR_ZEN_Context_Menu_OverrideWaypoints">
-            <English>Override Waypoint Placement</English>
-            <German>Überschreibe Platzierung von Wegpunkten</German>
-            <Chinesesimp>覆盖路径点位置</Chinesesimp>
-            <Chinese>覆蓋路徑點位置</Chinese>
-            <Japanese>ウェイポイント配置上書き</Japanese>
-            <Italian>Oltrepassare posizionamento waypoint</Italian>
-            <French>Positionnement des points de passage</French>
-        </Key>
-        <Key ID="STR_ZEN_Context_Menu_OverrideWaypoints_Description">
-            <English>Allows for the context menu to be opened by right clicking when waypoint placement would normally occur.\nRequires holding the SHIFT key in order to place waypoints.</English>
-            <German>Erlaubt es das Kontextmenu über Rechtsklick zu öffnen, wenn normalerweise ein Wegpunkt platziert wird.\nPlatzierung von Wegpunkten benötigt stattdessen zusätzlich die Umschalttaste.</German>
-            <Chinesesimp>允许在通常情况下，在放置路径点时通过右键打开滚轮菜单。\n需要按住SHIFT键来放置路径点。</Chinesesimp>
-            <Chinese>允許在通常情況下，在放置路徑點時通過右鍵打開滾輪菜單。 \n需要按住SHIFT鍵來放置路徑點。</Chinese>
-            <Japanese>ウェイポイント配置時に右クリックでコンテキスト メニューを使えるようにします。\nウェイポイントの配置にはシフトキーを長押しする必要があります。</Japanese>
-            <Italian>Consente l'apertura del menu contestuale facendo clic con il pulsante destro del mouse quando normalmente si verifica il posizionamento del waypoint.\nRichiede la pressione del tasto SHIFT per posizionare i waypoint.</Italian>
-            <French>Permet d'ouvrir le menu contextuel en cliquant avec le bouton droit de la souris lors du contrôle normal du positionnement des points de passage.\nIl est nécessaire d'appuyer sur la touche SHIFT pour positionner les points de passage.</French>
+        <Key ID="STR_ZEN_Context_Menu_KeybindOnly">
+            <English>Keybind Only</English>
+            <French>Touche uniquement</French>
+            <Italian>Solo combinazione di tasti</Italian>
+            <Polish>Tylko skrót klawiaturowy</Polish>
+            <Russian>Только сочетание клавиш</Russian>
+            <German>Nur Tastenkombination</German>
+            <Korean>키 바인드만 사용 가능</Korean>
+            <Japanese>割り当てキーからのみ</Japanese>
+            <Chinese>僅限綁定按鍵</Chinese>
+            <Chinesesimp>仅限绑定按键</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Context_Menu_OpenContextMenu">
             <English>Open Context Menu</English>
             <French>Ouvrir le menu contextuel</French>
+            <Italian>Apri il menu contestuale</Italian>
+            <Polish>Otwórz menu kontekstowe</Polish>
             <Russian>Открыть контекстное меню</Russian>
             <German>Kontextmenu öffnen</German>
-            <Polish>Otwórz menu kontekstowe</Polish>
-            <Japanese>コンテキスト メニューを開く</Japanese>
             <Korean>맞춤형 메뉴 열기</Korean>
-            <Chinesesimp>打开滚轮菜单</Chinesesimp>
+            <Japanese>コンテキスト メニューを開く</Japanese>
             <Chinese>打開滾輪菜單</Chinese>
-            <Italian>Apri il menu contestuale</Italian>
+            <Chinesesimp>打开滚轮菜单</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Context_Menu_OverrideWaypoints">
+            <English>Override Waypoint Placement</English>
+            <French>Positionnement des points de passage</French>
+            <Italian>Oltrepassare posizionamento waypoint</Italian>
+            <German>Überschreibe Platzierung von Wegpunkten</German>
+            <Japanese>ウェイポイント配置上書き</Japanese>
+            <Chinese>覆蓋路徑點位置</Chinese>
+            <Chinesesimp>覆盖路径点位置</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZEN_Context_Menu_OverrideWaypoints_Description">
+            <English>Allows for the context menu to be opened by right clicking when waypoint placement would normally occur.\nRequires holding the SHIFT key in order to place waypoints.</English>
+            <French>Permet d'ouvrir le menu contextuel en cliquant avec le bouton droit de la souris lors du contrôle normal du positionnement des points de passage.\nIl est nécessaire d'appuyer sur la touche SHIFT pour positionner les points de passage.</French>
+            <Italian>Consente l'apertura del menu contestuale facendo clic con il pulsante destro del mouse quando normalmente si verifica il posizionamento del waypoint.\nRichiede la pressione del tasto SHIFT per posizionare i waypoint.</Italian>
+            <German>Erlaubt es das Kontextmenu über Rechtsklick zu öffnen, wenn normalerweise ein Wegpunkt platziert wird.\nPlatzierung von Wegpunkten benötigt stattdessen zusätzlich die Umschalttaste.</German>
+            <Japanese>ウェイポイント配置時に右クリックでコンテキスト メニューを使えるようにします。\nウェイポイントの配置にはシフトキーを長押しする必要があります。</Japanese>
+            <Chinese>允許在通常情況下，在放置路徑點時通過右鍵打開滾輪菜單。 \n需要按住SHIFT鍵來放置路徑點。</Chinese>
+            <Chinesesimp>允许在通常情况下，在放置路径点时通过右键打开滚轮菜单。\n需要按住SHIFT键来放置路径点。</Chinesesimp>
         </Key>
     </Package>
 </Project>
