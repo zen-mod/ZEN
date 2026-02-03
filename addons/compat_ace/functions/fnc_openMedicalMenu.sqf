@@ -17,4 +17,4 @@
 
 params ["_entity"];
 
-[_entity] call ACEFUNC(ace_medical,openMenu);
+[_entity] call ACEFUNC(medical_gui,openMenu);
