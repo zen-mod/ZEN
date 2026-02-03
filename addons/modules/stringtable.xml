@@ -1214,6 +1214,15 @@
             <Italian>Rendi invincibile</Italian>
             <French>Rendre Invincible</French>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleEditTerrainLocation">
+            <English>Edit Terrain Location</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleEditTerrainLocation_Importance">
+            <English>Importance</English>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleEditTerrainLocation_AreaShape">
+            <English>Area Shape</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleMakeInvincible_Invincible">
             <English>Invincible</English>
             <Russian>Неуязвимость</Russian>
