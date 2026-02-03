@@ -509,5 +509,37 @@
         <Key ID="STR_ZEN_Editor_MoveCamToSelection_AlternateCQB">
             <English>Alternate + CQB</English>
         </Key>
+        <Key ID="STR_ZEN_Editor_SetUnitPosUp">
+            <English>Switch Stance to Standing</English>
+            <German>Haltung auf aufrecht umschalten</German>
+        </Key>
+        <Key ID="STR_ZEN_Editor_SetUnitPosUp_Description">
+            <English>Switch the stance of all selected units to standing.</English>
+            <German>Haltung aller ausgewählten Einheiten auf aufrecht umschalten.</German>
+        </Key>
+        <Key ID="STR_ZEN_Editor_SetUnitPosMiddle">
+            <English>Switch Stance to Crouch</English>
+            <German>Haltung auf geduckt umschalten</German>
+        </Key>
+        <Key ID="STR_ZEN_Editor_SetUnitPosMiddle_Description">
+            <English>Switch the stance of all selected units to crouch.</English>
+            <German>Haltung aller ausgewählten Einheiten auf geduckt umschalten.</German>
+        </Key>
+        <Key ID="STR_ZEN_Editor_SetUnitPosDown">
+            <English>Switch Stance to Prone</English>
+            <German>Haltung auf liegend umschalten</German>
+        </Key>
+        <Key ID="STR_ZEN_Editor_SetUnitPosDown_Description">
+            <English>Switch the stance of all selected units to prone.</English>
+            <German>Haltung aller ausgewählten Einheiten auf liegend umschalten.</German>
+        </Key>
+        <Key ID="STR_ZEN_Editor_SetUnitPosAuto">
+            <English>Switch Stance to Automatic</English>
+            <German>Haltung auf automatisch umschalten</German>
+        </Key>
+        <Key ID="STR_ZEN_Editor_SetUnitPosAuto_Description">
+            <English>Switch the stance of all selected units to automatic.</English>
+            <German>Haltung aller ausgewählten Einheiten auf automatisch umschalten.</German>
+        </Key>
     </Package>
 </Project>

@@ -16,3 +16,4 @@ PREP(handleTreeButtons);
 PREP(handleUnload);
 PREP(moveCamToSelection);
 PREP(pingCurators);
+PREP(switchStance);
