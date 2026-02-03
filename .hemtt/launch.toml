@@ -1,0 +1,11 @@
+[default]
+mission = "test.VR"
+workshop = [
+    "450814997", # CBA_A3
+]
+
+[ace]
+extends = "default"
+workshop = [
+    "463939057", # ACE3
+]

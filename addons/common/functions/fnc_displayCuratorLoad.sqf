@@ -18,7 +18,7 @@
 params ["_display"];
 
 // Remove "Gear" animation when entering Zeus
-if (GVAR(disableGearAnim) && {vehicle player == player}) then {
+if (GVAR(disableGearAnim) && {isNull objectParent player}) then {
     [{player switchMove _this}, animationState player] call CBA_fnc_execNextFrame;
 };
 

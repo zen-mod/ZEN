@@ -21,7 +21,7 @@ params ["", "_expand"];
 RscDisplayCurator_sections params ["_mode"];
 
 // Can't collapse or expand marker or recent trees
-if (_mode > 2) exitWith {};
+if (_mode > CURATOR_MODE_MODULES) exitWith {};
 
 // Collapse or expand current tree
 private _ctrlTree = call EFUNC(common,getActiveTree);
@@ -32,7 +32,7 @@ if (_expand) then {
     _ctrlTree call EFUNC(common,collapseTree);
 
     // For QOL, keep factions of group trees visible
-    if (_mode == 1) then {
+    if (_mode == CURATOR_MODE_GROUPS) then {
         _ctrlTree tvExpand [0];
     };
 };

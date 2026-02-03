@@ -158,7 +158,7 @@ private _groupPosition = if (isNull _parentRow) then {
 
     // Apply a one pixel right, one pixel down offset so an option is not selected by default
     _posX = safeZoneX + SPACING_W max (_posX + pixelW min (safeZoneX + safeZoneW - _posW - SPACING_W));
-    _posY = safeZoneY + SPACING_H max (_posY + pixelH min (safeZoneY + safezoneH - _posH - SPACING_H));
+    _posY = safeZoneY + SPACING_H max (_posY + pixelH min (safeZoneY + safeZoneH - _posH - SPACING_H));
 
     [_posX, _posY, _posW, _posH]
 } else {
@@ -177,7 +177,7 @@ private _groupPosition = if (isNull _parentRow) then {
         _posX + _parentWidth + SPACING_W;
     };
 
-    _posY = safeZoneY + SPACING_H max (_posY min (safeZoneY + safezoneH - _posH - SPACING_H));
+    _posY = safeZoneY + SPACING_H max (_posY min (safeZoneY + safeZoneH - _posH - SPACING_H));
 
     [_posX, _posY, _posW, _posH]
 };

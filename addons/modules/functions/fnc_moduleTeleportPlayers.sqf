@@ -59,7 +59,7 @@ params ["_logic"];
             } else {
                 // Need special handling for players in vehicles
                 // Without this they are teleported back inside the vehicle
-                if (_x isKindOf "CAManBase" && {vehicle _x != _x}) then {
+                if (_x isKindOf "CAManBase" && {!isNull objectParent _x}) then {
                     [QGVAR(teleportOutOfVehicle), [_x, _position], _x] call CBA_fnc_targetEvent;
                 } else {
                     _x setVehiclePosition [_position, [], 0, "NONE"];

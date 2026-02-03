@@ -27,7 +27,13 @@ if (!GVAR(iconsVisible)) then {
 
 RscDisplayCurator_sections params ["_mode"];
 
-if (!GVAR(includeCrew) && {_mode == 0 || {_mode == 4 && {isClass (configFile >> "CfgVehicles" >> GVAR(recentTreeData))}}}) then {
+if (
+    !GVAR(includeCrew)
+    && {
+        _mode == CURATOR_MODE_UNITS
+        || {_mode == CURATOR_MODE_RECENT && {isClass (configFile >> "CfgVehicles" >> GVAR(recentTreeData))}}
+    }
+) then {
     deleteVehicleCrew _object;
 };
 

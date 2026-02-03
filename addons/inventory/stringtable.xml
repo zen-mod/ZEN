@@ -9,6 +9,7 @@
             <Chinesesimp>编辑库存(%1)</Chinesesimp>
             <Chinese>編輯庫存(%1)</Chinese>
             <Italian>Modifica inventario (%1)</Italian>
+            <French>Modifier un inventaire (%1)</French>
         </Key>
         <Key ID="STR_ZEN_Inventory_Search_Tooltip">
             <English>Search the items list. Use 'class ' prefix to search by class name (e.g. 'class FirstAidKit').</English>
@@ -17,6 +18,7 @@
             <Chinesesimp>搜索项目列表。使用'class'前缀按类名搜索（例如，'class FirstAidKit'）。</Chinesesimp>
             <Chinese>搜索項目列表。 使用“class”前綴按類名搜索（例如'class FirstAidKit'）。</Chinese>
             <Italian>Cerca nell'elenco degli oggetti. Usa il prefisso 'class' per cercare i nomi delle classi (es. 'class FirstAidKit').</Italian>
+            <French>Cherche dans la liste des objets. Utilise le préfixe 'class' pour rechercher des noms de classe (par ex. 'class FirstAidKit').</French>
         </Key>
         <Key ID="STR_ZEN_Inventory_Reset_Tooltip">
             <English>Reset to default inventory.</English>
@@ -26,6 +28,7 @@
             <Chinesesimp>重置为默认库存。</Chinesesimp>
             <Chinese>重置為默認庫存。</Chinese>
             <Italian>Ripristina l'inventario predefinito.</Italian>
+            <French>Revenir à l'inventaire standard.</French>
         </Key>
         <Key ID="STR_ZEN_Inventory_Clear_Tooltip">
             <English>Clear items from current category.</English>
@@ -34,6 +37,7 @@
             <Chinesesimp>清除当前类名中的项目。</Chinesesimp>
             <Chinese>清除當前類名中的項目。</Chinese>
             <Italian>Rimuovi oggetti dalla categoria corrente.</Italian>
+            <French>Supprime les objets de la catégorie actuelle.</French>
         </Key>
         <Key ID="STR_ZEN_Inventory_Weapon_Tooltip">
             <English>View weapon specific items.</English>
@@ -42,6 +46,7 @@
             <Chinesesimp>查看武器的特定项目。</Chinesesimp>
             <Chinese>查看武器的特定項目。</Chinese>
             <Italian>Visualizza gli oggetti specifici dell'arma.</Italian>
+            <French>Voir l'inventaire spécifique à l'arme.</French>
         </Key>
         <Key ID="STR_ZEN_Inventory_Close_Tooltip">
             <English>Close weapon specific items.</English>
@@ -50,6 +55,7 @@
             <Chinesesimp>关闭武器的特定项目。</Chinesesimp>
             <Chinese>關閉武器的特定項目。</Chinese>
             <Italian>Chiudi oggetti specifici per armi.</Italian>
+            <French>Ferme l'inventaire spécifique à l'arme.</French>
         </Key>
     </Package>
 </Project>

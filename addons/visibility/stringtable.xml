@@ -14,6 +14,9 @@
         <Key ID="STR_ZEN_Visibility_Enabled">
             <English>Enable Visibility Indicator</English>
             <German>Aktiviere den Sichtbarkeitsindikator</German>
+            <Japanese>可視性インジケータを有効化</Japanese>
+            <French>Activer l'indicateur de visibilité</French>
+            <Chinesesimp>启用能见度指标</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Visibility_Enabled_Description">
             <English>Enables showing an indicator when a player can see the Zeus cursor position.</English>
@@ -28,18 +31,30 @@
         <Key ID="STR_ZEN_Visibility_DuringPlacementOnly">
             <English>During Placement Only</English>
             <German>Nur während dem Platzieren</German>
+            <Japanese>配置中のみ</Japanese>
+            <French>Pendant le placement uniquement</French>
+            <Chinesesimp>仅在放置时</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Visibility_DuringPlacementOnly_Description">
             <English>Only show the indicator while placing objects.</English>
             <German>Zeigt den Indikator nur an während dem Platzieren</German>
+            <Japanese>オブジェクトを配置している間のみインジケーターを表示します。</Japanese>
+            <French>Affiche l'indicateur uniquement pendant le placement</French>
+            <Chinesesimp>仅在放置物体时显示能见度指标</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Visibility_MaxDistance">
             <English>Max Check Distance</English>
             <German>Maximale Distanz</German>
+            <Japanese>最大チェック距離</Japanese>
+            <French>Distance maximum</French>
+            <Chinesesimp>最大检查距离</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Visibility_MaxDistance_Description">
             <English>Controls the maximum distance from the cursor's position that players are considered for visibility checks.</English>
             <German>Die Maximale Distanz zwischen dem Mauszeiger and den Spielern, bei der die Sichtbarkeit überprüft wird.</German>
+            <Japanese>プレイヤーの視認性チェックの対象となる、カーソルの位置からの最大距離を制御します。</Japanese>
+            <French>La distance maximale entre le curseur de la souris et les joueurs, à laquelle la visibilité est vérifiée.</French>
+            <Chinesesimp>控制玩家进行能见度检查时玩家距离光标位置的最大距离</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Visibility_Visible">
             <English>VISIBLE</English>

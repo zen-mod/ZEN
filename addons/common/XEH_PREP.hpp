@@ -11,7 +11,6 @@ PREP(drawHint);
 PREP(dumpPerformanceCounters);
 PREP(earthquake);
 PREP(ejectPassengers);
-PREP(execAfterNFrames);
 PREP(exportMissionSQF);
 PREP(exportText);
 PREP(fireArtillery);

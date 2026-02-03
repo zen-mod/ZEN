@@ -85,7 +85,7 @@ _display displayAddEventHandler ["KeyUp", {call FUNC(handleKeyUp)}];
 {
     private _ctrl = _display displayCtrl _x;
     _ctrl ctrlAddEventHandler ["MouseButtonDown", {
-        if (RscDisplayCurator_sections select 0 == 1) then {
+        if (RscDisplayCurator_sections select 0 == CURATOR_MODE_GROUPS) then {
             private _ctrlTree = call EFUNC(common,getActiveTree);
             private _path = tvCurSel _ctrlTree;
 

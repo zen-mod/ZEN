@@ -12,6 +12,7 @@ class CfgPatches {
             "ace_interaction",
             "ace_zeus"
         };
+        skipWhenMissingDependencies = 1;
         author = ECSTRING(main,Author);
         authors[] = {"mharis001"};
         url = ECSTRING(main,URL);
@@ -25,3 +26,4 @@ PRELOAD_ADDONS;
 #include "CfgVehicles.hpp"
 #include "CfgWaypointTypes.hpp"
 #include "ACE_ZeusActions.hpp"
+#include "CfgContext.hpp"
