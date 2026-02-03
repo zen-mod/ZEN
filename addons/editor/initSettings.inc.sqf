@@ -78,3 +78,12 @@
     true,
     true
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(moveCamToSelection),
+    "LIST",
+    ["str_usract_curator_move_cam", LSTRING(MoveCamToSelection_Description)],
+    [ELSTRING(main,DisplayName), ELSTRING(camera,DisplayName)],
+    [[0, 1, 2, 3], ["str_a3_cfgroles_default0", LSTRING(MoveCamToSelection_Alternate), LSTRING(MoveCamToSelection_CQB), LSTRING(MoveCamToSelection_AlternateCQB)], 3],
+    false
+] call CBA_fnc_addSetting;
