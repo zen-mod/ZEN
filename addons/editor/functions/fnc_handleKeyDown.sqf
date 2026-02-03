@@ -19,7 +19,8 @@
 params ["_display", "_keyCode"];
 
 if (
-    GVAR(moveCamToSelection) > 0
+    !RscDisplayCurator_search
+    && GVAR(moveCamToSelection) > 0
     && {inputAction "curatorLockCameraTo" == 0}
     && {_keyCode in actionKeys "curatorMoveCamTo"}
     && {count SELECTED_OBJECTS > 0}
