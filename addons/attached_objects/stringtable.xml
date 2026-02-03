@@ -4,22 +4,32 @@
         <Key ID="STR_ZEN_Attached_Objects_DisplayName">
             <English>Attached Objects</English>
             <Japanese>取り付けられたオブジェクト</Japanese>
+            <French>Objets attachés</French>
+            <Chinesesimp>已附加的物体</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Attached_Objects_Attach">
             <English>Attach Objects</English>
             <Japanese>オブジェクトの取り付け</Japanese>
+            <French>Attacher des objets</French>
+            <Chinesesimp>附加物体</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Attached_Objects_Attach_Description">
             <English>Attaches all selected objects to the specified parent object.</English>
             <Japanese>選択したすべてのオブジェクトを指定した親オブジェクトに取り付けます。</Japanese>
+            <French>Attache tous les objets sélectionnés à l'objet parent spécifié.</French>
+            <Chinesesimp>将选中的所有物体附加到指定的父物体上</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Attached_Objects_Detach">
             <English>Detach Objects</English>
             <Japanese>オブジェクトの切り離し</Japanese>
+            <French>Détacher des objets</French>
+            <Chinesesimp>分离物体</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Attached_Objects_Detach_Description">
             <English>Detaches all selected objects from their parent object.</English>
             <Japanese>選択したすべてのオブジェクトを親オブジェクトから切り離します。</Japanese>
+            <French>Détache tous les objets sélectionnés de leur objet parent.</French>
+            <Chinesesimp>将所有选定的物体与其父物体分离</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Attached_Objects_AttachTo">
             <English>Attach To</English>
@@ -31,18 +41,25 @@
             <Chinesesimp>附加到</Chinesesimp>
             <Chinese>附加到</Chinese>
             <Italian>Allegare a</Italian>
+            <French>Attacher à</French>
         </Key>
         <Key ID="STR_ZEN_Attached_Objects_ObjectsAttached">
             <English>Objects Attached: %1</English>
             <Japanese>取り付けたオブジェクト: %1</Japanese>
+            <French>Objets attachés : %1</French>
+            <Chinesesimp>物体已附加: %1</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Attached_Objects_ObjectsDetached">
             <English>Objects Detached: %1</English>
             <Japanese>切り離したオブジェクト: %1</Japanese>
+            <French>Objets détachés : %1</French>
+            <Chinesesimp>物体已分离: %1</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Attached_Objects_PlaceOnObject">
             <English>Place on an object to attach or detach</English>
             <Japanese>取り付け/切り離ししたいオブジェクトの上に置いてください</Japanese>
+            <French>Placer sur un objet pour attacher ou détacher</French>
+            <Chinesesimp>放置在一个物体上来附加或分离</Chinesesimp>
         </Key>
         <Key ID="STR_ZEN_Attached_Objects_CannotAttachToSelf">
             <English>Cannot attach object to itself</English>
@@ -54,6 +71,7 @@
             <Chinesesimp>无法将物体附加到物体自己身上</Chinesesimp>
             <Chinese>無法將物體附加到物體自己身上</Chinese>
             <Italian>Impossibile collegare l'oggetto a se stesso</Italian>
+            <French>Impossible d'attacher un objet à lui-même</French>
         </Key>
     </Package>
 </Project>

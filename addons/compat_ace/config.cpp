@@ -26,3 +26,4 @@ PRELOAD_ADDONS;
 #include "CfgVehicles.hpp"
 #include "CfgWaypointTypes.hpp"
 #include "ACE_ZeusActions.hpp"
+#include "CfgContext.hpp"

@@ -187,7 +187,7 @@ class EGVAR(context_menu,actions) {
     class HealUnits {
         displayName = "$STR_State_Heal";
         icon = QPATHTOF(ui\medical_cross_ca.paa);
-        priority = 50;
+        priority = 52;
         class All {
             displayName = ECSTRING(common,All);
             condition = QUOTE([ARR_2(_objects,_args)] call FUNC(canHealUnits));

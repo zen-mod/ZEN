@@ -53,10 +53,10 @@ class GVAR(RscCheckbox): RscCheckBox {
     y = 0;
     w = QUOTE(POS_W(1));
     h = QUOTE(POS_H(1));
-    soundClick[] = {"\a3\ui_f\data\sound\rscbutton\soundclick", 0.09, 1};
-    soundEnter[] = {"\a3\ui_f\data\sound\rscbutton\soundenter", 0.09, 1};
-    soundEscape[] = {"\a3\ui_f\data\sound\rscbutton\soundescape", 0.09, 1};
-    soundPush[] = {"\a3\ui_f\data\sound\rscbutton\soundpush", 0.09, 1};
+    soundClick[] = {"\a3\ui_f\data\sound\rscbutton\soundclick.wss", 0.09, 1};
+    soundEnter[] = {"\a3\ui_f\data\sound\rscbutton\soundenter.wss", 0.09, 1};
+    soundEscape[] = {"\a3\ui_f\data\sound\rscbutton\soundescape.wss", 0.09, 1};
+    soundPush[] = {"\a3\ui_f\data\sound\rscbutton\soundpush.wss", 0.09, 1};
 };
 
 class GVAR(RscCombo): RscCombo {
