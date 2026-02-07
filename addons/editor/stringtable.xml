@@ -496,50 +496,63 @@
         </Key>
         <Key ID="STR_ZEN_Editor_MoveCamToSelection">
             <English>Focus Object Mode</English>
+            <French>Focus Mode Objet</French>
         </Key>
         <Key ID="STR_ZEN_Editor_MoveCamToSelection_Description">
             <English>Behaviour for "Move camera to selected entity" with an object selected.\nDefault: Base game behaviour.\nAlternate: 20 m above and behind object.\nCQB: Top-rear of object bounding box, useful for units inside buildings.\nAlternate + CQB: Switch between views on subsequent activations.</English>
+            <French>Comportement de l'option « Déplacer la caméra vers l'entité sélectionnée » lorsqu'un objet est sélectionné. \nPar défaut : comportement du jeu de base. \nAlternative : 20 m au-dessus et derrière l'objet. \nCQB : partie supérieure arrière du cadre englobant l'objet, utile pour les unités à l'intérieur des bâtiments. \nAlternative + CQB : basculement entre les vues lors des activations suivantes.</French>
         </Key>
         <Key ID="STR_ZEN_Editor_MoveCamToSelection_Alternate">
             <English>Alternate</English>
+            <French>Alternative</French>
         </Key>
         <Key ID="STR_ZEN_Editor_MoveCamToSelection_CQB">
             <English>CQB</English>
+            <French>CQB</French>
         </Key>
         <Key ID="STR_ZEN_Editor_MoveCamToSelection_AlternateCQB">
             <English>Alternate + CQB</English>
+            <French>Alternative + CQB</French>
         </Key>
         <Key ID="STR_ZEN_Editor_SetUnitPosUp">
             <English>Switch Stance to Standing</English>
             <German>Haltung auf aufrecht umschalten</German>
+            <French>Passer en position debout</French>
         </Key>
         <Key ID="STR_ZEN_Editor_SetUnitPosUp_Description">
             <English>Switch the stance of all selected units to standing.</English>
             <German>Haltung aller ausgewählten Einheiten auf aufrecht umschalten.</German>
+            <French>Faites passer toutes les unités sélectionnées en position debout.</French>
         </Key>
         <Key ID="STR_ZEN_Editor_SetUnitPosMiddle">
             <English>Switch Stance to Crouch</English>
             <German>Haltung auf geduckt umschalten</German>
+            <French>Passer en position accroupie</French>
         </Key>
         <Key ID="STR_ZEN_Editor_SetUnitPosMiddle_Description">
             <English>Switch the stance of all selected units to crouch.</English>
             <German>Haltung aller ausgewählten Einheiten auf geduckt umschalten.</German>
+            <French>Faites passer toutes les unités sélectionnées en position accroupie.</French>
         </Key>
         <Key ID="STR_ZEN_Editor_SetUnitPosDown">
             <English>Switch Stance to Prone</English>
             <German>Haltung auf liegend umschalten</German>
+            <French>Passer en position couchée</French>
         </Key>
         <Key ID="STR_ZEN_Editor_SetUnitPosDown_Description">
             <English>Switch the stance of all selected units to prone.</English>
             <German>Haltung aller ausgewählten Einheiten auf liegend umschalten.</German>
+            <French>Faites passer toutes les unités sélectionnées en position couchée.</French>
         </Key>
         <Key ID="STR_ZEN_Editor_SetUnitPosAuto">
             <English>Switch Stance to Automatic</English>
             <German>Haltung auf automatisch umschalten</German>
+            <French>Passer en mode automatique</French>
         </Key>
         <Key ID="STR_ZEN_Editor_SetUnitPosAuto_Description">
             <English>Switch the stance of all selected units to automatic.</English>
             <German>Haltung aller ausgewählten Einheiten auf automatisch umschalten.</German>
+            <French>Passez toutes les unités sélectionnées en mode automatique.</French>
         </Key>
     </Package>
 </Project>
