@@ -273,12 +273,29 @@ class EGVAR(context_menu,actions) {
             };
         };
     };
+    class VehicleLoadout {
+        displayName = "$STR_A3_VR_Stamina_01_Loadout";
+        icon = QPATHTOF(ui\ammo_ca.paa);
+        priority = 39;
+        class Magazines {
+            displayName = "$STR_GEAR_MAGAZINES";
+            condition = QUOTE(_hoveredEntity call FUNC(canEditMagazines));
+            statement = QUOTE(_hoveredEntity call EFUNC(loadout,configure));
+            icon = "\a3\ui_f\data\igui\cfg\weaponicons\mg_ca.paa";
+        };
+        class Pylons {
+            displayName = ECSTRING(pylons,DisplayName);
+            condition = QUOTE(_hoveredEntity call FUNC(canEditPylons));
+            statement = QUOTE(_hoveredEntity call EFUNC(pylons,configure));
+            icon = "\a3\ui_f\data\igui\cfg\weaponicons\aa_ca.paa";
+        };
+    };
     class Inventory {
         displayName = "$STR_A3_Gear1";
         condition = QUOTE(_hoveredEntity call FUNC(canEditInventory));
         statement = QUOTE(_hoveredEntity call EFUNC(inventory,configure));
         icon = "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeInventory\filter_0_ca.paa";
-        priority = 39;
+        priority = 38;
         class Edit {
             displayName = "$STR_3DEN_Display3DEN_MenUBar_Edit_text";
             condition = QUOTE(_hoveredEntity call FUNC(canEditInventory));
@@ -302,7 +319,7 @@ class EGVAR(context_menu,actions) {
         condition = QUOTE(_hoveredEntity call FUNC(canEditVehicleAppearance));
         statement = QUOTE(_hoveredEntity call EFUNC(garage,openGarage));
         icon = "\a3\3den\data\displays\display3den\entitymenu\garage_ca.paa";
-        priority = 38;
+        priority = 37;
         class Edit {
             displayName = "$STR_3DEN_Display3DEN_MenUBar_Edit_text";
             condition = QUOTE(_hoveredEntity call FUNC(canEditVehicleAppearance));
@@ -324,7 +341,7 @@ class EGVAR(context_menu,actions) {
     class VehicleLogistics {
         displayName = CSTRING(VehicleLogistics);
         icon = "\a3\ui_f\data\igui\cfg\simpleTasks\types\truck_ca.paa";
-        priority = 37;
+        priority = 36;
         class Repair {
             displayName = "$STR_Repair";
             condition = QUOTE(_objects call FUNC(canRepairVehicles));
