@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Comments">
+        <Key ID="STR_ZEN_Comments_Comments">
+            <English>Enable comments in Zeus</English>
+            <German>Aktiviere Kommentare im Zeus</German>
+        </Key>
+        <Key ID="STR_ZEN_Comments_Comments_Description">
+            <English>Allow creating comments in Zeus.</English>
+            <German>Erlaube das Erstellen von Kommentaren im Zeus.</German>
+        </Key>
+        <Key ID="STR_ZEN_Comments_3DENComments">
+            <English>Show 3DEN comments in Zeus</English>
+            <German>Zeige 3DEN-Kommentare im Zeus</German>
+        </Key>
+        <Key ID="STR_ZEN_Comments_3DENComments_Description">
+            <English>Show 3DEN comments in Zeus.</English>
+            <German>Zeige 3DEN-Kommentare im Zeus an.</German>
+        </Key>
+        <Key ID="STR_ZEN_Comments_3DENCommentColor">
+            <English>3DEN comment color</English>
+            <German>Farbe der 3DEN-Kommentare</German>
+        </Key>
+        <Key ID="STR_ZEN_Comments_3DENCommentColor_Description">
+            <English>Color of 3DEN comments in Zeus.</English>
+            <German>Farbe der 3DEN-Kommentare im Zeus.</German>
+        </Key>
+        <Key ID="STR_ZEN_Comments_AllowDeleting3DENComments">
+            <English>Allow deleting 3DEN comments</English>
+            <German>Erlaube Löschen von 3DEN-Kommentaren</German>
+        </Key>
+        <Key ID="STR_ZEN_Comments_AllowDeleting3DENComments_Description">
+            <English>Allow any Zeus to delete 3DEN comments.</English>
+            <German>Erlaube jedem Zeus das Löschen von 3DEN-Kommentaren.</German>
+        </Key>
+        <Key ID="STR_ZEN_Comments_ShowCommentInZeus">
+            <English>Show comment in Zeus</English>
+            <German>Zeige Kommentar in Zeus</German>
+        </Key>
+        <Key ID="STR_ZEN_Comments_ShowCommentInZeus_Description">
+            <English>If selected, this comment will be shown in Zeus.</English>
+            <German>Wenn ausgewählt, wird dieser Kommentar in Zeus angezeigt.</German>
+        </Key>
+        <Key ID="STR_ZEN_Comments_LockPosition">
+            <English>Lock position</English>
+            <German>Position sperren</German>
+        </Key>
+    </Package>
+</Project>
