@@ -76,8 +76,8 @@ Executed **globally** and on **JIP** when a comment is created.
 
 **Parameters:**
 
-- 0: Comment ID &lt;STRING&gt;
-- 1: Comment Data &lt;ARRAY&gt;
+- 0: ID &lt;STRING&gt;
+- 1: Data &lt;ARRAY&gt;
   - _position: Position &lt;ARRAY&gt; [x, y, z]
   - _title: Title &lt;STRING&gt;
   - _tooltip: Tooltip &lt;STRING&gt;
@@ -93,7 +93,7 @@ Executed **globally** and on **JIP** when a comment is deleted.
 
 **Parameters:**
 
-- 0: Comment ID &lt;STRING&gt;
+- 0: ID &lt;STRING&gt;
 
 ---
 
@@ -103,8 +103,8 @@ Executed **globally** and on **JIP** when a comment is updated.
 
 **Parameters:**
 
-- 0: Comment ID &lt;STRING&gt;
-- 1: Comment Data &lt;ARRAY&gt;
+- 0: ID &lt;STRING&gt;
+- 1: Data &lt;ARRAY&gt;
   - _position: Position &lt;ARRAY&gt; [x, y, z]
   - _title: Title &lt;STRING&gt;
   - _tooltip: Tooltip &lt;STRING&gt;
