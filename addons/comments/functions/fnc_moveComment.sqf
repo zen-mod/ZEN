@@ -4,7 +4,7 @@
  * Move a comment.
  *
  * Arguments:
- * 0: Icon control <CONTROL>
+ * 0: Comment id <STRING>
  * 1: New position ASL <ARRAY>
  * 2: Move only locally <BOOLEAN> (default: false)
  *
