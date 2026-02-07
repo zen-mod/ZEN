@@ -4,46 +4,57 @@
         <Key ID="STR_ZEN_Comments_Comments">
             <English>Enable comments in Zeus</English>
             <German>Aktiviere Kommentare im Zeus</German>
+            <French>Activer les commentaires dans Zeus</French>
         </Key>
         <Key ID="STR_ZEN_Comments_Comments_Description">
             <English>Allow creating comments in Zeus.</English>
             <German>Erlaube das Erstellen von Kommentaren im Zeus.</German>
+            <French>Autoriser la création de commentaires dans Zeus.</French>
         </Key>
         <Key ID="STR_ZEN_Comments_3DENComments">
             <English>Show 3DEN comments in Zeus</English>
             <German>Zeige 3DEN-Kommentare im Zeus</German>
+            <French>Afficher les commentaires 3DEN dans Zeus</French>
         </Key>
         <Key ID="STR_ZEN_Comments_3DENComments_Description">
             <English>Show 3DEN comments in Zeus.</English>
             <German>Zeige 3DEN-Kommentare im Zeus an.</German>
+            <French>Afficher les commentaires 3DEN dans Zeus.</French>
         </Key>
         <Key ID="STR_ZEN_Comments_3DENCommentColor">
             <English>3DEN comment color</English>
             <German>Farbe der 3DEN-Kommentare</German>
+            <French>Couleur du commentaire 3DEN</French>
         </Key>
         <Key ID="STR_ZEN_Comments_3DENCommentColor_Description">
             <English>Color of 3DEN comments in Zeus.</English>
             <German>Farbe der 3DEN-Kommentare im Zeus.</German>
+            <French>Couleur des commentaires 3DEN dans Zeus.</French>
         </Key>
         <Key ID="STR_ZEN_Comments_AllowDeleting3DENComments">
             <English>Allow deleting 3DEN comments</English>
             <German>Erlaube Löschen von 3DEN-Kommentaren</German>
+            <French>Autoriser la suppression des commentaires 3DEN</French>
         </Key>
         <Key ID="STR_ZEN_Comments_AllowDeleting3DENComments_Description">
             <English>Allow any Zeus to delete 3DEN comments.</English>
             <German>Erlaube jedem Zeus das Löschen von 3DEN-Kommentaren.</German>
+            <French>Autoriser tout Zeus à supprimer les commentaires 3DEN.</French>
         </Key>
         <Key ID="STR_ZEN_Comments_ShowCommentInZeus">
             <English>Show comment in Zeus</English>
             <German>Zeige Kommentar in Zeus</German>
+            <French>Show comment in Zeus</French>
         </Key>
         <Key ID="STR_ZEN_Comments_ShowCommentInZeus_Description">
             <English>If selected, this comment will be shown in Zeus.</English>
             <German>Wenn ausgewählt, wird dieser Kommentar in Zeus angezeigt.</German>
+            <French>Si sélectionné, ce commentaire sera affiché dans Zeus.</French>
         </Key>
         <Key ID="STR_ZEN_Comments_LockPosition">
             <English>Lock position</English>
             <German>Position sperren</German>
+            <French>Verrouiller la position</French>
         </Key>
     </Package>
 </Project>

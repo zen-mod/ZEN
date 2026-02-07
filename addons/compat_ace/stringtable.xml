@@ -17,6 +17,7 @@
         </Key>
         <Key ID="STR_ZEN_Compat_ACE_OpenMedicalMenu">
             <English>Open Medical Menu</English>
+            <French>Ouvrir le menu médical</French>
         </Key>
         <Key ID="STR_ZEN_Compat_ACE_HideModules_Description">
             <English>Hides duplicate modules added by ACE Zeus. Requires display reload.</English>
