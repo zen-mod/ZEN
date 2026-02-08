@@ -18,6 +18,18 @@
 
 params ["_display", "_keyCode"];
 
+if (
+    !RscDisplayCurator_search
+    && GVAR(moveCamToSelection) > 0
+    && {inputAction "curatorLockCameraTo" == 0}
+    && {_keyCode in actionKeys "curatorMoveCamTo"}
+    && {count SELECTED_OBJECTS > 0}
+) exitWith {
+    [] call FUNC(moveCamToSelection);
+
+    true
+};
+
 if (_keyCode in actionKeys "curatorPingView" && {!isNil QGVAR(pingTarget)} && {isNil QGVAR(pingViewed)}) exitWith {
     if (GVAR(pingTarget) isEqualType objNull) then {
         private _distance = 0.5 * sizeOf typeOf GVAR(pingTarget) max 25;

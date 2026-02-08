@@ -7,6 +7,7 @@
   - [<i class="fas fa-warehouse"></i> Vehicle Garage](/user_guide/garage.md)
   - [<i class="fas fa-map-marked"></i> Area Markers](/user_guide/area_markers.md)
   - [<i class="fas fa-ruler"></i> Plotting](/user_guide/plotting.md)
+  - [<i class="fas fa-comment-dots"></i> Comments](/user_guide/comments.md)
 - **Frameworks**
   - [<i class="fas fa-bars"></i> Context Menu](/frameworks/context_menu.md)
   - [<i class="fas fa-cog"></i> Custom Modules](/frameworks/custom_modules.md)

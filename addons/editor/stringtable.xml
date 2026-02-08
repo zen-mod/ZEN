@@ -494,5 +494,52 @@
             <French>Permet aux unités IA sélectionnées de commencer ou d'arrêter de se déplacer. N'affecte pas la visée ou le tir. Semblable à la fonction « Maintenir la position » dans les jeux RTS.</French>
             <Chinesesimp>让选中的AI单位开始或结束移动. 不影响瞄准或射击. 类似于RTS游戏中的"保持当前位置"</Chinesesimp>
         </Key>
+        <Key ID="STR_ZEN_Editor_MoveCamToSelection">
+            <English>Focus Object Mode</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_MoveCamToSelection_Description">
+            <English>Behaviour for "Move camera to selected entity" with an object selected.\nDefault: Base game behaviour.\nAlternate: 20 m above and behind object.\nCQB: Top-rear of object bounding box, useful for units inside buildings.\nAlternate + CQB: Switch between views on subsequent activations.</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_MoveCamToSelection_Alternate">
+            <English>Alternate</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_MoveCamToSelection_CQB">
+            <English>CQB</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_MoveCamToSelection_AlternateCQB">
+            <English>Alternate + CQB</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_SetUnitPosUp">
+            <English>Switch Stance to Standing</English>
+            <German>Haltung auf aufrecht umschalten</German>
+        </Key>
+        <Key ID="STR_ZEN_Editor_SetUnitPosUp_Description">
+            <English>Switch the stance of all selected units to standing.</English>
+            <German>Haltung aller ausgewählten Einheiten auf aufrecht umschalten.</German>
+        </Key>
+        <Key ID="STR_ZEN_Editor_SetUnitPosMiddle">
+            <English>Switch Stance to Crouch</English>
+            <German>Haltung auf geduckt umschalten</German>
+        </Key>
+        <Key ID="STR_ZEN_Editor_SetUnitPosMiddle_Description">
+            <English>Switch the stance of all selected units to crouch.</English>
+            <German>Haltung aller ausgewählten Einheiten auf geduckt umschalten.</German>
+        </Key>
+        <Key ID="STR_ZEN_Editor_SetUnitPosDown">
+            <English>Switch Stance to Prone</English>
+            <German>Haltung auf liegend umschalten</German>
+        </Key>
+        <Key ID="STR_ZEN_Editor_SetUnitPosDown_Description">
+            <English>Switch the stance of all selected units to prone.</English>
+            <German>Haltung aller ausgewählten Einheiten auf liegend umschalten.</German>
+        </Key>
+        <Key ID="STR_ZEN_Editor_SetUnitPosAuto">
+            <English>Switch Stance to Automatic</English>
+            <German>Haltung auf automatisch umschalten</German>
+        </Key>
+        <Key ID="STR_ZEN_Editor_SetUnitPosAuto_Description">
+            <English>Switch the stance of all selected units to automatic.</English>
+            <German>Haltung aller ausgewählten Einheiten auf automatisch umschalten.</German>
+        </Key>
     </Package>
 </Project>
