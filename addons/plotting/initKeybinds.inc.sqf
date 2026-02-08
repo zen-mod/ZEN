@@ -95,5 +95,5 @@ private _category = [ELSTRING(main,DisplayName), LSTRING(DisplayName)];
         };
     },
     {},
-    [DIK_Y, [false, true, false]] // Default: Ctrl + Y
+    [DIK_Z, [false, true, false]] // Default: Ctrl + Z
 ] call CBA_fnc_addKeybind;
