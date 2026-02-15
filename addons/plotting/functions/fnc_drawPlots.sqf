@@ -57,7 +57,7 @@ if (_activePlot isNotEqualTo []) then {
     if (_startPosOrObj isEqualTo objNull || {_endPosOrObj isEqualTo objNull}) then {continue};
 
     private _scale = [MAP_ICON_SCALE, ICON_SCALE] select _drawIn3D;
-    private _visualProperties = [ICON, GVAR(color), _scale, ICON_ANGLE, LINEWIDTH];
+    private _visualProperties = [ICON, GVAR(color), _scale, ICON_ANGLE, LINE_WIDTH];
     private _drawArgs = [_startPosOrObj, _endPosOrObj, _visualProperties, _formatters, _args, _ctrlMap];
 
     if (_type in GVAR(plotTypes)) then {
