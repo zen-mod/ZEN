@@ -6,23 +6,23 @@
             <German>Plotten</German>
         </Key>
         <Key ID="STR_ZEN_Plotting_MeasureDistance">
-            <English>Measure distance</English>
+            <English>Measure Distance</English>
             <German>Entfernung messen</German>
         </Key>
         <Key ID="STR_ZEN_Plotting_MeasureDistanceFromCamera">
-            <English>Measure distance from camera</English>
+            <English>Measure Distance from Camera</English>
             <German>Entfernung von Kamera messen</German>
         </Key>
         <Key ID="STR_ZEN_Plotting_MeasureRadius">
-            <English>Measure radius</English>
+            <English>Measure Radius</English>
             <German>Radius messen</German>
         </Key>
         <Key ID="STR_ZEN_Plotting_MeasureOffset">
-            <English>Measure offset</English>
+            <English>Measure Offset</English>
             <German>Versatz messen</German>
         </Key>
         <Key ID="STR_ZEN_Plotting_ClearPlots">
-            <English>Clear plots</English>
+            <English>Clear Plots</English>
             <German>Plots entfernen</German>
         </Key>
         <Key ID="STR_ZEN_Plotting_ToggleDistanceFormat">
