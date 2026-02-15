@@ -60,6 +60,10 @@ Sub-actions allow for copying and pasting the hovered unit's loadout onto anothe
 Furthermore, the unit's current weapon can be switched between their rifle, handgun, or binoculars.
 The main action acts as a shortcut for the "Edit" sub-action.
 
+## Plotting
+
+Creates a [plot](/user_guide/plotting.md) at the context menu's position or attached object.
+
 ## Place Comment
 
 Creates a [comment](/user_guide/comments.md) at the context menu's position.
