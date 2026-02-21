@@ -57,7 +57,7 @@
             <Italian>Impossibile schierare tutte le unità - non ci sono abbastanza posizioni libere</Italian>
             <Czech>Nelze obsadit všechny jednotky - nedostatek pozic</Czech>
             <Portuguese>Incapaz de guarnecer todas as unidades - não há posições o suficiente</Portuguese>
-            <Japanese>全てのユニットを歩哨にできません - 空きスペース無し</Japanese>
+            <Japanese>全ユニットは立哨に出来ません - 空きスペースが不足</Japanese>
             <Korean>모든 유닛 배치 불가 - 공간이 충분하지 않음</Korean>
             <Spanish>No se pueden guarnecer todas las unidades - no hay suficientes posiciones</Spanish>
             <Chinesesimp>无法驻扎所有单位--没有足够的位置</Chinesesimp>
@@ -250,7 +250,7 @@
             <German>Sichtbarkeit überprüfen</German>
             <Polish>Sprawdź Widoczne</Polish>
             <Korean>표시 확인</Korean>
-            <Japanese>射線権威</Japanese>
+            <Japanese>可視性の確認</Japanese>
             <Spanish>Verificar visible</Spanish>
             <Chinesesimp>检查瞄准线</Chinesesimp>
             <Chinese>檢查瞄準線</Chinese>
@@ -275,6 +275,7 @@
             <Chinesesimp>武器开火</Chinesesimp>
             <Chinese>武器開火</Chinese>
             <French>Arme à feu</French>
+            <Japanese>武器の射撃</Japanese>
         </Key>
         <Key ID="STR_ZEN_AI_FSM">
             <English>FSM</English>
@@ -406,7 +407,7 @@
             <German>Zielen mit der Waffe</German>
             <Polish>Celowanie Bronią</Polish>
             <Korean>무기 조준</Korean>
-            <Japanese>武器照準</Japanese>
+            <Japanese>武器の照準</Japanese>
             <Spanish>Punteria del arma</Spanish>
             <Chinesesimp>武器瞄准</Chinesesimp>
             <Chinese>武器瞄準</Chinese>

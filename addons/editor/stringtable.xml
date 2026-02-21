@@ -496,50 +496,63 @@
         </Key>
         <Key ID="STR_ZEN_Editor_MoveCamToSelection">
             <English>Focus Object Mode</English>
+            <Japanese>オブジェクトフォーカスモード</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_MoveCamToSelection_Description">
             <English>Behaviour for "Move camera to selected entity" with an object selected.\nDefault: Base game behaviour.\nAlternate: 20 m above and behind object.\nCQB: Top-rear of object bounding box, useful for units inside buildings.\nAlternate + CQB: Switch between views on subsequent activations.</English>
+            <Japanese>オブジェクトを選択した状態での"カメラを選択した物体に移動"する際の動作。\nデフォルト: 基本ゲームの動作。\n代替: オブジェクトの20m上方後方。\nCQB: オブジェクトの境界ボックスの上後方。建物内にいるユニットに便利です。\n代替 + CQB: 二回以上実行した場合に視点をCQBに切り替えます。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_MoveCamToSelection_Alternate">
             <English>Alternate</English>
+            <Japanese>代替</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_MoveCamToSelection_CQB">
             <English>CQB</English>
+            <Japanese>CQB</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_MoveCamToSelection_AlternateCQB">
             <English>Alternate + CQB</English>
+            <Japanese>代替 + CQB</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_SetUnitPosUp">
             <English>Switch Stance to Standing</English>
             <German>Haltung auf aufrecht umschalten</German>
+            <Japanese>姿勢を立ちに切り替え</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_SetUnitPosUp_Description">
             <English>Switch the stance of all selected units to standing.</English>
             <German>Haltung aller ausgewählten Einheiten auf aufrecht umschalten.</German>
+            <Japanese>選択したすべてのユニットの姿勢を立ちに切り替えます。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_SetUnitPosMiddle">
             <English>Switch Stance to Crouch</English>
             <German>Haltung auf geduckt umschalten</German>
+            <Japanese>姿勢をしゃがみに切り替え</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_SetUnitPosMiddle_Description">
             <English>Switch the stance of all selected units to crouch.</English>
             <German>Haltung aller ausgewählten Einheiten auf geduckt umschalten.</German>
+            <Japanese>選択したすべてのユニットの姿勢をしゃがみに切り替えます。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_SetUnitPosDown">
             <English>Switch Stance to Prone</English>
             <German>Haltung auf liegend umschalten</German>
+            <Japanese>姿勢を伏せに切り替え</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_SetUnitPosDown_Description">
             <English>Switch the stance of all selected units to prone.</English>
             <German>Haltung aller ausgewählten Einheiten auf liegend umschalten.</German>
+            <Japanese>選択したすべてのユニットの姿勢を伏せに切り替えます。</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_SetUnitPosAuto">
             <English>Switch Stance to Automatic</English>
             <German>Haltung auf automatisch umschalten</German>
+            <Japanese>姿勢を自動に切り替え</Japanese>
         </Key>
         <Key ID="STR_ZEN_Editor_SetUnitPosAuto_Description">
             <English>Switch the stance of all selected units to automatic.</English>
             <German>Haltung aller ausgewählten Einheiten auf automatisch umschalten.</German>
+            <Japanese>選択したすべてのユニットの姿勢を自動に切り替えます。</Japanese>
         </Key>
     </Package>
 </Project>
