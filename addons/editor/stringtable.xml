@@ -499,7 +499,6 @@
             <French>Focus Mode Objet</French>
             <Japanese>オブジェクトフォーカスモード</Japanese>
         </Key>
-        </Key>
         <Key ID="STR_ZEN_Editor_MoveCamToSelection_Description">
             <English>Behaviour for "Move camera to selected entity" with an object selected.\nDefault: Base game behaviour.\nAlternate: 20 m above and behind object.\nCQB: Top-rear of object bounding box, useful for units inside buildings.\nAlternate + CQB: Switch between views on subsequent activations.</English>
             <French>Comportement de l'option « Déplacer la caméra vers l'entité sélectionnée » lorsqu'un objet est sélectionné. \nPar défaut : comportement du jeu de base. \nAlternative : 20 m au-dessus et derrière l'objet. \nCQB : partie supérieure arrière du cadre englobant l'objet, utile pour les unités à l'intérieur des bâtiments. \nAlternative + CQB : basculement entre les vues lors des activations suivantes.</French>
