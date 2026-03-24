@@ -15,3 +15,5 @@
 #endif
 
 #include "\x\zen\addons\main\script_macros.hpp"
+
+#define AI_SUB_SKILLS ["aimingAccuracy", "aimingShake", "aimingSpeed", "commanding", "courage", "endurance", "general", "reloadSpeed", "spotDistance", "spotTime"]

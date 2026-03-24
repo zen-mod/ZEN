@@ -38,9 +38,9 @@ private _presetMagazines = _ctrlPresets getVariable str _selectedIndex;
 
     for "_index" from 0 to (lbSize _ctrlCombo - 1) do {
         if (_ctrlCombo lbData _index == _magazine) exitWith {
-            LOCK;
+            LB_LOCK;
             _ctrlCombo lbSetCurSel _index;
-            UNLOCK;
+            LB_UNLOCK;
         };
     };
 

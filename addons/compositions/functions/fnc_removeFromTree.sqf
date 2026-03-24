@@ -31,16 +31,20 @@ private _name     = _ctrlTree tvText _path;
 _ctrlTree tvDelete _path;
 
 // Delete the composition from saved data if needed
+private _compositions = GET_COMPOSITIONS;
+private _categoryHash = _compositions get _category;
+
 if (_deleteFromData) then {
-    GET_COMPOSITIONS deleteAt FIND_COMPOSITION(_category,_name);
+    _categoryHash deleteAt _name;
 };
 
 // Delete the category from the tree if no more compositions exist under it
-if (!CATEGORY_EXISTS(_category)) then {
+if (keys _categoryHash isEqualTo []) then {
     private _categories = _ctrlTree getVariable [QGVAR(categories), []];
     _categories deleteAt (_categories find _category);
-
     _ctrlTree tvDelete GET_PARENT_PATH(_path);
+
+    _compositions deleteAt _category;
 };
 
 // Manually trigger tree selection change

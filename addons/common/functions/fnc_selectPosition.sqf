@@ -67,7 +67,7 @@ params [
 
 // Exit with failure if an instance is already active
 if (GVAR(selectPositionActive)) exitWith {
-    [false, _objects, [0, 0, 0], _args, false, false, false] call _code;
+    [false, _objects, [0, 0, 0], _args, false, false, false] call _function;
 };
 
 GVAR(selectPositionActive) = true;
@@ -79,9 +79,9 @@ private _visuals = [_text, _icon, _angle, _color];
 private _mouseEH = [_display, "MouseButtonDown", {
     params ["", "_button", "", "", "_shift", "_ctrl", "_alt"];
 
-    if (_button != 0) exitWith {};
+    if (_button != 0 || {!call FUNC(isCursorOnMouseArea)}) exitWith {};
 
-    private _position = [] call FUNC(getPosFromScreen);
+    private _position = [GVAR(mousePos), 2] call FUNC(getPosFromScreen);
     _thisArgs params ["_objects", "_function", "_args"];
 
     [true, _objects, _position, _args, _shift, _ctrl, _alt] call _function;
@@ -94,7 +94,7 @@ private _keyboardEH = [_display, "KeyDown", {
 
     if (_key != DIK_ESCAPE) exitWith {false};
 
-    private _position = [] call FUNC(getPosFromScreen);
+    private _position = [GVAR(mousePos), 2] call FUNC(getPosFromScreen);
     _thisArgs params ["_objects", "_function", "_args"];
 
     [false, _objects, _position, _args, _shift, _ctrl, _alt] call _function;
@@ -108,7 +108,7 @@ private _drawEH = [_ctrlMap, "Draw", {
     params ["_ctrlMap"];
     _thisArgs params ["_objects", "_args", "_visuals", "_modifierFunction"];
 
-    private _position = [] call FUNC(getPosFromScreen);
+    private _position = [GVAR(mousePos), 2] call FUNC(getPosFromScreen);
     [_objects, _position, _args, _visuals] call _modifierFunction;
     _visuals params ["_text", "_icon", "_angle", "_color"];
 
@@ -155,7 +155,7 @@ private _drawEH = [_ctrlMap, "Draw", {
     // No 3D drawing needed if the map is visible
     if (visibleMap) exitWith {};
 
-    private _position = [] call FUNC(getPosFromScreen);
+    private _position = [GVAR(mousePos), 2] call FUNC(getPosFromScreen);
     [_objects, _position, _args, _visuals] call _modifierFunction;
     _visuals params ["_text", "_icon", "_angle", "_color"];
 
@@ -163,11 +163,11 @@ private _drawEH = [_ctrlMap, "Draw", {
         _text = localize _text;
     };
 
-    _position = ASLtoAGL _position;
+    _position = ASLToAGL _position;
 
     drawIcon3D [_icon, _color, _position, 1.5, 1.5, _angle, _text];
 
     {
-        drawLine3D [ASLtoAGL getPosASLVisual _x, _position, _color];
+        drawLine3D [ASLToAGL getPosASLVisual _x, _position, _color];
     } forEach TO_ARRAY(_objects);
 }, 0, [_objects, _function, _args, _visuals, _modifierFunction, _mouseEH, _keyboardEH, _drawEH]] call CBA_fnc_addPerFrameHandler;

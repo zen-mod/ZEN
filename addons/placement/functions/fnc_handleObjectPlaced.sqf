@@ -32,14 +32,17 @@ _object allowDamage false;
 // Apply the preview object's position to the placed object after a frame
 // Helps in preventing the object from being destroyed by being moved
 [{
-    params ["_object", "_position", "_vectorUp"];
+    params ["_object", "_position", "_dirAndUp"];
 
     _object setPosASL _position;
-    _object setVectorUp _vectorUp;
+    _object setVectorDirAndUp _dirAndUp;
     _object setVelocity [0, 0, 0];
 
-    [{_this allowDamage true}, _object] call CBA_fnc_execNextFrame;
-}, [_object, getPosASL GVAR(helper), vectorUp GVAR(helper)]] call CBA_fnc_execNextFrame;
+    [{
+        _this allowDamage true;
+        [QGVAR(done), _this] call CBA_fnc_localEvent;
+    }, _object] call CBA_fnc_execNextFrame;
+}, [_object, getPosASL GVAR(helper), [vectorDir GVAR(helper), vectorUp GVAR(helper)]]] call CBA_fnc_execNextFrame;
 
 // Do not cancel the preview if the control key is held
 if (cba_events_control) exitWith {};

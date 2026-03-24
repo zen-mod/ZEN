@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [true, [0, 0, 0], 100] call zen_context_actions_fnc_editableObjects
+ * [true, [0, 0, 0], 100] call zen_context_actions_fnc_updateEditableObjects
  *
  * Public: No
  */
@@ -20,7 +20,5 @@
 params ["_mode", "_position", "_radius"];
 
 private _curator = getAssignedCuratorLogic player;
-private _objects = nearestObjects [ASLtoAGL _position, ["All"], _radius, true];
-private _eventName = [QEGVAR(common,removeObjects), QEGVAR(common,addObjects)] select _mode;
-
-[_eventName, [_objects, _curator]] call CBA_fnc_serverEvent;
+private _objects = nearestObjects [ASLToAGL _position, ["All"], _radius, true];
+[_objects, _mode, _curator] call EFUNC(common,updateEditableObjects);

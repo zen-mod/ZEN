@@ -6,6 +6,8 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
+GVAR(mousePos) = [0, 0];
+
 GVAR(aceMedical) = isClass (configFile >> "CfgPatches" >> "ace_medical");
 GVAR(aceMedicalTreatment) = isClass (configFile >> "CfgPatches" >> "ace_medical_treatment");
 
@@ -26,6 +28,6 @@ GVAR(runAfterSettingsInit) = [];
     GVAR(runAfterSettingsInit) = nil;
 }] call CBA_fnc_addEventHandler;
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 ADDON = true;

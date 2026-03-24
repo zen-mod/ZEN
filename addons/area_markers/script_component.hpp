@@ -26,15 +26,13 @@
 #define POS_H(N) ((N) * GUI_GRID_H)
 
 #define ICON_SIZE 0.6
-
-#define ICON_WIDTH  POS_W(ICON_SIZE)
+#define ICON_WIDTH POS_W(ICON_SIZE)
 #define ICON_HEIGHT POS_H(ICON_SIZE)
 
 #define OFFSET_X POS_W(ICON_SIZE / 2)
 #define OFFSET_Y POS_H(ICON_SIZE / 2)
 
 #define ICON_CENTER "\a3\3den\data\cfg3den\marker\texturecenter_ca.paa"
-#define ICON_MARKERS "\a3\3den\data\displays\display3den\panelright\submode_marker_area_ca.paa"
 #define ICON_ELLIPSE "\a3\3DEN\Data\Attributes\Shape\ellipse_ca.paa"
 #define ICON_RECTANGLE "\a3\3DEN\Data\Attributes\Shape\rectangle_ca.paa"
 
@@ -56,3 +54,6 @@
 #define IDC_CONFIGURE_CANCEL 42881
 
 #define IDCS_CONFIGURE_EDIT_BOXES [IDC_CONFIGURE_SIZE_A, IDC_CONFIGURE_SIZE_B, IDC_CONFIGURE_ROTATION_EDIT, IDC_CONFIGURE_ALPHA_EDIT]
+
+#define EDITABLE_MARKERS_ALL 0
+#define EDITABLE_MARKERS_ONLY_ZEUS_CREATED 1

@@ -24,8 +24,8 @@ private _cfgMarkerClasses = configFile >> "CfgMarkerClasses";
 {
     if (getNumber (_x >> "scope") > 0 && {getText (_x >> "markerClass") != ""}) then {
         private _class = configName _x;
-        private _name  = getText (_x >> "name");
-        private _icon  = getText (_x >> "icon");
+        private _name = getText (_x >> "name");
+        private _icon = getText (_x >> "icon");
         private _color = getArray (_x >> "color") apply {if (_x isEqualType "") then {call compile _x} else {_x}};
         private _category = getText (_cfgMarkerClasses >> getText (_x >> "markerClass") >> "displayName");
 

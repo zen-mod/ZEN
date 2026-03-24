@@ -45,8 +45,9 @@ _ctrlDelete ctrlAddEventHandler ["ButtonClick", {call FUNC(handleDelete)}];
 
 // Create the map
 private _ctrlMap = _display ctrlCreate [QGVAR(RscMap), IDC_CM_MAP];
-_ctrlMap ctrlSetPosition [_contentX, _contentY + POS_H(1), _contentW, POS_H(20)];
-_ctrlMap ctrlCommit 0;
+_ctrlMap ctrlMapSetPosition [_contentX, _contentY + POS_H(1), _contentW, POS_H(20)];
+_ctrlMap ctrlMapAnimAdd [0, 2, [worldSize / 2, worldSize / 2]];
+ctrlMapAnimCommit _ctrlMap;
 
 _ctrlMap ctrlAddEventHandler ["MouseButtonDown", {call FUNC(handleMouseButtonDown)}];
 _ctrlMap ctrlAddEventHandler ["MouseButtonUp", {call FUNC(handleMouseButtonUp)}];

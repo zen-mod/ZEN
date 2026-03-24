@@ -4,23 +4,24 @@
  * Handles clicking the tree collapse and expand all buttons.
  *
  * Arguments:
- * 0: Expand <BOOL>
+ * 0: Display (not used) <DISPLAY>
+ * 1: Expand <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [false] call zen_editor_fnc_handleTreeButtons
+ * [DISPLAY, false] call zen_editor_fnc_handleTreeButtons
  *
  * Public: No
  */
 
-params ["_expand"];
+params ["", "_expand"];
 
 RscDisplayCurator_sections params ["_mode"];
 
 // Can't collapse or expand marker or recent trees
-if (_mode > 2) exitWith {};
+if (_mode > CURATOR_MODE_MODULES) exitWith {};
 
 // Collapse or expand current tree
 private _ctrlTree = call EFUNC(common,getActiveTree);
@@ -31,7 +32,7 @@ if (_expand) then {
     _ctrlTree call EFUNC(common,collapseTree);
 
     // For QOL, keep factions of group trees visible
-    if (_mode == 1) then {
+    if (_mode == CURATOR_MODE_GROUPS) then {
         _ctrlTree tvExpand [0];
     };
 };

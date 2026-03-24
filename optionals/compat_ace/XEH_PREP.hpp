@@ -1,2 +1,0 @@
-PREP(canRemoteControl);
-PREP(remoteControl);

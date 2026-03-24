@@ -26,3 +26,9 @@
 
 #define IDC_PREVIEW_GROUP 98470
 #define IDC_PREVIEW_IMAGE 98480
+
+// Height of the image - other control positions are based on this value and the aspect ratio of the image
+#define IMAGE_HEIGHT 5.2
+
+// Size of the border around the image on one side
+#define BORDER_SIZE 0.2

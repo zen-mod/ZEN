@@ -20,14 +20,10 @@ BEGIN_COUNTER(onDraw);
 params ["_ctrlMap"];
 
 {
-    private _ctrlIcon = GVAR(icons) getVariable _x;
+    (_ctrlMap ctrlMapWorldToScreen markerPos _x) params ["_posX", "_posY"];
 
-    if (!isNil "_ctrlIcon") then {
-        (_ctrlMap ctrlMapWorldToScreen markerPos _x) params ["_posX", "_posY"];
-
-        _ctrlIcon ctrlSetPosition [_posX - OFFSET_X, _posY - OFFSET_Y];
-        _ctrlIcon ctrlCommit 0;
-    };
-} forEach GVAR(markers);
+    _y ctrlSetPosition [_posX - OFFSET_X, _posY - OFFSET_Y];
+    _y ctrlCommit 0;
+} forEach GVAR(icons);
 
 END_COUNTER(onDraw);

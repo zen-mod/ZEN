@@ -40,7 +40,7 @@ if (isServer) then {
     [_jipID, _logic] call CBA_fnc_removeGlobalEventJIP;
 
     // Make the logic editable for all curators
-    [QEGVAR(common,addObjects), [[_logic]]] call CBA_fnc_localEvent;
+    [_logic] call EFUNC(common,updateEditableObjects);
 
     // Disable attributes for the logic
     _logic setVariable [QEGVAR(attributes,disabled), true, true];

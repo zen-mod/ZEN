@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Populates the custom markers tree.
+ * Populates the custom icon markers tree.
  *
  * Arguments:
  * 0: Markers Tree <CONTROL>
@@ -18,14 +18,12 @@
 params ["_ctrlTree"];
 
 {
-    private _categoryIndex = _ctrlTree tvAdd [[], _x];
+    private _index = _ctrlTree tvAdd [[], _x];
 
     {
         _x params ["_class", "_name", "_icon", "_color"];
 
-        private _index = _ctrlTree tvAdd [[_categoryIndex], _name];
-        private _path  = [_categoryIndex, _index];
-
+        private _path = [_index, _ctrlTree tvAdd [[_index], _name]];
         _ctrlTree tvSetData [_path, _class];
         _ctrlTree tvSetTooltip [_path, _name];
         _ctrlTree tvSetPicture [_path, _icon];

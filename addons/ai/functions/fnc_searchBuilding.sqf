@@ -42,7 +42,7 @@ private _groupState = [formation _group, behaviour _leader, speedMode _group, co
 private _stances = [];
 
 {
-    if (alive _x && {vehicle _x == _x} && {!isPlayer _x}) then {
+    if (alive _x && {isNull objectParent _x} && {!isPlayer _x}) then {
         _stances pushBack [_x, unitPos _x];
         [QEGVAR(common,setUnitPos), [_x, "UP"], _x] call CBA_fnc_targetEvent;
     };
@@ -54,7 +54,7 @@ private _stances = [];
 
     // Refresh units in case some died or left/joined the group
     private _units = units _group select {
-        alive _x && {vehicle _x == _x} && {!isPlayer _x}
+        alive _x && {isNull objectParent _x} && {!isPlayer _x}
     };
 
     // Exit the search if the group has no units left

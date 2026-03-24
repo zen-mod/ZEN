@@ -6,6 +6,8 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
+#include "initSettings.inc.sqf"
+
 // Add inventory button to attribute display
 [
     "Object",
@@ -14,7 +16,7 @@ PREP_RECOMPILE_END;
         [_entity] call FUNC(configure);
     },
     {
-        alive _entity && {getNumber (configOf _entity >> "maximumLoad") > 0}
+        EGVAR(attributes,enableInventory) && {alive _entity} && {maxLoad _entity > 0} && {!(_entity isKindOf "CAManBase")}
     }
 ] call EFUNC(attributes,addButton);
 

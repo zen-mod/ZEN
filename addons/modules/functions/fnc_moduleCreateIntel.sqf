@@ -105,7 +105,7 @@ if (isNull _object) then {
 
     if (_object isEqualType []) then {
         _object = createVehicle [_values deleteAt 0, _object, [], 0, "NONE"];
-        [QEGVAR(common,addObjects), [[_object]]] call CBA_fnc_serverEvent;
+        _object call EFUNC(common,updateEditableObjects);
     };
 
     // Handle no action type option when ACE is not loaded

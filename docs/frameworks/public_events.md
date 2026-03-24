@@ -34,6 +34,16 @@ Executed **locally** when Zeus starts remote controlling a unit.
 
 ---
 
+#### zen_remoteControlStopped
+
+Executed **locally** when Zeus stops remote controlling a unit.
+
+**Parameters:**
+
+- 0: Unit &lt;OBJECT&gt;
+
+---
+
 #### zen_editor_modeChanged
 
 Executed **locally** when the Zeus display's create trees mode is changed.
@@ -57,3 +67,47 @@ Event still fires if the selected side is the same as the previous side.
 - 0: Display &lt;DISPLAY&gt;
 - 1: Mode &lt;NUMBER&gt;
 - 2: Side &lt;NUMBER&gt;
+
+---
+
+#### zen_comments_commentCreated
+
+Executed **globally** and on **JIP** when a comment is created.
+
+**Parameters:**
+
+- 0: ID &lt;STRING&gt;
+- 1: Data &lt;ARRAY&gt;
+  - _position: Position &lt;ARRAY&gt; [x, y, z]
+  - _title: Title &lt;STRING&gt;
+  - _tooltip: Tooltip &lt;STRING&gt;
+  - _color: Color &lt;ARRAY&gt; [r, g, b, a]
+  - _creator: Creator &lt;STRING&gt;
+  - _lockPosition: Is position locked? &lt;BOOLEAN&gt;
+
+---
+
+#### zen_comments_commentDeleted
+
+Executed **globally** and on **JIP** when a comment is deleted.
+
+**Parameters:**
+
+- 0: ID &lt;STRING&gt;
+
+---
+
+#### zen_comments_commentUpdated
+
+Executed **globally** and on **JIP** when a comment is updated.
+
+**Parameters:**
+
+- 0: ID &lt;STRING&gt;
+- 1: Data &lt;ARRAY&gt;
+  - _position: Position &lt;ARRAY&gt; [x, y, z]
+  - _title: Title &lt;STRING&gt;
+  - _tooltip: Tooltip &lt;STRING&gt;
+  - _color: Color &lt;ARRAY&gt; [r, g, b, a]
+  - _creator: Creator &lt;STRING&gt;
+  - _lockPosition: Is position locked? &lt;BOOLEAN&gt;

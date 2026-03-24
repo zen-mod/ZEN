@@ -39,7 +39,7 @@
 
 // _contextPosASL and _selectedObjects, _selectedGroups .., kept for BWC
 #define SETUP_ACTION_VARS \
-    private _position = [GVAR(mousePos)] call EFUNC(common,getPosFromScreen); \
+    private _position = [GVAR(mousePos), 2] call EFUNC(common,getPosFromScreen); \
     private _hoveredEntity = GVAR(hovered); \
     +GVAR(selected) params ["_objects", "_groups", "_waypoints", "_markers"]; \
     private _contextPosASL =  _position; \

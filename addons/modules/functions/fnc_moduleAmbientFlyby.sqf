@@ -114,4 +114,4 @@ _waypoint setWaypointSpeed _speed;
 _waypoint setWaypointStatements ["true", "private _group = group this; private _aircrafts = []; {_aircrafts pushBackUnique vehicle _x; deleteVehicle _x} forEach thisList; {deleteVehicle _x} forEach _aircrafts; deleteGroup _group"];
 
 // Add aircrafts to curators
-[QEGVAR(common,addObjects), [_aircrafts]] call CBA_fnc_serverEvent;
+[_aircrafts] call EFUNC(common,updateEditableObjects);

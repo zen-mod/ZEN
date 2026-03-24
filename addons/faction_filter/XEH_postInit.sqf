@@ -3,21 +3,10 @@
 ["CBA_SettingChanged", {
     params ["_name"];
 
-    // Schedule the Zeus display to be reloaded when a faction filter setting is changed
+    // Reload the Zeus display when a faction filter setting is changed
     // Allows for changing faction filter settings mid-mission while the interface is forced
-    if (QUOTE(ADDON) in _name && {!isNull findDisplay IDD_RSCDISPLAYCURATOR} && {isNil QGVAR(displayReload)}) then {
-        GVAR(displayReload) = true;
-
-        {
-            (findDisplay IDD_RSCDISPLAYCURATOR) closeDisplay IDC_CANCEL;
-
-            [{
-                isNull findDisplay IDD_RSCDISPLAYCURATOR
-            }, {
-                openCuratorInterface;
-                GVAR(displayReload) = nil;
-            }] call CBA_fnc_waitUntilAndExecute;
-        } call CBA_fnc_execNextFrame;
+    if (QUOTE(ADDON) in _name) then {
+        [] call EFUNC(common,reloadDisplay);
     };
 }] call CBA_fnc_addEventHandler;
 

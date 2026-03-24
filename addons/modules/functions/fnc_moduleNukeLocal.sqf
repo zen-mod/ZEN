@@ -22,7 +22,7 @@ params ["_position", "_destructionRadius", "_destructionRate", "_colorCorrection
 
 // Destruction effects, only handled on the server
 if (isServer && {_destructionRadius > 0} && {_destructionRate > 0}) then {
-    private _objects = nearestObjects [ASLtoAGL _position, [], _destructionRadius] select {
+    private _objects = nearestObjects [ASLToAGL _position, [], _destructionRadius] select {
         isDamageAllowed _x && {!(_x isKindOf "Logic")} && {!(_x isKindOf "VirtualMan_F")}
     };
 

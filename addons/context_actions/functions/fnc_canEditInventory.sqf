@@ -19,4 +19,5 @@ params ["_entity"];
 
 _entity isEqualType objNull
 && {alive _entity}
-&& {getNumber (configOf _entity >> "maximumLoad") > 0}
+&& {maxLoad _entity > 0}
+&& {!(_entity isKindOf "CAManBase")}

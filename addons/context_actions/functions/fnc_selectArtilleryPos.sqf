@@ -22,12 +22,12 @@ private _vehicles = _objects select {
     !isNull gunner _x && {_args in getArtilleryAmmo [_x]}
 };
 
-if (_vehicles isEqualTo []) exitwith {};
+if (_vehicles isEqualTo []) exitWith {};
 
 private _modifierFunction = {
     params ["_vehicles", "_position", "_magazine", "_visuals"];
 
-    if (ASLtoAGL _position inRangeOfArtillery [_vehicles, _magazine]) then {
+    if (ASLToAGL _position inRangeOfArtillery [_vehicles, _magazine]) then {
         _visuals set [0, LSTRING(FireArtillery)];
         _visuals set [3, COLOR_IN_RANGE];
     } else {
@@ -41,7 +41,7 @@ private _modifierFunction = {
 
     if (!_successful) exitWith {};
 
-    _position = ASLtoAGL _position;
+    _position = ASLToAGL _position;
 
     if (_position inRangeOfArtillery [_vehicles, _magazine]) then {
         {

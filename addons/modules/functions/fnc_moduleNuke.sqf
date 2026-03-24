@@ -24,7 +24,7 @@ deleteVehicle _logic;
     [
         "SLIDER:RADIUS",
         LSTRING(DestructionRadius),
-        [0, 5000, 200, 0, ASLtoAGL _position, [1, 0, 0, 0.7]]
+        [0, 5000, 200, 0, ASLToAGL _position, [1, 0, 0, 0.7]]
     ],
     [
         "EDIT",

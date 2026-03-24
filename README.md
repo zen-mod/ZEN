@@ -1,10 +1,11 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/zen-mod/ZEN/master/extras/assets/logo/logo_zen_black.png" width="500">
+    <img src="https://github.com/zen-mod/ZEN/raw/master/extras/assets/logo/black/ZEN-Logo.png#gh-light-mode-only" width="512">
+    <img src="https://github.com/zen-mod/ZEN/raw/master/extras/assets/logo/white/ZEN-Logo.png#gh-dark-mode-only" width="512">
 </p>
 
 <p align="center">
     <a href="https://github.com/zen-mod/ZEN/releases">
-        <img src="https://img.shields.io/badge/Version-1.11.0-blue.svg?style=flat-square" alt="Zeus Enhanced Version">
+        <img src="https://img.shields.io/github/release/zen-mod/ZEN.svg?style=flat-square&label=Version" alt="Zeus Enhanced Version">
     </a>
     <a href="https://github.com/zen-mod/ZEN/issues">
         <img src="https://img.shields.io/github/issues-raw/zen-mod/ZEN.svg?style=flat-square&label=Issues" alt="Zeus Enhanced Issues">
@@ -27,7 +28,7 @@ Zeus Enhanced is built with communities who use Zeus as their primary mission ma
 For an in-depth breakdown of the features and frameworks please visit the [website](https://zen-mod.github.io/ZEN).
 
 This mod is built using the same foundation and design standards as the ACE3 Project.
-Special thanks to the [ACE3 Team](http://ace3mod.com/team.html) for their open source nature and permission to use their systems, without their work this would not be possible.
+Special thanks to the [ACE3 Team](https://ace3.acemod.org/team) for their open source nature and permission to use their systems, without their work this would not be possible.
 
 ## Features
 
@@ -48,6 +49,7 @@ Special thanks to the [ACE3 Team](http://ace3mod.com/team.html) for their open s
 - Settings to control Zeus camera properties such as speed and available vision modes.
 - Zeus camera flashlight for easier editing at night.
 - New waypoint types such as paradrop available through Zeus.
+- Ability to place comments and see comments created in 3DEN. 
 
 ## Contributing
 

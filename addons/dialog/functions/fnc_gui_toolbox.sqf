@@ -34,7 +34,10 @@ parsingNamespace setVariable [QEGVAR(common,columns), _columns max 1];
 private _ctrlToolbox = _display ctrlCreate [QEGVAR(common,RscToolbox), IDC_ROW_TOOLBOX, _controlsGroup];
 
 {
-    _ctrlToolbox lbAdd _x;
+    _x params ["_text", "_tooltip"];
+
+    private _index = _ctrlToolbox lbAdd _text;
+    _ctrlToolbox lbSetTooltip [_index, _tooltip];
 } forEach _strings;
 
 // Convert boolean default values to a toolbox index

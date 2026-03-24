@@ -31,22 +31,40 @@ _params params ["_weapon", "_magazine", "_delay", "_dispersion", "_target"];
 // Store the logic and target (in case the target is not changed)
 _display setVariable [QGVAR(params), [_logic, _target]];
 
+// Common function to populate weapon and magazine lists with entries
+private _fnc_populateList = {
+    params ["_ctrlList", "_entries", "_baseConfig"];
+
+    lnbClear _ctrlList;
+
+    {
+        private _config = _baseConfig >> _x;
+        private _name = getText (_config >> "displayName");
+        private _icon = getText (_config >> "picture");
+
+        private _index = _ctrlList lnbAddRow ["", _name];
+        _ctrlList lnbSetTooltip [[_index, 0], format ["%1\n%2", _name, _x]];
+        _ctrlList lnbSetPicture [[_index, 0], _icon];
+        _ctrlList lnbSetData [[_index, 0], _x];
+
+        private _mod = [_config] call EFUNC(common,getDLC);
+
+        if (_mod != "") then {
+            private _logo = modParams [_mod, ["logo"]] param [0, ""];
+            _ctrlList lnbSetPicture [[_index, 2], _logo];
+        };
+    } forEach _entries;
+
+    _ctrlList lnbSort [1];
+    _ctrlList lnbSetCurSelRow 0;
+};
+
+_display setVariable [QFUNC(populateList), _fnc_populateList];
+
 // Populate the weapons list
 private _ctrlWeapon = _display displayCtrl IDC_TRACERS_WEAPON;
-private _cfgWeapons = configFile >> "CfgWeapons";
-
-{
-    private _config = _cfgWeapons >> _x;
-    private _name = getText (_config >> "displayName");
-    private _icon = getText (_config >> "picture");
-
-    private _index = _ctrlWeapon lnbAddRow ["", _name];
-    _ctrlWeapon lnbSetTooltip [[_index, 0], format ["%1\n%2", _name, _x]];
-    _ctrlWeapon lnbSetPicture [[_index, 0], _icon];
-    _ctrlWeapon lnbSetData [[_index, 0], _x];
-} forEach keys (uiNamespace getVariable QGVAR(tracersCache));
-
-_ctrlWeapon lnbSort [1];
+private _weapons = keys (uiNamespace getVariable QGVAR(tracersCache));
+[_ctrlWeapon, _weapons, configFile >> "CfgWeapons"] call _fnc_populateList;
 
 // Refresh the magazines list when a weapon is selected
 _ctrlWeapon ctrlAddEventHandler ["LBSelChanged", {
@@ -54,25 +72,11 @@ _ctrlWeapon ctrlAddEventHandler ["LBSelChanged", {
 
     private _display = ctrlParent _ctrlWeapon;
     private _weapon = _ctrlWeapon lnbData [_index, 0];
+    private _fnc_populateList = _display getVariable QFUNC(populateList);
 
     private _ctrlMagazine = _display displayCtrl IDC_TRACERS_MAGAZINE;
-    private _cfgMagazines = configFile >> "CfgMagazines";
-
-    lnbClear _ctrlMagazine;
-
-    {
-        private _config = _cfgMagazines >> _x;
-        private _name = getText (_config >> "displayName");
-        private _icon = getText (_config >> "picture");
-
-        private _index = _ctrlMagazine lnbAddRow ["", _name];
-        _ctrlMagazine lnbSetTooltip [[_index, 0], format ["%1\n%2", _name, _x]];
-        _ctrlMagazine lnbSetPicture [[_index, 0], _icon];
-        _ctrlMagazine lnbSetData [[_index, 0], _x];
-    } forEach (uiNamespace getVariable QGVAR(tracersCache) get _weapon);
-
-    _ctrlMagazine lnbSort [1];
-    _ctrlMagazine lnbSetCurSelRow 0;
+    private _magazines = uiNamespace getVariable QGVAR(tracersCache) get _weapon;
+    [_ctrlMagazine, _magazines, configFile >> "CfgMagazines"] call _fnc_populateList;
 }];
 
 // Select the current weapon in the list (also initially populates magazines list)

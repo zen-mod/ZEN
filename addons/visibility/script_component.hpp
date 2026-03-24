@@ -17,3 +17,7 @@
 #include "\x\zen\addons\main\script_macros.hpp"
 
 #include "\x\zen\addons\common\defineResinclDesign.inc"
+
+#define INDICATOR_DISABLED       0
+#define INDICATOR_ENABLED        1
+#define INDICATOR_PLACEMENT_ONLY 2

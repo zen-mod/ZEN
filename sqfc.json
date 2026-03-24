@@ -1,0 +1,16 @@
+{
+    "inputDirs": [
+        "P:/x/zen/addons/"
+    ],
+    "includePaths": [
+        "P:/"
+    ],
+    "excludeList": [
+        "initsettings.inc.sqf",
+        "initkeybinds.inc.sqf",
+        "initattributes.inc.sqf",
+        "\\dev\\"
+    ],
+    "outputDir": "P:/",
+    "workerThreads": 12
+}

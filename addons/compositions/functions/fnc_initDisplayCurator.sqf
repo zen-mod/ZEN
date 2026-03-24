@@ -29,7 +29,7 @@
     };
 
     // Initially hide the custom compositions panel if the compositions tree is not active
-    if (GETMVAR(RscDisplayCurator_sections,[]) isNotEqualTo [1, 4]) then {
+    if (GETMVAR(RscDisplayCurator_sections,[]) isNotEqualTo [CURATOR_MODE_GROUPS, CURATOR_SIDE_EMPTY]) then {
         private _ctrlPanel = _display displayCtrl IDC_PANEL_GROUP;
         _ctrlPanel ctrlShow false;
     };
@@ -64,7 +64,15 @@
     _ctrlTree tvSetPictureRightColorSelected [[0, _index], [1, 1, 1, 1]];
 
     // Initially add all compositions to the tree
-    GVAR(treeAdditions) = +GET_COMPOSITIONS;
+    GVAR(treeAdditions) = [];
+
+    {
+        private _category = _x;
+        {
+            GVAR(treeAdditions) pushBack [_category, _x, _y];
+        } forEach _y;
+    } forEach GET_COMPOSITIONS;
+
     [_display] call FUNC(processTreeAdditions);
 
     _ctrlTree ctrlAddEventHandler ["TreeSelChanged", {call FUNC(handleTreeSelect)}];

@@ -24,8 +24,8 @@ private _path = tvCurSel _ctrlTree;
 private _category = _ctrlTree tvText GET_PARENT_PATH(_path);
 private _name     = _ctrlTree tvText _path;
 
-private _index = FIND_COMPOSITION(_category,_name);
+private _composition = GET_COMPOSITION(_category,_name);
 
-if (_index != -1) then {
-    ["edit", GET_COMPOSITIONS select _index] call FUNC(openDisplay);
+if (!isNil "_composition") then {
+    ["edit", [_category, _name, _composition]] call FUNC(openDisplay);
 };

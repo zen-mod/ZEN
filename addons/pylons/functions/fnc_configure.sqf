@@ -66,7 +66,7 @@ private _controls = [];
     _ctrlCombo ctrlAddEventHandler ["LBSelChanged", {call FUNC(handleMagazineSelect)}];
     _ctrlCombo setVariable [QGVAR(index), _forEachIndex];
 
-    _ctrlCombo lbAdd localize LSTRING(Empty);
+    _ctrlCombo lbAdd localize "STR_3DEN_Attributes_PylonEmpty_text";
     _ctrlCombo lbSetCurSel 0;
 
     // Get compatible magazines and sort them alphabetically by name

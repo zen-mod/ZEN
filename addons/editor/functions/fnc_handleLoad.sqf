@@ -56,6 +56,7 @@ if (GVAR(disableLiveSearch)) then {
 };
 
 _display displayAddEventHandler ["KeyDown", {call FUNC(handleKeyDown)}];
+_display displayAddEventHandler ["KeyUp", {call FUNC(handleKeyUp)}];
 
 {
     private _ctrl = _display displayCtrl _x;
@@ -84,11 +85,11 @@ _display displayAddEventHandler ["KeyDown", {call FUNC(handleKeyDown)}];
 {
     private _ctrl = _display displayCtrl _x;
     _ctrl ctrlAddEventHandler ["MouseButtonDown", {
-        if (RscDisplayCurator_sections select 0 == 1) then {
+        if (RscDisplayCurator_sections select 0 == CURATOR_MODE_GROUPS) then {
             private _ctrlTree = call EFUNC(common,getActiveTree);
-            private _pathLength = count tvCurSel _ctrlTree;
+            private _path = tvCurSel _ctrlTree;
 
-            if (_pathLength > 0 && {_pathLength < 4}) then {
+            if (_path isNotEqualTo [] && {_ctrlTree tvCount _path > 0}) then {
                 _ctrlTree tvSetCurSel [-1];
             };
         };
@@ -109,6 +110,18 @@ _ctrlTreeRecent ctrlAddEventHandler ["TreeSelChanged", {
         GVAR(recentTreeData) = _ctrlTreeRecent tvData _selectedPath;
     };
 }];
+
+// Trigger events when the tree collapse and expand all buttons are clicked
+{
+    private _ctrlTreeButton = _display displayCtrl _x;
+    _ctrlTreeButton ctrlAddEventHandler ["ButtonClick", {
+        params ["_ctrlTreeButton"];
+
+        private _display = ctrlParent _ctrlTreeButton;
+        private _expand = ctrlIDC _ctrlTreeButton == IDC_EXPAND_ALL;
+        [QGVAR(treeButtonClicked), [_display, _expand]] call CBA_fnc_localEvent;
+    }];
+} forEach [IDC_COLLAPSE_ALL, IDC_EXPAND_ALL];
 
 // Initially open the map fully zoomed out and centered
 if (isNil QGVAR(previousMapState)) then {
@@ -148,11 +161,11 @@ GVAR(iconsVisible) = true;
 
         [QGVAR(treesLoaded), _display] call CBA_fnc_localEvent;
 
-        [_display] call FUNC(addGroupIcons);
+        // Decluttering empty tree first since this will potentially reduce the number
+        // of entries that need to be processed by the subsequent functions
         [_display] call FUNC(declutterEmptyTree);
-
-        // Initially fix side buttons (can be hidden if a tree has no entries)
-        [FUNC(fixSideButtons), _display] call CBA_fnc_execNextFrame;
+        [_display] call FUNC(addGroupIcons);
+        [_display] call FUNC(addModIcons);
 
         {
             private _ctrl = _display displayCtrl _x;

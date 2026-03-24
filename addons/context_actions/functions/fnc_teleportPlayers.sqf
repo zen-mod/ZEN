@@ -30,7 +30,7 @@ private _players = _this select {isPlayer _x};
                 // setVehiclePosition places units on surface directly below position
                 // Sometimes this will be the second surface below the selected position
                 // Adding a small vertical offset allows units to be teleported consistently onto surfaces such as rooftops
-                _position = ASLtoATL _position vectorAdd [0, 0, 0.1];
+                _position = ASLToATL _position vectorAdd [0, 0, 0.1];
 
                 {
                     _x setVehiclePosition [_position, [], 0, "NONE"];

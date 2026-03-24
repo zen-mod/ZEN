@@ -23,7 +23,7 @@ if (visibleMap && {_keyCode == DIK_DELETE}) exitWith {
     ctrlMapMouseOver _ctrlMap params [["_type", ""], ["_marker", ""]];
 
     if (_type == "marker" && {_marker in GVAR(markers)}) exitWith {
-        [QGVAR(delete), _marker] call CBA_fnc_serverEvent;
+        deleteMarker _marker;
         true
     };
 

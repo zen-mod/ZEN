@@ -23,7 +23,7 @@ params [["_objects", [], [[]]], ["_centerPos", nil, [[]], [2, 3]], ["_includeWay
 
 // Filter destroyed objects and any objects that are attached to or "part of" another
 // The data for these objects will be included in the parent object's data
-_objects = _objects select {alive _x && {vehicle _x == _x} && {isNull attachedTo _x} && {isNull ropeAttachedTo _x}};
+_objects = _objects select {alive _x && {isNull objectParent _x} && {isNull attachedTo _x} && {isNull ropeAttachedTo _x}};
 _objects = _objects arrayIntersect _objects;
 
 // Find the center position of all objects if one is not given
@@ -90,7 +90,7 @@ private _fnc_serializeUnit = {
     params ["_unit"];
 
     private _type = typeOf _unit;
-    private _position = ASLtoAGL getPosASL _unit vectorDiff _centerPos;
+    private _position = ASLToAGL getPosASL _unit vectorDiff _centerPos;
     private _direction = getDir _unit;
 
     private _group = _unit call _fnc_serializeGroup;
@@ -100,7 +100,7 @@ private _fnc_serializeUnit = {
     private _skill = skill _unit;
     private _stance = unitPos _unit;
 
-    private _loadout = getUnitLoadout _unit;
+    private _loadout = [_unit] call CBA_fnc_getLoadout;
     private _identity = [name _unit, face _unit, speaker _unit, pitch _unit, nameSound _unit, _unit call BIS_fnc_getUnitInsignia];
     private _flagTexture = getForcedFlagTexture _unit;
 
@@ -113,7 +113,7 @@ private _fnc_serializeVehicle = {
     params ["_vehicle"];
 
     private _type = typeOf _vehicle;
-    private _position = ASLtoAGL getPosASL _vehicle vectorDiff _centerPos;
+    private _position = ASLToAGL getPosASL _vehicle vectorDiff _centerPos;
     private _direction = [vectorDir _vehicle, vectorUp _vehicle];
 
     private _fuel = fuel _vehicle;
@@ -176,7 +176,7 @@ private _fnc_serializeStatic = {
     params ["_object"];
 
     private _type = typeOf _object;
-    private _position = ASLtoAGL getPosASL _object vectorDiff _centerPos;
+    private _position = ASLToAGL getPosASL _object vectorDiff _centerPos;
     private _direction = [vectorDir _object, vectorUp _object];
 
     private _simulationEnabled = simulationEnabled _object;
@@ -197,7 +197,7 @@ private _fnc_serializeAttachedObjects = {
             private _data = _x call _fnc_serializeObject;
             if (isNil "_data") exitWith {};
 
-            private _offset = _object worldToModel ASLtoAGL getPosASL _x;
+            private _offset = _object worldToModel ASLToAGL getPosWorld _x;
             private _dirAndUp = [_object vectorWorldToModel vectorDir _x, _object vectorWorldToModel vectorUp _x];
 
             _attachedObjects pushBack [_data, _offset, _dirAndUp];

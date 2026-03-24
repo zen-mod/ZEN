@@ -9,6 +9,9 @@
             <Polish>Tryby kamery</Polish>
             <Portuguese>Modos de Visão</Portuguese>
             <Japanese>表示モード</Japanese>
+            <Chinesesimp>视觉模式</Chinesesimp>
+            <Chinese>視覺模式</Chinese>
+            <Italian>Modalità di visione</Italian>
         </Key>
         <Key ID="STR_ZEN_Vision_IncreaseNVGBrightness">
             <English>Increase NVG Brightness</English>
@@ -18,6 +21,9 @@
             <Polish>Zwiększ jasność noktowizji</Polish>
             <Portuguese>Aumentar Brilho NVG</Portuguese>
             <Japanese>NVG の明度を上げる</Japanese>
+            <Chinesesimp>增加夜视仪亮度</Chinesesimp>
+            <Chinese>增加夜視儀亮度</Chinese>
+            <Italian>Aumenta luminosità NVG</Italian>
         </Key>
         <Key ID="STR_ZEN_Vision_DecreaseNVGBrightness">
             <English>Decrease NVG Brightness</English>
@@ -27,6 +33,9 @@
             <Polish>Zmniejsz jasność noktowizji</Polish>
             <Portuguese>Reduzir Brilho NVG</Portuguese>
             <Japanese>NVG の明度を下げる</Japanese>
+            <Chinesesimp>减弱夜视仪亮度</Chinesesimp>
+            <Chinese>減弱夜視儀亮度</Chinese>
+            <Italian>Riduci luminosità NVG</Italian>
         </Key>
         <Key ID="STR_ZEN_Vision_Brightness">
             <English>Brightness: %1</English>
@@ -36,6 +45,9 @@
             <Polish>Jasność: %1</Polish>
             <Portuguese>Brilho: %1</Portuguese>
             <Japanese>明度: %1</Japanese>
+            <Chinesesimp>亮度: %1</Chinesesimp>
+            <Chinese>亮度: %1</Chinese>
+            <Italian>Luminosità: %1</Italian>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableNVG">
             <English>Nightvision</English>
@@ -45,6 +57,9 @@
             <Polish>Noktowizja</Polish>
             <Portuguese>Visão Noturna</Portuguese>
             <Japanese>暗視</Japanese>
+            <Chinesesimp>夜视仪</Chinesesimp>
+            <Chinese>夜視</Chinese>
+            <Italian>Visione notturna</Italian>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableWhiteHot">
             <English>Thermal - White Hot</English>
@@ -54,6 +69,9 @@
             <Polish>Termowizja - Biały ciepły</Polish>
             <Portuguese>Térmica - Branco Quente</Portuguese>
             <Japanese>サーマル - ホワイト ホット</Japanese>
+            <Chinesesimp>热成像--白热</Chinesesimp>
+            <Chinese>熱成像 - 白熱</Chinese>
+            <Italian>Termico - Bianco Caldo</Italian>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableBlackHot">
             <English>Thermal - Black Hot</English>
@@ -63,6 +81,9 @@
             <Polish>Termowizja - Czarny ciepły</Polish>
             <Portuguese>Térmica - Preto Quente</Portuguese>
             <Japanese>サーマル - ブラック ホット</Japanese>
+            <Chinesesimp>热成像--黑热</Chinesesimp>
+            <Chinese>熱成像 - 黑熱</Chinese>
+            <Italian>Termico - Nero Caldo</Italian>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableGreenHotCold">
             <English>Thermal - Light Green Hot / Dark Green Cold</English>
@@ -72,6 +93,9 @@
             <Polish>Termowizja - Jasnozielony ciepły / Ciemnozielony zimny</Polish>
             <Portuguese>Térmica - Verde Claro Quente / Verde Escuro Frio</Portuguese>
             <Japanese>サーマル - 黄緑 ホット/深緑 コールド</Japanese>
+            <Chinesesimp>热成像--浅绿色热/深绿色冷</Chinesesimp>
+            <Chinese>熱成像 - 淺綠色熱/深綠色冷</Chinese>
+            <Italian>Termico - Verde chiaro caldo / Verde scuro freddo</Italian>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableBlackHotGreenCold">
             <English>Thermal - Black Hot / Green Cold</English>
@@ -81,6 +105,9 @@
             <Polish>Termowizja - Czarny ciepły / Zielony zimny</Polish>
             <Portuguese>Térmica - Preto Quente / Verde Frio</Portuguese>
             <Japanese>サーマル - ブラック ホット/グリーン コールド</Japanese>
+            <Chinesesimp>热成像--黑热/绿冷</Chinesesimp>
+            <Chinese>熱成像 - 黑熱/綠冷</Chinese>
+            <Italian>Termico - Nero Caldo / Verde Freddo</Italian>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableRedHotCold">
             <English>Thermal - Light Red Hot / Dark Red Cold</English>
@@ -90,6 +117,9 @@
             <Polish>Termowizja - Jasnoczerwony ciepły / Ciemnoczerwony zimny</Polish>
             <Portuguese>Térmica - Vermelho Claro Quente / Vermelho Escuro Frio</Portuguese>
             <Japanese>サーマル - 桃色 ホット/深赤 コールド</Japanese>
+            <Chinesesimp>热成像--浅红热/深红冷</Chinesesimp>
+            <Chinese>熱成像 - 淺紅熱/深紅冷</Chinese>
+            <Italian>Termico - Rosso chiaro caldo / Rosso scuro freddo</Italian>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableBlackHotRedCold">
             <English>Thermal - Black Hot / Red Cold</English>
@@ -99,6 +129,9 @@
             <Polish>Termowizja - Czarny ciepły / Czerwony zimny</Polish>
             <Portuguese>Térmica - Preto Quente / Vermelho Frio</Portuguese>
             <Japanese>サーマル - ブラック ホット/レッド コールド</Japanese>
+            <Chinesesimp>热成像--黑热/红冷</Chinesesimp>
+            <Chinese>熱成像 - 黑熱/紅冷</Chinese>
+            <Italian>Termico - Nero Caldo / Rosso Freddo</Italian>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableWhiteHotRedCold">
             <English>Thermal - White Hot / Red Cold</English>
@@ -108,6 +141,9 @@
             <Polish>Termowizja - Biały ciepły / Czerwony zimny</Polish>
             <Portuguese>Térmica - Branco Quente / Vermelho Frio</Portuguese>
             <Japanese>サーマル - ホワイト ホット/レッド コールド</Japanese>
+            <Chinesesimp>热成像--白热/红冷</Chinesesimp>
+            <Chinese>熱成像 - 白熱/紅冷</Chinese>
+            <Italian>Termico - Bianco Caldo / Rosso Freddo</Italian>
         </Key>
         <Key ID="STR_ZEN_Vision_EnableRedGreenThermal">
             <English>Thermal - Red / Green (White Bodies)</English>
@@ -117,6 +153,9 @@
             <Polish>Termowizja - Czerwono / Zielona (białe ciała)</Polish>
             <Portuguese>Térmica - Vermelho / Verde (Corpos Brancos)</Portuguese>
             <Japanese>サーマル - レッド/グリーン (身体が白く)</Japanese>
+            <Chinesesimp>热成像--红/绿（白体）</Chinesesimp>
+            <Chinese>熱成像 - 紅/綠（白體）</Chinese>
+            <Italian>Termico - Rosso/Verde (Corpi Bianchi)</Italian>
         </Key>
     </Package>
 </Project>

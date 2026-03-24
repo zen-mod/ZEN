@@ -18,9 +18,9 @@
 params ["_vehicle"];
 
 private _turrets = if (_vehicle isEqualType objNull) then {
-    allTurrets _vehicle;
+    allTurrets _vehicle
 } else {
-    [_vehicle] call BIS_fnc_allTurrets;
+    [_vehicle] call BIS_fnc_allTurrets
 };
 
 // Add the driver turret

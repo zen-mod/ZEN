@@ -41,7 +41,7 @@ class CfgVehicles {
 
     class GVAR(moduleAddFullArsenal): GVAR(moduleBase) {
         curatorCanAttach = 1;
-        category = GVAR(Inventory);
+        category = QGVAR(Inventory);
         displayName = CSTRING(ModuleAddFullArsenal);
         function = QFUNC(moduleAddFullArsenal);
         icon = "\a3\ui_f\data\logos\a_64_ca.paa";
@@ -90,12 +90,6 @@ class CfgVehicles {
         displayName = CSTRING(ModuleAttachFlag);
         function = QFUNC(moduleAttachFlag);
         icon = QPATHTOF(ui\flag_ca.paa);
-    };
-    class GVAR(moduleAttachTo): GVAR(moduleBase) {
-        curatorCanAttach = 1;
-        category = QGVAR(Objects);
-        displayName = CSTRING(ModuleAttachTo);
-        function = QFUNC(moduleAttachTo);
     };
     class GVAR(moduleBindVariable): GVAR(moduleBase) {
         curatorCanAttach = 1;
@@ -335,17 +329,24 @@ class CfgVehicles {
     };
     class GVAR(moduleRemoveArsenal): GVAR(moduleBase) {
         curatorCanAttach = 1;
-        category = GVAR(Inventory);
+        category = QGVAR(Inventory);
         displayName = CSTRING(ModuleRemoveArsenal);
         function = QFUNC(moduleRemoveArsenal);
         icon = "\a3\ui_f\data\logos\a_64_ca.paa";
     };
     class GVAR(moduleRotateObject): GVAR(moduleBase) {
         curatorCanAttach = 1;
-        category = GVAR(Objects);
+        category = QGVAR(Objects);
         displayName = CSTRING(RotateObject);
         function = QFUNC(moduleRotateObject);
         icon = QPATHTOF(ui\rotate_ca.paa);
+    };
+    class GVAR(moduleScaleObject): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Objects);
+        displayName = CSTRING(ScaleObject);
+        function = QFUNC(moduleScaleObject);
+        icon = "\a3\3den\Data\Cfg3DEN\History\scaleItems_ca.paa";
     };
     class GVAR(moduleSearchBuilding): GVAR(moduleBase) {
         curatorCanAttach = 1;
@@ -411,6 +412,12 @@ class CfgVehicles {
         category = QGVAR(AI);
         displayName = CSTRING(ModuleSuicideBomber);
         function = QFUNC(moduleSuicideBomber);
+    };
+    class GVAR(moduleSuppressiveFire): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = ECSTRING(ai,SuppressiveFire);
+        function = QFUNC(moduleSuppressiveFire);
     };
     class GVAR(moduleTeleportPlayers): GVAR(moduleBase) {
         curatorCanAttach = 1;
