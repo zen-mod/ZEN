@@ -62,6 +62,15 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(deepPasteHC),
+    "CHECKBOX",
+    [LSTRING(DeepPasteHC), LSTRING(DeepPasteHC_Description)],
+    [ELSTRING(main,DisplayName), LSTRING(DisplayName)],
+    true,
+    false
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(unitRadioMessages),
     "LIST",
     [LSTRING(UnitRadioMessages), LSTRING(UnitRadioMessages_Description)],

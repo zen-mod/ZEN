@@ -358,6 +358,7 @@
     _unit setNameSound _nameSound;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(deserializeObjects), LINKFUNC(deserializeObjects)] call CBA_fnc_addEventHandler;
 [QGVAR(earthquake), LINKFUNC(earthquake)] call CBA_fnc_addEventHandler;
 [QGVAR(fireArtillery), LINKFUNC(fireArtillery)] call CBA_fnc_addEventHandler;
 [QGVAR(fireWeapon), LINKFUNC(fireWeapon)] call CBA_fnc_addEventHandler;
