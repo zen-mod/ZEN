@@ -319,6 +319,11 @@
     _object setObjectScale _scale;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setMarkerDrawPriority), {
+    params ["_markerName", "_priority"];
+    _markerName setMarkerDrawPriority _priority;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(setVehicleRadar), {
     params ["_vehicle", "_mode"];
     _vehicle setVehicleRadar _mode;
