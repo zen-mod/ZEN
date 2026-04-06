@@ -17,6 +17,7 @@
         </Key>
         <Key ID="STR_ZEN_Compat_ACE_OpenMedicalMenu">
             <English>Open Medical Menu</English>
+            <French>Ouvrir le menu médical</French>
             <Japanese>医療メニューを開く</Japanese>
         </Key>
         <Key ID="STR_ZEN_Compat_ACE_HideModules_Description">
