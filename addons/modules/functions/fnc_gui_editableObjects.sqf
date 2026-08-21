@@ -18,8 +18,8 @@
 
 params ["_display", "_logic"];
 
-private _selections = GVAR(saved) getVariable [QGVAR(editableObjects), [1, 1, 0, 100, [true, true, true, true]]];
-_selections params ["_editingMode", "_curators", "_rangeMode", "_range", "_filter"];
+private _selections = GVAR(saved) getVariable [QGVAR(editableObjects), [1, 1, 0, 0, 100, [true, true, true, true]]];
+_selections params ["_editingMode", "_curators", "_alive", "_rangeMode", "_range", "_filter"];
 
 _display setVariable [QGVAR(position), ASLToAGL getPosASL _logic];
 deleteVehicle _logic;
@@ -29,6 +29,9 @@ _ctrlEditingMode lbSetCurSel _editingMode;
 
 private _ctrlCurators = _display displayCtrl IDC_EDITABLEOBJECTS_CURATORS;
 _ctrlCurators lbSetCurSel _curators;
+
+private _ctrlAlive = _display displayCtrl IDC_EDITABLEOBJECTS_ALIVE;
+_ctrlAlive lbSetCurSel _alive;
 
 private _fnc_rangeModeChanged = {
     params ["_ctrlRangeMode", "_index"];
@@ -98,6 +101,9 @@ private _fnc_onConfirm = {
     private _ctrlCurators = _display displayCtrl IDC_EDITABLEOBJECTS_CURATORS;
     private _curators = lbCurSel _ctrlCurators;
 
+    private _ctrlAlive = _display displayCtrl IDC_EDITABLEOBJECTS_ALIVE;
+    private _alive = lbCurSel _ctrlAlive;
+
     private _ctrlRangeMode = _display displayCtrl IDC_EDITABLEOBJECTS_RANGE_MODE;
     private _rangeMode = lbCurSel _ctrlRangeMode;
 
@@ -111,7 +117,7 @@ private _fnc_onConfirm = {
         cbChecked (_display displayCtrl IDC_EDITABLEOBJECTS_FILTER_STATIC)
     ];
 
-    private _selections = [_editingMode, _curators, _rangeMode, _range, _filter];
+    private _selections = [_editingMode, _curators, _alive, _rangeMode, _range, _filter];
     GVAR(saved) setVariable [QGVAR(editableObjects), _selections];
 
     // Use objNull for all curators
@@ -122,7 +128,7 @@ private _fnc_onConfirm = {
         _range = -1;
     };
 
-    [QGVAR(moduleEditableObjects), [_position, _editingMode > 0, _curator, _range, _filter]] call CBA_fnc_serverEvent;
+    [QGVAR(moduleEditableObjects), [_position, _editingMode > 0, _curator, _alive, _range, _filter]] call CBA_fnc_serverEvent;
 };
 
 private _ctrlButtonOK = _display displayCtrl IDC_OK;

@@ -7,19 +7,19 @@
  * 0: Position <ARRAY>
  * 1: Editing Mode <BOOL>
  * 2: Curator <OBJECT>
- * 3: Range <NUMBER>
- * 4: Filter <ARRAY>
+ * 3: Alive mode <NUMBER> (0: Both, 1: Alive, 2: Dead)
+ * 4: Range <NUMBER>
+ * 5: Filter <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [[0, 0, 0], true, objNull, -1, [true, true, true, true]] call zen_modules_fnc_moduleEditableObjects
+ * [[0, 0, 0], true, objNull, 0, -1, [true, true, true, true]] call zen_modules_fnc_moduleEditableObjects
  *
  * Public: No
  */
-
-params ["_position", "_editingMode", "_curator", "_range", "_filter"];
+params ["_position", "_editingMode", "_curator", "_alive", "_range", "_filter"];
 _filter params ["_allowAll", "_allowUnits", "_allowVehicles", "_allowStatic"];
 
 private _objects = [];
@@ -60,6 +60,13 @@ if (_range == -1) then {
     };
 
     _objects = nearestObjects [_position, _types, _range, true];
+};
+
+if (_alive isNotEqualTo 0) then {
+    private _required = (_alive isEqualTo 1);
+    _objects = _objects select {
+        alive _x isEqualTo _required;
+    };
 };
 
 [_objects, _editingMode, _curator] call EFUNC(common,updateEditableObjects);
