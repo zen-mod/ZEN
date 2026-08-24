@@ -9,6 +9,7 @@
             <Chinese>掛架</Chinese>
             <Italian>Piloni</Italian>
             <French>Pylônes</French>
+            <Spanish>Pilones</Spanish>
         </Key>
         <Key ID="STR_ZEN_Pylons_Title">
             <English>Configure Pylons (%1)</English>
@@ -18,6 +19,7 @@
             <Chinese>設置掛架 (%1)</Chinese>
             <Italian>Modifica piloni (% 1)</Italian>
             <French>Configurer les pylônes (%1)</French>
+            <Spanish>Configurar pilones (%1)</Spanish>
         </Key>
     </Package>
 </Project>

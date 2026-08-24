@@ -12,6 +12,7 @@
             <Chinese>環境動畫</Chinese>
             <Italian>Animazione ambientale</Italian>
             <French>Animation d'ambiance</French>
+            <Spanish>Animación ambiental</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Type">
             <English>Animation Type</English>
@@ -24,6 +25,7 @@
             <Chinese>動畫類型</Chinese>
             <Italian>Tipo di animazione</Italian>
             <French>Type d'animation</French>
+            <Spanish>Tipo de animación</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_StopAnimation">
             <English>Stop Animation</English>
@@ -36,6 +38,7 @@
             <Chinese>停滯動畫</Chinese>
             <Italian>Interrompi animazione</Italian>
             <French>Arrêt de l'animation</French>
+            <Spanish>Detener animación</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_SitOnFloor">
             <English>Sit On Floor</English>
@@ -48,6 +51,7 @@
             <Chinese>坐在地上</Chinese>
             <Italian>Siediti sul pavimento</Italian>
             <French>S'asseoir par terre</French>
+            <Spanish>Sentarse en el suelo</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_SitArmed">
             <English>Sit On Floor (Armed)</English>
@@ -58,6 +62,7 @@
             <Chinese>坐在地上(武裝)</Chinese>
             <Italian>Siediti sul pavimento (armato)</Italian>
             <French>S'asseoir par terre (armé)</French>
+            <Spanish>Sentarse en el suelo (armado)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Squat">
             <English>Squat</English>
@@ -68,6 +73,7 @@
             <Chinese>蹲下</Chinese>
             <Italian>Accovacciarsi</Italian>
             <French>Squat</French>
+            <Spanish>En cuclillas</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_SquatArmed">
             <English>Squat (Armed)</English>
@@ -78,6 +84,7 @@
             <Chinese>蹲下(武裝)</Chinese>
             <Italian>Accovacciarsi (armato)</Italian>
             <French>Squat (armé)</French>
+            <Spanish>En cuclillas (armado)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_LeanOnWall">
             <English>Lean On Wall</English>
@@ -90,6 +97,7 @@
             <Chinese>倚牆而立</Chinese>
             <Italian>Appoggiarsi al muro</Italian>
             <French>S'appuyer sur le mur</French>
+            <Spanish>Apoyarse en la pared</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Watch">
             <English>Watch</English>
@@ -102,6 +110,7 @@
             <Chinese>觀察</Chinese>
             <Italian>Osservare</Italian>
             <French>Faire le guet</French>
+            <Spanish>Vigilar</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_StandIdle">
             <English>Stand Idle</English>
@@ -114,6 +123,7 @@
             <Chinese>懶散站立</Chinese>
             <Italian>Rimani inattivo</Italian>
             <French>Rester debout</French>
+            <Spanish>De pie inactivo</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_StandIdleNoWeapon">
             <English>Stand Idle (No Weapon)</English>
@@ -126,6 +136,7 @@
             <Chinese>懶散站立（無武裝）</Chinese>
             <Italian>Rimani inattivo (Nessuna arma)</Italian>
             <French>Rester debout (pas d'arme)</French>
+            <Spanish>De pie inactivo (sin arma)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_StandWithPistol">
             <English>Stand Idle (Pistol)</English>
@@ -135,6 +146,7 @@
             <Chinese>懶散站立（手槍）</Chinese>
             <Italian>Rimani inattivo (Pistola)</Italian>
             <French>Rester debout (pistolet)</French>
+            <Spanish>De pie inactivo (pistola)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_AtEase">
             <English>At Ease</English>
@@ -147,6 +159,7 @@
             <Chinese>安逸</Chinese>
             <Italian>A proprio agio</Italian>
             <French>Se tenir debout de manière décontractée</French>
+            <Spanish>Descanso</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_GuardKneeled">
             <English>Guard (Kneel)</English>
@@ -157,6 +170,7 @@
             <Chinese>警衛（跪姿）</Chinese>
             <Italian>Guardia (inginocchiarsi)</Italian>
             <French>Surveiller (à genoux)</French>
+            <Spanish>Guardia (arrodillado)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ListenToBriefing">
             <English>Listen To Briefing</English>
@@ -169,6 +183,7 @@
             <Chinese>聽取簡報</Chinese>
             <Italian>Ascolta il briefing</Italian>
             <French>Écouter le briefing</French>
+            <Spanish>Escuchar el briefing</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Briefing">
             <English>Briefing</English>
@@ -181,6 +196,7 @@
             <Chinese>簡報</Chinese>
             <Italian>Briefing</Italian>
             <French>Briefing</French>
+            <Spanish>Briefing</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_BriefingInteractive">
             <English>Briefing (Interactive)</English>
@@ -193,6 +209,7 @@
             <Chinese>簡報(互動)</Chinese>
             <Italian>Briefing (Interattivo)</Italian>
             <French>Briefing (Interactif)</French>
+            <Spanish>Briefing (interactivo)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ListeningCivilian">
             <English>Listening Civilian</English>
@@ -205,6 +222,7 @@
             <Chinese>傾聽民聲</Chinese>
             <Italian>Ascolto civile</Italian>
             <French>Civil à l'écoute</French>
+            <Spanish>Civil escuchando</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_TalkingCivilian">
             <English>Talking Civilian</English>
@@ -217,6 +235,7 @@
             <Chinese>可交談平民</Chinese>
             <Italian>Parlando civile</Italian>
             <French>Civil parlant</French>
+            <Spanish>Civil hablando</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ListenToRadio">
             <English>Listen To Radio</English>
@@ -229,6 +248,7 @@
             <Chinese>收聽無線電</Chinese>
             <Italian>Ascoltare la radio</Italian>
             <French>Écouter la radio</French>
+            <Spanish>Escuchar la radio</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ShieldFromSun">
             <English>Shield From Sun</English>
@@ -241,6 +261,7 @@
             <Chinese>遮擋陽光</Chinese>
             <Italian>Scudo dal sole</Italian>
             <French>Protéger de la lumière du soleil</French>
+            <Spanish>Protegerse del sol</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_NavigateAircraft">
             <English>Navigate Aircraft</English>
@@ -253,6 +274,7 @@
             <Chinese>導航機</Chinese>
             <Italian>Naviga in aereo</Italian>
             <French>Guidage des aéronefs</French>
+            <Spanish>Guiar aeronave</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ShowVehicleTheWay">
             <English>Showing A Vehicle The Way</English>
@@ -265,6 +287,7 @@
             <Chinese>為車輛指路</Chinese>
             <Italian>Mostrare la strada a un veicolo</Italian>
             <French>Indiquer le chemin à un véhicule</French>
+            <Spanish>Indicar el camino a un vehículo</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_TreatWounded">
             <English>Treat Wounded</English>
@@ -277,6 +300,7 @@
             <Chinese>治療傷員</Chinese>
             <Italian>Trattare i feriti</Italian>
             <French>Soigner un blessé</French>
+            <Spanish>Atender a un herido</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_CombatWounded">
             <English>Combat Wounded</English>
@@ -289,6 +313,7 @@
             <Chinese>戰鬥傷員</Chinese>
             <Italian>Ferito in combattimento</Italian>
             <French>Blessure de combat</French>
+            <Spanish>Herido en combate</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedGeneral">
             <English>Wounded (General)</English>
@@ -301,6 +326,7 @@
             <Chinese>受傷(一般)</Chinese>
             <Italian>Ferito (Generale)</Italian>
             <French>Blessé (général)</French>
+            <Spanish>Herido (general)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedLeaning">
             <English>Wounded (Leaning)</English>
@@ -311,6 +337,7 @@
             <Chinese>受傷(倚靠)</Chinese>
             <Italian>Ferito (Appoggiato)</Italian>
             <French>Blessé (penché)</French>
+            <Spanish>Herido (apoyado)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedHead">
             <English>Wounded (Head)</English>
@@ -323,6 +350,7 @@
             <Chinese>受傷(頭部)</Chinese>
             <Italian>Ferito (testa)</Italian>
             <French>Blessé (tête)</French>
+            <Spanish>Herido (cabeza)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedChest">
             <English>Wounded (Chest)</English>
@@ -335,6 +363,7 @@
             <Chinese>受傷(胸部)</Chinese>
             <Italian>Ferito (petto)</Italian>
             <French>Blessé (poitrine)</French>
+            <Spanish>Herido (pecho)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedArm">
             <English>Wounded (Arm)</English>
@@ -347,6 +376,7 @@
             <Chinese>受傷(手臂)</Chinese>
             <Italian>Ferito (braccio)</Italian>
             <French>Blessé (bras)</French>
+            <Spanish>Herido (brazo)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_WoundedLeg">
             <English>Wounded (Leg)</English>
@@ -359,6 +389,7 @@
             <Chinese>受傷(腿部)</Chinese>
             <Italian>Ferito (Gamba)</Italian>
             <French>Blessé (jambe)</French>
+            <Spanish>Herido (pierna)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_ShockedCivilian">
             <English>Shocked Civilian</English>
@@ -371,6 +402,7 @@
             <Chinese>震驚的平民</Chinese>
             <Italian>Civile scioccato</Italian>
             <French>Civil choqué</French>
+            <Spanish>Civil conmocionado</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_HidingCivilian">
             <English>Hiding Civilian</English>
@@ -383,6 +415,7 @@
             <Chinese>隱藏的平民</Chinese>
             <Italian>Nascondere civile</Italian>
             <French>Civil caché</French>
+            <Spanish>Civil escondido</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Surrender">
             <English>Surrender</English>
@@ -392,6 +425,7 @@
             <Chinese>投降</Chinese>
             <Italian>Capitolazione</Italian>
             <French>Se rendre</French>
+            <Spanish>Rendirse</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_SitCaptured">
             <English>Sit Captured</English>
@@ -404,6 +438,7 @@
             <Chinese>坐著的囚犯</Chinese>
             <Italian>Siedi catturato</Italian>
             <French>Assoir un prisonnier</French>
+            <Spanish>Sentado como prisionero</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_RepairStand">
             <English>Repair Vehicle (Stand)</English>
@@ -416,6 +451,7 @@
             <Chinese>維修車輛（直立）</Chinese>
             <Italian>Riparazione veicolo (in piedi) </Italian>
             <French>Réparer un véhicule (debout)</French>
+            <Spanish>Reparar vehículo (de pie)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_RepairKneel">
             <English>Repair Vehicle (Kneel)</English>
@@ -428,6 +464,7 @@
             <Chinese>維修車輛（跪姿）</Chinese>
             <Italian>Riparare il veicolo (inginocchiarsi)</Italian>
             <French>Réparer un véhicule (à genoux)</French>
+            <Spanish>Reparar vehículo (arrodillado)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_RepairProne">
             <English>Repair Vehicle (Prone)</English>
@@ -440,6 +477,7 @@
             <Chinese>維修車輛（俯臥）</Chinese>
             <Italian>Riparazione veicolo (prono)</Italian>
             <French>Réparer un véhicule (couché)</French>
+            <Spanish>Reparar vehículo (tumbado)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Dead">
             <English>Dead</English>
@@ -450,6 +488,7 @@
             <Chinese>死亡</Chinese>
             <Italian>Morta</Italian>
             <French>Mort</French>
+            <Spanish>Muerto</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_DeadLeaning">
             <English>Dead (Leaning)</English>
@@ -460,6 +499,7 @@
             <Chinese>死亡（倚靠）</Chinese>
             <Italian>Morto (pendente)</Italian>
             <French>Mort (pendant)</French>
+            <Spanish>Muerto (apoyado)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_DeadSit">
             <English>Dead (Sitting)</English>
@@ -470,6 +510,7 @@
             <Chinese>死亡（坐姿）</Chinese>
             <Italian>morto (seduto)</Italian>
             <French>Mort (assis)</French>
+            <Spanish>Muerto (sentado)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_LeanOnTable">
             <English>Lean On Table</English>
@@ -480,6 +521,7 @@
             <Chinese>靠在桌上</Chinese>
             <Italian>Appoggiarsi al tavolo</Italian>
             <French>S'appuyer sur la table</French>
+            <Spanish>Apoyarse en la mesa</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Binoculars">
             <English>Look Through Binoculars</English>
@@ -490,6 +532,7 @@
             <Chinese>透過望遠鏡看</Chinese>
             <Italian>Guarda attraverso il binocolo</Italian>
             <French>Regarder dans les jumelles</French>
+            <Spanish>Mirar con prismáticos</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Salute">
             <English>Salute</English>
@@ -500,6 +543,7 @@
             <Chinese>敬禮</Chinese>
             <Italian>Saluto</Italian>
             <French>Salutations</French>
+            <Spanish>Saludar</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientAnim_Combat">
             <English>Combat Ready</English>
@@ -512,6 +556,7 @@
             <Chinese>戰鬥準備</Chinese>
             <Italian>Combattimento pronto</Italian>
             <French>Prêt au combat</French>
+            <Spanish>Listo para el combate</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby">
             <English>Ambient Flyby</English>
@@ -523,6 +568,7 @@
             <Chinese>環境飛越</Chinese>
             <Italian>Passaggio aereo atmosferico</Italian>
             <French>Vol d'ambiance</French>
+            <Spanish>Pasada aérea ambiental</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_AircraftSelect">
             <English>Aircraft Selection</English>
@@ -535,6 +581,7 @@
             <Chinese>選擇飛機</Chinese>
             <Italian>Selezione di aeromobili</Italian>
             <French>Sélection d'aéronefs</French>
+            <Spanish>Selección de aeronave</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_FlyTowards">
             <English>Fly Towards</English>
@@ -546,6 +593,7 @@
             <Chinese>飛往</Chinese>
             <Italian>Vola verso</Italian>
             <French>Direction de vol</French>
+            <Spanish>Volar hacia</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_FlyTowards_Tooltip">
             <English>Aircraft will fly towards this direction from the opposite direction.</English>
@@ -557,6 +605,7 @@
             <Chinese>飛機會從相反的方向飛向該方向。</Chinese>
             <Italian>L'aereo volerà in questa direzione dalla direzione opposta.</Italian>
             <French>Les aéronefs voleront dans cette direction à partir de la direction opposée.</French>
+            <Spanish>Las aeronaves volarán hacia esta dirección partiendo de la dirección opuesta.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Tooltip">
             <English>Sets the height that the aircraft will fly at, in meters.</English>
@@ -569,6 +618,7 @@
             <Chinese>設置飛機的飛行高度（米）</Chinese>
             <Italian>Imposta l'altezza alla quale volerà l'aereo, in metri.</Italian>
             <French>Définit l'altitude à laquelle l'aéronef doit voler, en mètres.</French>
+            <Spanish>Define la altura a la que volarán las aeronaves, en metros.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Mode_AGL">
             <English>Follow Terrain</English>
@@ -580,6 +630,7 @@
             <Chinese>地形跟踪</Chinese>
             <Italian>Segui il terreno</Italian>
             <French>Suivre le terrain</French>
+            <Spanish>Seguir el terreno</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Mode_ASL">
             <English>Fixed Altitude</English>
@@ -590,6 +641,7 @@
             <Chinese>固定高度</Chinese>
             <Italian>Altitudine fissa</Italian>
             <French>Altitude fixe</French>
+            <Spanish>Altitud fija</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Mode_AGL_Tooltip">
             <English>The aircraft will follow the terrain, staying at the same height relative to the ground. Based on AGL.</English>
@@ -601,6 +653,7 @@
             <Chinese>飛機將跟隨地形，保持在相對於地面的相同高度。以海拔高度為基礎。</Chinese>
             <Italian>L'aereo seguirà il terreno, rimanendo alla stessa altezza rispetto al suolo. Basato su AGL.</Italian>
             <French>L'avion suit le terrain en restant à la même hauteur par rapport au sol. Basé sur l'AGL.</French>
+            <Spanish>Las aeronaves seguirán el terreno, manteniendo la misma altura respecto al suelo. Basado en AGL.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Height_Mode_ASL_Tooltip">
             <English>The aircraft will fly at a constant altitude, only following the terrain if less than 10 meters from the ground. Based on ASL, final altitude is the elevation of the module plus the height given.</English>
@@ -611,6 +664,7 @@
             <Chinese>飛機將在一個恆定的高度飛行，只有在距離地面不到10米的情況下才會跟隨地形飛行。以海拔高度為基礎，最終高度是模塊的海拔高度加上給定的高度。</Chinese>
             <Italian>Il velivolo volerà ad altitudine costante, seguendo il terreno solo se a meno di 10 metri dal suolo. In base all'ASL, l'altitudine finale è l'elevazione del modulo più l'altezza data.</Italian>
             <French>L'avion volera à une altitude constante, ne suivant le terrain qu'à moins de 10 mètres du sol. Sur la base de l'ASL, l'altitude finale est l'altitude du module plus la hauteur donnée.</French>
+            <Spanish>Las aeronaves volarán a una altitud constante y solo seguirán el terreno si están a menos de 10 metros del suelo. Basado en ASL: la altitud final es la elevación del módulo más la altura indicada.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Distance">
             <English>Distance</English>
@@ -623,6 +677,7 @@
             <Chinese>距離</Chinese>
             <Italian>Distanza</Italian>
             <French>Distance</French>
+            <Spanish>Distancia</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Distance_Tooltip">
             <English>Sets the distance that the aircraft will start out from, in meters.</English>
@@ -634,6 +689,7 @@
             <Chinese>設置開始距離（米）。</Chinese>
             <Italian>Imposta la distanza da cui partirà il velivolo, in metri.</Italian>
             <French>Définit la distance de départ de l'avion, en mètres.</French>
+            <Spanish>Define la distancia desde la que partirán las aeronaves, en metros.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Speed_Tooltip">
             <English>Sets how fast the aircraft will fly.</English>
@@ -646,6 +702,7 @@
             <Chinese>設置飛行速度。</Chinese>
             <Italian>Imposta la velocità di volo dell'aereo.</Italian>
             <French>Définit la vitesse de vol de l'avion.</French>
+            <Spanish>Define la velocidad a la que volarán las aeronaves.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Amount">
             <English>Amount</English>
@@ -657,6 +714,7 @@
             <Chinese>數量</Chinese>
             <Italian>Quantità</Italian>
             <French>Montant</French>
+            <Spanish>Cantidad</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAmbientFlyby_Amount_Tooltip">
             <English>Sets the amount of aircraft that will be spawned.</English>
@@ -668,6 +726,7 @@
             <Chinese>設置生成的飛機數量。</Chinese>
             <Italian>Imposta la quantità di aerei che verranno generati.</Italian>
             <French>Définit le nombre d'avions qui seront créés.</French>
+            <Spanish>Define la cantidad de aeronaves que se generarán.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAssignZeus">
             <English>Promote To Zeus</English>
@@ -680,6 +739,7 @@
             <Chinese>提升為宙斯</Chinese>
             <Italian>Promuovi a Zeus</Italian>
             <French>Promouvoir Zeus</French>
+            <Spanish>Ascender a Zeus</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAssignZeus_AlreadyZeus">
             <English>Unit is already a curator</English>
@@ -692,6 +752,7 @@
             <Chinese>單位已經是宙斯了</Chinese>
             <Italian>Unit è già un curatore</Italian>
             <French>L'unité est déjà Zeus.</French>
+            <Spanish>La unidad ya es un curador</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAssignZeus_Promoted">
             <English>You have been promoted to Zeus.</English>
@@ -704,6 +765,7 @@
             <Chinese>你已被提升為宙斯。</Chinese>
             <Italian>Sei stato promosso a Zeus.</Italian>
             <French>Vous avez été promu Zeus.</French>
+            <Spanish>Has sido ascendido a Zeus.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAttachFlag">
             <English>Attach Flag</English>
@@ -716,6 +778,7 @@
             <Chinese>附加旗幟</Chinese>
             <Italian>Allega bandiera</Italian>
             <French>Attacher le drapeau</French>
+            <Spanish>Acoplar bandera</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAttachFlag_Type">
             <English>Flag Type</English>
@@ -728,6 +791,7 @@
             <Chinese>旗幟類型</Chinese>
             <Italian>Tipo di bandiera</Italian>
             <French>Type de drapeau</French>
+            <Spanish>Tipo de bandera</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_CreateIED">
             <English>Create IED</English>
@@ -740,6 +804,7 @@
             <Chinese>生成IED</Chinese>
             <Italian>Crea IED</Italian>
             <French>Créer un IED</French>
+            <Spanish>Crear IED</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_AlreadyAnIED">
             <English>Object is already an IED</English>
@@ -752,6 +817,7 @@
             <Chinese>物體已經有一個簡易爆炸裝置（IED）了</Chinese>
             <Italian>L'oggetto è già un IED</Italian>
             <French>L'objet est déjà un IED</French>
+            <Spanish>El objeto ya es un IED</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ActivationSide">
             <English>Activation Side</English>
@@ -764,6 +830,7 @@
             <Chinese>激活陣營</Chinese>
             <Italian>Lato attivazione</Italian>
             <French>Côté d'activation</French>
+            <Spanish>Bando de activación</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ActivationRadius">
             <English>Activation Radius</English>
@@ -776,6 +843,7 @@
             <Chinese>激活半徑</Chinese>
             <Italian>Raggio di attivazione</Italian>
             <French>Rayon d'activation</French>
+            <Spanish>Radio de activación</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ExplosionSize">
             <English>Explosion Size</English>
@@ -788,6 +856,7 @@
             <Chinese>爆炸威力</Chinese>
             <Italian>Dimensione dell'esplosione</Italian>
             <French>Taille d'explosion</French>
+            <Spanish>Tamaño de la explosión</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_IsJammable">
             <English>Is Jammable</English>
@@ -800,6 +869,7 @@
             <Chinese>是否可被干擾</Chinese>
             <Italian>È inceppabile</Italian>
             <French>Peut être perturbé</French>
+            <Spanish>Se puede inhibir</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleConvoyParameters">
             <English>Convoy Parameters</English>
@@ -812,6 +882,7 @@
             <Chinese>車隊參數</Chinese>
             <Italian>Convoy parameters</Italian>
             <French>Paramètres du convoi</French>
+            <Spanish>Parámetros del convoy</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_Separation">
             <English>Convoy Separation</English>
@@ -824,6 +895,7 @@
             <Chinese>車隊分離</Chinese>
             <Italian>Separazione del convoglio</Italian>
             <French>Séparation du convoi</French>
+            <Spanish>Separación del convoy</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_Separation_Tooltip">
             <English>Sets the distance that the vehicle will keep to the vehicle in front of it, in meters.\nSmall values should only be used for slow moving convoys.\nFor best results, vehicles should be in the same group with a column formation.</English>
@@ -835,6 +907,7 @@
             <Chinese>設置車輛與車輛間保持的距離（米）。 \n為了獲得最佳效果，車輛應在同一小組中以縱隊的形式排列。</Chinese>
             <Italian>Imposta la distanza che il veicolo manterrà dal veicolo davanti, in metri.\nValori piccoli dovrebbero essere usati solo per convogli che si muovono lentamente.\nPer ottenere i migliori risultati, i veicoli dovrebbero essere nello stesso gruppo con una formazione di colonne.</Italian>
             <French>Définit la distance en mètres que le véhicule doit respecter par rapport au véhicule qui le précède.\nLes petites valeurs ne doivent être utilisées que pour les convois qui se déplacent lentement.\nPour de meilleurs résultats, les véhicules doivent être dans le même groupe avec une formation de colonnes.</French>
+            <Spanish>Define la distancia, en metros, que el vehículo mantendrá con el vehículo que va delante.\nLos valores pequeños solo deberían usarse en convoyes lentos.\nPara obtener mejores resultados, los vehículos deben estar en el mismo grupo y en formación de columna.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_Speed">
             <English>Speed Limit</English>
@@ -847,6 +920,7 @@
             <Chinese>限速</Chinese>
             <Italian>Limite di velocità</Italian>
             <French>Limite de vitesse</French>
+            <Spanish>Límite de velocidad</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_Speed_Tooltip">
             <English>Limits the speed of the vehicle to the given value, in kilometers per hour.</English>
@@ -859,6 +933,7 @@
             <Chinese>將車輛的速度限制在一個給定值，單位是公里/小時。</Chinese>
             <Italian>Limita la velocità del veicolo al valore dato, in chilometri orari.</Italian>
             <French>Limite la vitesse du véhicule à la valeur indiquée, en km/h.</French>
+            <Spanish>Limita la velocidad del vehículo al valor indicado, en kilómetros por hora.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_ForceRoad">
             <English>Stay On Road</English>
@@ -871,6 +946,7 @@
             <Chinese>保持行駛在道路上</Chinese>
             <Italian>Resta in strada</Italian>
             <French>Rester sur la route</French>
+            <Spanish>Permanecer en la carretera</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleConvoyParameters_ForceRoad_Tooltip">
             <English>Forces the vehicle to stay on the road.</English>
@@ -883,6 +959,7 @@
             <Chinese>迫使車輛保持在道路上。</Chinese>
             <Italian>Obbliga il veicolo a rimanere sulla strada.</Italian>
             <French>Oblige le véhicule à rester sur la route.</French>
+            <Spanish>Obliga al vehículo a permanecer en la carretera.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCAS_Bomb">
             <English>CAS - Bomb Strike</English>
@@ -895,6 +972,7 @@
             <Chinese>CAS - 航彈空襲</Chinese>
             <Italian>CAS - Attacco bomba</Italian>
             <French>CAS - Attaque par bombardement</French>
+            <Spanish>CAS - Ataque con bombas</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_BindVariable">
             <English>Bind Variable To Object</English>
@@ -906,6 +984,7 @@
             <Chinese>綁定變量至物體上</Chinese>
             <Italian>Associa variabile a oggetto</Italian>
             <French>Lier une variable à un objet</French>
+            <Spanish>Asignar variable al objeto</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_VariableName">
             <English>Variable Name</English>
@@ -917,6 +996,7 @@
             <Chinese>變量名</Chinese>
             <Italian>Nome variabile</Italian>
             <French>Nom de la variable</French>
+            <Spanish>Nombre de la variable</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_BroadcastVariable">
             <English>Public (Broadcast)</English>
@@ -927,6 +1007,7 @@
             <Chinese>公共（廣播）</Chinese>
             <Italian>Pubblico (trasmesso)</Italian>
             <French>Public (diffusion)</French>
+            <Spanish>Pública (difundida)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ShowInConfig">
             <English>Show In Config Viewer</English>
@@ -938,6 +1019,7 @@
             <Chinese>在配置查看器中顯示</Chinese>
             <Italian>Mostra nel visualizzatore di configurazione</Italian>
             <French>Afficher dans le Config Viewer</French>
+            <Spanish>Mostrar en el visor de configuración</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleDamageBuildings">
             <English>Damage Buildings</English>
@@ -949,6 +1031,7 @@
             <Chinese>建築物損壞</Chinese>
             <Italian>Danni agli edifici</Italian>
             <French>Endommager les bâtiments</French>
+            <Spanish>Dañar edificios</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_BuildingSelection">
             <English>Building Selection</English>
@@ -960,6 +1043,7 @@
             <Chinese>建築物選擇</Chinese>
             <Italian>Selezione dell'edificio</Italian>
             <French>Sélection des bâtiments</French>
+            <Spanish>Selección de edificios</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_DamageState">
             <English>Damage State</English>
@@ -971,6 +1055,7 @@
             <Chinese>損壞狀態</Chinese>
             <Italian>Stato del danno</Italian>
             <French>Etat des dommages</French>
+            <Spanish>Estado de daño</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_DamageState_Tooltip">
             <English>Selects the damage state to apply.\nIn nearest mode, only damage states that the nearest building supports are selectable.\nIn radius mode, the selected damage state will be applied only to buildings that support it.</English>
@@ -981,6 +1066,7 @@
             <Chinese>選擇要應用的損壞狀態。 \n在最新模式中，只有最近的建築支持的損壞狀態可以選擇。 \n在半徑模式下，選擇的損壞狀態將只應用於支持它的建築。</Chinese>
             <Italian>Seleziona lo stato di danno da applicare.\nNella modalità più vicino, solo il danno indica che i supporti dell'edificio più vicini sono selezionabili.\nIn modalità raggio, lo stato di danno selezionato verrà applicato solo agli edifici che lo supportano.</Italian>
             <French>Sélectionne l'état des dommages à appliquer.\nEn mode proximité, seules les indications de dommages que le bâtiment le plus proche supporte peuvent être sélectionnées.\nEn mode rayon, l'état des dommages sélectionné ne sera appliqué qu'aux bâtiments qui le supportent.</French>
+            <Spanish>Selecciona el estado de daño que se aplicará.\nEn el modo de edificio más cercano, solo se pueden seleccionar los estados de daño que admita ese edificio.\nEn el modo de radio, el estado de daño seleccionado se aplicará únicamente a los edificios que lo admitan.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_DestructionEffects">
             <English>Destruction Effects</English>
@@ -992,6 +1078,7 @@
             <Chinese>損壞效果</Chinese>
             <Italian>Effetti di distruzione</Italian>
             <French>Effets de destruction</French>
+            <Spanish>Efectos de destrucción</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_DestructionEffects_Tooltip">
             <English>WARNING: Enabling destruction effects when using the module on a large amount of buildings can create a lot of lag.</English>
@@ -1003,6 +1090,7 @@
             <Chinese>警告：在大量建築物上使用該模塊時，啟用損壞效果會產生大量的滯後卡頓。</Chinese>
             <Italian>ATTENZIONE: l'attivazione degli effetti di distruzione quando si utilizza il modulo su una grande quantità di edifici può creare molto ritardo.</Italian>
             <French>AVERTISSEMENT : L'activation des effets de destruction lors de l'utilisation du module sur un grand nombre de bâtiments peut entraîner un temps de latence important.</French>
+            <Spanish>ADVERTENCIA: activar los efectos de destrucción al usar el módulo sobre una gran cantidad de edificios puede provocar mucha ralentización.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEarthquake">
             <English>Earthquake</English>
@@ -1015,6 +1103,7 @@
             <Chinese>地震</Chinese>
             <Italian>Terremoto</Italian>
             <French>Tremblement de terre</French>
+            <Spanish>Terremoto</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEarthquake_Radius">
             <English>Radius (m)</English>
@@ -1027,6 +1116,7 @@
             <Chinese>半徑（米）</Chinese>
             <Italian>Raggio (m)</Italian>
             <French>Rayon (m)</French>
+            <Spanish>Radio (m)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEarthquake_Intensity">
             <English>Intensity</English>
@@ -1039,6 +1129,7 @@
             <Chinese>強度</Chinese>
             <Italian>Intensità</Italian>
             <French>Intensité</French>
+            <Spanish>Intensidad</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEarthquake_Buildings">
             <English>Destroy Buildings</English>
@@ -1051,6 +1142,7 @@
             <Chinese>摧毀建築物</Chinese>
             <Italian>Distruggi gli edifici</Italian>
             <French>Destruction de bâtiments</French>
+            <Spanish>Destruir edificios</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects">
             <English>Update Editable Objects</English>
@@ -1063,6 +1155,7 @@
             <Chinese>更新可編輯物體</Chinese>
             <Italian>Aggiorna oggetti modificabili</Italian>
             <French>Mise à jour des objets éditables</French>
+            <Spanish>Actualizar objetos editables</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects_EditingMode">
             <English>Editing Mode</English>
@@ -1075,6 +1168,7 @@
             <Chinese>編輯模式</Chinese>
             <Italian>Modalità di modifica</Italian>
             <French>Mode édition</French>
+            <Spanish>Modo de edición</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects_EditingMode_Tooltip">
             <English>Add or remove editable objects from Zeus.</English>
@@ -1087,6 +1181,7 @@
             <Chinese>從Zeus中添加或刪除可編輯物體。</Chinese>
             <Italian>Aggiungi o rimuovi oggetti modificabili da Zeus.</Italian>
             <French>Ajouter ou supprimer des objets éditables depuis Zeus.</French>
+            <Spanish>Añade o elimina objetos editables de Zeus.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects_AddObjects">
             <English>Add Objects</English>
@@ -1099,6 +1194,7 @@
             <Chinese>添加物體</Chinese>
             <Italian>Aggiungi oggetti</Italian>
             <French>Ajouter des objets</French>
+            <Spanish>Añadir objetos</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects_RemoveObjects">
             <English>Remove Objects</English>
@@ -1111,6 +1207,7 @@
             <Chinese>移除物體</Chinese>
             <Italian>Rimuovi oggetti</Italian>
             <French>Supprimer des objets</French>
+            <Spanish>Eliminar objetos</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects_AllCurators">
             <English>All Curators</English>
@@ -1123,6 +1220,7 @@
             <Chinese>所有宙斯</Chinese>
             <Italian>Tutti i curatori</Italian>
             <French>Tous les Zeus</French>
+            <Spanish>Todos los curadores</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects_AllCurators_Tooltip">
             <English>Controls whether changes are applied to all curators or just locally.</English>
@@ -1134,6 +1232,7 @@
             <Chinese>控制更改是否應用於所有宙斯或僅本地。</Chinese>
             <Italian>Controlla se le modifiche vengono applicate a tutti i curatori o solo localmente.</Italian>
             <French>Contrôle si les changements sont appliqués à tous les Zeus ou seulement localement.</French>
+            <Spanish>Controla si los cambios se aplican a todos los curadores o solo localmente.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects_AllMissionObjects">
             <English>All Mission Objects</English>
@@ -1145,6 +1244,7 @@
             <Chinese>所有任務目標</Chinese>
             <Italian>Tutti gli oggetti della missione</Italian>
             <French>Tous les objets de mission</French>
+            <Spanish>Todos los objetos de la misión</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleHeal">
             <English>Heal</English>
@@ -1157,6 +1257,7 @@
             <Chinese>治愈</Chinese>
             <Italian>Guarire</Italian>
             <French>Soigner</French>
+            <Spanish>Curar</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSpawnCarrier">
             <English>USS Freedom</English>
@@ -1167,6 +1268,7 @@
             <Chinese>USS Freedom瀕海戰鬥艦</Chinese>
             <Italian>USS Freedom</Italian>
             <French>USS Freedom</French>
+            <Spanish>USS Freedom</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSpawnDestroyer">
             <English>USS Liberty</English>
@@ -1177,6 +1279,7 @@
             <Chinese>USS Liberty航母</Chinese>
             <Italian>USS Liberty</Italian>
             <French>USS Liberty</French>
+            <Spanish>USS Liberty</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_AttachEffect">
             <English>Attach/Detach Effect</English>
@@ -1189,6 +1292,7 @@
             <Chinese>附加/刪除效果</Chinese>
             <Italian>Effetto attacca/stacca</Italian>
             <French>Effet attacher/détacher</French>
+            <Spanish>Acoplar/desacoplar efecto</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSetDate">
             <English>Set Date</English>
@@ -1201,6 +1305,7 @@
             <Chinese>設置時間</Chinese>
             <Italian>Impostare la data</Italian>
             <French>Définir la date</French>
+            <Spanish>Establecer fecha</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleMakeInvincible">
             <English>Make Invincible</English>
@@ -1213,6 +1318,7 @@
             <Chinese>無敵</Chinese>
             <Italian>Rendi invincibile</Italian>
             <French>Rendre Invincible</French>
+            <Spanish>Hacer invencible</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleMakeInvincible_Invincible">
             <English>Invincible</English>
@@ -1225,6 +1331,7 @@
             <Chinese>無敵</Chinese>
             <Italian>Invincibile</Italian>
             <French>Invincible</French>
+            <Spanish>Invencible</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleMakeInvincible_IncludeCrew">
             <English>Include Crew</English>
@@ -1237,6 +1344,7 @@
             <Chinese>包含乘員</Chinese>
             <Italian>Includi equipaggio</Italian>
             <French>Inclure l'équipage</French>
+            <Spanish>Incluir tripulación</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSimulation">
             <English>Toggle Simulation</English>
@@ -1249,6 +1357,7 @@
             <Chinese>切換模擬</Chinese>
             <Italian>Interruttore di simulazione</Italian>
             <French>Basculer la simulation</French>
+            <Spanish>Alternar simulación</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleVisibility">
             <English>Toggle Visibility</English>
@@ -1261,6 +1370,7 @@
             <Chinese>切換可見性</Chinese>
             <Italian>Interruttore di visibilità</Italian>
             <French>Basculer la visibilité</French>
+            <Spanish>Alternar visibilidad</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ChangeHeight">
             <English>Change Height</English>
@@ -1273,6 +1383,7 @@
             <Chinese>更改高度</Chinese>
             <Italian>Cambia altezza</Italian>
             <French>Modifier la hauteur</French>
+            <Spanish>Cambiar altura</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ChangeHeight_Tooltip">
             <English>Change the height of the object by this value (can be negative).</English>
@@ -1285,6 +1396,7 @@
             <Chinese>用這個值改變物體的高度（可以是負值）。</Chinese>
             <Italian>Modificare l'altezza dell'oggetto di questo valore (può essere negativo).</Italian>
             <French>Modifie la hauteur de l'objet de cette valeur (qui peut être négative).</French>
+            <Spanish>Cambia la altura del objeto en este valor (puede ser negativo).</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ScaleObject">
             <English>Scale Object</English>
@@ -1294,6 +1406,7 @@
             <Chinese>縮放物體</Chinese>
             <Japanese>オブジェクト大きさ</Japanese>
             <Italian>Oggetto in scala</Italian>
+            <Spanish>Escalar objeto</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ScaleObject_Tooltip">
             <English>Scale the object by this factor relative to the original model.</English>
@@ -1303,6 +1416,7 @@
             <Chinese>相對於原始模型，用此功能縮放物體。</Chinese>
             <Japanese>オブジェクトの大きさをこの係数で変更します</Japanese>
             <Italian>Scala l'oggetto di questo fattore rispetto al modello originale.</Italian>
+            <Spanish>Escala el objeto según este factor respecto al modelo original.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleChatter">
             <English>Chatter</English>
@@ -1315,6 +1429,7 @@
             <Chinese>聊天</Chinese>
             <Italian>Chiacchiere</Italian>
             <French>Chatter</French>
+            <Spanish>Charla por radio</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleChatter_Message">
             <English>Message</English>
@@ -1327,6 +1442,7 @@
             <Chinese>信息</Chinese>
             <Italian>Messaggio</Italian>
             <French>Message</French>
+            <Spanish>Mensaje</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleChatter_Channel">
             <English>Channel</English>
@@ -1339,6 +1455,7 @@
             <Chinese>頻道</Chinese>
             <Italian>Canale</Italian>
             <French>Canal</French>
+            <Spanish>Canal</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSitOnChair">
             <English>Sit On Chair</English>
@@ -1351,6 +1468,7 @@
             <Chinese>坐在椅子上</Chinese>
             <Italian>Siedi sulla sedia</Italian>
             <French>S'asseoir sur une chaise</French>
+            <Spanish>Sentarse en una silla</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSitOnChair_ChairObject">
             <English>Chair Object</English>
@@ -1363,6 +1481,7 @@
             <Chinese>椅子上的物體</Chinese>
             <Italian>Oggetto Sedia</Italian>
             <French>Objet sur la chaise</French>
+            <Spanish>Silla</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateMinefield">
             <English>Create Minefield</English>
@@ -1375,6 +1494,7 @@
             <Chinese>創建雷區</Chinese>
             <Italian>Crea campo minato</Italian>
             <French>Créer un champ de mines</French>
+            <Spanish>Crear campo de minas</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateMinefield_MineArea">
             <English>Minefield Area</English>
@@ -1387,6 +1507,7 @@
             <Chinese>雷區面積</Chinese>
             <Italian>Zona del campo minato</Italian>
             <French>Champ de mines</French>
+            <Spanish>Área del campo de minas</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateMinefield_MineType">
             <English>Mine Type</English>
@@ -1399,6 +1520,7 @@
             <Chinese>地雷類型</Chinese>
             <Italian>Tipo di miniera</Italian>
             <French>Type de mine</French>
+            <Spanish>Tipo de mina</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateMinefield_MineDensity">
             <English>Mine Density</English>
@@ -1411,6 +1533,7 @@
             <Chinese>地雷密度</Chinese>
             <Italian>Densità della miniera</Italian>
             <French>Densité des mines</French>
+            <Spanish>Densidad de minas</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateMinefield_RandomPlacement">
             <English>Random Placement</English>
@@ -1420,6 +1543,7 @@
             <Chinese>隨機分佈</Chinese>
             <Italian>Posizionamento casuale</Italian>
             <French>Placement aléatoire</French>
+            <Spanish>Colocación aleatoria</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateMinefield_RandomPlacement_Tooltip">
             <English>Controls whether mines will be placed uniformly or randomly within the area.</English>
@@ -1430,6 +1554,7 @@
             <Chinese>控制地雷是均勻地還是隨機地分佈在區域內。</Chinese>
             <Italian>Controlla se le mine verranno posizionate in modo uniforme o casuale all'interno dell'area.</Italian>
             <French>Permet de déterminer si les mines seront placées de manière uniforme ou aléatoire dans la zone.</French>
+            <Spanish>Controla si las minas se colocarán de forma uniforme o aleatoria dentro del área.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGlobalHint">
             <English>Global Hint</English>
@@ -1442,6 +1567,7 @@
             <Chinese>全局提示</Chinese>
             <Italian>Suggerimento globale</Italian>
             <French>Indice global</French>
+            <Spanish>Aviso global</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleHideZeus">
             <English>Hide Zeus</English>
@@ -1454,6 +1580,7 @@
             <Chinese>隱藏宙斯</Chinese>
             <Italian>Nascondi Zeus</Italian>
             <French>Cacher Zeus</French>
+            <Spanish>Ocultar a Zeus</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ZeusIsNowHidden">
             <English>Zeus is now hidden</English>
@@ -1466,6 +1593,7 @@
             <Chinese>宙斯現在被隱藏了</Chinese>
             <Italian>Zeus ora è nascosto</Italian>
             <French>Zeus est maintenant caché</French>
+            <Spanish>Zeus está ahora oculto</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ZeusIsNowVisible">
             <English>Zeus is now visible</English>
@@ -1478,6 +1606,7 @@
             <Chinese>宙斯現在可見</Chinese>
             <Italian>Zeus è ora visibile</Italian>
             <French>Zeus est maintenant visible</French>
+            <Spanish>Zeus está ahora visible</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModulePatrolArea">
             <English>Patrol Area</English>
@@ -1491,6 +1620,7 @@
             <Italian>Area di Pattugliamento</Italian>
             <Chinesesimp>巡逻区域</Chinesesimp>
             <Chinese>巡邏區域</Chinese>
+            <Spanish>Patrullar zona</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModulePatrolArea_Radius">
             <English>Patrol Radius (m)</English>
@@ -1503,6 +1633,7 @@
             <Chinese>巡邏半徑（米）</Chinese>
             <Italian>Raggio di pattuglia (m)</Italian>
             <French>Rayon de patrouille (m)</French>
+            <Spanish>Radio de patrulla (m)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModulePatrolArea_Radius_Tooltip">
             <English>The radius that will be patrolled by the group.</English>
@@ -1515,6 +1646,7 @@
             <Chinese>小隊將巡邏的半徑。</Chinese>
             <Italian>Il raggio che sarà pattugliato dal gruppo.</Italian>
             <French>Le rayon dans lequel le groupe patrouillera.</French>
+            <Spanish>El radio que patrullará el grupo.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModulePatrolArea_Behaviour_Tooltip">
             <English>Will modify the behavior, speed mode, and formation of the group.</English>
@@ -1526,6 +1658,7 @@
             <Chinese>將修改小體的行為、速度模式和隊形。</Chinese>
             <Italian>Modificherà il comportamento, la modalità di velocità e la formazione del gruppo.</Italian>
             <French>Modifiera le comportement, le mode de vitesse et la formation du groupe.</French>
+            <Spanish>Modificará el comportamiento, el modo de velocidad y la formación del grupo.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSideRelations">
             <English>Side Relations</English>
@@ -1538,6 +1671,7 @@
             <Chinese>陣營關係</Chinese>
             <Italian>Lato Relazioni</Italian>
             <French>Relations avec le camp</French>
+            <Spanish>Relaciones entre bandos</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_RelationToChange">
             <English>Relation to Change</English>
@@ -1550,6 +1684,7 @@
             <Chinese>關係變動</Chinese>
             <Italian>Relazione con il cambiamento</Italian>
             <French>Changement de relation</French>
+            <Spanish>Relación a cambiar</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_HostileTo">
             <English>Hostile to</English>
@@ -1562,6 +1697,7 @@
             <Chinese>敵對</Chinese>
             <Italian>ostile con</Italian>
             <French>Hostile envers</French>
+            <Spanish>Hostil hacia</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_FriendlyTo">
             <English>Friendly to</English>
@@ -1574,6 +1710,7 @@
             <Chinese>友好</Chinese>
             <Italian>Amichevole con</Italian>
             <French>Ami envers</French>
+            <Spanish>Aliado de</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_PlayRadioMessage">
             <English>Play Radio Message</English>
@@ -1586,6 +1723,7 @@
             <Chinese>播放無線電信息</Chinese>
             <Italian>Riproduci messaggio radio</Italian>
             <French>Lire le message radio</French>
+            <Spanish>Reproducir mensaje de radio</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTeleportPlayers">
             <English>Teleport Players</English>
@@ -1598,6 +1736,7 @@
             <Chinese>傳送玩家</Chinese>
             <Italian>Teletrasporto giocatori</Italian>
             <French>Téléporter les joueurs</French>
+            <Spanish>Teletransportar jugadores</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTeleportPlayers_IncludeVehicles">
             <English>Include Vehicles</English>
@@ -1609,6 +1748,7 @@
             <Chinese>包含載具</Chinese>
             <Italian>Includi veicoli</Italian>
             <French>Inclure les véhicules</French>
+            <Spanish>Incluir vehículos</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTeleportPlayers_IncludeVehicles_Tooltip">
             <English>Teleports vehicles of players instead of the players themselves.\nIf the module was attached to a vehicle, this is ignored and players will be moved into the attached vehicle.</English>
@@ -1619,6 +1759,7 @@
             <Chinese>傳送玩家的載具而不是玩家本身。 \n如果模塊被附加到載具上，這將被忽略，玩家將被移動到所附加的載具上。</Chinese>
             <Italian>Teletrasporta i veicoli dei giocatori invece dei giocatori stessi.\nSe il modulo era attaccato a un veicolo, questo viene ignorato e i giocatori verranno spostati nel veicolo attaccato.</Italian>
             <French>Téléporte les véhicules des joueurs au lieu des joueurs eux-mêmes.\nSi le module a été attaché à un véhicule, ceci est ignoré et les joueurs seront déplacés dans le véhicule attaché.</French>
+            <Spanish>Teletransporta los vehículos de los jugadores en lugar de a los propios jugadores.\nSi el módulo se acopló a un vehículo, esta opción se ignora y los jugadores serán trasladados al interior de dicho vehículo.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSmokePillar">
             <English>Smoke Pillar</English>
@@ -1631,6 +1772,7 @@
             <Chinese>煙柱</Chinese>
             <Italian>Colonna Fumo</Italian>
             <French>Colonne de fumée</French>
+            <Spanish>Columna de humo</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_SmokePillarType">
             <English>Smoke Pillar Type</English>
@@ -1643,6 +1785,7 @@
             <Chinese>煙柱類型</Chinese>
             <Italian>Tipo di colonna di fumo</Italian>
             <French>Type de colonne de fumée</French>
+            <Spanish>Tipo de columna de humo</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_VehicleFire">
             <English>Vehicle Fire</English>
@@ -1655,6 +1798,7 @@
             <Chinese>車輛起火</Chinese>
             <Italian>Incendio del veicolo</Italian>
             <French>Véhicule en feu</French>
+            <Spanish>Incendio de vehículo</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_SmallOilySmoke">
             <English>Small Oily Smoke</English>
@@ -1667,6 +1811,7 @@
             <Chinese>小型燃油煙霧</Chinese>
             <Italian>Piccolo fumo oleoso</Italian>
             <French>Fumée légère (produits pétroliers)</French>
+            <Spanish>Humo aceitoso pequeño</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_MediumOilySmoke">
             <English>Medium Oily Smoke</English>
@@ -1679,6 +1824,7 @@
             <Chinese>中等燃油煙霧</Chinese>
             <Italian>Fumo medio oleoso</Italian>
             <French>Fumée moyenne (produits pétroliers)</French>
+            <Spanish>Humo aceitoso mediano</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_LargeOilySmoke">
             <English>Large Oily Smoke</English>
@@ -1691,6 +1837,7 @@
             <Chinese>大量燃油煙霧</Chinese>
             <Italian>Fumo oleoso grande</Italian>
             <French>Fumée lourde (produits pétroliers)</French>
+            <Spanish>Humo aceitoso grande</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_SmallWoodSmoke">
             <English>Small Wood Smoke</English>
@@ -1703,6 +1850,7 @@
             <Chinese>小型木材煙霧</Chinese>
             <Italian>Fumo di legna piccolo</Italian>
             <French>Faible fumée (bois)</French>
+            <Spanish>Humo de madera pequeño</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_MediumWoodSmoke">
             <English>Medium Wood Smoke</English>
@@ -1715,6 +1863,7 @@
             <Chinese>中等木材煙霧</Chinese>
             <Italian>Fumo medio di legno</Italian>
             <French>Fumée moyenne (bois)</French>
+            <Spanish>Humo de madera mediano</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_LargeWoodSmoke">
             <English>Large Wood Smoke</English>
@@ -1727,6 +1876,7 @@
             <Chinese>大量木材煙霧</Chinese>
             <Italian>Fumo di legna grande</Italian>
             <French>Fumée épaisse (bois)</French>
+            <Spanish>Humo de madera grande</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_SmallMixedSmoke">
             <English>Small Mixed Smoke</English>
@@ -1739,6 +1889,7 @@
             <Chinese>小型混合菸霧</Chinese>
             <Italian>Fumo Misto Piccolo</Italian>
             <French>Fumée légère (mixte)</French>
+            <Spanish>Humo mixto pequeño</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_MediumMixedSmoke">
             <English>Medium Mixed Smoke</English>
@@ -1751,6 +1902,7 @@
             <Chinese>中等混合菸霧</Chinese>
             <Italian>Fumo Medio Misto</Italian>
             <French>Fumée moyenne (mixte)</French>
+            <Spanish>Humo mixto mediano</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_LargeMixedSmoke">
             <English>Large Mixed Smoke</English>
@@ -1763,6 +1915,7 @@
             <Chinese>大量混合菸霧</Chinese>
             <Italian>Fumo misto grande</Italian>
             <French>Fumée lourde (mixte)</French>
+            <Spanish>Humo mixto grande</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleLightSource">
             <English>Light Source</English>
@@ -1775,6 +1928,7 @@
             <Chinese>光源</Chinese>
             <Italian>Fonte di luce</Italian>
             <French>Source lumineuse</French>
+            <Spanish>Fuente de luz</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleLightSource_Color">
             <English>Light Color</English>
@@ -1787,6 +1941,7 @@
             <Chinese>光線顏色</Chinese>
             <Italian>Colore chiaro</Italian>
             <French>Couleur de la lumière</French>
+            <Spanish>Color de la luz</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleLightSource_Range">
             <English>Range (m)</English>
@@ -1799,6 +1954,7 @@
             <Chinese>範圍（米）</Chinese>
             <Italian>Gamma (m)</Italian>
             <French>Portée (m)</French>
+            <Spanish>Alcance (m)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleLightSource_Constant">
             <English>Constant Attenuation</English>
@@ -1810,6 +1966,7 @@
             <Chinese>持續衰減</Chinese>
             <Italian>Smorzamento costante</Italian>
             <French>Atténuation constante</French>
+            <Spanish>Atenuación constante</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleLightSource_Linear">
             <English>Linear Attenuation</English>
@@ -1821,6 +1978,7 @@
             <Chinese>線性衰減</Chinese>
             <Italian>Smorzamento lineare</Italian>
             <French>Atténuation linéaire</French>
+            <Spanish>Atenuación lineal</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleLightSource_Quadratic">
             <English>Quadratic Attenuation</English>
@@ -1832,6 +1990,7 @@
             <Chinese>二次衰減</Chinese>
             <Italian>Smorzamento quadratica</Italian>
             <French>Atténuation quadratique</French>
+            <Spanish>Atenuación cuadrática</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEquipWithECM">
             <English>Equip With ECM</English>
@@ -1843,6 +2002,7 @@
             <Chinese>配備電子乾擾/對抗</Chinese>
             <Italian>Equipaggiare con jammer</Italian>
             <French>Équiper d'un brouilleur</French>
+            <Spanish>Equipar con ECM</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleEquipWithECM_HasECM">
             <English>Has ECM</English>
@@ -1854,6 +2014,7 @@
             <Chinese>擁有電子乾擾/對抗</Chinese>
             <Italian>Dotato di jammer</Italian>
             <French>Possession d'ECM</French>
+            <Spanish>Tiene ECM</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFlyHeight">
             <English>Fly Height</English>
@@ -1865,6 +2026,7 @@
             <Chinese>飛行高度</Chinese>
             <Italian>Altitudine</Italian>
             <French>Altitude de vol</French>
+            <Spanish>Altura de vuelo</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFlyHeight_Tooltip">
             <English>Sets the flying altitude for the aircraft relative to the ground.</English>
@@ -1876,6 +2038,7 @@
             <Chinese>設置飛機相對於地面的飛行高度。</Chinese>
             <Italian>Imposta l'altitudine di volo dell'aereo rispetto al suolo.</Italian>
             <French>Définit l'altitude de vol de l'avion par rapport au sol.</French>
+            <Spanish>Define la altitud de vuelo de la aeronave respecto al suelo.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTurretOptics">
             <English>Vehicle Turret Optics</English>
@@ -1888,6 +2051,7 @@
             <Chinese>車載砲塔光學系統</Chinese>
             <Italian>Ottica della torretta del veicolo</Italian>
             <French>Optique de tourelle du véhicule</French>
+            <Spanish>Ópticas de las torretas</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTurretOptics_NVG">
             <English>NVG Equipment</English>
@@ -1900,6 +2064,7 @@
             <Chinese>夜視裝備</Chinese>
             <Italian>Dispositivi per la visione notturna</Italian>
             <French>Équipement NVG</French>
+            <Spanish>Equipo de visión nocturna</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleTurretOptics_TI">
             <English>TI Equipment</English>
@@ -1911,6 +2076,7 @@
             <Chinese>熱成像裝備</Chinese>
             <Italian>Dispositivi a infrarossi termici</Italian>
             <French>Équipement TI (Imagerie thermique)</French>
+            <Spanish>Equipo de imagen térmica</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGarrison">
             <English>Garrison Group</English>
@@ -1921,6 +2087,7 @@
             <Chinese>駐防小隊</Chinese>
             <Italian>Occupare edifici</Italian>
             <French>Garrisonner le groupe</French>
+            <Spanish>Guarnecer grupo</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGarrison_FillMode">
             <English>Filling Mode</English>
@@ -1932,6 +2099,7 @@
             <Chinese>佔領模式</Chinese>
             <Italian>Modalità di riempimento</Italian>
             <French>Mode de remplissage</French>
+            <Spanish>Modo de llenado</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGarrison_Even">
             <English>Even Filling</English>
@@ -1943,6 +2111,7 @@
             <Chinese>均勻分佈</Chinese>
             <Italian>Riempi uniformemente</Italian>
             <French>Remplissage uniforme</French>
+            <Spanish>Llenado uniforme</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGarrison_ByBuilding">
             <English>Building By Building</English>
@@ -1954,6 +2123,7 @@
             <Chinese>逐個建築</Chinese>
             <Italian>Costruire per edificio</Italian>
             <French>Bâtiment par bâtiment</French>
+            <Spanish>Edificio por edificio</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGarrison_Random">
             <English>Random</English>
@@ -1965,6 +2135,7 @@
             <Chinese>隨機</Chinese>
             <Italian>Coincidentalmente</Italian>
             <French>Au hasard</French>
+            <Spanish>Aleatorio</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleGarrison_TopDown">
             <English>Fill From Top Down</English>
@@ -1976,6 +2147,7 @@
             <Chinese>自上而下分佈</Chinese>
             <Italian>Riempi dall'alto verso il basso</Italian>
             <French>Remplir de haut en bas</French>
+            <Spanish>Llenar de arriba abajo</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleUnGarrison">
             <English>Un-Garrison Group</English>
@@ -1986,6 +2158,7 @@
             <Chinese>非駐軍小隊</Chinese>
             <Italian>Annulla l'occupazione</Italian>
             <French>Groupe sans garnison</French>
+            <Spanish>Desguarnecer grupo</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_GroupSide">
             <English>Group Side</English>
@@ -1998,6 +2171,7 @@
             <Chinese>小隊陣營</Chinese>
             <Italian>Lato gruppo</Italian>
             <French>Côté groupe</French>
+            <Spanish>Bando del grupo</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSuicideBomber">
             <English>Suicide Bomber</English>
@@ -2061,7 +2235,7 @@
             <Polish>Jednostka będzie aktywnie próbowała znaleźć i ruszyć w kierunku pobliskich jednostek strony aktywacji. Zasięg Auto Seek opiera się na umiejętności punktowej odległości jednostki z minimum 100 metrów.</Polish>
             <Portuguese>A unidade tentará ativamente encontrar e se mover para as unidades próximas do lado da ativação. O alcance da Auto Seek é baseado na habilidade de distância do ponto da unidade com um mínimo de 100 metros.</Portuguese>
             <Russian>Устройство будет активно пытаться найти и перейти к соседним единицам активации. Диапазон автоматического поиска основан на умении снимать расстояние на расстоянии не менее 100 метров.</Russian>
-            <Spanish>La unidad intentará buscar activamente y moverse hacia las unidades cercanas del lado de activación. El rango de Auto Seek se basa en la habilidad de distancia al punto de la unidad con un mínimo de 100 metros.</Spanish>
+            <Spanish>La unidad intentará buscar activamente unidades cercanas del bando de activación y se moverá hacia ellas.\nEl alcance de la búsqueda automática se basa en la habilidad de detección a distancia de la unidad, con un mínimo de 100 metros.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleSuicideBomber_AlreadyBomber">
             <English>Unit is already a suicide bomber</English>
@@ -2088,6 +2262,7 @@
             <Chinese>執行代碼</Chinese>
             <Italian>Esegui codice</Italian>
             <French>Exécuter le code</French>
+            <Spanish>Ejecutar código</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleExecuteCode_Args_Tooltip">
             <English>This code will be passed the following arguments:\n0: Module Position ASL\n1: Attached Object (objNull if none)</English>
@@ -2098,6 +2273,7 @@
             <Chinese>這段代碼將被傳遞給以下參數：\n0：模塊位置（平均海拔高度）\n1：附加對象（如果沒有，objNull）。</Chinese>
             <Italian>A questo codice verranno passati i seguenti argomenti:\n0: Module Position ASL\n1: Attached Object (objNull se nessuno)</Italian>
             <French>Les arguments suivants seront transmis à ce code:\n0 : Position du module ASL\n1 : Objet attaché (objNull s'il n'y en a pas)</French>
+            <Spanish>A este código se le pasarán los siguientes argumentos:\n0: Posición del módulo en ASL\n1: Objeto acoplado (objNull si no hay ninguno)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleExecuteCode_Disabled">
             <English>Code execution by Zeus is disabled in this mission</English>
@@ -2108,6 +2284,7 @@
             <Chinese>在這個任務中，禁止執行Zeus代碼。</Chinese>
             <Italian>L'esecuzione del codice da parte di Zeus è disabilitata in questa missione</Italian>
             <French>L'exécution du code par Zeus est désactivée dans cette mission.</French>
+            <Spanish>La ejecución de código por parte de Zeus está desactivada en esta misión</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleExecuteCode_Local">
             <English>Local</English>
@@ -2118,6 +2295,7 @@
             <Chinese>本地</Chinese>
             <Italian>Locale</Italian>
             <French>Local</French>
+            <Spanish>Local</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleExecuteCode_Server">
             <English>Server</English>
@@ -2128,6 +2306,7 @@
             <Chinese>伺服器</Chinese>
             <Italian>Server</Italian>
             <French>Serveur</French>
+            <Spanish>Servidor</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleExecuteCode_Global">
             <English>Global</English>
@@ -2138,6 +2317,7 @@
             <Chinese>全局</Chinese>
             <Italian>Globale</Italian>
             <French>Global</French>
+            <Spanish>Global</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleExecuteCode_GlobalAndJIP">
             <English>Global and JIP</English>
@@ -2148,6 +2328,7 @@
             <Chinese>全局和JIP</Chinese>
             <Italian>Globale e JIP</Italian>
             <French>Global and JIP</French>
+            <Spanish>Global y JIP</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission">
             <English>Artillery Fire Mission</English>
@@ -2159,6 +2340,7 @@
             <Chinese>砲擊任務</Chinese>
             <Italian>Missione di fuoco di artiglieria</Italian>
             <French>Mission de tir d'artillerie</French>
+            <Spanish>Misión de fuego de artillería</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_NotArtillery">
             <English>Unit is not an artillery vehicle</English>
@@ -2170,6 +2352,7 @@
             <Chinese>單位不是火砲車</Chinese>
             <Italian>L'unità non è un veicolo di artiglieria</Italian>
             <French>L'unité n'est pas un véhicule d'artillerie</French>
+            <Spanish>La unidad no es un vehículo de artillería</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_NoGunners">
             <English>Artillery vehicles have no gunners</English>
@@ -2181,6 +2364,7 @@
             <Chinese>車輛沒有砲手</Chinese>
             <Italian>I veicoli di artiglieria non hanno artiglieri</Italian>
             <French>Les véhicules d'artillerie n'ont pas de tireurs</French>
+            <Spanish>Los vehículos de artillería no tienen artilleros</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_ArtilleryETA">
             <English>Artillery ETA: %1 seconds</English>
@@ -2192,6 +2376,7 @@
             <Chinese>砲擊預計落彈時間：%1秒</Chinese>
             <Italian>ETA dell'artiglieria: %1 secondi</Italian>
             <French>ETA de l'artillerie : %1 secondes</French>
+            <Spanish>Tiempo estimado de la artillería: %1 segundos</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Targetting">
             <English>Targeting</English>
@@ -2203,6 +2388,7 @@
             <Chinese>目標</Chinese>
             <Italian>Obiettivo</Italian>
             <French>Ciblage</French>
+            <Spanish>Designación de objetivo</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Mode">
             <English>Mode</English>
@@ -2214,6 +2400,7 @@
             <Chinese>模式</Chinese>
             <Italian>Modalità</Italian>
             <French>Mode</French>
+            <Spanish>Modo</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_MapGrid">
             <English>Map Grid</English>
@@ -2225,6 +2412,7 @@
             <Chinese>坐標</Chinese>
             <Italian>Griglia mappa</Italian>
             <French>Coordonnées sur la carte</French>
+            <Spanish>Cuadrícula del mapa</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_TargetModule">
             <English>Target Module</English>
@@ -2236,6 +2424,7 @@
             <Chinese>目標模塊</Chinese>
             <Italian>Modulo di destinazione</Italian>
             <French>Module cible</French>
+            <Spanish>Módulo de objetivo</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Spread">
             <English>Spread</English>
@@ -2247,6 +2436,7 @@
             <Chinese>精度</Chinese>
             <Italian>Propagazione</Italian>
             <French>Dispersion</French>
+            <Spanish>Dispersión</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Spread_Tooltip">
             <English>Controls the spread of fired artillery, in meters.</English>
@@ -2258,6 +2448,7 @@
             <Chinese>砲擊精度（米）</Chinese>
             <Italian>Controlla la diffusione dell'artiglieria sparata, in metri.</Italian>
             <French>Contrôle la propagation des tirs d'artillerie, en mètres.</French>
+            <Spanish>Controla la dispersión de los proyectiles de artillería disparados, en metros.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_FireParameters">
             <English>Fire Parameters</English>
@@ -2269,6 +2460,7 @@
             <Chinese>砲擊參數</Chinese>
             <Italian>Parametri di fuoco</Italian>
             <French>Paramètres de tir</French>
+            <Spanish>Parámetros de fuego</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Units">
             <English>Units</English>
@@ -2280,6 +2472,7 @@
             <Chinese>單位</Chinese>
             <Italian>Unità</Italian>
             <French>Unités</French>
+            <Spanish>Unidades</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_">
             <English>Number of units involved in the fire mission.</English>
@@ -2291,6 +2484,7 @@
             <Chinese>參與砲擊任務的單位數量。</Chinese>
             <Italian>Numero di unità coinvolte nella missione di fuoco.</Italian>
             <French>Nombre d'unités impliquées dans la mission de tir.</French>
+            <Spanish>Número de unidades que participan en la misión de fuego.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Ammo">
             <English>Ammo</English>
@@ -2302,6 +2496,7 @@
             <Chinese>彈種</Chinese>
             <Italian>Munizioni</Italian>
             <French>Munitions</French>
+            <Spanish>Munición</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Rounds">
             <English>Rounds</English>
@@ -2313,6 +2508,7 @@
             <Chinese>輪次</Chinese>
             <Italian>Scatti</Italian>
             <French>Cartouches</French>
+            <Spanish>Proyectiles</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleFireMission_Rounds_Tooltip">
             <English>Number of rounds that should be fired by each unit.</English>
@@ -2324,6 +2520,7 @@
             <Chinese>每個單位應該砲擊的砲彈數量。</Chinese>
             <Italian>Numero di colpi che dovrebbero essere sparati da ciascuna unità.</Italian>
             <French>Nombre de cartouches devant être tirées par chaque unité.</French>
+            <Spanish>Número de proyectiles que disparará cada unidad.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather">
             <English>Change Weather</English>
@@ -2335,6 +2532,7 @@
             <Chinese>改變天氣</Chinese>
             <Italian>CambiaTempo metereologico</Italian>
             <French>Changer la météo</French>
+            <Spanish>Cambiar meteorología</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Forced">
             <English>Force Changes</English>
@@ -2344,6 +2542,7 @@
             <Chinese>強制改變</Chinese>
             <Italian>Cambiamenti di forza</Italian>
             <French>Changement forcé</French>
+            <Spanish>Forzar cambios</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Forced_Tooltip">
             <English>Forces the following weather conditions instantaneously instead of allowing the engine to simulate a transition from the current weather.\nNOTE: Weather in Arma can desync and differ between the server and clients. For consistent weather, it is best to force the changes.</English>
@@ -2353,6 +2552,7 @@
             <Chinese>強制改變以下天氣，而不是讓引擎模擬過渡當前天氣。 \n注意：Arma中的天氣可以不同步，並且在服務器和客戶端之間有所不同。為了獲得一致的天氣，最好是強制改變。</Chinese>
             <Italian>Forza le seguenti condizioni meteorologiche istantaneamente invece di consentire al motore di simulare una transizione dal tempo attuale.\nNOTA: il tempo in Arma può desincronizzarsi e differire tra il server e i client. Per condizioni meteorologiche costanti, è meglio forzare i cambiamenti.</Italian>
             <French>Force les conditions météorologiques suivantes instantanément au lieu de permettre au moteur de simuler une transition à partir de la météo actuelle.\nREMARQUE : La météo dans Arma peut se désynchroniser et différer entre le serveur et les clients. Pour obtenir des conditions météorologiques constantes, il est préférable de forcer les changements.</French>
+            <Spanish>Fuerza las siguientes condiciones meteorológicas de forma instantánea, en lugar de dejar que el motor simule una transición desde la meteorología actual.\nNOTA: la meteorología en Arma puede desincronizarse y diferir entre el servidor y los clientes. Para que sea consistente, lo mejor es forzar los cambios.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Overcast">
             <English>Overcast</English>
@@ -2364,6 +2564,7 @@
             <Chinese>雲量</Chinese>
             <Italian>Coperto</Italian>
             <French>Couvert</French>
+            <Spanish>Nubosidad</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Overcast_Tooltip">
             <English>Sets the amount of cloud cover, higher values result in a greater likelihood of precipitations/storms and faster wind speeds.</English>
@@ -2371,6 +2572,7 @@
             <Japanese>雲の量を設定します。値が大きいほど、降水/嵐の可能性が高くなり、風速が速くなります。</Japanese>
             <French>Définit l'importance de la couverture nuageuse, des valeurs élevées entraînant une plus grande probabilité de précipitations/tempêtes et des vitesses de vent plus élevées.</French>
             <Chinesesimp>设置云量, 值越高, 降水/风暴的可能性就越大, 风速越快</Chinesesimp>
+            <Spanish>Define la cantidad de nubes; los valores más altos aumentan la probabilidad de precipitaciones o tormentas y la velocidad del viento.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Precipitation">
             <English>Precipitation</English>
@@ -2378,6 +2580,7 @@
             <Japanese>降水量</Japanese>
             <French>Précipitations</French>
             <Chinesesimp>降水</Chinesesimp>
+            <Spanish>Precipitación</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Precipitation_Tooltip">
             <English>Sets the precipitation strength, requires overcast to be greater than 70%.</English>
@@ -2385,6 +2588,7 @@
             <Japanese>降水の強さを設定します。曇りが 70% を超える必要があります。</Japanese>
             <French>Définit la force des précipitations, exige que le couvert soit supérieur à 70 %.</French>
             <Chinesesimp>设置降水强度, 要求云量大于70%</Chinesesimp>
+            <Spanish>Define la intensidad de la precipitación; requiere una nubosidad superior al 70 %.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_PrecipitationType">
             <English>Precipitation Type</English>
@@ -2392,6 +2596,7 @@
             <Japanese>降水タイプ</Japanese>
             <French>Type de précipitations</French>
             <Chinesesimp>降水类型</Chinesesimp>
+            <Spanish>Tipo de precipitación</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_PrecipitationType_Tooltip">
             <English>Sets the type of precipitation.</English>
@@ -2399,6 +2604,7 @@
             <Japanese>降水の種類を設定します。</Japanese>
             <French>Définit le type de précipitations.</French>
             <Chinesesimp>设置降水类型</Chinesesimp>
+            <Spanish>Define el tipo de precipitación.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Rain">
             <English>Rain</English>
@@ -2410,6 +2616,7 @@
             <Chinese>雨</Chinese>
             <Italian>Piovere</Italian>
             <French>Pluie</French>
+            <Spanish>Lluvia</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Snow">
             <English>Snow</English>
@@ -2417,6 +2624,7 @@
             <Japanese>雪</Japanese>
             <French>Neige</French>
             <Chinesesimp>雪</Chinesesimp>
+            <Spanish>Nieve</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Lightning">
             <English>Lightning</English>
@@ -2428,6 +2636,7 @@
             <Chinese>打雷</Chinese>
             <Italian>Fulmine</Italian>
             <French>Foudre</French>
+            <Spanish>Rayos</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Lightning_Tooltip">
             <English>Sets the frequency of lightning strikes, requires overcast to be near 100%.</English>
@@ -2438,6 +2647,7 @@
             <Chinese>設置雷電頻率，要求雲量接近100%。</Chinese>
             <Italian>Imposta la frequenza dei fulmini, richiede che il cielo sia prossimo al 100%.</Italian>
             <French>Définit la fréquence des coups de foudre, nécessite un couvert proche de 100 %.</French>
+            <Spanish>Define la frecuencia de los rayos; requiere una nubosidad cercana al 100 %.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Rainbow">
             <English>Rainbow</English>
@@ -2449,6 +2659,7 @@
             <Chinese>彩虹</Chinese>
             <Italian>Arcobaleno</Italian>
             <French>Arc-en-ciel</French>
+            <Spanish>Arcoíris</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Rainbow_Tooltip">
             <English>Sets the intensity of rainbows.</English>
@@ -2459,6 +2670,7 @@
             <Chinese>設置彩虹亮度。</Chinese>
             <Italian>Imposta l'intensità degli arcobaleni.</Italian>
             <French>Définit l'intensité des arcs-en-ciel.</French>
+            <Spanish>Define la intensidad de los arcoíris.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Waves">
             <English>Waves</English>
@@ -2470,6 +2682,7 @@
             <Chinese>海浪</Chinese>
             <Italian>Onde</Italian>
             <French>Vagues</French>
+            <Spanish>Oleaje</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Waves_Tooltip">
             <English>Sets the size of waves (higher values equal taller waves), applied independently of cloud cover settings.</English>
@@ -2480,6 +2693,7 @@
             <Chinese>設定波浪的大小（數值越大，波浪越高），獨立於雲量設置而應用。</Chinese>
             <Italian>Imposta la dimensione delle onde (valori più alti equivalgono a onde più alte), applicate indipendentemente dalle impostazioni della copertura nuvolosa.</Italian>
             <French>Définit la taille des vagues (des valeurs plus élevées correspondent à des vagues plus hautes), indépendamment des paramètres de la couverture nuageuse.</French>
+            <Spanish>Define el tamaño de las olas (los valores más altos equivalen a olas más grandes); se aplica de forma independiente a la nubosidad.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_WindSpeed">
             <English>Wind Speed</English>
@@ -2491,6 +2705,7 @@
             <Chinese>風速</Chinese>
             <Italian>Velocità del vento</Italian>
             <French>Vitesse du vent</French>
+            <Spanish>Velocidad del viento</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_WindSpeed_Tooltip">
             <English>Sets the wind speed in kilometers per hour.</English>
@@ -2500,6 +2715,7 @@
             <Chinese>設置風速（千米/小時）。</Chinese>
             <Italian>Imposta la velocità del vento in chilometri orari.</Italian>
             <French>Définit la vitesse du vent en km/h.</French>
+            <Spanish>Define la velocidad del viento en kilómetros por hora.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_WindDirection">
             <English>Wind Direction</English>
@@ -2511,6 +2727,7 @@
             <Chinese>風向</Chinese>
             <Italian>La direzione del vento</Italian>
             <French>Direction du vent</French>
+            <Spanish>Dirección del viento</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_WindDirection_Tooltip">
             <English>Sets the wind direction.</English>
@@ -2521,6 +2738,7 @@
             <Chinese>設置風向</Chinese>
             <Italian>Imposta la direzione del vento.</Italian>
             <French>Définit la direction du vent.</French>
+            <Spanish>Define la dirección del viento.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Gusts">
             <English>Gusts</English>
@@ -2532,6 +2750,7 @@
             <Chinese>陣風</Chinese>
             <Italian>Raffiche</Italian>
             <French>Rafales de vent</French>
+            <Spanish>Ráfagas de viento</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_Gusts_Tooltip">
             <English>Sets the strength of gusts, random changes in wind direction.\nThese changes become stronger and more frequent with worse cloud cover.</English>
@@ -2542,6 +2761,7 @@
             <Chinese>設置陣風強度，風向隨機變化。 \n這些變化隨著雲量的增加而變得更加強烈和頻繁。</Chinese>
             <Italian>Imposta la forza delle raffiche, cambiamenti casuali nella direzione del vento.\nQuesti cambiamenti diventano più forti e più frequenti con una copertura nuvolosa peggiore.</Italian>
             <French>Définit la force des rafales, des changements aléatoires dans la direction du vent.\nCes changements deviennent plus forts et plus fréquents lorsque la couverture nuageuse est plus importante.</French>
+            <Spanish>Define la intensidad de las ráfagas, es decir, los cambios aleatorios en la dirección del viento.\nEstos cambios son más fuertes y frecuentes cuanto peor es la nubosidad.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogDensity">
             <English>Fog Density</English>
@@ -2553,6 +2773,7 @@
             <Chinese>霧氣濃度</Chinese>
             <Italian>Densità nebbia</Italian>
             <French>Densité du brouillard</French>
+            <Spanish>Densidad de la niebla</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogDensity_Tooltip">
             <English>Sets the fog density at the base fog altitude.</English>
@@ -2563,6 +2784,7 @@
             <Chinese>設置基礎霧氣高度。</Chinese>
             <Italian>Imposta la densità della nebbia all'altitudine di base della nebbia.</Italian>
             <French>Définit la densité du brouillard à l'altitude de base du brouillard.</French>
+            <Spanish>Define la densidad de la niebla en la altitud base de la niebla.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogDecay">
             <English>Fog Decay</English>
@@ -2574,6 +2796,7 @@
             <Chinese>霧霾衰減</Chinese>
             <Italian>Decadimento della nebbia</Italian>
             <French>Atténuation du brouillard</French>
+            <Spanish>Decaimiento de la niebla</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogDecay_Tooltip">
             <English>Sets how much the fog density decays with altitude. Larger values result in a sharper fog ceiling (more defined fog start).\nSmaller values lead to a more smooth transition from no fog to full fog, and as a result, the fog will cross the base altitude line more.\nWhen this is a positive value, the fog will be generated below the base altitude (valley fog); if negative, above the base altitude (mountain fog).</English>
@@ -2584,6 +2807,7 @@
             <Chinese>設置霧氣密度隨海拔高度衰減的程度。較大的值會導致更突變的霧氣變化（更明確的霧開始）。 \n較小的值會導致的過渡就越平滑，因此，霧會更多地穿過基準高度線。 \n如果正值，霧將產生於基準高度以下(谷霧) ; 如果負值，霧將產生於基準高度以上(峰霧)。</Chinese>
             <Italian>Imposta quanto la densità della nebbia decade con l'altitudine. Valori più grandi producono un limite di nebbia più nitido (inizio nebbia più definito).\nValori più piccoli portano a una transizione più graduale da assenza di nebbia a nebbia piena e, di conseguenza, la nebbia attraverserà di più la linea dell'altitudine di base.\nQuando questo è un valore positivo, la nebbia verrà generata al di sotto della quota di base (nebbia di valle); se negativo, al di sopra della quota di base (nebbia di montagna).</Italian>
             <French>Définit le degré de décroissance de la densité du brouillard en fonction de l'altitude. Des valeurs plus élevées entraînent un plafond de brouillard plus net (début de brouillard plus défini).\nDes valeurs plus petites entraînent une transition plus douce entre l'absence de brouillard et le brouillard complet et, par conséquent, le brouillard traversera davantage la ligne d'altitude de base.\nLorsque cette valeur est positive, le brouillard sera généré en dessous de l'altitude de base (brouillard de vallée) ; si elle est négative, au-dessus de l'altitude de base (brouillard de montagne).</French>
+            <Spanish>Define cuánto disminuye la densidad de la niebla con la altitud. Los valores más altos producen un techo de niebla más marcado (un inicio de la niebla más definido).\nLos valores más bajos suavizan la transición entre la ausencia de niebla y la niebla total, por lo que la niebla cruzará más la línea de altitud base.\nCon un valor positivo, la niebla se genera por debajo de la altitud base (niebla de valle); si es negativo, por encima (niebla de montaña).</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogAltitude">
             <English>Fog Altitude</English>
@@ -2595,6 +2819,7 @@
             <Chinese>霧氣高度</Chinese>
             <Italian>Altitudine nebbia</Italian>
             <French>Altitude du brouillard</French>
+            <Spanish>Altitud de la niebla</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleWeather_FogAltitude_Tooltip">
             <English>Sets the base altitude of the fog layer, in meters above/below sea level.</English>
@@ -2605,6 +2830,7 @@
             <Chinese>設置霧氣的基準高度（米，海平面以上/以下）。</Chinese>
             <Italian>Imposta l'altitudine di base dello strato di nebbia, in metri sopra/sotto il livello del mare.</Italian>
             <French>Définit l'altitude de base de la couche de brouillard, en mètres au-dessus/au-dessous du niveau de la mer.</French>
+            <Spanish>Define la altitud base de la capa de niebla, en metros por encima o por debajo del nivel del mar.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateTeleporter">
             <English>Create Teleporter</English>
@@ -2616,6 +2842,7 @@
             <Chinese>創建傳送點</Chinese>
             <Italian>Crea Teletrasporto</Italian>
             <French>Créer un téléporteur</French>
+            <Spanish>Crear teletransportador</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ToggleTarget">
             <English>Toggle Target</English>
@@ -2627,6 +2854,7 @@
             <Chinese>切換目標</Chinese>
             <Italian>Cambia bersaglio</Italian>
             <French>Changer de cible</French>
+            <Spanish>Objetivo del cambio</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ToggleTarget_Tooltip">
             <English>Units affected by the toggle.</English>
@@ -2638,6 +2866,7 @@
             <Polish>Jednostki zaznaczone do przełączenia celu.</Polish>
             <Italian>Unità interessate dall'interruttore.</Italian>
             <French>Unités marquées pour le changement de cible.</French>
+            <Spanish>Unidades afectadas por el cambio.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_AddGear">
             <English>Add Gear</English>
@@ -2650,6 +2879,7 @@
             <Korean>장비 추가</Korean>
             <Polish>Dodaj wyposażenie</Polish>
             <Russian>Добавить снаряжение</Russian>
+            <Spanish>Añadir equipo</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_RemoveNVG">
             <English>Remove NVGs</English>
@@ -2659,6 +2889,7 @@
             <Chinese>移除夜視儀</Chinese>
             <Italian>Rimuovere i dispositivi per la visione notturna</Italian>
             <French>Retirer les NVG</French>
+            <Spanish>Quitar gafas de visión nocturna</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_RemoveNVG_Tooltip">
             <English>Remove any currently equipped Night Vision Goggles.</English>
@@ -2668,6 +2899,7 @@
             <Chinese>移除當前裝備的任何夜視儀。</Chinese>
             <Italian>Rimuovi tutti gli occhiali per la visione notturna attualmente equipaggiati.</Italian>
             <French>Retirer toute lunette de vision nocturne actuellement équipée.</French>
+            <Spanish>Quita las gafas de visión nocturna que estén equipadas.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleToggleFlashlights">
             <English>Toggle Flashlights</English>
@@ -2680,6 +2912,7 @@
             <Korean>손전등 토글</Korean>
             <Polish>Przełącz latarki</Polish>
             <Russian>Вкл/Выкл Фонари</Russian>
+            <Spanish>Alternar linternas</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleToggleFlashlights_Flashlights">
             <English>Flashlights</English>
@@ -2692,6 +2925,7 @@
             <Korean>손전등</Korean>
             <Polish>Latarki</Polish>
             <Russian>Фонари</Russian>
+            <Spanish>Linternas</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleToggleIRLasers">
             <English>Toggle IR Lasers</English>
@@ -2703,6 +2937,7 @@
             <Polish>Przełącz lasery IR</Polish>
             <Italian>Cambia laser IR</Italian>
             <French>Changer de laser IR</French>
+            <Spanish>Alternar láseres IR</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleToggleIRLasers_IRLasers">
             <English>IR Lasers</English>
@@ -2714,6 +2949,7 @@
             <Polish>Laser IR (podczerwony)</Polish>
             <Italian>IR Lasers</Italian>
             <French>IR Lasers</French>
+            <Spanish>Láseres IR</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAddFullArsenal">
             <English>Add Full Arsenal</English>
@@ -2726,6 +2962,7 @@
             <Polish>Dodaj pełny arsenał</Polish>
             <Korean>전체 아스날 추가</Korean>
             <Italian>Aggiungi arsenale completo</Italian>
+            <Spanish>Añadir arsenal completo</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleRemoveArsenal">
             <English>Remove Arsenal</English>
@@ -2738,6 +2975,7 @@
             <Polish>Usuń arsenał</Polish>
             <Korean>아스날 제거</Korean>
             <Italian>Rimuovi Arsenale</Italian>
+            <Spanish>Quitar arsenal</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateTarget">
             <English>Create Target</English>
@@ -2749,6 +2987,7 @@
             <Chinese>創建目標</Chinese>
             <Italian>Crea bersaglio</Italian>
             <French>Créer une cible</French>
+            <Spanish>Crear objetivo</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateTarget_Name">
             <English>Target Name</English>
@@ -2760,6 +2999,7 @@
             <Chinese>目標名稱</Chinese>
             <Italian>Nome dell'obiettivo</Italian>
             <French>Nom de la cible</French>
+            <Spanish>Nombre del objetivo</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateTarget_Format">
             <English>Target %1</English>
@@ -2771,6 +3011,7 @@
             <Chinese>目標 %1</Chinese>
             <Italian>Obiettivo %1</Italian>
             <French>Cible %1</French>
+            <Spanish>Objetivo %1</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateTarget_AttachLaser">
             <English>Attach Laser Target For</English>
@@ -2781,6 +3022,7 @@
             <Chinese>附加激光靶，用於</Chinese>
             <Italian>Attacca il bersaglio laser per</Italian>
             <French>Fixer une cible laser pour</French>
+            <Spanish>Acoplar designador láser para</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateLZ">
             <English>Create LZ</English>
@@ -2792,6 +3034,7 @@
             <Japanese>LZ を生成</Japanese>
             <Italian>Crea LZ</Italian>
             <French>Créer un LZ</French>
+            <Spanish>Crear LZ</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateLZ_Name">
             <English>LZ Name</English>
@@ -2803,6 +3046,7 @@
             <Japanese>LZ 名</Japanese>
             <Italian>Nome LZ</Italian>
             <French>Nom de la LZ</French>
+            <Spanish>Nombre de la LZ</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateLZ_Format">
             <English>LZ %1</English>
@@ -2814,6 +3058,7 @@
             <Japanese>LZ %1</Japanese>
             <Italian>LZ %1</Italian>
             <French>LZ %1</French>
+            <Spanish>LZ %1</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateRP">
             <English>Create RP</English>
@@ -2825,6 +3070,7 @@
             <Japanese>RP 生成</Japanese>
             <Italian>Crea RP</Italian>
             <French>Créer un RP</French>
+            <Spanish>Crear RP</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateRP_Name">
             <English>RP Name</English>
@@ -2836,6 +3082,7 @@
             <Japanese>RP 名</Japanese>
             <Italian>Nome RP</Italian>
             <French>Nom du RP</French>
+            <Spanish>Nombre del RP</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateRP_Format">
             <English>RP %1</English>
@@ -2847,6 +3094,7 @@
             <Japanese>RP %1</Japanese>
             <Italian>RP %1</Italian>
             <French>RP %1</French>
+            <Spanish>RP %1</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_SpawnReinforcements">
             <English>Spawn Reinforcements</English>
@@ -2858,6 +3106,7 @@
             <Japanese>増援生成</Japanese>
             <Italian>Genera rinforzi</Italian>
             <French>Créer des renforts</French>
+            <Spanish>Generar refuerzos</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_VehicleSelect">
             <English>Vehicle Select</English>
@@ -2869,6 +3118,7 @@
             <Japanese>車両選択</Japanese>
             <Italian>Selezione del veicolo</Italian>
             <French>Sélection du véhicule</French>
+            <Spanish>Selección de vehículo</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_Category">
             <English>Category</English>
@@ -2880,6 +3130,7 @@
             <Japanese>カテゴリ</Japanese>
             <Italian>Categoria</Italian>
             <French>Catégorie</French>
+            <Spanish>Categoría</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_GroupSelect">
             <English>Group Select</English>
@@ -2891,6 +3142,7 @@
             <Japanese>グループ選択</Japanese>
             <Italian>Seleziona gruppo</Italian>
             <French>Sélection du groupe</French>
+            <Spanish>Selección de grupo</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_CurrentGroup">
             <English>Current Group</English>
@@ -2902,6 +3154,7 @@
             <Japanese>現在のグループ</Japanese>
             <Italian>Gruppo attuale</Italian>
             <French>Groupe actuel</French>
+            <Spanish>Grupo actual</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_VehicleLZ">
             <English>Vehicle LZ/DZ</English>
@@ -2913,6 +3166,7 @@
             <Japanese>車両 LZ/DZ</Japanese>
             <Italian>Veicolo LZ/DZ</Italian>
             <French>Véhicule LZ/DZ</French>
+            <Spanish>LZ/DZ del vehículo</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_VehicleBehaviour">
             <English>Vehicle Behaviour</English>
@@ -2924,6 +3178,7 @@
             <Japanese>車両の挙動</Japanese>
             <Italian>Comportamento del veicolo</Italian>
             <French>Comportement des véhicules</French>
+            <Spanish>Comportamiento del vehículo</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_StayAtLZ">
             <English>Stay at LZ</English>
@@ -2935,6 +3190,7 @@
             <Japanese>LZ で待機</Japanese>
             <Italian>Soggiorna a LZ</Italian>
             <French>Rester sur la LZ</French>
+            <Spanish>Permanecer en la LZ</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_RTBAndDespawn">
             <English>RTB and Despawn</English>
@@ -2946,6 +3202,7 @@
             <Japanese>RTB と削除</Japanese>
             <Italian>Indietro ed elimina</Italian>
             <French>RTB et Despawn</French>
+            <Spanish>Regresar a base y desaparecer</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_InsertionMethod">
             <English>Insertion Method</English>
@@ -2956,6 +3213,7 @@
             <Chinese>插入方式</Chinese>
             <Italian>Metodo di svezzamento</Italian>
             <French>Méthode d'insertion</French>
+            <Spanish>Método de inserción</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_UnitRP">
             <English>Unit RP</English>
@@ -2967,6 +3225,7 @@
             <Japanese>ユニット RP</Japanese>
             <Italian>Unità RP</Italian>
             <French>RP de l'unité</French>
+            <Spanish>RP de las unidades</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_UnitBehaviour">
             <English>Unit Behaviour</English>
@@ -2978,6 +3237,7 @@
             <Japanese>ユニットの挙動</Japanese>
             <Italian>Comportamento dell'unità</Italian>
             <French>Comportement de l'unité</French>
+            <Spanish>Comportamiento de las unidades</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel">
             <English>Create/Edit Intel</English>
@@ -2989,6 +3249,7 @@
             <Chinese>創建/編輯情報</Chinese>
             <Italian>Crea/modifica nota</Italian>
             <French>Créer/modifier une information</French>
+            <Spanish>Crear/editar información</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ObjectType">
             <English>Object Type</English>
@@ -3000,6 +3261,7 @@
             <Chinese>物體類型</Chinese>
             <Italian>Tipo di oggetto</Italian>
             <French>Type d'objet</French>
+            <Spanish>Tipo de objeto</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ShareWith">
             <English>Share With</English>
@@ -3011,6 +3273,7 @@
             <Chinese>分享給</Chinese>
             <Italian>Condividi con</Italian>
             <French>Partager avec</French>
+            <Spanish>Compartir con</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_DeleteOnCompletion">
             <English>Delete On Completion</English>
@@ -3022,6 +3285,7 @@
             <Chinese>完成後刪除</Chinese>
             <Italian>Elimina al completamento</Italian>
             <French>Supprimer après achèvement</French>
+            <Spanish>Eliminar al completarse</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ActionType">
             <English>Action Type</English>
@@ -3031,6 +3295,7 @@
             <Chinese>動作類型</Chinese>
             <Italian>Tipo di azione</Italian>
             <French>Type d'action</French>
+            <Spanish>Tipo de acción</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_HoldAction">
             <English>Hold Action</English>
@@ -3040,6 +3305,7 @@
             <Chinese>保持動作</Chinese>
             <Italian>Presa azione</Italian>
             <French>Maintenir l'action.</French>
+            <Spanish>Acción mantenida</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_InteractionMenu">
             <English>ACE Interaction Menu</English>
@@ -3049,6 +3315,7 @@
             <Chinese>ACE互動菜單</Chinese>
             <Italian>Menu interazione ACE</Italian>
             <French>Menu Interaction ACE</French>
+            <Spanish>Menú de interacción de ACE</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ActionText">
             <English>Action Text</English>
@@ -3060,6 +3327,7 @@
             <Chinese>行動文本</Chinese>
             <Italian>Testo azione</Italian>
             <French>Texte d'action</French>
+            <Spanish>Texto de la acción</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ActionSound">
             <English>Action Sound</English>
@@ -3070,6 +3338,7 @@
             <Chinese>行動聲音</Chinese>
             <Italian>Suono d'azione</Italian>
             <French>Son d'action</French>
+            <Spanish>Sonido de la acción</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_LaptopKeyboard">
             <English>Laptop Keyboard</English>
@@ -3080,6 +3349,7 @@
             <Chinese>筆記本鍵盤</Chinese>
             <Italian>Tastiera del computer portatile</Italian>
             <French>Clavier d'ordinateur portable</French>
+            <Spanish>Teclado de portátil</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_PCKeyboard">
             <English>PC Keyboard</English>
@@ -3090,6 +3360,7 @@
             <Chinese>電腦鍵盤</Chinese>
             <Italian>Tastiera del PC</Italian>
             <French>Clavier PC</French>
+            <Spanish>Teclado de PC</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_SearchBody">
             <English>Search Body</English>
@@ -3100,6 +3371,7 @@
             <Chinese>搜查屍體</Chinese>
             <Italian>Cerca corpo</Italian>
             <French>Fouiller le corps</French>
+            <Spanish>Registrar cadáver</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_ActionDuration">
             <English>Action Duration</English>
@@ -3111,6 +3383,7 @@
             <Polish>Długość Akcji</Polish>
             <Italian>Durata dell'azione</Italian>
             <French>Durée de l'action</French>
+            <Spanish>Duración de la acción</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_IntelTitle">
             <English>Intel Title</English>
@@ -3122,6 +3395,7 @@
             <Chinese>情報標題</Chinese>
             <Italian>Titolo avviso</Italian>
             <French>Titre de l'information</French>
+            <Spanish>Título de la información</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_IntelText">
             <English>Intel Text</English>
@@ -3133,6 +3407,7 @@
             <Chinese>情報文本</Chinese>
             <Italian>Nota testo</Italian>
             <French>Texte d'information</French>
+            <Spanish>Texto de la información</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_PickUpIntel">
             <English>Pick Up Intel</English>
@@ -3144,6 +3419,7 @@
             <Chinese>拾取情報</Chinese>
             <Italian>Per prendere nota</Italian>
             <French>Ramasser l'information</French>
+            <Spanish>Recoger información</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_IntelFound">
             <English>Intel Found</English>
@@ -3155,6 +3431,7 @@
             <Chinese>情報發現</Chinese>
             <Italian>Avviso trovato</Italian>
             <French>Information trouvée</French>
+            <Spanish>Información encontrada</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCreateIntel_PlayerFoundIntel">
             <English>%1 found intel: "%2"</English>
@@ -3166,6 +3443,7 @@
             <Chinese>%1 發現情報: "%2"</Chinese>
             <Italian>% 1 ha trovato il suggerimento "% 2"</Italian>
             <French>%1 a trouvé l'intel : "%2"</French>
+            <Spanish>%1 ha encontrado información: "%2"</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleCrewToGunner">
             <English>Crew To Gunner</English>
@@ -3175,6 +3453,7 @@
             <Chinese>乘員進入砲手</Chinese>
             <Italian>L'equipaggio al cannoniere</Italian>
             <French>L'équipage à l'artilleur.</French>
+            <Spanish>Tripulación a artillero</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ToggleLamps">
             <English>Toggle Lamps</English>
@@ -3186,6 +3465,7 @@
             <Polish>Przełącz lampy</Polish>
             <Italian>Interruttore lampade</Italian>
             <French>Allumage des feux</French>
+            <Spanish>Alternar farolas</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ToggleLamps_Repair_Tooltip">
             <English>Repair broken lights when turning them on.</English>
@@ -3197,6 +3477,7 @@
             <Polish>Napraw zepsute lampy przed włączeniem.</Polish>
             <Italian>Riparare le lampade durante la commutazione</Italian>
             <French>Réparez les lumières cassées lorsque vous les allumez.</French>
+            <Spanish>Repara las luces rotas al encenderlas.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_BurstDelay">
             <English>Burst Delay</English>
@@ -3206,6 +3487,7 @@
             <Japanese>射撃間隔</Japanese>
             <Italian>Ritardo tra le raffiche di fuoco</Italian>
             <French>Retard entre les coups de feu</French>
+            <Spanish>Retardo entre ráfagas</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_BurstDelay_Tooltip">
             <English>The delay, in seconds, between bursts of tracers.\nSelected randomly in a range from min to max, gravitating towards mid.</English>
@@ -3215,6 +3497,7 @@
             <Japanese>曳光弾の射撃間隔を秒で設定します。\nランダム値の場合は、最小値から最大値までの中央値付近で選択されます。。</Japanese>
             <Italian>Il ritardo, in secondi, tra raffiche di traccianti.\nSelezionati casualmente in un intervallo da min a max, gravitando verso la metà.</Italian>
             <French>Délai entre les tirs en secondes.\nIl est choisi au hasard dans une distribution avec la valeur minimale, la valeur maximale et la valeur moyenne spécifiées.</French>
+            <Spanish>El retardo, en segundos, entre ráfagas de trazadoras.\nSe elige aleatoriamente en un rango del mínimo al máximo, tendiendo hacia el valor medio.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_Dispersion">
             <English>Dispersion</English>
@@ -3224,6 +3507,7 @@
             <Japanese>精度</Japanese>
             <Italian>Dispersione</Italian>
             <French>Dispersion</French>
+            <Spanish>Dispersión</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_Dispersion_Tooltip">
             <English>The dispersion of the fired tracer rounds.</English>
@@ -3233,6 +3517,7 @@
             <Japanese>射撃される曳光弾の精度を設定します。</Japanese>
             <Italian>La dispersione dei proiettili traccianti sparati.</Italian>
             <French>Dispersion des munitions traçantes tirées.</French>
+            <Spanish>La dispersión de las trazadoras disparadas.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_Random_Tooltip">
             <English>Tracers are fired randomly in the air.</English>
@@ -3242,6 +3527,7 @@
             <Japanese>曳光弾が空中に向かって射撃されます。</Japanese>
             <Italian>I traccianti vengono lanciati casualmente in aria.</Italian>
             <French>Les munitions traçantes sont tirées en l'air de manière aléatoire.</French>
+            <Spanish>Las trazadoras se disparan al aire de forma aleatoria.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_Camera_Tooltip">
             <English>Tracers are fired at the current camera position.</English>
@@ -3251,6 +3537,7 @@
             <Japanese>曳光弾は現在のカメラ位置から射撃されます。</Japanese>
             <Italian>I traccianti vengono attivati nella posizione corrente della telecamera.</Italian>
             <French>Les munitions traçantes sont tirées contre la position actuelle de la caméra.</French>
+            <Spanish>Las trazadoras se disparan hacia la posición actual de la cámara.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_Cursor_Tooltip">
             <English>Tracers target is selected using the cursor after closing the dialog.</English>
@@ -3260,6 +3547,7 @@
             <Japanese>曳光弾はダイアログを閉じた後に、カーソル位置に向かって射撃されます。</Japanese>
             <Italian>Il target dei tracer viene selezionato utilizzando il cursore dopo aver chiuso la finestra di dialogo.</Italian>
             <French>La cible des munitions traçantes est choisie en fonction de la position du curseur de la souris après la fermeture de la fenêtre.</French>
+            <Spanish>El objetivo de las trazadoras se selecciona con el cursor tras cerrar el diálogo.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_Tracers_TracersTarget">
             <English>Tracers Target</English>
@@ -3269,6 +3557,7 @@
             <Japanese>曳光弾の目標</Japanese>
             <Italian>Obiettivo dei traccianti</Italian>
             <French>Cible des munitions traçantes</French>
+            <Spanish>Objetivo de las trazadoras</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire">
             <English>Custom Fire</English>
@@ -3280,6 +3569,7 @@
             <Japanese>火を作成</Japanese>
             <Italian>Fuoco personalizzato</Italian>
             <French>Incendie sur mesure</French>
+            <Spanish>Fuego personalizado</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire_EffectSize">
             <English>Effect Size</English>
@@ -3291,6 +3581,7 @@
             <Japanese>エフェクトの大きさ</Japanese>
             <Italian>Dimensione dell'effetto</Italian>
             <French>Taille de l'effet</French>
+            <Spanish>Tamaño del efecto</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire_ParticleDensity">
             <English>Particle Density</English>
@@ -3302,6 +3593,7 @@
             <Japanese>パーティクル密度</Japanese>
             <Italian>Densità delle particelle</Italian>
             <French>Densité des particules</French>
+            <Spanish>Densidad de las partículas</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire_ParticleLifetime">
             <English>Particle Lifetime</English>
@@ -3312,6 +3604,7 @@
             <Japanese>パーティクル存在時間</Japanese>
             <Italian>Durata delle particelle</Italian>
             <French>Durée de vie des particules</French>
+            <Spanish>Duración de las partículas</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire_ParticleSpeed">
             <English>Particle Speed</English>
@@ -3323,6 +3616,7 @@
             <Japanese>パーティクル速度</Japanese>
             <Italian>Velocità delle particelle</Italian>
             <French>Vitesse des particules</French>
+            <Spanish>Velocidad de las partículas</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire_ParticleSize">
             <English>Particle Size</English>
@@ -3334,6 +3628,7 @@
             <Japanese>パーティクルの大きさ</Japanese>
             <Italian>Dimensione delle particelle</Italian>
             <French>Taille des particules</French>
+            <Spanish>Tamaño de las partículas</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_CustomFire_ParticleOrientation">
             <English>Particle Orientation</English>
@@ -3345,6 +3640,7 @@
             <Japanese>パーティクル方位</Japanese>
             <Italian>Orientamento delle particelle</Italian>
             <French>Orientation des particules</French>
+            <Spanish>Orientación de las partículas</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_GlobalAISkill">
             <English>Global AI Skill</English>
@@ -3356,6 +3652,7 @@
             <Japanese>AI 全体スキル</Japanese>
             <Italian>Abilità IA globale</Italian>
             <French>Compétences globales des IA</French>
+            <Spanish>Habilidad global de la IA</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_GlobalAISkill_Enabled">
             <English>Global Skill</English>
@@ -3367,6 +3664,7 @@
             <Japanese>全体スキル</Japanese>
             <Italian>Abilità globale</Italian>
             <French>Compétences globales</French>
+            <Spanish>Habilidad global</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_GlobalAISkill_Enabled_Description">
             <English>Enables applying the following skill values to all current and newly created AI units.</English>
@@ -3377,6 +3675,7 @@
             <Chinese>啟用對所有當前和新創建的AI單位應用以下技能值。</Chinese>
             <Italian>Consente di applicare i seguenti valori di abilità a tutte le unità AI attuali e appena create.</Italian>
             <French>Applique le paramètre de capacité à toutes les unités nouvelles et existantes.</French>
+            <Spanish>Aplica los siguientes valores de habilidad a todas las unidades de IA actuales y a las que se creen a partir de ahora.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ExportMissionSQF">
             <English>Export Mission SQF</English>
@@ -3387,6 +3686,7 @@
             <Chinese>導出任務SQF</Chinese>
             <Italian>Esporta missione SQF</Italian>
             <French>Exporter la mission au format SQF</French>
+            <Spanish>Exportar misión a SQF</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_EntireMission">
             <English>Entire Mission</English>
@@ -3397,6 +3697,7 @@
             <Chinese>整個任務</Chinese>
             <Italian>Intera Missione</Italian>
             <French>Mission complète</French>
+            <Spanish>Misión completa</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_IncludeMarkers">
             <English>Include Markers</English>
@@ -3407,6 +3708,7 @@
             <Chinese>包含標記</Chinese>
             <Italian>Includi marcatori</Italian>
             <French>Inclure les marqueurs</French>
+            <Spanish>Incluir marcadores</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_EditableObjectsOnly">
             <English>Editable Objects Only</English>
@@ -3417,6 +3719,7 @@
             <Chinese>僅限可編輯對象</Chinese>
             <Italian>Solo oggetti modificabili</Italian>
             <French>Objets éditables uniquement</French>
+            <Spanish>Solo objetos editables</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_EditableObjectsOnly_Tooltip">
             <English>Only objects that are currently editable by the local curator will be exported.</English>
@@ -3427,6 +3730,7 @@
             <Chinese>只有當前可由本地宙斯編輯的對象才會被導出。</Chinese>
             <Italian>Verranno esportati solo gli oggetti attualmente modificabili dal curatore locale.</Italian>
             <French>Seuls les objets qui sont actuellement modifiables par le Zeus local sont exportés.</French>
+            <Spanish>Solo se exportarán los objetos que el curador local pueda editar actualmente.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_RotateObject">
             <English>Rotate Object</English>
@@ -3437,6 +3741,7 @@
             <Chinese>旋轉物體</Chinese>
             <Italian>Ruota oggetto</Italian>
             <French>Rotation de l'objet</French>
+            <Spanish>Rotar objeto</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_AtomicBomb">
             <English>Atomic Bomb</English>
@@ -3447,6 +3752,7 @@
             <Chinese>核彈</Chinese>
             <Italian>Bomba atomica</Italian>
             <French>Bombe atomique</French>
+            <Spanish>Bomba atómica</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_DestructionRadius">
             <English>Destruction Radius (m)</English>
@@ -3457,6 +3763,7 @@
             <Chinese>毀滅半徑（米）</Chinese>
             <Italian>Raggio di distruzione (m)</Italian>
             <French>Rayon de destruction (m)</French>
+            <Spanish>Radio de destrucción (m)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_DestructionRate">
             <English>Destruction Rate</English>
@@ -3467,6 +3774,7 @@
             <Chinese>破壞率</Chinese>
             <Italian>Tasso di distruzione</Italian>
             <French>Taux de destruction</French>
+            <Spanish>Ritmo de destrucción</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_DestructionRate_Tooltip">
             <English>The maximum number of objects destroyed per second.</English>
@@ -3477,6 +3785,7 @@
             <Chinese>每秒鐘摧毀的最大物體數量。</Chinese>
             <Italian>Il numero massimo di oggetti distrutti al secondo.</Italian>
             <French>Nombre maximum d'objets détruits par seconde.</French>
+            <Spanish>El número máximo de objetos destruidos por segundo.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ColorCorrections">
             <English>Color Corrections</English>
@@ -3487,6 +3796,7 @@
             <Chinese>色彩校正</Chinese>
             <Italian>Correzioni del colore</Italian>
             <French>Corrections de couleurs</French>
+            <Spanish>Correcciones de color</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ConfirmDetonation">
             <English>Are you sure you want to detonate an atomic bomb?</English>
@@ -3497,6 +3807,7 @@
             <Chinese>你確定要引爆原子彈嗎？</Chinese>
             <Italian>Sei sicuro di voler far esplodere una bomba atomica?</Italian>
             <French>Êtes-vous sûr de vouloir faire exploser une bombe atomique ?</French>
+            <Spanish>¿Seguro que quieres detonar una bomba atómica?</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleAnimationViewer">
             <English>Show In Animation Viewer</English>
@@ -3506,6 +3817,7 @@
             <Japanese>アニメーション ビューワで表示</Japanese>
             <Italian>Mostra nel visualizzatore di animazioni</Italian>
             <French>Affiché dans le visualiseur d'animation</French>
+            <Spanish>Mostrar en el visor de animaciones</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_Duration_Tooltip">
             <English>Controls the amount of time, in seconds, the units will suppress for.</English>
@@ -3515,6 +3827,7 @@
             <German>Kontrolliert die Zeit in Sekunden, in der die Einheit unterdrückt.</German>
             <Italian>Controlla la quantità di tempo, in secondi, per la quale le unità sopprimeranno.</Italian>
             <French>Contrôle le temps, en secondes, pendant lequel l'unité est supprimée.</French>
+            <Spanish>Controla el tiempo, en segundos, durante el que las unidades harán fuego de supresión.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_FireMode">
             <English>Fire Mode</English>
@@ -3522,6 +3835,7 @@
             <Japanese>射撃モード</Japanese>
             <French>Mode de tir</French>
             <Chinesesimp>开火模式</Chinesesimp>
+            <Spanish>Modo de disparo</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_FireMode_SingleShotsSlow">
             <English>Single Shots (Slow)</English>
@@ -3529,6 +3843,7 @@
             <Japanese>単発 (遅い)</Japanese>
             <French>Tir unique (Lent)</French>
             <Chinesesimp>单发点射(慢)</Chinesesimp>
+            <Spanish>Disparos únicos (lento)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_FireMode_SingleShotsFast">
             <English>Single Shots (Fast)</English>
@@ -3536,6 +3851,7 @@
             <Japanese>単発 (速い)</Japanese>
             <French>Tir unique (rapide)</French>
             <Chinesesimp>单发点射(快)</Chinesesimp>
+            <Spanish>Disparos únicos (rápido)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_FireMode_ThreeRoundBurstsSlow">
             <English>Three Round Bursts (Slow)</English>
@@ -3543,6 +3859,7 @@
             <Japanese>三連射 (遅い)</Japanese>
             <French>Coup de feu (Lent)</French>
             <Chinesesimp>三连发(慢)</Chinesesimp>
+            <Spanish>Ráfagas de tres disparos (lento)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_FireMode_ThreeRoundBurstsFast">
             <English>Three Round Bursts (Fast)</English>
@@ -3550,6 +3867,7 @@
             <Japanese>三連射 (早い)</Japanese>
             <French>Coup de feu (Rapide)</French>
             <Chinesesimp>三连发(快)</Chinesesimp>
+            <Spanish>Ráfagas de tres disparos (rápido)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_FireMode_FullyAutomaticWithPauses">
             <English>Fully Automatic (With Pauses)</English>
@@ -3557,6 +3875,7 @@
             <Japanese>全連射 (止めあり)</Japanese>
             <French>Tir continu (avec pauses)</French>
             <Chinesesimp>全自动(有间隔)</Chinesesimp>
+            <Spanish>Automático (con pausas)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_FireMode_FullyAutomaticUninterrupted">
             <English>Fully Automatic (Uninterrupted)</English>
@@ -3564,6 +3883,7 @@
             <Japanese>全連射 (休みなく)</Japanese>
             <French>Tir continu (ininterrompu)</French>
             <Chinesesimp>全自动(持续开火)</Chinesesimp>
+            <Spanish>Automático (ininterrumpido)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_Stance_Tooltip">
             <English>Controls the stance units on foot will employ while suppressing.</English>
@@ -3573,6 +3893,7 @@
             <German>Kontrolliert die Haltung, die Infateristen annehmen beim unterdrücken.</German>
             <Italian>Controlla le unità di posizione a piedi che utilizzeranno durante la soppressione.</Italian>
             <French>Contrôle l'attitude que les unités à pied adopteront lors de la suppression.</French>
+            <Spanish>Controla la postura que adoptarán las unidades a pie mientras hacen fuego de supresión.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_EntireGroup">
             <English>Entire Group</English>
@@ -3582,6 +3903,7 @@
             <German>Gesammte Gruppe</German>
             <Italian>Intero Gruppo</Italian>
             <French>Groupe entier</French>
+            <Spanish>Grupo completo</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_SuppressiveFire_EntireGroup_Tooltip">
             <English>Controls whether the entire group will perform the suppressive fire.</English>
@@ -3591,6 +3913,7 @@
             <German>Kontrolliert, ob die gesammte Gruppe Unterdrückungsfeuer Leistet.</German>
             <Italian>Controlla se l'intero gruppo eseguirà il fuoco di soppressione.</Italian>
             <French>Contrôle si l'ensemble du groupe effectue un tir de suppression.</French>
+            <Spanish>Controla si todo el grupo realizará el fuego de supresión.</Spanish>
         </Key>
         <!-- Module Categories -->
         <Key ID="STR_ZEN_Modules_Buildings">
@@ -3604,6 +3927,7 @@
             <Chinese>建築物</Chinese>
             <Italian>Edifici</Italian>
             <French>Bâtiments</French>
+            <Spanish>Edificios</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_DevTools">
             <English>Development Tools</English>
@@ -3615,6 +3939,7 @@
             <Chinese>開發工具</Chinese>
             <Italian>Strumenti di sviluppo</Italian>
             <French>Outils de développement</French>
+            <Spanish>Herramientas de desarrollo</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_Equipment">
             <English>Equipment</English>
@@ -3627,6 +3952,7 @@
             <Chinese>裝備</Chinese>
             <Italian>Attrezzatura</Italian>
             <French>Equipement</French>
+            <Spanish>Equipo</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_Objects">
             <English>Objects</English>
@@ -3639,6 +3965,7 @@
             <Chinese>物體</Chinese>
             <Italian>Oggetti</Italian>
             <French>Objets</French>
+            <Spanish>Objetos</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_Players">
             <English>Players</English>
@@ -3651,6 +3978,7 @@
             <Chinese>玩家</Chinese>
             <Italian>Giocatori</Italian>
             <French>Joueurs</French>
+            <Spanish>Jugadores</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_Reinforcements">
             <English>Reinforcements</English>
@@ -3662,6 +3990,7 @@
             <Japanese>増援</Japanese>
             <Italian>Rinforzi</Italian>
             <French>Renforts</French>
+            <Spanish>Refuerzos</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_Spawn">
             <English>Spawn</English>
@@ -3674,6 +4003,7 @@
             <Chinese>生成</Chinese>
             <Italian>Spawn</Italian>
             <French>Spawn</French>
+            <Spanish>Generar</Spanish>
         </Key>
         <!-- Feedback Messages -->
         <Key ID="STR_ZEN_Modules_NoUnitSelected">
@@ -3702,6 +4032,7 @@
             <Polish>Postaw na obiekcie</Polish>
             <Italian>Posiziona su un oggetto</Italian>
             <French>Placer sur un objet</French>
+            <Spanish>Colócalo sobre un objeto</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_NotAttachedTo">
             <English>Only for attached objects</English>
@@ -3711,6 +4042,7 @@
             <Chinese>僅適用於附加對象</Chinese>
             <Japanese>取り付けられたオブジェクトのみ</Japanese>
             <Italian>Solo per oggetti attaccati</Italian>
+            <Spanish>Solo para objetos acoplados</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_ValueOutOfRange">
             <English>Only values between %1 and %2 are valid</English>
@@ -3720,6 +4052,7 @@
             <Chinese>只有在 %1 和 %2 之間的值才有效</Chinese>
             <Japanese>値は %1 と %2 の間の値のみが有効です。</Japanese>
             <Italian>Sono validi solo i valori compresi tra %1 e %2</Italian>
+            <Spanish>Solo son válidos los valores entre %1 y %2</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_OnlyAlive">
             <English>Unit must be alive</English>
@@ -3764,6 +4097,7 @@
             <Chinese>單位不得是步兵</Chinese>
             <Italian>L'unità non deve essere di fanteria</Italian>
             <French>L'unité ne doit pas être de l'infanterie</French>
+            <Spanish>La unidad no debe ser infantería</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_OnlyPlayers">
             <English>Unit must be a player</English>
@@ -3776,6 +4110,7 @@
             <Chinese>單位必須是玩家</Chinese>
             <Italian>L'unità deve essere un giocatore</Italian>
             <French>L'unité doit être un joueur</French>
+            <Spanish>La unidad debe ser un jugador</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_OnlyVehicles">
             <English>Unit must be a vehicle</English>
@@ -3797,6 +4132,7 @@
             <Japanese>ユニットは車両か旗である必要があります</Japanese>
             <French>L'unité doit être un véhicule ou un drapeau</French>
             <Chinesesimp>单位必须是载具或旗帜</Chinesesimp>
+            <Spanish>La unidad debe ser un vehículo o una bandera</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_OnlyAircraft">
             <English>The unit must be an aircraft</English>
@@ -3809,6 +4145,7 @@
             <Chinese>單位必須是飛機</Chinese>
             <Italian>L'unità deve essere un aeromobile</Italian>
             <French>L'unité doit être un aéronef</French>
+            <Spanish>La unidad debe ser una aeronave</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_OnlySpecificSide">
             <English>Unit must belong to an appropriate side</English>
@@ -3837,6 +4174,7 @@
             <Italian>L'edificio più vicino è troppo lontano</Italian>
             <Chinesesimp>最近的房子离太远了</Chinesesimp>
             <Chinese>最近的房子離太遠了</Chinese>
+            <Spanish>El edificio más cercano está demasiado lejos</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_NoBuildingFound">
             <English>Unable to find a building to search</English>
@@ -3847,6 +4185,7 @@
             <Chinese>無法找到可供搜索的建築物</Chinese>
             <Italian>Impossibile trovare un edificio da cercare</Italian>
             <French>Pas de bâtiment à fouiller à proximité</French>
+            <Spanish>No se ha encontrado ningún edificio que registrar</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_NoTargetModules">
             <English>No target modules exist, place one first.</English>
@@ -3857,6 +4196,7 @@
             <Chinese>沒有目標模塊，請先放置一個。</Chinese>
             <Italian>Non esistono moduli di destinazione, posizionane uno per primo.</Italian>
             <French>Si aucun module cible n'existe, il faut en placer un en premier.</French>
+            <Spanish>No existe ningún módulo de objetivo; coloca uno primero.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_NotInRangeOfArtillery">
             <English>Target position is not in range for all vehicles</English>
@@ -3867,6 +4207,7 @@
             <Chinese>目標位置不在所有車輛範圍內</Chinese>
             <Italian>La posizione target non è nel raggio d'azione per tutti i veicoli</Italian>
             <French>La position cible n'est pas à portée de tous les véhicules</French>
+            <Spanish>La posición objetivo no está al alcance de todos los vehículos</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_PlaceAnLZ">
             <English>Place an LZ</English>
@@ -3878,6 +4219,7 @@
             <Japanese>LZ を設置</Japanese>
             <Italian>Posiziona un LZ</Italian>
             <French>Placer une LZ</French>
+            <Spanish>Coloca una LZ</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_NoTeleportPosition">
             <English>Unable to find suitable position to teleport vehicle to.</English>
@@ -3888,6 +4230,7 @@
             <Chinese>無法找到合適的位置傳送車輛。</Chinese>
             <Italian>Impossibile trovare una posizione adatta per il teletrasporto del veicolo.</Italian>
             <French>Impossible de trouver une position adéquate pour téléporter le véhicule.</French>
+            <Spanish>No se ha encontrado una posición adecuada a la que teletransportar el vehículo.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_MustHaveGunner">
             <English>Vehicle must have a primary gunner seat</English>
@@ -3897,6 +4240,7 @@
             <Chinese>車輛必須有一個主砲手座位</Chinese>
             <Italian>Il veicolo deve avere un posto di mitragliere principale</Italian>
             <French>Le véhicule doit être équipé d'un siège pour le tireur principal</French>
+            <Spanish>El vehículo debe tener un puesto de artillero principal</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_NoCrewAvailable">
             <English>Vehicle must have other crew available</English>
@@ -3906,6 +4250,7 @@
             <Chinese>車輛必須有其他乘員位可用</Chinese>
             <Italian>Il veicolo deve avere altro equipaggio disponibile</Italian>
             <French>Le véhicule doit disposer d'un autre équipage</French>
+            <Spanish>El vehículo debe tener otros tripulantes disponibles</Spanish>
         </Key>
     </Package>
 </Project>
