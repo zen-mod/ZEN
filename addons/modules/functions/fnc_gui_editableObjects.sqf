@@ -18,7 +18,7 @@
 
 params ["_display", "_logic"];
 
-private _selections = GVAR(saved) getVariable [QGVAR(editableObjects), [1, 1, 0, 100, [true, true, true, true], 0]];
+private _selections = GVAR(saved) getVariable [QGVAR(editableObjects), [1, 1, 0, 100, [true, true, true, true], 2]];
 _selections params ["_editingMode", "_curators", "_rangeMode", "_range", "_filter", "_alive"];
 
 _display setVariable [QGVAR(position), ASLToAGL getPosASL _logic];
