@@ -1064,65 +1064,6 @@
             <Italian>Aggiorna oggetti modificabili</Italian>
             <French>Mise à jour des objets éditables</French>
         </Key>
-        <Key ID="STR_ZEN_Modules_ModuleEditableObjects_Alive">
-            <English>Alive</English>
-            <Russian>Живой</Russian>
-            <German>Lebendig</German>
-            <Polish>Żywy</Polish>
-            <Japanese>生存</Japanese>
-            <Korean>살아있는</Korean>
-            <Chinesesimp>活着</Chinesesimp>
-            <Chinese>活著</Chinese>
-            <Italian>Vivo</Italian>
-            <French>Vivant</French>
-        </Key>
-        <Key ID="STR_ZEN_Modules_ModuleEditableObjects_Alive_Tooltip">
-            <English>Controls whether the objects should be alive, dead or both.</English>
-            <Russian>Определяет, должны ли объекты быть живыми, мертвыми или и тем и другим</Russian>
-            <German>Steuert, ob die Objekte lebendig, tot oder beides sein sollen.</German>
-            <Polish>Ustala czy obiekty mają być żywe, martwe czy oba.</Polish>
-            <Japanese>オブジェクトが生存しているか、死亡しているか、またはその両方であるかを制御します。</Japanese>
-            <Chinesesimp>控制物体是活着、死了还是两者都有。</Chinesesimp>
-            <Chinese>控制物體是活著、死了還是兩者都有。</Chinese>
-            <Italian>Controlla se gli oggetti devono essere vivi, morti o entrambi.</Italian>
-            <French>Contrôle si les objets doivent être vivants, morts ou les deux.</French>
-        </Key>
-        <Key ID="STR_ZEN_Modules_ModuleEditableObjects_Alive_Alive">
-            <English>Alive</English>
-            <Russian>Живой</Russian>
-            <German>Lebendig</German>
-            <Polish>Żywy</Polish>
-            <Japanese>生存</Japanese>
-            <Korean>살아있는</Korean>
-            <Chinesesimp>活着</Chinesesimp>
-            <Chinese>活著</Chinese>
-            <Italian>Vivo</Italian>
-            <French>Vivant</French>
-        </Key>
-        <Key ID="STR_ZEN_Modules_ModuleEditableObjects_Alive_Both">
-            <English>Both</English>
-            <Russian>Оба</Russian>
-            <German>Beides</German>
-            <Polish>Oba</Polish>
-            <Japanese>両方</Japanese>
-            <Korean>둘 다</Korean>
-            <Chinesesimp>两者都有</Chinesesimp>
-            <Chinese>兩者都有</Chinese>
-            <Italian>Entrambi</Italian>
-            <French>Les deux</French>
-        </Key>
-        <Key ID="STR_ZEN_Modules_ModuleEditableObjects_Alive_Dead">
-            <English>Dead</English>
-            <Russian>Мертвый</Russian>
-            <German>Tot</German>
-            <Polish>Martwy</Polish>
-            <Japanese>死亡</Japanese>
-            <Korean>죽은</Korean>
-            <Chinesesimp>死了</Chinesesimp>
-            <Chinese>死了</Chinese>
-            <Italian>Morto</Italian>
-            <French>Mort</French>
-        </Key>
         <Key ID="STR_ZEN_Modules_ModuleEditableObjects_EditingMode">
             <English>Editing Mode</English>
             <Russian>Режим редактирования</Russian>
@@ -1204,6 +1145,9 @@
             <Chinese>所有任務目標</Chinese>
             <Italian>Tutti gli oggetti della missione</Italian>
             <French>Tous les objets de mission</French>
+        </Key>
+        <Key ID="STR_ZEN_Modules_ModuleEditableObjects_Alive_Tooltip">
+            <English>Controls whether the objects should be dead, alive, or either.</English>
         </Key>
         <Key ID="STR_ZEN_Modules_ModuleHeal">
             <English>Heal</English>

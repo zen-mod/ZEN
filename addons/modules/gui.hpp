@@ -395,58 +395,43 @@ class GVAR(RscEditableObjects): GVAR(RscDisplay) {
                     idc = IDC_EDITABLEOBJECTS_CURATORS;
                     y = QUOTE(POS_H(1.1));
                 };
-                class AliveLabel: EGVAR(common,RscLabel) {
-                    text = CSTRING(ModuleEditableObjects_Alive);
-                    tooltip = CSTRING(ModuleEditableObjects_Alive_Tooltip);
-                    y = QUOTE(POS_H(2.2));
-                };
-                class Alive: ctrlToolbox {
-                    idc = IDC_EDITABLEOBJECTS_ALIVE;
-                    x = QUOTE(POS_W(10.1));
-                    y = QUOTE(POS_H(2.2));
-                    w = QUOTE(POS_W(15.9));
-                    h = QUOTE(POS_H(1));
-                    rows = 1;
-                    columns = 3;
-                    strings[] = {CSTRING(ModuleEditableObjects_Alive_Both), CSTRING(ModuleEditableObjects_Alive_Alive), CSTRING(ModuleEditableObjects_Alive_Dead)};
-                };
                 class RangeLabel: EGVAR(common,RscLabel) {
                     text = ECSTRING(common,Range);
-                    y = QUOTE(POS_H(3.3));
+                    y = QUOTE(POS_H(2.2));
                     h = QUOTE(POS_H(2.1));
                 };
                 class RangeMode: EditingMode {
                     idc = IDC_EDITABLEOBJECTS_RANGE_MODE;
-                    y = QUOTE(POS_H(3.3));
+                    y = QUOTE(POS_H(2.2));
                     strings[] = {ECSTRING(common,Radius), CSTRING(ModuleEditableObjects_AllMissionObjects)};
                 };
                 class RangeSlider: ctrlXSliderH {
                     idc = IDC_EDITABLEOBJECTS_RANGE_SLIDER;
                     x = QUOTE(POS_W(10.1));
-                    y = QUOTE(POS_H(4.4));
+                    y = QUOTE(POS_H(3.3));
                     w = QUOTE(POS_W(13.4));
                     h = QUOTE(POS_H(1));
                 };
                 class RangeEdit: EGVAR(common,RscEdit) {
                     idc = IDC_EDITABLEOBJECTS_RANGE_EDIT;
                     x = QUOTE(POS_W(23.6));
-                    y = QUOTE(POS_H(4.4));
+                    y = QUOTE(POS_H(3.3));
                     w = QUOTE(POS_W(2.4));
                     h = QUOTE(POS_H(1));
                 };
                 class FilterLabel: EGVAR(common,RscLabel) {
                     text = ECSTRING(common,Filter);
-                    y = QUOTE(POS_H(5.5));
+                    y = QUOTE(POS_H(4.4));
                     h = QUOTE(POS_H(3.8));
                 };
                 class FilterBackground: EGVAR(common,RscBackground) {
-                    y = QUOTE(POS_H(5.5));
+                    y = QUOTE(POS_H(4.4));
                     h = QUOTE(POS_H(3.8));
                 };
                 class FilterAll: ctrlCheckbox {
                     idc = IDC_EDITABLEOBJECTS_FILTER_ALL;
                     x = QUOTE(POS_W(10.1));
-                    y = QUOTE(POS_H(5.6));
+                    y = QUOTE(POS_H(4.5));
                     w = QUOTE(POS_W(0.9));
                     h = QUOTE(POS_H(0.9));
                 };
@@ -454,7 +439,7 @@ class GVAR(RscEditableObjects): GVAR(RscDisplay) {
                     idc = -1;
                     text = ECSTRING(common,All);
                     x = QUOTE(POS_W(11));
-                    y = QUOTE(POS_H(5.6));
+                    y = QUOTE(POS_H(4.5));
                     w = QUOTE(POS_W(10));
                     h = QUOTE(POS_H(0.9));
                     sizeEx = QUOTE(POS_H(0.9));
@@ -462,27 +447,38 @@ class GVAR(RscEditableObjects): GVAR(RscDisplay) {
                 };
                 class FilterUnits: FilterAll {
                     idc = IDC_EDITABLEOBJECTS_FILTER_UNITS;
-                    y = QUOTE(POS_H(6.5));
+                    y = QUOTE(POS_H(5.4));
                 };
                 class FilterUnitsText: FilterAllText {
                     text = ECSTRING(common,Units);
-                    y = QUOTE(POS_H(6.5));
+                    y = QUOTE(POS_H(5.4));
                 };
                 class FilterVehicles: FilterAll {
                     idc = IDC_EDITABLEOBJECTS_FILTER_VEHICLES;
-                    y = QUOTE(POS_H(7.4));
+                    y = QUOTE(POS_H(6.3));
                 };
                 class FilterVehiclesText: FilterAllText {
                     text = ECSTRING(common,Vehicles);
-                    y = QUOTE(POS_H(7.4));
+                    y = QUOTE(POS_H(6.3));
                 };
                 class FilterStatic: FilterAll {
                     idc = IDC_EDITABLEOBJECTS_FILTER_STATIC;
-                    y = QUOTE(POS_H(8.3));
+                    y = QUOTE(POS_H(7.2));
                 };
                 class FilterStaticText: FilterAllText {
                     text = ECSTRING(common,Static);
+                    y = QUOTE(POS_H(7.2));
+                };
+                class AliveLabel: EGVAR(common,RscLabel) {
+                    text = ECSTRING(common,Alive);
+                    tooltip = CSTRING(ModuleEditableObjects_Alive_Tooltip);
                     y = QUOTE(POS_H(8.3));
+                };
+                class Alive: EditingMode {
+                    idc = IDC_EDITABLEOBJECTS_ALIVE;
+                    y = QUOTE(POS_H(8.3));
+                    columns = 3;
+                    strings[] = {ECSTRING(common,No), ECSTRING(common,Yes), ECSTRING(common,Either)};
                 };
             };
         };
