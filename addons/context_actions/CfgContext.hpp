@@ -1,4 +1,8 @@
 class EGVAR(context_menu,actions) {
+    class TopSeparator {
+        separator = 1;
+        priority = 100;
+    };
     class FireArtillery {
         displayName = CSTRING(FireArtillery);
         icon = "\a3\ui_f\data\gui\cfg\communicationmenu\artillery_ca.paa";
@@ -222,6 +226,10 @@ class EGVAR(context_menu,actions) {
             icon = "\z\ace\addons\captives\UI\Surrender_ca.paa";
         };
     };
+    class UnitActionsSeprator {
+        separator = 1;
+        priority = 50;
+    };
     class Loadout {
         displayName = "$STR_A3_VR_Stamina_01_Loadout";
         condition = QUOTE(_hoveredEntity call FUNC(canEditLoadout));
@@ -355,11 +363,15 @@ class EGVAR(context_menu,actions) {
             icon = "\a3\ui_f\data\IGUI\Cfg\Actions\unloadVehicle_ca.paa";
         };
     };
+    class EditorActionsSeparator {
+        separator = 1;
+        priority = 21;
+    };
     class EditableObjects {
         displayName = CSTRING(EditableObjects);
         statement = QUOTE(call FUNC(openEditableObjectsDialog));
         icon = QPATHTOEF(modules,ui\edit_obj_ca.paa);
-        priority = 30;
+        priority = 20;
         class Add {
             displayName = ECSTRING(common,Add);
             icon = QPATHTOF(ui\add_ca.paa);
@@ -390,6 +402,9 @@ class EGVAR(context_menu,actions) {
                 statement = QUOTE([ARR_3(SELECTED_OBJECTS,false,getAssignedCuratorLogic player)] call EFUNC(common,updateEditableObjects));
                 icon = QPATHTOF(ui\remove_ca.paa);
             };
+            class SelectedSeparator {
+                separator = 1;
+            };
             class 10m: Selected {
                 displayName = CSTRING(10m);
                 statement = QUOTE([ARR_3(false,_position,_args)] call FUNC(updateEditableObjects));
@@ -416,6 +431,10 @@ class EGVAR(context_menu,actions) {
         icon = "\a3\modules_f_curator\data\portraitremotecontrol_ca.paa";
         priority = 20;
     };
+    class TeleportSeparator {
+        separator = 1;
+        priority = 10;
+    };
     class TeleportPlayers {
         displayName = CSTRING(TeleportPlayers);
         condition = QUOTE(_objects findIf {isPlayer _x} != -1);
@@ -428,5 +447,9 @@ class EGVAR(context_menu,actions) {
         statement = QUOTE(call FUNC(teleportZeus));
         icon = "\a3\Ui_F_Curator\Data\Logos\arma3_curator_eye_256_ca.paa";
         priority = 10;
+    };
+    class BottomSeparator {
+        separator = 1;
+        priority = 1;
     };
 };

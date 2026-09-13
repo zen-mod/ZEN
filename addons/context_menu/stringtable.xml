@@ -76,6 +76,12 @@
             <Italian>Consente l'apertura del menu contestuale facendo clic con il pulsante destro del mouse quando normalmente si verifica il posizionamento del waypoint.\nRichiede la pressione del tasto SHIFT per posizionare i waypoint.</Italian>
             <French>Permet d'ouvrir le menu contextuel en cliquant avec le bouton droit de la souris lors du contrôle normal du positionnement des points de passage.\nIl est nécessaire d'appuyer sur la touche SHIFT pour positionner les points de passage.</French>
         </Key>
+        <Key ID="STR_ZEN_Context_Menu_ShowSeparators">
+            <English>Show Separators</English>
+        </Key>
+        <Key ID="STR_ZEN_Context_Menu_ShowSeparators_Description">
+            <English>Controls whether separators are rendered in the context menu.\nThese can help visually group related actions, allowing for easier navigation of the context menu.</English>
+        </Key>
         <Key ID="STR_ZEN_Context_Menu_OpenContextMenu">
             <English>Open Context Menu</English>
             <French>Ouvrir le menu contextuel</French>

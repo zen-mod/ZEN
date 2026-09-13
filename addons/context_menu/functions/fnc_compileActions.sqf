@@ -49,6 +49,7 @@ private _fnc_getActionData = {
         [_children, 2, false] call CBA_fnc_sortNestedArray;
 
         private _priority = getNumber (_entryConfig >> "priority");
+        private _isSeparator = getNumber (_entryConfig >> "separator") > 0;
 
         private _actionEntry = [
             [
@@ -60,7 +61,8 @@ private _fnc_getActionData = {
                 _condition,
                 _args,
                 _insertChildren,
-                _modifierFunction
+                _modifierFunction,
+                _isSeparator
             ],
             _children,
             _priority
