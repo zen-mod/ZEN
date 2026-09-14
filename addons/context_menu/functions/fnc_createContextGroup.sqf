@@ -33,7 +33,7 @@ GVAR(contextGroups) set [_contextLevel, _ctrlContextGroup];
 // Keep track of the maximum text width among all rows
 private _textWidth = POS_W(5.9);
 private _height = 0;
-private _previousWasEmpty = false;
+private _previousWasSeparator = false;
 private _hasActionAbove = false;
 
 // Create context action rows
@@ -41,14 +41,14 @@ private _contextRows = [];
 private _contextSeprators = [];
 
 {
-    _x params ["_action", "_children", "", "_isSeparator"];
-    _action params ["", "_displayName", "_icon", "_iconColor", "_statement", "_condition", "_args"];
+    _x params ["_action", "_children"];
+    _action params ["", "_displayName", "_icon", "_iconColor", "_statement", "_condition", "_args", "", "", "_isSeparator"];
 
     if (_isSeparator) then {
-        _previousWasEmpty = true;
+        _previousWasSeparator = true;
         continue;
     } else {
-        if (_previousWasEmpty && {_hasActionAbove}) then {
+        if (_previousWasSeparator && {_hasActionAbove}) then {
             private _ctrlContextSeparator = _display ctrlCreate [QGVAR(separator), IDC_CONTEXT_SEPARATOR, _ctrlContextGroup];
             _ctrlContextSeparator ctrlSetPositionY POS_H(_height);
             _ctrlContextSeparator ctrlCommit 0;
@@ -56,7 +56,7 @@ private _contextSeprators = [];
 
             _height = _height + 0.8;
         };
-        _previousWasEmpty = false;
+        _previousWasSeparator = false;
         _hasActionAbove = true;
     };
 

@@ -54,7 +54,7 @@ private _activeActions = [];
 
         // Only add the action to active actions if its statement is not empty or it has active children
         if (_isSeparator || {_statement isNotEqualTo {}} || {_activeChildren isNotEqualTo []}) then {
-            _activeActions pushBack [_action, _activeChildren, _priority, _isSeparator];
+            _activeActions pushBack [_action, _activeChildren, _priority];
         };
     };
 } forEach _actions;

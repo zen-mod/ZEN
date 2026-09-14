@@ -79,10 +79,10 @@ class GVAR(separator): RscControlsGroupNoScrollbars {
         class Background: RscText {
             idc = IDC_CONTEXT_SEPARATOR_LINE;
             x = QUOTE(POS_W(0.3));
-            y = QUOTE(POS_H(0.37));
+            y = QUOTE(POS_H(0.38));
             w = QUOTE(POS_W(7.4));
-            h = QUOTE(POS_H(0.03));
-            colorBackground[] = {1, 1, 1, 0.25};
+            h = QUOTE(POS_H(0.04));
+            colorBackground[] = {1, 1, 1, 0.5};
         };
     };
 };
