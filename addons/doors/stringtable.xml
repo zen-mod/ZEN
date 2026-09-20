@@ -12,6 +12,7 @@
             <Chinesesimp>门设置</Chinesesimp>
             <Chinese>門設置</Chinese>
             <Italian>Configura le porte</Italian>
+            <Spanish>Configurar puertas</Spanish>
         </Key>
         <Key ID="STR_ZEN_Doors_DoorState">
             <English>Door State</English>
@@ -21,6 +22,7 @@
             <Chinesesimp>门状态</Chinesesimp>
             <Chinese>門狀態</Chinese>
             <Italian>Stato della porta</Italian>
+            <Spanish>Estado de la puerta</Spanish>
         </Key>
         <Key ID="STR_ZEN_Doors_NoBuilding">
             <English>Place on a building</English>
@@ -33,6 +35,7 @@
             <Chinesesimp>置于建筑物上</Chinesesimp>
             <Chinese>置於建築物上</Chinese>
             <Italian>Posto su un edificio</Italian>
+            <Spanish>Colócalo sobre un edificio</Spanish>
         </Key>
         <Key ID="STR_ZEN_Doors_NoDoors">
             <English>Building has no doors</English>
@@ -45,6 +48,7 @@
             <Chinesesimp>建筑物无门</Chinesesimp>
             <Chinese>建築物無門</Chinese>
             <Italian>L'edificio non ha porte</Italian>
+            <Spanish>El edificio no tiene puertas</Spanish>
         </Key>
     </Package>
 </Project>

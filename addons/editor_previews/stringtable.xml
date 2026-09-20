@@ -10,6 +10,7 @@
             <Chinese>物體預覽圖像</Chinese>
             <Italian>Immagini di anteprima dell'oggetto</Italian>
             <French>Images de prévisualisation des objets</French>
+            <Spanish>Imágenes de vista previa de los objetos</Spanish>
         </Key>
         <Key ID="STR_ZEN_Editor_Previews_Enabled_Description">
             <English>Enables object preview images when hovering over an item in the create trees.</English>
@@ -20,6 +21,7 @@
             <Chinese>當鼠標懸停在創建樹中的一個項目上時，啟用物體預覽圖像。</Chinese>
             <Italian>Abilita le immagini di anteprima degli oggetti quando si passa con il mouse su un elemento negli alberi di creazione.</Italian>
             <French>Active les vignettes des objets lorsqu'on pointe l'objet dans l'arborescence des unités.</French>
+            <Spanish>Muestra imágenes de vista previa al pasar el cursor sobre un elemento de los árboles de creación.</Spanish>
         </Key>
     </Package>
 </Project>

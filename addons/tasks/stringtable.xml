@@ -9,6 +9,7 @@
             <Chinese>模塊位置</Chinese>
             <Italian>Posizione del modulo</Italian>
             <French>Position du module</French>
+            <Spanish>Posición del módulo</Spanish>
         </Key>
         <Key ID="STR_ZEN_Tasks_ModulePosition_Tooltip">
             <English>The task's position will be synchronized with the position of the module.</English>
@@ -18,6 +19,7 @@
             <Chinese>該任務的位置將與模塊的位置同步。</Chinese>
             <Italian>La posizione dell'attività sarà sincronizzata con la posizione del modulo.</Italian>
             <French>La position de la tâche sera synchronisée avec la position du module.</French>
+            <Spanish>La posición de la tarea se sincronizará con la posición del módulo.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Tasks_DestinationDisabled_Tooltip">
             <English>The task will not have position associated with it.</English>
@@ -27,6 +29,7 @@
             <Chinese>該任務將不會有與之相關的位置。</Chinese>
             <Italian>L'attività non avrà una posizione ad essa associata.</Italian>
             <French>La tâche n'est pas associée à une position.</French>
+            <Spanish>La tarea no tendrá ninguna posición asociada.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Tasks_Type_Tooltip">
             <English>Sets the task's icon.</English>
@@ -36,6 +39,7 @@
             <Chinese>設置任務圖標</Chinese>
             <Italian>Imposta l'icona dell'attività.</Italian>
             <French>Définit l'icône de la tâche.</French>
+            <Spanish>Define el icono de la tarea.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Tasks_TitleDescription">
             <English>Title &amp; Description</English>
@@ -45,6 +49,7 @@
             <Chinese>標題與描述</Chinese>
             <Italian>Titolo &amp; Descrizione</Italian>
             <French>Titre et description</French>
+            <Spanish>Título y descripción</Spanish>
         </Key>
         <Key ID="STR_ZEN_Tasks_TitleDescription_Tooltip">
             <English>The task's title and description. Task description supports XML-like tags (see structured text syntax for SQF).</English>
@@ -54,6 +59,7 @@
             <Chinese>任務的標題和描述。任務描述可以使用日誌記錄所支持的標籤。</Chinese>
             <Italian>Il titolo e la descrizione dell'attività. La descrizione dell'attività supporta tag di tipo XML (vedere la sintassi del testo strutturato per SQF).</Italian>
             <French>Le titre et la description de la tâche. La description de la tâche prend en charge les balises de type XML (voir la syntaxe de texte structuré pour SQF).</French>
+            <Spanish>El título y la descripción de la tarea. La descripción admite etiquetas similares a XML (consulta la sintaxis de texto estructurado de SQF).</Spanish>
         </Key>
         <Key ID="STR_ZEN_Tasks_Default">
             <English>Default</English>
@@ -63,6 +69,7 @@
             <Chinesesimp>默认</Chinesesimp>
             <Chinese>默認</Chinese>
             <Italian>Predefinito</Italian>
+            <Spanish>Predeterminado</Spanish>
         </Key>
         <Key ID="STR_ZEN_Tasks_Airdrop">
             <English>Airdrop</English>
@@ -72,6 +79,7 @@
             <Chinesesimp>空降</Chinesesimp>
             <Chinese>空降</Chinese>
             <Italian>Lancio del paracadute</Italian>
+            <Spanish>Lanzamiento aéreo</Spanish>
         </Key>
         <Key ID="STR_ZEN_Tasks_Box">
             <English>Box</English>
@@ -81,6 +89,7 @@
             <Chinesesimp>箱子</Chinesesimp>
             <Chinese>箱子</Chinese>
             <Italian>Scatola</Italian>
+            <Spanish>Caja</Spanish>
         </Key>
         <Key ID="STR_ZEN_Tasks_Container">
             <English>Container</English>
@@ -90,6 +99,7 @@
             <Chinesesimp>集装箱</Chinesesimp>
             <Chinese>集裝箱</Chinese>
             <Italian>Contenitore</Italian>
+            <Spanish>Contenedor</Spanish>
         </Key>
         <Key ID="STR_ZEN_Tasks_Danger">
             <English>Danger</English>
@@ -115,6 +125,7 @@
             <Chinesesimp>退出</Chinesesimp>
             <Chinese>退出</Chinese>
             <Italian>Uscita</Italian>
+            <Spanish>Salida</Spanish>
         </Key>
         <Key ID="STR_ZEN_Tasks_Kill">
             <English>Kill</English>
@@ -124,6 +135,7 @@
             <Chinesesimp>杀死</Chinesesimp>
             <Chinese>殺死</Chinese>
             <Italian>Uccisione</Italian>
+            <Spanish>Eliminar</Spanish>
         </Key>
         <Key ID="STR_ZEN_Tasks_Listen">
             <English>Listen</English>
@@ -133,6 +145,7 @@
             <Chinesesimp>听取</Chinesesimp>
             <Chinese>聽取</Chinese>
             <Italian>Ascolta</Italian>
+            <Spanish>Escuchar</Spanish>
         </Key>
         <Key ID="STR_ZEN_Tasks_Meet">
             <English>Meet</English>
@@ -238,6 +251,7 @@
             <Chinesesimp>导航</Chinesesimp>
             <Chinese>導航</Chinese>
             <Italian>Navigare</Italian>
+            <Spanish>Navegar</Spanish>
         </Key>
         <Key ID="STR_ZEN_Tasks_Run">
             <English>Run</English>
@@ -247,6 +261,7 @@
             <Chinesesimp>跑</Chinesesimp>
             <Chinese>跑</Chinese>
             <Italian>Correre</Italian>
+            <Spanish>Correr</Spanish>
         </Key>
         <Key ID="STR_ZEN_Tasks_Scout">
             <English>Scout</English>
@@ -256,6 +271,7 @@
             <Chinesesimp>侦查</Chinesesimp>
             <Chinese>偵察</Chinese>
             <Italian>Esploratore</Italian>
+            <Spanish>Explorar</Spanish>
         </Key>
         <Key ID="STR_ZEN_Tasks_Search">
             <English>Search</English>
@@ -265,6 +281,7 @@
             <Chinesesimp>搜索</Chinesesimp>
             <Chinese>捜索</Chinese>
             <Italian>Cerca</Italian>
+            <Spanish>Buscar</Spanish>
         </Key>
         <Key ID="STR_ZEN_Tasks_Talk">
             <English>Talk</English>
@@ -386,6 +403,7 @@
             <Chinesesimp>使用</Chinesesimp>
             <Chinese>使用</Chinese>
             <Italian>Utilizzo</Italian>
+            <Spanish>Usar</Spanish>
         </Key>
         <Key ID="STR_ZEN_Tasks_Whiteboard">
             <English>Whiteboard</English>
@@ -395,6 +413,7 @@
             <Chinesesimp>白板</Chinesesimp>
             <Chinese>白板</Chinese>
             <Italian>Lavagna</Italian>
+            <Spanish>Pizarra</Spanish>
         </Key>
     </Package>
 </Project>

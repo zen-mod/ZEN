@@ -10,6 +10,7 @@
             <Chinesesimp>%1 发</Chinesesimp>
             <Chinese>%1 發</Chinese>
             <Italian>%1 Cartucce</Italian>
+            <Spanish>%1 proyectiles</Spanish>
         </Key>
         <Key ID="STR_ZEN_Loadout_AmmoTooltip">
             <English>%1\n%2 Rounds\n%3</English>
@@ -20,6 +21,7 @@
             <Chinesesimp>%1\n%2 发\n%3</Chinesesimp>
             <Chinese>%1\n%2 發\n%3</Chinese>
             <Italian>%1\n%2 Cartucce\n%3</Italian>
+            <Spanish>%1\n%2 proyectiles\n%3</Spanish>
         </Key>
         <Key ID="STR_ZEN_Loadout_EditLoadout">
             <English>Edit Loadout (%1)</English>
@@ -30,6 +32,7 @@
             <Chinese>編輯裝備 (%1)</Chinese>
             <Italian>Personalizza l'attrezzatura (%1)</Italian>
             <French>Éditer l'équipement (%1)</French>
+            <Spanish>Editar equipamiento (%1)</Spanish>
         </Key>
     </Package>
 </Project>
