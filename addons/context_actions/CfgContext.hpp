@@ -387,11 +387,13 @@ class EGVAR(context_menu,actions) {
             icon = QPATHTOF(ui\remove_ca.paa);
             class Selected {
                 displayName = CSTRING(Selected);
+                condition = QUOTE(SELECTED_OBJECTS isNotEqualTo []);
                 statement = QUOTE([ARR_3(SELECTED_OBJECTS,false,getAssignedCuratorLogic player)] call EFUNC(common,updateEditableObjects));
                 icon = QPATHTOF(ui\remove_ca.paa);
             };
             class 10m: Selected {
                 displayName = CSTRING(10m);
+                condition = QUOTE(true);
                 statement = QUOTE([ARR_3(false,_position,_args)] call FUNC(updateEditableObjects));
                 args = 10;
             };
