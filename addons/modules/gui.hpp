@@ -370,7 +370,7 @@ class GVAR(RscEditableObjects): GVAR(RscDisplay) {
         class Title: Title {};
         class Background: Background {};
         class Content: Content {
-            h = QUOTE(POS_H(8.2));
+            h = QUOTE(POS_H(9.3));
             class controls {
                 class EditingModeLabel: EGVAR(common,RscLabel) {
                     text = CSTRING(ModuleEditableObjects_EditingMode);
@@ -468,6 +468,17 @@ class GVAR(RscEditableObjects): GVAR(RscDisplay) {
                 class FilterStaticText: FilterAllText {
                     text = ECSTRING(common,Static);
                     y = QUOTE(POS_H(7.2));
+                };
+                class AliveLabel: EGVAR(common,RscLabel) {
+                    text = ECSTRING(common,Alive);
+                    tooltip = CSTRING(ModuleEditableObjects_Alive_Tooltip);
+                    y = QUOTE(POS_H(8.3));
+                };
+                class Alive: EditingMode {
+                    idc = IDC_EDITABLEOBJECTS_ALIVE;
+                    y = QUOTE(POS_H(8.3));
+                    columns = 3;
+                    strings[] = {ECSTRING(common,No), ECSTRING(common,Yes), ECSTRING(common,Either)};
                 };
             };
         };

@@ -111,6 +111,19 @@
             <Italian>Spegni</Italian>
             <Spanish>Apagado</Spanish>
         </Key>
+        <Key ID="STR_ZEN_Common_Either">
+            <English>Either</English>
+            <French>L'un ou l'autre</French>
+            <Russian>Любой</Russian>
+            <German>Eines von beiden</German>
+            <Polish>Dowolny</Polish>
+            <Czech>Libovolné</Czech>
+            <Italian>Uno dei due</Italian>
+            <Japanese>どちらでも</Japanese>
+            <Korean>어느 쪽이든</Korean>
+            <Chinesesimp>任一</Chinesesimp>
+            <Chinese>任一</Chinese>
+        </Key>
         <Key ID="STR_ZEN_Common_Unchanged">
             <English>Unchanged</English>
             <French>Inchangé</French>
@@ -376,6 +389,18 @@
             <Chinesesimp>飞机</Chinesesimp>
             <Chinese>飛機</Chinese>
             <Spanish>Aeronaves</Spanish>
+        </Key>
+        <Key ID="STR_ZEN_Common_Alive">
+            <English>Alive</English>
+            <Russian>Живой</Russian>
+            <German>Lebendig</German>
+            <Polish>Żywy</Polish>
+            <Japanese>生存</Japanese>
+            <Korean>살아있는</Korean>
+            <Chinesesimp>活着</Chinesesimp>
+            <Chinese>活著</Chinese>
+            <Italian>Vivo</Italian>
+            <French>Vivant</French>
         </Key>
         <Key ID="STR_ZEN_Common_Filter">
             <English>Filter</English>

@@ -1246,6 +1246,9 @@
             <French>Tous les objets de mission</French>
             <Spanish>Todos los objetos de la misión</Spanish>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleEditableObjects_Alive_Tooltip">
+            <English>Controls whether the objects should be dead, alive, or either.</English>
+        </Key>
         <Key ID="STR_ZEN_Modules_ModuleHeal">
             <English>Heal</English>
             <Russian>Лечить</Russian>
