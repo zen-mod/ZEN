@@ -19,7 +19,7 @@ class GVAR(display) {
             y = QUOTE(CENTER_Y - (PICTURE_H + GRID_H(22)) / 2);
             w = QUOTE(PICTURE_W + GRID_W(5));
             h = QUOTE(GRID_H(5));
-            colorBackground[] = GUI_THEME_COLOR;
+            colorBackground[] = GUI_BCG_COLOR;
             moving = 1;
         };
         class Background: RscText {
