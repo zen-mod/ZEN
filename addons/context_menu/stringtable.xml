@@ -83,6 +83,12 @@
             <French>Permet d'ouvrir le menu contextuel en cliquant avec le bouton droit de la souris lors du contrôle normal du positionnement des points de passage.\nIl est nécessaire d'appuyer sur la touche SHIFT pour positionner les points de passage.</French>
             <Spanish>Permite abrir el menú contextual con el clic derecho allí donde normalmente se colocaría un punto de destino.\nRequiere mantener pulsada la tecla MAYÚS para colocar puntos de destino.</Spanish>
         </Key>
+        <Key ID="STR_ZEN_Context_Menu_ShowSeparators">
+            <English>Show Separators</English>
+        </Key>
+        <Key ID="STR_ZEN_Context_Menu_ShowSeparators_Description">
+            <English>Controls whether separators are rendered in the context menu.\nThese can help visually group related actions, allowing for easier navigation of the context menu.</English>
+        </Key>
         <Key ID="STR_ZEN_Context_Menu_OpenContextMenu">
             <English>Open Context Menu</English>
             <French>Ouvrir le menu contextuel</French>

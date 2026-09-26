@@ -15,3 +15,12 @@
     false,
     false
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(showSeparators),
+    "CHECKBOX",
+    [LSTRING(ShowSeparators), LSTRING(ShowSeparators_Description)],
+    [ELSTRING(main,DisplayName), LSTRING(DisplayName)],
+    true,
+    false
+] call CBA_fnc_addSetting;
