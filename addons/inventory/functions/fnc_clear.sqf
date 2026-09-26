@@ -30,6 +30,17 @@ private _fnc_clear = {
 
     private _cargo = _display getVariable QGVAR(cargo);
     _display setVariable [QGVAR(currentLoad), [_cargo] call FUNC(calculateLoad)];
+
+    // Remove items from the tracked containers as well
+    private _containers = _display getVariable [QGVAR(containers), []];
+
+    {
+        _x params ["_containerType"];
+
+        if (_containerType in _items) then {
+            _containers deleteAt _forEachIndex;
+        };
+    } forEachReversed _containers;
 };
 
 if (_display getVariable [QGVAR(weapon), ""] == "") then {
@@ -38,6 +49,7 @@ if (_display getVariable [QGVAR(weapon), ""] == "") then {
     if (_category == -1) then {
         // No specific category, empty cargo completely
         _display setVariable [QGVAR(cargo), EMPTY_CARGO];
+        _display setVariable [QGVAR(containers), []];
         _display setVariable [QGVAR(currentLoad), 0];
     } else {
         // Specific category selected, get items to remove from the master items list

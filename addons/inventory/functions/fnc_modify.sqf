@@ -74,6 +74,37 @@ if (_count > 0) then {
     _counts deleteAt _index;
 };
 
+// Update tracked containers if needed
+private _isContainer = _item call EFUNC(common,isContainerItem);
+
+if (_isContainer && {_amount != 0}) then {
+    private _containers = _display getVariable [QGVAR(containers), []];
+
+    if (_amount > 0) then {
+        // Newly added containers do not have an existing inventory
+        for "_i" from 1 to _amount do {
+            _containers pushBack [_item, objNull];
+        };
+    } else {
+        // Remove the most recently added/matched instance
+        // LIFO gives useful semantics for adding and then removing (or vice versa)
+        private _amountToRemove = -_amount;
+
+        {
+            _x params ["_containerType"];
+
+            if (_containerType == _item) then {
+                _containers deleteAt _forEachIndex;
+                _amountToRemove = _amountToRemove - 1;
+
+                if (_amountToRemove == 0) then {
+                    break;
+                };
+            };
+        } forEachReversed _containers;
+    };
+};
+
 // Update the item's row in the list
 private _alpha = [ALPHA_NONE, ALPHA_SOME] select (_count > 0);
 _ctrlList lnbSetValue [[_currentRow, 2], _count];

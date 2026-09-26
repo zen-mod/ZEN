@@ -28,6 +28,7 @@ _display setVariable [QGVAR(currentLoad), _currentLoad];
 _display setVariable [QGVAR(maximumLoad), maxLoad _object];
 _display setVariable [QGVAR(object), _object];
 _display setVariable [QGVAR(cargo), _cargo];
+_display setVariable [QGVAR(containers), everyContainer _object];
 
 // Adjust display element positions based on the content height
 [_display] call EFUNC(common,initDisplayPositioning);
