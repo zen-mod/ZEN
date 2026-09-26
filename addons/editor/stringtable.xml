@@ -492,6 +492,18 @@
             <Chinesesimp>让选定的AI单位看向宙斯镜头所在位置</Chinesesimp>
             <Spanish>Hace que las unidades de IA seleccionadas vigilen la posición de la cámara de Zeus.</Spanish>
         </Key>
+        <Key ID="STR_ZEN_Editor_DeepPasteHC">
+            <English>Deep Paste On Headless Client</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_DeepPasteHC_Description">
+            <English>Deep-copied entities will be sent to headless client(s) if available, avoiding subsequent transfer.</English>
+        </Key>
+        <Key ID="STR_ZEN_Editor_FocusSearchBar">
+            <English>Focus Search Bar</English>
+            <German>Suchfeld fokussieren</German>
+            <Polish>Skieruj na wyszukiwarke</Polish>
+            <Japanese>検索バーにフォーカス</Japanese>
+        </Key>
         <Key ID="STR_ZEN_Editor_ForceFire">
             <English>Force Fire</English>
             <Japanese>強制射撃</Japanese>

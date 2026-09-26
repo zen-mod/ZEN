@@ -9,6 +9,7 @@
  * 1: Center Position <ARRAY>
  * 2: Make Editable <BOOL> (default: true)
  * 3: Randomization <BOOL> (default: false)
+ * 4: Use Headless Client <BOOL> (default: true)
  *
  * Return Value:
  * Created Objects <ARRAY>
@@ -19,8 +20,14 @@
  * Public: No
  */
 
-params [["_serializedData", [], [[]]], ["_centerPos", [0, 0, 0], [[]], [2, 3]], ["_makeEditable", true, [true]], ["_enableRandomization", false, [true]]];
+params [["_serializedData", [], [[]]], ["_centerPos", [0, 0, 0], [[]], [2, 3]], ["_makeEditable", true, [true]], ["_enableRandomization", false, [true]], ["_useHC", true, [true]]];
 _serializedData params [["_objectData", [], [[]]], ["_groupData", [], [[]]]];
+
+// Check for suitable Headless Client
+private _hc = [] call FUNC(getFewestGroupsHC);
+if (isServer && {_useHC} && {!isNull _hc}) exitWith {
+    [QEGVAR(common,deserializeObjects), _this, _hc] call CBA_fnc_targetEvent;
+};
 
 // Set center position to ground level over land and water level over the ocean
 // Serialized object data offsets are relative to AGL height 0
