@@ -287,6 +287,10 @@ Creates an invisible unit that shoots customizable tracer bursts at a specified 
 
 Un-garrisons units from the attached group.
 
+## Unpack Static Weapon
+
+Orders AI with weapons bags to set up the static weapon facing the target position.
+
 ## Update Editable Objects
 
 Adds or removes editable objects of the selected types from the local or all curators.
