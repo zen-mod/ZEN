@@ -24,4 +24,5 @@ private _vehicles = _this select {
 
 {
     _x setDamage 0;
+    [QEGVAR(common,setDamage), [_x, 0], _x] call CBA_fnc_targetEvent;
 } forEach _vehicles;
