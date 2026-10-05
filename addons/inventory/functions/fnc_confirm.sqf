@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: mharis001
+ * Author: mharis001, Venrix
  * Handles confirming the inventory display changes.
  *
  * Arguments:
@@ -19,7 +19,7 @@ params ["_ctrlButtonOK"];
 
 private _display = ctrlParent _ctrlButtonOK;
 private _object = _display getVariable QGVAR(object);
-private _cargo  = _display getVariable QGVAR(cargo);
+private _cargo = _display getVariable QGVAR(cargo);
 _cargo params ["_itemCargo", "_weaponCargo", "_magazineCargo", "_backpackCargo"];
 
 clearItemCargoGlobal _object;
@@ -50,3 +50,22 @@ _backpackCargo params ["_backpackTypes", "_backpackCounts"];
 {
     _object addBackpackCargoGlobal [_x, _backpackCounts select _forEachIndex];
 } forEach _backpackTypes;
+
+// Restore the opening snapshot, consuming one recreated container per entry
+private _everyContainer = everyContainer _object;
+
+{
+    _x params ["_type", "_data"];
+
+    private _index = _everyContainer findIf {_x select 0 == _type};
+
+    if (_index != -1) then {
+        private _container = _everyContainer deleteAt _index select 1;
+
+        // Consume new containers too so duplicate classes remain aligned
+        // Empty data leaves their config-defined contents untouched
+        if (_data isNotEqualTo []) then {
+            [_container, _data] call EFUNC(common,deserializeInventory);
+        };
+    };
+} forEach (_display getVariable QGVAR(containers));
