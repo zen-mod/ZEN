@@ -81,9 +81,9 @@ if (_isContainer && {_amount != 0}) then {
     private _containers = _display getVariable [QGVAR(containers), []];
 
     if (_amount > 0) then {
-        // Newly added containers do not have an existing inventory
+        // Empty data preserves the config-defined inventory of newly added containers
         for "_i" from 1 to _amount do {
-            _containers pushBack [_item, objNull];
+            _containers pushBack [_item, []];
         };
     } else {
         // Remove the most recently added/matched instance

@@ -23,7 +23,7 @@ private _object = _display getVariable QGVAR(object);
 private _cargo = _object call EFUNC(common,getDefaultInventory);
 _display setVariable [QGVAR(cargo), _cargo];
 
-// Track default container items as new containers with no preserved contents
+// Use config-defined contents for the default container items
 private _containers = [];
 
 {
@@ -34,7 +34,7 @@ private _containers = [];
             private _count = _counts select _forEachIndex;
 
             for "_i" from 1 to _count do {
-                _containers pushBack [_x, objNull];
+                _containers pushBack [_x, []];
             };
         };
     } forEach _types;

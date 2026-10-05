@@ -23,12 +23,19 @@ if (!createDialog QGVAR(display)) exitWith {};
 private _cargo = [getItemCargo _object, getWeaponCargo _object, getMagazineCargo _object, getBackpackCargo _object];
 private _currentLoad = [_cargo] call FUNC(calculateLoad);
 
+// Capture nested contents now so confirmation applies the same snapshot as the cargo
+private _containers = everyContainer _object apply {
+    _x params ["_type", "_container"];
+
+    [_type, _container call EFUNC(common,serializeInventory)]
+};
+
 private _display = uiNamespace getVariable QEGVAR(common,display);
 _display setVariable [QGVAR(currentLoad), _currentLoad];
 _display setVariable [QGVAR(maximumLoad), maxLoad _object];
 _display setVariable [QGVAR(object), _object];
 _display setVariable [QGVAR(cargo), _cargo];
-_display setVariable [QGVAR(containers), everyContainer _object];
+_display setVariable [QGVAR(containers), _containers];
 
 // Adjust display element positions based on the content height
 [_display] call EFUNC(common,initDisplayPositioning);
