@@ -302,6 +302,11 @@ class CfgVehicles {
         displayName = CSTRING(ModuleHideZeus);
         function = QFUNC(moduleHideZeus);
     };
+    class GVAR(moduleInjure): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleInjure);
+        function = QFUNC(moduleInjure);
+    };
     class GVAR(moduleLightSource): GVAR(moduleBase) {
         category = "Effects";
         displayName = CSTRING(ModuleLightSource);

@@ -4255,5 +4255,8 @@
             <French>Le véhicule doit disposer d'un autre équipage</French>
             <Spanish>El vehículo debe tener otros tripulantes disponibles</Spanish>
         </Key>
+        <Key ID="STR_ZEN_Modules_ModuleInjure">
+            <English>Injure</English>
+        </Key>
     </Package>
 </Project>
