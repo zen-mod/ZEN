@@ -13,6 +13,7 @@
             <Korean>카메라</Korean>
             <Chinesesimp>摄像机</Chinesesimp>
             <Chinese>攝像機</Chinese>
+            <Spanish>Cámara</Spanish>
         </Key>
         <Key ID="STR_ZEN_Camera_FollowTerrain">
             <English>Follow Terrain</English>
@@ -26,6 +27,7 @@
             <Korean>지형 따라가기</Korean>
             <Chinesesimp>地形跟踪</Chinesesimp>
             <Chinese>地形跟踪</Chinese>
+            <Spanish>Seguir el terreno</Spanish>
         </Key>
         <Key ID="STR_ZEN_Camera_FollowTerrain_Description">
             <English>Controls whether the camera's height should adjust with changes in terrain elevation.</English>
@@ -39,6 +41,7 @@
             <Chinese>控制攝像機的高度是否應隨地形高度的變化而調整。</Chinese>
             <Polish>Kontroluje czy kamera podąża względem wysokości terenu.</Polish>
             <Italian>Controlla se l'altezza della telecamera deve adattarsi ai cambiamenti nell'elevazione del terreno.</Italian>
+            <Spanish>Controla si la altura de la cámara debe ajustarse a los cambios de elevación del terreno.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Camera_AdaptiveSpeed">
             <English>Adaptive Speed</English>
@@ -52,6 +55,7 @@
             <Korean>속도 자동 조절</Korean>
             <Chinesesimp>自适应速度</Chinesesimp>
             <Chinese>自適應速度</Chinese>
+            <Spanish>Velocidad adaptativa</Spanish>
         </Key>
         <Key ID="STR_ZEN_Camera_AdaptiveSpeed_Description">
             <English>Adapts the camera's speed based on its current height. Lower height - slower camera movement.</English>
@@ -65,6 +69,7 @@
             <Chinese>根據攝像機的當前高度調整其速度。較低的高度 - 較慢的相機移動速度。</Chinese>
             <Polish>Steruje prędkością kamery względem obecnej wysokości, czym wyżej tym szybciej, czym niżej tym wolniej.</Polish>
             <Italian>Adatta la velocità della telecamera in base alla sua altezza attuale. Altezza ridotta - movimento della telecamera più lento.</Italian>
+            <Spanish>Adapta la velocidad de la cámara a su altura actual. A menor altura, movimiento más lento.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Camera_DefaultSpeedCoef">
             <English>Default Speed Coefficient</English>
@@ -78,6 +83,7 @@
             <Korean>기본 속도 계수</Korean>
             <Chinesesimp>默认速度系数</Chinesesimp>
             <Chinese>默認速度係數</Chinese>
+            <Spanish>Coeficiente de velocidad predeterminada</Spanish>
         </Key>
         <Key ID="STR_ZEN_Camera_DefaultSpeedCoef_Description">
             <English>Coefficient for the default camera movement speed, higher is faster.</English>
@@ -91,6 +97,7 @@
             <Chinese>默認攝像機移動速度的係數，越高越快。</Chinese>
             <Polish>Współczynnik domyślnej prędkości kamery, wyższa wartość równa się szybciej.</Polish>
             <Italian>Coefficiente per la velocità di movimento della telecamera predefinita, più alto è più veloce.</Italian>
+            <Spanish>Coeficiente de la velocidad de movimiento predeterminada de la cámara; cuanto más alto, más rápida.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Camera_FastSpeedCoef">
             <English>Fast Speed Coefficient</English>
@@ -104,6 +111,7 @@
             <Chinesesimp>高速系数</Chinesesimp>
             <Chinese>高速係數</Chinese>
             <Italian>Coefficiente di velocità veloce</Italian>
+            <Spanish>Coeficiente de velocidad rápida</Spanish>
         </Key>
         <Key ID="STR_ZEN_Camera_FastSpeedCoef_Description">
             <English>Coefficient for the fast camera movement speed (when holding down the shift key), higher is faster.</English>
@@ -117,6 +125,7 @@
             <Chinese>攝像機快速移動速度的係數（按住shift鍵時），越高越快。</Chinese>
             <Polish>Wspólczynnik szybkiego ruchu kamery (naciskając shift), wyższa wartość równa się szybciej</Polish>
             <Italian>Coefficiente per la velocità di movimento della telecamera (tenendo premuto il tasto Maiusc), più alto è più veloce.</Italian>
+            <Spanish>Coeficiente de la velocidad de movimiento rápida de la cámara (al mantener pulsada la tecla Mayús); cuanto más alto, más rápida.</Spanish>
         </Key>
     </Package>
 </Project>

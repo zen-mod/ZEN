@@ -9,6 +9,7 @@
             <Japanese>カメラの終了位置</Japanese>
             <Italian>Posizione dopo essere usciti dalla telecamera</Italian>
             <French>Position après avoir quitté la caméra</French>
+            <Spanish>Posición de la cámara al salir</Spanish>
         </Key>
         <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_Description">
             <English>Controls where the camera is positioned after exiting remote control.\nIf the unit is deleted while remote controlling, the camera's position is unchanged.</English>
@@ -18,6 +19,7 @@
             <Japanese>遠隔操作を終了時のカメラ位置を設定します。\n遠隔操作中にユニットが削除された場合は、カメラ位置は変わりません。</Japanese>
             <Italian>Controlla dove viene posizionata la telecamera dopo essere usciti dal controllo remoto. \nLa posizione della telecamera rimane invariata se l'unità è stata eliminata durante il controllo remoto.</Italian>
             <French>Contrôle l'endroit où la caméra est positionnée après avoir quitté la commande à distance.\nLa position de la caméra reste inchangée si l'unité a été supprimée pendant la commande à distance.</French>
+            <Spanish>Controla dónde se sitúa la cámara tras salir del control remoto.\nSi la unidad se elimina durante el control remoto, la posición de la cámara no cambia.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_Unchanged_Description">
             <English>The camera's position is unchanged and restored as it was when remote control started.</English>
@@ -27,6 +29,7 @@
             <Japanese>カメラ位置は、遠隔操作が開始されても変更されずまた元の位置へ戻りません。</Japanese>
             <Italian>La posizione della telecamera rimane invariata e viene reimpostata sulla posizione prima del telecomando.</Italian>
             <French>La position de la caméra reste inchangée et revient à la position avant la commande à distance.</French>
+            <Spanish>La posición de la cámara no cambia y se restaura tal como estaba al iniciar el control remoto.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_Relative">
             <English>Relative</English>
@@ -36,6 +39,7 @@
             <Japanese>相対的</Japanese>
             <Italian>Relativo</Italian>
             <French>Relative</French>
+            <Spanish>Relativa</Spanish>
         </Key>
         <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_Relative_Description">
             <English>The camera is positioned based on where it was relative to the unit when remote control started.</English>
@@ -45,6 +49,7 @@
             <Japanese>カメラ位置は、遠隔操作を開始時に遠隔操作ユニットの相対位置へ移動します。</Japanese>
             <Italian>La telecamera è posizionata in base alla posizione relativa all'unità quando è stato avviato il telecomando.</Italian>
             <French>La caméra est positionnée en fonction de sa position relative par rapport à l'unité lorsque la commande à distance a été lancée.</French>
+            <Spanish>La cámara se sitúa según la posición que tenía respecto a la unidad al iniciar el control remoto.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_RelativeLimited">
             <English>Relative (Limited)</English>
@@ -54,6 +59,7 @@
             <Japanese>相対的 (限定的)</Japanese>
             <Italian>Relativo (Limitato)</Italian>
             <French>Relatif (limité)</French>
+            <Spanish>Relativa (limitada)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_RelativeLimited_Description">
             <English>The camera is positioned based on where it was relative to the unit when remote control started but limited to a maximum distance of 50 meters from the unit.</English>
@@ -63,6 +69,7 @@
             <Japanese>カメラ位置は、遠隔操作を開始時に遠隔操作ユニットの相対位置へ移動しますが、最大 50m までの範囲距離内に移動します。</Japanese>
             <Italian>La telecamera è posizionata in base alla posizione relativa all'unità quando è stato avviato il telecomando, ma la distanza è limitata a un massimo di 50 metri dall'unità.</Italian>
             <French>La caméra est positionnée en fonction de l'endroit où elle se trouvait par rapport à l'unité lorsque la commande à distance a démarré, mais elle est limitée à une distance maximale de 50 mètres de l'unité.</French>
+            <Spanish>La cámara se sitúa según la posición que tenía respecto a la unidad al iniciar el control remoto, pero limitada a una distancia máxima de 50 metros de la unidad.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_AboveUnit">
             <English>Above Unit</English>
@@ -72,6 +79,7 @@
             <Japanese>ユニットの上</Japanese>
             <Italian>Sopra l'unità</Italian>
             <French>Au-dessus de l'unité</French>
+            <Spanish>Sobre la unidad</Spanish>
         </Key>
         <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_AboveUnit_Description">
             <English>The camera is positioned 10 meters directly above the unit and facing the same direction as the unit.</English>
@@ -81,6 +89,7 @@
             <Japanese>カメラ位置はユニットの 10m 上空へ移動され、ユニットと同じ方向を向きます。</Japanese>
             <Italian>La telecamera è posizionata a 10 metri direttamente sopra l'unità e rivolta nella stessa direzione dell'unità.</Italian>
             <French>La caméra est placée à 10 mètres directement au-dessus de l'unité et orientée dans la même direction que l'unité.</French>
+            <Spanish>La cámara se sitúa 10 metros justo encima de la unidad y mirando en la misma dirección que ella.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_BehindUnit">
             <English>Behind Unit</English>
@@ -90,6 +99,7 @@
             <Japanese>ユニットの後ろ</Japanese>
             <Italian>Dietro l'unità</Italian>
             <French>Derrière l'unité</French>
+            <Spanish>Detrás de la unidad</Spanish>
         </Key>
         <Key ID="STR_ZEN_Remote_Control_CameraExitPosition_BehindUnit_Description">
             <English>The camera is positioned 10 meters behind and 10 meters above the unit and looking at the unit.</English>
@@ -99,6 +109,7 @@
             <Japanese>カメラ位置はユニットの 10m 後方かつ 10m 上空へ移動され、ユニットを向くよう移動します。</Japanese>
             <Italian>La telecamera è posizionata 10 metri dietro e 10 metri sopra l'unità ed è rivolta nella stessa direzione dell'unità.</Italian>
             <French>La caméra est placée à 10 mètres derrière et 10 mètres au-dessus de l'unité et regarde l'unité.</French>
+            <Spanish>La cámara se sitúa 10 metros por detrás y 10 metros por encima de la unidad, mirando hacia ella.</Spanish>
         </Key>
     </Package>
 </Project>

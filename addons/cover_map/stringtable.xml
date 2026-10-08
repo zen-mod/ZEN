@@ -9,6 +9,7 @@
             <Japanese>右クリックで地図の一部分を影付きの赤で囲います。\n囲われた部分をクリックすると移動でき、外側をクリックすると新しいエリアを作ります。</Japanese>
             <Italian>Fare clic con il pulsante sinistro del mouse per interagire con l'area della mappa di copertura (ombreggiata in rosso).\nFare clic all'interno dell'area la sposterà e facendo clic all'esterno creerà una nuova area.</Italian>
             <French>Utilise le clic gauche pour interagir avec la section de la carte (zone rouge).\nUn clic à l'intérieur de la zone déplace la section et un clic à l'extérieur génère une nouvelle section.</French>
+            <Spanish>Haz clic izquierdo para interactuar con el área cubierta del mapa (sombreada en rojo).\nAl hacer clic dentro del área la moverás; al hacer clic fuera crearás una nueva.</Spanish>
         </Key>
     </Package>
 </Project>

@@ -68,3 +68,21 @@ class GVAR(row): RscControlsGroupNoScrollbars {
         };
     };
 };
+
+class GVAR(separator): RscControlsGroupNoScrollbars {
+    idc = IDC_CONTEXT_SEPARATOR;
+    x = 0;
+    y = 0;
+    w = QUOTE(POS_W(8));
+    h = QUOTE(POS_H(0.8));
+    class controls {
+        class Background: RscText {
+            idc = IDC_CONTEXT_SEPARATOR_LINE;
+            x = QUOTE(POS_W(0.3));
+            y = QUOTE(POS_H(0.38));
+            w = QUOTE(POS_W(7.4));
+            h = QUOTE(POS_H(0.04));
+            colorBackground[] = {1, 1, 1, 0.5};
+        };
+    };
+};

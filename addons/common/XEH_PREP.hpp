@@ -48,6 +48,7 @@ PREP(initListNBoxSorting);
 PREP(initOwnersControl);
 PREP(initSidesControl);
 PREP(initSliderEdit);
+PREP(isContainerItem);
 PREP(isCursorOnMouseArea);
 PREP(isInScreenshotMode);
 PREP(isPlacementActive);

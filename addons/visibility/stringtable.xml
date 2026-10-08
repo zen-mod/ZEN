@@ -10,6 +10,7 @@
             <Chinesesimp>能见度指标</Chinesesimp>
             <Chinese>能见度指标</Chinese>
             <Italian>Indicatore di visibilità</Italian>
+            <Spanish>Indicador de visibilidad</Spanish>
         </Key>
         <Key ID="STR_ZEN_Visibility_Enabled">
             <English>Enable Visibility Indicator</English>
@@ -17,6 +18,7 @@
             <Japanese>可視性インジケータを有効化</Japanese>
             <French>Activer l'indicateur de visibilité</French>
             <Chinesesimp>启用能见度指标</Chinesesimp>
+            <Spanish>Activar el indicador de visibilidad</Spanish>
         </Key>
         <Key ID="STR_ZEN_Visibility_Enabled_Description">
             <English>Enables showing an indicator when a player can see the Zeus cursor position.</English>
@@ -27,6 +29,7 @@
             <Chinesesimp>显示玩家何时能看到宙斯的光标。</Chinesesimp>
             <Chinese>顯示玩家何時能看到宙斯的光標。</Chinese>
             <Italian>Indica quando un giocatore può vedere il cursore 'Zeus'</Italian>
+            <Spanish>Muestra un indicador cuando un jugador puede ver la posición del cursor de Zeus.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Visibility_DuringPlacementOnly">
             <English>During Placement Only</English>
@@ -34,6 +37,7 @@
             <Japanese>配置中のみ</Japanese>
             <French>Pendant le placement uniquement</French>
             <Chinesesimp>仅在放置时</Chinesesimp>
+            <Spanish>Solo al colocar objetos</Spanish>
         </Key>
         <Key ID="STR_ZEN_Visibility_DuringPlacementOnly_Description">
             <English>Only show the indicator while placing objects.</English>
@@ -41,6 +45,7 @@
             <Japanese>オブジェクトを配置している間のみインジケーターを表示します。</Japanese>
             <French>Affiche l'indicateur uniquement pendant le placement</French>
             <Chinesesimp>仅在放置物体时显示能见度指标</Chinesesimp>
+            <Spanish>Muestra el indicador únicamente mientras se colocan objetos.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Visibility_MaxDistance">
             <English>Max Check Distance</English>
@@ -48,6 +53,7 @@
             <Japanese>最大チェック距離</Japanese>
             <French>Distance maximum</French>
             <Chinesesimp>最大检查距离</Chinesesimp>
+            <Spanish>Distancia máxima de comprobación</Spanish>
         </Key>
         <Key ID="STR_ZEN_Visibility_MaxDistance_Description">
             <English>Controls the maximum distance from the cursor's position that players are considered for visibility checks.</English>
@@ -55,6 +61,7 @@
             <Japanese>プレイヤーの視認性チェックの対象となる、カーソルの位置からの最大距離を制御します。</Japanese>
             <French>La distance maximale entre le curseur de la souris et les joueurs, à laquelle la visibilité est vérifiée.</French>
             <Chinesesimp>控制玩家进行能见度检查时玩家距离光标位置的最大距离</Chinesesimp>
+            <Spanish>Controla la distancia máxima desde la posición del cursor a la que se tienen en cuenta los jugadores en las comprobaciones de visibilidad.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Visibility_Visible">
             <English>VISIBLE</English>
@@ -65,6 +72,7 @@
             <Japanese>可視性</Japanese>
             <Chinesesimp>可见性</Chinesesimp>
             <Chinese>可見性</Chinese>
+            <Spanish>VISIBLE</Spanish>
         </Key>
     </Package>
 </Project>
