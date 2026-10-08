@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Handles unloading the Zeus Display.
+ * Handles unloading the Zeus display.
  *
  * Arguments:
  * 0: Display <DISPLAY>

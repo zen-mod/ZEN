@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Selection_Presets">
+        <Key ID="STR_ZEN_Selection_Presets_DisplayName">
+            <English>Selection Presets</English>
+        </Key>
+        <Key ID="STR_ZEN_Selection_Presets_Enabled">
+            <English>Enable Presets Bar</English>
+        </Key>
+        <Key ID="STR_ZEN_Selection_Presets_Enabled_Description">
+            <English>Enables a clickable selection presets bar at the bottom of the Zeus display.\nThe standard keyboard shortcuts remain available when disabled.</English>
+        </Key>
+        <Key ID="STR_ZEN_Selection_Presets_EmptySlotMode">
+            <English>Empty Slot Mode</English>
+        </Key>
+        <Key ID="STR_ZEN_Selection_Presets_EmptySlotMode_Description">
+            <English>Controls how empty selection preset slots appear in the presets bar.\nWhen the bar is hidden because all presets are empty, use CTRL + a number key to save the first preset.</English>
+        </Key>
+        <Key ID="STR_ZEN_Selection_Presets_ShowAll">
+            <English>Show All</English>
+        </Key>
+        <Key ID="STR_ZEN_Selection_Presets_ShowAll_Description">
+            <English>Always show every preset slot, including empty slots.</English>
+        </Key>
+        <Key ID="STR_ZEN_Selection_Presets_HideEmptySlots">
+            <English>Hide Empty Slots</English>
+        </Key>
+        <Key ID="STR_ZEN_Selection_Presets_HideEmptySlots_Description">
+            <English>Only show slots with saved presets. The bar disappears when all presets are empty.</English>
+        </Key>
+        <Key ID="STR_ZEN_Selection_Presets_ReplaceWithAddButton">
+            <English>Replace With Add Button</English>
+        </Key>
+        <Key ID="STR_ZEN_Selection_Presets_ReplaceWithAddButton_Description">
+            <English>Show slots with a saved preset and a button that saves the current selection to the first empty slot.</English>
+        </Key>
+        <Key ID="STR_ZEN_Selection_Presets_UseGroupIcons">
+            <English>Use Group Icons</English>
+        </Key>
+        <Key ID="STR_ZEN_Selection_Presets_UseGroupIcons_Description">
+            <English>Controls whether saved units are represented with a NATO icon appropriate for their group's role.</English>
+        </Key>
+        <Key ID="STR_ZEN_Selection_Presets_ExceptSingleUnits">
+            <English>Yes, Except Single Units</English>
+        </Key>
+        <Key ID="STR_ZEN_Selection_Presets_ExceptSingleUnits_Description">
+            <English>Use group icons except for groups containing only one unit.</English>
+        </Key>
+        <Key ID="STR_ZEN_Selection_Presets_ShowTooltips">
+            <English>Show Preset Tooltips</English>
+        </Key>
+        <Key ID="STR_ZEN_Selection_Presets_ShowTooltips_Description">
+            <English>Controls whether a list of saved object types and counts is displayed when hovering over a preset.</English>
+        </Key>
+        <Key ID="STR_ZEN_Selection_Presets_PersistPresets">
+            <English>Persist &amp; Restore Presets</English>
+        </Key>
+        <Key ID="STR_ZEN_Selection_Presets_PersistPresets_Description">
+            <English>Enables restoring selection presets when reopening the Zeus interface. Presets are saved locally for each curator.\nIn vanilla Arma 3, selection presets are discarded when the display is closed.</English>
+        </Key>
+        <Key ID="STR_ZEN_Selection_Presets_ExcludeFromPresets">
+            <English>Exclude Objects from Presets</English>
+        </Key>
+        <Key ID="STR_ZEN_Selection_Presets_ExcludeFromPresets_Description">
+            <English>Controls which types of objects are automatically excluded when saving a selection preset.</English>
+        </Key>
+        <Key ID="STR_ZEN_Selection_Presets_PropsAndModules">
+            <English>Props and Modules</English>
+        </Key>
+        <Key ID="STR_ZEN_Selection_Presets_TooltipHeader">
+            <English>Selection Preset %1</English>
+        </Key>
+        <Key ID="STR_ZEN_Selection_Presets_TooltipEntry">
+            <English>- %1x %2</English>
+        </Key>
+        <Key ID="STR_ZEN_Selection_Presets_TooltipRemaining">
+            <English>- ... +%1 additional objects</English>
+        </Key>
+        <Key ID="STR_ZEN_Selection_Presets_AddPresetTooltip">
+            <English>Add Selection Preset</English>
+        </Key>
+    </Package>
+</Project>
