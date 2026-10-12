@@ -14,3 +14,7 @@ options.ignore = [
     # External variables
     "AR_SUPPORTED_VEHICLES"
 ]
+
+# Arma supports JPEGs for UI pictures, such as the screenshots used by tour pages
+[config.file_type]
+enabled = false
