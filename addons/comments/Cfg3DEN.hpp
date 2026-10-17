@@ -31,9 +31,9 @@ class Cfg3DEN {
     class EventHandlers {
         class ADDON {
             // Arguments are for debugging
-            onMissionSave = QUOTE(['onMissionSave'] call FUNC(save3DENComments));
-            onMissionAutosave = QUOTE(['onMissionAutosave'] call FUNC(save3DENComments));
-            onBeforeMissionPreview = QUOTE(['onBeforeMissionPreview'] call FUNC(save3DENComments));
+            onMissionSave = QUOTE('onMissionSave' call FUNC(save3DENComments));
+            onMissionAutosave = QUOTE('onMissionAutosave' call FUNC(save3DENComments));
+            onBeforeMissionPreview = QUOTE('onBeforeMissionPreview' call FUNC(save3DENComments));
         };
     };
 
