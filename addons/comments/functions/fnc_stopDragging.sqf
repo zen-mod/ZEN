@@ -2,27 +2,39 @@
 /*
  * Author: mharis001
  * Stops dragging the comment being dragged, if any.
- * The comment is moved back to where the drag started.
+ * The dragged position is either applied by updating the comment or reverted.
  *
  * Arguments:
- * None
+ * 0: Apply Position <BOOL> (default: false)
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call zen_comments_fnc_stopDragging
+ * [true] call zen_comments_fnc_stopDragging
  *
  * Public: No
  */
 
+params [["_applyPosition", false]];
+
 if (GVAR(draggedComment) == "") exitWith {};
 
-// Move the comment back to its original position (the dragged position was only applied locally)
+// The dragged position was only applied locally, update the comment if it was moved or move it back
 private _ctrlIcon = GVAR(icons) get GVAR(draggedComment);
 private _data = GVAR(comments) get GVAR(draggedComment);
-_data set [DATA_INDEX_POSITION, _ctrlIcon getVariable QGVAR(dragOriginalPos)];
+private _originalPos = _ctrlIcon getVariable QGVAR(dragOriginalPos);
 
-[_ctrlIcon] call FUNC(updateIconColor);
+if (_applyPosition) then {
+    private _draggedPos = _data select DATA_INDEX_POSITION;
+
+    if (_draggedPos isNotEqualTo _originalPos) then {
+        [GVAR(draggedComment), _draggedPos] call FUNC(updateComment);
+    };
+} else {
+    _data set [DATA_INDEX_POSITION, _originalPos];
+};
 
 GVAR(draggedComment) = "";
+
+[_ctrlIcon] call FUNC(updateIconColor);

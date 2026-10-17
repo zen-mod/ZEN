@@ -18,21 +18,6 @@
 
 params ["", "_button"];
 
-if (
-    _button != 0
-    || {GVAR(draggedComment) == ""}
-) exitWith {};
+if (_button != 0) exitWith {};
 
-// The dragged position was only applied locally, update the comment if it was moved
-private _ctrlIcon = GVAR(icons) get GVAR(draggedComment);
-private _data = GVAR(comments) get GVAR(draggedComment);
-private _oldPos = _ctrlIcon getVariable QGVAR(dragOriginalPos);
-private _newPos = _data select DATA_INDEX_POSITION;
-
-if (_newPos isNotEqualTo _oldPos) then {
-    [GVAR(draggedComment), _newPos] call FUNC(updateComment);
-};
-
-GVAR(draggedComment) = "";
-
-[_ctrlIcon] call FUNC(updateIconColor);
+[true] call FUNC(stopDragging);
