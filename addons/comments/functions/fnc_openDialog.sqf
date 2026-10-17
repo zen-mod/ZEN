@@ -1,57 +1,78 @@
 #include "script_component.hpp"
 /*
  * Author: Timi007
- * Opens the dialog for creating a comment.
+ * Opens the dialog for creating or editing a comment.
  *
  * Arguments:
- * 0: Position ASL <ARRAY> or Comment ID <STRING>
+ * 0: Position ASL (create) or Comment ID (edit) <ARRAY|STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * [[0, 0, 0]] call zen_comments_fnc_openDialog
  * ["zeus:0"] call zen_comments_fnc_openDialog
  *
  * Public: No
  */
 
-params ["_positionOrId"];
+params ["_positionOrID"];
 
-private _id = ["", _positionOrId] select (_positionOrId isEqualType "");
-private _isEditingComment = _id isNotEqualTo "";
+private _id = ["", _positionOrID] select (_positionOrID isEqualType "");
+private _data = GVAR(comments) getOrDefault [_id, []];
+private _isEditing = _id != "";
 
-(GVAR(comments) getOrDefault [_id, []]) params [
-    ["_position", [], [[]], 3],
-    ["_title", "", [""]],
-    ["_tooltip", "", [""]],
-    ["_color", DEFAULT_COLOR, [[]], 4],
-    ["_creator", "", [""]],
-    ["_lockPosition", false, [false]]
+_data params [
+    ["_position", _positionOrID],
+    ["_title", ""],
+    ["_tooltip", ""],
+    ["_color", GVAR(colorDefault)],
+    "",
+    ["_lockPosition", false]
 ];
 
-if (_positionOrId isEqualType [] && _position isEqualTo []) then {
-    _position = _positionOrId;
-};
+private _dialogTitle = [
+    "STR_3DEN_Display3DEN_EntityMenu_CreateComment_text",
+    LSTRING(EditComment)
+] select _isEditing;
 
-[
-    localize STR_CREATE_COMMENT,
+[_dialogTitle, [
     [
-        ["EDIT", localize "str_3den_comment_attribute_name_displayname", [_title], true],
-        ["EDIT:MULTI", localize "str_3den_comment_attribute_name_tooltip", [_tooltip], true],
-        ["TOOLBOX:YESNO", LLSTRING(LockPosition), [_lockPosition], _isEditingComment],
-        ["COLOR", localize "str_3den_marker_attribute_color_displayname", _color, _isEditingComment]
+        "EDIT",
+        "STR_3DEN_Comment_Attribute_Name_displayName",
+        _title,
+        true
     ],
-    {
-        (_this select 0) params ["_title", "_tooltip", "_lockPosition", "_color"];
-        (_this select 1) params ["_id", "_position"];
+    [
+        "EDIT:MULTI",
+        "STR_3DEN_Comment_Attribute_Name_tooltip",
+        _tooltip,
+        true
+    ],
+    [
+        "COLOR",
+        "STR_3DEN_Marker_Attribute_Color_displayName",
+        _color,
+        true
+    ],
+    [
+        "TOOLBOX:YESNO",
+        [LSTRING(LockPosition), LSTRING(LockPosition_Description)],
+        _lockPosition,
+        true
+    ]
+], {
+        params ["_values", "_args"];
+        _values params ["_title", "_tooltip", "_color", "_lockPosition"];
+        _args params ["_id", "_position"];
 
-        if (_id isEqualTo "") then {
-            [QGVAR(createComment), [_position, _title, _tooltip, _color, profileName, _lockPosition]] call CBA_fnc_serverEvent;
-        } else {
-            [QGVAR(updateComment), [_id, _position, _title, _tooltip, _color, profileName, _lockPosition]] call CBA_fnc_serverEvent;
+        if (_id == "") exitWith {
+            [_position, _title, _tooltip, _color, profileName, _lockPosition] call FUNC(createComment);
         };
-    },
-    {},
-    [_id, _position]
-] call EFUNC(dialog,create);
+
+        // The comment may have been deleted while the dialog was open
+        if !(_id in GVAR(comments)) exitWith {};
+
+        // Only update the fields that are in the dialog
+        // The comment could have moved while the dialog was open and the creator remains unchanged
+        [_id, nil, _title, _tooltip, _color, nil, _lockPosition] call FUNC(updateComment);
+}, {}, [_id, _position]] call EFUNC(dialog,create);

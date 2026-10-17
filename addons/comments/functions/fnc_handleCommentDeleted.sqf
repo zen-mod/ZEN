@@ -1,22 +1,22 @@
 #include "script_component.hpp"
 /*
  * Author: Timi007
- * Deletes the comment locally.
+ * Handles a comment being deleted.
  *
  * Arguments:
- * 0: Comment id <STRING>
+ * 0: Comment ID <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * ["zeus:2"] call zen_comments_fnc_onCommentDeleted
+ * ["zeus:0"] call zen_comments_fnc_handleCommentDeleted
  *
  * Public: No
  */
 
 params ["_id"];
 
-GVAR(comments) deleteAt _id;
-
 [_id] call FUNC(deleteIcon);
+
+GVAR(comments) deleteAt _id;
