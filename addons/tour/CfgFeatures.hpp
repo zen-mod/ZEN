@@ -37,7 +37,7 @@ class GVAR(features) {
         title = "$STR_3DEN_Comment_textPlural";
         description = CSTRING(Comments_Description);
         picture = QPATHTOF(features\comments\header.jpg);
-        focus[] = {0.36, 0.37, 0.24, 0.34};
+        focus[] = {0.30, 0.34, 0.28, 0.38};
         class Placing {
             title = CSTRING(Comments_Placing);
             text = CSTRING(Comments_Placing_Text);
