@@ -319,11 +319,6 @@
     _object setObjectScale _scale;
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(setMarkerDrawPriority), {
-    params ["_markerName", "_priority"];
-    _markerName setMarkerDrawPriority _priority;
-}] call CBA_fnc_addEventHandler;
-
 [QGVAR(setVehicleRadar), {
     params ["_vehicle", "_mode"];
     _vehicle setVehicleRadar _mode;
@@ -361,6 +356,11 @@
     _unit setSpeaker _speaker;
     _unit setPitch _pitch;
     _unit setNameSound _nameSound;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setMarkerDrawPriority), {
+    params ["_marker", "_priority"];
+    _marker setMarkerDrawPriority _priority;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(earthquake), LINKFUNC(earthquake)] call CBA_fnc_addEventHandler;

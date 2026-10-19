@@ -53,7 +53,7 @@ if (_set) then {
     0 boundingBoxReal _object params ["_p0", "_p1"];
     private _size = _p1 vectorDiff _p0 vectorMultiply 0.5 select [0, 2];
 
-    _marker = createMarker [format [QGVAR(%1), _object call BIS_fnc_netId], _object];
+    _marker = createMarker [format [QGVAR(%1), netId _object], _object];
     _marker setMarkerShapeLocal "RECTANGLE";
     _marker setMarkerColorLocal "ColorGrey";
     _marker setMarkerBrushLocal "SolidFull";
@@ -61,21 +61,9 @@ if (_set) then {
     _marker setMarkerDir getDir _object;
     _object setVariable [QGVAR(marker), _marker, true];
 
-    [QEGVAR(common,setMarkerDrawPriority), [_marker, -1], _marker] call CBA_fnc_globalEventJIP;
-
-    // Delete marker when the object is deleted
-    private _eventID = _object addEventHandler ["Deleted", {
-        params ["_object"];
-
-        deleteMarker (_object getVariable [QGVAR(marker), ""]);
-    }];
-
-    _object setVariable [QGVAR(eventID), _eventID];
+    [QEGVAR(common,setMarkerDrawPriority), [_marker, -999], _marker] call CBA_fnc_globalEventJIP;
 } else {
     if (_marker == "") exitWith {};
 
-    private _eventID = _object getVariable [QGVAR(eventID), -1];
-    _object removeEventHandler ["Deleted", _eventID];
-    _object setVariable [QGVAR(marker), nil, true];
     deleteMarker _marker;
 };
