@@ -153,10 +153,10 @@ private _fnc_deserializeVehicle = {
     [_vehicle, _inventory] call FUNC(deserializeInventory);
 
     if (_enableRandomization) then {
-        [_vehicle, "", []] call BIS_fnc_initVehicle;
+        [BIS_fnc_initVehicle, [_vehicle, "", []], 1] call CBA_fnc_waitAndExecute;
     } else {
         _customization params ["_textures", "_animations"];
-        [_vehicle, _textures, _animations, true] call BIS_fnc_initVehicle;
+        [BIS_fnc_initVehicle, [_vehicle, _textures, _animations, true], 1] call CBA_fnc_waitAndExecute;
     };
 
     {
@@ -173,7 +173,7 @@ private _fnc_deserializeVehicle = {
         _x params ["_magazine", "_turretPath", "_ammoCount"];
 
         private _pylonIndex = _forEachIndex + 1;
-        _vehicle setPylonLoadOut [_pylonIndex, _magazine, false, _turretPath];
+        _vehicle setPylonLoadout [_pylonIndex, _magazine, false, _turretPath];
         _vehicle setAmmoOnPylon [_pylonIndex, _ammoCount];
     } forEach _pylonMagazines;
 

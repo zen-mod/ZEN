@@ -163,11 +163,11 @@ private _drawEH = [_ctrlMap, "Draw", {
         _text = localize _text;
     };
 
-    _position = ASLtoAGL _position;
+    _position = ASLToAGL _position;
 
     drawIcon3D [_icon, _color, _position, 1.5, 1.5, _angle, _text];
 
     {
-        drawLine3D [ASLtoAGL getPosASLVisual _x, _position, _color];
+        drawLine3D [ASLToAGL getPosASLVisual _x, _position, _color];
     } forEach TO_ARRAY(_objects);
 }, 0, [_objects, _function, _args, _visuals, _modifierFunction, _mouseEH, _keyboardEH, _drawEH]] call CBA_fnc_addPerFrameHandler;

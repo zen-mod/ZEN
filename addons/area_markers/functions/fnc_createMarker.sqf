@@ -21,7 +21,7 @@
 params ["_position", ["_shape", "RECTANGLE"]];
 
 private _marker = createMarker [format [QGVAR(%1), GVAR(nextID)], _position];
-_marker setMarkerShape _shape;
+_marker setMarkerShapeLocal _shape;
 _marker setMarkerSize [50, 50];
 
 GVAR(nextID) = GVAR(nextID) + 1;

@@ -30,11 +30,4 @@ if (visibleMap && {_keyCode == DIK_DELETE}) exitWith {
     false
 };
 
-// Map visibility can be toggled with the ESCAPE key
-// Appears to be hard coded and independent of the "ingamePause" user action
-// Also, update the icons when the interface's visibility is toggled
-if (_keyCode == DIK_ESCAPE || {_keyCode in actionKeys "curatorToggleInterface"}) then {
-    call FUNC(onMapToggled);
-};
-
 false

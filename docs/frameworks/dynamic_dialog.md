@@ -211,11 +211,29 @@ The return value type depends on the given default value:
 ### Vector `VECTOR`
 
 A vector input control with support for both XY and XYZ vectors.
-The number of axes displayed depends on the length of the default value array (2 or 3).
+The number of axes displayed depends on the length of the default value array (2 or 3). 
+
+Optionally, the minimum and maximum of each vector component can be set. 
+The user can still set values outside the limits, except for negative numbers if the minimum doesn't allow for it. 
+The input values are only clipped after confirmation.
+
+The vector control can be configured to only accept integer values.
+
+An additional sub-type exists for control type to configure sizes - `VECTOR:SIZE`.
+This sub-type changes the icons from XYZ to ABC. 
+Furthermore, by default, this sub-type only allows for positive values or zero as input.
 
 **Control Specific Argument(s):**
 
 - Default vector &lt;ARRAY&gt;
+- Minimum values &lt;ARRAY&gt;
+    - If this is an empty array, no minimums are set; otherwise, it **must** be the same length as the default vector array (2 or 3).
+    - Use `nil` to set no minimum for a specific vector component.
+    - If set, this will overwrite the default minimums for the `VECTOR:SIZE` sub-type.
+    - Example: `[-1, nil, 0]` The minimum for X is -1, for Y there's none, and for Z it's 0.
+- Maximum values &lt;ARRAY&gt;
+    - Same properties as minimum.
+- Only allow integers &lt;BOOL&gt;
 
 **Return Value:**
 

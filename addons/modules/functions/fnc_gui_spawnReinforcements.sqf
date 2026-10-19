@@ -24,7 +24,7 @@ params ["_display", "_logic"];
 private _selections = GVAR(saved) getVariable [QGVAR(spawnReinforcements), [0, 0, 0, 0, 0, [], -3, 1, 0, 100, -3, 0]];
 _selections params ["_side", "_faction", "_category", "_vehicle", "_treeMode", "_unitList", "_vehicleLZ", "_vehicleBehaviour", "_insertionMethodIndex", "_flyHeight", "_unitRP", "_unitBehaviour"];
 
-private _position = ASLtoAGL getPosASL _logic;
+private _position = ASLToAGL getPosASL _logic;
 _display setVariable [QGVAR(position), _position];
 deleteVehicle _logic;
 
@@ -472,11 +472,11 @@ private _fnc_onConfirm = {
     private _positionLZ = [LOGIC_TYPE_LZ, _vehicleLZ, _position] call EFUNC(position_logics,select);
     private _positionRP = [LOGIC_TYPE_RP, _unitRP, _position] call EFUNC(position_logics,select);
 
-    _positionLZ = ASLtoAGL getPosASL _positionLZ;
+    _positionLZ = ASLToAGL getPosASL _positionLZ;
 
     // Handle none option for RP
     if (!isNull _positionRP) then {
-        _positionRP = ASLtoAGL getPosASL _positionRP;
+        _positionRP = ASLToAGL getPosASL _positionRP;
     };
 
     [QGVAR(moduleSpawnReinforcements), [_vehicle, _unitList, _position, _positionLZ, _positionRP, _vehicleBehaviour > 0, _insertionMethod, _unitBehaviour, _flyHeight]] call CBA_fnc_serverEvent;

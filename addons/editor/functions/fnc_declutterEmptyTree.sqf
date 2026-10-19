@@ -19,23 +19,38 @@ if (!GVAR(declutterEmptyTree)) exitWith {};
 
 params ["_display"];
 
-// Get faction names for west, east, independent, and civilian sides
-if (isNil QGVAR(factionNames)) then {
-    GVAR(factionNames) = configProperties [configFile >> "CfgFactionClasses", "isClass _x"] select {
-        getNumber (_x >> "side") in [0, 1, 2, 3]
-    } apply {
-        getText (_x >> "displayName")
-    };
-};
-
-private _factionNames = GVAR(factionNames);
-
 // Remove factions from empty tree
 // Backwards since tree item paths will change as items are deleted
 private _ctrlTree = _display displayCtrl IDC_RSCDISPLAYCURATOR_CREATE_UNITS_EMPTY;
+private _fastDeclutterFactions = uiNamespace getVariable [QGVAR(fastDeclutterFactions), createHashMap];
+private _slowDeclutterFactions = uiNamespace getVariable [QGVAR(slowDeclutterFactions), createHashMap];
+private _forcedEmptyObjects = uiNamespace getVariable [QGVAR(forcedEmptyObjects), createHashMap];
 
 for "_i" from (_ctrlTree tvCount []) - 1 to 0 step -1 do {
-    if (_ctrlTree tvText [_i] in _factionNames) then {
+    private _faction = _ctrlTree tvText [_i];
+
+    // Delete entire node for factions that do not contain any forced empty objects (fast case)
+    if (_faction in _fastDeclutterFactions) then {
         _ctrlTree tvDelete [_i];
+        continue;
+    };
+
+    // For factions that contain forced empty objects, need to check every leaf node individually (slow case)
+    if (_faction in _slowDeclutterFactions) then {
+        for "_j" from (_ctrlTree tvCount [_i]) - 1 to 0 step -1 do {
+            for "_k" from (_ctrlTree tvCount [_i, _j]) - 1 to 0 step -1 do {
+                private _data = _ctrlTree tvData [_i, _j, _k];
+                if (_data in _forcedEmptyObjects) then {continue};
+                _ctrlTree tvDelete [_i, _j, _k];
+            };
+
+            if (_ctrlTree tvCount [_i, _j] == 0) then {
+                _ctrlTree tvDelete [_i, _j];
+            };
+        };
+
+        if (_ctrlTree tvCount [_i] == 0) then {
+            _ctrlTree tvDelete [_i];
+        };
     };
 };

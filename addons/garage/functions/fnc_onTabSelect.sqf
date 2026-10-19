@@ -36,7 +36,7 @@ _ctrlEmpty ctrlCommit 0;
 
 {
     private _active = _selectedTab == _forEachIndex;
-    private _fade = [1, 0] select _active;
+    private _fade = parseNumber !_active;
     private _fadeTime = [0, FADE_DELAY] select (_active && {!_forced});
 
     private _ctrlBackground = _display displayCtrl (_x - 1);

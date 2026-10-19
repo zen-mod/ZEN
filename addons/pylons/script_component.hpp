@@ -16,6 +16,7 @@
 
 #include "\x\zen\addons\main\script_macros.hpp"
 
+#include "\a3\ui_f\hpp\defineCommonColors.inc"
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 #include "\x\zen\addons\common\defineResinclDesign.inc"
 
@@ -46,6 +47,6 @@
 #define SCALE_FACTOR_Y 1.6667
 
 // Used to exit LBSelChanged event handler code triggered by the lbSetCurSel command
-#define LOCK GVAR(lock) = true
-#define UNLOCK GVAR(lock) = nil
-#define EXIT_LOCKED if (!isNil QGVAR(lock)) exitWith {}
+#define LB_LOCK GVAR(lock) = true
+#define LB_UNLOCK GVAR(lock) = nil
+#define LB_EXIT_LOCKED if (!isNil QGVAR(lock)) exitWith {}

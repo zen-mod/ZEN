@@ -23,11 +23,13 @@ if (!hasInterface) exitWith {
     false
 };
 
-if (_this select 0 isEqualType "") then {
-    _this = [_this];
+private _params = _this;
+
+if (_params select 0 isEqualType "") then {
+    _params = [_params];
 };
 
-params [["_actionPath", [], [[]]]];
+_params params [["_actionPath", [], [[]]]];
 
 scopeName "Main";
 

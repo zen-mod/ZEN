@@ -27,27 +27,27 @@ class GVAR(RscTasks): EGVAR(modules,RscDisplay) {
         class Title: Title {};
         class Background: Background {};
         class Content: Content {
-            h = POS_H(24.8);
+            h = QUOTE(POS_H(24.8));
             class controls {
                 class OwnersLabel: EGVAR(common,RscLabel) {
                     text = "$STR_A3_RscAttributeOwners_Title";
-                    w = POS_W(26);
+                    w = QUOTE(POS_W(26));
                 };
                 class Owners: EGVAR(common,RscOwners) {
                     idc = IDC_TASK_OWNERS;
-                    y = POS_H(1);
+                    y = QUOTE(POS_H(1));
                 };
                 class StateLabel: EGVAR(common,RscLabel) {
                     text = "$STR_A3_RscAttributeTaskState_Title";
-                    y = POS_H(11.1);
-                    h = POS_H(2);
+                    y = QUOTE(POS_H(11.1));
+                    h = QUOTE(POS_H(2));
                 };
                 class State: ctrlToolboxPictureKeepAspect {
                     idc = IDC_TASK_STATE;
-                    x = POS_W(10.1);
-                    y = POS_H(11.1);
-                    w = POS_W(15.9);
-                    h = POS_H(2);
+                    x = QUOTE(POS_W(10.1));
+                    y = QUOTE(POS_H(11.1));
+                    w = QUOTE(POS_W(15.9));
+                    h = QUOTE(POS_H(2));
                     rows = 1;
                     columns = 5;
                     strings[] = {
@@ -67,14 +67,14 @@ class GVAR(RscTasks): EGVAR(modules,RscDisplay) {
                 };
                 class DestinationLabel: EGVAR(common,RscLabel) {
                     text = "$STR_A3_CfgVehicles_ModuleTaskSetDestination_F_Arguments_Destination_0";
-                    y = POS_H(13.2);
+                    y = QUOTE(POS_H(13.2));
                 };
                 class Destination: ctrlToolbox {
                     idc = IDC_TASK_DESTINATION;
-                    x = POS_W(10.1);
-                    y = POS_H(13.2);
-                    w = POS_W(15.9);
-                    h = POS_H(1);
+                    x = QUOTE(POS_W(10.1));
+                    y = QUOTE(POS_H(13.2));
+                    w = QUOTE(POS_W(15.9));
+                    h = QUOTE(POS_H(1));
                     rows = 1;
                     columns = 2;
                     strings[] = {ECSTRING(common,Disabled), CSTRING(ModulePosition)};
@@ -83,38 +83,38 @@ class GVAR(RscTasks): EGVAR(modules,RscDisplay) {
                 class TypeLabel: EGVAR(common,RscLabel) {
                     text = "$STR_A3_cfgvehicles_moduletaskcreate_f_arguments_type_0";
                     tooltip = CSTRING(Type_Tooltip);
-                    y = POS_H(14.3);
+                    y = QUOTE(POS_H(14.3));
                 };
                 class Type: ctrlCombo {
                     idc = IDC_TASK_TYPE;
-                    x = POS_W(10.1);
-                    y = POS_H(14.3);
-                    w = POS_W(15.9);
-                    h = POS_H(1);
+                    x = QUOTE(POS_W(10.1));
+                    y = QUOTE(POS_H(14.3));
+                    w = QUOTE(POS_W(15.9));
+                    h = QUOTE(POS_H(1));
                 };
                 class TitleDescriptionLabel: EGVAR(common,RscLabel) {
                     text = CSTRING(TitleDescription);
                     tooltip = CSTRING(TitleDescription_Tooltip);
-                    y = POS_H(15.4);
+                    y = QUOTE(POS_H(15.4));
                 };
                 class History: Type {
                     idc = IDC_TASK_HISTORY;
-                    y = POS_H(15.4);
+                    y = QUOTE(POS_H(15.4));
                 };
                 class Title: EGVAR(common,RscEdit) {
                     idc = IDC_TASK_TITLE;
-                    x = pixelW;
-                    y = POS_H(16.5);
-                    w = POS_W(26) - pixelW;
+                    x = QUOTE(pixelW);
+                    y = QUOTE(POS_H(16.5));
+                    w = QUOTE(POS_W(26) - pixelW);
                 };
                 class Description: EGVAR(common,RscEdit) {
                     idc = IDC_TASK_DESCRIPTION;
                     style = ST_MULTI;
-                    x = pixelW;
-                    y = POS_H(17.6);
-                    w = POS_W(26) - pixelW;
-                    h = POS_H(7.2);
-                    sizeEx = POS_H(0.9);
+                    x = QUOTE(pixelW);
+                    y = QUOTE(POS_H(17.6));
+                    w = QUOTE(POS_W(26) - pixelW);
+                    h = QUOTE(POS_H(7.2));
+                    sizeEx = QUOTE(POS_H(0.9));
                 };
             };
         };

@@ -16,7 +16,7 @@ from github import Github
 
 
 TRANSLATIONISSUE = 190
-TRANSLATIONBODY = """**[Translation Guide](http://ace3mod.com/wiki/development/how-to-translate-ace3.html)**
+TRANSLATIONBODY = """**[Translation Guide](https://ace3.acemod.org/wiki/development/how-to-translate-ace3)**
 
 {}
 """

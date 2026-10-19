@@ -16,6 +16,7 @@
 
 #include "\x\zen\addons\main\script_macros.hpp"
 
+#include "\a3\ui_f\hpp\defineCommonColors.inc"
 #include "\a3\ui_f\hpp\defineCommonGrids.inc"
 #include "\x\zen\addons\common\defineResinclDesign.inc"
 #include "\x\zen\addons\editor\script_idc.hpp"

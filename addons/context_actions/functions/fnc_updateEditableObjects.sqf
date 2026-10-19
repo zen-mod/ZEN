@@ -20,5 +20,5 @@
 params ["_mode", "_position", "_radius"];
 
 private _curator = getAssignedCuratorLogic player;
-private _objects = nearestObjects [ASLtoAGL _position, ["All"], _radius, true];
+private _objects = nearestObjects [ASLToAGL _position, ["All"], _radius, true];
 [_objects, _mode, _curator] call EFUNC(common,updateEditableObjects);

@@ -95,7 +95,7 @@ if !(side group _unit in [west, east, independent, civilian]) exitWith {
         if (_successful) then {
             curatorMouseOver params ["_type", "_entity"];
 
-            private _target = [ASLtoATL _position, _entity] select (_type == "OBJECT");
+            private _target = [ASLToATL _position, _entity] select (_type == "OBJECT");
             {
                 [_x, _target, _duration, _fireMode, _stance] call EFUNC(ai,suppressiveFire);
             } forEach _units;

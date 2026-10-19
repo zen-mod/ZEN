@@ -7,7 +7,7 @@ class GVAR(control): ctrlControlsGroupNoScrollbars {
     x = 0;
     y = 0;
     w = 0;
-    h = POS_H(IMAGE_HEIGHT + 2 * BORDER_SIZE);
+    h = QUOTE(POS_H(IMAGE_HEIGHT + 2 * BORDER_SIZE));
     class controls {
         class Background: ctrlStatic {
             idc = -1;
@@ -19,10 +19,10 @@ class GVAR(control): ctrlControlsGroupNoScrollbars {
         };
         class Image: ctrlStaticPictureKeepAspect {
             idc = IDC_PREVIEW_IMAGE;
-            x = POS_W(BORDER_SIZE);
-            y = POS_H(BORDER_SIZE);
+            x = QUOTE(POS_W(BORDER_SIZE));
+            y = QUOTE(POS_H(BORDER_SIZE));
             w = 0;
-            h = POS_H(IMAGE_HEIGHT);
+            h = QUOTE(POS_H(IMAGE_HEIGHT));
         };
     };
 };

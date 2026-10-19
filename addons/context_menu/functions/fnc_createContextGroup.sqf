@@ -32,17 +32,41 @@ GVAR(contextGroups) set [_contextLevel, _ctrlContextGroup];
 
 // Keep track of the maximum text width among all rows
 private _textWidth = POS_W(5.9);
+private _height = 0;
+private _previousWasSeparator = false;
+private _hasActionAbove = false;
 
 // Create context action rows
 private _contextRows = [];
+private _contextSeprators = [];
 
 {
     _x params ["_action", "_children"];
-    _action params ["", "_displayName", "_icon", "_iconColor", "_statement", "_condition", "_args"];
+    _action params ["", "_displayName", "_icon", "_iconColor", "_statement", "_condition", "_args", "", "", "_isSeparator"];
+
+    if (_isSeparator) then {
+        _previousWasSeparator = true;
+        continue;
+    } else {
+        if (_previousWasSeparator && {_hasActionAbove}) then {
+            private _ctrlContextSeparator = _display ctrlCreate [QGVAR(separator), IDC_CONTEXT_SEPARATOR, _ctrlContextGroup];
+            _ctrlContextSeparator ctrlSetPositionY POS_H(_height);
+            _ctrlContextSeparator ctrlCommit 0;
+            _contextSeprators pushBack _ctrlContextSeparator;
+
+            _height = _height + 0.8;
+        };
+        _previousWasSeparator = false;
+        _hasActionAbove = true;
+    };
 
     // Create context row control
     private _ctrlContextRow = _display ctrlCreate [QGVAR(row), IDC_CONTEXT_ROW, _ctrlContextGroup];
+    _ctrlContextRow ctrlSetPositionY POS_H(_height);
+    _ctrlContextRow ctrlCommit 0;
     _contextRows pushBack _ctrlContextRow;
+
+    _height = _height + 1;
 
     // Set action name and icon
     private _ctrlName = _ctrlContextRow controlsGroupCtrl IDC_CONTEXT_NAME;
@@ -121,11 +145,10 @@ private _contextRows = [];
 
 // Update positioning of context rows based on the maximum text width
 private _posW = _textWidth + POS_W(2.1);
-private _posH = POS_H(count _actions);
+private _posH = POS_H(_height);
 
 {
     private _ctrlContextRow = _x;
-    _ctrlContextRow ctrlSetPositionY POS_H(_forEachIndex);
     _ctrlContextRow ctrlSetPositionW _posW;
     _ctrlContextRow ctrlCommit 0;
 
@@ -146,6 +169,19 @@ private _posH = POS_H(count _actions);
     _ctrlExpandable ctrlCommit 0;
 } forEach _contextRows;
 
+// Also update width of separators
+private _posWSeparatorLine = _posW - POS_W(0.6);
+
+{
+    private _ctrlContextSeparator = _x;
+    _ctrlContextSeparator ctrlSetPositionW _posW;
+    _ctrlContextSeparator ctrlCommit 0;
+
+    private _ctrlLine = _ctrlContextSeparator controlsGroupCtrl IDC_CONTEXT_SEPARATOR_LINE;
+    _ctrlLine ctrlSetPositionW _posWSeparatorLine;
+    _ctrlLine ctrlCommit 0;
+} forEach _contextSeprators;
+
 // Update the context group background's position
 private _ctrlBackground = _ctrlContextGroup controlsGroupCtrl IDC_CONTEXT_BACKGROUND;
 _ctrlBackground ctrlSetPosition [0, 0, _posW, _posH];
@@ -158,7 +194,7 @@ private _groupPosition = if (isNull _parentRow) then {
 
     // Apply a one pixel right, one pixel down offset so an option is not selected by default
     _posX = safeZoneX + SPACING_W max (_posX + pixelW min (safeZoneX + safeZoneW - _posW - SPACING_W));
-    _posY = safeZoneY + SPACING_H max (_posY + pixelH min (safeZoneY + safezoneH - _posH - SPACING_H));
+    _posY = safeZoneY + SPACING_H max (_posY + pixelH min (safeZoneY + safeZoneH - _posH - SPACING_H));
 
     [_posX, _posY, _posW, _posH]
 } else {
@@ -177,7 +213,7 @@ private _groupPosition = if (isNull _parentRow) then {
         _posX + _parentWidth + SPACING_W;
     };
 
-    _posY = safeZoneY + SPACING_H max (_posY min (safeZoneY + safezoneH - _posH - SPACING_H));
+    _posY = safeZoneY + SPACING_H max (_posY min (safeZoneY + safeZoneH - _posH - SPACING_H));
 
     [_posX, _posY, _posW, _posH]
 };

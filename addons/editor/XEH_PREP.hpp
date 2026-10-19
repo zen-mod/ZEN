@@ -14,4 +14,6 @@ PREP(handleSearchKeyUp);
 PREP(handleSideButtons);
 PREP(handleTreeButtons);
 PREP(handleUnload);
+PREP(moveCamToSelection);
 PREP(pingCurators);
+PREP(switchStance);

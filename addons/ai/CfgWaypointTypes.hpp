@@ -15,6 +15,10 @@ class ZEN_WaypointTypes {
         displayName = "$STR_ac_hold";
         type = "HOLD";
     };
+    class Guard {
+        displayName = "$STR_ac_guard";
+        type = "GUARD";
+    };
     class Sentry {
         displayName = "$STR_ac_sentry";
         type = "SENTRY";

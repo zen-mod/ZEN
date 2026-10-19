@@ -158,8 +158,8 @@ private _fnc_updateGroupList = {
     lbClear _ctrlList;
 
     {
-        if (units _x findIf {isPlayer _x} != -1 && {_filter in toLower groupID _x}) then {
-            private _index = _ctrlList lbAdd groupID _x;
+        if (units _x findIf {isPlayer _x} != -1 && {_filter in toLower groupId _x}) then {
+            private _index = _ctrlList lbAdd groupId _x;
             _ctrlList lbSetPicture [_index, [ICON_UNCHECKED, ICON_CHECKED] select (_x in _groups)];
             _ctrlList lbSetPictureRight [_index, [_x] call EFUNC(common,getSideIcon)];
 

@@ -30,11 +30,18 @@ if (allGroups findIf {side _x isEqualTo _side && {groupId _x isEqualTo _groupId}
     _newGroup setGroupIdGlobal [_groupId];
 };
 
+private _units = units _group;
+
 // Preserve assigned team for each unit
-{
+// Teams need to be gotten before removing units from group
+private _teams = _units apply {
     private _team = assignedTeam _x;
+    [_team, "MAIN"] select (_team == "")
+};
+
+{
     [_x] joinSilent _newGroup;
-    _x assignTeam _team;
-} forEach units _group;
+    _x assignTeam (_teams select _forEachIndex);
+} forEach _units;
 
 deleteGroup _group;

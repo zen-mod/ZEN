@@ -136,7 +136,7 @@ _controlsGroup setVariable [QFUNC(onConfirm), {
     profileNamespace setVariable [_modeVarName, _mode];
 
     // Do not save empty strings and strings that are longer that the maximum number of characters
-    if (_text == "" || {_maxCharacters > 0 && {count _text > _maxCharacters}}) exitwith {};
+    if (_text == "" || {_maxCharacters > 0 && {count _text > _maxCharacters}}) exitWith {};
 
     private _history = profileNamespace getVariable [_historyVarName, []];
     _history deleteAt (_history find _text);

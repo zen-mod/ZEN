@@ -19,7 +19,7 @@
 params ["_display", "_expand"];
 
 // Only handle the custom icon markers tree, rest are handled by editor component
-if (RscDisplayCurator_sections select 0 != 3 || {GVAR(mode) != 0}) exitWith {};
+if (RscDisplayCurator_sections select 0 != CURATOR_MODE_MARKERS || {GVAR(mode) != 0}) exitWith {};
 
 private _ctrlTreeIcons = _display displayCtrl IDC_MARKERS_TREE_ICONS;
 

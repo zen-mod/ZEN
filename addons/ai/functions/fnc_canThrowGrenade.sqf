@@ -21,7 +21,7 @@ params [["_unit", objNull, [objNull]], ["_magazine", "", [""]]];
 
 alive _unit
 && {!isPlayer _unit}
-&& {vehicle _unit == _unit}
+&& {isNull objectParent _unit}
 && {_unit isKindOf "CAManBase"}
 && {lifeState _unit in ["HEALTHY", "INJURED"]}
 && {!(_unit call EFUNC(common,isSwimming))}

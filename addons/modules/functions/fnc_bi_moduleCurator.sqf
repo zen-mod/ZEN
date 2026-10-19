@@ -162,7 +162,7 @@ if (_activated) then {
                 // Add radio channels
                 {
                     _x radioChannelAdd [_player];
-                } forEach (_logic getvariable ["channels", []]);
+                } forEach (_logic getVariable ["channels", []]);
 
                 // Send a notification to all assigned players
                 [{
@@ -310,7 +310,7 @@ if (_activated) then {
                     }
                 }, {
                     [true, true] spawn BIS_fnc_forceCuratorInterface;
-                    ("RscDisplayCurator" call BIS_fnc_rscLayer) cuttext ["", "BLACK IN", 1e10];
+                    ("RscDisplayCurator" call BIS_fnc_rscLayer) cutText ["", "BLACK IN", 1e10];
                 }] call CBA_fnc_waitUntilAndExecute;
             };
         };

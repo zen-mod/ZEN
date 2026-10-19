@@ -22,20 +22,20 @@ if (isNull _display) exitWith {controlNull};
 RscDisplayCurator_sections params ["_mode", "_side"];
 
 private _treeIDC = switch (_mode) do {
-    case 0: {
-        IDCS_UNIT_TREES select _side;
+    case CURATOR_MODE_UNITS: {
+        IDCS_UNIT_TREES select _side
     };
-    case 1: {
-        IDCS_GROUP_TREES select _side;
+    case CURATOR_MODE_GROUPS: {
+        IDCS_GROUP_TREES select _side
     };
-    case 2: {
-        IDC_RSCDISPLAYCURATOR_CREATE_MODULES;
+    case CURATOR_MODE_MODULES: {
+        IDC_RSCDISPLAYCURATOR_CREATE_MODULES
     };
-    case 3: {
-        IDC_RSCDISPLAYCURATOR_CREATE_MARKERS;
+    case CURATOR_MODE_MARKERS: {
+        IDC_RSCDISPLAYCURATOR_CREATE_MARKERS
     };
-    case 4: {
-        IDC_RSCDISPLAYCURATOR_CREATE_RECENT;
+    case CURATOR_MODE_RECENT: {
+        IDC_RSCDISPLAYCURATOR_CREATE_RECENT
     };
 };
 

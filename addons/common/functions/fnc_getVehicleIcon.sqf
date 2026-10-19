@@ -1,10 +1,10 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Returns the file path of the given vehicle's icon.
+ * Returns the file path of the given object's vehicle icon.
  *
  * Arguments:
- * 0: Vehicle <STRING|OBJECT>
+ * 0: Object or Object Type <OBJECT|STRING>
  *
  * Return Value:
  * Icon File Path <STRING>
@@ -15,26 +15,43 @@
  * Public: No
  */
 
-params [["_vehicle", "", ["", objNull]]];
+#define DEFAULT_ICON "\a3\ui_f\data\map\vehicleicons\iconvehicle_ca.paa"
+
+params [["_object", "", ["", objNull]]];
 
 if (isNil QGVAR(vehicleIcons)) then {
-    GVAR(vehicleIcons) = [] call CBA_fnc_createNamespace;
+    GVAR(vehicleIcons) = createHashMap;
 };
 
-if (_vehicle isEqualType objNull) then {
-    _vehicle = typeOf _vehicle;
+private _objectType = if (_object isEqualType objNull) then {
+    typeOf _object
+} else {
+    // Normalize cache key to config case
+    configName (configFile >> "CfgVehicles" >> _object)
 };
 
-private _icon = GVAR(vehicleIcons) getVariable _vehicle;
-
-if (isNil "_icon") then {
-    _icon = getText (configFile >> "CfgVehicles" >> _vehicle >> "icon");
+GVAR(vehicleIcons) getOrDefaultCall [_objectType, {
+    private _icon = getText (configFile >> "CfgVehicles" >> _objectType >> "icon");
 
     if (isText (configFile >> "CfgVehicleIcons" >> _icon)) then {
         _icon = getText (configFile >> "CfgVehicleIcons" >> _icon);
     };
 
-    GVAR(vehicleIcons) setVariable [_vehicle, _icon];
-};
+    if (
+        !fileExists _icon
+        // Allow procedural textures
+        && {_icon select [0, 1] != "#"}
+    ) then {
+        // Sometimes the config defines the texture without file extension
+        // fileExists returns false even though this is a valid config
+        _icon = _icon + ".paa";
 
-_icon
+        if (fileExists _icon) exitWith {
+            _icon
+        };
+
+        DEFAULT_ICON
+    } else {
+        _icon
+    };
+}, true]

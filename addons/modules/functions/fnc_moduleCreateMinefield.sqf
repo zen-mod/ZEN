@@ -80,6 +80,6 @@ _minesCache params ["_configNames", "_displayNames"];
 
     // Add created mines to editable objects
     [_mines] call EFUNC(common,updateEditableObjects);
-}, {}, ASLtoAGL getPosASL _logic] call EFUNC(dialog,create);
+}, {}, ASLToAGL getPosASL _logic] call EFUNC(dialog,create);
 
 deleteVehicle _logic;
