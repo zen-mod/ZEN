@@ -4,6 +4,6 @@ class EGVAR(context_menu,actions) {
         icon = COMMENT_ICON;
         condition = QGVAR(enabled);
         statement = QUOTE([_position] call FUNC(openDialog));
-        priority = 35;
+        priority = 20;
     };
 };

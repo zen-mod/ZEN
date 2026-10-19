@@ -47,6 +47,7 @@
             <German>Unterstützungsfeuer</German>
             <Italian>Fuoco di Soppressione</Italian>
             <French>Tir de suppression</French>
+            <Spanish>Fuego de supresión</Spanish>
         </Key>
         <Key ID="STR_ZEN_AI_CouldNotGarrisonAll">
             <English>Unable to garrison all units - not enough positions</English>
@@ -276,6 +277,7 @@
             <Chinese>武器開火</Chinese>
             <French>Arme à feu</French>
             <Japanese>武器の射撃</Japanese>
+            <Spanish>Disparar arma</Spanish>
         </Key>
         <Key ID="STR_ZEN_AI_FSM">
             <English>FSM</English>

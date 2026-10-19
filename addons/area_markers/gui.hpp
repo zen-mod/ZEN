@@ -61,7 +61,7 @@ class GVAR(configure): RscControlsGroupNoScrollbars {
                     y = 0;
                     w = QUOTE(POS_W(27));
                     h = QUOTE(POS_H(1));
-                    colorBackground[] = GUI_THEME_COLOR;
+                    colorBackground[] = GUI_BCG_COLOR;
                 };
                 class Background: RscText {
                     idc = -1;

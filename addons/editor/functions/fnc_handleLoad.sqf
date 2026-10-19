@@ -2,7 +2,7 @@
 #include "\a3\ui_f\hpp\defineResinclDesign.inc" // can't put this in config due to undef error
 /*
  * Author: mharis001
- * Handles initializing the Zeus Display.
+ * Handles initializing the Zeus display.
  *
  * Arguments:
  * 0: Display <DISPLAY>

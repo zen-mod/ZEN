@@ -9,6 +9,7 @@
             <Chinese>部件損壞 (%1)</Chinese>
             <Italian>Danni ai componenti (%1)</Italian>
             <French>Dégâts des composants (%1)</French>
+            <Spanish>Daño de los componentes (%1)</Spanish>
         </Key>
         <Key ID="STR_ZEN_Damage_HitBody">
             <English>Body</English>
@@ -170,7 +171,7 @@
             <Polish>Ogon</Polish>
             <Czech>Ocas</Czech>
             <Russian>Хвост</Russian>
-            <Spanish>Tail</Spanish>
+            <Spanish>Cola</Spanish>
             <Portuguese>Cauda</Portuguese>
             <Italian>Coda</Italian>
             <French>Queue</French>
@@ -186,7 +187,7 @@
             <Czech>Pilotova Trubice</Czech>
             <Russian>Кокпит</Russian>
             <Portuguese>Tubo de Pitot </Portuguese>
-            <Spanish>Tubo del pitot </Spanish>
+            <Spanish>Tubo del pitot</Spanish>
             <Italian>Tubo di Pitot</Italian>
             <French>Sonde pitot</French>
             <Japanese>ピトー管</Japanese>
@@ -599,6 +600,7 @@
             <Chinese>前側反應裝甲</Chinese>
             <Italian>Corazza reattiva davanti</Italian>
             <French>Blindage réactif à l'avant</French>
+            <Spanish>ERA frontal</Spanish>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitera_back">
             <English>ERA Back</English>
@@ -610,6 +612,7 @@
             <Chinese>後側反應裝甲</Chinese>
             <Italian>Corazza reattiva posteriore</Italian>
             <French>Blindage réactif à l'arrière</French>
+            <Spanish>ERA trasero</Spanish>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitera_left">
             <English>ERA Left</English>
@@ -621,6 +624,7 @@
             <Chinese>左側反應裝甲</Chinese>
             <Italian>Corazza reattiva sinistra</Italian>
             <French>Blindage réactif à gauche</French>
+            <Spanish>ERA izquierdo</Spanish>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitera_right">
             <English>ERA Right</English>
@@ -632,6 +636,7 @@
             <Chinese>右側反應裝甲</Chinese>
             <Italian>Corazza reattiva destra</Italian>
             <French>Blindage réactif à droite</French>
+            <Spanish>ERA derecho</Spanish>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitera_top">
             <English>ERA Top</English>
@@ -643,6 +648,7 @@
             <Chinese>頂部反應裝甲</Chinese>
             <Italian>Corazza reattiva sopra</Italian>
             <French>Blindage réactif en haut</French>
+            <Spanish>ERA superior</Spanish>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitslat">
             <English>Slat</English>
@@ -654,6 +660,7 @@
             <Chinese>防彈格柵</Chinese>
             <Italian>Slat</Italian>
             <French>Cage</French>
+            <Spanish>Rejilla</Spanish>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitslat_left">
             <English>Slat Left</English>
@@ -665,6 +672,7 @@
             <Chinese>左側防彈格柵</Chinese>
             <Italian>Slat Left</Italian>
             <French>Cage à gauche</French>
+            <Spanish>Rejilla izquierda</Spanish>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitslat_right">
             <English>Slat Right</English>
@@ -676,6 +684,7 @@
             <Chinese>右側防彈格柵</Chinese>
             <Italian>Slat Right</Italian>
             <French>Cage à droite</French>
+            <Spanish>Rejilla derecha</Spanish>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitslat_front">
             <English>Slat Front</English>
@@ -687,6 +696,7 @@
             <Chinese>前側防彈格柵</Chinese>
             <Italian>Slat Front</Italian>
             <French>Cage à l'avant</French>
+            <Spanish>Rejilla frontal</Spanish>
         </Key>
         <Key ID="STR_ZEN_Damage_Hitslat_back">
             <English>Slat Back</English>
@@ -698,6 +708,7 @@
             <Chinese>後側防彈格柵</Chinese>
             <Italian>Slat Back</Italian>
             <French>Cage arrière</French>
+            <Spanish>Rejilla trasera</Spanish>
         </Key>
     </Package>
 </Project>

@@ -7,6 +7,7 @@
             <Japanese>ACE 互換</Japanese>
             <French>Compatibilité avec ACE</French>
             <Chinesesimp>ACE兼容</Chinesesimp>
+            <Spanish>Compatibilidad con ACE</Spanish>
         </Key>
         <Key ID="STR_ZEN_Compat_ACE_HideModules">
             <English>Hide ACE Modules</English>
@@ -14,11 +15,13 @@
             <Japanese>ACE モジュール非表示</Japanese>
             <French>Cacher les modules ACE</French>
             <Chinesesimp>隐藏ACE模块</Chinesesimp>
+            <Spanish>Ocultar los módulos de ACE</Spanish>
         </Key>
         <Key ID="STR_ZEN_Compat_ACE_OpenMedicalMenu">
             <English>Open Medical Menu</English>
             <French>Ouvrir le menu médical</French>
             <Japanese>医療メニューを開く</Japanese>
+            <Spanish>Abrir el menú médico</Spanish>
         </Key>
         <Key ID="STR_ZEN_Compat_ACE_HideModules_Description">
             <English>Hides duplicate modules added by ACE Zeus. Requires display reload.</English>
@@ -26,6 +29,7 @@
             <Japanese>ACE Zeus と重複しているモジュールを非表示にします。これには再描画が必要です。</Japanese>
             <French>Cache les modules en double ajoutés par ACE Zeus. Nécessite le rechargement de l'affichage.</French>
             <Chinesesimp>隐藏由ACE宙斯功能添加的重复模块. 重启显示后生效</Chinesesimp>
+            <Spanish>Oculta los módulos duplicados que añade ACE Zeus. Requiere recargar la interfaz.</Spanish>
         </Key>
         <Key ID="STR_ZEN_Compat_ACE_Fastrope">
             <English>Fastrope</English>
