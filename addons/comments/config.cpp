@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"zen_dialog"};
+        requiredAddons[] = {"zen_dialog", "zen_editor"};
         author = ECSTRING(main,Author);
         authors[] = {"Timi007"};
         url = ECSTRING(main,URL);
@@ -16,7 +16,7 @@ class CfgPatches {
 
 PRELOAD_ADDONS;
 
-#include "CfgEventHandlers.hpp"
 #include "Cfg3DEN.hpp"
 #include "CfgContext.hpp"
+#include "CfgEventHandlers.hpp"
 #include "gui.hpp"

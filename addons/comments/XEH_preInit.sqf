@@ -11,16 +11,15 @@ if (isServer) then {
     GVAR(nextID) = 0;
 };
 
-if (hasInterface) then {
-    // Map of all comments
-    // Keys are comment IDs and values are the data
-    GVAR(comments) = createHashMap;
-    GVAR(icons) = createHashMap;
+// Map of comment IDs to data (3DEN comments are loaded in postInit)
+GVAR(comments) = createHashMap;
 
-    GVAR(draw3DAdded) = false;
+// Map of comment IDs to icon controls
+GVAR(icons) = createHashMap;
 
-    GVAR(movingComment) = [];
-};
+// IDs of the hovered comment and the comment being dragged, empty when there is none
+GVAR(hoveredComment) = "";
+GVAR(draggedComment) = "";
 
 #include "initSettings.inc.sqf"
 
