@@ -10,12 +10,11 @@ class Cfg3DEN {
         class Scenario {
             class AttributeCategories {
                 class ADDON {
-                    displayName = STR_DISPLAY_NAME;
+                    displayName = "$STR_3DEN_Comment_textPlural";
                     collapsed = 1;
-
                     class Attributes {
                         class GVAR(3DENComments) {
-                            displayName = STR_DISPLAY_NAME;
+                            displayName = "$STR_3DEN_Comment_textPlural";
                             property = QGVAR(3DENComments);
                             control = QGVAR(hiddenAttribute);
                             tooltip = "";
@@ -31,10 +30,9 @@ class Cfg3DEN {
 
     class EventHandlers {
         class ADDON {
-            // Arguments are for debugging
-            onMissionSave = QUOTE(['onMissionSave'] call FUNC(save3DENComments));
-            onMissionAutosave = QUOTE(['onMissionAutosave'] call FUNC(save3DENComments));
-            onBeforeMissionPreview = QUOTE(['onBeforeMissionPreview'] call FUNC(save3DENComments));
+            // Autosaves are not handled since the comments can only be saved by saving the mission again
+            onMissionSave = QUOTE('onMissionSave' call FUNC(save3DENComments));
+            onBeforeMissionPreview = QUOTE('onBeforeMissionPreview' call FUNC(save3DENComments));
         };
     };
 
@@ -43,7 +41,6 @@ class Cfg3DEN {
             class ADDON {
                 displayName = ECSTRING(main,DisplayName);
                 collapsed = 0;
-
                 class Attributes {
                     class GVAR(showComment) {
                         displayName = CSTRING(ShowCommentInZeus);

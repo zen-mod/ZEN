@@ -32,6 +32,8 @@ PREP(getLightingSelections);
 PREP(getPhoneticName);
 PREP(getPlayers);
 PREP(getPosFromScreen);
+PREP(getPosFromScreenAtHeight);
+PREP(getPosFromScreenOnPlane);
 PREP(getPylonTurret);
 PREP(getSelectedUnits);
 PREP(getSelectedVehicles);
