@@ -22,7 +22,6 @@ params ["_ctrlTree", "_path"];
 
 private _display = ctrlParent _ctrlTree;
 private _ctrlGroup = _display displayCtrl IDC_PREVIEW_GROUP;
-
 private _type = _ctrlTree tvData _path;
 
 if (_type isEqualTo "") then {
@@ -35,8 +34,14 @@ if (_type isEqualTo "") then {
     };
 
     getTextureInfo _image params ["_width", "_height"];
-    private _ratio = _width / _height;
 
+    // For some reason, getTextureInfo can return zero for the width and height for valid textures
+    // Usually happens after ALT-TAB-ing out and back into the game on an object type that wasn't previously viewed
+    if (_width == 0 || {_height == 0}) exitWith {
+        _ctrlGroup ctrlShow false;
+    };
+
+    private _ratio = _width / _height;
     private _ctrlImage = _display displayCtrl IDC_PREVIEW_IMAGE;
     _ctrlImage ctrlSetPositionW POS_W(IMAGE_HEIGHT * _ratio);
     _ctrlImage ctrlSetText _image;
