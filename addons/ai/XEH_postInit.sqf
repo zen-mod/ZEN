@@ -7,3 +7,5 @@ QGVAR(skills) addPublicVariableEventHandler LINKFUNC(handleSkillsChange);
 [QGVAR(suppressiveFire), LINKFUNC(suppressiveFire)] call CBA_fnc_addEventHandler;
 [QGVAR(throwGrenade), LINKFUNC(throwGrenade)] call CBA_fnc_addEventHandler;
 [QGVAR(unGarrison), LINKFUNC(unGarrison)] call CBA_fnc_addEventHandler;
+
+[QGVAR(unpackStaticWeapon), LINKFUNC(unpackStaticWeapon)] call CBA_fnc_addEventHandler;
