@@ -103,6 +103,22 @@ if (isServer) then {
     player createDiaryRecord [QGVAR(intel), [_title, _text]];
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(editTerrainLocation), {
+    params ["_values", "_locationPosition"];
+    _values params ["_type", "_text", "_direction", "_isRectangular", "_size", "_name", "_side", "_importance"];
+
+    private _location = nearestLocation [_locationPosition, ""];
+    private _l = createLocation [_location];
+    _l setType _type;
+    _l setText _text;
+    _l setDirection _direction;
+    _l setRectangular _isRectangular;
+    _l setSize _size;
+    _l setName _name;
+    _l setSide _side;
+    _l setImportance parseNumber _importance;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(teleportOutOfVehicle), {
     params ["_unit", "_position"];
 

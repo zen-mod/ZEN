@@ -46,6 +46,7 @@ class CfgPatches {
             QGVAR(moduleHideTerrainObjects),
             QGVAR(moduleHideZeus),
             QGVAR(moduleLightSource),
+            QGVAR(moduleEditTerrainLocation),
             QGVAR(moduleMakeInvincible),
             QGVAR(moduleNuke),
             QGVAR(modulePatrolArea),
