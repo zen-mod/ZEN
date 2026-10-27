@@ -40,6 +40,7 @@
 #define SPACING_H POS_H(0.2)
 
 // _contextPosASL and _selectedObjects, _selectedGroups .., kept for BWC
+// IGNORE_PRIVATE_WARNING ["_contextPosASL", "_selectedObjects", "_selectedGroups", "_selectedWaypoints", "_selectedMarkers"];
 #define SETUP_ACTION_VARS \
     private _position = [GVAR(mousePos), 2] call EFUNC(common,getPosFromScreen); \
     private _hoveredEntity = GVAR(hovered); \
