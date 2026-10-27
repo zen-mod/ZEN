@@ -3,6 +3,22 @@ options.ignore = [
     "addPublicVariableEventHandler", # Alt syntax is broken, we are using main syntax
 ]
 
+[sqf.banned_macros]
+options.release = [
+    "DEBUG_MODE_FULL",
+    "DISABLE_COMPILE_CACHE",
+    "ENABLE_PERFORMANCE_COUNTERS"
+]
+
+[sqf.not_private]
+enabled = true
+
+[sqf.undefined]
+enabled = true
+
+[sqf.unused]
+enabled = true
+
 [sqf.var_all_caps]
 options.ignore = [
     # Debug macros
@@ -13,4 +29,9 @@ options.ignore = [
 
     # External variables
     "AR_SUPPORTED_VEHICLES"
+]
+
+[stringtables.usage]
+options.ignore = [
+    "str_zen_damage_hit*",
 ]

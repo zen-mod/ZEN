@@ -22,7 +22,7 @@ params ["_entity", "_type"];
 private _data = GVAR(displays) getVariable _type;
 if (isNil "_data") exitWith {};
 
-_data params ["_title", "_check", "_attributes", "_buttons"];
+_data params ["_title", "_checkEntity", "_attributes", "_buttons"];
 
 // Filter active attributes, exit if none are active
 _attributes = _attributes select {_entity call (_x select 6)};

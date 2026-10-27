@@ -22,8 +22,13 @@ params ["_controlsGroup", "", "", "_entity"];
 
 // Exit and display message if waypoint is attached to a vehicle
 if (!isNull waypointAttachedVehicle _entity) exitWith {
-    private _ctrlBackground = _display displayCtrl IDC_ATTRIBUTE_BACKGROUND;
+    private _ctrlBackground = _controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_BACKGROUND;
     _ctrlBackground ctrlSetText localize "str_a3_rscattributewaypointtype_type";
+    _ctrlBackground ctrlSetPositionH POS_H(5);
+    _ctrlBackground ctrlCommit 0;
+
+    _controlsGroup ctrlSetPositionH POS_H(6);
+    _controlsGroup ctrlCommit 0;
 };
 
 // Get active waypoint types and create toolbox with appropriate number of rows
@@ -35,7 +40,7 @@ private _rows = ceil (count _waypointTypes / 3);
 parsingNamespace setVariable [QEGVAR(common,rows), _rows];
 parsingNamespace setVariable [QEGVAR(common,columns), 3];
 
-private _ctrlToolbox = _display ctrlCreate [QEGVAR(common,RscToolbox), IDC_ATTRIBUTE_TOOLBOX, _controlsGroup];
+private _ctrlToolbox = ctrlParent _controlsGroup ctrlCreate [QEGVAR(common,RscToolbox), IDC_ATTRIBUTE_TOOLBOX, _controlsGroup];
 _ctrlToolbox ctrlSetBackgroundColor [0, 0, 0, 0];
 _ctrlToolbox ctrlSetPosition [0, POS_H(1), POS_W(26), POS_H(_rows)];
 _ctrlToolbox ctrlCommit 0;
