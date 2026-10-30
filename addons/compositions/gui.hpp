@@ -5,7 +5,6 @@ class RscControlsGroupNoScrollbars;
 class ctrlButtonPictureKeepAspect;
 
 class EGVAR(common,RscLabel);
-class EGVAR(common,RscBackground);
 class EGVAR(common,RscEdit);
 class EGVAR(common,RscCombo);
 
@@ -20,7 +19,7 @@ class GVAR(display) {
             y = QUOTE(POS_Y(9.85));
             w = QUOTE(POS_W(27));
             h = QUOTE(POS_H(1));
-            colorBackground[] = GUI_THEME_COLOR;
+            colorBackground[] = GUI_BCG_COLOR;
             moving = 1;
         };
         class Background: RscText {

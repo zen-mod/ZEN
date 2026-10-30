@@ -33,11 +33,14 @@
 #define IDC_CONTEXT_ICON 185050
 #define IDC_CONTEXT_EXPANDABLE 185060
 #define IDC_CONTEXT_MOUSE 185070
+#define IDC_CONTEXT_SEPARATOR 185080
+#define IDC_CONTEXT_SEPARATOR_LINE 185090
 
 #define SPACING_W POS_W(0.2)
 #define SPACING_H POS_H(0.2)
 
 // _contextPosASL and _selectedObjects, _selectedGroups .., kept for BWC
+// IGNORE_PRIVATE_WARNING ["_contextPosASL", "_selectedObjects", "_selectedGroups", "_selectedWaypoints", "_selectedMarkers"];
 #define SETUP_ACTION_VARS \
     private _position = [GVAR(mousePos), 2] call EFUNC(common,getPosFromScreen); \
     private _hoveredEntity = GVAR(hovered); \

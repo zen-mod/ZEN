@@ -153,10 +153,10 @@ private _fnc_deserializeVehicle = {
     [_vehicle, _inventory] call FUNC(deserializeInventory);
 
     if (_enableRandomization) then {
-        [_vehicle, "", []] call BIS_fnc_initVehicle;
+        [BIS_fnc_initVehicle, [_vehicle, "", []], 1] call CBA_fnc_waitAndExecute;
     } else {
         _customization params ["_textures", "_animations"];
-        [_vehicle, _textures, _animations, true] call BIS_fnc_initVehicle;
+        [BIS_fnc_initVehicle, [_vehicle, _textures, _animations, true], 1] call CBA_fnc_waitAndExecute;
     };
 
     {

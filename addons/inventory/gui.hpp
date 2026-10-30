@@ -7,7 +7,6 @@ class ctrlStaticPictureKeepAspect;
 class ctrlToolboxPictureKeepAspect;
 class RscControlsGroupNoScrollbars;
 
-class EGVAR(common,RscLabel);
 class EGVAR(common,RscBackground);
 class EGVAR(common,RscEdit);
 

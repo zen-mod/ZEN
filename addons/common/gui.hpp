@@ -334,7 +334,7 @@ class GVAR(RscDisplay) {
             x = QUOTE(POS_X(6.5));
             w = QUOTE(POS_W(27));
             h = QUOTE(POS_H(1));
-            colorBackground[] = GUI_THEME_COLOR;
+            colorBackground[] = GUI_BCG_COLOR;
             moving = 1;
         };
         class Background: RscText {
@@ -386,7 +386,7 @@ class GVAR(messageBox) {
             y = QUOTE(POS_Y(7.5));
             w = QUOTE(POS_W(15));
             h = QUOTE(POS_H(1));
-            colorBackground[] = GUI_THEME_COLOR;
+            colorBackground[] = GUI_BCG_COLOR;
             moving = 1;
         };
         class Background: RscText {
@@ -437,7 +437,7 @@ class GVAR(export) {
             y = QUOTE(POS_Y(0));
             w = QUOTE(POS_W(30));
             h = QUOTE(POS_H(1));
-            colorBackground[] = GUI_THEME_COLOR;
+            colorBackground[] = GUI_BCG_COLOR;
             moving = 1;
         };
         class Background: RscText {

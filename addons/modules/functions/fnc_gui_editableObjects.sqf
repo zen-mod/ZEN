@@ -18,8 +18,8 @@
 
 params ["_display", "_logic"];
 
-private _selections = GVAR(saved) getVariable [QGVAR(editableObjects), [1, 1, 0, 100, [true, true, true, true]]];
-_selections params ["_editingMode", "_curators", "_rangeMode", "_range", "_filter"];
+private _selections = GVAR(saved) getVariable [QGVAR(editableObjects), [1, 1, 0, 100, [true, true, true, true], 2]];
+_selections params ["_editingMode", "_curators", "_rangeMode", "_range", "_filter", "_alive"];
 
 _display setVariable [QGVAR(position), ASLToAGL getPosASL _logic];
 deleteVehicle _logic;
@@ -86,6 +86,9 @@ _ctrlFilterVehicles cbSetChecked _filterVehicles;
 private _ctrlFilterStatic = _display displayCtrl IDC_EDITABLEOBJECTS_FILTER_STATIC;
 _ctrlFilterStatic cbSetChecked _filterStatic;
 
+private _ctrlAlive = _display displayCtrl IDC_EDITABLEOBJECTS_ALIVE;
+_ctrlAlive lbSetCurSel _alive;
+
 private _fnc_onConfirm = {
     params ["_ctrlButtonOK"];
 
@@ -111,7 +114,10 @@ private _fnc_onConfirm = {
         cbChecked (_display displayCtrl IDC_EDITABLEOBJECTS_FILTER_STATIC)
     ];
 
-    private _selections = [_editingMode, _curators, _rangeMode, _range, _filter];
+    private _ctrlAlive = _display displayCtrl IDC_EDITABLEOBJECTS_ALIVE;
+    private _alive = lbCurSel _ctrlAlive;
+
+    private _selections = [_editingMode, _curators, _rangeMode, _range, _filter, _alive];
     GVAR(saved) setVariable [QGVAR(editableObjects), _selections];
 
     // Use objNull for all curators
@@ -122,7 +128,7 @@ private _fnc_onConfirm = {
         _range = -1;
     };
 
-    [QGVAR(moduleEditableObjects), [_position, _editingMode > 0, _curator, _range, _filter]] call CBA_fnc_serverEvent;
+    [QGVAR(moduleEditableObjects), [_position, _editingMode > 0, _curator, _range, _filter, _alive]] call CBA_fnc_serverEvent;
 };
 
 private _ctrlButtonOK = _display displayCtrl IDC_OK;

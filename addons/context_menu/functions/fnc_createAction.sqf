@@ -13,6 +13,7 @@
  * 5: Arguments <ANY> (default: [])
  * 6: Dynamic Children <CODE> (default: {})
  * 7: Modifier Function <CODE> (default: {})
+ * 8: Is Separator <BOOL> (default: false)
  *
  * Return Value:
  * Action <ARRAY>
@@ -31,7 +32,8 @@ params [
     ["_condition", {true}, [{}]],
     ["_args", []],
     ["_insertChildren", {}, [{}]],
-    ["_modifierFunction", {}, [{}]]
+    ["_modifierFunction", {}, [{}]],
+    ["_isSeparator", false, [false]]
 ];
 
 _iconArg params [
@@ -48,5 +50,6 @@ _iconArg params [
     _condition,
     _args,
     _insertChildren,
-    _modifierFunction
+    _modifierFunction,
+    _isSeparator
 ]
