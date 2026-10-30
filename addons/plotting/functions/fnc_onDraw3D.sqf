@@ -17,6 +17,12 @@
 
 BEGIN_COUNTER(onDraw3D);
 
+if (!GVAR(enabled)) exitWith {
+    removeMissionEventHandler [_thisEvent, _thisEventHandler];
+    GVAR(draw3DAdded) = false;
+    LOG("Removed Draw3D.");
+};
+
 if (
     isNull (findDisplay IDD_RSCDISPLAYCURATOR)  // We are in not Zeus
     || {!isNull (findDisplay IDD_INTERRUPT)}    // Pause menu is opened

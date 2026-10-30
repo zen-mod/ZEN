@@ -21,12 +21,12 @@ params ["_plots", ["_activePlot", [], [[]]], ["_ctrlMap", controlNull, [controlN
 
 private _drawIn3D = isNull _ctrlMap;
 
-(GVAR(speedFormatters) select GVAR(currentSpeedFormatter)) params ["", "_fnc_formatTime", "", "_speeds"];
+(GVAR(speedFormatters) select GVAR(currentSpeedFormatter)) params ["", "", "_fnc_formatTime", "", "_speeds"];
 
 private _formatters = [
-    (GVAR(distanceFormatters) select GVAR(currentDistanceFormatter)) select 1,
+    (GVAR(distanceFormatters) select GVAR(currentDistanceFormatter)) select 2,
     _fnc_formatTime,
-    (GVAR(azimuthFormatters) select GVAR(currentAzimuthFormatter)) select 1
+    (GVAR(azimuthFormatters) select GVAR(currentAzimuthFormatter)) select 2
 ];
 
 private _args = [
@@ -46,19 +46,19 @@ if (_activePlot isNotEqualTo []) then {
         _pos2D
     };
 
-    _activePlotWithMouseEndPos = [[_type, _startPosOrObj, _endPos]];
+    _activePlotWithMouseEndPos = [[_type, _startPosOrObj, _endPos, true]];
 };
 
 // Draw all plots
 {
-    _x params ["_type", "_startPosOrObj", "_endPosOrObj"];
+    _x params ["_type", "_startPosOrObj", "_endPosOrObj", ["_isActivePlot", false]];
 
     // Skip invalid plots
     if (_startPosOrObj isEqualTo objNull || {_endPosOrObj isEqualTo objNull}) then {continue};
 
     private _scale = [MAP_ICON_SCALE, ICON_SCALE] select _drawIn3D;
     private _visualProperties = [ICON, GVAR(color), _scale, ICON_ANGLE, LINE_WIDTH];
-    private _drawArgs = [_startPosOrObj, _endPosOrObj, _visualProperties, _formatters, _args, _ctrlMap];
+    private _drawArgs = [_startPosOrObj, _endPosOrObj, _visualProperties, _formatters, _args, _ctrlMap, _isActivePlot];
 
     if (_type in GVAR(plotTypes)) then {
         _drawArgs call (GVAR(plotTypes) get _type);

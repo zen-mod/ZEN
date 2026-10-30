@@ -19,6 +19,11 @@ BEGIN_COUNTER(onDraw);
 
 params ["_ctrlMap"];
 
+if (!GVAR(enabled)) exitWith {
+    _ctrlMap ctrlRemoveEventHandler [_thisEvent, _thisEventHandler];
+    LOG("Removed 3DENComments map draw.");
+};
+
 if (dialog || {call EFUNC(common,isInScreenshotMode)}) exitWith {}; // Dialog is open or HUD is hidden
 
 [values GVAR(plots), GVAR(activePlot), _ctrlMap] call FUNC(drawPlots);

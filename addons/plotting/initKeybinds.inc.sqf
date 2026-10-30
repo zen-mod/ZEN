@@ -9,6 +9,9 @@ private _category = [ELSTRING(main,DisplayName), LSTRING(DisplayName)];
             private _numFormatters = count GVAR(distanceFormatters);
             GVAR(currentDistanceFormatter) = (GVAR(currentDistanceFormatter) + 1) % _numFormatters;
 
+            private _unitDisplayName = GVAR(distanceFormatters) select GVAR(currentDistanceFormatter) select 1;
+            [LLSTRING(FormatsDistanceUnitChanged), _unitDisplayName] call EFUNC(common,showMessage);
+
             true
         };
     },
@@ -22,8 +25,10 @@ private _category = [ELSTRING(main,DisplayName), LSTRING(DisplayName)];
     [LSTRING(ToggleSpeed), LSTRING(ToggleSpeed_Description)],
     {
         if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
-            private _numSpeeds = count (GVAR(speedFormatters) select GVAR(currentSpeedFormatter) select 3);
+            private _numSpeeds = count (GVAR(speedFormatters) select GVAR(currentSpeedFormatter) select 4);
             GVAR(currentSpeedIndex) = (GVAR(currentSpeedIndex) + 1) % _numSpeeds;
+
+            [LLSTRING(FormatsStaticSpeedChanged)] call EFUNC(common,showMessage);
 
             true
         };
@@ -43,6 +48,9 @@ private _category = [ELSTRING(main,DisplayName), LSTRING(DisplayName)];
 
             GVAR(currentSpeedIndex) = 0;
 
+            private _unitDisplayName = GVAR(speedFormatters) select GVAR(currentSpeedFormatter) select 1;
+            [LLSTRING(FormatsSpeedUnitChanged), _unitDisplayName] call EFUNC(common,showMessage);
+
             true
         };
     },
@@ -58,6 +66,9 @@ private _category = [ELSTRING(main,DisplayName), LSTRING(DisplayName)];
         if (!isNull curatorCamera && {!GETMVAR(RscDisplayCurator_search,false)}) then {
             private _numFormatters = count GVAR(azimuthFormatters);
             GVAR(currentAzimuthFormatter) = (GVAR(currentAzimuthFormatter) + 1) % _numFormatters;
+
+            private _unitDisplayName = GVAR(azimuthFormatters) select GVAR(currentAzimuthFormatter) select 1;
+            [LLSTRING(FormatsAzimuthUnitChanged), _unitDisplayName] call EFUNC(common,showMessage);
 
             true
         };

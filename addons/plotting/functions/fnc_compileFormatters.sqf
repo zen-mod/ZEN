@@ -23,12 +23,14 @@ private _fnc_getFormatters = {
         private _entryConfig = _x;
 
         private _formatterName = configName _entryConfig;
+        private _formatterDisplayName = getText (_entryConfig >> "displayName");
         private _formatter = compile getText (_entryConfig >> "formatter");
         private _priority = getNumber (_entryConfig >> "priority");
         private _speeds = if (isArray (_entryConfig >> "speeds")) then {getArray (_entryConfig >> "speeds")} else {[]};
 
         private _formatterEntry = [
             _formatterName,
+            _formatterDisplayName,
             _formatter,
             _priority,
             _speeds
@@ -37,7 +39,7 @@ private _fnc_getFormatters = {
         _formatters pushBack _formatterEntry;
     } forEach configProperties [_cfgFormatters, "isClass _x", true];
 
-    [_formatters, 2, false] call CBA_fnc_sortNestedArray
+    [_formatters, 3, false] call CBA_fnc_sortNestedArray
 };
 
 private _cfgFormatters = configFile >> QGVAR(formatters);

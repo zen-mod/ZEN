@@ -2,10 +2,12 @@ class GVAR(formatters) {
     // Formats distance: _this is distance in meters
     class Distance {
         class Meter {
+            displayName = CSTRING(FormatsMeter);
             formatter = QUOTE(FORMAT_1('%1 m',[ARR_3(_this,1,parseNumber (abs _this < 100))] call CBA_fnc_formatNumber));
             priority = 100;
         };
         class Feet {
+            displayName = CSTRING(FormatsFeet);
             formatter = QUOTE(FORMAT_1('%1 ft',[ARR_3(_this * 3.281,1,0)] call CBA_fnc_formatNumber));
             priority = 90;
         };
@@ -14,6 +16,7 @@ class GVAR(formatters) {
     // Formats custom speeds: _this is [distance (m), speed (m/s)]
     class Speed {
         class kmh {
+            displayName = CSTRING(FormatsKmh);
             formatter = QUOTE(call FUNC(formatSpeedKmh));
             priority = 100;
 
@@ -33,10 +36,12 @@ class GVAR(formatters) {
     // Formats direction: _this is direction in the range 0..360 degrees.
     class Azimuth {
         class Degree {
+            displayName = CSTRING(FormatsDegree);
             formatter = QUOTE(FORMAT_1('%1°',(round _this) % 360));
             priority = 100;
         };
         class NATOMil {
+            displayName = CSTRING(FormatsNATOMil);
             formatter = QUOTE(FORMAT_1('%1 mil',(round (_this * 17.7778)) % 6400));
             priority = 90;
         };

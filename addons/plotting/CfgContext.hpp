@@ -2,6 +2,7 @@ class EGVAR(context_menu,actions) {
     class Plots {
         displayName = CSTRING(DisplayName);
         icon = QPATHTOF(ui\ruler.paa);
+        condition = QGVAR(enabled);
         statement = QUOTE(call FUNC(selectPosition));
         args = "LINE";
         priority = 15;

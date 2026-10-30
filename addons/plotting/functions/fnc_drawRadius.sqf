@@ -18,6 +18,7 @@
  *      2: Azimuth formatter <CODE>
  * 4: Additional arguments <ARRAY> (default: [])
  * 5: Map control <CONTROL> (default: Draw in 3D)
+ * 6: Always render the plot (ignore out of sight, etc.) <BOOLEAN> (default: false)
  *
  * Return Value:
  * None
@@ -28,7 +29,16 @@
  * Public: No
  */
 
-params ["_centerPosOrObj", "_endPosOrObj", "_visualProperties", "_formatters", ["_args", [], [[]]], ["_ctrlMap", controlNull, [controlNull]]];
+params [
+    "_centerPosOrObj",
+    "_endPosOrObj",
+    "_visualProperties",
+    "_formatters",
+    ["_args", [], [[]]],
+    ["_ctrlMap", controlNull, [controlNull]],
+    ["_alwaysRender", false, [false]]
+];
+
 _visualProperties params ["_icon", "_color", "_scale", "_angle", "_lineWidth"];
 _args params [["_speed", 0, [0]]];
 
@@ -63,11 +73,11 @@ if (isNull _ctrlMap) then { // 3D
     private _centerAGL = ASLToAGL _centerPos;
     private _endPosAGL = ASLToAGL _endPos;
 
-    if (CAN_RENDER_ICON(_camPos,_centerPos)) then {
+    if (_alwaysRender || CAN_RENDER_ICON(_camPos,_centerPos)) then {
         drawIcon3D [_icon, _color, _centerAGL, _scale, _scale, _angle];
     };
 
-    if (_camPos vectorDistance _centerPos <= _radius + MAX_RENDER_DISTANCE) then {
+    if (_alwaysRender || (_camPos vectorDistance _centerPos <= _radius + MAX_RENDER_DISTANCE)) then {
         drawLine3D [_centerAGL, _endPosAGL, _color, _lineWidth];
         drawIcon3D [_icon, _color, _endPosAGL, _scale, _scale, _angle, [_radius, _speed, _azimuth, _formatters] call _fnc_format];
     };
@@ -85,7 +95,7 @@ if (isNull _ctrlMap) then { // 3D
         private _pos1 = _centerPos vectorAdd (_offsets select _i);
         private _pos2 = _centerPos vectorAdd (_offsets select ((_i + 1) % _count));
 
-        if (CAN_RENDER_LINE(_camPos,_pos1,_pos2)) then {
+        if (_alwaysRender || CAN_RENDER_LINE(_camPos,_pos1,_pos2)) then {
             drawLine3D [ASLToAGL _pos1, ASLToAGL _pos2, _color, _lineWidth];
         };
     };

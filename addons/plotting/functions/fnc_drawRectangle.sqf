@@ -16,6 +16,7 @@
  *      0: Distance formatter <CODE>
  * 4: Additional arguments <ARRAY> (default: [])
  * 5: Map control <CONTROL> (default: Draw in 3D)
+ * 6: Always render the plot (ignore out of sight, etc.) <BOOLEAN> (default: false)
  *
  * Return Value:
  * None
@@ -26,7 +27,16 @@
  * Public: No
  */
 
-params ["_startPosOrObj", "_endPosOrObj", "_visualProperties", "_formatters", ["_args", [], [[]]], ["_ctrlMap", controlNull, [controlNull]]];
+params [
+    "_startPosOrObj",
+    "_endPosOrObj",
+    "_visualProperties",
+    "_formatters",
+    ["_args", [], [[]]],
+    ["_ctrlMap", controlNull, [controlNull]],
+    ["_alwaysRender", false, [false]]
+];
+
 _visualProperties params ["_icon", "_color", "_scale", "_angle", "_lineWidth"];
 
 private _startPos = _startPosOrObj;
@@ -53,7 +63,7 @@ private _fnc_format = {
 if (isNull _ctrlMap) then { // 3D
     private _camPos = getPosASL curatorCamera;
 
-    if (CAN_RENDER_ICON(_camPos,_startPos)) then {
+    if (_alwaysRender || CAN_RENDER_ICON(_camPos,_startPos)) then {
         drawIcon3D [_icon, _color, ASLToAGL _startPos, _scale, _scale, _angle];
     };
 
@@ -80,13 +90,13 @@ if (isNull _ctrlMap) then { // 3D
             private _pos1 = _x select _i;
             private _pos2 = _x select (_i + 1);
 
-            if (CAN_RENDER_LINE(_camPos,_pos1,_pos2)) then {
+            if (_alwaysRender || CAN_RENDER_LINE(_camPos,_pos1,_pos2)) then {
                 drawLine3D [ASLToAGL _pos1, ASLToAGL _pos2, _color, _lineWidth];
             };
         };
     } forEach _edges;
 
-    if (CAN_RENDER_ICON(_camPos,_endPos)) then {
+    if (_alwaysRender || CAN_RENDER_ICON(_camPos,_endPos)) then {
         drawIcon3D [_icon, _color, ASLToAGL _endPos, _scale, _scale, _angle, [_offset, _formatters] call _fnc_format];
     };
 } else { // Map
