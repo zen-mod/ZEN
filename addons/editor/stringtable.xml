@@ -548,36 +548,6 @@
             <Chinesesimp>让选中的AI单位开始或结束移动. 不影响瞄准或射击. 类似于RTS游戏中的"保持当前位置"</Chinesesimp>
             <Spanish>Hace que las unidades de IA seleccionadas empiecen o dejen de moverse. No afecta a la puntería ni al disparo. Similar a "Mantener posición" en los juegos de estrategia en tiempo real.</Spanish>
         </Key>
-        <Key ID="STR_ZEN_Editor_MoveCamToSelection">
-            <English>Focus Object Mode</English>
-            <French>Focus Mode Objet</French>
-            <Japanese>オブジェクトフォーカスモード</Japanese>
-            <Spanish>Modo de enfoque de objetos</Spanish>
-        </Key>
-        <Key ID="STR_ZEN_Editor_MoveCamToSelection_Description">
-            <English>Behaviour for "Move camera to selected entity" with an object selected.\nDefault: Base game behaviour.\nAlternate: 20 m above and behind object.\nCQB: Top-rear of object bounding box, useful for units inside buildings.\nAlternate + CQB: Switch between views on subsequent activations.</English>
-            <French>Comportement de l'option « Déplacer la caméra vers l'entité sélectionnée » lorsqu'un objet est sélectionné. \nPar défaut : comportement du jeu de base. \nAlternative : 20 m au-dessus et derrière l'objet. \nCQB : partie supérieure arrière du cadre englobant l'objet, utile pour les unités à l'intérieur des bâtiments. \nAlternative + CQB : basculement entre les vues lors des activations suivantes.</French>
-            <Japanese>オブジェクトを選択した状態での"カメラを選択した物体に移動"する際の動作。\nデフォルト: 基本ゲームの動作。\n代替: オブジェクトの20m上方後方。\nCQB: オブジェクトの境界ボックスの上後方。建物内にいるユニットに便利です。\n代替 + CQB: 二回以上実行した場合に視点をCQBに切り替えます。</Japanese>
-            <Spanish>Comportamiento de "Mover la cámara a la entidad seleccionada" cuando hay un objeto seleccionado.\nPredeterminado: comportamiento original del juego.\nAlternativo: 20 m por encima y por detrás del objeto.\nCQB: parte superior trasera de la caja envolvente del objeto, útil para unidades dentro de edificios.\nAlternativo + CQB: alterna entre ambas vistas en activaciones sucesivas.</Spanish>
-        </Key>
-        <Key ID="STR_ZEN_Editor_MoveCamToSelection_Alternate">
-            <English>Alternate</English>
-            <French>Alternative</French>
-            <Japanese>代替</Japanese>
-            <Spanish>Alternativo</Spanish>
-        </Key>
-        <Key ID="STR_ZEN_Editor_MoveCamToSelection_CQB">
-            <English>CQB</English>
-            <French>CQB</French>
-            <Japanese>CQB</Japanese>
-            <Spanish>CQB</Spanish>
-        </Key>
-        <Key ID="STR_ZEN_Editor_MoveCamToSelection_AlternateCQB">
-            <English>Alternate + CQB</English>
-            <French>Alternative + CQB</French>
-            <Japanese>代替 + CQB</Japanese>
-            <Spanish>Alternativo + CQB</Spanish>
-        </Key>
         <Key ID="STR_ZEN_Editor_SetUnitPosUp">
             <English>Switch Stance to Standing</English>
             <German>Haltung auf aufrecht umschalten</German>

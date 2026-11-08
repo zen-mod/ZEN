@@ -8,7 +8,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"zen_common"};
         author = ECSTRING(main,Author);
-        authors[] = {"mharis001", "Kex"};
+        authors[] = {"mharis001", "Kex", "Ampersand"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
