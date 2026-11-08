@@ -45,6 +45,7 @@ class CfgPatches {
             QGVAR(moduleHeal),
             QGVAR(moduleHideTerrainObjects),
             QGVAR(moduleHideZeus),
+            QGVAR(moduleInjure),
             QGVAR(moduleLightSource),
             QGVAR(moduleMakeInvincible),
             QGVAR(moduleNuke),
