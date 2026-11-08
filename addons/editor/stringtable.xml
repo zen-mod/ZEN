@@ -82,7 +82,7 @@
             <French>Nécessite d'appuyer sur Entrée ou de cliquer sur le bouton de recherche pour confirmer une recherche. \nAide à réduire le retard dans la recherche d'un grand nombre d'items.</French>
             <German>Suche wird erst ausgeführt, wenn die Eingabetaste oder die Lupe neben dem Eingabefeld betätigt wird.\nHilft, Verzögerungen bei der Suche durch viele Elemente zu reduzieren.</German>
             <Polish>Wymaga wciśnięcia Enter lub kliknięcia przycisku wyszukiwania by potwierdzić wyszukiwanie.\nPomaga zredukować lag przy przeszukiwaniu wielu przedmiotów.</Polish>
-            <Russian>Для подтверждения поиска тебуется нажатие клавиши Ввод\nПомогает уменьшить лаг при поиске </Russian>
+            <Russian>Для подтверждения поиска тебуется нажатие клавиши Ввод\nПомогает уменьшить лаг при поиске</Russian>
             <Japanese>有効化すると検索ボタンをクリックするかエンターを押すまで検索を行いません。\n大量のアイテムがある場合は遅延の低減に繋がります。</Japanese>
             <Korean>검색을 완료하기 위해 엔터키를 누르거나 검색 버튼을 눌러야 합니다. \n많은 아이템을 검색함으로써 생기는 렉이 줄어드는데 도움이 됩니다.</Korean>
             <Chinesesimp>需要按回车键或点击搜索按钮来确认搜索。\n有助于减少在搜索大量项目时的滞后。</Chinesesimp>
@@ -97,7 +97,7 @@
             <German>Leer Kategorie aufräumen</German>
             <Polish>Oczyść drzewo pustych obiektów</Polish>
             <Japanese>空ツリー整理</Japanese>
-            <Korean> 범주 정리하기</Korean>
+            <Korean>범주 정리하기</Korean>
             <Chinesesimp>清理空树</Chinesesimp>
             <Chinese>清理空樹</Chinese>
             <Italian>Declutter albero vuoto</Italian>

@@ -30,12 +30,12 @@
         };
 
         if (units _x findIf {!isPlayer _x && {!(_x getVariable [QGVAR(garrisoned), false])}} == -1) then {
-            group _unit enableAttack true;
+            group _x enableAttack true;
         };
 
-        _unit setVariable [QGVAR(garrisoned), false, true];
-        
+        _x setVariable [QGVAR(garrisoned), false, true];
+
         // End fix for rotating garrisoned units
-        _unit doWatch objNull;
+        _x doWatch objNull;
     };
 } forEach _this;

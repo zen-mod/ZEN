@@ -1,5 +1,4 @@
 class RscText;
-class RscEdit;
 class ctrlXSliderH;
 class RscControlsGroupNoScrollbars;
 

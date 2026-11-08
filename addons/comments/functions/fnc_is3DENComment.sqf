@@ -1,22 +1,20 @@
 #include "script_component.hpp"
 /*
  * Author: Timi007
- * Checks if comment with given id is an 3DEN comment.
+ * Checks if the comment with the given ID is a 3DEN comment.
  *
  * Arguments:
- * 0: Comment id <STRING>
+ * 0: Comment ID <STRING>
  *
  * Return Value:
- * Is an 3DEN comment <BOOLEAN>
+ * Is 3DEN Comment <BOOL>
  *
  * Example:
- * ["3den:2"] call zen_comments_fnc_is3DENComment
+ * ["3den:0"] call zen_comments_fnc_is3DENComment
  *
  * Public: No
  */
 
 params ["_id"];
 
-(_id splitString ":") params [["_type", "", [""]]];
-
-_type isEqualTo COMMENT_TYPE_3DEN
+_id select [0, COMMENT_TYPE_PREFIX_LENGTH] == COMMENT_TYPE_3DEN

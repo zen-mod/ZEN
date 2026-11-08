@@ -108,6 +108,7 @@ _ctrlEdit ctrlAddEventHandler ["KillFocus", {
     params ["_ctrlEdit"];
     (_ctrlEdit getVariable QGVAR(params)) params ["_ctrlSlider", "_isPercentage", "_formatting", "_fnc_formatValue"];
 
+    // IGNORE_PRIVATE_WARNING ["_value"];
     private _value = sliderPosition _ctrlSlider;
     _ctrlEdit ctrlSetText call _fnc_formatValue;
 }];

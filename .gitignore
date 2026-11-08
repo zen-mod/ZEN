@@ -17,6 +17,7 @@ CHANGELOG.md
 hemtt*
 .hemttout
 !hemtt.toml
+.hemttprivatekey
 @zen
 tools/armake.exe
 ArmaScriptCompiler.exe

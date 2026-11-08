@@ -33,7 +33,7 @@ if (_activated) then {
         if (_revealMines > 0) then {
             // Reveal the mine to curator's side
             {
-                _side = (getAssignedCuratorLogic _x) call BIS_fnc_objectSide;
+                private _side = (getAssignedCuratorLogic _x) call BIS_fnc_objectSide;
                 _side revealMine _explosive;
             } forEach (objectCurators _logic);
 

@@ -1,20 +1,52 @@
-class RscActivePicture;
-class GVAR(RscActiveCommentIcon): RscActivePicture {
-    onMouseEnter = QUOTE((_this select 0) setVariable [ARR_2(QQGVAR(isActive),true)]; ctrlSetFocus (_this select 0)); // Set focus for KeyDown to register
-    onMouseExit = QUOTE((_this select 0) setVariable [ARR_2(QQGVAR(isActive),false)]);
+class RscText;
+class RscPicture;
+class RscControlsGroupNoScrollbars;
 
-    // For deleting comments
-    onKeyDown = QUOTE(call FUNC(onKeyDown));
+class GVAR(icon): RscControlsGroupNoScrollbars {
+    class controls {
+        class Title: RscText {
+            idc = IDC_ICON_TITLE;
+            style = ST_CENTER;
+            font = "RobotoCondensed";
+            shadow = 0;
+        };
+        class Image: RscPicture {
+            idc = IDC_ICON_IMAGE;
+            text = COMMENT_ICON;
+        };
+        class Creator: Title {
+            idc = IDC_ICON_CREATOR;
+        };
+    };
+};
 
-    // For editing comments
-    onMouseButtonDblClick = QUOTE(call FUNC(onMouseDblClick));
-
-    // For moving comments
-    onMouseButtonDown = QUOTE(call FUNC(onMouseButtonDown));
-    onMouseButtonUp = QUOTE(call FUNC(onMouseButtonUp));
-    onMouseMoving = QUOTE(call FUNC(onMouseMoving));
-
-    shadow = 1;
-    text = COMMENT_ICON;
-    tooltipMaxWidth = QUOTE(POS_W(15));
+class RscDisplayCurator {
+    class ControlsBackground {
+        // The comment icons are created in a background container controls group
+        // so that they are drawn behind the foreground interface elements
+        class GVAR(container): RscControlsGroupNoScrollbars {
+            idc = IDC_CONTAINER;
+            x = QUOTE(safeZoneXAbs);
+            y = QUOTE(safeZoneY);
+            w = QUOTE(safeZoneWAbs);
+            h = QUOTE(safeZoneH);
+        };
+        // Mouse handling for all comment icons is done using this one control which
+        // is moved over the image of the comment under the cursor every frame
+        // Putting this in the background controls automatically ensures that comments
+        // do not receive mouse events when behind foreground interface elements
+        class GVAR(mouse): RscText {
+            idc = IDC_MOUSE;
+            style = ST_MULTI;
+            tooltipMaxWidth = QUOTE(POS_W(15));
+            onMouseButtonDblClick = QUOTE(call FUNC(handleMouseButtonDblClick));
+            onMouseButtonDown = QUOTE(call FUNC(handleMouseButtonDown));
+            onMouseButtonUp = QUOTE(call FUNC(handleMouseButtonUp));
+            onMouseZChanged = QUOTE(call FUNC(handleMouseZChanged));
+            x = 0;
+            y = 0;
+            w = 0;
+            h = 0;
+        };
+    };
 };

@@ -1,4 +1,3 @@
-class ctrlToolbox;
 class ctrlToolboxPictureKeepAspect;
 class ctrlXSliderH;
 class ctrlButtonPictureKeepAspect;

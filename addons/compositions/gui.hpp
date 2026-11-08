@@ -5,7 +5,6 @@ class RscControlsGroupNoScrollbars;
 class ctrlButtonPictureKeepAspect;
 
 class EGVAR(common,RscLabel);
-class EGVAR(common,RscBackground);
 class EGVAR(common,RscEdit);
 class EGVAR(common,RscCombo);
 

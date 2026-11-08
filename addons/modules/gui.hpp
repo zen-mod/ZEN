@@ -1,11 +1,7 @@
 class RscText;
-class RscEdit;
-class RscCombo;
 class RscPicture;
-class RscListBox;
 class RscEditMulti;
 class RscStructuredText;
-class RscControlsGroup;
 class RscControlsGroupNoScrollbars;
 
 class ctrlTree;
@@ -1129,7 +1125,7 @@ class GVAR(RscSpawnReinforcements): GVAR(RscDisplay) {
                             w = QUOTE(POS_W(11));
                         };
                         class VehicleBehaviourLabel: VehicleLZLabel {
-                            text = "Vehicle Behaviour";
+                            text = CSTRING(VehicleBehaviour);
                             y = QUOTE(POS_H(2.2));
                         };
                         class VehicleBehaviour: ctrlToolbox {

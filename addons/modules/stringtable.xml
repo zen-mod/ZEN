@@ -449,7 +449,7 @@
             <Korean>차량 수리 (선 상태로)</Korean>
             <Chinesesimp>维修车辆（直立）</Chinesesimp>
             <Chinese>維修車輛（直立）</Chinese>
-            <Italian>Riparazione veicolo (in piedi) </Italian>
+            <Italian>Riparazione veicolo (in piedi)</Italian>
             <French>Réparer un véhicule (debout)</French>
             <Spanish>Reparar vehículo (de pie)</Spanish>
         </Key>
@@ -647,7 +647,7 @@
             <English>The aircraft will follow the terrain, staying at the same height relative to the ground. Based on AGL.</English>
             <German>Das Flugzeug versucht dem Gelände zu folgen und bleibt auf der gleichen Höhe, basierend auf der Oberfläche (AGL).</German>
             <Japanese>航空機は地形に沿って飛ぶようになり、高度が地形によって変化します。AGL をベースとします。</Japanese>
-            <Korean>항공기는 지형을 따르고, 같은 고도에 위치하게 될것입니다. AGL에 기반합니다. </Korean>
+            <Korean>항공기는 지형을 따르고, 같은 고도에 위치하게 될것입니다. AGL에 기반합니다.</Korean>
             <Polish>Statek powietrzny będzie podążał wzdłuż terenu, pozostając na tym samym pułapie względem wysokości terenu (AGL).</Polish>
             <Chinesesimp>飞机将跟随地形，保持在相对于地面的相同高度。以海拔高度为基础。</Chinesesimp>
             <Chinese>飛機將跟隨地形，保持在相對於地面的相同高度。以海拔高度為基礎。</Chinese>
@@ -1060,7 +1060,7 @@
         <Key ID="STR_ZEN_Modules_DamageState_Tooltip">
             <English>Selects the damage state to apply.\nIn nearest mode, only damage states that the nearest building supports are selectable.\nIn radius mode, the selected damage state will be applied only to buildings that support it.</English>
             <German>Wählt den anzuwendenden Schadenszustand aus. Im "Nächsten" Modus wird nur das nächstgelegene Gebäude ausgewählt. Im "Radius" Modus wird der Schadenszustand nur auf Häuser, die diesen unterstützen angewendet.</German>
-            <Polish>Wybiera tryb obrażeń do zastosowania.\nTryb najbliższy, obsługuje jedynie typy obrażeń możliwe dla najbliższego budynku.\Tryb "Promienny", wybrany typ obrażen zostanie zadany tylko budynkom które obsługują taki typ. </Polish>
+            <Polish>Wybiera tryb obrażeń do zastosowania.\nTryb najbliższy, obsługuje jedynie typy obrażeń możliwe dla najbliższego budynku.\Tryb "Promienny", wybrany typ obrażen zostanie zadany tylko budynkom które obsługują taki typ.</Polish>
             <Japanese>適用するダメージを設定します。\n近傍モードでは、選択可能で対応している最も近い建物のみに適用されます。\n範囲モードでは、範囲内にある対応している建物のみに適用されます。</Japanese>
             <Chinesesimp>选择要应用的损坏状态。\n在最新模式中，只有最近的建筑支持的损坏状态可以选择。\n在半径模式下，选择的损坏状态将只应用于支持它的建筑。</Chinesesimp>
             <Chinese>選擇要應用的損壞狀態。 \n在最新模式中，只有最近的建築支持的損壞狀態可以選擇。 \n在半徑模式下，選擇的損壞狀態將只應用於支持它的建築。</Chinese>
@@ -2477,7 +2477,7 @@
             <French>Unités</French>
             <Spanish>Unidades</Spanish>
         </Key>
-        <Key ID="STR_ZEN_Modules_ModuleFireMission_">
+        <Key ID="STR_ZEN_Modules_ModuleFireMission_Units_Tooltip">
             <English>Number of units involved in the fire mission.</English>
             <German>Anzahl der Einheiten die an der Feuermission beteiligt sind.</German>
             <Polish>Liczba jednostek wykonujących misję ogniową</Polish>
@@ -2805,7 +2805,7 @@
             <English>Sets how much the fog density decays with altitude. Larger values result in a sharper fog ceiling (more defined fog start).\nSmaller values lead to a more smooth transition from no fog to full fog, and as a result, the fog will cross the base altitude line more.\nWhen this is a positive value, the fog will be generated below the base altitude (valley fog); if negative, above the base altitude (mountain fog).</English>
             <German>Legt fest, wie stark die Nebeldichte mit der Höhe abnimmt. Größere Werte führen zu einer schärferen Nebeldecke (definierterer Nebelbeginn). \nKleinere Werte führen zu einem sanfteren Übergang von keinem Nebel zu vollem Nebel, so dass der Nebel die Basishöhenlinie mehr überschreitet. \nWenn dies ein positiver Wert ist, wird der Nebel unterhalb der Basishöhe (Talnebel) erzeugt, wenn negativ, oberhalb der Basishöhe (Bergnebel).</German>
             <Japanese>標高によりどのくらい霧が減衰するかを決定できます。大きな値では霧の天辺がよりシャープになります。\n小さな値ではよりスムーズに霧が濃くなり、よりもっと標高と混じります。\n正の値では霧が基礎標高より下から生成され、負の値では基礎標高より上から生成されます。</Japanese>
-            <Polish>Ustawia zanikanie mgły wraz z wzrostem wysokości. Wyższe wartości tego pola oznaczają ostrzejszy próg zamglenia.\nNiższe wartości oznaczają gładsze przejscie pomiędzy brakiem mgły a pełną mgłą.\nPozytywne wartości na tym polu oznaczją ze mgła będzie generowana poniżej bazowej wysokości (w dolinach itp), negatywne wartości oznaczją że będzie generowana powyżej bazowej wysokości (na górach itp.) </Polish>
+            <Polish>Ustawia zanikanie mgły wraz z wzrostem wysokości. Wyższe wartości tego pola oznaczają ostrzejszy próg zamglenia.\nNiższe wartości oznaczają gładsze przejscie pomiędzy brakiem mgły a pełną mgłą.\nPozytywne wartości na tym polu oznaczją ze mgła będzie generowana poniżej bazowej wysokości (w dolinach itp), negatywne wartości oznaczją że będzie generowana powyżej bazowej wysokości (na górach itp.)</Polish>
             <Chinesesimp>设置雾气密度随海拔高度衰减的程度。较大的值会导致更突变的雾气变化（更明确的雾开始）。\n较小的值会导致的过渡就越平滑，因此，雾会更多地穿过基准高度线。\n如果正值，雾将产生于基准高度以下(谷雾) ; 如果负值，雾将产生于基准高度以上(峰雾)。</Chinesesimp>
             <Chinese>設置霧氣密度隨海拔高度衰減的程度。較大的值會導致更突變的霧氣變化（更明確的霧開始）。 \n較小的值會導致的過渡就越平滑，因此，霧會更多地穿過基準高度線。 \n如果正值，霧將產生於基準高度以下(谷霧) ; 如果負值，霧將產生於基準高度以上(峰霧)。</Chinese>
             <Italian>Imposta quanto la densità della nebbia decade con l'altitudine. Valori più grandi producono un limite di nebbia più nitido (inizio nebbia più definito).\nValori più piccoli portano a una transizione più graduale da assenza di nebbia a nebbia piena e, di conseguenza, la nebbia attraverserà di più la linea dell'altitudine di base.\nQuando questo è un valore positivo, la nebbia verrà generata al di sotto della quota di base (nebbia di valle); se negativo, al di sopra della quota di base (nebbia di montagna).</Italian>
@@ -4019,7 +4019,7 @@
             <Polish>Nie ma nic pod kursorem</Polish>
             <Russian>Поместите на солдата или технику</Russian>
             <Hungarian>Semmi sincs az egér alatt</Hungarian>
-            <Italian>Posiziona su un'unità </Italian>
+            <Italian>Posiziona su un'unità</Italian>
             <Japanese>ユニットの上に設置</Japanese>
             <Korean>대상에 배치하기</Korean>
             <Chinesesimp>放置在一个单位上</Chinesesimp>
@@ -4066,7 +4066,7 @@
             <Polish>Używaj tylko na żywych jednostkach</Polish>
             <Russian>Применимо только к живым юнитам</Russian>
             <Hungarian>Csak élő egységeken használni</Hungarian>
-            <Italian>L'unità deve essere viva </Italian>
+            <Italian>L'unità deve essere viva</Italian>
             <Portuguese>Usar somente em unidades vivas</Portuguese>
             <Korean>대상이 반드시 살아있어야 합니다</Korean>
             <Chinesesimp>单位必须是活着</Chinesesimp>
@@ -4164,20 +4164,6 @@
             <Chinese>單位必須屬於一個合適的一邊</Chinese>
             <Portuguese>Unidade deve pertencer á um lado apropriado</Portuguese>
             <Spanish>La unidad debe pertenecer al bando apropiado</Spanish>
-        </Key>
-        <Key ID="STR_ZEN_Modules_BuildingTooFar">
-            <English>Nearest building is too far away</English>
-            <French>Le bâtiment le plus proche est trop loin</French>
-            <Russian>Ближайшие здания слишком далеко</Russian>
-            <Czech>Nejbližší budova je příliš daleko</Czech>
-            <Japanese>近くに建物がありません</Japanese>
-            <Polish>Najbliższy budynek jest zbyt daleko</Polish>
-            <German>Das nächstgelegene Gebäude ist zu weit entfernt</German>
-            <Korean>가장가까운 건물이 너무 멈</Korean>
-            <Italian>L'edificio più vicino è troppo lontano</Italian>
-            <Chinesesimp>最近的房子离太远了</Chinesesimp>
-            <Chinese>最近的房子離太遠了</Chinese>
-            <Spanish>El edificio más cercano está demasiado lejos</Spanish>
         </Key>
         <Key ID="STR_ZEN_Modules_NoBuildingFound">
             <English>Unable to find a building to search</English>

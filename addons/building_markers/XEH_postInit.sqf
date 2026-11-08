@@ -2,6 +2,9 @@
 
 if (isServer) then {
     [QGVAR(set), LINKFUNC(set)] call CBA_fnc_addEventHandler;
+
+    addMissionEventHandler ["EntityDeleted", {call FUNC(handleEntityDeleted)}];
+    addMissionEventHandler ["MarkerDeleted", {call FUNC(handleMarkerDeleted)}];
 };
 
 if (hasInterface) then {

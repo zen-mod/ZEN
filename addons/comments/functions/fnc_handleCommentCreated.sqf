@@ -1,17 +1,17 @@
 #include "script_component.hpp"
 /*
  * Author: Timi007
- * Creates the comment locally.
+ * Handles a comment being created.
  *
  * Arguments:
- * 0: Unique comment id <STRING>
- * 1: Comment data <ARRAY>
+ * 0: Comment ID <STRING>
+ * 1: Comment Data <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * ["zeus:1", [[0,0,0], "My Comment", "This is a nice comment", [1,0,0,0.7], "Joe"]] call zen_comments_fnc_onCommentCreated
+ * ["zeus:0", _data] call zen_comments_fnc_handleCommentCreated
  *
  * Public: No
  */

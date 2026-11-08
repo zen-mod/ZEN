@@ -224,7 +224,7 @@
             <Polish>Czas (w sekundach) pomiędzy wypełnieniem warunku zaliczenia punktu trasy a jego faktycznym zaliczeniem.</Polish>
             <Czech>Čas (v sekundách) mezi splněním podmínky trasového bodu a dokončením trasového bodu.</Czech>
             <Portuguese>O tempo (em segundos) entre a condição satisfatória da parada e a conclusão da parada.</Portuguese>
-            <Italian>Il tempo (in secondi) che passa tra il soddisfacimento della condizione dell'obiettivo e il suo completamento </Italian>
+            <Italian>Il tempo (in secondi) che passa tra il soddisfacimento della condizione dell'obiettivo e il suo completamento</Italian>
             <Japanese>タイムアウト (秒) はウェイポイントの条件達成とウェイポイント完了の間に適用されます。</Japanese>
             <Korean>웨이포인트 조건 만족 및 웨이포인트 완료 사이의 시간 (초)</Korean>
             <Chinesesimp>满足路径点条件与路径点完成之间的时间（以秒为单位）。</Chinesesimp>
