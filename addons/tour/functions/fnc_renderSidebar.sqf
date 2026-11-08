@@ -68,6 +68,11 @@ private _ctrlButton = _display displayCtrl IDC_BUTTON_ALL_FEATURES;
 _ctrlButton ctrlSetText toUpper LLSTRING(ViewAllFeatures);
 _ctrlButton ctrlShow _isWhatsNew;
 
+// Only as wide as its text, so that it is not highlighted while hovering over the empty space beside it
+// For buttons, the text width does not include the margins
+_ctrlButton ctrlSetPositionW (ctrlTextWidth _ctrlButton + 2 * TEXT_MARGIN);
+_ctrlButton ctrlCommit 0;
+
 private _ctrlSidebar = _display displayCtrl IDC_SIDEBAR;
 private _textX = POS_W(SIDEBAR_INSET);
 private _textW = POS_W(SIDEBAR_WIDTH - 2 * SIDEBAR_INSET);
