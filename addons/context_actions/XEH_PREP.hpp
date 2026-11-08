@@ -1,5 +1,7 @@
 PREP(canEditInventory);
 PREP(canEditLoadout);
+PREP(canEditMagazines);
+PREP(canEditPylons);
 PREP(canEditVehicleAppearance);
 PREP(canHealUnits);
 PREP(canPasteVehicleAppearance);
