@@ -8,3 +8,5 @@ PREP(searchBuilding);
 PREP(suppressiveFire);
 PREP(throwGrenade);
 PREP(unGarrison);
+PREP(unpackStaticWeapon);
+PREP(unpackStaticWeaponPFH);
