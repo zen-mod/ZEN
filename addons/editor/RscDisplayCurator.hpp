@@ -18,6 +18,9 @@ class RscDisplayCurator {
             x = QUOTE(safeZoneX + POS_EDGE(12.5,11) * GUI_GRID_W);
             y = QUOTE(safeZoneY + POS_EDGE(0.5,0) * GUI_GRID_H);
             w = QUOTE(safeZoneW - POS_EDGE(25,22) * GUI_GRID_W);
+            // The base game makes the group half a unit taller than its controls for no apparent reason
+            // Nothing uses the extra height, but it blocks mouse interactions below the bar
+            h = QUOTE(GUI_GRID_H);
             class controls {
                 class PointsBackground: RscText {
                     w = QUOTE(safeZoneW - POS_EDGE(25,22) * GUI_GRID_W);
@@ -152,6 +155,17 @@ class RscDisplayCurator {
                     };
                 };
             };
+        };
+        // Holds the display's focus instead of the mouse area and the map, which cover the controls that
+        // should be drawn above them while they have focus, and the header titles, which pulse while focused
+        // A static control only takes focus with the multi-line style
+        class GVAR(focusHolder): RscText {
+            idc = IDC_FOCUS_HOLDER;
+            style = ST_MULTI;
+            x = 0;
+            y = 0;
+            w = 0;
+            h = 0;
         };
     };
 };

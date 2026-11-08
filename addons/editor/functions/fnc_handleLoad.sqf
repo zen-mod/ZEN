@@ -135,6 +135,36 @@ private _ctrlMap = _display displayCtrl IDC_RSCDISPLAYCURATOR_MAINMAP;
 _ctrlMap ctrlMapAnimAdd [0, _mapScale, _mapPosition];
 ctrlMapAnimCommit _ctrlMap;
 
+// The engine draws and hit-tests the focused control over the others, so controls that should be drawn
+// above the mouse area or the map would never trigger mouse events while those have focus, which they get
+// from every click. The focus is moved to this holder instead, which also keeps the header titles from pulsing
+{
+    private _ctrl = _display displayCtrl _x;
+
+    // Runs after the engine's own focus change, so the map is not drawn over them for a frame
+    _ctrl ctrlAddEventHandler ["MouseButtonDown", {
+        params ["_ctrl"];
+
+        ctrlSetFocus (ctrlParent _ctrl displayCtrl IDC_FOCUS_HOLDER);
+    }];
+
+    // Right clicks and the second click of a double click give focus without a mouse button down event
+    // The engine sets the focus again after this event, so it is set to the holder in the next frame
+    // This also handles focus set through other means such as scripts
+    _ctrl ctrlAddEventHandler ["SetFocus", {
+        [{
+            params ["_ctrl"];
+
+            ctrlSetFocus (ctrlParent _ctrl displayCtrl IDC_FOCUS_HOLDER);
+        }, _this] call CBA_fnc_execNextFrame;
+    }];
+} forEach [IDC_RSCDISPLAYCURATOR_MOUSEAREA, IDC_RSCDISPLAYCURATOR_MAINMAP];
+
+// Fix the display initially putting focus on the EDIT header, which pulses while focused
+[{
+    ctrlSetFocus (_this displayCtrl IDC_FOCUS_HOLDER);
+}, _display] call CBA_fnc_execNextFrame;
+
 // Reset editable icons visibility tracking variable
 // Prevents unwanted behaviour if display is closed while icons are hidden
 GVAR(iconsVisible) = true;
