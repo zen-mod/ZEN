@@ -66,5 +66,5 @@ private _areaH = _focusH * _frameH;
     [
         IDC_PICTURE_DIM_RIGHT,
         [_areaX + _areaW, _areaY, (_pictureW - _areaX - _areaW) max 0, _areaH]
-    ],
+    ]
 ];
