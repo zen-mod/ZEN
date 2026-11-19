@@ -16,6 +16,9 @@
  * Public: No
  */
 
+// Slows the start and end of an animation for the given fraction of its progress
+#define EASE(PROGRESS) ((PROGRESS) * (PROGRESS) * (3 - 2 * (PROGRESS)))
+
 params ["_display", "_pfhID"];
 
 if (isNull _display) exitWith {
@@ -30,27 +33,62 @@ if (_media isEqualTo []) exitWith {};
 private _ctrlPage = _display displayCtrl IDC_PAGE;
 private _scroll = (ctrlScrollValues _ctrlPage select 0) max 0;
 private _pageH = _display getVariable [QGVAR(pageHeight), 0];
-private _viewH = ctrlPosition _ctrlPage select 3;
+ctrlPosition _ctrlPage params ["", "", "_viewW", "_viewH"];
 private _viewTop = _scroll * ((_pageH - _viewH) max 0);
 private _viewBottom = _viewTop + _viewH;
 private _now = diag_tickTime;
 
-// Moves media between its initial and animated states, where pictures focus and comparisons split in the middle
-private _fnc_animate = {
-    params ["_ctrlMedia", "_isAnimated", "_duration"];
+// Media can extend past the visible part of the page, where it cannot be hovered
+// The mouse position within the page accounts for its scroll position
+ctrlMousePosition _ctrlPage params ["_pageMouseX", "_pageMouseY"];
 
-    _ctrlMedia setVariable [QGVAR(changeTime), _now];
+private _isMouseInView = (
+    _pageMouseX >= 0
+    && {_pageMouseX < _viewW}
+    && {_pageMouseY >= _viewTop}
+    && {_pageMouseY < _viewBottom}
+);
+
+// Returns the given progress moved towards its target, at the speed to complete it over the given duration
+// Moving at a constant speed allows an animation to smoothly reverse at any point
+private _fnc_step = {
+    params ["_progress", "_target", "_duration"];
+
+    private _step = diag_deltaTime / _duration;
+    _target max (_progress - _step) min (_progress + _step)
+};
+
+// Updates media for the given progress of its animations, only when it has changed
+private _fnc_setProgress = {
+    params ["_ctrlMedia", "_progress"];
+
+    if (_progress isEqualTo (_ctrlMedia getVariable QGVAR(progress))) exitWith {};
+
+    _ctrlMedia setVariable [QGVAR(progress), _progress];
 
     if (_ctrlMedia getVariable QGVAR(type) == "comparison") then {
-        [_ctrlMedia, [1, COMPARISON_SPLIT] select _isAnimated, _duration] call FUNC(setComparisonSplit);
+        _progress params ["_split"];
+
+        [_ctrlMedia, linearConversion [0, 1, EASE(_split), 1, COMPARISON_SPLIT]] call FUNC(setComparisonSplit);
     } else {
-        [_ctrlMedia, _isAnimated, _duration] call FUNC(setPictureFocus);
+        _progress params ["_zoom", "_highlight"];
+
+        [_ctrlMedia, EASE(_zoom), EASE(_highlight)] call FUNC(setPictureFocus);
     };
+};
+
+// Changes the state of the current media
+private _fnc_setState = {
+    _state = _this;
+    _timeSinceChange = 0;
+
+    _ctrlMedia setVariable [QGVAR(state), _state];
+    _ctrlMedia setVariable [QGVAR(changeTime), _now];
 };
 
 {
     private _ctrlMedia = _x;
-    private _mediaH = ctrlPosition _ctrlMedia select 3;
+    ctrlPosition _ctrlMedia params ["", "", "_mediaW", "_mediaH"];
 
     // Media can be nested in groups, so its position within the page adds up the positions of each group
     private _mediaY = 0;
@@ -68,64 +106,109 @@ private _fnc_animate = {
     private _isOutOfView = _mediaY + _mediaH < _viewTop || {_mediaY > _viewBottom};
 
     if (_isOutOfView) then {
-        if !(_state in [MEDIA_STATE_HIDDEN, MEDIA_STATE_MANUAL]) then {
-            if (_type != "slideshow") then {
-                [_ctrlMedia, false, 0] call _fnc_animate;
-            };
+        // The hover delay should restart when scrolled back under the mouse
+        _ctrlMedia setVariable [QGVAR(hoverTime), _now];
 
+        if (_state != MEDIA_STATE_MANUAL) then {
             _ctrlMedia setVariable [QGVAR(state), MEDIA_STATE_HIDDEN];
+
+            if (_type != "slideshow") then {
+                private _progress = _ctrlMedia getVariable QGVAR(progress) apply {0};
+                [_ctrlMedia, _progress] call _fnc_setProgress;
+            };
         };
 
         continue;
     };
+
+    private _timeSinceChange = _now - (_ctrlMedia getVariable [QGVAR(changeTime), _now]);
 
     // Start once the center is in view, so that most of the media can be seen
     if (_state == MEDIA_STATE_HIDDEN) then {
         private _mediaCenterY = _mediaY + _mediaH / 2;
 
         if (_mediaCenterY > _viewTop && {_mediaCenterY < _viewBottom}) then {
-            _ctrlMedia setVariable [QGVAR(changeTime), _now];
-            _ctrlMedia setVariable [QGVAR(state), MEDIA_STATE_WAITING];
+            MEDIA_STATE_WAITING call _fnc_setState;
         };
-
-        continue;
     };
 
-    private _changeTime = _ctrlMedia getVariable QGVAR(changeTime);
-    private _timeSinceChange = _now - _changeTime;
-
-    // Slideshows advance while visible, with clicking through slides also restarting the interval
-    if (_type == "slideshow") then {
-        if (_timeSinceChange >= SLIDESHOW_INTERVAL) then {
-            private _nextSlide = (_ctrlMedia getVariable QGVAR(slide)) + 1;
-            [_ctrlMedia, _nextSlide, SLIDESHOW_FADE_DURATION] call FUNC(selectSlide);
+    switch (_type) do {
+        // Slideshows advance while visible, with clicking through slides also restarting the interval
+        case "slideshow": {
+            if (_state != MEDIA_STATE_HIDDEN && {_timeSinceChange >= SLIDESHOW_INTERVAL}) then {
+                private _nextSlide = (_ctrlMedia getVariable QGVAR(slide)) + 1;
+                [_ctrlMedia, _nextSlide, SLIDESHOW_FADE_DURATION] call FUNC(selectSlide);
+            };
         };
+        // Comparisons only show their divider once, after which it is left to the player
+        case "comparison": {
+            if (_state == MEDIA_STATE_WAITING && {_timeSinceChange >= MEDIA_ANIMATION_DELAY}) then {
+                MEDIA_STATE_ANIMATED call _fnc_setState;
+            };
 
-        continue;
-    };
+            if (_state == MEDIA_STATE_ANIMATED) then {
+                _ctrlMedia getVariable QGVAR(progress) params ["_split"];
 
-    switch (_state) do {
-        case MEDIA_STATE_WAITING: {
-            if (_timeSinceChange < MEDIA_ANIMATION_DELAY) exitWith {};
+                _split = [_split, 1, MEDIA_ANIMATION_DURATION] call _fnc_step;
+                [_ctrlMedia, [_split]] call _fnc_setProgress;
 
-            [_ctrlMedia, true, MEDIA_ANIMATION_DURATION] call _fnc_animate;
-
-            // Comparisons only show their divider once, after which it is left to the player
-            private _nextState = [MEDIA_STATE_ANIMATED, MEDIA_STATE_MANUAL] select (_type == "comparison");
-            _ctrlMedia setVariable [QGVAR(state), _nextState];
+                if (_split == 1) then {
+                    MEDIA_STATE_MANUAL call _fnc_setState;
+                };
+            };
         };
-        case MEDIA_STATE_ANIMATED: {
-            private _isLooping = _ctrlMedia getVariable [QGVAR(loop), false];
-            if (!_isLooping || {_timeSinceChange < MEDIA_ANIMATION_DURATION + MEDIA_LOOP_HOLD}) exitWith {};
+        // Pictures highlight their focus area on their own and leave zooming to the player, unless looping
+        case "picture": {
+            private _isLooping = _ctrlMedia getVariable QGVAR(loop);
+            private _loopTime = MEDIA_ANIMATION_DURATION + MEDIA_LOOP_HOLD;
 
-            [_ctrlMedia, false, MEDIA_ANIMATION_DURATION] call _fnc_animate;
-            _ctrlMedia setVariable [QGVAR(state), MEDIA_STATE_REVERSED];
-        };
-        case MEDIA_STATE_REVERSED: {
-            if (_timeSinceChange < MEDIA_ANIMATION_DURATION + MEDIA_LOOP_HOLD) exitWith {};
+            switch (_state) do {
+                case MEDIA_STATE_WAITING: {
+                    if (_timeSinceChange >= MEDIA_ANIMATION_DELAY) then {
+                        MEDIA_STATE_ANIMATED call _fnc_setState;
+                    };
+                };
+                case MEDIA_STATE_ANIMATED: {
+                    if (_isLooping && {_timeSinceChange >= _loopTime}) then {
+                        MEDIA_STATE_REVERSED call _fnc_setState;
+                    };
+                };
+                case MEDIA_STATE_REVERSED: {
+                    if (_timeSinceChange >= _loopTime) then {
+                        MEDIA_STATE_ANIMATED call _fnc_setState;
+                    };
+                };
+            };
 
-            [_ctrlMedia, true, MEDIA_ANIMATION_DURATION] call _fnc_animate;
-            _ctrlMedia setVariable [QGVAR(state), MEDIA_STATE_ANIMATED];
+            ctrlMousePosition _ctrlMedia params ["_mouseX", "_mouseY"];
+
+            private _isHovered = (
+                _isMouseInView
+                && {_mouseX >= 0}
+                && {_mouseX < _mediaW}
+                && {_mouseY >= 0}
+                && {_mouseY < _mediaH}
+            );
+
+            // The delay prevents pictures from zooming as they are scrolled past or the mouse moves across them
+            if (!_isHovered) then {
+                _ctrlMedia setVariable [QGVAR(hoverTime), _now];
+            };
+
+            private _isHighlighted = _state == MEDIA_STATE_ANIMATED;
+            private _isHoverZoomed = _now - (_ctrlMedia getVariable QGVAR(hoverTime)) >= PICTURE_HOVER_DELAY;
+            private _isZoomed = [_isHoverZoomed, _isHighlighted] select _isLooping;
+            private _zoomDuration = [_ctrlMedia getVariable QGVAR(zoomDuration), MEDIA_ANIMATION_DURATION] select _isLooping;
+
+            _ctrlMedia getVariable QGVAR(progress) params ["_zoom", "_highlight"];
+
+            [
+                _ctrlMedia,
+                [
+                    [_zoom, parseNumber _isZoomed, _zoomDuration] call _fnc_step,
+                    [_highlight, parseNumber _isHighlighted, PICTURE_HIGHLIGHT_DURATION] call _fnc_step
+                ]
+            ] call _fnc_setProgress;
         };
     };
 } forEach _media;

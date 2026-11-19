@@ -151,6 +151,13 @@
 #define MEDIA_ANIMATION_DURATION 1.2
 #define MEDIA_LOOP_HOLD          2.5
 
+// Pictures highlight their focus area once scrolled into view, and zoom after being hovered for a delay
+// Larger zooms take longer, by the given time per unit of zoom, without slowing small zooms down to match
+#define PICTURE_HIGHLIGHT_DURATION     0.6
+#define PICTURE_HOVER_DELAY            0.4
+#define PICTURE_ZOOM_BASE_DURATION     0.4
+#define PICTURE_ZOOM_DURATION_PER_UNIT 0.3
+
 #define SLIDESHOW_INTERVAL      5
 #define SLIDESHOW_FADE_DURATION 0.6
 

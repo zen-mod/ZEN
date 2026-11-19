@@ -25,12 +25,13 @@
  *   comparison[] - Before and after pictures of the same size, split by a divider that can be dragged.
  *   slides[]     - Pictures of the same size shown one at a time, each as {picture, caption (optional)}.
  *
- * Pictures can draw attention to an area, animating each time they are scrolled into view:
+ * Pictures can draw attention to an area, and zoom in on it while hovered:
  *   focus[]      - Area of the picture to focus as {x, y, w, h} fractions.
  *   zoom         - Zoom factor, centered on the focus area or the picture's center without one
  *                  (default: enough for the focus area to fill most of the picture, 1 to not zoom).
- *   highlight    - Dim the rest of the picture around the focus area (default: 1).
- *   loop         - Keep zooming in and out while visible (default: 0).
+ *   highlight    - Dim the rest of the picture around the focus area each time it is scrolled
+ *                  into view (default: 1).
+ *   loop         - Keep zooming in and out while visible, instead of zooming while hovered (default: 0).
  */
 class GVAR(features) {
     class Comments {

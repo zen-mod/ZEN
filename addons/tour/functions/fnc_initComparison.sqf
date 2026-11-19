@@ -51,6 +51,7 @@ _ctrlMouse ctrlCommit 0;
 
 _ctrlComparison setVariable [QGVAR(type), "comparison"];
 _ctrlComparison setVariable [QGVAR(state), MEDIA_STATE_HIDDEN];
+_ctrlComparison setVariable [QGVAR(progress), [0]];
 [_ctrlComparison, 1] call FUNC(setComparisonSplit);
 
 true

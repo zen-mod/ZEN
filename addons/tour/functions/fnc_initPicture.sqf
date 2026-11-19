@@ -2,7 +2,7 @@
 /*
  * Author: mharis001
  * Initializes a picture group from the given config, showing the picture in full.
- * Prepares the animation when the config has a focus area or zoom.
+ * Prepares its animations when the config has a focus area or zoom.
  *
  * Arguments:
  * 0: Picture <CONTROL>
@@ -35,6 +35,7 @@ private _highlight = _hasFocus && {!isNumber _highlightEntry || {getNumber _high
 
 {
     private _ctrl = _ctrlPicture controlsGroupCtrl _x;
+    _ctrl ctrlSetPixelPrecision PIXEL_PRECISION;
     _ctrl ctrlShow _highlight;
 } forEach [
     IDC_PICTURE_DIM_TOP,
@@ -77,31 +78,15 @@ private _zoomedX = (_pictureW / 2 - _focusCenterX) min 0 max (_pictureW - _zoome
 private _zoomedY = (_pictureH / 2 - _focusCenterY) min 0 max (_pictureH - _zoomedH);
 private _zoomedRect = [_zoomedX, _zoomedY, _zoomedW, _zoomedH];
 
-// Returns the positions of the dims surrounding the focus area for the given picture position
-private _fnc_getDims = {
-    params ["_posX", "_posY", "_posW", "_posH"];
-
-    private _areaX = _posX + _focusX * _posW;
-    private _areaY = _posY + _focusY * _posH;
-    private _areaW = _focusW * _posW;
-    private _areaH = _focusH * _posH;
-
-    [
-        [0, 0, _pictureW, _areaY max 0],
-        [0, _areaY + _areaH, _pictureW, (_pictureH - _areaY - _areaH) max 0],
-        [0, _areaY, _areaX max 0, _areaH],
-        [_areaX + _areaW, _areaY, (_pictureW - _areaX - _areaW) max 0, _areaH]
-    ]
-};
-
-// Positions of the picture and its dims when unfocused and focused
-private _frames = [_rect, _zoomedRect] apply {[_x, _x call _fnc_getDims]};
-
 _ctrlPicture setVariable [QGVAR(type), "picture"];
 _ctrlPicture setVariable [QGVAR(state), MEDIA_STATE_HIDDEN];
-_ctrlPicture setVariable [QGVAR(frames), _frames];
+_ctrlPicture setVariable [QGVAR(frames), [_rect, _zoomedRect]];
+_ctrlPicture setVariable [QGVAR(focus), _focus];
 _ctrlPicture setVariable [QGVAR(highlight), _highlight];
+_ctrlPicture setVariable [QGVAR(zoomDuration), PICTURE_ZOOM_BASE_DURATION + PICTURE_ZOOM_DURATION_PER_UNIT * (_scale - 1)];
 _ctrlPicture setVariable [QGVAR(loop), getNumber (_config >> "loop") == 1];
-[_ctrlPicture, false] call FUNC(setPictureFocus);
+_ctrlPicture setVariable [QGVAR(progress), [0, 0]];
+_ctrlPicture setVariable [QGVAR(hoverTime), diag_tickTime];
+[_ctrlPicture, 0, 0] call FUNC(setPictureFocus);
 
 true
