@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZEN">
+    <Package name="Tour">
+        <Container name="General">
+            <Key ID="STR_ZEN_Tour_Features">
+                <English>Zeus Enhanced Features</English>
+            </Key>
+            <Key ID="STR_ZEN_Tour_Features_Description">
+                <English>Browse the features of Zeus Enhanced and see what's new.</English>
+            </Key>
+            <Key ID="STR_ZEN_Tour_WhatsNew">
+                <English>What's New in Zeus Enhanced</English>
+            </Key>
+            <Key ID="STR_ZEN_Tour_NewIn">
+                <English>New in %1</English>
+            </Key>
+            <Key ID="STR_ZEN_Tour_ViewAllFeatures">
+                <English>View All Features</English>
+            </Key>
+            <Key ID="STR_ZEN_Tour_GitHub">
+                <English>View release notes and report issues on GitHub.</English>
+            </Key>
+            <Key ID="STR_ZEN_Tour_New">
+                <English>NEW</English>
+            </Key>
+            <Key ID="STR_ZEN_Tour_Before">
+                <English>BEFORE</English>
+            </Key>
+            <Key ID="STR_ZEN_Tour_After">
+                <English>AFTER</English>
+            </Key>
+            <Key ID="STR_ZEN_Tour_Note">
+                <English>NOTE</English>
+            </Key>
+            <Key ID="STR_ZEN_Tour_Tip">
+                <English>TIP</English>
+            </Key>
+            <Key ID="STR_ZEN_Tour_Warning">
+                <English>WARNING</English>
+            </Key>
+            <Key ID="STR_ZEN_Tour_Enabled">
+                <English>Show What's New After Updates</English>
+            </Key>
+            <Key ID="STR_ZEN_Tour_Enabled_Description">
+                <English>Shows the new features the first time the Zeus interface is opened after Zeus Enhanced is updated.\nAll features can be browsed from the pause menu under Options.</English>
+            </Key>
+        </Container>
+        <Key ID="STR_ZEN_Tour_Comments_Description">
+            <English>Leave notes in the world for yourself and other curators. Mark objectives, explain a setup, or point out something to keep an eye on.</English>
+        </Key>
+        <Key ID="STR_ZEN_Tour_Comments_Placing">
+            <English>Placing Comments</English>
+        </Key>
+        <Key ID="STR_ZEN_Tour_Comments_Placing_Text">
+            <English>Right-click to open the context menu and choose &lt;b&gt;Place Comment&lt;/b&gt;.&lt;br/&gt;&lt;br/&gt;Give it a title, an optional tooltip with more detail, and a color that stands out. Each comment shows the name of the Zeus who placed it.</English>
+        </Key>
+        <Key ID="STR_ZEN_Tour_Comments_Editing">
+            <English>Editing Comments</English>
+        </Key>
+        <Key ID="STR_ZEN_Tour_Comments_Editing_Text">
+            <English>Interact with a comment through its icon:</English>
+        </Key>
+        <Key ID="STR_ZEN_Tour_Comments_Move">
+            <English>Move the comment.</English>
+        </Key>
+        <Key ID="STR_ZEN_Tour_Comments_Edit">
+            <English>Edit the comment's properties.</English>
+        </Key>
+        <Key ID="STR_ZEN_Tour_Comments_Delete">
+            <English>Delete the hovered comment.</English>
+        </Key>
+        <Key ID="STR_ZEN_Tour_Comments_Shared_Text">
+            <English>&lt;b&gt;Comments are shared and synchronized with every Zeus&lt;/b&gt;, so all curators see the same notes, including ones who join later.</English>
+        </Key>
+        <Key ID="STR_ZEN_Tour_Comments_Eden">
+            <English>3DEN Comments</English>
+        </Key>
+        <Key ID="STR_ZEN_Tour_Comments_Eden_Text">
+            <English>Comments placed in the 3DEN Editor appear in Zeus automatically, in their own color. They cannot be moved and can only be deleted if allowed in Addon Options. To keep one hidden, uncheck &lt;b&gt;Show Comment in Zeus&lt;/b&gt; in 3DEN.</English>
+        </Key>
+        <Key ID="STR_ZEN_Tour_SelectionPresets_Description">
+            <English>Save a group of objects and quickly select or navigate to them again. Use the bar at the bottom to reference and interact with your presets.</English>
+        </Key>
+        <Key ID="STR_ZEN_Tour_SelectionPresets_Saving">
+            <English>Saving Presets</English>
+        </Key>
+        <Key ID="STR_ZEN_Tour_SelectionPresets_Saving_Text">
+            <English>Select some objects, then click &lt;img image='\x\zen\addons\selection_presets\ui\plus_ca.paa' size='0.7'/&gt; in the bar to save them to the next empty slot. To save to a specific slot or change an existing preset, use these shortcuts:</English>
+        </Key>
+        <Key ID="STR_ZEN_Tour_SelectionPresets_SaveToSlot">
+            <English>Save the selection to that slot.</English>
+        </Key>
+        <Key ID="STR_ZEN_Tour_SelectionPresets_Replace">
+            <English>Replace a preset with the selection.</English>
+        </Key>
+        <Key ID="STR_ZEN_Tour_SelectionPresets_Add">
+            <English>Add the selection to an existing preset.</English>
+        </Key>
+        <Key ID="STR_ZEN_Tour_SelectionPresets_Selecting">
+            <English>Selecting Presets</English>
+        </Key>
+        <Key ID="STR_ZEN_Tour_SelectionPresets_Selecting_Text">
+            <English>Select the objects of a saved preset by clicking it in the bar or using the shortcuts. For reference:</English>
+        </Key>
+        <Key ID="STR_ZEN_Tour_SelectionPresets_SelectClick">
+            <English>Select a preset.</English>
+        </Key>
+        <Key ID="STR_ZEN_Tour_SelectionPresets_SelectKey">
+            <English>Select the preset in that slot.</English>
+        </Key>
+        <Key ID="STR_ZEN_Tour_SelectionPresets_Contents_Text">
+            <English>Hover over a preset to see a list of the objects that it contains.</English>
+        </Key>
+        <Key ID="STR_ZEN_Tour_SelectionPresets_Customizing">
+            <English>Customizing the Bar</English>
+        </Key>
+        <Key ID="STR_ZEN_Tour_SelectionPresets_Customizing_Text">
+            <English>Make the bar your own from {esc} &amp;gt; &lt;b&gt;Options&lt;/b&gt; &amp;gt; &lt;b&gt;Addon Options&lt;/b&gt;, under &lt;b&gt;Zeus Enhanced&lt;/b&gt; &amp;gt; &lt;b&gt;Selection Presets&lt;/b&gt;. You can:</English>
+        </Key>
+        <Key ID="STR_ZEN_Tour_SelectionPresets_EmptySlots">
+            <English>Show empty slots, hide them, or replace them with an add button.</English>
+        </Key>
+        <Key ID="STR_ZEN_Tour_SelectionPresets_GroupIcons">
+            <English>Show units with their group's icon.</English>
+        </Key>
+        <Key ID="STR_ZEN_Tour_SelectionPresets_Tooltips">
+            <English>Hide the tooltips that list a preset's contents.</English>
+        </Key>
+        <Key ID="STR_ZEN_Tour_SelectionPresets_Exclude">
+            <English>Exclude props and modules automatically from new presets.</English>
+        </Key>
+        <Key ID="STR_ZEN_Tour_SelectionPresets_Disable">
+            <English>Disable the bar entirely, while keeping the keyboard shortcuts.</English>
+        </Key>
+        <Key ID="STR_ZEN_Tour_SelectionPresets_Persistence_Text">
+            <English>&lt;b&gt;Presets are now persistent.&lt;/b&gt; Unlike in vanilla Zeus, your presets are saved when you close the interface, and restored when you return to Zeus after, for example, remote controlling a unit.</English>
+        </Key>
+    </Package>
+</Project>
