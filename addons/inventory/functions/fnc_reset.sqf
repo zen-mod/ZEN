@@ -21,6 +21,9 @@ private _object = _display getVariable QGVAR(object);
 
 // Set the cargo to the object's default inventory
 private _cargo = _object call EFUNC(common,getDefaultInventory);
+
+// Convert default weapons to weapon items arrays, keeping any config linked attachments
+_cargo set [CARGO_WEAPONS, (_cargo select CARGO_WEAPONS) call FUNC(groupWeapons)];
 _display setVariable [QGVAR(cargo), _cargo];
 
 // Use config-defined contents for the default container items
@@ -30,7 +33,7 @@ private _containers = [];
     _x params ["_types", "_counts"];
 
     {
-        if (_x call EFUNC(common,isContainerItem)) then {
+        if (_x isEqualType "" && {_x call EFUNC(common,isContainerItem)}) then {
             private _count = _counts select _forEachIndex;
 
             for "_i" from 1 to _count do {

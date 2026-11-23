@@ -20,7 +20,9 @@ params ["_object"];
 if (!createDialog QGVAR(display)) exitWith {};
 
 // Get the object's current cargo and calculate its load
-private _cargo = [getItemCargo _object, getWeaponCargo _object, getMagazineCargo _object, getBackpackCargo _object];
+// Weapons are tracked with their attachments and loaded magazines, identical configurations are grouped
+private _weaponCargo = [weaponsItemsCargo _object] call FUNC(groupWeapons);
+private _cargo = [getItemCargo _object, _weaponCargo, getMagazineCargo _object, getBackpackCargo _object];
 private _currentLoad = [_cargo] call FUNC(calculateLoad);
 
 // Capture nested contents now so confirmation applies the same snapshot as the cargo

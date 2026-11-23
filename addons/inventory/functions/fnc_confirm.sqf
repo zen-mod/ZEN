@@ -36,7 +36,7 @@ _itemCargo params ["_itemTypes", "_itemCounts"];
 _weaponCargo params ["_weaponTypes", "_weaponCounts"];
 
 {
-    _object addWeaponCargoGlobal [_x, _weaponCounts select _forEachIndex];
+    _object addWeaponWithAttachmentsCargoGlobal [_x, _weaponCounts select _forEachIndex];
 } forEach _weaponTypes;
 
 _magazineCargo params ["_magazineTypes", "_magazineCounts"];
