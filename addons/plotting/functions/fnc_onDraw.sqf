@@ -21,7 +21,8 @@ params ["_ctrlMap"];
 
 if (!GVAR(enabled)) exitWith {
     _ctrlMap ctrlRemoveEventHandler [_thisEvent, _thisEventHandler];
-    LOG("Removed 3DENComments map draw.");
+    _ctrlMap setVariable [QGVAR(drawEH), nil];
+    LOG("Removed map draw.");
 };
 
 if (dialog || {call EFUNC(common,isInScreenshotMode)}) exitWith {}; // Dialog is open or HUD is hidden

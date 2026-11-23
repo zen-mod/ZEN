@@ -21,17 +21,8 @@ TRACE_1("Zeus display opened",_display);
 
 GVAR(activePlot) = [];
 
-if (!GVAR(draw3DAdded)) then {
-    LOG("Adding Draw3D.");
-    addMissionEventHandler ["Draw3D", {call FUNC(onDraw3D)}];
-    GVAR(draw3DAdded) = true;
-};
-
 LOG("Adding input handlers.");
 _display displayAddEventHandler ["MouseButtonDown", {call FUNC(onMouseButtonDown)}];
 _display displayAddEventHandler ["KeyDown", {call FUNC(onKeyDown)}];
 
-// MapDraw EH needs to be added every time the Zeus display is opened.
-LOG("Adding map draw.");
-private _ctrlMap = _display displayCtrl IDC_RSCDISPLAYCURATOR_MAINMAP;
-_ctrlMap ctrlAddEventHandler ["Draw", {call FUNC(onDraw)}];
+[_display] call FUNC(addDrawEventHandlers);

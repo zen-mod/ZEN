@@ -32,6 +32,8 @@ if (!GVAR(draw3DAdded)) then {
 };
 
 // MapDraw EH needs to be added every time the Zeus display is opened.
-LOG("Adding map draw.");
 private _ctrlMap = _display displayCtrl IDC_RSCDISPLAYCURATOR_MAINMAP;
-_ctrlMap ctrlAddEventHandler ["Draw", {call FUNC(onDraw)}];
+if (isNil {_ctrlMap getVariable QGVAR(drawEH)}) then {
+    LOG("Adding map draw.");
+    _ctrlMap setVariable [QGVAR(drawEH), _ctrlMap ctrlAddEventHandler ["Draw", {call FUNC(onDraw)}]];
+};

@@ -1,3 +1,4 @@
+PREP(addDrawEventHandlers);
 PREP(addPlot);
 PREP(clearPlots);
 PREP(compileFormatters);

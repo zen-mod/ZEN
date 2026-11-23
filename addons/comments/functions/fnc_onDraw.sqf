@@ -21,6 +21,7 @@ params ["_mapCtrl"];
 
 if (!GVAR(enabled) && !GVAR(enabled3DEN)) exitWith {
     _mapCtrl ctrlRemoveEventHandler [_thisEvent, _thisEventHandler];
+    _mapCtrl setVariable [QGVAR(drawEH), nil];
     LOG("Removed 3DENComments map draw.");
 };
 

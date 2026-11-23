@@ -6,7 +6,11 @@ private _category = [ELSTRING(main,DisplayName), LSTRING(DisplayName)];
     [LLSTRING(Enabled), LLSTRING(Enabled_Description)],
     _category,
     true,
-    0
+    0,
+    {
+        if (!_this) exitWith {}; // Draw EHs remove themselves when disabled
+        [findDisplay IDD_RSCDISPLAYCURATOR] call FUNC(addDrawEventHandlers);
+    }
 ] call CBA_fnc_addSetting;
 
 [
