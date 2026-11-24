@@ -62,6 +62,7 @@ PREP(moduleGroupSide);
 PREP(moduleHeal);
 PREP(moduleHideTerrainObjects);
 PREP(moduleHideZeus);
+PREP(moduleInjure);
 PREP(moduleLightSource);
 PREP(moduleMakeInvincible);
 PREP(moduleNuke);

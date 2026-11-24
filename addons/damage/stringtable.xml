@@ -710,5 +710,14 @@
             <French>Cage arrière</French>
             <Spanish>Rejilla trasera</Spanish>
         </Key>
+        <Key ID="STR_ZEN_Damage_HitHead">
+            <English>Head</English>
+        </Key>
+        <Key ID="STR_ZEN_Damage_HitHands">
+            <English>Arms</English>
+        </Key>
+        <Key ID="STR_ZEN_Damage_HitLegs">
+            <English>Legs</English>
+        </Key>
     </Package>
 </Project>
