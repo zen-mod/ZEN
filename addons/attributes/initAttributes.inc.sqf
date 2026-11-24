@@ -49,6 +49,7 @@
         private _damage = 1 - _value;
         {
             _x setDamage _damage;
+            [QEGVAR(common,setDamage), [_x, _damage], _x] call CBA_fnc_targetEvent;
         } forEach SELECTED_OBJECTS;
     },
     {1 - damage _entity},
