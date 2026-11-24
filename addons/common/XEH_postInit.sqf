@@ -141,6 +141,11 @@
 [QGVAR(doWatch), {
     params ["_unit", "_target"];
     _unit doWatch _target;
+    {
+        if !(_x checkAIFeature "ANIM") then {
+            _x setDir (_x getDir _target);
+        };
+    } forEach flatten [_unit];
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(doTarget), {
@@ -197,6 +202,17 @@
 [QGVAR(selectWeapon), {
     params ["_unit", "_muzzle"];
     _unit selectWeapon _muzzle;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(switchWeapon), {
+    params ["_unit", "_muzzle"];
+    _unit selectWeapon _muzzle;
+    if (_muzzle == secondaryWeapon _unit) then {
+        _unit playMove "amovpercmstpsraswlnrdnon";
+        _unit disableAI "ANIM";
+    } else {
+        _unit enableAI "ANIM";
+    };
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(selectWeaponTurret), {

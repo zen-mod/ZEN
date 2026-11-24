@@ -22,6 +22,7 @@ _actionParams params ["", "", "", "", "", "_hoveredEntity"];
 
 private _weapon = [
     primaryWeapon _hoveredEntity,
+    secondaryWeapon _hoveredEntity,
     handgunWeapon _hoveredEntity,
     binocular _hoveredEntity
 ] select _args;
