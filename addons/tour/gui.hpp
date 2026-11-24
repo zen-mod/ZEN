@@ -1,17 +1,11 @@
 class RscText;
 class RscPicture;
 class RscStructuredText;
-class RscDisplayEmpty;
 class RscControlsGroupNoScrollbars;
 class ctrlButton;
 class ctrlButtonPictureKeepAspect;
 
 class EGVAR(common,RscControlsGroup);
-
-// Opened by the pause menu option, which can only open displays by class name
-class GVAR(pauseMenuHelper): RscDisplayEmpty {
-    onLoad = QUOTE(call FUNC(handlePauseMenu));
-};
 
 class GVAR(title): RscText {
     font = "RobotoCondensedBold";

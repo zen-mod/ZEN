@@ -8,7 +8,7 @@ PREP(handleEntryClick);
 PREP(handleEntryHover);
 PREP(handleKeyDown);
 PREP(handleLoad);
-PREP(handlePauseMenu);
+PREP(handlePauseMenuOption);
 PREP(handleSlideClick);
 PREP(handleViewAllClick);
 PREP(initComparison);
