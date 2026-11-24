@@ -1,15 +1,4 @@
 #include "script_component.hpp"
 
-if (!hasInterface) exitWith {};
-
-["CBA_SettingChanged", {
-    params ["_name"];
-
-    if (_name in [QGVAR(followTerrain), QGVAR(adaptiveSpeed), QGVAR(defaultSpeedCoef), QGVAR(fastSpeedCoef)]) then {
-        [] call FUNC(updateSettings);
-    };
-}] call CBA_fnc_addEventHandler;
-
-["zen_curatorDisplayLoaded", {
-    FUNC(updateSettings) call CBA_fnc_execNextFrame;
-}] call CBA_fnc_addEventHandler;
+["zen_curatorDisplayLoaded", LINKFUNC(handleLoad)] call CBA_fnc_addEventHandler;
+["CBA_SettingChanged", LINKFUNC(handleSettingChanged)] call CBA_fnc_addEventHandler;

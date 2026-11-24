@@ -127,5 +127,23 @@
             <Italian>Coefficiente per la velocità di movimento della telecamera (tenendo premuto il tasto Maiusc), più alto è più veloce.</Italian>
             <Spanish>Coeficiente de la velocidad de movimiento rápida de la cámara (al mantener pulsada la tecla Mayús); cuanto más alto, más rápida.</Spanish>
         </Key>
+        <Key ID="STR_ZEN_Camera_MoveCameraMode">
+            <English>Move Camera Mode</English>
+        </Key>
+        <Key ID="STR_ZEN_Camera_MoveCameraMode_Description">
+            <English>Controls the behaviour of the "Move camera to selected entity" keybind.</English>
+        </Key>
+        <Key ID="STR_ZEN_Camera_MoveCameraMode_BaseGame">
+            <English>Base Game</English>
+        </Key>
+        <Key ID="STR_ZEN_Camera_MoveCameraMode_BaseGame_Description">
+            <English>The camera's move behaviour is unchanged from the base game.</English>
+        </Key>
+        <Key ID="STR_ZEN_Camera_MoveCameraMode_Enhanced">
+            <English>Enhanced</English>
+        </Key>
+        <Key ID="STR_ZEN_Camera_MoveCameraMode_Enhanced_Description">
+            <English>The camera shows the selected object from above and behind, keeping a clear line of sight to it.\nActivating again on a unit or small object switches to a close view of it, looking at its front when it is against a wall. Units and small objects under a roof start with the close view.\nHolding the key follows the object, and the camera can be moved around it while following.</English>
+        </Key>
     </Package>
 </Project>

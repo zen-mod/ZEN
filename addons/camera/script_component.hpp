@@ -15,3 +15,6 @@
 #endif
 
 #include "\x\zen\addons\main\script_macros.hpp"
+
+#define MOVE_CAMERA_MODE_BASEGAME 0
+#define MOVE_CAMERA_MODE_ENHANCED 1
