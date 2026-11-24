@@ -38,11 +38,11 @@ _itemCargo params ["_itemTypes", "_itemCounts"];
     _load = _load + getNumber (_config >> "mass") * (_itemCounts select _forEachIndex);
 } forEach _itemTypes;
 
-// Add the masses of weapons in the inventory
+// Add the masses of weapons in the inventory, including their attachments and loaded magazines
 _weaponCargo params ["_weaponTypes", "_weaponCounts"];
 
 {
-    _load = _load + getNumber (_cfgWeapons >> _x >> "WeaponSlotsInfo" >> "mass") * (_weaponCounts select _forEachIndex);
+    _load = _load + ([_x] call FUNC(getWeaponMass)) * (_weaponCounts select _forEachIndex);
 } forEach _weaponTypes;
 
 // Add the masses of magazines in the inventory

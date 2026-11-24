@@ -22,8 +22,7 @@ params ["_display", ["_onlyButtons", false]];
 // Get the currently selected item and its mass
 private _ctrlList = _display displayCtrl IDC_LIST;
 private _currentRow = lnbCurSelRow _ctrlList;
-private _item = _ctrlList lnbData [_currentRow, 0];
-private _mass = _item call FUNC(getItemMass);
+(_display call FUNC(getSelected)) params ["_item", "", "_mass"];
 
 // Get the current and maximum load for the object
 private _currentLoad = _display getVariable QGVAR(currentLoad);

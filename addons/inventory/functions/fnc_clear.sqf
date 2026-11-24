@@ -23,10 +23,14 @@ private _fnc_clear = {
     (_display call FUNC(getCargo)) params ["_types", "_counts"];
 
     {
-        private _index = _types find _x;
-        _types  deleteAt _index;
-        _counts deleteAt _index;
-    } forEach _items;
+        // Weapons are stored as weapon items arrays, compare using their class name
+        private _type = if (_x isEqualType []) then {_x select 0} else {_x};
+
+        if (_type in _items) then {
+            _types  deleteAt _forEachIndex;
+            _counts deleteAt _forEachIndex;
+        };
+    } forEachReversed _types;
 
     private _cargo = _display getVariable QGVAR(cargo);
     _display setVariable [QGVAR(currentLoad), [_cargo] call FUNC(calculateLoad)];
