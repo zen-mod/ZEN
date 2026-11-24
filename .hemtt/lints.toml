@@ -1,3 +1,7 @@
+# Arma supports JPEGs for UI pictures, such as the screenshots used by tour pages
+[config.file_type]
+enabled = false
+
 [sqf.banned_commands]
 options.ignore = [
     "addPublicVariableEventHandler", # Alt syntax is broken, we are using main syntax
